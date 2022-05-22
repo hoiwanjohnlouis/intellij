@@ -78,13 +78,9 @@ public class Tag154AmtAllocNetMoney extends FIX41Abstract implements LogValuePai
         Tag154AmtAllocNetMoney tagData;
 
         tagData = new Tag154AmtAllocNetMoney(new MyAmtType(TESTA_AMT_ALLOC_NET_MONEY) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag154AmtAllocNetMoney(new MyAmtType(TESTB_AMT_ALLOC_NET_MONEY) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

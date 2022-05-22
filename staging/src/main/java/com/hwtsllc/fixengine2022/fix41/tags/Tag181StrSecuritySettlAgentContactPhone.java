@@ -79,13 +79,9 @@ public class Tag181StrSecuritySettlAgentContactPhone extends FIX41Abstract imple
         Tag181StrSecuritySettlAgentContactPhone tagData;
 
         tagData = new Tag181StrSecuritySettlAgentContactPhone(new MyStringType(TESTA_STR_SECURITY_SETTL_AGENT_CONTACT_PHONE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag181StrSecuritySettlAgentContactPhone(new MyStringType(TESTB_STR_SECURITY_SETTL_AGENT_CONTACT_PHONE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

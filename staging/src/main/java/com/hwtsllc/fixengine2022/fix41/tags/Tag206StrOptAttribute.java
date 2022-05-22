@@ -89,13 +89,9 @@ public class Tag206StrOptAttribute extends FIX41Abstract implements LogValuePair
         Tag206StrOptAttribute tagData;
 
         tagData = new Tag206StrOptAttribute(new MyStringType(TESTA_STR_OPT_ATTRIBUTE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag206StrOptAttribute(new MyStringType(TESTB_STR_OPT_ATTRIBUTE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

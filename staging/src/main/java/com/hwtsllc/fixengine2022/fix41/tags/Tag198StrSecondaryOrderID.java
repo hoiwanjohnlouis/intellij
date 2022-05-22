@@ -79,13 +79,9 @@ public class Tag198StrSecondaryOrderID extends FIX41Abstract implements LogValue
         Tag198StrSecondaryOrderID tagData;
 
         tagData = new Tag198StrSecondaryOrderID(new MyStringType(TESTA_STR_SECONDARY_ORDER_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag198StrSecondaryOrderID(new MyStringType(TESTB_STR_SECONDARY_ORDER_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

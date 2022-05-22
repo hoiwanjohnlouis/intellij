@@ -78,13 +78,9 @@ public class Tag190PrcOfferSpotRate extends FIX41Abstract implements LogValuePai
         Tag190PrcOfferSpotRate tagData;
 
         tagData = new Tag190PrcOfferSpotRate(new MyPriceType(TESTA_PRC_OFFER_SPOT_RATE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag190PrcOfferSpotRate(new MyPriceType(TESTB_PRC_OFFER_SPOT_RATE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

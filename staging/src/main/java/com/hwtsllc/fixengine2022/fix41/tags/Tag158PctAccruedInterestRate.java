@@ -81,13 +81,9 @@ public class Tag158PctAccruedInterestRate extends FIX41Abstract implements LogVa
         Tag158PctAccruedInterestRate tagData;
 
         tagData = new Tag158PctAccruedInterestRate(new MyPercentageType(TESTA_PCT_ACCRUED_INTEREST_RATE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag158PctAccruedInterestRate(new MyPercentageType(TESTB_PCT_ACCRUED_INTEREST_RATE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

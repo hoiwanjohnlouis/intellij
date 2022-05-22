@@ -81,13 +81,9 @@ public class Tag174StrSettlBrkrCode extends FIX41Abstract implements LogValuePai
         Tag174StrSettlBrkrCode tagData;
 
         tagData = new Tag174StrSettlBrkrCode(new MyStringType(TESTA_STR_SETTL_BRKR_CODE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag174StrSettlBrkrCode(new MyStringType(TESTB_STR_SETTL_BRKR_CODE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

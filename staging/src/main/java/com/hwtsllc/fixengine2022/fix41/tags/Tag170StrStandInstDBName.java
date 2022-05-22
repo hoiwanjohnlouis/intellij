@@ -78,13 +78,9 @@ public class Tag170StrStandInstDBName extends FIX41Abstract implements LogValueP
         Tag170StrStandInstDBName tagData;
 
         tagData = new Tag170StrStandInstDBName(new MyStringType(TESTA_STR_STAND_INST_DB_NAME) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag170StrStandInstDBName(new MyStringType(TESTB_STR_STAND_INST_DB_NAME) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

@@ -76,16 +76,7 @@ public class Tag192QtyOrderQty2 extends FIX41Abstract implements LogValuePairStr
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag192QtyOrderQty2 tagData;
-
-        tagData = new Tag192QtyOrderQty2(new MyQtyType(TESTA_QTY_ORDER_QTY_2) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag192QtyOrderQty2(new MyQtyType(TESTB_QTY_ORDER_QTY_2) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( new Tag192QtyOrderQty2(new MyQtyType(TESTA_QTY_ORDER_QTY_2) ).toVerboseString() );
+        System.out.println( new Tag192QtyOrderQty2(new MyQtyType(TESTB_QTY_ORDER_QTY_2) ).toVerboseString() );
     }
 }

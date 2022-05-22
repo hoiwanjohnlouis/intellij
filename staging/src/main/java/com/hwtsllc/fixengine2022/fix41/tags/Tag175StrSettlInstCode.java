@@ -82,13 +82,9 @@ public class Tag175StrSettlInstCode extends FIX41Abstract implements LogValuePai
         Tag175StrSettlInstCode tagData;
 
         tagData = new Tag175StrSettlInstCode(new MyStringType(TESTA_STR_SETTL_INST_CODE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag175StrSettlInstCode(new MyStringType(TESTB_STR_SETTL_INST_CODE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

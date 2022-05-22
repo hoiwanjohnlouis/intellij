@@ -78,13 +78,9 @@ public class Tag146NumNoRelatedSym extends FIX41Abstract implements LogValuePair
         Tag146NumNoRelatedSym tagData;
 
         tagData = new Tag146NumNoRelatedSym(new MyNumInGroupType(TESTA_NUM_NO_RELATED_SYM) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag146NumNoRelatedSym(new MyNumInGroupType(TESTB_NUM_NO_RELATED_SYM) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

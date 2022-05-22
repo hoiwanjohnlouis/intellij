@@ -81,13 +81,9 @@ public class Tag207ExcSecurityExchange extends FIX41Abstract implements LogValue
         Tag207ExcSecurityExchange tagData;
 
         tagData = new Tag207ExcSecurityExchange(new MyExchangeType(TESTA_EXC_SECURITY_EXCHANGE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag207ExcSecurityExchange(new MyExchangeType(TESTB_EXC_SECURITY_EXCHANGE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

@@ -80,13 +80,9 @@ public class Tag211FloPegOffsetValue extends FIX41Abstract implements LogValuePa
         Tag211FloPegOffsetValue tagData;
 
         tagData = new Tag211FloPegOffsetValue(new MyFloatType(TESTA_FLO_PEG_DIFFERENCE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag211FloPegOffsetValue(new MyFloatType(TESTB_FLO_PEG_DIFFERENCE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

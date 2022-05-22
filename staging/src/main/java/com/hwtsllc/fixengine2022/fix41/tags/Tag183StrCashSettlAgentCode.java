@@ -81,13 +81,9 @@ public class Tag183StrCashSettlAgentCode extends FIX41Abstract implements LogVal
         Tag183StrCashSettlAgentCode tagData;
 
         tagData = new Tag183StrCashSettlAgentCode(new MyStringType(TESTA_STR_CASH_SETTL_AGENT_CODE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag183StrCashSettlAgentCode(new MyStringType(TESTB_STR_CASH_SETTL_AGENT_CODE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

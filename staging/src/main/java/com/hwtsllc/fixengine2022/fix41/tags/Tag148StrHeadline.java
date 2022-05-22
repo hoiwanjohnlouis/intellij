@@ -78,13 +78,9 @@ public class Tag148StrHeadline extends FIX41Abstract implements LogValuePairStri
         Tag148StrHeadline tagData;
 
         tagData = new Tag148StrHeadline(new MyStringType(TESTA_STR_HEADLINE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag148StrHeadline(new MyStringType(TESTB_STR_HEADLINE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

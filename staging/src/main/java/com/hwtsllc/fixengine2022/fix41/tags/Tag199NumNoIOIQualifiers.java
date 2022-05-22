@@ -78,13 +78,9 @@ public class Tag199NumNoIOIQualifiers extends FIX41Abstract implements LogValueP
         Tag199NumNoIOIQualifiers tagData;
 
         tagData = new Tag199NumNoIOIQualifiers(new MyNumInGroupType(TESTA_NUM_NO_IOI_QUALIFIERS) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag199NumNoIOIQualifiers(new MyNumInGroupType(TESTB_NUM_NO_IOI_QUALIFIERS) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

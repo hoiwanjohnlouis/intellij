@@ -78,13 +78,9 @@ public class Tag159AmtAccruedInterestAmt extends FIX41Abstract implements LogVal
         Tag159AmtAccruedInterestAmt tagData;
 
         tagData = new Tag159AmtAccruedInterestAmt(new MyAmtType(TESTA_AMT_ACCRUED_INTEREST_AMT) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag159AmtAccruedInterestAmt(new MyAmtType(TESTB_AMT_ACCRUED_INTEREST_AMT) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

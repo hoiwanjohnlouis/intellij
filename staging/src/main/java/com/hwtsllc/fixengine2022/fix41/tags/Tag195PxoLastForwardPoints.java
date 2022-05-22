@@ -81,13 +81,9 @@ public class Tag195PxoLastForwardPoints extends FIX41Abstract implements LogValu
         Tag195PxoLastForwardPoints tagData;
 
         tagData = new Tag195PxoLastForwardPoints(new MyPriceOffsetType(TESTA_PXO_LAST_FORWARD_POINTS) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag195PxoLastForwardPoints(new MyPriceOffsetType(TESTB_PXO_LAST_FORWARD_POINTS) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

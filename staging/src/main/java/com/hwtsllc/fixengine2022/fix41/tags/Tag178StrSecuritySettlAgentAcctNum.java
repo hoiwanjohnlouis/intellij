@@ -79,13 +79,9 @@ public class Tag178StrSecuritySettlAgentAcctNum extends FIX41Abstract implements
         Tag178StrSecuritySettlAgentAcctNum tagData;
 
         tagData = new Tag178StrSecuritySettlAgentAcctNum(new MyStringType(TESTA_STR_SECURITY_SETTL_AGENT_ACCT_NUM) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag178StrSecuritySettlAgentAcctNum(new MyStringType(TESTB_STR_SECURITY_SETTL_AGENT_ACCT_NUM) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

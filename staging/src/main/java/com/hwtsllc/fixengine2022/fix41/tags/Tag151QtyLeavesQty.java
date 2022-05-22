@@ -81,16 +81,7 @@ public class Tag151QtyLeavesQty extends FIX41Abstract implements LogValuePairStr
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag151QtyLeavesQty tagData;
-
-        tagData = new Tag151QtyLeavesQty(new MyQtyType(TESTA_QTY_LEAVES_QTY) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag151QtyLeavesQty(new MyQtyType(TESTB_QTY_LEAVES_QTY) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( new Tag151QtyLeavesQty(new MyQtyType(TESTA_QTY_LEAVES_QTY) ).toVerboseString() );
+        System.out.println( new Tag151QtyLeavesQty(new MyQtyType(TESTB_QTY_LEAVES_QTY) ).toVerboseString() );
     }
 }

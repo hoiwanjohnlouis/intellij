@@ -79,13 +79,9 @@ public class Tag193LmdSettlDate2 extends FIX41Abstract implements LogValuePairSt
         Tag193LmdSettlDate2 tagData;
 
         tagData = new Tag193LmdSettlDate2(new MyLocalMktDateType(TESTA_LMD_SETTL_DATE_2) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag193LmdSettlDate2(new MyLocalMktDateType(TESTB_LMD_SETTL_DATE_2) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

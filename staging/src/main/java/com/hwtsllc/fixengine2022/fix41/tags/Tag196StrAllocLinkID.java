@@ -80,13 +80,9 @@ public class Tag196StrAllocLinkID extends FIX41Abstract implements LogValuePairS
         Tag196StrAllocLinkID tagData;
 
         tagData = new Tag196StrAllocLinkID(new MyStringType(TESTA_STR_ALLOC_LINK_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag196StrAllocLinkID(new MyStringType(TESTB_STR_ALLOC_LINK_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

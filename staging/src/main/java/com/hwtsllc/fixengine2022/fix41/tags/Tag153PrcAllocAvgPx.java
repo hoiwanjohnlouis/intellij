@@ -80,13 +80,9 @@ public class Tag153PrcAllocAvgPx extends FIX41Abstract implements LogValuePairSt
         Tag153PrcAllocAvgPx tagData;
 
         tagData = new Tag153PrcAllocAvgPx(new MyPriceType(TESTA_PRC_ALLOC_AVG_PX) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag153PrcAllocAvgPx(new MyPriceType(TESTB_PRC_ALLOC_AVG_PX) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

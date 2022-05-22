@@ -78,13 +78,9 @@ public class Tag147StrSubject extends FIX41Abstract implements LogValuePairStrin
         Tag147StrSubject tagData;
 
         tagData = new Tag147StrSubject(new MyStringType(TESTA_STR_SUBJECT) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag147StrSubject(new MyStringType(TESTB_STR_SUBJECT) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

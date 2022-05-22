@@ -78,13 +78,9 @@ public class Tag142StrSenderLocationID extends FIX41Abstract implements LogValue
         Tag142StrSenderLocationID tagData;
 
         tagData = new Tag142StrSenderLocationID(new MyStringType(TESTA_STR_SENDER_LOCATION_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag142StrSenderLocationID(new MyStringType(TESTB_STR_SENDER_LOCATION_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

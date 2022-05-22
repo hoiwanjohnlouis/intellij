@@ -78,13 +78,9 @@ public class Tag171StrStandInstDBID extends FIX41Abstract implements LogValuePai
         Tag171StrStandInstDBID tagData;
 
         tagData = new Tag171StrStandInstDBID(new MyStringType(TESTA_STR_STAND_INST_DB_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag171StrStandInstDBID(new MyStringType(TESTB_STR_STAND_INST_DB_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

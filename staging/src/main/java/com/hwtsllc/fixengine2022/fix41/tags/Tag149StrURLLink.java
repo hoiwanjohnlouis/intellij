@@ -81,13 +81,9 @@ public class Tag149StrURLLink extends FIX41Abstract implements LogValuePairStrin
         Tag149StrURLLink tagData;
 
         tagData = new Tag149StrURLLink(new MyStringType(TESTA_STR_URL_LINK) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag149StrURLLink(new MyStringType(TESTB_STR_URL_LINK) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

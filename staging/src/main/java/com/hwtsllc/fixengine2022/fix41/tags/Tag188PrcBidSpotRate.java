@@ -78,13 +78,9 @@ public class Tag188PrcBidSpotRate extends FIX41Abstract implements LogValuePairS
         Tag188PrcBidSpotRate tagData;
 
         tagData = new Tag188PrcBidSpotRate(new MyPriceType(TESTA_PRC_BID_SPOT_RATE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag188PrcBidSpotRate(new MyPriceType(TESTB_PRC_BID_SPOT_RATE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

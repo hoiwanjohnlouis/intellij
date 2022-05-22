@@ -79,16 +79,7 @@ public class Tag210QtyMaxShow extends FIX41Abstract implements LogValuePairStrin
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag210QtyMaxShow tagData;
-
-        tagData = new Tag210QtyMaxShow(new MyQtyType(TESTA_QTY_MAX_SHOW) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag210QtyMaxShow(new MyQtyType(TESTB_QTY_MAX_SHOW) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( new Tag210QtyMaxShow(new MyQtyType(TESTA_QTY_MAX_SHOW) ).toVerboseString() );
+        System.out.println( new Tag210QtyMaxShow(new MyQtyType(TESTB_QTY_MAX_SHOW) ).toVerboseString() );
     }
 }

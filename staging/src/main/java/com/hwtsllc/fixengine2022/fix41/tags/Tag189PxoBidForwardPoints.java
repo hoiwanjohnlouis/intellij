@@ -78,13 +78,9 @@ public class Tag189PxoBidForwardPoints extends FIX41Abstract implements LogValue
         Tag189PxoBidForwardPoints tagData;
 
         tagData = new Tag189PxoBidForwardPoints(new MyPriceOffsetType(TESTA_PXO_BID_FORWARD_POINTS) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag189PxoBidForwardPoints(new MyPriceOffsetType(TESTB_PXO_BID_FORWARD_POINTS) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

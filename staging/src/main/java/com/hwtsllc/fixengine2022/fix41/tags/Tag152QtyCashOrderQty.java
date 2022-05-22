@@ -79,16 +79,7 @@ public class Tag152QtyCashOrderQty extends FIX41Abstract implements LogValuePair
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag152QtyCashOrderQty tagData;
-
-        tagData = new Tag152QtyCashOrderQty(new MyQtyType(TESTA_QTY_CASH_ORDER_QTY) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-
-        tagData = new Tag152QtyCashOrderQty(new MyQtyType(TESTB_QTY_CASH_ORDER_QTY) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( new Tag152QtyCashOrderQty(new MyQtyType(TESTA_QTY_CASH_ORDER_QTY) ).toVerboseString() );
+        System.out.println( new Tag152QtyCashOrderQty(new MyQtyType(TESTB_QTY_CASH_ORDER_QTY) ).toVerboseString() );
     }
 }

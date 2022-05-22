@@ -78,13 +78,9 @@ public class Tag144StrOnBehalfOfLocationID extends FIX41Abstract implements LogV
         Tag144StrOnBehalfOfLocationID tagData;
 
         tagData = new Tag144StrOnBehalfOfLocationID(new MyStringType(TESTA_STR_ON_BEHALF_OF_LOCATION_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag144StrOnBehalfOfLocationID(new MyStringType(TESTB_STR_ON_BEHALF_OF_LOCATION_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

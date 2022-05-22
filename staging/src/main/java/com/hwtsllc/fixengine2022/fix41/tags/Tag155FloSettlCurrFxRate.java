@@ -78,13 +78,9 @@ public class Tag155FloSettlCurrFxRate extends FIX41Abstract implements LogValueP
         Tag155FloSettlCurrFxRate tagData;
 
         tagData = new Tag155FloSettlCurrFxRate(new MyFloatType(TESTA_FLO_SETTL_CURR_FX_RATE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag155FloSettlCurrFxRate(new MyFloatType(TESTB_FLO_SETTL_CURR_FX_RATE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

@@ -79,13 +79,9 @@ public class Tag184StrCashSettlAgentAcctNum extends FIX41Abstract implements Log
         Tag184StrCashSettlAgentAcctNum tagData;
 
         tagData = new Tag184StrCashSettlAgentAcctNum(new MyStringType(TESTA_STR_CASH_SETTL_AGENT_ACCT_NUM) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag184StrCashSettlAgentAcctNum(new MyStringType(TESTB_STR_CASH_SETTL_AGENT_ACCT_NUM) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

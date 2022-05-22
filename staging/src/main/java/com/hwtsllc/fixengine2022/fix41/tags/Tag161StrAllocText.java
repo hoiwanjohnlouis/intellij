@@ -78,13 +78,9 @@ public class Tag161StrAllocText extends FIX41Abstract implements LogValuePairStr
         Tag161StrAllocText tagData;
 
         tagData = new Tag161StrAllocText(new MyStringType(TESTA_STR_ALLOC_TEXT) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag161StrAllocText(new MyStringType(TESTB_STR_ALLOC_TEXT) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

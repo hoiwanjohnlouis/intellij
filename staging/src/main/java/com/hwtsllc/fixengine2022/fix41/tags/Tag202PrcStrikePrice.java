@@ -78,13 +78,9 @@ public class Tag202PrcStrikePrice extends FIX41Abstract implements LogValuePairS
         Tag202PrcStrikePrice tagData;
 
         tagData = new Tag202PrcStrikePrice(new MyPriceType(TESTA_PRC_STRIKE_PRICE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag202PrcStrikePrice(new MyPriceType(TESTB_PRC_STRIKE_PRICE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

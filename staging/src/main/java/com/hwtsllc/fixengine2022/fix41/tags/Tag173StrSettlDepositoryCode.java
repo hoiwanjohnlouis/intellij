@@ -80,13 +80,9 @@ public class Tag173StrSettlDepositoryCode extends FIX41Abstract implements LogVa
         Tag173StrSettlDepositoryCode tagData;
 
         tagData = new Tag173StrSettlDepositoryCode(new MyStringType(TESTA_STR_SETTL_DEPOSITORY_CODE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag173StrSettlDepositoryCode(new MyStringType(TESTB_STR_SETTL_DEPOSITORY_CODE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

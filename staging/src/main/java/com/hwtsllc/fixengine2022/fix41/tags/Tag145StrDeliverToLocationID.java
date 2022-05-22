@@ -78,13 +78,9 @@ public class Tag145StrDeliverToLocationID extends FIX41Abstract implements LogVa
         Tag145StrDeliverToLocationID tagData;
 
         tagData = new Tag145StrDeliverToLocationID(new MyStringType(TESTA_STR_DELIVER_TO_LOCATION_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag145StrDeliverToLocationID(new MyStringType(TESTB_STR_DELIVER_TO_LOCATION_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

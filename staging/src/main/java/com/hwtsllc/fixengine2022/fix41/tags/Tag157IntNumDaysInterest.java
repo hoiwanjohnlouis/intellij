@@ -80,13 +80,9 @@ public class Tag157IntNumDaysInterest extends FIX41Abstract implements LogValueP
         Tag157IntNumDaysInterest tagData;
 
         tagData = new Tag157IntNumDaysInterest(new MyIntType(TESTA_INT_NUM_DAYS_INTEREST) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag157IntNumDaysInterest(new MyIntType(TESTB_INT_NUM_DAYS_INTEREST) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

@@ -81,13 +81,9 @@ public class Tag186StrCashSettlAgentContactName extends FIX41Abstract implements
         Tag186StrCashSettlAgentContactName tagData;
 
         tagData = new Tag186StrCashSettlAgentContactName(new MyStringType(TESTA_STR_CASH_SETTL_AGENT_CONTACT_NAME) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag186StrCashSettlAgentContactName(new MyStringType(TESTB_STR_CASH_SETTL_AGENT_CONTACT_NAME) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

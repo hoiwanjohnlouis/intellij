@@ -81,13 +81,9 @@ public class Tag185StrCashSettlAgentAcctName extends FIX41Abstract implements Lo
         Tag185StrCashSettlAgentAcctName tagData;
 
         tagData = new Tag185StrCashSettlAgentAcctName(new MyStringType(TESTA_STR_CASH_SETTL_AGENT_ACCT_NAME) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag185StrCashSettlAgentAcctName(new MyStringType(TESTB_STR_CASH_SETTL_AGENT_ACCT_NAME) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

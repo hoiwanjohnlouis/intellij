@@ -78,13 +78,9 @@ public class Tag164StrEmailThreadID extends FIX41Abstract implements LogValuePai
         Tag164StrEmailThreadID tagData;
 
         tagData = new Tag164StrEmailThreadID(new MyStringType(TESTA_STR_EMAIL_THREAD_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag164StrEmailThreadID(new MyStringType(TESTB_STR_EMAIL_THREAD_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

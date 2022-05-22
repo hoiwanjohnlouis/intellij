@@ -78,13 +78,9 @@ public class Tag162StrSettlInstID extends FIX41Abstract implements LogValuePairS
         Tag162StrSettlInstID tagData;
 
         tagData = new Tag162StrSettlInstID(new MyStringType(TESTA_STR_SETTL_INST_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag162StrSettlInstID(new MyStringType(TESTB_STR_SETTL_INST_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

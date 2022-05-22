@@ -82,13 +82,9 @@ public class Tag205IntMaturityDay extends FIX41Abstract implements LogValuePairS
         Tag205IntMaturityDay tagData;
 
         tagData = new Tag205IntMaturityDay(new MyIntType(TESTA_INT_MATURITY_DAY) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag205IntMaturityDay(new MyIntType(TESTB_INT_MATURITY_DAY) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

@@ -79,13 +79,9 @@ public class Tag168UtcEffectiveTime extends FIX41Abstract implements LogValuePai
         Tag168UtcEffectiveTime tagData;
 
         tagData = new Tag168UtcEffectiveTime(new MyUTCTimestampType(TESTA_UTC_EFFECTIVE_TIME) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag168UtcEffectiveTime(new MyUTCTimestampType(TESTB_UTC_EFFECTIVE_TIME) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

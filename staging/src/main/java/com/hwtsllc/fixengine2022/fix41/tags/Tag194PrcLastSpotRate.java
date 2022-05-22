@@ -78,13 +78,9 @@ public class Tag194PrcLastSpotRate extends FIX41Abstract implements LogValuePair
         Tag194PrcLastSpotRate tagData;
 
         tagData = new Tag194PrcLastSpotRate(new MyPriceType(TESTA_PRC_LAST_SPOT_RATE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag194PrcLastSpotRate(new MyPriceType(TESTB_PRC_LAST_SPOT_RATE) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }

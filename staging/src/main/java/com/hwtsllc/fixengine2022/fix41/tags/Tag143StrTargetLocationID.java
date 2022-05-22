@@ -78,13 +78,9 @@ public class Tag143StrTargetLocationID extends FIX41Abstract implements LogValue
         Tag143StrTargetLocationID tagData;
 
         tagData = new Tag143StrTargetLocationID(new MyStringType(TESTA_STR_TARGET_LOCATION_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
 
         tagData = new Tag143StrTargetLocationID(new MyStringType(TESTB_STR_TARGET_LOCATION_ID) );
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+        System.out.println( tagData.toVerboseString() );
     }
 }
