@@ -62,23 +62,23 @@ class Tag205IntMaturityDayTest {
     void PrintFIXTagTest() {
         Tag205IntMaturityDay tagData;
 
-        tagData = new Tag205IntMaturityDay(new MyIntType(Tag205IntMaturityDay.TESTB_INT_HEART_BT_INT));
+        tagData = new Tag205IntMaturityDay(new MyIntType(Tag205IntMaturityDay.TESTB_INT_MATURITY_DAY));
         System.out.println( tagData.toVerboseString() );
     }
     @Test
     void TagGetDataValueTest() {
         Tag205IntMaturityDay tagData;
 
-        tagData = new Tag205IntMaturityDay(new MyIntType(Tag205IntMaturityDay.TESTB_INT_HEART_BT_INT));
-        assertEquals( Tag205IntMaturityDay.TESTB_INT_HEART_BT_INT, tagData.getDataValue());
+        tagData = new Tag205IntMaturityDay(new MyIntType(Tag205IntMaturityDay.TESTB_INT_MATURITY_DAY));
+        assertEquals( Tag205IntMaturityDay.TESTB_INT_MATURITY_DAY, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {
         Tag205IntMaturityDay tagData;
 
-        tagData = new Tag205IntMaturityDay(new MyIntType(Tag205IntMaturityDay.TESTB_INT_HEART_BT_INT));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag205IntMaturityDay.TESTB_INT_HEART_BT_INT,
+        tagData = new Tag205IntMaturityDay(new MyIntType(Tag205IntMaturityDay.TESTB_INT_MATURITY_DAY));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag205IntMaturityDay.TESTB_INT_MATURITY_DAY,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toValuePairString());
@@ -87,8 +87,8 @@ class Tag205IntMaturityDayTest {
     void TagToStringTest() {
         Tag205IntMaturityDay tagData;
 
-        tagData = new Tag205IntMaturityDay(new MyIntType(Tag205IntMaturityDay.TESTB_INT_HEART_BT_INT));
-        assertEquals( String.valueOf(Tag205IntMaturityDay.TESTB_INT_HEART_BT_INT),
+        tagData = new Tag205IntMaturityDay(new MyIntType(Tag205IntMaturityDay.TESTB_INT_MATURITY_DAY));
+        assertEquals( String.valueOf(Tag205IntMaturityDay.TESTB_INT_MATURITY_DAY),
                 tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toString());
@@ -97,14 +97,14 @@ class Tag205IntMaturityDayTest {
     void TagToVerboseStringTest() {
         Tag205IntMaturityDay tagData;
 
-        tagData = new Tag205IntMaturityDay(new MyIntType(Tag205IntMaturityDay.TESTA_INT_HEART_BT_INT));
+        tagData = new Tag205IntMaturityDay(new MyIntType(Tag205IntMaturityDay.TESTA_INT_MATURITY_DAY));
         assertEquals( "Tag205IntMaturityDay\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                         "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag205IntMaturityDay.TESTA_INT_HEART_BT_INT + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag205IntMaturityDay.TESTA_INT_HEART_BT_INT + "]",
+                        "\tDataValue[" + Tag205IntMaturityDay.TESTA_INT_MATURITY_DAY + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag205IntMaturityDay.TESTA_INT_MATURITY_DAY + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
-import com.hwtsllc.fixengine2022.fix40.tags.Tag210QtyMaxShow;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -59,23 +58,23 @@ class Tag210QtyMaxShowTest {
     void PrintFIXTagTest() {
         Tag210QtyMaxShow tagData;
 
-        tagData = new Tag210QtyMaxShow(new MyQtyType(Tag210QtyMaxShow.TESTB_QTY_OFFER_SIZE));
+        tagData = new Tag210QtyMaxShow(new MyQtyType(Tag210QtyMaxShow.TESTA_QTY_MAX_SHOW));
         System.out.println( tagData.toVerboseString() );
     }
     @Test
     void TagGetDataValueTest() {
         Tag210QtyMaxShow tagData;
 
-        tagData = new Tag210QtyMaxShow(new MyQtyType(Tag210QtyMaxShow.TESTB_QTY_OFFER_SIZE));
-        assertEquals( Tag210QtyMaxShow.TESTB_QTY_OFFER_SIZE, tagData.getDataValue());
+        tagData = new Tag210QtyMaxShow(new MyQtyType(Tag210QtyMaxShow.TESTA_QTY_MAX_SHOW));
+        assertEquals( Tag210QtyMaxShow.TESTA_QTY_MAX_SHOW, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {
         Tag210QtyMaxShow tagData;
 
-        tagData = new Tag210QtyMaxShow(new MyQtyType(Tag210QtyMaxShow.TESTB_QTY_OFFER_SIZE));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag210QtyMaxShow.TESTB_QTY_OFFER_SIZE,
+        tagData = new Tag210QtyMaxShow(new MyQtyType(Tag210QtyMaxShow.TESTA_QTY_MAX_SHOW));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag210QtyMaxShow.TESTA_QTY_MAX_SHOW,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toValuePairString());
@@ -84,8 +83,8 @@ class Tag210QtyMaxShowTest {
     void TagToStringTest() {
         Tag210QtyMaxShow tagData;
 
-        tagData = new Tag210QtyMaxShow(new MyQtyType(Tag210QtyMaxShow.TESTB_QTY_OFFER_SIZE));
-        assertEquals( String.valueOf(Tag210QtyMaxShow.TESTB_QTY_OFFER_SIZE),
+        tagData = new Tag210QtyMaxShow(new MyQtyType(Tag210QtyMaxShow.TESTA_QTY_MAX_SHOW));
+        assertEquals( String.valueOf(Tag210QtyMaxShow.TESTA_QTY_MAX_SHOW),
                 tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toString());
@@ -94,14 +93,14 @@ class Tag210QtyMaxShowTest {
     void TagToVerboseStringTest() {
         Tag210QtyMaxShow tagData;
 
-        tagData = new Tag210QtyMaxShow(new MyQtyType(Tag210QtyMaxShow.TESTA_QTY_OFFER_SIZE));
+        tagData = new Tag210QtyMaxShow(new MyQtyType(Tag210QtyMaxShow.TESTA_QTY_MAX_SHOW));
         assertEquals( "Tag210QtyMaxShow\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                         "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag210QtyMaxShow.TESTA_QTY_OFFER_SIZE + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag210QtyMaxShow.TESTA_QTY_OFFER_SIZE + "]",
+                        "\tDataValue[" + Tag210QtyMaxShow.TESTA_QTY_MAX_SHOW + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag210QtyMaxShow.TESTA_QTY_MAX_SHOW + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

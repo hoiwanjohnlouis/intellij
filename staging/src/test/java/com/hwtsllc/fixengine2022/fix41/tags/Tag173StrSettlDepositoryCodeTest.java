@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.fix40.tags.Tag173StrSettlDepositoryCode;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -64,7 +63,7 @@ class Tag173StrSettlDepositoryCodeTest {
         Tag173StrSettlDepositoryCode tagData;
 
         tagData = new Tag173StrSettlDepositoryCode(
-                new MyStringType(Tag173StrSettlDepositoryCode.TESTB_STR_QUOTE_REQ_ID));
+                new MyStringType(Tag173StrSettlDepositoryCode.TESTB_STR_SETTL_DEPOSITORY_CODE));
         System.out.println( tagData.toVerboseString() );
     }
     @Test
@@ -72,8 +71,8 @@ class Tag173StrSettlDepositoryCodeTest {
         Tag173StrSettlDepositoryCode tagData;
 
         tagData = new Tag173StrSettlDepositoryCode(
-                new MyStringType(Tag173StrSettlDepositoryCode.TESTB_STR_QUOTE_REQ_ID));
-        assertEquals( Tag173StrSettlDepositoryCode.TESTB_STR_QUOTE_REQ_ID, tagData.getDataValue());
+                new MyStringType(Tag173StrSettlDepositoryCode.TESTB_STR_SETTL_DEPOSITORY_CODE));
+        assertEquals( Tag173StrSettlDepositoryCode.TESTB_STR_SETTL_DEPOSITORY_CODE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -81,8 +80,8 @@ class Tag173StrSettlDepositoryCodeTest {
         Tag173StrSettlDepositoryCode tagData;
 
         tagData = new Tag173StrSettlDepositoryCode(
-                new MyStringType(Tag173StrSettlDepositoryCode.TESTB_STR_QUOTE_REQ_ID));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag173StrSettlDepositoryCode.TESTB_STR_QUOTE_REQ_ID,
+                new MyStringType(Tag173StrSettlDepositoryCode.TESTB_STR_SETTL_DEPOSITORY_CODE));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag173StrSettlDepositoryCode.TESTB_STR_SETTL_DEPOSITORY_CODE,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toValuePairString());
@@ -92,8 +91,8 @@ class Tag173StrSettlDepositoryCodeTest {
         Tag173StrSettlDepositoryCode tagData;
 
         tagData = new Tag173StrSettlDepositoryCode(
-                new MyStringType(Tag173StrSettlDepositoryCode.TESTB_STR_QUOTE_REQ_ID));
-        assertEquals( Tag173StrSettlDepositoryCode.TESTB_STR_QUOTE_REQ_ID,
+                new MyStringType(Tag173StrSettlDepositoryCode.TESTB_STR_SETTL_DEPOSITORY_CODE));
+        assertEquals( Tag173StrSettlDepositoryCode.TESTB_STR_SETTL_DEPOSITORY_CODE,
                 tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toString());
@@ -103,14 +102,15 @@ class Tag173StrSettlDepositoryCodeTest {
         Tag173StrSettlDepositoryCode tagData;
 
         tagData = new Tag173StrSettlDepositoryCode(
-                new MyStringType(Tag173StrSettlDepositoryCode.TESTA_STR_QUOTE_REQ_ID));
+                new MyStringType(Tag173StrSettlDepositoryCode.TESTA_STR_SETTL_DEPOSITORY_CODE));
         assertEquals( "Tag173StrSettlDepositoryCode\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                         "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag173StrSettlDepositoryCode.TESTA_STR_QUOTE_REQ_ID + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag173StrSettlDepositoryCode.TESTA_STR_QUOTE_REQ_ID + "]",
+                        "\tDataValue[" + Tag173StrSettlDepositoryCode.TESTA_STR_SETTL_DEPOSITORY_CODE + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" +
+                                            Tag173StrSettlDepositoryCode.TESTA_STR_SETTL_DEPOSITORY_CODE + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

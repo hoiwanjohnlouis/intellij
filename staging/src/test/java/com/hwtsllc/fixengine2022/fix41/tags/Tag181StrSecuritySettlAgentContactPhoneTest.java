@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.fix40.tags.Tag181StrSecuritySettlAgentContactPhone;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -65,7 +64,7 @@ class Tag181StrSecuritySettlAgentContactPhoneTest {
         Tag181StrSecuritySettlAgentContactPhone tagData;
 
         tagData = new Tag181StrSecuritySettlAgentContactPhone(
-                new MyStringType(Tag181StrSecuritySettlAgentContactPhone.TESTB_STR_QUOTE_REQ_ID));
+                new MyStringType(Tag181StrSecuritySettlAgentContactPhone.TESTB_STR_SECURITY_SETTL_AGENT_CONTACT_PHONE));
         System.out.println( tagData.toVerboseString() );
     }
     @Test
@@ -73,8 +72,9 @@ class Tag181StrSecuritySettlAgentContactPhoneTest {
         Tag181StrSecuritySettlAgentContactPhone tagData;
 
         tagData = new Tag181StrSecuritySettlAgentContactPhone(
-                new MyStringType(Tag181StrSecuritySettlAgentContactPhone.TESTB_STR_QUOTE_REQ_ID));
-        assertEquals( Tag181StrSecuritySettlAgentContactPhone.TESTB_STR_QUOTE_REQ_ID, tagData.getDataValue());
+                new MyStringType(Tag181StrSecuritySettlAgentContactPhone.TESTB_STR_SECURITY_SETTL_AGENT_CONTACT_PHONE));
+        assertEquals( Tag181StrSecuritySettlAgentContactPhone.TESTB_STR_SECURITY_SETTL_AGENT_CONTACT_PHONE,
+                tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -82,8 +82,9 @@ class Tag181StrSecuritySettlAgentContactPhoneTest {
         Tag181StrSecuritySettlAgentContactPhone tagData;
 
         tagData = new Tag181StrSecuritySettlAgentContactPhone(
-                new MyStringType(Tag181StrSecuritySettlAgentContactPhone.TESTB_STR_QUOTE_REQ_ID));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag181StrSecuritySettlAgentContactPhone.TESTB_STR_QUOTE_REQ_ID,
+                new MyStringType(Tag181StrSecuritySettlAgentContactPhone.TESTB_STR_SECURITY_SETTL_AGENT_CONTACT_PHONE));
+        assertEquals( tagData.toFIXIDString() + "=" +
+                        Tag181StrSecuritySettlAgentContactPhone.TESTB_STR_SECURITY_SETTL_AGENT_CONTACT_PHONE,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toValuePairString());
@@ -93,8 +94,8 @@ class Tag181StrSecuritySettlAgentContactPhoneTest {
         Tag181StrSecuritySettlAgentContactPhone tagData;
 
         tagData = new Tag181StrSecuritySettlAgentContactPhone(
-                new MyStringType(Tag181StrSecuritySettlAgentContactPhone.TESTB_STR_QUOTE_REQ_ID));
-        assertEquals( Tag181StrSecuritySettlAgentContactPhone.TESTB_STR_QUOTE_REQ_ID,
+                new MyStringType(Tag181StrSecuritySettlAgentContactPhone.TESTB_STR_SECURITY_SETTL_AGENT_CONTACT_PHONE));
+        assertEquals( Tag181StrSecuritySettlAgentContactPhone.TESTB_STR_SECURITY_SETTL_AGENT_CONTACT_PHONE,
                 tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toString());
@@ -104,15 +105,15 @@ class Tag181StrSecuritySettlAgentContactPhoneTest {
         Tag181StrSecuritySettlAgentContactPhone tagData;
 
         tagData = new Tag181StrSecuritySettlAgentContactPhone(
-                new MyStringType(Tag181StrSecuritySettlAgentContactPhone.TESTA_STR_QUOTE_REQ_ID));
+                new MyStringType(Tag181StrSecuritySettlAgentContactPhone.TESTA_STR_SECURITY_SETTL_AGENT_CONTACT_PHONE));
         assertEquals( "Tag181StrSecuritySettlAgentContactPhone\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                         "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag181StrSecuritySettlAgentContactPhone.TESTA_STR_QUOTE_REQ_ID + "]\n" +
+                        "\tDataValue[" + Tag181StrSecuritySettlAgentContactPhone.TESTA_STR_SECURITY_SETTL_AGENT_CONTACT_PHONE + "]\n" +
                         "\tValuePair[" + tagData.toFIXIDString() + "=" +
-                                            Tag181StrSecuritySettlAgentContactPhone.TESTA_STR_QUOTE_REQ_ID + "]",
+                                            Tag181StrSecuritySettlAgentContactPhone.TESTA_STR_SECURITY_SETTL_AGENT_CONTACT_PHONE + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.fix40.tags.Tag200StrMaturityMonthYear;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -75,7 +74,7 @@ class Tag200StrMaturityMonthYearTest {
         Tag200StrMaturityMonthYear tagData;
 
         tagData = new Tag200StrMaturityMonthYear(
-                new MyStringType(Tag200StrMaturityMonthYear.TESTB_STR_QUOTE_REQ_ID));
+                new MyStringType(Tag200StrMaturityMonthYear.TESTB_STR_MATURITY_MONTH_YEAR));
         System.out.println( tagData.toVerboseString() );
     }
     @Test
@@ -83,8 +82,8 @@ class Tag200StrMaturityMonthYearTest {
         Tag200StrMaturityMonthYear tagData;
 
         tagData = new Tag200StrMaturityMonthYear(
-                new MyStringType(Tag200StrMaturityMonthYear.TESTB_STR_QUOTE_REQ_ID));
-        assertEquals( Tag200StrMaturityMonthYear.TESTB_STR_QUOTE_REQ_ID, tagData.getDataValue());
+                new MyStringType(Tag200StrMaturityMonthYear.TESTB_STR_MATURITY_MONTH_YEAR));
+        assertEquals( Tag200StrMaturityMonthYear.TESTB_STR_MATURITY_MONTH_YEAR, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -92,8 +91,8 @@ class Tag200StrMaturityMonthYearTest {
         Tag200StrMaturityMonthYear tagData;
 
         tagData = new Tag200StrMaturityMonthYear(
-                new MyStringType(Tag200StrMaturityMonthYear.TESTB_STR_QUOTE_REQ_ID));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag200StrMaturityMonthYear.TESTB_STR_QUOTE_REQ_ID,
+                new MyStringType(Tag200StrMaturityMonthYear.TESTB_STR_MATURITY_MONTH_YEAR));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag200StrMaturityMonthYear.TESTB_STR_MATURITY_MONTH_YEAR,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toValuePairString());
@@ -103,8 +102,8 @@ class Tag200StrMaturityMonthYearTest {
         Tag200StrMaturityMonthYear tagData;
 
         tagData = new Tag200StrMaturityMonthYear(
-                new MyStringType(Tag200StrMaturityMonthYear.TESTB_STR_QUOTE_REQ_ID));
-        assertEquals( Tag200StrMaturityMonthYear.TESTB_STR_QUOTE_REQ_ID,
+                new MyStringType(Tag200StrMaturityMonthYear.TESTB_STR_MATURITY_MONTH_YEAR));
+        assertEquals( Tag200StrMaturityMonthYear.TESTB_STR_MATURITY_MONTH_YEAR,
                 tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toString());
@@ -114,14 +113,15 @@ class Tag200StrMaturityMonthYearTest {
         Tag200StrMaturityMonthYear tagData;
 
         tagData = new Tag200StrMaturityMonthYear(
-                new MyStringType(Tag200StrMaturityMonthYear.TESTA_STR_QUOTE_REQ_ID));
+                new MyStringType(Tag200StrMaturityMonthYear.TESTA_STR_MATURITY_MONTH_YEAR));
         assertEquals( "Tag200StrMaturityMonthYear\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                         "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag200StrMaturityMonthYear.TESTA_STR_QUOTE_REQ_ID + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag200StrMaturityMonthYear.TESTA_STR_QUOTE_REQ_ID + "]",
+                        "\tDataValue[" + Tag200StrMaturityMonthYear.TESTA_STR_MATURITY_MONTH_YEAR + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" +
+                                            Tag200StrMaturityMonthYear.TESTA_STR_MATURITY_MONTH_YEAR + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

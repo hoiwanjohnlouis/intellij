@@ -16,7 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix41.enums;
 
-import static org.junit.jupiter.api.Assertions.*;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
  *  208
@@ -30,4 +34,24 @@ import static org.junit.jupiter.api.Assertions.*;
  *  <p>    Y - Details should be communicated
  */
 class Bool208NotifyBrokerOfCreditTest {
+    @Test
+    void Enum0114Test() {
+        Bool208NotifyBrokerOfCredit enumType;
+
+        enumType = Bool208NotifyBrokerOfCredit.NO;
+        assertEquals("N",enumType.toFIXIDString());
+        assertEquals("NO", enumType.toFIXNameString());
+        assertEquals("N - Details should not be communicated", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+
+        enumType = Bool208NotifyBrokerOfCredit.YES;
+        assertEquals("Y", enumType.toFIXIDString());
+        assertEquals("YES", enumType.toFIXNameString());
+        assertEquals("Y - Details should be communicated", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+    }
 }

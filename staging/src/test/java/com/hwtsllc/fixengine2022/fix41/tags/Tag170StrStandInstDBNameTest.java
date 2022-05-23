@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.fix40.tags.Tag170StrStandInstDBName;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -59,23 +58,23 @@ class Tag170StrStandInstDBNameTest {
     void PrintFIXTagTest() {
         Tag170StrStandInstDBName tagData;
 
-        tagData = new Tag170StrStandInstDBName(new MyStringType(Tag170StrStandInstDBName.TESTB_STR_QUOTE_REQ_ID));
+        tagData = new Tag170StrStandInstDBName(new MyStringType(Tag170StrStandInstDBName.TESTB_STR_STAND_INST_DB_NAME));
         System.out.println( tagData.toVerboseString() );
     }
     @Test
     void TagGetDataValueTest() {
         Tag170StrStandInstDBName tagData;
 
-        tagData = new Tag170StrStandInstDBName(new MyStringType(Tag170StrStandInstDBName.TESTB_STR_QUOTE_REQ_ID));
-        assertEquals( Tag170StrStandInstDBName.TESTB_STR_QUOTE_REQ_ID, tagData.getDataValue());
+        tagData = new Tag170StrStandInstDBName(new MyStringType(Tag170StrStandInstDBName.TESTB_STR_STAND_INST_DB_NAME));
+        assertEquals( Tag170StrStandInstDBName.TESTB_STR_STAND_INST_DB_NAME, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {
         Tag170StrStandInstDBName tagData;
 
-        tagData = new Tag170StrStandInstDBName(new MyStringType(Tag170StrStandInstDBName.TESTB_STR_QUOTE_REQ_ID));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag170StrStandInstDBName.TESTB_STR_QUOTE_REQ_ID,
+        tagData = new Tag170StrStandInstDBName(new MyStringType(Tag170StrStandInstDBName.TESTB_STR_STAND_INST_DB_NAME));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag170StrStandInstDBName.TESTB_STR_STAND_INST_DB_NAME,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toValuePairString());
@@ -84,8 +83,8 @@ class Tag170StrStandInstDBNameTest {
     void TagToStringTest() {
         Tag170StrStandInstDBName tagData;
 
-        tagData = new Tag170StrStandInstDBName(new MyStringType(Tag170StrStandInstDBName.TESTB_STR_QUOTE_REQ_ID));
-        assertEquals( Tag170StrStandInstDBName.TESTB_STR_QUOTE_REQ_ID,
+        tagData = new Tag170StrStandInstDBName(new MyStringType(Tag170StrStandInstDBName.TESTB_STR_STAND_INST_DB_NAME));
+        assertEquals( Tag170StrStandInstDBName.TESTB_STR_STAND_INST_DB_NAME,
                 tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toString());
@@ -94,14 +93,14 @@ class Tag170StrStandInstDBNameTest {
     void TagToVerboseStringTest() {
         Tag170StrStandInstDBName tagData;
 
-        tagData = new Tag170StrStandInstDBName(new MyStringType(Tag170StrStandInstDBName.TESTA_STR_QUOTE_REQ_ID));
+        tagData = new Tag170StrStandInstDBName(new MyStringType(Tag170StrStandInstDBName.TESTA_STR_STAND_INST_DB_NAME));
         assertEquals( "Tag170StrStandInstDBName\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                         "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag170StrStandInstDBName.TESTA_STR_QUOTE_REQ_ID + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag170StrStandInstDBName.TESTA_STR_QUOTE_REQ_ID + "]",
+                        "\tDataValue[" + Tag170StrStandInstDBName.TESTA_STR_STAND_INST_DB_NAME + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag170StrStandInstDBName.TESTA_STR_STAND_INST_DB_NAME + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

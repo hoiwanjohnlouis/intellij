@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.fix40.tags.Tag196StrAllocLinkID;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -61,23 +60,23 @@ class Tag196StrAllocLinkIDTest {
     void PrintFIXTagTest() {
         Tag196StrAllocLinkID tagData;
 
-        tagData = new Tag196StrAllocLinkID(new MyStringType(Tag196StrAllocLinkID.TESTB_STR_QUOTE_REQ_ID));
+        tagData = new Tag196StrAllocLinkID(new MyStringType(Tag196StrAllocLinkID.TESTB_STR_ALLOC_LINK_ID));
         System.out.println( tagData.toVerboseString() );
     }
     @Test
     void TagGetDataValueTest() {
         Tag196StrAllocLinkID tagData;
 
-        tagData = new Tag196StrAllocLinkID(new MyStringType(Tag196StrAllocLinkID.TESTB_STR_QUOTE_REQ_ID));
-        assertEquals( Tag196StrAllocLinkID.TESTB_STR_QUOTE_REQ_ID, tagData.getDataValue());
+        tagData = new Tag196StrAllocLinkID(new MyStringType(Tag196StrAllocLinkID.TESTB_STR_ALLOC_LINK_ID));
+        assertEquals( Tag196StrAllocLinkID.TESTB_STR_ALLOC_LINK_ID, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {
         Tag196StrAllocLinkID tagData;
 
-        tagData = new Tag196StrAllocLinkID(new MyStringType(Tag196StrAllocLinkID.TESTB_STR_QUOTE_REQ_ID));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag196StrAllocLinkID.TESTB_STR_QUOTE_REQ_ID,
+        tagData = new Tag196StrAllocLinkID(new MyStringType(Tag196StrAllocLinkID.TESTB_STR_ALLOC_LINK_ID));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag196StrAllocLinkID.TESTB_STR_ALLOC_LINK_ID,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toValuePairString());
@@ -86,8 +85,8 @@ class Tag196StrAllocLinkIDTest {
     void TagToStringTest() {
         Tag196StrAllocLinkID tagData;
 
-        tagData = new Tag196StrAllocLinkID(new MyStringType(Tag196StrAllocLinkID.TESTB_STR_QUOTE_REQ_ID));
-        assertEquals( Tag196StrAllocLinkID.TESTB_STR_QUOTE_REQ_ID,
+        tagData = new Tag196StrAllocLinkID(new MyStringType(Tag196StrAllocLinkID.TESTB_STR_ALLOC_LINK_ID));
+        assertEquals( Tag196StrAllocLinkID.TESTB_STR_ALLOC_LINK_ID,
                 tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toString());
@@ -96,14 +95,14 @@ class Tag196StrAllocLinkIDTest {
     void TagToVerboseStringTest() {
         Tag196StrAllocLinkID tagData;
 
-        tagData = new Tag196StrAllocLinkID(new MyStringType(Tag196StrAllocLinkID.TESTA_STR_QUOTE_REQ_ID));
+        tagData = new Tag196StrAllocLinkID(new MyStringType(Tag196StrAllocLinkID.TESTA_STR_ALLOC_LINK_ID));
         assertEquals( "Tag196StrAllocLinkID\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                         "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag196StrAllocLinkID.TESTA_STR_QUOTE_REQ_ID + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag196StrAllocLinkID.TESTA_STR_QUOTE_REQ_ID + "]",
+                        "\tDataValue[" + Tag196StrAllocLinkID.TESTA_STR_ALLOC_LINK_ID + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag196StrAllocLinkID.TESTA_STR_ALLOC_LINK_ID + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

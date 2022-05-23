@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.fix40.tags.Tag182StrCashSettlAgentName;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -63,7 +62,7 @@ class Tag182StrCashSettlAgentNameTest {
         Tag182StrCashSettlAgentName tagData;
 
         tagData = new Tag182StrCashSettlAgentName(
-                new MyStringType(Tag182StrCashSettlAgentName.TESTB_STR_QUOTE_REQ_ID));
+                new MyStringType(Tag182StrCashSettlAgentName.TESTB_STR_CASH_SETTL_AGENT_NAME));
         System.out.println( tagData.toVerboseString() );
     }
     @Test
@@ -71,8 +70,8 @@ class Tag182StrCashSettlAgentNameTest {
         Tag182StrCashSettlAgentName tagData;
 
         tagData = new Tag182StrCashSettlAgentName(
-                new MyStringType(Tag182StrCashSettlAgentName.TESTB_STR_QUOTE_REQ_ID));
-        assertEquals( Tag182StrCashSettlAgentName.TESTB_STR_QUOTE_REQ_ID, tagData.getDataValue());
+                new MyStringType(Tag182StrCashSettlAgentName.TESTB_STR_CASH_SETTL_AGENT_NAME));
+        assertEquals( Tag182StrCashSettlAgentName.TESTB_STR_CASH_SETTL_AGENT_NAME, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -80,8 +79,8 @@ class Tag182StrCashSettlAgentNameTest {
         Tag182StrCashSettlAgentName tagData;
 
         tagData = new Tag182StrCashSettlAgentName(
-                new MyStringType(Tag182StrCashSettlAgentName.TESTB_STR_QUOTE_REQ_ID));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag182StrCashSettlAgentName.TESTB_STR_QUOTE_REQ_ID,
+                new MyStringType(Tag182StrCashSettlAgentName.TESTB_STR_CASH_SETTL_AGENT_NAME));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag182StrCashSettlAgentName.TESTB_STR_CASH_SETTL_AGENT_NAME,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toValuePairString());
@@ -91,8 +90,8 @@ class Tag182StrCashSettlAgentNameTest {
         Tag182StrCashSettlAgentName tagData;
 
         tagData = new Tag182StrCashSettlAgentName(
-                new MyStringType(Tag182StrCashSettlAgentName.TESTB_STR_QUOTE_REQ_ID));
-        assertEquals( Tag182StrCashSettlAgentName.TESTB_STR_QUOTE_REQ_ID,
+                new MyStringType(Tag182StrCashSettlAgentName.TESTB_STR_CASH_SETTL_AGENT_NAME));
+        assertEquals( Tag182StrCashSettlAgentName.TESTB_STR_CASH_SETTL_AGENT_NAME,
                 tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toString());
@@ -102,14 +101,15 @@ class Tag182StrCashSettlAgentNameTest {
         Tag182StrCashSettlAgentName tagData;
 
         tagData = new Tag182StrCashSettlAgentName(
-                new MyStringType(Tag182StrCashSettlAgentName.TESTA_STR_QUOTE_REQ_ID));
+                new MyStringType(Tag182StrCashSettlAgentName.TESTA_STR_CASH_SETTL_AGENT_NAME));
         assertEquals( "Tag182StrCashSettlAgentName\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                         "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag182StrCashSettlAgentName.TESTA_STR_QUOTE_REQ_ID + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag182StrCashSettlAgentName.TESTA_STR_QUOTE_REQ_ID + "]",
+                        "\tDataValue[" + Tag182StrCashSettlAgentName.TESTA_STR_CASH_SETTL_AGENT_NAME + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" +
+                                            Tag182StrCashSettlAgentName.TESTA_STR_CASH_SETTL_AGENT_NAME + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

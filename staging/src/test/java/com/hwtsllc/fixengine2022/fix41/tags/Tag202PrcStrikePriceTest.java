@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
-import com.hwtsllc.fixengine2022.fix40.tags.Tag202PrcStrikePrice;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -59,23 +58,23 @@ class Tag202PrcStrikePriceTest {
     void PrintFIXTagTest() {
         Tag202PrcStrikePrice tagData;
 
-        tagData = new Tag202PrcStrikePrice(new MyPriceType(Tag202PrcStrikePrice.TESTB_PRC_PREV_CLOSE_PX));
+        tagData = new Tag202PrcStrikePrice(new MyPriceType(Tag202PrcStrikePrice.TESTB_PRC_STRIKE_PRICE));
         System.out.println( tagData.toVerboseString() );
     }
     @Test
     void TagGetDataValueTest() {
         Tag202PrcStrikePrice tagData;
 
-        tagData = new Tag202PrcStrikePrice(new MyPriceType(Tag202PrcStrikePrice.TESTB_PRC_PREV_CLOSE_PX));
-        assertEquals( Tag202PrcStrikePrice.TESTB_PRC_PREV_CLOSE_PX, tagData.getDataValue());
+        tagData = new Tag202PrcStrikePrice(new MyPriceType(Tag202PrcStrikePrice.TESTB_PRC_STRIKE_PRICE));
+        assertEquals( Tag202PrcStrikePrice.TESTB_PRC_STRIKE_PRICE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {
         Tag202PrcStrikePrice tagData;
 
-        tagData = new Tag202PrcStrikePrice(new MyPriceType(Tag202PrcStrikePrice.TESTB_PRC_PREV_CLOSE_PX));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag202PrcStrikePrice.TESTB_PRC_PREV_CLOSE_PX,
+        tagData = new Tag202PrcStrikePrice(new MyPriceType(Tag202PrcStrikePrice.TESTB_PRC_STRIKE_PRICE));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag202PrcStrikePrice.TESTB_PRC_STRIKE_PRICE,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toValuePairString());
@@ -84,8 +83,8 @@ class Tag202PrcStrikePriceTest {
     void TagToStringTest() {
         Tag202PrcStrikePrice tagData;
 
-        tagData = new Tag202PrcStrikePrice(new MyPriceType(Tag202PrcStrikePrice.TESTB_PRC_PREV_CLOSE_PX));
-        assertEquals( String.valueOf(Tag202PrcStrikePrice.TESTB_PRC_PREV_CLOSE_PX),
+        tagData = new Tag202PrcStrikePrice(new MyPriceType(Tag202PrcStrikePrice.TESTB_PRC_STRIKE_PRICE));
+        assertEquals( String.valueOf(Tag202PrcStrikePrice.TESTB_PRC_STRIKE_PRICE),
                 tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toString());
@@ -94,14 +93,14 @@ class Tag202PrcStrikePriceTest {
     void TagToVerboseStringTest() {
         Tag202PrcStrikePrice tagData;
 
-        tagData = new Tag202PrcStrikePrice(new MyPriceType(Tag202PrcStrikePrice.TESTA_PRC_PREV_CLOSE_PX));
+        tagData = new Tag202PrcStrikePrice(new MyPriceType(Tag202PrcStrikePrice.TESTA_PRC_STRIKE_PRICE));
         assertEquals( "Tag202PrcStrikePrice\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                         "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag202PrcStrikePrice.TESTA_PRC_PREV_CLOSE_PX + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag202PrcStrikePrice.TESTA_PRC_PREV_CLOSE_PX + "]",
+                        "\tDataValue[" + Tag202PrcStrikePrice.TESTA_PRC_STRIKE_PRICE + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag202PrcStrikePrice.TESTA_PRC_STRIKE_PRICE + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

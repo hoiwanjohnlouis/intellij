@@ -64,7 +64,7 @@ class Tag195PxoLastForwardPointsTest {
         Tag195PxoLastForwardPoints tagData;
 
         tagData = new Tag195PxoLastForwardPoints(
-                new MyPriceOffsetType(Tag195PxoLastForwardPoints.TESTB_PRC_PREV_CLOSE_PX));
+                new MyPriceOffsetType(Tag195PxoLastForwardPoints.TESTB_PXO_LAST_FORWARD_POINTS));
         System.out.println( tagData.toVerboseString() );
     }
     @Test
@@ -72,8 +72,8 @@ class Tag195PxoLastForwardPointsTest {
         Tag195PxoLastForwardPoints tagData;
 
         tagData = new Tag195PxoLastForwardPoints(
-                new MyPriceOffsetType(Tag195PxoLastForwardPoints.TESTB_PRC_PREV_CLOSE_PX));
-        assertEquals( Tag195PxoLastForwardPoints.TESTB_PRC_PREV_CLOSE_PX, tagData.getDataValue());
+                new MyPriceOffsetType(Tag195PxoLastForwardPoints.TESTB_PXO_LAST_FORWARD_POINTS));
+        assertEquals( Tag195PxoLastForwardPoints.TESTB_PXO_LAST_FORWARD_POINTS, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -81,8 +81,8 @@ class Tag195PxoLastForwardPointsTest {
         Tag195PxoLastForwardPoints tagData;
 
         tagData = new Tag195PxoLastForwardPoints(
-                new MyPriceOffsetType(Tag195PxoLastForwardPoints.TESTB_PRC_PREV_CLOSE_PX));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag195PxoLastForwardPoints.TESTB_PRC_PREV_CLOSE_PX,
+                new MyPriceOffsetType(Tag195PxoLastForwardPoints.TESTB_PXO_LAST_FORWARD_POINTS));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag195PxoLastForwardPoints.TESTB_PXO_LAST_FORWARD_POINTS,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toValuePairString());
@@ -92,8 +92,8 @@ class Tag195PxoLastForwardPointsTest {
         Tag195PxoLastForwardPoints tagData;
 
         tagData = new Tag195PxoLastForwardPoints(
-                new MyPriceOffsetType(Tag195PxoLastForwardPoints.TESTB_PRC_PREV_CLOSE_PX));
-        assertEquals( String.valueOf(Tag195PxoLastForwardPoints.TESTB_PRC_PREV_CLOSE_PX),
+                new MyPriceOffsetType(Tag195PxoLastForwardPoints.TESTB_PXO_LAST_FORWARD_POINTS));
+        assertEquals( String.valueOf(Tag195PxoLastForwardPoints.TESTB_PXO_LAST_FORWARD_POINTS),
                 tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toString());
@@ -103,14 +103,15 @@ class Tag195PxoLastForwardPointsTest {
         Tag195PxoLastForwardPoints tagData;
 
         tagData = new Tag195PxoLastForwardPoints(
-                new MyPriceOffsetType(Tag195PxoLastForwardPoints.TESTA_PRC_PREV_CLOSE_PX));
+                new MyPriceOffsetType(Tag195PxoLastForwardPoints.TESTA_PXO_LAST_FORWARD_POINTS));
         assertEquals( "Tag195PxoLastForwardPoints\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                         "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag195PxoLastForwardPoints.TESTA_PRC_PREV_CLOSE_PX + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag195PxoLastForwardPoints.TESTA_PRC_PREV_CLOSE_PX + "]",
+                        "\tDataValue[" + Tag195PxoLastForwardPoints.TESTA_PXO_LAST_FORWARD_POINTS + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" +
+                                            Tag195PxoLastForwardPoints.TESTA_PXO_LAST_FORWARD_POINTS + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

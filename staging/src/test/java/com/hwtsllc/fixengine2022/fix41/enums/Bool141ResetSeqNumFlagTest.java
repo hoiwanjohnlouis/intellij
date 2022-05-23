@@ -16,7 +16,11 @@
 
 package com.hwtsllc.fixengine2022.fix41.enums;
 
-import static org.junit.jupiter.api.Assertions.*;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
  *  141
@@ -30,4 +34,24 @@ import static org.junit.jupiter.api.Assertions.*;
  *  <p>    Y - Yes, reset sequence numbers
  */
 class Bool141ResetSeqNumFlagTest {
+    @Test
+    void Enum0114Test() {
+        Bool141ResetSeqNumFlag enumType;
+
+        enumType = Bool141ResetSeqNumFlag.NO;
+        assertEquals("N",enumType.toFIXIDString());
+        assertEquals("NO", enumType.toFIXNameString());
+        assertEquals("N - No", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+
+        enumType = Bool141ResetSeqNumFlag.YES;
+        assertEquals("Y", enumType.toFIXIDString());
+        assertEquals("YES", enumType.toFIXNameString());
+        assertEquals("Y - Yes, reset sequence numbers", enumType.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+    }
 }

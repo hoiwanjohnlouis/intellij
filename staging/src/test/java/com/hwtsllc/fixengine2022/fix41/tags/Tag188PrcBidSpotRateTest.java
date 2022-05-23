@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
-import com.hwtsllc.fixengine2022.fix40.tags.Tag188PrcBidSpotRate;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -59,23 +58,23 @@ class Tag188PrcBidSpotRateTest {
     void PrintFIXTagTest() {
         Tag188PrcBidSpotRate tagData;
 
-        tagData = new Tag188PrcBidSpotRate(new MyPriceType(Tag188PrcBidSpotRate.TESTB_PRC_PREV_CLOSE_PX));
+        tagData = new Tag188PrcBidSpotRate(new MyPriceType(Tag188PrcBidSpotRate.TESTB_PRC_BID_SPOT_RATE));
         System.out.println( tagData.toVerboseString() );
     }
     @Test
     void TagGetDataValueTest() {
         Tag188PrcBidSpotRate tagData;
 
-        tagData = new Tag188PrcBidSpotRate(new MyPriceType(Tag188PrcBidSpotRate.TESTB_PRC_PREV_CLOSE_PX));
-        assertEquals( Tag188PrcBidSpotRate.TESTB_PRC_PREV_CLOSE_PX, tagData.getDataValue());
+        tagData = new Tag188PrcBidSpotRate(new MyPriceType(Tag188PrcBidSpotRate.TESTB_PRC_BID_SPOT_RATE));
+        assertEquals( Tag188PrcBidSpotRate.TESTB_PRC_BID_SPOT_RATE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {
         Tag188PrcBidSpotRate tagData;
 
-        tagData = new Tag188PrcBidSpotRate(new MyPriceType(Tag188PrcBidSpotRate.TESTB_PRC_PREV_CLOSE_PX));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag188PrcBidSpotRate.TESTB_PRC_PREV_CLOSE_PX,
+        tagData = new Tag188PrcBidSpotRate(new MyPriceType(Tag188PrcBidSpotRate.TESTB_PRC_BID_SPOT_RATE));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag188PrcBidSpotRate.TESTB_PRC_BID_SPOT_RATE,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toValuePairString());
@@ -84,8 +83,8 @@ class Tag188PrcBidSpotRateTest {
     void TagToStringTest() {
         Tag188PrcBidSpotRate tagData;
 
-        tagData = new Tag188PrcBidSpotRate(new MyPriceType(Tag188PrcBidSpotRate.TESTB_PRC_PREV_CLOSE_PX));
-        assertEquals( String.valueOf(Tag188PrcBidSpotRate.TESTB_PRC_PREV_CLOSE_PX),
+        tagData = new Tag188PrcBidSpotRate(new MyPriceType(Tag188PrcBidSpotRate.TESTB_PRC_BID_SPOT_RATE));
+        assertEquals( String.valueOf(Tag188PrcBidSpotRate.TESTB_PRC_BID_SPOT_RATE),
                 tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toString());
@@ -94,14 +93,14 @@ class Tag188PrcBidSpotRateTest {
     void TagToVerboseStringTest() {
         Tag188PrcBidSpotRate tagData;
 
-        tagData = new Tag188PrcBidSpotRate(new MyPriceType(Tag188PrcBidSpotRate.TESTA_PRC_PREV_CLOSE_PX));
+        tagData = new Tag188PrcBidSpotRate(new MyPriceType(Tag188PrcBidSpotRate.TESTA_PRC_BID_SPOT_RATE));
         assertEquals( "Tag188PrcBidSpotRate\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                         "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag188PrcBidSpotRate.TESTA_PRC_PREV_CLOSE_PX + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag188PrcBidSpotRate.TESTA_PRC_PREV_CLOSE_PX + "]",
+                        "\tDataValue[" + Tag188PrcBidSpotRate.TESTA_PRC_BID_SPOT_RATE + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag188PrcBidSpotRate.TESTA_PRC_BID_SPOT_RATE + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

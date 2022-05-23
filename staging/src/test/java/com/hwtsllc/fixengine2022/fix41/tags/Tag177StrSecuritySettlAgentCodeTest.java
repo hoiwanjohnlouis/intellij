@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.fix40.tags.Tag177StrSecuritySettlAgentCode;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -66,7 +65,7 @@ class Tag177StrSecuritySettlAgentCodeTest {
         Tag177StrSecuritySettlAgentCode tagData;
 
         tagData = new Tag177StrSecuritySettlAgentCode(
-                new MyStringType(Tag177StrSecuritySettlAgentCode.TESTB_STR_QUOTE_REQ_ID));
+                new MyStringType(Tag177StrSecuritySettlAgentCode.TESTB_STR_SECURITY_SETTL_AGENT_CODE));
         System.out.println( tagData.toVerboseString() );
     }
     @Test
@@ -74,8 +73,8 @@ class Tag177StrSecuritySettlAgentCodeTest {
         Tag177StrSecuritySettlAgentCode tagData;
 
         tagData = new Tag177StrSecuritySettlAgentCode(
-                new MyStringType(Tag177StrSecuritySettlAgentCode.TESTB_STR_QUOTE_REQ_ID));
-        assertEquals( Tag177StrSecuritySettlAgentCode.TESTB_STR_QUOTE_REQ_ID, tagData.getDataValue());
+                new MyStringType(Tag177StrSecuritySettlAgentCode.TESTB_STR_SECURITY_SETTL_AGENT_CODE));
+        assertEquals( Tag177StrSecuritySettlAgentCode.TESTB_STR_SECURITY_SETTL_AGENT_CODE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -83,8 +82,9 @@ class Tag177StrSecuritySettlAgentCodeTest {
         Tag177StrSecuritySettlAgentCode tagData;
 
         tagData = new Tag177StrSecuritySettlAgentCode(
-                new MyStringType(Tag177StrSecuritySettlAgentCode.TESTB_STR_QUOTE_REQ_ID));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag177StrSecuritySettlAgentCode.TESTB_STR_QUOTE_REQ_ID,
+                new MyStringType(Tag177StrSecuritySettlAgentCode.TESTB_STR_SECURITY_SETTL_AGENT_CODE));
+        assertEquals( tagData.toFIXIDString() + "=" +
+                                Tag177StrSecuritySettlAgentCode.TESTB_STR_SECURITY_SETTL_AGENT_CODE,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toValuePairString());
@@ -94,8 +94,8 @@ class Tag177StrSecuritySettlAgentCodeTest {
         Tag177StrSecuritySettlAgentCode tagData;
 
         tagData = new Tag177StrSecuritySettlAgentCode(
-                new MyStringType(Tag177StrSecuritySettlAgentCode.TESTB_STR_QUOTE_REQ_ID));
-        assertEquals( Tag177StrSecuritySettlAgentCode.TESTB_STR_QUOTE_REQ_ID,
+                new MyStringType(Tag177StrSecuritySettlAgentCode.TESTB_STR_SECURITY_SETTL_AGENT_CODE));
+        assertEquals( Tag177StrSecuritySettlAgentCode.TESTB_STR_SECURITY_SETTL_AGENT_CODE,
                 tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toString());
@@ -105,15 +105,15 @@ class Tag177StrSecuritySettlAgentCodeTest {
         Tag177StrSecuritySettlAgentCode tagData;
 
         tagData = new Tag177StrSecuritySettlAgentCode(
-                new MyStringType(Tag177StrSecuritySettlAgentCode.TESTA_STR_QUOTE_REQ_ID));
+                new MyStringType(Tag177StrSecuritySettlAgentCode.TESTA_STR_SECURITY_SETTL_AGENT_CODE));
         assertEquals( "Tag177StrSecuritySettlAgentCode\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                         "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag177StrSecuritySettlAgentCode.TESTA_STR_QUOTE_REQ_ID + "]\n" +
+                        "\tDataValue[" + Tag177StrSecuritySettlAgentCode.TESTA_STR_SECURITY_SETTL_AGENT_CODE + "]\n" +
                         "\tValuePair[" + tagData.toFIXIDString() + "=" +
-                                            Tag177StrSecuritySettlAgentCode.TESTA_STR_QUOTE_REQ_ID + "]",
+                                            Tag177StrSecuritySettlAgentCode.TESTA_STR_SECURITY_SETTL_AGENT_CODE + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

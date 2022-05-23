@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.fix40.tags.Tag198StrSecondaryOrderID;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -63,7 +62,7 @@ class Tag198StrSecondaryOrderIDTest {
         Tag198StrSecondaryOrderID tagData;
 
         tagData = new Tag198StrSecondaryOrderID(
-                new MyStringType(Tag198StrSecondaryOrderID.TESTB_STR_QUOTE_REQ_ID));
+                new MyStringType(Tag198StrSecondaryOrderID.TESTB_STR_SECONDARY_ORDER_ID));
         System.out.println( tagData.toVerboseString() );
     }
     @Test
@@ -71,8 +70,8 @@ class Tag198StrSecondaryOrderIDTest {
         Tag198StrSecondaryOrderID tagData;
 
         tagData = new Tag198StrSecondaryOrderID(
-                new MyStringType(Tag198StrSecondaryOrderID.TESTB_STR_QUOTE_REQ_ID));
-        assertEquals( Tag198StrSecondaryOrderID.TESTB_STR_QUOTE_REQ_ID, tagData.getDataValue());
+                new MyStringType(Tag198StrSecondaryOrderID.TESTB_STR_SECONDARY_ORDER_ID));
+        assertEquals( Tag198StrSecondaryOrderID.TESTB_STR_SECONDARY_ORDER_ID, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -80,8 +79,8 @@ class Tag198StrSecondaryOrderIDTest {
         Tag198StrSecondaryOrderID tagData;
 
         tagData = new Tag198StrSecondaryOrderID(
-                new MyStringType(Tag198StrSecondaryOrderID.TESTB_STR_QUOTE_REQ_ID));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag198StrSecondaryOrderID.TESTB_STR_QUOTE_REQ_ID,
+                new MyStringType(Tag198StrSecondaryOrderID.TESTB_STR_SECONDARY_ORDER_ID));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag198StrSecondaryOrderID.TESTB_STR_SECONDARY_ORDER_ID,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toValuePairString());
@@ -90,8 +89,8 @@ class Tag198StrSecondaryOrderIDTest {
     void TagToStringTest() {
         Tag198StrSecondaryOrderID tagData;
 
-        tagData = new Tag198StrSecondaryOrderID(new MyStringType(Tag198StrSecondaryOrderID.TESTB_STR_QUOTE_REQ_ID));
-        assertEquals( Tag198StrSecondaryOrderID.TESTB_STR_QUOTE_REQ_ID,
+        tagData = new Tag198StrSecondaryOrderID(new MyStringType(Tag198StrSecondaryOrderID.TESTB_STR_SECONDARY_ORDER_ID));
+        assertEquals( Tag198StrSecondaryOrderID.TESTB_STR_SECONDARY_ORDER_ID,
                 tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toString());
@@ -101,14 +100,15 @@ class Tag198StrSecondaryOrderIDTest {
         Tag198StrSecondaryOrderID tagData;
 
         tagData = new Tag198StrSecondaryOrderID(
-                new MyStringType(Tag198StrSecondaryOrderID.TESTA_STR_QUOTE_REQ_ID));
+                new MyStringType(Tag198StrSecondaryOrderID.TESTA_STR_SECONDARY_ORDER_ID));
         assertEquals( "Tag198StrSecondaryOrderID\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                         "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag198StrSecondaryOrderID.TESTA_STR_QUOTE_REQ_ID + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag198StrSecondaryOrderID.TESTA_STR_QUOTE_REQ_ID + "]",
+                        "\tDataValue[" + Tag198StrSecondaryOrderID.TESTA_STR_SECONDARY_ORDER_ID + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" +
+                                            Tag198StrSecondaryOrderID.TESTA_STR_SECONDARY_ORDER_ID + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

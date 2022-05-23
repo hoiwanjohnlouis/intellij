@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.fix40.tags.Tag164StrEmailThreadID;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -59,23 +58,23 @@ class Tag164StrEmailThreadIDTest {
     void PrintFIXTagTest() {
         Tag164StrEmailThreadID tagData;
 
-        tagData = new Tag164StrEmailThreadID(new MyStringType(Tag164StrEmailThreadID.TESTB_STR_QUOTE_REQ_ID));
+        tagData = new Tag164StrEmailThreadID(new MyStringType(Tag164StrEmailThreadID.TESTB_STR_EMAIL_THREAD_ID));
         System.out.println( tagData.toVerboseString() );
     }
     @Test
     void TagGetDataValueTest() {
         Tag164StrEmailThreadID tagData;
 
-        tagData = new Tag164StrEmailThreadID(new MyStringType(Tag164StrEmailThreadID.TESTB_STR_QUOTE_REQ_ID));
-        assertEquals( Tag164StrEmailThreadID.TESTB_STR_QUOTE_REQ_ID, tagData.getDataValue());
+        tagData = new Tag164StrEmailThreadID(new MyStringType(Tag164StrEmailThreadID.TESTB_STR_EMAIL_THREAD_ID));
+        assertEquals( Tag164StrEmailThreadID.TESTB_STR_EMAIL_THREAD_ID, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {
         Tag164StrEmailThreadID tagData;
 
-        tagData = new Tag164StrEmailThreadID(new MyStringType(Tag164StrEmailThreadID.TESTB_STR_QUOTE_REQ_ID));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag164StrEmailThreadID.TESTB_STR_QUOTE_REQ_ID,
+        tagData = new Tag164StrEmailThreadID(new MyStringType(Tag164StrEmailThreadID.TESTB_STR_EMAIL_THREAD_ID));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag164StrEmailThreadID.TESTB_STR_EMAIL_THREAD_ID,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toValuePairString());
@@ -84,8 +83,8 @@ class Tag164StrEmailThreadIDTest {
     void TagToStringTest() {
         Tag164StrEmailThreadID tagData;
 
-        tagData = new Tag164StrEmailThreadID(new MyStringType(Tag164StrEmailThreadID.TESTB_STR_QUOTE_REQ_ID));
-        assertEquals( Tag164StrEmailThreadID.TESTB_STR_QUOTE_REQ_ID,
+        tagData = new Tag164StrEmailThreadID(new MyStringType(Tag164StrEmailThreadID.TESTB_STR_EMAIL_THREAD_ID));
+        assertEquals( Tag164StrEmailThreadID.TESTB_STR_EMAIL_THREAD_ID,
                 tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toString());
@@ -94,14 +93,14 @@ class Tag164StrEmailThreadIDTest {
     void TagToVerboseStringTest() {
         Tag164StrEmailThreadID tagData;
 
-        tagData = new Tag164StrEmailThreadID(new MyStringType(Tag164StrEmailThreadID.TESTA_STR_QUOTE_REQ_ID));
+        tagData = new Tag164StrEmailThreadID(new MyStringType(Tag164StrEmailThreadID.TESTA_STR_EMAIL_THREAD_ID));
         assertEquals( "Tag164StrEmailThreadID\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                         "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag164StrEmailThreadID.TESTA_STR_QUOTE_REQ_ID + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag164StrEmailThreadID.TESTA_STR_QUOTE_REQ_ID + "]",
+                        "\tDataValue[" + Tag164StrEmailThreadID.TESTA_STR_EMAIL_THREAD_ID + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag164StrEmailThreadID.TESTA_STR_EMAIL_THREAD_ID + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

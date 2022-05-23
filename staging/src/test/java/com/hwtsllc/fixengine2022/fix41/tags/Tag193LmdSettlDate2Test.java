@@ -18,8 +18,6 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyLocalMktDateType;
-import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.fix40.tags.Tag193LmdSettlDate2;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -61,23 +59,23 @@ class Tag193LmdSettlDate2Test {
     void PrintFIXTagTest() {
         Tag193LmdSettlDate2 tagData;
 
-        tagData = new Tag193LmdSettlDate2(new MyLocalMktDateType(Tag193LmdSettlDate2.TESTB_STR_DELIVER_TO_SUB_ID));
+        tagData = new Tag193LmdSettlDate2(new MyLocalMktDateType(Tag193LmdSettlDate2.TESTB_LMD_SETTL_DATE_2));
         System.out.println( tagData.toVerboseString() );
     }
     @Test
     void TagGetDataValueTest() {
         Tag193LmdSettlDate2 tagData;
 
-        tagData = new Tag193LmdSettlDate2(new MyLocalMktDateType(Tag193LmdSettlDate2.TESTB_STR_DELIVER_TO_SUB_ID));
-        assertEquals( Tag193LmdSettlDate2.TESTB_STR_DELIVER_TO_SUB_ID, tagData.getDataValue());
+        tagData = new Tag193LmdSettlDate2(new MyLocalMktDateType(Tag193LmdSettlDate2.TESTB_LMD_SETTL_DATE_2));
+        assertEquals( Tag193LmdSettlDate2.TESTB_LMD_SETTL_DATE_2, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {
         Tag193LmdSettlDate2 tagData;
 
-        tagData = new Tag193LmdSettlDate2(new MyLocalMktDateType(Tag193LmdSettlDate2.TESTB_STR_DELIVER_TO_SUB_ID));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag193LmdSettlDate2.TESTB_STR_DELIVER_TO_SUB_ID,
+        tagData = new Tag193LmdSettlDate2(new MyLocalMktDateType(Tag193LmdSettlDate2.TESTB_LMD_SETTL_DATE_2));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag193LmdSettlDate2.TESTB_LMD_SETTL_DATE_2,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toValuePairString());
@@ -86,8 +84,8 @@ class Tag193LmdSettlDate2Test {
     void TagToStringTest() {
         Tag193LmdSettlDate2 tagData;
 
-        tagData = new Tag193LmdSettlDate2(new MyLocalMktDateType(Tag193LmdSettlDate2.TESTB_STR_DELIVER_TO_SUB_ID));
-        assertEquals( Tag193LmdSettlDate2.TESTB_STR_DELIVER_TO_SUB_ID,
+        tagData = new Tag193LmdSettlDate2(new MyLocalMktDateType(Tag193LmdSettlDate2.TESTB_LMD_SETTL_DATE_2));
+        assertEquals( Tag193LmdSettlDate2.TESTB_LMD_SETTL_DATE_2,
                 tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toString());
@@ -96,14 +94,14 @@ class Tag193LmdSettlDate2Test {
     void TagToVerboseStringTest() {
         Tag193LmdSettlDate2 tagData;
 
-        tagData = new Tag193LmdSettlDate2(new MyLocalMktDateType(Tag193LmdSettlDate2.TESTA_STR_DELIVER_TO_SUB_ID));
+        tagData = new Tag193LmdSettlDate2(new MyLocalMktDateType(Tag193LmdSettlDate2.TESTA_LMD_SETTL_DATE_2));
         assertEquals( "Tag193LmdSettlDate2\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                         "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag193LmdSettlDate2.TESTA_STR_DELIVER_TO_SUB_ID + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag193LmdSettlDate2.TESTA_STR_DELIVER_TO_SUB_ID + "]",
+                        "\tDataValue[" + Tag193LmdSettlDate2.TESTA_LMD_SETTL_DATE_2 + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag193LmdSettlDate2.TESTA_LMD_SETTL_DATE_2 + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.fix40.tags.Tag161StrAllocText;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -59,23 +58,23 @@ class Tag161StrAllocTextTest {
     void PrintFIXTagTest() {
         Tag161StrAllocText tagData;
 
-        tagData = new Tag161StrAllocText(new MyStringType(Tag161StrAllocText.TESTB_STR_QUOTE_REQ_ID));
+        tagData = new Tag161StrAllocText(new MyStringType(Tag161StrAllocText.TESTB_STR_ALLOC_TEXT));
         System.out.println( tagData.toVerboseString() );
     }
     @Test
     void TagGetDataValueTest() {
         Tag161StrAllocText tagData;
 
-        tagData = new Tag161StrAllocText(new MyStringType(Tag161StrAllocText.TESTB_STR_QUOTE_REQ_ID));
-        assertEquals( Tag161StrAllocText.TESTB_STR_QUOTE_REQ_ID, tagData.getDataValue());
+        tagData = new Tag161StrAllocText(new MyStringType(Tag161StrAllocText.TESTB_STR_ALLOC_TEXT));
+        assertEquals( Tag161StrAllocText.TESTB_STR_ALLOC_TEXT, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {
         Tag161StrAllocText tagData;
 
-        tagData = new Tag161StrAllocText(new MyStringType(Tag161StrAllocText.TESTB_STR_QUOTE_REQ_ID));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag161StrAllocText.TESTB_STR_QUOTE_REQ_ID,
+        tagData = new Tag161StrAllocText(new MyStringType(Tag161StrAllocText.TESTB_STR_ALLOC_TEXT));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag161StrAllocText.TESTB_STR_ALLOC_TEXT,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toValuePairString());
@@ -84,8 +83,8 @@ class Tag161StrAllocTextTest {
     void TagToStringTest() {
         Tag161StrAllocText tagData;
 
-        tagData = new Tag161StrAllocText(new MyStringType(Tag161StrAllocText.TESTB_STR_QUOTE_REQ_ID));
-        assertEquals( Tag161StrAllocText.TESTB_STR_QUOTE_REQ_ID,
+        tagData = new Tag161StrAllocText(new MyStringType(Tag161StrAllocText.TESTB_STR_ALLOC_TEXT));
+        assertEquals( Tag161StrAllocText.TESTB_STR_ALLOC_TEXT,
                 tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toString());
@@ -94,14 +93,14 @@ class Tag161StrAllocTextTest {
     void TagToVerboseStringTest() {
         Tag161StrAllocText tagData;
 
-        tagData = new Tag161StrAllocText(new MyStringType(Tag161StrAllocText.TESTA_STR_QUOTE_REQ_ID));
+        tagData = new Tag161StrAllocText(new MyStringType(Tag161StrAllocText.TESTA_STR_ALLOC_TEXT));
         assertEquals( "Tag161StrAllocText\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                         "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag161StrAllocText.TESTA_STR_QUOTE_REQ_ID + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag161StrAllocText.TESTA_STR_QUOTE_REQ_ID + "]",
+                        "\tDataValue[" + Tag161StrAllocText.TESTA_STR_ALLOC_TEXT + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag161StrAllocText.TESTA_STR_ALLOC_TEXT + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
