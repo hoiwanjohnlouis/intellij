@@ -56,4 +56,54 @@ class Tag199NumNoIOIQualifiersTest {
         assertEquals( Tag199NumNoIOIQualifiers.TESTB_NUM_NO_IOI_QUALIFIERS, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag199NumNoIOIQualifiers tagData;
+
+        tagData = new Tag199NumNoIOIQualifiers(new MyNumInGroupType(Tag199NumNoIOIQualifiers.TESTB_NUM_NO_IOI_QUALIFIERS));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag199NumNoIOIQualifiers tagData;
+
+        tagData = new Tag199NumNoIOIQualifiers(new MyNumInGroupType(Tag199NumNoIOIQualifiers.TESTB_NUM_NO_IOI_QUALIFIERS));
+        assertEquals( Tag199NumNoIOIQualifiers.TESTB_NUM_NO_IOI_QUALIFIERS, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag199NumNoIOIQualifiers tagData;
+
+        tagData = new Tag199NumNoIOIQualifiers(new MyNumInGroupType(Tag199NumNoIOIQualifiers.TESTB_NUM_NO_IOI_QUALIFIERS));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag199NumNoIOIQualifiers.TESTB_NUM_NO_IOI_QUALIFIERS,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag199NumNoIOIQualifiers tagData;
+
+        tagData = new Tag199NumNoIOIQualifiers(new MyNumInGroupType(Tag199NumNoIOIQualifiers.TESTB_NUM_NO_IOI_QUALIFIERS));
+        assertEquals( String.valueOf(Tag199NumNoIOIQualifiers.TESTB_NUM_NO_IOI_QUALIFIERS),
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag199NumNoIOIQualifiers tagData;
+
+        tagData = new Tag199NumNoIOIQualifiers(new MyNumInGroupType(Tag199NumNoIOIQualifiers.TESTA_NUM_NO_IOI_QUALIFIERS));
+        assertEquals( "Tag199NumNoIOIQualifiers\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag199NumNoIOIQualifiers.TESTA_NUM_NO_IOI_QUALIFIERS + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag199NumNoIOIQualifiers.TESTA_NUM_NO_IOI_QUALIFIERS + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

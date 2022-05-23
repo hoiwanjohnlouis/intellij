@@ -52,11 +52,67 @@ class Tag158PctAccruedInterestRateTest {
         tagData = new Tag158PctAccruedInterestRate(
                 new MyPercentageType(Tag158PctAccruedInterestRate.TESTA_PCT_ACCRUED_INTEREST_RATE));
         assertEquals( Tag158PctAccruedInterestRate.TESTA_PCT_ACCRUED_INTEREST_RATE, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag158PctAccruedInterestRate(
                 new MyPercentageType(Tag158PctAccruedInterestRate.TESTB_PCT_ACCRUED_INTEREST_RATE));
         assertEquals( Tag158PctAccruedInterestRate.TESTB_PCT_ACCRUED_INTEREST_RATE, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag158PctAccruedInterestRate tagData;
+
+        tagData = new Tag158PctAccruedInterestRate(
+                new MyPercentageType(Tag158PctAccruedInterestRate.TESTB_PCT_ACCRUED_INTEREST_RATE));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag158PctAccruedInterestRate tagData;
+
+        tagData = new Tag158PctAccruedInterestRate(
+                new MyPercentageType(Tag158PctAccruedInterestRate.TESTB_PCT_ACCRUED_INTEREST_RATE));
+        assertEquals( Tag158PctAccruedInterestRate.TESTB_PCT_ACCRUED_INTEREST_RATE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag158PctAccruedInterestRate tagData;
+
+        tagData = new Tag158PctAccruedInterestRate(
+                new MyPercentageType(Tag158PctAccruedInterestRate.TESTB_PCT_ACCRUED_INTEREST_RATE));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag158PctAccruedInterestRate.TESTB_PCT_ACCRUED_INTEREST_RATE,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag158PctAccruedInterestRate tagData;
+
+        tagData = new Tag158PctAccruedInterestRate(
+                new MyPercentageType(Tag158PctAccruedInterestRate.TESTB_PCT_ACCRUED_INTEREST_RATE));
+        assertEquals( String.valueOf(Tag158PctAccruedInterestRate.TESTB_PCT_ACCRUED_INTEREST_RATE),
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag158PctAccruedInterestRate tagData;
+
+        tagData = new Tag158PctAccruedInterestRate(
+                new MyPercentageType(Tag158PctAccruedInterestRate.TESTA_PCT_ACCRUED_INTEREST_RATE));
+        assertEquals( "Tag158PctAccruedInterestRate\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag158PctAccruedInterestRate.TESTA_PCT_ACCRUED_INTEREST_RATE + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" +
+                                            Tag158PctAccruedInterestRate.TESTA_PCT_ACCRUED_INTEREST_RATE + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

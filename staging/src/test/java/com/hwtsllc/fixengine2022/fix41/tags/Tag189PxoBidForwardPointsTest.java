@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
+import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceOffsetType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -55,5 +56,56 @@ class Tag189PxoBidForwardPointsTest {
                 new MyPriceOffsetType(Tag189PxoBidForwardPoints.TESTB_PXO_BID_FORWARD_POINTS));
         assertEquals( Tag189PxoBidForwardPoints.TESTB_PXO_BID_FORWARD_POINTS, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag189PxoBidForwardPoints tagData;
+
+        tagData =
+                new Tag189PxoBidForwardPoints(new MyPriceOffsetType(Tag189PxoBidForwardPoints.TESTB_PRC_PREV_CLOSE_PX));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag189PxoBidForwardPoints tagData;
+
+        tagData = new Tag189PxoBidForwardPoints(new MyPriceOffsetType(Tag189PxoBidForwardPoints.TESTB_PRC_PREV_CLOSE_PX));
+        assertEquals( Tag189PxoBidForwardPoints.TESTB_PRC_PREV_CLOSE_PX, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag189PxoBidForwardPoints tagData;
+
+        tagData = new Tag189PxoBidForwardPoints(new MyPriceOffsetType(Tag189PxoBidForwardPoints.TESTB_PRC_PREV_CLOSE_PX));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag189PxoBidForwardPoints.TESTB_PRC_PREV_CLOSE_PX,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag189PxoBidForwardPoints tagData;
+
+        tagData = new Tag189PxoBidForwardPoints(new MyPriceOffsetType(Tag189PxoBidForwardPoints.TESTB_PRC_PREV_CLOSE_PX));
+        assertEquals( String.valueOf(Tag189PxoBidForwardPoints.TESTB_PRC_PREV_CLOSE_PX),
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag189PxoBidForwardPoints tagData;
+
+        tagData = new Tag189PxoBidForwardPoints(new MyPriceOffsetType(Tag189PxoBidForwardPoints.TESTA_PRC_PREV_CLOSE_PX));
+        assertEquals( "Tag189PxoBidForwardPoints\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag189PxoBidForwardPoints.TESTA_PRC_PREV_CLOSE_PX + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag189PxoBidForwardPoints.TESTA_PRC_PREV_CLOSE_PX + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

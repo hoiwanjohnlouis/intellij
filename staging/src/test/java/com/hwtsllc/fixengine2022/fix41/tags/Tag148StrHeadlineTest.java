@@ -54,4 +54,54 @@ class Tag148StrHeadlineTest {
         assertEquals( Tag148StrHeadline.TESTB_STR_HEADLINE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag148StrHeadline tagData;
+
+        tagData = new Tag148StrHeadline(new MyStringType(Tag148StrHeadline.TESTB_STR_HEADLINE));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag148StrHeadline tagData;
+
+        tagData = new Tag148StrHeadline(new MyStringType(Tag148StrHeadline.TESTB_STR_HEADLINE));
+        assertEquals( Tag148StrHeadline.TESTB_STR_HEADLINE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag148StrHeadline tagData;
+
+        tagData = new Tag148StrHeadline(new MyStringType(Tag148StrHeadline.TESTB_STR_HEADLINE));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag148StrHeadline.TESTB_STR_HEADLINE,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag148StrHeadline tagData;
+
+        tagData = new Tag148StrHeadline(new MyStringType(Tag148StrHeadline.TESTB_STR_HEADLINE));
+        assertEquals( Tag148StrHeadline.TESTB_STR_HEADLINE,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag148StrHeadline tagData;
+
+        tagData = new Tag148StrHeadline(new MyStringType(Tag148StrHeadline.TESTA_STR_HEADLINE));
+        assertEquals( "Tag148StrHeadline\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag148StrHeadline.TESTA_STR_HEADLINE + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag148StrHeadline.TESTA_STR_HEADLINE + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

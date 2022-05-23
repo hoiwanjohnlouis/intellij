@@ -56,4 +56,60 @@ class Tag159AmtAccruedInterestAmtTest {
         assertEquals( Tag159AmtAccruedInterestAmt.TESTB_AMT_ACCRUED_INTEREST_AMT, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag159AmtAccruedInterestAmt tagData;
+
+        tagData = new Tag159AmtAccruedInterestAmt(
+                new MyAmtType(Tag159AmtAccruedInterestAmt.TESTB_AMT_ACCRUED_INTEREST_AMT));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag159AmtAccruedInterestAmt tagData;
+
+        tagData = new Tag159AmtAccruedInterestAmt(
+                new MyAmtType(Tag159AmtAccruedInterestAmt.TESTB_AMT_ACCRUED_INTEREST_AMT));
+        assertEquals( Tag159AmtAccruedInterestAmt.TESTB_AMT_ACCRUED_INTEREST_AMT, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag159AmtAccruedInterestAmt tagData;
+
+        tagData = new Tag159AmtAccruedInterestAmt(
+                new MyAmtType(Tag159AmtAccruedInterestAmt.TESTB_AMT_ACCRUED_INTEREST_AMT));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag159AmtAccruedInterestAmt.TESTB_AMT_ACCRUED_INTEREST_AMT,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag159AmtAccruedInterestAmt tagData;
+
+        tagData = new Tag159AmtAccruedInterestAmt(
+                new MyAmtType(Tag159AmtAccruedInterestAmt.TESTB_AMT_ACCRUED_INTEREST_AMT));
+        assertEquals( String.valueOf(Tag159AmtAccruedInterestAmt.TESTB_AMT_ACCRUED_INTEREST_AMT),
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag159AmtAccruedInterestAmt tagData;
+
+        tagData = new Tag159AmtAccruedInterestAmt(
+                new MyAmtType(Tag159AmtAccruedInterestAmt.TESTA_AMT_ACCRUED_INTEREST_AMT));
+        assertEquals( "Tag159AmtAccruedInterestAmt\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag159AmtAccruedInterestAmt.TESTA_AMT_ACCRUED_INTEREST_AMT + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" +
+                                            Tag159AmtAccruedInterestAmt.TESTA_AMT_ACCRUED_INTEREST_AMT + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

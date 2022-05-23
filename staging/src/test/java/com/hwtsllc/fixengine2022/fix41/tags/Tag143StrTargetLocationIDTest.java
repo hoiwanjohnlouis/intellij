@@ -56,4 +56,54 @@ class Tag143StrTargetLocationIDTest {
         assertEquals( Tag143StrTargetLocationID.TESTB_STR_TARGET_LOCATION_ID, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag143StrTargetLocationID tagData;
+
+        tagData = new Tag143StrTargetLocationID(new MyStringType(Tag143StrTargetLocationID.TESTB_STR_TARGET_LOCATION_ID));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag143StrTargetLocationID tagData;
+
+        tagData = new Tag143StrTargetLocationID(new MyStringType(Tag143StrTargetLocationID.TESTB_STR_TARGET_LOCATION_ID));
+        assertEquals( Tag143StrTargetLocationID.TESTB_STR_TARGET_LOCATION_ID, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag143StrTargetLocationID tagData;
+
+        tagData = new Tag143StrTargetLocationID(new MyStringType(Tag143StrTargetLocationID.TESTB_STR_TARGET_LOCATION_ID));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag143StrTargetLocationID.TESTB_STR_TARGET_LOCATION_ID,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag143StrTargetLocationID tagData;
+
+        tagData = new Tag143StrTargetLocationID(new MyStringType(Tag143StrTargetLocationID.TESTB_STR_TARGET_LOCATION_ID));
+        assertEquals( Tag143StrTargetLocationID.TESTB_STR_TARGET_LOCATION_ID,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag143StrTargetLocationID tagData;
+
+        tagData = new Tag143StrTargetLocationID(new MyStringType(Tag143StrTargetLocationID.TESTA_STR_TARGET_LOCATION_ID));
+        assertEquals( "Tag143StrTargetLocationID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag143StrTargetLocationID.TESTA_STR_TARGET_LOCATION_ID + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag143StrTargetLocationID.TESTA_STR_TARGET_LOCATION_ID + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.fix40.tags.Tag187StrCashSettlAgentContactPhone;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -60,5 +61,61 @@ class Tag187StrCashSettlAgentContactPhoneTest {
         assertEquals( Tag187StrCashSettlAgentContactPhone.TESTB_STR_CASH_SETTL_AGENT_CONTACT_PHONE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag187StrCashSettlAgentContactPhone tagData;
+
+        tagData = new Tag187StrCashSettlAgentContactPhone(
+                new MyStringType(Tag187StrCashSettlAgentContactPhone.TESTB_STR_QUOTE_REQ_ID));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag187StrCashSettlAgentContactPhone tagData;
+
+        tagData = new Tag187StrCashSettlAgentContactPhone(
+                new MyStringType(Tag187StrCashSettlAgentContactPhone.TESTB_STR_QUOTE_REQ_ID));
+        assertEquals( Tag187StrCashSettlAgentContactPhone.TESTB_STR_QUOTE_REQ_ID, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag187StrCashSettlAgentContactPhone tagData;
+
+        tagData = new Tag187StrCashSettlAgentContactPhone(
+                new MyStringType(Tag187StrCashSettlAgentContactPhone.TESTB_STR_QUOTE_REQ_ID));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag187StrCashSettlAgentContactPhone.TESTB_STR_QUOTE_REQ_ID,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag187StrCashSettlAgentContactPhone tagData;
+
+        tagData = new Tag187StrCashSettlAgentContactPhone(
+                new MyStringType(Tag187StrCashSettlAgentContactPhone.TESTB_STR_QUOTE_REQ_ID));
+        assertEquals( Tag187StrCashSettlAgentContactPhone.TESTB_STR_QUOTE_REQ_ID,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag187StrCashSettlAgentContactPhone tagData;
+
+        tagData = new Tag187StrCashSettlAgentContactPhone(
+                new MyStringType(Tag187StrCashSettlAgentContactPhone.TESTA_STR_QUOTE_REQ_ID));
+        assertEquals( "Tag187StrCashSettlAgentContactPhone\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag187StrCashSettlAgentContactPhone.TESTA_STR_QUOTE_REQ_ID + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" +
+                                            Tag187StrCashSettlAgentContactPhone.TESTA_STR_QUOTE_REQ_ID + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

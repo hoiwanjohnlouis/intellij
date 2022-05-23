@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.fix40.tags.Tag176StrSecuritySettlAgentName;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -56,5 +57,61 @@ class Tag176StrSecuritySettlAgentNameTest {
                 new MyStringType(Tag176StrSecuritySettlAgentName.TESTB_STR_SECURITY_SETTL_AGENT_NAME));
         assertEquals( Tag176StrSecuritySettlAgentName.TESTB_STR_SECURITY_SETTL_AGENT_NAME, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag176StrSecuritySettlAgentName tagData;
+
+        tagData = new Tag176StrSecuritySettlAgentName(
+                new MyStringType(Tag176StrSecuritySettlAgentName.TESTB_STR_QUOTE_REQ_ID));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag176StrSecuritySettlAgentName tagData;
+
+        tagData = new Tag176StrSecuritySettlAgentName(
+                new MyStringType(Tag176StrSecuritySettlAgentName.TESTB_STR_QUOTE_REQ_ID));
+        assertEquals( Tag176StrSecuritySettlAgentName.TESTB_STR_QUOTE_REQ_ID, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag176StrSecuritySettlAgentName tagData;
+
+        tagData = new Tag176StrSecuritySettlAgentName(
+                new MyStringType(Tag176StrSecuritySettlAgentName.TESTB_STR_QUOTE_REQ_ID));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag176StrSecuritySettlAgentName.TESTB_STR_QUOTE_REQ_ID,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag176StrSecuritySettlAgentName tagData;
+
+        tagData = new Tag176StrSecuritySettlAgentName(
+                new MyStringType(Tag176StrSecuritySettlAgentName.TESTB_STR_QUOTE_REQ_ID));
+        assertEquals( Tag176StrSecuritySettlAgentName.TESTB_STR_QUOTE_REQ_ID,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag176StrSecuritySettlAgentName tagData;
+
+        tagData = new Tag176StrSecuritySettlAgentName(
+                new MyStringType(Tag176StrSecuritySettlAgentName.TESTA_STR_QUOTE_REQ_ID));
+        assertEquals( "Tag176StrSecuritySettlAgentName\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag176StrSecuritySettlAgentName.TESTA_STR_QUOTE_REQ_ID + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" +
+                                            Tag176StrSecuritySettlAgentName.TESTA_STR_QUOTE_REQ_ID + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

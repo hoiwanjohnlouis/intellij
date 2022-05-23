@@ -56,4 +56,55 @@ class Tag191PxoOfferForwardPointsTest {
         assertEquals( Tag191PxoOfferForwardPoints.TESTB_PXO_OFFER_FORWARD_POINTS, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag191PxoOfferForwardPoints tagData;
+
+        tagData =
+                new Tag191PxoOfferForwardPoints(new MyPriceOffsetType(Tag191PxoOfferForwardPoints.TESTB_PRC_PREV_CLOSE_PX));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag191PxoOfferForwardPoints tagData;
+
+        tagData = new Tag191PxoOfferForwardPoints(new MyPriceOffsetType(Tag191PxoOfferForwardPoints.TESTB_PRC_PREV_CLOSE_PX));
+        assertEquals( Tag191PxoOfferForwardPoints.TESTB_PRC_PREV_CLOSE_PX, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag191PxoOfferForwardPoints tagData;
+
+        tagData = new Tag191PxoOfferForwardPoints(new MyPriceOffsetType(Tag191PxoOfferForwardPoints.TESTB_PRC_PREV_CLOSE_PX));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag191PxoOfferForwardPoints.TESTB_PRC_PREV_CLOSE_PX,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag191PxoOfferForwardPoints tagData;
+
+        tagData = new Tag191PxoOfferForwardPoints(new MyPriceOffsetType(Tag191PxoOfferForwardPoints.TESTB_PRC_PREV_CLOSE_PX));
+        assertEquals( String.valueOf(Tag191PxoOfferForwardPoints.TESTB_PRC_PREV_CLOSE_PX),
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag191PxoOfferForwardPoints tagData;
+
+        tagData = new Tag191PxoOfferForwardPoints(new MyPriceOffsetType(Tag191PxoOfferForwardPoints.TESTA_PRC_PREV_CLOSE_PX));
+        assertEquals( "Tag191PxoOfferForwardPoints\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag191PxoOfferForwardPoints.TESTA_PRC_PREV_CLOSE_PX + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag191PxoOfferForwardPoints.TESTA_PRC_PREV_CLOSE_PX + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

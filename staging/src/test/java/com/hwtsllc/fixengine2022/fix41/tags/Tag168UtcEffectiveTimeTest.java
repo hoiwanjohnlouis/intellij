@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
+import com.hwtsllc.fixengine2022.fix40.tags.Tag168UtcEffectiveTime;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
 import org.junit.jupiter.api.Test;
@@ -54,5 +55,55 @@ class Tag168UtcEffectiveTimeTest {
         tagData = new Tag168UtcEffectiveTime(new MyUTCTimestampType(Tag168UtcEffectiveTime.TESTB_UTC_EFFECTIVE_TIME));
         assertEquals( Tag168UtcEffectiveTime.TESTB_UTC_EFFECTIVE_TIME, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag168UtcEffectiveTime tagData;
+
+        tagData = new Tag168UtcEffectiveTime(new MyUTCTimestampType(Tag168UtcEffectiveTime.TESTB_UTC_ORIG_SENDING_TIME));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag168UtcEffectiveTime tagData;
+
+        tagData = new Tag168UtcEffectiveTime(new MyUTCTimestampType(Tag168UtcEffectiveTime.TESTB_UTC_ORIG_SENDING_TIME));
+        assertEquals( Tag168UtcEffectiveTime.TESTB_UTC_ORIG_SENDING_TIME, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag168UtcEffectiveTime tagData;
+
+        tagData = new Tag168UtcEffectiveTime(new MyUTCTimestampType(Tag168UtcEffectiveTime.TESTB_UTC_ORIG_SENDING_TIME));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag168UtcEffectiveTime.TESTB_UTC_ORIG_SENDING_TIME,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag168UtcEffectiveTime tagData;
+
+        tagData = new Tag168UtcEffectiveTime(new MyUTCTimestampType(Tag168UtcEffectiveTime.TESTB_UTC_ORIG_SENDING_TIME));
+        assertEquals( Tag168UtcEffectiveTime.TESTB_UTC_ORIG_SENDING_TIME,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag168UtcEffectiveTime tagData;
+
+        tagData = new Tag168UtcEffectiveTime(new MyUTCTimestampType(Tag168UtcEffectiveTime.TESTA_UTC_ORIG_SENDING_TIME));
+        assertEquals( "Tag168UtcEffectiveTime\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag168UtcEffectiveTime.TESTA_UTC_ORIG_SENDING_TIME + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag168UtcEffectiveTime.TESTA_UTC_ORIG_SENDING_TIME + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

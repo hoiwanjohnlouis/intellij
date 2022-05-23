@@ -17,8 +17,8 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumPutOrCall;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -63,5 +63,70 @@ class Tag201EnuPutOrCallTest {
         tagData = new Tag201EnuPutOrCall(MyEnumPutOrCall.PUT);
         assertEquals( MyEnumPutOrCall.PUT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag201EnuPutOrCall tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumPutOrCall oneEnum : MyEnumPutOrCall.values()) {
+            tagData = new Tag201EnuPutOrCall(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag201EnuPutOrCall tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumPutOrCall oneEnum : MyEnumPutOrCall.values()) {
+            tagData = new Tag201EnuPutOrCall(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag201EnuPutOrCall tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumPutOrCall oneEnum : MyEnumPutOrCall.values()) {
+            tagData = new Tag201EnuPutOrCall(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag201EnuPutOrCall tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumPutOrCall oneEnum : MyEnumPutOrCall.values()) {
+            tagData = new Tag201EnuPutOrCall(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag201EnuPutOrCall tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumPutOrCall oneEnum : MyEnumPutOrCall.values()) {
+            tagData = new Tag201EnuPutOrCall(oneEnum);
+            assertEquals( "Tag201EnuPutOrCall\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
     }
 }

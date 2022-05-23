@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.fix40.tags.Tag175StrSettlInstCode;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -57,5 +58,55 @@ class Tag175StrSettlInstCodeTest {
         tagData = new Tag175StrSettlInstCode(new MyStringType(Tag175StrSettlInstCode.TESTB_STR_SETTL_INST_CODE));
         assertEquals( Tag175StrSettlInstCode.TESTB_STR_SETTL_INST_CODE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag175StrSettlInstCode tagData;
+
+        tagData = new Tag175StrSettlInstCode(new MyStringType(Tag175StrSettlInstCode.TESTB_STR_QUOTE_REQ_ID));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag175StrSettlInstCode tagData;
+
+        tagData = new Tag175StrSettlInstCode(new MyStringType(Tag175StrSettlInstCode.TESTB_STR_QUOTE_REQ_ID));
+        assertEquals( Tag175StrSettlInstCode.TESTB_STR_QUOTE_REQ_ID, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag175StrSettlInstCode tagData;
+
+        tagData = new Tag175StrSettlInstCode(new MyStringType(Tag175StrSettlInstCode.TESTB_STR_QUOTE_REQ_ID));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag175StrSettlInstCode.TESTB_STR_QUOTE_REQ_ID,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag175StrSettlInstCode tagData;
+
+        tagData = new Tag175StrSettlInstCode(new MyStringType(Tag175StrSettlInstCode.TESTB_STR_QUOTE_REQ_ID));
+        assertEquals( Tag175StrSettlInstCode.TESTB_STR_QUOTE_REQ_ID,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag175StrSettlInstCode tagData;
+
+        tagData = new Tag175StrSettlInstCode(new MyStringType(Tag175StrSettlInstCode.TESTA_STR_QUOTE_REQ_ID));
+        assertEquals( "Tag175StrSettlInstCode\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag175StrSettlInstCode.TESTA_STR_QUOTE_REQ_ID + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag175StrSettlInstCode.TESTA_STR_QUOTE_REQ_ID + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

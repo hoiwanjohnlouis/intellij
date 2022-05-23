@@ -56,4 +56,54 @@ class Tag157IntNumDaysInterestTest {
         assertEquals( Tag157IntNumDaysInterest.TESTB_INT_NUM_DAYS_INTEREST, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag157IntNumDaysInterest tagData;
+
+        tagData = new Tag157IntNumDaysInterest(new MyIntType(Tag157IntNumDaysInterest.TESTB_INT_NUM_DAYS_INTEREST));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag157IntNumDaysInterest tagData;
+
+        tagData = new Tag157IntNumDaysInterest(new MyIntType(Tag157IntNumDaysInterest.TESTB_INT_NUM_DAYS_INTEREST));
+        assertEquals( Tag157IntNumDaysInterest.TESTB_INT_NUM_DAYS_INTEREST, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag157IntNumDaysInterest tagData;
+
+        tagData = new Tag157IntNumDaysInterest(new MyIntType(Tag157IntNumDaysInterest.TESTB_INT_NUM_DAYS_INTEREST));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag157IntNumDaysInterest.TESTB_INT_NUM_DAYS_INTEREST,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag157IntNumDaysInterest tagData;
+
+        tagData = new Tag157IntNumDaysInterest(new MyIntType(Tag157IntNumDaysInterest.TESTB_INT_NUM_DAYS_INTEREST));
+        assertEquals( String.valueOf(Tag157IntNumDaysInterest.TESTB_INT_NUM_DAYS_INTEREST),
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag157IntNumDaysInterest tagData;
+
+        tagData = new Tag157IntNumDaysInterest(new MyIntType(Tag157IntNumDaysInterest.TESTA_INT_NUM_DAYS_INTEREST));
+        assertEquals( "Tag157IntNumDaysInterest\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag157IntNumDaysInterest.TESTA_INT_NUM_DAYS_INTEREST + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag157IntNumDaysInterest.TESTA_INT_NUM_DAYS_INTEREST + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

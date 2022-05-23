@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
+import com.hwtsllc.fixengine2022.fix40.tags.Tag190PrcOfferSpotRate;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -53,5 +54,55 @@ class Tag190PrcOfferSpotRateTest {
         tagData = new Tag190PrcOfferSpotRate(new MyPriceType(Tag190PrcOfferSpotRate.TESTB_PRC_OFFER_SPOT_RATE));
         assertEquals( Tag190PrcOfferSpotRate.TESTB_PRC_OFFER_SPOT_RATE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag190PrcOfferSpotRate tagData;
+
+        tagData = new Tag190PrcOfferSpotRate(new MyPriceType(Tag190PrcOfferSpotRate.TESTB_PRC_PREV_CLOSE_PX));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag190PrcOfferSpotRate tagData;
+
+        tagData = new Tag190PrcOfferSpotRate(new MyPriceType(Tag190PrcOfferSpotRate.TESTB_PRC_PREV_CLOSE_PX));
+        assertEquals( Tag190PrcOfferSpotRate.TESTB_PRC_PREV_CLOSE_PX, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag190PrcOfferSpotRate tagData;
+
+        tagData = new Tag190PrcOfferSpotRate(new MyPriceType(Tag190PrcOfferSpotRate.TESTB_PRC_PREV_CLOSE_PX));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag190PrcOfferSpotRate.TESTB_PRC_PREV_CLOSE_PX,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag190PrcOfferSpotRate tagData;
+
+        tagData = new Tag190PrcOfferSpotRate(new MyPriceType(Tag190PrcOfferSpotRate.TESTB_PRC_PREV_CLOSE_PX));
+        assertEquals( String.valueOf(Tag190PrcOfferSpotRate.TESTB_PRC_PREV_CLOSE_PX),
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag190PrcOfferSpotRate tagData;
+
+        tagData = new Tag190PrcOfferSpotRate(new MyPriceType(Tag190PrcOfferSpotRate.TESTA_PRC_PREV_CLOSE_PX));
+        assertEquals( "Tag190PrcOfferSpotRate\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag190PrcOfferSpotRate.TESTA_PRC_PREV_CLOSE_PX + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag190PrcOfferSpotRate.TESTA_PRC_PREV_CLOSE_PX + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

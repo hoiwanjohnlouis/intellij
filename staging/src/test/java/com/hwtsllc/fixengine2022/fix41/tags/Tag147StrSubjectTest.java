@@ -54,4 +54,54 @@ class Tag147StrSubjectTest {
         assertEquals( Tag147StrSubject.TESTB_STR_SUBJECT, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag147StrSubject tagData;
+
+        tagData = new Tag147StrSubject(new MyStringType(Tag147StrSubject.TESTB_STR_SUBJECT));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag147StrSubject tagData;
+
+        tagData = new Tag147StrSubject(new MyStringType(Tag147StrSubject.TESTB_STR_SUBJECT));
+        assertEquals( Tag147StrSubject.TESTB_STR_SUBJECT, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag147StrSubject tagData;
+
+        tagData = new Tag147StrSubject(new MyStringType(Tag147StrSubject.TESTB_STR_SUBJECT));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag147StrSubject.TESTB_STR_SUBJECT,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag147StrSubject tagData;
+
+        tagData = new Tag147StrSubject(new MyStringType(Tag147StrSubject.TESTB_STR_SUBJECT));
+        assertEquals( Tag147StrSubject.TESTB_STR_SUBJECT,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag147StrSubject tagData;
+
+        tagData = new Tag147StrSubject(new MyStringType(Tag147StrSubject.TESTA_STR_SUBJECT));
+        assertEquals( "Tag147StrSubject\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag147StrSubject.TESTA_STR_SUBJECT + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag147StrSubject.TESTA_STR_SUBJECT + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

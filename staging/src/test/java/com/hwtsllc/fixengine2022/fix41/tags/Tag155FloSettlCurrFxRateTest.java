@@ -54,4 +54,54 @@ class Tag155FloSettlCurrFxRateTest {
         assertEquals( Tag155FloSettlCurrFxRate.TESTB_FLO_SETTL_CURR_FX_RATE, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag155FloSettlCurrFxRate tagData;
+
+        tagData = new Tag155FloSettlCurrFxRate(new MyFloatType(Tag155FloSettlCurrFxRate.TESTB_FLO_SETTL_CURR_FX_RATE));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag155FloSettlCurrFxRate tagData;
+
+        tagData = new Tag155FloSettlCurrFxRate(new MyFloatType(Tag155FloSettlCurrFxRate.TESTB_FLO_SETTL_CURR_FX_RATE));
+        assertEquals( Tag155FloSettlCurrFxRate.TESTB_FLO_SETTL_CURR_FX_RATE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag155FloSettlCurrFxRate tagData;
+
+        tagData = new Tag155FloSettlCurrFxRate(new MyFloatType(Tag155FloSettlCurrFxRate.TESTB_FLO_SETTL_CURR_FX_RATE));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag155FloSettlCurrFxRate.TESTB_FLO_SETTL_CURR_FX_RATE,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag155FloSettlCurrFxRate tagData;
+
+        tagData = new Tag155FloSettlCurrFxRate(new MyFloatType(Tag155FloSettlCurrFxRate.TESTB_FLO_SETTL_CURR_FX_RATE));
+        assertEquals( String.valueOf(Tag155FloSettlCurrFxRate.TESTB_FLO_SETTL_CURR_FX_RATE),
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag155FloSettlCurrFxRate tagData;
+
+        tagData = new Tag155FloSettlCurrFxRate(new MyFloatType(Tag155FloSettlCurrFxRate.TESTA_FLO_SETTL_CURR_FX_RATE));
+        assertEquals( "Tag155FloSettlCurrFxRate\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag155FloSettlCurrFxRate.TESTA_FLO_SETTL_CURR_FX_RATE + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag155FloSettlCurrFxRate.TESTA_FLO_SETTL_CURR_FX_RATE + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }

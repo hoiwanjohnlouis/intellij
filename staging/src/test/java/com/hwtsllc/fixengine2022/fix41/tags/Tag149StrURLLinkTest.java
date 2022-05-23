@@ -57,4 +57,54 @@ class Tag149StrURLLinkTest {
         assertEquals( Tag149StrURLLink.TESTB_STR_URL_LINK, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag149StrURLLink tagData;
+
+        tagData = new Tag149StrURLLink(new MyStringType(Tag149StrURLLink.TESTB_STR_URL_LINK));
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag149StrURLLink tagData;
+
+        tagData = new Tag149StrURLLink(new MyStringType(Tag149StrURLLink.TESTB_STR_URL_LINK));
+        assertEquals( Tag149StrURLLink.TESTB_STR_URL_LINK, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag149StrURLLink tagData;
+
+        tagData = new Tag149StrURLLink(new MyStringType(Tag149StrURLLink.TESTB_STR_URL_LINK));
+        assertEquals( tagData.toFIXIDString() + "=" + Tag149StrURLLink.TESTB_STR_URL_LINK,
+                tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag149StrURLLink tagData;
+
+        tagData = new Tag149StrURLLink(new MyStringType(Tag149StrURLLink.TESTB_STR_URL_LINK));
+        assertEquals( Tag149StrURLLink.TESTB_STR_URL_LINK,
+                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag149StrURLLink tagData;
+
+        tagData = new Tag149StrURLLink(new MyStringType(Tag149StrURLLink.TESTA_STR_URL_LINK));
+        assertEquals( "Tag149StrURLLink\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + Tag149StrURLLink.TESTA_STR_URL_LINK + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag149StrURLLink.TESTA_STR_URL_LINK + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    }
 }
