@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  439
+ *  ClearingFirm
+ *  String
+ *  <p>
+ *  Deprecated in FIX.4.2 Firm that will clear the trade.
+ *  <p>
+ *  Used if different from the executing firm.
+ */
 // @Deprecated
 class Tag439StrClearingFirmTest {
     @Test

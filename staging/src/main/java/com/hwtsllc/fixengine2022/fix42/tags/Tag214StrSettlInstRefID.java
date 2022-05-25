@@ -22,6 +22,14 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  214
+ *  SettlInstRefID
+ *  String
+ *  <p>
+ *  Reference identifier for the SettlInstID (162) with
+ *  Cancel and Replace SettlInstTransType (163) transaction types.
+ */
 public class Tag214StrSettlInstRefID extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

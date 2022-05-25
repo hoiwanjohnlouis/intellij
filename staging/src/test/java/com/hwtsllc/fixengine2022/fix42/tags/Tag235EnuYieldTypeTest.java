@@ -24,6 +24,55 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  235
+ *  YieldType
+ *  String
+ *  <p>
+ *  Type of yield. (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ *  <p></p>
+ *  Valid values:
+ *  <p>    "AFTERTAX - After Tax Yield (Municipals)"
+ *  <p>    "ANNUAL - Annual Yield"
+ *  <p>    "ATISSUE - Yield At Issue (Municipals)"
+ *  <p>    "AVGMATURITY - Yield To Avg Maturity"
+ *  <p>    "BOOK - Book Yield"
+ *  <p></p>
+ *  <p>    "CALL - Yield to Next Call"
+ *  <p>    "CHANGE - Yield Change Since Close"
+ *  <p>    "CLOSE - Closing Yield"
+ *  <p>    "COMPOUND - Compound Yield"
+ *  <p>    "CURRENT - Current Yield"
+ *  <p></p>
+ *  <p>    "GOVTEQUIV - Gvnt Equivalent Yield"
+ *  <p>    "GROSS - True Gross Yield"
+ *  <p>    "INFLATION - Yield with Inflation Assumption"
+ *  <p>    "INVERSEFLOATER - Inverse Floater Bond Yield"
+ *  <p>    "LASTCLOSE - Most Recent Closing Yield"
+ *  <p></p>
+ *  <p>    "LASTMONTH - Closing Yield Most Recent Month"
+ *  <p>    "LASTQUARTER - Closing Yield Most Recent Quarter"
+ *  <p>    "LASTYEAR - Closing Yield Most Recent Year"
+ *  <p>    "LONGAVGLIFE - Yield to Longest Average Life"
+ *  <p>    "MARK - Mark to Market Yield"
+ *  <p></p>
+ *  <p>    "MATURITY - Yield to Maturity"
+ *  <p>    "NEXTREFUND - Yield to Next Refund (Sinking Fund Bonds)"
+ *  <p>    "OPENAVG - Open Average Yield"
+ *  <p>    "PREVCLOSE - Previous Close Yield"
+ *  <p>    "PROCEEDS - Proceeds Yield"
+ *  <p></p>
+ *  <p>    "PUT - Yield to Next Put"
+ *  <p>    "SEMIANNUAL - Semi-annual Yield"
+ *  <p>    "SHORTAVGLIFE - Yield to Shortest Average Life"
+ *  <p>    "SIMPLE - Simple Yield"
+ *  <p>    "TAXEQUIV - Tax Equivalent Yield"
+ *  <p></p>
+ *  <p>    "TENDER - Yield to Tender Date"
+ *  <p>    "TRUE - True Yield"
+ *  <p>    "VALUE1_32 - Yield Value Of 1/32"
+ *  <p>    "WORST - Yield To Worst"
+ */
 class Tag235EnuYieldTypeTest {
     @Test
     void FIX0235Test() {
@@ -35,45 +84,6 @@ class Tag235EnuYieldTypeTest {
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
-    /**
-     *  235
-     *  YieldType
-     *  various msg types
-     *      "AFTERTAX - After Tax Yield (Municipals)"
-     *      "ANNUAL - Annual Yield"
-     *      "ATISSUE - Yield At Issue (Municipals)"
-     *      "AVGMATURITY - Yield To Avg Maturity"
-     *      "BOOK - Book Yield"
-     *      "CALL - Yield to Next Call"
-     *      "CHANGE - Yield Change Since Close"
-     *      "CLOSE - Closing Yield"
-     *      "COMPOUND - Compound Yield"
-     *      "CURRENT - Current Yield"
-     *      "GOVTEQUIV - Gvnt Equivalent Yield"
-     *      "GROSS - True Gross Yield"
-     *      "INFLATION - Yield with Inflation Assumption"
-     *      "INVERSEFLOATER - Inverse Floater Bond Yield"
-     *      "LASTCLOSE - Most Recent Closing Yield"
-     *      "LASTMONTH - Closing Yield Most Recent Month"
-     *      "LASTQUARTER - Closing Yield Most Recent Quarter"
-     *      "LASTYEAR - Closing Yield Most Recent Year"
-     *      "LONGAVGLIFE - Yield to Longest Average Life"
-     *      "MARK - Mark to Market Yield"
-     *      "MATURITY - Yield to Maturity"
-     *      "NEXTREFUND - Yield to Next Refund (Sinking Fund Bonds)"
-     *      "OPENAVG - Open Average Yield"
-     *      "PREVCLOSE - Previous Close Yield"
-     *      "PROCEEDS - Proceeds Yield"
-     *      "PUT - Yield to Next Put"
-     *      "SEMIANNUAL - Semi-annual Yield"
-     *      "SHORTAVGLIFE - Yield to Shortest Average Life"
-     *      "SIMPLE - Simple Yield"
-     *      "TAXEQUIV - Tax Equivalent Yield"
-     *      "TENDER - Yield to Tender Date"
-     *      "TRUE - True Yield"
-     *      "VALUE1_32 - Yield Value Of 1/32"
-     *      "WORST - Yield To Worst"
-     */
     @Test
     void Tag0235Test() {
         Tag235EnuYieldType tagData;

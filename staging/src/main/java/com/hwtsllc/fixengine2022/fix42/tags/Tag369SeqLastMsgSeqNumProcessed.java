@@ -22,6 +22,18 @@ import com.hwtsllc.fixengine2022.datatypes.MySeqNumType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  369
+ *  LastMsgSeqNumProcessed
+ *  SeqNum
+ *  <p>
+ *  The last MsgSeqNum (34) value received by the FIX engine and processed by
+ *  downstream application, such as trading engine or order routing system.
+ *  <p>
+ *  Can be specified on every message sent.
+ *  <p></p>
+ *  Useful for detecting a backlog with a counterparty.
+ */
 public class Tag369SeqLastMsgSeqNumProcessed extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MySeqNumType dataValue;
 

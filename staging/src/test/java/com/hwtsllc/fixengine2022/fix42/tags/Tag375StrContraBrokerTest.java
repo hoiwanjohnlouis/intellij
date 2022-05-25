@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  375
+ *  ContraBroker
+ *  String
+ *  <p>
+ *  Identifies contra broker.
+ *  <p>
+ *  Standard NASD market-maker mnemonic is preferred.
+ */
 class Tag375StrContraBrokerTest {
     @Test
     void FIX0375Test() {

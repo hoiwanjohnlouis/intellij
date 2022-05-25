@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  371
+ *  RefTagID
+ *  int
+ *  <p>
+ *  The tag number of the FIX field being referenced.
+ */
 public class Tag371IntRefLogID extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyIntType dataValue;
 

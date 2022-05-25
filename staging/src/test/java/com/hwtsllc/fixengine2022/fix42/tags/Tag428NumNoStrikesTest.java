@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  428
+ *  NoStrikes
+ *  NumInGroup
+ *  <p>
+ *  Number of list strike price entries.
+ */
 class Tag428NumNoStrikesTest {
     @Test
     void FIX0428Test() {

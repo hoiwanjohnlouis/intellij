@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyLengthType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  212
+ *  XmlDataLen
+ *  Length
+ *  <p>
+ *  Length of the XmlData data block.
+ */
 public class Tag212LenXmlDataLen extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyLengthType dataValue;
 

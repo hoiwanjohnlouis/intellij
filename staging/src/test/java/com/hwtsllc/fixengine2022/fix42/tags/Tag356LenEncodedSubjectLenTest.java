@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  356
+ *  EncodedSubjectLen
+ *  Length
+ *  <p>
+ *  Byte length of encoded (non-ASCII characters) EncodedSubject (357) field.
+ */
 class Tag356LenEncodedSubjectLenTest {
     @Test
     void FIX0356Test() {

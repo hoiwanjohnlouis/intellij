@@ -24,6 +24,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  381
+ *  GrossTradeAmt
+ *  Amt
+ *  <p>
+ *  Total amount traded (e.g. CumQty (14) * AvgPx (6)) expressed in units of currency.
+ *  <p>
+ *  For FX Futures this is used to express the notional value of a fill when LastQty
+ *  and other quantity fields are express in terms of contract size.
+ */
 class Tag381AmtGrossTradeAmtTest {
     @Test
     void FIX0381Test() {

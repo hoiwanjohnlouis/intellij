@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  272
+ *  MDEntryDate
+ *  UTCDateOnly
+ *  <p>
+ *  Date of Market Data Entry.
+ *  <p>
+ *  (prior to FIX 4.4 field was of type UTCDate)
+ */
 class Tag272UtcdMDEntryDateTest {
     @Test
     void FIX0272Test() {

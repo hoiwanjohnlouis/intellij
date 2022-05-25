@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  381
+ *  GrossTradeAmt
+ *  Amt
+ *  <p>
+ *  Total amount traded (e.g. CumQty (14) * AvgPx (6)) expressed in units of currency.
+ *  <p>
+ *  For FX Futures this is used to express the notional value of a fill when LastQty
+ *  and other quantity fields are express in terms of contract size.
+ */
 public class Tag381AmtGrossTradeAmt extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyAmtType dataValue;
 

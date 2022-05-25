@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  407
+ *  OutsideIndexPct
+ *  Percentage
+ *  <p>
+ *  Used in EFP trades.
+ *  <p>
+ *  Represented as a percentage.
+ */
 class Tag407PctOutsideIndexPctTest {
     @Test
     void FIX0407Test() {

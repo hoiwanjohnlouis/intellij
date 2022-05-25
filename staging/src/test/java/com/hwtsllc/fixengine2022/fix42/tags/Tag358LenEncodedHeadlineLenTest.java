@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  358
+ *  EncodedHeadlineLen
+ *  Length
+ *  <p>
+ *  Byte length of encoded (non-ASCII characters) EncodedHeadline (359) field.
+ */
 class Tag358LenEncodedHeadlineLenTest {
     @Test
     void FIX0358Test() {

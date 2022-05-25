@@ -22,11 +22,22 @@ import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  316
+ *  UnderlyingStrikePrice
+ *  Price
+ *  <p>
+ *  Underlying security’s StrikePrice.
+ *  <p>
+ *  See StrikePrice (202) field for description
+ */
 public class Tag316PrcUnderlyingStrikePrice extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceType dataValue;
 
-    public final static double TESTA_PRC_UNDERLYING_STRIKE_PRICE = 3.16D;
-    public final static double TESTB_PRC_UNDERLYING_STRIKE_PRICE = 6.13D;
+    public final static double TESTA_PRC_UNDERLYING_STRIKE_PRICE
+            = 3.16D;
+    public final static double TESTB_PRC_UNDERLYING_STRIKE_PRICE
+            = 6.13D;
 
     public Tag316PrcUnderlyingStrikePrice(MyPriceType dataValue) {
         setFixType(FIX42.FIX316_PRC_UNDERLYING_STRIKE_PRICE);

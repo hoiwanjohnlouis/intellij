@@ -24,6 +24,21 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  240
+ *  RedemptionDate
+ *  LocalMktDate
+ *  <p>
+ *  Deprecated in FIX.4.4
+ *  <p>
+ *  Return of investor's principal in a security.
+ *  <p>
+ *  Bond redemption can occur before maturity date.
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ *  <p></p>
+ *  (prior to FIX 4.4 field was of type UTCDate)
+ */
 // @Deprecated
 class Tag240LmdRedemptionDateTest {
     @Test

@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  366
+ *  AllocPrice
+ *  Price
+ *  <p>
+ *  Executed price for an AllocAccount (79) entry.
+ *  <p>
+ *  Used when using "executed price" vs. "average price" allocations (e.g. Japan).
+ */
 public class Tag366PrcAllocPrice extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceType dataValue;
 

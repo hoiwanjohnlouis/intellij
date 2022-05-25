@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  287
+ *  SellerDays
+ *  int
+ *  <p>
+ *  Specifies the number of days that may elapse before delivery of the security
+ */
 class Tag287IntSellerDaysTest {
     @Test
     void FIX0287Test() {

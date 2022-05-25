@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  441
+ *  LiquidityNumSecurities
+ *  int
+ *  <p>
+ *  Number of Securites between LiquidityPctLow (402) and LiquidityPctHigh (403) in Currency.
+ */
 class Tag441IntLiquidityNumSecuritiesTest {
     @Test
     void FIX0441Test() {

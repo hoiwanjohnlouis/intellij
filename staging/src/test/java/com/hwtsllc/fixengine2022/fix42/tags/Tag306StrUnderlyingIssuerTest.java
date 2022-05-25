@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  306
+ *  UnderlyingIssuer
+ *  String
+ *  <p>
+ *  Underlying security’s Issuer.
+ *  <p>
+ *  See Issuer (06) field for description
+ */
 class Tag306StrUnderlyingIssuerTest {
     @Test
     void FIX0306Test() {

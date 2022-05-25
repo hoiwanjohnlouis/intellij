@@ -24,6 +24,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  446
+ *  EncodedListStatusText
+ *  data
+ *  <p>
+ *  Encoded (non-ASCII characters) representation of the ListStatusText (444) field
+ *  in the encoded format specified via the MessageEncoding (347) field.
+ *  <p></p>
+ *  If used, the ASCII (English) representation should also be specified in the ListStatusText field.
+ */
 class Tag446DatEncodedListStatusTextTest {
     @Test
     void FIX0446Test() {

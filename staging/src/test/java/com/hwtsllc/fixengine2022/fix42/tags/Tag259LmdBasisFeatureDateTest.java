@@ -24,6 +24,20 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  259
+ *  BasisFeatureDate
+ *  LocalMktDate
+ *  <p>
+ *  BasisFeatureDate allows requesting firms within fixed income the ability to
+ *  request an alternative yield-to-worst, -maturity, -extended or other call.
+ *  <p>
+ *  This flows through the confirm process.
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ *  <p></p>
+ *  (prior to FIX 4.4 field was of type UTCDate)
+ */
 class Tag259LmdBasisFeatureDateTest {
     @Test
     void FIX0259Test() {

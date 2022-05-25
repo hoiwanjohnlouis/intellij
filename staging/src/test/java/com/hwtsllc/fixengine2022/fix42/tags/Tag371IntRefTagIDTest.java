@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  371
+ *  RefTagID
+ *  int
+ *  <p>
+ *  The tag number of the FIX field being referenced.
+ */
 class Tag371IntRefTagIDTest {
     @Test
     void FIX0371Test() {

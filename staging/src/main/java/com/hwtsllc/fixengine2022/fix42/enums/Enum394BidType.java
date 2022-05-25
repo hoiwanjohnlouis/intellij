@@ -20,17 +20,19 @@ import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Tag394
- *  Enu
+ *  394
  *  BidType
- *
- *      1-3 msg types
- *      NON_DISCLOSED( "1", "NON_DISCLOSED", "1 - Non Disclosed style (e.g. US/European)" ),
- *      DISCLOSED( "2", "DISCLOSED", "2 - Disclosed style (e.g. Japanese)" ),
- *      NO_BIDDING( "3", "NO_BIDDING", "3 - No bidding process" ),
+ *  int
+ *  <p>
+ *  Code to identify the type of Bid Request.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - "Non Disclosed" style (e.g. US/European)
+ *  <p>    2 - "Disclosed" style (e.g. Japanese)
+ *  <p>    3 - No bidding process
  */
 public enum Enum394BidType implements LogFIXString, LogVerboseString {
-    /**
+    /*
      * 1-3 msg types
      */
     NON_DISCLOSED( "1", "NON_DISCLOSED", "1 - Non Disclosed style (e.g. US/European)" ),

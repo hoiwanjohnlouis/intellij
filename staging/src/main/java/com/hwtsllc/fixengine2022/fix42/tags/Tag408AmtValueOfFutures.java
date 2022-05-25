@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  408
+ *  ValueOfFutures
+ *  Amt
+ *  <p>
+ *  Used in EFP trades
+ */
 public class Tag408AmtValueOfFutures extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyAmtType dataValue;
 

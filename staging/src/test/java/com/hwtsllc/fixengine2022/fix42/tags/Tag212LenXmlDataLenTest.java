@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  212
+ *  XmlDataLen
+ *  Length
+ *  <p>
+ *  Length of the XmlData data block.
+ */
 class Tag212LenXmlDataLenTest {
     @Test
     void FIX0212Test() {

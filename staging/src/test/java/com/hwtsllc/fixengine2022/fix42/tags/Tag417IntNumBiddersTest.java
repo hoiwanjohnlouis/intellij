@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  417
+ *  NumBidders
+ *  int
+ *  <p>
+ *  Indicates the total number of bidders on the list
+ */
 class Tag417IntNumBiddersTest {
     @Test
     void FIX0417Test() {

@@ -22,6 +22,19 @@ import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  245
+ *  UnderlyingRepurchaseRate
+ *  Percentage
+ *  <p>
+ *  Deprecated in FIX.4.4
+ *  <p>
+ *  Underlying security's RepurchaseRate.
+ *  <p>
+ *  See RepurchaseRate (227) field for description
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ */
 // @Deprecated
 public class Tag245PctUnderlyingRepurchaseRate extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyPercentageType dataValue;

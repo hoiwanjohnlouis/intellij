@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  332
+ *  HighPx
+ *  Price
+ *  <p>
+ *  Represents an indication of the high end of the price range for a security prior to the open or reopen
+ */
 class Tag332PrcHighPxTest {
     @Test
     void FIX0332Test() {

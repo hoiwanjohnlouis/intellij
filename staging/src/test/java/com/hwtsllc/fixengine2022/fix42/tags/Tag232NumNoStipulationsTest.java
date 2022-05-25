@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  232
+ *  NoStipulations
+ *  NumInGroup
+ *  <p>
+ *  Number of stipulation entries
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3).
+ */
 class Tag232NumNoStipulationsTest {
     @Test
     void FIX0232Test() {

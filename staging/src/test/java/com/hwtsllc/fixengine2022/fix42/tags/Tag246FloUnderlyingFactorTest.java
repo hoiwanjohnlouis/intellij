@@ -24,6 +24,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  246
+ *  UnderlyingFactor
+ *  float
+ *  <p>
+ *  Underlying security’s Factor.
+ *  <p>
+ *  See Factor (228) field for description
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ */
 class Tag246FloUnderlyingFactorTest {
     @Test
     void FIX0246Test() {

@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  236
+ *  Yield
+ *  Percentage
+ *  <p>
+ *  Yield percentage.
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ */
 class Tag236PctYieldTest {
     @Test
     void FIX0236Test() {

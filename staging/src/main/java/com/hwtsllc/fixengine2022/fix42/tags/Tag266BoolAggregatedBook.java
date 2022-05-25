@@ -18,22 +18,33 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix42.enums.Bool266AggregatedBook;
 import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  266
+ *  AggregatedBook
+ *  Boolean
+ *  <p>
+ *  Specifies whether or not book entries should be aggregated. (Not specified) = broker option
+ *  <p></p>
+ *  Valid values:
+ *  <p>    N - book entries should not be aggregated
+ *  <p>    Y - book entries to be aggregated
+ */
 public class Tag266BoolAggregatedBook extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
-    private final MyBooleanType dataValue;
+    private final Bool266AggregatedBook dataValue;
 
-    public final static MyBooleanType TESTA_BOOL_AGGREGATED_BOOK
-                    = MyBooleanType.NO ;
+    public final static Bool266AggregatedBook TESTA_BOOL_AGGREGATED_BOOK
+                    = Bool266AggregatedBook.NO ;
                     // N - book entries should not be aggregated
-    public final static MyBooleanType TESTB_BOOL_AGGREGATED_BOOK
-                    = MyBooleanType.YES;
+    public final static Bool266AggregatedBook TESTB_BOOL_AGGREGATED_BOOK
+                    = Bool266AggregatedBook.YES;
                     // Y - book entries to be aggregated
 
-    public Tag266BoolAggregatedBook(MyBooleanType dataValue) {
+    public Tag266BoolAggregatedBook(Bool266AggregatedBook dataValue) {
         setFixType(FIX42.FIX266_BOOL_AGGREGATED_BOOK);
         this.dataValue = dataValue;
     }

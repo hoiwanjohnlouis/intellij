@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  405
+ *  EFPTrackingError
+ *  Percentage
+ *  <p>
+ *  Eg Used in EFP trades 2% (EFP – Exchange for Physical).
+ *  <p>
+ *  Represented as a percentage.
+ */
 class Tag405PctEFPTrackingErrorTest {
     @Test
     void FIX0405Test() {

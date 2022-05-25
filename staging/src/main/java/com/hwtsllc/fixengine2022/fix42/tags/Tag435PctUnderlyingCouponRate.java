@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  435
+ *  UnderlyingCouponRate
+ *  Percentage
+ *  <p>
+ *  Underlying security’s CouponRate.
+ *  <p>
+ *  See CouponRate (223) field for description
+ */
 public class Tag435PctUnderlyingCouponRate extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyPercentageType dataValue;
 

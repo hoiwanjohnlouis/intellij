@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  415
+ *  ProgPeriodInterval
+ *  int
+ *  <p>
+ *  Time in minutes between each ListStatus report sent by SellSide.
+ *  <p>
+ *  Zero means don’t send status.
+ */
 class Tag415IntProgPeriodIntervalTest {
     @Test
     void FIX0415Test() {

@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  324
+ *  SecurityStatusReqID
+ *  String
+ *  <p>
+ *  Unique ID of a Security Status Request message.
+ */
 public class Tag324StrSecurityStatusReqID extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

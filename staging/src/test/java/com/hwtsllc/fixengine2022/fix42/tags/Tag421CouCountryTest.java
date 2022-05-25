@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  421
+ *  Country
+ *  Country
+ *  <p>
+ *  ISO Country Code in field
+ */
 class Tag421CouCountryTest {
     @Test
     void FIX0421Test() {

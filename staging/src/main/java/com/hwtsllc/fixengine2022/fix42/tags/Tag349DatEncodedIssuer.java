@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.datatypes.MyDataType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  349
+ *  EncodedIssuer
+ *  data
+ *  <p>
+ *  Encoded (non-ASCII characters) representation of the Issuer field in the
+ *  encoded format specified via the MessageEncoding (347) field.
+ *  <p></p>
+ *  If used, the ASCII (English) representation should also be specified in the Issuer field.
+ */
 public class Tag349DatEncodedIssuer extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyDataType dataValue;
 

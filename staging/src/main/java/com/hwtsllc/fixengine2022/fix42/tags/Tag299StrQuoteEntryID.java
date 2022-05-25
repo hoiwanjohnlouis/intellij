@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  299
+ *  QuoteEntryID
+ *  String
+ *  <p>
+ *  Uniquely identifies the quote as part of a QuoteSet.
+ */
 public class Tag299StrQuoteEntryID extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

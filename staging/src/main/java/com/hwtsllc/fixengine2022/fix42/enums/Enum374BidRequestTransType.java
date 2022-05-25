@@ -20,16 +20,20 @@ import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Tag374
+ *  374
  *  Enu
  *  BidRequestTransType
- *
- *      C, and N msg types
- *      CANCEL( "C", "CANCEL", "C - Cancel" ),
- *      NEW( "N", "NEW", "N - New" ),
+ *  char
+ *  <p>
+ *  Identifies the Bid Request message type.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    C, and N msg types
+ *  <p>    "C - Cancel"
+ *  <p>    "N - New"
  */
 public enum Enum374BidRequestTransType implements LogFIXString, LogVerboseString {
-    /**
+    /*
      * C, and N msg types
      */
     CANCEL( "C", "CANCEL", "C - Cancel" ),

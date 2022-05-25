@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyCountryType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  421
+ *  Country
+ *  Country
+ *  <p>
+ *  ISO Country Code in field
+ */
 public class Tag421CouCountry extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyCountryType dataValue;
 

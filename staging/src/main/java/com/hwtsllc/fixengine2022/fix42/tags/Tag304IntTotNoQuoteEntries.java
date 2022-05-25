@@ -22,13 +22,27 @@ import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
-public class Tag304IntTotQuoteEntries extends FIX42Abstract implements LogValuePairString, LogVerboseString {
+/**
+ *  304
+ *  TotNoQuoteEntries
+ *  int
+ *  <p>
+ *  Total number of quotes for the quote set across all messages.
+ *  <p>
+ *  Should be the sum of all NoQuoteEntries (295) in each message
+ *  that has repeating quotes that are part of the same quote set.
+ *  <p></p>
+ *  (Prior to FIX 4.4 this field was named TotQuoteEntries)
+ */
+public class Tag304IntTotNoQuoteEntries extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_TOT_QUOTE_ENTRIES = 60;
-    public final static int TESTB_INT_TOT_QUOTE_ENTRIES = 30;
+    public final static int TESTA_INT_TOT_QUOTE_ENTRIES
+            = 60;
+    public final static int TESTB_INT_TOT_QUOTE_ENTRIES
+            = 30;
 
-    public Tag304IntTotQuoteEntries(MyIntType dataValue) {
+    public Tag304IntTotNoQuoteEntries(MyIntType dataValue) {
         setFixType(FIX42.FIX304_INT_TOT_QUOTE_ENTRIES);
         this.dataValue = dataValue;
     }
@@ -68,14 +82,14 @@ public class Tag304IntTotQuoteEntries extends FIX42Abstract implements LogValueP
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag304IntTotQuoteEntries tagData;
+        Tag304IntTotNoQuoteEntries tagData;
 
-        tagData = new Tag304IntTotQuoteEntries(new MyIntType(TESTA_INT_TOT_QUOTE_ENTRIES) );
+        tagData = new Tag304IntTotNoQuoteEntries(new MyIntType(TESTA_INT_TOT_QUOTE_ENTRIES) );
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
 
-        tagData = new Tag304IntTotQuoteEntries(new MyIntType(TESTB_INT_TOT_QUOTE_ENTRIES) );
+        tagData = new Tag304IntTotNoQuoteEntries(new MyIntType(TESTB_INT_TOT_QUOTE_ENTRIES) );
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());

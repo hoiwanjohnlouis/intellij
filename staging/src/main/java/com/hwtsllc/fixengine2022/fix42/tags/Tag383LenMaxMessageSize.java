@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyLengthType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  383
+ *  MaxMessageSize
+ *  Length
+ *  <p>
+ *  Maximum number of bytes supported for a single message.
+ */
 public class Tag383LenMaxMessageSize extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyLengthType dataValue;
 

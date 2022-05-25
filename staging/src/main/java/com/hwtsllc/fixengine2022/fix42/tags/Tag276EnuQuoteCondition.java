@@ -26,67 +26,81 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  276
  *  QuoteCondition
- *
- *      A-Z
- *      "A - Open/Active"
- *      "B - Closed/Inactive"
- *      "C - Exchange Best"
- *      "D - Consolidated Best"
- *      "E - Locked"
- *      "F - Crossed"
- *      "G - Depth"
- *      "H - Fast Trading"
- *      "I - Non-Firm"
- *      "J - Outright Price"
- *      "K - Implied Price"
- *      "L - Manual/Slow Quote"
- *      "M - Depth on Offer"
- *      "N - Depth on Bid"
- *      "O - Closing"
- *      "P - News Dissemination"
- *      "Q - Trading Range"
- *      "R - Order Influx"
- *      "S - Due to Related"
- *      "T - News Pending"
- *      "U - Additional Info"
- *      "V - Additional Info due to related"
- *      "W - Resume"
- *      "X - View of Common"
- *      "Y - Volume Alert"
- *      "Z - Order Imbalance"
- *
- *      a-z
- *      "a - Equipment Changeover"
- *      "b - No Open / No Resume"
- *      "c - Regular ETH"
- *      "d - Automatic Execution"
- *      "e - Automatic Execution ETH"
- *      "f - Fast Market ETH"
- *      "g - Inactive ETH"
- *      "h - Rotation"
- *      "i - Rotation ETH"
- *      "j - Halt"
- *      "k - Halt ETH"
- *      "l - Due to News Dissemination"
- *      "m - Due to News Pending"
- *      "n - Trading Resume"
- *      "o - Out of Sequence"
- *      "p - Bid Specialist"
- *      "q - Offer Specialist"
- *      "r - Bid Offer Specialist"
- *      "s - End of Day SAM"
- *      "t - Forbidden SAM"
- *      "u - Frozen SAM"
- *      "v - PreOpening SAM"
- *      "w - Opening SAM"
- *      "x - Open SAM"
- *      "y - Surveillance SAM"
- *      "z - Suspended SAM"
- *
- *      0-2
- *      "0 - Reserved SAM"
- *      "1 - No Active SAM"
- *      "2 - Restricted"
+ *  MultipleStringValue
+ *  <p>
+ *  Space-delimited list of conditions describing a quote.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    A-Z
+ *  <p>    "A - Open/Active"
+ *  <p>    "B - Closed/Inactive"
+ *  <p>    "C - Exchange Best"
+ *  <p>    "D - Consolidated Best"
+ *  <p>    "E - Locked"
+ *  <p></p>
+ *  <p>    "F - Crossed"
+ *  <p>    "G - Depth"
+ *  <p>    "H - Fast Trading"
+ *  <p>    "I - Non-Firm"
+ *  <p>    "J - Outright Price"
+ *  <p></p>
+ *  <p>    "K - Implied Price"
+ *  <p>    "L - Manual/Slow Quote"
+ *  <p>    "M - Depth on Offer"
+ *  <p>    "N - Depth on Bid"
+ *  <p>    "O - Closing"
+ *  <p></p>
+ *  <p>    "P - News Dissemination"
+ *  <p>    "Q - Trading Range"
+ *  <p>    "R - Order Influx"
+ *  <p>    "S - Due to Related"
+ *  <p>    "T - News Pending"
+ *  <p></p>
+ *  <p>    "U - Additional Info"
+ *  <p>    "V - Additional Info due to related"
+ *  <p>    "W - Resume"
+ *  <p>    "X - View of Common"
+ *  <p>    "Y - Volume Alert"
+ *  <p></p>
+ *  <p>    "Z - Order Imbalance"
+ *  <p></p>
+ *  <p>    a-z
+ *  <p>    "a - Equipment Changeover"
+ *  <p>    "b - No Open / No Resume"
+ *  <p>    "c - Regular ETH"
+ *  <p>    "d - Automatic Execution"
+ *  <p>    "e - Automatic Execution ETH"
+ *  <p></p>
+ *  <p>    "f - Fast Market ETH"
+ *  <p>    "g - Inactive ETH"
+ *  <p>    "h - Rotation"
+ *  <p>    "i - Rotation ETH"
+ *  <p>    "j - Halt"
+ *  <p></p>
+ *  <p>    "k - Halt ETH"
+ *  <p>    "l - Due to News Dissemination"
+ *  <p>    "m - Due to News Pending"
+ *  <p>    "n - Trading Resume"
+ *  <p>    "o - Out of Sequence"
+ *  <p></p>
+ *  <p>    "p - Bid Specialist"
+ *  <p>    "q - Offer Specialist"
+ *  <p>    "r - Bid Offer Specialist"
+ *  <p>    "s - End of Day SAM"
+ *  <p>    "t - Forbidden SAM"
+ *  <p></p>
+ *  <p>    "u - Frozen SAM"
+ *  <p>    "v - PreOpening SAM"
+ *  <p>    "w - Opening SAM"
+ *  <p>    "x - Open SAM"
+ *  <p>    "y - Surveillance SAM"
+ *  <p></p>
+ *  <p>    "z - Suspended SAM"
+ *  <p></p>
+ *  <p>    0-2
+ *  <p>    "0 - Reserved SAM"
+ *  <p>    "1 - No Active SAM"
+ *  <p>    "2 - Restricted"
  */
 public class Tag276EnuQuoteCondition extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum276QuoteCondition dataValue;

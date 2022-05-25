@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  295
+ *  NoQuoteEntries
+ *  NumInGroup
+ *  <p>
+ *  The number of quote entries for a QuoteSet.
+ */
 class Tag295NumNoQuoteEntriesTest {
     @Test
     void FIX0295Test() {

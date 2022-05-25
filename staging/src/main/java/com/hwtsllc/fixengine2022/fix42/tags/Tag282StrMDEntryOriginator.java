@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  282
+ *  MDEntryOriginator
+ *  String
+ *  <p>
+ *  Deprecated in FIX.5.0 Originator of a Market Data Entry
+ */
 public class Tag282StrMDEntryOriginator extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

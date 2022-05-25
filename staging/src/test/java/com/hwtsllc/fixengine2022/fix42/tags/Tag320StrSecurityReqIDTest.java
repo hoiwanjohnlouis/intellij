@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  320
+ *  SecurityReqID
+ *  String
+ *  <p>
+ *  Unique ID of a Security Definition Request.
+ */
 class Tag320StrSecurityReqIDTest {
     @Test
     void FIX0320Test() {

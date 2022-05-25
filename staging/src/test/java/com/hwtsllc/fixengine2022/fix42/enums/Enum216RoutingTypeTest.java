@@ -25,10 +25,15 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 /**
  *  216
  *  RoutingType
- *      1 - Target Firm
- *      2 - Target List
- *      3 - Block Firm
- *      4 - Block List
+ *  int
+ *  <p>
+ *  Indicates the type of RoutingID (217) specified.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Target Firm
+ *  <p>    2 - Target List
+ *  <p>    3 - Block Firm
+ *  <p>    4 - Block List
  */
 class Enum216RoutingTypeTest {
     @Test

@@ -24,6 +24,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  213
+ *  XmlData
+ *  data
+ *  <p>
+ *  Actual XML data stream (e.g. FIXML).
+ *  <p>
+ *  See approriate XML reference (e.g. FIXML).
+ *  <p></p>
+ *  Note: may contain embedded SOH characters.
+ */
 class Tag213DatXmlDataTest {
     @Test
     void FIX0213Test() {

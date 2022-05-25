@@ -23,13 +23,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  Tag434
- *  Enu
+ *  434
  *  CxlRejResponseTo
- *
- *      1-2 msg types
- *      ORDER_CANCEL_REQUEST( "1", "ORDER_CANCEL_REQUEST", "1 - Order cancel request" ),
- *      ORDER_MODIFICATION_REQUEST( "2", "ORDER_MODIFICATION_REQUEST", "2 - Order cancel/replace request" ),
+ *  char
+ *  <p>
+ *  Identifies the type of request that a Cancel Reject is in response to.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1-2 msg types
+ *  <p>    1 - Order cancel request
+ *  <p>    2 - Order cancel/replace request
  */
 class Enum434CxlRejResponseToTest {
     @Test

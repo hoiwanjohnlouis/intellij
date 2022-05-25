@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  280
+ *  MDEntryRefID
+ *  String
+ *  <p>
+ *  Refers to a previous MDEntryID (278).
+ */
 class Tag280StrMDEntryRefIDTest {
     @Test
     void FIX0280Test() {

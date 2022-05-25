@@ -25,15 +25,19 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  Tag418
- *  Enu
+ *  418
  *  BidTradeType
- *
- *      A, G, J, and R msg types
- *      AGENCY( "A", "AGENCY", "A - Agency" ),
- *      VWAP_GUARANTEE( "G", "VWAP_GUARANTEE", "G - VWAP Guarantee" ),
- *      GUARANTEED_CLOSE( "J", "GUARANTEED_CLOSE", "J - Guaranteed Close" ),
- *      RISK_TRADE( "R", "RISK_TRADE", "R - Risk Trade" ),
+ *  char
+ *  <p>
+ *  Code to represent the type of trade.
+ *  <p>
+ *  (Prior to FIX 4.4 this field was named "TradeType")
+ *  <p></p>
+ *  Valid values:
+ *  <p>    A - Agency
+ *  <p>    G - VWAP Guarantee
+ *  <p>    J - Guaranteed Close
+ *  <p>    R - Risk Trade
  */
 class Tag418EnuBidTradeTypeTest {
     @Test

@@ -23,17 +23,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  Tag427
- *  Enu
+ *  427
  *  GTBookingInst
- *
- *      0-2 msg types
- *      BOOK_OUT_ALL_TRADES( "0", "BOOK_OUT_ALL_TRADES",
- *                          "0 - Book out all trades on day of execution" ),
- *      ACCUMULATE_EXECUTIONS_UNTIL_FILLED_OR_EXPIRES( "1", "ACCUMULATE_EXECUTIONS_UNTIL_FILLED_OR_EXPIRES",
- *                          "1 - Accumulate executions until order is filled or expires" ),
- *      ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE( "2", "ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE",
- *                          "2 - Accumulate until verbally notified otherwise" ),
+ *  int
+ *  <p>
+ *  Code to identify whether to book out executions on a part-filled GT order on the day of execution or to accumulate.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Book out all trades on day of execution
+ *  <p>    1 - Accumulate executions until order is filled or expires
+ *  <p>    2 - Accumulate until verbally notified otherwise
  */
 class Enum427GTBookingInstTest {
     @Test

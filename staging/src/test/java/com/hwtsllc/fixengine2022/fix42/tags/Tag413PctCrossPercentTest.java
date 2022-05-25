@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  413
+ *  CrossPercent
+ *  Percentage
+ *  <p>
+ *  Percentage of program that crosses in Currency.  Represented as a percentage.
+ */
 class Tag413PctCrossPercentTest {
     @Test
     void FIX0413Test() {

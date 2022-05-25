@@ -22,16 +22,20 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  291
+ *  FinancialStatus
+ *  MultipleCharValue
+ *  <p>
+ *  Identifies a firm's or a security's financial status
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1-3 msg types
+ *  <p>    BANKRUPT( "1", "BANKRUPT", "1 - Bankrupt" ),
+ *  <p>    PENDING_DELISTING( "2", "PENDING_DELISTING", "2 - Pending delisting" ),
+ *  <p>    RESTRICTED( "3", "RESTRICTED", "3 - Restricted" ),
+ */
 class Enum291FinancialStatusTest {
-    /**
-     *  291
-     *  FinancialStatus
-     *
-     *      1-3 msg types
-     *      BANKRUPT( "1", "BANKRUPT", "1 - Bankrupt" ),
-     *      PENDING_DELISTING( "2", "PENDING_DELISTING", "2 - Pending delisting" ),
-     *      RESTRICTED( "3", "RESTRICTED", "3 - Restricted" ),
-     */
     @Test
     void Enum0291Test() {
         Enum291FinancialStatus enumType;

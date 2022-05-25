@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  217
+ *  RoutingID
+ *  String
+ *  <p>
+ *  Assigned value used to identify a specific routing destination.
+ */
 class Tag217StrRoutingIDTest {
     @Test
     void FIX0217Test() {

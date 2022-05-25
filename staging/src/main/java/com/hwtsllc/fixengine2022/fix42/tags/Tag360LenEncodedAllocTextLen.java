@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyLengthType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  360
+ *  EncodedAllocTextLen
+ *  Length
+ *  <p>
+ *  Byte length of encoded (non-ASCII characters) EncodedAllocText (361) field.
+ */
 public class Tag360LenEncodedAllocTextLen extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyLengthType dataValue;
 

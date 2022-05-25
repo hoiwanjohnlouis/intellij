@@ -22,6 +22,17 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  257
+ *  LegCreditRating
+ *  String
+ *  <p>
+ *  Multileg instrument's individual leg security’s CreditRating.
+ *  <p>
+ *  See CreditRating (255) field for description
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ */
 public class Tag257StrLegCreditRating extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

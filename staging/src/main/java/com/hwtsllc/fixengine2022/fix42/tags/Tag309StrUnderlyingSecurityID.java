@@ -22,11 +22,22 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  309
+ *  UnderlyingSecurityID
+ *  String
+ *  <p>
+ *  Underlying security’s SecurityID.
+ *  <p>
+ *  See SecurityID (48) field for description
+ */
 public class Tag309StrUnderlyingSecurityID extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_UNDERLYING_SECURITY_ID = "BilboBaggins-Tag309StrUnderlyingSecurityID";
-    public final static String TESTB_STR_UNDERLYING_SECURITY_ID = "Gandalf-Tag309StrUnderlyingSecurityID";
+    public final static String TESTA_STR_UNDERLYING_SECURITY_ID
+            = "BilboBaggins-Tag309StrUnderlyingSecurityID";
+    public final static String TESTB_STR_UNDERLYING_SECURITY_ID
+            = "Gandalf-Tag309StrUnderlyingSecurityID";
 
     public Tag309StrUnderlyingSecurityID(MyStringType dataValue) {
         setFixType(FIX42.FIX309_STR_UNDERLYING_SECURITY_ID);

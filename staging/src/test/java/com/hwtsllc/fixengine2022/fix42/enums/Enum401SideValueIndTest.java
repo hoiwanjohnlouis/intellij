@@ -23,13 +23,18 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  Tag401
- *  Enu
+ *  401
  *  SideValueInd
- *
- *      1-2 msg types
- *      SIDE_VALUE_1( "1", "SIDE_VALUE_1", "1 - Side Value 1" ),
- *      SIDE_VALUE_2( "2", "SIDE_VALUE_2", "2 - Side Value 2" ),
+ *  int
+ *  <p>
+ *  Code to identify which "SideValue" the value refers to.
+ *  <p>
+ *  SideValue1 and SideValue2 are used as opposed to Buy or Sell
+ *  so that the basket can be quoted either way as Buy or Sell.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Side Value 1
+ *  <p>    2 - Side Value 2
  */
 class Enum401SideValueIndTest {
     @Test

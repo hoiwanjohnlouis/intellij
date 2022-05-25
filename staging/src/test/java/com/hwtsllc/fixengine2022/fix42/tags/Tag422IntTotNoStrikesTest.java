@@ -24,6 +24,18 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  422
+ *  TotNoStrikes
+ *  int
+ *  <p>
+ *  Total number of strike price entries across all messages.
+ *  <p>
+ *  Should be the sum of all NoStrikes (428) in each message that has
+ *  repeating strike price entries related to the same ListID (66).
+ *  <p></p>
+ *  Used to support fragmentation.
+ */
 class Tag422IntTotNoStrikesTest {
     @Test
     void FIX0422Test() {

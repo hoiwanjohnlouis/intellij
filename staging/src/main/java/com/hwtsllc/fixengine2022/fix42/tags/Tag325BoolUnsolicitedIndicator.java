@@ -18,22 +18,31 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix42.enums.Bool325UnsolicitedIndicator;
 import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  325
+ *  UnsolicitedIndicator
+ *  Boolean
+ *  <p>
+ *  Indicates whether or not message is being sent as a result of a subscription request or not.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    N - Message is being sent as a result of a prior request
+ *  <p>    Y - Message is being sent unsolicited
+ */
 public class Tag325BoolUnsolicitedIndicator extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
-    private final MyBooleanType dataValue;
+    private final Bool325UnsolicitedIndicator dataValue;
 
-    public final static MyBooleanType TESTA_BOOL_UNSOLICITED_INDICATOR
-            = MyBooleanType.NO ;
-            // N - Msg is being sent as a result of a prior request
-    public final static MyBooleanType TESTB_BOOL_UNSOLICITED_INDICATOR
-            = MyBooleanType.YES;
-            // Y - Msg is being sent unsolicited
+    public final static Bool325UnsolicitedIndicator TESTA_BOOL_UNSOLICITED_INDICATOR
+            = Bool325UnsolicitedIndicator.NO ;
+    public final static Bool325UnsolicitedIndicator TESTB_BOOL_UNSOLICITED_INDICATOR
+            = Bool325UnsolicitedIndicator.YES;
 
-    public Tag325BoolUnsolicitedIndicator(MyBooleanType dataValue) {
+    public Tag325BoolUnsolicitedIndicator(Bool325UnsolicitedIndicator dataValue) {
         setFixType(FIX42.FIX325_BOOL_UNSOLICITED_INDICATOR);
         this.dataValue = dataValue;
     }

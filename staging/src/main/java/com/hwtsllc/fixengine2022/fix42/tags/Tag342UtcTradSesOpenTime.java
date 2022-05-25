@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  342
+ *  TradSesOpenTime
+ *  UTCTimestamp
+ *  <p>
+ *  Time of the opening of the trading session
+ */
 public class Tag342UtcTradSesOpenTime extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyUTCTimestampType dataValue;
 

@@ -24,6 +24,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  432
+ *  ExpireDate
+ *  LocalMktDate
+ *  <p>
+ *  Date of order expiration (last day the order can trade),
+ *  always expressed in terms of the local market date.
+ *  <p>
+ *  The time at which the order expires is determined by the local market’s business practices
+ */
 class Tag432LmdExpireDateTest {
     @Test
     void FIX0432Test() {

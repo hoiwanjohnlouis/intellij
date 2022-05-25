@@ -23,17 +23,21 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  Tag429
- *  Enu
+ *  429
  *  ListStatusType
- *
- *      1-6 msg types
- *      ACK( "1", "ACK", "1 - Ack" ),
- *      RESPONSE( "2", "RESPONSE", "2 - Response" ),
- *      TIMED( "3", "TIMED", "3 - Timed" ),
- *      EXEC_STARTED( "4", "EXEC_STARTED", "4 - Exec Started" ),
- *      ALL_DONE( "5", "ALL_DONE", "5 - All Done" ),
- *      ALERT( "6", "ALERT", "6 - Alert" ),
+ *  int
+ *  <p>
+ *  Code to represent the status type.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1-6 msg types
+ *  <p>    1 - Ack
+ *  <p>    2 - Response
+ *  <p>    3 - Timed
+ *  <p>    4 - Exec Started
+ *  <p>    5 - All Done
+ *  <p></p>
+ *  <p>    6 - Alert
  */
 class Enum429ListStatusTypeTest {
     @Test
@@ -87,6 +91,7 @@ class Enum429ListStatusTypeTest {
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+
 
         enumType = Enum429ListStatusType.ALERT;
         assertEquals( "6", enumType.toFIXIDString());

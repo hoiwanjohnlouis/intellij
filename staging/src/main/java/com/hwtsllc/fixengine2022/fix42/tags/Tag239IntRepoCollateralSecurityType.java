@@ -22,6 +22,17 @@ import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  239
+ *  RepoCollateralSecurityType
+ *  int
+ *  <p>
+ *  Identifies the collateral used in the transaction.
+ *  <p></p>
+ *  Valid values:
+ *  <p>
+ *  see SecurityType (167) field (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ */
 // @Deprecated
 public class Tag239IntRepoCollateralSecurityType extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyIntType dataValue;

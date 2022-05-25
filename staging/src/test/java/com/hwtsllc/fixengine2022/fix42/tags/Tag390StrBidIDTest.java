@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  390
+ *  BidID
+ *  String
+ *  <p>
+ *  Unique identifier for Bid Response as assigned by sell-side (broker, exchange, ECN).
+ *  <p></p>
+ *  Uniqueness must be guaranteed within a single trading day.
+ */
 class Tag390StrBidIDTest {
     @Test
     void FIX0390Test() {

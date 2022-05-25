@@ -24,21 +24,23 @@ import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Tag380
- *  Enu
+ *  380
  *  BusinessRejectReason
- *
- *      0-7, 18 msg types
- *      OTHER( "0", "OTHER", "0 - Other" ),
- *      UNKNOWN_ID( "1", "UNKNOWN_ID", "1 - Unknown ID" ),
- *      UNKNOWN_SECURITY( "2", "UNKNOWN_SECURITY", "2 - Unknown Security" ),
- *      UNKNOWN_MESSAGE_TYPE( "3", "UNKNOWN_MESSAGE_TYPE", "3 - Unknown Message Type" ),
- *      APPLICATION_NOT_AVAILABLE( "4", "APPLICATION_NOT_AVAILABLE", "4 - Application not available" ),
- *      REQUIRED_FIELD_MISSING( "5", "REQUIRED_FIELD_MISSING", "5 - Conditionally required field missing" ),
- *      NOT_AUTHORIZED( "6", "NOT_AUTHORIZED", "6 - Not Authorized" ),
- *      DELIVERTO_FIRM_NOT_AVAILABLE( "7", "DELIVERTO_FIRM_NOT_AVAILABLE",
- *                          "7 - DeliverTo firm not available at this time" ),
- *      INVALID_PRICE_INCREMENT( "18", "INVALID_PRICE_INCREMENT", "18 - Invalid price increment" ),
+ *  int
+ *  <p>
+ *  Code to identify reason for a Business Message Reject message.
+ *  <p></p>
+ *  Valid values:
+ *  <p>     0 - Other
+ *  <p>     1 - Unknown ID
+ *  <p>     2 - Unknown Security
+ *  <p>     3 - Unknown Message Type
+ *  <p>     4 - Application not available
+ *  <p></p>
+ *  <p>     5 - Conditionally required field missing
+ *  <p>     6 - Not Authorized
+ *  <p>     7 - DeliverTo firm not available at this time
+ *  <p>     18 - Invalid price increment
  */
 public class Tag380EnuBusinessRejectReason extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum380BusinessRejectReason dataValue;

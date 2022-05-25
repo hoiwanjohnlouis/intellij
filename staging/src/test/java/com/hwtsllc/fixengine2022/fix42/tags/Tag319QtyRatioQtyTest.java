@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  319
+ *  RatioQty
+ *  Qty
+ *  <p>
+ *  Deprecated in FIX.4.2 Quantity of a particular leg in the security.
+ */
 // @Deprecated
 class Tag319QtyRatioQtyTest {
     @Test

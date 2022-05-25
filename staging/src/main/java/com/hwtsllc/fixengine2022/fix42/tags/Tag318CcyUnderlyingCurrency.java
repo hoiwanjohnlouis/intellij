@@ -22,12 +22,23 @@ import com.hwtsllc.fixengine2022.datatypes.MyCurrencyType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  318
+ *  UnderlyingCurrency
+ *  Currency
+ *  <p>
+ *  Underlying security’s Currency.
+ *  <p>
+ *  See Currency (5) field for description and valid values
+ */
 // @Deprecated
 public class Tag318CcyUnderlyingCurrency extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyCurrencyType dataValue;
 
-    public final static String TESTA_CCY_UNDERLYING_CURRENCY = "USD";
-    public final static String TESTB_CCY_UNDERLYING_CURRENCY = "EUR";
+    public final static String TESTA_CCY_UNDERLYING_CURRENCY
+            = "USD";
+    public final static String TESTB_CCY_UNDERLYING_CURRENCY
+            = "EUR";
 
     public Tag318CcyUnderlyingCurrency(MyCurrencyType dataValue) {
         setFixType(FIX42.FIX318_CCY_UNDERLYING_CURRENCY);

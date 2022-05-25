@@ -24,6 +24,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  313
+ *  UnderlyingMaturityMonthYear
+ *  month-year
+ *  <p>
+ *  Underlying security’s MaturityMonthYear.
+ *  <p>
+ *  Can be used with standardized derivatives vs. the UnderlyingMaturityDate (542) field.
+ *  <p>
+ *  See MaturityMonthYear (200) field for description
+ */
 class Tag313StrUnderlyingMaturityMonthYearTest {
     @Test
     void FIX0313Test() {

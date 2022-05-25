@@ -20,17 +20,21 @@ import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Tag334
+ *  334
  *  Enu
  *  Adjustment
- *
- *      1-3 msg types
- *      CANCEL( "1", "CANCEL", "1 - Cancel" ),
- *      ERROR( "2", "ERROR", "2 - Error" ),
- *      CORRECTION( "3", "CORRECTION", "3 - Correction" ),
+ *  int
+ *  <p>
+ *  Identifies the type of adjustment.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1-3 msg types
+ *  <p>    CANCEL( "1", "CANCEL", "1 - Cancel" ),
+ *  <p>    ERROR( "2", "ERROR", "2 - Error" ),
+ *  <p>    CORRECTION( "3", "CORRECTION", "3 - Correction" ),
  */
 public enum Enum334Adjustment implements LogFIXString, LogVerboseString {
-    /**
+    /*
      * 1-3 msg types
      */
     CANCEL( "1", "CANCEL", "1 - Cancel" ),

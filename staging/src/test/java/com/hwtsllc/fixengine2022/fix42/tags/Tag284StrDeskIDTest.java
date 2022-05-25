@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  284
+ *  DeskID
+ *  String
+ *  <p>
+ *  Identification of a Market Maker’s desk
+ */
 class Tag284StrDeskIDTest {
     @Test
     void FIX0284Test() {

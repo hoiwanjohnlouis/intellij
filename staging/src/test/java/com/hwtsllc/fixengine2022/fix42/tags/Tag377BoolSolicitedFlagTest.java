@@ -17,13 +17,24 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix42.enums.Bool377SolicitedFlag;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  377
+ *  SolicitedFlag
+ *  Boolean
+ *  <p>
+ *  Indicates whether or not the order was solicited.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    N - Was not solicited
+ *  <p>    Y - Was solicited
+ */
 class Tag377BoolSolicitedFlagTest {
     @Test
     void FIX0377Test() {
@@ -39,11 +50,11 @@ class Tag377BoolSolicitedFlagTest {
     void Tag0377Test() {
         Tag377BoolSolicitedFlag tagData;
 
-        tagData = new Tag377BoolSolicitedFlag(MyBooleanType.NO);
+        tagData = new Tag377BoolSolicitedFlag(Bool377SolicitedFlag.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag377BoolSolicitedFlag(MyBooleanType.YES);
+        tagData = new Tag377BoolSolicitedFlag(Bool377SolicitedFlag.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

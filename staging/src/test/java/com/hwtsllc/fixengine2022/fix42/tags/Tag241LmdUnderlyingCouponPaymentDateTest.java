@@ -24,6 +24,19 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  241
+ *  UnderlyingCouponPaymentDate
+ *  LocalMktDate
+ *  <p>
+ *  Underlying security’s CouponPaymentDate.
+ *  <p>
+ *  See CouponPaymentDate (224) field for description
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ *  <p></p>
+ *  (prior to FIX 4.4 field was of type UTCDate)
+ */
 class Tag241LmdUnderlyingCouponPaymentDateTest {
     @Test
     void FIX0241Test() {

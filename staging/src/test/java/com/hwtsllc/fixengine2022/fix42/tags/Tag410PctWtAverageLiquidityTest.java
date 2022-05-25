@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  410
+ *  WtAverageLiquidity
+ *  Percentage
+ *  <p>
+ *  Overall weighted average liquidity expressed as a % of average daily volume.
+ *  <p>
+ *  Represented as a percentage.
+ */
 class Tag410PctWtAverageLiquidityTest {
     @Test
     void FIX0410Test() {

@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  443
+ *  StrikeTime
+ *  UTCTimestamp
+ *  <p>
+ *  The time at which current market prices are used to determine the value of a basket.
+ */
 public class Tag443UtcStrikeTime extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyUTCTimestampType dataValue;
 

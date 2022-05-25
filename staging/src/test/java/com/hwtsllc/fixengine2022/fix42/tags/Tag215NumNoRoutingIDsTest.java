@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  215
+ *  NoRoutingIDs
+ *  NumInGroup
+ *  <p>
+ *  Number of repeating groups of RoutingID (217) and RoutingType (216) values.
+ *  <p></p>
+ *  See Volume 3: "Pre-Trade Message Targeting/Routing"
+ */
 class Tag215NumNoRoutingIDsTest {
     @Test
     void FIX0215Test() {

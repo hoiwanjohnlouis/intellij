@@ -24,6 +24,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  220
+ *  BenchmarkCurveCurrency
+ *  Currency
+ *  <p>
+ *  Identifies currency used for  benchmark curve.
+ *  <p></p>
+ *  See "Appendix 6-A: Valid Currency Codes" for information on obtaining valid values.
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ */
 class Tag220CcyBenchmarkCurveCurrencyTest {
     @Test
     void FIX0220Test() {

@@ -24,17 +24,22 @@ import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Tag327
+ *  327
  *  Enu
  *  HaltReason
- *
- *      D, E, I, M, P, and X msg types
- *      NEWS_DISSEMINATION( "D", "NEWS_DISSEMINATION", "D - News Dissemination" ),
- *      ORDER_INFLUX( "E", "ORDER_INFLUX", "E - Order Influx" ),
- *      ORDER_IMBALANCE( "I", "ORDER_IMBALANCE", "I - Order Imbalance" ),
- *      ADDITIONAL_INFORMATION( "M", "ADDITIONAL_INFORMATION", "M - Additional Information" ),
- *      NEW_PENDING( "P", "NEW_PENDING", "P - New Pending" ),
- *      EQUIPMENT_CHANGE_OVER( "X", "EQUIPMENT_CHANGE_OVER", "X - Equipment Changeover" ),
+ *  char
+ *  <p>
+ *  Denotes the reason for the Opening Delay or Trading Halt.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    D, E, I, M, P, and X msg types
+ *  <p>    "D - News Dissemination"
+ *  <p>    "E - Order Influx"
+ *  <p>    "I - Order Imbalance"
+ *  <p>    "M - Additional Information"
+ *  <p>    "P - New Pending"
+ *  <p></p>
+ *  <p>    "X - Equipment Changeover"
  */
 public class Tag327EnuHaltReason extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum327HaltReason dataValue;

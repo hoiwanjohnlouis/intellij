@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  237
+ *  TotalTakedown
+ *  Amt
+ *  <p>
+ *  The price at which the securities are distributed to the different members of an
+ *  underwriting group for the primary market in Municipals, total gross underwriter's spread.
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ */
 public class Tag237AmtTotalTakedown extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyAmtType dataValue;
 

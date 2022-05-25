@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  376
+ *  ComplianceID
+ *  String
+ *  <p>
+ *  ID used to represent this transaction for compliance purposes (e.g. OATS reporting).
+ */
 class Tag376StrComplianceIDTest {
     @Test
     void FIX0376Test() {

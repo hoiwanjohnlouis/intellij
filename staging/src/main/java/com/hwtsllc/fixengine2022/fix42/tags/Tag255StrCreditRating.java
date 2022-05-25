@@ -22,6 +22,17 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  255
+ *  CreditRating
+ *  String
+ *  <p>
+ *  An evaluation of a company's ability to repay obligations or its likelihood of not defaulting.
+ *  <p>
+ *  These evaluations are provided by Credit Rating Agencies, i.e. S&P, Moody's.
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ */
 public class Tag255StrCreditRating extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

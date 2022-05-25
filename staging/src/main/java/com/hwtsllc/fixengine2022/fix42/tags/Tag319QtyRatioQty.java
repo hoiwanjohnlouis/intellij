@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  319
+ *  RatioQty
+ *  Qty
+ *  <p>
+ *  Deprecated in FIX.4.2 Quantity of a particular leg in the security.
+ */
 // @Deprecated
 public class Tag319QtyRatioQty extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyQtyType dataValue;

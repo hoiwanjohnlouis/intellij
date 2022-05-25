@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  437
+ *  ContraTradeQty
+ *  Qty
+ *  <p>
+ *  Quantity traded with the ContraBroker (375).
+ */
 class Tag437QtyContraTradeQtyTest {
     @Test
     void FIX0437Test() {

@@ -27,9 +27,13 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 /**
  *  265
  *  MDUpdateType
- *  0-1 msg types
- *      "0 - Full refresh"
- *      "1 - Incremental refresh"
+ *  int
+ *  <p>
+ *  Specifies the type of Market Data update.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    "0 - Full refresh"
+ *  <p>    "1 - Incremental refresh"
  */
 class Tag265EnuMDUpdateTypeTest {
     @Test

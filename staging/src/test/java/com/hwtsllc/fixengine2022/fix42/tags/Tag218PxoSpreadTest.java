@@ -24,6 +24,26 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  218
+ *  Spread
+ *  PriceOffset
+ *  <p>
+ *  For Fixed Income.
+ *  <p>
+ *  Either Swap Spread or Spread to Benchmark depending upon the order type.
+ *  <p></p>
+ *  Spread to Benchmark:  Basis points relative to a benchmark.
+ *  To be expressed as "count of basis points" (vs. an absolute value).
+ *  <p>
+ *  E.g. High Grade Corporate Bonds may express price as basis points relative to benchmark
+ *  <p>
+ *  (the BenchmarkCurveName (22) field).
+ *  <p>
+ *  Note: Basis points can be negative.
+ *  <p></p>
+ *  Swap Spread:  Target spread for a swap.
+ */
 class Tag218PxoSpreadTest {
     @Test
     void FIX0218Test() {

@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  424
+ *  DayOrderQty
+ *  Qty
+ *  <p>
+ *  For GT orders, the OrderQty (38) less all quantity (adjusted for stock splits)
+ *  that traded on previous days.
+ *  <p>
+ *  DayOrderQty (424) = OrderQty – (CumQty (14) – DayCumQty (425))
+ */
 public class Tag424QtyDayOrderQty extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyQtyType dataValue;
 

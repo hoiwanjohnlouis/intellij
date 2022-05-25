@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  403
+ *  LiquidityPctHigh
+ *  Percentage
+ *  <p>
+ *  Upper liquidity indicator if TotalNumSecurities (393) > 1.  Represented as a percentage.
+ */
 public class Tag403PctLiquidityPctHigh extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyPercentageType dataValue;
 

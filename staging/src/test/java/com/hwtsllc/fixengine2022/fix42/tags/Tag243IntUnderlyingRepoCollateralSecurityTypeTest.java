@@ -24,6 +24,19 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  243
+ *  UnderlyingRepoCollateralSecurityType
+ *  int
+ *  <p>
+ *  Deprecated in FIX.4.4
+ *  <p>
+ *  Underlying security's RepoCollateralSecurityType.
+ *  <p>
+ *  See RepoCollateralSecurityType (239) field for description.
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ */
 // @Deprecated
 class Tag243IntUnderlyingRepoCollateralSecurityTypeTest {
     @Test

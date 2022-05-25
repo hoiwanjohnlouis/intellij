@@ -27,30 +27,38 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 /**
  *  292
  *  CorporateAction
- *
- *      A-V msg types
- *      EX_DIVIDEND( "A", "EX_DIVIDEND", "A - Ex-Dividend" ),
- *      EX_DISTRIBUTION( "B", "EX_DISTRIBUTION", "B - Ex-Distribution" ),
- *      EX_RIGHTS( "C", "EX_RIGHTS", "C - Ex-Rights" ),
- *      NEW( "D", "NEW", "D - New" ),
- *      EX_INTEREST( "E", "EX_INTEREST", "E - Ex-Interest" ),
- *      CASH_DIVIDEND( "F", "CASH_DIVIDEND", "F - Cash Dividend" ),
- *      STOCK_DIVIDEND( "G", "STOCK_DIVIDEND", "G - Stock Dividend" ),
- *      NON_INTEGER_STOCK_SPLIT( "H", "NON_INTEGER_STOCK_SPLIT", "H - Non-Integer Stock Split" ),
- *      REVERSE_STOCK_SPLIT( "I", "REVERSE_STOCK_SPLIT", "I - Reverse Stock Split" ),
- *      STANDARD_INTEGER_STOCK_SPLIT( "J", "STANDARD_INTEGER_STOCK_SPLIT", "J - Standard-Integer Stock Split" ),
- *      POSITION_CONSOLIDATION( "K", "POSITION_CONSOLIDATION", "K - Position Consolidation" ),
- *      LIQUIDATION_REORGANIZATION( "L", "LIQUIDATION_REORGANIZATION", "L - Liquidation Reorganization" ),
- *      MERGER_REORGANIZATION( "M", "MERGER_REORGANIZATION", "M - Merger Reorganization" ),
- *      RIGHTS_OFFERING( "N", "RIGHTS_OFFERING", "N - Rights Offering" ),
- *      SHAREHOLDER_MEETING( "O", "SHAREHOLDER_MEETING", "O - Shareholder Meeting" ),
- *      SPINOFF( "P", "SPINOFF", "P - Spinoff" ),
- *      TENDER_OFFER( "Q", "TENDER_OFFER", "Q - Tender Offer" ),
- *      WARRANT( "R", "WARRANT", "R - Warrant" ),
- *      SPECIAL_ACTION( "S", "SPECIAL_ACTION", "S - Special Action" ),
- *      SYMBOL_CONVERSION( "T", "SYMBOL_CONVERSION", "T - Symbol Conversion" ),
- *      CUSIP_OR_NAME_CHANGE( "U", "CUSIP_OR_NAME_CHANGE", "U - CUSIP / Name Change" ),
- *      LEAP_ROLLOVER( "V", "LEAP_ROLLOVER", "V - Leap Rollover" ),
+ *  MultipleCharValue
+ *  <p>
+ *  Identifies the type of Corporate Action.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    A-V msg types
+ *  <p>    EX_DIVIDEND( "A", "EX_DIVIDEND", "A - Ex-Dividend" ),
+ *  <p>    EX_DISTRIBUTION( "B", "EX_DISTRIBUTION", "B - Ex-Distribution" ),
+ *  <p>    EX_RIGHTS( "C", "EX_RIGHTS", "C - Ex-Rights" ),
+ *  <p>    NEW( "D", "NEW", "D - New" ),
+ *  <p>    EX_INTEREST( "E", "EX_INTEREST", "E - Ex-Interest" ),
+ *  <p></p>
+ *  <p>    CASH_DIVIDEND( "F", "CASH_DIVIDEND", "F - Cash Dividend" ),
+ *  <p>    STOCK_DIVIDEND( "G", "STOCK_DIVIDEND", "G - Stock Dividend" ),
+ *  <p>    NON_INTEGER_STOCK_SPLIT( "H", "NON_INTEGER_STOCK_SPLIT", "H - Non-Integer Stock Split" ),
+ *  <p>    REVERSE_STOCK_SPLIT( "I", "REVERSE_STOCK_SPLIT", "I - Reverse Stock Split" ),
+ *  <p>    STANDARD_INTEGER_STOCK_SPLIT( "J", "STANDARD_INTEGER_STOCK_SPLIT", "J - Standard-Integer Stock Split" ),
+ *  <p></p>
+ *  <p>    POSITION_CONSOLIDATION( "K", "POSITION_CONSOLIDATION", "K - Position Consolidation" ),
+ *  <p>    LIQUIDATION_REORGANIZATION( "L", "LIQUIDATION_REORGANIZATION", "L - Liquidation Reorganization" ),
+ *  <p>    MERGER_REORGANIZATION( "M", "MERGER_REORGANIZATION", "M - Merger Reorganization" ),
+ *  <p>    RIGHTS_OFFERING( "N", "RIGHTS_OFFERING", "N - Rights Offering" ),
+ *  <p>    SHAREHOLDER_MEETING( "O", "SHAREHOLDER_MEETING", "O - Shareholder Meeting" ),
+ *  <p></p>
+ *  <p>    SPINOFF( "P", "SPINOFF", "P - Spinoff" ),
+ *  <p>    TENDER_OFFER( "Q", "TENDER_OFFER", "Q - Tender Offer" ),
+ *  <p>    WARRANT( "R", "WARRANT", "R - Warrant" ),
+ *  <p>    SPECIAL_ACTION( "S", "SPECIAL_ACTION", "S - Special Action" ),
+ *  <p>    SYMBOL_CONVERSION( "T", "SYMBOL_CONVERSION", "T - Symbol Conversion" ),
+ *  <p></p>
+ *  <p>    CUSIP_OR_NAME_CHANGE( "U", "CUSIP_OR_NAME_CHANGE", "U - CUSIP / Name Change" ),
+ *  <p>    LEAP_ROLLOVER( "V", "LEAP_ROLLOVER", "V - Leap Rollover" ),
  */
 class Tag292EnuCorporateActionTest {
     @Test

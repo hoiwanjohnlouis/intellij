@@ -24,6 +24,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  253
+ *  LegFactor
+ *  float
+ *  <p>
+ *  Multileg instrument's individual leg security’s Factor.
+ *  <p>
+ *  See Factor (228) field for description
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ */
 class Tag253FloLegFactorTest {
     @Test
     void FIX0253Test() {

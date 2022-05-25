@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.datatypes.MyDataType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  446
+ *  EncodedListStatusText
+ *  data
+ *  <p>
+ *  Encoded (non-ASCII characters) representation of the ListStatusText (444) field
+ *  in the encoded format specified via the MessageEncoding (347) field.
+ *  <p></p>
+ *  If used, the ASCII (English) representation should also be specified in the ListStatusText field.
+ */
 public class Tag446DatEncodedListStatusText extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyDataType dataValue;
 

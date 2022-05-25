@@ -27,10 +27,14 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 /**
  *  285
  *  DeleteReason
- *
- *      0-1 msg types
- *      CANCELLATION_OR_TRADE_BUST( "0", "CANCELLATION_OR_TRADE_BUST", "0 - Cancellation / Trade Bust" ),
- *      ERROR( "1", "ERROR", "1 - Error" ),
+ *  char
+ *  <p>
+ *  Reason for deletion.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0-1 msg types
+ *  <p>    CANCELLATION_OR_TRADE_BUST( "0", "CANCELLATION_OR_TRADE_BUST", "0 - Cancellation / Trade Bust" ),
+ *  <p>    ERROR( "1", "ERROR", "1 - Error" ),
  */
 class Tag285EnuDeleteReasonTest {
     @Test

@@ -22,6 +22,20 @@ import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  370
+ *  OnBehalfOfSendingTime
+ *  UTCTimestamp
+ *  <p>
+ *  Deprecated in FIX.4.3
+ *  <p>
+ *  Used when a message is sent via a 'hub' or 'service bureau'.
+ *  <p>
+ *  If A sends to Q (the hub), who then sends to B via a separate FIX session, then when Q sends to B,
+ *  the value of this field should represent the SendingTime on the message A sent to Q.
+ *  <p></p>
+ *  (always expressed in UTC (Universal Time Coordinated, also known as 'GMT')
+ */
 public class Tag370UtcOnBehalfOfSendingTime extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyUTCTimestampType dataValue;
 

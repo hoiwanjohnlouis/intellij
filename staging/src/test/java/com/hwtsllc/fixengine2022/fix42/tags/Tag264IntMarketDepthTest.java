@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  264
+ *  MarketDepth
+ *  int
+ *  <p>
+ *  Depth of market for Book Snapshot
+ */
 class Tag264IntMarketDepthTest {
     @Test
     void FIX0264Test() {

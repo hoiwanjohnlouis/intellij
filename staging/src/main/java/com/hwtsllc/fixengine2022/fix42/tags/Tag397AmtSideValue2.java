@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  397
+ *  SideValue2
+ *  Amt
+ *  <p>
+ *  Amounts in currency
+ */
 public class Tag397AmtSideValue2 extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyAmtType dataValue;
 

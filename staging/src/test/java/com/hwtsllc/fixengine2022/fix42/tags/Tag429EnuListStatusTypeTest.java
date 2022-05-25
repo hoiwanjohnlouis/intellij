@@ -25,17 +25,21 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  Tag429
- *  Enu
+ *  429
  *  ListStatusType
- *
- *      1-6 msg types
- *      ACK( "1", "ACK", "1 - Ack" ),
- *      RESPONSE( "2", "RESPONSE", "2 - Response" ),
- *      TIMED( "3", "TIMED", "3 - Timed" ),
- *      EXEC_STARTED( "4", "EXEC_STARTED", "4 - Exec Started" ),
- *      ALL_DONE( "5", "ALL_DONE", "5 - All Done" ),
- *      ALERT( "6", "ALERT", "6 - Alert" ),
+ *  int
+ *  <p>
+ *  Code to represent the status type.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1-6 msg types
+ *  <p>    1 - Ack
+ *  <p>    2 - Response
+ *  <p>    3 - Timed
+ *  <p>    4 - Exec Started
+ *  <p>    5 - All Done
+ *  <p></p>
+ *  <p>    6 - Alert
  */
 class Tag429EnuListStatusTypeTest {
     @Test
@@ -74,6 +78,7 @@ class Tag429EnuListStatusTypeTest {
         tagData = new Tag429EnuListStatusType(Enum429ListStatusType.ALL_DONE);
         assertEquals( Enum429ListStatusType.ALL_DONE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
 
         tagData = new Tag429EnuListStatusType(Enum429ListStatusType.ALERT);
         assertEquals( Enum429ListStatusType.ALERT.toFIXIDString(), tagData.getDataValue());

@@ -24,13 +24,17 @@ import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Tag374
+ *  374
  *  Enu
  *  BidRequestTransType
- *
- *      C, and N msg types
- *      CANCEL( "C", "CANCEL", "C - Cancel" ),
- *      NEW( "N", "NEW", "N - New" ),
+ *  char
+ *  <p>
+ *  Identifies the Bid Request message type.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    C, and N msg types
+ *  <p>    "C - Cancel"
+ *  <p>    "N - New"
  */
 public class Tag374EnuBidRequestTransType extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum374BidRequestTransType dataValue;

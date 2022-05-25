@@ -22,12 +22,23 @@ import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  314
+ *  UnderlyingMaturityDay
+ *  day-of-month
+ *  <p>
+ *  Deprecated in FIX.4.2
+ *  <p>
+ *  Underlying security�s MaturityDay.  See MaturityDay field for description
+ */
 // @Deprecated
 public class Tag314IntUnderlyingMaturityDay extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_UNDERLYING_MATURITY_DAY = 1;
-    public final static int TESTB_INT_UNDERLYING_MATURITY_DAY = 28;
+    public final static int TESTA_INT_UNDERLYING_MATURITY_DAY
+            = 1;
+    public final static int TESTB_INT_UNDERLYING_MATURITY_DAY
+            = 28;
 
     public Tag314IntUnderlyingMaturityDay(MyIntType dataValue) {
         setFixType(FIX42.FIX314_INT_UNDERLYING_MATURITY_DAY);

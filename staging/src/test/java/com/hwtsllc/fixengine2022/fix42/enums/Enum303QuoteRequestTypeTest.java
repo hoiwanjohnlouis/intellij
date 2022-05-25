@@ -22,15 +22,19 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  303
+ *  QuoteRequestType
+ *  int
+ *  <p>
+ *  Indicates the type of Quote Request being generated
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1-2 msg types
+ *  <p>    "1 - Manual"
+ *  <p>    "2 - Automatic"
+ */
 class Enum303QuoteRequestTypeTest {
-    /**
-     *  303
-     *  QuoteRequestType
-     *
-     *      1-2 msg types
-     *      MANUAL( "1", "MANUAL", "1 - Manual" ),
-     *      AUTOMATIC( "2", "AUTOMATIC", "2 - Automatic" ),
-     */
     @Test
     void Enum0303Test() {
         Enum303QuoteRequestType enumType;

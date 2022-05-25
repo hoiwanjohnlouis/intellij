@@ -26,22 +26,20 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
  *  323
- *  Enu
  *  SecurityResponseType
- *
- *      1-6 msg types
- *      ACCEPT_SECURITY_AS_IS( "1", "ACCEPT_SECURITY_AS_IS",
- *                          "1 - Accept security proposal as-is" ),
- *      ACCEPT_SECURITY_REVISIONS( "2", "ACCEPT_SECURITY_REVISIONS",
- *                          "2 - Accept security proposal with revisions as indicated in the message" ),
- *      LIST_OF_SECURITY_TYPES_RETURNED( "3", "LIST_OF_SECURITY_TYPES_RETURNED",
- *                          "3 - List of security types returned per request" ),
- *      LIST_OF_SECURITIES_RETURNED_PER_REQUEST( "4", "LIST_OF_SECURITIES_RETURNED_PER_REQUEST",
- *                          "4 - List of securities returned per request" ),
- *      REJECT_SECURITY_PROPOSAL( "5", "REJECT_SECURITY_PROPOSAL",
- *                          "5 - Reject security proposal" ),
- *      CANNOT_MATCH_SELECTION( "6", "CANNOT_MATCH_SELECTION",
- *                          "6 - Cannot match selection criteria" ),
+ *  int
+ *  <p>
+ *  Type of Security Definition message response.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1-6 msg types
+ *  <p>    "1 - Accept security proposal as-is"
+ *  <p>    "2 - Accept security proposal with revisions as indicated in the message"
+ *  <p>    "3 - List of security types returned per request"
+ *  <p>    "4 - List of securities returned per request"
+ *  <p>    "5 - Reject security proposal"
+ *  <p></p>
+ *  <p>    "6 - Cannot match selection criteria"
  */
 class Tag323EnuSecurityResponseTypeTest {
     @Test
@@ -80,6 +78,7 @@ class Tag323EnuSecurityResponseTypeTest {
         tagData = new Tag323EnuSecurityResponseType(Enum323SecurityResponseType.REJECT_SECURITY_PROPOSAL);
         assertEquals( Enum323SecurityResponseType.REJECT_SECURITY_PROPOSAL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
 
         tagData = new Tag323EnuSecurityResponseType(Enum323SecurityResponseType.CANNOT_MATCH_SELECTION);
         assertEquals( Enum323SecurityResponseType.CANNOT_MATCH_SELECTION.toFIXIDString(), tagData.getDataValue());

@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  360
+ *  EncodedAllocTextLen
+ *  Length
+ *  <p>
+ *  Byte length of encoded (non-ASCII characters) EncodedAllocText (361) field.
+ */
 class Tag360LenEncodedAllocTextLenTest {
     @Test
     void FIX0360Test() {

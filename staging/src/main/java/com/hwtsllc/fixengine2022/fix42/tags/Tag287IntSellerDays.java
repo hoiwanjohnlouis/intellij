@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  287
+ *  SellerDays
+ *  int
+ *  <p>
+ *  Specifies the number of days that may elapse before delivery of the security
+ */
 public class Tag287IntSellerDays extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyIntType dataValue;
 

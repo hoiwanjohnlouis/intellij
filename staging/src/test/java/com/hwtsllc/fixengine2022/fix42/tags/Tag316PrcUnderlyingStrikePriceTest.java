@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  316
+ *  UnderlyingStrikePrice
+ *  Price
+ *  <p>
+ *  Underlying security’s StrikePrice.
+ *  <p>
+ *  See StrikePrice (202) field for description
+ */
 class Tag316PrcUnderlyingStrikePriceTest {
     @Test
     void FIX0316Test() {

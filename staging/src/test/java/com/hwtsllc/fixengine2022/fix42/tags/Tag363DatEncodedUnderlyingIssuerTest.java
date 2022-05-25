@@ -24,6 +24,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  363
+ *  EncodedUnderlyingIssuer
+ *  data
+ *  <p>
+ *  Encoded (non-ASCII characters) representation of the UnderlyingIssuer (306) field
+ *  in the encoded format specified via the MessageEncoding (347) field.
+ *  <p></p>
+ *  If used, the ASCII (English) representation should also be specified in the UnderlyingIssuer field.
+ */
 class Tag363DatEncodedUnderlyingIssuerTest {
     @Test
     void FIX0363Test() {

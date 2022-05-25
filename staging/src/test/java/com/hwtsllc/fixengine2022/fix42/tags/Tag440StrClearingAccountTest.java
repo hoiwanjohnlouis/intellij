@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  440
+ *  ClearingAccount
+ *  String
+ *  <p>
+ *  Deprecated in FIX.4.2 Supplemental accounting information forwared to clearing house/firm.
+ */
 // @Deprecated
 class Tag440StrClearingAccountTest {
     @Test

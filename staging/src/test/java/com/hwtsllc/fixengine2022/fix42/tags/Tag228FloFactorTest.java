@@ -24,6 +24,25 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  228
+ *  Factor
+ *  float
+ *  <p></p>
+ *  For Fixed Income: Amorization Factor for deriving Current face from Original face for
+ *  ABS or MBS securities, note the fraction may be greater than, equal to or less than .
+ *  <p></p>
+ *  In TIPS securities this is the Inflation index.
+ *  <p>
+ *  Qty * Factor * Price = Gross Trade Amount
+ *  <p></p>
+ *  For Derivatives: Contract Value Factor by which price must be adjusted
+ *  to determine the true nominal value of one futures/options contract.
+ *  <p>
+ *  (Qty * Price) * Factor = Nominal Value
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ */
 class Tag228FloFactorTest {
     @Test
     void FIX0228Test() {

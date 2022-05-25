@@ -17,13 +17,24 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix42.enums.Bool411ExchangeForPhysical;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  411
+ *  ExchangeForPhysical
+ *  Boolean
+ *  <p>
+ *  Indicates whether or not to exchange for phsyical.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    N - False
+ *  <p>    Y - True
+ */
 class Tag411BoolExchangeForPhysicalTest {
     @Test
     void FIX0411Test() {
@@ -39,11 +50,11 @@ class Tag411BoolExchangeForPhysicalTest {
     void Tag0411Test() {
         Tag411BoolExchangeForPhysical tagData;
 
-        tagData = new Tag411BoolExchangeForPhysical(MyBooleanType.NO);
+        tagData = new Tag411BoolExchangeForPhysical(Bool411ExchangeForPhysical.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag411BoolExchangeForPhysical(MyBooleanType.YES);
+        tagData = new Tag411BoolExchangeForPhysical(Bool411ExchangeForPhysical.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

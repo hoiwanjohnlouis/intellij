@@ -24,6 +24,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  226
+ *  RepurchaseTerm
+ *  int
+ *  <p>
+ *  Deprecated in FIX.4.4
+ *  <p>
+ *  Number of business days before repurchase of a repo.
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ */
 // @Deprecated
 class Tag226IntRepurchaseTermTest {
     @Test

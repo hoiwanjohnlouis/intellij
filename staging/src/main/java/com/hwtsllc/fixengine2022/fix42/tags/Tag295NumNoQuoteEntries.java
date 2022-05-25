@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  295
+ *  NoQuoteEntries
+ *  NumInGroup
+ *  <p>
+ *  The number of quote entries for a QuoteSet.
+ */
 public class Tag295NumNoQuoteEntries extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyNumInGroupType dataValue;
 

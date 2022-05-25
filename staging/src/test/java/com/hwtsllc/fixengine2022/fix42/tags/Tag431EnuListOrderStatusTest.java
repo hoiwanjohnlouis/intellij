@@ -25,18 +25,22 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  Tag431
- *  Enu
+ *  431
  *  ListOrderStatus
- *
- *      1-7 msg types
- *      IN_BIDDING_PROCESS( "1", "IN_BIDDING_PROCESS", "1 - In Bidding Process" ),
- *      RECEIVED_FOR_EXECUTION( "2", "RECEIVED_FOR_EXECUTION", "2 - Received For Execution" ),
- *      EXECUTING( "3", "EXECUTING", "3 - Executing" ),
- *      CANCELLING( "4", "CANCELLING", "4 - Cancelling" ),
- *      ALERT( "5", "ALERT", "5 - Alert" ),
- *      ALL_DONE( "6", "ALL_DONE", "6 - All Done" ),
- *      REJECT( "7", "REJECT", "7 - Reject" ),
+ *  int
+ *  <p>
+ *  Code to represent the status of a list order.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1-7 msg types
+ *  <p>    1 - In bidding process
+ *  <p>    2 - Received for execution
+ *  <p>    3 - Executing
+ *  <p>    4 - Cancelling
+ *  <p>    5 - Alert
+ *  <p></p>
+ *  <p>    6 - All Done
+ *  <p>    7 - Reject
  */
 class Tag431EnuListOrderStatusTest {
     @Test

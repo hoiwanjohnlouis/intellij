@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  426
+ *  DayAvgPx
+ *  Price
+ *  <p>
+ *  The average price for quantity on a GT order that has traded today.
+ */
 public class Tag426PrcDayAvgPx extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceType dataValue;
 

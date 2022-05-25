@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  435
+ *  UnderlyingCouponRate
+ *  Percentage
+ *  <p>
+ *  Underlying security’s CouponRate.
+ *  <p>
+ *  See CouponRate (223) field for description
+ */
 class Tag435PctUnderlyingCouponRateTest {
     @Test
     void FIX0435Test() {

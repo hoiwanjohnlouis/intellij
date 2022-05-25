@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  345
+ *  TradSesEndTime
+ *  UTCTimestamp
+ *  <p>
+ *  End time of the trading session
+ */
 class Tag345UtcTradSesEndTimeTest {
     @Test
     void FIX0345Test() {

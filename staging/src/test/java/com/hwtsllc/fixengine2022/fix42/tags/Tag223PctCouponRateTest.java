@@ -24,6 +24,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  223
+ *  CouponRate
+ *  Percentage
+ *  <p>
+ *  The rate of interest that, when multiplied by the principal, par value,
+ *  or face value of a bond, provides the currency amount of the periodic interest payment.
+ *  <p>
+ *  The coupon is always cited, along with maturity, in any quotation of a bond's price.
+ */
 class Tag223PctCouponRateTest {
     @Test
     void FIX0223Test() {

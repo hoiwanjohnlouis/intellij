@@ -25,20 +25,22 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  Tag388
- *  Enu
+ *  388
  *  DiscretionInst
- *
- *      0-7 msg types
- *      RELATED_TO_DISPLAYED_PRICE( "0", "RELATED_TO_DISPLAYED_PRICE", "0 - Related to displayed price" ),
- *      RELATED_TO_MARKET_PRICE( "1", "RELATED_TO_MARKET_PRICE", "1 - Related to market price" ),
- *      RELATED_TO_PRIMARY_PRICE( "2", "RELATED_TO_PRIMARY_PRICE", "2 - Related to primary price" ),
- *      RELATED_TO_LOCAL_PRIMARY_PRICE( "3", "RELATED_TO_LOCAL_PRIMARY_PRICE",
- *                          "3 - Related to local primary price" ),
- *      RELATED_TO_MIDPOINT_PRICE( "4", "RELATED_TO_MIDPOINT_PRICE", "4 - Related to midpoint price" ),
- *      RELATED_TO_LAST_TRADE_PRICE( "5", "RELATED_TO_LAST_TRADE_PRICE", "5 - Related to last trade price" ),
- *      RELATED_TO_VWAP( "6", "RELATED_TO_VWAP", "6 - Related to VWAP" ),
- *      AVERAGE_PRICE_GUARANTEE( "7", "AVERAGE_PRICE_GUARANTEE", "7 - Average Price Guarantee" ),
+ *  char
+ *  <p>
+ *  Code to identify the price a DiscretionOffsetValue (389) is related to and should be mathematically added to.
+ *  <p></p>
+ *  Valid values:
+ *  <p>     0 - Related to displayed price
+ *  <p>     1 - Related to market price
+ *  <p>     2 - Related to primary price
+ *  <p>     3 - Related to local primary price
+ *  <p>     4 - Related to midpoint price
+ *  <p></p>
+ *  <p>     5 - Related to last trade price
+ *  <p>     6 - Related to VWAP
+ *  <p>     7 - Average Price Guarantee
  */
 class Tag388EnuDiscretionInstTest {
     @Test

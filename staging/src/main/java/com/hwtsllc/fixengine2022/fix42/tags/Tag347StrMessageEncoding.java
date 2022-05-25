@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  347
+ *  MessageEncoding
+ *  String
+ *  <p>
+ *  Type of message encoding (non-ASCII (non-English) characters) used in a message’s "Encoded" fields.
+ */
 public class Tag347StrMessageEncoding extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

@@ -25,17 +25,22 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  Tag327
+ *  327
  *  Enu
  *  HaltReason
- *
- *      D, E, I, M, P, and X msg types
- *      NEWS_DISSEMINATION( "D", "NEWS_DISSEMINATION", "D - News Dissemination" ),
- *      ORDER_INFLUX( "E", "ORDER_INFLUX", "E - Order Influx" ),
- *      ORDER_IMBALANCE( "I", "ORDER_IMBALANCE", "I - Order Imbalance" ),
- *      ADDITIONAL_INFORMATION( "M", "ADDITIONAL_INFORMATION", "M - Additional Information" ),
- *      NEW_PENDING( "P", "NEW_PENDING", "P - New Pending" ),
- *      EQUIPMENT_CHANGE_OVER( "X", "EQUIPMENT_CHANGE_OVER", "X - Equipment Changeover" ),
+ *  char
+ *  <p>
+ *  Denotes the reason for the Opening Delay or Trading Halt.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    D, E, I, M, P, and X msg types
+ *  <p>    "D - News Dissemination"
+ *  <p>    "E - Order Influx"
+ *  <p>    "I - Order Imbalance"
+ *  <p>    "M - Additional Information"
+ *  <p>    "P - New Pending"
+ *  <p></p>
+ *  <p>    "X - Equipment Changeover"
  */
 class Tag327EnuHaltReasonTest {
     @Test
@@ -74,6 +79,7 @@ class Tag327EnuHaltReasonTest {
         tagData = new Tag327EnuHaltReason(Enum327HaltReason.NEW_PENDING);
         assertEquals( Enum327HaltReason.NEW_PENDING.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
 
         tagData = new Tag327EnuHaltReason(Enum327HaltReason.EQUIPMENT_CHANGE_OVER);
         assertEquals( Enum327HaltReason.EQUIPMENT_CHANGE_OVER.toFIXIDString(), tagData.getDataValue());

@@ -24,6 +24,19 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  229
+ *  TradeOriginationDate
+ *  LocalMktDate
+ *  <p>
+ *  Used with Fixed Income for Muncipal New Issue Market.
+ *  <p>
+ *  Agreement in principal between counter-parties prior to actual trade date.
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ *  <p></p>
+ *  (prior to FIX 4.4 field was of type UTCDate)
+ */
 class Tag229LmdTradeOriginatingDateTest {
     @Test
     void FIX0229Test() {

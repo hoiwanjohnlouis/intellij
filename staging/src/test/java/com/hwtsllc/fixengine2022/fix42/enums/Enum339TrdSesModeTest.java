@@ -23,14 +23,18 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  Tag339
+ *  339
  *  Enu
  *  TradSesMode
- *
- *      1-3 msg types
- *      TESTING( "1", "TESTING", "1 - Testing" ),
- *      SIMULATED( "2", "SIMULATED", "2 - Simulated" ),
- *      PRODUCTION( "3", "PRODUCTION", "3 - Production" ),
+ *  int
+ *  <p>
+ *  Trading Session Mode
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1-3 msg types
+ *  <p>    "1 - Testing"
+ *  <p>    "2 - Simulated"
+ *  <p>    "3 - Production"
  */
 class Enum339TrdSesModeTest {
     @Test

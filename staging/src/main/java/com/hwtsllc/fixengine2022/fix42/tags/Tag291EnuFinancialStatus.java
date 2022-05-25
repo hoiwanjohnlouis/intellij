@@ -26,11 +26,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  291
  *  FinancialStatus
- *
- *      1-3 msg types
- *      BANKRUPT( "1", "BANKRUPT", "1 - Bankrupt" ),
- *      PENDING_DELISTING( "2", "PENDING_DELISTING", "2 - Pending delisting" ),
- *      RESTRICTED( "3", "RESTRICTED", "3 - Restricted" ),
+ *  MultipleCharValue
+ *  <p>
+ *  Identifies a firm's or a security's financial status
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1-3 msg types
+ *  <p>    BANKRUPT( "1", "BANKRUPT", "1 - Bankrupt" ),
+ *  <p>    PENDING_DELISTING( "2", "PENDING_DELISTING", "2 - Pending delisting" ),
+ *  <p>    RESTRICTED( "3", "RESTRICTED", "3 - Restricted" ),
  */
 public class Tag291EnuFinancialStatus extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum291FinancialStatus dataValue;

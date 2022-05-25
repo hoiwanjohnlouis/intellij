@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  406
+ *  FairValue
+ *  Amt
+ *  <p>
+ *  Used in EFP trades
+ */
 class Tag406AmtFairValueTest {
     @Test
     void FIX0406Test() {

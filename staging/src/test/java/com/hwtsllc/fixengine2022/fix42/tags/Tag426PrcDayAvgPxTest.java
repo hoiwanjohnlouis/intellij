@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  426
+ *  DayAvgPx
+ *  Price
+ *  <p>
+ *  The average price for quantity on a GT order that has traded today.
+ */
 class Tag426PrcDayAvgPxTest {
     @Test
     void FIX0426Test() {

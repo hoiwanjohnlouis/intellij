@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  232
+ *  NoStipulations
+ *  NumInGroup
+ *  <p>
+ *  Number of stipulation entries
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3).
+ */
 public class Tag232NumNoStipulations extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyNumInGroupType dataValue;
 

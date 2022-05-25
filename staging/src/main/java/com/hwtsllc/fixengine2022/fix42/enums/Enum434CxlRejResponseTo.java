@@ -20,16 +20,19 @@ import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Tag434
- *  Enu
+ *  434
  *  CxlRejResponseTo
- *
- *      1-2 msg types
- *      ORDER_CANCEL_REQUEST( "1", "ORDER_CANCEL_REQUEST", "1 - Order cancel request" ),
- *      ORDER_MODIFICATION_REQUEST( "2", "ORDER_MODIFICATION_REQUEST", "2 - Order cancel/replace request" ),
+ *  char
+ *  <p>
+ *  Identifies the type of request that a Cancel Reject is in response to.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1-2 msg types
+ *  <p>    1 - Order cancel request
+ *  <p>    2 - Order cancel/replace request
  */
 public enum Enum434CxlRejResponseTo implements LogFIXString, LogVerboseString {
-    /**
+    /*
      * 1-2 msg types
      */
     ORDER_CANCEL_REQUEST( "1", "ORDER_CANCEL_REQUEST",

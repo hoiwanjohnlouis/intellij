@@ -17,13 +17,24 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix42.enums.Bool266AggregatedBook;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  266
+ *  AggregatedBook
+ *  Boolean
+ *  <p>
+ *  Specifies whether or not book entries should be aggregated. (Not specified) = broker option
+ *  <p></p>
+ *  Valid values:
+ *  <p>    N - book entries should not be aggregated
+ *  <p>    Y - book entries to be aggregated
+ */
 class Tag266BoolAggregatedBookTest {
     @Test
     void FIX0266Test() {
@@ -39,11 +50,11 @@ class Tag266BoolAggregatedBookTest {
     void Tag0266Test() {
         Tag266BoolAggregatedBook tagData;
 
-        tagData = new Tag266BoolAggregatedBook(MyBooleanType.NO);
+        tagData = new Tag266BoolAggregatedBook(Bool266AggregatedBook.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag266BoolAggregatedBook(MyBooleanType.YES);
+        tagData = new Tag266BoolAggregatedBook(Bool266AggregatedBook.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

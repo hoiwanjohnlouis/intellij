@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  268
+ *  NoMDEntries
+ *  NumInGroup
+ *  <p>
+ *  Number of entries in Market Data message.
+ */
 class Tag268NumNoMDEntriesTest {
     @Test
     void FIX0268Test() {

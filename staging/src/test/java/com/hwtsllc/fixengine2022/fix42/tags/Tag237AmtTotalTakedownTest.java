@@ -24,6 +24,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  237
+ *  TotalTakedown
+ *  Amt
+ *  <p>
+ *  The price at which the securities are distributed to the different members of an
+ *  underwriting group for the primary market in Municipals, total gross underwriter's spread.
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ */
 class Tag237AmtTotalTakedownTest {
     @Test
     void FIX0237Test() {

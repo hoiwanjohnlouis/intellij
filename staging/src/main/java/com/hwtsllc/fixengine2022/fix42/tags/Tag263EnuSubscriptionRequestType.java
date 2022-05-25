@@ -23,6 +23,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  263
+ *  SubscriptionRequestType
+ *  char
+ *  <p>
+ *  Subscription Request Type
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Snapshot
+ *  <p>    1 - Snapshot + Updates (Subscribe)
+ *  <p>    2 - Disable previous Snapshot + Update Request (Unsubscribe)
+ */
 public class Tag263EnuSubscriptionRequestType extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum263SubscriptionRequestType dataValue;
 

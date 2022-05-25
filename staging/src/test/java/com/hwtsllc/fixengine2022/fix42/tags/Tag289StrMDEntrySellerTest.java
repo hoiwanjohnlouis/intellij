@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  289
+ *  MDEntrySeller
+ *  String
+ *  <p>
+ *  Selling party in a trade
+ */
 class Tag289StrMDEntrySellerTest {
     @Test
     void FIX0289Test() {

@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  438
+ *  ContraTradeTime
+ *  UTCTimestamp
+ *  <p>
+ *  Identifies the time of the trade with the ContraBroker (375).
+ *  <p>
+ *  (always expressed in UTC (Universal Time Coordinated, also known as "GMT")
+ */
 class Tag438UtcContraTradeTimeTest {
     @Test
     void FIX0438Test() {

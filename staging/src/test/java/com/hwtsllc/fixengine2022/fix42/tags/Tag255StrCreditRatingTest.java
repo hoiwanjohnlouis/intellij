@@ -24,6 +24,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  255
+ *  CreditRating
+ *  String
+ *  <p>
+ *  An evaluation of a company's ability to repay obligations or its likelihood of not defaulting.
+ *  <p>
+ *  These evaluations are provided by Credit Rating Agencies, i.e. S&P, Moody's.
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ */
 class Tag255StrCreditRatingTest {
     @Test
     void FIX0255Test() {

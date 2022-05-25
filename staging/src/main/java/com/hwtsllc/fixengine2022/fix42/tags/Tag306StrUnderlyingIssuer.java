@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  306
+ *  UnderlyingIssuer
+ *  String
+ *  <p>
+ *  Underlying security’s Issuer.
+ *  <p>
+ *  See Issuer (06) field for description
+ */
 public class Tag306StrUnderlyingIssuer extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

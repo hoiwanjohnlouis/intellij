@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  324
+ *  SecurityStatusReqID
+ *  String
+ *  <p>
+ *  Unique ID of a Security Status Request message.
+ */
 class Tag324StrSecurityStatusReqIDTest {
     @Test
     void FIX0324Test() {

@@ -26,9 +26,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  265
  *  MDUpdateType
- *  0-1 msg types
- *      "0 - Full refresh"
- *      "1 - Incremental refresh"
+ *  int
+ *  <p>
+ *  Specifies the type of Market Data update.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    "0 - Full refresh"
+ *  <p>    "1 - Incremental refresh"
  */
 public class Tag265EnuMDUpdateType extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum265MDUpdateType dataValue;

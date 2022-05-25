@@ -26,16 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  286
  *  OpenCloseSettleFlag
- *
- *      0-5 msg types
- *      DAILY_OPEN_OR_CLOSE_OR_SETTLEMENT( "0", "DAILY_OPEN_OR_CLOSE_OR_SETTLEMENT",
- *                  "0 - Daily Open / Close / Settlement entry" ),
- *      SESSION_OPEN_OR_CLOSE_OR_SETTLEMENT( "1", "SESSION_OPEN_OR_CLOSE_OR_SETTLEMENT",
- *                  "1 - Session Open / Close / Settlement entry" ),
- *      DELIVERY_SETTLEMENT( "2", "DELIVERY_SETTLEMENT", "2 - Delivery Settlement entry" ),
- *      EXPECTED( "3", "EXPECTED", "3 - Expected entry" ),
- *      PREVIOUS_BUSINESS_DAY( "4", "PREVIOUS_BUSINESS_DAY", "4 - Entry from previous business day" ),
- *      THEORETICAL_PRICE_VALUE( "5", "THEORETICAL_PRICE_VALUE", "5 - Theoretical Price value" ),
+ *  MultipleCharValue
+ *  <p>
+ *  Flag that identifies a market data entry. (Prior to FIX 4.3 this field was of type char)
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0-5 msg types
+ *  <p>    "0 - Daily Open / Close / Settlement entry"
+ *  <p>    "1 - Session Open / Close / Settlement entry"
+ *  <p>    "2 - Delivery Settlement entry"
+ *  <p>    "3 - Expected entry"
+ *  <p>    "4 - Entry from previous business day"
+ *  <p>    "5 - Theoretical Price value"
  */
 public class Tag286EnuOpenCloseSettleFlag extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum286OpenCLoseSettlFlag dataValue;

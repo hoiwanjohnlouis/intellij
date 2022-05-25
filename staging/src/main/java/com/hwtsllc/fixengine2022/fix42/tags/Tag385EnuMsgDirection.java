@@ -24,13 +24,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Tag385
- *  Enu
+ *  385
  *  MsgDirection
- *
- *      R, and S msg types
- *      RECEIVE( "R", "RECEIVE", "R - Receive" ),
- *      SEND( "S", "SEND", "S - Send" ),
+ *  char
+ *  <p>
+ *  Specifies the direction of the messsage.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    R - Receive
+ *  <p>    S - Send
  */
 public class Tag385EnuMsgDirection extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum385MsgDirection dataValue;

@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  270
+ *  MDEntryPx
+ *  Price
+ *  <p>
+ *  Price of the Market Data Entry.
+ */
 class Tag270PrcMDEntryPxTest {
     @Test
     void FIX0270Test() {

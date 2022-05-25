@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  402
+ *  LiquidityPctLow
+ *  Percentage
+ *  <p>
+ *  Liquidity indicator or lower limit if TotalNumSecurities (393) > 1.  Represented as a percentage.
+ */
 class Tag402PctLiquidityPctLowTest {
     @Test
     void FIX0402Test() {

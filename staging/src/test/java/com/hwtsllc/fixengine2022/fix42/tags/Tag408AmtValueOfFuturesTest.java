@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  408
+ *  ValueOfFutures
+ *  Amt
+ *  <p>
+ *  Used in EFP trades
+ */
 class Tag408AmtValueOfFuturesTest {
     @Test
     void FIX0408Test() {

@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  404
+ *  LiquidityValue
+ *  Amt
+ *  <p>
+ *  Value between LiquidityPctLow (402) and LiquidityPctHigh (403) in Currency
+ */
 class Tag404AmtLiquidityValueTest {
     @Test
     void FIX0404Test() {

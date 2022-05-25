@@ -24,6 +24,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  257
+ *  LegCreditRating
+ *  String
+ *  <p>
+ *  Multileg instrument's individual leg security’s CreditRating.
+ *  <p>
+ *  See CreditRating (255) field for description
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ */
 class Tag257StrLegCreditRatingTest {
     @Test
     void FIX0257Test() {

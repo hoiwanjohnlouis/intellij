@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  307
+ *  UnderlyingSecurityDesc
+ *  String
+ *  <p>
+ *  Underlying security’s SecurityDesc.
+ *  <p>
+ *  See SecurityDesc (07) field for description
+ */
 class Tag307StrUnderlyingSecurityDescTest {
     @Test
     void FIX0307Test() {

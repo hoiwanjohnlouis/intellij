@@ -20,16 +20,19 @@ import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Tag430
- *  Enu
+ *  430
  *  NetGrossInd
- *
- *      1-2 msg types
- *      NET( "1", "NET", "1 - Net" ),
- *      GROSS( "2", "GROSS", "2 - Gross" ),
+ *  int
+ *  <p>
+ *  Code to represent whether value is net (inclusive of tax) or gross.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1-2 msg types
+ *  <p>    1 - Net
+ *  <p>    2 - Gross
  */
 public enum Enum430NetGrossInd implements LogFIXString, LogVerboseString {
-    /**
+    /*
      * 1-2 msg types
      */
     NET( "1", "NET", "1 - Net" ),

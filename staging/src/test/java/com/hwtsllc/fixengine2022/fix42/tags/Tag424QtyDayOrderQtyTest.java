@@ -24,6 +24,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  424
+ *  DayOrderQty
+ *  Qty
+ *  <p>
+ *  For GT orders, the OrderQty (38) less all quantity (adjusted for stock splits)
+ *  that traded on previous days.
+ *  <p>
+ *  DayOrderQty (424) = OrderQty – (CumQty (14) – DayCumQty (425))
+ */
 class Tag424QtyDayOrderQtyTest {
     @Test
     void FIX0424Test() {

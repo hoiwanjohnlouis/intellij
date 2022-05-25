@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  425
+ *  DayCumQty
+ *  Qty
+ *  <p>
+ *  Quantity on a GT order that has traded today.
+ */
 class Tag425QtyDayCumQtyTest {
     @Test
     void FIX0425Test() {

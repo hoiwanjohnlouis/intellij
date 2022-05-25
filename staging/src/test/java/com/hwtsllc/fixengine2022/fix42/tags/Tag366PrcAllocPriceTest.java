@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  366
+ *  AllocPrice
+ *  Price
+ *  <p>
+ *  Executed price for an AllocAccount (79) entry.
+ *  <p>
+ *  Used when using "executed price" vs. "average price" allocations (e.g. Japan).
+ */
 class Tag366PrcAllocPriceTest {
     @Test
     void FIX0366Test() {

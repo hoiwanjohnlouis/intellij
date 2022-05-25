@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  335
+ *  TradSesReqID
+ *  String
+ *  <p>
+ *  Unique ID of a Trading Session Status message.
+ */
 class Tag335StrTradSesReqIDTest {
     @Test
     void FIX0335Test() {

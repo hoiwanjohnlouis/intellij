@@ -24,6 +24,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  256
+ *  UnderlyingCreditRating
+ *  String
+ *  <p>
+ *  Underlying security’s CreditRating.
+ *  <p>
+ *  See CreditRating (255) field for description
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ */
 class Tag256StrUnderlyingCreditRatingTest {
     @Test
     void FIX0256Test() {

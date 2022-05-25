@@ -24,6 +24,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  224
+ *  CouponPaymentDate
+ *  LocalMktDate
+ *  <p>
+ *  Date interest is to be paid.  Used in identifying Corporate Bond issues.
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ *  <p></p>
+ *  (prior to FIX 4.4 field was of type UTCDate)
+ */
 class Tag224LmdCouponPaymentDateTest {
     @Test
     void FIX0224Test() {

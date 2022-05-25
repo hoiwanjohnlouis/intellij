@@ -24,6 +24,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  357
+ *  EncodedSubject
+ *  data
+ *  <p>
+ *  Encoded (non-ASCII characters) representation of the Subject (147) field
+ *  in the encoded format specified via the MessageEncoding (347) field.
+ *  <p></p>
+ *  If used, the ASCII (English) representation should also be specified in the Subject field.
+ */
 class Tag357DatEncodedSubjectTest {
     @Test
     void FIX0357Test() {

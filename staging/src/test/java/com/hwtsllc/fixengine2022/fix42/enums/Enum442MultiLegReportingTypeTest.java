@@ -23,14 +23,19 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  Tag442
- *  Enu
+ *  442
  *  MultiLegReportingType
- *
- *      1-3 msg types
- *      SINGLE_SECURITY( "1", "SINGLE_SECURITY", "1 - Single security (default if not specified)" ),
- *      INDIVIDUAL_LEG_SECURITY( "2", "INDIVIDUAL_LEG_SECURITY", "2 - Individual leg of a multi=leg security" ),
- *      MULTI_LEG_SECURITY( "3", "MULTI_LEG_SECURITY", "3 - Multi-leg security" ),
+ *  char
+ *  <p>
+ *  Used to indicate what an Execution Report represents
+ *  <p>
+ *  (e.g. used with multi-leg securities, such as option strategies, spreads, etc.).
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1-3 msg types
+ *  <p>    1 - Single security (default if not specified)
+ *  <p>    2 - Individual leg of a multi=leg security
+ *  <p>    3 - Multi-leg security
  */
 class Enum442MultiLegReportingTypeTest {
     @Test

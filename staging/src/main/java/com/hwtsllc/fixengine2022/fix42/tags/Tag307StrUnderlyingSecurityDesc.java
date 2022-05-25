@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  307
+ *  UnderlyingSecurityDesc
+ *  String
+ *  <p>
+ *  Underlying security’s SecurityDesc.
+ *  <p>
+ *  See SecurityDesc (07) field for description
+ */
 public class Tag307StrUnderlyingSecurityDesc extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

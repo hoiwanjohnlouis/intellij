@@ -24,6 +24,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  389
+ *  DiscretionOffsetValue
+ *  float
+ *  <p>
+ *  Amount (signed) added to the "related to" price specified via DiscretionInst (388),
+ *  in the context of DiscretionOffsetType (842)
+ *  <p></p>
+ *  (Prior to FIX 4.4 this field was of type PriceOffset)
+ */
 class Tag389FloDiscretionOffsetValueTest {
     @Test
     void FIX0389Test() {

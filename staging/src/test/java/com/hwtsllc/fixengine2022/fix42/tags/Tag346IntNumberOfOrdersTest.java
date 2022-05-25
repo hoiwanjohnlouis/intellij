@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  346
+ *  NumberOfOrders
+ *  int
+ *  <p>
+ *  Number of orders in the market.
+ */
 class Tag346IntNumberOfOrdersTest {
     @Test
     void FIX0346Test() {

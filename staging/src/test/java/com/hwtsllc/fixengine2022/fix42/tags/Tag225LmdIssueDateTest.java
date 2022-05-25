@@ -24,6 +24,20 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  225
+ *  IssueDate
+ *  LocalMktDate
+ *  <p>
+ *  The date on which a bond or stock offering is issued.
+ *  <p>
+ *  It may or may not be the same as the effective date ("Dated Date")
+ *  or the date on which interest begins to accrue ("Interest Accrual Date")
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ *  <p></p>
+ *  (prior to FIX 4.4 field was of type UTCDate)
+ */
 class Tag225LmdIssueDateTest {
     @Test
     void FIX0225Test() {

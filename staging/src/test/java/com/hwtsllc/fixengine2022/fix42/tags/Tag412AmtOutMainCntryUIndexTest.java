@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  412
+ *  OutMainCntryUIndex
+ *  Amt
+ *  <p>
+ *  Value of stocks in Currency
+ */
 class Tag412AmtOutMainCntryUIndexTest {
     @Test
     void FIX0412Test() {

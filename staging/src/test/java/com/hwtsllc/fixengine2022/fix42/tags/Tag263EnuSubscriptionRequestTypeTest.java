@@ -27,9 +27,14 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 /**
  *  263
  *  SubscriptionRequestType
- *      "0 - Snapshot"
- *      "1 - Snapshot + Updates (Subscribe)"
- *      "2 - Disable previous Snapshot + Update Request (Unsubscribe)"
+ *  char
+ *  <p>
+ *  Subscription Request Type
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Snapshot
+ *  <p>    1 - Snapshot + Updates (Subscribe)
+ *  <p>    2 - Disable previous Snapshot + Update Request (Unsubscribe)
  */
 class Tag263EnuSubscriptionRequestTypeTest {
     @Test

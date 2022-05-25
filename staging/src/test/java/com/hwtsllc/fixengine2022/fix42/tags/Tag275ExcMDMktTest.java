@@ -24,6 +24,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  275
+ *  MDMkt
+ *  Exchange
+ *  <p>
+ *  Deprecated in FIX.5.0 Market posting quote / trade.
+ *  <p>
+ *  Valid values:
+ *  <p>
+ *  See "Appendix 6-C"
+ */
 class Tag275ExcMDMktTest {
     @Test
     void FIX0275Test() {

@@ -18,20 +18,31 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix42.enums.Bool411ExchangeForPhysical;
 import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  411
+ *  ExchangeForPhysical
+ *  Boolean
+ *  <p>
+ *  Indicates whether or not to exchange for phsyical.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    N - False
+ *  <p>    Y - True
+ */
 public class Tag411BoolExchangeForPhysical extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
-    private final MyBooleanType dataValue;
+    private final Bool411ExchangeForPhysical dataValue;
 
-    public final static MyBooleanType TESTA_BOOL_EXCHANGE_FOR_PHYSICAL
-            = MyBooleanType.NO;   // N - False
-    public final static MyBooleanType TESTB_BOOL_EXCHANGE_FOR_PHYSICAL
-            = MyBooleanType.YES;  // Y - True
+    public final static Bool411ExchangeForPhysical TESTA_BOOL_EXCHANGE_FOR_PHYSICAL
+            = Bool411ExchangeForPhysical.NO;
+    public final static Bool411ExchangeForPhysical TESTB_BOOL_EXCHANGE_FOR_PHYSICAL
+            = Bool411ExchangeForPhysical.YES;
 
-    public Tag411BoolExchangeForPhysical(MyBooleanType dataValue) {
+    public Tag411BoolExchangeForPhysical(Bool411ExchangeForPhysical dataValue) {
         setFixType(FIX42.FIX411_BOOL_EXCHANGE_FOR_PHYSICAL);
         this.dataValue = dataValue;
     }

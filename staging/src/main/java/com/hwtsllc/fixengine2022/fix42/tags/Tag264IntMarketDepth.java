@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  264
+ *  MarketDepth
+ *  int
+ *  <p>
+ *  Depth of market for Book Snapshot
+ */
 public class Tag264IntMarketDepth extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyIntType dataValue;
 

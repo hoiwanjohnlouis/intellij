@@ -24,6 +24,24 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  400
+ *  BidDescriptor
+ *  String
+ *  <p>
+ *  BidDescriptor value.
+ *  <p></p>
+ *  Usage depends upon BidDescriptorTyp (399).
+ *  <p>
+ *  If BidDescriptorType = 1
+ *  Industrials etc - Free text
+ *  <p>
+ *  If BidDescriptorType = 2
+ *  "FR" etc - ISO Country Codes
+ *  <p>
+ *  If BidDescriptorType = 3
+ *  FT00, FT250, STOX - Free text
+ */
 class Tag400StrBidDescriptorTest {
     @Test
     void FIX0400Test() {

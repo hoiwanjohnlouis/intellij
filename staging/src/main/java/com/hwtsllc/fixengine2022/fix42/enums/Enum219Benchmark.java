@@ -22,16 +22,23 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  219
  *  EnuBenchmarkTest
- *      1-9 msg types
- *      "1 - CURVE"
- *      "2 - 5YR"
- *      "3 - OLD5"
- *      "4 - 10YR"
- *      "5 - OLD10"
- *      "6 - 30YR"
- *      "7 - OLD30"
- *      "8 - 3MOLIBOR"
- *      "9 - 6MOLIBOR"
+ *  char
+ *  <p>
+ *  Deprecated in FIX.4.2 For Fixed Income.
+ *  <p>
+ *  Identifies the benchmark (e.g. used in conjunction with the Spread field).
+ *  <p></p>
+ *  Valid values:
+ *  <p>    "1 - CURVE"
+ *  <p>    "2 - 5YR"
+ *  <p>    "3 - OLD5"
+ *  <p>    "4 - 10YR"
+ *  <p>    "5 - OLD10"
+ *  <p></p>
+ *  <p>    "6 - 30YR"
+ *  <p>    "7 - OLD30"
+ *  <p>    "8 - 3MOLIBOR"
+ *  <p>    "9 - 6MOLIBOR"
  */
 public enum Enum219Benchmark implements LogFIXString, LogVerboseString {
     /**

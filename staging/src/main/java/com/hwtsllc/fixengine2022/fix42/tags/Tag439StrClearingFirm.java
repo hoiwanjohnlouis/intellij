@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  439
+ *  ClearingFirm
+ *  String
+ *  <p>
+ *  Deprecated in FIX.4.2 Firm that will clear the trade.
+ *  <p>
+ *  Used if different from the executing firm.
+ */
 // @Deprecated
 public class Tag439StrClearingFirm extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;

@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  398
+ *  NoBidDescriptors
+ *  NumInGroup
+ *  <p>
+ *  Number of BidDescriptor (400) entries.
+ */
 class Tag398NumNoBidDescriptorsTest {
     @Test
     void FIX0398Test() {

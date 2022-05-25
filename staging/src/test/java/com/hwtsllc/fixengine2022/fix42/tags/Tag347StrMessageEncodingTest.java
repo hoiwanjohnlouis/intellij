@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  347
+ *  MessageEncoding
+ *  String
+ *  <p>
+ *  Type of message encoding (non-ASCII (non-English) characters) used in a message’s "Encoded" fields.
+ */
 class Tag347StrMessageEncodingTest {
     @Test
     void FIX0347Test() {

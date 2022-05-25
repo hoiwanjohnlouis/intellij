@@ -24,7 +24,19 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag304IntTotQuoteEntriesTest {
+/**
+ *  304
+ *  TotNoQuoteEntries
+ *  int
+ *  <p>
+ *  Total number of quotes for the quote set across all messages.
+ *  <p>
+ *  Should be the sum of all NoQuoteEntries (295) in each message
+ *  that has repeating quotes that are part of the same quote set.
+ *  <p></p>
+ *  (Prior to FIX 4.4 this field was named TotQuoteEntries)
+ */
+class Tag304IntTotNoQuoteEntriesTest {
     @Test
     void FIX0304Test() {
         FIX42 fixData = FIX42.FIX304_INT_TOT_QUOTE_ENTRIES;
@@ -37,17 +49,17 @@ class Tag304IntTotQuoteEntriesTest {
     }
     @Test
     void Tag0304Test() {
-        Tag304IntTotQuoteEntries tagData;
+        Tag304IntTotNoQuoteEntries tagData;
 
-        tagData = new Tag304IntTotQuoteEntries(new MyIntType(
-                Tag304IntTotQuoteEntries.TESTA_INT_TOT_QUOTE_ENTRIES));
-        assertEquals( Tag304IntTotQuoteEntries.TESTA_INT_TOT_QUOTE_ENTRIES,
+        tagData = new Tag304IntTotNoQuoteEntries(new MyIntType(
+                Tag304IntTotNoQuoteEntries.TESTA_INT_TOT_QUOTE_ENTRIES));
+        assertEquals( Tag304IntTotNoQuoteEntries.TESTA_INT_TOT_QUOTE_ENTRIES,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag304IntTotQuoteEntries(new MyIntType(
-                Tag304IntTotQuoteEntries.TESTB_INT_TOT_QUOTE_ENTRIES));
-        assertEquals( Tag304IntTotQuoteEntries.TESTB_INT_TOT_QUOTE_ENTRIES,
+        tagData = new Tag304IntTotNoQuoteEntries(new MyIntType(
+                Tag304IntTotNoQuoteEntries.TESTB_INT_TOT_QUOTE_ENTRIES));
+        assertEquals( Tag304IntTotNoQuoteEntries.TESTB_INT_TOT_QUOTE_ENTRIES,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }

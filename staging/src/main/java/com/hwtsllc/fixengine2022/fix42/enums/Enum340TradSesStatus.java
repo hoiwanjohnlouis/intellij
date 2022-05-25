@@ -20,21 +20,26 @@ import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Tag340
+ *  340
  *  Enu
  *  TradSesStatus
- *
- *      0-6 msg types
- *      UNKNOWN( "0", "UNKNOWN", "0 - Unknown" ),
- *      HALTED( "1", "HALTED", "1 - Halted" ),
- *      OPEN( "2", "OPEN", "2 - Open" ),
- *      CLOSED( "3", "CLOSED", "3 - Closed" ),
- *      PRE_OPEN( "4", "PRE_OPEN", "4 - Pre-Open" ),
- *      PRE_CLOSE( "5", "PRE_CLOSE", "5 - Pre-Close" ),
- *      REQUEST_REJECTED( "6", "REQUEST_REJECTED", "6 - Request Rejected" ),
+ *  int
+ *  <p>
+ *  State of the trading session.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0-6 msg types
+ *  <p>    "0 - Unknown"
+ *  <p>    "1 - Halted"
+ *  <p>    "2 - Open"
+ *  <p>    "3 - Closed"
+ *  <p>    "4 - Pre-Open"
+ *  <p></p>
+ *  <p>    "5 - Pre-Close"
+ *  <p>    "6 - Request Rejected"
  */
 public enum Enum340TradSesStatus implements LogFIXString, LogVerboseString {
-    /**
+    /*
      * 0-6 msg types
      */
     UNKNOWN( "0", "UNKNOWN", "0 - Unknown" ),
@@ -42,6 +47,7 @@ public enum Enum340TradSesStatus implements LogFIXString, LogVerboseString {
     OPEN( "2", "OPEN", "2 - Open" ),
     CLOSED( "3", "CLOSED", "3 - Closed" ),
     PRE_OPEN( "4", "PRE_OPEN", "4 - Pre-Open" ),
+
     PRE_CLOSE( "5", "PRE_CLOSE", "5 - Pre-Close" ),
     REQUEST_REJECTED( "6", "REQUEST_REJECTED", "6 - Request Rejected" ),
     ;

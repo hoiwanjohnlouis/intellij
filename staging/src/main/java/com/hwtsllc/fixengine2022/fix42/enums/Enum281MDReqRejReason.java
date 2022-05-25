@@ -22,24 +22,29 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  281
  *  MDReqRejReason
- *
- *      0-9 msg types
- *      "0 - Unknown Symbol"
- *      "1 - Duplicate MDReqID"
- *      "2 - Insufficient Bandwidth"
- *      "3 - Insufficient Permissions"
- *      "4 - Unsupported SubscriptionRequestType"
- *      "5 - Unsupported MarketDepth"
- *      "6 - Unsupported MDUpdateType"
- *      "7 - Unsupported AggregatedBook"
- *      "8 - Unsupported MDEntryType";
- *      "9 - Unsupported TradingSessionID";
- *
- *      A-D msg types
- *      "A - Unsupported Scope";
- *      "B - Unsupported OpenCloseSettleFlag";
- *      "C - Unsupported MDImplicitDelete"
- *      "D - Insufficient credit";
+ *  char
+ *  <p>
+ *  Reason for the rejection of a Market Data request.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0-9 msg types
+ *  <p>    "0 - Unknown Symbol"
+ *  <p>    "1 - Duplicate MDReqID"
+ *  <p>    "2 - Insufficient Bandwidth"
+ *  <p>    "3 - Insufficient Permissions"
+ *  <p>    "4 - Unsupported SubscriptionRequestType"
+ *  <p></p>
+ *  <p>    "5 - Unsupported MarketDepth"
+ *  <p>    "6 - Unsupported MDUpdateType"
+ *  <p>    "7 - Unsupported AggregatedBook"
+ *  <p>    "8 - Unsupported MDEntryType";
+ *  <p>    "9 - Unsupported TradingSessionID";
+ *  <p></p>
+ *  <p>    A-D msg types
+ *  <p>    "A - Unsupported Scope";
+ *  <p>    "B - Unsupported OpenCloseSettleFlag";
+ *  <p>    "C - Unsupported MDImplicitDelete"
+ *  <p>    "D - Insufficient credit";
  */
 public enum Enum281MDReqRejReason implements LogFIXString, LogVerboseString {
     /**
@@ -55,6 +60,7 @@ public enum Enum281MDReqRejReason implements LogFIXString, LogVerboseString {
             "3 - Insufficient Permissions" ),
     UNSUPPORTED_SUBSCRIPTIONREQUESTTYPE( "4", "UNSUPPORTED_SUBSCRIPTIONREQUESTTYPE",
             "4 - Unsupported SubscriptionRequestType" ),
+
     UNSUPPORTED_MARKETDEPTH( "5", "UNSUPPORTED_MARKETDEPTH",
             "5 - Unsupported MarketDepth" ),
     UNSUPPORTED_MDUPDATETYPE( "6", "UNSUPPORTED_MDUPDATETYPE",

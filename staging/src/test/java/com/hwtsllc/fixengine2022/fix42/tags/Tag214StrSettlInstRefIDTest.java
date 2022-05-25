@@ -24,6 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  214
+ *  SettlInstRefID
+ *  String
+ *  <p>
+ *  Reference identifier for the SettlInstID (162) with
+ *  Cancel and Replace SettlInstTransType (163) transaction types.
+ */
 class Tag214StrSettlInstRefIDTest {
     @Test
     void FIX0214Test() {

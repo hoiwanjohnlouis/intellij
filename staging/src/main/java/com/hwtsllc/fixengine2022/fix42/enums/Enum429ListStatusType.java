@@ -20,20 +20,24 @@ import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Tag429
- *  Enu
+ *  429
  *  ListStatusType
- *
- *      1-6 msg types
- *      ACK( "1", "ACK", "1 - Ack" ),
- *      RESPONSE( "2", "RESPONSE", "2 - Response" ),
- *      TIMED( "3", "TIMED", "3 - Timed" ),
- *      EXEC_STARTED( "4", "EXEC_STARTED", "4 - Exec Started" ),
- *      ALL_DONE( "5", "ALL_DONE", "5 - All Done" ),
- *      ALERT( "6", "ALERT", "6 - Alert" ),
+ *  int
+ *  <p>
+ *  Code to represent the status type.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1-6 msg types
+ *  <p>    1 - Ack
+ *  <p>    2 - Response
+ *  <p>    3 - Timed
+ *  <p>    4 - Exec Started
+ *  <p>    5 - All Done
+ *  <p></p>
+ *  <p>    6 - Alert
  */
 public enum Enum429ListStatusType implements LogFIXString, LogVerboseString {
-    /**
+    /*
      * 1-6 msg types
      */
     ACK( "1", "ACK", "1 - Ack" ),
@@ -41,6 +45,7 @@ public enum Enum429ListStatusType implements LogFIXString, LogVerboseString {
     TIMED( "3", "TIMED", "3 - Timed" ),
     EXEC_STARTED( "4", "EXEC_STARTED", "4 - Exec Started" ),
     ALL_DONE( "5", "ALL_DONE", "5 - All Done" ),
+
     ALERT( "6", "ALERT", "6 - Alert" ),
     ;
 

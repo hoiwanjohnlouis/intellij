@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.datatypes.MyFloatType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  389
+ *  DiscretionOffsetValue
+ *  float
+ *  <p>
+ *  Amount (signed) added to the "related to" price specified via DiscretionInst (388),
+ *  in the context of DiscretionOffsetType (842)
+ *  <p></p>
+ *  (Prior to FIX 4.4 this field was of type PriceOffset)
+ */
 public class Tag389FloDiscretionOffsetValue extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyFloatType dataValue;
 

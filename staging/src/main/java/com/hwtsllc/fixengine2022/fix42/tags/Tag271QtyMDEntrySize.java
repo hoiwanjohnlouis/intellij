@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  271
+ *  MDEntrySize
+ *  Qty
+ *  <p>
+ *  Quantity or volume represented by the Market Data Entry.
+ */
 public class Tag271QtyMDEntrySize extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyQtyType dataValue;
 

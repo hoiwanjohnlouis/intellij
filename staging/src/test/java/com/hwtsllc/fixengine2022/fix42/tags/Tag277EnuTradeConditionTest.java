@@ -27,86 +27,102 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 /**
  *  277
  *  TradeCondition
- *
- *      0
- *      "0 - Cancel"
- *
- *      A-Z
- *      "A - Cash (only) Market"
- *      "B - Average Price Trade"
- *      "C - Cash Trade (same day clearing)"
- *      "D - Next Day (only) Market"
- *      "E - Opening/Reopening Trade Detail"
- *      "F - Intraday Trade Detail"
- *      "G - Rule 127 Trade (NYSE)"
- *      "H - Rule 155 Trade (AMEX)"
- *      "I - Sold Last (late reporting)"
- *      "J - Next Day Trade (next day clearing)"
- *      "K - Opened (late report of opened trade)"
- *      "L - Seller"
- *      "M - Sold (out of sequence)"
- *      "N - Stopped Stock (guarantee of price but does not execute the order)"
- *      "P - Imbalance More Buyers (cannot be used in combination with Q)"
- *      "Q - Imbalance More Sellers (cannot be used in combination with P)"
- *      "R - Opening Price"
- *      "S - Bargain Condition (LSE)"
- *      "T - Converted Price Indicator"
- *      "U - Exchange Last"
- *      "V - Final Price of Session"
- *      "W - Ex-pit"
- *      "X - Crossed"
- *      "Y - Trades resulting from manual/slow quote"
- *      "Z - Trades resulting from intermarket sweep"
- *
- *      a-z
- *     "a - Volume Only"
- *     "b - Direct Plus"
- *     "c - Acquisition"
- *     "d - Bunched"
- *     "e - Distribution"
- *     "f - Bunched Sale"
- *     "g - Split Trade"
- *     "h - Cancel Stopped"
- *     "i - Cancel ETH"
- *     "j - Cancel Stopped ETH"
- *     "k - Out of Sequence ETH"
- *     "l - Cancel Last ETH"
- *     "m - Sold Last Sale ETH"
- *     "n - Cancel Last"
- *     "o - Sold Last Sale"
- *     "p - Cancel Open"
- *     "q - Cancel Open ETH"
- *     "r - Opened Sale ETH"
- *     "s - Cancel Only"
- *     "t - Cancel Only ETH"
- *     "u - Late Open ETH"
- *     "v - Auto Execution ETH"
- *     "w - Reopen"
- *     "x - Reopen ETH"
- *     "y - Adjusted"
- *     "z - Adjusted ETH"
- *
- *      AA-AT
- *      "AA - Spread"
- *      "AB - Spread ETH"
- *      "AC - Straddle"
- *      "AD - Straddle ETH"
- *      "AE - Stopped"
- *      "AF - Stopped ETH"
- *      "AG - Regular ETH"
- *      "AH - Combo"
- *      "AI - Combo ETH"
- *      "AJ - Official Closing Price"
- *      "AK - Prior Reference Price"
- *      "AL - Stopped Sold Last"
- *      "AM - Stopped Out of Sequence"
- *      "AN - Offical Closing Price"
- *      "AO - Crossed"
- *      "AP - Fast Market"
- *      "AQ - Automatic Execution"
- *      "AR - Form T"
- *      "AS - Basket Index"
- *      "AT - Burst Basket"
+ *  MultipleStringValue
+ *  <p>
+ *  Space-delimited list of conditions describing a trade
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0
+ *  <p>    "0 - Cancel"
+ *  <p></p>
+ *  <p>    A-Z
+ *  <p>    "A - Cash (only) Market"
+ *  <p>    "B - Average Price Trade"
+ *  <p>    "C - Cash Trade (same day clearing)"
+ *  <p>    "D - Next Day (only) Market"
+ *  <p>    "E - Opening/Reopening Trade Detail"
+ *  <p></p>
+ *  <p>    "F - Intraday Trade Detail"
+ *  <p>    "G - Rule 127 Trade (NYSE)"
+ *  <p>    "H - Rule 155 Trade (AMEX)"
+ *  <p>    "I - Sold Last (late reporting)"
+ *  <p>    "J - Next Day Trade (next day clearing)"
+ *  <p></p>
+ *  <p>    "K - Opened (late report of opened trade)"
+ *  <p>    "L - Seller"
+ *  <p>    "M - Sold (out of sequence)"
+ *  <p>    "N - Stopped Stock (guarantee of price but does not execute the order)"
+ *  <p>    "P - Imbalance More Buyers (cannot be used in combination with Q)"
+ *  <p></p>
+ *  <p>    "Q - Imbalance More Sellers (cannot be used in combination with P)"
+ *  <p>    "R - Opening Price"
+ *  <p>    "S - Bargain Condition (LSE)"
+ *  <p>    "T - Converted Price Indicator"
+ *  <p>    "U - Exchange Last"
+ *  <p></p>
+ *  <p>    "V - Final Price of Session"
+ *  <p>    "W - Ex-pit"
+ *  <p>    "X - Crossed"
+ *  <p>    "Y - Trades resulting from manual/slow quote"
+ *  <p>    "Z - Trades resulting from intermarket sweep"
+ *  <p></p>
+ *  <p>    a-z
+ *  <p>   "a - Volume Only"
+ *  <p>   "b - Direct Plus"
+ *  <p>   "c - Acquisition"
+ *  <p>   "d - Bunched"
+ *  <p>   "e - Distribution"
+ *  <p></p>
+ *  <p>   "f - Bunched Sale"
+ *  <p>   "g - Split Trade"
+ *  <p>   "h - Cancel Stopped"
+ *  <p>   "i - Cancel ETH"
+ *  <p>   "j - Cancel Stopped ETH"
+ *  <p></p>
+ *  <p>   "k - Out of Sequence ETH"
+ *  <p>   "l - Cancel Last ETH"
+ *  <p>   "m - Sold Last Sale ETH"
+ *  <p>   "n - Cancel Last"
+ *  <p>   "o - Sold Last Sale"
+ *  <p></p>
+ *  <p>   "p - Cancel Open"
+ *  <p>   "q - Cancel Open ETH"
+ *  <p>   "r - Opened Sale ETH"
+ *  <p>   "s - Cancel Only"
+ *  <p>   "t - Cancel Only ETH"
+ *  <p></p>
+ *  <p>   "u - Late Open ETH"
+ *  <p>   "v - Auto Execution ETH"
+ *  <p>   "w - Reopen"
+ *  <p>   "x - Reopen ETH"
+ *  <p>   "y - Adjusted"
+ *  <p></p>
+ *  <p>   "z - Adjusted ETH"
+ *  <p></p>
+ *  <p>    AA-AT
+ *  <p>    "AA - Spread"
+ *  <p>    "AB - Spread ETH"
+ *  <p>    "AC - Straddle"
+ *  <p>    "AD - Straddle ETH"
+ *  <p>    "AE - Stopped"
+ *  <p></p>
+ *  <p>    "AF - Stopped ETH"
+ *  <p>    "AG - Regular ETH"
+ *  <p>    "AH - Combo"
+ *  <p>    "AI - Combo ETH"
+ *  <p>    "AJ - Official Closing Price"
+ *  <p></p>
+ *  <p>    "AK - Prior Reference Price"
+ *  <p>    "AL - Stopped Sold Last"
+ *  <p>    "AM - Stopped Out of Sequence"
+ *  <p>    "AN - Offical Closing Price"
+ *  <p>    "AO - Crossed"
+ *  <p></p>
+ *  <p>    "AP - Fast Market"
+ *  <p>    "AQ - Automatic Execution"
+ *  <p>    "AR - Form T"
+ *  <p>    "AS - Basket Index"
+ *  <p>    "AT - Burst Basket"
  */
 class Tag277EnuTradeConditionTest {
     @Test

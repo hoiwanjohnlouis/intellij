@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  299
+ *  QuoteEntryID
+ *  String
+ *  <p>
+ *  Uniquely identifies the quote as part of a QuoteSet.
+ */
 class Tag299StrQuoteEntryIDTest {
     @Test
     void FIX0299Test() {

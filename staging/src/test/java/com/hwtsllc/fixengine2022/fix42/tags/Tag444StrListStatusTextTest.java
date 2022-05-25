@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  444
+ *  ListStatusText
+ *  String
+ *  <p>
+ *  Free format text string related to List Status.
+ */
 class Tag444StrListStatusTextTest {
     @Test
     void FIX0444Test() {

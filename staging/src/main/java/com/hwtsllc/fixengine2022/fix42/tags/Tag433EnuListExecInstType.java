@@ -24,22 +24,22 @@ import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Tag433
- *  Enu
+ *  433
  *  ListExecInstType
- *
- *      1-5 msg types
- *      IMMEDIATE( "1", "IMMEDIATE", "1 - Immediate" ),
- *      WAIT_FOR_EXECUTION_INSTRUCTION( "2", "WAIT_FOR_EXECUTION_INSTRUCTION",
- *                          "2 - Wait for Execution Instruction (i.e. a List Execution message or " +
- *                          "phone call before proceeding with execution of the list)" ),
- *      SELL_DRIVEN( "3", "SELL_DRIVEN", "3 - Exchange/switch CIV order - Sell driven" ),
- *      BUY_DRIVEN_CASH_TOP_UP( "4", "BUY_DRIVEN_CASH_TOP_UP",
- *                          "4 - Exchange/switch CIV order - Buy driven, cash top-up " +
- *                          "(i.e. additional cash will be provided to fulfill the order)" ),
- *      BUY_DRIVEN_CASH_WITHDRAW( "5", "BUY_DRIVEN_CASH_WITHDRAW",
- *                          "5 - Exchange/switch CIV order - Buy driven, cash withdraw " +
- *                          "(i.e. additional cash will not be provided to fulfill the order)" ),
+ *  char
+ *  <p>
+ *  Identifies the type of ListExecInst (69).
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1-5 msg types
+ *  <p>    1 - Immediate
+ *  <p>    2 - Wait for Execute Instruction
+ *  <p>        (i.e. a List Execute message or phone call before proceeding with execution of the list)
+ *  <p>    3 - Exchange/switch CIV order - Sell driven
+ *  <p>    4 - Exchange/switch CIV order - Buy driven, cash top-up
+ *  <p>        (i.e. additional cash will be provided to fulfill the order)
+ *  <p>    5 - Exchange/switch CIV order - Buy driven, cash withdraw
+ *  <p>        (i.e. additional cash will not be provided to fulfill the order)
  */
 public class Tag433EnuListExecInstType extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum433ListExecInstType dataValue;

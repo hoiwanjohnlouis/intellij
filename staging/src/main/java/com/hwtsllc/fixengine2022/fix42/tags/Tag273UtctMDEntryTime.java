@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyUTCTimeType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  273
+ *  MDEntryTime
+ *  UTCTimeOnly
+ *  <p>
+ *  Time of Market Data Entry.
+ */
 public class Tag273UtctMDEntryTime extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyUTCTimeType dataValue;
 

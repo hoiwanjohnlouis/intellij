@@ -24,6 +24,21 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  247
+ *  UnderlyingRedemptionDate
+ *  LocalMktDate
+ *  <p>
+ *  Deprecated in FIX.4.4
+ *  <p>
+ *  Underlying security's RedemptionDate.
+ *  <p>
+ *  See RedemptionDate (240) field for description
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ *  <p></p>
+ *  (prior to FIX 4.4 field was of type UTCDate)
+ */
 // @Deprecated
 class Tag247LmdUnderlyingRedemptionDateTest {
     @Test

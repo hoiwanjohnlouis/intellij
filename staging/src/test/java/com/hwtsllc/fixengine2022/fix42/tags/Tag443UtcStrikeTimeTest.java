@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  443
+ *  StrikeTime
+ *  UTCTimestamp
+ *  <p>
+ *  The time at which current market prices are used to determine the value of a basket.
+ */
 class Tag443UtcStrikeTimeTest {
     @Test
     void FIX0443Test() {

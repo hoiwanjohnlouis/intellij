@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.datatypes.MyLocalMktDateType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  432
+ *  ExpireDate
+ *  LocalMktDate
+ *  <p>
+ *  Date of order expiration (last day the order can trade),
+ *  always expressed in terms of the local market date.
+ *  <p>
+ *  The time at which the order expires is determined by the local market’s business practices
+ */
 public class Tag432LmdExpireDate extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyLocalMktDateType dataValue;
 

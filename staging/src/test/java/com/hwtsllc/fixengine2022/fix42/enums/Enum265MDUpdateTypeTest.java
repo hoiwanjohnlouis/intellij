@@ -22,14 +22,18 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  265
+ *  MDUpdateType
+ *  int
+ *  <p>
+ *  Specifies the type of Market Data update.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    "0 - Full refresh"
+ *  <p>    "1 - Incremental refresh"
+ */
 class Enum265MDUpdateTypeTest {
-    /**
-     *  265
-     *  MDUpdateType
-     *  0-1 msg types
-     *      "0 - Full refresh"
-     *      "1 - Incremental refresh"
-     */
     @Test
     void Enum0265Test() {
         Enum265MDUpdateType enumType;

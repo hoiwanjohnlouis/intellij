@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  322
+ *  SecurityResponseID
+ *  String
+ *  <p>
+ *  Unique ID of a Security Definition message.
+ */
 class Tag322StrSecurityResponseIDTest {
     @Test
     void FIX0322Test() {

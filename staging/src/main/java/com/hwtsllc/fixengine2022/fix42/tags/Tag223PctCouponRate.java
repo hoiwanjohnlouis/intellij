@@ -22,6 +22,16 @@ import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  223
+ *  CouponRate
+ *  Percentage
+ *  <p>
+ *  The rate of interest that, when multiplied by the principal, par value,
+ *  or face value of a bond, provides the currency amount of the periodic interest payment.
+ *  <p>
+ *  The coupon is always cited, along with maturity, in any quotation of a bond's price.
+ */
 public class Tag223PctCouponRate extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyPercentageType dataValue;
 

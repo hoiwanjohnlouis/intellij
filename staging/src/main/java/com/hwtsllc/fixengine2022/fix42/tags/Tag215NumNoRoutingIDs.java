@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  215
+ *  NoRoutingIDs
+ *  NumInGroup
+ *  <p>
+ *  Number of repeating groups of RoutingID (217) and RoutingType (216) values.
+ *  <p></p>
+ *  See Volume 3: "Pre-Trade Message Targeting/Routing"
+ */
 public class Tag215NumNoRoutingIDs extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyNumInGroupType dataValue;
 

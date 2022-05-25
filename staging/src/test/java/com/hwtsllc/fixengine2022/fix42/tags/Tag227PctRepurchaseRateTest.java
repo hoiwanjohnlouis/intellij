@@ -24,6 +24,19 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  227
+ *  RepurchaseRate
+ *  Percentage
+ *  <p>
+ *  Deprecated in FIX.4.4
+ *  <p>
+ *  Percent of par at which a Repo will be repaid.
+ *  <p>
+ *  Represented as a percent, e.g. .9525 represents 95-/4 percent of par.
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ */
 // @Deprecated
 class Tag227PctRepurchaseRateTest {
     @Test

@@ -20,16 +20,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Tag385
- *  Enu
+ *  385
  *  MsgDirection
- *
- *      R, and S msg types
- *      RECEIVE( "R", "RECEIVE", "R - Receive" ),
- *      SEND( "S", "SEND", "S - Send" ),
+ *  char
+ *  <p>
+ *  Specifies the direction of the messsage.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    R - Receive
+ *  <p>    S - Send
  */
 public enum Enum385MsgDirection implements LogFIXString, LogVerboseString {
-    /**
+    /*
      * R, and S msg types
      */
     RECEIVE( "R", "RECEIVE", "R - Receive" ),

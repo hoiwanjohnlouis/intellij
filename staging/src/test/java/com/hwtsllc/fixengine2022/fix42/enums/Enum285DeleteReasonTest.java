@@ -22,15 +22,19 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  285
+ *  DeleteReason
+ *  char
+ *  <p>
+ *  Reason for deletion.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0-1 msg types
+ *  <p>    CANCELLATION_OR_TRADE_BUST( "0", "CANCELLATION_OR_TRADE_BUST", "0 - Cancellation / Trade Bust" ),
+ *  <p>    ERROR( "1", "ERROR", "1 - Error" ),
+ */
 class Enum285DeleteReasonTest {
-    /**
-     *  285
-     *  DeleteReason
-     *
-     *      0-1 msg types
-     *      CANCELLATION_OR_TRADE_BUST( "0", "CANCELLATION_OR_TRADE_BUST", "0 - Cancellation / Trade Bust" ),
-     *      ERROR( "1", "ERROR", "1 - Error" ),
-     */
     @Test
     void Enum0285Test() {
         Enum285DeleteReason enumType;

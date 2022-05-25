@@ -25,13 +25,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  Tag385
- *  Enu
+ *  385
  *  MsgDirection
- *
- *      R, and S msg types
- *      RECEIVE( "R", "RECEIVE", "R - Receive" ),
- *      SEND( "S", "SEND", "S - Send" ),
+ *  char
+ *  <p>
+ *  Specifies the direction of the messsage.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    R - Receive
+ *  <p>    S - Send
  */
 class Tag385EnuMsgDirectionTest {
     @Test

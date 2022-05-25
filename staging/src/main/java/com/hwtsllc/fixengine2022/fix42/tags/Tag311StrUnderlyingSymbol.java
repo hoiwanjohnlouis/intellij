@@ -22,11 +22,22 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  311
+ *  UnderlyingSymbol
+ *  String
+ *  <p>
+ *  Underlying security’s Symbol.
+ *  <p>
+ *  See Symbol (55) field for description
+ */
 public class Tag311StrUnderlyingSymbol extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_UNDERLYING_SYMBOL = "BilboBaggins-Tag311StrUnderlyingSymbol";
-    public final static String TESTB_STR_UNDERLYING_SYMBOL = "Gandalf-Tag311StrUnderlyingSymbol";
+    public final static String TESTA_STR_UNDERLYING_SYMBOL
+            = "BilboBaggins-Tag311StrUnderlyingSymbol";
+    public final static String TESTB_STR_UNDERLYING_SYMBOL
+            = "Gandalf-Tag311StrUnderlyingSymbol";
 
     public Tag311StrUnderlyingSymbol(MyStringType dataValue) {
         setFixType(FIX42.FIX311_STR_UNDERLYING_SYMBOL);

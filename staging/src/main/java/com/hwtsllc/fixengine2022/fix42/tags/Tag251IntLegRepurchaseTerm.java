@@ -22,6 +22,19 @@ import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  251
+ *  LegRepurchaseTerm
+ *  int
+ *  <p>
+ *  Deprecated in FIX.4.4
+ *  <p>
+ *  Multileg instrument's individual leg security�s RepurchaseTerm.
+ *  <p>
+ *  See RepurchaseTerm (226) field for description
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ */
 // @Deprecated
 public class Tag251IntLegRepurchaseTerm extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyIntType dataValue;

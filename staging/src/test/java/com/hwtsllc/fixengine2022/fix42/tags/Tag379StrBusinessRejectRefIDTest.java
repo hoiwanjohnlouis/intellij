@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  379
+ *  BusinessRejectRefID
+ *  String
+ *  <p>
+ *  The value of the business-level "ID" field on the message being referenced.
+ */
 class Tag379StrBusinessRejectRefIDTest {
     @Test
     void FIX0379Test() {

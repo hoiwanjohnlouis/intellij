@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  294
+ *  DefOfferSize
+ *  Qty
+ *  <p>
+ *  Default Offer Size.
+ */
 class Tag294QtyDefOfferSizeTest {
     @Test
     void FIX0294Test() {

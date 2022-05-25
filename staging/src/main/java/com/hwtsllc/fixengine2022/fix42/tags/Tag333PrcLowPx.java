@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  333
+ *  LowPx
+ *  Price
+ *  <p>
+ *  Represents an indication of the low end of the price range for a security prior to the open or reopen
+ */
 public class Tag333PrcLowPx extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceType dataValue;
 

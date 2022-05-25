@@ -26,10 +26,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  303
  *  QuoteRequestType
- *
- *      1-2 msg types
- *      MANUAL( "1", "MANUAL", "1 - Manual" ),
- *      AUTOMATIC( "2", "AUTOMATIC", "2 - Automatic" ),
+ *  int
+ *  <p>
+ *  Indicates the type of Quote Request being generated
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1-2 msg types
+ *  <p>    "1 - Manual"
+ *  <p>    "2 - Automatic"
  */
 public class Tag303EnuQuoteRequestType extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum303QuoteRequestType dataValue;

@@ -25,14 +25,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  Tag394
- *  Enu
+ *  394
  *  BidType
- *
- *      1-3 msg types
- *      NON_DISCLOSED( "1", "NON_DISCLOSED", "1 - Non Disclosed style (e.g. US/European)" ),
- *      DISCLOSED( "2", "DISCLOSED", "2 - Disclosed style (e.g. Japanese)" ),
- *      NO_BIDDING( "3", "NO_BIDDING", "3 - No bidding process" ),
+ *  int
+ *  <p>
+ *  Code to identify the type of Bid Request.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - "Non Disclosed" style (e.g. US/European)
+ *  <p>    2 - "Disclosed" style (e.g. Japanese)
+ *  <p>    3 - No bidding process
  */
 class Tag394EnuBidTypeTest {
     @Test

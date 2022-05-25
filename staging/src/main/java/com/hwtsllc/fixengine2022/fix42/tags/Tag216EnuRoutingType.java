@@ -26,10 +26,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  216
  *  RoutingType
- *      1 - Target Firm
- *      2 - Target List
- *      3 - Block Firm
- *      4 - Block List
+ *  int
+ *  <p>
+ *  Indicates the type of RoutingID (217) specified.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Target Firm
+ *  <p>    2 - Target List
+ *  <p>    3 - Block Firm
+ *  <p>    4 - Block List
  */
 public class Tag216EnuRoutingType extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum216RoutingType dataValue;

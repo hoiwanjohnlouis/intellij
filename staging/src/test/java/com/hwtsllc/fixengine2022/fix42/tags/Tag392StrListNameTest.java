@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  392
+ *  ListName
+ *  String
+ *  <p>
+ *  Descriptive name for list order.
+ */
 class Tag392StrListNameTest {
     @Test
     void FIX0392Test() {

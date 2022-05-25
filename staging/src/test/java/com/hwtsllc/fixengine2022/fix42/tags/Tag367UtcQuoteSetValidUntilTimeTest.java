@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  367
+ *  QuoteSetValidUntilTime
+ *  UTCTimestamp
+ *  <p>
+ *  Indicates expiration time of this particular QuoteSet
+ *  <p>
+ *  (always expressed in UTC (Universal Time Coordinated, also known as "GMT")
+ */
 class Tag367UtcQuoteSetValidUntilTimeTest {
     @Test
     void FIX0367Test() {

@@ -24,6 +24,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  260
+ *  BasisFeaturePrice
+ *  Price
+ *  <p>
+ *  Price for BasisFeatureDate.
+ *  <p>
+ *  See BasisFeatureDate (259)
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ */
 class Tag260PrcBasisFeaturePriceTest {
     @Test
     void FIX0260Test() {

@@ -22,24 +22,28 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  300
+ *  QuoteRejectReason
+ *  int
+ *  <p>
+ *  Reason Quote was rejected:
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1-9, 99 msg types
+ *  <p>    "1 - Unknown Symbol (security)"
+ *  <p>    "2 - Exchange (Security) closed"
+ *  <p>    "3 - Quote Request exceeds limit"
+ *  <p>    "4 - Too late to enter"
+ *  <p>    "5 - Unknown Quote"
+ *  <p></p>
+ *  <p>    "6 - Duplicate Quote"
+ *  <p>    "7 - Invalid bid/ask spread"
+ *  <p>    "8 - Invalid price"
+ *  <p>    "9 - Not authorized to quote security"
+ *  <p>    "99 - Other"
+ */
 class Enum300QuoteRejectReasonTest {
-    /**
-     *  300
-     *  QuoteRejectReason
-     *
-     *      1-9, 99 msg types
-     *      UNKNOWN_SYMBOL( "1", "UNKNOWN_SYMBOL", "1 - Unknown Symbol (security)" ),
-     *      EXCHANGE_SECURITY_CLOSED( "2", "EXCHANGE_SECURITY_CLOSED", "2 - Exchange (Security) closed" ),
-     *      QUOTE_REQUEST_EXCEEDS_LIMIT( "3", "QUOTE_REQUEST_EXCEEDS_LIMIT", "3 - Quote Request exceeds limit" ),
-     *      TOO_LATE_TO_ENTER( "4", "TOO_LATE_TO_ENTER", "4 - Too late to enter" ),
-     *      UNKNOWN_QUOTE( "5", "UNKNOWN_QUOTE", "5 - Unknown Quote" ),
-     *      DUPLICATE_QUOTE( "6", "DUPLICATE_QUOTE", "6 - Duplicate Quote" ),
-     *      INVALID_BID_ASK_SPREAD( "7", "INVALID_BID_ASK_SPREAD", "7 - Invalid bid/ask spread" ),
-     *      INVALID_PRICE( "8", "INVALID_PRICE", "8 - Invalid price" ),
-     *      NOT_AUTHORIZED_TO_QUOTE_SECURITY( "9", "NOT_AUTHORIZED_TO_QUOTE_SECURITY",
-     *                      "9 - Not authorized to quote security" ),
-     *      OTHER( "99", "OTHER", "99 - Other" ),
-     */
     @Test
     void Enum0300Test() {
         Enum300QuoteRejectReason enumType;
@@ -96,6 +100,7 @@ class Enum300QuoteRejectReasonTest {
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+
 
         enumType = Enum300QuoteRejectReason.DUPLICATE_QUOTE;
         assertEquals( "6", enumType.toFIXIDString());

@@ -22,6 +22,17 @@ import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  260
+ *  BasisFeaturePrice
+ *  Price
+ *  <p>
+ *  Price for BasisFeatureDate.
+ *  <p>
+ *  See BasisFeatureDate (259)
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ */
 public class Tag260PrcBasisFeaturePrice extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceType dataValue;
 

@@ -24,6 +24,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  290
+ *  MDEntryPositionNo
+ *  int
+ *  <p>
+ *  Display position of a bid or offer, numbered from most competitive to least competitive,
+ *  per market side, beginning with.
+ */
 class Tag290IntMDEntryPositionNoTest {
     @Test
     void FIX0290Test() {

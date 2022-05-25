@@ -22,6 +22,17 @@ import com.hwtsllc.fixengine2022.datatypes.MyExchangeType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  308
+ *  UnderlyingSecurityExchange
+ *  Exchange
+ *  <p>
+ *  Underlying security’s SecurityExchange.  Can be used to identify the underlying security.
+ *  <p>
+ *  Valid values:
+ *  <p>
+ *  see SecurityExchange (207)
+ */
 public class Tag308ExcUnderlyingSecurityExchange extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyExchangeType dataValue;
 

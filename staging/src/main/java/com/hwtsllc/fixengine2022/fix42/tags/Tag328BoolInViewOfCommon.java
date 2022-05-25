@@ -18,22 +18,31 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix42.enums.Bool328InViewOfCommon;
 import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  328
+ *  InViewOfCommon
+ *  Boolean
+ *  <p>
+ *  Indicates whether or not the halt was due to Common Stock trading being halted.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    N - Halt was not related to a halt of the common stock
+ *  <p>    Y - Half was due to common stock being halted
+ */
 public class Tag328BoolInViewOfCommon extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
-    private final MyBooleanType dataValue;
+    private final Bool328InViewOfCommon dataValue;
 
-    public final static MyBooleanType TESTA_BOOL_IN_VIEW_OF_COMMON
-            = MyBooleanType.NO ;
-                                    // N - Halt was not related to a halt of the common stock
-    public final static MyBooleanType TESTB_BOOL_IN_VIEW_OF_COMMON
-            = MyBooleanType.YES;
-                                    // Y - Half was due to common stock being halted
+    public final static Bool328InViewOfCommon TESTA_BOOL_IN_VIEW_OF_COMMON
+            = Bool328InViewOfCommon.NO ;
+    public final static Bool328InViewOfCommon TESTB_BOOL_IN_VIEW_OF_COMMON
+            = Bool328InViewOfCommon.YES;
 
-    public Tag328BoolInViewOfCommon(MyBooleanType dataValue) {
+    public Tag328BoolInViewOfCommon(Bool328InViewOfCommon dataValue) {
         setFixType(FIX42.FIX328_BOOL_IN_VIEW_OF_COMMON);
         this.dataValue = dataValue;
     }

@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  271
+ *  MDEntrySize
+ *  Qty
+ *  <p>
+ *  Quantity or volume represented by the Market Data Entry.
+ */
 class Tag271QtyMDEntrySizeTest {
     @Test
     void FIX0271Test() {

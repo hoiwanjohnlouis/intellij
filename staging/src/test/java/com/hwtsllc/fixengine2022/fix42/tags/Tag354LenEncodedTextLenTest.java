@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  354
+ *  EncodedTextLen
+ *  Length
+ *  <p>
+ *  Byte length of encoded (non-ASCII characters) EncodedText (355) field.
+ */
 class Tag354LenEncodedTextLenTest {
     @Test
     void FIX0354Test() {

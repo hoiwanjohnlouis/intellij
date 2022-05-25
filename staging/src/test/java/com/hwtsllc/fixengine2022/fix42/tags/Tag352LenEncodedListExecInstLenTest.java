@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  352
+ *  EncodedListExecInstLen
+ *  Length
+ *  <p>
+ *  Byte length of encoded (non-ASCII characters) EncodedListExecInst (353) field.
+ */
 class Tag352LenEncodedListExecInstLenTest {
     @Test
     void FIX0352Test() {

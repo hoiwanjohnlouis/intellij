@@ -27,12 +27,15 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 /**
  *  301
  *  QuoteResponseLevel
- *
- *      0-2 msg types
- *      NO_ACKNOWLEDGEMENT( "0", "NO_ACKNOWLEDGEMENT", "0 - No Acknowledgement (default)" ),
- *      ACKNOWLEDGE_NEGATIVE_OR_ERRORS( "1", "ACKNOWLEDGE_NEGATIVE_OR_ERRORS",
- *                      "1 - Acknowledge only negative or erroneous quotes" ),
- *      ACKNOWLEDGE_EACH_QUOTE( "2", "ACKNOWLEDGE_EACH_QUOTE", "2 - Acknowledge each quote messages" ),
+ *  int
+ *  <p>
+ *  Level of Response requested from receiver of quote messages.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0-2 msg types
+ *  <p>    "0 - No Acknowledgement (default)"
+ *  <p>    "1 - Acknowledge only negative or erroneous quotes"
+ *  <p>    "2 - Acknowledge each quote messages"
  */
 class Tag301EnuQuoteResponseLevelTest {
     @Test

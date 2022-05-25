@@ -24,6 +24,19 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  248
+ *  LegCouponPaymentDate
+ *  LocalMktDate
+ *  <p>
+ *  Multileg instrument's individual leg security’s CouponPaymentDate.
+ *  <p>
+ *  See CouponPaymentDate (224) field for description
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ *  <p></p>
+ *  (prior to FIX 4.4 field was of type UTCDate)
+ */
 class Tag248LmdLegCouponPaymentDateTest {
     @Test
     void FIX0248Test() {

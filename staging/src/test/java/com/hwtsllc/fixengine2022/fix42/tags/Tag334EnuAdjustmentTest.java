@@ -25,14 +25,18 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  Tag334
+ *  334
  *  Enu
  *  Adjustment
- *
- *      1-3 msg types
- *      CANCEL( "1", "CANCEL", "1 - Cancel" ),
- *      ERROR( "2", "ERROR", "2 - Error" ),
- *      CORRECTION( "3", "CORRECTION", "3 - Correction" ),
+ *  int
+ *  <p>
+ *  Identifies the type of adjustment.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1-3 msg types
+ *  <p>    CANCEL( "1", "CANCEL", "1 - Cancel" ),
+ *  <p>    ERROR( "2", "ERROR", "2 - Error" ),
+ *  <p>    CORRECTION( "3", "CORRECTION", "3 - Correction" ),
  */
 class Tag334EnuAdjustmentTest {
     @Test

@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  282
+ *  MDEntryOriginator
+ *  String
+ *  <p>
+ *  Deprecated in FIX.5.0 Originator of a Market Data Entry
+ */
 class Tag282StrMDEntryOriginatorTest {
     @Test
     void FIX0282Test() {

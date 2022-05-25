@@ -24,6 +24,62 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  234
+ *  StipulationValue
+ *  String
+ *  <p></p>
+ *  For Fixed Income.  Value of stipulation.
+ *  <p>
+ *  The expression can be an absolute single value or a combination of values and logical operators:
+ *  <p></p>
+ *  <p>     < value
+ *  <p>     > value
+ *  <p>     <= value
+ *  <p>     >= value
+ *  <p>     value
+ *  <p>     value – value2
+ *  <p>     value OR value2
+ *  <p>     value AND value2
+ *  <p>     YES
+ *  <p>     NO
+ *  <p></p>
+ *  <p>     Bargain conditions recognized by the London Stock Exchange –
+ *          to be used when StipulationType is "BGNCON".
+ *  <p>     CD = Special cum Dividend
+ *  <p>     XD = Special ex Dividend
+ *  <p>     CC = Special cum Coupon
+ *  <p>     XC = Special ex Coupon
+ *  <p>     CB = Special cum Bonus
+ *  <p>     XB = Special ex Bonus
+ *  <p>     CR = Special cum Rights
+ *  <p>     XR = Special ex Rights
+ *  <p>     CP = Special cum Capital Repayments
+ *  <p>     XP = Special ex Capital Repayments
+ *  <p>     CS = Cash Settlement
+ *  <p>     SP = Special Price
+ *  <p>     TR = Report for European Equity Market Securities in accordance with Chapter 8 of the Rules.
+ *  <p>     GD = Guaranteed Delivery
+ *  <p></p>
+ *  <p>     Values for StipulationType = "PXSOURCE":
+ *  <p>     BB GENERIC
+ *  <p>     BB FAIRVALUE
+ *  <p>     BROKERTEC
+ *  <p>     ESPEED
+ *  <p>     GOVPX
+ *  <p>     HILLIARD FARBER
+ *  <p>     ICAP
+ *  <p>     TRADEWEB
+ *  <p>     TULLETT LIBERTY
+ *          If a particular side of the market is wanted append /BID /OFFER or /MID.
+ *  <p>     plus appropriate combinations of the above and other expressions
+ *          by mutual agreement of the counterparties.
+ *  <p></p>
+ *  <p></p>
+ *  <p>     Examples: ">=60", ".25", "ORANGE OR CONTRACOSTA", etc.
+ *  <p></p>
+ *  <p>     (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ */
 class Tag234StrStipulationValueTest {
     @Test
     void FIX0234Test() {

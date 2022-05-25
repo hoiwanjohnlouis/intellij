@@ -18,20 +18,31 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix42.enums.Bool377SolicitedFlag;
 import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  377
+ *  SolicitedFlag
+ *  Boolean
+ *  <p>
+ *  Indicates whether or not the order was solicited.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    N - Was not solicited
+ *  <p>    Y - Was solicited
+ */
 public class Tag377BoolSolicitedFlag extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
-    private final MyBooleanType dataValue;
+    private final Bool377SolicitedFlag dataValue;
 
-    public final static MyBooleanType TESTA_BOOL_SOLICITED_FLAG
-            = MyBooleanType.NO ;     // N - Was not solicited
-    public final static MyBooleanType TESTB_BOOL_SOLICITED_FLAG
-            = MyBooleanType.YES;     // Y - Was solicited
+    public final static Bool377SolicitedFlag TESTA_BOOL_SOLICITED_FLAG
+            = Bool377SolicitedFlag.NO ;
+    public final static Bool377SolicitedFlag TESTB_BOOL_SOLICITED_FLAG
+            = Bool377SolicitedFlag.YES;
 
-    public Tag377BoolSolicitedFlag(MyBooleanType dataValue) {
+    public Tag377BoolSolicitedFlag(Bool377SolicitedFlag dataValue) {
         setFixType(FIX42.FIX377_BOOL_SOLICITED_FLAG);
         this.dataValue = dataValue;
     }

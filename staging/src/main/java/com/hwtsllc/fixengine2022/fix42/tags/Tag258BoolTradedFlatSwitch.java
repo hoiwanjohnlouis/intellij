@@ -18,20 +18,33 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix42.enums.Bool258TradedFlatSwitch;
 import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  258
+ *  TradedFlatSwitch
+ *  Boolean
+ *  <p>
+ *  Driver and part of trade in the event that the Security Master file was wrong at the point of entry
+ *  <p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ *  <p></p>
+ *  Valid values:
+ *  <p>    N - Not Traded Flat
+ *  <p>    Y - Traded Flat
+ */
 public class Tag258BoolTradedFlatSwitch extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
-    private final MyBooleanType dataValue;
+    private final Bool258TradedFlatSwitch dataValue;
 
-    public final static MyBooleanType TESTA_BOOL_TRADED_FLAT_SWITCH
-            = MyBooleanType.NO ; // N - Not Traded Flat
-    public final static MyBooleanType TESTB_BOOL_TRADED_FLAT_SWITCH
-            = MyBooleanType.YES; // Y - Traded Flat
+    public final static Bool258TradedFlatSwitch TESTA_BOOL_TRADED_FLAT_SWITCH
+            = Bool258TradedFlatSwitch.NO ;
+    public final static Bool258TradedFlatSwitch TESTB_BOOL_TRADED_FLAT_SWITCH
+            = Bool258TradedFlatSwitch.YES;
 
-    public Tag258BoolTradedFlatSwitch(MyBooleanType dataValue) {
+    public Tag258BoolTradedFlatSwitch(Bool258TradedFlatSwitch dataValue) {
         setFixType(FIX42.FIX258_BOOL_TRADED_FLAT_SWITCH);
         this.dataValue = dataValue;
     }

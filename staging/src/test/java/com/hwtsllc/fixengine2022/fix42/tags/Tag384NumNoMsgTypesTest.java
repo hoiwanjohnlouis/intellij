@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  384
+ *  NoMsgTypes
+ *  NumInGroup
+ *  <p>
+ *  Number of MsgTypes (35) in repeating group.
+ */
 class Tag384NumNoMsgTypesTest {
     @Test
     void FIX0384Test() {

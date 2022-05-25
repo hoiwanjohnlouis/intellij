@@ -22,6 +22,17 @@ import com.hwtsllc.fixengine2022.datatypes.MyDataType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  213
+ *  XmlData
+ *  data
+ *  <p>
+ *  Actual XML data stream (e.g. FIXML).
+ *  <p>
+ *  See approriate XML reference (e.g. FIXML).
+ *  <p></p>
+ *  Note: may contain embedded SOH characters.
+ */
 public class Tag213DatXmlData extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyDataType dataValue;
 

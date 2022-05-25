@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  262
+ *  MDReqID
+ *  String
+ *  <p>
+ *  Unique identifier for Market Data Request
+ */
 class Tag262StrMDReqIDTest {
     @Test
     void FIX0262Test() {

@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  391
+ *  ClientBidID
+ *  String
+ *  <p>
+ *  Unique identifier for a Bid Request as assigned by institution.
+ *  <p></p>
+ *  Uniqueness must be guaranteed within a single trading day.
+ */
 class Tag391StrClientBidIDTest {
     @Test
     void FIX0391Test() {

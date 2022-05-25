@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  412
+ *  OutMainCntryUIndex
+ *  Amt
+ *  <p>
+ *  Value of stocks in Currency
+ */
 public class Tag412AmtOutMainCntryUIndex extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyAmtType dataValue;
 

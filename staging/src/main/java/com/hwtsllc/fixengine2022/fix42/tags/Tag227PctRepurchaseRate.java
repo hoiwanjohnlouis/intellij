@@ -22,6 +22,19 @@ import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  227
+ *  RepurchaseRate
+ *  Percentage
+ *  <p>
+ *  Deprecated in FIX.4.4
+ *  <p>
+ *  Percent of par at which a Repo will be repaid.
+ *  <p>
+ *  Represented as a percent, e.g. .9525 represents 95-/4 percent of par.
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ */
 // @Deprecated
 public class Tag227PctRepurchaseRate extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyPercentageType dataValue;

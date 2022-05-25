@@ -20,17 +20,21 @@ import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Tag339
+ *  339
  *  Enu
  *  TradSesMode
- *
- *      1-3 msg types
- *      TESTING( "1", "TESTING", "1 - Testing" ),
- *      SIMULATED( "2", "SIMULATED", "2 - Simulated" ),
- *      PRODUCTION( "3", "PRODUCTION", "3 - Production" ),
+ *  int
+ *  <p>
+ *  Trading Session Mode
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1-3 msg types
+ *  <p>    "1 - Testing"
+ *  <p>    "2 - Simulated"
+ *  <p>    "3 - Production"
  */
 public enum Enum339TrdSesMode implements LogFIXString, LogVerboseString {
-    /**
+    /*
      * 1-3 msg types
      */
     TESTING( "1", "TESTING", "1 - Testing" ),

@@ -19,10 +19,19 @@ package com.hwtsllc.fixengine2022.fix42.enums;
 import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  263
+ *  SubscriptionRequestType
+ *  char
+ *  <p>
+ *  Subscription Request Type
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Snapshot
+ *  <p>    1 - Snapshot + Updates (Subscribe)
+ *  <p>    2 - Disable previous Snapshot + Update Request (Unsubscribe)
+ */
 public enum Enum263SubscriptionRequestType implements LogFIXString, LogVerboseString {
-    /**
-     * 0-2 msg types
-     */
     SNAPSHOT( "0", "SNAPSHOT",
             "0 - Snapshot" ),
     SUBSCRIBE_SNAPSHOT( "1", "SUBSCRIBE_SNAPSHOT",

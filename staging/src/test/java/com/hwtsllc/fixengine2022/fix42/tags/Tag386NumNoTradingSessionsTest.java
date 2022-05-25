@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  386
+ *  NoTradingSessions
+ *  NumInGroup
+ *  <p>
+ *  Number of TradingSessionIDs (336) in repeating group.
+ */
 class Tag386NumNoTradingSessionsTest {
     @Test
     void FIX0386Test() {

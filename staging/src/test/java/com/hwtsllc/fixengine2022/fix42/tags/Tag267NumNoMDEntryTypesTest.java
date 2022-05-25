@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  267
+ *  NoMDEntryTypes
+ *  NumInGroup
+ *  <p>
+ *  Number of MDEntryType (269) fields requested.
+ */
 class Tag267NumNoMDEntryTypesTest {
     @Test
     void FIX0267Test() {

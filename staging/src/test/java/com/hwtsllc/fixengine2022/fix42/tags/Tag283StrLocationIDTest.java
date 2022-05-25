@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  283
+ *  LocationID
+ *  String
+ *  <p>
+ *  Identification of a Market Maker’s location
+ */
 class Tag283StrLocationIDTest {
     @Test
     void FIX0283Test() {

@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  318
+ *  UnderlyingCurrency
+ *  Currency
+ *  <p>
+ *  Underlying security’s Currency.
+ *  <p>
+ *  See Currency (5) field for description and valid values
+ */
 // @Deprecated
 class Tag318CcyUnderlyingCurrencyTest {
     @Test

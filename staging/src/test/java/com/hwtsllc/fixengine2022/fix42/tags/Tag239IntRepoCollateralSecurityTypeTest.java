@@ -24,6 +24,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  239
+ *  RepoCollateralSecurityType
+ *  int
+ *  <p>
+ *  Identifies the collateral used in the transaction.
+ *  <p></p>
+ *  Valid values:
+ *  <p>
+ *  see SecurityType (167) field (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ */
 class Tag239IntRepoCollateralSecurityTypeTest {
     @Test
     void FIX0239Test() {

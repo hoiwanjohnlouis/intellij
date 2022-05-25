@@ -24,6 +24,18 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  369
+ *  LastMsgSeqNumProcessed
+ *  SeqNum
+ *  <p>
+ *  The last MsgSeqNum (34) value received by the FIX engine and processed by
+ *  downstream application, such as trading engine or order routing system.
+ *  <p>
+ *  Can be specified on every message sent.
+ *  <p></p>
+ *  Useful for detecting a backlog with a counterparty.
+ */
 class Tag369SeqLastMsgSeqNumProcessedTest {
     @Test
     void FIX0369Test() {

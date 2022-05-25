@@ -20,17 +20,21 @@ import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Tag338
+ *  338
  *  Enu
  *  TradSesMethod
- *
- *      1-3 msg types
- *      ELECTRONIC( "1", "ELECTRONIC", "1 - Electronic" ),
- *      OPEN_OUTCRY( "2", "OPEN_OUTCRY", "2 - Open Outcry" ),
- *      TWO_PARTY( "3", "TWO_PARTY", "3 - Two Party" ),
+ *  int
+ *  <p>
+ *  Method of trading
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1-3 msg types
+ *  <p>    "1 - Electronic"
+ *  <p>    "2 - Open Outcry"
+ *  <p>    "3 - Two Party"
  */
 public enum Enum338TradSesMethod implements LogFIXString, LogVerboseString {
-    /**
+    /*
      * 1-3 msg types
      */
     ELECTRONIC( "1", "ELECTRONIC", "1 - Electronic" ),

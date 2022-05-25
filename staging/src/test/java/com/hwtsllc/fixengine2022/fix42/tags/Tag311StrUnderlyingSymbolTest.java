@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  311
+ *  UnderlyingSymbol
+ *  String
+ *  <p>
+ *  Underlying security’s Symbol.
+ *  <p>
+ *  See Symbol (55) field for description
+ */
 class Tag311StrUnderlyingSymbolTest {
     @Test
     void FIX0311Test() {

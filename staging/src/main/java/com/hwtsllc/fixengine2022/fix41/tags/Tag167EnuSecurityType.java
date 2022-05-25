@@ -71,159 +71,140 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p></p>
  *  Valid values:
  *  <p>    Deprecated, 4
- *  <p>    DEPRECATED_FUTURE( "FUT", "DEPRECATED_FUTURE", "FUT - Future (Deprecated)" ),
- *  <p>    DEPRECATED_OPTION( "OPT", "DEPRECATED_OPTION", "OPT - Option (Deprecated)" ),
- *  <p>    DEPRECATED_US_TREASURY_NOTE( "UST", "DEPRECATED_US_TREASURY_NOTE",
- *                          "UST - US Treasury Note (Deprecated Value Use TNOTE)" ),
- *  <p>    DEPRECATED_US_TREASURY_BILL( "USTB", "DEPRECATED_US_TREASURY_BILL",
- *                          "USTB - US Treasury Bill (Deprecated Value Use TBILL)" ),
+ *  <p>    "FUT - Future (Deprecated)"
+ *  <p>    "OPT - Option (Deprecated)"
+ *  <p>    "UST - US Treasury Note (Deprecated Value Use TNOTE)"
+ *  <p>    "USTB - US Treasury Bill (Deprecated Value Use TBILL)"
  *  <p></p>
  *      Agency, 5
- *  <p>    EURO_SUPRANATIONAL_COUPON( "EUSUPRA", "EURO_SUPRANATIONAL_COUPON",
- *                          "EUSUPRA - Euro Supranational Coupon (Agency)" ),
- *  <p>    FEDERAL_AGENCY_COUPON( "FAC", "FEDERAL_AGENCY_COUPON", "FAC - Federal Agency Coupon" ),
- *  <p>    FEDERAL_AGENCY_DISCOUNT_NOTE( "FADN", "FEDERAL_AGENCY_DISCOUNT_NOTE",
- *                          "FADN - Federal Agency Discount Note" ),
- *  <p>    PRIVATE_EXPORT_FUNDING( "PEF", "PRIVATE_EXPORT_FUNDING", "PEF - Private Export Funding (Agency)" ),
- *  <p>    USD_SUPRANATIONAL_COUPON( "SUPRA", "USD_SUPRANATIONAL_COUPON",
- *                          "SUPRA - USD Supranational Coupons (Agency)" ),
+ *  <p>    "EUSUPRA - Euro Supranational Coupon (Agency)"
+ *  <p>    "FAC - Federal Agency Coupon"
+ *  <p>    "FADN - Federal Agency Discount Note"
+ *  <p>    "PEF - Private Export Funding (Agency)"
+ *  <p>    "SUPRA - USD Supranational Coupons (Agency)"
  *  <p></p>
  *      Corporate, 8
- *  <p>    CORPORATE_BOND( "CORP", "CORPORATE_BOND", "CORP - Corporate Bond" ),
- *  <p>    CORPORATE_PRIVATE_PLACEMENT( "CPP", "CORPORATE_PRIVATE_PLACEMENT", "CPP - Corporate Private Placement" ),
- *  <p>    CONVERTIBLE_BOND( "CB", "CONVERTIBLE_BOND", "CB - Convertible Bond (Corporate)" ),
- *  <p>    DUAL_CURRENCY( "DUAL", "DUAL_CURRENCY", "DUAL - Dual Currency (Corporate)" ),
- *  <p>    EURO_CORPORATE_BOND( "EUCORP", "EURO_CORPORATE_BOND", "EUCORP - Euro Corporate Bond" ),
+ *  <p>    "CORP - Corporate Bond"
+ *  <p>    "CPP - Corporate Private Placement"
+ *  <p>    "CB - Convertible Bond (Corporate)"
+ *  <p>    "DUAL - Dual Currency (Corporate)"
+ *  <p>    "EUCORP - Euro Corporate Bond"
  *  <p></p>
- *  <p>    INDEXED_LINKED( "XLINKD", "INDEXED_LINKED", "XLINKD - Indexed Linked (Corporate)" ),
- *  <p>    STRUCTURED_NOTE( "STRUCT", "STRUCTURED_NOTE", "STRUCT - Structured Note (Corporate)" ),
- *  <p>    YANKEE_CORPORATE_BOND( "YANK", "YANKEE_CORPORATE_BOND", "YANK - Yankee Corporate Bond" ),
+ *  <p>    "XLINKD - Indexed Linked (Corporate)"
+ *  <p>    "STRUCT - Structured Note (Corporate)"
+ *  <p>    "YANK - Yankee Corporate Bond"
  *  <p></p>
  *      Currency, 1
- *  <p>    FOREIGN_EXCHANGE_CONTRACT( "FOR", "FOREIGN_EXCHANGE_CONTRACT",
- *                          "FOR - Foreign Exchange Contract (Currency)" ),
+ *  <p>    "FOR - Foreign Exchange Contract (Currency)"
  *  <p></p>
  *      Equity, 2
- *  <p>    COMMON_STOCK( "CS", "COMMON_STOCK", "CS - Common Stock (Equity)" ),
- *  <p>    PREFERRED_STOCK( "PS", "PREFERRED_STOCK", "PS - Preferred Stock (Equity)" ),
+ *  <p>    "CS - Common Stock (Equity)"
+ *  <p>    "PS - Preferred Stock (Equity)"
  *  <p></p>
  *      Finance, 5
- *  <p>    REPURCHASE( "REPO", "REPURCHASE", "REPO - Repurchase (Financing)" ),
- *  <p>    FORWARD( "FORWARD", "FORWARD", "FORWARD - Forward (Financing)" ),
- *  <p>    BUY_SELLBACK( "BUYSELL", "BUY_SELLBACK", "BUYSELL - Buy Sellback (Financing)" ),
- *  <p>    SECURITIES_LOAN( "SECLOAN", "SECURITIES_LOAN", "SECLOAN - Securities Loan (Financing)" ),
- *  <p>    SECURITIES_PLEDGE( "SECPLEDGE", "SECURITIES_PLEDGE", "SECPLEDGE - Securities Pledge (Financing)" ),
+ *  <p>    "REPO - Repurchase (Financing)"
+ *  <p>    "FORWARD - Forward (Financing)"
+ *  <p>    "BUYSELL - Buy Sellback (Financing)"
+ *  <p>    "SECLOAN - Securities Loan (Financing)"
+ *  <p>    "SECPLEDGE - Securities Pledge (Financing)"
  *  <p></p>
  *      Government, 9
- *  <p>    BRADY_BOND( "BRADY", "BRADY_BOND", "BRADY - Brady Bond (Government)" ),
- *  <p>    EURO_SOVEREIGNS( "EUSOV", "EURO_SOVEREIGNS", "EUSOV - Euro Sovereigns (Government)" ),
- *  <p>    US_TREASURY_BOND( "TBOND", "US_TREASURY_BOND", "TBOND - US Treasury Bond (Government)" ),
- *  <p>    INTEREST_STRIP_ANY_BOND( "TINT", "INTEREST_STRIP_ANY_BOND",
- *                          "TINT - Interest Strip From Any Bond Or Note (Government)" ),
- *  <p>    TREASURY_INFLATION_PROTECTED_SECURITIES( "TIPS", "TREASURY_INFLATION_PROTECTED_SECURITIES",
- *                          "TIPS - Treasury Inflation Protected Securities (Government)" ),
+ *  <p>    "BRADY - Brady Bond (Government)"
+ *  <p>    "EUSOV - Euro Sovereigns (Government)"
+ *  <p>    "TBOND - US Treasury Bond (Government)"
+ *  <p>    "TINT - Interest Strip From Any Bond Or Note (Government)"
+ *  <p>    "TIPS - Treasury Inflation Protected Securities (Government)"
  *  <p></p>
- *  <p>    PRINCIPAL_STRIP_CALLABLE_BOND( "TCAL", "PRINCIPAL_STRIP_CALLABLE_BOND",
- *                          "TCAL - Principal Strip Of A Callable Bond Or Note (Government)" ),
- *  <p>    PRINCIPAL_STRIP_NON_CALLABLE_BOND( "TPRN", "PRINCIPAL_STRIP_NON_CALLABLE_BOND",
- *                          "TPRN - Principal Strip From A Non-Callable Bond Or Note (Government)" ),
- *  <p>    US_TREASURY_NOTE( "TNOTE", "US_TREASURY_NOTE", "TNOTE - US Treasury Note (Government)" ),
- *  <p>    US_TREASURY_BILL( "TBILL", "US_TREASURY_BILL", "TBILL - US Treasury Bill (Government)" ),
+ *  <p>    "TCAL - Principal Strip Of A Callable Bond Or Note (Government)"
+ *  <p>    "TPRN - Principal Strip From A Non-Callable Bond Or Note (Government)"
+ *  <p>    "TNOTE - US Treasury Note (Government)"
+ *  <p>    "TBILL - US Treasury Bill (Government)"
  *  <p></p>
  *      Loan, 13
- *  <p>    TERM_LOAN( "TERM", "TERM_LOAN", "TERM - Term Loan" ),
- *  <p>    REVOLVER_LOAN( "RVLV", "REVOLVER_LOAN", "RVLV - Revolver Loan" ),
- *  <p>    REVOLVER_TERM_LOAN( "RVLVTRM", "REVOLVER_TERM_LOAN", "RVLVTRM - Revolver/Term Loan" ),
- *  <p>    BRIDGE_LOAN( "BRIDGE", "BRIDGE_LOAN", "BRIDGE - Bridge Loan" ),
- *  <p>    LETTER_OF_CREDIT( "LOFC", "LETTER_OF_CREDIT", "LOFC - Letter Of Credit" ),
+ *  <p>    "TERM - Term Loan"
+ *  <p>    "RVLV - Revolver Loan"
+ *  <p>    "RVLVTRM - Revolver/Term Loan"
+ *  <p>    "BRIDGE - Bridge Loan"
+ *  <p>    "LOFC - Letter Of Credit"
  *  <p></p>
- *  <p>    SWING_LINE_FACILITY( "SWING", "SWING_LINE_FACILITY", "SWING - Swing Line Facility" ),
- *  <p>    DEBTOR_IN_POSSESSION( "DINP", "DEBTOR_IN_POSSESSION", "DINP - Debtor In Possession" ),
- *  <p>    DEFAULTED_LOAN( "DEFLTED", "DEFAULTED_LOAN", "DEFLTED - Defaulted" ),
- *  <p>    WITHDRAWN_LOAN( "WITHDRN", "WITHDRAWN_LOAN", "WITHDRN - Withdrawn" ),
- *  <p>    REPLACED_LOAN( "REPLACD", "REPLACED_LOAN", "REPLACD - Replaced" ),
+ *  <p>    "SWING - Swing Line Facility"
+ *  <p>    "DINP - Debtor In Possession"
+ *  <p>    "DEFLTED - Defaulted"
+ *  <p>    "WITHDRN - Withdrawn"
+ *  <p>    "REPLACD - Replaced"
  *  <p></p>
- *  <p>    MATURED_LOAN( "MATURED", "MATURED_LOAN", "MATURED - Matured" ),
- *  <p>    AMENDED_AND_RESTATED( "AMENDED", "AMENDED_AND_RESTATED", "AMENDED - Amended & Restated" ),
- *  <p>    RETIRED_LOAN( "RETIRED", "RETIRED_LOAN", "RETIRED - Retired" ),
+ *  <p>    "MATURED - Matured"
+ *  <p>    "AMENDED - Amended & Restated"
+ *  <p>    "RETIRED - Retired"
  *  <p></p>
  *      Money Market, 18
- *  <p>    BANKERS_ACCEPTANCE( "BA", "BANKERS_ACCEPTANCE", "BA - Bankers Acceptance" ),
- *  <p>    BANK_NOTES( "BN", "BANK_NOTES", "BN - Bank Notes" ),
- *  <p>    BILL_OF_EXCHANGES( "BOX", "BILL_OF_EXCHANGES", "BOX - Bill Of Exchanges" ),
- *  <p>    CERTIFICATE_OF_DEPOSIT( "CD", "CERTIFICATE_OF_DEPOSIT", "CD - Certificate Of Deposit" ),
- *  <p>    CALL_LOANS( "CL", "CALL_LOANS", "CL - Call Loans" ),
+ *  <p>    "BA - Bankers Acceptance"
+ *  <p>    "BN - Bank Notes"
+ *  <p>    "BOX - Bill Of Exchanges"
+ *  <p>    "CD - Certificate Of Deposit"
+ *  <p>    "CL - Call Loans"
  *  <p></p>
- *  <p>    COMMERCIAL_PAPER( "CP", "COMMERCIAL_PAPER", "CP - Commercial Paper" ),
- *  <p>    DEPOSIT_NOTES( "DN", "DEPOSIT_NOTES", "DN - Deposit Notes" ),
- *  <p>    EURO_CERTIFICATE_OF_DEPOSIT( "EUCD", "EURO_CERTIFICATE_OF_DEPOSIT", "EUCD - Euro Certificate Of Deposit" ),
- *  <p>    EURO_COMMERCIAL_PAPER( "EUCP", "EURO_COMMERCIAL_PAPER", "EUCP - Euro Commercial Paper" ),
- *  <p>    LIQUIDITY_NOTE( "LQN", "LIQUIDITY_NOTE", "LQN - Liquidity Note" ),
+ *  <p>    "CP - Commercial Paper"
+ *  <p>    "DN - Deposit Notes"
+ *  <p>    "EUCD - Euro Certificate Of Deposit"
+ *  <p>    "EUCP - Euro Commercial Paper"
+ *  <p>    "LQN - Liquidity Note"
  *  <p></p>
- *  <p>    MEDIUM_TERM_NOTES( "MTN", "MEDIUM_TERM_NOTES", "MTN - Medium Term Notes" ),
- *  <p>    OVERNIGHT( "ONITE", "OVERNIGHT", "ONITE - Overnight" ),
- *  <p>    PROMISSORY_NOTE( "PN", "PROMISSORY_NOTE", "PN - Promissory Note" ),
- *  <p>    PLAZOS_FIJOS( "PZFJ", "PLAZOS_FIJOS", "PZFJ - Plazos Fijos" ),
- *  <p>    SHORT_TERM_LOAN_NOTE( "STN", "SHORT_TERM_LOAN_NOTE", "STN - Short Term Loan Note" ),
+ *  <p>    "MTN - Medium Term Notes"
+ *  <p>    "ONITE - Overnight"
+ *  <p>    "PN - Promissory Note"
+ *  <p>    "PZFJ - Plazos Fijos"
+ *  <p>    "STN - Short Term Loan Note"
  *  <p></p>
- *  <p>    TIME_DEPOSIT( "TD", "TIME_DEPOSIT", "TD - Time Deposit" ),
- *  <p>    EXTENDED_COMM_NOTE( "XCN", "EXTENDED_COMM_NOTE", "XCN - Extended Comm Note" ),
- *  <p>    YANKEE_CERTIFICATE_OF_DEPOSIT( "YCD", "YANKEE_CERTIFICATE_OF_DEPOSIT",
- *                          "YCD - Yankee Certificate Of Deposit" ),
+ *  <p>    "TD - Time Deposit"
+ *  <p>    "XCN - Extended Comm Note"
+ *  <p>    "YCD - Yankee Certificate Of Deposit"
  *  <p></p>
  *      Mortgage, 11
- *  <p>    ASSET_BACKED_SECURITIES( "ABS", "ASSET_BACKED_SECURITIES", "ABS - Asset-backed Securities" ),
- *  <p>    CORP_MORTGAGE_BACKED_SECURITIES( "CMBS", "CORP_MORTGAGE_BACKED_SECURITIES",
- *                          "CMBS - Corp. Mortgage-backed Securities" ),
- *  <p>    COLLATERALIZED_MORTGAGE_OBLIGATION( "CMO", "COLLATERALIZED_MORTGAGE_OBLIGATION",
- *                          "CMO - Collateralized Mortgage Obligation" ),
- *  <p>    IOETTE_MORTGAGE( "IET", "IOETTE_MORTGAGE", "IET - IOETTE Mortgage" ),
- *  <p>    MORTGAGE_BACKED_SECURITIES( "MBS", "MORTGAGE_BACKED_SECURITIES", "MBS - Mortgage-backed Securities" ),
+ *  <p>    "ABS - Asset-backed Securities"
+ *  <p>    "CMBS - Corp. Mortgage-backed Securities"
+ *  <p>    "CMO - Collateralized Mortgage Obligation"
+ *  <p>    "IET - IOETTE Mortgage"
+ *  <p>    "MBS - Mortgage-backed Securities"
  *  <p></p>
- *  <p>    MORTGAGE_INTEREST_ONLY( "MIO", "MORTGAGE_INTEREST_ONLY", "MIO - Mortgage Interest Only" ),
- *  <p>    MORTGAGE_PRINCIPAL_ONLY( "MPO", "MORTGAGE_PRINCIPAL_ONLY", "MPO - Mortgage Principal Only" ),
- *  <p>    MORTGAGE_PRIVATE_PLACEMENT( "MPP", "MORTGAGE_PRIVATE_PLACEMENT", "MPP - Mortgage Private Placement" ),
- *  <p>    MISCELLANEOUS_PASS_THROUGH( "MPT", "MISCELLANEOUS_PASS_THROUGH", "MPT - Miscellaneous Pass-through" ),
- *  <p>    PFANDBRIEFE( "PFAND", "PFANDBRIEFE", "PFAND - Pfandbriefe" ),
+ *  <p>    "MIO - Mortgage Interest Only"
+ *  <p>    "MPO - Mortgage Principal Only"
+ *  <p>    "MPP - Mortgage Private Placement"
+ *  <p>    "MPT - Miscellaneous Pass-through"
+ *  <p>    "PFAND - Pfandbriefe"
  *  <p></p>
- *  <p>    TO_BE_ANNOUNCED( "TBA", "TO_BE_ANNOUNCED", "TBA - To Be Announced" ),
+ *  <p>    "TBA - To Be Announced"
  *  <p></p>
  *      Municipal, 16
- *  <p>    OTHER_ANTICIPATION_NOTES( "AN", "OTHER_ANTICIPATION_NOTES",
- *                          "AN - Other Anticipation Notes (BAN, GAN, etc.)" ),
- *  <p>    CERTIFICATE_OF_OBLIGATION( "COFO", "CERTIFICATE_OF_OBLIGATION",
- *                          "COFO - Certificate Of Obligation" ),
- *  <p>    CERTIFICATE_OF_PARTICIPATION( "COFP", "CERTIFICATE_OF_PARTICIPATION",
- *                          "COFP - Certificate Of Participation" ),
- *  <p>    GENERAL_OBLIGATION_BONDS( "GO", "GENERAL_OBLIGATION_BONDS", "GO - General Obligation Bonds" ),
- *  <p>    MANDATORY_TENDER( "MT", "MANDATORY_TENDER", "MT - Mandatory Tender" ),
+ *  <p>    "AN - Other Anticipation Notes (BAN, GAN, etc.)",
+ *  <p>    "COFO - Certificate Of Obligation"
+ *  <p>    "COFP - Certificate Of Participation"
+ *  <p>    "GO - General Obligation Bonds"
+ *  <p>    "MT - Mandatory Tender"
  *  <p></p>
- *  <p>    REVENUE_ANTICIPATION_NOTE( "RAN", "REVENUE_ANTICIPATION_NOTE", "RAN - Revenue Anticipation Note" ),
- *  <p>    REVENUE_BONDS( "REV", "REVENUE_BONDS", "REV - Revenue Bonds" ),
- *  <p>    SPECIAL_ASSESSMENT( "SPCLA", "SPECIAL_ASSESSMENT", "SPCLA - Special Assessment" ),
- *  <p>    SPECIAL_OBLIGATION( "SPCLO", "SPECIAL_OBLIGATION", "SPCLO - Special Obligation" ),
- *  <p>    SPECIAL_TAX( "SPCLT", "SPECIAL_TAX", "SPCLT - Special Tax" ),
+ *  <p>    "RAN - Revenue Anticipation Note"
+ *  <p>    "REV - Revenue Bonds"
+ *  <p>    "SPCLA - Special Assessment"
+ *  <p>    "SPCLO - Special Obligation"
+ *  <p>    "SPCLT - Special Tax"
  *  <p></p>
- *  <p>    TAX_ANTICIPATION_NOTE( "TAN", "TAX_ANTICIPATION_NOTE", "TAN - Tax Anticipation Note" ),
- *  <p>    TAX_ALLOCATION( "TAXA", "TAX_ALLOCATION", "TAXA - Tax Allocation" ),
- *  <p>    TAX_EXEMPT_COMMERCIAL_PAPER( "TECP", "TAX_EXEMPT_COMMERCIAL_PAPER",
- *                          "TECP - Tax Exempt Commercial Paper" ),
- *  <p>    TAX_REVENUE_ANTICIPATION_NOTE( "TRAN", "TAX_REVENUE_ANTICIPATION_NOTE",
- *                          "TRAN - Tax Revenue Anticipation Note" ),
- *  <p>    VARIABLE_RATE_DEMAND_NOTE( "VRDN", "VARIABLE_RATE_DEMAND_NOTE", "VRDN - Variable Rate Demand Note" ),
+ *  <p>    "TAN - Tax Anticipation Note"
+ *  <p>    "TAXA - Tax Allocation"
+ *  <p>    "TECP - Tax Exempt Commercial Paper"
+ *  <p>    "TRAN - Tax Revenue Anticipation Note"
+ *  <p>    "VRDN - Variable Rate Demand Note"
  *  <p></p>
- *  <p>    WARRANT( "WAR", "WARRANT", "WAR - Warrant" ),
+ *  <p>    "WAR - Warrant"
  *  <p></p>
  *      Other, 7
- *  <p>    MUTUAL_FUND( "MF", "MUTUAL_FUND", "MF - Mutual Fund" ),
- *  <p>    MULTILEG_INSTRUMENT( "MLEG", "MULTILEG_INSTRUMENT", "MLEG - Multileg Instrument" ),
- *  <p>    NO_SECURITY_TYPE( "NONE", "NO_SECURITY_TYPE", "NONE - No Security Type" ),
- *  <p>    OPTIONS_ON_FUTURES( "OOF", "OPTIONS_ON_FUTURES", "OOF - Options on Futures" ),
- *  <p>    OPTIONS_ON_PHYSICAL( "OOP", "OPTIONS_ON_PHYSICAL", "OOP - Options on Physical" ),
+ *  <p>    "MF - Mutual Fund"
+ *  <p>    "MLEG - Multileg Instrument"
+ *  <p>    "NONE - No Security Type"
+ *  <p>    "OOF - Options on Futures"
+ *  <p>    "OOP - Options on Physical"
  *  <p></p>
- *  <p>    WILDCARD_ENTRY( "WLD", "WILDCARD_ENTRY",
- *                          "WLD - Wildcard Entry (used on Security Definition Request message)" ),
- *      CASH( "CASH", "CASH", "CASH - Cash" ),
+ *  <p>    "WLD - Wildcard Entry (used on Security Definition Request message)"
+ *  <p>    "CASH - Cash"
  */
 public class Tag167EnuSecurityType extends FIX41Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final MyEnumSecurityType dataValue;

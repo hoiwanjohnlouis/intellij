@@ -22,6 +22,17 @@ import com.hwtsllc.fixengine2022.datatypes.MyExchangeType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  275
+ *  MDMkt
+ *  Exchange
+ *  <p>
+ *  Deprecated in FIX.5.0 Market posting quote / trade.
+ *  <p>
+ *  Valid values:
+ *  <p>
+ *  See "Appendix 6-C"
+ */
 public class Tag275ExcMDMkt extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyExchangeType dataValue;
 

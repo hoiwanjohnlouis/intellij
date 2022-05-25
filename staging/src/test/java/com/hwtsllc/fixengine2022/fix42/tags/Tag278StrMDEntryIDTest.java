@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  278
+ *  MDEntryID
+ *  String
+ *  <p>
+ *  Unique Market Data Entry identifier.
+ */
 class Tag278StrMDEntryIDTest {
     @Test
     void FIX0278Test() {

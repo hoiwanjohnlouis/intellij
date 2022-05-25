@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  393
+ *  TotNoRelatedSym
+ *  int
+ *  <p>
+ *  Total number of securities.
+ *  <p>
+ *  (Prior to FIX 4.4 this field was named TotalNumSecurities)
+ */
 class Tag393IntTotalNumSecuritiesTest {
     @Test
     void FIX0393Test() {

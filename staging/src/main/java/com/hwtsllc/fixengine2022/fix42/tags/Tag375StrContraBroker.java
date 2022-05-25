@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  375
+ *  ContraBroker
+ *  String
+ *  <p>
+ *  Identifies contra broker.
+ *  <p>
+ *  Standard NASD market-maker mnemonic is preferred.
+ */
 public class Tag375StrContraBroker extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

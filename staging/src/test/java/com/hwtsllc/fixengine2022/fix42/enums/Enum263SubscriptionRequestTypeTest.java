@@ -22,6 +22,18 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  263
+ *  SubscriptionRequestType
+ *  char
+ *  <p>
+ *  Subscription Request Type
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Snapshot
+ *  <p>    1 - Snapshot + Updates (Subscribe)
+ *  <p>    2 - Disable previous Snapshot + Update Request (Unsubscribe)
+ */
 class Enum263SubscriptionRequestTypeTest {
     @Test
     void Enum0263Test() {

@@ -22,6 +22,19 @@ import com.hwtsllc.fixengine2022.datatypes.MyLocalMktDateType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  229
+ *  TradeOriginationDate
+ *  LocalMktDate
+ *  <p>
+ *  Used with Fixed Income for Muncipal New Issue Market.
+ *  <p>
+ *  Agreement in principal between counter-parties prior to actual trade date.
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ *  <p></p>
+ *  (prior to FIX 4.4 field was of type UTCDate)
+ */
 public class Tag229LmdTradeOriginatingDate extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyLocalMktDateType dataValue;
 

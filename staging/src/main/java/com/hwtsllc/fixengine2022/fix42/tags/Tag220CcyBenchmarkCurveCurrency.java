@@ -22,11 +22,24 @@ import com.hwtsllc.fixengine2022.datatypes.MyCurrencyType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  220
+ *  BenchmarkCurveCurrency
+ *  Currency
+ *  <p>
+ *  Identifies currency used for  benchmark curve.
+ *  <p></p>
+ *  See "Appendix 6-A: Valid Currency Codes" for information on obtaining valid values.
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ */
 public class Tag220CcyBenchmarkCurveCurrency extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyCurrencyType dataValue;
 
-    public final static String TESTA_CCY_BENCHMARK_CURVE_CURRENCY = "USD";
-    public final static String TESTB_CCY_BENCHMARK_CURVE_CURRENCY = "EUR";
+    public final static String TESTA_CCY_BENCHMARK_CURVE_CURRENCY
+            = "USD";
+    public final static String TESTB_CCY_BENCHMARK_CURVE_CURRENCY
+            = "EUR";
 
     public Tag220CcyBenchmarkCurveCurrency(MyCurrencyType dataValue) {
         setFixType(FIX42.FIX220_CCY_BENCHMARK_CURVE_CURRENCY);

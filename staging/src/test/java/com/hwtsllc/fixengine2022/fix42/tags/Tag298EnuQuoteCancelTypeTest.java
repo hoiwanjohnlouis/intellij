@@ -27,13 +27,17 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 /**
  *  298
  *  QuoteCancelType
- *
- *      1-5 msg types
- *      CANCEL_FOR_SYMBOL( "1", "CANCEL_FOR_SYMBOL", "1 - Cancel for Symbol(s)" ),
- *      CANCEL_FOR_SECURITY_TYPE( "2", "CANCEL_FOR_SECURITY_TYPE", "2 - Cancel for Security Type(s)" ),
- *      CANCEL_FOR_UNDERLYING_SYMBOL( "3", "CANCEL_FOR_UNDERLYING_SYMBOL", "3 - Cancel for Underlying Symbol" ),
- *      CANCEL_ALL_QUOTES( "4", "CANCEL_ALL_QUOTES", "4 - Cancel All Quotes" ),
- *      CANCEL_QUOTEID_QUOTE("5", "CANCEL_QUOTEID_QUOTE", "5 - Cancel quote specified in QuoteID" ),
+ *  int
+ *  <p>
+ *  Identifies the type of  quote cancel.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1-5 msg types
+ *  <p>    "1 - Cancel for Symbol(s)"
+ *  <p>    "2 - Cancel for Security Type(s)"
+ *  <p>    "3 - Cancel for Underlying Symbol"
+ *  <p>    "4 - Cancel All Quotes"
+ *  <p>    "5 - Cancel quote specified in QuoteID"
  */
 class Tag298EnuQuoteCancelTypeTest {
     @Test

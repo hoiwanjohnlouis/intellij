@@ -22,6 +22,14 @@ import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  290
+ *  MDEntryPositionNo
+ *  int
+ *  <p>
+ *  Display position of a bid or offer, numbered from most competitive to least competitive,
+ *  per market side, beginning with.
+ */
 public class Tag290IntMDEntryPositionNo extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyIntType dataValue;
 

@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  337
+ *  ContraTrader
+ *  String
+ *  <p>
+ *  Identifies the trader (e.g. "badge number") of the ContraBroker.
+ */
 public class Tag337StrContraTrader extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

@@ -27,36 +27,45 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 /**
  *  269
  *  MDEntryType
- *
+ *  char
+ *  <p></p>
+ *  Type  Market Data entry.
+ *  <p></p>
+ *  Valid values:
+ *  <p></p>
  *  0-9 msg types
- *      "0 - Bid"
- *      "1 - Offer"
- *      "2 - Trade"
- *      "3 - Index Value"
- *      "4 - Opening Price"
- *      "5 - Closing Price"
- *      "6 - Settlement Price"
- *      "7 - Trading Session High Price"
- *      "8 - Trading Session Low Price"
- *      "9 - Trading Session VWAP Price"
- *
+ *  <p>    "0 - Bid"
+ *  <p>    "1 - Offer"
+ *  <p>    "2 - Trade"
+ *  <p>    "3 - Index Value"
+ *  <p>    "4 - Opening Price"
+ *  <p></p>
+ *  <p>    "5 - Closing Price"
+ *  <p>    "6 - Settlement Price"
+ *  <p>    "7 - Trading Session High Price"
+ *  <p>    "8 - Trading Session Low Price"
+ *  <p>    "9 - Trading Session VWAP Price"
+ *  <p></p>
  *  A-Q msg types
- *      "A - Imbalance"
- *      "B - Trade Volume"
- *      "C - Open Interest"
- *      "D - Composite Underlying Price"
- *      "E - Simulated Sell Price"
- *      "F - Simulated Buy Price"
- *      "G - Margin Rate"
- *      "H - Mid Price"
- *      "J - Empty Book"
- *      "K - Settle High Price"
- *      "L - Settle Low Price"
- *      "M - Prior Settle Price"
- *      "N - Session High Bid"
- *      "O - Session Low Offer"
- *      "P - Early Prices"
- *      "Q - Auction Clearing Price"
+ *  <p>    "A - Imbalance"
+ *  <p>    "B - Trade Volume"
+ *  <p>    "C - Open Interest"
+ *  <p>    "D - Composite Underlying Price"
+ *  <p>    "E - Simulated Sell Price"
+ *  <p></p>
+ *  <p>    "F - Simulated Buy Price"
+ *  <p>    "G - Margin Rate"
+ *  <p>    "H - Mid Price"
+ *  <p>    "J - Empty Book"
+ *  <p>    "K - Settle High Price"
+ *  <p></p>
+ *  <p>    "L - Settle Low Price"
+ *  <p>    "M - Prior Settle Price"
+ *  <p>    "N - Session High Bid"
+ *  <p>    "O - Session Low Offer"
+ *  <p>    "P - Early Prices"
+ *  <p></p>
+ *  <p>    "Q - Auction Clearing Price"
  */
 class Tag269EnuMDEntryTypeTest {
     @Test

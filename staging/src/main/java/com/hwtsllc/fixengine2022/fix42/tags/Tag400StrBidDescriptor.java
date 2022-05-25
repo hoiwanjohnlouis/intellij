@@ -22,6 +22,24 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  400
+ *  BidDescriptor
+ *  String
+ *  <p>
+ *  BidDescriptor value.
+ *  <p></p>
+ *  Usage depends upon BidDescriptorTyp (399).
+ *  <p>
+ *  If BidDescriptorType = 1
+ *  Industrials etc - Free text
+ *  <p>
+ *  If BidDescriptorType = 2
+ *  "FR" etc - ISO Country Codes
+ *  <p>
+ *  If BidDescriptorType = 3
+ *  FT00, FT250, STOX - Free text
+ */
 public class Tag400StrBidDescriptor extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  238
+ *  Concession
+ *  Amt
+ *  <p>
+ *  Provides the reduction in price for the secondary market in Muncipals.
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ */
 class Tag238AmtConcessionTest {
     @Test
     void FIX0238Test() {

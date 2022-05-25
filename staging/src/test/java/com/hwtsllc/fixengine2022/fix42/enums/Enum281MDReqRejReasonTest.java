@@ -22,29 +22,34 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  281
+ *  MDReqRejReason
+ *  char
+ *  <p>
+ *  Reason for the rejection of a Market Data request.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0-9 msg types
+ *  <p>    "0 - Unknown Symbol"
+ *  <p>    "1 - Duplicate MDReqID"
+ *  <p>    "2 - Insufficient Bandwidth"
+ *  <p>    "3 - Insufficient Permissions"
+ *  <p>    "4 - Unsupported SubscriptionRequestType"
+ *  <p></p>
+ *  <p>    "5 - Unsupported MarketDepth"
+ *  <p>    "6 - Unsupported MDUpdateType"
+ *  <p>    "7 - Unsupported AggregatedBook"
+ *  <p>    "8 - Unsupported MDEntryType";
+ *  <p>    "9 - Unsupported TradingSessionID";
+ *  <p></p>
+ *  <p>    A-D msg types
+ *  <p>    "A - Unsupported Scope";
+ *  <p>    "B - Unsupported OpenCloseSettleFlag";
+ *  <p>    "C - Unsupported MDImplicitDelete"
+ *  <p>    "D - Insufficient credit";
+ */
 class Enum281MDReqRejReasonTest {
-    /**
-     *  281
-     *  MDReqRejReason
-     *
-     *      0-9 msg types
-     *      "0 - Unknown Symbol"
-     *      "1 - Duplicate MDReqID"
-     *      "2 - Insufficient Bandwidth"
-     *      "3 - Insufficient Permissions"
-     *      "4 - Unsupported SubscriptionRequestType"
-     *      "5 - Unsupported MarketDepth"
-     *      "6 - Unsupported MDUpdateType"
-     *      "7 - Unsupported AggregatedBook"
-     *      "8 - Unsupported MDEntryType";
-     *      "9 - Unsupported TradingSessionID";
-     *
-     *      A-D msg types
-     *      "A - Unsupported Scope";
-     *      "B - Unsupported OpenCloseSettleFlag";
-     *      "C - Unsupported MDImplicitDelete"
-     *      "D - Insufficient credit";
-     */
     @Test
     void Enum0281Test() {
         Enum281MDReqRejReason enumType;

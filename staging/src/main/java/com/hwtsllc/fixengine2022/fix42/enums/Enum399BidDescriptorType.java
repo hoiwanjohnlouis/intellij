@@ -20,17 +20,19 @@ import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Tag399
- *  Enu
+ *  399
  *  BidDescriptorType
- *
- *      1-3 msg types
- *      SECTOR( "1", "SECTOR", "1 - Sector" ),
- *      COUNTRY( "2", "COUNTRY", "2 - Country" ),
- *      INDEX( "3", "INDEX", "3 - Index" ),
+ *  int
+ *  <p>
+ *  Code to identify the type of BidDescriptor (400).
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Sector
+ *  <p>    2 - Country
+ *  <p>    3 - Index
  */
 public enum Enum399BidDescriptorType implements LogFIXString, LogVerboseString {
-    /**
+    /*
      * 1-3 msg types
      */
     SECTOR( "1", "SECTOR", "1 - Sector" ),

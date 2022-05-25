@@ -25,15 +25,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  Tag409
- *  Enu
+ *  409
  *  LiquidityIndType
- *
- *      1-4 msg types
- *      FIVE_DAY_MOVING_AVERAGE( "1", "FIVE_DAY_MOVING_AVERAGE", "1 - 5-Day Moving Average" ),
- *      TWENTY_DAY_MOVING_AVERAGE( "2", "TWENTY_DAY_MOVING_AVERAGE", "2 - 20-Day Moving Average" ),
- *      NORMAL_MARKET_SIZE( "3", "NORMAL_MARKET_SIZE", "3 - Normal Market Size" ),
- *      OTHER( "4", "OTHER", "4 - Other" ),
+ *  int
+ *  <p>
+ *  Code to identify the type of liquidity indicator.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - 5-day moving average
+ *  <p>    2 - 20-day moving average
+ *  <p>    3 - Normal market size
+ *  <p>    4 - Other
  */
 class Tag409EnuLiquidityIndTypeTest {
     @Test

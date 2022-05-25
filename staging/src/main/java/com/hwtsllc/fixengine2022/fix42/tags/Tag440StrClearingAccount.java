@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  440
+ *  ClearingAccount
+ *  String
+ *  <p>
+ *  Deprecated in FIX.4.2 Supplemental accounting information forwared to clearing house/firm.
+ */
 // @Deprecated
 public class Tag440StrClearingAccount extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;

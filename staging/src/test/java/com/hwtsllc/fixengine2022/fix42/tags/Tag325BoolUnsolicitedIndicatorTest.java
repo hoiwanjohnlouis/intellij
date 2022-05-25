@@ -17,13 +17,24 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix42.enums.Bool325UnsolicitedIndicator;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  325
+ *  UnsolicitedIndicator
+ *  Boolean
+ *  <p>
+ *  Indicates whether or not message is being sent as a result of a subscription request or not.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    N - Message is being sent as a result of a prior request
+ *  <p>    Y - Message is being sent unsolicited
+ */
 class Tag325BoolUnsolicitedIndicatorTest {
     @Test
     void FIX0325Test() {
@@ -39,11 +50,11 @@ class Tag325BoolUnsolicitedIndicatorTest {
     void Tag0325Test() {
         Tag325BoolUnsolicitedIndicator tagData;
 
-        tagData = new Tag325BoolUnsolicitedIndicator(MyBooleanType.NO);
+        tagData = new Tag325BoolUnsolicitedIndicator(Bool325UnsolicitedIndicator.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag325BoolUnsolicitedIndicator(MyBooleanType.YES);
+        tagData = new Tag325BoolUnsolicitedIndicator(Bool325UnsolicitedIndicator.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

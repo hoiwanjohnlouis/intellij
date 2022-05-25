@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyLengthType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  364
+ *  EncodedUnderlyingSecurityDescLen
+ *  Length
+ *  <p>
+ *  Byte length of encoded (non-ASCII characters) EncodedUnderlyingSecurityDesc (365) field.
+ */
 public class Tag364LenEncodedUnderlyingSecurityDescLen extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyLengthType dataValue;
 

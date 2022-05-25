@@ -22,6 +22,29 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  222
+ *  BenchmarkCurvePoint
+ *  String
+ *  <p>
+ *  Point on benchmark curve.  Free form values:  e.g. "Y", "7Y", "INTERPOLATED".
+ *  <p>
+ *  Sample values:
+ *  <p>
+ *  M = combination of a number between 1-12 and a "M" for month
+ *  <p>
+ *  Y = combination of number between 1-100 and a "Y" for year}
+ *  <p>
+ *  10Y-OLD = see above, then add "-OLD" when appropriate
+ *  <p>
+ *  INTERPOLATED = the point is mathematically derived
+ *  <p>
+ *  2/2031 5 3/8 = the point is stated via a combination of maturity month / year and coupon
+ *  <p></p>
+ *  See Fixed Income-specific documentation at http://www.fixprotocol.org for additional values.
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ */
 public class Tag222StrBenchmarkCurvePoint extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

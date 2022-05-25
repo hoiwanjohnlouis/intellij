@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  317
+ *  UnderlyingOptAttribute
+ *  char
+ *  <p>
+ *  Underlying security’s OptAttribute.
+ *  <p>
+ *  See OptAttribute (206) field for description
+ */
 class Tag317StrUnderlyingOptAttributeTest {
     @Test
     void FIX0317Test() {

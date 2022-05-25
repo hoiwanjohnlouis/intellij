@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  386
+ *  NoTradingSessions
+ *  NumInGroup
+ *  <p>
+ *  Number of TradingSessionIDs (336) in repeating group.
+ */
 public class Tag386NumNoTradingSessions extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyNumInGroupType dataValue;
 

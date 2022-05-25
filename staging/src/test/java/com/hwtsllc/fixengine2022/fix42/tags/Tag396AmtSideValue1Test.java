@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  396
+ *  SideValue1
+ *  Amt
+ *  <p>
+ *  Amounts in currency
+ */
 class Tag396AmtSideValue1Test {
     @Test
     void FIX0396Test() {

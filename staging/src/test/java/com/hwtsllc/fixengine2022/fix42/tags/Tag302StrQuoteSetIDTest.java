@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  302
+ *  QuoteSetID
+ *  String
+ *  <p>
+ *  Unique id for the Quote Set.
+ */
 class Tag302StrQuoteSetIDTest {
     @Test
     void FIX0302Test() {

@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  314
+ *  UnderlyingMaturityDay
+ *  day-of-month
+ *  <p>
+ *  Deprecated in FIX.4.2
+ *  <p>
+ *  Underlying security�s MaturityDay.  See MaturityDay field for description
+ */
 // @Deprecated
 class Tag314IntUnderlyingMaturityDayTest {
     @Test

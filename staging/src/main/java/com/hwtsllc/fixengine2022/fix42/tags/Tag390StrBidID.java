@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  390
+ *  BidID
+ *  String
+ *  <p>
+ *  Unique identifier for Bid Response as assigned by sell-side (broker, exchange, ECN).
+ *  <p></p>
+ *  Uniqueness must be guaranteed within a single trading day.
+ */
 public class Tag390StrBidID extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

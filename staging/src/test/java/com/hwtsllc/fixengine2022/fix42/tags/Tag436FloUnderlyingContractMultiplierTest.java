@@ -24,6 +24,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  436
+ *  UnderlyingContractMultiplier
+ *  float
+ *  <p>
+ *  Underlying security’s ContractMultiplier.
+ *  <p>
+ *  See ContractMultiplier (231) field for description
+ */
 class Tag436FloUnderlyingContractMultiplierTest {
     @Test
     void FIX0436Test() {

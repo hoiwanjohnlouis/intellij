@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  383
+ *  MaxMessageSize
+ *  Length
+ *  <p>
+ *  Maximum number of bytes supported for a single message.
+ */
 class Tag383LenMaxMessageSizeTest {
     @Test
     void FIX0383Test() {

@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  337
+ *  ContraTrader
+ *  String
+ *  <p>
+ *  Identifies the trader (e.g. "badge number") of the ContraBroker.
+ */
 class Tag337StrContraTraderTest {
     @Test
     void FIX0337Test() {

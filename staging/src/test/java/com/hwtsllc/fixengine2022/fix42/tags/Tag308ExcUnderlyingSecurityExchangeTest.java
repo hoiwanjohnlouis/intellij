@@ -24,6 +24,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  308
+ *  UnderlyingSecurityExchange
+ *  Exchange
+ *  <p>
+ *  Underlying security’s SecurityExchange.  Can be used to identify the underlying security.
+ *  <p>
+ *  Valid values:
+ *  <p>
+ *  see SecurityExchange (207)
+ */
 class Tag308ExcUnderlyingSecurityExchangeTest {
     @Test
     void FIX0308Test() {

@@ -24,6 +24,19 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  251
+ *  LegRepurchaseTerm
+ *  int
+ *  <p>
+ *  Deprecated in FIX.4.4
+ *  <p>
+ *  Multileg instrument's individual leg security�s RepurchaseTerm.
+ *  <p>
+ *  See RepurchaseTerm (226) field for description
+ *  <p></p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ */
 // @Deprecated
 class Tag251IntLegRepurchaseTermTest {
     @Test

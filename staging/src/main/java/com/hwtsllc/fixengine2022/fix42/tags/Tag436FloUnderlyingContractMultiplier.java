@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyFloatType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  436
+ *  UnderlyingContractMultiplier
+ *  float
+ *  <p>
+ *  Underlying security’s ContractMultiplier.
+ *  <p>
+ *  See ContractMultiplier (231) field for description
+ */
 public class Tag436FloUnderlyingContractMultiplier extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyFloatType dataValue;
 

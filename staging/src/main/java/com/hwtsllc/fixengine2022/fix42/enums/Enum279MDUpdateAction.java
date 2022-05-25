@@ -22,13 +22,17 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  279
  *  MDUpdateAction
- *
- *      0-4 msg types
- *      NEW( "0", "NEW", "0 - New" ),
- *      CHANGE( "1", "CHANGE", "1 - Change" ),
- *      DELETE( "2", "DELETE", "2 - Delete" ),
- *      DELETE_THRU( "3", "DELETE_THRU", "3 - Delete Thru" ),
- *      DELETE_FROM( "4", "DELETE_FROM", "4 - Delete From" ),
+ *  char
+ *  <p>
+ *  Type of Market Data update action.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0-4 msg types
+ *  <p>    NEW( "0", "NEW", "0 - New" ),
+ *  <p>    CHANGE( "1", "CHANGE", "1 - Change" ),
+ *  <p>    DELETE( "2", "DELETE", "2 - Delete" ),
+ *  <p>    DELETE_THRU( "3", "DELETE_THRU", "3 - Delete Thru" ),
+ *  <p>    DELETE_FROM( "4", "DELETE_FROM", "4 - Delete From" ),
  */
 public enum Enum279MDUpdateAction implements LogFIXString, LogVerboseString {
     /**

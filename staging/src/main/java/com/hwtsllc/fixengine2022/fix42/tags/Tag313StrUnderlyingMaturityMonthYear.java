@@ -22,6 +22,17 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  313
+ *  UnderlyingMaturityMonthYear
+ *  month-year
+ *  <p>
+ *  Underlying security’s MaturityMonthYear.
+ *  <p>
+ *  Can be used with standardized derivatives vs. the UnderlyingMaturityDate (542) field.
+ *  <p>
+ *  See MaturityMonthYear (200) field for description
+ */
 public class Tag313StrUnderlyingMaturityMonthYear extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

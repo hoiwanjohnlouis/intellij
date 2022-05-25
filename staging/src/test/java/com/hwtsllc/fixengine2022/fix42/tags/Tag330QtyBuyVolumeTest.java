@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  330
+ *  BuyVolume
+ *  Qty
+ *  <p>
+ *  Quantity bought.
+ */
 class Tag330QtyBuyVolumeTest {
     @Test
     void FIX0330Test() {

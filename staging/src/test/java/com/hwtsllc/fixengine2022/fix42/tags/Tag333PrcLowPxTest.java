@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  333
+ *  LowPx
+ *  Price
+ *  <p>
+ *  Represents an indication of the low end of the price range for a security prior to the open or reopen
+ */
 class Tag333PrcLowPxTest {
     @Test
     void FIX0333Test() {

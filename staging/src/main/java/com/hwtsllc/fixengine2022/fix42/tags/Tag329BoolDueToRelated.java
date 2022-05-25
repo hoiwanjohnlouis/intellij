@@ -18,22 +18,31 @@ package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix42.enums.Bool329DueToRelated;
 import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  329
+ *  DueToRelated
+ *  Boolean
+ *  <p>
+ *  Indicates whether or not the halt was due to the Related Security being halted.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    N - Halt was not related to a halt of the related security
+ *  <p>    Y - Halt was due to related security being halted
+ */
 public class Tag329BoolDueToRelated extends FIX42Abstract implements LogValuePairString, LogVerboseString, LogDataString {
-    private final MyBooleanType dataValue;
+    private final Bool329DueToRelated dataValue;
 
-    public final static MyBooleanType TESTA_BOOL_DUE_TO_RELATED
-            = MyBooleanType.NO ;
-            // N - Halt was not related to a halt of the related security
-    public final static MyBooleanType TESTB_BOOL_DUE_TO_RELATED
-            = MyBooleanType.YES;
-            // Y - Half was due to the related security being halted
+    public final static Bool329DueToRelated TESTA_BOOL_DUE_TO_RELATED
+            = Bool329DueToRelated.NO ;
+    public final static Bool329DueToRelated TESTB_BOOL_DUE_TO_RELATED
+            = Bool329DueToRelated.YES;
 
-    public Tag329BoolDueToRelated(MyBooleanType dataValue) {
+    public Tag329BoolDueToRelated(Bool329DueToRelated dataValue) {
         setFixType(FIX42.FIX329_BOOL_DUE_TO_RELATED);
         this.dataValue = dataValue;
     }

@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  405
+ *  EFPTrackingError
+ *  Percentage
+ *  <p>
+ *  Eg Used in EFP trades 2% (EFP – Exchange for Physical).
+ *  <p>
+ *  Represented as a percentage.
+ */
 public class Tag405PctEFPTrackingError extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyPercentageType dataValue;
 

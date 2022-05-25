@@ -17,13 +17,26 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix42.enums.Bool258TradedFlatSwitch;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  258
+ *  TradedFlatSwitch
+ *  Boolean
+ *  <p>
+ *  Driver and part of trade in the event that the Security Master file was wrong at the point of entry
+ *  <p>
+ *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
+ *  <p></p>
+ *  Valid values:
+ *  <p>    N - Not Traded Flat
+ *  <p>    Y - Traded Flat
+ */
 class Tag258BoolTradedFlatSwitchTest {
     @Test
     void FIX0258Test() {
@@ -39,11 +52,11 @@ class Tag258BoolTradedFlatSwitchTest {
     void Tag0258Test() {
         Tag258BoolTradedFlatSwitch tagData;
 
-        tagData = new Tag258BoolTradedFlatSwitch(MyBooleanType.NO);
+        tagData = new Tag258BoolTradedFlatSwitch(Bool258TradedFlatSwitch.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag258BoolTradedFlatSwitch(MyBooleanType.YES);
+        tagData = new Tag258BoolTradedFlatSwitch(Bool258TradedFlatSwitch.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

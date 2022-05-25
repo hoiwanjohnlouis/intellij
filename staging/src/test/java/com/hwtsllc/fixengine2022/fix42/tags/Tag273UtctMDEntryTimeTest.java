@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  273
+ *  MDEntryTime
+ *  UTCTimeOnly
+ *  <p>
+ *  Time of Market Data Entry.
+ */
 class Tag273UtctMDEntryTimeTest {
     @Test
     void FIX0273Test() {

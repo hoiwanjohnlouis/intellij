@@ -23,14 +23,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  Tag399
- *  Enu
+ *  399
  *  BidDescriptorType
- *
- *      1-3 msg types
- *      SECTOR( "1", "SECTOR", "1 - Sector" ),
- *      COUNTRY( "2", "COUNTRY", "2 - Country" ),
- *      INDEX( "3", "INDEX", "3 - Index" ),
+ *  int
+ *  <p>
+ *  Code to identify the type of BidDescriptor (400).
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Sector
+ *  <p>    2 - Country
+ *  <p>    3 - Index
  */
 class Enum399BidDescriptorTypeTest {
     @Test

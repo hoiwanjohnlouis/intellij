@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  317
+ *  UnderlyingOptAttribute
+ *  char
+ *  <p>
+ *  Underlying security’s OptAttribute.
+ *  <p>
+ *  See OptAttribute (206) field for description
+ */
 public class Tag317StrUnderlyingOptAttribute extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  420
+ *  NoBidComponents
+ *  NumInGroup
+ *  <p>
+ *  Indicates the number of list entries.
+ */
 class Tag420NumNoBidComponentsTest {
     @Test
     void FIX0420Test() {

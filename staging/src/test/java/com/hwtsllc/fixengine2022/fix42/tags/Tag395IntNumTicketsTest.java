@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  395
+ *  NumTickets
+ *  int
+ *  <p>
+ *  Total number of tickets.
+ */
 class Tag395IntNumTicketsTest {
     @Test
     void FIX0395Test() {
