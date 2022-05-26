@@ -138,15 +138,14 @@ public class Tag269EnuMDEntryType extends FIX42Abstract implements LogValuePairS
         Tag269EnuMDEntryType tagData;
 
         tagData = new Tag269EnuMDEntryType(TESTA_ENU_MD_ENTRY_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag269EnuMDEntryType(TESTB_ENU_MD_ENTRY_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum269MDEntryType oneEnum : Enum269MDEntryType.values()) {
+            System.out.println( new Tag269EnuMDEntryType(oneEnum).toVerboseString() );
+        }
     }
 }

@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag371IntRefLogID extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_REF_TAG_ID = 60;
-    public final static int TESTB_INT_REF_TAG_ID = 30;
+    public final static int TESTA_INT_REF_TAG_ID
+            = 60;
+    public final static int TESTB_INT_REF_TAG_ID
+            = 30;
 
     public Tag371IntRefLogID(MyIntType dataValue) {
         setFixType(FIX42.FIX371_INT_REF_TAG_ID);
@@ -78,13 +80,9 @@ public class Tag371IntRefLogID extends FIX42Abstract implements LogValuePairStri
         Tag371IntRefLogID tagData;
 
         tagData = new Tag371IntRefLogID(new MyIntType(TESTA_INT_REF_TAG_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag371IntRefLogID(new MyIntType(TESTB_INT_REF_TAG_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

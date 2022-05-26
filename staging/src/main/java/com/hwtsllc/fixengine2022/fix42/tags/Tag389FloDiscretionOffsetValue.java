@@ -35,8 +35,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag389FloDiscretionOffsetValue extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyFloatType dataValue;
 
-    public final static float TESTA_FLO_DISCRETION_OFFSET_VALUE = 3.89F;
-    public final static float TESTB_FLO_DISCRETION_OFFSET_VALUE = 9.83F;
+    public final static float TESTA_FLO_DISCRETION_OFFSET_VALUE
+            = 3.89F;
+    public final static float TESTB_FLO_DISCRETION_OFFSET_VALUE
+            = 9.83F;
 
     public Tag389FloDiscretionOffsetValue(MyFloatType dataValue) {
         setFixType(FIX42.FIX389_FLO_DISCRETION_OFFSET_VALUE);
@@ -81,13 +83,9 @@ public class Tag389FloDiscretionOffsetValue extends FIX42Abstract implements Log
         Tag389FloDiscretionOffsetValue tagData;
 
         tagData = new Tag389FloDiscretionOffsetValue(new MyFloatType(TESTA_FLO_DISCRETION_OFFSET_VALUE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag389FloDiscretionOffsetValue(new MyFloatType(TESTB_FLO_DISCRETION_OFFSET_VALUE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

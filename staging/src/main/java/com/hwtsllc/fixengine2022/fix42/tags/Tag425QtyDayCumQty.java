@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag425QtyDayCumQty extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyQtyType dataValue;
 
-    public final static int TESTA_QTY_DAY_CUM_QTY = 425;
-    public final static int TESTB_QTY_DAY_CUM_QTY = 524;
+    public final static int TESTA_QTY_DAY_CUM_QTY
+            = 425;
+    public final static int TESTB_QTY_DAY_CUM_QTY
+            = 524;
 
     public Tag425QtyDayCumQty(MyQtyType dataValue) {
         setFixType(FIX42.FIX425_QTY_DAY_CUM_QTY);
@@ -78,13 +80,9 @@ public class Tag425QtyDayCumQty extends FIX42Abstract implements LogValuePairStr
         Tag425QtyDayCumQty tagData;
 
         tagData = new Tag425QtyDayCumQty(new MyQtyType(TESTA_QTY_DAY_CUM_QTY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag425QtyDayCumQty(new MyQtyType(TESTB_QTY_DAY_CUM_QTY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -129,15 +129,14 @@ public class Tag312EnuUnderlyingSymbolSfx extends FIX42Abstract implements LogVa
         Tag312EnuUnderlyingSymbolSfx tagData;
 
         tagData = new Tag312EnuUnderlyingSymbolSfx(TESTA_ENU_UNDERLYING_SYMBOL_SFX);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag312EnuUnderlyingSymbolSfx(TESTB_ENU_UNDERLYING_SYMBOL_SFX);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
+            System.out.println( new Tag312EnuUnderlyingSymbolSfx(oneEnum).toVerboseString() );
+        }
     }
 }

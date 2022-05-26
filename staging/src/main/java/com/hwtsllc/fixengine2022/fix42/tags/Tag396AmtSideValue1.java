@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag396AmtSideValue1 extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyAmtType dataValue;
 
-    public final static double TESTA_AMT_SIDE_VALUE1 = 3.96D;
-    public final static double TESTB_AMT_SIDE_VALUE1 = 6.93D;
+    public final static double TESTA_AMT_SIDE_VALUE1
+            = 3.96D;
+    public final static double TESTB_AMT_SIDE_VALUE1
+            = 6.93D;
 
     public Tag396AmtSideValue1(MyAmtType dataValue) {
         setFixType(FIX42.FIX396_AMT_SIDE_VALUE1);
@@ -78,13 +80,9 @@ public class Tag396AmtSideValue1 extends FIX42Abstract implements LogValuePairSt
         Tag396AmtSideValue1 tagData;
 
         tagData = new Tag396AmtSideValue1(new MyAmtType(TESTA_AMT_SIDE_VALUE1) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag396AmtSideValue1(new MyAmtType(TESTB_AMT_SIDE_VALUE1) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

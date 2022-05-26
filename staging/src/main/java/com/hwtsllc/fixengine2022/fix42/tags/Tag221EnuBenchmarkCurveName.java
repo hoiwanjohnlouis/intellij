@@ -126,15 +126,14 @@ public class Tag221EnuBenchmarkCurveName extends FIX42Abstract implements LogVal
         Tag221EnuBenchmarkCurveName tagData;
 
         tagData = new Tag221EnuBenchmarkCurveName(TESTA_ENU_BENCHMARK_CURVE_NAME);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag221EnuBenchmarkCurveName(TESTB_ENU_BENCHMARK_CURVE_NAME);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (MyEnumBenchmarkCurveName oneEnum : MyEnumBenchmarkCurveName.values()) {
+            System.out.println( new Tag221EnuBenchmarkCurveName(oneEnum).toVerboseString() );
+        }
     }
 }

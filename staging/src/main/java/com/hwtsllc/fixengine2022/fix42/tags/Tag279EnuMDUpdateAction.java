@@ -110,15 +110,14 @@ public class Tag279EnuMDUpdateAction extends FIX42Abstract implements LogValuePa
         Tag279EnuMDUpdateAction tagData;
 
         tagData = new Tag279EnuMDUpdateAction(TESTA_ENU_MD_UPDATE_ACTION);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag279EnuMDUpdateAction(TESTB_ENU_MD_UPDATE_ACTION);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum279MDUpdateAction oneEnum : Enum279MDUpdateAction.values()) {
+            System.out.println( new Tag279EnuMDUpdateAction(oneEnum).toVerboseString() );
+        }
     }
 }

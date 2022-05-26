@@ -37,8 +37,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag422IntTotNoStrikes extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_TOT_NO_STRIKES = 60;
-    public final static int TESTB_INT_TOT_NO_STRIKES = 30;
+    public final static int TESTA_INT_TOT_NO_STRIKES
+            = 60;
+    public final static int TESTB_INT_TOT_NO_STRIKES
+            = 30;
 
     public Tag422IntTotNoStrikes(MyIntType dataValue) {
         setFixType(FIX42.FIX422_INT_TOT_NO_STRIKES);
@@ -83,13 +85,9 @@ public class Tag422IntTotNoStrikes extends FIX42Abstract implements LogValuePair
         Tag422IntTotNoStrikes tagData;
 
         tagData = new Tag422IntTotNoStrikes(new MyIntType(TESTA_INT_TOT_NO_STRIKES) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag422IntTotNoStrikes(new MyIntType(TESTB_INT_TOT_NO_STRIKES) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -116,15 +116,14 @@ public class Tag300EnuQuoteRejectReason extends FIX42Abstract implements LogValu
         Tag300EnuQuoteRejectReason tagData;
 
         tagData = new Tag300EnuQuoteRejectReason(TESTA_ENU_QUOTE_REJECT_REASON);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag300EnuQuoteRejectReason(TESTB_ENU_QUOTE_REJECT_REASON);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum300QuoteRejectReason oneEnum : Enum300QuoteRejectReason.values()) {
+            System.out.println( new Tag300EnuQuoteRejectReason(oneEnum).toVerboseString() );
+        }
     }
 }

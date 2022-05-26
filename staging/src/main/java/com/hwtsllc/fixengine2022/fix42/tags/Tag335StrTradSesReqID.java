@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag335StrTradSesReqID extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_TRAD_SES_REQ_ID = "BilboBaggins-Tag335StrTradSesReqID";
-    public final static String TESTB_STR_TRAD_SES_REQ_ID = "Gandalf-Tag335StrTradSesReqID";
+    public final static String TESTA_STR_TRAD_SES_REQ_ID
+            = "BilboBaggins-Tag335StrTradSesReqID";
+    public final static String TESTB_STR_TRAD_SES_REQ_ID
+            = "Gandalf-Tag335StrTradSesReqID";
 
     public Tag335StrTradSesReqID(MyStringType dataValue) {
         setFixType(FIX42.FIX335_STR_TRAD_SES_REQ_ID);
@@ -78,13 +80,9 @@ public class Tag335StrTradSesReqID extends FIX42Abstract implements LogValuePair
         Tag335StrTradSesReqID tagData;
 
         tagData = new Tag335StrTradSesReqID(new MyStringType(TESTA_STR_TRAD_SES_REQ_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag335StrTradSesReqID(new MyStringType(TESTB_STR_TRAD_SES_REQ_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

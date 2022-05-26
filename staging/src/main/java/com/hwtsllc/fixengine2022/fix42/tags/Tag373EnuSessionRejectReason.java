@@ -127,15 +127,14 @@ public class Tag373EnuSessionRejectReason extends FIX42Abstract implements LogVa
         Tag373EnuSessionRejectReason tagData;
 
         tagData = new Tag373EnuSessionRejectReason(TESTA_ENU_SESSION_REJECT_REASON);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag373EnuSessionRejectReason(TESTB_ENU_SESSION_REJECT_REASON);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum373SessionRejectReason oneEnum : Enum373SessionRejectReason.values()) {
+            System.out.println( new Tag373EnuSessionRejectReason(oneEnum).toVerboseString() );
+        }
     }
 }

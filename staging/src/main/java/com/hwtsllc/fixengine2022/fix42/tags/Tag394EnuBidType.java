@@ -107,15 +107,14 @@ public class Tag394EnuBidType extends FIX42Abstract implements LogValuePairStrin
         Tag394EnuBidType tagData;
 
         tagData = new Tag394EnuBidType(TESTA_ENU_BID_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag394EnuBidType(TESTB_ENU_BID_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum394BidType oneEnum : Enum394BidType.values()) {
+            System.out.println( new Tag394EnuBidType(oneEnum).toVerboseString() );
+        }
     }
 }

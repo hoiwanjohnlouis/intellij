@@ -83,13 +83,9 @@ public class Tag318CcyUnderlyingCurrency extends FIX42Abstract implements LogVal
         Tag318CcyUnderlyingCurrency tagData;
 
         tagData = new Tag318CcyUnderlyingCurrency(new MyCurrencyType(TESTA_CCY_UNDERLYING_CURRENCY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag318CcyUnderlyingCurrency(new MyCurrencyType(TESTB_CCY_UNDERLYING_CURRENCY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

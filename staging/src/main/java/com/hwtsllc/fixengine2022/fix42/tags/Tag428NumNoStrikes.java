@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag428NumNoStrikes extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyNumInGroupType dataValue;
 
-    public final static int TESTA_NUM_NO_STRIKES = 428; // fake data
-    public final static int TESTB_NUM_NO_STRIKES = 824;
+    public final static int TESTA_NUM_NO_STRIKES
+            = 428;
+    public final static int TESTB_NUM_NO_STRIKES
+            = 824;
 
     public Tag428NumNoStrikes(MyNumInGroupType dataValue) {
         setFixType(FIX42.FIX428_NUM_NO_STRIKES);
@@ -78,13 +80,9 @@ public class Tag428NumNoStrikes extends FIX42Abstract implements LogValuePairStr
         Tag428NumNoStrikes tagData;
 
         tagData = new Tag428NumNoStrikes(new MyNumInGroupType(TESTA_NUM_NO_STRIKES) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag428NumNoStrikes(new MyNumInGroupType(TESTB_NUM_NO_STRIKES) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

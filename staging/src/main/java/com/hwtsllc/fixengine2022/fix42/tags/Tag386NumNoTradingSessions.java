@@ -33,7 +33,7 @@ public class Tag386NumNoTradingSessions extends FIX42Abstract implements LogValu
     private final MyNumInGroupType dataValue;
 
     public final static int TESTA_NUM_NO_TRADING_SESSIONS
-            = 386; // fake data
+            = 386;
     public final static int TESTB_NUM_NO_TRADING_SESSIONS
             = 683;
 
@@ -80,13 +80,9 @@ public class Tag386NumNoTradingSessions extends FIX42Abstract implements LogValu
         Tag386NumNoTradingSessions tagData;
 
         tagData = new Tag386NumNoTradingSessions(new MyNumInGroupType(TESTA_NUM_NO_TRADING_SESSIONS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag386NumNoTradingSessions(new MyNumInGroupType(TESTB_NUM_NO_TRADING_SESSIONS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag437QtyContraTradeQty extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyQtyType dataValue;
 
-    public final static int TESTA_QTY_CONTRA_TRADE_QTY = 437;
-    public final static int TESTB_QTY_CONTRA_TRADE_QTY = 734;
+    public final static int TESTA_QTY_CONTRA_TRADE_QTY
+            = 437;
+    public final static int TESTB_QTY_CONTRA_TRADE_QTY
+            = 734;
 
     public Tag437QtyContraTradeQty(MyQtyType dataValue) {
         setFixType(FIX42.FIX437_QTY_CONTRA_TRADE_QTY);
@@ -78,13 +80,9 @@ public class Tag437QtyContraTradeQty extends FIX42Abstract implements LogValuePa
         Tag437QtyContraTradeQty tagData;
 
         tagData = new Tag437QtyContraTradeQty(new MyQtyType(TESTA_QTY_CONTRA_TRADE_QTY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag437QtyContraTradeQty(new MyQtyType(TESTB_QTY_CONTRA_TRADE_QTY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

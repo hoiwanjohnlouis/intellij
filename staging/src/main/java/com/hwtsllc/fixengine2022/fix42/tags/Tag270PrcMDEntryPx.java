@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag270PrcMDEntryPx extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceType dataValue;
 
-    public final static double TESTA_PRC_MD_ENTRY_PX = 2.70D;
-    public final static double TESTB_PRC_MD_ENTRY_PX = 7.2D;
+    public final static double TESTA_PRC_MD_ENTRY_PX
+            = 2.70D;
+    public final static double TESTB_PRC_MD_ENTRY_PX
+            = 7.20D;
 
     public Tag270PrcMDEntryPx(MyPriceType dataValue) {
         setFixType(FIX42.FIX270_PRC_MD_ENTRY_PX);
@@ -78,13 +80,9 @@ public class Tag270PrcMDEntryPx extends FIX42Abstract implements LogValuePairStr
         Tag270PrcMDEntryPx tagData;
 
         tagData = new Tag270PrcMDEntryPx(new MyPriceType(TESTA_PRC_MD_ENTRY_PX) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag270PrcMDEntryPx(new MyPriceType(TESTB_PRC_MD_ENTRY_PX) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

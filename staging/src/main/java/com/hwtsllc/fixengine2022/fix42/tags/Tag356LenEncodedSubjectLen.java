@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag356LenEncodedSubjectLen extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyLengthType dataValue;
 
-    public final static int TESTA_LEN_ENCODED_SUBJECT_LEN = 356;
-    public final static int TESTB_LEN_ENCODED_SUBJECT_LEN = 653;
+    public final static int TESTA_LEN_ENCODED_SUBJECT_LEN
+            = 356;
+    public final static int TESTB_LEN_ENCODED_SUBJECT_LEN
+            = 653;
 
     public Tag356LenEncodedSubjectLen(MyLengthType dataValue) {
         setFixType(FIX42.FIX356_LEN_ENCODED_SUBJECT_LEN);
@@ -78,18 +80,9 @@ public class Tag356LenEncodedSubjectLen extends FIX42Abstract implements LogValu
         Tag356LenEncodedSubjectLen tagData;
 
         tagData = new Tag356LenEncodedSubjectLen(new MyLengthType(TESTA_LEN_ENCODED_SUBJECT_LEN) );
-        System.out.println("initial values A");
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag356LenEncodedSubjectLen(new MyLengthType(TESTB_LEN_ENCODED_SUBJECT_LEN) );
-        System.out.println("initial values B");
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
     }
 }

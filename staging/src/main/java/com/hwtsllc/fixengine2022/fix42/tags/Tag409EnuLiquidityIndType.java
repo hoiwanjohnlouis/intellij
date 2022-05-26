@@ -108,15 +108,14 @@ public class Tag409EnuLiquidityIndType extends FIX42Abstract implements LogValue
         Tag409EnuLiquidityIndType tagData;
 
         tagData = new Tag409EnuLiquidityIndType(TESTA_ENU_LIQUIDITY_IND_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag409EnuLiquidityIndType(TESTB_ENU_LIQUIDITY_IND_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum409LiquidityIndType oneEnum : Enum409LiquidityIndType.values()) {
+            System.out.println( new Tag409EnuLiquidityIndType(oneEnum).toVerboseString() );
+        }
     }
 }

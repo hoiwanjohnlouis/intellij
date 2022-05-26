@@ -35,8 +35,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag381AmtGrossTradeAmt extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyAmtType dataValue;
 
-    public final static double TESTA_AMT_GROSS_TRADE_AMT = 3.81D;
-    public final static double TESTB_AMT_GROSS_TRADE_AMT = 1.83D;
+    public final static double TESTA_AMT_GROSS_TRADE_AMT
+            = 3.81D;
+    public final static double TESTB_AMT_GROSS_TRADE_AMT
+            = 1.83D;
 
     public Tag381AmtGrossTradeAmt(MyAmtType dataValue) {
         setFixType(FIX42.FIX381_AMT_GROSS_TRADE_AMT);
@@ -81,13 +83,9 @@ public class Tag381AmtGrossTradeAmt extends FIX42Abstract implements LogValuePai
         Tag381AmtGrossTradeAmt tagData;
 
         tagData = new Tag381AmtGrossTradeAmt(new MyAmtType(TESTA_AMT_GROSS_TRADE_AMT) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag381AmtGrossTradeAmt(new MyAmtType(TESTB_AMT_GROSS_TRADE_AMT) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

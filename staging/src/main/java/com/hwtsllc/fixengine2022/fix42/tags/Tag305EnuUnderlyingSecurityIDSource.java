@@ -200,15 +200,14 @@ public class Tag305EnuUnderlyingSecurityIDSource extends FIX42Abstract implement
         Tag305EnuUnderlyingSecurityIDSource tagData;
 
         tagData = new Tag305EnuUnderlyingSecurityIDSource(TESTA_ENU_UNDERLYING_SECURITY_ID_SOURCE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag305EnuUnderlyingSecurityIDSource(TESTB_ENU_UNDERLYING_SECURITY_ID_SOURCE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
+            System.out.println( new Tag305EnuUnderlyingSecurityIDSource(oneEnum).toVerboseString() );
+        }
     }
 }

@@ -106,15 +106,14 @@ public class Tag325BoolUnsolicitedIndicator extends FIX42Abstract implements Log
         Tag325BoolUnsolicitedIndicator tagData;
 
         tagData = new Tag325BoolUnsolicitedIndicator(TESTA_BOOL_UNSOLICITED_INDICATOR);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag325BoolUnsolicitedIndicator(TESTB_BOOL_UNSOLICITED_INDICATOR);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Bool325UnsolicitedIndicator oneEnum : Bool325UnsolicitedIndicator.values()) {
+            System.out.println( new Tag325BoolUnsolicitedIndicator(oneEnum).toVerboseString() );
+        }
     }
 }

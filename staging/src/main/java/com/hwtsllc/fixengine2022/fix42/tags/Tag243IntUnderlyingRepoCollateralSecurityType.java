@@ -39,8 +39,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag243IntUnderlyingRepoCollateralSecurityType extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE = 60;
-    public final static int TESTB_INT_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE = 30;
+    public final static int TESTA_INT_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE
+            = 60;
+    public final static int TESTB_INT_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE
+            = 30;
 
     public Tag243IntUnderlyingRepoCollateralSecurityType(MyIntType dataValue) {
         setFixType(FIX42.FIX243_INT_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE);
@@ -85,13 +87,9 @@ public class Tag243IntUnderlyingRepoCollateralSecurityType extends FIX42Abstract
         Tag243IntUnderlyingRepoCollateralSecurityType tagData;
 
         tagData = new Tag243IntUnderlyingRepoCollateralSecurityType(new MyIntType(TESTA_INT_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag243IntUnderlyingRepoCollateralSecurityType(new MyIntType(TESTB_INT_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

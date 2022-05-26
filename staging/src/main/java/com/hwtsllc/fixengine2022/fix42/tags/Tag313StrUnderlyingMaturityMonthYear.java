@@ -84,13 +84,9 @@ public class Tag313StrUnderlyingMaturityMonthYear extends FIX42Abstract implemen
         Tag313StrUnderlyingMaturityMonthYear tagData;
 
         tagData = new Tag313StrUnderlyingMaturityMonthYear(new MyStringType(TESTA_STR_UNDERLYING_MATURITY_MONTH_YEAR) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag313StrUnderlyingMaturityMonthYear(new MyStringType(TESTB_STR_UNDERLYING_MATURITY_MONTH_YEAR) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

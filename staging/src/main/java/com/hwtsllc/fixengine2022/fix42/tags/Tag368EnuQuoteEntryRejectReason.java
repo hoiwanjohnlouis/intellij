@@ -117,15 +117,14 @@ public class Tag368EnuQuoteEntryRejectReason extends FIX42Abstract implements Lo
         Tag368EnuQuoteEntryRejectReason tagData;
 
         tagData = new Tag368EnuQuoteEntryRejectReason(TESTA_ENU_QUOTE_ENTRY_REJECT_REASON);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag368EnuQuoteEntryRejectReason(TESTB_ENU_QUOTE_ENTRY_REJECT_REASON);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum368QuoteEntryRejectReason oneEnum : Enum368QuoteEntryRejectReason.values()) {
+            System.out.println( new Tag368EnuQuoteEntryRejectReason(oneEnum).toVerboseString() );
+        }
     }
 }

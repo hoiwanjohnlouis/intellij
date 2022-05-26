@@ -82,13 +82,9 @@ public class Tag317StrUnderlyingOptAttribute extends FIX42Abstract implements Lo
         Tag317StrUnderlyingOptAttribute tagData;
 
         tagData = new Tag317StrUnderlyingOptAttribute(new MyStringType(TESTA_STR_UNDERLYING_OPT_ATTRIBUTE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag317StrUnderlyingOptAttribute(new MyStringType(TESTB_STR_UNDERLYING_OPT_ATTRIBUTE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

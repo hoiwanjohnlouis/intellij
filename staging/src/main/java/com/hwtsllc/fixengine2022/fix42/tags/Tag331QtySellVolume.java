@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag331QtySellVolume extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyQtyType dataValue;
 
-    public final static int TESTA_QTY_SELL_VOLUME = 331;
-    public final static int TESTB_QTY_SELL_VOLUME = 133;
+    public final static int TESTA_QTY_SELL_VOLUME
+            = 331;
+    public final static int TESTB_QTY_SELL_VOLUME
+            = 133;
 
     public Tag331QtySellVolume(MyQtyType dataValue) {
         setFixType(FIX42.FIX331_QTY_SELL_VOLUME);
@@ -78,13 +80,9 @@ public class Tag331QtySellVolume extends FIX42Abstract implements LogValuePairSt
         Tag331QtySellVolume tagData;
 
         tagData = new Tag331QtySellVolume(new MyQtyType(TESTA_QTY_SELL_VOLUME) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag331QtySellVolume(new MyQtyType(TESTB_QTY_SELL_VOLUME) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

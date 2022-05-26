@@ -35,8 +35,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag355DatEncodedText extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyDataType dataValue;
 
-    public final static String TESTA_DAT_ENCODED_TEXT = "BilboBaggins-Tag355DatEncodedText";
-    public final static String TESTB_DAT_ENCODED_TEXT = "Gandalf-Tag355DatEncodedText";
+    public final static String TESTA_DAT_ENCODED_TEXT
+            = "BilboBaggins-Tag355DatEncodedText";
+    public final static String TESTB_DAT_ENCODED_TEXT
+            = "Gandalf-Tag355DatEncodedText";
 
     public Tag355DatEncodedText(MyDataType dataValue) {
         setFixType(FIX42.FIX355_DAT_ENCODED_TEXT);
@@ -81,18 +83,9 @@ public class Tag355DatEncodedText extends FIX42Abstract implements LogValuePairS
         Tag355DatEncodedText tagData;
 
         tagData= new Tag355DatEncodedText(new MyDataType(TESTA_DAT_ENCODED_TEXT) );
-        System.out.println("initial values A");
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag355DatEncodedText(new MyDataType(TESTB_DAT_ENCODED_TEXT) );
-        System.out.println("initial values B");
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
     }
 }

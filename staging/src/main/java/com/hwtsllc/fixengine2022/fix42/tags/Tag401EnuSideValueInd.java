@@ -109,15 +109,14 @@ public class Tag401EnuSideValueInd extends FIX42Abstract implements LogValuePair
         Tag401EnuSideValueInd tagData;
 
         tagData = new Tag401EnuSideValueInd(TESTA_ENU_SIDE_VALUE_IND);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag401EnuSideValueInd(TESTB_ENU_SIDE_VALUE_IND);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum401SideValueInd oneEnum : Enum401SideValueInd.values()) {
+            System.out.println( new Tag401EnuSideValueInd(oneEnum).toVerboseString() );
+        }
     }
 }

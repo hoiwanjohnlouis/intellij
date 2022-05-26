@@ -112,15 +112,14 @@ public class Tag429EnuListStatusType extends FIX42Abstract implements LogValuePa
         Tag429EnuListStatusType tagData;
 
         tagData = new Tag429EnuListStatusType(TESTA_ENU_LIST_STATUS_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag429EnuListStatusType(TESTB_ENU_LIST_STATUS_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum429ListStatusType oneEnum : Enum429ListStatusType.values()) {
+            System.out.println( new Tag429EnuListStatusType(oneEnum).toVerboseString() );
+        }
     }
 }

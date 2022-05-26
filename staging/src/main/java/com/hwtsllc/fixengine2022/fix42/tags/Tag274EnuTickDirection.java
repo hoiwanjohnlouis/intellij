@@ -108,15 +108,14 @@ public class Tag274EnuTickDirection extends FIX42Abstract implements LogValuePai
         Tag274EnuTickDirection tagData;
 
         tagData = new Tag274EnuTickDirection(TESTA_ENU_TICK_DIRECTION);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag274EnuTickDirection(TESTB_ENU_TICK_DIRECTION);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum274TickDirection oneEnum : Enum274TickDirection.values()) {
+            System.out.println( new Tag274EnuTickDirection(oneEnum).toVerboseString() );
+        }
     }
 }

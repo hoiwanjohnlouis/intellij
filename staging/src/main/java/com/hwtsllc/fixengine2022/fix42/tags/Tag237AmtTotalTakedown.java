@@ -35,8 +35,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag237AmtTotalTakedown extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyAmtType dataValue;
 
-    public final static double TESTA_AMT_TOTAL_TAKEDOWN = 2.37D;
-    public final static double TESTB_AMT_TOTAL_TAKEDOWN = 7.32D;
+    public final static double TESTA_AMT_TOTAL_TAKEDOWN
+            = 2.37D;
+    public final static double TESTB_AMT_TOTAL_TAKEDOWN
+            = 7.32D;
 
     public Tag237AmtTotalTakedown(MyAmtType dataValue) {
         setFixType(FIX42.FIX237_AMT_TOTAL_TAKEDOWN);
@@ -81,13 +83,9 @@ public class Tag237AmtTotalTakedown extends FIX42Abstract implements LogValuePai
         Tag237AmtTotalTakedown tagData;
 
         tagData = new Tag237AmtTotalTakedown(new MyAmtType(TESTA_AMT_TOTAL_TAKEDOWN) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag237AmtTotalTakedown(new MyAmtType(TESTB_AMT_TOTAL_TAKEDOWN) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

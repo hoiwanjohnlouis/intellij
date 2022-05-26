@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag443UtcStrikeTime extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyUTCTimestampType dataValue;
 
-    public final static String TESTA_UTC_STRIKE_TIME = "18991231-23:59:59.443";
-    public final static String TESTB_UTC_STRIKE_TIME = "19001231-23:59:59.443";
+    public final static String TESTA_UTC_STRIKE_TIME
+            = "18991231-23:59:59.443";
+    public final static String TESTB_UTC_STRIKE_TIME
+            = "19001231-23:59:59.443";
 
     public Tag443UtcStrikeTime(MyUTCTimestampType dataValue) {
         setFixType(FIX42.FIX443_UTC_STRIKE_TIME);
@@ -78,13 +80,9 @@ public class Tag443UtcStrikeTime extends FIX42Abstract implements LogValuePairSt
         Tag443UtcStrikeTime tagData;
 
         tagData = new Tag443UtcStrikeTime(new MyUTCTimestampType(TESTA_UTC_STRIKE_TIME) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag443UtcStrikeTime(new MyUTCTimestampType(TESTB_UTC_STRIKE_TIME) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

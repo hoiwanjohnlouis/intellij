@@ -107,15 +107,14 @@ public class Tag263EnuSubscriptionRequestType extends FIX42Abstract implements L
         Tag263EnuSubscriptionRequestType tagData;
 
         tagData = new Tag263EnuSubscriptionRequestType(TESTA_ENU_SUBSCRIPTION_REQUEST_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag263EnuSubscriptionRequestType(TESTB_ENU_SUBSCRIPTION_REQUEST_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum263SubscriptionRequestType oneEnum : Enum263SubscriptionRequestType.values()) {
+            System.out.println( new Tag263EnuSubscriptionRequestType(oneEnum).toVerboseString() );
+        }
     }
 }

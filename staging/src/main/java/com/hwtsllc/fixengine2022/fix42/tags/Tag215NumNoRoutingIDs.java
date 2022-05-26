@@ -80,13 +80,9 @@ public class Tag215NumNoRoutingIDs extends FIX42Abstract implements LogValuePair
         Tag215NumNoRoutingIDs tagData;
 
         tagData = new Tag215NumNoRoutingIDs(new MyNumInGroupType(TESTA_NUM_NO_ROUTING_IDS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag215NumNoRoutingIDs(new MyNumInGroupType(TESTB_NUM_NO_ROUTING_IDS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

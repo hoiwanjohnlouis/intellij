@@ -34,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag438UtcContraTradeTime extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyUTCTimestampType dataValue;
 
-    public final static String TESTA_UTC_CONTRA_TRADE_TIME = "18991231-23:59:59.999";
-    public final static String TESTB_UTC_CONTRA_TRADE_TIME = "19001231-23:59:59.999";
+    public final static String TESTA_UTC_CONTRA_TRADE_TIME
+            = "18991231-23:59:59.999";
+    public final static String TESTB_UTC_CONTRA_TRADE_TIME
+            = "19001231-23:59:59.999";
 
     public Tag438UtcContraTradeTime(MyUTCTimestampType dataValue) {
         setFixType(FIX42.FIX438_UTC_CONTRA_TRADE_TIME);
@@ -80,13 +82,9 @@ public class Tag438UtcContraTradeTime extends FIX42Abstract implements LogValueP
         Tag438UtcContraTradeTime tagData;
 
         tagData = new Tag438UtcContraTradeTime(new MyUTCTimestampType(TESTA_UTC_CONTRA_TRADE_TIME) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag438UtcContraTradeTime(new MyUTCTimestampType(TESTB_UTC_CONTRA_TRADE_TIME) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

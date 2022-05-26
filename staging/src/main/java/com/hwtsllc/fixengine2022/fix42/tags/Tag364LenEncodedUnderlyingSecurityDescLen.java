@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag364LenEncodedUnderlyingSecurityDescLen extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyLengthType dataValue;
 
-    public final static int TESTA_LEN_ENCODED_UNDERLYING_SECURITY_DESC_LEN = 364;
-    public final static int TESTB_LEN_ENCODED_UNDERLYING_SECURITY_DESC_LEN = 463;
+    public final static int TESTA_LEN_ENCODED_UNDERLYING_SECURITY_DESC_LEN
+            = 364;
+    public final static int TESTB_LEN_ENCODED_UNDERLYING_SECURITY_DESC_LEN
+            = 463;
 
     public Tag364LenEncodedUnderlyingSecurityDescLen(MyLengthType dataValue) {
         setFixType(FIX42.FIX364_LEN_ENCODED_UNDERLYING_SECURITY_DESC_LEN);
@@ -78,18 +80,9 @@ public class Tag364LenEncodedUnderlyingSecurityDescLen extends FIX42Abstract imp
         Tag364LenEncodedUnderlyingSecurityDescLen tagData;
 
         tagData = new Tag364LenEncodedUnderlyingSecurityDescLen(new MyLengthType(TESTA_LEN_ENCODED_UNDERLYING_SECURITY_DESC_LEN) );
-        System.out.println("initial values A");
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag364LenEncodedUnderlyingSecurityDescLen(new MyLengthType(TESTB_LEN_ENCODED_UNDERLYING_SECURITY_DESC_LEN) );
-        System.out.println("initial values B");
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
     }
 }

@@ -110,15 +110,14 @@ public class Tag298EnuQuoteCancelType extends FIX42Abstract implements LogValueP
         Tag298EnuQuoteCancelType tagData;
 
         tagData = new Tag298EnuQuoteCancelType(TESTA_ENU_QUOTE_CANCEL_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag298EnuQuoteCancelType(TESTB_ENU_QUOTE_CANCEL_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum298QuoteCancelType oneEnum : Enum298QuoteCancelType.values()) {
+            System.out.println( new Tag298EnuQuoteCancelType(oneEnum).toVerboseString() );
+        }
     }
 }

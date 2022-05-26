@@ -33,8 +33,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag319QtyRatioQty extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyQtyType dataValue;
 
-    public final static int TESTA_QTY_RATIO_QTY = 319;
-    public final static int TESTB_QTY_RATIO_QTY = 913;
+    public final static int TESTA_QTY_RATIO_QTY
+            = 319;
+    public final static int TESTB_QTY_RATIO_QTY
+            = 913;
 
     public Tag319QtyRatioQty(MyQtyType dataValue) {
         setFixType(FIX42.FIX319_QTY_RATIO_QTY);
@@ -79,13 +81,9 @@ public class Tag319QtyRatioQty extends FIX42Abstract implements LogValuePairStri
         Tag319QtyRatioQty tagData;
 
         tagData = new Tag319QtyRatioQty(new MyQtyType(TESTA_QTY_RATIO_QTY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag319QtyRatioQty(new MyQtyType(TESTB_QTY_RATIO_QTY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

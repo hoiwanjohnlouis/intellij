@@ -106,15 +106,14 @@ public class Tag377BoolSolicitedFlag extends FIX42Abstract implements LogValuePa
         Tag377BoolSolicitedFlag tagData;
 
         tagData = new Tag377BoolSolicitedFlag(TESTA_BOOL_SOLICITED_FLAG);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag377BoolSolicitedFlag(TESTB_BOOL_SOLICITED_FLAG);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Bool377SolicitedFlag oneEnum : Bool377SolicitedFlag.values()) {
+            System.out.println( new Tag377BoolSolicitedFlag(oneEnum).toVerboseString() );
+        }
     }
 }

@@ -36,8 +36,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag257StrLegCreditRating extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_LEG_CREDIT_RATING = "BilboBaggins-Tag257StrLegCreditRating";
-    public final static String TESTB_STR_LEG_CREDIT_RATING = "Gandalf-Tag257StrLegCreditRating";
+    public final static String TESTA_STR_LEG_CREDIT_RATING
+            = "BilboBaggins-Tag257StrLegCreditRating";
+    public final static String TESTB_STR_LEG_CREDIT_RATING
+            = "Gandalf-Tag257StrLegCreditRating";
 
     public Tag257StrLegCreditRating(MyStringType dataValue) {
         setFixType(FIX42.FIX257_STR_LEG_CREDIT_RATING);
@@ -82,13 +84,9 @@ public class Tag257StrLegCreditRating extends FIX42Abstract implements LogValueP
         Tag257StrLegCreditRating tagData;
 
         tagData = new Tag257StrLegCreditRating(new MyStringType(TESTA_STR_LEG_CREDIT_RATING) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag257StrLegCreditRating(new MyStringType(TESTB_STR_LEG_CREDIT_RATING) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -131,15 +131,14 @@ public class Tag292EnuCorporateAction extends FIX42Abstract implements LogValueP
         Tag292EnuCorporateAction tagData;
 
         tagData = new Tag292EnuCorporateAction(TESTA_ENU_CORPORATE_ACTION);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag292EnuCorporateAction(TESTB_ENU_CORPORATE_ACTION);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum292CorporateAction oneEnum : Enum292CorporateAction.values()) {
+            System.out.println( new Tag292EnuCorporateAction(oneEnum).toVerboseString() );
+        }
     }
 }

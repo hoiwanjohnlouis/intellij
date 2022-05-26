@@ -35,8 +35,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag223PctCouponRate extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyPercentageType dataValue;
 
-    public final static double TESTA_PCT_COUPON_RATE = 0.0223D;
-    public final static double TESTB_PCT_COUPON_RATE = 0.0322D;
+    public final static double TESTA_PCT_COUPON_RATE
+            = 0.0223D;
+    public final static double TESTB_PCT_COUPON_RATE
+            = 0.0322D;
 
     public Tag223PctCouponRate(MyPercentageType dataValue) {
         setFixType(FIX42.FIX223_PCT_COUPON_RATE);
@@ -81,13 +83,9 @@ public class Tag223PctCouponRate extends FIX42Abstract implements LogValuePairSt
         Tag223PctCouponRate tagData;
 
         tagData = new Tag223PctCouponRate(new MyPercentageType(TESTA_PCT_COUPON_RATE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag223PctCouponRate(new MyPercentageType(TESTB_PCT_COUPON_RATE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

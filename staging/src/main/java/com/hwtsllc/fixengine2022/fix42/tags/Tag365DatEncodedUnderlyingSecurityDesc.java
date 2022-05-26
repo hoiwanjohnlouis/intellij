@@ -83,18 +83,9 @@ public class Tag365DatEncodedUnderlyingSecurityDesc extends FIX42Abstract implem
         Tag365DatEncodedUnderlyingSecurityDesc tagData;
 
         tagData= new Tag365DatEncodedUnderlyingSecurityDesc(new MyDataType(TESTA_DAT_ENCODED_UNDERLYING_SECURITY_DESC) );
-        System.out.println("initial values A");
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag365DatEncodedUnderlyingSecurityDesc(new MyDataType(TESTB_DAT_ENCODED_UNDERLYING_SECURITY_DESC) );
-        System.out.println("initial values B");
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
     }
 }

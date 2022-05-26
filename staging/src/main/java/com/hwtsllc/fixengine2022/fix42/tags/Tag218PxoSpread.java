@@ -91,13 +91,9 @@ public class Tag218PxoSpread extends FIX42Abstract implements LogValuePairString
         Tag218PxoSpread tagData;
 
         tagData = new Tag218PxoSpread(new MyPriceOffsetType(TESTA_PXO_SPREAD) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag218PxoSpread(new MyPriceOffsetType(TESTB_PXO_SPREAD) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

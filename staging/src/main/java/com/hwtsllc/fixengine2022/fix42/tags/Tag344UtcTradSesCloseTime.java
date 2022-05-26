@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag344UtcTradSesCloseTime extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyUTCTimestampType dataValue;
 
-    public final static String TESTA_UTC_TRAD_SES_CLOSE_TIME = "18991231-23:59:59.344";
-    public final static String TESTB_UTC_TRAD_SES_CLOSE_TIME = "19001231-23:59:59.344";
+    public final static String TESTA_UTC_TRAD_SES_CLOSE_TIME
+            = "18991231-23:59:59.344";
+    public final static String TESTB_UTC_TRAD_SES_CLOSE_TIME
+            = "19001231-23:59:59.344";
 
     public Tag344UtcTradSesCloseTime(MyUTCTimestampType dataValue) {
         setFixType(FIX42.FIX344_UTC_TRAD_SES_CLOSE_TIME);
@@ -78,13 +80,9 @@ public class Tag344UtcTradSesCloseTime extends FIX42Abstract implements LogValue
         Tag344UtcTradSesCloseTime tagData;
 
         tagData = new Tag344UtcTradSesCloseTime(new MyUTCTimestampType(TESTA_UTC_TRAD_SES_CLOSE_TIME) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag344UtcTradSesCloseTime(new MyUTCTimestampType(TESTB_UTC_TRAD_SES_CLOSE_TIME) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

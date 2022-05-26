@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag264IntMarketDepth extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_MARKET_DEPTH = 60;
-    public final static int TESTB_INT_MARKET_DEPTH = 30;
+    public final static int TESTA_INT_MARKET_DEPTH
+            = 60;
+    public final static int TESTB_INT_MARKET_DEPTH
+            = 30;
 
     public Tag264IntMarketDepth(MyIntType dataValue) {
         setFixType(FIX42.FIX264_INT_MARKET_DEPTH);
@@ -78,13 +80,9 @@ public class Tag264IntMarketDepth extends FIX42Abstract implements LogValuePairS
         Tag264IntMarketDepth tagData;
 
         tagData = new Tag264IntMarketDepth(new MyIntType(TESTA_INT_MARKET_DEPTH) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag264IntMarketDepth(new MyIntType(TESTB_INT_MARKET_DEPTH) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag324StrSecurityStatusReqID extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_SECURITY_STATUS_REQ_ID = "BilboBaggins-Tag324StrSecurityStatusReqID";
-    public final static String TESTB_STR_SECURITY_STATUS_REQ_ID = "Gandalf-Tag324StrSecurityStatusReqID";
+    public final static String TESTA_STR_SECURITY_STATUS_REQ_ID
+            = "BilboBaggins-Tag324StrSecurityStatusReqID";
+    public final static String TESTB_STR_SECURITY_STATUS_REQ_ID
+            = "Gandalf-Tag324StrSecurityStatusReqID";
 
     public Tag324StrSecurityStatusReqID(MyStringType dataValue) {
         setFixType(FIX42.FIX324_STR_SECURITY_STATUS_REQ_ID);
@@ -78,13 +80,9 @@ public class Tag324StrSecurityStatusReqID extends FIX42Abstract implements LogVa
         Tag324StrSecurityStatusReqID tagData;
 
         tagData = new Tag324StrSecurityStatusReqID(new MyStringType(TESTA_STR_SECURITY_STATUS_REQ_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag324StrSecurityStatusReqID(new MyStringType(TESTB_STR_SECURITY_STATUS_REQ_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

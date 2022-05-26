@@ -39,8 +39,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag370UtcOnBehalfOfSendingTime extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyUTCTimestampType dataValue;
 
-    public final static String TESTA_UTC_ON_BEHALF_OF_SENDING_TIME = "18991231-23:59:59.370";
-    public final static String TESTB_UTC_ON_BEHALF_OF_SENDING_TIME = "19001231-23:59:59.370";
+    public final static String TESTA_UTC_ON_BEHALF_OF_SENDING_TIME
+            = "18991231-23:59:59.370";
+    public final static String TESTB_UTC_ON_BEHALF_OF_SENDING_TIME
+            = "19001231-23:59:59.370";
 
     public Tag370UtcOnBehalfOfSendingTime(MyUTCTimestampType dataValue) {
         setFixType(FIX42.FIX370_UTC_ON_BEHALF_OF_SENDING_TIME);
@@ -85,13 +87,9 @@ public class Tag370UtcOnBehalfOfSendingTime extends FIX42Abstract implements Log
         Tag370UtcOnBehalfOfSendingTime tagData;
 
         tagData = new Tag370UtcOnBehalfOfSendingTime(new MyUTCTimestampType(TESTA_UTC_ON_BEHALF_OF_SENDING_TIME) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag370UtcOnBehalfOfSendingTime(new MyUTCTimestampType(TESTB_UTC_ON_BEHALF_OF_SENDING_TIME) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

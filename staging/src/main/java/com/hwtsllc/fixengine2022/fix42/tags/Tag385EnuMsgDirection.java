@@ -106,15 +106,14 @@ public class Tag385EnuMsgDirection extends FIX42Abstract implements LogValuePair
         Tag385EnuMsgDirection tagData;
 
         tagData = new Tag385EnuMsgDirection(TESTA_ENU_MSG_DIRECTION);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag385EnuMsgDirection(TESTB_ENU_MSG_DIRECTION);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum385MsgDirection oneEnum : Enum385MsgDirection.values()) {
+            System.out.println( new Tag385EnuMsgDirection(oneEnum).toVerboseString() );
+        }
     }
 }

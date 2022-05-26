@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag408AmtValueOfFutures extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyAmtType dataValue;
 
-    public final static double TESTA_AMT_VALUE_OF_FUTURES = 4.08D;
-    public final static double TESTB_AMT_VALUE_OF_FUTURES = 8.04D;
+    public final static double TESTA_AMT_VALUE_OF_FUTURES
+            = 4.08D;
+    public final static double TESTB_AMT_VALUE_OF_FUTURES
+            = 8.04D;
 
     public Tag408AmtValueOfFutures(MyAmtType dataValue) {
         setFixType(FIX42.FIX408_AMT_VALUE_OF_FUTURES);
@@ -78,13 +80,9 @@ public class Tag408AmtValueOfFutures extends FIX42Abstract implements LogValuePa
         Tag408AmtValueOfFutures tagData;
 
         tagData = new Tag408AmtValueOfFutures(new MyAmtType(TESTA_AMT_VALUE_OF_FUTURES) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag408AmtValueOfFutures(new MyAmtType(TESTB_AMT_VALUE_OF_FUTURES) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -110,15 +110,14 @@ public class Tag442EnuMultiLegReportingType extends FIX42Abstract implements Log
         Tag442EnuMultiLegReportingType tagData;
 
         tagData = new Tag442EnuMultiLegReportingType(TESTA_ENU_MULTI_LEG_REPORTING_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag442EnuMultiLegReportingType(TESTB_ENU_MULTI_LEG_REPORTING_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum442MultiLegReportingType oneEnum : Enum442MultiLegReportingType.values()) {
+            System.out.println( new Tag442EnuMultiLegReportingType(oneEnum).toVerboseString() );
+        }
     }
 }

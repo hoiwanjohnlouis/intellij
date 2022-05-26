@@ -110,15 +110,14 @@ public class Tag414EnuProgRptReqs extends FIX42Abstract implements LogValuePairS
         Tag414EnuProgRptReqs tagData;
 
         tagData = new Tag414EnuProgRptReqs(TESTA_ENU_PROG_RPT_REQS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag414EnuProgRptReqs(TESTB_ENU_PROG_RPT_REQS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum414ProgRptReqs oneEnum : Enum414ProgRptReqs.values()) {
+            System.out.println( new Tag414EnuProgRptReqs(oneEnum).toVerboseString() );
+        }
     }
 }

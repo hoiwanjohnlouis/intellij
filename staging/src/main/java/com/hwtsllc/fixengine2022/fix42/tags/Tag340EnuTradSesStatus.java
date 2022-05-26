@@ -114,15 +114,14 @@ public class Tag340EnuTradSesStatus extends FIX42Abstract implements LogValuePai
         Tag340EnuTradSesStatus tagData;
 
         tagData = new Tag340EnuTradSesStatus(TESTA_ENU_TRAD_SES_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag340EnuTradSesStatus(TESTB_ENU_TRAD_SES_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum340TradSesStatus oneEnum : Enum340TradSesStatus.values()) {
+            System.out.println( new Tag340EnuTradSesStatus(oneEnum).toVerboseString() );
+        }
     }
 }

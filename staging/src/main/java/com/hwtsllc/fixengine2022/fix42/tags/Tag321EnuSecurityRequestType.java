@@ -112,15 +112,14 @@ public class Tag321EnuSecurityRequestType extends FIX42Abstract implements LogVa
         Tag321EnuSecurityRequestType tagData;
 
         tagData = new Tag321EnuSecurityRequestType(TESTA_ENU_SECURITY_REQUEST_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag321EnuSecurityRequestType(TESTB_ENU_SECURITY_REQUEST_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum321SecurityRequestType oneEnum : Enum321SecurityRequestType.values()) {
+            System.out.println( new Tag321EnuSecurityRequestType(oneEnum).toVerboseString() );
+        }
     }
 }

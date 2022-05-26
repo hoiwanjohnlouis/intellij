@@ -34,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag415IntProgPeriodInterval extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_PROG_PERIOD_INTERVAL = 60;
-    public final static int TESTB_INT_PROG_PERIOD_INTERVAL = 30;
+    public final static int TESTA_INT_PROG_PERIOD_INTERVAL
+            = 60;
+    public final static int TESTB_INT_PROG_PERIOD_INTERVAL
+            = 30;
 
     public Tag415IntProgPeriodInterval(MyIntType dataValue) {
         setFixType(FIX42.FIX415_INT_PROG_PERIOD_INTERVAL);
@@ -80,13 +82,9 @@ public class Tag415IntProgPeriodInterval extends FIX42Abstract implements LogVal
         Tag415IntProgPeriodInterval tagData;
 
         tagData = new Tag415IntProgPeriodInterval(new MyIntType(TESTA_INT_PROG_PERIOD_INTERVAL) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag415IntProgPeriodInterval(new MyIntType(TESTB_INT_PROG_PERIOD_INTERVAL) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

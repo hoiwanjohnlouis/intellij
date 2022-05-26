@@ -108,15 +108,14 @@ public class Tag258BoolTradedFlatSwitch extends FIX42Abstract implements LogValu
         Tag258BoolTradedFlatSwitch tagData;
 
         tagData = new Tag258BoolTradedFlatSwitch(TESTA_BOOL_TRADED_FLAT_SWITCH);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag258BoolTradedFlatSwitch(TESTB_BOOL_TRADED_FLAT_SWITCH);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Bool258TradedFlatSwitch oneEnum : Bool258TradedFlatSwitch.values()) {
+            System.out.println( new Tag258BoolTradedFlatSwitch(oneEnum).toVerboseString() );
+        }
     }
 }

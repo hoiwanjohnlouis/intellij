@@ -106,15 +106,14 @@ public class Tag265EnuMDUpdateType extends FIX42Abstract implements LogValuePair
         Tag265EnuMDUpdateType tagData;
 
         tagData = new Tag265EnuMDUpdateType(TESTA_ENU_MD_UPDATE_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag265EnuMDUpdateType(TESTB_ENU_MD_UPDATE_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum265MDUpdateType oneEnum : Enum265MDUpdateType.values()) {
+            System.out.println( new Tag265EnuMDUpdateType(oneEnum).toVerboseString() );
+        }
     }
 }

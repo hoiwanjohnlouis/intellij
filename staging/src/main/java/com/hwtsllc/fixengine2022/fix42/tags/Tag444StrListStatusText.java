@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag444StrListStatusText extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_LIST_STATUS_TEXT = "BilboBaggins-Tag444StrListStatusText";
-    public final static String TESTB_STR_LIST_STATUS_TEXT = "Gandalf-Tag444StrListStatusText";
+    public final static String TESTA_STR_LIST_STATUS_TEXT
+            = "BilboBaggins-Tag444StrListStatusText";
+    public final static String TESTB_STR_LIST_STATUS_TEXT
+            = "Gandalf-Tag444StrListStatusText";
 
     public Tag444StrListStatusText(MyStringType dataValue) {
         setFixType(FIX42.FIX444_STR_LIST_STATUS_TEXT);
@@ -78,13 +80,9 @@ public class Tag444StrListStatusText extends FIX42Abstract implements LogValuePa
         Tag444StrListStatusText tagData;
 
         tagData = new Tag444StrListStatusText(new MyStringType(TESTA_STR_LIST_STATUS_TEXT) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag444StrListStatusText(new MyStringType(TESTB_STR_LIST_STATUS_TEXT) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

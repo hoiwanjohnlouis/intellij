@@ -35,8 +35,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag424QtyDayOrderQty extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyQtyType dataValue;
 
-    public final static int TESTA_QTY_DAY_ORDER_QTY = 424;
-    public final static int TESTB_QTY_DAY_ORDER_QTY = 424;
+    public final static int TESTA_QTY_DAY_ORDER_QTY
+            = 424;
+    public final static int TESTB_QTY_DAY_ORDER_QTY
+            = 424;
 
     public Tag424QtyDayOrderQty(MyQtyType dataValue) {
         setFixType(FIX42.FIX424_QTY_DAY_ORDER_QTY);
@@ -81,13 +83,9 @@ public class Tag424QtyDayOrderQty extends FIX42Abstract implements LogValuePairS
         Tag424QtyDayOrderQty tagData;
 
         tagData = new Tag424QtyDayOrderQty(new MyQtyType(TESTA_QTY_DAY_ORDER_QTY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag424QtyDayOrderQty(new MyQtyType(TESTB_QTY_DAY_ORDER_QTY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

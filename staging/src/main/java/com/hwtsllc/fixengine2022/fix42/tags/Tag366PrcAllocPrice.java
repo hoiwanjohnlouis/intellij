@@ -34,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag366PrcAllocPrice extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceType dataValue;
 
-    public final static double TESTA_PRC_ALLOC_PRICE = 3.66D;
-    public final static double TESTB_PRC_ALLOC_PRICE = 6.63D;
+    public final static double TESTA_PRC_ALLOC_PRICE
+            = 3.66D;
+    public final static double TESTB_PRC_ALLOC_PRICE
+            = 6.63D;
 
     public Tag366PrcAllocPrice(MyPriceType dataValue) {
         setFixType(FIX42.FIX366_PRC_ALLOC_PRICE);
@@ -80,13 +82,9 @@ public class Tag366PrcAllocPrice extends FIX42Abstract implements LogValuePairSt
         Tag366PrcAllocPrice tagData;
 
         tagData = new Tag366PrcAllocPrice(new MyPriceType(TESTA_PRC_ALLOC_PRICE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag366PrcAllocPrice(new MyPriceType(TESTB_PRC_ALLOC_PRICE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -52,8 +52,8 @@ class Tag280StrMDEntryRefIDTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag280StrMDEntryRefID(
-                new MyStringType(Tag280StrMDEntryRefID.TESTB_STR_MD_ENTRY_REF_IDD));
-        assertEquals( Tag280StrMDEntryRefID.TESTB_STR_MD_ENTRY_REF_IDD, tagData.getDataValue() );
+                new MyStringType(Tag280StrMDEntryRefID.TESTB_STR_MD_ENTRY_REF_ID));
+        assertEquals( Tag280StrMDEntryRefID.TESTB_STR_MD_ENTRY_REF_ID, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
 }

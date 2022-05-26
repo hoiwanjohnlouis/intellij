@@ -82,13 +82,9 @@ public class Tag309StrUnderlyingSecurityID extends FIX42Abstract implements LogV
         Tag309StrUnderlyingSecurityID tagData;
 
         tagData = new Tag309StrUnderlyingSecurityID(new MyStringType(TESTA_STR_UNDERLYING_SECURITY_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag309StrUnderlyingSecurityID(new MyStringType(TESTB_STR_UNDERLYING_SECURITY_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

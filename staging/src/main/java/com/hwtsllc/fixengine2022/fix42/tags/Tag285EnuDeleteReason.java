@@ -107,15 +107,14 @@ public class Tag285EnuDeleteReason extends FIX42Abstract implements LogValuePair
         Tag285EnuDeleteReason tagData;
 
         tagData = new Tag285EnuDeleteReason(TESTA_ENU_DELETE_REASON);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag285EnuDeleteReason(TESTB_ENU_DELETE_REASON);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum285DeleteReason oneEnum : Enum285DeleteReason.values()) {
+            System.out.println( new Tag285EnuDeleteReason(oneEnum).toVerboseString() );
+        }
     }
 }

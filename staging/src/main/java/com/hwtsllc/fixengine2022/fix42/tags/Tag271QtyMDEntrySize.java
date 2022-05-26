@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag271QtyMDEntrySize extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyQtyType dataValue;
 
-    public final static int TESTA_QTY_MD_ENTRY_SIZE = 271;
-    public final static int TESTB_QTY_MD_ENTRY_SIZE = 172;
+    public final static int TESTA_QTY_MD_ENTRY_SIZE
+            = 271;
+    public final static int TESTB_QTY_MD_ENTRY_SIZE
+            = 172;
 
     public Tag271QtyMDEntrySize(MyQtyType dataValue) {
         setFixType(FIX42.FIX271_QTY_MD_ENTRY_SIZE);
@@ -78,13 +80,9 @@ public class Tag271QtyMDEntrySize extends FIX42Abstract implements LogValuePairS
         Tag271QtyMDEntrySize tagData;
 
         tagData = new Tag271QtyMDEntrySize(new MyQtyType(TESTA_QTY_MD_ENTRY_SIZE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag271QtyMDEntrySize(new MyQtyType(TESTB_QTY_MD_ENTRY_SIZE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

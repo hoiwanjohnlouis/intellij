@@ -34,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag272UtcdMDEntryDate extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyUTCDateType dataValue;
 
-    public final static String TESTA_UTCD_MD_ENTRY_DATE = "18991231";
-    public final static String TESTB_UTCD_MD_ENTRY_DATE = "19001231";
+    public final static String TESTA_UTCD_MD_ENTRY_DATE
+            = "18991231";
+    public final static String TESTB_UTCD_MD_ENTRY_DATE
+            = "19001231";
 
     public Tag272UtcdMDEntryDate(MyUTCDateType dataValue) {
         setFixType(FIX42.FIX272_UTCD_MD_ENTRY_DATE);
@@ -80,13 +82,9 @@ public class Tag272UtcdMDEntryDate extends FIX42Abstract implements LogValuePair
         Tag272UtcdMDEntryDate tagData;
 
         tagData = new Tag272UtcdMDEntryDate(new MyUTCDateType(TESTA_UTCD_MD_ENTRY_DATE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag272UtcdMDEntryDate(new MyUTCDateType(TESTB_UTCD_MD_ENTRY_DATE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

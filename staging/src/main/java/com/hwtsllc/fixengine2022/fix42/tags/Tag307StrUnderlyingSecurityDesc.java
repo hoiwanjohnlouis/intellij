@@ -34,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag307StrUnderlyingSecurityDesc extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_UNDERLYING_SECURITY_DESC = "BilboBaggins-Tag307StrUnderlyingSecurityDesc";
-    public final static String TESTB_STR_UNDERLYING_SECURITY_DESC = "Gandalf-Tag307StrUnderlyingSecurityDesc";
+    public final static String TESTA_STR_UNDERLYING_SECURITY_DESC
+            = "BilboBaggins-Tag307StrUnderlyingSecurityDesc";
+    public final static String TESTB_STR_UNDERLYING_SECURITY_DESC
+            = "Gandalf-Tag307StrUnderlyingSecurityDesc";
 
     public Tag307StrUnderlyingSecurityDesc(MyStringType dataValue) {
         setFixType(FIX42.FIX307_STR_UNDERLYING_SECURITY_DESC);
@@ -80,13 +82,9 @@ public class Tag307StrUnderlyingSecurityDesc extends FIX42Abstract implements Lo
         Tag307StrUnderlyingSecurityDesc tagData;
 
         tagData = new Tag307StrUnderlyingSecurityDesc(new MyStringType(TESTA_STR_UNDERLYING_SECURITY_DESC) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag307StrUnderlyingSecurityDesc(new MyStringType(TESTB_STR_UNDERLYING_SECURITY_DESC) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

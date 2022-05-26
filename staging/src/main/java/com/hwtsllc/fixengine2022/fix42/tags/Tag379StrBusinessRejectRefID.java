@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag379StrBusinessRejectRefID extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_BUSINESS_REJECT_REF_ID = "BilboBaggins-Tag379StrBusinessRejectRefID";
-    public final static String TESTB_STR_BUSINESS_REJECT_REF_ID = "Gandalf-Tag379StrBusinessRejectRefID";
+    public final static String TESTA_STR_BUSINESS_REJECT_REF_ID
+            = "BilboBaggins-Tag379StrBusinessRejectRefID";
+    public final static String TESTB_STR_BUSINESS_REJECT_REF_ID
+            = "Gandalf-Tag379StrBusinessRejectRefID";
 
     public Tag379StrBusinessRejectRefID(MyStringType dataValue) {
         setFixType(FIX42.FIX379_STR_BUSINESS_REJECT_REF_ID);
@@ -78,13 +80,9 @@ public class Tag379StrBusinessRejectRefID extends FIX42Abstract implements LogVa
         Tag379StrBusinessRejectRefID tagData;
 
         tagData = new Tag379StrBusinessRejectRefID(new MyStringType(TESTA_STR_BUSINESS_REJECT_REF_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag379StrBusinessRejectRefID(new MyStringType(TESTB_STR_BUSINESS_REJECT_REF_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

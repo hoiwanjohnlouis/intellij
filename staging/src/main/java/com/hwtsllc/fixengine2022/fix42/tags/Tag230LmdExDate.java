@@ -41,8 +41,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag230LmdExDate extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyLocalMktDateType dataValue;
 
-    public final static String TESTA_LMD_EX_DATE = "Frodo-Tag230LmdExDate";
-    public final static String TESTB_LMD_EX_DATE = "Gandalf-Tag230LmdExDate";
+    public final static String TESTA_LMD_EX_DATE
+            = "Frodo-Tag230LmdExDate";
+    public final static String TESTB_LMD_EX_DATE
+            = "Gandalf-Tag230LmdExDate";
 
     public Tag230LmdExDate(MyLocalMktDateType dataValue) {
         setFixType(FIX42.FIX230_LMD_EX_DATE);
@@ -87,13 +89,9 @@ public class Tag230LmdExDate extends FIX42Abstract implements LogValuePairString
         Tag230LmdExDate tagData;
 
         tagData = new Tag230LmdExDate(new MyLocalMktDateType(TESTA_LMD_EX_DATE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag230LmdExDate(new MyLocalMktDateType(TESTB_LMD_EX_DATE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

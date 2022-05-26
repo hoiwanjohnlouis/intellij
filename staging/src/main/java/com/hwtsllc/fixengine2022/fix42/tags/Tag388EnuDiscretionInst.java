@@ -113,15 +113,14 @@ public class Tag388EnuDiscretionInst extends FIX42Abstract implements LogValuePa
         Tag388EnuDiscretionInst tagData;
 
         tagData = new Tag388EnuDiscretionInst(TESTA_ENU_DISCRETION_INST);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag388EnuDiscretionInst(TESTB_ENU_DISCRETION_INST);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum388DiscretionInst oneEnum : Enum388DiscretionInst.values()) {
+            System.out.println( new Tag388EnuDiscretionInst(oneEnum).toVerboseString() );
+        }
     }
 }

@@ -112,15 +112,14 @@ public class Tag323EnuSecurityResponseType extends FIX42Abstract implements LogV
         Tag323EnuSecurityResponseType tagData;
 
         tagData = new Tag323EnuSecurityResponseType(TESTA_ENU_SECURITY_RESPONSE_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag323EnuSecurityResponseType(TESTB_ENU_SECURITY_RESPONSE_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum323SecurityResponseType oneEnum : Enum323SecurityResponseType.values()) {
+            System.out.println( new Tag323EnuSecurityResponseType(oneEnum).toVerboseString() );
+        }
     }
 }

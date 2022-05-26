@@ -109,15 +109,14 @@ public class Tag334EnuAdjustment extends FIX42Abstract implements LogValuePairSt
         Tag334EnuAdjustment tagData;
 
         tagData = new Tag334EnuAdjustment(TESTA_ENU_ADJUSTMENT);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag334EnuAdjustment(TESTB_ENU_ADJUSTMENT);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum334Adjustment oneEnum : Enum334Adjustment.values()) {
+            System.out.println( new Tag334EnuAdjustment(oneEnum).toVerboseString() );
+        }
     }
 }

@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag413PctCrossPercent extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyPercentageType dataValue;
 
-    public final static double TESTA_PCT_CROSS_PERCENT = 0.0413D;
-    public final static double TESTB_PCT_CROSS_PERCENT = 0.0314D;
+    public final static double TESTA_PCT_CROSS_PERCENT
+            = 0.0413D;
+    public final static double TESTB_PCT_CROSS_PERCENT
+            = 0.0314D;
 
     public Tag413PctCrossPercent(MyPercentageType dataValue) {
         setFixType(FIX42.FIX413_PCT_CROSS_PERCENT);
@@ -78,13 +80,9 @@ public class Tag413PctCrossPercent extends FIX42Abstract implements LogValuePair
         Tag413PctCrossPercent tagData;
 
         tagData = new Tag413PctCrossPercent(new MyPercentageType(TESTA_PCT_CROSS_PERCENT) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag413PctCrossPercent(new MyPercentageType(TESTB_PCT_CROSS_PERCENT) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -34,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag405PctEFPTrackingError extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyPercentageType dataValue;
 
-    public final static double TESTA_PCT_EFP_TRACKING_ERROR = 0.0405D;
-    public final static double TESTB_PCT_EFP_TRACKING_ERROR = 0.0504D;
+    public final static double TESTA_PCT_EFP_TRACKING_ERROR
+            = 0.0405D;
+    public final static double TESTB_PCT_EFP_TRACKING_ERROR
+            = 0.0504D;
 
     public Tag405PctEFPTrackingError(MyPercentageType dataValue) {
         setFixType(FIX42.FIX405_PCT_EFP_TRACKING_ERROR);
@@ -80,13 +82,9 @@ public class Tag405PctEFPTrackingError extends FIX42Abstract implements LogValue
         Tag405PctEFPTrackingError tagData;
 
         tagData = new Tag405PctEFPTrackingError(new MyPercentageType(TESTA_PCT_EFP_TRACKING_ERROR) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag405PctEFPTrackingError(new MyPercentageType(TESTB_PCT_EFP_TRACKING_ERROR) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -107,15 +107,14 @@ public class Tag399EnuBidDescriptorType extends FIX42Abstract implements LogValu
         Tag399EnuBidDescriptorType tagData;
 
         tagData = new Tag399EnuBidDescriptorType(TESTA_ENU_BID_DESCRIPTOR_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag399EnuBidDescriptorType(TESTB_ENU_BID_DESCRIPTOR_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum399BidDescriptorType oneEnum : Enum399BidDescriptorType.values()) {
+            System.out.println( new Tag399EnuBidDescriptorType(oneEnum).toVerboseString() );
+        }
     }
 }

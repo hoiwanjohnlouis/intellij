@@ -48,8 +48,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag222StrBenchmarkCurvePoint extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_BENCHMARK_CURVE_POINT = "BilboBaggins-Tag222StrBenchmarkCurvePoint";
-    public final static String TESTB_STR_BENCHMARK_CURVE_POINT = "Gandalf-Tag222StrBenchmarkCurvePoint";
+    public final static String TESTA_STR_BENCHMARK_CURVE_POINT
+            = "BilboBaggins-Tag222StrBenchmarkCurvePoint";
+    public final static String TESTB_STR_BENCHMARK_CURVE_POINT
+            = "Gandalf-Tag222StrBenchmarkCurvePoint";
 
     public Tag222StrBenchmarkCurvePoint(MyStringType dataValue) {
         setFixType(FIX42.FIX222_STR_BENCHMARK_CURVE_POINT);
@@ -94,13 +96,9 @@ public class Tag222StrBenchmarkCurvePoint extends FIX42Abstract implements LogVa
         Tag222StrBenchmarkCurvePoint tagData;
 
         tagData = new Tag222StrBenchmarkCurvePoint(new MyStringType(TESTA_STR_BENCHMARK_CURVE_POINT) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag222StrBenchmarkCurvePoint(new MyStringType(TESTB_STR_BENCHMARK_CURVE_POINT) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

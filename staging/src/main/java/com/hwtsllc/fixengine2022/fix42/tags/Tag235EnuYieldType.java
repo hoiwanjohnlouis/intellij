@@ -144,15 +144,14 @@ public class Tag235EnuYieldType extends FIX42Abstract implements LogValuePairStr
         Tag235EnuYieldType tagData;
 
         tagData = new Tag235EnuYieldType(TESTA_ENU_YIELD_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag235EnuYieldType(TESTB_ENU_YIELD_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum235YieldType oneEnum : Enum235YieldType.values()) {
+            System.out.println( new Tag235EnuYieldType(oneEnum).toVerboseString() );
+        }
     }
 }

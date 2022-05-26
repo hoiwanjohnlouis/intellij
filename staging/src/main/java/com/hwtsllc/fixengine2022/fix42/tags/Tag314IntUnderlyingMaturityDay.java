@@ -83,13 +83,9 @@ public class Tag314IntUnderlyingMaturityDay extends FIX42Abstract implements Log
         Tag314IntUnderlyingMaturityDay tagData;
 
         tagData = new Tag314IntUnderlyingMaturityDay(new MyIntType(TESTA_INT_UNDERLYING_MATURITY_DAY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag314IntUnderlyingMaturityDay(new MyIntType(TESTB_INT_UNDERLYING_MATURITY_DAY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

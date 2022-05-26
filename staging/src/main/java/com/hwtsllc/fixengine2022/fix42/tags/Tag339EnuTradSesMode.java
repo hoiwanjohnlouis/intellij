@@ -109,15 +109,14 @@ public class Tag339EnuTradSesMode extends FIX42Abstract implements LogValuePairS
         Tag339EnuTradSesMode tagData;
 
         tagData = new Tag339EnuTradSesMode(TESTA_ENU_TRAD_SES_MODE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag339EnuTradSesMode(TESTB_ENU_TRAD_SES_MODE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum339TrdSesMode oneEnum : Enum339TrdSesMode.values()) {
+            System.out.println( new Tag339EnuTradSesMode(oneEnum).toVerboseString() );
+        }
     }
 }

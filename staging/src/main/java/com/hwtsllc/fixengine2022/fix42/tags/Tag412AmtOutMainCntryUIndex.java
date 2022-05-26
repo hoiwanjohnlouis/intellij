@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag412AmtOutMainCntryUIndex extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyAmtType dataValue;
 
-    public final static double TESTA_AMT_OUT_MAIN_CNTRY_U_INDEX = 4.12D;
-    public final static double TESTB_AMT_OUT_MAIN_CNTRY_U_INDEX = 2.14D;
+    public final static double TESTA_AMT_OUT_MAIN_CNTRY_U_INDEX
+            = 4.12D;
+    public final static double TESTB_AMT_OUT_MAIN_CNTRY_U_INDEX
+            = 2.14D;
 
     public Tag412AmtOutMainCntryUIndex(MyAmtType dataValue) {
         setFixType(FIX42.FIX412_AMT_OUT_MAIN_CNTRY_U_INDEX);
@@ -78,13 +80,9 @@ public class Tag412AmtOutMainCntryUIndex extends FIX42Abstract implements LogVal
         Tag412AmtOutMainCntryUIndex tagData;
 
         tagData = new Tag412AmtOutMainCntryUIndex(new MyAmtType(TESTA_AMT_OUT_MAIN_CNTRY_U_INDEX) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag412AmtOutMainCntryUIndex(new MyAmtType(TESTB_AMT_OUT_MAIN_CNTRY_U_INDEX) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

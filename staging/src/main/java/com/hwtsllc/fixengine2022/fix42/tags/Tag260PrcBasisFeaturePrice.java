@@ -36,8 +36,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag260PrcBasisFeaturePrice extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceType dataValue;
 
-    public final static double TESTA_PRC_BASIS_FEATURE_PRICE = 2.60D;
-    public final static double TESTB_PRC_BASIS_FEATURE_PRICE = 6.2D;
+    public final static double TESTA_PRC_BASIS_FEATURE_PRICE
+            = 2.60D;
+    public final static double TESTB_PRC_BASIS_FEATURE_PRICE
+            = 6.2D;
 
     public Tag260PrcBasisFeaturePrice(MyPriceType dataValue) {
         setFixType(FIX42.FIX260_PRC_BASIS_FEATURE_PRICE);
@@ -82,13 +84,9 @@ public class Tag260PrcBasisFeaturePrice extends FIX42Abstract implements LogValu
         Tag260PrcBasisFeaturePrice tagData;
 
         tagData = new Tag260PrcBasisFeaturePrice(new MyPriceType(TESTA_PRC_BASIS_FEATURE_PRICE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag260PrcBasisFeaturePrice(new MyPriceType(TESTB_PRC_BASIS_FEATURE_PRICE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

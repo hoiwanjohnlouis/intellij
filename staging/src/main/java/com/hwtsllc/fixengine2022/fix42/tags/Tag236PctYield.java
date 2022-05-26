@@ -34,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag236PctYield extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyPercentageType dataValue;
 
-    public final static double TESTA_PCT_YIELD = 0.0236D;
-    public final static double TESTB_PCT_YIELD = 0.0632D;
+    public final static double TESTA_PCT_YIELD
+            = 0.0236D;
+    public final static double TESTB_PCT_YIELD
+            = 0.0632D;
 
     public Tag236PctYield(MyPercentageType dataValue) {
         setFixType(FIX42.FIX236_PCT_YIELD);
@@ -80,13 +82,9 @@ public class Tag236PctYield extends FIX42Abstract implements LogValuePairString,
         Tag236PctYield tagData;
 
         tagData = new Tag236PctYield(new MyPercentageType(TESTA_PCT_YIELD) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag236PctYield(new MyPercentageType(TESTB_PCT_YIELD) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

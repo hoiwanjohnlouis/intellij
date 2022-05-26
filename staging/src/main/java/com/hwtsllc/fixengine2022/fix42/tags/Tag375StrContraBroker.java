@@ -34,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag375StrContraBroker extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_CONTRA_BROKER = "BilboBaggins-Tag375StrContraBroker";
-    public final static String TESTB_STR_CONTRA_BROKER = "Gandalf-Tag375StrContraBroker";
+    public final static String TESTA_STR_CONTRA_BROKER
+            = "BilboBaggins-Tag375StrContraBroker";
+    public final static String TESTB_STR_CONTRA_BROKER
+            = "Gandalf-Tag375StrContraBroker";
 
     public Tag375StrContraBroker(MyStringType dataValue) {
         setFixType(FIX42.FIX375_STR_CONTRA_BROKER);
@@ -80,13 +82,9 @@ public class Tag375StrContraBroker extends FIX42Abstract implements LogValuePair
         Tag375StrContraBroker tagData;
 
         tagData = new Tag375StrContraBroker(new MyStringType(TESTA_STR_CONTRA_BROKER) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag375StrContraBroker(new MyStringType(TESTB_STR_CONTRA_BROKER) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

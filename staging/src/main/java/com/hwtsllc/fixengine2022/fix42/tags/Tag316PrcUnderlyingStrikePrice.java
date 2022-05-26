@@ -82,13 +82,9 @@ public class Tag316PrcUnderlyingStrikePrice extends FIX42Abstract implements Log
         Tag316PrcUnderlyingStrikePrice tagData;
 
         tagData = new Tag316PrcUnderlyingStrikePrice(new MyPriceType(TESTA_PRC_UNDERLYING_STRIKE_PRICE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag316PrcUnderlyingStrikePrice(new MyPriceType(TESTB_PRC_UNDERLYING_STRIKE_PRICE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

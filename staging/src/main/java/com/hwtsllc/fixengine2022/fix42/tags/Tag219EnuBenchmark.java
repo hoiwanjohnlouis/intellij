@@ -117,15 +117,14 @@ public class Tag219EnuBenchmark extends FIX42Abstract implements LogValuePairStr
         Tag219EnuBenchmark tagData;
 
         tagData = new Tag219EnuBenchmark(TESTA_ENU_BENCHMARK);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag219EnuBenchmark(TESTB_ENU_BENCHMARK);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum219Benchmark oneEnum : Enum219Benchmark.values()) {
+            System.out.println( new Tag219EnuBenchmark(oneEnum).toVerboseString() );
+        }
     }
 }

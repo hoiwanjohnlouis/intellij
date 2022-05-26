@@ -106,15 +106,14 @@ public class Tag411BoolExchangeForPhysical extends FIX42Abstract implements LogV
         Tag411BoolExchangeForPhysical tagData;
 
         tagData = new Tag411BoolExchangeForPhysical(TESTA_BOOL_EXCHANGE_FOR_PHYSICAL);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag411BoolExchangeForPhysical(TESTB_BOOL_EXCHANGE_FOR_PHYSICAL);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Bool411ExchangeForPhysical oneEnum : Bool411ExchangeForPhysical.values()) {
+            System.out.println( new Tag411BoolExchangeForPhysical(oneEnum).toVerboseString() );
+        }
     }
 }

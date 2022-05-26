@@ -39,10 +39,8 @@ public class Tag266BoolAggregatedBook extends FIX42Abstract implements LogValueP
 
     public final static Bool266AggregatedBook TESTA_BOOL_AGGREGATED_BOOK
                     = Bool266AggregatedBook.NO ;
-                    // N - book entries should not be aggregated
     public final static Bool266AggregatedBook TESTB_BOOL_AGGREGATED_BOOK
                     = Bool266AggregatedBook.YES;
-                    // Y - book entries to be aggregated
 
     public Tag266BoolAggregatedBook(Bool266AggregatedBook dataValue) {
         setFixType(FIX42.FIX266_BOOL_AGGREGATED_BOOK);
@@ -108,15 +106,14 @@ public class Tag266BoolAggregatedBook extends FIX42Abstract implements LogValueP
         Tag266BoolAggregatedBook tagData;
 
         tagData = new Tag266BoolAggregatedBook(TESTA_BOOL_AGGREGATED_BOOK);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag266BoolAggregatedBook(TESTB_BOOL_AGGREGATED_BOOK);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Bool266AggregatedBook oneEnum : Bool266AggregatedBook.values()) {
+            System.out.println( new Tag266BoolAggregatedBook(oneEnum).toVerboseString() );
+        }
     }
 }

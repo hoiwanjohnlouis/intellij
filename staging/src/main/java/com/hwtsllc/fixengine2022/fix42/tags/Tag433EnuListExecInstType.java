@@ -113,15 +113,14 @@ public class Tag433EnuListExecInstType extends FIX42Abstract implements LogValue
         Tag433EnuListExecInstType tagData;
 
         tagData = new Tag433EnuListExecInstType(TESTA_ENU_LIST_EXEC_INST_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag433EnuListExecInstType(TESTB_ENU_LIST_EXEC_INST_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum433ListExecInstType oneEnum : Enum433ListExecInstType.values()) {
+            System.out.println( new Tag433EnuListExecInstType(oneEnum).toVerboseString() );
+        }
     }
 }

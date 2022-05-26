@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag441IntLiquidityNumSecurities extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_LIQUIDITY_NUM_SECURITIES = 60;
-    public final static int TESTB_INT_LIQUIDITY_NUM_SECURITIES = 30;
+    public final static int TESTA_INT_LIQUIDITY_NUM_SECURITIES
+            = 60;
+    public final static int TESTB_INT_LIQUIDITY_NUM_SECURITIES
+            = 30;
 
     public Tag441IntLiquidityNumSecurities(MyIntType dataValue) {
         setFixType(FIX42.FIX441_INT_LIQUIDITY_NUM_SECURITIES);
@@ -78,13 +80,9 @@ public class Tag441IntLiquidityNumSecurities extends FIX42Abstract implements Lo
         Tag441IntLiquidityNumSecurities tagData;
 
         tagData = new Tag441IntLiquidityNumSecurities(new MyIntType(TESTA_INT_LIQUIDITY_NUM_SECURITIES) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag441IntLiquidityNumSecurities(new MyIntType(TESTB_INT_LIQUIDITY_NUM_SECURITIES) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

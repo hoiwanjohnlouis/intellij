@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag382NumNoContraBrokers extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyNumInGroupType dataValue;
 
-    public final static int TESTA_NUM_NO_CONTRA_BROKERS = 382; // fake data
-    public final static int TESTB_NUM_NO_CONTRA_BROKERS = 283;
+    public final static int TESTA_NUM_NO_CONTRA_BROKERS
+            = 382;
+    public final static int TESTB_NUM_NO_CONTRA_BROKERS
+            = 283;
 
     public Tag382NumNoContraBrokers(MyNumInGroupType dataValue) {
         setFixType(FIX42.FIX382_NUM_NO_CONTRA_BROKERS);
@@ -78,13 +80,9 @@ public class Tag382NumNoContraBrokers extends FIX42Abstract implements LogValueP
         Tag382NumNoContraBrokers tagData;
 
         tagData = new Tag382NumNoContraBrokers(new MyNumInGroupType(TESTA_NUM_NO_CONTRA_BROKERS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag382NumNoContraBrokers(new MyNumInGroupType(TESTB_NUM_NO_CONTRA_BROKERS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

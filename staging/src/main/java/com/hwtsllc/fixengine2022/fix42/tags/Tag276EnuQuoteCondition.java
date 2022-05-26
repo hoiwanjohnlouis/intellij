@@ -174,15 +174,14 @@ public class Tag276EnuQuoteCondition extends FIX42Abstract implements LogValuePa
         Tag276EnuQuoteCondition tagData;
 
         tagData = new Tag276EnuQuoteCondition(TESTA_ENU_QUOTE_CONDITION);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag276EnuQuoteCondition(TESTB_ENU_QUOTE_CONDITION);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum276QuoteCondition oneEnum : Enum276QuoteCondition.values()) {
+            System.out.println( new Tag276EnuQuoteCondition(oneEnum).toVerboseString() );
+        }
     }
 }

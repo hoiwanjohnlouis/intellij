@@ -84,13 +84,9 @@ public class Tag308ExcUnderlyingSecurityExchange extends FIX42Abstract implement
         Tag308ExcUnderlyingSecurityExchange tagData;
 
         tagData = new Tag308ExcUnderlyingSecurityExchange(new MyExchangeType(TESTA_EXC_UNDERLYING_SECURITY_EXCHANGE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag308ExcUnderlyingSecurityExchange(new MyExchangeType(TESTB_EXC_UNDERLYING_SECURITY_EXCHANGE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

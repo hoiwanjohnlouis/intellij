@@ -114,15 +114,14 @@ public class Tag380EnuBusinessRejectReason extends FIX42Abstract implements LogV
         Tag380EnuBusinessRejectReason tagData;
 
         tagData = new Tag380EnuBusinessRejectReason(TESTA_ENU_BUSINESS_REJECT_REASON);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag380EnuBusinessRejectReason(TESTB_ENU_BUSINESS_REJECT_REASON);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum380BusinessRejectReason oneEnum : Enum380BusinessRejectReason.values()) {
+            System.out.println( new Tag380EnuBusinessRejectReason(oneEnum).toVerboseString() );
+        }
     }
 }

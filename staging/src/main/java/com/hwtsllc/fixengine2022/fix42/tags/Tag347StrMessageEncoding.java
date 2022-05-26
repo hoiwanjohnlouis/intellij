@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag347StrMessageEncoding extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_MESSAGE_ENCODING = "BilboBaggins-Tag347StrMessageEncoding";
-    public final static String TESTB_STR_MESSAGE_ENCODING = "Gandalf-Tag347StrMessageEncoding";
+    public final static String TESTA_STR_MESSAGE_ENCODING
+            = "BilboBaggins-Tag347StrMessageEncoding";
+    public final static String TESTB_STR_MESSAGE_ENCODING
+            = "Gandalf-Tag347StrMessageEncoding";
 
     public Tag347StrMessageEncoding(MyStringType dataValue) {
         setFixType(FIX42.FIX347_STR_MESSAGE_ENCODING);
@@ -78,13 +80,9 @@ public class Tag347StrMessageEncoding extends FIX42Abstract implements LogValueP
         Tag347StrMessageEncoding tagData;
 
         tagData = new Tag347StrMessageEncoding(new MyStringType(TESTA_STR_MESSAGE_ENCODING) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag347StrMessageEncoding(new MyStringType(TESTB_STR_MESSAGE_ENCODING) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

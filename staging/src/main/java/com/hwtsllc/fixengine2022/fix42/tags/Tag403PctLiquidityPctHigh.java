@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag403PctLiquidityPctHigh extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyPercentageType dataValue;
 
-    public final static double TESTA_PCT_LIQUIDITY_PCT_HIGH = 0.0403D;
-    public final static double TESTB_PCT_LIQUIDITY_PCT_HIGH = 0.0304D;
+    public final static double TESTA_PCT_LIQUIDITY_PCT_HIGH
+            = 0.0403D;
+    public final static double TESTB_PCT_LIQUIDITY_PCT_HIGH
+            = 0.0304D;
 
     public Tag403PctLiquidityPctHigh(MyPercentageType dataValue) {
         setFixType(FIX42.FIX403_PCT_LIQUIDITY_PCT_HIGH);
@@ -78,13 +80,9 @@ public class Tag403PctLiquidityPctHigh extends FIX42Abstract implements LogValue
         Tag403PctLiquidityPctHigh tagData;
 
         tagData = new Tag403PctLiquidityPctHigh(new MyPercentageType(TESTA_PCT_LIQUIDITY_PCT_HIGH) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag403PctLiquidityPctHigh(new MyPercentageType(TESTB_PCT_LIQUIDITY_PCT_HIGH) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

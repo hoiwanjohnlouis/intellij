@@ -107,15 +107,14 @@ public class Tag427EnuGTBookingInst extends FIX42Abstract implements LogValuePai
         Tag427EnuGTBookingInst tagData;
 
         tagData = new Tag427EnuGTBookingInst(TESTA_ENU_GT_BOOKING_INST);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag427EnuGTBookingInst(TESTB_ENU_GT_BOOKING_INST);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum427GTBookingInst oneEnum : Enum427GTBookingInst.values()) {
+            System.out.println( new Tag427EnuGTBookingInst(oneEnum).toVerboseString() );
+        }
     }
 }

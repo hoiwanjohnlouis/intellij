@@ -44,8 +44,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag228FloFactor extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyFloatType dataValue;
 
-    public final static float TESTA_FLO_FACTOR = 2.28F;
-    public final static float TESTB_FLO_FACTOR = 8.22F;
+    public final static float TESTA_FLO_FACTOR
+            = 2.28F;
+    public final static float TESTB_FLO_FACTOR
+            = 8.22F;
 
     public Tag228FloFactor(MyFloatType dataValue) {
         setFixType(FIX42.FIX228_FLO_FACTOR);
@@ -90,13 +92,9 @@ public class Tag228FloFactor extends FIX42Abstract implements LogValuePairString
         Tag228FloFactor tagData;
 
         tagData = new Tag228FloFactor(new MyFloatType(TESTA_FLO_FACTOR) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag228FloFactor(new MyFloatType(TESTB_FLO_FACTOR) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -106,15 +106,14 @@ public class Tag329BoolDueToRelated extends FIX42Abstract implements LogValuePai
         Tag329BoolDueToRelated tagData;
 
         tagData = new Tag329BoolDueToRelated(TESTA_BOOL_DUE_TO_RELATED);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag329BoolDueToRelated(TESTB_BOOL_DUE_TO_RELATED);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Bool329DueToRelated oneEnum : Bool329DueToRelated.values()) {
+            System.out.println( new Tag329BoolDueToRelated(oneEnum).toVerboseString() );
+        }
     }
 }

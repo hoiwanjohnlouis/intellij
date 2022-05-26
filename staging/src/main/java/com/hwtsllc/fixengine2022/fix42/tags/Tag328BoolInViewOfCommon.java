@@ -106,15 +106,14 @@ public class Tag328BoolInViewOfCommon extends FIX42Abstract implements LogValueP
         Tag328BoolInViewOfCommon tagData;
 
         tagData = new Tag328BoolInViewOfCommon(TESTA_BOOL_IN_VIEW_OF_COMMON);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag328BoolInViewOfCommon(TESTB_BOOL_IN_VIEW_OF_COMMON);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Bool328InViewOfCommon oneEnum : Bool328InViewOfCommon.values()) {
+            System.out.println( new Tag328BoolInViewOfCommon(oneEnum).toVerboseString() );
+        }
     }
 }

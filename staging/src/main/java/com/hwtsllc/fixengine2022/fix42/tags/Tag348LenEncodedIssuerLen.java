@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag348LenEncodedIssuerLen extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyLengthType dataValue;
 
-    public final static int TESTA_LEN_ENCODED_ISSUER_LEN = 348;
-    public final static int TESTB_LEN_ENCODED_ISSUER_LEN = 843;
+    public final static int TESTA_LEN_ENCODED_ISSUER_LEN
+            = 348;
+    public final static int TESTB_LEN_ENCODED_ISSUER_LEN
+            = 843;
 
     public Tag348LenEncodedIssuerLen(MyLengthType dataValue) {
         setFixType(FIX42.FIX348_LEN_ENCODED_ISSUER_LEN);
@@ -78,18 +80,9 @@ public class Tag348LenEncodedIssuerLen extends FIX42Abstract implements LogValue
         Tag348LenEncodedIssuerLen tagData;
 
         tagData = new Tag348LenEncodedIssuerLen(new MyLengthType(TESTA_LEN_ENCODED_ISSUER_LEN) );
-        System.out.println("initial values A");
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag348LenEncodedIssuerLen(new MyLengthType(TESTB_LEN_ENCODED_ISSUER_LEN) );
-        System.out.println("initial values B");
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
     }
 }

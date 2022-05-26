@@ -195,15 +195,14 @@ public class Tag277EnuTradeCondition extends FIX42Abstract implements LogValuePa
         Tag277EnuTradeCondition tagData;
 
         tagData = new Tag277EnuTradeCondition(TESTA_ENU_TRADE_CONDITION);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag277EnuTradeCondition(TESTB_ENU_TRADE_CONDITION);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum277TradeCondition oneEnum : Enum277TradeCondition.values()) {
+            System.out.println( new Tag277EnuTradeCondition(oneEnum).toVerboseString() );
+        }
     }
 }

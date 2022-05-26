@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag296NumNoQuoteSets extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyNumInGroupType dataValue;
 
-    public final static int TESTA_NUM_NO_QUOTE_SETS = 296; // fake data
-    public final static int TESTB_NUM_NO_QUOTE_SETS = 692;
+    public final static int TESTA_NUM_NO_QUOTE_SETS
+            = 296;
+    public final static int TESTB_NUM_NO_QUOTE_SETS
+            = 692;
 
     public Tag296NumNoQuoteSets(MyNumInGroupType dataValue) {
         setFixType(FIX42.FIX296_NUM_NO_QUOTE_SETS);
@@ -78,13 +80,9 @@ public class Tag296NumNoQuoteSets extends FIX42Abstract implements LogValuePairS
         Tag296NumNoQuoteSets tagData;
 
         tagData = new Tag296NumNoQuoteSets(new MyNumInGroupType(TESTA_NUM_NO_QUOTE_SETS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag296NumNoQuoteSets(new MyNumInGroupType(TESTB_NUM_NO_QUOTE_SETS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

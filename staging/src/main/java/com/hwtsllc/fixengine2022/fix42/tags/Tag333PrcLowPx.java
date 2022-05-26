@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag333PrcLowPx extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceType dataValue;
 
-    public final static double TESTA_PRC_LOW_PX = 3.33D;
-    public final static double TESTB_PRC_LOW_PX = 3.33D;
+    public final static double TESTA_PRC_LOW_PX
+            = 3.33D;
+    public final static double TESTB_PRC_LOW_PX
+            = 3.33D;
 
     public Tag333PrcLowPx(MyPriceType dataValue) {
         setFixType(FIX42.FIX333_PRC_LOW_PX);
@@ -78,13 +80,9 @@ public class Tag333PrcLowPx extends FIX42Abstract implements LogValuePairString,
         Tag333PrcLowPx tagData;
 
         tagData = new Tag333PrcLowPx(new MyPriceType(TESTA_PRC_LOW_PX) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag333PrcLowPx(new MyPriceType(TESTB_PRC_LOW_PX) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

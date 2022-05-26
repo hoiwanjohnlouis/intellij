@@ -34,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag407PctOutsideIndexPct extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyPercentageType dataValue;
 
-    public final static double TESTA_PCT_OUTSIDE_INDEX_PCT = 0.0407D;
-    public final static double TESTB_PCT_OUTSIDE_INDEX_PCT = 0.0704D;
+    public final static double TESTA_PCT_OUTSIDE_INDEX_PCT
+            = 0.0407D;
+    public final static double TESTB_PCT_OUTSIDE_INDEX_PCT
+            = 0.0704D;
 
     public Tag407PctOutsideIndexPct(MyPercentageType dataValue) {
         setFixType(FIX42.FIX407_PCT_OUTSIDE_INDEX_PCT);
@@ -80,13 +82,9 @@ public class Tag407PctOutsideIndexPct extends FIX42Abstract implements LogValueP
         Tag407PctOutsideIndexPct tagData;
 
         tagData = new Tag407PctOutsideIndexPct(new MyPercentageType(TESTA_PCT_OUTSIDE_INDEX_PCT) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag407PctOutsideIndexPct(new MyPercentageType(TESTB_PCT_OUTSIDE_INDEX_PCT) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

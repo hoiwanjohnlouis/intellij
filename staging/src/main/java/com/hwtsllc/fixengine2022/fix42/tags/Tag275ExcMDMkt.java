@@ -36,8 +36,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag275ExcMDMkt extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyExchangeType dataValue;
 
-    public final static String TESTA_EXC_MD_MKT = "BilboBaggins-Tag275ExcMDMkt";
-    public final static String TESTB_EXC_MD_MKT = "Gandalf-Tag275ExcMDMkt";
+    public final static String TESTA_EXC_MD_MKT
+            = "BilboBaggins-Tag275ExcMDMkt";
+    public final static String TESTB_EXC_MD_MKT
+            = "Gandalf-Tag275ExcMDMkt";
 
     public Tag275ExcMDMkt(MyExchangeType dataValue) {
         setFixType(FIX42.FIX275_EXC_MD_MKT);
@@ -82,13 +84,9 @@ public class Tag275ExcMDMkt extends FIX42Abstract implements LogValuePairString,
         Tag275ExcMDMkt tagData;
 
         tagData = new Tag275ExcMDMkt(new MyExchangeType(TESTA_EXC_MD_MKT) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag275ExcMDMkt(new MyExchangeType(TESTB_EXC_MD_MKT) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

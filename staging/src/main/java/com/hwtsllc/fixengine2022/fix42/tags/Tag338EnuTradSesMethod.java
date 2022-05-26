@@ -109,15 +109,14 @@ public class Tag338EnuTradSesMethod extends FIX42Abstract implements LogValuePai
         Tag338EnuTradSesMethod tagData;
 
         tagData = new Tag338EnuTradSesMethod(TESTA_ENU_TRAD_SES_METHOD);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag338EnuTradSesMethod(TESTB_ENU_TRAD_SES_METHOD);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum338TradSesMethod oneEnum : Enum338TradSesMethod.values()) {
+            System.out.println( new Tag338EnuTradSesMethod(oneEnum).toVerboseString() );
+        }
     }
 }

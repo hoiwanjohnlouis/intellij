@@ -34,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag367UtcQuoteSetValidUntilTime extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyUTCTimestampType dataValue;
 
-    public final static String TESTA_UTC_QUOTE_SET_VALID_UNTIL_TIME = "18991231-23:59:59.367";
-    public final static String TESTB_UTC_QUOTE_SET_VALID_UNTIL_TIME = "19001231-23:59:59.367";
+    public final static String TESTA_UTC_QUOTE_SET_VALID_UNTIL_TIME
+            = "18991231-23:59:59.367";
+    public final static String TESTB_UTC_QUOTE_SET_VALID_UNTIL_TIME
+            = "19001231-23:59:59.367";
 
     public Tag367UtcQuoteSetValidUntilTime(MyUTCTimestampType dataValue) {
         setFixType(FIX42.FIX367_UTC_QUOTE_SET_VALID_UNTIL_TIME);
@@ -80,13 +82,9 @@ public class Tag367UtcQuoteSetValidUntilTime extends FIX42Abstract implements Lo
         Tag367UtcQuoteSetValidUntilTime tagData;
 
         tagData = new Tag367UtcQuoteSetValidUntilTime(new MyUTCTimestampType(TESTA_UTC_QUOTE_SET_VALID_UNTIL_TIME) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag367UtcQuoteSetValidUntilTime(new MyUTCTimestampType(TESTB_UTC_QUOTE_SET_VALID_UNTIL_TIME) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

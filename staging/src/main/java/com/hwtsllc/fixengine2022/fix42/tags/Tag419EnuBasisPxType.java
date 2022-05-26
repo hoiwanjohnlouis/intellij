@@ -120,15 +120,14 @@ public class Tag419EnuBasisPxType extends FIX42Abstract implements LogValuePairS
         Tag419EnuBasisPxType tagData;
 
         tagData = new Tag419EnuBasisPxType(TESTA_ENU_BASIS_PX_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag419EnuBasisPxType(TESTB_ENU_BASIS_PX_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum419BasisPxType oneEnum : Enum419BasisPxType.values()) {
+            System.out.println( new Tag419EnuBasisPxType(oneEnum).toVerboseString() );
+        }
     }
 }

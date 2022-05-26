@@ -113,15 +113,14 @@ public class Tag431EnuListOrderStatus extends FIX42Abstract implements LogValueP
         Tag431EnuListOrderStatus tagData;
 
         tagData = new Tag431EnuListOrderStatus(TESTA_ENU_LIST_ORDER_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag431EnuListOrderStatus(TESTB_ENU_LIST_ORDER_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum431ListOrderStatus oneEnum : Enum431ListOrderStatus.values()) {
+            System.out.println( new Tag431EnuListOrderStatus(oneEnum).toVerboseString() );
+        }
     }
 }

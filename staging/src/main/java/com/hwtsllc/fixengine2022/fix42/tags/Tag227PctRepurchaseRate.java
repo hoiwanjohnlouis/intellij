@@ -39,8 +39,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag227PctRepurchaseRate extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyPercentageType dataValue;
 
-    public final static double TESTA_PCT_REPURCHASE_RATE = 0.0227D;
-    public final static double TESTB_PCT_REPURCHASE_RATE = 0.0722D;
+    public final static double TESTA_PCT_REPURCHASE_RATE
+            = 0.0227D;
+    public final static double TESTB_PCT_REPURCHASE_RATE
+            = 0.0722D;
 
     public Tag227PctRepurchaseRate(MyPercentageType dataValue) {
         setFixType(FIX42.FIX227_PCT_REPURCHASE_RATE);
@@ -85,13 +87,9 @@ public class Tag227PctRepurchaseRate extends FIX42Abstract implements LogValuePa
         Tag227PctRepurchaseRate tagData;
 
         tagData = new Tag227PctRepurchaseRate(new MyPercentageType(TESTA_PCT_REPURCHASE_RATE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag227PctRepurchaseRate(new MyPercentageType(TESTB_PCT_REPURCHASE_RATE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

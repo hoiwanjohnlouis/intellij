@@ -34,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag306StrUnderlyingIssuer extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_UNDERLYING_ISSUER = "BilboBaggins-Tag306StrUnderlyingIssuer";
-    public final static String TESTB_STR_UNDERLYING_ISSUER = "Gandalf-Tag306StrUnderlyingIssuer";
+    public final static String TESTA_STR_UNDERLYING_ISSUER
+            = "BilboBaggins-Tag306StrUnderlyingIssuer";
+    public final static String TESTB_STR_UNDERLYING_ISSUER
+            = "Gandalf-Tag306StrUnderlyingIssuer";
 
     public Tag306StrUnderlyingIssuer(MyStringType dataValue) {
         setFixType(FIX42.FIX306_STR_UNDERLYING_ISSUER);
@@ -80,13 +82,9 @@ public class Tag306StrUnderlyingIssuer extends FIX42Abstract implements LogValue
         Tag306StrUnderlyingIssuer tagData;
 
         tagData = new Tag306StrUnderlyingIssuer(new MyStringType(TESTA_STR_UNDERLYING_ISSUER) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag306StrUnderlyingIssuer(new MyStringType(TESTB_STR_UNDERLYING_ISSUER) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

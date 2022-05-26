@@ -107,15 +107,14 @@ public class Tag430EnuNetGrossInd extends FIX42Abstract implements LogValuePairS
         Tag430EnuNetGrossInd tagData;
 
         tagData = new Tag430EnuNetGrossInd(TESTA_ENU_NET_GROSS_IND);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag430EnuNetGrossInd(TESTB_ENU_NET_GROSS_IND);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum430NetGrossInd oneEnum : Enum430NetGrossInd.values()) {
+            System.out.println( new Tag430EnuNetGrossInd(oneEnum).toVerboseString() );
+        }
     }
 }

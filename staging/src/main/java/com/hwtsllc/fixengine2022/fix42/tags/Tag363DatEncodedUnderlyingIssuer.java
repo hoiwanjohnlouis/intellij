@@ -35,8 +35,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag363DatEncodedUnderlyingIssuer extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyDataType dataValue;
 
-    public final static String TESTA_DAT_ENCODED_UNDERLYING_ISSUER = "BilboBaggins-Tag363DatEncodedUnderlyingIssuer";
-    public final static String TESTB_DAT_ENCODED_UNDERLYING_ISSUER = "Gandalf-Tag363DatEncodedUnderlyingIssuer";
+    public final static String TESTA_DAT_ENCODED_UNDERLYING_ISSUER
+            = "BilboBaggins-Tag363DatEncodedUnderlyingIssuer";
+    public final static String TESTB_DAT_ENCODED_UNDERLYING_ISSUER
+            = "Gandalf-Tag363DatEncodedUnderlyingIssuer";
 
     public Tag363DatEncodedUnderlyingIssuer(MyDataType dataValue) {
         setFixType(FIX42.FIX363_DAT_ENCODED_UNDERLYING_ISSUER);
@@ -81,18 +83,9 @@ public class Tag363DatEncodedUnderlyingIssuer extends FIX42Abstract implements L
         Tag363DatEncodedUnderlyingIssuer tagData;
 
         tagData= new Tag363DatEncodedUnderlyingIssuer(new MyDataType(TESTA_DAT_ENCODED_UNDERLYING_ISSUER) );
-        System.out.println("initial values A");
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag363DatEncodedUnderlyingIssuer(new MyDataType(TESTB_DAT_ENCODED_UNDERLYING_ISSUER) );
-        System.out.println("initial values B");
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
     }
 }

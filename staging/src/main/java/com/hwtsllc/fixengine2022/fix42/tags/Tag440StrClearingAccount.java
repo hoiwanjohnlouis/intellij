@@ -33,8 +33,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag440StrClearingAccount extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_CLEARING_ACCOUNT = "BilboBaggins-Tag440StrClearingAccount";
-    public final static String TESTB_STR_CLEARING_ACCOUNT = "Gandalf-Tag440StrClearingAccount";
+    public final static String TESTA_STR_CLEARING_ACCOUNT
+            = "BilboBaggins-Tag440StrClearingAccount";
+    public final static String TESTB_STR_CLEARING_ACCOUNT
+            = "Gandalf-Tag440StrClearingAccount";
 
     public Tag440StrClearingAccount(MyStringType dataValue) {
         setFixType(FIX42.FIX440_STR_CLEARING_ACCOUNT);
@@ -79,13 +81,9 @@ public class Tag440StrClearingAccount extends FIX42Abstract implements LogValueP
         Tag440StrClearingAccount tagData;
 
         tagData = new Tag440StrClearingAccount(new MyStringType(TESTA_STR_CLEARING_ACCOUNT) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag440StrClearingAccount(new MyStringType(TESTB_STR_CLEARING_ACCOUNT) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

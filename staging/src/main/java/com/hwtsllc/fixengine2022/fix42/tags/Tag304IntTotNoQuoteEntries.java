@@ -85,13 +85,9 @@ public class Tag304IntTotNoQuoteEntries extends FIX42Abstract implements LogValu
         Tag304IntTotNoQuoteEntries tagData;
 
         tagData = new Tag304IntTotNoQuoteEntries(new MyIntType(TESTA_INT_TOT_QUOTE_ENTRIES) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag304IntTotNoQuoteEntries(new MyIntType(TESTB_INT_TOT_QUOTE_ENTRIES) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -34,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag393IntTotalNumSecurities extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_TOTAL_NUM_SECURITIES = 60;
-    public final static int TESTB_INT_TOTAL_NUM_SECURITIES = 30;
+    public final static int TESTA_INT_TOTAL_NUM_SECURITIES
+            = 60;
+    public final static int TESTB_INT_TOTAL_NUM_SECURITIES
+            = 30;
 
     public Tag393IntTotalNumSecurities(MyIntType dataValue) {
         setFixType(FIX42.FIX393_INT_TOTAL_NUM_SECURITIES);
@@ -80,13 +82,9 @@ public class Tag393IntTotalNumSecurities extends FIX42Abstract implements LogVal
         Tag393IntTotalNumSecurities tagData;
 
         tagData = new Tag393IntTotalNumSecurities(new MyIntType(TESTA_INT_TOTAL_NUM_SECURITIES) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag393IntTotalNumSecurities(new MyIntType(TESTB_INT_TOTAL_NUM_SECURITIES) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

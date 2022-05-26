@@ -248,15 +248,14 @@ public class Tag372EnuRefMsgType extends FIX42Abstract implements LogValuePairSt
         Tag372EnuRefMsgType tagData;
 
         tagData = new Tag372EnuRefMsgType(TESTA_ENU_REF_MSG_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag372EnuRefMsgType(TESTB_ENU_REF_MSG_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (MyEnumMsgType oneEnum : MyEnumMsgType.values()) {
+            System.out.println( new Tag372EnuRefMsgType(oneEnum).toVerboseString() );
+        }
     }
 }

@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag376StrComplianceID extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_COMPLIANCE_ID = "BilboBaggins-Tag376StrComplianceID";
-    public final static String TESTB_STR_COMPLIANCE_ID = "Gandalf-Tag376StrComplianceID";
+    public final static String TESTA_STR_COMPLIANCE_ID
+            = "BilboBaggins-Tag376StrComplianceID";
+    public final static String TESTB_STR_COMPLIANCE_ID
+            = "Gandalf-Tag376StrComplianceID";
 
     public Tag376StrComplianceID(MyStringType dataValue) {
         setFixType(FIX42.FIX376_STR_COMPLIANCE_ID);
@@ -78,13 +80,9 @@ public class Tag376StrComplianceID extends FIX42Abstract implements LogValuePair
         Tag376StrComplianceID tagData;
 
         tagData = new Tag376StrComplianceID(new MyStringType(TESTA_STR_COMPLIANCE_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag376StrComplianceID(new MyStringType(TESTB_STR_COMPLIANCE_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

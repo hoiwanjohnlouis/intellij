@@ -122,15 +122,14 @@ public class Tag281EnuMDReqRejReason extends FIX42Abstract implements LogValuePa
         Tag281EnuMDReqRejReason tagData;
 
         tagData = new Tag281EnuMDReqRejReason(TESTA_ENU_MD_REQ_REJ_REASON);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag281EnuMDReqRejReason(TESTB_ENU_MD_REQ_REJ_REASON);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum281MDReqRejReason oneEnum : Enum281MDReqRejReason.values()) {
+            System.out.println( new Tag281EnuMDReqRejReason(oneEnum).toVerboseString() );
+        }
     }
 }

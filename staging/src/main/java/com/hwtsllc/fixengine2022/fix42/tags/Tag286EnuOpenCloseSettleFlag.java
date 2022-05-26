@@ -111,15 +111,14 @@ public class Tag286EnuOpenCloseSettleFlag extends FIX42Abstract implements LogVa
         Tag286EnuOpenCloseSettleFlag tagData;
 
         tagData = new Tag286EnuOpenCloseSettleFlag(TESTA_ENU_OPEN_CLOSE_SETTLE_FLAG);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag286EnuOpenCloseSettleFlag(TESTB_ENU_OPEN_CLOSE_SETTLE_FLAG);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum286OpenCLoseSettlFlag oneEnum : Enum286OpenCLoseSettlFlag.values()) {
+            System.out.println( new Tag286EnuOpenCloseSettleFlag(oneEnum).toVerboseString() );
+        }
     }
 }

@@ -108,15 +108,14 @@ public class Tag216EnuRoutingType extends FIX42Abstract implements LogValuePairS
         Tag216EnuRoutingType tagData;
 
         tagData = new Tag216EnuRoutingType(TESTA_ENU_ROUTING_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag216EnuRoutingType(TESTB_ENU_ROUTING_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+            System.out.println( new Tag216EnuRoutingType(oneEnum).toVerboseString() );
+        }
     }
 }

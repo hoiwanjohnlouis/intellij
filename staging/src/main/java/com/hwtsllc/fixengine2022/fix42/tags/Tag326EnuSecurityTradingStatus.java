@@ -131,15 +131,14 @@ public class Tag326EnuSecurityTradingStatus extends FIX42Abstract implements Log
         Tag326EnuSecurityTradingStatus tagData;
 
         tagData = new Tag326EnuSecurityTradingStatus(TESTA_ENU_SECURITY_TRADING_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag326EnuSecurityTradingStatus(TESTB_ENU_SECURITY_TRADING_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum326SecurityTradingStatus oneEnum : Enum326SecurityTradingStatus.values()) {
+            System.out.println( new Tag326EnuSecurityTradingStatus(oneEnum).toVerboseString() );
+        }
     }
 }

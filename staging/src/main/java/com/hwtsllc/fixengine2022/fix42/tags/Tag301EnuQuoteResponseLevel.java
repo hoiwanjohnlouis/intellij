@@ -108,15 +108,14 @@ public class Tag301EnuQuoteResponseLevel extends FIX42Abstract implements LogVal
         Tag301EnuQuoteResponseLevel tagData;
 
         tagData = new Tag301EnuQuoteResponseLevel(TESTA_ENU_QUOTE_RESPONSE_LEVEL);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag301EnuQuoteResponseLevel(TESTB_ENU_QUOTE_RESPONSE_LEVEL);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum301QuoteResponseLevel oneEnum : Enum301QuoteResponseLevel.values()) {
+            System.out.println( new Tag301EnuQuoteResponseLevel(oneEnum).toVerboseString() );
+        }
     }
 }

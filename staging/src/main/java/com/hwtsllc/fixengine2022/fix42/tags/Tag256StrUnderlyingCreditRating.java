@@ -36,8 +36,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag256StrUnderlyingCreditRating extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_UNDERLYING_CREDIT_RATING = "BilboBaggins-Tag256StrUnderlyingCreditRating";
-    public final static String TESTB_STR_UNDERLYING_CREDIT_RATING = "Gandalf-Tag256StrUnderlyingCreditRating";
+    public final static String TESTA_STR_UNDERLYING_CREDIT_RATING
+            = "BilboBaggins-Tag256StrUnderlyingCreditRating";
+    public final static String TESTB_STR_UNDERLYING_CREDIT_RATING
+            = "Gandalf-Tag256StrUnderlyingCreditRating";
 
     public Tag256StrUnderlyingCreditRating(MyStringType dataValue) {
         setFixType(FIX42.FIX256_STR_UNDERLYING_CREDIT_RATING);
@@ -82,13 +84,9 @@ public class Tag256StrUnderlyingCreditRating extends FIX42Abstract implements Lo
         Tag256StrUnderlyingCreditRating tagData;
 
         tagData = new Tag256StrUnderlyingCreditRating(new MyStringType(TESTA_STR_UNDERLYING_CREDIT_RATING) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag256StrUnderlyingCreditRating(new MyStringType(TESTB_STR_UNDERLYING_CREDIT_RATING) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

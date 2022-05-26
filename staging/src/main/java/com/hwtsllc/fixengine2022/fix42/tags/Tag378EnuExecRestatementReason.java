@@ -121,15 +121,14 @@ public class Tag378EnuExecRestatementReason extends FIX42Abstract implements Log
         Tag378EnuExecRestatementReason tagData;
 
         tagData = new Tag378EnuExecRestatementReason(TESTA_ENU_EXEC_RESTATEMENT_REASON);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag378EnuExecRestatementReason(TESTB_ENU_EXEC_RESTATEMENT_REASON);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum378ExecRestatementReason oneEnum : Enum378ExecRestatementReason.values()) {
+            System.out.println( new Tag378EnuExecRestatementReason(oneEnum).toVerboseString() );
+        }
     }
 }

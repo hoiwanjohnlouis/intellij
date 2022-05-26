@@ -35,8 +35,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag439StrClearingFirm extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_CLEARING_FIRM = "BilboBaggins-Tag439StrClearingFirm";
-    public final static String TESTB_STR_CLEARING_FIRM = "Gandalf-Tag439StrClearingFirm";
+    public final static String TESTA_STR_CLEARING_FIRM
+            = "BilboBaggins-Tag439StrClearingFirm";
+    public final static String TESTB_STR_CLEARING_FIRM
+            = "Gandalf-Tag439StrClearingFirm";
 
     public Tag439StrClearingFirm(MyStringType dataValue) {
         setFixType(FIX42.FIX439_STR_CLEARING_FIRM);
@@ -81,13 +83,9 @@ public class Tag439StrClearingFirm extends FIX42Abstract implements LogValuePair
         Tag439StrClearingFirm tagData;
 
         tagData = new Tag439StrClearingFirm(new MyStringType(TESTA_STR_CLEARING_FIRM) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag439StrClearingFirm(new MyStringType(TESTB_STR_CLEARING_FIRM) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

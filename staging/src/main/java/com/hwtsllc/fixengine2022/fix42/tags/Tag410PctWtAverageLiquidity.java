@@ -34,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag410PctWtAverageLiquidity extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyPercentageType dataValue;
 
-    public final static double TESTA_PCT_WT_AVERAGE_LIQUIDITY = 0.0410D;
-    public final static double TESTB_PCT_WT_AVERAGE_LIQUIDITY = 0.0014D;
+    public final static double TESTA_PCT_WT_AVERAGE_LIQUIDITY
+            = 0.0410D;
+    public final static double TESTB_PCT_WT_AVERAGE_LIQUIDITY
+            = 0.0014D;
 
     public Tag410PctWtAverageLiquidity(MyPercentageType dataValue) {
         setFixType(FIX42.FIX410_PCT_WT_AVERAGE_LIQUIDITY);
@@ -80,13 +82,9 @@ public class Tag410PctWtAverageLiquidity extends FIX42Abstract implements LogVal
         Tag410PctWtAverageLiquidity tagData;
 
         tagData = new Tag410PctWtAverageLiquidity(new MyPercentageType(TESTA_PCT_WT_AVERAGE_LIQUIDITY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag410PctWtAverageLiquidity(new MyPercentageType(TESTB_PCT_WT_AVERAGE_LIQUIDITY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

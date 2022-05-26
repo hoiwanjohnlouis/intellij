@@ -106,15 +106,14 @@ public class Tag416EnuIncTaxInd extends FIX42Abstract implements LogValuePairStr
         Tag416EnuIncTaxInd tagData;
 
         tagData = new Tag416EnuIncTaxInd(TESTA_ENU_INC_TAX_IND);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag416EnuIncTaxInd(TESTB_ENU_INC_TAX_IND);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum416IncTaxInd oneEnum : Enum416IncTaxInd.values()) {
+            System.out.println( new Tag416EnuIncTaxInd(oneEnum).toVerboseString() );
+        }
     }
 }

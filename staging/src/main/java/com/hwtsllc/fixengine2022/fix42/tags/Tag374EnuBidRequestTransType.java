@@ -108,15 +108,14 @@ public class Tag374EnuBidRequestTransType extends FIX42Abstract implements LogVa
         Tag374EnuBidRequestTransType tagData;
 
         tagData = new Tag374EnuBidRequestTransType(TESTA_ENU_BID_REQUEST_TRANS_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag374EnuBidRequestTransType(TESTB_ENU_BID_REQUEST_TRANS_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum374BidRequestTransType oneEnum : Enum374BidRequestTransType.values()) {
+            System.out.println( new Tag374EnuBidRequestTransType(oneEnum).toVerboseString() );
+        }
     }
 }

@@ -113,15 +113,14 @@ public class Tag315EnuUnderlyingPutOrCall extends FIX42Abstract implements LogVa
         Tag315EnuUnderlyingPutOrCall tagData;
 
         tagData = new Tag315EnuUnderlyingPutOrCall(TESTA_ENU_UNDERLYING_PUT_OR_CALL);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag315EnuUnderlyingPutOrCall(TESTB_ENU_UNDERLYING_PUT_OR_CALL);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (MyEnumPutOrCall oneEnum : MyEnumPutOrCall.values()) {
+            System.out.println( new Tag315EnuUnderlyingPutOrCall(oneEnum).toVerboseString() );
+        }
     }
 }

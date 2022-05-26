@@ -37,8 +37,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag226IntRepurchaseTerm extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_REPURCHASE_TERM = 60;
-    public final static int TESTB_INT_REPURCHASE_TERM = 30;
+    public final static int TESTA_INT_REPURCHASE_TERM
+            = 60;
+    public final static int TESTB_INT_REPURCHASE_TERM
+            = 30;
 
     public Tag226IntRepurchaseTerm(MyIntType dataValue) {
         setFixType(FIX42.FIX226_INT_REPURCHASE_TERM);
@@ -83,13 +85,9 @@ public class Tag226IntRepurchaseTerm extends FIX42Abstract implements LogValuePa
         Tag226IntRepurchaseTerm tagData;
 
         tagData = new Tag226IntRepurchaseTerm(new MyIntType(TESTA_INT_REPURCHASE_TERM) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag226IntRepurchaseTerm(new MyIntType(TESTB_INT_REPURCHASE_TERM) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

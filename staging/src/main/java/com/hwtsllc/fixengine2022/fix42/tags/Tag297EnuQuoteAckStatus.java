@@ -124,15 +124,14 @@ public class Tag297EnuQuoteAckStatus extends FIX42Abstract implements LogValuePa
         Tag297EnuQuoteAckStatus tagData;
 
         tagData = new Tag297EnuQuoteAckStatus(TESTA_ENU_QUOTE_ACK_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag297EnuQuoteAckStatus(TESTB_ENU_QUOTE_ACK_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum297QuoteStatus oneEnum : Enum297QuoteStatus.values()) {
+            System.out.println( new Tag297EnuQuoteAckStatus(oneEnum).toVerboseString() );
+        }
     }
 }

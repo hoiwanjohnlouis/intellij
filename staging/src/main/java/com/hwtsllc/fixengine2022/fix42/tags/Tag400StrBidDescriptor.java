@@ -43,8 +43,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag400StrBidDescriptor extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_BID_DESCRIPTOR = "BilboBaggins-Tag400StrBidDescriptor";
-    public final static String TESTB_STR_BID_DESCRIPTOR = "Gandalf-Tag400StrBidDescriptor";
+    public final static String TESTA_STR_BID_DESCRIPTOR
+            = "BilboBaggins-Tag400StrBidDescriptor";
+    public final static String TESTB_STR_BID_DESCRIPTOR
+            = "Gandalf-Tag400StrBidDescriptor";
 
     public Tag400StrBidDescriptor(MyStringType dataValue) {
         setFixType(FIX42.FIX400_STR_BID_DESCRIPTOR);
@@ -89,13 +91,9 @@ public class Tag400StrBidDescriptor extends FIX42Abstract implements LogValuePai
         Tag400StrBidDescriptor tagData;
 
         tagData = new Tag400StrBidDescriptor(new MyStringType(TESTA_STR_BID_DESCRIPTOR) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag400StrBidDescriptor(new MyStringType(TESTB_STR_BID_DESCRIPTOR) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

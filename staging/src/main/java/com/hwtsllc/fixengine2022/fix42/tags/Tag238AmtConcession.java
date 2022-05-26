@@ -34,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag238AmtConcession extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyAmtType dataValue;
 
-    public final static double TESTA_AMT_CONCESSION = 2.38D;
-    public final static double TESTB_AMT_CONCESSION = 8.32D;
+    public final static double TESTA_AMT_CONCESSION
+            = 2.38D;
+    public final static double TESTB_AMT_CONCESSION
+            = 8.32D;
 
     public Tag238AmtConcession(MyAmtType dataValue) {
         setFixType(FIX42.FIX238_AMT_CONCESSION);
@@ -80,13 +82,9 @@ public class Tag238AmtConcession extends FIX42Abstract implements LogValuePairSt
         Tag238AmtConcession tagData;
 
         tagData = new Tag238AmtConcession(new MyAmtType(TESTA_AMT_CONCESSION) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag238AmtConcession(new MyAmtType(TESTB_AMT_CONCESSION) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

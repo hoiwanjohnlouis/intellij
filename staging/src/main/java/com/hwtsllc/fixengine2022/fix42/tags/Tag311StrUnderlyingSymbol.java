@@ -82,13 +82,9 @@ public class Tag311StrUnderlyingSymbol extends FIX42Abstract implements LogValue
         Tag311StrUnderlyingSymbol tagData;
 
         tagData = new Tag311StrUnderlyingSymbol(new MyStringType(TESTA_STR_UNDERLYING_SYMBOL) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag311StrUnderlyingSymbol(new MyStringType(TESTB_STR_UNDERLYING_SYMBOL) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

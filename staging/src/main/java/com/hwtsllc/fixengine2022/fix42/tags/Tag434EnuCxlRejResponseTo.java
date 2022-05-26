@@ -107,15 +107,14 @@ public class Tag434EnuCxlRejResponseTo extends FIX42Abstract implements LogValue
         Tag434EnuCxlRejResponseTo tagData;
 
         tagData = new Tag434EnuCxlRejResponseTo(TESTA_ENU_CXL_REJ_RESPONSE_TO);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag434EnuCxlRejResponseTo(TESTB_ENU_CXL_REJ_RESPONSE_TO);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum434CxlRejResponseTo oneEnum : Enum434CxlRejResponseTo.values()) {
+            System.out.println( new Tag434EnuCxlRejResponseTo(oneEnum).toVerboseString() );
+        }
     }
 }

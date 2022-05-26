@@ -84,13 +84,9 @@ public class Tag220CcyBenchmarkCurveCurrency extends FIX42Abstract implements Lo
         Tag220CcyBenchmarkCurveCurrency tagData;
 
         tagData = new Tag220CcyBenchmarkCurveCurrency(new MyCurrencyType(TESTA_CCY_BENCHMARK_CURVE_CURRENCY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag220CcyBenchmarkCurveCurrency(new MyCurrencyType(TESTB_CCY_BENCHMARK_CURVE_CURRENCY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

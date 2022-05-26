@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag282StrMDEntryOriginator extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_MD_ENTRY_ORIGINATOR = "BilboBaggins-Tag282StrMDEntryOriginator";
-    public final static String TESTB_STR_MD_ENTRY_ORIGINATOR = "Gandalf-Tag282StrMDEntryOriginator";
+    public final static String TESTA_STR_MD_ENTRY_ORIGINATOR
+            = "BilboBaggins-Tag282StrMDEntryOriginator";
+    public final static String TESTB_STR_MD_ENTRY_ORIGINATOR
+            = "Gandalf-Tag282StrMDEntryOriginator";
 
     public Tag282StrMDEntryOriginator(MyStringType dataValue) {
         setFixType(FIX42.FIX282_STR_MD_ENTRY_ORIGINATOR);
@@ -78,13 +80,9 @@ public class Tag282StrMDEntryOriginator extends FIX42Abstract implements LogValu
         Tag282StrMDEntryOriginator tagData;
 
         tagData = new Tag282StrMDEntryOriginator(new MyStringType(TESTA_STR_MD_ENTRY_ORIGINATOR) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag282StrMDEntryOriginator(new MyStringType(TESTB_STR_MD_ENTRY_ORIGINATOR) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

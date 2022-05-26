@@ -113,15 +113,14 @@ public class Tag327EnuHaltReason extends FIX42Abstract implements LogValuePairSt
         Tag327EnuHaltReason tagData;
 
         tagData = new Tag327EnuHaltReason(TESTA_ENU_HALT_REASON);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag327EnuHaltReason(TESTB_ENU_HALT_REASON);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum327HaltReason oneEnum : Enum327HaltReason.values()) {
+            System.out.println( new Tag327EnuHaltReason(oneEnum).toVerboseString() );
+        }
     }
 }

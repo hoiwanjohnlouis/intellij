@@ -79,13 +79,9 @@ public class Tag214StrSettlInstRefID extends FIX42Abstract implements LogValuePa
         Tag214StrSettlInstRefID tagData;
 
         tagData = new Tag214StrSettlInstRefID(new MyStringType(TESTA_STR_SETTL_INST_REF_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag214StrSettlInstRefID(new MyStringType(TESTB_STR_SETTL_INST_REF_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -81,8 +81,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag234StrStipulationValue extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_STIPULATION_VALUE = "BilboBaggins-Tag234StrStipulationValue";
-    public final static String TESTB_STR_STIPULATION_VALUE = "Gandalf-Tag234StrStipulationValue";
+    public final static String TESTA_STR_STIPULATION_VALUE
+            = "BilboBaggins-Tag234StrStipulationValue";
+    public final static String TESTB_STR_STIPULATION_VALUE
+            = "Gandalf-Tag234StrStipulationValue";
 
     public Tag234StrStipulationValue(MyStringType dataValue) {
         setFixType(FIX42.FIX234_STR_STIPULATION_VALUE);
@@ -127,13 +129,9 @@ public class Tag234StrStipulationValue extends FIX42Abstract implements LogValue
         Tag234StrStipulationValue tagData;
 
         tagData = new Tag234StrStipulationValue(new MyStringType(TESTA_STR_STIPULATION_VALUE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag234StrStipulationValue(new MyStringType(TESTB_STR_STIPULATION_VALUE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -36,8 +36,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag246FloUnderlyingFactor extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyFloatType dataValue;
 
-    public final static float TESTA_FLO_UNDERLYING_FACTOR = 2.46F;
-    public final static float TESTB_FLO_UNDERLYING_FACTOR = 6.42F;
+    public final static float TESTA_FLO_UNDERLYING_FACTOR
+            = 2.46F;
+    public final static float TESTB_FLO_UNDERLYING_FACTOR
+            = 6.42F;
 
     public Tag246FloUnderlyingFactor(MyFloatType dataValue) {
         setFixType(FIX42.FIX246_FLO_UNDERLYING_FACTOR);
@@ -82,13 +84,9 @@ public class Tag246FloUnderlyingFactor extends FIX42Abstract implements LogValue
         Tag246FloUnderlyingFactor tagData;
 
         tagData = new Tag246FloUnderlyingFactor(new MyFloatType(TESTA_FLO_UNDERLYING_FACTOR) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag246FloUnderlyingFactor(new MyFloatType(TESTB_FLO_UNDERLYING_FACTOR) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

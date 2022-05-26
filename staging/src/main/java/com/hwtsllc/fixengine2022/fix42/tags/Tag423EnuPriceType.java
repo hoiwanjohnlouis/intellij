@@ -155,15 +155,14 @@ public class Tag423EnuPriceType extends FIX42Abstract implements LogValuePairStr
         Tag423EnuPriceType tagData;
 
         tagData = new Tag423EnuPriceType(TESTA_ENU_PRICE_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag423EnuPriceType(TESTB_ENU_PRICE_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (MyEnumPriceType oneEnum : MyEnumPriceType.values()) {
+            System.out.println( new Tag423EnuPriceType(oneEnum).toVerboseString() );
+        }
     }
 }

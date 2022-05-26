@@ -110,15 +110,14 @@ public class Tag418EnuBidTradeType extends FIX42Abstract implements LogValuePair
         Tag418EnuBidTradeType tagData;
 
         tagData = new Tag418EnuBidTradeType(TESTA_ENU_BID_TRADE_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag418EnuBidTradeType(TESTB_ENU_BID_TRADE_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum418BidTradeType oneEnum : Enum418BidTradeType.values()) {
+            System.out.println( new Tag418EnuBidTradeType(oneEnum).toVerboseString() );
+        }
     }
 }

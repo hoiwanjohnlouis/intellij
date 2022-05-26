@@ -37,8 +37,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag369SeqLastMsgSeqNumProcessed extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MySeqNumType dataValue;
 
-    public final static int TESTA_SEQ_LAST_MSG_SEQ_NUM_PROCESSED = 369;
-    public final static int TESTB_SEQ_LAST_MSG_SEQ_NUM_PROCESSED = 963;
+    public final static int TESTA_SEQ_LAST_MSG_SEQ_NUM_PROCESSED
+            = 369;
+    public final static int TESTB_SEQ_LAST_MSG_SEQ_NUM_PROCESSED
+            = 963;
 
     public Tag369SeqLastMsgSeqNumProcessed(final MySeqNumType dataValue) {
         setFixType(FIX42.FIX369_SEQ_LAST_MSG_SEQ_NUM_PROCESSED);
@@ -83,18 +85,9 @@ public class Tag369SeqLastMsgSeqNumProcessed extends FIX42Abstract implements Lo
         Tag369SeqLastMsgSeqNumProcessed tagData;
 
         tagData = new Tag369SeqLastMsgSeqNumProcessed(new MySeqNumType(TESTA_SEQ_LAST_MSG_SEQ_NUM_PROCESSED) );
-        System.out.println("initial values A");
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag369SeqLastMsgSeqNumProcessed(new MySeqNumType(TESTB_SEQ_LAST_MSG_SEQ_NUM_PROCESSED) );
-        System.out.println("initial values B");
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
     }
 }

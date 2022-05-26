@@ -78,13 +78,9 @@ public class Tag217StrRoutingID extends FIX42Abstract implements LogValuePairStr
         Tag217StrRoutingID tagData;
 
         tagData = new Tag217StrRoutingID(new MyStringType(TESTA_STR_ROUTING_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag217StrRoutingID(new MyStringType(TESTB_STR_ROUTING_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

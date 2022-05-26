@@ -38,8 +38,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag248LmdLegCouponPaymentDate extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyLocalMktDateType dataValue;
 
-    public final static String TESTA_LMD_LEG_COUPON_PAYMENT_DATE = "Frodo-Tag248LmdLegCouponPaymentDate";
-    public final static String TESTB_LMD_LEG_COUPON_PAYMENT_DATE = "Gandalf-Tag248LmdLegCouponPaymentDate";
+    public final static String TESTA_LMD_LEG_COUPON_PAYMENT_DATE
+            = "Frodo-Tag248LmdLegCouponPaymentDate";
+    public final static String TESTB_LMD_LEG_COUPON_PAYMENT_DATE
+            = "Gandalf-Tag248LmdLegCouponPaymentDate";
 
     public Tag248LmdLegCouponPaymentDate(MyLocalMktDateType dataValue) {
         setFixType(FIX42.FIX248_LMD_LEG_COUPON_PAYMENT_DATE);
@@ -84,13 +86,9 @@ public class Tag248LmdLegCouponPaymentDate extends FIX42Abstract implements LogV
         Tag248LmdLegCouponPaymentDate tagData;
 
         tagData = new Tag248LmdLegCouponPaymentDate(new MyLocalMktDateType(TESTA_LMD_LEG_COUPON_PAYMENT_DATE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag248LmdLegCouponPaymentDate(new MyLocalMktDateType(TESTB_LMD_LEG_COUPON_PAYMENT_DATE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

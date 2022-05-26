@@ -45,8 +45,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag231FloContractMultiplier extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyFloatType dataValue;
 
-    public final static float TESTA_FLO_CONTRACT_MULTIPLIER = 2.31F;
-    public final static float TESTB_FLO_CONTRACT_MULTIPLIER = 1.32F;
+    public final static float TESTA_FLO_CONTRACT_MULTIPLIER
+            = 2.31F;
+    public final static float TESTB_FLO_CONTRACT_MULTIPLIER
+            = 1.32F;
 
     public Tag231FloContractMultiplier(MyFloatType dataValue) {
         setFixType(FIX42.FIX231_FLO_CONTRACT_MULTIPLIER);
@@ -91,13 +93,9 @@ public class Tag231FloContractMultiplier extends FIX42Abstract implements LogVal
         Tag231FloContractMultiplier tagData;
 
         tagData = new Tag231FloContractMultiplier(new MyFloatType(TESTA_FLO_CONTRACT_MULTIPLIER) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag231FloContractMultiplier(new MyFloatType(TESTB_FLO_CONTRACT_MULTIPLIER) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

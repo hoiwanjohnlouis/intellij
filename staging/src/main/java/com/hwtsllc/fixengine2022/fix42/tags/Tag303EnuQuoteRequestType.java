@@ -107,15 +107,14 @@ public class Tag303EnuQuoteRequestType extends FIX42Abstract implements LogValue
         Tag303EnuQuoteRequestType tagData;
 
         tagData = new Tag303EnuQuoteRequestType(TESTA_ENU_QUOTE_REQUEST_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag303EnuQuoteRequestType(TESTB_ENU_QUOTE_REQUEST_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum303QuoteRequestType oneEnum : Enum303QuoteRequestType.values()) {
+            System.out.println( new Tag303EnuQuoteRequestType(oneEnum).toVerboseString() );
+        }
     }
 }

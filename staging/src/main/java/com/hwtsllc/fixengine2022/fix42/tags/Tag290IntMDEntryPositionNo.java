@@ -33,8 +33,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag290IntMDEntryPositionNo extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_MD_ENTRY_POSITION_NO = 60;
-    public final static int TESTB_INT_MD_ENTRY_POSITION_NO = 30;
+    public final static int TESTA_INT_MD_ENTRY_POSITION_NO
+            = 60;
+    public final static int TESTB_INT_MD_ENTRY_POSITION_NO
+            = 30;
 
     public Tag290IntMDEntryPositionNo(MyIntType dataValue) {
         setFixType(FIX42.FIX290_INT_MD_ENTRY_POSITION_NO);
@@ -79,13 +81,9 @@ public class Tag290IntMDEntryPositionNo extends FIX42Abstract implements LogValu
         Tag290IntMDEntryPositionNo tagData;
 
         tagData = new Tag290IntMDEntryPositionNo(new MyIntType(TESTA_INT_MD_ENTRY_POSITION_NO) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag290IntMDEntryPositionNo(new MyIntType(TESTB_INT_MD_ENTRY_POSITION_NO) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

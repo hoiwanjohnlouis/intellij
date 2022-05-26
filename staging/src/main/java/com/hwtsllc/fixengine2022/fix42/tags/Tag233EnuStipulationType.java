@@ -199,15 +199,14 @@ public class Tag233EnuStipulationType extends FIX42Abstract implements LogValueP
         Tag233EnuStipulationType tagData;
 
         tagData = new Tag233EnuStipulationType(TESTA_ENU_STIPULATION_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag233EnuStipulationType(TESTB_ENU_STIPULATION_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (MyEnumStipulationType oneEnum : MyEnumStipulationType.values()) {
+            System.out.println( new Tag233EnuStipulationType(oneEnum).toVerboseString() );
+        }
     }
 }

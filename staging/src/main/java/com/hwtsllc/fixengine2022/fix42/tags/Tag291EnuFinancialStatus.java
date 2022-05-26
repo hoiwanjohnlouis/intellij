@@ -108,15 +108,14 @@ public class Tag291EnuFinancialStatus extends FIX42Abstract implements LogValueP
         Tag291EnuFinancialStatus tagData;
 
         tagData = new Tag291EnuFinancialStatus(TESTA_ENU_FINANCIAL_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag291EnuFinancialStatus(TESTB_ENU_FINANCIAL_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (Enum291FinancialStatus oneEnum : Enum291FinancialStatus.values()) {
+            System.out.println( new Tag291EnuFinancialStatus(oneEnum).toVerboseString() );
+        }
     }
 }

@@ -278,15 +278,14 @@ public class Tag310EnuUnderlyingSecurityType extends FIX42Abstract implements Lo
         Tag310EnuUnderlyingSecurityType tagData;
 
         tagData = new Tag310EnuUnderlyingSecurityType(TESTA_ENU_UNDERLYING_SECURITY_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag310EnuUnderlyingSecurityType(TESTB_ENU_UNDERLYING_SECURITY_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and display
+        for (MyEnumSecurityType oneEnum : MyEnumSecurityType.values()) {
+            System.out.println( new Tag310EnuUnderlyingSecurityType(oneEnum).toVerboseString() );
+        }
     }
 }

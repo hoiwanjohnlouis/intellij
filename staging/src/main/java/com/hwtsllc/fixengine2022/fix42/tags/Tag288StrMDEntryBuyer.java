@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag288StrMDEntryBuyer extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_MD_ENTRY_BUYER = "BilboBaggins-Tag288StrMDEntryBuyer";
-    public final static String TESTB_STR_MD_ENTRY_BUYER = "Gandalf-Tag288StrMDEntryBuyer";
+    public final static String TESTA_STR_MD_ENTRY_BUYER
+            = "BilboBaggins-Tag288StrMDEntryBuyer";
+    public final static String TESTB_STR_MD_ENTRY_BUYER
+            = "Gandalf-Tag288StrMDEntryBuyer";
 
     public Tag288StrMDEntryBuyer(MyStringType dataValue) {
         setFixType(FIX42.FIX288_STR_MD_ENTRY_BUYER);
@@ -78,13 +80,9 @@ public class Tag288StrMDEntryBuyer extends FIX42Abstract implements LogValuePair
         Tag288StrMDEntryBuyer tagData;
 
         tagData = new Tag288StrMDEntryBuyer(new MyStringType(TESTA_STR_MD_ENTRY_BUYER) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag288StrMDEntryBuyer(new MyStringType(TESTB_STR_MD_ENTRY_BUYER) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag417IntNumBidders extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_NUM_BIDDERS = 60;
-    public final static int TESTB_INT_NUM_BIDDERS = 30;
+    public final static int TESTA_INT_NUM_BIDDERS
+            = 60;
+    public final static int TESTB_INT_NUM_BIDDERS
+            = 30;
 
     public Tag417IntNumBidders(MyIntType dataValue) {
         setFixType(FIX42.FIX417_INT_NUM_BIDDERS);
@@ -78,13 +80,9 @@ public class Tag417IntNumBidders extends FIX42Abstract implements LogValuePairSt
         Tag417IntNumBidders tagData;
 
         tagData = new Tag417IntNumBidders(new MyIntType(TESTA_INT_NUM_BIDDERS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag417IntNumBidders(new MyIntType(TESTB_INT_NUM_BIDDERS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

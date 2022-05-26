@@ -35,8 +35,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag446DatEncodedListStatusText extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyDataType dataValue;
 
-    public final static String TESTA_DAT_LIST_STATUS_ENCODED_TEXT = "BilboBaggins-Tag446DatEncodedListStatusText";
-    public final static String TESTB_DAT_LIST_STATUS_ENCODED_TEXT = "Gandalf-Tag446DatEncodedListStatusText";
+    public final static String TESTA_DAT_LIST_STATUS_ENCODED_TEXT
+            = "BilboBaggins-Tag446DatEncodedListStatusText";
+    public final static String TESTB_DAT_LIST_STATUS_ENCODED_TEXT
+            = "Gandalf-Tag446DatEncodedListStatusText";
 
     public Tag446DatEncodedListStatusText(MyDataType dataValue) {
         setFixType(FIX42.FIX446_DAT_LIST_STATUS_ENCODED_TEXT);
@@ -81,18 +83,9 @@ public class Tag446DatEncodedListStatusText extends FIX42Abstract implements Log
         Tag446DatEncodedListStatusText tagData;
 
         tagData= new Tag446DatEncodedListStatusText(new MyDataType(TESTA_DAT_LIST_STATUS_ENCODED_TEXT) );
-        System.out.println("initial values A");
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag446DatEncodedListStatusText(new MyDataType(TESTB_DAT_LIST_STATUS_ENCODED_TEXT) );
-        System.out.println("initial values B");
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
     }
 }

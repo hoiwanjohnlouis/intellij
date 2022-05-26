@@ -78,18 +78,9 @@ public class Tag212LenXmlDataLen extends FIX42Abstract implements LogValuePairSt
         Tag212LenXmlDataLen tagData;
 
         tagData = new Tag212LenXmlDataLen(new MyLengthType(TESTA_LEN_XML_DATA_LEN) );
-        System.out.println("initial values A");
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag212LenXmlDataLen(new MyLengthType(TESTB_LEN_XML_DATA_LEN) );
-        System.out.println("initial values B");
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
     }
 }

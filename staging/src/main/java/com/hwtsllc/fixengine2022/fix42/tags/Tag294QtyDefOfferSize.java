@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag294QtyDefOfferSize extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyQtyType dataValue;
 
-    public final static int TESTA_QTY_DEF_OFFER_SIZE = 294;
-    public final static int TESTB_QTY_DEF_OFFER_SIZE = 492;
+    public final static int TESTA_QTY_DEF_OFFER_SIZE
+            = 294;
+    public final static int TESTB_QTY_DEF_OFFER_SIZE
+            = 492;
 
     public Tag294QtyDefOfferSize(MyQtyType dataValue) {
         setFixType(FIX42.FIX294_QTY_DEF_OFFER_SIZE);
@@ -78,13 +80,9 @@ public class Tag294QtyDefOfferSize extends FIX42Abstract implements LogValuePair
         Tag294QtyDefOfferSize tagData;
 
         tagData = new Tag294QtyDefOfferSize(new MyQtyType(TESTA_QTY_DEF_OFFER_SIZE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag294QtyDefOfferSize(new MyQtyType(TESTB_QTY_DEF_OFFER_SIZE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

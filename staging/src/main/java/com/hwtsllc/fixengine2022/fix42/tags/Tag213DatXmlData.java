@@ -82,18 +82,9 @@ public class Tag213DatXmlData extends FIX42Abstract implements LogValuePairStrin
         Tag213DatXmlData tagData;
 
         tagData= new Tag213DatXmlData(new MyDataType(TESTA_DAT_XML_DATA) );
-        System.out.println("initial values A");
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag213DatXmlData(new MyDataType(TESTB_DAT_XML_DATA) );
-        System.out.println("initial values B");
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
     }
 }
