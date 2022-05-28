@@ -64,7 +64,7 @@ public enum FIX41 implements LogFIXString, LogVerboseString {
      * Start of FIX4.1 as defined by the FIX Protocol Specification 4.1
      *  Tags: 141-211
      */
-    FIX141_BOOL_RESET_SEQ_NUM_FLAG(141, "RESET_SEQ_NUM_FLAG", "ResetSeqNumFlag"),
+    FIX141_ENU_RESET_SEQ_NUM_FLAG(141, "RESET_SEQ_NUM_FLAG", "ResetSeqNumFlag"),
     FIX142_STR_SENDER_LOCATION_ID(142, "SENDER_LOCATION_ID", "SenderLocationID"),
     FIX143_STR_TARGET_LOCATION_ID(143, "TARGET_LOCATION_ID", "TargetLocationID"),
     FIX144_STR_ON_BEHALF_OF_LOCATION_ID(144, "ON_BEHALF_OF_LOCATION_ID", "OnBehalfOfLocationID"),
@@ -140,7 +140,7 @@ public enum FIX41 implements LogFIXString, LogVerboseString {
     FIX205_INT_MATURITY_DAY(205, "MATURITY_DAY", "MaturityDay (replaced)"),
     FIX206_STR_OPT_ATTRIBUTE(206, "OPT_ATTRIBUTE", "OptAttribute"),
     FIX207_EXC_SECURITY_EXCHANGE(207, "SECURITY_EXCHANGE", "SecurityExchange"),
-    FIX208_BOOL_NOTIFY_BROKER_OF_CREDIT(208, "NOTIFY_BROKER_OF_CREDIT", "NotifyBrokerOfCredit"),
+    FIX208_ENU_NOTIFY_BROKER_OF_CREDIT(208, "NOTIFY_BROKER_OF_CREDIT", "NotifyBrokerOfCredit"),
     FIX209_ENU_ALLOC_HANDL_INST(209, "ALLOC_HANDL_INST", "AllocHandlInst"),
     FIX210_QTY_MAX_SHOW(210, "MAX_SHOW", "MaxShow"),
 

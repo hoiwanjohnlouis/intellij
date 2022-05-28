@@ -45,17 +45,76 @@ class Tag426PrcDayAvgPxTest {
     @Test
     void Tag0426Test() {
         Tag426PrcDayAvgPx tagData;
+        double oneElement;
 
-        tagData = new Tag426PrcDayAvgPx(new MyPriceType(
-                Tag426PrcDayAvgPx.TESTA_PRC_DAY_AVG_PX));
-        assertEquals( Tag426PrcDayAvgPx.TESTA_PRC_DAY_AVG_PX,
-                tagData.getDataValue());
+        oneElement = Tag426PrcDayAvgPx.TESTA_PRC_DAY_AVG_PX;
+        tagData = new Tag426PrcDayAvgPx( new MyPriceType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag426PrcDayAvgPx(new MyPriceType(
-                Tag426PrcDayAvgPx.TESTB_PRC_DAY_AVG_PX));
-        assertEquals( Tag426PrcDayAvgPx.TESTB_PRC_DAY_AVG_PX,
-                tagData.getDataValue());
+        oneElement = Tag426PrcDayAvgPx.TESTB_PRC_DAY_AVG_PX;
+        tagData = new Tag426PrcDayAvgPx( new MyPriceType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag426PrcDayAvgPx tagData;
+        double oneElement;
+
+        oneElement = Tag426PrcDayAvgPx.TESTA_PRC_DAY_AVG_PX;
+        tagData = new Tag426PrcDayAvgPx( new MyPriceType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag426PrcDayAvgPx.TESTB_PRC_DAY_AVG_PX;
+        tagData = new Tag426PrcDayAvgPx( new MyPriceType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag426PrcDayAvgPx tagData;
+        double oneElement;
+
+        oneElement = Tag426PrcDayAvgPx.TESTB_PRC_DAY_AVG_PX;
+        tagData = new Tag426PrcDayAvgPx( new MyPriceType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag426PrcDayAvgPx tagData;
+        double oneElement;
+
+        oneElement = Tag426PrcDayAvgPx.TESTB_PRC_DAY_AVG_PX;
+        tagData = new Tag426PrcDayAvgPx( new MyPriceType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag426PrcDayAvgPx tagData;
+        double oneElement;
+
+        oneElement = Tag426PrcDayAvgPx.TESTB_PRC_DAY_AVG_PX;
+        tagData = new Tag426PrcDayAvgPx( new MyPriceType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag426PrcDayAvgPx tagData;
+        double oneElement;
+
+        oneElement = Tag426PrcDayAvgPx.TESTA_PRC_DAY_AVG_PX;
+        tagData = new Tag426PrcDayAvgPx( new MyPriceType( oneElement ) );
+        assertEquals( "Tag426PrcDayAvgPx\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

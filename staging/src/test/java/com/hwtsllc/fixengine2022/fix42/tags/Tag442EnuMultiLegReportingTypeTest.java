@@ -17,8 +17,8 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum442MultiLegReportingType;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -68,5 +68,70 @@ class Tag442EnuMultiLegReportingTypeTest {
         tagData = new Tag442EnuMultiLegReportingType(Enum442MultiLegReportingType.MULTI_LEG_SECURITY);
         assertEquals( Enum442MultiLegReportingType.MULTI_LEG_SECURITY.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag442EnuMultiLegReportingType tagData;
+
+        // loop around the ENUM and process
+        for (Enum442MultiLegReportingType oneEnum : Enum442MultiLegReportingType.values()) {
+            tagData = new Tag442EnuMultiLegReportingType(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag442EnuMultiLegReportingType tagData;
+
+        // loop around the ENUM and process
+        for (Enum442MultiLegReportingType oneEnum : Enum442MultiLegReportingType.values()) {
+            tagData = new Tag442EnuMultiLegReportingType(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag442EnuMultiLegReportingType tagData;
+
+        // loop around the ENUM and process
+        for (Enum442MultiLegReportingType oneEnum : Enum442MultiLegReportingType.values()) {
+            tagData = new Tag442EnuMultiLegReportingType(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag442EnuMultiLegReportingType tagData;
+
+        // loop around the ENUM and process
+        for (Enum442MultiLegReportingType oneEnum : Enum442MultiLegReportingType.values()) {
+            tagData = new Tag442EnuMultiLegReportingType(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag442EnuMultiLegReportingType tagData;
+
+        // loop around the ENUM and process
+        for (Enum442MultiLegReportingType oneEnum : Enum442MultiLegReportingType.values()) {
+            tagData = new Tag442EnuMultiLegReportingType(oneEnum);
+            assertEquals( "Tag442EnuMultiLegReportingType\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
     }
 }

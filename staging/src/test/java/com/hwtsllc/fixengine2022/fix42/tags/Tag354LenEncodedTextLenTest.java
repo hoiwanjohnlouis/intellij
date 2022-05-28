@@ -45,9 +45,76 @@ class Tag354LenEncodedTextLenTest {
     @Test
     void Tag0354Test() {
         Tag354LenEncodedTextLen tagData;
+        int oneElement;
 
-        tagData = new Tag354LenEncodedTextLen( new MyLengthType(23) );
-        assertEquals( 23, tagData.getDataValue() );
+        oneElement = Tag354LenEncodedTextLen.TESTA_LEN_ENCODED_TEXT_LEN;
+        tagData = new Tag354LenEncodedTextLen( new MyLengthType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag354LenEncodedTextLen.TESTB_LEN_ENCODED_TEXT_LEN;
+        tagData = new Tag354LenEncodedTextLen( new MyLengthType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag354LenEncodedTextLen tagData;
+        int oneElement;
+
+        oneElement = Tag354LenEncodedTextLen.TESTA_LEN_ENCODED_TEXT_LEN;
+        tagData = new Tag354LenEncodedTextLen( new MyLengthType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag354LenEncodedTextLen.TESTB_LEN_ENCODED_TEXT_LEN;
+        tagData = new Tag354LenEncodedTextLen( new MyLengthType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag354LenEncodedTextLen tagData;
+        int oneElement;
+
+        oneElement = Tag354LenEncodedTextLen.TESTB_LEN_ENCODED_TEXT_LEN;
+        tagData = new Tag354LenEncodedTextLen( new MyLengthType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag354LenEncodedTextLen tagData;
+        int oneElement;
+
+        oneElement = Tag354LenEncodedTextLen.TESTB_LEN_ENCODED_TEXT_LEN;
+        tagData = new Tag354LenEncodedTextLen( new MyLengthType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag354LenEncodedTextLen tagData;
+        int oneElement;
+
+        oneElement = Tag354LenEncodedTextLen.TESTB_LEN_ENCODED_TEXT_LEN;
+        tagData = new Tag354LenEncodedTextLen( new MyLengthType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag354LenEncodedTextLen tagData;
+        int oneElement;
+
+        oneElement = Tag354LenEncodedTextLen.TESTA_LEN_ENCODED_TEXT_LEN;
+        tagData = new Tag354LenEncodedTextLen( new MyLengthType( oneElement ) );
+        assertEquals( "Tag354LenEncodedTextLen\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

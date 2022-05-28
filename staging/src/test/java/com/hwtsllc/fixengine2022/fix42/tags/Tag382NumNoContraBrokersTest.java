@@ -45,17 +45,76 @@ class Tag382NumNoContraBrokersTest {
     @Test
     void Tag0382Test() {
         Tag382NumNoContraBrokers tagData;
+        int oneElement;
 
-        tagData = new Tag382NumNoContraBrokers(new MyNumInGroupType(
-                Tag382NumNoContraBrokers.TESTA_NUM_NO_CONTRA_BROKERS));
-        assertEquals( Tag382NumNoContraBrokers.TESTA_NUM_NO_CONTRA_BROKERS,
-                tagData.getDataValue());
+        oneElement = Tag382NumNoContraBrokers.TESTA_NUM_NO_CONTRA_BROKERS;
+        tagData = new Tag382NumNoContraBrokers( new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag382NumNoContraBrokers(new MyNumInGroupType(
-                Tag382NumNoContraBrokers.TESTB_NUM_NO_CONTRA_BROKERS));
-        assertEquals( Tag382NumNoContraBrokers.TESTB_NUM_NO_CONTRA_BROKERS,
-                tagData.getDataValue());
+        oneElement = Tag382NumNoContraBrokers.TESTB_NUM_NO_CONTRA_BROKERS;
+        tagData = new Tag382NumNoContraBrokers( new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag382NumNoContraBrokers tagData;
+        int oneElement;
+
+        oneElement = Tag382NumNoContraBrokers.TESTA_NUM_NO_CONTRA_BROKERS;
+        tagData = new Tag382NumNoContraBrokers( new MyNumInGroupType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag382NumNoContraBrokers.TESTB_NUM_NO_CONTRA_BROKERS;
+        tagData = new Tag382NumNoContraBrokers( new MyNumInGroupType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag382NumNoContraBrokers tagData;
+        int oneElement;
+
+        oneElement = Tag382NumNoContraBrokers.TESTB_NUM_NO_CONTRA_BROKERS;
+        tagData = new Tag382NumNoContraBrokers( new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag382NumNoContraBrokers tagData;
+        int oneElement;
+
+        oneElement = Tag382NumNoContraBrokers.TESTB_NUM_NO_CONTRA_BROKERS;
+        tagData = new Tag382NumNoContraBrokers( new MyNumInGroupType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag382NumNoContraBrokers tagData;
+        int oneElement;
+
+        oneElement = Tag382NumNoContraBrokers.TESTB_NUM_NO_CONTRA_BROKERS;
+        tagData = new Tag382NumNoContraBrokers( new MyNumInGroupType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag382NumNoContraBrokers tagData;
+        int oneElement;
+
+        oneElement = Tag382NumNoContraBrokers.TESTA_NUM_NO_CONTRA_BROKERS;
+        tagData = new Tag382NumNoContraBrokers( new MyNumInGroupType( oneElement ) );
+        assertEquals( "Tag382NumNoContraBrokers\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

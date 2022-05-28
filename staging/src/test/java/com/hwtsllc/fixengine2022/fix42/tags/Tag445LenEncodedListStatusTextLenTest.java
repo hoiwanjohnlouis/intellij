@@ -45,9 +45,76 @@ class Tag445LenEncodedListStatusTextLenTest {
     @Test
     void Tag0445Test() {
         Tag445LenEncodedListStatusTextLen tagData;
+        int oneElement;
 
-        tagData = new Tag445LenEncodedListStatusTextLen( new MyLengthType(23) );
-        assertEquals( 23, tagData.getDataValue() );
+        oneElement = Tag445LenEncodedListStatusTextLen.TESTA_LEN_LIST_STATUS_ENCODED_TEXT_LEN;
+        tagData = new Tag445LenEncodedListStatusTextLen( new MyLengthType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag445LenEncodedListStatusTextLen.TESTB_LEN_LIST_STATUS_ENCODED_TEXT_LEN;
+        tagData = new Tag445LenEncodedListStatusTextLen( new MyLengthType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag445LenEncodedListStatusTextLen tagData;
+        int oneElement;
+
+        oneElement = Tag445LenEncodedListStatusTextLen.TESTA_LEN_LIST_STATUS_ENCODED_TEXT_LEN;
+        tagData = new Tag445LenEncodedListStatusTextLen( new MyLengthType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag445LenEncodedListStatusTextLen.TESTB_LEN_LIST_STATUS_ENCODED_TEXT_LEN;
+        tagData = new Tag445LenEncodedListStatusTextLen( new MyLengthType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag445LenEncodedListStatusTextLen tagData;
+        int oneElement;
+
+        oneElement = Tag445LenEncodedListStatusTextLen.TESTB_LEN_LIST_STATUS_ENCODED_TEXT_LEN;
+        tagData = new Tag445LenEncodedListStatusTextLen( new MyLengthType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag445LenEncodedListStatusTextLen tagData;
+        int oneElement;
+
+        oneElement = Tag445LenEncodedListStatusTextLen.TESTB_LEN_LIST_STATUS_ENCODED_TEXT_LEN;
+        tagData = new Tag445LenEncodedListStatusTextLen( new MyLengthType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag445LenEncodedListStatusTextLen tagData;
+        int oneElement;
+
+        oneElement = Tag445LenEncodedListStatusTextLen.TESTB_LEN_LIST_STATUS_ENCODED_TEXT_LEN;
+        tagData = new Tag445LenEncodedListStatusTextLen( new MyLengthType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag445LenEncodedListStatusTextLen tagData;
+        int oneElement;
+
+        oneElement = Tag445LenEncodedListStatusTextLen.TESTA_LEN_LIST_STATUS_ENCODED_TEXT_LEN;
+        tagData = new Tag445LenEncodedListStatusTextLen( new MyLengthType( oneElement ) );
+        assertEquals( "Tag445LenEncodedListStatusTextLen\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

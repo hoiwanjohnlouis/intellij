@@ -50,17 +50,76 @@ class Tag226IntRepurchaseTermTest {
     @Test
     void Tag0226Test() {
         Tag226IntRepurchaseTerm tagData;
+        int oneElement;
 
-        tagData = new Tag226IntRepurchaseTerm(new MyIntType(
-                Tag226IntRepurchaseTerm.TESTA_INT_REPURCHASE_TERM));
-        assertEquals( Tag226IntRepurchaseTerm.TESTA_INT_REPURCHASE_TERM,
-                tagData.getDataValue());
+        oneElement = Tag226IntRepurchaseTerm.TESTA_INT_REPURCHASE_TERM;
+        tagData = new Tag226IntRepurchaseTerm( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag226IntRepurchaseTerm(new MyIntType(
-                Tag226IntRepurchaseTerm.TESTB_INT_REPURCHASE_TERM));
-        assertEquals( Tag226IntRepurchaseTerm.TESTB_INT_REPURCHASE_TERM,
-                tagData.getDataValue());
+        oneElement = Tag226IntRepurchaseTerm.TESTB_INT_REPURCHASE_TERM;
+        tagData = new Tag226IntRepurchaseTerm( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag226IntRepurchaseTerm tagData;
+        int oneElement;
+
+        oneElement = Tag226IntRepurchaseTerm.TESTA_INT_REPURCHASE_TERM;
+        tagData = new Tag226IntRepurchaseTerm( new MyIntType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag226IntRepurchaseTerm.TESTB_INT_REPURCHASE_TERM;
+        tagData = new Tag226IntRepurchaseTerm( new MyIntType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag226IntRepurchaseTerm tagData;
+        int oneElement;
+
+        oneElement = Tag226IntRepurchaseTerm.TESTB_INT_REPURCHASE_TERM;
+        tagData = new Tag226IntRepurchaseTerm( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag226IntRepurchaseTerm tagData;
+        int oneElement;
+
+        oneElement = Tag226IntRepurchaseTerm.TESTB_INT_REPURCHASE_TERM;
+        tagData = new Tag226IntRepurchaseTerm( new MyIntType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag226IntRepurchaseTerm tagData;
+        int oneElement;
+
+        oneElement = Tag226IntRepurchaseTerm.TESTB_INT_REPURCHASE_TERM;
+        tagData = new Tag226IntRepurchaseTerm( new MyIntType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag226IntRepurchaseTerm tagData;
+        int oneElement;
+
+        oneElement = Tag226IntRepurchaseTerm.TESTA_INT_REPURCHASE_TERM;
+        tagData = new Tag226IntRepurchaseTerm( new MyIntType( oneElement ) );
+        assertEquals( "Tag226IntRepurchaseTerm\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

@@ -47,17 +47,76 @@ class Tag410PctWtAverageLiquidityTest {
     @Test
     void Tag0410Test() {
         Tag410PctWtAverageLiquidity tagData;
+        double oneElement;
 
-        tagData = new Tag410PctWtAverageLiquidity(new MyPercentageType(
-                Tag410PctWtAverageLiquidity.TESTA_PCT_WT_AVERAGE_LIQUIDITY));
-        assertEquals( Tag410PctWtAverageLiquidity.TESTA_PCT_WT_AVERAGE_LIQUIDITY,
-                tagData.getDataValue() );
+        oneElement = Tag410PctWtAverageLiquidity.TESTA_PCT_WT_AVERAGE_LIQUIDITY;
+        tagData = new Tag410PctWtAverageLiquidity( new MyPercentageType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag410PctWtAverageLiquidity(new MyPercentageType(
-                Tag410PctWtAverageLiquidity.TESTB_PCT_WT_AVERAGE_LIQUIDITY));
-        assertEquals( Tag410PctWtAverageLiquidity.TESTB_PCT_WT_AVERAGE_LIQUIDITY,
-                tagData.getDataValue() );
+        oneElement = Tag410PctWtAverageLiquidity.TESTB_PCT_WT_AVERAGE_LIQUIDITY;
+        tagData = new Tag410PctWtAverageLiquidity( new MyPercentageType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag410PctWtAverageLiquidity tagData;
+        double oneElement;
+
+        oneElement = Tag410PctWtAverageLiquidity.TESTA_PCT_WT_AVERAGE_LIQUIDITY;
+        tagData = new Tag410PctWtAverageLiquidity( new MyPercentageType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag410PctWtAverageLiquidity.TESTB_PCT_WT_AVERAGE_LIQUIDITY;
+        tagData = new Tag410PctWtAverageLiquidity( new MyPercentageType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag410PctWtAverageLiquidity tagData;
+        double oneElement;
+
+        oneElement = Tag410PctWtAverageLiquidity.TESTB_PCT_WT_AVERAGE_LIQUIDITY;
+        tagData = new Tag410PctWtAverageLiquidity( new MyPercentageType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag410PctWtAverageLiquidity tagData;
+        double oneElement;
+
+        oneElement = Tag410PctWtAverageLiquidity.TESTB_PCT_WT_AVERAGE_LIQUIDITY;
+        tagData = new Tag410PctWtAverageLiquidity( new MyPercentageType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag410PctWtAverageLiquidity tagData;
+        double oneElement;
+
+        oneElement = Tag410PctWtAverageLiquidity.TESTB_PCT_WT_AVERAGE_LIQUIDITY;
+        tagData = new Tag410PctWtAverageLiquidity( new MyPercentageType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag410PctWtAverageLiquidity tagData;
+        double oneElement;
+
+        oneElement = Tag410PctWtAverageLiquidity.TESTA_PCT_WT_AVERAGE_LIQUIDITY;
+        tagData = new Tag410PctWtAverageLiquidity( new MyPercentageType( oneElement ) );
+        assertEquals( "Tag410PctWtAverageLiquidity\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

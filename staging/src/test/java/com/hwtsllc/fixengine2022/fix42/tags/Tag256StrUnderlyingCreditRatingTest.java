@@ -49,17 +49,72 @@ class Tag256StrUnderlyingCreditRatingTest {
     @Test
     void Tag0256Test() {
         Tag256StrUnderlyingCreditRating tagData;
+        String oneElement;
 
-        tagData = new Tag256StrUnderlyingCreditRating(new MyStringType(
-                Tag256StrUnderlyingCreditRating.TESTA_STR_UNDERLYING_CREDIT_RATING));
-        assertEquals( Tag256StrUnderlyingCreditRating.TESTA_STR_UNDERLYING_CREDIT_RATING,
-                tagData.getDataValue() );
+        oneElement = Tag256StrUnderlyingCreditRating.TESTA_STR_UNDERLYING_CREDIT_RATING;
+        tagData = new Tag256StrUnderlyingCreditRating( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag256StrUnderlyingCreditRating(new MyStringType(
-                Tag256StrUnderlyingCreditRating.TESTB_STR_UNDERLYING_CREDIT_RATING));
-        assertEquals( Tag256StrUnderlyingCreditRating.TESTB_STR_UNDERLYING_CREDIT_RATING,
-                tagData.getDataValue() );
+        oneElement = Tag256StrUnderlyingCreditRating.TESTB_STR_UNDERLYING_CREDIT_RATING;
+        tagData = new Tag256StrUnderlyingCreditRating( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag256StrUnderlyingCreditRating tagData;
+        String oneElement;
+
+        oneElement = Tag256StrUnderlyingCreditRating.TESTB_STR_UNDERLYING_CREDIT_RATING;
+        tagData = new Tag256StrUnderlyingCreditRating( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag256StrUnderlyingCreditRating tagData;
+        String oneElement;
+
+        oneElement = Tag256StrUnderlyingCreditRating.TESTB_STR_UNDERLYING_CREDIT_RATING;
+        tagData = new Tag256StrUnderlyingCreditRating( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag256StrUnderlyingCreditRating tagData;
+        String oneElement;
+
+        oneElement = Tag256StrUnderlyingCreditRating.TESTB_STR_UNDERLYING_CREDIT_RATING;
+        tagData = new Tag256StrUnderlyingCreditRating( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag256StrUnderlyingCreditRating tagData;
+        String oneElement;
+
+        oneElement = Tag256StrUnderlyingCreditRating.TESTB_STR_UNDERLYING_CREDIT_RATING;
+        tagData = new Tag256StrUnderlyingCreditRating( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag256StrUnderlyingCreditRating tagData;
+        String oneElement;
+
+        oneElement = Tag256StrUnderlyingCreditRating.TESTA_STR_UNDERLYING_CREDIT_RATING;
+        tagData = new Tag256StrUnderlyingCreditRating( new MyStringType( oneElement ) );
+        assertEquals( "Tag256StrUnderlyingCreditRating\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

@@ -52,17 +52,76 @@ class Tag250IntLegRepoCollateralSecurityTypeTest {
     @Test
     void Tag0250Test() {
         Tag250IntLegRepoCollateralSecurityType tagData;
+        int oneElement;
 
-        tagData = new Tag250IntLegRepoCollateralSecurityType(new MyIntType(
-                Tag250IntLegRepoCollateralSecurityType.TESTA_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE));
-        assertEquals( Tag250IntLegRepoCollateralSecurityType.TESTA_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE,
-                tagData.getDataValue());
+        oneElement = Tag250IntLegRepoCollateralSecurityType.TESTA_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE;
+        tagData = new Tag250IntLegRepoCollateralSecurityType( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag250IntLegRepoCollateralSecurityType(new MyIntType(
-                Tag250IntLegRepoCollateralSecurityType.TESTB_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE));
-        assertEquals( Tag250IntLegRepoCollateralSecurityType.TESTB_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE,
-                tagData.getDataValue());
+        oneElement = Tag250IntLegRepoCollateralSecurityType.TESTB_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE;
+        tagData = new Tag250IntLegRepoCollateralSecurityType( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag250IntLegRepoCollateralSecurityType tagData;
+        int oneElement;
+
+        oneElement = Tag250IntLegRepoCollateralSecurityType.TESTA_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE;
+        tagData = new Tag250IntLegRepoCollateralSecurityType( new MyIntType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag250IntLegRepoCollateralSecurityType.TESTB_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE;
+        tagData = new Tag250IntLegRepoCollateralSecurityType( new MyIntType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag250IntLegRepoCollateralSecurityType tagData;
+        int oneElement;
+
+        oneElement = Tag250IntLegRepoCollateralSecurityType.TESTB_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE;
+        tagData = new Tag250IntLegRepoCollateralSecurityType( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag250IntLegRepoCollateralSecurityType tagData;
+        int oneElement;
+
+        oneElement = Tag250IntLegRepoCollateralSecurityType.TESTB_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE;
+        tagData = new Tag250IntLegRepoCollateralSecurityType( new MyIntType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag250IntLegRepoCollateralSecurityType tagData;
+        int oneElement;
+
+        oneElement = Tag250IntLegRepoCollateralSecurityType.TESTB_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE;
+        tagData = new Tag250IntLegRepoCollateralSecurityType( new MyIntType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag250IntLegRepoCollateralSecurityType tagData;
+        int oneElement;
+
+        oneElement = Tag250IntLegRepoCollateralSecurityType.TESTA_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE;
+        tagData = new Tag250IntLegRepoCollateralSecurityType( new MyIntType( oneElement ) );
+        assertEquals( "Tag250IntLegRepoCollateralSecurityType\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

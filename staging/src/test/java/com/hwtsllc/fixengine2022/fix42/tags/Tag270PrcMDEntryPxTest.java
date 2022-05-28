@@ -45,17 +45,76 @@ class Tag270PrcMDEntryPxTest {
     @Test
     void Tag0270Test() {
         Tag270PrcMDEntryPx tagData;
+        double oneElement;
 
-        tagData = new Tag270PrcMDEntryPx(new MyPriceType(
-                Tag270PrcMDEntryPx.TESTA_PRC_MD_ENTRY_PX));
-        assertEquals( Tag270PrcMDEntryPx.TESTA_PRC_MD_ENTRY_PX,
-                tagData.getDataValue());
+        oneElement = Tag270PrcMDEntryPx.TESTA_PRC_MD_ENTRY_PX;
+        tagData = new Tag270PrcMDEntryPx( new MyPriceType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag270PrcMDEntryPx(new MyPriceType(
-                Tag270PrcMDEntryPx.TESTB_PRC_MD_ENTRY_PX));
-        assertEquals( Tag270PrcMDEntryPx.TESTB_PRC_MD_ENTRY_PX,
-                tagData.getDataValue());
+        oneElement = Tag270PrcMDEntryPx.TESTB_PRC_MD_ENTRY_PX;
+        tagData = new Tag270PrcMDEntryPx( new MyPriceType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag270PrcMDEntryPx tagData;
+        double oneElement;
+
+        oneElement = Tag270PrcMDEntryPx.TESTA_PRC_MD_ENTRY_PX;
+        tagData = new Tag270PrcMDEntryPx( new MyPriceType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag270PrcMDEntryPx.TESTB_PRC_MD_ENTRY_PX;
+        tagData = new Tag270PrcMDEntryPx( new MyPriceType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag270PrcMDEntryPx tagData;
+        double oneElement;
+
+        oneElement = Tag270PrcMDEntryPx.TESTB_PRC_MD_ENTRY_PX;
+        tagData = new Tag270PrcMDEntryPx( new MyPriceType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag270PrcMDEntryPx tagData;
+        double oneElement;
+
+        oneElement = Tag270PrcMDEntryPx.TESTB_PRC_MD_ENTRY_PX;
+        tagData = new Tag270PrcMDEntryPx( new MyPriceType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag270PrcMDEntryPx tagData;
+        double oneElement;
+
+        oneElement = Tag270PrcMDEntryPx.TESTB_PRC_MD_ENTRY_PX;
+        tagData = new Tag270PrcMDEntryPx( new MyPriceType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag270PrcMDEntryPx tagData;
+        double oneElement;
+
+        oneElement = Tag270PrcMDEntryPx.TESTA_PRC_MD_ENTRY_PX;
+        tagData = new Tag270PrcMDEntryPx( new MyPriceType( oneElement ) );
+        assertEquals( "Tag270PrcMDEntryPx\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

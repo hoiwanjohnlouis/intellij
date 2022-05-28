@@ -47,17 +47,72 @@ class Tag391StrClientBidIDTest {
     @Test
     void Tag0391Test() {
         Tag391StrClientBidID tagData;
+        String oneElement;
 
-        tagData = new Tag391StrClientBidID(new MyStringType(
-                Tag391StrClientBidID.TESTA_STR_CLIENT_BID_ID));
-        assertEquals( Tag391StrClientBidID.TESTA_STR_CLIENT_BID_ID,
-                tagData.getDataValue() );
+        oneElement = Tag391StrClientBidID.TESTA_STR_CLIENT_BID_ID;
+        tagData = new Tag391StrClientBidID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag391StrClientBidID(new MyStringType(
-                Tag391StrClientBidID.TESTB_STR_CLIENT_BID_ID));
-        assertEquals( Tag391StrClientBidID.TESTB_STR_CLIENT_BID_ID,
-                tagData.getDataValue() );
+        oneElement = Tag391StrClientBidID.TESTB_STR_CLIENT_BID_ID;
+        tagData = new Tag391StrClientBidID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag391StrClientBidID tagData;
+        String oneElement;
+
+        oneElement = Tag391StrClientBidID.TESTB_STR_CLIENT_BID_ID;
+        tagData = new Tag391StrClientBidID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag391StrClientBidID tagData;
+        String oneElement;
+
+        oneElement = Tag391StrClientBidID.TESTB_STR_CLIENT_BID_ID;
+        tagData = new Tag391StrClientBidID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag391StrClientBidID tagData;
+        String oneElement;
+
+        oneElement = Tag391StrClientBidID.TESTB_STR_CLIENT_BID_ID;
+        tagData = new Tag391StrClientBidID( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag391StrClientBidID tagData;
+        String oneElement;
+
+        oneElement = Tag391StrClientBidID.TESTB_STR_CLIENT_BID_ID;
+        tagData = new Tag391StrClientBidID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag391StrClientBidID tagData;
+        String oneElement;
+
+        oneElement = Tag391StrClientBidID.TESTA_STR_CLIENT_BID_ID;
+        tagData = new Tag391StrClientBidID( new MyStringType( oneElement ) );
+        assertEquals( "Tag391StrClientBidID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

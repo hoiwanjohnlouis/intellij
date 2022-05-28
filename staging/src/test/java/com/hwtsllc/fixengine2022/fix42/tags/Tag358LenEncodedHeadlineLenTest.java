@@ -45,9 +45,76 @@ class Tag358LenEncodedHeadlineLenTest {
     @Test
     void Tag0358Test() {
         Tag358LenEncodedHeadlineLen tagData;
+        int oneElement;
 
-        tagData = new Tag358LenEncodedHeadlineLen( new MyLengthType(23) );
-        assertEquals( 23, tagData.getDataValue() );
+        oneElement = Tag358LenEncodedHeadlineLen.TESTA_LEN_ENCODED_HEADLINE_LEN;
+        tagData = new Tag358LenEncodedHeadlineLen( new MyLengthType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag358LenEncodedHeadlineLen.TESTB_LEN_ENCODED_HEADLINE_LEN;
+        tagData = new Tag358LenEncodedHeadlineLen( new MyLengthType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag358LenEncodedHeadlineLen tagData;
+        int oneElement;
+
+        oneElement = Tag358LenEncodedHeadlineLen.TESTA_LEN_ENCODED_HEADLINE_LEN;
+        tagData = new Tag358LenEncodedHeadlineLen( new MyLengthType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag358LenEncodedHeadlineLen.TESTB_LEN_ENCODED_HEADLINE_LEN;
+        tagData = new Tag358LenEncodedHeadlineLen( new MyLengthType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag358LenEncodedHeadlineLen tagData;
+        int oneElement;
+
+        oneElement = Tag358LenEncodedHeadlineLen.TESTB_LEN_ENCODED_HEADLINE_LEN;
+        tagData = new Tag358LenEncodedHeadlineLen( new MyLengthType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag358LenEncodedHeadlineLen tagData;
+        int oneElement;
+
+        oneElement = Tag358LenEncodedHeadlineLen.TESTB_LEN_ENCODED_HEADLINE_LEN;
+        tagData = new Tag358LenEncodedHeadlineLen( new MyLengthType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag358LenEncodedHeadlineLen tagData;
+        int oneElement;
+
+        oneElement = Tag358LenEncodedHeadlineLen.TESTB_LEN_ENCODED_HEADLINE_LEN;
+        tagData = new Tag358LenEncodedHeadlineLen( new MyLengthType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag358LenEncodedHeadlineLen tagData;
+        int oneElement;
+
+        oneElement = Tag358LenEncodedHeadlineLen.TESTA_LEN_ENCODED_HEADLINE_LEN;
+        tagData = new Tag358LenEncodedHeadlineLen( new MyLengthType( oneElement ) );
+        assertEquals( "Tag358LenEncodedHeadlineLen\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

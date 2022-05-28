@@ -52,17 +52,76 @@ class Tag227PctRepurchaseRateTest {
     @Test
     void Tag0227Test() {
         Tag227PctRepurchaseRate tagData;
+        double oneElement;
 
-        tagData = new Tag227PctRepurchaseRate(new MyPercentageType(
-                Tag227PctRepurchaseRate.TESTA_PCT_REPURCHASE_RATE));
-        assertEquals( Tag227PctRepurchaseRate.TESTA_PCT_REPURCHASE_RATE,
-                tagData.getDataValue() );
+        oneElement = Tag227PctRepurchaseRate.TESTA_PCT_REPURCHASE_RATE;
+        tagData = new Tag227PctRepurchaseRate(new MyPercentageType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag227PctRepurchaseRate(new MyPercentageType(
-                Tag227PctRepurchaseRate.TESTB_PCT_REPURCHASE_RATE));
-        assertEquals( Tag227PctRepurchaseRate.TESTB_PCT_REPURCHASE_RATE,
-                tagData.getDataValue() );
+        oneElement = Tag227PctRepurchaseRate.TESTB_PCT_REPURCHASE_RATE;
+        tagData = new Tag227PctRepurchaseRate(new MyPercentageType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag227PctRepurchaseRate tagData;
+        double oneElement;
+
+        oneElement = Tag227PctRepurchaseRate.TESTA_PCT_REPURCHASE_RATE;
+        tagData = new Tag227PctRepurchaseRate( new MyPercentageType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag227PctRepurchaseRate.TESTB_PCT_REPURCHASE_RATE;
+        tagData = new Tag227PctRepurchaseRate( new MyPercentageType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag227PctRepurchaseRate tagData;
+        double oneElement;
+
+        oneElement = Tag227PctRepurchaseRate.TESTB_PCT_REPURCHASE_RATE;
+        tagData = new Tag227PctRepurchaseRate( new MyPercentageType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag227PctRepurchaseRate tagData;
+        double oneElement;
+
+        oneElement = Tag227PctRepurchaseRate.TESTB_PCT_REPURCHASE_RATE;
+        tagData = new Tag227PctRepurchaseRate( new MyPercentageType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag227PctRepurchaseRate tagData;
+        double oneElement;
+
+        oneElement = Tag227PctRepurchaseRate.TESTB_PCT_REPURCHASE_RATE;
+        tagData = new Tag227PctRepurchaseRate( new MyPercentageType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag227PctRepurchaseRate tagData;
+        double oneElement;
+
+        oneElement = Tag227PctRepurchaseRate.TESTA_PCT_REPURCHASE_RATE;
+        tagData = new Tag227PctRepurchaseRate( new MyPercentageType( oneElement ) );
+        assertEquals( "Tag227PctRepurchaseRate\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

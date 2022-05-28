@@ -111,7 +111,7 @@ public enum FIX27 implements LogFIXString, LogVerboseString, MyTestValues {
 
     FIX41_STR_ORIG_CL_ORD_ID(41, "ORIG_CL_ORD_ID", "OrigClOrdID"),
     FIX42_UTC_ORIG_TIME(42, "ORIG_TIME", "OrigTime"),
-    FIX43_BOOL_POSS_DUP_FLAG(43, "POSS_DUP_FLAG", "PossDupFlag"),
+    FIX43_ENU_POSS_DUP_FLAG(43, "POSS_DUP_FLAG", "PossDupFlag"),
     FIX44_PRC_PRICE(44, "PRICE", "Price"),
     FIX45_SEQ_REF_SEQ_NUM(45, "REF_SEQ_NUM", "RefSeqNum"),
     FIX46_STR_RELATD_SYM(46, "RELATD_SYM", "RelatdSym (No longer used)"),
@@ -170,7 +170,7 @@ public enum FIX27 implements LogFIXString, LogVerboseString, MyTestValues {
     FIX94_ENU_EMAIL_TYPE(94, "EMAIL_TYPE", "EmailType"),
     FIX95_LEN_RAW_DATA_LENGTH(95, "RAW_DATA_LENGTH", "RawDataLength"),
     FIX96_DAT_RAW_DATA(96, "RAW_DATA", "RawData"),
-    FIX97_BOOL_POSS_RESEND(97, "POSS_RESEND", "PossResend"),
+    FIX97_ENU_POSS_RESEND(97, "POSS_RESEND", "PossResend"),
     FIX98_ENU_ENCRYPT_METHOD(98, "ENCRYPT_METHOD", "EncryptMethod"),
     FIX99_PRC_STOP_PX(99, "STOP_PX", "StopPx"),
     FIX100_STR_EX_DESTINATION(100, "EX_DESTINATION", "ExDestination"),

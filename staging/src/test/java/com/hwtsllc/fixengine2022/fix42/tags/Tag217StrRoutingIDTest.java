@@ -45,15 +45,72 @@ class Tag217StrRoutingIDTest {
     @Test
     void Tag0217Test() {
         Tag217StrRoutingID tagData;
+        String oneElement;
 
-        tagData = new Tag217StrRoutingID(
-                new MyStringType(Tag217StrRoutingID.TESTA_STR_ROUTING_ID));
-        assertEquals( Tag217StrRoutingID.TESTA_STR_ROUTING_ID, tagData.getDataValue() );
+        oneElement = Tag217StrRoutingID.TESTA_STR_ROUTING_ID;
+        tagData = new Tag217StrRoutingID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag217StrRoutingID(
-                new MyStringType(Tag217StrRoutingID.TESTB_STR_ROUTING_ID));
-        assertEquals( Tag217StrRoutingID.TESTB_STR_ROUTING_ID, tagData.getDataValue() );
+        oneElement = Tag217StrRoutingID.TESTB_STR_ROUTING_ID;
+        tagData = new Tag217StrRoutingID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag217StrRoutingID tagData;
+        String oneElement;
+
+        oneElement = Tag217StrRoutingID.TESTB_STR_ROUTING_ID;
+        tagData = new Tag217StrRoutingID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag217StrRoutingID tagData;
+        String oneElement;
+
+        oneElement = Tag217StrRoutingID.TESTB_STR_ROUTING_ID;
+        tagData = new Tag217StrRoutingID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag217StrRoutingID tagData;
+        String oneElement;
+
+        oneElement = Tag217StrRoutingID.TESTB_STR_ROUTING_ID;
+        tagData = new Tag217StrRoutingID( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag217StrRoutingID tagData;
+        String oneElement;
+
+        oneElement = Tag217StrRoutingID.TESTB_STR_ROUTING_ID;
+        tagData = new Tag217StrRoutingID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag217StrRoutingID tagData;
+        String oneElement;
+
+        oneElement = Tag217StrRoutingID.TESTA_STR_ROUTING_ID;
+        tagData = new Tag217StrRoutingID( new MyStringType( oneElement ) );
+        assertEquals( "Tag217StrRoutingID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

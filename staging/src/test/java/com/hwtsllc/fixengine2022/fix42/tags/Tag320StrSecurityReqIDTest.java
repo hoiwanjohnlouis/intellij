@@ -45,17 +45,72 @@ class Tag320StrSecurityReqIDTest {
     @Test
     void Tag0320Test() {
         Tag320StrSecurityReqID tagData;
+        String oneElement;
 
-        tagData = new Tag320StrSecurityReqID(new MyStringType(
-                Tag320StrSecurityReqID.TESTA_STR_SECURITY_REQ_ID));
-        assertEquals( Tag320StrSecurityReqID.TESTA_STR_SECURITY_REQ_ID,
-                tagData.getDataValue() );
+        oneElement = Tag320StrSecurityReqID.TESTA_STR_SECURITY_REQ_ID;
+        tagData = new Tag320StrSecurityReqID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag320StrSecurityReqID(new MyStringType(
-                Tag320StrSecurityReqID.TESTB_STR_SECURITY_REQ_ID));
-        assertEquals( Tag320StrSecurityReqID.TESTB_STR_SECURITY_REQ_ID,
-                tagData.getDataValue() );
+        oneElement = Tag320StrSecurityReqID.TESTB_STR_SECURITY_REQ_ID;
+        tagData = new Tag320StrSecurityReqID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag320StrSecurityReqID tagData;
+        String oneElement;
+
+        oneElement = Tag320StrSecurityReqID.TESTB_STR_SECURITY_REQ_ID;
+        tagData = new Tag320StrSecurityReqID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag320StrSecurityReqID tagData;
+        String oneElement;
+
+        oneElement = Tag320StrSecurityReqID.TESTB_STR_SECURITY_REQ_ID;
+        tagData = new Tag320StrSecurityReqID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag320StrSecurityReqID tagData;
+        String oneElement;
+
+        oneElement = Tag320StrSecurityReqID.TESTB_STR_SECURITY_REQ_ID;
+        tagData = new Tag320StrSecurityReqID( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag320StrSecurityReqID tagData;
+        String oneElement;
+
+        oneElement = Tag320StrSecurityReqID.TESTB_STR_SECURITY_REQ_ID;
+        tagData = new Tag320StrSecurityReqID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag320StrSecurityReqID tagData;
+        String oneElement;
+
+        oneElement = Tag320StrSecurityReqID.TESTA_STR_SECURITY_REQ_ID;
+        tagData = new Tag320StrSecurityReqID( new MyStringType( oneElement ) );
+        assertEquals( "Tag320StrSecurityReqID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

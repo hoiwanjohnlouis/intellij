@@ -48,17 +48,76 @@ class Tag314IntUnderlyingMaturityDayTest {
     @Test
     void Tag0314Test() {
         Tag314IntUnderlyingMaturityDay tagData;
+        int oneElement;
 
-        tagData = new Tag314IntUnderlyingMaturityDay(new MyIntType(
-                Tag314IntUnderlyingMaturityDay.TESTA_INT_UNDERLYING_MATURITY_DAY));
-        assertEquals( Tag314IntUnderlyingMaturityDay.TESTA_INT_UNDERLYING_MATURITY_DAY,
-                tagData.getDataValue());
+        oneElement = Tag314IntUnderlyingMaturityDay.TESTA_INT_UNDERLYING_MATURITY_DAY;
+        tagData = new Tag314IntUnderlyingMaturityDay( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag314IntUnderlyingMaturityDay(new MyIntType(
-                Tag314IntUnderlyingMaturityDay.TESTB_INT_UNDERLYING_MATURITY_DAY));
-        assertEquals( Tag314IntUnderlyingMaturityDay.TESTB_INT_UNDERLYING_MATURITY_DAY,
-                tagData.getDataValue());
+        oneElement = Tag314IntUnderlyingMaturityDay.TESTB_INT_UNDERLYING_MATURITY_DAY;
+        tagData = new Tag314IntUnderlyingMaturityDay( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag314IntUnderlyingMaturityDay tagData;
+        int oneElement;
+
+        oneElement = Tag314IntUnderlyingMaturityDay.TESTA_INT_UNDERLYING_MATURITY_DAY;
+        tagData = new Tag314IntUnderlyingMaturityDay( new MyIntType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag314IntUnderlyingMaturityDay.TESTB_INT_UNDERLYING_MATURITY_DAY;
+        tagData = new Tag314IntUnderlyingMaturityDay( new MyIntType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag314IntUnderlyingMaturityDay tagData;
+        int oneElement;
+
+        oneElement = Tag314IntUnderlyingMaturityDay.TESTB_INT_UNDERLYING_MATURITY_DAY;
+        tagData = new Tag314IntUnderlyingMaturityDay( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag314IntUnderlyingMaturityDay tagData;
+        int oneElement;
+
+        oneElement = Tag314IntUnderlyingMaturityDay.TESTB_INT_UNDERLYING_MATURITY_DAY;
+        tagData = new Tag314IntUnderlyingMaturityDay( new MyIntType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag314IntUnderlyingMaturityDay tagData;
+        int oneElement;
+
+        oneElement = Tag314IntUnderlyingMaturityDay.TESTB_INT_UNDERLYING_MATURITY_DAY;
+        tagData = new Tag314IntUnderlyingMaturityDay( new MyIntType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag314IntUnderlyingMaturityDay tagData;
+        int oneElement;
+
+        oneElement = Tag314IntUnderlyingMaturityDay.TESTA_INT_UNDERLYING_MATURITY_DAY;
+        tagData = new Tag314IntUnderlyingMaturityDay( new MyIntType( oneElement ) );
+        assertEquals( "Tag314IntUnderlyingMaturityDay\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

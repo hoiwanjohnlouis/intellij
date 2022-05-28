@@ -48,15 +48,76 @@ class Tag361DatEncodedAllocTextTest {
     @Test
     void Tag0361Test() {
         Tag361DatEncodedAllocText tagData;
+        String oneElement;
 
-        tagData = new Tag361DatEncodedAllocText(
-                new MyDataType(Tag361DatEncodedAllocText.TESTA_DAT_ENCODED_ALLOC_TEXT));
-        assertEquals( Tag361DatEncodedAllocText.TESTA_DAT_ENCODED_ALLOC_TEXT, tagData.getDataValue() );
+        oneElement = Tag361DatEncodedAllocText.TESTA_DAT_ENCODED_ALLOC_TEXT;
+        tagData = new Tag361DatEncodedAllocText( new MyDataType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag361DatEncodedAllocText(
-                new MyDataType(Tag361DatEncodedAllocText.TESTB_DAT_ENCODED_ALLOC_TEXT));
-        assertEquals( Tag361DatEncodedAllocText.TESTB_DAT_ENCODED_ALLOC_TEXT, tagData.getDataValue() );
+        oneElement = Tag361DatEncodedAllocText.TESTB_DAT_ENCODED_ALLOC_TEXT;
+        tagData = new Tag361DatEncodedAllocText( new MyDataType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag361DatEncodedAllocText tagData;
+        String oneElement;
+
+        oneElement = Tag361DatEncodedAllocText.TESTA_DAT_ENCODED_ALLOC_TEXT;
+        tagData = new Tag361DatEncodedAllocText( new MyDataType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag361DatEncodedAllocText.TESTB_DAT_ENCODED_ALLOC_TEXT;
+        tagData = new Tag361DatEncodedAllocText( new MyDataType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag361DatEncodedAllocText tagData;
+        String oneElement;
+
+        oneElement = Tag361DatEncodedAllocText.TESTB_DAT_ENCODED_ALLOC_TEXT;
+        tagData = new Tag361DatEncodedAllocText( new MyDataType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag361DatEncodedAllocText tagData;
+        String oneElement;
+
+        oneElement = Tag361DatEncodedAllocText.TESTB_DAT_ENCODED_ALLOC_TEXT;
+        tagData = new Tag361DatEncodedAllocText( new MyDataType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag361DatEncodedAllocText tagData;
+        String oneElement;
+
+        oneElement = Tag361DatEncodedAllocText.TESTB_DAT_ENCODED_ALLOC_TEXT;
+        tagData = new Tag361DatEncodedAllocText( new MyDataType( oneElement ) );
+        assertEquals( oneElement, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag361DatEncodedAllocText tagData;
+        String oneElement;
+
+        oneElement = Tag361DatEncodedAllocText.TESTA_DAT_ENCODED_ALLOC_TEXT;
+        tagData = new Tag361DatEncodedAllocText( new MyDataType( oneElement ) );
+        assertEquals( "Tag361DatEncodedAllocText\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

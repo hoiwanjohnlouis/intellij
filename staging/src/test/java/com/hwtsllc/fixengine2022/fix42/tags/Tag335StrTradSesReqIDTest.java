@@ -45,17 +45,72 @@ class Tag335StrTradSesReqIDTest {
     @Test
     void Tag0335Test() {
         Tag335StrTradSesReqID tagData;
+        String oneElement;
 
-        tagData = new Tag335StrTradSesReqID(new MyStringType(
-                Tag335StrTradSesReqID.TESTA_STR_TRAD_SES_REQ_ID));
-        assertEquals( Tag335StrTradSesReqID.TESTA_STR_TRAD_SES_REQ_ID,
-                tagData.getDataValue() );
+        oneElement = Tag335StrTradSesReqID.TESTA_STR_TRAD_SES_REQ_ID;
+        tagData = new Tag335StrTradSesReqID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag335StrTradSesReqID(new MyStringType(
-                Tag335StrTradSesReqID.TESTB_STR_TRAD_SES_REQ_ID));
-        assertEquals( Tag335StrTradSesReqID.TESTB_STR_TRAD_SES_REQ_ID,
-                tagData.getDataValue() );
+        oneElement = Tag335StrTradSesReqID.TESTB_STR_TRAD_SES_REQ_ID;
+        tagData = new Tag335StrTradSesReqID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag335StrTradSesReqID tagData;
+        String oneElement;
+
+        oneElement = Tag335StrTradSesReqID.TESTB_STR_TRAD_SES_REQ_ID;
+        tagData = new Tag335StrTradSesReqID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag335StrTradSesReqID tagData;
+        String oneElement;
+
+        oneElement = Tag335StrTradSesReqID.TESTB_STR_TRAD_SES_REQ_ID;
+        tagData = new Tag335StrTradSesReqID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag335StrTradSesReqID tagData;
+        String oneElement;
+
+        oneElement = Tag335StrTradSesReqID.TESTB_STR_TRAD_SES_REQ_ID;
+        tagData = new Tag335StrTradSesReqID( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag335StrTradSesReqID tagData;
+        String oneElement;
+
+        oneElement = Tag335StrTradSesReqID.TESTB_STR_TRAD_SES_REQ_ID;
+        tagData = new Tag335StrTradSesReqID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag335StrTradSesReqID tagData;
+        String oneElement;
+
+        oneElement = Tag335StrTradSesReqID.TESTA_STR_TRAD_SES_REQ_ID;
+        tagData = new Tag335StrTradSesReqID( new MyStringType( oneElement ) );
+        assertEquals( "Tag335StrTradSesReqID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

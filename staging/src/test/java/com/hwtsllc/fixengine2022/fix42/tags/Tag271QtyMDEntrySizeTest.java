@@ -45,17 +45,76 @@ class Tag271QtyMDEntrySizeTest {
     @Test
     void Tag0271Test() {
         Tag271QtyMDEntrySize tagData;
+        int oneElement;
 
-        tagData = new Tag271QtyMDEntrySize(new MyQtyType(
-                Tag271QtyMDEntrySize.TESTA_QTY_MD_ENTRY_SIZE));
-        assertEquals( Tag271QtyMDEntrySize.TESTA_QTY_MD_ENTRY_SIZE,
-                tagData.getDataValue());
+        oneElement = Tag271QtyMDEntrySize.TESTA_QTY_MD_ENTRY_SIZE;
+        tagData = new Tag271QtyMDEntrySize( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag271QtyMDEntrySize(new MyQtyType(
-                Tag271QtyMDEntrySize.TESTB_QTY_MD_ENTRY_SIZE));
-        assertEquals( Tag271QtyMDEntrySize.TESTB_QTY_MD_ENTRY_SIZE,
-                tagData.getDataValue());
+        oneElement = Tag271QtyMDEntrySize.TESTB_QTY_MD_ENTRY_SIZE;
+        tagData = new Tag271QtyMDEntrySize( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag271QtyMDEntrySize tagData;
+        int oneElement;
+
+        oneElement = Tag271QtyMDEntrySize.TESTA_QTY_MD_ENTRY_SIZE;
+        tagData = new Tag271QtyMDEntrySize( new MyQtyType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag271QtyMDEntrySize.TESTB_QTY_MD_ENTRY_SIZE;
+        tagData = new Tag271QtyMDEntrySize( new MyQtyType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag271QtyMDEntrySize tagData;
+        int oneElement;
+
+        oneElement = Tag271QtyMDEntrySize.TESTB_QTY_MD_ENTRY_SIZE;
+        tagData = new Tag271QtyMDEntrySize( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag271QtyMDEntrySize tagData;
+        int oneElement;
+
+        oneElement = Tag271QtyMDEntrySize.TESTB_QTY_MD_ENTRY_SIZE;
+        tagData = new Tag271QtyMDEntrySize( new MyQtyType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag271QtyMDEntrySize tagData;
+        int oneElement;
+
+        oneElement = Tag271QtyMDEntrySize.TESTB_QTY_MD_ENTRY_SIZE;
+        tagData = new Tag271QtyMDEntrySize( new MyQtyType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag271QtyMDEntrySize tagData;
+        int oneElement;
+
+        oneElement = Tag271QtyMDEntrySize.TESTA_QTY_MD_ENTRY_SIZE;
+        tagData = new Tag271QtyMDEntrySize( new MyQtyType( oneElement ) );
+        assertEquals( "Tag271QtyMDEntrySize\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

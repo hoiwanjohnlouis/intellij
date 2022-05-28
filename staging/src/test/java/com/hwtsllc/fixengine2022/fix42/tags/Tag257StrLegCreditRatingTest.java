@@ -49,15 +49,72 @@ class Tag257StrLegCreditRatingTest {
     @Test
     void Tag0257Test() {
         Tag257StrLegCreditRating tagData;
+        String oneElement;
 
-        tagData = new Tag257StrLegCreditRating(
-                new MyStringType(Tag257StrLegCreditRating.TESTA_STR_LEG_CREDIT_RATING));
-        assertEquals( Tag257StrLegCreditRating.TESTA_STR_LEG_CREDIT_RATING, tagData.getDataValue() );
+        oneElement = Tag257StrLegCreditRating.TESTA_STR_LEG_CREDIT_RATING;
+        tagData = new Tag257StrLegCreditRating( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag257StrLegCreditRating(
-                new MyStringType(Tag257StrLegCreditRating.TESTB_STR_LEG_CREDIT_RATING));
+        oneElement = Tag257StrLegCreditRating.TESTB_STR_LEG_CREDIT_RATING;
+        tagData = new Tag257StrLegCreditRating( new MyStringType( oneElement ) );
         assertEquals( Tag257StrLegCreditRating.TESTB_STR_LEG_CREDIT_RATING, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag257StrLegCreditRating tagData;
+        String oneElement;
+
+        oneElement = Tag257StrLegCreditRating.TESTB_STR_LEG_CREDIT_RATING;
+        tagData = new Tag257StrLegCreditRating( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag257StrLegCreditRating tagData;
+        String oneElement;
+
+        oneElement = Tag257StrLegCreditRating.TESTB_STR_LEG_CREDIT_RATING;
+        tagData = new Tag257StrLegCreditRating( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag257StrLegCreditRating tagData;
+        String oneElement;
+
+        oneElement = Tag257StrLegCreditRating.TESTB_STR_LEG_CREDIT_RATING;
+        tagData = new Tag257StrLegCreditRating( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag257StrLegCreditRating tagData;
+        String oneElement;
+
+        oneElement = Tag257StrLegCreditRating.TESTB_STR_LEG_CREDIT_RATING;
+        tagData = new Tag257StrLegCreditRating( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag257StrLegCreditRating tagData;
+        String oneElement;
+
+        oneElement = Tag257StrLegCreditRating.TESTA_STR_LEG_CREDIT_RATING;
+        tagData = new Tag257StrLegCreditRating( new MyStringType( oneElement ) );
+        assertEquals( "Tag257StrLegCreditRating\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

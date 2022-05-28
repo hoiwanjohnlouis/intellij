@@ -45,17 +45,76 @@ class Tag406AmtFairValueTest {
     @Test
     void Tag0406Test() {
         Tag406AmtFairValue tagData;
+        double oneElement;
 
-        tagData = new Tag406AmtFairValue(new MyAmtType(
-                Tag406AmtFairValue.TESTA_AMT_FAIR_VALUE));
-        assertEquals( Tag406AmtFairValue.TESTA_AMT_FAIR_VALUE,
-                tagData.getDataValue());
+        oneElement = Tag406AmtFairValue.TESTA_AMT_FAIR_VALUE;
+        tagData = new Tag406AmtFairValue( new MyAmtType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag406AmtFairValue(new MyAmtType(
-                Tag406AmtFairValue.TESTB_AMT_FAIR_VALUE));
-        assertEquals( Tag406AmtFairValue.TESTB_AMT_FAIR_VALUE,
-                tagData.getDataValue());
+        oneElement = Tag406AmtFairValue.TESTB_AMT_FAIR_VALUE;
+        tagData = new Tag406AmtFairValue( new MyAmtType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag406AmtFairValue tagData;
+        double oneElement;
+
+        oneElement = Tag406AmtFairValue.TESTA_AMT_FAIR_VALUE;
+        tagData = new Tag406AmtFairValue( new MyAmtType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag406AmtFairValue.TESTB_AMT_FAIR_VALUE;
+        tagData = new Tag406AmtFairValue( new MyAmtType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag406AmtFairValue tagData;
+        double oneElement;
+
+        oneElement = Tag406AmtFairValue.TESTB_AMT_FAIR_VALUE;
+        tagData = new Tag406AmtFairValue( new MyAmtType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag406AmtFairValue tagData;
+        double oneElement;
+
+        oneElement = Tag406AmtFairValue.TESTB_AMT_FAIR_VALUE;
+        tagData = new Tag406AmtFairValue( new MyAmtType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag406AmtFairValue tagData;
+        double oneElement;
+
+        oneElement = Tag406AmtFairValue.TESTB_AMT_FAIR_VALUE;
+        tagData = new Tag406AmtFairValue( new MyAmtType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag406AmtFairValue tagData;
+        double oneElement;
+
+        oneElement = Tag406AmtFairValue.TESTA_AMT_FAIR_VALUE;
+        tagData = new Tag406AmtFairValue( new MyAmtType( oneElement ) );
+        assertEquals( "Tag406AmtFairValue\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

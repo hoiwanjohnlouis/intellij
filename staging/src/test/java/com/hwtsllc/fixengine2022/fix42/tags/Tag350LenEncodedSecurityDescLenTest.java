@@ -45,9 +45,76 @@ class Tag350LenEncodedSecurityDescLenTest {
     @Test
     void Tag0350Test() {
         Tag350LenEncodedSecurityDescLen tagData;
+        int oneElement;
 
-        tagData = new Tag350LenEncodedSecurityDescLen( new MyLengthType(23) );
-        assertEquals( 23, tagData.getDataValue() );
+        oneElement = Tag350LenEncodedSecurityDescLen.TESTA_LEN_ENCODED_SECURITY_DESC_LEN;
+        tagData = new Tag350LenEncodedSecurityDescLen( new MyLengthType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag350LenEncodedSecurityDescLen.TESTB_LEN_ENCODED_SECURITY_DESC_LEN;
+        tagData = new Tag350LenEncodedSecurityDescLen( new MyLengthType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag350LenEncodedSecurityDescLen tagData;
+        int oneElement;
+
+        oneElement = Tag350LenEncodedSecurityDescLen.TESTA_LEN_ENCODED_SECURITY_DESC_LEN;
+        tagData = new Tag350LenEncodedSecurityDescLen( new MyLengthType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag350LenEncodedSecurityDescLen.TESTB_LEN_ENCODED_SECURITY_DESC_LEN;
+        tagData = new Tag350LenEncodedSecurityDescLen( new MyLengthType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag350LenEncodedSecurityDescLen tagData;
+        int oneElement;
+
+        oneElement = Tag350LenEncodedSecurityDescLen.TESTB_LEN_ENCODED_SECURITY_DESC_LEN;
+        tagData = new Tag350LenEncodedSecurityDescLen( new MyLengthType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag350LenEncodedSecurityDescLen tagData;
+        int oneElement;
+
+        oneElement = Tag350LenEncodedSecurityDescLen.TESTB_LEN_ENCODED_SECURITY_DESC_LEN;
+        tagData = new Tag350LenEncodedSecurityDescLen( new MyLengthType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag350LenEncodedSecurityDescLen tagData;
+        int oneElement;
+
+        oneElement = Tag350LenEncodedSecurityDescLen.TESTB_LEN_ENCODED_SECURITY_DESC_LEN;
+        tagData = new Tag350LenEncodedSecurityDescLen( new MyLengthType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag350LenEncodedSecurityDescLen tagData;
+        int oneElement;
+
+        oneElement = Tag350LenEncodedSecurityDescLen.TESTA_LEN_ENCODED_SECURITY_DESC_LEN;
+        tagData = new Tag350LenEncodedSecurityDescLen( new MyLengthType( oneElement ) );
+        assertEquals( "Tag350LenEncodedSecurityDescLen\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

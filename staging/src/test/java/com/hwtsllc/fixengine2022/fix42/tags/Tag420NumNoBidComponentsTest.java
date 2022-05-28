@@ -45,17 +45,76 @@ class Tag420NumNoBidComponentsTest {
     @Test
     void Tag0420Test() {
         Tag420NumNoBidComponents tagData;
+        int oneElement;
 
-        tagData = new Tag420NumNoBidComponents(new MyNumInGroupType(
-                Tag420NumNoBidComponents.TESTA_NUM_NO_BID_COMPONENTS));
-        assertEquals( Tag420NumNoBidComponents.TESTA_NUM_NO_BID_COMPONENTS,
-                tagData.getDataValue());
+        oneElement = Tag420NumNoBidComponents.TESTA_NUM_NO_BID_COMPONENTS;
+        tagData = new Tag420NumNoBidComponents( new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag420NumNoBidComponents(new MyNumInGroupType(
-                Tag420NumNoBidComponents.TESTB_NUM_NO_BID_COMPONENTS));
-        assertEquals( Tag420NumNoBidComponents.TESTB_NUM_NO_BID_COMPONENTS,
-                tagData.getDataValue());
+        oneElement = Tag420NumNoBidComponents.TESTB_NUM_NO_BID_COMPONENTS;
+        tagData = new Tag420NumNoBidComponents( new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag420NumNoBidComponents tagData;
+        int oneElement;
+
+        oneElement = Tag420NumNoBidComponents.TESTA_NUM_NO_BID_COMPONENTS;
+        tagData = new Tag420NumNoBidComponents( new MyNumInGroupType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag420NumNoBidComponents.TESTB_NUM_NO_BID_COMPONENTS;
+        tagData = new Tag420NumNoBidComponents( new MyNumInGroupType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag420NumNoBidComponents tagData;
+        int oneElement;
+
+        oneElement = Tag420NumNoBidComponents.TESTB_NUM_NO_BID_COMPONENTS;
+        tagData = new Tag420NumNoBidComponents( new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag420NumNoBidComponents tagData;
+        int oneElement;
+
+        oneElement = Tag420NumNoBidComponents.TESTB_NUM_NO_BID_COMPONENTS;
+        tagData = new Tag420NumNoBidComponents( new MyNumInGroupType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag420NumNoBidComponents tagData;
+        int oneElement;
+
+        oneElement = Tag420NumNoBidComponents.TESTB_NUM_NO_BID_COMPONENTS;
+        tagData = new Tag420NumNoBidComponents( new MyNumInGroupType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag420NumNoBidComponents tagData;
+        int oneElement;
+
+        oneElement = Tag420NumNoBidComponents.TESTA_NUM_NO_BID_COMPONENTS;
+        tagData = new Tag420NumNoBidComponents( new MyNumInGroupType( oneElement ) );
+        assertEquals( "Tag420NumNoBidComponents\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

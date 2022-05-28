@@ -45,15 +45,72 @@ class Tag283StrLocationIDTest {
     @Test
     void Tag0283Test() {
         Tag283StrLocationID tagData;
+        String oneElement;
 
-        tagData = new Tag283StrLocationID(
-                new MyStringType(Tag283StrLocationID.TESTA_STR_LOCATION_ID));
-        assertEquals( Tag283StrLocationID.TESTA_STR_LOCATION_ID, tagData.getDataValue() );
+        oneElement = Tag283StrLocationID.TESTA_STR_LOCATION_ID;
+        tagData = new Tag283StrLocationID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag283StrLocationID(
-                new MyStringType(Tag283StrLocationID.TESTB_STR_LOCATION_ID));
-        assertEquals( Tag283StrLocationID.TESTB_STR_LOCATION_ID, tagData.getDataValue() );
+        oneElement = Tag283StrLocationID.TESTB_STR_LOCATION_ID;
+        tagData = new Tag283StrLocationID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag283StrLocationID tagData;
+        String oneElement;
+
+        oneElement = Tag283StrLocationID.TESTB_STR_LOCATION_ID;
+        tagData = new Tag283StrLocationID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag283StrLocationID tagData;
+        String oneElement;
+
+        oneElement = Tag283StrLocationID.TESTB_STR_LOCATION_ID;
+        tagData = new Tag283StrLocationID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag283StrLocationID tagData;
+        String oneElement;
+
+        oneElement = Tag283StrLocationID.TESTB_STR_LOCATION_ID;
+        tagData = new Tag283StrLocationID( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag283StrLocationID tagData;
+        String oneElement;
+
+        oneElement = Tag283StrLocationID.TESTB_STR_LOCATION_ID;
+        tagData = new Tag283StrLocationID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag283StrLocationID tagData;
+        String oneElement;
+
+        oneElement = Tag283StrLocationID.TESTA_STR_LOCATION_ID;
+        tagData = new Tag283StrLocationID( new MyStringType( oneElement ) );
+        assertEquals( "Tag283StrLocationID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

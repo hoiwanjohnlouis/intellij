@@ -54,17 +54,76 @@ class Tag247LmdUnderlyingRedemptionDateTest {
     @Test
     void Tag0247Test() {
         Tag247LmdUnderlyingRedemptionDate tagData;
+        String oneElement;
 
-        tagData = new Tag247LmdUnderlyingRedemptionDate(new MyLocalMktDateType(
-                Tag247LmdUnderlyingRedemptionDate.TESTA_LMD_UNDERLYING_REDEMPTION_DATE));
-        assertEquals( Tag247LmdUnderlyingRedemptionDate.TESTA_LMD_UNDERLYING_REDEMPTION_DATE,
-                tagData.getDataValue() );
+        oneElement = Tag247LmdUnderlyingRedemptionDate.TESTA_LMD_UNDERLYING_REDEMPTION_DATE;
+        tagData = new Tag247LmdUnderlyingRedemptionDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag247LmdUnderlyingRedemptionDate(new MyLocalMktDateType(
-                Tag247LmdUnderlyingRedemptionDate.TESTB_LMD_UNDERLYING_REDEMPTION_DATE));
-        assertEquals( Tag247LmdUnderlyingRedemptionDate.TESTB_LMD_UNDERLYING_REDEMPTION_DATE,
-                tagData.getDataValue() );
+        oneElement = Tag247LmdUnderlyingRedemptionDate.TESTB_LMD_UNDERLYING_REDEMPTION_DATE;
+        tagData = new Tag247LmdUnderlyingRedemptionDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag247LmdUnderlyingRedemptionDate tagData;
+        String oneElement;
+
+        oneElement = Tag247LmdUnderlyingRedemptionDate.TESTA_LMD_UNDERLYING_REDEMPTION_DATE;
+        tagData = new Tag247LmdUnderlyingRedemptionDate( new MyLocalMktDateType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag247LmdUnderlyingRedemptionDate.TESTB_LMD_UNDERLYING_REDEMPTION_DATE;
+        tagData = new Tag247LmdUnderlyingRedemptionDate( new MyLocalMktDateType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag247LmdUnderlyingRedemptionDate tagData;
+        String oneElement;
+
+        oneElement = Tag247LmdUnderlyingRedemptionDate.TESTB_LMD_UNDERLYING_REDEMPTION_DATE;
+        tagData = new Tag247LmdUnderlyingRedemptionDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag247LmdUnderlyingRedemptionDate tagData;
+        String oneElement;
+
+        oneElement = Tag247LmdUnderlyingRedemptionDate.TESTB_LMD_UNDERLYING_REDEMPTION_DATE;
+        tagData = new Tag247LmdUnderlyingRedemptionDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag247LmdUnderlyingRedemptionDate tagData;
+        String oneElement;
+
+        oneElement = Tag247LmdUnderlyingRedemptionDate.TESTB_LMD_UNDERLYING_REDEMPTION_DATE;
+        tagData = new Tag247LmdUnderlyingRedemptionDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( oneElement, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag247LmdUnderlyingRedemptionDate tagData;
+        String oneElement;
+
+        oneElement = Tag247LmdUnderlyingRedemptionDate.TESTA_LMD_UNDERLYING_REDEMPTION_DATE;
+        tagData = new Tag247LmdUnderlyingRedemptionDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( "Tag247LmdUnderlyingRedemptionDate\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

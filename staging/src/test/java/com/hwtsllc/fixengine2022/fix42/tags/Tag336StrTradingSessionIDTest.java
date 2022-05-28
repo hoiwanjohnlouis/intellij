@@ -58,17 +58,72 @@ class Tag336StrTradingSessionIDTest {
     @Test
     void Tag0336Test() {
         Tag336StrTradingSessionID tagData;
+        String oneElement;
 
-        tagData = new Tag336StrTradingSessionID(new MyStringType(
-                Tag336StrTradingSessionID.TESTA_STR_TRADING_SESSION_ID));
-        assertEquals( Tag336StrTradingSessionID.TESTA_STR_TRADING_SESSION_ID,
-                tagData.getDataValue() );
+        oneElement = Tag336StrTradingSessionID.TESTA_STR_TRADING_SESSION_ID;
+        tagData = new Tag336StrTradingSessionID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag336StrTradingSessionID(new MyStringType(
-                Tag336StrTradingSessionID.TESTB_STR_TRADING_SESSION_ID));
-        assertEquals( Tag336StrTradingSessionID.TESTB_STR_TRADING_SESSION_ID,
-                tagData.getDataValue() );
+        oneElement = Tag336StrTradingSessionID.TESTB_STR_TRADING_SESSION_ID;
+        tagData = new Tag336StrTradingSessionID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag336StrTradingSessionID tagData;
+        String oneElement;
+
+        oneElement = Tag336StrTradingSessionID.TESTB_STR_TRADING_SESSION_ID;
+        tagData = new Tag336StrTradingSessionID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag336StrTradingSessionID tagData;
+        String oneElement;
+
+        oneElement = Tag336StrTradingSessionID.TESTB_STR_TRADING_SESSION_ID;
+        tagData = new Tag336StrTradingSessionID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag336StrTradingSessionID tagData;
+        String oneElement;
+
+        oneElement = Tag336StrTradingSessionID.TESTB_STR_TRADING_SESSION_ID;
+        tagData = new Tag336StrTradingSessionID( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag336StrTradingSessionID tagData;
+        String oneElement;
+
+        oneElement = Tag336StrTradingSessionID.TESTB_STR_TRADING_SESSION_ID;
+        tagData = new Tag336StrTradingSessionID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag336StrTradingSessionID tagData;
+        String oneElement;
+
+        oneElement = Tag336StrTradingSessionID.TESTA_STR_TRADING_SESSION_ID;
+        tagData = new Tag336StrTradingSessionID( new MyStringType( oneElement ) );
+        assertEquals( "Tag336StrTradingSessionID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

@@ -45,9 +45,76 @@ class Tag360LenEncodedAllocTextLenTest {
     @Test
     void Tag0360Test() {
         Tag360LenEncodedAllocTextLen tagData;
+        int oneElement;
 
-        tagData = new Tag360LenEncodedAllocTextLen( new MyLengthType(23) );
-        assertEquals( 23, tagData.getDataValue() );
+        oneElement = Tag360LenEncodedAllocTextLen.TESTA_LEN_ENCODED_ALLOC_TEXT_LEN;
+        tagData = new Tag360LenEncodedAllocTextLen( new MyLengthType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag360LenEncodedAllocTextLen.TESTB_LEN_ENCODED_ALLOC_TEXT_LEN;
+        tagData = new Tag360LenEncodedAllocTextLen( new MyLengthType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag360LenEncodedAllocTextLen tagData;
+        int oneElement;
+
+        oneElement = Tag360LenEncodedAllocTextLen.TESTA_LEN_ENCODED_ALLOC_TEXT_LEN;
+        tagData = new Tag360LenEncodedAllocTextLen( new MyLengthType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag360LenEncodedAllocTextLen.TESTB_LEN_ENCODED_ALLOC_TEXT_LEN;
+        tagData = new Tag360LenEncodedAllocTextLen( new MyLengthType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag360LenEncodedAllocTextLen tagData;
+        int oneElement;
+
+        oneElement = Tag360LenEncodedAllocTextLen.TESTB_LEN_ENCODED_ALLOC_TEXT_LEN;
+        tagData = new Tag360LenEncodedAllocTextLen( new MyLengthType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag360LenEncodedAllocTextLen tagData;
+        int oneElement;
+
+        oneElement = Tag360LenEncodedAllocTextLen.TESTB_LEN_ENCODED_ALLOC_TEXT_LEN;
+        tagData = new Tag360LenEncodedAllocTextLen( new MyLengthType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag360LenEncodedAllocTextLen tagData;
+        int oneElement;
+
+        oneElement = Tag360LenEncodedAllocTextLen.TESTB_LEN_ENCODED_ALLOC_TEXT_LEN;
+        tagData = new Tag360LenEncodedAllocTextLen( new MyLengthType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag360LenEncodedAllocTextLen tagData;
+        int oneElement;
+
+        oneElement = Tag360LenEncodedAllocTextLen.TESTA_LEN_ENCODED_ALLOC_TEXT_LEN;
+        tagData = new Tag360LenEncodedAllocTextLen( new MyLengthType( oneElement ) );
+        assertEquals( "Tag360LenEncodedAllocTextLen\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

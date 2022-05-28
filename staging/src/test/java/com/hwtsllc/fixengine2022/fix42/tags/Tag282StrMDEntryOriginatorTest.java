@@ -45,15 +45,72 @@ class Tag282StrMDEntryOriginatorTest {
     @Test
     void Tag0282Test() {
         Tag282StrMDEntryOriginator tagData;
+        String oneElement;
 
-        tagData = new Tag282StrMDEntryOriginator(
-                new MyStringType(Tag282StrMDEntryOriginator.TESTA_STR_MD_ENTRY_ORIGINATOR));
-        assertEquals( Tag282StrMDEntryOriginator.TESTA_STR_MD_ENTRY_ORIGINATOR, tagData.getDataValue() );
+        oneElement = Tag282StrMDEntryOriginator.TESTA_STR_MD_ENTRY_ORIGINATOR;
+        tagData = new Tag282StrMDEntryOriginator( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag282StrMDEntryOriginator(
-                new MyStringType(Tag282StrMDEntryOriginator.TESTB_STR_MD_ENTRY_ORIGINATOR));
-        assertEquals( Tag282StrMDEntryOriginator.TESTB_STR_MD_ENTRY_ORIGINATOR, tagData.getDataValue() );
+        oneElement = Tag282StrMDEntryOriginator.TESTB_STR_MD_ENTRY_ORIGINATOR;
+        tagData = new Tag282StrMDEntryOriginator( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag282StrMDEntryOriginator tagData;
+        String oneElement;
+
+        oneElement = Tag282StrMDEntryOriginator.TESTB_STR_MD_ENTRY_ORIGINATOR;
+        tagData = new Tag282StrMDEntryOriginator( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag282StrMDEntryOriginator tagData;
+        String oneElement;
+
+        oneElement = Tag282StrMDEntryOriginator.TESTB_STR_MD_ENTRY_ORIGINATOR;
+        tagData = new Tag282StrMDEntryOriginator( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag282StrMDEntryOriginator tagData;
+        String oneElement;
+
+        oneElement = Tag282StrMDEntryOriginator.TESTB_STR_MD_ENTRY_ORIGINATOR;
+        tagData = new Tag282StrMDEntryOriginator( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag282StrMDEntryOriginator tagData;
+        String oneElement;
+
+        oneElement = Tag282StrMDEntryOriginator.TESTB_STR_MD_ENTRY_ORIGINATOR;
+        tagData = new Tag282StrMDEntryOriginator( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag282StrMDEntryOriginator tagData;
+        String oneElement;
+
+        oneElement = Tag282StrMDEntryOriginator.TESTA_STR_MD_ENTRY_ORIGINATOR;
+        tagData = new Tag282StrMDEntryOriginator( new MyStringType( oneElement ) );
+        assertEquals( "Tag282StrMDEntryOriginator\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

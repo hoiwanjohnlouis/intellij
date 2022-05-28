@@ -17,8 +17,8 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum281MDReqRejReason;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -128,5 +128,70 @@ class Tag281EnuMDReqRejReasonTest {
         tagData = new Tag281EnuMDReqRejReason(Enum281MDReqRejReason.INSUFFICIENT_CREDIT);
         assertEquals( Enum281MDReqRejReason.INSUFFICIENT_CREDIT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag281EnuMDReqRejReason tagData;
+
+        // loop around the ENUM and process
+        for (Enum281MDReqRejReason oneEnum : Enum281MDReqRejReason.values()) {
+            tagData = new Tag281EnuMDReqRejReason(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag281EnuMDReqRejReason tagData;
+
+        // loop around the ENUM and process
+        for (Enum281MDReqRejReason oneEnum : Enum281MDReqRejReason.values()) {
+            tagData = new Tag281EnuMDReqRejReason(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag281EnuMDReqRejReason tagData;
+
+        // loop around the ENUM and process
+        for (Enum281MDReqRejReason oneEnum : Enum281MDReqRejReason.values()) {
+            tagData = new Tag281EnuMDReqRejReason(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag281EnuMDReqRejReason tagData;
+
+        // loop around the ENUM and process
+        for (Enum281MDReqRejReason oneEnum : Enum281MDReqRejReason.values()) {
+            tagData = new Tag281EnuMDReqRejReason(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag281EnuMDReqRejReason tagData;
+
+        // loop around the ENUM and process
+        for (Enum281MDReqRejReason oneEnum : Enum281MDReqRejReason.values()) {
+            tagData = new Tag281EnuMDReqRejReason(oneEnum);
+            assertEquals( "Tag281EnuMDReqRejReason\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
     }
 }

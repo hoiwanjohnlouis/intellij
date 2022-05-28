@@ -45,17 +45,76 @@ class Tag287IntSellerDaysTest {
     @Test
     void Tag0287Test() {
         Tag287IntSellerDays tagData;
+        int oneElement;
 
-        tagData = new Tag287IntSellerDays(new MyIntType(
-                Tag287IntSellerDays.TESTA_INT_SELLER_DAYS));
-        assertEquals( Tag287IntSellerDays.TESTA_INT_SELLER_DAYS,
-                tagData.getDataValue());
+        oneElement = Tag287IntSellerDays.TESTA_INT_SELLER_DAYS;
+        tagData = new Tag287IntSellerDays( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag287IntSellerDays(new MyIntType(
-                Tag287IntSellerDays.TESTB_INT_SELLER_DAYS));
-        assertEquals( Tag287IntSellerDays.TESTB_INT_SELLER_DAYS,
-                tagData.getDataValue());
+        oneElement = Tag287IntSellerDays.TESTB_INT_SELLER_DAYS;
+        tagData = new Tag287IntSellerDays( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag287IntSellerDays tagData;
+        int oneElement;
+
+        oneElement = Tag287IntSellerDays.TESTA_INT_SELLER_DAYS;
+        tagData = new Tag287IntSellerDays( new MyIntType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag287IntSellerDays.TESTB_INT_SELLER_DAYS;
+        tagData = new Tag287IntSellerDays( new MyIntType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag287IntSellerDays tagData;
+        int oneElement;
+
+        oneElement = Tag287IntSellerDays.TESTB_INT_SELLER_DAYS;
+        tagData = new Tag287IntSellerDays( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag287IntSellerDays tagData;
+        int oneElement;
+
+        oneElement = Tag287IntSellerDays.TESTB_INT_SELLER_DAYS;
+        tagData = new Tag287IntSellerDays( new MyIntType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag287IntSellerDays tagData;
+        int oneElement;
+
+        oneElement = Tag287IntSellerDays.TESTB_INT_SELLER_DAYS;
+        tagData = new Tag287IntSellerDays( new MyIntType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag287IntSellerDays tagData;
+        int oneElement;
+
+        oneElement = Tag287IntSellerDays.TESTA_INT_SELLER_DAYS;
+        tagData = new Tag287IntSellerDays( new MyIntType( oneElement ) );
+        assertEquals( "Tag287IntSellerDays\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

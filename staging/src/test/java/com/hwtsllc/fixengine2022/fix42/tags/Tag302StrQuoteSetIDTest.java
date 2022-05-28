@@ -45,15 +45,72 @@ class Tag302StrQuoteSetIDTest {
     @Test
     void Tag0302Test() {
         Tag302StrQuoteSetID tagData;
+        String oneElement;
 
-        tagData = new Tag302StrQuoteSetID(
-                new MyStringType(Tag302StrQuoteSetID.TESTA_STR_QUOTE_SET_ID));
-        assertEquals( Tag302StrQuoteSetID.TESTA_STR_QUOTE_SET_ID, tagData.getDataValue() );
+        oneElement = Tag302StrQuoteSetID.TESTA_STR_QUOTE_SET_ID;
+        tagData = new Tag302StrQuoteSetID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag302StrQuoteSetID(
-                new MyStringType(Tag302StrQuoteSetID.TESTB_STR_QUOTE_SET_ID));
-        assertEquals( Tag302StrQuoteSetID.TESTB_STR_QUOTE_SET_ID, tagData.getDataValue() );
+        oneElement = Tag302StrQuoteSetID.TESTB_STR_QUOTE_SET_ID;
+        tagData = new Tag302StrQuoteSetID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag302StrQuoteSetID tagData;
+        String oneElement;
+
+        oneElement = Tag302StrQuoteSetID.TESTB_STR_QUOTE_SET_ID;
+        tagData = new Tag302StrQuoteSetID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag302StrQuoteSetID tagData;
+        String oneElement;
+
+        oneElement = Tag302StrQuoteSetID.TESTB_STR_QUOTE_SET_ID;
+        tagData = new Tag302StrQuoteSetID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag302StrQuoteSetID tagData;
+        String oneElement;
+
+        oneElement = Tag302StrQuoteSetID.TESTB_STR_QUOTE_SET_ID;
+        tagData = new Tag302StrQuoteSetID( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag302StrQuoteSetID tagData;
+        String oneElement;
+
+        oneElement = Tag302StrQuoteSetID.TESTB_STR_QUOTE_SET_ID;
+        tagData = new Tag302StrQuoteSetID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag302StrQuoteSetID tagData;
+        String oneElement;
+
+        oneElement = Tag302StrQuoteSetID.TESTA_STR_QUOTE_SET_ID;
+        tagData = new Tag302StrQuoteSetID( new MyStringType( oneElement ) );
+        assertEquals( "Tag302StrQuoteSetID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

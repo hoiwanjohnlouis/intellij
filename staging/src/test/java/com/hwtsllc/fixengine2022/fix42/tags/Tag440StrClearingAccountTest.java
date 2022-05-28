@@ -46,17 +46,72 @@ class Tag440StrClearingAccountTest {
     @Test
     void Tag0440Test() {
         Tag440StrClearingAccount tagData;
+        String oneElement;
 
-        tagData = new Tag440StrClearingAccount(new MyStringType(
-                Tag440StrClearingAccount.TESTA_STR_CLEARING_ACCOUNT));
-        assertEquals( Tag440StrClearingAccount.TESTA_STR_CLEARING_ACCOUNT,
-                tagData.getDataValue() );
+        oneElement = Tag440StrClearingAccount.TESTA_STR_CLEARING_ACCOUNT;
+        tagData = new Tag440StrClearingAccount( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag440StrClearingAccount(new MyStringType(
-                Tag440StrClearingAccount.TESTB_STR_CLEARING_ACCOUNT));
-        assertEquals( Tag440StrClearingAccount.TESTB_STR_CLEARING_ACCOUNT,
-                tagData.getDataValue() );
+        oneElement = Tag440StrClearingAccount.TESTB_STR_CLEARING_ACCOUNT;
+        tagData = new Tag440StrClearingAccount( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag440StrClearingAccount tagData;
+        String oneElement;
+
+        oneElement = Tag440StrClearingAccount.TESTB_STR_CLEARING_ACCOUNT;
+        tagData = new Tag440StrClearingAccount( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag440StrClearingAccount tagData;
+        String oneElement;
+
+        oneElement = Tag440StrClearingAccount.TESTB_STR_CLEARING_ACCOUNT;
+        tagData = new Tag440StrClearingAccount( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag440StrClearingAccount tagData;
+        String oneElement;
+
+        oneElement = Tag440StrClearingAccount.TESTB_STR_CLEARING_ACCOUNT;
+        tagData = new Tag440StrClearingAccount( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag440StrClearingAccount tagData;
+        String oneElement;
+
+        oneElement = Tag440StrClearingAccount.TESTB_STR_CLEARING_ACCOUNT;
+        tagData = new Tag440StrClearingAccount(new MyStringType(oneElement));
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag440StrClearingAccount tagData;
+        String oneElement;
+
+        oneElement = Tag440StrClearingAccount.TESTA_STR_CLEARING_ACCOUNT;
+        tagData = new Tag440StrClearingAccount(new MyStringType(oneElement));
+        assertEquals( "Tag440StrClearingAccount\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

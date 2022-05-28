@@ -45,9 +45,71 @@ class Tag348LenEncodedIssuerLenTest {
     @Test
     void Tag0348Test() {
         Tag348LenEncodedIssuerLen tagData;
+        int oneElement;
 
-        tagData = new Tag348LenEncodedIssuerLen( new MyLengthType(23) );
-        assertEquals( 23, tagData.getDataValue() );
+        oneElement = 23;
+        tagData = new Tag348LenEncodedIssuerLen( new MyLengthType(oneElement) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag212LenXmlDataLen tagData;
+        int oneElement;
+
+        oneElement = Tag212LenXmlDataLen.TESTA_LEN_XML_DATA_LEN;
+        tagData = new Tag212LenXmlDataLen( new MyLengthType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag212LenXmlDataLen.TESTB_LEN_XML_DATA_LEN;
+        tagData = new Tag212LenXmlDataLen( new MyLengthType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag212LenXmlDataLen tagData;
+        int oneElement;
+
+        oneElement = Tag212LenXmlDataLen.TESTB_LEN_XML_DATA_LEN;
+        tagData = new Tag212LenXmlDataLen( new MyLengthType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag212LenXmlDataLen tagData;
+        int oneElement;
+
+        oneElement = Tag212LenXmlDataLen.TESTB_LEN_XML_DATA_LEN;
+        tagData = new Tag212LenXmlDataLen( new MyLengthType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag212LenXmlDataLen tagData;
+        int oneElement;
+
+        oneElement = Tag212LenXmlDataLen.TESTB_LEN_XML_DATA_LEN;
+        tagData = new Tag212LenXmlDataLen( new MyLengthType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag212LenXmlDataLen tagData;
+        int oneElement;
+
+        oneElement = Tag212LenXmlDataLen.TESTB_LEN_XML_DATA_LEN;
+        tagData = new Tag212LenXmlDataLen( new MyLengthType( oneElement ) );
+        assertEquals( "Tag212LenXmlDataLen\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

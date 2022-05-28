@@ -17,8 +17,8 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum380BusinessRejectReason;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -97,5 +97,70 @@ class Tag380EnuBusinessRejectReasonTest {
         tagData = new Tag380EnuBusinessRejectReason(Enum380BusinessRejectReason.INVALID_PRICE_INCREMENT);
         assertEquals( Enum380BusinessRejectReason.INVALID_PRICE_INCREMENT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag380EnuBusinessRejectReason tagData;
+
+        // loop around the ENUM and process
+        for (Enum380BusinessRejectReason oneEnum : Enum380BusinessRejectReason.values()) {
+            tagData = new Tag380EnuBusinessRejectReason(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag380EnuBusinessRejectReason tagData;
+
+        // loop around the ENUM and process
+        for (Enum380BusinessRejectReason oneEnum : Enum380BusinessRejectReason.values()) {
+            tagData = new Tag380EnuBusinessRejectReason(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag380EnuBusinessRejectReason tagData;
+
+        // loop around the ENUM and process
+        for (Enum380BusinessRejectReason oneEnum : Enum380BusinessRejectReason.values()) {
+            tagData = new Tag380EnuBusinessRejectReason(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag380EnuBusinessRejectReason tagData;
+
+        // loop around the ENUM and process
+        for (Enum380BusinessRejectReason oneEnum : Enum380BusinessRejectReason.values()) {
+            tagData = new Tag380EnuBusinessRejectReason(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag380EnuBusinessRejectReason tagData;
+
+        // loop around the ENUM and process
+        for (Enum380BusinessRejectReason oneEnum : Enum380BusinessRejectReason.values()) {
+            tagData = new Tag380EnuBusinessRejectReason(oneEnum);
+            assertEquals( "Tag380EnuBusinessRejectReason\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
     }
 }

@@ -17,8 +17,8 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum297QuoteStatus;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -137,5 +137,70 @@ class Tag297EnuQuoteAckStatusTest {
         tagData = new Tag297EnuQuoteAckStatus(Enum297QuoteStatus.CANCELED_DUE_TO_CROSS_MARKET);
         assertEquals( Enum297QuoteStatus.CANCELED_DUE_TO_CROSS_MARKET.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag297EnuQuoteAckStatus tagData;
+
+        // loop around the ENUM and process
+        for (Enum297QuoteStatus oneEnum : Enum297QuoteStatus.values()) {
+            tagData = new Tag297EnuQuoteAckStatus(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag297EnuQuoteAckStatus tagData;
+
+        // loop around the ENUM and process
+        for (Enum297QuoteStatus oneEnum : Enum297QuoteStatus.values()) {
+            tagData = new Tag297EnuQuoteAckStatus(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag297EnuQuoteAckStatus tagData;
+
+        // loop around the ENUM and process
+        for (Enum297QuoteStatus oneEnum : Enum297QuoteStatus.values()) {
+            tagData = new Tag297EnuQuoteAckStatus(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag297EnuQuoteAckStatus tagData;
+
+        // loop around the ENUM and process
+        for (Enum297QuoteStatus oneEnum : Enum297QuoteStatus.values()) {
+            tagData = new Tag297EnuQuoteAckStatus(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag297EnuQuoteAckStatus tagData;
+
+        // loop around the ENUM and process
+        for (Enum297QuoteStatus oneEnum : Enum297QuoteStatus.values()) {
+            tagData = new Tag297EnuQuoteAckStatus(oneEnum);
+            assertEquals( "Tag297EnuQuoteAckStatus\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
     }
 }

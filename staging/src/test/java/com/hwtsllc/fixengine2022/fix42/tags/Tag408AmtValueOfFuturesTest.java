@@ -45,17 +45,76 @@ class Tag408AmtValueOfFuturesTest {
     @Test
     void Tag0408Test() {
         Tag408AmtValueOfFutures tagData;
+        double oneElement;
 
-        tagData = new Tag408AmtValueOfFutures(new MyAmtType(
-                Tag408AmtValueOfFutures.TESTA_AMT_VALUE_OF_FUTURES));
-        assertEquals( Tag408AmtValueOfFutures.TESTA_AMT_VALUE_OF_FUTURES,
-                tagData.getDataValue());
+        oneElement = Tag408AmtValueOfFutures.TESTA_AMT_VALUE_OF_FUTURES;
+        tagData = new Tag408AmtValueOfFutures( new MyAmtType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag408AmtValueOfFutures(new MyAmtType(
-                Tag408AmtValueOfFutures.TESTB_AMT_VALUE_OF_FUTURES));
-        assertEquals( Tag408AmtValueOfFutures.TESTB_AMT_VALUE_OF_FUTURES,
-                tagData.getDataValue());
+        oneElement = Tag408AmtValueOfFutures.TESTB_AMT_VALUE_OF_FUTURES;
+        tagData = new Tag408AmtValueOfFutures( new MyAmtType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag408AmtValueOfFutures tagData;
+        double oneElement;
+
+        oneElement = Tag408AmtValueOfFutures.TESTA_AMT_VALUE_OF_FUTURES;
+        tagData = new Tag408AmtValueOfFutures( new MyAmtType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag408AmtValueOfFutures.TESTB_AMT_VALUE_OF_FUTURES;
+        tagData = new Tag408AmtValueOfFutures( new MyAmtType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag408AmtValueOfFutures tagData;
+        double oneElement;
+
+        oneElement = Tag408AmtValueOfFutures.TESTB_AMT_VALUE_OF_FUTURES;
+        tagData = new Tag408AmtValueOfFutures( new MyAmtType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag408AmtValueOfFutures tagData;
+        double oneElement;
+
+        oneElement = Tag408AmtValueOfFutures.TESTB_AMT_VALUE_OF_FUTURES;
+        tagData = new Tag408AmtValueOfFutures( new MyAmtType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag408AmtValueOfFutures tagData;
+        double oneElement;
+
+        oneElement = Tag408AmtValueOfFutures.TESTB_AMT_VALUE_OF_FUTURES;
+        tagData = new Tag408AmtValueOfFutures( new MyAmtType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag408AmtValueOfFutures tagData;
+        double oneElement;
+
+        oneElement = Tag408AmtValueOfFutures.TESTA_AMT_VALUE_OF_FUTURES;
+        tagData = new Tag408AmtValueOfFutures( new MyAmtType( oneElement ) );
+        assertEquals( "Tag408AmtValueOfFutures\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

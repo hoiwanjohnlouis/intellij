@@ -45,17 +45,76 @@ class Tag412AmtOutMainCntryUIndexTest {
     @Test
     void Tag0412Test() {
         Tag412AmtOutMainCntryUIndex tagData;
+        double oneElement;
 
-        tagData = new Tag412AmtOutMainCntryUIndex(new MyAmtType(
-                Tag412AmtOutMainCntryUIndex.TESTA_AMT_OUT_MAIN_CNTRY_U_INDEX));
-        assertEquals( Tag412AmtOutMainCntryUIndex.TESTA_AMT_OUT_MAIN_CNTRY_U_INDEX,
-                tagData.getDataValue());
+        oneElement = Tag412AmtOutMainCntryUIndex.TESTA_AMT_OUT_MAIN_CNTRY_U_INDEX;
+        tagData = new Tag412AmtOutMainCntryUIndex( new MyAmtType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag412AmtOutMainCntryUIndex(new MyAmtType(
-                Tag412AmtOutMainCntryUIndex.TESTB_AMT_OUT_MAIN_CNTRY_U_INDEX));
-        assertEquals( Tag412AmtOutMainCntryUIndex.TESTB_AMT_OUT_MAIN_CNTRY_U_INDEX,
-                tagData.getDataValue());
+        oneElement = Tag412AmtOutMainCntryUIndex.TESTB_AMT_OUT_MAIN_CNTRY_U_INDEX;
+        tagData = new Tag412AmtOutMainCntryUIndex( new MyAmtType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag412AmtOutMainCntryUIndex tagData;
+        double oneElement;
+
+        oneElement = Tag412AmtOutMainCntryUIndex.TESTA_AMT_OUT_MAIN_CNTRY_U_INDEX;
+        tagData = new Tag412AmtOutMainCntryUIndex( new MyAmtType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag412AmtOutMainCntryUIndex.TESTB_AMT_OUT_MAIN_CNTRY_U_INDEX;
+        tagData = new Tag412AmtOutMainCntryUIndex( new MyAmtType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag412AmtOutMainCntryUIndex tagData;
+        double oneElement;
+
+        oneElement = Tag412AmtOutMainCntryUIndex.TESTB_AMT_OUT_MAIN_CNTRY_U_INDEX;
+        tagData = new Tag412AmtOutMainCntryUIndex( new MyAmtType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag412AmtOutMainCntryUIndex tagData;
+        double oneElement;
+
+        oneElement = Tag412AmtOutMainCntryUIndex.TESTB_AMT_OUT_MAIN_CNTRY_U_INDEX;
+        tagData = new Tag412AmtOutMainCntryUIndex( new MyAmtType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag412AmtOutMainCntryUIndex tagData;
+        double oneElement;
+
+        oneElement = Tag412AmtOutMainCntryUIndex.TESTB_AMT_OUT_MAIN_CNTRY_U_INDEX;
+        tagData = new Tag412AmtOutMainCntryUIndex( new MyAmtType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag412AmtOutMainCntryUIndex tagData;
+        double oneElement;
+
+        oneElement = Tag412AmtOutMainCntryUIndex.TESTA_AMT_OUT_MAIN_CNTRY_U_INDEX;
+        tagData = new Tag412AmtOutMainCntryUIndex( new MyAmtType( oneElement ) );
+        assertEquals( "Tag412AmtOutMainCntryUIndex\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

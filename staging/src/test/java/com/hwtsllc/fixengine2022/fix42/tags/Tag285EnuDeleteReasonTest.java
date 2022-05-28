@@ -17,8 +17,8 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum285DeleteReason;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -61,5 +61,70 @@ class Tag285EnuDeleteReasonTest {
         tagData = new Tag285EnuDeleteReason(Enum285DeleteReason.ERROR);
         assertEquals( Enum285DeleteReason.ERROR.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag285EnuDeleteReason tagData;
+
+        // loop around the ENUM and process
+        for (Enum285DeleteReason oneEnum : Enum285DeleteReason.values()) {
+            tagData = new Tag285EnuDeleteReason(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag285EnuDeleteReason tagData;
+
+        // loop around the ENUM and process
+        for (Enum285DeleteReason oneEnum : Enum285DeleteReason.values()) {
+            tagData = new Tag285EnuDeleteReason(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag285EnuDeleteReason tagData;
+
+        // loop around the ENUM and process
+        for (Enum285DeleteReason oneEnum : Enum285DeleteReason.values()) {
+            tagData = new Tag285EnuDeleteReason(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag285EnuDeleteReason tagData;
+
+        // loop around the ENUM and process
+        for (Enum285DeleteReason oneEnum : Enum285DeleteReason.values()) {
+            tagData = new Tag285EnuDeleteReason(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag285EnuDeleteReason tagData;
+
+        // loop around the ENUM and process
+        for (Enum285DeleteReason oneEnum : Enum285DeleteReason.values()) {
+            tagData = new Tag285EnuDeleteReason(oneEnum);
+            assertEquals( "Tag285EnuDeleteReason\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
     }
 }

@@ -49,17 +49,76 @@ class Tag224LmdCouponPaymentDateTest {
     @Test
     void Tag0224Test() {
         Tag224LmdCouponPaymentDate tagData;
+        String oneElement;
 
-        tagData = new Tag224LmdCouponPaymentDate(new MyLocalMktDateType(
-                Tag224LmdCouponPaymentDate.TESTA_LMD_COUPON_PAYMENT_DATE));
-        assertEquals( Tag224LmdCouponPaymentDate.TESTA_LMD_COUPON_PAYMENT_DATE,
-                tagData.getDataValue() );
+        oneElement = Tag224LmdCouponPaymentDate.TESTA_LMD_COUPON_PAYMENT_DATE;
+        tagData = new Tag224LmdCouponPaymentDate(new MyLocalMktDateType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag224LmdCouponPaymentDate(new MyLocalMktDateType(
-                Tag224LmdCouponPaymentDate.TESTB_LMD_COUPON_PAYMENT_DATE));
-        assertEquals( Tag224LmdCouponPaymentDate.TESTB_LMD_COUPON_PAYMENT_DATE,
-                tagData.getDataValue() );
+        oneElement = Tag224LmdCouponPaymentDate.TESTB_LMD_COUPON_PAYMENT_DATE;
+        tagData = new Tag224LmdCouponPaymentDate(new MyLocalMktDateType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag224LmdCouponPaymentDate tagData;
+        String oneElement;
+
+        oneElement = Tag224LmdCouponPaymentDate.TESTA_LMD_COUPON_PAYMENT_DATE;
+        tagData = new Tag224LmdCouponPaymentDate( new MyLocalMktDateType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag224LmdCouponPaymentDate.TESTB_LMD_COUPON_PAYMENT_DATE;
+        tagData = new Tag224LmdCouponPaymentDate( new MyLocalMktDateType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag224LmdCouponPaymentDate tagData;
+        String oneElement;
+
+        oneElement = Tag224LmdCouponPaymentDate.TESTB_LMD_COUPON_PAYMENT_DATE;
+        tagData = new Tag224LmdCouponPaymentDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag224LmdCouponPaymentDate tagData;
+        String oneElement;
+
+        oneElement = Tag224LmdCouponPaymentDate.TESTB_LMD_COUPON_PAYMENT_DATE;
+        tagData = new Tag224LmdCouponPaymentDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag224LmdCouponPaymentDate tagData;
+        String oneElement;
+
+        oneElement = Tag224LmdCouponPaymentDate.TESTB_LMD_COUPON_PAYMENT_DATE;
+        tagData = new Tag224LmdCouponPaymentDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( oneElement, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag224LmdCouponPaymentDate tagData;
+        String oneElement;
+
+        oneElement = Tag224LmdCouponPaymentDate.TESTA_LMD_COUPON_PAYMENT_DATE;
+        tagData = new Tag224LmdCouponPaymentDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( "Tag224LmdCouponPaymentDate\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

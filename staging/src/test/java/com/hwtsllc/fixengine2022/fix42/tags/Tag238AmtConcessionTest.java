@@ -47,17 +47,76 @@ class Tag238AmtConcessionTest {
     @Test
     void Tag0238Test() {
         Tag238AmtConcession tagData;
+        double oneElement;
 
-        tagData = new Tag238AmtConcession(new MyAmtType(
-                Tag238AmtConcession.TESTA_AMT_CONCESSION));
-        assertEquals( Tag238AmtConcession.TESTA_AMT_CONCESSION,
-                tagData.getDataValue());
+        oneElement = Tag238AmtConcession.TESTA_AMT_CONCESSION;
+        tagData = new Tag238AmtConcession( new MyAmtType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag238AmtConcession(new MyAmtType(
-                Tag238AmtConcession.TESTB_AMT_CONCESSION));
-        assertEquals( Tag238AmtConcession.TESTB_AMT_CONCESSION,
-                tagData.getDataValue());
+        oneElement = Tag238AmtConcession.TESTB_AMT_CONCESSION;
+        tagData = new Tag238AmtConcession( new MyAmtType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag238AmtConcession tagData;
+        double oneElement;
+
+        oneElement = Tag238AmtConcession.TESTA_AMT_CONCESSION;
+        tagData = new Tag238AmtConcession( new MyAmtType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag238AmtConcession.TESTB_AMT_CONCESSION;
+        tagData = new Tag238AmtConcession( new MyAmtType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag238AmtConcession tagData;
+        double oneElement;
+
+        oneElement = Tag238AmtConcession.TESTB_AMT_CONCESSION;
+        tagData = new Tag238AmtConcession( new MyAmtType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag238AmtConcession tagData;
+        double oneElement;
+
+        oneElement = Tag238AmtConcession.TESTB_AMT_CONCESSION;
+        tagData = new Tag238AmtConcession( new MyAmtType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag238AmtConcession tagData;
+        double oneElement;
+
+        oneElement = Tag238AmtConcession.TESTB_AMT_CONCESSION;
+        tagData = new Tag238AmtConcession( new MyAmtType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag238AmtConcession tagData;
+        double oneElement;
+
+        oneElement = Tag238AmtConcession.TESTA_AMT_CONCESSION;
+        tagData = new Tag238AmtConcession( new MyAmtType( oneElement ) );
+        assertEquals( "Tag238AmtConcession\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

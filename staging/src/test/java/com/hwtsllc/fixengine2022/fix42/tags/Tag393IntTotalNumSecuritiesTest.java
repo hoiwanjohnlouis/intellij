@@ -47,17 +47,76 @@ class Tag393IntTotalNumSecuritiesTest {
     @Test
     void Tag0393Test() {
         Tag393IntTotalNumSecurities tagData;
+        int oneElement;
 
-        tagData = new Tag393IntTotalNumSecurities(new MyIntType(
-                Tag393IntTotalNumSecurities.TESTA_INT_TOTAL_NUM_SECURITIES));
-        assertEquals( Tag393IntTotalNumSecurities.TESTA_INT_TOTAL_NUM_SECURITIES,
-                tagData.getDataValue());
+        oneElement = Tag393IntTotalNumSecurities.TESTA_INT_TOTAL_NUM_SECURITIES;
+        tagData = new Tag393IntTotalNumSecurities( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag393IntTotalNumSecurities(new MyIntType(
-                Tag393IntTotalNumSecurities.TESTB_INT_TOTAL_NUM_SECURITIES));
-        assertEquals( Tag393IntTotalNumSecurities.TESTB_INT_TOTAL_NUM_SECURITIES,
-                tagData.getDataValue());
+        oneElement = Tag393IntTotalNumSecurities.TESTB_INT_TOTAL_NUM_SECURITIES;
+        tagData = new Tag393IntTotalNumSecurities( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag393IntTotalNumSecurities tagData;
+        int oneElement;
+
+        oneElement = Tag393IntTotalNumSecurities.TESTA_INT_TOTAL_NUM_SECURITIES;
+        tagData = new Tag393IntTotalNumSecurities( new MyIntType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag393IntTotalNumSecurities.TESTB_INT_TOTAL_NUM_SECURITIES;
+        tagData = new Tag393IntTotalNumSecurities( new MyIntType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag393IntTotalNumSecurities tagData;
+        int oneElement;
+
+        oneElement = Tag393IntTotalNumSecurities.TESTB_INT_TOTAL_NUM_SECURITIES;
+        tagData = new Tag393IntTotalNumSecurities( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag393IntTotalNumSecurities tagData;
+        int oneElement;
+
+        oneElement = Tag393IntTotalNumSecurities.TESTB_INT_TOTAL_NUM_SECURITIES;
+        tagData = new Tag393IntTotalNumSecurities( new MyIntType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag393IntTotalNumSecurities tagData;
+        int oneElement;
+
+        oneElement = Tag393IntTotalNumSecurities.TESTB_INT_TOTAL_NUM_SECURITIES;
+        tagData = new Tag393IntTotalNumSecurities( new MyIntType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag393IntTotalNumSecurities tagData;
+        int oneElement;
+
+        oneElement = Tag393IntTotalNumSecurities.TESTA_INT_TOTAL_NUM_SECURITIES;
+        tagData = new Tag393IntTotalNumSecurities( new MyIntType( oneElement ) );
+        assertEquals( "Tag393IntTotalNumSecurities\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

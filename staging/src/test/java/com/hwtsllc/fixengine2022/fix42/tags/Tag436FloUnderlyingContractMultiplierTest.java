@@ -47,17 +47,73 @@ class Tag436FloUnderlyingContractMultiplierTest {
     @Test
     void Tag0436Test() {
         Tag436FloUnderlyingContractMultiplier tagData;
+        float oneElement;
 
-        tagData = new Tag436FloUnderlyingContractMultiplier(new MyFloatType(
-                Tag436FloUnderlyingContractMultiplier.TESTA_FLO_UNDERLYING_CONTRACT_MULTIPLIER));
-        assertEquals( Tag436FloUnderlyingContractMultiplier.TESTA_FLO_UNDERLYING_CONTRACT_MULTIPLIER,
-                tagData.getDataValue());
+        oneElement = Tag436FloUnderlyingContractMultiplier.TESTA_FLO_UNDERLYING_CONTRACT_MULTIPLIER;
+        tagData = new Tag436FloUnderlyingContractMultiplier( new MyFloatType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag436FloUnderlyingContractMultiplier(new MyFloatType(
-                Tag436FloUnderlyingContractMultiplier.TESTB_FLO_UNDERLYING_CONTRACT_MULTIPLIER));
-        assertEquals( Tag436FloUnderlyingContractMultiplier.TESTB_FLO_UNDERLYING_CONTRACT_MULTIPLIER,
-                tagData.getDataValue());
+        oneElement = Tag436FloUnderlyingContractMultiplier.TESTB_FLO_UNDERLYING_CONTRACT_MULTIPLIER;
+        tagData = new Tag436FloUnderlyingContractMultiplier( new MyFloatType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag436FloUnderlyingContractMultiplier tagData;
+        float oneElement;
+
+        oneElement = Tag436FloUnderlyingContractMultiplier.TESTB_FLO_UNDERLYING_CONTRACT_MULTIPLIER;
+        tagData = new Tag436FloUnderlyingContractMultiplier( new MyFloatType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag436FloUnderlyingContractMultiplier tagData;
+        float oneElement;
+
+        oneElement = Tag436FloUnderlyingContractMultiplier.TESTB_FLO_UNDERLYING_CONTRACT_MULTIPLIER;
+        tagData = new Tag436FloUnderlyingContractMultiplier( new MyFloatType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag436FloUnderlyingContractMultiplier tagData;
+        float oneElement;
+
+        oneElement = Tag436FloUnderlyingContractMultiplier.TESTB_FLO_UNDERLYING_CONTRACT_MULTIPLIER;
+        tagData = new Tag436FloUnderlyingContractMultiplier( new MyFloatType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag436FloUnderlyingContractMultiplier tagData;
+        float oneElement;
+
+        oneElement = Tag436FloUnderlyingContractMultiplier.TESTB_FLO_UNDERLYING_CONTRACT_MULTIPLIER;
+        tagData = new Tag436FloUnderlyingContractMultiplier( new MyFloatType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag436FloUnderlyingContractMultiplier tagData;
+        float oneElement;
+
+        oneElement = Tag436FloUnderlyingContractMultiplier.TESTA_FLO_UNDERLYING_CONTRACT_MULTIPLIER;
+        tagData = new Tag436FloUnderlyingContractMultiplier( new MyFloatType( oneElement ) );
+        assertEquals( "Tag436FloUnderlyingContractMultiplier\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement +
+                        "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

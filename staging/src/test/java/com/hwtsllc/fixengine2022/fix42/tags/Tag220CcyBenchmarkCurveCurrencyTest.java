@@ -49,17 +49,76 @@ class Tag220CcyBenchmarkCurveCurrencyTest {
     @Test
     void Tag0220Test() {
         Tag220CcyBenchmarkCurveCurrency tagData;
+        String oneElement;
 
-        tagData = new Tag220CcyBenchmarkCurveCurrency(new MyCurrencyType(
-                Tag220CcyBenchmarkCurveCurrency.TESTA_CCY_BENCHMARK_CURVE_CURRENCY));
-        assertEquals( Tag220CcyBenchmarkCurveCurrency.TESTA_CCY_BENCHMARK_CURVE_CURRENCY,
-                tagData.getDataValue() );
+        oneElement = Tag220CcyBenchmarkCurveCurrency.TESTA_CCY_BENCHMARK_CURVE_CURRENCY;
+        tagData = new Tag220CcyBenchmarkCurveCurrency( new MyCurrencyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag220CcyBenchmarkCurveCurrency(new MyCurrencyType(
-                Tag220CcyBenchmarkCurveCurrency.TESTB_CCY_BENCHMARK_CURVE_CURRENCY));
-        assertEquals( Tag220CcyBenchmarkCurveCurrency.TESTB_CCY_BENCHMARK_CURVE_CURRENCY,
-                tagData.getDataValue() );
+        oneElement = Tag220CcyBenchmarkCurveCurrency.TESTB_CCY_BENCHMARK_CURVE_CURRENCY;
+        tagData = new Tag220CcyBenchmarkCurveCurrency( new MyCurrencyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag220CcyBenchmarkCurveCurrency tagData;
+        String oneElement;
+
+        oneElement = Tag220CcyBenchmarkCurveCurrency.TESTA_CCY_BENCHMARK_CURVE_CURRENCY;
+        tagData = new Tag220CcyBenchmarkCurveCurrency( new MyCurrencyType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag220CcyBenchmarkCurveCurrency.TESTB_CCY_BENCHMARK_CURVE_CURRENCY;
+        tagData = new Tag220CcyBenchmarkCurveCurrency( new MyCurrencyType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag220CcyBenchmarkCurveCurrency tagData;
+        String oneElement;
+
+        oneElement = Tag220CcyBenchmarkCurveCurrency.TESTB_CCY_BENCHMARK_CURVE_CURRENCY;
+        tagData = new Tag220CcyBenchmarkCurveCurrency( new MyCurrencyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag220CcyBenchmarkCurveCurrency tagData;
+        String oneElement;
+
+        oneElement = Tag220CcyBenchmarkCurveCurrency.TESTB_CCY_BENCHMARK_CURVE_CURRENCY;
+        tagData = new Tag220CcyBenchmarkCurveCurrency( new MyCurrencyType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag220CcyBenchmarkCurveCurrency tagData;
+        String oneElement;
+
+        oneElement = Tag220CcyBenchmarkCurveCurrency.TESTB_CCY_BENCHMARK_CURVE_CURRENCY;
+        tagData = new Tag220CcyBenchmarkCurveCurrency( new MyCurrencyType( oneElement ) );
+        assertEquals( oneElement, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag220CcyBenchmarkCurveCurrency tagData;
+        String oneElement;
+
+        oneElement = Tag220CcyBenchmarkCurveCurrency.TESTA_CCY_BENCHMARK_CURVE_CURRENCY;
+        tagData = new Tag220CcyBenchmarkCurveCurrency( new MyCurrencyType( oneElement ) );
+        assertEquals( "Tag220CcyBenchmarkCurveCurrency\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

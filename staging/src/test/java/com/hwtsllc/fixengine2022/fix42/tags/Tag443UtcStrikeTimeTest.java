@@ -45,17 +45,76 @@ class Tag443UtcStrikeTimeTest {
     @Test
     void Tag0443Test() {
         Tag443UtcStrikeTime tagData;
+        String oneElement;
 
-        tagData = new Tag443UtcStrikeTime(new MyUTCTimestampType(
-                Tag443UtcStrikeTime.TESTA_UTC_STRIKE_TIME));
-        assertEquals( Tag443UtcStrikeTime.TESTA_UTC_STRIKE_TIME,
-                tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
+        oneElement = Tag443UtcStrikeTime.TESTA_UTC_STRIKE_TIME;
+        tagData = new Tag443UtcStrikeTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag443UtcStrikeTime(new MyUTCTimestampType(
-                Tag443UtcStrikeTime.TESTB_UTC_STRIKE_TIME));
-        assertEquals( Tag443UtcStrikeTime.TESTB_UTC_STRIKE_TIME,
-                tagData.getDataValue());
+        oneElement = Tag443UtcStrikeTime.TESTB_UTC_STRIKE_TIME;
+        tagData = new Tag443UtcStrikeTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag443UtcStrikeTime tagData;
+        String oneElement;
+
+        oneElement = Tag443UtcStrikeTime.TESTA_UTC_STRIKE_TIME;
+        tagData = new Tag443UtcStrikeTime( new MyUTCTimestampType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag443UtcStrikeTime.TESTB_UTC_STRIKE_TIME;
+        tagData = new Tag443UtcStrikeTime( new MyUTCTimestampType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag443UtcStrikeTime tagData;
+        String oneElement;
+
+        oneElement = Tag443UtcStrikeTime.TESTB_UTC_STRIKE_TIME;
+        tagData = new Tag443UtcStrikeTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag443UtcStrikeTime tagData;
+        String oneElement;
+
+        oneElement = Tag443UtcStrikeTime.TESTB_UTC_STRIKE_TIME;
+        tagData = new Tag443UtcStrikeTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag443UtcStrikeTime tagData;
+        String oneElement;
+
+        oneElement = Tag443UtcStrikeTime.TESTB_UTC_STRIKE_TIME;
+        tagData = new Tag443UtcStrikeTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag443UtcStrikeTime tagData;
+        String oneElement;
+
+        oneElement = Tag443UtcStrikeTime.TESTA_UTC_STRIKE_TIME;
+        tagData = new Tag443UtcStrikeTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( "Tag443UtcStrikeTime\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toVerboseString() );
     }
 }

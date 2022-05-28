@@ -46,17 +46,76 @@ class Tag319QtyRatioQtyTest {
     @Test
     void Tag0319Test() {
         Tag319QtyRatioQty tagData;
+        int oneElement;
 
-        tagData = new Tag319QtyRatioQty(new MyQtyType(
-                Tag319QtyRatioQty.TESTA_QTY_RATIO_QTY));
-        assertEquals( Tag319QtyRatioQty.TESTA_QTY_RATIO_QTY,
-                tagData.getDataValue());
+        oneElement = Tag319QtyRatioQty.TESTA_QTY_RATIO_QTY;
+        tagData = new Tag319QtyRatioQty( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag319QtyRatioQty(new MyQtyType(
-                Tag319QtyRatioQty.TESTB_QTY_RATIO_QTY));
-        assertEquals( Tag319QtyRatioQty.TESTB_QTY_RATIO_QTY,
-                tagData.getDataValue());
+        oneElement = Tag319QtyRatioQty.TESTB_QTY_RATIO_QTY;
+        tagData = new Tag319QtyRatioQty( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag319QtyRatioQty tagData;
+        int oneElement;
+
+        oneElement = Tag319QtyRatioQty.TESTA_QTY_RATIO_QTY;
+        tagData = new Tag319QtyRatioQty( new MyQtyType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag319QtyRatioQty.TESTB_QTY_RATIO_QTY;
+        tagData = new Tag319QtyRatioQty( new MyQtyType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag319QtyRatioQty tagData;
+        int oneElement;
+
+        oneElement = Tag319QtyRatioQty.TESTB_QTY_RATIO_QTY;
+        tagData = new Tag319QtyRatioQty( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag319QtyRatioQty tagData;
+        int oneElement;
+
+        oneElement = Tag319QtyRatioQty.TESTB_QTY_RATIO_QTY;
+        tagData = new Tag319QtyRatioQty( new MyQtyType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag319QtyRatioQty tagData;
+        int oneElement;
+
+        oneElement = Tag319QtyRatioQty.TESTB_QTY_RATIO_QTY;
+        tagData = new Tag319QtyRatioQty( new MyQtyType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag319QtyRatioQty tagData;
+        int oneElement;
+
+        oneElement = Tag319QtyRatioQty.TESTA_QTY_RATIO_QTY;
+        tagData = new Tag319QtyRatioQty( new MyQtyType( oneElement ) );
+        assertEquals( "Tag319QtyRatioQty\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

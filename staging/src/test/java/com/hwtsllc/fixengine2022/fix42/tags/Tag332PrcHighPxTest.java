@@ -45,17 +45,76 @@ class Tag332PrcHighPxTest {
     @Test
     void Tag0332Test() {
         Tag332PrcHighPx tagData;
+        double oneElement;
 
-        tagData = new Tag332PrcHighPx(new MyPriceType(
-                Tag332PrcHighPx.TESTA_PRC_HIGH_PX));
-        assertEquals( Tag332PrcHighPx.TESTA_PRC_HIGH_PX,
-                tagData.getDataValue());
+        oneElement = Tag332PrcHighPx.TESTA_PRC_HIGH_PX;
+        tagData = new Tag332PrcHighPx( new MyPriceType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag332PrcHighPx(new MyPriceType(
-                Tag332PrcHighPx.TESTB_PRC_HIGH_PX));
-        assertEquals( Tag332PrcHighPx.TESTB_PRC_HIGH_PX,
-                tagData.getDataValue());
+        oneElement = Tag332PrcHighPx.TESTB_PRC_HIGH_PX;
+        tagData = new Tag332PrcHighPx( new MyPriceType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag332PrcHighPx tagData;
+        double oneElement;
+
+        oneElement = Tag332PrcHighPx.TESTA_PRC_HIGH_PX;
+        tagData = new Tag332PrcHighPx( new MyPriceType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag332PrcHighPx.TESTB_PRC_HIGH_PX;
+        tagData = new Tag332PrcHighPx( new MyPriceType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag332PrcHighPx tagData;
+        double oneElement;
+
+        oneElement = Tag332PrcHighPx.TESTB_PRC_HIGH_PX;
+        tagData = new Tag332PrcHighPx( new MyPriceType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag332PrcHighPx tagData;
+        double oneElement;
+
+        oneElement = Tag332PrcHighPx.TESTB_PRC_HIGH_PX;
+        tagData = new Tag332PrcHighPx( new MyPriceType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag332PrcHighPx tagData;
+        double oneElement;
+
+        oneElement = Tag332PrcHighPx.TESTB_PRC_HIGH_PX;
+        tagData = new Tag332PrcHighPx( new MyPriceType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag332PrcHighPx tagData;
+        double oneElement;
+
+        oneElement = Tag332PrcHighPx.TESTA_PRC_HIGH_PX;
+        tagData = new Tag332PrcHighPx( new MyPriceType( oneElement ) );
+        assertEquals( "Tag332PrcHighPx\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

@@ -45,17 +45,76 @@ class Tag413PctCrossPercentTest {
     @Test
     void Tag0413Test() {
         Tag413PctCrossPercent tagData;
+        double oneElement;
 
-        tagData = new Tag413PctCrossPercent(new MyPercentageType(
-                Tag413PctCrossPercent.TESTA_PCT_CROSS_PERCENT));
-        assertEquals( Tag413PctCrossPercent.TESTA_PCT_CROSS_PERCENT,
-                tagData.getDataValue() );
+        oneElement = Tag413PctCrossPercent.TESTA_PCT_CROSS_PERCENT;
+        tagData = new Tag413PctCrossPercent( new MyPercentageType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag413PctCrossPercent(new MyPercentageType(
-                Tag413PctCrossPercent.TESTB_PCT_CROSS_PERCENT));
-        assertEquals( Tag413PctCrossPercent.TESTB_PCT_CROSS_PERCENT,
-                tagData.getDataValue() );
+        oneElement = Tag413PctCrossPercent.TESTB_PCT_CROSS_PERCENT;
+        tagData = new Tag413PctCrossPercent( new MyPercentageType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag413PctCrossPercent tagData;
+        double oneElement;
+
+        oneElement = Tag413PctCrossPercent.TESTA_PCT_CROSS_PERCENT;
+        tagData = new Tag413PctCrossPercent( new MyPercentageType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag413PctCrossPercent.TESTB_PCT_CROSS_PERCENT;
+        tagData = new Tag413PctCrossPercent( new MyPercentageType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag413PctCrossPercent tagData;
+        double oneElement;
+
+        oneElement = Tag413PctCrossPercent.TESTB_PCT_CROSS_PERCENT;
+        tagData = new Tag413PctCrossPercent( new MyPercentageType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag413PctCrossPercent tagData;
+        double oneElement;
+
+        oneElement = Tag413PctCrossPercent.TESTB_PCT_CROSS_PERCENT;
+        tagData = new Tag413PctCrossPercent( new MyPercentageType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag413PctCrossPercent tagData;
+        double oneElement;
+
+        oneElement = Tag413PctCrossPercent.TESTB_PCT_CROSS_PERCENT;
+        tagData = new Tag413PctCrossPercent( new MyPercentageType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag413PctCrossPercent tagData;
+        double oneElement;
+
+        oneElement = Tag413PctCrossPercent.TESTA_PCT_CROSS_PERCENT;
+        tagData = new Tag413PctCrossPercent( new MyPercentageType( oneElement ) );
+        assertEquals( "Tag413PctCrossPercent\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

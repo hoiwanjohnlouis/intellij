@@ -48,17 +48,76 @@ class Tag381AmtGrossTradeAmtTest {
     @Test
     void Tag0381Test() {
         Tag381AmtGrossTradeAmt tagData;
+        double oneElement;
 
-        tagData = new Tag381AmtGrossTradeAmt(new MyAmtType(
-                Tag381AmtGrossTradeAmt.TESTA_AMT_GROSS_TRADE_AMT));
-        assertEquals( Tag381AmtGrossTradeAmt.TESTA_AMT_GROSS_TRADE_AMT,
-                tagData.getDataValue());
+        oneElement = Tag381AmtGrossTradeAmt.TESTA_AMT_GROSS_TRADE_AMT;
+        tagData = new Tag381AmtGrossTradeAmt( new MyAmtType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag381AmtGrossTradeAmt(new MyAmtType(
-                Tag381AmtGrossTradeAmt.TESTB_AMT_GROSS_TRADE_AMT));
-        assertEquals( Tag381AmtGrossTradeAmt.TESTB_AMT_GROSS_TRADE_AMT,
-                tagData.getDataValue());
+        oneElement = Tag381AmtGrossTradeAmt.TESTB_AMT_GROSS_TRADE_AMT;
+        tagData = new Tag381AmtGrossTradeAmt( new MyAmtType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag381AmtGrossTradeAmt tagData;
+        double oneElement;
+
+        oneElement = Tag381AmtGrossTradeAmt.TESTA_AMT_GROSS_TRADE_AMT;
+        tagData = new Tag381AmtGrossTradeAmt( new MyAmtType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag381AmtGrossTradeAmt.TESTB_AMT_GROSS_TRADE_AMT;
+        tagData = new Tag381AmtGrossTradeAmt( new MyAmtType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag381AmtGrossTradeAmt tagData;
+        double oneElement;
+
+        oneElement = Tag381AmtGrossTradeAmt.TESTB_AMT_GROSS_TRADE_AMT;
+        tagData = new Tag381AmtGrossTradeAmt( new MyAmtType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag381AmtGrossTradeAmt tagData;
+        double oneElement;
+
+        oneElement = Tag381AmtGrossTradeAmt.TESTB_AMT_GROSS_TRADE_AMT;
+        tagData = new Tag381AmtGrossTradeAmt( new MyAmtType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag381AmtGrossTradeAmt tagData;
+        double oneElement;
+
+        oneElement = Tag381AmtGrossTradeAmt.TESTB_AMT_GROSS_TRADE_AMT;
+        tagData = new Tag381AmtGrossTradeAmt( new MyAmtType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag381AmtGrossTradeAmt tagData;
+        double oneElement;
+
+        oneElement = Tag381AmtGrossTradeAmt.TESTA_AMT_GROSS_TRADE_AMT;
+        tagData = new Tag381AmtGrossTradeAmt( new MyAmtType( oneElement ) );
+        assertEquals( "Tag381AmtGrossTradeAmt\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

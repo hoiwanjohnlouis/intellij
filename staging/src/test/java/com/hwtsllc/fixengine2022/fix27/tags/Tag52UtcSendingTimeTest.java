@@ -46,59 +46,81 @@ class Tag52UtcSendingTimeTest {
     @Test
     void Tag0052Test() {
         Tag52UtcSendingTime tagData;
+        String oneElement;
 
-        tagData = new Tag52UtcSendingTime(new MyUTCTimestampType("20220320 141400") );
-        assertEquals( "20220320 141400", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
+        oneElement = "20220320 141400";
+        tagData = new Tag52UtcSendingTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag52UtcSendingTime.TESTA_UTC_SENDING_TIME;
+        tagData = new Tag52UtcSendingTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag52UtcSendingTime.TESTB_UTC_SENDING_TIME;
+        tagData = new Tag52UtcSendingTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void PrintFIXTagTest() {
         Tag52UtcSendingTime tagData;
+        String oneElement;
 
-        tagData = new Tag52UtcSendingTime(new MyUTCTimestampType(Tag52UtcSendingTime.TESTB_UTC_SENDING_TIME));
+        oneElement = Tag52UtcSendingTime.TESTA_UTC_SENDING_TIME;
+        tagData = new Tag52UtcSendingTime( new MyUTCTimestampType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag52UtcSendingTime.TESTB_UTC_SENDING_TIME;
+        tagData = new Tag52UtcSendingTime( new MyUTCTimestampType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
     @Test
     void TagGetDataValueTest() {
         Tag52UtcSendingTime tagData;
+        String oneElement;
 
-        tagData = new Tag52UtcSendingTime(new MyUTCTimestampType(Tag52UtcSendingTime.TESTB_UTC_SENDING_TIME));
-        assertEquals( Tag52UtcSendingTime.TESTB_UTC_SENDING_TIME, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        oneElement = Tag52UtcSendingTime.TESTB_UTC_SENDING_TIME;
+        tagData = new Tag52UtcSendingTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {
         Tag52UtcSendingTime tagData;
+        String oneElement;
 
-        tagData = new Tag52UtcSendingTime(new MyUTCTimestampType(Tag52UtcSendingTime.TESTB_UTC_SENDING_TIME));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag52UtcSendingTime.TESTB_UTC_SENDING_TIME,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag52UtcSendingTime.TESTB_UTC_SENDING_TIME;
+        tagData = new Tag52UtcSendingTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toValuePairString() );
     }
     @Test
     void TagToStringTest() {
         Tag52UtcSendingTime tagData;
+        String oneElement;
 
-        tagData = new Tag52UtcSendingTime(new MyUTCTimestampType(Tag52UtcSendingTime.TESTB_UTC_SENDING_TIME));
-        assertEquals( Tag52UtcSendingTime.TESTB_UTC_SENDING_TIME,
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag52UtcSendingTime.TESTB_UTC_SENDING_TIME;
+        tagData = new Tag52UtcSendingTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toString() );
     }
     @Test
     void TagToVerboseStringTest() {
         Tag52UtcSendingTime tagData;
+        String oneElement;
 
-        tagData = new Tag52UtcSendingTime(new MyUTCTimestampType(Tag52UtcSendingTime.TESTA_UTC_SENDING_TIME));
+        oneElement = Tag52UtcSendingTime.TESTA_UTC_SENDING_TIME;
+        tagData = new Tag52UtcSendingTime( new MyUTCTimestampType( oneElement ) );
         assertEquals( "Tag52UtcSendingTime\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                         "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag52UtcSendingTime.TESTA_UTC_SENDING_TIME + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag52UtcSendingTime.TESTA_UTC_SENDING_TIME + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toVerboseString() );
     }
 }

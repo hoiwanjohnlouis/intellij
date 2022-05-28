@@ -49,17 +49,76 @@ class Tag308ExcUnderlyingSecurityExchangeTest {
     @Test
     void Tag0308Test() {
         Tag308ExcUnderlyingSecurityExchange tagData;
+        String oneElement;
 
-        tagData = new Tag308ExcUnderlyingSecurityExchange(new MyExchangeType(
-                Tag308ExcUnderlyingSecurityExchange.TESTA_EXC_UNDERLYING_SECURITY_EXCHANGE));
-        assertEquals( Tag308ExcUnderlyingSecurityExchange.TESTA_EXC_UNDERLYING_SECURITY_EXCHANGE,
-                tagData.getDataValue());
+        oneElement = Tag308ExcUnderlyingSecurityExchange.TESTA_EXC_UNDERLYING_SECURITY_EXCHANGE;
+        tagData = new Tag308ExcUnderlyingSecurityExchange( new MyExchangeType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_EXC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag308ExcUnderlyingSecurityExchange(new MyExchangeType(
-                Tag308ExcUnderlyingSecurityExchange.TESTB_EXC_UNDERLYING_SECURITY_EXCHANGE));
-        assertEquals( Tag308ExcUnderlyingSecurityExchange.TESTB_EXC_UNDERLYING_SECURITY_EXCHANGE,
-                tagData.getDataValue());
+        oneElement = Tag308ExcUnderlyingSecurityExchange.TESTB_EXC_UNDERLYING_SECURITY_EXCHANGE;
+        tagData = new Tag308ExcUnderlyingSecurityExchange( new MyExchangeType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_EXC_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag308ExcUnderlyingSecurityExchange tagData;
+        String oneElement;
+
+        oneElement = Tag308ExcUnderlyingSecurityExchange.TESTA_EXC_UNDERLYING_SECURITY_EXCHANGE;
+        tagData = new Tag308ExcUnderlyingSecurityExchange( new MyExchangeType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag308ExcUnderlyingSecurityExchange.TESTB_EXC_UNDERLYING_SECURITY_EXCHANGE;
+        tagData = new Tag308ExcUnderlyingSecurityExchange( new MyExchangeType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag308ExcUnderlyingSecurityExchange tagData;
+        String oneElement;
+
+        oneElement = Tag308ExcUnderlyingSecurityExchange.TESTB_EXC_UNDERLYING_SECURITY_EXCHANGE;
+        tagData = new Tag308ExcUnderlyingSecurityExchange( new MyExchangeType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag308ExcUnderlyingSecurityExchange tagData;
+        String oneElement;
+
+        oneElement = Tag308ExcUnderlyingSecurityExchange.TESTB_EXC_UNDERLYING_SECURITY_EXCHANGE;
+        tagData = new Tag308ExcUnderlyingSecurityExchange( new MyExchangeType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag308ExcUnderlyingSecurityExchange tagData;
+        String oneElement;
+
+        oneElement = Tag308ExcUnderlyingSecurityExchange.TESTB_EXC_UNDERLYING_SECURITY_EXCHANGE;
+        tagData = new Tag308ExcUnderlyingSecurityExchange( new MyExchangeType( oneElement ) );
+        assertEquals( oneElement, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag308ExcUnderlyingSecurityExchange tagData;
+        String oneElement;
+
+        oneElement = Tag308ExcUnderlyingSecurityExchange.TESTA_EXC_UNDERLYING_SECURITY_EXCHANGE;
+        tagData = new Tag308ExcUnderlyingSecurityExchange( new MyExchangeType( oneElement ) );
+        assertEquals( "Tag308ExcUnderlyingSecurityExchange\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

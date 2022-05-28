@@ -17,8 +17,8 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum321SecurityRequestType;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -74,5 +74,70 @@ class Tag321EnuSecurityRequestTypeTest {
         tagData = new Tag321EnuSecurityRequestType(Enum321SecurityRequestType.REQUEST_LIST_SECURITIES);
         assertEquals( Enum321SecurityRequestType.REQUEST_LIST_SECURITIES.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag321EnuSecurityRequestType tagData;
+
+        // loop around the ENUM and process
+        for (Enum321SecurityRequestType oneEnum : Enum321SecurityRequestType.values()) {
+            tagData = new Tag321EnuSecurityRequestType(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag321EnuSecurityRequestType tagData;
+
+        // loop around the ENUM and process
+        for (Enum321SecurityRequestType oneEnum : Enum321SecurityRequestType.values()) {
+            tagData = new Tag321EnuSecurityRequestType(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag321EnuSecurityRequestType tagData;
+
+        // loop around the ENUM and process
+        for (Enum321SecurityRequestType oneEnum : Enum321SecurityRequestType.values()) {
+            tagData = new Tag321EnuSecurityRequestType(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag321EnuSecurityRequestType tagData;
+
+        // loop around the ENUM and process
+        for (Enum321SecurityRequestType oneEnum : Enum321SecurityRequestType.values()) {
+            tagData = new Tag321EnuSecurityRequestType(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag321EnuSecurityRequestType tagData;
+
+        // loop around the ENUM and process
+        for (Enum321SecurityRequestType oneEnum : Enum321SecurityRequestType.values()) {
+            tagData = new Tag321EnuSecurityRequestType(oneEnum);
+            assertEquals( "Tag321EnuSecurityRequestType\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
     }
 }

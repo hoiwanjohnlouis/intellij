@@ -49,13 +49,72 @@ class Tag213DatXmlDataTest {
     @Test
     void Tag0213Test() {
         Tag213DatXmlData tagData;
+        String oneElement;
 
-        tagData = new Tag213DatXmlData(new MyDataType(Tag213DatXmlData.TESTA_DAT_XML_DATA));
-        assertEquals( Tag213DatXmlData.TESTA_DAT_XML_DATA, tagData.getDataValue() );
+        oneElement = Tag213DatXmlData.TESTA_DAT_XML_DATA;
+        tagData = new Tag213DatXmlData( new MyDataType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag213DatXmlData(new MyDataType(Tag213DatXmlData.TESTB_DAT_XML_DATA));
-        assertEquals( Tag213DatXmlData.TESTB_DAT_XML_DATA, tagData.getDataValue() );
+        oneElement = Tag213DatXmlData.TESTB_DAT_XML_DATA;
+        tagData = new Tag213DatXmlData( new MyDataType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag213DatXmlData tagData;
+        String oneElement;
+
+        oneElement = Tag213DatXmlData.TESTB_DAT_XML_DATA;
+        tagData = new Tag213DatXmlData( new MyDataType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag213DatXmlData tagData;
+        String oneElement;
+
+        oneElement = Tag213DatXmlData.TESTB_DAT_XML_DATA;
+        tagData = new Tag213DatXmlData( new MyDataType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag213DatXmlData tagData;
+        String oneElement;
+
+        oneElement = Tag213DatXmlData.TESTB_DAT_XML_DATA;
+        tagData = new Tag213DatXmlData( new MyDataType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag213DatXmlData tagData;
+        String oneElement;
+
+        oneElement = Tag213DatXmlData.TESTB_DAT_XML_DATA;
+        tagData = new Tag213DatXmlData( new MyDataType( oneElement ) );
+        assertEquals( oneElement, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag213DatXmlData tagData;
+        String oneElement;
+
+        oneElement = Tag213DatXmlData.TESTA_DAT_XML_DATA;
+        tagData = new Tag213DatXmlData( new MyDataType( oneElement ) );
+        assertEquals( "Tag213DatXmlData\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

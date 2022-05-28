@@ -48,17 +48,76 @@ class Tag318CcyUnderlyingCurrencyTest {
     @Test
     void Tag0318Test() {
         Tag318CcyUnderlyingCurrency tagData;
+        String oneElement;
 
-        tagData = new Tag318CcyUnderlyingCurrency(new MyCurrencyType(
-                Tag318CcyUnderlyingCurrency.TESTA_CCY_UNDERLYING_CURRENCY));
-        assertEquals( Tag318CcyUnderlyingCurrency.TESTA_CCY_UNDERLYING_CURRENCY,
-                tagData.getDataValue() );
+        oneElement = Tag318CcyUnderlyingCurrency.TESTA_CCY_UNDERLYING_CURRENCY;
+        tagData = new Tag318CcyUnderlyingCurrency( new MyCurrencyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag318CcyUnderlyingCurrency(new MyCurrencyType(
-                Tag318CcyUnderlyingCurrency.TESTB_CCY_UNDERLYING_CURRENCY));
-        assertEquals( Tag318CcyUnderlyingCurrency.TESTB_CCY_UNDERLYING_CURRENCY,
-                tagData.getDataValue() );
+        oneElement = Tag318CcyUnderlyingCurrency.TESTB_CCY_UNDERLYING_CURRENCY;
+        tagData = new Tag318CcyUnderlyingCurrency( new MyCurrencyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag318CcyUnderlyingCurrency tagData;
+        String oneElement;
+
+        oneElement = Tag318CcyUnderlyingCurrency.TESTA_CCY_UNDERLYING_CURRENCY;
+        tagData = new Tag318CcyUnderlyingCurrency( new MyCurrencyType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag318CcyUnderlyingCurrency.TESTB_CCY_UNDERLYING_CURRENCY;
+        tagData = new Tag318CcyUnderlyingCurrency( new MyCurrencyType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag318CcyUnderlyingCurrency tagData;
+        String oneElement;
+
+        oneElement = Tag318CcyUnderlyingCurrency.TESTB_CCY_UNDERLYING_CURRENCY;
+        tagData = new Tag318CcyUnderlyingCurrency( new MyCurrencyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag318CcyUnderlyingCurrency tagData;
+        String oneElement;
+
+        oneElement = Tag318CcyUnderlyingCurrency.TESTB_CCY_UNDERLYING_CURRENCY;
+        tagData = new Tag318CcyUnderlyingCurrency( new MyCurrencyType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag318CcyUnderlyingCurrency tagData;
+        String oneElement;
+
+        oneElement = Tag318CcyUnderlyingCurrency.TESTB_CCY_UNDERLYING_CURRENCY;
+        tagData = new Tag318CcyUnderlyingCurrency( new MyCurrencyType( oneElement ) );
+        assertEquals( oneElement, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag318CcyUnderlyingCurrency tagData;
+        String oneElement;
+
+        oneElement = Tag318CcyUnderlyingCurrency.TESTA_CCY_UNDERLYING_CURRENCY;
+        tagData = new Tag318CcyUnderlyingCurrency( new MyCurrencyType( oneElement ) );
+        assertEquals( "Tag318CcyUnderlyingCurrency\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

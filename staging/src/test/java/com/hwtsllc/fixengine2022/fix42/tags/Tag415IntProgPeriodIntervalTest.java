@@ -47,17 +47,76 @@ class Tag415IntProgPeriodIntervalTest {
     @Test
     void Tag0415Test() {
         Tag415IntProgPeriodInterval tagData;
+        int oneElement;
 
-        tagData = new Tag415IntProgPeriodInterval(new MyIntType(
-                Tag415IntProgPeriodInterval.TESTA_INT_PROG_PERIOD_INTERVAL));
-        assertEquals( Tag415IntProgPeriodInterval.TESTA_INT_PROG_PERIOD_INTERVAL,
-                tagData.getDataValue());
+        oneElement = Tag415IntProgPeriodInterval.TESTA_INT_PROG_PERIOD_INTERVAL;
+        tagData = new Tag415IntProgPeriodInterval( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag415IntProgPeriodInterval(new MyIntType(
-                Tag415IntProgPeriodInterval.TESTB_INT_PROG_PERIOD_INTERVAL));
-        assertEquals( Tag415IntProgPeriodInterval.TESTB_INT_PROG_PERIOD_INTERVAL,
-                tagData.getDataValue());
+        oneElement = Tag415IntProgPeriodInterval.TESTB_INT_PROG_PERIOD_INTERVAL;
+        tagData = new Tag415IntProgPeriodInterval( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag415IntProgPeriodInterval tagData;
+        int oneElement;
+
+        oneElement = Tag415IntProgPeriodInterval.TESTA_INT_PROG_PERIOD_INTERVAL;
+        tagData = new Tag415IntProgPeriodInterval( new MyIntType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag415IntProgPeriodInterval.TESTB_INT_PROG_PERIOD_INTERVAL;
+        tagData = new Tag415IntProgPeriodInterval( new MyIntType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag415IntProgPeriodInterval tagData;
+        int oneElement;
+
+        oneElement = Tag415IntProgPeriodInterval.TESTB_INT_PROG_PERIOD_INTERVAL;
+        tagData = new Tag415IntProgPeriodInterval( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag415IntProgPeriodInterval tagData;
+        int oneElement;
+
+        oneElement = Tag415IntProgPeriodInterval.TESTB_INT_PROG_PERIOD_INTERVAL;
+        tagData = new Tag415IntProgPeriodInterval( new MyIntType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag415IntProgPeriodInterval tagData;
+        int oneElement;
+
+        oneElement = Tag415IntProgPeriodInterval.TESTB_INT_PROG_PERIOD_INTERVAL;
+        tagData = new Tag415IntProgPeriodInterval( new MyIntType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag415IntProgPeriodInterval tagData;
+        int oneElement;
+
+        oneElement = Tag415IntProgPeriodInterval.TESTA_INT_PROG_PERIOD_INTERVAL;
+        tagData = new Tag415IntProgPeriodInterval( new MyIntType( oneElement ) );
+        assertEquals( "Tag415IntProgPeriodInterval\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

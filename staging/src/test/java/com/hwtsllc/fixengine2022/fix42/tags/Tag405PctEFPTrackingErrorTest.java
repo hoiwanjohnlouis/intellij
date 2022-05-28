@@ -47,17 +47,76 @@ class Tag405PctEFPTrackingErrorTest {
     @Test
     void Tag0405Test() {
         Tag405PctEFPTrackingError tagData;
+        double oneElement;
 
-        tagData = new Tag405PctEFPTrackingError(new MyPercentageType(
-                Tag405PctEFPTrackingError.TESTA_PCT_EFP_TRACKING_ERROR));
-        assertEquals( Tag405PctEFPTrackingError.TESTA_PCT_EFP_TRACKING_ERROR,
-                tagData.getDataValue() );
+        oneElement = Tag405PctEFPTrackingError.TESTA_PCT_EFP_TRACKING_ERROR;
+        tagData = new Tag405PctEFPTrackingError( new MyPercentageType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag405PctEFPTrackingError(new MyPercentageType(
-                Tag405PctEFPTrackingError.TESTB_PCT_EFP_TRACKING_ERROR));
-        assertEquals( Tag405PctEFPTrackingError.TESTB_PCT_EFP_TRACKING_ERROR,
-                tagData.getDataValue() );
+        oneElement = Tag405PctEFPTrackingError.TESTB_PCT_EFP_TRACKING_ERROR;
+        tagData = new Tag405PctEFPTrackingError( new MyPercentageType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag405PctEFPTrackingError tagData;
+        double oneElement;
+
+        oneElement = Tag405PctEFPTrackingError.TESTA_PCT_EFP_TRACKING_ERROR;
+        tagData = new Tag405PctEFPTrackingError( new MyPercentageType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag405PctEFPTrackingError.TESTB_PCT_EFP_TRACKING_ERROR;
+        tagData = new Tag405PctEFPTrackingError( new MyPercentageType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag405PctEFPTrackingError tagData;
+        double oneElement;
+
+        oneElement = Tag405PctEFPTrackingError.TESTB_PCT_EFP_TRACKING_ERROR;
+        tagData = new Tag405PctEFPTrackingError( new MyPercentageType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag405PctEFPTrackingError tagData;
+        double oneElement;
+
+        oneElement = Tag405PctEFPTrackingError.TESTB_PCT_EFP_TRACKING_ERROR;
+        tagData = new Tag405PctEFPTrackingError( new MyPercentageType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag405PctEFPTrackingError tagData;
+        double oneElement;
+
+        oneElement = Tag405PctEFPTrackingError.TESTB_PCT_EFP_TRACKING_ERROR;
+        tagData = new Tag405PctEFPTrackingError( new MyPercentageType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag405PctEFPTrackingError tagData;
+        double oneElement;
+
+        oneElement = Tag405PctEFPTrackingError.TESTA_PCT_EFP_TRACKING_ERROR;
+        tagData = new Tag405PctEFPTrackingError( new MyPercentageType( oneElement ) );
+        assertEquals( "Tag405PctEFPTrackingError\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

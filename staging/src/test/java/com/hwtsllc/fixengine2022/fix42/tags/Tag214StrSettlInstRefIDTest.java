@@ -46,15 +46,72 @@ class Tag214StrSettlInstRefIDTest {
     @Test
     void Tag0214Test() {
         Tag214StrSettlInstRefID tagData;
+        String oneElement;
 
-        tagData = new Tag214StrSettlInstRefID(
-                new MyStringType(Tag214StrSettlInstRefID.TESTA_STR_SETTL_INST_REF_ID));
-        assertEquals( Tag214StrSettlInstRefID.TESTA_STR_SETTL_INST_REF_ID, tagData.getDataValue() );
+        oneElement = Tag214StrSettlInstRefID.TESTA_STR_SETTL_INST_REF_ID;
+        tagData = new Tag214StrSettlInstRefID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag214StrSettlInstRefID(
-                new MyStringType(Tag214StrSettlInstRefID.TESTB_STR_SETTL_INST_REF_ID));
-        assertEquals( Tag214StrSettlInstRefID.TESTB_STR_SETTL_INST_REF_ID, tagData.getDataValue() );
+        oneElement = Tag214StrSettlInstRefID.TESTB_STR_SETTL_INST_REF_ID;
+        tagData = new Tag214StrSettlInstRefID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag214StrSettlInstRefID tagData;
+        String oneElement;
+
+        oneElement = Tag214StrSettlInstRefID.TESTB_STR_SETTL_INST_REF_ID;
+        tagData = new Tag214StrSettlInstRefID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag214StrSettlInstRefID tagData;
+        String oneElement;
+
+        oneElement = Tag214StrSettlInstRefID.TESTB_STR_SETTL_INST_REF_ID;
+        tagData = new Tag214StrSettlInstRefID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag214StrSettlInstRefID tagData;
+        String oneElement;
+
+        oneElement = Tag214StrSettlInstRefID.TESTB_STR_SETTL_INST_REF_ID;
+        tagData = new Tag214StrSettlInstRefID( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag214StrSettlInstRefID tagData;
+        String oneElement;
+
+        oneElement = Tag214StrSettlInstRefID.TESTB_STR_SETTL_INST_REF_ID;
+        tagData = new Tag214StrSettlInstRefID(new MyStringType(oneElement));
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag214StrSettlInstRefID tagData;
+        String oneElement;
+
+        oneElement = Tag214StrSettlInstRefID.TESTA_STR_SETTL_INST_REF_ID;
+        tagData = new Tag214StrSettlInstRefID( new MyStringType( oneElement ) );
+        assertEquals( "Tag214StrSettlInstRefID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

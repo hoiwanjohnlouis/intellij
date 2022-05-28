@@ -45,9 +45,76 @@ class Tag383LenMaxMessageSizeTest {
     @Test
     void Tag0383Test() {
         Tag383LenMaxMessageSize tagData;
+        int oneElement;
 
-        tagData = new Tag383LenMaxMessageSize( new MyLengthType(23) );
-        assertEquals( 23, tagData.getDataValue() );
+        oneElement = Tag383LenMaxMessageSize.TESTA_LEN_MAX_MESSAGE_SIZE;
+        tagData = new Tag383LenMaxMessageSize( new MyLengthType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag383LenMaxMessageSize.TESTB_LEN_MAX_MESSAGE_SIZE;
+        tagData = new Tag383LenMaxMessageSize( new MyLengthType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag383LenMaxMessageSize tagData;
+        int oneElement;
+
+        oneElement = Tag383LenMaxMessageSize.TESTA_LEN_MAX_MESSAGE_SIZE;
+        tagData = new Tag383LenMaxMessageSize( new MyLengthType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag383LenMaxMessageSize.TESTB_LEN_MAX_MESSAGE_SIZE;
+        tagData = new Tag383LenMaxMessageSize( new MyLengthType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag383LenMaxMessageSize tagData;
+        int oneElement;
+
+        oneElement = Tag383LenMaxMessageSize.TESTB_LEN_MAX_MESSAGE_SIZE;
+        tagData = new Tag383LenMaxMessageSize( new MyLengthType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag383LenMaxMessageSize tagData;
+        int oneElement;
+
+        oneElement = Tag383LenMaxMessageSize.TESTB_LEN_MAX_MESSAGE_SIZE;
+        tagData = new Tag383LenMaxMessageSize( new MyLengthType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag383LenMaxMessageSize tagData;
+        int oneElement;
+
+        oneElement = Tag383LenMaxMessageSize.TESTB_LEN_MAX_MESSAGE_SIZE;
+        tagData = new Tag383LenMaxMessageSize( new MyLengthType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag383LenMaxMessageSize tagData;
+        int oneElement;
+
+        oneElement = Tag383LenMaxMessageSize.TESTA_LEN_MAX_MESSAGE_SIZE;
+        tagData = new Tag383LenMaxMessageSize( new MyLengthType( oneElement ) );
+        assertEquals( "Tag383LenMaxMessageSize\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

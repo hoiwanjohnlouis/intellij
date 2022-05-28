@@ -45,17 +45,76 @@ class Tag295NumNoQuoteEntriesTest {
     @Test
     void Tag0295Test() {
         Tag295NumNoQuoteEntries tagData;
+        int oneElement;
 
-        tagData = new Tag295NumNoQuoteEntries(new MyNumInGroupType(
-                Tag295NumNoQuoteEntries.TESTA_NUM_NO_QUOTE_ENTRIES));
-        assertEquals( Tag295NumNoQuoteEntries.TESTA_NUM_NO_QUOTE_ENTRIES,
-                tagData.getDataValue());
+        oneElement = Tag295NumNoQuoteEntries.TESTA_NUM_NO_QUOTE_ENTRIES;
+        tagData = new Tag295NumNoQuoteEntries( new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag295NumNoQuoteEntries(new MyNumInGroupType(
-                Tag295NumNoQuoteEntries.TESTB_NUM_NO_QUOTE_ENTRIES));
-        assertEquals( Tag295NumNoQuoteEntries.TESTB_NUM_NO_QUOTE_ENTRIES,
-                tagData.getDataValue());
+        oneElement = Tag295NumNoQuoteEntries.TESTB_NUM_NO_QUOTE_ENTRIES;
+        tagData = new Tag295NumNoQuoteEntries( new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag295NumNoQuoteEntries tagData;
+        int oneElement;
+
+        oneElement = Tag295NumNoQuoteEntries.TESTA_NUM_NO_QUOTE_ENTRIES;
+        tagData = new Tag295NumNoQuoteEntries( new MyNumInGroupType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag295NumNoQuoteEntries.TESTB_NUM_NO_QUOTE_ENTRIES;
+        tagData = new Tag295NumNoQuoteEntries( new MyNumInGroupType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag295NumNoQuoteEntries tagData;
+        int oneElement;
+
+        oneElement = Tag295NumNoQuoteEntries.TESTB_NUM_NO_QUOTE_ENTRIES;
+        tagData = new Tag295NumNoQuoteEntries( new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag295NumNoQuoteEntries tagData;
+        int oneElement;
+
+        oneElement = Tag295NumNoQuoteEntries.TESTB_NUM_NO_QUOTE_ENTRIES;
+        tagData = new Tag295NumNoQuoteEntries( new MyNumInGroupType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag295NumNoQuoteEntries tagData;
+        int oneElement;
+
+        oneElement = Tag295NumNoQuoteEntries.TESTB_NUM_NO_QUOTE_ENTRIES;
+        tagData = new Tag295NumNoQuoteEntries( new MyNumInGroupType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag295NumNoQuoteEntries tagData;
+        int oneElement;
+
+        oneElement = Tag295NumNoQuoteEntries.TESTA_NUM_NO_QUOTE_ENTRIES;
+        tagData = new Tag295NumNoQuoteEntries( new MyNumInGroupType( oneElement ) );
+        assertEquals( "Tag295NumNoQuoteEntries\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

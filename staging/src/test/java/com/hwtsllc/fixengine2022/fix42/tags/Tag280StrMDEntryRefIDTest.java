@@ -45,15 +45,72 @@ class Tag280StrMDEntryRefIDTest {
     @Test
     void Tag0280Test() {
         Tag280StrMDEntryRefID tagData;
+        String oneElement;
 
-        tagData = new Tag280StrMDEntryRefID(
-                new MyStringType(Tag280StrMDEntryRefID.TESTA_STR_MD_ENTRY_REF_ID));
-        assertEquals( Tag280StrMDEntryRefID.TESTA_STR_MD_ENTRY_REF_ID, tagData.getDataValue() );
+        oneElement = Tag280StrMDEntryRefID.TESTA_STR_MD_ENTRY_REF_ID;
+        tagData = new Tag280StrMDEntryRefID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag280StrMDEntryRefID(
-                new MyStringType(Tag280StrMDEntryRefID.TESTB_STR_MD_ENTRY_REF_ID));
-        assertEquals( Tag280StrMDEntryRefID.TESTB_STR_MD_ENTRY_REF_ID, tagData.getDataValue() );
+        oneElement = Tag280StrMDEntryRefID.TESTB_STR_MD_ENTRY_REF_ID;
+        tagData = new Tag280StrMDEntryRefID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag280StrMDEntryRefID tagData;
+        String oneElement;
+
+        oneElement = Tag280StrMDEntryRefID.TESTB_STR_MD_ENTRY_REF_ID;
+        tagData = new Tag280StrMDEntryRefID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag280StrMDEntryRefID tagData;
+        String oneElement;
+
+        oneElement = Tag280StrMDEntryRefID.TESTB_STR_MD_ENTRY_REF_ID;
+        tagData = new Tag280StrMDEntryRefID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag280StrMDEntryRefID tagData;
+        String oneElement;
+
+        oneElement = Tag280StrMDEntryRefID.TESTB_STR_MD_ENTRY_REF_ID;
+        tagData = new Tag280StrMDEntryRefID( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag280StrMDEntryRefID tagData;
+        String oneElement;
+
+        oneElement = Tag280StrMDEntryRefID.TESTB_STR_MD_ENTRY_REF_ID;
+        tagData = new Tag280StrMDEntryRefID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag280StrMDEntryRefID tagData;
+        String oneElement;
+
+        oneElement = Tag280StrMDEntryRefID.TESTA_STR_MD_ENTRY_REF_ID;
+        tagData = new Tag280StrMDEntryRefID( new MyStringType( oneElement ) );
+        assertEquals( "Tag280StrMDEntryRefID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

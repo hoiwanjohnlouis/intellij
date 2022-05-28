@@ -17,8 +17,8 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum298QuoteCancelType;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -76,5 +76,70 @@ class Tag298EnuQuoteCancelTypeTest {
         tagData = new Tag298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_QUOTEID_QUOTE);
         assertEquals( Enum298QuoteCancelType.CANCEL_QUOTEID_QUOTE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag298EnuQuoteCancelType tagData;
+
+        // loop around the ENUM and process
+        for (Enum298QuoteCancelType oneEnum : Enum298QuoteCancelType.values()) {
+            tagData = new Tag298EnuQuoteCancelType(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag298EnuQuoteCancelType tagData;
+
+        // loop around the ENUM and process
+        for (Enum298QuoteCancelType oneEnum : Enum298QuoteCancelType.values()) {
+            tagData = new Tag298EnuQuoteCancelType(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag298EnuQuoteCancelType tagData;
+
+        // loop around the ENUM and process
+        for (Enum298QuoteCancelType oneEnum : Enum298QuoteCancelType.values()) {
+            tagData = new Tag298EnuQuoteCancelType(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag298EnuQuoteCancelType tagData;
+
+        // loop around the ENUM and process
+        for (Enum298QuoteCancelType oneEnum : Enum298QuoteCancelType.values()) {
+            tagData = new Tag298EnuQuoteCancelType(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag298EnuQuoteCancelType tagData;
+
+        // loop around the ENUM and process
+        for (Enum298QuoteCancelType oneEnum : Enum298QuoteCancelType.values()) {
+            tagData = new Tag298EnuQuoteCancelType(oneEnum);
+            assertEquals( "Tag298EnuQuoteCancelType\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
     }
 }

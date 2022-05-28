@@ -74,7 +74,7 @@ public enum FIX30 implements LogFIXString, LogVerboseString {
 
     FIX111_QTY_MAX_FLOOR(111, "MAX_FLOOR", "MaxFloor"),
     FIX112_STR_TEST_REQ_ID(112, "TEST_REQ_ID", "TestReqID"),
-    FIX113_BOOL_REPORT_TO_EXCH(113, "REPORT_TO_EXCH", "ReportToExch"),
+    FIX113_ENU_REPORT_TO_EXCH(113, "REPORT_TO_EXCH", "ReportToExch"),
     /*
      *
      * End of FIX3.0

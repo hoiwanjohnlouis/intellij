@@ -48,15 +48,72 @@ class Tag446DatEncodedListStatusTextTest {
     @Test
     void Tag0446Test() {
         Tag446DatEncodedListStatusText tagData;
+        String oneElement;
 
-        tagData = new Tag446DatEncodedListStatusText(
-                new MyDataType(Tag446DatEncodedListStatusText.TESTA_DAT_LIST_STATUS_ENCODED_TEXT));
-        assertEquals( Tag446DatEncodedListStatusText.TESTA_DAT_LIST_STATUS_ENCODED_TEXT, tagData.getDataValue() );
+        oneElement = Tag446DatEncodedListStatusText.TESTA_DAT_LIST_STATUS_ENCODED_TEXT;
+        tagData = new Tag446DatEncodedListStatusText( new MyDataType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag446DatEncodedListStatusText(
-                new MyDataType(Tag446DatEncodedListStatusText.TESTB_DAT_LIST_STATUS_ENCODED_TEXT));
-        assertEquals( Tag446DatEncodedListStatusText.TESTB_DAT_LIST_STATUS_ENCODED_TEXT, tagData.getDataValue() );
+        oneElement = Tag446DatEncodedListStatusText.TESTB_DAT_LIST_STATUS_ENCODED_TEXT;
+        tagData = new Tag446DatEncodedListStatusText( new MyDataType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag446DatEncodedListStatusText tagData;
+        String oneElement;
+
+        oneElement = Tag446DatEncodedListStatusText.TESTB_DAT_LIST_STATUS_ENCODED_TEXT;
+        tagData = new Tag446DatEncodedListStatusText( new MyDataType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag446DatEncodedListStatusText tagData;
+        String oneElement;
+
+        oneElement = Tag446DatEncodedListStatusText.TESTB_DAT_LIST_STATUS_ENCODED_TEXT;
+        tagData = new Tag446DatEncodedListStatusText( new MyDataType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag446DatEncodedListStatusText tagData;
+        String oneElement;
+
+        oneElement = Tag446DatEncodedListStatusText.TESTB_DAT_LIST_STATUS_ENCODED_TEXT;
+        tagData = new Tag446DatEncodedListStatusText( new MyDataType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag446DatEncodedListStatusText tagData;
+        String oneElement;
+
+        oneElement = Tag446DatEncodedListStatusText.TESTB_DAT_LIST_STATUS_ENCODED_TEXT;
+        tagData = new Tag446DatEncodedListStatusText( new MyDataType( oneElement ) );
+        assertEquals( oneElement, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag446DatEncodedListStatusText tagData;
+        String oneElement;
+
+        oneElement = Tag446DatEncodedListStatusText.TESTA_DAT_LIST_STATUS_ENCODED_TEXT;
+        tagData = new Tag446DatEncodedListStatusText( new MyDataType( oneElement ) );
+        assertEquals( "Tag446DatEncodedListStatusText\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

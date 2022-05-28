@@ -49,6 +49,7 @@ class Tag260PrcBasisFeaturePriceTest {
     @Test
     void Tag0260Test() {
         Tag260PrcBasisFeaturePrice tagData;
+        double oneElement;
 
         tagData = new Tag260PrcBasisFeaturePrice(new MyPriceType(
                 Tag260PrcBasisFeaturePrice.TESTA_PRC_BASIS_FEATURE_PRICE));
@@ -61,5 +62,65 @@ class Tag260PrcBasisFeaturePriceTest {
         assertEquals( Tag260PrcBasisFeaturePrice.TESTB_PRC_BASIS_FEATURE_PRICE,
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag260PrcBasisFeaturePrice tagData;
+        double oneElement;
+
+        oneElement = Tag260PrcBasisFeaturePrice.TESTA_PRC_BASIS_FEATURE_PRICE;
+        tagData = new Tag260PrcBasisFeaturePrice( new MyPriceType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag260PrcBasisFeaturePrice.TESTB_PRC_BASIS_FEATURE_PRICE;
+        tagData = new Tag260PrcBasisFeaturePrice( new MyPriceType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag260PrcBasisFeaturePrice tagData;
+        double oneElement;
+
+        oneElement = Tag260PrcBasisFeaturePrice.TESTB_PRC_BASIS_FEATURE_PRICE;
+        tagData = new Tag260PrcBasisFeaturePrice( new MyPriceType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag260PrcBasisFeaturePrice tagData;
+        double oneElement;
+
+        oneElement = Tag260PrcBasisFeaturePrice.TESTB_PRC_BASIS_FEATURE_PRICE;
+        tagData = new Tag260PrcBasisFeaturePrice( new MyPriceType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag260PrcBasisFeaturePrice tagData;
+        double oneElement;
+
+        oneElement = Tag260PrcBasisFeaturePrice.TESTB_PRC_BASIS_FEATURE_PRICE;
+        tagData = new Tag260PrcBasisFeaturePrice( new MyPriceType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag260PrcBasisFeaturePrice tagData;
+        double oneElement;
+
+        oneElement = Tag260PrcBasisFeaturePrice.TESTA_PRC_BASIS_FEATURE_PRICE;
+        tagData = new Tag260PrcBasisFeaturePrice( new MyPriceType( oneElement ) );
+        assertEquals( "Tag260PrcBasisFeaturePrice\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

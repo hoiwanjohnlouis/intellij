@@ -45,17 +45,76 @@ class Tag342UtcTradSesOpenTimeTest {
     @Test
     void Tag0342Test() {
         Tag342UtcTradSesOpenTime tagData;
+        String oneElement;
 
-        tagData = new Tag342UtcTradSesOpenTime(new MyUTCTimestampType(
-                Tag342UtcTradSesOpenTime.TESTA_UTC_TRAD_SES_OPEN_TIME));
-        assertEquals( Tag342UtcTradSesOpenTime.TESTA_UTC_TRAD_SES_OPEN_TIME,
-                tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
+        oneElement = Tag342UtcTradSesOpenTime.TESTA_UTC_TRAD_SES_OPEN_TIME;
+        tagData = new Tag342UtcTradSesOpenTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag342UtcTradSesOpenTime(new MyUTCTimestampType(
-                Tag342UtcTradSesOpenTime.TESTB_UTC_TRAD_SES_OPEN_TIME));
-        assertEquals( Tag342UtcTradSesOpenTime.TESTB_UTC_TRAD_SES_OPEN_TIME,
-                tagData.getDataValue());
+        oneElement = Tag342UtcTradSesOpenTime.TESTB_UTC_TRAD_SES_OPEN_TIME;
+        tagData = new Tag342UtcTradSesOpenTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag342UtcTradSesOpenTime tagData;
+        String oneElement;
+
+        oneElement = Tag342UtcTradSesOpenTime.TESTA_UTC_TRAD_SES_OPEN_TIME;
+        tagData = new Tag342UtcTradSesOpenTime( new MyUTCTimestampType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag342UtcTradSesOpenTime.TESTB_UTC_TRAD_SES_OPEN_TIME;
+        tagData = new Tag342UtcTradSesOpenTime( new MyUTCTimestampType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag342UtcTradSesOpenTime tagData;
+        String oneElement;
+
+        oneElement = Tag342UtcTradSesOpenTime.TESTB_UTC_TRAD_SES_OPEN_TIME;
+        tagData = new Tag342UtcTradSesOpenTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag342UtcTradSesOpenTime tagData;
+        String oneElement;
+
+        oneElement = Tag342UtcTradSesOpenTime.TESTB_UTC_TRAD_SES_OPEN_TIME;
+        tagData = new Tag342UtcTradSesOpenTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag342UtcTradSesOpenTime tagData;
+        String oneElement;
+
+        oneElement = Tag342UtcTradSesOpenTime.TESTB_UTC_TRAD_SES_OPEN_TIME;
+        tagData = new Tag342UtcTradSesOpenTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag342UtcTradSesOpenTime tagData;
+        String oneElement;
+
+        oneElement = Tag342UtcTradSesOpenTime.TESTA_UTC_TRAD_SES_OPEN_TIME;
+        tagData = new Tag342UtcTradSesOpenTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( "Tag342UtcTradSesOpenTime\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toVerboseString() );
     }
 }

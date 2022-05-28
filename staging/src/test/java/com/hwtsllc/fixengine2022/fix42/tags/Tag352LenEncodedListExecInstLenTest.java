@@ -45,9 +45,76 @@ class Tag352LenEncodedListExecInstLenTest {
     @Test
     void Tag0352Test() {
         Tag352LenEncodedListExecInstLen tagData;
+        int oneElement;
 
-        tagData = new Tag352LenEncodedListExecInstLen( new MyLengthType(23) );
-        assertEquals( 23, tagData.getDataValue() );
+        oneElement = Tag352LenEncodedListExecInstLen.TESTA_LEN_ENCODED_LIST_EXEC_INST_LEN;
+        tagData = new Tag352LenEncodedListExecInstLen( new MyLengthType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag352LenEncodedListExecInstLen.TESTB_LEN_ENCODED_LIST_EXEC_INST_LEN;
+        tagData = new Tag352LenEncodedListExecInstLen( new MyLengthType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag352LenEncodedListExecInstLen tagData;
+        int oneElement;
+
+        oneElement = Tag352LenEncodedListExecInstLen.TESTA_LEN_ENCODED_LIST_EXEC_INST_LEN;
+        tagData = new Tag352LenEncodedListExecInstLen( new MyLengthType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag352LenEncodedListExecInstLen.TESTB_LEN_ENCODED_LIST_EXEC_INST_LEN;
+        tagData = new Tag352LenEncodedListExecInstLen( new MyLengthType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag352LenEncodedListExecInstLen tagData;
+        int oneElement;
+
+        oneElement = Tag352LenEncodedListExecInstLen.TESTB_LEN_ENCODED_LIST_EXEC_INST_LEN;
+        tagData = new Tag352LenEncodedListExecInstLen( new MyLengthType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag352LenEncodedListExecInstLen tagData;
+        int oneElement;
+
+        oneElement = Tag352LenEncodedListExecInstLen.TESTB_LEN_ENCODED_LIST_EXEC_INST_LEN;
+        tagData = new Tag352LenEncodedListExecInstLen( new MyLengthType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag352LenEncodedListExecInstLen tagData;
+        int oneElement;
+
+        oneElement = Tag352LenEncodedListExecInstLen.TESTB_LEN_ENCODED_LIST_EXEC_INST_LEN;
+        tagData = new Tag352LenEncodedListExecInstLen( new MyLengthType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag352LenEncodedListExecInstLen tagData;
+        int oneElement;
+
+        oneElement = Tag352LenEncodedListExecInstLen.TESTA_LEN_ENCODED_LIST_EXEC_INST_LEN;
+        tagData = new Tag352LenEncodedListExecInstLen( new MyLengthType( oneElement ) );
+        assertEquals( "Tag352LenEncodedListExecInstLen\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

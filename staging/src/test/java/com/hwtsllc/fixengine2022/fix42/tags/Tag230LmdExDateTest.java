@@ -54,17 +54,76 @@ class Tag230LmdExDateTest {
     @Test
     void Tag0230Test() {
         Tag230LmdExDate tagData;
+        String oneElement;
 
-        tagData = new Tag230LmdExDate(new MyLocalMktDateType(
-                Tag230LmdExDate.TESTA_LMD_EX_DATE));
-        assertEquals( Tag230LmdExDate.TESTA_LMD_EX_DATE,
-                tagData.getDataValue() );
+        oneElement = Tag230LmdExDate.TESTA_LMD_EX_DATE;
+        tagData = new Tag230LmdExDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag230LmdExDate(new MyLocalMktDateType(
-                Tag230LmdExDate.TESTB_LMD_EX_DATE));
-        assertEquals( Tag230LmdExDate.TESTB_LMD_EX_DATE,
-                tagData.getDataValue() );
+        oneElement = Tag230LmdExDate.TESTB_LMD_EX_DATE;
+        tagData = new Tag230LmdExDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag230LmdExDate tagData;
+        String oneElement;
+
+        oneElement = Tag230LmdExDate.TESTA_LMD_EX_DATE;
+        tagData = new Tag230LmdExDate( new MyLocalMktDateType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag230LmdExDate.TESTB_LMD_EX_DATE;
+        tagData = new Tag230LmdExDate( new MyLocalMktDateType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag230LmdExDate tagData;
+        String oneElement;
+
+        oneElement = Tag230LmdExDate.TESTB_LMD_EX_DATE;
+        tagData = new Tag230LmdExDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag230LmdExDate tagData;
+        String oneElement;
+
+        oneElement = Tag230LmdExDate.TESTB_LMD_EX_DATE;
+        tagData = new Tag230LmdExDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag230LmdExDate tagData;
+        String oneElement;
+
+        oneElement = Tag230LmdExDate.TESTB_LMD_EX_DATE;
+        tagData = new Tag230LmdExDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( oneElement, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag230LmdExDate tagData;
+        String oneElement;
+
+        oneElement = Tag230LmdExDate.TESTA_LMD_EX_DATE;
+        tagData = new Tag230LmdExDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( "Tag230LmdExDate\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

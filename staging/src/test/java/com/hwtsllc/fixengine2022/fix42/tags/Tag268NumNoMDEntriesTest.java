@@ -45,17 +45,76 @@ class Tag268NumNoMDEntriesTest {
     @Test
     void Tag0268Test() {
         Tag268NumNoMDEntries tagData;
+        int oneElement;
 
-        tagData = new Tag268NumNoMDEntries(new MyNumInGroupType(
-                Tag268NumNoMDEntries.TESTA_NUM_NO_MD_ENTRIES));
-        assertEquals( Tag268NumNoMDEntries.TESTA_NUM_NO_MD_ENTRIES,
-                tagData.getDataValue());
+        oneElement = Tag268NumNoMDEntries.TESTA_NUM_NO_MD_ENTRIES;
+        tagData = new Tag268NumNoMDEntries(new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag268NumNoMDEntries(new MyNumInGroupType(
-                Tag268NumNoMDEntries.TESTB_NUM_NO_MD_ENTRIES));
-        assertEquals( Tag268NumNoMDEntries.TESTB_NUM_NO_MD_ENTRIES,
-                tagData.getDataValue());
+        oneElement = Tag268NumNoMDEntries.TESTB_NUM_NO_MD_ENTRIES;
+        tagData = new Tag268NumNoMDEntries(new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag268NumNoMDEntries tagData;
+        int oneElement;
+
+        oneElement = Tag268NumNoMDEntries.TESTA_NUM_NO_MD_ENTRIES;
+        tagData = new Tag268NumNoMDEntries( new MyNumInGroupType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag268NumNoMDEntries.TESTB_NUM_NO_MD_ENTRIES;
+        tagData = new Tag268NumNoMDEntries( new MyNumInGroupType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag268NumNoMDEntries tagData;
+        int oneElement;
+
+        oneElement = Tag268NumNoMDEntries.TESTB_NUM_NO_MD_ENTRIES;
+        tagData = new Tag268NumNoMDEntries( new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag268NumNoMDEntries tagData;
+        int oneElement;
+
+        oneElement = Tag268NumNoMDEntries.TESTB_NUM_NO_MD_ENTRIES;
+        tagData = new Tag268NumNoMDEntries( new MyNumInGroupType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag268NumNoMDEntries tagData;
+        int oneElement;
+
+        oneElement = Tag268NumNoMDEntries.TESTB_NUM_NO_MD_ENTRIES;
+        tagData = new Tag268NumNoMDEntries( new MyNumInGroupType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag268NumNoMDEntries tagData;
+        int oneElement;
+
+        oneElement = Tag268NumNoMDEntries.TESTA_NUM_NO_MD_ENTRIES;
+        tagData = new Tag268NumNoMDEntries( new MyNumInGroupType( oneElement ) );
+        assertEquals( "Tag268NumNoMDEntries\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

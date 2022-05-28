@@ -52,17 +52,76 @@ class Tag254LmdLegRedemptionDateTest {
     @Test
     void Tag0254Test() {
         Tag254LmdLegRedemptionDate tagData;
+        String oneElement;
 
-        tagData = new Tag254LmdLegRedemptionDate(new MyLocalMktDateType(
-                Tag254LmdLegRedemptionDate.TESTA_LMD_LEG_REDEMPTION_DATE));
-        assertEquals( Tag254LmdLegRedemptionDate.TESTA_LMD_LEG_REDEMPTION_DATE,
-                tagData.getDataValue() );
+        oneElement = Tag254LmdLegRedemptionDate.TESTA_LMD_LEG_REDEMPTION_DATE;
+        tagData = new Tag254LmdLegRedemptionDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag254LmdLegRedemptionDate(new MyLocalMktDateType(
-                Tag254LmdLegRedemptionDate.TESTB_LMD_LEG_REDEMPTION_DATE));
-        assertEquals( Tag254LmdLegRedemptionDate.TESTB_LMD_LEG_REDEMPTION_DATE,
-                tagData.getDataValue() );
+        oneElement = Tag254LmdLegRedemptionDate.TESTB_LMD_LEG_REDEMPTION_DATE;
+        tagData = new Tag254LmdLegRedemptionDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag254LmdLegRedemptionDate tagData;
+        String oneElement;
+
+        oneElement = Tag254LmdLegRedemptionDate.TESTA_LMD_LEG_REDEMPTION_DATE;
+        tagData = new Tag254LmdLegRedemptionDate( new MyLocalMktDateType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag254LmdLegRedemptionDate.TESTB_LMD_LEG_REDEMPTION_DATE;
+        tagData = new Tag254LmdLegRedemptionDate( new MyLocalMktDateType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag254LmdLegRedemptionDate tagData;
+        String oneElement;
+
+        oneElement = Tag254LmdLegRedemptionDate.TESTB_LMD_LEG_REDEMPTION_DATE;
+        tagData = new Tag254LmdLegRedemptionDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag254LmdLegRedemptionDate tagData;
+        String oneElement;
+
+        oneElement = Tag254LmdLegRedemptionDate.TESTB_LMD_LEG_REDEMPTION_DATE;
+        tagData = new Tag254LmdLegRedemptionDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag254LmdLegRedemptionDate tagData;
+        String oneElement;
+
+        oneElement = Tag254LmdLegRedemptionDate.TESTB_LMD_LEG_REDEMPTION_DATE;
+        tagData = new Tag254LmdLegRedemptionDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( oneElement, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag254LmdLegRedemptionDate tagData;
+        String oneElement;
+
+        oneElement = Tag254LmdLegRedemptionDate.TESTA_LMD_LEG_REDEMPTION_DATE;
+        tagData = new Tag254LmdLegRedemptionDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( "Tag254LmdLegRedemptionDate\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

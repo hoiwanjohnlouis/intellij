@@ -46,59 +46,81 @@ class Tag60UtcTransactTimeTest {
     @Test
     void Tag0060Test() {
         Tag60UtcTransactTime tagData;
+        String oneElement;
 
-        tagData = new Tag60UtcTransactTime(new MyUTCTimestampType("20220401 000000") );
-        assertEquals( "20220401 000000", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
+        oneElement = "20220401 000000";
+        tagData = new Tag60UtcTransactTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag60UtcTransactTime.TESTA_UTC_TRANSACT_TIME;
+        tagData = new Tag60UtcTransactTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag60UtcTransactTime.TESTB_UTC_TRANSACT_TIME;
+        tagData = new Tag60UtcTransactTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void PrintFIXTagTest() {
         Tag60UtcTransactTime tagData;
+        String oneElement;
 
-        tagData = new Tag60UtcTransactTime(new MyUTCTimestampType(Tag60UtcTransactTime.TESTB_UTC_TRANSACT_TIME));
+        oneElement = Tag60UtcTransactTime.TESTA_UTC_TRANSACT_TIME;
+        tagData = new Tag60UtcTransactTime( new MyUTCTimestampType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag60UtcTransactTime.TESTB_UTC_TRANSACT_TIME;
+        tagData = new Tag60UtcTransactTime( new MyUTCTimestampType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
     @Test
     void TagGetDataValueTest() {
         Tag60UtcTransactTime tagData;
+        String oneElement;
 
-        tagData = new Tag60UtcTransactTime(new MyUTCTimestampType(Tag60UtcTransactTime.TESTB_UTC_TRANSACT_TIME));
-        assertEquals( Tag60UtcTransactTime.TESTB_UTC_TRANSACT_TIME, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        oneElement = Tag60UtcTransactTime.TESTB_UTC_TRANSACT_TIME;
+        tagData = new Tag60UtcTransactTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {
         Tag60UtcTransactTime tagData;
+        String oneElement;
 
-        tagData = new Tag60UtcTransactTime(new MyUTCTimestampType(Tag60UtcTransactTime.TESTB_UTC_TRANSACT_TIME));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag60UtcTransactTime.TESTB_UTC_TRANSACT_TIME,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag60UtcTransactTime.TESTB_UTC_TRANSACT_TIME;
+        tagData = new Tag60UtcTransactTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toValuePairString() );
     }
     @Test
     void TagToStringTest() {
         Tag60UtcTransactTime tagData;
+        String oneElement;
 
-        tagData = new Tag60UtcTransactTime(new MyUTCTimestampType(Tag60UtcTransactTime.TESTB_UTC_TRANSACT_TIME));
-        assertEquals( Tag60UtcTransactTime.TESTB_UTC_TRANSACT_TIME,
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag60UtcTransactTime.TESTB_UTC_TRANSACT_TIME;
+        tagData = new Tag60UtcTransactTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toString() );
     }
     @Test
     void TagToVerboseStringTest() {
         Tag60UtcTransactTime tagData;
+        String oneElement;
 
-        tagData = new Tag60UtcTransactTime(new MyUTCTimestampType(Tag60UtcTransactTime.TESTA_UTC_TRANSACT_TIME));
+        oneElement = Tag60UtcTransactTime.TESTA_UTC_TRANSACT_TIME;
+        tagData = new Tag60UtcTransactTime( new MyUTCTimestampType( oneElement ) );
         assertEquals( "Tag60UtcTransactTime\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                         "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag60UtcTransactTime.TESTA_UTC_TRANSACT_TIME + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag60UtcTransactTime.TESTA_UTC_TRANSACT_TIME + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toVerboseString() );
     }
 }

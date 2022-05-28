@@ -46,64 +46,76 @@ class Tag168UtcEffectiveTimeTest {
     @Test
     void Tag0168Test() {
         Tag168UtcEffectiveTime tagData;
+        String oneElement;
 
-        tagData = new Tag168UtcEffectiveTime(new MyUTCTimestampType(Tag168UtcEffectiveTime.TESTA_UTC_EFFECTIVE_TIME));
-        assertEquals( Tag168UtcEffectiveTime.TESTA_UTC_EFFECTIVE_TIME, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        oneElement = Tag168UtcEffectiveTime.TESTA_UTC_EFFECTIVE_TIME;
+        tagData = new Tag168UtcEffectiveTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag168UtcEffectiveTime(new MyUTCTimestampType(Tag168UtcEffectiveTime.TESTB_UTC_EFFECTIVE_TIME));
-        assertEquals( Tag168UtcEffectiveTime.TESTB_UTC_EFFECTIVE_TIME, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        oneElement = Tag168UtcEffectiveTime.TESTB_UTC_EFFECTIVE_TIME;
+        tagData = new Tag168UtcEffectiveTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void PrintFIXTagTest() {
         Tag168UtcEffectiveTime tagData;
+        String oneElement;
 
-        tagData = new Tag168UtcEffectiveTime(new MyUTCTimestampType(Tag168UtcEffectiveTime.TESTB_UTC_EFFECTIVE_TIME));
+        oneElement = Tag168UtcEffectiveTime.TESTA_UTC_EFFECTIVE_TIME;
+        tagData = new Tag168UtcEffectiveTime( new MyUTCTimestampType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag168UtcEffectiveTime.TESTB_UTC_EFFECTIVE_TIME;
+        tagData = new Tag168UtcEffectiveTime( new MyUTCTimestampType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
     @Test
     void TagGetDataValueTest() {
         Tag168UtcEffectiveTime tagData;
+        String oneElement;
 
-        tagData = new Tag168UtcEffectiveTime(new MyUTCTimestampType(Tag168UtcEffectiveTime.TESTB_UTC_EFFECTIVE_TIME));
-        assertEquals( Tag168UtcEffectiveTime.TESTB_UTC_EFFECTIVE_TIME, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        oneElement = Tag168UtcEffectiveTime.TESTB_UTC_EFFECTIVE_TIME;
+        tagData = new Tag168UtcEffectiveTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void TagToValuePairStringTest() {
         Tag168UtcEffectiveTime tagData;
+        String oneElement;
 
-        tagData = new Tag168UtcEffectiveTime(new MyUTCTimestampType(Tag168UtcEffectiveTime.TESTB_UTC_EFFECTIVE_TIME));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag168UtcEffectiveTime.TESTB_UTC_EFFECTIVE_TIME,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag168UtcEffectiveTime.TESTB_UTC_EFFECTIVE_TIME;
+        tagData = new Tag168UtcEffectiveTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toValuePairString() );
     }
     @Test
     void TagToStringTest() {
         Tag168UtcEffectiveTime tagData;
+        String oneElement;
 
-        tagData = new Tag168UtcEffectiveTime(new MyUTCTimestampType(Tag168UtcEffectiveTime.TESTB_UTC_EFFECTIVE_TIME));
-        assertEquals( Tag168UtcEffectiveTime.TESTB_UTC_EFFECTIVE_TIME,
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag168UtcEffectiveTime.TESTB_UTC_EFFECTIVE_TIME;
+        tagData = new Tag168UtcEffectiveTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toString() );
     }
     @Test
     void TagToVerboseStringTest() {
         Tag168UtcEffectiveTime tagData;
+        String oneElement;
 
-        tagData =
-                new Tag168UtcEffectiveTime(new MyUTCTimestampType(Tag168UtcEffectiveTime.TESTA_UTC_EFFECTIVE_TIME));
+        oneElement = Tag168UtcEffectiveTime.TESTA_UTC_EFFECTIVE_TIME;
+        tagData = new Tag168UtcEffectiveTime( new MyUTCTimestampType( oneElement ) );
         assertEquals( "Tag168UtcEffectiveTime\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                         "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag168UtcEffectiveTime.TESTA_UTC_EFFECTIVE_TIME + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag168UtcEffectiveTime.TESTA_UTC_EFFECTIVE_TIME + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toVerboseString() );
     }
 }

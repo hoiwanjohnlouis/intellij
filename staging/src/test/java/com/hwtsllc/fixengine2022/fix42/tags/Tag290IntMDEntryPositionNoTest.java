@@ -46,17 +46,76 @@ class Tag290IntMDEntryPositionNoTest {
     @Test
     void Tag0290Test() {
         Tag290IntMDEntryPositionNo tagData;
+        int oneElement;
 
-        tagData = new Tag290IntMDEntryPositionNo(new MyIntType(
-                Tag290IntMDEntryPositionNo.TESTA_INT_MD_ENTRY_POSITION_NO));
-        assertEquals( Tag290IntMDEntryPositionNo.TESTA_INT_MD_ENTRY_POSITION_NO,
-                tagData.getDataValue());
+        oneElement = Tag290IntMDEntryPositionNo.TESTA_INT_MD_ENTRY_POSITION_NO;
+        tagData = new Tag290IntMDEntryPositionNo( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag290IntMDEntryPositionNo(new MyIntType(
-                Tag290IntMDEntryPositionNo.TESTB_INT_MD_ENTRY_POSITION_NO));
-        assertEquals( Tag290IntMDEntryPositionNo.TESTB_INT_MD_ENTRY_POSITION_NO,
-                tagData.getDataValue());
+        oneElement = Tag290IntMDEntryPositionNo.TESTB_INT_MD_ENTRY_POSITION_NO;
+        tagData = new Tag290IntMDEntryPositionNo( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag290IntMDEntryPositionNo tagData;
+        int oneElement;
+
+        oneElement = Tag290IntMDEntryPositionNo.TESTA_INT_MD_ENTRY_POSITION_NO;
+        tagData = new Tag290IntMDEntryPositionNo( new MyIntType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag290IntMDEntryPositionNo.TESTB_INT_MD_ENTRY_POSITION_NO;
+        tagData = new Tag290IntMDEntryPositionNo( new MyIntType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag290IntMDEntryPositionNo tagData;
+        int oneElement;
+
+        oneElement = Tag290IntMDEntryPositionNo.TESTB_INT_MD_ENTRY_POSITION_NO;
+        tagData = new Tag290IntMDEntryPositionNo( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag290IntMDEntryPositionNo tagData;
+        int oneElement;
+
+        oneElement = Tag290IntMDEntryPositionNo.TESTB_INT_MD_ENTRY_POSITION_NO;
+        tagData = new Tag290IntMDEntryPositionNo( new MyIntType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag290IntMDEntryPositionNo tagData;
+        int oneElement;
+
+        oneElement = Tag290IntMDEntryPositionNo.TESTB_INT_MD_ENTRY_POSITION_NO;
+        tagData = new Tag290IntMDEntryPositionNo( new MyIntType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag290IntMDEntryPositionNo tagData;
+        int oneElement;
+
+        oneElement = Tag290IntMDEntryPositionNo.TESTA_INT_MD_ENTRY_POSITION_NO;
+        tagData = new Tag290IntMDEntryPositionNo( new MyIntType( oneElement ) );
+        assertEquals( "Tag290IntMDEntryPositionNo\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

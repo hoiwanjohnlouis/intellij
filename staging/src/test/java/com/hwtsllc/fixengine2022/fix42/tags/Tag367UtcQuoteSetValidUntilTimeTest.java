@@ -47,17 +47,76 @@ class Tag367UtcQuoteSetValidUntilTimeTest {
     @Test
     void Tag0367Test() {
         Tag367UtcQuoteSetValidUntilTime tagData;
+        String oneElement;
 
-        tagData = new Tag367UtcQuoteSetValidUntilTime(new MyUTCTimestampType(
-                Tag367UtcQuoteSetValidUntilTime.TESTA_UTC_QUOTE_SET_VALID_UNTIL_TIME));
-        assertEquals( Tag367UtcQuoteSetValidUntilTime.TESTA_UTC_QUOTE_SET_VALID_UNTIL_TIME,
-                tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
+        oneElement = Tag367UtcQuoteSetValidUntilTime.TESTA_UTC_QUOTE_SET_VALID_UNTIL_TIME;
+        tagData = new Tag367UtcQuoteSetValidUntilTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag367UtcQuoteSetValidUntilTime(new MyUTCTimestampType(
-                Tag367UtcQuoteSetValidUntilTime.TESTB_UTC_QUOTE_SET_VALID_UNTIL_TIME));
-        assertEquals( Tag367UtcQuoteSetValidUntilTime.TESTB_UTC_QUOTE_SET_VALID_UNTIL_TIME,
-                tagData.getDataValue());
+        oneElement = Tag367UtcQuoteSetValidUntilTime.TESTB_UTC_QUOTE_SET_VALID_UNTIL_TIME;
+        tagData = new Tag367UtcQuoteSetValidUntilTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag367UtcQuoteSetValidUntilTime tagData;
+        String oneElement;
+
+        oneElement = Tag367UtcQuoteSetValidUntilTime.TESTA_UTC_QUOTE_SET_VALID_UNTIL_TIME;
+        tagData = new Tag367UtcQuoteSetValidUntilTime( new MyUTCTimestampType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag367UtcQuoteSetValidUntilTime.TESTB_UTC_QUOTE_SET_VALID_UNTIL_TIME;
+        tagData = new Tag367UtcQuoteSetValidUntilTime( new MyUTCTimestampType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag367UtcQuoteSetValidUntilTime tagData;
+        String oneElement;
+
+        oneElement = Tag367UtcQuoteSetValidUntilTime.TESTB_UTC_QUOTE_SET_VALID_UNTIL_TIME;
+        tagData = new Tag367UtcQuoteSetValidUntilTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag367UtcQuoteSetValidUntilTime tagData;
+        String oneElement;
+
+        oneElement = Tag367UtcQuoteSetValidUntilTime.TESTB_UTC_QUOTE_SET_VALID_UNTIL_TIME;
+        tagData = new Tag367UtcQuoteSetValidUntilTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag367UtcQuoteSetValidUntilTime tagData;
+        String oneElement;
+
+        oneElement = Tag367UtcQuoteSetValidUntilTime.TESTB_UTC_QUOTE_SET_VALID_UNTIL_TIME;
+        tagData = new Tag367UtcQuoteSetValidUntilTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag367UtcQuoteSetValidUntilTime tagData;
+        String oneElement;
+
+        oneElement = Tag367UtcQuoteSetValidUntilTime.TESTA_UTC_QUOTE_SET_VALID_UNTIL_TIME;
+        tagData = new Tag367UtcQuoteSetValidUntilTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( "Tag367UtcQuoteSetValidUntilTime\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toVerboseString() );
     }
 }

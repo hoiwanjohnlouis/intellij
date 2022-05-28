@@ -47,17 +47,76 @@ class Tag316PrcUnderlyingStrikePriceTest {
     @Test
     void Tag0316Test() {
         Tag316PrcUnderlyingStrikePrice tagData;
+        double oneElement;
 
-        tagData = new Tag316PrcUnderlyingStrikePrice(new MyPriceType(
-                Tag316PrcUnderlyingStrikePrice.TESTA_PRC_UNDERLYING_STRIKE_PRICE));
-        assertEquals( Tag316PrcUnderlyingStrikePrice.TESTA_PRC_UNDERLYING_STRIKE_PRICE,
-                tagData.getDataValue());
+        oneElement = Tag316PrcUnderlyingStrikePrice.TESTA_PRC_UNDERLYING_STRIKE_PRICE;
+        tagData = new Tag316PrcUnderlyingStrikePrice( new MyPriceType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag316PrcUnderlyingStrikePrice(new MyPriceType(
-                Tag316PrcUnderlyingStrikePrice.TESTB_PRC_UNDERLYING_STRIKE_PRICE));
-        assertEquals( Tag316PrcUnderlyingStrikePrice.TESTB_PRC_UNDERLYING_STRIKE_PRICE,
-                tagData.getDataValue());
+        oneElement = Tag316PrcUnderlyingStrikePrice.TESTB_PRC_UNDERLYING_STRIKE_PRICE;
+        tagData = new Tag316PrcUnderlyingStrikePrice( new MyPriceType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag316PrcUnderlyingStrikePrice tagData;
+        double oneElement;
+
+        oneElement = Tag316PrcUnderlyingStrikePrice.TESTA_PRC_UNDERLYING_STRIKE_PRICE;
+        tagData = new Tag316PrcUnderlyingStrikePrice( new MyPriceType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag316PrcUnderlyingStrikePrice.TESTB_PRC_UNDERLYING_STRIKE_PRICE;
+        tagData = new Tag316PrcUnderlyingStrikePrice( new MyPriceType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag316PrcUnderlyingStrikePrice tagData;
+        double oneElement;
+
+        oneElement = Tag316PrcUnderlyingStrikePrice.TESTB_PRC_UNDERLYING_STRIKE_PRICE;
+        tagData = new Tag316PrcUnderlyingStrikePrice( new MyPriceType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag316PrcUnderlyingStrikePrice tagData;
+        double oneElement;
+
+        oneElement = Tag316PrcUnderlyingStrikePrice.TESTB_PRC_UNDERLYING_STRIKE_PRICE;
+        tagData = new Tag316PrcUnderlyingStrikePrice( new MyPriceType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag316PrcUnderlyingStrikePrice tagData;
+        double oneElement;
+
+        oneElement = Tag316PrcUnderlyingStrikePrice.TESTB_PRC_UNDERLYING_STRIKE_PRICE;
+        tagData = new Tag316PrcUnderlyingStrikePrice( new MyPriceType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag316PrcUnderlyingStrikePrice tagData;
+        double oneElement;
+
+        oneElement = Tag316PrcUnderlyingStrikePrice.TESTA_PRC_UNDERLYING_STRIKE_PRICE;
+        tagData = new Tag316PrcUnderlyingStrikePrice( new MyPriceType( oneElement ) );
+        assertEquals( "Tag316PrcUnderlyingStrikePrice\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

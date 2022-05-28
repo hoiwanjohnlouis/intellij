@@ -48,15 +48,76 @@ class Tag357DatEncodedSubjectTest {
     @Test
     void Tag0357Test() {
         Tag357DatEncodedSubject tagData;
+        String oneElement;
 
-        tagData = new Tag357DatEncodedSubject(
-                new MyDataType(Tag357DatEncodedSubject.TESTA_DAT_ENCODED_SUBJECT));
-        assertEquals( Tag357DatEncodedSubject.TESTA_DAT_ENCODED_SUBJECT, tagData.getDataValue() );
+        oneElement = Tag357DatEncodedSubject.TESTA_DAT_ENCODED_SUBJECT;
+        tagData = new Tag357DatEncodedSubject( new MyDataType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag357DatEncodedSubject(
-                new MyDataType(Tag357DatEncodedSubject.TESTB_DAT_ENCODED_SUBJECT));
-        assertEquals( Tag357DatEncodedSubject.TESTB_DAT_ENCODED_SUBJECT, tagData.getDataValue() );
+        oneElement = Tag357DatEncodedSubject.TESTB_DAT_ENCODED_SUBJECT;
+        tagData = new Tag357DatEncodedSubject( new MyDataType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag357DatEncodedSubject tagData;
+        String oneElement;
+
+        oneElement = Tag357DatEncodedSubject.TESTA_DAT_ENCODED_SUBJECT;
+        tagData = new Tag357DatEncodedSubject( new MyDataType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag357DatEncodedSubject.TESTB_DAT_ENCODED_SUBJECT;
+        tagData = new Tag357DatEncodedSubject( new MyDataType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag357DatEncodedSubject tagData;
+        String oneElement;
+
+        oneElement = Tag357DatEncodedSubject.TESTB_DAT_ENCODED_SUBJECT;
+        tagData = new Tag357DatEncodedSubject( new MyDataType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag357DatEncodedSubject tagData;
+        String oneElement;
+
+        oneElement = Tag357DatEncodedSubject.TESTB_DAT_ENCODED_SUBJECT;
+        tagData = new Tag357DatEncodedSubject( new MyDataType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag357DatEncodedSubject tagData;
+        String oneElement;
+
+        oneElement = Tag357DatEncodedSubject.TESTB_DAT_ENCODED_SUBJECT;
+        tagData = new Tag357DatEncodedSubject( new MyDataType( oneElement ) );
+        assertEquals( oneElement, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag357DatEncodedSubject tagData;
+        String oneElement;
+
+        oneElement = Tag357DatEncodedSubject.TESTA_DAT_ENCODED_SUBJECT;
+        tagData = new Tag357DatEncodedSubject( new MyDataType( oneElement ) );
+        assertEquals( "Tag357DatEncodedSubject\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

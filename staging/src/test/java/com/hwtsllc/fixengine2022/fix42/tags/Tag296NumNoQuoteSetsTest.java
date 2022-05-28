@@ -45,17 +45,76 @@ class Tag296NumNoQuoteSetsTest {
     @Test
     void Tag0296Test() {
         Tag296NumNoQuoteSets tagData;
+        int oneElement;
 
-        tagData = new Tag296NumNoQuoteSets(new MyNumInGroupType(
-                Tag296NumNoQuoteSets.TESTA_NUM_NO_QUOTE_SETS));
-        assertEquals( Tag296NumNoQuoteSets.TESTA_NUM_NO_QUOTE_SETS,
-                tagData.getDataValue());
+        oneElement = Tag296NumNoQuoteSets.TESTA_NUM_NO_QUOTE_SETS;
+        tagData = new Tag296NumNoQuoteSets( new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag296NumNoQuoteSets(new MyNumInGroupType(
-                Tag296NumNoQuoteSets.TESTB_NUM_NO_QUOTE_SETS));
-        assertEquals( Tag296NumNoQuoteSets.TESTB_NUM_NO_QUOTE_SETS,
-                tagData.getDataValue());
+        oneElement = Tag296NumNoQuoteSets.TESTB_NUM_NO_QUOTE_SETS;
+        tagData = new Tag296NumNoQuoteSets( new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag296NumNoQuoteSets tagData;
+        int oneElement;
+
+        oneElement = Tag296NumNoQuoteSets.TESTA_NUM_NO_QUOTE_SETS;
+        tagData = new Tag296NumNoQuoteSets( new MyNumInGroupType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag296NumNoQuoteSets.TESTB_NUM_NO_QUOTE_SETS;
+        tagData = new Tag296NumNoQuoteSets( new MyNumInGroupType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag296NumNoQuoteSets tagData;
+        int oneElement;
+
+        oneElement = Tag296NumNoQuoteSets.TESTB_NUM_NO_QUOTE_SETS;
+        tagData = new Tag296NumNoQuoteSets( new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag296NumNoQuoteSets tagData;
+        int oneElement;
+
+        oneElement = Tag296NumNoQuoteSets.TESTB_NUM_NO_QUOTE_SETS;
+        tagData = new Tag296NumNoQuoteSets( new MyNumInGroupType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag296NumNoQuoteSets tagData;
+        int oneElement;
+
+        oneElement = Tag296NumNoQuoteSets.TESTB_NUM_NO_QUOTE_SETS;
+        tagData = new Tag296NumNoQuoteSets( new MyNumInGroupType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag296NumNoQuoteSets tagData;
+        int oneElement;
+
+        oneElement = Tag296NumNoQuoteSets.TESTA_NUM_NO_QUOTE_SETS;
+        tagData = new Tag296NumNoQuoteSets( new MyNumInGroupType( oneElement ) );
+        assertEquals( "Tag296NumNoQuoteSets\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

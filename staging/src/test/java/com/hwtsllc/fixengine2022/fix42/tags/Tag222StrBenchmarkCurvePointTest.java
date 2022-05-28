@@ -61,15 +61,72 @@ class Tag222StrBenchmarkCurvePointTest {
     @Test
     void Tag0222Test() {
         Tag222StrBenchmarkCurvePoint tagData;
+        String oneElement;
 
-        tagData = new Tag222StrBenchmarkCurvePoint(
-                new MyStringType(Tag222StrBenchmarkCurvePoint.TESTA_STR_BENCHMARK_CURVE_POINT));
-        assertEquals( Tag222StrBenchmarkCurvePoint.TESTA_STR_BENCHMARK_CURVE_POINT, tagData.getDataValue() );
+        oneElement = Tag222StrBenchmarkCurvePoint.TESTA_STR_BENCHMARK_CURVE_POINT;
+        tagData = new Tag222StrBenchmarkCurvePoint( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag222StrBenchmarkCurvePoint(
-                new MyStringType(Tag222StrBenchmarkCurvePoint.TESTB_STR_BENCHMARK_CURVE_POINT));
-        assertEquals( Tag222StrBenchmarkCurvePoint.TESTB_STR_BENCHMARK_CURVE_POINT, tagData.getDataValue() );
+        oneElement = Tag222StrBenchmarkCurvePoint.TESTB_STR_BENCHMARK_CURVE_POINT;
+        tagData = new Tag222StrBenchmarkCurvePoint( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag222StrBenchmarkCurvePoint tagData;
+        String oneElement;
+
+        oneElement = Tag222StrBenchmarkCurvePoint.TESTB_STR_BENCHMARK_CURVE_POINT;
+        tagData = new Tag222StrBenchmarkCurvePoint( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag222StrBenchmarkCurvePoint tagData;
+        String oneElement;
+
+        oneElement = Tag222StrBenchmarkCurvePoint.TESTB_STR_BENCHMARK_CURVE_POINT;
+        tagData = new Tag222StrBenchmarkCurvePoint( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag222StrBenchmarkCurvePoint tagData;
+        String oneElement;
+
+        oneElement = Tag222StrBenchmarkCurvePoint.TESTB_STR_BENCHMARK_CURVE_POINT;
+        tagData = new Tag222StrBenchmarkCurvePoint( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag222StrBenchmarkCurvePoint tagData;
+        String oneElement;
+
+        oneElement = Tag222StrBenchmarkCurvePoint.TESTB_STR_BENCHMARK_CURVE_POINT;
+        tagData = new Tag222StrBenchmarkCurvePoint( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag222StrBenchmarkCurvePoint tagData;
+        String oneElement;
+
+        oneElement = Tag222StrBenchmarkCurvePoint.TESTA_STR_BENCHMARK_CURVE_POINT;
+        tagData = new Tag222StrBenchmarkCurvePoint( new MyStringType( oneElement ) );
+        assertEquals( "Tag222StrBenchmarkCurvePoint\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

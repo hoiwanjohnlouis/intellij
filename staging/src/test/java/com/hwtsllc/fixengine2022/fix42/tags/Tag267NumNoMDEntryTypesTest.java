@@ -45,17 +45,76 @@ class Tag267NumNoMDEntryTypesTest {
     @Test
     void Tag0267Test() {
         Tag267NumNoMDEntryTypes tagData;
+        int oneElement;
 
-        tagData = new Tag267NumNoMDEntryTypes(new MyNumInGroupType(
-                Tag267NumNoMDEntryTypes.TESTA_NUM_NO_MD_ENTRY_TYPES));
-        assertEquals( Tag267NumNoMDEntryTypes.TESTA_NUM_NO_MD_ENTRY_TYPES,
-                tagData.getDataValue());
+        oneElement = Tag267NumNoMDEntryTypes.TESTA_NUM_NO_MD_ENTRY_TYPES;
+        tagData = new Tag267NumNoMDEntryTypes( new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag267NumNoMDEntryTypes(new MyNumInGroupType(
-                Tag267NumNoMDEntryTypes.TESTB_NUM_NO_MD_ENTRY_TYPES));
-        assertEquals( Tag267NumNoMDEntryTypes.TESTB_NUM_NO_MD_ENTRY_TYPES,
-                tagData.getDataValue());
+        oneElement = Tag267NumNoMDEntryTypes.TESTB_NUM_NO_MD_ENTRY_TYPES;
+        tagData = new Tag267NumNoMDEntryTypes( new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag267NumNoMDEntryTypes tagData;
+        int oneElement;
+
+        oneElement = Tag267NumNoMDEntryTypes.TESTA_NUM_NO_MD_ENTRY_TYPES;
+        tagData = new Tag267NumNoMDEntryTypes( new MyNumInGroupType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag267NumNoMDEntryTypes.TESTB_NUM_NO_MD_ENTRY_TYPES;
+        tagData = new Tag267NumNoMDEntryTypes( new MyNumInGroupType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag267NumNoMDEntryTypes tagData;
+        int oneElement;
+
+        oneElement = Tag267NumNoMDEntryTypes.TESTB_NUM_NO_MD_ENTRY_TYPES;
+        tagData = new Tag267NumNoMDEntryTypes( new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag267NumNoMDEntryTypes tagData;
+        int oneElement;
+
+        oneElement = Tag267NumNoMDEntryTypes.TESTB_NUM_NO_MD_ENTRY_TYPES;
+        tagData = new Tag267NumNoMDEntryTypes( new MyNumInGroupType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag267NumNoMDEntryTypes tagData;
+        int oneElement;
+
+        oneElement = Tag267NumNoMDEntryTypes.TESTB_NUM_NO_MD_ENTRY_TYPES;
+        tagData = new Tag267NumNoMDEntryTypes( new MyNumInGroupType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag267NumNoMDEntryTypes tagData;
+        int oneElement;
+
+        oneElement = Tag267NumNoMDEntryTypes.TESTA_NUM_NO_MD_ENTRY_TYPES;
+        tagData = new Tag267NumNoMDEntryTypes( new MyNumInGroupType( oneElement ) );
+        assertEquals( "Tag267NumNoMDEntryTypes\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

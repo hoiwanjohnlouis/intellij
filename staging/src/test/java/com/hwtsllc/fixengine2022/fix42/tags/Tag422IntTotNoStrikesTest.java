@@ -50,17 +50,76 @@ class Tag422IntTotNoStrikesTest {
     @Test
     void Tag0422Test() {
         Tag422IntTotNoStrikes tagData;
+        int oneElement;
 
-        tagData = new Tag422IntTotNoStrikes(new MyIntType(
-                Tag422IntTotNoStrikes.TESTA_INT_TOT_NO_STRIKES));
-        assertEquals( Tag422IntTotNoStrikes.TESTA_INT_TOT_NO_STRIKES,
-                tagData.getDataValue());
+        oneElement = Tag422IntTotNoStrikes.TESTA_INT_TOT_NO_STRIKES;
+        tagData = new Tag422IntTotNoStrikes( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag422IntTotNoStrikes(new MyIntType(
-                Tag422IntTotNoStrikes.TESTB_INT_TOT_NO_STRIKES));
-        assertEquals( Tag422IntTotNoStrikes.TESTB_INT_TOT_NO_STRIKES,
-                tagData.getDataValue());
+        oneElement = Tag422IntTotNoStrikes.TESTB_INT_TOT_NO_STRIKES;
+        tagData = new Tag422IntTotNoStrikes( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag422IntTotNoStrikes tagData;
+        int oneElement;
+
+        oneElement = Tag422IntTotNoStrikes.TESTA_INT_TOT_NO_STRIKES;
+        tagData = new Tag422IntTotNoStrikes( new MyIntType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag422IntTotNoStrikes.TESTB_INT_TOT_NO_STRIKES;
+        tagData = new Tag422IntTotNoStrikes( new MyIntType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag422IntTotNoStrikes tagData;
+        int oneElement;
+
+        oneElement = Tag422IntTotNoStrikes.TESTB_INT_TOT_NO_STRIKES;
+        tagData = new Tag422IntTotNoStrikes( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag422IntTotNoStrikes tagData;
+        int oneElement;
+
+        oneElement = Tag422IntTotNoStrikes.TESTB_INT_TOT_NO_STRIKES;
+        tagData = new Tag422IntTotNoStrikes( new MyIntType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag422IntTotNoStrikes tagData;
+        int oneElement;
+
+        oneElement = Tag422IntTotNoStrikes.TESTB_INT_TOT_NO_STRIKES;
+        tagData = new Tag422IntTotNoStrikes( new MyIntType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag422IntTotNoStrikes tagData;
+        int oneElement;
+
+        oneElement = Tag422IntTotNoStrikes.TESTA_INT_TOT_NO_STRIKES;
+        tagData = new Tag422IntTotNoStrikes( new MyIntType( oneElement ) );
+        assertEquals( "Tag422IntTotNoStrikes\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

@@ -45,17 +45,76 @@ class Tag428NumNoStrikesTest {
     @Test
     void Tag0428Test() {
         Tag428NumNoStrikes tagData;
+        int oneElement;
 
-        tagData = new Tag428NumNoStrikes(new MyNumInGroupType(
-                Tag428NumNoStrikes.TESTA_NUM_NO_STRIKES));
-        assertEquals( Tag428NumNoStrikes.TESTA_NUM_NO_STRIKES,
-                tagData.getDataValue());
+        oneElement = Tag428NumNoStrikes.TESTA_NUM_NO_STRIKES;
+        tagData = new Tag428NumNoStrikes( new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag428NumNoStrikes(new MyNumInGroupType(
-                Tag428NumNoStrikes.TESTB_NUM_NO_STRIKES));
-        assertEquals( Tag428NumNoStrikes.TESTB_NUM_NO_STRIKES,
-                tagData.getDataValue());
+        oneElement = Tag428NumNoStrikes.TESTB_NUM_NO_STRIKES;
+        tagData = new Tag428NumNoStrikes( new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag428NumNoStrikes tagData;
+        int oneElement;
+
+        oneElement = Tag428NumNoStrikes.TESTA_NUM_NO_STRIKES;
+        tagData = new Tag428NumNoStrikes( new MyNumInGroupType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag428NumNoStrikes.TESTB_NUM_NO_STRIKES;
+        tagData = new Tag428NumNoStrikes( new MyNumInGroupType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag428NumNoStrikes tagData;
+        int oneElement;
+
+        oneElement = Tag428NumNoStrikes.TESTB_NUM_NO_STRIKES;
+        tagData = new Tag428NumNoStrikes( new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag428NumNoStrikes tagData;
+        int oneElement;
+
+        oneElement = Tag428NumNoStrikes.TESTB_NUM_NO_STRIKES;
+        tagData = new Tag428NumNoStrikes( new MyNumInGroupType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag428NumNoStrikes tagData;
+        int oneElement;
+
+        oneElement = Tag428NumNoStrikes.TESTB_NUM_NO_STRIKES;
+        tagData = new Tag428NumNoStrikes( new MyNumInGroupType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag428NumNoStrikes tagData;
+        int oneElement;
+
+        oneElement = Tag428NumNoStrikes.TESTA_NUM_NO_STRIKES;
+        tagData = new Tag428NumNoStrikes( new MyNumInGroupType( oneElement ) );
+        assertEquals( "Tag428NumNoStrikes\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

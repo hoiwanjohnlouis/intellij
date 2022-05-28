@@ -45,17 +45,76 @@ class Tag397AmtSideValue2Test {
     @Test
     void Tag0397Test() {
         Tag397AmtSideValue2 tagData;
+        double oneElement;
 
-        tagData = new Tag397AmtSideValue2(new MyAmtType(
-                Tag397AmtSideValue2.TESTA_AMT_SIDE_VALUE2));
-        assertEquals( Tag397AmtSideValue2.TESTA_AMT_SIDE_VALUE2,
-                tagData.getDataValue());
+        oneElement = Tag397AmtSideValue2.TESTA_AMT_SIDE_VALUE2;
+        tagData = new Tag397AmtSideValue2( new MyAmtType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag397AmtSideValue2(new MyAmtType(
-                Tag397AmtSideValue2.TESTB_AMT_SIDE_VALUE2));
-        assertEquals( Tag397AmtSideValue2.TESTB_AMT_SIDE_VALUE2,
-                tagData.getDataValue());
+        oneElement = Tag397AmtSideValue2.TESTB_AMT_SIDE_VALUE2;
+        tagData = new Tag397AmtSideValue2( new MyAmtType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag397AmtSideValue2 tagData;
+        double oneElement;
+
+        oneElement = Tag397AmtSideValue2.TESTA_AMT_SIDE_VALUE2;
+        tagData = new Tag397AmtSideValue2( new MyAmtType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag397AmtSideValue2.TESTB_AMT_SIDE_VALUE2;
+        tagData = new Tag397AmtSideValue2( new MyAmtType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag397AmtSideValue2 tagData;
+        double oneElement;
+
+        oneElement = Tag397AmtSideValue2.TESTB_AMT_SIDE_VALUE2;
+        tagData = new Tag397AmtSideValue2( new MyAmtType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag397AmtSideValue2 tagData;
+        double oneElement;
+
+        oneElement = Tag397AmtSideValue2.TESTB_AMT_SIDE_VALUE2;
+        tagData = new Tag397AmtSideValue2( new MyAmtType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag397AmtSideValue2 tagData;
+        double oneElement;
+
+        oneElement = Tag397AmtSideValue2.TESTB_AMT_SIDE_VALUE2;
+        tagData = new Tag397AmtSideValue2( new MyAmtType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag397AmtSideValue2 tagData;
+        double oneElement;
+
+        oneElement = Tag397AmtSideValue2.TESTA_AMT_SIDE_VALUE2;
+        tagData = new Tag397AmtSideValue2( new MyAmtType( oneElement ) );
+        assertEquals( "Tag397AmtSideValue2\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

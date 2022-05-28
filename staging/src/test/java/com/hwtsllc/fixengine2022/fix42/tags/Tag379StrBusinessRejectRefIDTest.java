@@ -45,17 +45,72 @@ class Tag379StrBusinessRejectRefIDTest {
     @Test
     void Tag0379Test() {
         Tag379StrBusinessRejectRefID tagData;
+        String oneElement;
 
-        tagData = new Tag379StrBusinessRejectRefID(new MyStringType(
-                Tag379StrBusinessRejectRefID.TESTA_STR_BUSINESS_REJECT_REF_ID));
-        assertEquals( Tag379StrBusinessRejectRefID.TESTA_STR_BUSINESS_REJECT_REF_ID,
-                tagData.getDataValue() );
+        oneElement = Tag379StrBusinessRejectRefID.TESTA_STR_BUSINESS_REJECT_REF_ID;
+        tagData = new Tag379StrBusinessRejectRefID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag379StrBusinessRejectRefID(new MyStringType(
-                Tag379StrBusinessRejectRefID.TESTB_STR_BUSINESS_REJECT_REF_ID));
-        assertEquals( Tag379StrBusinessRejectRefID.TESTB_STR_BUSINESS_REJECT_REF_ID,
-                tagData.getDataValue() );
+        oneElement = Tag379StrBusinessRejectRefID.TESTB_STR_BUSINESS_REJECT_REF_ID;
+        tagData = new Tag379StrBusinessRejectRefID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag379StrBusinessRejectRefID tagData;
+        String oneElement;
+
+        oneElement = Tag379StrBusinessRejectRefID.TESTB_STR_BUSINESS_REJECT_REF_ID;
+        tagData = new Tag379StrBusinessRejectRefID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag379StrBusinessRejectRefID tagData;
+        String oneElement;
+
+        oneElement = Tag379StrBusinessRejectRefID.TESTB_STR_BUSINESS_REJECT_REF_ID;
+        tagData = new Tag379StrBusinessRejectRefID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag379StrBusinessRejectRefID tagData;
+        String oneElement;
+
+        oneElement = Tag379StrBusinessRejectRefID.TESTB_STR_BUSINESS_REJECT_REF_ID;
+        tagData = new Tag379StrBusinessRejectRefID( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag379StrBusinessRejectRefID tagData;
+        String oneElement;
+
+        oneElement = Tag379StrBusinessRejectRefID.TESTB_STR_BUSINESS_REJECT_REF_ID;
+        tagData = new Tag379StrBusinessRejectRefID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag379StrBusinessRejectRefID tagData;
+        String oneElement;
+
+        oneElement = Tag379StrBusinessRejectRefID.TESTA_STR_BUSINESS_REJECT_REF_ID;
+        tagData = new Tag379StrBusinessRejectRefID( new MyStringType( oneElement ) );
+        assertEquals( "Tag379StrBusinessRejectRefID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

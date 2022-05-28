@@ -45,17 +45,76 @@ class Tag330QtyBuyVolumeTest {
     @Test
     void Tag0330Test() {
         Tag330QtyBuyVolume tagData;
+        int oneElement;
 
-        tagData = new Tag330QtyBuyVolume(new MyQtyType(
-                Tag330QtyBuyVolume.TESTA_QTY_BUY_VOLUME));
-        assertEquals( Tag330QtyBuyVolume.TESTA_QTY_BUY_VOLUME,
-                tagData.getDataValue());
+        oneElement = Tag330QtyBuyVolume.TESTA_QTY_BUY_VOLUME;
+        tagData = new Tag330QtyBuyVolume( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag330QtyBuyVolume(new MyQtyType(
-                Tag330QtyBuyVolume.TESTB_QTY_BUY_VOLUME));
-        assertEquals( Tag330QtyBuyVolume.TESTB_QTY_BUY_VOLUME,
-                tagData.getDataValue());
+        oneElement = Tag330QtyBuyVolume.TESTB_QTY_BUY_VOLUME;
+        tagData = new Tag330QtyBuyVolume( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag330QtyBuyVolume tagData;
+        int oneElement;
+
+        oneElement = Tag330QtyBuyVolume.TESTA_QTY_BUY_VOLUME;
+        tagData = new Tag330QtyBuyVolume( new MyQtyType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag330QtyBuyVolume.TESTB_QTY_BUY_VOLUME;
+        tagData = new Tag330QtyBuyVolume( new MyQtyType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag330QtyBuyVolume tagData;
+        int oneElement;
+
+        oneElement = Tag330QtyBuyVolume.TESTB_QTY_BUY_VOLUME;
+        tagData = new Tag330QtyBuyVolume( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag330QtyBuyVolume tagData;
+        int oneElement;
+
+        oneElement = Tag330QtyBuyVolume.TESTB_QTY_BUY_VOLUME;
+        tagData = new Tag330QtyBuyVolume( new MyQtyType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag330QtyBuyVolume tagData;
+        int oneElement;
+
+        oneElement = Tag330QtyBuyVolume.TESTB_QTY_BUY_VOLUME;
+        tagData = new Tag330QtyBuyVolume( new MyQtyType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag330QtyBuyVolume tagData;
+        int oneElement;
+
+        oneElement = Tag330QtyBuyVolume.TESTA_QTY_BUY_VOLUME;
+        tagData = new Tag330QtyBuyVolume( new MyQtyType( oneElement ) );
+        assertEquals( "Tag330QtyBuyVolume\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

@@ -50,17 +50,76 @@ class Tag304IntTotNoQuoteEntriesTest {
     @Test
     void Tag0304Test() {
         Tag304IntTotNoQuoteEntries tagData;
+        int oneElement;
 
-        tagData = new Tag304IntTotNoQuoteEntries(new MyIntType(
-                Tag304IntTotNoQuoteEntries.TESTA_INT_TOT_QUOTE_ENTRIES));
-        assertEquals( Tag304IntTotNoQuoteEntries.TESTA_INT_TOT_QUOTE_ENTRIES,
-                tagData.getDataValue());
+        oneElement = Tag304IntTotNoQuoteEntries.TESTA_INT_TOT_QUOTE_ENTRIES;
+        tagData = new Tag304IntTotNoQuoteEntries( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag304IntTotNoQuoteEntries(new MyIntType(
-                Tag304IntTotNoQuoteEntries.TESTB_INT_TOT_QUOTE_ENTRIES));
-        assertEquals( Tag304IntTotNoQuoteEntries.TESTB_INT_TOT_QUOTE_ENTRIES,
-                tagData.getDataValue());
+        oneElement = Tag304IntTotNoQuoteEntries.TESTB_INT_TOT_QUOTE_ENTRIES;
+        tagData = new Tag304IntTotNoQuoteEntries( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag304IntTotNoQuoteEntries tagData;
+        int oneElement;
+
+        oneElement = Tag304IntTotNoQuoteEntries.TESTA_INT_TOT_QUOTE_ENTRIES;
+        tagData = new Tag304IntTotNoQuoteEntries( new MyIntType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag304IntTotNoQuoteEntries.TESTB_INT_TOT_QUOTE_ENTRIES;
+        tagData = new Tag304IntTotNoQuoteEntries( new MyIntType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag304IntTotNoQuoteEntries tagData;
+        int oneElement;
+
+        oneElement = Tag304IntTotNoQuoteEntries.TESTB_INT_TOT_QUOTE_ENTRIES;
+        tagData = new Tag304IntTotNoQuoteEntries( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag304IntTotNoQuoteEntries tagData;
+        int oneElement;
+
+        oneElement = Tag304IntTotNoQuoteEntries.TESTB_INT_TOT_QUOTE_ENTRIES;
+        tagData = new Tag304IntTotNoQuoteEntries( new MyIntType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag304IntTotNoQuoteEntries tagData;
+        int oneElement;
+
+        oneElement = Tag304IntTotNoQuoteEntries.TESTB_INT_TOT_QUOTE_ENTRIES;
+        tagData = new Tag304IntTotNoQuoteEntries( new MyIntType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag304IntTotNoQuoteEntries tagData;
+        int oneElement;
+
+        oneElement = Tag304IntTotNoQuoteEntries.TESTA_INT_TOT_QUOTE_ENTRIES;
+        tagData = new Tag304IntTotNoQuoteEntries( new MyIntType( oneElement ) );
+        assertEquals( "Tag304IntTotNoQuoteEntries\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

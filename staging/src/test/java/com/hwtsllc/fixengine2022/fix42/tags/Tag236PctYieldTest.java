@@ -47,17 +47,76 @@ class Tag236PctYieldTest {
     @Test
     void Tag0236Test() {
         Tag236PctYield tagData;
+        double oneElement;
 
-        tagData = new Tag236PctYield(new MyPercentageType(
-                Tag236PctYield.TESTA_PCT_YIELD));
-        assertEquals( Tag236PctYield.TESTA_PCT_YIELD,
-                tagData.getDataValue() );
+        oneElement = Tag236PctYield.TESTA_PCT_YIELD;
+        tagData = new Tag236PctYield( new MyPercentageType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag236PctYield(new MyPercentageType(
-                Tag236PctYield.TESTB_PCT_YIELD));
-        assertEquals( Tag236PctYield.TESTB_PCT_YIELD,
-                tagData.getDataValue() );
+        oneElement = Tag236PctYield.TESTB_PCT_YIELD;
+        tagData = new Tag236PctYield( new MyPercentageType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag236PctYield tagData;
+        double oneElement;
+
+        oneElement = Tag236PctYield.TESTA_PCT_YIELD;
+        tagData = new Tag236PctYield( new MyPercentageType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag236PctYield.TESTB_PCT_YIELD;
+        tagData = new Tag236PctYield( new MyPercentageType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag236PctYield tagData;
+        double oneElement;
+
+        oneElement = Tag236PctYield.TESTB_PCT_YIELD;
+        tagData = new Tag236PctYield( new MyPercentageType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag236PctYield tagData;
+        double oneElement;
+
+        oneElement = Tag236PctYield.TESTB_PCT_YIELD;
+        tagData = new Tag236PctYield( new MyPercentageType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag236PctYield tagData;
+        double oneElement;
+
+        oneElement = Tag236PctYield.TESTB_PCT_YIELD;
+        tagData = new Tag236PctYield( new MyPercentageType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag236PctYield tagData;
+        double oneElement;
+
+        oneElement = Tag236PctYield.TESTA_PCT_YIELD;
+        tagData = new Tag236PctYield( new MyPercentageType( oneElement ) );
+        assertEquals( "Tag236PctYield\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

@@ -49,17 +49,75 @@ class Tag246FloUnderlyingFactorTest {
     @Test
     void Tag0246Test() {
         Tag246FloUnderlyingFactor tagData;
+        float oneElement;
 
-        tagData = new Tag246FloUnderlyingFactor(new MyFloatType(
-                Tag246FloUnderlyingFactor.TESTA_FLO_UNDERLYING_FACTOR));
-        assertEquals( Tag246FloUnderlyingFactor.TESTA_FLO_UNDERLYING_FACTOR,
-                tagData.getDataValue());
+        oneElement = Tag246FloUnderlyingFactor.TESTA_FLO_UNDERLYING_FACTOR;
+        tagData = new Tag246FloUnderlyingFactor( new MyFloatType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag246FloUnderlyingFactor(new MyFloatType(
-                Tag246FloUnderlyingFactor.TESTB_FLO_UNDERLYING_FACTOR));
-        assertEquals( Tag246FloUnderlyingFactor.TESTB_FLO_UNDERLYING_FACTOR,
-                tagData.getDataValue());
+        oneElement = Tag246FloUnderlyingFactor.TESTB_FLO_UNDERLYING_FACTOR;
+        tagData = new Tag246FloUnderlyingFactor( new MyFloatType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag246FloUnderlyingFactor tagData;
+        float oneElement;
+
+        oneElement = Tag246FloUnderlyingFactor.TESTB_FLO_UNDERLYING_FACTOR;
+        tagData = new Tag246FloUnderlyingFactor( new MyFloatType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag246FloUnderlyingFactor tagData;
+        float oneElement;
+
+        oneElement = Tag246FloUnderlyingFactor.TESTB_FLO_UNDERLYING_FACTOR;
+        tagData = new Tag246FloUnderlyingFactor( new MyFloatType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag246FloUnderlyingFactor tagData;
+        float oneElement;
+
+        oneElement = Tag246FloUnderlyingFactor.TESTB_FLO_UNDERLYING_FACTOR;
+        tagData = new Tag246FloUnderlyingFactor( new MyFloatType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag246FloUnderlyingFactor tagData;
+        float oneElement;
+
+        oneElement = Tag246FloUnderlyingFactor.TESTB_FLO_UNDERLYING_FACTOR;
+        tagData = new Tag246FloUnderlyingFactor( new MyFloatType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag246FloUnderlyingFactor tagData;
+        float oneElement;
+
+        oneElement = Tag246FloUnderlyingFactor.TESTA_FLO_UNDERLYING_FACTOR;
+        tagData = new Tag246FloUnderlyingFactor( new MyFloatType( oneElement ) );
+        assertEquals( "Tag246FloUnderlyingFactor\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement +
+                        "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

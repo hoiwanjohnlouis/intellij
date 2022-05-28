@@ -27,7 +27,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  Factor
  *  float
  *  <p></p>
- *  For Fixed Income: Amorization Factor for deriving Current face from Original face for
+ *  For Fixed Income: Amortization Factor for deriving Current face from Original face for
  *  ABS or MBS securities, note the fraction may be greater than, equal to or less than .
  *  <p></p>
  *  In TIPS securities this is the Inflation index.

@@ -45,17 +45,76 @@ class Tag404AmtLiquidityValueTest {
     @Test
     void Tag0404Test() {
         Tag404AmtLiquidityValue tagData;
+        double oneElement;
 
-        tagData = new Tag404AmtLiquidityValue(new MyAmtType(
-                Tag404AmtLiquidityValue.TESTA_AMT_LIQUIDITY_VALUE));
-        assertEquals( Tag404AmtLiquidityValue.TESTA_AMT_LIQUIDITY_VALUE,
-                tagData.getDataValue());
+        oneElement = Tag404AmtLiquidityValue.TESTA_AMT_LIQUIDITY_VALUE;
+        tagData = new Tag404AmtLiquidityValue( new MyAmtType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag404AmtLiquidityValue(new MyAmtType(
-                Tag404AmtLiquidityValue.TESTB_AMT_LIQUIDITY_VALUE));
-        assertEquals( Tag404AmtLiquidityValue.TESTB_AMT_LIQUIDITY_VALUE,
-                tagData.getDataValue());
+        oneElement = Tag404AmtLiquidityValue.TESTB_AMT_LIQUIDITY_VALUE;
+        tagData = new Tag404AmtLiquidityValue( new MyAmtType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag404AmtLiquidityValue tagData;
+        double oneElement;
+
+        oneElement = Tag404AmtLiquidityValue.TESTA_AMT_LIQUIDITY_VALUE;
+        tagData = new Tag404AmtLiquidityValue( new MyAmtType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag404AmtLiquidityValue.TESTB_AMT_LIQUIDITY_VALUE;
+        tagData = new Tag404AmtLiquidityValue( new MyAmtType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag404AmtLiquidityValue tagData;
+        double oneElement;
+
+        oneElement = Tag404AmtLiquidityValue.TESTB_AMT_LIQUIDITY_VALUE;
+        tagData = new Tag404AmtLiquidityValue( new MyAmtType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag404AmtLiquidityValue tagData;
+        double oneElement;
+
+        oneElement = Tag404AmtLiquidityValue.TESTB_AMT_LIQUIDITY_VALUE;
+        tagData = new Tag404AmtLiquidityValue( new MyAmtType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag404AmtLiquidityValue tagData;
+        double oneElement;
+
+        oneElement = Tag404AmtLiquidityValue.TESTB_AMT_LIQUIDITY_VALUE;
+        tagData = new Tag404AmtLiquidityValue( new MyAmtType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag404AmtLiquidityValue tagData;
+        double oneElement;
+
+        oneElement = Tag404AmtLiquidityValue.TESTA_AMT_LIQUIDITY_VALUE;
+        tagData = new Tag404AmtLiquidityValue( new MyAmtType( oneElement ) );
+        assertEquals( "Tag404AmtLiquidityValue\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

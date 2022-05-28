@@ -58,15 +58,77 @@ class Tag218PxoSpreadTest {
     @Test
     void Tag0218Test() {
         Tag218PxoSpread tagData;
+        double oneElement;
 
-        tagData = new Tag218PxoSpread(
-                new MyPriceOffsetType(Tag218PxoSpread.TESTA_PXO_SPREAD));
-        assertEquals( Tag218PxoSpread.TESTA_PXO_SPREAD, tagData.getDataValue());
+        oneElement = Tag218PxoSpread.TESTA_PXO_SPREAD;
+        tagData = new Tag218PxoSpread( new MyPriceOffsetType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag218PxoSpread(
-                new MyPriceOffsetType(Tag218PxoSpread.TESTB_PXO_SPREAD));
-        assertEquals( Tag218PxoSpread.TESTB_PXO_SPREAD, tagData.getDataValue());
+        oneElement = Tag218PxoSpread.TESTB_PXO_SPREAD;
+        tagData = new Tag218PxoSpread( new MyPriceOffsetType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag218PxoSpread tagData;
+        double oneElement;
+
+        oneElement = Tag218PxoSpread.TESTA_PXO_SPREAD;
+        tagData = new Tag218PxoSpread( new MyPriceOffsetType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag218PxoSpread.TESTB_PXO_SPREAD;
+        tagData = new Tag218PxoSpread( new MyPriceOffsetType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag218PxoSpread tagData;
+        double oneElement;
+
+        oneElement = Tag218PxoSpread.TESTB_PXO_SPREAD;
+        tagData = new Tag218PxoSpread( new MyPriceOffsetType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag218PxoSpread tagData;
+        double oneElement;
+
+        oneElement = Tag218PxoSpread.TESTB_PXO_SPREAD;
+        tagData = new Tag218PxoSpread( new MyPriceOffsetType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag218PxoSpread tagData;
+        double oneElement;
+
+        oneElement = Tag218PxoSpread.TESTB_PXO_SPREAD;
+        tagData = new Tag218PxoSpread( new MyPriceOffsetType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag218PxoSpread tagData;
+        double oneElement;
+
+        oneElement = Tag218PxoSpread.TESTA_PXO_SPREAD;
+        tagData = new Tag218PxoSpread( new MyPriceOffsetType( oneElement ) );
+        assertEquals( "Tag218PxoSpread\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

@@ -29,7 +29,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  Factor
  *  float
  *  <p></p>
- *  For Fixed Income: Amorization Factor for deriving Current face from Original face for
+ *  For Fixed Income: Amortization Factor for deriving Current face from Original face for
  *  ABS or MBS securities, note the fraction may be greater than, equal to or less than .
  *  <p></p>
  *  In TIPS securities this is the Inflation index.
@@ -57,17 +57,73 @@ class Tag228FloFactorTest {
     @Test
     void Tag0228Test() {
         Tag228FloFactor tagData;
+        float oneElement;
 
-        tagData = new Tag228FloFactor(new MyFloatType(
-                Tag228FloFactor.TESTA_FLO_FACTOR));
-        assertEquals( Tag228FloFactor.TESTA_FLO_FACTOR,
-                tagData.getDataValue());
+        oneElement = Tag228FloFactor.TESTA_FLO_FACTOR;
+        tagData = new Tag228FloFactor( new MyFloatType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag228FloFactor(new MyFloatType(
-                Tag228FloFactor.TESTB_FLO_FACTOR));
-        assertEquals( Tag228FloFactor.TESTB_FLO_FACTOR,
-                tagData.getDataValue());
+        oneElement = Tag228FloFactor.TESTB_FLO_FACTOR;
+        tagData = new Tag228FloFactor( new MyFloatType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag228FloFactor tagData;
+        float oneElement;
+
+        oneElement = Tag228FloFactor.TESTB_FLO_FACTOR;
+        tagData = new Tag228FloFactor( new MyFloatType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag228FloFactor tagData;
+        float oneElement;
+
+        oneElement = Tag228FloFactor.TESTB_FLO_FACTOR;
+        tagData = new Tag228FloFactor( new MyFloatType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag228FloFactor tagData;
+        float oneElement;
+
+        oneElement = Tag228FloFactor.TESTB_FLO_FACTOR;
+        tagData = new Tag228FloFactor( new MyFloatType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag228FloFactor tagData;
+        float oneElement;
+
+        oneElement = Tag228FloFactor.TESTB_FLO_FACTOR;
+        tagData = new Tag228FloFactor( new MyFloatType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag228FloFactor tagData;
+        float oneElement;
+
+        oneElement = Tag228FloFactor.TESTA_FLO_FACTOR;
+        tagData = new Tag228FloFactor( new MyFloatType( oneElement ) );
+        assertEquals( "Tag228FloFactor\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement +
+                        "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

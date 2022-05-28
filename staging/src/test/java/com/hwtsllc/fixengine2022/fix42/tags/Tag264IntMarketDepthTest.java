@@ -45,17 +45,76 @@ class Tag264IntMarketDepthTest {
     @Test
     void Tag0264Test() {
         Tag264IntMarketDepth tagData;
+        int oneElement;
 
-        tagData = new Tag264IntMarketDepth(new MyIntType(
-                Tag264IntMarketDepth.TESTA_INT_MARKET_DEPTH));
-        assertEquals( Tag264IntMarketDepth.TESTA_INT_MARKET_DEPTH,
-                tagData.getDataValue());
+        oneElement = Tag264IntMarketDepth.TESTA_INT_MARKET_DEPTH;
+        tagData = new Tag264IntMarketDepth( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag264IntMarketDepth(new MyIntType(
-                Tag264IntMarketDepth.TESTB_INT_MARKET_DEPTH));
-        assertEquals( Tag264IntMarketDepth.TESTB_INT_MARKET_DEPTH,
-                tagData.getDataValue());
+        oneElement = Tag264IntMarketDepth.TESTB_INT_MARKET_DEPTH;
+        tagData = new Tag264IntMarketDepth( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag264IntMarketDepth tagData;
+        int oneElement;
+
+        oneElement = Tag264IntMarketDepth.TESTA_INT_MARKET_DEPTH;
+        tagData = new Tag264IntMarketDepth( new MyIntType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag264IntMarketDepth.TESTB_INT_MARKET_DEPTH;
+        tagData = new Tag264IntMarketDepth( new MyIntType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag264IntMarketDepth tagData;
+        int oneElement;
+
+        oneElement = Tag264IntMarketDepth.TESTB_INT_MARKET_DEPTH;
+        tagData = new Tag264IntMarketDepth( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag264IntMarketDepth tagData;
+        int oneElement;
+
+        oneElement = Tag264IntMarketDepth.TESTB_INT_MARKET_DEPTH;
+        tagData = new Tag264IntMarketDepth( new MyIntType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag264IntMarketDepth tagData;
+        int oneElement;
+
+        oneElement = Tag264IntMarketDepth.TESTB_INT_MARKET_DEPTH;
+        tagData = new Tag264IntMarketDepth( new MyIntType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag264IntMarketDepth tagData;
+        int oneElement;
+
+        oneElement = Tag264IntMarketDepth.TESTA_INT_MARKET_DEPTH;
+        tagData = new Tag264IntMarketDepth( new MyIntType( oneElement ) );
+        assertEquals( "Tag264IntMarketDepth\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

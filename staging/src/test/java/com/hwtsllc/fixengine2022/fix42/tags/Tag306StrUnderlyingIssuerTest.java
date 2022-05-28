@@ -47,15 +47,72 @@ class Tag306StrUnderlyingIssuerTest {
     @Test
     void Tag0306Test() {
         Tag306StrUnderlyingIssuer tagData;
+        String oneElement;
 
-        tagData = new Tag306StrUnderlyingIssuer(
-                new MyStringType(Tag306StrUnderlyingIssuer.TESTA_STR_UNDERLYING_ISSUER));
-        assertEquals( Tag306StrUnderlyingIssuer.TESTA_STR_UNDERLYING_ISSUER, tagData.getDataValue() );
+        oneElement = Tag306StrUnderlyingIssuer.TESTA_STR_UNDERLYING_ISSUER;
+        tagData = new Tag306StrUnderlyingIssuer( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag306StrUnderlyingIssuer(
-                new MyStringType(Tag306StrUnderlyingIssuer.TESTB_STR_UNDERLYING_ISSUER));
-        assertEquals( Tag306StrUnderlyingIssuer.TESTB_STR_UNDERLYING_ISSUER, tagData.getDataValue() );
+        oneElement = Tag306StrUnderlyingIssuer.TESTB_STR_UNDERLYING_ISSUER;
+        tagData = new Tag306StrUnderlyingIssuer( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag306StrUnderlyingIssuer tagData;
+        String oneElement;
+
+        oneElement = Tag306StrUnderlyingIssuer.TESTB_STR_UNDERLYING_ISSUER;
+        tagData = new Tag306StrUnderlyingIssuer( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag306StrUnderlyingIssuer tagData;
+        String oneElement;
+
+        oneElement = Tag306StrUnderlyingIssuer.TESTB_STR_UNDERLYING_ISSUER;
+        tagData = new Tag306StrUnderlyingIssuer( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag306StrUnderlyingIssuer tagData;
+        String oneElement;
+
+        oneElement = Tag306StrUnderlyingIssuer.TESTB_STR_UNDERLYING_ISSUER;
+        tagData = new Tag306StrUnderlyingIssuer( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag306StrUnderlyingIssuer tagData;
+        String oneElement;
+
+        oneElement = Tag306StrUnderlyingIssuer.TESTB_STR_UNDERLYING_ISSUER;
+        tagData = new Tag306StrUnderlyingIssuer( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag306StrUnderlyingIssuer tagData;
+        String oneElement;
+
+        oneElement = Tag306StrUnderlyingIssuer.TESTA_STR_UNDERLYING_ISSUER;
+        tagData = new Tag306StrUnderlyingIssuer( new MyStringType( oneElement ) );
+        assertEquals( "Tag306StrUnderlyingIssuer\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

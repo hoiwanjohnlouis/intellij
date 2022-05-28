@@ -48,17 +48,76 @@ class Tag432LmdExpireDateTest {
     @Test
     void Tag0432Test() {
         Tag432LmdExpireDate tagData;
+        String oneElement;
 
-        tagData = new Tag432LmdExpireDate(new MyLocalMktDateType(
-                Tag432LmdExpireDate.TESTA_LMD_EXPIRE_DATE));
-        assertEquals( Tag432LmdExpireDate.TESTA_LMD_EXPIRE_DATE,
-                tagData.getDataValue() );
+        oneElement = Tag432LmdExpireDate.TESTA_LMD_EXPIRE_DATE;
+        tagData = new Tag432LmdExpireDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag432LmdExpireDate(new MyLocalMktDateType(
-                Tag432LmdExpireDate.TESTB_LMD_EXPIRE_DATE));
-        assertEquals( Tag432LmdExpireDate.TESTB_LMD_EXPIRE_DATE,
-                tagData.getDataValue() );
+        oneElement = Tag432LmdExpireDate.TESTB_LMD_EXPIRE_DATE;
+        tagData = new Tag432LmdExpireDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag432LmdExpireDate tagData;
+        String oneElement;
+
+        oneElement = Tag432LmdExpireDate.TESTA_LMD_EXPIRE_DATE;
+        tagData = new Tag432LmdExpireDate( new MyLocalMktDateType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag432LmdExpireDate.TESTB_LMD_EXPIRE_DATE;
+        tagData = new Tag432LmdExpireDate( new MyLocalMktDateType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag432LmdExpireDate tagData;
+        String oneElement;
+
+        oneElement = Tag432LmdExpireDate.TESTB_LMD_EXPIRE_DATE;
+        tagData = new Tag432LmdExpireDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag432LmdExpireDate tagData;
+        String oneElement;
+
+        oneElement = Tag432LmdExpireDate.TESTB_LMD_EXPIRE_DATE;
+        tagData = new Tag432LmdExpireDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag432LmdExpireDate tagData;
+        String oneElement;
+
+        oneElement = Tag432LmdExpireDate.TESTB_LMD_EXPIRE_DATE;
+        tagData = new Tag432LmdExpireDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( oneElement, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag432LmdExpireDate tagData;
+        String oneElement;
+
+        oneElement = Tag432LmdExpireDate.TESTA_LMD_EXPIRE_DATE;
+        tagData = new Tag432LmdExpireDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( "Tag432LmdExpireDate\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

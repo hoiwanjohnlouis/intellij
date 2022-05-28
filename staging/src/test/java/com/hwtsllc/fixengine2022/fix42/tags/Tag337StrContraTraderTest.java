@@ -45,17 +45,72 @@ class Tag337StrContraTraderTest {
     @Test
     void Tag0337Test() {
         Tag337StrContraTrader tagData;
+        String oneElement;
 
-        tagData = new Tag337StrContraTrader(new MyStringType(
-                Tag337StrContraTrader.TESTA_STR_CONTRA_TRADER));
-        assertEquals( Tag337StrContraTrader.TESTA_STR_CONTRA_TRADER,
-                tagData.getDataValue() );
+        oneElement = Tag337StrContraTrader.TESTA_STR_CONTRA_TRADER;
+        tagData = new Tag337StrContraTrader( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag337StrContraTrader(new MyStringType(
-                Tag337StrContraTrader.TESTB_STR_CONTRA_TRADER));
-        assertEquals( Tag337StrContraTrader.TESTB_STR_CONTRA_TRADER,
-                tagData.getDataValue() );
+        oneElement = Tag337StrContraTrader.TESTB_STR_CONTRA_TRADER;
+        tagData = new Tag337StrContraTrader( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag337StrContraTrader tagData;
+        String oneElement;
+
+        oneElement = Tag337StrContraTrader.TESTB_STR_CONTRA_TRADER;
+        tagData = new Tag337StrContraTrader( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag337StrContraTrader tagData;
+        String oneElement;
+
+        oneElement = Tag337StrContraTrader.TESTB_STR_CONTRA_TRADER;
+        tagData = new Tag337StrContraTrader( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag337StrContraTrader tagData;
+        String oneElement;
+
+        oneElement = Tag337StrContraTrader.TESTB_STR_CONTRA_TRADER;
+        tagData = new Tag337StrContraTrader( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag337StrContraTrader tagData;
+        String oneElement;
+
+        oneElement = Tag337StrContraTrader.TESTB_STR_CONTRA_TRADER;
+        tagData = new Tag337StrContraTrader( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag337StrContraTrader tagData;
+        String oneElement;
+
+        oneElement = Tag337StrContraTrader.TESTA_STR_CONTRA_TRADER;
+        tagData = new Tag337StrContraTrader( new MyStringType( oneElement ) );
+        assertEquals( "Tag337StrContraTrader\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

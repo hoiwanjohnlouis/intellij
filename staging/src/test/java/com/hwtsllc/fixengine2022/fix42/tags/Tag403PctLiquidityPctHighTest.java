@@ -45,17 +45,76 @@ class Tag403PctLiquidityPctHighTest {
     @Test
     void Tag0403Test() {
         Tag403PctLiquidityPctHigh tagData;
+        double oneElement;
 
-        tagData = new Tag403PctLiquidityPctHigh(new MyPercentageType(
-                Tag403PctLiquidityPctHigh.TESTA_PCT_LIQUIDITY_PCT_HIGH));
-        assertEquals( Tag403PctLiquidityPctHigh.TESTA_PCT_LIQUIDITY_PCT_HIGH,
-                tagData.getDataValue() );
+        oneElement = Tag403PctLiquidityPctHigh.TESTA_PCT_LIQUIDITY_PCT_HIGH;
+        tagData = new Tag403PctLiquidityPctHigh( new MyPercentageType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag403PctLiquidityPctHigh(new MyPercentageType(
-                Tag403PctLiquidityPctHigh.TESTB_PCT_LIQUIDITY_PCT_HIGH));
-        assertEquals( Tag403PctLiquidityPctHigh.TESTB_PCT_LIQUIDITY_PCT_HIGH,
-                tagData.getDataValue() );
+        oneElement = Tag403PctLiquidityPctHigh.TESTB_PCT_LIQUIDITY_PCT_HIGH;
+        tagData = new Tag403PctLiquidityPctHigh( new MyPercentageType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag403PctLiquidityPctHigh tagData;
+        double oneElement;
+
+        oneElement = Tag403PctLiquidityPctHigh.TESTA_PCT_LIQUIDITY_PCT_HIGH;
+        tagData = new Tag403PctLiquidityPctHigh( new MyPercentageType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag403PctLiquidityPctHigh.TESTB_PCT_LIQUIDITY_PCT_HIGH;
+        tagData = new Tag403PctLiquidityPctHigh( new MyPercentageType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag403PctLiquidityPctHigh tagData;
+        double oneElement;
+
+        oneElement = Tag403PctLiquidityPctHigh.TESTB_PCT_LIQUIDITY_PCT_HIGH;
+        tagData = new Tag403PctLiquidityPctHigh( new MyPercentageType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag403PctLiquidityPctHigh tagData;
+        double oneElement;
+
+        oneElement = Tag403PctLiquidityPctHigh.TESTB_PCT_LIQUIDITY_PCT_HIGH;
+        tagData = new Tag403PctLiquidityPctHigh( new MyPercentageType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag403PctLiquidityPctHigh tagData;
+        double oneElement;
+
+        oneElement = Tag403PctLiquidityPctHigh.TESTB_PCT_LIQUIDITY_PCT_HIGH;
+        tagData = new Tag403PctLiquidityPctHigh( new MyPercentageType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag403PctLiquidityPctHigh tagData;
+        double oneElement;
+
+        oneElement = Tag403PctLiquidityPctHigh.TESTA_PCT_LIQUIDITY_PCT_HIGH;
+        tagData = new Tag403PctLiquidityPctHigh( new MyPercentageType( oneElement ) );
+        assertEquals( "Tag403PctLiquidityPctHigh\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

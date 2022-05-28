@@ -17,8 +17,8 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.datatypes.MyUTCTimeType;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -45,17 +45,76 @@ class Tag273UtctMDEntryTimeTest {
     @Test
     void Tag0273Test() {
         Tag273UtctMDEntryTime tagData;
+        String oneElement;
 
-        tagData = new Tag273UtctMDEntryTime(new MyUTCTimeType(
-                Tag273UtctMDEntryTime.TESTA_UTCT_MD_ENTRY_TIME));
-        assertEquals( Tag273UtctMDEntryTime.TESTA_UTCT_MD_ENTRY_TIME,
-                tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
+        oneElement = Tag273UtctMDEntryTime.TESTA_UTCT_MD_ENTRY_TIME;
+        tagData = new Tag273UtctMDEntryTime(new MyUTCTimeType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_UTCT_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag273UtctMDEntryTime(new MyUTCTimeType(
-                Tag273UtctMDEntryTime.TESTB_UTCT_MD_ENTRY_TIME));
-        assertEquals( Tag273UtctMDEntryTime.TESTB_UTCT_MD_ENTRY_TIME,
-                tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
+        oneElement = Tag273UtctMDEntryTime.TESTB_UTCT_MD_ENTRY_TIME;
+        tagData = new Tag273UtctMDEntryTime(new MyUTCTimeType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_UTCT_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag273UtctMDEntryTime tagData;
+        String oneElement;
+
+        oneElement = Tag273UtctMDEntryTime.TESTA_UTCT_MD_ENTRY_TIME;
+        tagData = new Tag273UtctMDEntryTime(new MyUTCTimeType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag273UtctMDEntryTime.TESTB_UTCT_MD_ENTRY_TIME;
+        tagData = new Tag273UtctMDEntryTime(new MyUTCTimeType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag273UtctMDEntryTime tagData;
+        String oneElement;
+
+        oneElement = Tag273UtctMDEntryTime.TESTB_UTCT_MD_ENTRY_TIME;
+        tagData = new Tag273UtctMDEntryTime(new MyUTCTimeType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_UTCT_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag273UtctMDEntryTime tagData;
+        String oneElement;
+
+        oneElement = Tag273UtctMDEntryTime.TESTB_UTCT_MD_ENTRY_TIME;
+        tagData = new Tag273UtctMDEntryTime(new MyUTCTimeType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_UTCT_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag273UtctMDEntryTime tagData;
+        String oneElement;
+
+        oneElement = Tag273UtctMDEntryTime.TESTB_UTCT_MD_ENTRY_TIME;
+        tagData = new Tag273UtctMDEntryTime(new MyUTCTimeType( oneElement ) );
+        assertEquals( oneElement, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_UTCT_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag273UtctMDEntryTime tagData;
+        String oneElement;
+
+        oneElement = Tag273UtctMDEntryTime.TESTA_UTCT_MD_ENTRY_TIME;
+        tagData = new Tag273UtctMDEntryTime(new MyUTCTimeType( oneElement ) );
+        assertEquals( "Tag273UtctMDEntryTime\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_UTCT_DATA_VALUE, tagData.toVerboseString() );
     }
 }

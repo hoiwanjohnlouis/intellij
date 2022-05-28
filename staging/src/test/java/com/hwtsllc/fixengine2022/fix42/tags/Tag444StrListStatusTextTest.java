@@ -45,17 +45,72 @@ class Tag444StrListStatusTextTest {
     @Test
     void Tag0444Test() {
         Tag444StrListStatusText tagData;
+        String oneElement;
 
-        tagData = new Tag444StrListStatusText(new MyStringType(
-                Tag444StrListStatusText.TESTA_STR_LIST_STATUS_TEXT));
-        assertEquals( Tag444StrListStatusText.TESTA_STR_LIST_STATUS_TEXT,
-                tagData.getDataValue() );
+        oneElement = Tag444StrListStatusText.TESTA_STR_LIST_STATUS_TEXT;
+        tagData = new Tag444StrListStatusText( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag444StrListStatusText(new MyStringType(
-                Tag444StrListStatusText.TESTB_STR_LIST_STATUS_TEXT));
-        assertEquals( Tag444StrListStatusText.TESTB_STR_LIST_STATUS_TEXT,
-                tagData.getDataValue() );
+        oneElement = Tag444StrListStatusText.TESTB_STR_LIST_STATUS_TEXT;
+        tagData = new Tag444StrListStatusText( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag444StrListStatusText tagData;
+        String oneElement;
+
+        oneElement = Tag444StrListStatusText.TESTB_STR_LIST_STATUS_TEXT;
+        tagData = new Tag444StrListStatusText( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag444StrListStatusText tagData;
+        String oneElement;
+
+        oneElement = Tag444StrListStatusText.TESTB_STR_LIST_STATUS_TEXT;
+        tagData = new Tag444StrListStatusText( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag444StrListStatusText tagData;
+        String oneElement;
+
+        oneElement = Tag444StrListStatusText.TESTB_STR_LIST_STATUS_TEXT;
+        tagData = new Tag444StrListStatusText( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag444StrListStatusText tagData;
+        String oneElement;
+
+        oneElement = Tag444StrListStatusText.TESTB_STR_LIST_STATUS_TEXT;
+        tagData = new Tag444StrListStatusText( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag444StrListStatusText tagData;
+        String oneElement;
+
+        oneElement = Tag444StrListStatusText.TESTA_STR_LIST_STATUS_TEXT;
+        tagData = new Tag444StrListStatusText( new MyStringType( oneElement ) );
+        assertEquals( "Tag444StrListStatusText\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

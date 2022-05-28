@@ -45,17 +45,72 @@ class Tag376StrComplianceIDTest {
     @Test
     void Tag0376Test() {
         Tag376StrComplianceID tagData;
+        String oneElement;
 
-        tagData = new Tag376StrComplianceID(new MyStringType(
-                Tag376StrComplianceID.TESTA_STR_COMPLIANCE_ID));
-        assertEquals( Tag376StrComplianceID.TESTA_STR_COMPLIANCE_ID,
-                tagData.getDataValue() );
+        oneElement = Tag376StrComplianceID.TESTA_STR_COMPLIANCE_ID;
+        tagData = new Tag376StrComplianceID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag376StrComplianceID(new MyStringType(
-                Tag376StrComplianceID.TESTB_STR_COMPLIANCE_ID));
-        assertEquals( Tag376StrComplianceID.TESTB_STR_COMPLIANCE_ID,
-                tagData.getDataValue() );
+        oneElement = Tag376StrComplianceID.TESTB_STR_COMPLIANCE_ID;
+        tagData = new Tag376StrComplianceID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag376StrComplianceID tagData;
+        String oneElement;
+
+        oneElement = Tag376StrComplianceID.TESTB_STR_COMPLIANCE_ID;
+        tagData = new Tag376StrComplianceID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag376StrComplianceID tagData;
+        String oneElement;
+
+        oneElement = Tag376StrComplianceID.TESTB_STR_COMPLIANCE_ID;
+        tagData = new Tag376StrComplianceID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag376StrComplianceID tagData;
+        String oneElement;
+
+        oneElement = Tag376StrComplianceID.TESTB_STR_COMPLIANCE_ID;
+        tagData = new Tag376StrComplianceID( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag376StrComplianceID tagData;
+        String oneElement;
+
+        oneElement = Tag376StrComplianceID.TESTB_STR_COMPLIANCE_ID;
+        tagData = new Tag376StrComplianceID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag376StrComplianceID tagData;
+        String oneElement;
+
+        oneElement = Tag376StrComplianceID.TESTA_STR_COMPLIANCE_ID;
+        tagData = new Tag376StrComplianceID( new MyStringType( oneElement ) );
+        assertEquals( "Tag376StrComplianceID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

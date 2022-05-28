@@ -45,6 +45,7 @@ class Tag398NumNoBidDescriptorsTest {
     @Test
     void Tag0398Test() {
         Tag398NumNoBidDescriptors tagData;
+        int oneElement;
 
         tagData = new Tag398NumNoBidDescriptors(new MyNumInGroupType(
                 Tag398NumNoBidDescriptors.TESTA_NUM_NO_BID_DESCRIPTORS));
@@ -52,10 +53,69 @@ class Tag398NumNoBidDescriptorsTest {
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag398NumNoBidDescriptors(new MyNumInGroupType(
-                Tag398NumNoBidDescriptors.TESTB_NUM_NO_BID_DESCRIPTORS));
-        assertEquals( Tag398NumNoBidDescriptors.TESTB_NUM_NO_BID_DESCRIPTORS,
-                tagData.getDataValue());
+        oneElement = Tag398NumNoBidDescriptors.TESTB_NUM_NO_BID_DESCRIPTORS;
+        tagData = new Tag398NumNoBidDescriptors( new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag398NumNoBidDescriptors tagData;
+        int oneElement;
+
+        oneElement = Tag398NumNoBidDescriptors.TESTA_NUM_NO_BID_DESCRIPTORS;
+        tagData = new Tag398NumNoBidDescriptors( new MyNumInGroupType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag398NumNoBidDescriptors.TESTB_NUM_NO_BID_DESCRIPTORS;
+        tagData = new Tag398NumNoBidDescriptors( new MyNumInGroupType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag398NumNoBidDescriptors tagData;
+        int oneElement;
+
+        oneElement = Tag398NumNoBidDescriptors.TESTB_NUM_NO_BID_DESCRIPTORS;
+        tagData = new Tag398NumNoBidDescriptors( new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag398NumNoBidDescriptors tagData;
+        int oneElement;
+
+        oneElement = Tag398NumNoBidDescriptors.TESTB_NUM_NO_BID_DESCRIPTORS;
+        tagData = new Tag398NumNoBidDescriptors( new MyNumInGroupType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag398NumNoBidDescriptors tagData;
+        int oneElement;
+
+        oneElement = Tag398NumNoBidDescriptors.TESTB_NUM_NO_BID_DESCRIPTORS;
+        tagData = new Tag398NumNoBidDescriptors( new MyNumInGroupType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag398NumNoBidDescriptors tagData;
+        int oneElement;
+
+        oneElement = Tag398NumNoBidDescriptors.TESTA_NUM_NO_BID_DESCRIPTORS;
+        tagData = new Tag398NumNoBidDescriptors( new MyNumInGroupType( oneElement ) );
+        assertEquals( "Tag398NumNoBidDescriptors\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

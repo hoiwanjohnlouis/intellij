@@ -47,17 +47,76 @@ class Tag366PrcAllocPriceTest {
     @Test
     void Tag0366Test() {
         Tag366PrcAllocPrice tagData;
+        double oneElement;
 
-        tagData = new Tag366PrcAllocPrice(new MyPriceType(
-                Tag366PrcAllocPrice.TESTA_PRC_ALLOC_PRICE));
-        assertEquals( Tag366PrcAllocPrice.TESTA_PRC_ALLOC_PRICE,
-                tagData.getDataValue());
+        oneElement = Tag366PrcAllocPrice.TESTA_PRC_ALLOC_PRICE;
+        tagData = new Tag366PrcAllocPrice( new MyPriceType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag366PrcAllocPrice(new MyPriceType(
-                Tag366PrcAllocPrice.TESTB_PRC_ALLOC_PRICE));
-        assertEquals( Tag366PrcAllocPrice.TESTB_PRC_ALLOC_PRICE,
-                tagData.getDataValue());
+        oneElement = Tag366PrcAllocPrice.TESTB_PRC_ALLOC_PRICE;
+        tagData = new Tag366PrcAllocPrice( new MyPriceType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag366PrcAllocPrice tagData;
+        double oneElement;
+
+        oneElement = Tag366PrcAllocPrice.TESTA_PRC_ALLOC_PRICE;
+        tagData = new Tag366PrcAllocPrice( new MyPriceType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag366PrcAllocPrice.TESTB_PRC_ALLOC_PRICE;
+        tagData = new Tag366PrcAllocPrice( new MyPriceType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag366PrcAllocPrice tagData;
+        double oneElement;
+
+        oneElement = Tag366PrcAllocPrice.TESTB_PRC_ALLOC_PRICE;
+        tagData = new Tag366PrcAllocPrice( new MyPriceType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag366PrcAllocPrice tagData;
+        double oneElement;
+
+        oneElement = Tag366PrcAllocPrice.TESTB_PRC_ALLOC_PRICE;
+        tagData = new Tag366PrcAllocPrice( new MyPriceType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag366PrcAllocPrice tagData;
+        double oneElement;
+
+        oneElement = Tag366PrcAllocPrice.TESTB_PRC_ALLOC_PRICE;
+        tagData = new Tag366PrcAllocPrice( new MyPriceType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag366PrcAllocPrice tagData;
+        double oneElement;
+
+        oneElement = Tag366PrcAllocPrice.TESTA_PRC_ALLOC_PRICE;
+        tagData = new Tag366PrcAllocPrice( new MyPriceType( oneElement ) );
+        assertEquals( "Tag366PrcAllocPrice\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

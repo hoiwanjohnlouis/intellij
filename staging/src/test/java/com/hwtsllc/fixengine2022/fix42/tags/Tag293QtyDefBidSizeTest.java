@@ -45,17 +45,76 @@ class Tag293QtyDefBidSizeTest {
     @Test
     void Tag0293Test() {
         Tag293QtyDefBidSize tagData;
+        int oneElement;
 
-        tagData = new Tag293QtyDefBidSize(new MyQtyType(
-                Tag293QtyDefBidSize.TESTA_QTY_DEF_BID_SIZE));
-        assertEquals( Tag293QtyDefBidSize.TESTA_QTY_DEF_BID_SIZE,
-                tagData.getDataValue());
+        oneElement = Tag293QtyDefBidSize.TESTA_QTY_DEF_BID_SIZE;
+        tagData = new Tag293QtyDefBidSize( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag293QtyDefBidSize(new MyQtyType(
-                Tag293QtyDefBidSize.TESTB_QTY_DEF_BID_SIZE));
-        assertEquals( Tag293QtyDefBidSize.TESTB_QTY_DEF_BID_SIZE,
-                tagData.getDataValue());
+        oneElement = Tag293QtyDefBidSize.TESTB_QTY_DEF_BID_SIZE;
+        tagData = new Tag293QtyDefBidSize( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag293QtyDefBidSize tagData;
+        int oneElement;
+
+        oneElement = Tag293QtyDefBidSize.TESTA_QTY_DEF_BID_SIZE;
+        tagData = new Tag293QtyDefBidSize( new MyQtyType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag293QtyDefBidSize.TESTB_QTY_DEF_BID_SIZE;
+        tagData = new Tag293QtyDefBidSize( new MyQtyType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag293QtyDefBidSize tagData;
+        int oneElement;
+
+        oneElement = Tag293QtyDefBidSize.TESTB_QTY_DEF_BID_SIZE;
+        tagData = new Tag293QtyDefBidSize( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag293QtyDefBidSize tagData;
+        int oneElement;
+
+        oneElement = Tag293QtyDefBidSize.TESTB_QTY_DEF_BID_SIZE;
+        tagData = new Tag293QtyDefBidSize( new MyQtyType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag293QtyDefBidSize tagData;
+        int oneElement;
+
+        oneElement = Tag293QtyDefBidSize.TESTB_QTY_DEF_BID_SIZE;
+        tagData = new Tag293QtyDefBidSize( new MyQtyType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag293QtyDefBidSize tagData;
+        int oneElement;
+
+        oneElement = Tag293QtyDefBidSize.TESTA_QTY_DEF_BID_SIZE;
+        tagData = new Tag293QtyDefBidSize( new MyQtyType( oneElement ) );
+        assertEquals( "Tag293QtyDefBidSize\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

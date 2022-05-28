@@ -50,17 +50,76 @@ class Tag369SeqLastMsgSeqNumProcessedTest {
     @Test
     void Tag0369Test() {
         Tag369SeqLastMsgSeqNumProcessed tagData;
+        int oneElement;
 
-        tagData = new Tag369SeqLastMsgSeqNumProcessed(new MySeqNumType(
-                Tag369SeqLastMsgSeqNumProcessed.TESTA_SEQ_LAST_MSG_SEQ_NUM_PROCESSED) );
-        assertEquals( Tag369SeqLastMsgSeqNumProcessed.TESTA_SEQ_LAST_MSG_SEQ_NUM_PROCESSED,
-                tagData.getDataValue());
+        oneElement = Tag369SeqLastMsgSeqNumProcessed.TESTA_SEQ_LAST_MSG_SEQ_NUM_PROCESSED;
+        tagData = new Tag369SeqLastMsgSeqNumProcessed( new MySeqNumType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_SEQ_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag369SeqLastMsgSeqNumProcessed(new MySeqNumType(
-                Tag369SeqLastMsgSeqNumProcessed.TESTB_SEQ_LAST_MSG_SEQ_NUM_PROCESSED) );
-        assertEquals( Tag369SeqLastMsgSeqNumProcessed.TESTB_SEQ_LAST_MSG_SEQ_NUM_PROCESSED,
-                tagData.getDataValue());
+        oneElement = Tag369SeqLastMsgSeqNumProcessed.TESTB_SEQ_LAST_MSG_SEQ_NUM_PROCESSED;
+        tagData = new Tag369SeqLastMsgSeqNumProcessed( new MySeqNumType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_SEQ_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag369SeqLastMsgSeqNumProcessed tagData;
+        int oneElement;
+
+        oneElement = Tag369SeqLastMsgSeqNumProcessed.TESTA_SEQ_LAST_MSG_SEQ_NUM_PROCESSED;
+        tagData = new Tag369SeqLastMsgSeqNumProcessed( new MySeqNumType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag369SeqLastMsgSeqNumProcessed.TESTB_SEQ_LAST_MSG_SEQ_NUM_PROCESSED;
+        tagData = new Tag369SeqLastMsgSeqNumProcessed( new MySeqNumType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag369SeqLastMsgSeqNumProcessed tagData;
+        int oneElement;
+
+        oneElement = Tag369SeqLastMsgSeqNumProcessed.TESTB_SEQ_LAST_MSG_SEQ_NUM_PROCESSED;
+        tagData = new Tag369SeqLastMsgSeqNumProcessed( new MySeqNumType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_SEQ_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag369SeqLastMsgSeqNumProcessed tagData;
+        int oneElement;
+
+        oneElement = Tag369SeqLastMsgSeqNumProcessed.TESTB_SEQ_LAST_MSG_SEQ_NUM_PROCESSED;
+        tagData = new Tag369SeqLastMsgSeqNumProcessed( new MySeqNumType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag369SeqLastMsgSeqNumProcessed tagData;
+        int oneElement;
+
+        oneElement = Tag369SeqLastMsgSeqNumProcessed.TESTB_SEQ_LAST_MSG_SEQ_NUM_PROCESSED;
+        tagData = new Tag369SeqLastMsgSeqNumProcessed( new MySeqNumType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag369SeqLastMsgSeqNumProcessed tagData;
+        int oneElement;
+
+        oneElement = Tag369SeqLastMsgSeqNumProcessed.TESTA_SEQ_LAST_MSG_SEQ_NUM_PROCESSED;
+        tagData = new Tag369SeqLastMsgSeqNumProcessed( new MySeqNumType( oneElement ) );
+        assertEquals( "Tag369SeqLastMsgSeqNumProcessed\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }
