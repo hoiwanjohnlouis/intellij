@@ -17,8 +17,8 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix50.enums.Enum1008SideTrdSubTyp;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -106,5 +106,70 @@ class Tag1008EnuSideTrdSubTypTest {
         tagData = new Tag1008EnuSideTrdSubTyp( Enum1008SideTrdSubTyp.TRANSACTION_FROM_ASSIGNMENT );
         assertEquals( Enum1008SideTrdSubTyp.TRANSACTION_FROM_ASSIGNMENT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag1008EnuSideTrdSubTyp tagData;
+
+        // loop around the ENUM and process
+        for ( Enum1008SideTrdSubTyp oneEnum : Enum1008SideTrdSubTyp.values()) {
+            tagData = new Tag1008EnuSideTrdSubTyp(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag1008EnuSideTrdSubTyp tagData;
+
+        // loop around the ENUM and process
+        for (Enum1008SideTrdSubTyp oneEnum : Enum1008SideTrdSubTyp.values()) {
+            tagData = new Tag1008EnuSideTrdSubTyp(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag1008EnuSideTrdSubTyp tagData;
+
+        // loop around the ENUM and process
+        for (Enum1008SideTrdSubTyp oneEnum : Enum1008SideTrdSubTyp.values()) {
+            tagData = new Tag1008EnuSideTrdSubTyp(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag1008EnuSideTrdSubTyp tagData;
+
+        // loop around the ENUM and process
+        for (Enum1008SideTrdSubTyp oneEnum : Enum1008SideTrdSubTyp.values()) {
+            tagData = new Tag1008EnuSideTrdSubTyp(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag1008EnuSideTrdSubTyp tagData;
+
+        // loop around the ENUM and process
+        for (Enum1008SideTrdSubTyp oneEnum : Enum1008SideTrdSubTyp.values()) {
+            tagData = new Tag1008EnuSideTrdSubTyp(oneEnum);
+            assertEquals( "Tag1008EnuSideTrdSubTyp\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
     }
 }

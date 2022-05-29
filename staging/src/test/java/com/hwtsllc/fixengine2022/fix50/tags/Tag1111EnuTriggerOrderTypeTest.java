@@ -17,8 +17,8 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix50.enums.Enum1111TriggerOrderType;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -61,5 +61,70 @@ class Tag1111EnuTriggerOrderTypeTest {
         tagData = new Tag1111EnuTriggerOrderType( Enum1111TriggerOrderType.LIMIT );
         assertEquals( Enum1111TriggerOrderType.LIMIT.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag1111EnuTriggerOrderType tagData;
+
+        // loop around the ENUM and process
+        for ( Enum1111TriggerOrderType oneEnum : Enum1111TriggerOrderType.values()) {
+            tagData = new Tag1111EnuTriggerOrderType(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag1111EnuTriggerOrderType tagData;
+
+        // loop around the ENUM and process
+        for (Enum1111TriggerOrderType oneEnum : Enum1111TriggerOrderType.values()) {
+            tagData = new Tag1111EnuTriggerOrderType(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag1111EnuTriggerOrderType tagData;
+
+        // loop around the ENUM and process
+        for (Enum1111TriggerOrderType oneEnum : Enum1111TriggerOrderType.values()) {
+            tagData = new Tag1111EnuTriggerOrderType(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag1111EnuTriggerOrderType tagData;
+
+        // loop around the ENUM and process
+        for (Enum1111TriggerOrderType oneEnum : Enum1111TriggerOrderType.values()) {
+            tagData = new Tag1111EnuTriggerOrderType(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag1111EnuTriggerOrderType tagData;
+
+        // loop around the ENUM and process
+        for (Enum1111TriggerOrderType oneEnum : Enum1111TriggerOrderType.values()) {
+            tagData = new Tag1111EnuTriggerOrderType(oneEnum);
+            assertEquals( "Tag1111EnuTriggerOrderType\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
     }
 }

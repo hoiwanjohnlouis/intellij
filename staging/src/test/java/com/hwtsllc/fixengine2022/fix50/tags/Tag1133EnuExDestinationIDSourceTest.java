@@ -17,8 +17,8 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix50.enums.Enum1133DestinationSource;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -72,5 +72,70 @@ class Tag1133EnuExDestinationIDSourceTest {
         tagData = new Tag1133EnuExDestinationIDSource( Enum1133DestinationSource.MIC );
         assertEquals( Enum1133DestinationSource.MIC.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag1133EnuExDestinationIDSource tagData;
+
+        // loop around the ENUM and process
+        for ( Enum1133DestinationSource oneEnum : Enum1133DestinationSource.values()) {
+            tagData = new Tag1133EnuExDestinationIDSource(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag1133EnuExDestinationIDSource tagData;
+
+        // loop around the ENUM and process
+        for (Enum1133DestinationSource oneEnum : Enum1133DestinationSource.values()) {
+            tagData = new Tag1133EnuExDestinationIDSource(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag1133EnuExDestinationIDSource tagData;
+
+        // loop around the ENUM and process
+        for (Enum1133DestinationSource oneEnum : Enum1133DestinationSource.values()) {
+            tagData = new Tag1133EnuExDestinationIDSource(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag1133EnuExDestinationIDSource tagData;
+
+        // loop around the ENUM and process
+        for (Enum1133DestinationSource oneEnum : Enum1133DestinationSource.values()) {
+            tagData = new Tag1133EnuExDestinationIDSource(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag1133EnuExDestinationIDSource tagData;
+
+        // loop around the ENUM and process
+        for (Enum1133DestinationSource oneEnum : Enum1133DestinationSource.values()) {
+            tagData = new Tag1133EnuExDestinationIDSource(oneEnum);
+            assertEquals( "Tag1133EnuExDestinationIDSource\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
     }
 }

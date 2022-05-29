@@ -17,8 +17,8 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix50.enums.Enum1115OrderCategory;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -89,5 +89,70 @@ class Tag1115EnuOrderCategoryTest {
         tagData = new Tag1115EnuOrderCategory( Enum1115OrderCategory.CROSS_ORDER );
         assertEquals( Enum1115OrderCategory.CROSS_ORDER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag1115EnuOrderCategory tagData;
+
+        // loop around the ENUM and process
+        for ( Enum1115OrderCategory oneEnum : Enum1115OrderCategory.values()) {
+            tagData = new Tag1115EnuOrderCategory(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag1115EnuOrderCategory tagData;
+
+        // loop around the ENUM and process
+        for (Enum1115OrderCategory oneEnum : Enum1115OrderCategory.values()) {
+            tagData = new Tag1115EnuOrderCategory(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag1115EnuOrderCategory tagData;
+
+        // loop around the ENUM and process
+        for (Enum1115OrderCategory oneEnum : Enum1115OrderCategory.values()) {
+            tagData = new Tag1115EnuOrderCategory(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag1115EnuOrderCategory tagData;
+
+        // loop around the ENUM and process
+        for (Enum1115OrderCategory oneEnum : Enum1115OrderCategory.values()) {
+            tagData = new Tag1115EnuOrderCategory(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag1115EnuOrderCategory tagData;
+
+        // loop around the ENUM and process
+        for (Enum1115OrderCategory oneEnum : Enum1115OrderCategory.values()) {
+            tagData = new Tag1115EnuOrderCategory(oneEnum);
+            assertEquals( "Tag1115EnuOrderCategory\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
     }
 }

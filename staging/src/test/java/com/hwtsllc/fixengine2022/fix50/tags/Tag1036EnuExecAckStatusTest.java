@@ -17,8 +17,8 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix50.enums.Enum1036ExecAckStatus;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -62,5 +62,70 @@ class Tag1036EnuExecAckStatusTest {
         tagData = new Tag1036EnuExecAckStatus( Enum1036ExecAckStatus.DONT_KNOW_REJECTED );
         assertEquals( Enum1036ExecAckStatus.DONT_KNOW_REJECTED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag1036EnuExecAckStatus tagData;
+
+        // loop around the ENUM and process
+        for ( Enum1036ExecAckStatus oneEnum : Enum1036ExecAckStatus.values()) {
+            tagData = new Tag1036EnuExecAckStatus(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag1036EnuExecAckStatus tagData;
+
+        // loop around the ENUM and process
+        for (Enum1036ExecAckStatus oneEnum : Enum1036ExecAckStatus.values()) {
+            tagData = new Tag1036EnuExecAckStatus(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag1036EnuExecAckStatus tagData;
+
+        // loop around the ENUM and process
+        for (Enum1036ExecAckStatus oneEnum : Enum1036ExecAckStatus.values()) {
+            tagData = new Tag1036EnuExecAckStatus(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag1036EnuExecAckStatus tagData;
+
+        // loop around the ENUM and process
+        for (Enum1036ExecAckStatus oneEnum : Enum1036ExecAckStatus.values()) {
+            tagData = new Tag1036EnuExecAckStatus(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag1036EnuExecAckStatus tagData;
+
+        // loop around the ENUM and process
+        for (Enum1036ExecAckStatus oneEnum : Enum1036ExecAckStatus.values()) {
+            tagData = new Tag1036EnuExecAckStatus(oneEnum);
+            assertEquals( "Tag1036EnuExecAckStatus\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
     }
 }

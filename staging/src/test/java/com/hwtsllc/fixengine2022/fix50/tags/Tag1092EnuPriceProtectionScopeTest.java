@@ -16,8 +16,8 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.MyEnumPriceScope;
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumPriceScope;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -73,5 +73,70 @@ class Tag1092EnuPriceProtectionScopeTest {
         tagData = new Tag1092EnuPriceProtectionScope( MyEnumPriceScope.GLOBAL );
         assertEquals( MyEnumPriceScope.GLOBAL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag1092EnuPriceProtectionScope tagData;
+
+        // loop around the ENUM and process
+        for ( MyEnumPriceScope oneEnum : MyEnumPriceScope.values()) {
+            tagData = new Tag1092EnuPriceProtectionScope(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag1092EnuPriceProtectionScope tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumPriceScope oneEnum : MyEnumPriceScope.values()) {
+            tagData = new Tag1092EnuPriceProtectionScope(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag1092EnuPriceProtectionScope tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumPriceScope oneEnum : MyEnumPriceScope.values()) {
+            tagData = new Tag1092EnuPriceProtectionScope(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag1092EnuPriceProtectionScope tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumPriceScope oneEnum : MyEnumPriceScope.values()) {
+            tagData = new Tag1092EnuPriceProtectionScope(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag1092EnuPriceProtectionScope tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumPriceScope oneEnum : MyEnumPriceScope.values()) {
+            tagData = new Tag1092EnuPriceProtectionScope(oneEnum);
+            assertEquals( "Tag1092EnuPriceProtectionScope\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
     }
 }
