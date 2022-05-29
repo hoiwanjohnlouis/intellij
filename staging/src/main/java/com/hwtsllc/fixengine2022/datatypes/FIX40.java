@@ -45,6 +45,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>                 QTY = MyQtyType field, saved as int
  *  <p>                 SEQ = MySeqNumType field, saved as int
  *  <p>                 STR = MyStringType field, saved as String
+ *  <p>                 TZT = MyTZTimeOnlyType field, saved as String.  Expressed in local time with offset to UTC
  *  <p>                 UTC = MyUTCTimestampType field, saved as String
  *  <p>                 UTCD = MyUTCDateType field, saved as String
  *  <p>                 UTCT = MyUTCTimeType field, saved as String

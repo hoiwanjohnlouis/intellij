@@ -45,6 +45,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>                 QTY = MyQtyType field, saved as int
  *  <p>                 SEQ = MySeqNumType field, saved as int
  *  <p>                 STR = MyStringType field, saved as String
+ *  <p>                 TZT = MyTZTimeOnlyType field, saved as String.  Expressed in local time with offset to UTC
  *  <p>                 UTC = MyUTCTimestampType field, saved as String
  *  <p>                 UTCD = MyUTCDateType field, saved as String
  *  <p>                 UTCT = MyUTCTimeType field, saved as String
@@ -195,7 +196,7 @@ public enum FIX50 implements LogFIXString, LogVerboseString {
     FIX1073_PXO_LEG_LAST_FORWARD_POINTS(1073, "LEG_LAST_FORWARD_POINTS", "LegLastForwardPoints"),
     FIX1074_QTY_LEG_CALCULATED_CCY_LAST_QTY(1074, "LEG_CALCULATED_CCY_LAST_QTY", "LegCalculatedCcyLastQty"),
     FIX1075_AMT_LEG_GROSS_TRADE_AMT(1075, "LEG_GROSS_TRADE_AMT", "LegGrossTradeAmt"),
-    FIX1079_MATURITY_TIME(1079, "MATURITY_TIME", "MaturityTime"),
+    FIX1079_TZT_MATURITY_TIME(1079, "MATURITY_TIME", "MaturityTime"),
     FIX1080_STR_REF_ORDER_ID(1080, "REF_ORDER_ID", "RefOrderID"),
 
     FIX1081_ENU_REF_ORDER_ID_SOURCE(1081, "REF_ORDER_ID_SOURCE", "RefOrderIDSource"),

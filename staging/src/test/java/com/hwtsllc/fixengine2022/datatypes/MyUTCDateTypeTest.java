@@ -14,14 +14,16 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix50.tags;
+package com.hwtsllc.fixengine2022.datatypes;
 
-/**
- *  1079
- *  MaturityTime
- *  TZTimeOnly
- *  <p>
- *  Time of security's maturity expressed in local time with offset to UTC specified
- */
-public class Tag1079MaturityTime {
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class MyUTCDateTypeTest {
+    @Test
+    void UTCDateTypeTest() {
+        assertEquals(1,1);
+        assertNotEquals(2,1);
+    }
 }

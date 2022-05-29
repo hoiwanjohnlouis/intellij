@@ -41,6 +41,7 @@ public interface MyTestValues {
     int JUNK_QTY_DATA_VALUE = -65535;                               //  MyQtyType
     int JUNK_SEQ_DATA_VALUE = -65535;                               //  MySeqNumType
     String JUNK_STR_DATA_VALUE = "JunkMyStringType";                //  MyStringType
+    String JUNK_TZT_DATA_VALUE = "18991231_235959";                 //  MyTZTimeOnlyType
     String JUNK_UTC_DATA_VALUE = "18991231_235959";                 //  MyUTCTimestampType
     String JUNK_UTCD_DATA_VALUE = "00001332";                       //  MyUTCDateType
     String JUNK_UTCT_DATA_VALUE = "444444";                         //  MyUTCTimeType
