@@ -78,7 +78,7 @@ class Tag1058NumNoUndlyInstrumentPartiesTest {
         oneElement = Tag1058NumNoUndlyInstrumentParties.TESTB_NUM_NO_UNDLY_INSTRUMENT_PARTIES;
         tagData = new Tag1058NumNoUndlyInstrumentParties( new MyNumInGroupType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void TagToValuePairStringTest() {

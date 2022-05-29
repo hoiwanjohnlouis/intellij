@@ -78,7 +78,7 @@ class Tag1085QtyDisplayLowQtyTest {
         oneElement = Tag1085QtyDisplayLowQty.TESTB_QTY_DISPLAY_LOW_QTY;
         tagData = new Tag1085QtyDisplayLowQty( new MyQtyType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {

@@ -82,7 +82,7 @@ class Tag1089QtyMatchIncrementTest {
         oneElement = Tag1089QtyMatchIncrement.TESTB_QTY_MATCH_INCREMENT;
         tagData = new Tag1089QtyMatchIncrement( new MyQtyType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {

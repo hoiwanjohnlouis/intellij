@@ -78,7 +78,7 @@ class Tag970IntPositionLimitTest {
         oneElement = Tag970IntPositionLimit.TESTB_INT_POSITION_LIMIT;
         tagData = new Tag970IntPositionLimit( new MyIntType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {

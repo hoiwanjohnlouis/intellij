@@ -78,7 +78,7 @@ class Tag981NumNoExpirationTest {
         oneElement = Tag981NumNoExpiration.TESTB_NUM_NO_EXPIRATION;
         tagData = new Tag981NumNoExpiration( new MyNumInGroupType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void TagToValuePairStringTest() {

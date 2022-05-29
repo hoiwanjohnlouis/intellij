@@ -78,7 +78,7 @@ class Tag1088QtyRefreshQtyTest {
         oneElement = Tag1088QtyRefreshQty.TESTB_QTY_REFRESH_QTY;
         tagData = new Tag1088QtyRefreshQty( new MyQtyType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {

@@ -78,7 +78,7 @@ class Tag1044QtyUnderlyingAdjustedQuantityTest {
         oneElement = Tag1044QtyUnderlyingAdjustedQuantity.TESTB_QTY_UNDERLYING_ADJUSTED_QUANTITY;
         tagData = new Tag1044QtyUnderlyingAdjustedQuantity( new MyQtyType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {

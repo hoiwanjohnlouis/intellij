@@ -80,7 +80,7 @@ class Tag1074QtyLegCalculatedCcyLastQtyTest {
         oneElement = Tag1074QtyLegCalculatedCcyLastQty.TESTB_QTY_LEG_CALCULATED_CCY_LAST_QTY;
         tagData = new Tag1074QtyLegCalculatedCcyLastQty( new MyQtyType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {

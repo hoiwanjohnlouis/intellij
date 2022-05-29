@@ -78,7 +78,7 @@ class Tag1009IntSideQtyTest {
         oneElement = Tag1009IntSideQty.TESTB_INT_SIDE_QTY;
         tagData = new Tag1009IntSideQty( new MyIntType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {

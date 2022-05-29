@@ -78,7 +78,7 @@ class Tag957NumNoStrategyParametersTest {
         oneElement = Tag957NumNoStrategyParameters.TESTB_NUM_NO_STRATEGY_PARAMETERS;
         tagData = new Tag957NumNoStrategyParameters( new MyNumInGroupType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void TagToValuePairStringTest() {

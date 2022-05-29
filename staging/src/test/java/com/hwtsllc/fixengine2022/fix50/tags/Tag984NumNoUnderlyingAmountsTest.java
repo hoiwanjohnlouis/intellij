@@ -78,7 +78,7 @@ class Tag984NumNoUnderlyingAmountsTest {
         oneElement = Tag984NumNoUnderlyingAmounts.TESTB_NUM_NO_UNDERLYING_AMOUNTS;
         tagData = new Tag984NumNoUnderlyingAmounts( new MyNumInGroupType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void TagToValuePairStringTest() {

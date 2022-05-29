@@ -81,7 +81,7 @@ class Tag1082QtySecondaryDisplayQtyTest {
         oneElement = Tag1082QtySecondaryDisplayQty.TESTB_QTY_SECONDARY_DISPLAY_QTY;
         tagData = new Tag1082QtySecondaryDisplayQty( new MyQtyType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {

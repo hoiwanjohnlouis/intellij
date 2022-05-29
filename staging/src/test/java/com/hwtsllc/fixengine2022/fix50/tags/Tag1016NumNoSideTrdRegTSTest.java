@@ -78,7 +78,7 @@ class Tag1016NumNoSideTrdRegTSTest {
         oneElement = Tag1016NumNoSideTrdRegTS.TESTB_NUM_NO_SIDE_TRD_REG_TS;
         tagData = new Tag1016NumNoSideTrdRegTS( new MyNumInGroupType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void TagToValuePairStringTest() {

@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX50;
-import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
+import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -25,89 +25,95 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  1112
- *  TriggerNewQty
- *  Qty
+ *  1090
+ *  MaxPriceLevels
+ *  int
  *  <p>
- *  The Quantity the order should have after the trigger has hit.
+ *  Allows an order to specify a maximum number of price levels to trade through.
+ *  <p>
+ *  Only valid for aggressive orders and during continuous (autoexecution) trading sessions.
+ *  <p>
+ *  Property lost when order is put on book.
+ *  A partially filled order is assigned last trade price as limit price.
+ *  Non-filled order behaves as ordinary Market or Limit.
  */
-class Tag1112QtyTriggerNewQtyTest {
+class Tag1090IntMaxPriceLevelsTest {
     @Test
-    void FIX1112Test() {
-        FIX50 fixData = FIX50.FIX1112_QTY_TRIGGER_NEW_QTY;
-        assertEquals( "1112", fixData.toFIXIDString());
-        assertEquals( "TRIGGER_NEW_QTY", fixData.toFIXNameString());
-        assertEquals( "TriggerNewQty", fixData.toFIXDescriptionString());
+    void FIX1090Test() {
+        FIX50 fixData = FIX50.FIX1090_INT_MAX_PRICE_LEVELS;
+        assertEquals( "1090", fixData.toFIXIDString());
+        assertEquals( "MAX_PRICE_LEVELS", fixData.toFIXNameString());
+        assertEquals( "MaxPriceLevels", fixData.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
-    void Tag1112Test() {
-        Tag1112QtyTriggerNewQty tagData;
+    void Tag1090Test() {
+        Tag1090IntMaxPriceLevels tagData;
         int oneElement;
 
-        oneElement = Tag1112QtyTriggerNewQty.TESTA_QTY_TRIGGER_NEW_QTY;
-        tagData = new Tag1112QtyTriggerNewQty( new MyQtyType( oneElement ) );
+        oneElement = Tag1090IntMaxPriceLevels.TESTA_INT_MAX_PRICE_LEVELS;
+        tagData = new Tag1090IntMaxPriceLevels( new MyIntType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        oneElement = Tag1112QtyTriggerNewQty.TESTB_QTY_TRIGGER_NEW_QTY;
-        tagData = new Tag1112QtyTriggerNewQty( new MyQtyType( oneElement ) );
+        oneElement = Tag1090IntMaxPriceLevels.TESTB_INT_MAX_PRICE_LEVELS;
+        tagData = new Tag1090IntMaxPriceLevels( new MyIntType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void PrintFIXTagTest() {
-        Tag1112QtyTriggerNewQty tagData;
+        Tag1090IntMaxPriceLevels tagData;
         int oneElement;
 
-        oneElement = Tag1112QtyTriggerNewQty.TESTA_QTY_TRIGGER_NEW_QTY;
-        tagData = new Tag1112QtyTriggerNewQty( new MyQtyType( oneElement ) );
+        oneElement = Tag1090IntMaxPriceLevels.TESTA_INT_MAX_PRICE_LEVELS;
+        tagData = new Tag1090IntMaxPriceLevels( new MyIntType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag1112QtyTriggerNewQty.TESTB_QTY_TRIGGER_NEW_QTY;
-        tagData = new Tag1112QtyTriggerNewQty( new MyQtyType( oneElement ) );
+        oneElement = Tag1090IntMaxPriceLevels.TESTB_INT_MAX_PRICE_LEVELS;
+        tagData = new Tag1090IntMaxPriceLevels( new MyIntType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
     @Test
     void TagGetDataValueTest() {
-        Tag1112QtyTriggerNewQty tagData;
+        Tag1090IntMaxPriceLevels tagData;
         int oneElement;
 
-        oneElement = Tag1112QtyTriggerNewQty.TESTB_QTY_TRIGGER_NEW_QTY;
-        tagData = new Tag1112QtyTriggerNewQty( new MyQtyType( oneElement ) );
+        oneElement = Tag1090IntMaxPriceLevels.TESTB_INT_MAX_PRICE_LEVELS;
+        tagData = new Tag1090IntMaxPriceLevels( new MyIntType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag1112QtyTriggerNewQty tagData;
+        Tag1090IntMaxPriceLevels tagData;
         int oneElement;
 
-        oneElement = Tag1112QtyTriggerNewQty.TESTB_QTY_TRIGGER_NEW_QTY;
-        tagData = new Tag1112QtyTriggerNewQty( new MyQtyType( oneElement ) );
+        oneElement = Tag1090IntMaxPriceLevels.TESTB_INT_MAX_PRICE_LEVELS;
+        tagData = new Tag1090IntMaxPriceLevels( new MyIntType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
     }
     @Test
     void TagToStringTest() {
-        Tag1112QtyTriggerNewQty tagData;
+        Tag1090IntMaxPriceLevels tagData;
         int oneElement;
 
-        oneElement = Tag1112QtyTriggerNewQty.TESTB_QTY_TRIGGER_NEW_QTY;
-        tagData = new Tag1112QtyTriggerNewQty( new MyQtyType( oneElement ) );
+        oneElement = Tag1090IntMaxPriceLevels.TESTB_INT_MAX_PRICE_LEVELS;
+        tagData = new Tag1090IntMaxPriceLevels( new MyIntType( oneElement ) );
         assertEquals( String.valueOf( oneElement ), tagData.toString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag1112QtyTriggerNewQty tagData;
+        Tag1090IntMaxPriceLevels tagData;
         int oneElement;
 
-        oneElement = Tag1112QtyTriggerNewQty.TESTA_QTY_TRIGGER_NEW_QTY;
-        tagData = new Tag1112QtyTriggerNewQty( new MyQtyType( oneElement ) );
-        assertEquals( "Tag1112QtyTriggerNewQty\n" +
+        oneElement = Tag1090IntMaxPriceLevels.TESTA_INT_MAX_PRICE_LEVELS;
+        tagData = new Tag1090IntMaxPriceLevels( new MyIntType( oneElement ) );
+        assertEquals( "Tag1090IntMaxPriceLevels\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                         "\tFIXName[" + tagData.toFIXNameString() + "]\n" +

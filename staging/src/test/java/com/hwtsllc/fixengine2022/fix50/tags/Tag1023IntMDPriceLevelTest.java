@@ -81,7 +81,7 @@ class Tag1023IntMDPriceLevelTest {
         oneElement = Tag1023IntMDPriceLevel.TESTB_INT_MD_PRICE_LEVEL;
         tagData = new Tag1023IntMDPriceLevel( new MyIntType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {

@@ -82,7 +82,7 @@ class Tag1138QtyDisplayQtyTest {
         oneElement = Tag1138QtyDisplayQty.TESTB_QTY_DISPLAY_QTY;
         tagData = new Tag1138QtyDisplayQty( new MyQtyType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {

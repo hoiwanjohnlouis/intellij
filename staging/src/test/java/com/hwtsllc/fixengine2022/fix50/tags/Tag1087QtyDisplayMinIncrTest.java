@@ -81,7 +81,7 @@ class Tag1087QtyDisplayMinIncrTest {
         oneElement = Tag1087QtyDisplayMinIncr.TESTB_QTY_DISPLAY_MIN_INCR;
         tagData = new Tag1087QtyDisplayMinIncr( new MyQtyType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {

@@ -80,7 +80,7 @@ class Tag964IntSecurityReportIDTest {
         oneElement = Tag964IntSecurityReportID.TESTB_INT_SECURITY_REPORT_ID;
         tagData = new Tag964IntSecurityReportID( new MyIntType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {
