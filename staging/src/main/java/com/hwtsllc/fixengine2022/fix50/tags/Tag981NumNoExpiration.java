@@ -62,7 +62,11 @@ public class Tag981NumNoExpiration extends FIX50Abstract implements LogValuePair
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ public class Tag981NumNoExpiration extends FIX50Abstract implements LogValuePair
         Tag981NumNoExpiration tagData;
 
         tagData = new Tag981NumNoExpiration(new MyNumInGroupType(TESTA_NUM_NO_EXPIRATION) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag981NumNoExpiration(new MyNumInGroupType(TESTB_NUM_NO_EXPIRATION) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

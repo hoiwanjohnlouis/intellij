@@ -62,7 +62,11 @@ public class Tag1104StrTriggerSecurityID extends FIX50Abstract implements LogVal
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ public class Tag1104StrTriggerSecurityID extends FIX50Abstract implements LogVal
         Tag1104StrTriggerSecurityID tagData;
 
         tagData = new Tag1104StrTriggerSecurityID(new MyStringType(TESTA_STR_TRIGGER_SECURITY_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1104StrTriggerSecurityID(new MyStringType(TESTB_STR_TRIGGER_SECURITY_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

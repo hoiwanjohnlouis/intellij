@@ -45,9 +45,81 @@ class Tag1104StrTriggerSecurityIDTest {
     @Test
     void Tag1104Test() {
         Tag1104StrTriggerSecurityID tagData;
+        String oneElement;
 
-        tagData = new Tag1104StrTriggerSecurityID( new MyStringType("Chloe Kim") );
-        assertEquals( "Chloe Kim", tagData.getDataValue() );
+        oneElement = "Chloe Kim";
+        tagData = new Tag1104StrTriggerSecurityID( new MyStringType(oneElement) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag1104StrTriggerSecurityID.TESTA_STR_TRIGGER_SECURITY_ID;
+        tagData = new Tag1104StrTriggerSecurityID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag1104StrTriggerSecurityID.TESTB_STR_TRIGGER_SECURITY_ID;
+        tagData = new Tag1104StrTriggerSecurityID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag1104StrTriggerSecurityID tagData;
+        String oneElement;
+
+        oneElement = Tag1104StrTriggerSecurityID.TESTA_STR_TRIGGER_SECURITY_ID;
+        tagData = new Tag1104StrTriggerSecurityID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag1104StrTriggerSecurityID.TESTB_STR_TRIGGER_SECURITY_ID;
+        tagData = new Tag1104StrTriggerSecurityID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag1104StrTriggerSecurityID tagData;
+        String oneElement;
+
+        oneElement = Tag1104StrTriggerSecurityID.TESTB_STR_TRIGGER_SECURITY_ID;
+        tagData = new Tag1104StrTriggerSecurityID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag1104StrTriggerSecurityID tagData;
+        String oneElement;
+
+        oneElement = Tag1104StrTriggerSecurityID.TESTB_STR_TRIGGER_SECURITY_ID;
+        tagData = new Tag1104StrTriggerSecurityID( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag1104StrTriggerSecurityID tagData;
+        String oneElement;
+
+        oneElement = Tag1104StrTriggerSecurityID.TESTB_STR_TRIGGER_SECURITY_ID;
+        tagData = new Tag1104StrTriggerSecurityID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag1104StrTriggerSecurityID tagData;
+        String oneElement;
+
+        oneElement = Tag1104StrTriggerSecurityID.TESTA_STR_TRIGGER_SECURITY_ID;
+        tagData = new Tag1104StrTriggerSecurityID( new MyStringType( oneElement ) );
+        assertEquals( "Tag1104StrTriggerSecurityID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

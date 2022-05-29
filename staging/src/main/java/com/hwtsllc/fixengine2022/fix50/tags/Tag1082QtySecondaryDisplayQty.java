@@ -65,7 +65,11 @@ public class Tag1082QtySecondaryDisplayQty extends FIX50Abstract implements LogV
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -83,13 +87,9 @@ public class Tag1082QtySecondaryDisplayQty extends FIX50Abstract implements LogV
         Tag1082QtySecondaryDisplayQty tagData;
 
         tagData = new Tag1082QtySecondaryDisplayQty(new MyQtyType(TESTA_QTY_SECONDARY_DISPLAY_QTY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1082QtySecondaryDisplayQty(new MyQtyType(TESTB_QTY_SECONDARY_DISPLAY_QTY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

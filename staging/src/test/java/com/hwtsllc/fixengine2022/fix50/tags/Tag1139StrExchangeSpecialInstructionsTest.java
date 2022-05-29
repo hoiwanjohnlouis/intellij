@@ -45,9 +45,81 @@ class Tag1139StrExchangeSpecialInstructionsTest {
     @Test
     void Tag1139Test() {
         Tag1139StrExchangeSpecialInstructions tagData;
+        String oneElement;
 
-        tagData = new Tag1139StrExchangeSpecialInstructions( new MyStringType("Chloe Kim") );
-        assertEquals( "Chloe Kim", tagData.getDataValue() );
+        oneElement = "Chloe Kim";
+        tagData = new Tag1139StrExchangeSpecialInstructions( new MyStringType(oneElement) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag1139StrExchangeSpecialInstructions.TESTA_STR_EXCHANGE_SPECIAL_INSTRUCTIONS;
+        tagData = new Tag1139StrExchangeSpecialInstructions( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag1139StrExchangeSpecialInstructions.TESTB_STR_EXCHANGE_SPECIAL_INSTRUCTIONS;
+        tagData = new Tag1139StrExchangeSpecialInstructions( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag1139StrExchangeSpecialInstructions tagData;
+        String oneElement;
+
+        oneElement = Tag1139StrExchangeSpecialInstructions.TESTA_STR_EXCHANGE_SPECIAL_INSTRUCTIONS;
+        tagData = new Tag1139StrExchangeSpecialInstructions( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag1139StrExchangeSpecialInstructions.TESTB_STR_EXCHANGE_SPECIAL_INSTRUCTIONS;
+        tagData = new Tag1139StrExchangeSpecialInstructions( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag1139StrExchangeSpecialInstructions tagData;
+        String oneElement;
+
+        oneElement = Tag1139StrExchangeSpecialInstructions.TESTB_STR_EXCHANGE_SPECIAL_INSTRUCTIONS;
+        tagData = new Tag1139StrExchangeSpecialInstructions( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag1139StrExchangeSpecialInstructions tagData;
+        String oneElement;
+
+        oneElement = Tag1139StrExchangeSpecialInstructions.TESTB_STR_EXCHANGE_SPECIAL_INSTRUCTIONS;
+        tagData = new Tag1139StrExchangeSpecialInstructions( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag1139StrExchangeSpecialInstructions tagData;
+        String oneElement;
+
+        oneElement = Tag1139StrExchangeSpecialInstructions.TESTB_STR_EXCHANGE_SPECIAL_INSTRUCTIONS;
+        tagData = new Tag1139StrExchangeSpecialInstructions( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag1139StrExchangeSpecialInstructions tagData;
+        String oneElement;
+
+        oneElement = Tag1139StrExchangeSpecialInstructions.TESTA_STR_EXCHANGE_SPECIAL_INSTRUCTIONS;
+        tagData = new Tag1139StrExchangeSpecialInstructions( new MyStringType( oneElement ) );
+        assertEquals( "Tag1139StrExchangeSpecialInstructions\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

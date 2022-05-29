@@ -66,7 +66,11 @@ public class Tag1089QtyMatchIncrement extends FIX50Abstract implements LogValueP
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -84,13 +88,9 @@ public class Tag1089QtyMatchIncrement extends FIX50Abstract implements LogValueP
         Tag1089QtyMatchIncrement tagData;
 
         tagData = new Tag1089QtyMatchIncrement(new MyQtyType(TESTA_QTY_MATCH_INCREMENT) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1089QtyMatchIncrement(new MyQtyType(TESTB_QTY_MATCH_INCREMENT) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

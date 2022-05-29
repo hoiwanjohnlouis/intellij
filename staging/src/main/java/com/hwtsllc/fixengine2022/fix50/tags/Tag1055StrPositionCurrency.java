@@ -62,7 +62,11 @@ public class Tag1055StrPositionCurrency extends FIX50Abstract implements LogValu
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ public class Tag1055StrPositionCurrency extends FIX50Abstract implements LogValu
         Tag1055StrPositionCurrency tagData;
 
         tagData = new Tag1055StrPositionCurrency(new MyStringType(TESTA_STR_POSITION_CURRENCY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1055StrPositionCurrency(new MyStringType(TESTB_STR_POSITION_CURRENCY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

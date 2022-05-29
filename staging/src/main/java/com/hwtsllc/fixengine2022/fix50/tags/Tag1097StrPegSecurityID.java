@@ -62,7 +62,11 @@ public class Tag1097StrPegSecurityID extends FIX50Abstract implements LogValuePa
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ public class Tag1097StrPegSecurityID extends FIX50Abstract implements LogValuePa
         Tag1097StrPegSecurityID tagData;
 
         tagData = new Tag1097StrPegSecurityID(new MyStringType(TESTA_STR_PEG_SECURITY_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1097StrPegSecurityID(new MyStringType(TESTB_STR_PEG_SECURITY_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

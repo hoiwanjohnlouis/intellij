@@ -78,7 +78,7 @@ class Tag387QtyTotalVolumeTradedTest {
         oneElement = Tag387QtyTotalVolumeTraded.TESTB_QTY_TOTAL_VOLUME_TRADED;
         tagData = new Tag387QtyTotalVolumeTraded( new MyQtyType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {

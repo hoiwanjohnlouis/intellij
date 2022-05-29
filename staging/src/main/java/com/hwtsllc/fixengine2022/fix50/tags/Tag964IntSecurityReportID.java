@@ -64,7 +64,11 @@ public class Tag964IntSecurityReportID extends FIX50Abstract implements LogValue
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -82,13 +86,9 @@ public class Tag964IntSecurityReportID extends FIX50Abstract implements LogValue
         Tag964IntSecurityReportID tagData;
 
         tagData = new Tag964IntSecurityReportID(new MyIntType(TESTA_INT_SECURITY_REPORT_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag964IntSecurityReportID(new MyIntType(TESTB_INT_SECURITY_REPORT_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

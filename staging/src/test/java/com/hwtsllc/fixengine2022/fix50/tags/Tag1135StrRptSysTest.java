@@ -45,9 +45,81 @@ class Tag1135StrRptSysTest {
     @Test
     void Tag1135Test() {
         Tag1135StrRptSys tagData;
+        String oneElement;
 
-        tagData = new Tag1135StrRptSys( new MyStringType("Chloe Kim") );
-        assertEquals( "Chloe Kim", tagData.getDataValue() );
+        oneElement = "Chloe Kim";
+        tagData = new Tag1135StrRptSys( new MyStringType(oneElement) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag1135StrRptSys.TESTA_STR_RPT_SYS;
+        tagData = new Tag1135StrRptSys( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag1135StrRptSys.TESTB_STR_RPT_SYS;
+        tagData = new Tag1135StrRptSys( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag1135StrRptSys tagData;
+        String oneElement;
+
+        oneElement = Tag1135StrRptSys.TESTA_STR_RPT_SYS;
+        tagData = new Tag1135StrRptSys( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag1135StrRptSys.TESTB_STR_RPT_SYS;
+        tagData = new Tag1135StrRptSys( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag1135StrRptSys tagData;
+        String oneElement;
+
+        oneElement = Tag1135StrRptSys.TESTB_STR_RPT_SYS;
+        tagData = new Tag1135StrRptSys( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag1135StrRptSys tagData;
+        String oneElement;
+
+        oneElement = Tag1135StrRptSys.TESTB_STR_RPT_SYS;
+        tagData = new Tag1135StrRptSys( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag1135StrRptSys tagData;
+        String oneElement;
+
+        oneElement = Tag1135StrRptSys.TESTB_STR_RPT_SYS;
+        tagData = new Tag1135StrRptSys( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag1135StrRptSys tagData;
+        String oneElement;
+
+        oneElement = Tag1135StrRptSys.TESTA_STR_RPT_SYS;
+        tagData = new Tag1135StrRptSys( new MyStringType( oneElement ) );
+        assertEquals( "Tag1135StrRptSys\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

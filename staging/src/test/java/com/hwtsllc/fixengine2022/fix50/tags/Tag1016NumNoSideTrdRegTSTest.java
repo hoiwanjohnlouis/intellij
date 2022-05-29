@@ -45,15 +45,76 @@ class Tag1016NumNoSideTrdRegTSTest {
     @Test
     void Tag1016Test() {
         Tag1016NumNoSideTrdRegTS tagData;
+        int oneElement;
 
-        tagData = new Tag1016NumNoSideTrdRegTS(
-                new MyNumInGroupType( Tag1016NumNoSideTrdRegTS.TESTA_NUM_NO_SIDE_TRD_REG_TS ));
-        assertEquals( Tag1016NumNoSideTrdRegTS.TESTA_NUM_NO_SIDE_TRD_REG_TS, tagData.getDataValue());
+        oneElement = Tag1016NumNoSideTrdRegTS.TESTA_NUM_NO_SIDE_TRD_REG_TS;
+        tagData = new Tag1016NumNoSideTrdRegTS( new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag1016NumNoSideTrdRegTS(
-                new MyNumInGroupType( Tag1016NumNoSideTrdRegTS.TESTB_NUM_NO_SIDE_TRD_REG_TS ));
-        assertEquals( Tag1016NumNoSideTrdRegTS.TESTB_NUM_NO_SIDE_TRD_REG_TS, tagData.getDataValue());
+        oneElement = Tag1016NumNoSideTrdRegTS.TESTB_NUM_NO_SIDE_TRD_REG_TS;
+        tagData = new Tag1016NumNoSideTrdRegTS( new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag1016NumNoSideTrdRegTS tagData;
+        int oneElement;
+
+        oneElement = Tag1016NumNoSideTrdRegTS.TESTA_NUM_NO_SIDE_TRD_REG_TS;
+        tagData = new Tag1016NumNoSideTrdRegTS( new MyNumInGroupType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag1016NumNoSideTrdRegTS.TESTB_NUM_NO_SIDE_TRD_REG_TS;
+        tagData = new Tag1016NumNoSideTrdRegTS( new MyNumInGroupType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag1016NumNoSideTrdRegTS tagData;
+        int oneElement;
+
+        oneElement = Tag1016NumNoSideTrdRegTS.TESTB_NUM_NO_SIDE_TRD_REG_TS;
+        tagData = new Tag1016NumNoSideTrdRegTS( new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag1016NumNoSideTrdRegTS tagData;
+        int oneElement;
+
+        oneElement = Tag1016NumNoSideTrdRegTS.TESTB_NUM_NO_SIDE_TRD_REG_TS;
+        tagData = new Tag1016NumNoSideTrdRegTS( new MyNumInGroupType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag1016NumNoSideTrdRegTS tagData;
+        int oneElement;
+
+        oneElement = Tag1016NumNoSideTrdRegTS.TESTB_NUM_NO_SIDE_TRD_REG_TS;
+        tagData = new Tag1016NumNoSideTrdRegTS( new MyNumInGroupType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag1016NumNoSideTrdRegTS tagData;
+        int oneElement;
+
+        oneElement = Tag1016NumNoSideTrdRegTS.TESTA_NUM_NO_SIDE_TRD_REG_TS;
+        tagData = new Tag1016NumNoSideTrdRegTS( new MyNumInGroupType( oneElement ) );
+        assertEquals( "Tag1016NumNoSideTrdRegTS\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

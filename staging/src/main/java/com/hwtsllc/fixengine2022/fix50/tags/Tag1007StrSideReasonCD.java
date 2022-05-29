@@ -62,7 +62,11 @@ public class Tag1007StrSideReasonCD extends FIX50Abstract implements LogValuePai
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ public class Tag1007StrSideReasonCD extends FIX50Abstract implements LogValuePai
         Tag1007StrSideReasonCD tagData;
 
         tagData = new Tag1007StrSideReasonCD(new MyStringType(TESTA_STR_SIDE_REASON_CD) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1007StrSideReasonCD(new MyStringType(TESTB_STR_SIDE_REASON_CD) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

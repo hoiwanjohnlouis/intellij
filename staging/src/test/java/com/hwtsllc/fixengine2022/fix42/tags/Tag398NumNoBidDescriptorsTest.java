@@ -79,7 +79,7 @@ class Tag398NumNoBidDescriptorsTest {
         oneElement = Tag398NumNoBidDescriptors.TESTB_NUM_NO_BID_DESCRIPTORS;
         tagData = new Tag398NumNoBidDescriptors( new MyNumInGroupType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void TagToValuePairStringTest() {

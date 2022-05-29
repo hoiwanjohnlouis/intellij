@@ -62,7 +62,11 @@ public class Tag1139StrExchangeSpecialInstructions extends FIX50Abstract impleme
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ public class Tag1139StrExchangeSpecialInstructions extends FIX50Abstract impleme
         Tag1139StrExchangeSpecialInstructions tagData;
 
         tagData = new Tag1139StrExchangeSpecialInstructions(new MyStringType(TESTA_STR_EXCHANGE_SPECIAL_INSTRUCTIONS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1139StrExchangeSpecialInstructions(new MyStringType(TESTB_STR_EXCHANGE_SPECIAL_INSTRUCTIONS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

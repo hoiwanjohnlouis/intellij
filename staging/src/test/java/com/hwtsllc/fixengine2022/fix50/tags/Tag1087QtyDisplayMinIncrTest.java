@@ -48,17 +48,76 @@ class Tag1087QtyDisplayMinIncrTest {
     @Test
     void Tag1087Test() {
         Tag1087QtyDisplayMinIncr tagData;
+        int oneElement;
 
-        tagData = new Tag1087QtyDisplayMinIncr(new MyQtyType(
-                Tag1087QtyDisplayMinIncr.TESTA_QTY_DISPLAY_MIN_INCR));
-        assertEquals( Tag1087QtyDisplayMinIncr.TESTA_QTY_DISPLAY_MIN_INCR,
-                tagData.getDataValue());
+        oneElement = Tag1087QtyDisplayMinIncr.TESTA_QTY_DISPLAY_MIN_INCR;
+        tagData = new Tag1087QtyDisplayMinIncr( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag1087QtyDisplayMinIncr(new MyQtyType(
-                Tag1087QtyDisplayMinIncr.TESTA_QTY_DISPLAY_MIN_INCR));
-        assertEquals( Tag1087QtyDisplayMinIncr.TESTA_QTY_DISPLAY_MIN_INCR,
-                tagData.getDataValue());
+        oneElement = Tag1087QtyDisplayMinIncr.TESTB_QTY_DISPLAY_MIN_INCR;
+        tagData = new Tag1087QtyDisplayMinIncr( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag1087QtyDisplayMinIncr tagData;
+        int oneElement;
+
+        oneElement = Tag1087QtyDisplayMinIncr.TESTA_QTY_DISPLAY_MIN_INCR;
+        tagData = new Tag1087QtyDisplayMinIncr( new MyQtyType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag1087QtyDisplayMinIncr.TESTB_QTY_DISPLAY_MIN_INCR;
+        tagData = new Tag1087QtyDisplayMinIncr( new MyQtyType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag1087QtyDisplayMinIncr tagData;
+        int oneElement;
+
+        oneElement = Tag1087QtyDisplayMinIncr.TESTB_QTY_DISPLAY_MIN_INCR;
+        tagData = new Tag1087QtyDisplayMinIncr( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag1087QtyDisplayMinIncr tagData;
+        int oneElement;
+
+        oneElement = Tag1087QtyDisplayMinIncr.TESTB_QTY_DISPLAY_MIN_INCR;
+        tagData = new Tag1087QtyDisplayMinIncr( new MyQtyType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag1087QtyDisplayMinIncr tagData;
+        int oneElement;
+
+        oneElement = Tag1087QtyDisplayMinIncr.TESTB_QTY_DISPLAY_MIN_INCR;
+        tagData = new Tag1087QtyDisplayMinIncr( new MyQtyType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag1087QtyDisplayMinIncr tagData;
+        int oneElement;
+
+        oneElement = Tag1087QtyDisplayMinIncr.TESTA_QTY_DISPLAY_MIN_INCR;
+        tagData = new Tag1087QtyDisplayMinIncr( new MyQtyType( oneElement ) );
+        assertEquals( "Tag1087QtyDisplayMinIncr\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

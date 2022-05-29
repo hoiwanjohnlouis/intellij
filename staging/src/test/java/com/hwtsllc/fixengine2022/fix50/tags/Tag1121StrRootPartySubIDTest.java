@@ -45,9 +45,81 @@ class Tag1121StrRootPartySubIDTest {
     @Test
     void Tag1121Test() {
         Tag1121StrRootPartySubID tagData;
+        String oneElement;
 
-        tagData = new Tag1121StrRootPartySubID( new MyStringType("Chloe Kim") );
-        assertEquals( "Chloe Kim", tagData.getDataValue() );
+        oneElement = "Chloe Kim";
+        tagData = new Tag1121StrRootPartySubID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag1121StrRootPartySubID.TESTA_STR_ROOT_PARTY_SUB_ID;
+        tagData = new Tag1121StrRootPartySubID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag1121StrRootPartySubID.TESTB_STR_ROOT_PARTY_SUB_ID;
+        tagData = new Tag1121StrRootPartySubID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag1121StrRootPartySubID tagData;
+        String oneElement;
+
+        oneElement = Tag1121StrRootPartySubID.TESTA_STR_ROOT_PARTY_SUB_ID;
+        tagData = new Tag1121StrRootPartySubID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag1121StrRootPartySubID.TESTB_STR_ROOT_PARTY_SUB_ID;
+        tagData = new Tag1121StrRootPartySubID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag1121StrRootPartySubID tagData;
+        String oneElement;
+
+        oneElement = Tag1121StrRootPartySubID.TESTB_STR_ROOT_PARTY_SUB_ID;
+        tagData = new Tag1121StrRootPartySubID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag1121StrRootPartySubID tagData;
+        String oneElement;
+
+        oneElement = Tag1121StrRootPartySubID.TESTB_STR_ROOT_PARTY_SUB_ID;
+        tagData = new Tag1121StrRootPartySubID( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag1121StrRootPartySubID tagData;
+        String oneElement;
+
+        oneElement = Tag1121StrRootPartySubID.TESTB_STR_ROOT_PARTY_SUB_ID;
+        tagData = new Tag1121StrRootPartySubID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag1121StrRootPartySubID tagData;
+        String oneElement;
+
+        oneElement = Tag1121StrRootPartySubID.TESTA_STR_ROOT_PARTY_SUB_ID;
+        tagData = new Tag1121StrRootPartySubID( new MyStringType( oneElement ) );
+        assertEquals( "Tag1121StrRootPartySubID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

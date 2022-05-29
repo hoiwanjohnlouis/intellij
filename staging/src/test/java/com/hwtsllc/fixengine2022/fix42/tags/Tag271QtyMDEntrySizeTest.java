@@ -78,7 +78,7 @@ class Tag271QtyMDEntrySizeTest {
         oneElement = Tag271QtyMDEntrySize.TESTB_QTY_MD_ENTRY_SIZE;
         tagData = new Tag271QtyMDEntrySize( new MyQtyType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {

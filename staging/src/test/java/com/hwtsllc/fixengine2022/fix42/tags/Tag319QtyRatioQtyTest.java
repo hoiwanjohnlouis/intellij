@@ -79,7 +79,7 @@ class Tag319QtyRatioQtyTest {
         oneElement = Tag319QtyRatioQty.TESTB_QTY_RATIO_QTY;
         tagData = new Tag319QtyRatioQty( new MyQtyType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {

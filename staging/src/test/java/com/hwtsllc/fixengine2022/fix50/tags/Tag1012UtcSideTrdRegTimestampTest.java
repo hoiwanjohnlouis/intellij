@@ -50,15 +50,76 @@ class Tag1012UtcSideTrdRegTimestampTest {
     @Test
     void Tag1012Test() {
         Tag1012UtcSideTrdRegTimestamp tagData;
+        String oneElement;
 
-        tagData = new Tag1012UtcSideTrdRegTimestamp(
-                new MyUTCTimestampType( Tag1012UtcSideTrdRegTimestamp.TESTA_UTC_SIDE_TRD_REG_TIMESTAMP ));
-        assertEquals( Tag1012UtcSideTrdRegTimestamp.TESTA_UTC_SIDE_TRD_REG_TIMESTAMP, tagData.getDataValue() );
+        oneElement = Tag1012UtcSideTrdRegTimestamp.TESTA_UTC_SIDE_TRD_REG_TIMESTAMP;
+        tagData = new Tag1012UtcSideTrdRegTimestamp( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag1012UtcSideTrdRegTimestamp(
-                new MyUTCTimestampType( Tag1012UtcSideTrdRegTimestamp.TESTB_UTC_SIDE_TRD_REG_TIMESTAMP ));
-        assertEquals( Tag1012UtcSideTrdRegTimestamp.TESTB_UTC_SIDE_TRD_REG_TIMESTAMP, tagData.getDataValue() );
+        oneElement = Tag1012UtcSideTrdRegTimestamp.TESTB_UTC_SIDE_TRD_REG_TIMESTAMP;
+        tagData = new Tag1012UtcSideTrdRegTimestamp( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag1012UtcSideTrdRegTimestamp tagData;
+        String oneElement;
+
+        oneElement = Tag1012UtcSideTrdRegTimestamp.TESTA_UTC_SIDE_TRD_REG_TIMESTAMP;
+        tagData = new Tag1012UtcSideTrdRegTimestamp( new MyUTCTimestampType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag1012UtcSideTrdRegTimestamp.TESTB_UTC_SIDE_TRD_REG_TIMESTAMP;
+        tagData = new Tag1012UtcSideTrdRegTimestamp( new MyUTCTimestampType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag1012UtcSideTrdRegTimestamp tagData;
+        String oneElement;
+
+        oneElement = Tag1012UtcSideTrdRegTimestamp.TESTB_UTC_SIDE_TRD_REG_TIMESTAMP;
+        tagData = new Tag1012UtcSideTrdRegTimestamp( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag1012UtcSideTrdRegTimestamp tagData;
+        String oneElement;
+
+        oneElement = Tag1012UtcSideTrdRegTimestamp.TESTB_UTC_SIDE_TRD_REG_TIMESTAMP;
+        tagData = new Tag1012UtcSideTrdRegTimestamp( new MyUTCTimestampType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag1012UtcSideTrdRegTimestamp tagData;
+        String oneElement;
+
+        oneElement = Tag1012UtcSideTrdRegTimestamp.TESTB_UTC_SIDE_TRD_REG_TIMESTAMP;
+        tagData = new Tag1012UtcSideTrdRegTimestamp( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag1012UtcSideTrdRegTimestamp tagData;
+        String oneElement;
+
+        oneElement = Tag1012UtcSideTrdRegTimestamp.TESTA_UTC_SIDE_TRD_REG_TIMESTAMP;
+        tagData = new Tag1012UtcSideTrdRegTimestamp( new MyUTCTimestampType( oneElement ) );
+        assertEquals( "Tag1012UtcSideTrdRegTimestamp\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toVerboseString() );
     }
 }

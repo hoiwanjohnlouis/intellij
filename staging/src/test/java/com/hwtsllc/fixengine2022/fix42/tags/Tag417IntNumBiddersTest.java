@@ -78,7 +78,7 @@ class Tag417IntNumBiddersTest {
         oneElement = Tag417IntNumBidders.TESTB_INT_NUM_BIDDERS;
         tagData = new Tag417IntNumBidders( new MyIntType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {

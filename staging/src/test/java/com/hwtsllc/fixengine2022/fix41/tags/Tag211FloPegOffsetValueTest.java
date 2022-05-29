@@ -47,6 +47,7 @@ class Tag211FloPegOffsetValueTest {
     @Test
     void Tag0211Test() {
         Tag211FloPegOffsetValue tagData;
+        float oneElement;
 
         tagData = new Tag211FloPegOffsetValue(new MyFloatType(Tag211FloPegOffsetValue.TESTA_FLO_PEG_DIFFERENCE));
         assertEquals( Tag211FloPegOffsetValue.TESTA_FLO_PEG_DIFFERENCE, tagData.getDataValue());
@@ -59,6 +60,7 @@ class Tag211FloPegOffsetValueTest {
     @Test
     void PrintFIXTagTest() {
         Tag211FloPegOffsetValue tagData;
+        float oneElement;
 
         tagData = new Tag211FloPegOffsetValue(new MyFloatType(Tag211FloPegOffsetValue.TESTB_FLO_PEG_DIFFERENCE));
         System.out.println( tagData.toVerboseString() );
@@ -66,6 +68,7 @@ class Tag211FloPegOffsetValueTest {
     @Test
     void TagGetDataValueTest() {
         Tag211FloPegOffsetValue tagData;
+        float oneElement;
 
         tagData = new Tag211FloPegOffsetValue(new MyFloatType(Tag211FloPegOffsetValue.TESTB_FLO_PEG_DIFFERENCE));
         assertEquals( Tag211FloPegOffsetValue.TESTB_FLO_PEG_DIFFERENCE, tagData.getDataValue());
@@ -74,6 +77,7 @@ class Tag211FloPegOffsetValueTest {
     @Test
     void TagToValuePairStringTest() {
         Tag211FloPegOffsetValue tagData;
+        float oneElement;
 
         tagData = new Tag211FloPegOffsetValue(new MyFloatType(Tag211FloPegOffsetValue.TESTB_FLO_PEG_DIFFERENCE));
         assertEquals( tagData.toFIXIDString() + "=" + Tag211FloPegOffsetValue.TESTB_FLO_PEG_DIFFERENCE,
@@ -84,6 +88,7 @@ class Tag211FloPegOffsetValueTest {
     @Test
     void TagToStringTest() {
         Tag211FloPegOffsetValue tagData;
+        float oneElement;
 
         tagData = new Tag211FloPegOffsetValue(new MyFloatType(Tag211FloPegOffsetValue.TESTB_FLO_PEG_DIFFERENCE));
         assertEquals( String.valueOf(Tag211FloPegOffsetValue.TESTB_FLO_PEG_DIFFERENCE),
@@ -94,6 +99,7 @@ class Tag211FloPegOffsetValueTest {
     @Test
     void TagToVerboseStringTest() {
         Tag211FloPegOffsetValue tagData;
+        float oneElement;
 
         tagData = new Tag211FloPegOffsetValue(new MyFloatType(Tag211FloPegOffsetValue.TESTA_FLO_PEG_DIFFERENCE));
         assertEquals( "Tag211FloPegOffsetValue\n" +

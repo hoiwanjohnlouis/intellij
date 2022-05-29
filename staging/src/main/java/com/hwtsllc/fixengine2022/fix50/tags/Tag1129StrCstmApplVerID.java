@@ -16,6 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX50;
+import com.hwtsllc.fixengine2022.datatypes.FIX50Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
+
 /**
  *  1129
  *  CstmApplVerID
@@ -23,5 +29,64 @@ package com.hwtsllc.fixengine2022.fix50.tags;
  *  <p>
  *  Specifies a custom extension to a message being applied at the message level. Enumerated field
  */
-public class Tag1129StrCstmApplVerID {
+public class Tag1129StrCstmApplVerID extends FIX50Abstract implements LogValuePairString, LogVerboseString {
+    private final MyStringType dataValue;
+
+    public final static String TESTA_STR_CSTM_APPL_VER_ID
+            = "BilboBaggins-Tag1129StrCstmApplVerID";
+    public final static String TESTB_STR_CSTM_APPL_VER_ID
+            = "Gandalf-Tag1129StrCstmApplVerID";
+
+    public Tag1129StrCstmApplVerID(MyStringType dataValue) {
+        setFixType( FIX50.FIX1129_STR_CSTM_APPL_VER_ID );
+        this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getDataValue();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toValuePairString() {
+        return toFIXIDString()
+                .concat("=")
+                .concat(dataValue.toString());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toVerboseString() {
+        return super.toVerboseString()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
+    }
+
+    /**
+     *
+     * @param args   no args used at this time
+     */
+    public static void main(String[] args) {
+        Tag1129StrCstmApplVerID tagData;
+
+        tagData = new Tag1129StrCstmApplVerID(new MyStringType( TESTA_STR_CSTM_APPL_VER_ID ) );
+        System.out.println(tagData.toVerboseString());
+
+        tagData = new Tag1129StrCstmApplVerID(new MyStringType( TESTB_STR_CSTM_APPL_VER_ID ) );
+        System.out.println(tagData.toVerboseString());
+    }
 }

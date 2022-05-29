@@ -50,15 +50,76 @@ class Tag962UtcSideTimeInForceTest {
     @Test
     void Tag0962Test() {
         Tag962UtcSideTimeInForce tagData;
+        String oneElement;
 
-        tagData = new Tag962UtcSideTimeInForce(
-                        new MyUTCTimestampType( Tag962UtcSideTimeInForce.TESTA_UTC_SIDE_TIME_IN_FORCE ));
-        assertEquals( Tag962UtcSideTimeInForce.TESTA_UTC_SIDE_TIME_IN_FORCE, tagData.getDataValue() );
+        oneElement = Tag962UtcSideTimeInForce.TESTA_UTC_SIDE_TIME_IN_FORCE;
+        tagData = new Tag962UtcSideTimeInForce( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        tagData = new Tag962UtcSideTimeInForce(
-                        new MyUTCTimestampType( Tag962UtcSideTimeInForce.TESTB_UTC_SIDE_TIME_IN_FORCE ));
-        assertEquals( Tag962UtcSideTimeInForce.TESTB_UTC_SIDE_TIME_IN_FORCE, tagData.getDataValue() );
+        oneElement = Tag962UtcSideTimeInForce.TESTB_UTC_SIDE_TIME_IN_FORCE;
+        tagData = new Tag962UtcSideTimeInForce( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag962UtcSideTimeInForce tagData;
+        String oneElement;
+
+        oneElement = Tag962UtcSideTimeInForce.TESTA_UTC_SIDE_TIME_IN_FORCE;
+        tagData = new Tag962UtcSideTimeInForce( new MyUTCTimestampType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag962UtcSideTimeInForce.TESTB_UTC_SIDE_TIME_IN_FORCE;
+        tagData = new Tag962UtcSideTimeInForce( new MyUTCTimestampType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag962UtcSideTimeInForce tagData;
+        String oneElement;
+
+        oneElement = Tag962UtcSideTimeInForce.TESTB_UTC_SIDE_TIME_IN_FORCE;
+        tagData = new Tag962UtcSideTimeInForce( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag962UtcSideTimeInForce tagData;
+        String oneElement;
+
+        oneElement = Tag962UtcSideTimeInForce.TESTB_UTC_SIDE_TIME_IN_FORCE;
+        tagData = new Tag962UtcSideTimeInForce( new MyUTCTimestampType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag962UtcSideTimeInForce tagData;
+        String oneElement;
+
+        oneElement = Tag962UtcSideTimeInForce.TESTB_UTC_SIDE_TIME_IN_FORCE;
+        tagData = new Tag962UtcSideTimeInForce( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag962UtcSideTimeInForce tagData;
+        String oneElement;
+
+        oneElement = Tag962UtcSideTimeInForce.TESTA_UTC_SIDE_TIME_IN_FORCE;
+        tagData = new Tag962UtcSideTimeInForce( new MyUTCTimestampType( oneElement ) );
+        assertEquals( "Tag962UtcSideTimeInForce\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toVerboseString() );
     }
 }

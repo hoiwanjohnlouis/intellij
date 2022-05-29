@@ -49,17 +49,76 @@ class Tag1089QtyMatchIncrementTest {
     @Test
     void Tag1089Test() {
         Tag1089QtyMatchIncrement tagData;
+        int oneElement;
 
-        tagData = new Tag1089QtyMatchIncrement(new MyQtyType(
-                Tag1089QtyMatchIncrement.TESTA_QTY_MATCH_INCREMENT));
-        assertEquals( Tag1089QtyMatchIncrement.TESTA_QTY_MATCH_INCREMENT,
-                tagData.getDataValue());
+        oneElement = Tag1089QtyMatchIncrement.TESTA_QTY_MATCH_INCREMENT;
+        tagData = new Tag1089QtyMatchIncrement( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag1089QtyMatchIncrement(new MyQtyType(
-                Tag1089QtyMatchIncrement.TESTB_QTY_MATCH_INCREMENT));
-        assertEquals( Tag1089QtyMatchIncrement.TESTB_QTY_MATCH_INCREMENT,
-                tagData.getDataValue());
+        oneElement = Tag1089QtyMatchIncrement.TESTB_QTY_MATCH_INCREMENT;
+        tagData = new Tag1089QtyMatchIncrement( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag1089QtyMatchIncrement tagData;
+        int oneElement;
+
+        oneElement = Tag1089QtyMatchIncrement.TESTA_QTY_MATCH_INCREMENT;
+        tagData = new Tag1089QtyMatchIncrement( new MyQtyType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag1089QtyMatchIncrement.TESTB_QTY_MATCH_INCREMENT;
+        tagData = new Tag1089QtyMatchIncrement( new MyQtyType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag1089QtyMatchIncrement tagData;
+        int oneElement;
+
+        oneElement = Tag1089QtyMatchIncrement.TESTB_QTY_MATCH_INCREMENT;
+        tagData = new Tag1089QtyMatchIncrement( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag1089QtyMatchIncrement tagData;
+        int oneElement;
+
+        oneElement = Tag1089QtyMatchIncrement.TESTB_QTY_MATCH_INCREMENT;
+        tagData = new Tag1089QtyMatchIncrement( new MyQtyType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag1089QtyMatchIncrement tagData;
+        int oneElement;
+
+        oneElement = Tag1089QtyMatchIncrement.TESTB_QTY_MATCH_INCREMENT;
+        tagData = new Tag1089QtyMatchIncrement( new MyQtyType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag1089QtyMatchIncrement tagData;
+        int oneElement;
+
+        oneElement = Tag1089QtyMatchIncrement.TESTA_QTY_MATCH_INCREMENT;
+        tagData = new Tag1089QtyMatchIncrement( new MyQtyType( oneElement ) );
+        assertEquals( "Tag1089QtyMatchIncrement\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

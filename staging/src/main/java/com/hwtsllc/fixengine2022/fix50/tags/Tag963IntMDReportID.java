@@ -62,7 +62,11 @@ public class Tag963IntMDReportID extends FIX50Abstract implements LogValuePairSt
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ public class Tag963IntMDReportID extends FIX50Abstract implements LogValuePairSt
         Tag963IntMDReportID tagData;
 
         tagData = new Tag963IntMDReportID(new MyIntType(TESTA_INT_MD_REPORT_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag963IntMDReportID(new MyIntType(TESTB_INT_MD_REPORT_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -78,7 +78,7 @@ class Tag293QtyDefBidSizeTest {
         oneElement = Tag293QtyDefBidSize.TESTB_QTY_DEF_BID_SIZE;
         tagData = new Tag293QtyDefBidSize( new MyQtyType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {

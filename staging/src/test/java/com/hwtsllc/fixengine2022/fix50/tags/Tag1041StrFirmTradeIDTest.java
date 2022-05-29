@@ -46,9 +46,81 @@ class Tag1041StrFirmTradeIDTest {
     @Test
     void Tag1041Test() {
         Tag1041StrFirmTradeID tagData;
+        String oneElement;
 
-        tagData = new Tag1041StrFirmTradeID( new MyStringType("Chloe Kim") );
-        assertEquals( "Chloe Kim", tagData.getDataValue() );
+        oneElement = "Chloe Kim";
+        tagData = new Tag1041StrFirmTradeID( new MyStringType(oneElement) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag1041StrFirmTradeID.TESTA_STR_FIRM_TRADE_ID;
+        tagData = new Tag1041StrFirmTradeID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag1041StrFirmTradeID.TESTB_STR_FIRM_TRADE_ID;
+        tagData = new Tag1041StrFirmTradeID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag1041StrFirmTradeID tagData;
+        String oneElement;
+
+        oneElement = Tag1041StrFirmTradeID.TESTA_STR_FIRM_TRADE_ID;
+        tagData = new Tag1041StrFirmTradeID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag1041StrFirmTradeID.TESTB_STR_FIRM_TRADE_ID;
+        tagData = new Tag1041StrFirmTradeID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag1041StrFirmTradeID tagData;
+        String oneElement;
+
+        oneElement = Tag1041StrFirmTradeID.TESTB_STR_FIRM_TRADE_ID;
+        tagData = new Tag1041StrFirmTradeID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag1041StrFirmTradeID tagData;
+        String oneElement;
+
+        oneElement = Tag1041StrFirmTradeID.TESTB_STR_FIRM_TRADE_ID;
+        tagData = new Tag1041StrFirmTradeID( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag1041StrFirmTradeID tagData;
+        String oneElement;
+
+        oneElement = Tag1041StrFirmTradeID.TESTB_STR_FIRM_TRADE_ID;
+        tagData = new Tag1041StrFirmTradeID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag1041StrFirmTradeID tagData;
+        String oneElement;
+
+        oneElement = Tag1041StrFirmTradeID.TESTA_STR_FIRM_TRADE_ID;
+        tagData = new Tag1041StrFirmTradeID( new MyStringType( oneElement ) );
+        assertEquals( "Tag1041StrFirmTradeID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

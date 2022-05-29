@@ -62,7 +62,11 @@ class Tag957NumNoStrategyParameters extends FIX50Abstract implements LogValuePai
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ class Tag957NumNoStrategyParameters extends FIX50Abstract implements LogValuePai
         Tag957NumNoStrategyParameters tagData;
 
         tagData = new Tag957NumNoStrategyParameters(new MyNumInGroupType(TESTA_NUM_NO_STRATEGY_PARAMETERS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag957NumNoStrategyParameters(new MyNumInGroupType(TESTB_NUM_NO_STRATEGY_PARAMETERS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

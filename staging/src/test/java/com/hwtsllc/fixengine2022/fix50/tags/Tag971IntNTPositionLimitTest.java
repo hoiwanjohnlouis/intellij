@@ -45,17 +45,76 @@ class Tag971IntNTPositionLimitTest {
     @Test
     void Tag0971Test() {
         Tag971IntNTPositionLimit tagData;
+        int oneElement;
 
-        tagData = new Tag971IntNTPositionLimit(
-                new MyIntType( Tag971IntNTPositionLimit.TESTA_INT_NT_POSITION_LIMIT ));
-        assertEquals( Tag971IntNTPositionLimit.TESTA_INT_NT_POSITION_LIMIT,
-                tagData.getDataValue());
+        oneElement = Tag971IntNTPositionLimit.TESTA_INT_NT_POSITION_LIMIT;
+        tagData = new Tag971IntNTPositionLimit( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag971IntNTPositionLimit(
-                new MyIntType( Tag971IntNTPositionLimit.TESTB_INT_NT_POSITION_LIMIT ));
-        assertEquals( Tag971IntNTPositionLimit.TESTB_INT_NT_POSITION_LIMIT,
-                tagData.getDataValue());
+        oneElement = Tag971IntNTPositionLimit.TESTB_INT_NT_POSITION_LIMIT;
+        tagData = new Tag971IntNTPositionLimit( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag971IntNTPositionLimit tagData;
+        int oneElement;
+
+        oneElement = Tag971IntNTPositionLimit.TESTA_INT_NT_POSITION_LIMIT;
+        tagData = new Tag971IntNTPositionLimit( new MyIntType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag971IntNTPositionLimit.TESTB_INT_NT_POSITION_LIMIT;
+        tagData = new Tag971IntNTPositionLimit( new MyIntType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag971IntNTPositionLimit tagData;
+        int oneElement;
+
+        oneElement = Tag971IntNTPositionLimit.TESTB_INT_NT_POSITION_LIMIT;
+        tagData = new Tag971IntNTPositionLimit( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag971IntNTPositionLimit tagData;
+        int oneElement;
+
+        oneElement = Tag971IntNTPositionLimit.TESTB_INT_NT_POSITION_LIMIT;
+        tagData = new Tag971IntNTPositionLimit( new MyIntType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag971IntNTPositionLimit tagData;
+        int oneElement;
+
+        oneElement = Tag971IntNTPositionLimit.TESTB_INT_NT_POSITION_LIMIT;
+        tagData = new Tag971IntNTPositionLimit( new MyIntType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag971IntNTPositionLimit tagData;
+        int oneElement;
+
+        oneElement = Tag971IntNTPositionLimit.TESTA_INT_NT_POSITION_LIMIT;
+        tagData = new Tag971IntNTPositionLimit( new MyIntType( oneElement ) );
+        assertEquals( "Tag971IntNTPositionLimit\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

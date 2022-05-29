@@ -80,7 +80,7 @@ class Tag415IntProgPeriodIntervalTest {
         oneElement = Tag415IntProgPeriodInterval.TESTB_INT_PROG_PERIOD_INTERVAL;
         tagData = new Tag415IntProgPeriodInterval( new MyIntType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {

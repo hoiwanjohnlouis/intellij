@@ -62,7 +62,11 @@ public class Tag1005StrSideTradeReportID extends FIX50Abstract implements LogVal
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ public class Tag1005StrSideTradeReportID extends FIX50Abstract implements LogVal
         Tag1005StrSideTradeReportID tagData;
 
         tagData = new Tag1005StrSideTradeReportID(new MyStringType(TESTA_STR_SIDE_TRADE_REPORT_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1005StrSideTradeReportID(new MyStringType(TESTB_STR_SIDE_TRADE_REPORT_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

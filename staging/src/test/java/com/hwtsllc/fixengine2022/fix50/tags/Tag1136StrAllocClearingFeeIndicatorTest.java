@@ -45,9 +45,81 @@ class Tag1136StrAllocClearingFeeIndicatorTest {
     @Test
     void Tag1136Test() {
         Tag1136StrAllocClearingFeeIndicator tagData;
+        String oneElement;
 
-        tagData = new Tag1136StrAllocClearingFeeIndicator( new MyStringType("Chloe Kim") );
-        assertEquals( "Chloe Kim", tagData.getDataValue() );
+        oneElement = "Chloe Kim";
+        tagData = new Tag1136StrAllocClearingFeeIndicator( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag1136StrAllocClearingFeeIndicator.TESTA_STR_ALLOC_CLEARING_FEE_INDICATOR;
+        tagData = new Tag1136StrAllocClearingFeeIndicator( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag1136StrAllocClearingFeeIndicator.TESTB_STR_ALLOC_CLEARING_FEE_INDICATOR;
+        tagData = new Tag1136StrAllocClearingFeeIndicator( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag1136StrAllocClearingFeeIndicator tagData;
+        String oneElement;
+
+        oneElement = Tag1136StrAllocClearingFeeIndicator.TESTA_STR_ALLOC_CLEARING_FEE_INDICATOR;
+        tagData = new Tag1136StrAllocClearingFeeIndicator( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag1136StrAllocClearingFeeIndicator.TESTB_STR_ALLOC_CLEARING_FEE_INDICATOR;
+        tagData = new Tag1136StrAllocClearingFeeIndicator( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag1136StrAllocClearingFeeIndicator tagData;
+        String oneElement;
+
+        oneElement = Tag1136StrAllocClearingFeeIndicator.TESTB_STR_ALLOC_CLEARING_FEE_INDICATOR;
+        tagData = new Tag1136StrAllocClearingFeeIndicator( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag1136StrAllocClearingFeeIndicator tagData;
+        String oneElement;
+
+        oneElement = Tag1136StrAllocClearingFeeIndicator.TESTB_STR_ALLOC_CLEARING_FEE_INDICATOR;
+        tagData = new Tag1136StrAllocClearingFeeIndicator( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag1136StrAllocClearingFeeIndicator tagData;
+        String oneElement;
+
+        oneElement = Tag1136StrAllocClearingFeeIndicator.TESTB_STR_ALLOC_CLEARING_FEE_INDICATOR;
+        tagData = new Tag1136StrAllocClearingFeeIndicator( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag1136StrAllocClearingFeeIndicator tagData;
+        String oneElement;
+
+        oneElement = Tag1136StrAllocClearingFeeIndicator.TESTA_STR_ALLOC_CLEARING_FEE_INDICATOR;
+        tagData = new Tag1136StrAllocClearingFeeIndicator( new MyStringType( oneElement ) );
+        assertEquals( "Tag1136StrAllocClearingFeeIndicator\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

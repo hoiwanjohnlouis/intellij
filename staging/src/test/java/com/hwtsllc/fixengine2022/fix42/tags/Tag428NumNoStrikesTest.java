@@ -78,7 +78,7 @@ class Tag428NumNoStrikesTest {
         oneElement = Tag428NumNoStrikes.TESTB_NUM_NO_STRIKES;
         tagData = new Tag428NumNoStrikes( new MyNumInGroupType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void TagToValuePairStringTest() {

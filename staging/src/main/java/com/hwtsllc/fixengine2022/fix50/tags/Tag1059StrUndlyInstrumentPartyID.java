@@ -64,7 +64,11 @@ public class Tag1059StrUndlyInstrumentPartyID extends FIX50Abstract implements L
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -82,13 +86,9 @@ public class Tag1059StrUndlyInstrumentPartyID extends FIX50Abstract implements L
         Tag1059StrUndlyInstrumentPartyID tagData;
 
         tagData = new Tag1059StrUndlyInstrumentPartyID(new MyStringType(TESTA_STR_UNDLY_INSTRUMENT_PARTY_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1059StrUndlyInstrumentPartyID(new MyStringType(TESTB_STR_UNDLY_INSTRUMENT_PARTY_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

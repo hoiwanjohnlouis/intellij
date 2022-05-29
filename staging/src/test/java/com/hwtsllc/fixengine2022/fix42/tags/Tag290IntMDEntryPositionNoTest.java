@@ -79,7 +79,7 @@ class Tag290IntMDEntryPositionNoTest {
         oneElement = Tag290IntMDEntryPositionNo.TESTB_INT_MD_ENTRY_POSITION_NO;
         tagData = new Tag290IntMDEntryPositionNo( new MyIntType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {

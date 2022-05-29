@@ -61,7 +61,11 @@ public class Tag1039StrUnderlyingSettlMethod extends FIX50Abstract implements Lo
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -79,13 +83,9 @@ public class Tag1039StrUnderlyingSettlMethod extends FIX50Abstract implements Lo
         Tag1039StrUnderlyingSettlMethod tagData;
 
         tagData = new Tag1039StrUnderlyingSettlMethod(new MyStringType(TESTA_STR_UNDERLYING_SETTL_METHOD) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1039StrUnderlyingSettlMethod(new MyStringType(TESTB_STR_UNDERLYING_SETTL_METHOD) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

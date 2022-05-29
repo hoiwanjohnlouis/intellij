@@ -63,7 +63,11 @@ public class Tag1098StrPegSymbol extends FIX50Abstract implements LogValuePairSt
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -81,13 +85,9 @@ public class Tag1098StrPegSymbol extends FIX50Abstract implements LogValuePairSt
         Tag1098StrPegSymbol tagData;
 
         tagData = new Tag1098StrPegSymbol(new MyStringType(TESTA_STR_PEG_SYMBOL) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1098StrPegSymbol(new MyStringType(TESTB_STR_PEG_SYMBOL) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

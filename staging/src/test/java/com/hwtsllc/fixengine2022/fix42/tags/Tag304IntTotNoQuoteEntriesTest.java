@@ -83,7 +83,7 @@ class Tag304IntTotNoQuoteEntriesTest {
         oneElement = Tag304IntTotNoQuoteEntries.TESTB_INT_TOT_QUOTE_ENTRIES;
         tagData = new Tag304IntTotNoQuoteEntries( new MyIntType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {

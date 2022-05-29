@@ -46,9 +46,81 @@ class Tag1022StrMDFeedTypeTest {
     @Test
     void Tag1022Test() {
         Tag1022StrMDFeedType tagData;
+        String oneElement;
 
-        tagData = new Tag1022StrMDFeedType( new MyStringType("Chloe Kim") );
-        assertEquals( "Chloe Kim", tagData.getDataValue() );
+        oneElement = "Chloe Kim";
+        tagData = new Tag1022StrMDFeedType( new MyStringType(oneElement) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag1022StrMDFeedType.TESTA_STR_MD_FEED_TYPE;
+        tagData = new Tag1022StrMDFeedType( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag1022StrMDFeedType.TESTB_STR_MD_FEED_TYPE;
+        tagData = new Tag1022StrMDFeedType( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag1022StrMDFeedType tagData;
+        String oneElement;
+
+        oneElement = Tag1022StrMDFeedType.TESTA_STR_MD_FEED_TYPE;
+        tagData = new Tag1022StrMDFeedType( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag1022StrMDFeedType.TESTB_STR_MD_FEED_TYPE;
+        tagData = new Tag1022StrMDFeedType( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag1022StrMDFeedType tagData;
+        String oneElement;
+
+        oneElement = Tag1022StrMDFeedType.TESTB_STR_MD_FEED_TYPE;
+        tagData = new Tag1022StrMDFeedType( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag1022StrMDFeedType tagData;
+        String oneElement;
+
+        oneElement = Tag1022StrMDFeedType.TESTB_STR_MD_FEED_TYPE;
+        tagData = new Tag1022StrMDFeedType( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag1022StrMDFeedType tagData;
+        String oneElement;
+
+        oneElement = Tag1022StrMDFeedType.TESTB_STR_MD_FEED_TYPE;
+        tagData = new Tag1022StrMDFeedType( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag1022StrMDFeedType tagData;
+        String oneElement;
+
+        oneElement = Tag1022StrMDFeedType.TESTA_STR_MD_FEED_TYPE;
+        tagData = new Tag1022StrMDFeedType( new MyStringType( oneElement ) );
+        assertEquals( "Tag1022StrMDFeedType\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

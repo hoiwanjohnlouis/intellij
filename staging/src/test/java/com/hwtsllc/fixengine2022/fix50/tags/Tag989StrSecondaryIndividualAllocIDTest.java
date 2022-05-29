@@ -45,9 +45,81 @@ class Tag989StrSecondaryIndividualAllocIDTest {
     @Test
     void Tag0989Test() {
         Tag989StrSecondaryIndividualAllocID tagData;
+        String oneElement;
 
-        tagData = new Tag989StrSecondaryIndividualAllocID( new MyStringType("Chloe Kim") );
-        assertEquals( "Chloe Kim", tagData.getDataValue() );
+        oneElement = "Chloe Kim";
+        tagData = new Tag989StrSecondaryIndividualAllocID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag989StrSecondaryIndividualAllocID.TESTA_STR_SECONDARY_INDIVIDUAL_ALLOC_ID;
+        tagData = new Tag989StrSecondaryIndividualAllocID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag989StrSecondaryIndividualAllocID.TESTB_STR_SECONDARY_INDIVIDUAL_ALLOC_ID;
+        tagData = new Tag989StrSecondaryIndividualAllocID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag989StrSecondaryIndividualAllocID tagData;
+        String oneElement;
+
+        oneElement = Tag989StrSecondaryIndividualAllocID.TESTA_STR_SECONDARY_INDIVIDUAL_ALLOC_ID;
+        tagData = new Tag989StrSecondaryIndividualAllocID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag989StrSecondaryIndividualAllocID.TESTB_STR_SECONDARY_INDIVIDUAL_ALLOC_ID;
+        tagData = new Tag989StrSecondaryIndividualAllocID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag989StrSecondaryIndividualAllocID tagData;
+        String oneElement;
+
+        oneElement = Tag989StrSecondaryIndividualAllocID.TESTB_STR_SECONDARY_INDIVIDUAL_ALLOC_ID;
+        tagData = new Tag989StrSecondaryIndividualAllocID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag989StrSecondaryIndividualAllocID tagData;
+        String oneElement;
+
+        oneElement = Tag989StrSecondaryIndividualAllocID.TESTB_STR_SECONDARY_INDIVIDUAL_ALLOC_ID;
+        tagData = new Tag989StrSecondaryIndividualAllocID( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag989StrSecondaryIndividualAllocID tagData;
+        String oneElement;
+
+        oneElement = Tag989StrSecondaryIndividualAllocID.TESTB_STR_SECONDARY_INDIVIDUAL_ALLOC_ID;
+        tagData = new Tag989StrSecondaryIndividualAllocID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag989StrSecondaryIndividualAllocID tagData;
+        String oneElement;
+
+        oneElement = Tag989StrSecondaryIndividualAllocID.TESTA_STR_SECONDARY_INDIVIDUAL_ALLOC_ID;
+        tagData = new Tag989StrSecondaryIndividualAllocID( new MyStringType( oneElement ) );
+        assertEquals( "Tag989StrSecondaryIndividualAllocID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

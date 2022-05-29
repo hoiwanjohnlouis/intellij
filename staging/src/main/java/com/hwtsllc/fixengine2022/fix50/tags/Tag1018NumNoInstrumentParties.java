@@ -62,7 +62,11 @@ public class Tag1018NumNoInstrumentParties extends FIX50Abstract implements LogV
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ public class Tag1018NumNoInstrumentParties extends FIX50Abstract implements LogV
         Tag1018NumNoInstrumentParties tagData;
 
         tagData = new Tag1018NumNoInstrumentParties(new MyNumInGroupType(TESTA_NUM_NO_INSTRUMENT_PARTIES) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1018NumNoInstrumentParties(new MyNumInGroupType(TESTB_NUM_NO_INSTRUMENT_PARTIES) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -62,7 +62,11 @@ public class Tag977StrContIntRptID extends FIX50Abstract implements LogValuePair
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ public class Tag977StrContIntRptID extends FIX50Abstract implements LogValuePair
         Tag977StrContIntRptID tagData;
 
         tagData = new Tag977StrContIntRptID(new MyStringType(TESTA_STR_CONT_INT_RPT_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag977StrContIntRptID(new MyStringType(TESTB_STR_CONT_INT_RPT_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

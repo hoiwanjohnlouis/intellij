@@ -80,7 +80,7 @@ class Tag215NumNoRoutingIDsTest {
         oneElement = Tag215NumNoRoutingIDs.TESTB_NUM_NO_ROUTING_IDS;
         tagData = new Tag215NumNoRoutingIDs( new MyNumInGroupType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void TagToValuePairStringTest() {

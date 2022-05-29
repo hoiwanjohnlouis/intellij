@@ -67,7 +67,11 @@ public class Tag1012UtcSideTrdRegTimestamp extends FIX50Abstract implements LogV
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -85,13 +89,9 @@ public class Tag1012UtcSideTrdRegTimestamp extends FIX50Abstract implements LogV
         Tag1012UtcSideTrdRegTimestamp tagData;
 
         tagData = new Tag1012UtcSideTrdRegTimestamp(new MyUTCTimestampType(TESTA_UTC_SIDE_TRD_REG_TIMESTAMP) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1012UtcSideTrdRegTimestamp(new MyUTCTimestampType(TESTB_UTC_SIDE_TRD_REG_TIMESTAMP) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

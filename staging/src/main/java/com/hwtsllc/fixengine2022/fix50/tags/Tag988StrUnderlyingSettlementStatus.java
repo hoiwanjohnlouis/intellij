@@ -66,7 +66,11 @@ public class Tag988StrUnderlyingSettlementStatus extends FIX50Abstract implement
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -84,13 +88,9 @@ public class Tag988StrUnderlyingSettlementStatus extends FIX50Abstract implement
         Tag988StrUnderlyingSettlementStatus tagData;
 
         tagData = new Tag988StrUnderlyingSettlementStatus(new MyStringType(TESTA_STR_UNDERLYING_SETTLEMENT_STATUS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag988StrUnderlyingSettlementStatus(new MyStringType(TESTB_STR_UNDERLYING_SETTLEMENT_STATUS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

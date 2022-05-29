@@ -45,17 +45,76 @@ class Tag1013IntSideTrdRegTimestampTypeTest {
     @Test
     void Tag1013Test() {
         Tag1013IntSideTrdRegTimestampType tagData;
+        int oneElement;
 
-        tagData = new Tag1013IntSideTrdRegTimestampType(
-                new MyIntType( Tag1013IntSideTrdRegTimestampType.TESTA_INT_SIDE_TRD_REG_TIMESTAMP_TYPE ));
-        assertEquals( Tag1013IntSideTrdRegTimestampType.TESTA_INT_SIDE_TRD_REG_TIMESTAMP_TYPE,
-                tagData.getDataValue());
+        oneElement = Tag1013IntSideTrdRegTimestampType.TESTA_INT_SIDE_TRD_REG_TIMESTAMP_TYPE;
+        tagData = new Tag1013IntSideTrdRegTimestampType( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag1013IntSideTrdRegTimestampType(
-                new MyIntType( Tag1013IntSideTrdRegTimestampType.TESTB_INT_SIDE_TRD_REG_TIMESTAMP_TYPE ));
-        assertEquals( Tag1013IntSideTrdRegTimestampType.TESTB_INT_SIDE_TRD_REG_TIMESTAMP_TYPE,
-                tagData.getDataValue());
+        oneElement = Tag1013IntSideTrdRegTimestampType.TESTB_INT_SIDE_TRD_REG_TIMESTAMP_TYPE;
+        tagData = new Tag1013IntSideTrdRegTimestampType( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag1013IntSideTrdRegTimestampType tagData;
+        int oneElement;
+
+        oneElement = Tag1013IntSideTrdRegTimestampType.TESTA_INT_SIDE_TRD_REG_TIMESTAMP_TYPE;
+        tagData = new Tag1013IntSideTrdRegTimestampType( new MyIntType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag1013IntSideTrdRegTimestampType.TESTB_INT_SIDE_TRD_REG_TIMESTAMP_TYPE;
+        tagData = new Tag1013IntSideTrdRegTimestampType( new MyIntType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag1013IntSideTrdRegTimestampType tagData;
+        int oneElement;
+
+        oneElement = Tag1013IntSideTrdRegTimestampType.TESTB_INT_SIDE_TRD_REG_TIMESTAMP_TYPE;
+        tagData = new Tag1013IntSideTrdRegTimestampType( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag1013IntSideTrdRegTimestampType tagData;
+        int oneElement;
+
+        oneElement = Tag1013IntSideTrdRegTimestampType.TESTB_INT_SIDE_TRD_REG_TIMESTAMP_TYPE;
+        tagData = new Tag1013IntSideTrdRegTimestampType( new MyIntType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag1013IntSideTrdRegTimestampType tagData;
+        int oneElement;
+
+        oneElement = Tag1013IntSideTrdRegTimestampType.TESTB_INT_SIDE_TRD_REG_TIMESTAMP_TYPE;
+        tagData = new Tag1013IntSideTrdRegTimestampType( new MyIntType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag1013IntSideTrdRegTimestampType tagData;
+        int oneElement;
+
+        oneElement = Tag1013IntSideTrdRegTimestampType.TESTA_INT_SIDE_TRD_REG_TIMESTAMP_TYPE;
+        tagData = new Tag1013IntSideTrdRegTimestampType( new MyIntType( oneElement ) );
+        assertEquals( "Tag1013IntSideTrdRegTimestampType\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

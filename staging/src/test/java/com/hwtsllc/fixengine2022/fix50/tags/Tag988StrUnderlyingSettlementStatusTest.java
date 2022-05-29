@@ -49,9 +49,81 @@ class Tag988StrUnderlyingSettlementStatusTest {
     @Test
     void Tag0988Test() {
         Tag988StrUnderlyingSettlementStatus tagData;
+        String oneElement;
 
-        tagData = new Tag988StrUnderlyingSettlementStatus( new MyStringType("Chloe Kim") );
-        assertEquals( "Chloe Kim", tagData.getDataValue() );
+        oneElement = "Chloe Kim";
+        tagData = new Tag988StrUnderlyingSettlementStatus( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag988StrUnderlyingSettlementStatus.TESTA_STR_UNDERLYING_SETTLEMENT_STATUS;
+        tagData = new Tag988StrUnderlyingSettlementStatus( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag988StrUnderlyingSettlementStatus.TESTB_STR_UNDERLYING_SETTLEMENT_STATUS;
+        tagData = new Tag988StrUnderlyingSettlementStatus( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag988StrUnderlyingSettlementStatus tagData;
+        String oneElement;
+
+        oneElement = Tag988StrUnderlyingSettlementStatus.TESTA_STR_UNDERLYING_SETTLEMENT_STATUS;
+        tagData = new Tag988StrUnderlyingSettlementStatus( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag988StrUnderlyingSettlementStatus.TESTB_STR_UNDERLYING_SETTLEMENT_STATUS;
+        tagData = new Tag988StrUnderlyingSettlementStatus( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag988StrUnderlyingSettlementStatus tagData;
+        String oneElement;
+
+        oneElement = Tag988StrUnderlyingSettlementStatus.TESTB_STR_UNDERLYING_SETTLEMENT_STATUS;
+        tagData = new Tag988StrUnderlyingSettlementStatus( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag988StrUnderlyingSettlementStatus tagData;
+        String oneElement;
+
+        oneElement = Tag988StrUnderlyingSettlementStatus.TESTB_STR_UNDERLYING_SETTLEMENT_STATUS;
+        tagData = new Tag988StrUnderlyingSettlementStatus( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag988StrUnderlyingSettlementStatus tagData;
+        String oneElement;
+
+        oneElement = Tag988StrUnderlyingSettlementStatus.TESTB_STR_UNDERLYING_SETTLEMENT_STATUS;
+        tagData = new Tag988StrUnderlyingSettlementStatus( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag988StrUnderlyingSettlementStatus tagData;
+        String oneElement;
+
+        oneElement = Tag988StrUnderlyingSettlementStatus.TESTA_STR_UNDERLYING_SETTLEMENT_STATUS;
+        tagData = new Tag988StrUnderlyingSettlementStatus( new MyStringType( oneElement ) );
+        assertEquals( "Tag988StrUnderlyingSettlementStatus\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

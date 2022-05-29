@@ -70,7 +70,20 @@ public class Tag1021EnuMDBookType extends FIX50Abstract implements LogValuePairS
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -109,19 +122,9 @@ public class Tag1021EnuMDBookType extends FIX50Abstract implements LogValuePairS
         Tag1021EnuMDBookType tagData;
 
         tagData = new Tag1021EnuMDBookType(TESTA_ENU_MD_BOOK_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataIDString());
-        System.out.println(tagData.toDataNameString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag1021EnuMDBookType(TESTB_ENU_MD_BOOK_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataIDString());
-        System.out.println(tagData.toDataNameString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

@@ -62,7 +62,11 @@ public class Tag1136StrAllocClearingFeeIndicator extends FIX50Abstract implement
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ public class Tag1136StrAllocClearingFeeIndicator extends FIX50Abstract implement
         Tag1136StrAllocClearingFeeIndicator tagData;
 
         tagData = new Tag1136StrAllocClearingFeeIndicator(new MyStringType(TESTA_STR_ALLOC_CLEARING_FEE_INDICATOR) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1136StrAllocClearingFeeIndicator(new MyStringType(TESTB_STR_ALLOC_CLEARING_FEE_INDICATOR) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

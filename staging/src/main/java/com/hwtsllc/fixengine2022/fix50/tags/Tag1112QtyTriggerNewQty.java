@@ -62,7 +62,11 @@ public class Tag1112QtyTriggerNewQty extends FIX50Abstract implements LogValuePa
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ public class Tag1112QtyTriggerNewQty extends FIX50Abstract implements LogValuePa
         Tag1112QtyTriggerNewQty tagData;
 
         tagData = new Tag1112QtyTriggerNewQty(new MyQtyType(TESTA_QTY_TRIGGER_NEW_QTY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1112QtyTriggerNewQty(new MyQtyType(TESTB_QTY_TRIGGER_NEW_QTY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

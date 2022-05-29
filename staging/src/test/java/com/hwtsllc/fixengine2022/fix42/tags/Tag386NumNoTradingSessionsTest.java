@@ -78,7 +78,7 @@ class Tag386NumNoTradingSessionsTest {
         oneElement = Tag386NumNoTradingSessions.TESTB_NUM_NO_TRADING_SESSIONS;
         tagData = new Tag386NumNoTradingSessions( new MyNumInGroupType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void TagToValuePairStringTest() {

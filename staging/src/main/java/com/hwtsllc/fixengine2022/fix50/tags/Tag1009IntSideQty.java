@@ -62,7 +62,11 @@ public class Tag1009IntSideQty extends FIX50Abstract implements LogValuePairStri
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ public class Tag1009IntSideQty extends FIX50Abstract implements LogValuePairStri
         Tag1009IntSideQty tagData;
 
         tagData = new Tag1009IntSideQty(new MyIntType(TESTA_INT_SIDE_QTY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1009IntSideQty(new MyIntType(TESTB_INT_SIDE_QTY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -62,7 +62,11 @@ public class Tag1135StrRptSys extends FIX50Abstract implements LogValuePairStrin
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ public class Tag1135StrRptSys extends FIX50Abstract implements LogValuePairStrin
         Tag1135StrRptSys tagData;
 
         tagData = new Tag1135StrRptSys(new MyStringType(TESTA_STR_RPT_SYS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1135StrRptSys(new MyStringType(TESTB_STR_RPT_SYS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -62,7 +62,11 @@ public class Tag1044QtyUnderlyingAdjustedQuantity extends FIX50Abstract implemen
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ public class Tag1044QtyUnderlyingAdjustedQuantity extends FIX50Abstract implemen
         Tag1044QtyUnderlyingAdjustedQuantity tagData;
 
         tagData = new Tag1044QtyUnderlyingAdjustedQuantity(new MyQtyType(TESTA_QTY_UNDERLYING_ADJUSTED_QUANTITY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1044QtyUnderlyingAdjustedQuantity(new MyQtyType(TESTB_QTY_UNDERLYING_ADJUSTED_QUANTITY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

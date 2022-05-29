@@ -69,7 +69,11 @@ public class Tag1011StrMessageEventSource extends FIX50Abstract implements LogVa
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -87,13 +91,9 @@ public class Tag1011StrMessageEventSource extends FIX50Abstract implements LogVa
         Tag1011StrMessageEventSource tagData;
 
         tagData = new Tag1011StrMessageEventSource(new MyStringType(TESTA_STR_MESSAGE_EVENT_SOURCE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1011StrMessageEventSource(new MyStringType(TESTB_STR_MESSAGE_EVENT_SOURCE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

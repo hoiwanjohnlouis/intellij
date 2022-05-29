@@ -70,7 +70,11 @@ public class Tag961StrHostCrossID extends FIX50Abstract implements LogValuePairS
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -88,13 +92,9 @@ public class Tag961StrHostCrossID extends FIX50Abstract implements LogValuePairS
         Tag961StrHostCrossID tagData;
 
         tagData = new Tag961StrHostCrossID(new MyStringType(TESTA_STR_HOST_CROSS_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag961StrHostCrossID(new MyStringType(TESTB_STR_HOST_CROSS_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

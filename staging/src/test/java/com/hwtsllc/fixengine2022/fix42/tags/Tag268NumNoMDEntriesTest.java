@@ -78,7 +78,7 @@ class Tag268NumNoMDEntriesTest {
         oneElement = Tag268NumNoMDEntries.TESTB_NUM_NO_MD_ENTRIES;
         tagData = new Tag268NumNoMDEntries( new MyNumInGroupType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void TagToValuePairStringTest() {

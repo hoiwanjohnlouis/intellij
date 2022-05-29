@@ -62,7 +62,11 @@ public class Tag971IntNTPositionLimit extends FIX50Abstract implements LogValueP
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ public class Tag971IntNTPositionLimit extends FIX50Abstract implements LogValueP
         Tag971IntNTPositionLimit tagData;
 
         tagData = new Tag971IntNTPositionLimit(new MyIntType(TESTA_INT_NT_POSITION_LIMIT) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag971IntNTPositionLimit(new MyIntType(TESTB_INT_NT_POSITION_LIMIT) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

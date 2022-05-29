@@ -45,9 +45,81 @@ class Tag993StrAllocCustomerCapacityTest {
     @Test
     void Tag0993Test() {
         Tag993StrAllocCustomerCapacity tagData;
+        String oneElement;
 
-        tagData = new Tag993StrAllocCustomerCapacity( new MyStringType("Chloe Kim") );
-        assertEquals( "Chloe Kim", tagData.getDataValue() );
+        oneElement = "Chloe Kim";
+        tagData = new Tag993StrAllocCustomerCapacity( new MyStringType(oneElement) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag993StrAllocCustomerCapacity.TESTA_STR_ALLOC_CUSTOMER_CAPACITY;
+        tagData = new Tag993StrAllocCustomerCapacity( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag993StrAllocCustomerCapacity.TESTB_STR_ALLOC_CUSTOMER_CAPACITY;
+        tagData = new Tag993StrAllocCustomerCapacity( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag993StrAllocCustomerCapacity tagData;
+        String oneElement;
+
+        oneElement = Tag993StrAllocCustomerCapacity.TESTA_STR_ALLOC_CUSTOMER_CAPACITY;
+        tagData = new Tag993StrAllocCustomerCapacity( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag993StrAllocCustomerCapacity.TESTB_STR_ALLOC_CUSTOMER_CAPACITY;
+        tagData = new Tag993StrAllocCustomerCapacity( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag993StrAllocCustomerCapacity tagData;
+        String oneElement;
+
+        oneElement = Tag993StrAllocCustomerCapacity.TESTB_STR_ALLOC_CUSTOMER_CAPACITY;
+        tagData = new Tag993StrAllocCustomerCapacity( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag993StrAllocCustomerCapacity tagData;
+        String oneElement;
+
+        oneElement = Tag993StrAllocCustomerCapacity.TESTB_STR_ALLOC_CUSTOMER_CAPACITY;
+        tagData = new Tag993StrAllocCustomerCapacity( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag993StrAllocCustomerCapacity tagData;
+        String oneElement;
+
+        oneElement = Tag993StrAllocCustomerCapacity.TESTB_STR_ALLOC_CUSTOMER_CAPACITY;
+        tagData = new Tag993StrAllocCustomerCapacity( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag993StrAllocCustomerCapacity tagData;
+        String oneElement;
+
+        oneElement = Tag993StrAllocCustomerCapacity.TESTA_STR_ALLOC_CUSTOMER_CAPACITY;
+        tagData = new Tag993StrAllocCustomerCapacity( new MyStringType( oneElement ) );
+        assertEquals( "Tag993StrAllocCustomerCapacity\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

@@ -66,7 +66,11 @@ public class Tag1014StrSideTrdRegTimestampSrc extends FIX50Abstract implements L
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -84,13 +88,9 @@ public class Tag1014StrSideTrdRegTimestampSrc extends FIX50Abstract implements L
         Tag1014StrSideTrdRegTimestampSrc tagData;
 
         tagData = new Tag1014StrSideTrdRegTimestampSrc(new MyStringType(TESTA_STR_SIDE_TRD_REG_TIMESTAMP_SRC) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1014StrSideTrdRegTimestampSrc(new MyStringType(TESTB_STR_SIDE_TRD_REG_TIMESTAMP_SRC) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

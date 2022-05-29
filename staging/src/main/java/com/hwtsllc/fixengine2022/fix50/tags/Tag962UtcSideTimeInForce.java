@@ -67,7 +67,11 @@ public class Tag962UtcSideTimeInForce extends FIX50Abstract implements LogValueP
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -85,13 +89,9 @@ public class Tag962UtcSideTimeInForce extends FIX50Abstract implements LogValueP
         Tag962UtcSideTimeInForce tagData;
 
         tagData = new Tag962UtcSideTimeInForce(new MyUTCTimestampType(TESTA_UTC_SIDE_TIME_IN_FORCE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag962UtcSideTimeInForce(new MyUTCTimestampType(TESTB_UTC_SIDE_TIME_IN_FORCE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

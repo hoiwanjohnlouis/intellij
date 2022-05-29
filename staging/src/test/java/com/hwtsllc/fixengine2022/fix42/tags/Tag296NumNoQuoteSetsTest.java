@@ -78,7 +78,7 @@ class Tag296NumNoQuoteSetsTest {
         oneElement = Tag296NumNoQuoteSets.TESTB_NUM_NO_QUOTE_SETS;
         tagData = new Tag296NumNoQuoteSets( new MyNumInGroupType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void TagToValuePairStringTest() {

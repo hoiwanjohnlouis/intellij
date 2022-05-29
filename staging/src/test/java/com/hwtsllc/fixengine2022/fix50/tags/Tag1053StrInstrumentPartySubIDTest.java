@@ -47,9 +47,81 @@ class Tag1053StrInstrumentPartySubIDTest {
     @Test
     void Tag1053Test() {
         Tag1053StrInstrumentPartySubID tagData;
+        String oneElement;
 
-        tagData = new Tag1053StrInstrumentPartySubID( new MyStringType("Chloe Kim") );
-        assertEquals( "Chloe Kim", tagData.getDataValue() );
+        oneElement = "Chloe Kim";
+        tagData = new Tag1053StrInstrumentPartySubID( new MyStringType(oneElement) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag1053StrInstrumentPartySubID.TESTA_STR_INSTRUMENT_PARTY_SUB_ID;
+        tagData = new Tag1053StrInstrumentPartySubID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag1053StrInstrumentPartySubID.TESTB_STR_INSTRUMENT_PARTY_SUB_ID;
+        tagData = new Tag1053StrInstrumentPartySubID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag1053StrInstrumentPartySubID tagData;
+        String oneElement;
+
+        oneElement = Tag1053StrInstrumentPartySubID.TESTA_STR_INSTRUMENT_PARTY_SUB_ID;
+        tagData = new Tag1053StrInstrumentPartySubID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag1053StrInstrumentPartySubID.TESTB_STR_INSTRUMENT_PARTY_SUB_ID;
+        tagData = new Tag1053StrInstrumentPartySubID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag1053StrInstrumentPartySubID tagData;
+        String oneElement;
+
+        oneElement = Tag1053StrInstrumentPartySubID.TESTB_STR_INSTRUMENT_PARTY_SUB_ID;
+        tagData = new Tag1053StrInstrumentPartySubID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag1053StrInstrumentPartySubID tagData;
+        String oneElement;
+
+        oneElement = Tag1053StrInstrumentPartySubID.TESTB_STR_INSTRUMENT_PARTY_SUB_ID;
+        tagData = new Tag1053StrInstrumentPartySubID( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag1053StrInstrumentPartySubID tagData;
+        String oneElement;
+
+        oneElement = Tag1053StrInstrumentPartySubID.TESTB_STR_INSTRUMENT_PARTY_SUB_ID;
+        tagData = new Tag1053StrInstrumentPartySubID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag1053StrInstrumentPartySubID tagData;
+        String oneElement;
+
+        oneElement = Tag1053StrInstrumentPartySubID.TESTA_STR_INSTRUMENT_PARTY_SUB_ID;
+        tagData = new Tag1053StrInstrumentPartySubID( new MyStringType( oneElement ) );
+        assertEquals( "Tag1053StrInstrumentPartySubID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

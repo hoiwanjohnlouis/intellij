@@ -62,7 +62,11 @@ public class Tag984NumNoUnderlyingAmounts extends FIX50Abstract implements LogVa
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ public class Tag984NumNoUnderlyingAmounts extends FIX50Abstract implements LogVa
         Tag984NumNoUnderlyingAmounts tagData;
 
         tagData = new Tag984NumNoUnderlyingAmounts(new MyNumInGroupType(TESTA_NUM_NO_UNDERLYING_AMOUNTS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag984NumNoUnderlyingAmounts(new MyNumInGroupType(TESTB_NUM_NO_UNDERLYING_AMOUNTS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

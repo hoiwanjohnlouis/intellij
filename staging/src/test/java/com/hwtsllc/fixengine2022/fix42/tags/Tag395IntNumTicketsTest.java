@@ -78,7 +78,7 @@ class Tag395IntNumTicketsTest {
         oneElement = Tag395IntNumTickets.TESTB_INT_NUM_TICKETS;
         tagData = new Tag395IntNumTickets( new MyIntType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {

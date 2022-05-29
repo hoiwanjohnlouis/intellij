@@ -78,7 +78,7 @@ class Tag371IntRefTagIDTest {
         oneElement = Tag371IntRefLogID.TESTB_INT_REF_TAG_ID;
         tagData = new Tag371IntRefLogID( new MyIntType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {

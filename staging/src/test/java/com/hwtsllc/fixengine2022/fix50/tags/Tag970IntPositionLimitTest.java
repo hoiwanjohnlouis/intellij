@@ -45,17 +45,76 @@ class Tag970IntPositionLimitTest {
     @Test
     void Tag0970Test() {
         Tag970IntPositionLimit tagData;
+        int oneElement;
 
-        tagData = new Tag970IntPositionLimit(
-                new MyIntType( Tag970IntPositionLimit.TESTA_INT_POSITION_LIMIT ));
-        assertEquals( Tag970IntPositionLimit.TESTA_INT_POSITION_LIMIT,
-                tagData.getDataValue());
+        oneElement = Tag970IntPositionLimit.TESTA_INT_POSITION_LIMIT;
+        tagData = new Tag970IntPositionLimit( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag970IntPositionLimit(
-                new MyIntType( Tag970IntPositionLimit.TESTB_INT_POSITION_LIMIT ));
-        assertEquals( Tag970IntPositionLimit.TESTB_INT_POSITION_LIMIT,
-                tagData.getDataValue());
+        oneElement = Tag970IntPositionLimit.TESTB_INT_POSITION_LIMIT;
+        tagData = new Tag970IntPositionLimit( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag970IntPositionLimit tagData;
+        int oneElement;
+
+        oneElement = Tag970IntPositionLimit.TESTA_INT_POSITION_LIMIT;
+        tagData = new Tag970IntPositionLimit( new MyIntType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag970IntPositionLimit.TESTB_INT_POSITION_LIMIT;
+        tagData = new Tag970IntPositionLimit( new MyIntType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag970IntPositionLimit tagData;
+        int oneElement;
+
+        oneElement = Tag970IntPositionLimit.TESTB_INT_POSITION_LIMIT;
+        tagData = new Tag970IntPositionLimit( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag970IntPositionLimit tagData;
+        int oneElement;
+
+        oneElement = Tag970IntPositionLimit.TESTB_INT_POSITION_LIMIT;
+        tagData = new Tag970IntPositionLimit( new MyIntType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag970IntPositionLimit tagData;
+        int oneElement;
+
+        oneElement = Tag970IntPositionLimit.TESTB_INT_POSITION_LIMIT;
+        tagData = new Tag970IntPositionLimit( new MyIntType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag970IntPositionLimit tagData;
+        int oneElement;
+
+        oneElement = Tag970IntPositionLimit.TESTA_INT_POSITION_LIMIT;
+        tagData = new Tag970IntPositionLimit( new MyIntType( oneElement ) );
+        assertEquals( "Tag970IntPositionLimit\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

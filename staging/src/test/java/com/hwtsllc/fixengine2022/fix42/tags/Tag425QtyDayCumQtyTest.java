@@ -78,7 +78,7 @@ class Tag425QtyDayCumQtyTest {
         oneElement = Tag425QtyDayCumQty.TESTB_QTY_DAY_CUM_QTY;
         tagData = new Tag425QtyDayCumQty( new MyQtyType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {

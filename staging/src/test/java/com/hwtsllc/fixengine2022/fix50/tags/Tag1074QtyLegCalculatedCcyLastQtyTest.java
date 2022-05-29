@@ -47,17 +47,76 @@ class Tag1074QtyLegCalculatedCcyLastQtyTest {
     @Test
     void Tag1074Test() {
         Tag1074QtyLegCalculatedCcyLastQty tagData;
+        int oneElement;
 
-        tagData = new Tag1074QtyLegCalculatedCcyLastQty(new MyQtyType(
-                Tag1074QtyLegCalculatedCcyLastQty.TESTA_QTY_LEG_CALCULATED_CCY_LAST_QTY));
-        assertEquals( Tag1074QtyLegCalculatedCcyLastQty.TESTA_QTY_LEG_CALCULATED_CCY_LAST_QTY,
-                tagData.getDataValue());
+        oneElement = Tag1074QtyLegCalculatedCcyLastQty.TESTA_QTY_LEG_CALCULATED_CCY_LAST_QTY;
+        tagData = new Tag1074QtyLegCalculatedCcyLastQty( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag1074QtyLegCalculatedCcyLastQty(new MyQtyType(
-                Tag1074QtyLegCalculatedCcyLastQty.TESTB_QTY_LEG_CALCULATED_CCY_LAST_QTY));
-        assertEquals( Tag1074QtyLegCalculatedCcyLastQty.TESTB_QTY_LEG_CALCULATED_CCY_LAST_QTY,
-                tagData.getDataValue());
+        oneElement = Tag1074QtyLegCalculatedCcyLastQty.TESTB_QTY_LEG_CALCULATED_CCY_LAST_QTY;
+        tagData = new Tag1074QtyLegCalculatedCcyLastQty( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag1074QtyLegCalculatedCcyLastQty tagData;
+        int oneElement;
+
+        oneElement = Tag1074QtyLegCalculatedCcyLastQty.TESTA_QTY_LEG_CALCULATED_CCY_LAST_QTY;
+        tagData = new Tag1074QtyLegCalculatedCcyLastQty( new MyQtyType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag1074QtyLegCalculatedCcyLastQty.TESTB_QTY_LEG_CALCULATED_CCY_LAST_QTY;
+        tagData = new Tag1074QtyLegCalculatedCcyLastQty( new MyQtyType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag1074QtyLegCalculatedCcyLastQty tagData;
+        int oneElement;
+
+        oneElement = Tag1074QtyLegCalculatedCcyLastQty.TESTB_QTY_LEG_CALCULATED_CCY_LAST_QTY;
+        tagData = new Tag1074QtyLegCalculatedCcyLastQty( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag1074QtyLegCalculatedCcyLastQty tagData;
+        int oneElement;
+
+        oneElement = Tag1074QtyLegCalculatedCcyLastQty.TESTB_QTY_LEG_CALCULATED_CCY_LAST_QTY;
+        tagData = new Tag1074QtyLegCalculatedCcyLastQty( new MyQtyType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag1074QtyLegCalculatedCcyLastQty tagData;
+        int oneElement;
+
+        oneElement = Tag1074QtyLegCalculatedCcyLastQty.TESTB_QTY_LEG_CALCULATED_CCY_LAST_QTY;
+        tagData = new Tag1074QtyLegCalculatedCcyLastQty( new MyQtyType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag1074QtyLegCalculatedCcyLastQty tagData;
+        int oneElement;
+
+        oneElement = Tag1074QtyLegCalculatedCcyLastQty.TESTA_QTY_LEG_CALCULATED_CCY_LAST_QTY;
+        tagData = new Tag1074QtyLegCalculatedCcyLastQty( new MyQtyType( oneElement ) );
+        assertEquals( "Tag1074QtyLegCalculatedCcyLastQty\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

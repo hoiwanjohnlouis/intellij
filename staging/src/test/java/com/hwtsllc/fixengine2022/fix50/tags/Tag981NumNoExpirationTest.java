@@ -45,15 +45,76 @@ class Tag981NumNoExpirationTest {
     @Test
     void Tag0981Test() {
         Tag981NumNoExpiration tagData;
+        int oneElement;
 
-        tagData = new Tag981NumNoExpiration(
-                new MyNumInGroupType( Tag981NumNoExpiration.TESTA_NUM_NO_EXPIRATION ));
-        assertEquals( Tag981NumNoExpiration.TESTA_NUM_NO_EXPIRATION, tagData.getDataValue());
+        oneElement = Tag981NumNoExpiration.TESTA_NUM_NO_EXPIRATION;
+        tagData = new Tag981NumNoExpiration( new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag981NumNoExpiration(
-                new MyNumInGroupType( Tag981NumNoExpiration.TESTB_NUM_NO_EXPIRATION ));
-        assertEquals( Tag981NumNoExpiration.TESTB_NUM_NO_EXPIRATION, tagData.getDataValue());
+        oneElement = Tag981NumNoExpiration.TESTB_NUM_NO_EXPIRATION;
+        tagData = new Tag981NumNoExpiration( new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag981NumNoExpiration tagData;
+        int oneElement;
+
+        oneElement = Tag981NumNoExpiration.TESTA_NUM_NO_EXPIRATION;
+        tagData = new Tag981NumNoExpiration( new MyNumInGroupType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag981NumNoExpiration.TESTB_NUM_NO_EXPIRATION;
+        tagData = new Tag981NumNoExpiration( new MyNumInGroupType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag981NumNoExpiration tagData;
+        int oneElement;
+
+        oneElement = Tag981NumNoExpiration.TESTB_NUM_NO_EXPIRATION;
+        tagData = new Tag981NumNoExpiration( new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag981NumNoExpiration tagData;
+        int oneElement;
+
+        oneElement = Tag981NumNoExpiration.TESTB_NUM_NO_EXPIRATION;
+        tagData = new Tag981NumNoExpiration( new MyNumInGroupType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag981NumNoExpiration tagData;
+        int oneElement;
+
+        oneElement = Tag981NumNoExpiration.TESTB_NUM_NO_EXPIRATION;
+        tagData = new Tag981NumNoExpiration( new MyNumInGroupType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag981NumNoExpiration tagData;
+        int oneElement;
+
+        oneElement = Tag981NumNoExpiration.TESTA_NUM_NO_EXPIRATION;
+        tagData = new Tag981NumNoExpiration( new MyNumInGroupType( oneElement ) );
+        assertEquals( "Tag981NumNoExpiration\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

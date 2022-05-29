@@ -62,7 +62,11 @@ public class Tag1080StrRefOrderID extends FIX50Abstract implements LogValuePairS
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ public class Tag1080StrRefOrderID extends FIX50Abstract implements LogValuePairS
         Tag1080StrRefOrderID tagData;
 
         tagData = new Tag1080StrRefOrderID(new MyStringType(TESTA_STR_REF_ORDER_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1080StrRefOrderID(new MyStringType(TESTB_STR_REF_ORDER_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

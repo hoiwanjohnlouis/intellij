@@ -65,7 +65,11 @@ public class Tag1023IntMDPriceLevel extends FIX50Abstract implements LogValuePai
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -83,13 +87,9 @@ public class Tag1023IntMDPriceLevel extends FIX50Abstract implements LogValuePai
         Tag1023IntMDPriceLevel tagData;
 
         tagData = new Tag1023IntMDPriceLevel(new MyIntType(TESTA_INT_MD_PRICE_LEVEL) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1023IntMDPriceLevel(new MyIntType(TESTB_INT_MD_PRICE_LEVEL) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

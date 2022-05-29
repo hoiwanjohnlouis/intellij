@@ -45,6 +45,7 @@ class Tag155FloSettlCurrFxRateTest {
     @Test
     void Tag0155Test() {
         Tag155FloSettlCurrFxRate tagData;
+        float oneElement;
 
         tagData = new Tag155FloSettlCurrFxRate(new MyFloatType(Tag155FloSettlCurrFxRate.TESTA_FLO_SETTL_CURR_FX_RATE));
         assertEquals( Tag155FloSettlCurrFxRate.TESTA_FLO_SETTL_CURR_FX_RATE, tagData.getDataValue());
@@ -57,6 +58,7 @@ class Tag155FloSettlCurrFxRateTest {
     @Test
     void PrintFIXTagTest() {
         Tag155FloSettlCurrFxRate tagData;
+        float oneElement;
 
         tagData = new Tag155FloSettlCurrFxRate(new MyFloatType(Tag155FloSettlCurrFxRate.TESTB_FLO_SETTL_CURR_FX_RATE));
         System.out.println( tagData.toVerboseString() );
@@ -64,6 +66,7 @@ class Tag155FloSettlCurrFxRateTest {
     @Test
     void TagGetDataValueTest() {
         Tag155FloSettlCurrFxRate tagData;
+        float oneElement;
 
         tagData = new Tag155FloSettlCurrFxRate(new MyFloatType(Tag155FloSettlCurrFxRate.TESTB_FLO_SETTL_CURR_FX_RATE));
         assertEquals( Tag155FloSettlCurrFxRate.TESTB_FLO_SETTL_CURR_FX_RATE, tagData.getDataValue());
@@ -72,6 +75,7 @@ class Tag155FloSettlCurrFxRateTest {
     @Test
     void TagToValuePairStringTest() {
         Tag155FloSettlCurrFxRate tagData;
+        float oneElement;
 
         tagData = new Tag155FloSettlCurrFxRate(new MyFloatType(Tag155FloSettlCurrFxRate.TESTB_FLO_SETTL_CURR_FX_RATE));
         assertEquals( tagData.toFIXIDString() + "=" + Tag155FloSettlCurrFxRate.TESTB_FLO_SETTL_CURR_FX_RATE,
@@ -82,6 +86,7 @@ class Tag155FloSettlCurrFxRateTest {
     @Test
     void TagToStringTest() {
         Tag155FloSettlCurrFxRate tagData;
+        float oneElement;
 
         tagData = new Tag155FloSettlCurrFxRate(new MyFloatType(Tag155FloSettlCurrFxRate.TESTB_FLO_SETTL_CURR_FX_RATE));
         assertEquals( String.valueOf(Tag155FloSettlCurrFxRate.TESTB_FLO_SETTL_CURR_FX_RATE),
@@ -92,6 +97,7 @@ class Tag155FloSettlCurrFxRateTest {
     @Test
     void TagToVerboseStringTest() {
         Tag155FloSettlCurrFxRate tagData;
+        float oneElement;
 
         tagData = new Tag155FloSettlCurrFxRate(new MyFloatType(Tag155FloSettlCurrFxRate.TESTA_FLO_SETTL_CURR_FX_RATE));
         assertEquals( "Tag155FloSettlCurrFxRate\n" +

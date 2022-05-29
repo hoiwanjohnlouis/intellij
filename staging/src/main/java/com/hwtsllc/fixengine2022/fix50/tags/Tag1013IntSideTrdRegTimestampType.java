@@ -62,7 +62,11 @@ public class Tag1013IntSideTrdRegTimestampType extends FIX50Abstract implements 
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ public class Tag1013IntSideTrdRegTimestampType extends FIX50Abstract implements 
         Tag1013IntSideTrdRegTimestampType tagData;
 
         tagData = new Tag1013IntSideTrdRegTimestampType(new MyIntType(TESTA_INT_SIDE_TRD_REG_TIMESTAMP_TYPE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1013IntSideTrdRegTimestampType(new MyIntType(TESTB_INT_SIDE_TRD_REG_TIMESTAMP_TYPE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

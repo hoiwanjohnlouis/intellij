@@ -45,9 +45,81 @@ class Tag977StrContIntRptIDTest {
     @Test
     void Tag0977Test() {
         Tag977StrContIntRptID tagData;
+        String oneElement;
 
-        tagData = new Tag977StrContIntRptID( new MyStringType("Chloe Kim") );
-        assertEquals( "Chloe Kim", tagData.getDataValue() );
+        oneElement = "Chloe Kim";
+        tagData = new Tag977StrContIntRptID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag977StrContIntRptID.TESTA_STR_CONT_INT_RPT_ID;
+        tagData = new Tag977StrContIntRptID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag977StrContIntRptID.TESTB_STR_CONT_INT_RPT_ID;
+        tagData = new Tag977StrContIntRptID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag977StrContIntRptID tagData;
+        String oneElement;
+
+        oneElement = Tag977StrContIntRptID.TESTA_STR_CONT_INT_RPT_ID;
+        tagData = new Tag977StrContIntRptID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag977StrContIntRptID.TESTB_STR_CONT_INT_RPT_ID;
+        tagData = new Tag977StrContIntRptID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag977StrContIntRptID tagData;
+        String oneElement;
+
+        oneElement = Tag977StrContIntRptID.TESTB_STR_CONT_INT_RPT_ID;
+        tagData = new Tag977StrContIntRptID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag977StrContIntRptID tagData;
+        String oneElement;
+
+        oneElement = Tag977StrContIntRptID.TESTB_STR_CONT_INT_RPT_ID;
+        tagData = new Tag977StrContIntRptID( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag977StrContIntRptID tagData;
+        String oneElement;
+
+        oneElement = Tag977StrContIntRptID.TESTB_STR_CONT_INT_RPT_ID;
+        tagData = new Tag977StrContIntRptID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag977StrContIntRptID tagData;
+        String oneElement;
+
+        oneElement = Tag977StrContIntRptID.TESTA_STR_CONT_INT_RPT_ID;
+        tagData = new Tag977StrContIntRptID( new MyStringType( oneElement ) );
+        assertEquals( "Tag977StrContIntRptID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

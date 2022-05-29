@@ -45,17 +45,76 @@ class Tag1112QtyTriggerNewQtyTest {
     @Test
     void Tag1112Test() {
         Tag1112QtyTriggerNewQty tagData;
+        int oneElement;
 
-        tagData = new Tag1112QtyTriggerNewQty(new MyQtyType(
-                Tag1112QtyTriggerNewQty.TESTA_QTY_TRIGGER_NEW_QTY));
-        assertEquals( Tag1112QtyTriggerNewQty.TESTA_QTY_TRIGGER_NEW_QTY,
-                tagData.getDataValue());
+        oneElement = Tag1112QtyTriggerNewQty.TESTA_QTY_TRIGGER_NEW_QTY;
+        tagData = new Tag1112QtyTriggerNewQty( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag1112QtyTriggerNewQty(new MyQtyType(
-                Tag1112QtyTriggerNewQty.TESTB_QTY_TRIGGER_NEW_QTY));
-        assertEquals( Tag1112QtyTriggerNewQty.TESTB_QTY_TRIGGER_NEW_QTY,
-                tagData.getDataValue());
+        oneElement = Tag1112QtyTriggerNewQty.TESTB_QTY_TRIGGER_NEW_QTY;
+        tagData = new Tag1112QtyTriggerNewQty( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag1112QtyTriggerNewQty tagData;
+        int oneElement;
+
+        oneElement = Tag1112QtyTriggerNewQty.TESTA_QTY_TRIGGER_NEW_QTY;
+        tagData = new Tag1112QtyTriggerNewQty( new MyQtyType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag1112QtyTriggerNewQty.TESTB_QTY_TRIGGER_NEW_QTY;
+        tagData = new Tag1112QtyTriggerNewQty( new MyQtyType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag1112QtyTriggerNewQty tagData;
+        int oneElement;
+
+        oneElement = Tag1112QtyTriggerNewQty.TESTB_QTY_TRIGGER_NEW_QTY;
+        tagData = new Tag1112QtyTriggerNewQty( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag1112QtyTriggerNewQty tagData;
+        int oneElement;
+
+        oneElement = Tag1112QtyTriggerNewQty.TESTB_QTY_TRIGGER_NEW_QTY;
+        tagData = new Tag1112QtyTriggerNewQty( new MyQtyType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag1112QtyTriggerNewQty tagData;
+        int oneElement;
+
+        oneElement = Tag1112QtyTriggerNewQty.TESTB_QTY_TRIGGER_NEW_QTY;
+        tagData = new Tag1112QtyTriggerNewQty( new MyQtyType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag1112QtyTriggerNewQty tagData;
+        int oneElement;
+
+        oneElement = Tag1112QtyTriggerNewQty.TESTA_QTY_TRIGGER_NEW_QTY;
+        tagData = new Tag1112QtyTriggerNewQty( new MyQtyType( oneElement ) );
+        assertEquals( "Tag1112QtyTriggerNewQty\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

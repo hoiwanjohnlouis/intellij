@@ -62,7 +62,11 @@ public class Tag966StrSettleOnOpenFlag extends FIX50Abstract implements LogValue
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ public class Tag966StrSettleOnOpenFlag extends FIX50Abstract implements LogValue
         Tag966StrSettleOnOpenFlag tagData;
 
         tagData = new Tag966StrSettleOnOpenFlag(new MyStringType(TESTA_STR_SETTLE_ON_OPEN_FLAG) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag966StrSettleOnOpenFlag(new MyStringType(TESTB_STR_SETTLE_ON_OPEN_FLAG) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

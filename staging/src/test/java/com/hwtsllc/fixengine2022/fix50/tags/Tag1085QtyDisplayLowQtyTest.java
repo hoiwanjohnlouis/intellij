@@ -45,17 +45,76 @@ class Tag1085QtyDisplayLowQtyTest {
     @Test
     void Tag1085Test() {
         Tag1085QtyDisplayLowQty tagData;
+        int oneElement;
 
-        tagData = new Tag1085QtyDisplayLowQty(new MyQtyType(
-                Tag1085QtyDisplayLowQty.TESTA_QTY_DISPLAY_LOW_QTY));
-        assertEquals( Tag1085QtyDisplayLowQty.TESTA_QTY_DISPLAY_LOW_QTY,
-                tagData.getDataValue());
+        oneElement = Tag1085QtyDisplayLowQty.TESTA_QTY_DISPLAY_LOW_QTY;
+        tagData = new Tag1085QtyDisplayLowQty( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag1085QtyDisplayLowQty(new MyQtyType(
-                Tag1085QtyDisplayLowQty.TESTB_QTY_DISPLAY_LOW_QTY));
-        assertEquals( Tag1085QtyDisplayLowQty.TESTB_QTY_DISPLAY_LOW_QTY,
-                tagData.getDataValue());
+        oneElement = Tag1085QtyDisplayLowQty.TESTB_QTY_DISPLAY_LOW_QTY;
+        tagData = new Tag1085QtyDisplayLowQty( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag1085QtyDisplayLowQty tagData;
+        int oneElement;
+
+        oneElement = Tag1085QtyDisplayLowQty.TESTA_QTY_DISPLAY_LOW_QTY;
+        tagData = new Tag1085QtyDisplayLowQty( new MyQtyType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag1085QtyDisplayLowQty.TESTB_QTY_DISPLAY_LOW_QTY;
+        tagData = new Tag1085QtyDisplayLowQty( new MyQtyType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag1085QtyDisplayLowQty tagData;
+        int oneElement;
+
+        oneElement = Tag1085QtyDisplayLowQty.TESTB_QTY_DISPLAY_LOW_QTY;
+        tagData = new Tag1085QtyDisplayLowQty( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag1085QtyDisplayLowQty tagData;
+        int oneElement;
+
+        oneElement = Tag1085QtyDisplayLowQty.TESTB_QTY_DISPLAY_LOW_QTY;
+        tagData = new Tag1085QtyDisplayLowQty( new MyQtyType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag1085QtyDisplayLowQty tagData;
+        int oneElement;
+
+        oneElement = Tag1085QtyDisplayLowQty.TESTB_QTY_DISPLAY_LOW_QTY;
+        tagData = new Tag1085QtyDisplayLowQty( new MyQtyType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag1085QtyDisplayLowQty tagData;
+        int oneElement;
+
+        oneElement = Tag1085QtyDisplayLowQty.TESTA_QTY_DISPLAY_LOW_QTY;
+        tagData = new Tag1085QtyDisplayLowQty( new MyQtyType( oneElement ) );
+        assertEquals( "Tag1085QtyDisplayLowQty\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

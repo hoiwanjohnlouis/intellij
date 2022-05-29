@@ -62,7 +62,11 @@ public class Tag1040StrSecondaryTradeID extends FIX50Abstract implements LogValu
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ public class Tag1040StrSecondaryTradeID extends FIX50Abstract implements LogValu
         Tag1040StrSecondaryTradeID tagData;
 
         tagData = new Tag1040StrSecondaryTradeID(new MyStringType(TESTA_STR_SECONDARY_TRADE_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1040StrSecondaryTradeID(new MyStringType(TESTB_STR_SECONDARY_TRADE_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

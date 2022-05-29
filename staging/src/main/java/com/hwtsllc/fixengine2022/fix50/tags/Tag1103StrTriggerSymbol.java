@@ -63,7 +63,11 @@ public class Tag1103StrTriggerSymbol extends FIX50Abstract implements LogValuePa
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -81,13 +85,9 @@ public class Tag1103StrTriggerSymbol extends FIX50Abstract implements LogValuePa
         Tag1103StrTriggerSymbol tagData;
 
         tagData = new Tag1103StrTriggerSymbol(new MyStringType(TESTA_STR_TRIGGER_SYMBOL) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1103StrTriggerSymbol(new MyStringType(TESTB_STR_TRIGGER_SYMBOL) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

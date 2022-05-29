@@ -45,9 +45,81 @@ class Tag1099StrPegSecurityDescTest {
     @Test
     void Tag1099Test() {
         Tag1099StrPegSecurityDesc tagData;
+        String oneElement;
 
-        tagData = new Tag1099StrPegSecurityDesc( new MyStringType("Chloe Kim") );
-        assertEquals( "Chloe Kim", tagData.getDataValue() );
+        oneElement = "Chloe Kim";
+        tagData = new Tag1099StrPegSecurityDesc( new MyStringType(oneElement) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag1099StrPegSecurityDesc.TESTA_STR_PEG_SECURITY_DESC;
+        tagData = new Tag1099StrPegSecurityDesc( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag1099StrPegSecurityDesc.TESTB_STR_PEG_SECURITY_DESC;
+        tagData = new Tag1099StrPegSecurityDesc( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag1099StrPegSecurityDesc tagData;
+        String oneElement;
+
+        oneElement = Tag1099StrPegSecurityDesc.TESTA_STR_PEG_SECURITY_DESC;
+        tagData = new Tag1099StrPegSecurityDesc( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag1099StrPegSecurityDesc.TESTB_STR_PEG_SECURITY_DESC;
+        tagData = new Tag1099StrPegSecurityDesc( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag1099StrPegSecurityDesc tagData;
+        String oneElement;
+
+        oneElement = Tag1099StrPegSecurityDesc.TESTB_STR_PEG_SECURITY_DESC;
+        tagData = new Tag1099StrPegSecurityDesc( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag1099StrPegSecurityDesc tagData;
+        String oneElement;
+
+        oneElement = Tag1099StrPegSecurityDesc.TESTB_STR_PEG_SECURITY_DESC;
+        tagData = new Tag1099StrPegSecurityDesc( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag1099StrPegSecurityDesc tagData;
+        String oneElement;
+
+        oneElement = Tag1099StrPegSecurityDesc.TESTB_STR_PEG_SECURITY_DESC;
+        tagData = new Tag1099StrPegSecurityDesc( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag1099StrPegSecurityDesc tagData;
+        String oneElement;
+
+        oneElement = Tag1099StrPegSecurityDesc.TESTA_STR_PEG_SECURITY_DESC;
+        tagData = new Tag1099StrPegSecurityDesc( new MyStringType( oneElement ) );
+        assertEquals( "Tag1099StrPegSecurityDesc\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

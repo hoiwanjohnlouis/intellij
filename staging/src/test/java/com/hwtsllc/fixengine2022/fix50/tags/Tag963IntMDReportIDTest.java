@@ -58,4 +58,64 @@ class Tag963IntMDReportIDTest {
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag963IntMDReportID tagData;
+        int oneElement;
+
+        oneElement = Tag963IntMDReportID.TESTA_INT_MD_REPORT_ID;
+        tagData = new Tag963IntMDReportID( new MyIntType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag963IntMDReportID.TESTB_INT_MD_REPORT_ID;
+        tagData = new Tag963IntMDReportID( new MyIntType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag963IntMDReportID tagData;
+        int oneElement;
+
+        oneElement = Tag963IntMDReportID.TESTB_INT_MD_REPORT_ID;
+        tagData = new Tag963IntMDReportID( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag963IntMDReportID tagData;
+        int oneElement;
+
+        oneElement = Tag963IntMDReportID.TESTB_INT_MD_REPORT_ID;
+        tagData = new Tag963IntMDReportID( new MyIntType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag963IntMDReportID tagData;
+        int oneElement;
+
+        oneElement = Tag963IntMDReportID.TESTB_INT_MD_REPORT_ID;
+        tagData = new Tag963IntMDReportID( new MyIntType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag963IntMDReportID tagData;
+        int oneElement;
+
+        oneElement = Tag963IntMDReportID.TESTA_INT_MD_REPORT_ID;
+        tagData = new Tag963IntMDReportID( new MyIntType( oneElement ) );
+        assertEquals( "Tag963IntMDReportID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
+    }
 }

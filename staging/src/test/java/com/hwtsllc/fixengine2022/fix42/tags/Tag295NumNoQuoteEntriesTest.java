@@ -78,7 +78,7 @@ class Tag295NumNoQuoteEntriesTest {
         oneElement = Tag295NumNoQuoteEntries.TESTB_NUM_NO_QUOTE_ENTRIES;
         tagData = new Tag295NumNoQuoteEntries( new MyNumInGroupType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void TagToValuePairStringTest() {

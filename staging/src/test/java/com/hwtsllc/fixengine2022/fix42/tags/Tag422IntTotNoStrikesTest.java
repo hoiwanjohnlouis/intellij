@@ -83,7 +83,7 @@ class Tag422IntTotNoStrikesTest {
         oneElement = Tag422IntTotNoStrikes.TESTB_INT_TOT_NO_STRIKES;
         tagData = new Tag422IntTotNoStrikes( new MyIntType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {

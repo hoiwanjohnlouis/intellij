@@ -78,7 +78,7 @@ class Tag294QtyDefOfferSizeTest {
         oneElement = Tag294QtyDefOfferSize.TESTB_QTY_DEF_OFFER_SIZE;
         tagData = new Tag294QtyDefOfferSize( new MyQtyType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {

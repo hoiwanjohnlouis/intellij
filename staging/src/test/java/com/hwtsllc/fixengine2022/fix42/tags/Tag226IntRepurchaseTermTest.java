@@ -83,7 +83,7 @@ class Tag226IntRepurchaseTermTest {
         oneElement = Tag226IntRepurchaseTerm.TESTB_INT_REPURCHASE_TERM;
         tagData = new Tag226IntRepurchaseTerm( new MyIntType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {

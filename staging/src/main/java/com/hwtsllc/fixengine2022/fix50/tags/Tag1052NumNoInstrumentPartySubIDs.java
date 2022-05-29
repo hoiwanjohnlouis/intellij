@@ -62,7 +62,11 @@ public class Tag1052NumNoInstrumentPartySubIDs extends FIX50Abstract implements 
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ public class Tag1052NumNoInstrumentPartySubIDs extends FIX50Abstract implements 
         Tag1052NumNoInstrumentPartySubIDs tagData;
 
         tagData = new Tag1052NumNoInstrumentPartySubIDs(new MyNumInGroupType(TESTA_NUM_NO_INSTRUMENT_PARTY_SUB_IDS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1052NumNoInstrumentPartySubIDs(new MyNumInGroupType(TESTB_NUM_NO_INSTRUMENT_PARTY_SUB_IDS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -62,7 +62,11 @@ public class Tag1062NumNoUndlyInstrumentPartySubIDs extends FIX50Abstract implem
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ public class Tag1062NumNoUndlyInstrumentPartySubIDs extends FIX50Abstract implem
         Tag1062NumNoUndlyInstrumentPartySubIDs tagData;
 
         tagData = new Tag1062NumNoUndlyInstrumentPartySubIDs(new MyNumInGroupType(TESTA_NUM_NO_UNDLY_INSTRUMENT_PARTY_SUB_IDS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1062NumNoUndlyInstrumentPartySubIDs(new MyNumInGroupType(TESTB_NUM_NO_UNDLY_INSTRUMENT_PARTY_SUB_IDS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

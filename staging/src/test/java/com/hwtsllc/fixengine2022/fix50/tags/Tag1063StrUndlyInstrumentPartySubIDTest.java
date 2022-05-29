@@ -47,9 +47,81 @@ class Tag1063StrUndlyInstrumentPartySubIDTest {
     @Test
     void Tag1063Test() {
         Tag1063StrUndlyInstrumentPartySubID tagData;
+        String oneElement;
 
-        tagData = new Tag1063StrUndlyInstrumentPartySubID( new MyStringType("Chloe Kim") );
-        assertEquals( "Chloe Kim", tagData.getDataValue() );
+        oneElement = "Chloe Kim";
+        tagData = new Tag1063StrUndlyInstrumentPartySubID( new MyStringType(oneElement) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag1063StrUndlyInstrumentPartySubID.TESTA_STR_UNDLY_INSTRUMENT_PARTY_SUB_ID;
+        tagData = new Tag1063StrUndlyInstrumentPartySubID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag1063StrUndlyInstrumentPartySubID.TESTB_STR_UNDLY_INSTRUMENT_PARTY_SUB_ID;
+        tagData = new Tag1063StrUndlyInstrumentPartySubID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag1063StrUndlyInstrumentPartySubID tagData;
+        String oneElement;
+
+        oneElement = Tag1063StrUndlyInstrumentPartySubID.TESTA_STR_UNDLY_INSTRUMENT_PARTY_SUB_ID;
+        tagData = new Tag1063StrUndlyInstrumentPartySubID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag1063StrUndlyInstrumentPartySubID.TESTB_STR_UNDLY_INSTRUMENT_PARTY_SUB_ID;
+        tagData = new Tag1063StrUndlyInstrumentPartySubID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag1063StrUndlyInstrumentPartySubID tagData;
+        String oneElement;
+
+        oneElement = Tag1063StrUndlyInstrumentPartySubID.TESTB_STR_UNDLY_INSTRUMENT_PARTY_SUB_ID;
+        tagData = new Tag1063StrUndlyInstrumentPartySubID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag1063StrUndlyInstrumentPartySubID tagData;
+        String oneElement;
+
+        oneElement = Tag1063StrUndlyInstrumentPartySubID.TESTB_STR_UNDLY_INSTRUMENT_PARTY_SUB_ID;
+        tagData = new Tag1063StrUndlyInstrumentPartySubID( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag1063StrUndlyInstrumentPartySubID tagData;
+        String oneElement;
+
+        oneElement = Tag1063StrUndlyInstrumentPartySubID.TESTB_STR_UNDLY_INSTRUMENT_PARTY_SUB_ID;
+        tagData = new Tag1063StrUndlyInstrumentPartySubID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag1063StrUndlyInstrumentPartySubID tagData;
+        String oneElement;
+
+        oneElement = Tag1063StrUndlyInstrumentPartySubID.TESTA_STR_UNDLY_INSTRUMENT_PARTY_SUB_ID;
+        tagData = new Tag1063StrUndlyInstrumentPartySubID( new MyStringType( oneElement ) );
+        assertEquals( "Tag1063StrUndlyInstrumentPartySubID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

@@ -62,7 +62,11 @@ public class Tag989StrSecondaryIndividualAllocID extends FIX50Abstract implement
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ public class Tag989StrSecondaryIndividualAllocID extends FIX50Abstract implement
         Tag989StrSecondaryIndividualAllocID tagData;
 
         tagData = new Tag989StrSecondaryIndividualAllocID(new MyStringType(TESTA_STR_SECONDARY_INDIVIDUAL_ALLOC_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag989StrSecondaryIndividualAllocID(new MyStringType(TESTB_STR_SECONDARY_INDIVIDUAL_ALLOC_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

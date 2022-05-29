@@ -62,7 +62,11 @@ public class Tag1085QtyDisplayLowQty extends FIX50Abstract implements LogValuePa
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ public class Tag1085QtyDisplayLowQty extends FIX50Abstract implements LogValuePa
         Tag1085QtyDisplayLowQty tagData;
 
         tagData = new Tag1085QtyDisplayLowQty(new MyQtyType(TESTA_QTY_DISPLAY_LOW_QTY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1085QtyDisplayLowQty(new MyQtyType(TESTB_QTY_DISPLAY_LOW_QTY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -78,7 +78,7 @@ class Tag331QtySellVolumeTest {
         oneElement = Tag331QtySellVolume.TESTB_QTY_SELL_VOLUME;
         tagData = new Tag331QtySellVolume( new MyQtyType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {

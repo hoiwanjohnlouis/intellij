@@ -62,7 +62,11 @@ public class Tag983QtyExpQty extends FIX50Abstract implements LogValuePairString
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ public class Tag983QtyExpQty extends FIX50Abstract implements LogValuePairString
         Tag983QtyExpQty tagData;
 
         tagData = new Tag983QtyExpQty(new MyQtyType(TESTA_QTY_EXP_QTY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag983QtyExpQty(new MyQtyType(TESTB_QTY_EXP_QTY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -62,7 +62,11 @@ public class Tag958StrStrategyParameterName extends FIX50Abstract implements Log
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ public class Tag958StrStrategyParameterName extends FIX50Abstract implements Log
         Tag958StrStrategyParameterName tagData;
 
         tagData = new Tag958StrStrategyParameterName(new MyStringType(TESTA_STR_STRATEGY_PARAMETER_NAME) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag958StrStrategyParameterName(new MyStringType(TESTB_STR_STRATEGY_PARAMETER_NAME) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

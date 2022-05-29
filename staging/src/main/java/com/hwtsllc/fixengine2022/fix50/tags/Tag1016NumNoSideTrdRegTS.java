@@ -62,7 +62,11 @@ public class Tag1016NumNoSideTrdRegTS extends FIX50Abstract implements LogValueP
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ public class Tag1016NumNoSideTrdRegTS extends FIX50Abstract implements LogValueP
         Tag1016NumNoSideTrdRegTS tagData;
 
         tagData = new Tag1016NumNoSideTrdRegTS(new MyNumInGroupType(TESTA_NUM_NO_SIDE_TRD_REG_TS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1016NumNoSideTrdRegTS(new MyNumInGroupType(TESTB_NUM_NO_SIDE_TRD_REG_TS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

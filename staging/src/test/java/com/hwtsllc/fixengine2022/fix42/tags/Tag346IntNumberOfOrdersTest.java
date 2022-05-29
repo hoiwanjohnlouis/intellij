@@ -78,7 +78,7 @@ class Tag346IntNumberOfOrdersTest {
         oneElement = Tag346IntNumberOfOrders.TESTB_INT_NUMBER_OF_ORDERS;
         tagData = new Tag346IntNumberOfOrders( new MyIntType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {

@@ -62,7 +62,11 @@ public class Tag1114StrTriggerTradingSessionSubID extends FIX50Abstract implemen
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ public class Tag1114StrTriggerTradingSessionSubID extends FIX50Abstract implemen
         Tag1114StrTriggerTradingSessionSubID tagData;
 
         tagData = new Tag1114StrTriggerTradingSessionSubID(new MyStringType(TESTA_STR_TRIGGER_TRADING_SESSION_SUB_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1114StrTriggerTradingSessionSubID(new MyStringType(TESTB_STR_TRIGGER_TRADING_SESSION_SUB_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

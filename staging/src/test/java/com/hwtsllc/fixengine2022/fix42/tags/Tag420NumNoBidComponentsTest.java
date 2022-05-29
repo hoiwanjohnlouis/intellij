@@ -78,7 +78,7 @@ class Tag420NumNoBidComponentsTest {
         oneElement = Tag420NumNoBidComponents.TESTB_NUM_NO_BID_COMPONENTS;
         tagData = new Tag420NumNoBidComponents( new MyNumInGroupType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void TagToValuePairStringTest() {

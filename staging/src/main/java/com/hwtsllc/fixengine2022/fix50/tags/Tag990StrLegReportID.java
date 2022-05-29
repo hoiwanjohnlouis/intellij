@@ -62,7 +62,11 @@ public class Tag990StrLegReportID extends FIX50Abstract implements LogValuePairS
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ public class Tag990StrLegReportID extends FIX50Abstract implements LogValuePairS
         Tag990StrLegReportID tagData;
 
         tagData = new Tag990StrLegReportID(new MyStringType(TESTA_STR_LEG_REPORT_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag990StrLegReportID(new MyStringType(TESTB_STR_LEG_REPORT_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

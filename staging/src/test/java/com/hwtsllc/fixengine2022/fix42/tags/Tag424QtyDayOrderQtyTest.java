@@ -81,7 +81,7 @@ class Tag424QtyDayOrderQtyTest {
         oneElement = Tag424QtyDayOrderQty.TESTB_QTY_DAY_ORDER_QTY;
         tagData = new Tag424QtyDayOrderQty( new MyQtyType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {

@@ -62,7 +62,11 @@ public class Tag1088QtyRefreshQty extends FIX50Abstract implements LogValuePairS
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ public class Tag1088QtyRefreshQty extends FIX50Abstract implements LogValuePairS
         Tag1088QtyRefreshQty tagData;
 
         tagData = new Tag1088QtyRefreshQty(new MyQtyType(TESTA_QTY_REFRESH_QTY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1088QtyRefreshQty(new MyQtyType(TESTB_QTY_REFRESH_QTY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

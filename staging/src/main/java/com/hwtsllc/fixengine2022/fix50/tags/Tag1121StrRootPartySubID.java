@@ -62,7 +62,11 @@ public class Tag1121StrRootPartySubID extends FIX50Abstract implements LogValueP
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ public class Tag1121StrRootPartySubID extends FIX50Abstract implements LogValueP
         Tag1121StrRootPartySubID tagData;
 
         tagData = new Tag1121StrRootPartySubID(new MyStringType(TESTA_STR_ROOT_PARTY_SUB_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1121StrRootPartySubID(new MyStringType(TESTB_STR_ROOT_PARTY_SUB_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

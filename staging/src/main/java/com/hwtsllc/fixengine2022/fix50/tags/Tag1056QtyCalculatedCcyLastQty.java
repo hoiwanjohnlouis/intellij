@@ -64,7 +64,11 @@ public class Tag1056QtyCalculatedCcyLastQty extends FIX50Abstract implements Log
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -82,13 +86,9 @@ public class Tag1056QtyCalculatedCcyLastQty extends FIX50Abstract implements Log
         Tag1056QtyCalculatedCcyLastQty tagData;
 
         tagData = new Tag1056QtyCalculatedCcyLastQty(new MyQtyType(TESTA_QTY_CALCULATED_CCY_LAST_QTY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1056QtyCalculatedCcyLastQty(new MyQtyType(TESTB_QTY_CALCULATED_CCY_LAST_QTY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

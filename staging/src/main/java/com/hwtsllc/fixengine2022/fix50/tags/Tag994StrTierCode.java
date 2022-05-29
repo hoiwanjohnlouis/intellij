@@ -62,7 +62,11 @@ public class Tag994StrTierCode extends FIX50Abstract implements LogValuePairStri
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -80,13 +84,9 @@ public class Tag994StrTierCode extends FIX50Abstract implements LogValuePairStri
         Tag994StrTierCode tagData;
 
         tagData = new Tag994StrTierCode(new MyStringType(TESTA_STR_TIER_CODE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag994StrTierCode(new MyStringType(TESTB_STR_TIER_CODE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -46,9 +46,81 @@ class Tag1098StrPegSymbolTest {
     @Test
     void Tag1098Test() {
         Tag1098StrPegSymbol tagData;
+        String oneElement;
 
-        tagData = new Tag1098StrPegSymbol( new MyStringType("Chloe Kim") );
-        assertEquals( "Chloe Kim", tagData.getDataValue() );
+        oneElement = "Chloe Kim";
+        tagData = new Tag1098StrPegSymbol( new MyStringType(oneElement) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag1098StrPegSymbol.TESTA_STR_PEG_SYMBOL;
+        tagData = new Tag1098StrPegSymbol( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag1098StrPegSymbol.TESTB_STR_PEG_SYMBOL;
+        tagData = new Tag1098StrPegSymbol( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag1098StrPegSymbol tagData;
+        String oneElement;
+
+        oneElement = Tag1098StrPegSymbol.TESTA_STR_PEG_SYMBOL;
+        tagData = new Tag1098StrPegSymbol( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag1098StrPegSymbol.TESTB_STR_PEG_SYMBOL;
+        tagData = new Tag1098StrPegSymbol( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag1098StrPegSymbol tagData;
+        String oneElement;
+
+        oneElement = Tag1098StrPegSymbol.TESTB_STR_PEG_SYMBOL;
+        tagData = new Tag1098StrPegSymbol( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag1098StrPegSymbol tagData;
+        String oneElement;
+
+        oneElement = Tag1098StrPegSymbol.TESTB_STR_PEG_SYMBOL;
+        tagData = new Tag1098StrPegSymbol( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag1098StrPegSymbol tagData;
+        String oneElement;
+
+        oneElement = Tag1098StrPegSymbol.TESTB_STR_PEG_SYMBOL;
+        tagData = new Tag1098StrPegSymbol( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag1098StrPegSymbol tagData;
+        String oneElement;
+
+        oneElement = Tag1098StrPegSymbol.TESTA_STR_PEG_SYMBOL;
+        tagData = new Tag1098StrPegSymbol( new MyStringType( oneElement ) );
+        assertEquals( "Tag1098StrPegSymbol\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

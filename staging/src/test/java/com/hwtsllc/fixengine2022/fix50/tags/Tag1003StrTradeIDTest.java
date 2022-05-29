@@ -46,9 +46,81 @@ class Tag1003StrTradeIDTest {
     @Test
     void Tag1003Test() {
         Tag1003StrTradeID tagData;
+        String oneElement;
 
-        tagData = new Tag1003StrTradeID( new MyStringType("Chloe Kim") );
-        assertEquals( "Chloe Kim", tagData.getDataValue() );
+        oneElement = "Chloe Kim";
+        tagData = new Tag1003StrTradeID( new MyStringType(oneElement) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag1003StrTradeID.TESTA_STR_TRADE_ID;
+        tagData = new Tag1003StrTradeID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag1003StrTradeID.TESTB_STR_TRADE_ID;
+        tagData = new Tag1003StrTradeID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag1003StrTradeID tagData;
+        String oneElement;
+
+        oneElement = Tag1003StrTradeID.TESTA_STR_TRADE_ID;
+        tagData = new Tag1003StrTradeID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag1003StrTradeID.TESTB_STR_TRADE_ID;
+        tagData = new Tag1003StrTradeID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag1003StrTradeID tagData;
+        String oneElement;
+
+        oneElement = Tag1003StrTradeID.TESTB_STR_TRADE_ID;
+        tagData = new Tag1003StrTradeID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag1003StrTradeID tagData;
+        String oneElement;
+
+        oneElement = Tag1003StrTradeID.TESTB_STR_TRADE_ID;
+        tagData = new Tag1003StrTradeID( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag1003StrTradeID tagData;
+        String oneElement;
+
+        oneElement = Tag1003StrTradeID.TESTB_STR_TRADE_ID;
+        tagData = new Tag1003StrTradeID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag1003StrTradeID tagData;
+        String oneElement;
+
+        oneElement = Tag1003StrTradeID.TESTA_STR_TRADE_ID;
+        tagData = new Tag1003StrTradeID( new MyStringType( oneElement ) );
+        assertEquals( "Tag1003StrTradeID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

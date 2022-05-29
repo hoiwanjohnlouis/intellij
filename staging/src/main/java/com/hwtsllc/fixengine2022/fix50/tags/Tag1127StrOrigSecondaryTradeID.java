@@ -63,7 +63,11 @@ public class Tag1127StrOrigSecondaryTradeID extends FIX50Abstract implements Log
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -81,13 +85,9 @@ public class Tag1127StrOrigSecondaryTradeID extends FIX50Abstract implements Log
         Tag1127StrOrigSecondaryTradeID tagData;
 
         tagData = new Tag1127StrOrigSecondaryTradeID(new MyStringType(TESTA_STR_ORIG_SECONDARY_TRADE_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag1127StrOrigSecondaryTradeID(new MyStringType(TESTB_STR_ORIG_SECONDARY_TRADE_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }
