@@ -36,7 +36,7 @@ public class Tag1045FloUnderlyingFXRate extends FIX50Abstract implements LogValu
     public final static float TESTA_FLO_UNDERLYING_FX_RATE
             = 0.1045F;
     public final static float TESTB_FLO_UNDERLYING_FX_RATE
-            = -0.1045F;
+            = 0.01045F;
 
     public Tag1045FloUnderlyingFXRate(MyFloatType dataValue) {
         setFixType( FIX50.FIX1045_FLO_UNDERLYING_FX_RATE );

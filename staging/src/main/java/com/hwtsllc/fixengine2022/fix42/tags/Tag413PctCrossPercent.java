@@ -35,7 +35,7 @@ public class Tag413PctCrossPercent extends FIX42Abstract implements LogValuePair
     public final static double TESTA_PCT_CROSS_PERCENT
             = 0.0413D;
     public final static double TESTB_PCT_CROSS_PERCENT
-            = 0.0314D;
+            = 0.00413D;
 
     public Tag413PctCrossPercent(MyPercentageType dataValue) {
         setFixType(FIX42.FIX413_PCT_CROSS_PERCENT);

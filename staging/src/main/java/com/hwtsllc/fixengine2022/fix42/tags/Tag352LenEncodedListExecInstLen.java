@@ -35,7 +35,7 @@ public class Tag352LenEncodedListExecInstLen extends FIX42Abstract implements Lo
     public final static int TESTA_LEN_ENCODED_LIST_EXEC_INST_LEN
             = 352;
     public final static int TESTB_LEN_ENCODED_LIST_EXEC_INST_LEN
-            = 253;
+            = 52;
 
     public Tag352LenEncodedListExecInstLen(MyLengthType dataValue) {
         setFixType(FIX42.FIX352_LEN_ENCODED_LIST_EXEC_INST_LEN);

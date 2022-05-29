@@ -33,9 +33,9 @@ public class Tag346IntNumberOfOrders extends FIX42Abstract implements LogValuePa
     private final MyIntType dataValue;
 
     public final static int TESTA_INT_NUMBER_OF_ORDERS
-            = 60;
+            = 346;
     public final static int TESTB_INT_NUMBER_OF_ORDERS
-            = 30;
+            = 46;
 
     public Tag346IntNumberOfOrders(MyIntType dataValue) {
         setFixType(FIX42.FIX346_INT_NUMBER_OF_ORDERS);

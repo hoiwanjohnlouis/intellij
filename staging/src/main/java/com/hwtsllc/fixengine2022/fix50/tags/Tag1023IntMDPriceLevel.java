@@ -38,7 +38,7 @@ public class Tag1023IntMDPriceLevel extends FIX50Abstract implements LogValuePai
     public final static int TESTA_INT_MD_PRICE_LEVEL
             = 1023;
     public final static int TESTB_INT_MD_PRICE_LEVEL
-            = 3201;
+            = 23;
 
     public Tag1023IntMDPriceLevel(MyIntType dataValue) {
         setFixType(FIX50.FIX1023_INT_MD_PRICE_LEVEL);

@@ -40,9 +40,9 @@ public class Tag252PctLegRepurchaseRate extends FIX42Abstract implements LogValu
     private final MyPercentageType dataValue;
 
     public final static double TESTA_PCT_LEG_REPURCHASE_RATE
-            = 0.0252D;
-    public final static double TESTB_PCT_LEG_REPURCHASE_RATE
             = 0.252D;
+    public final static double TESTB_PCT_LEG_REPURCHASE_RATE
+            = 0.0252D;
 
     public Tag252PctLegRepurchaseRate(MyPercentageType dataValue) {
         setFixType(FIX42.FIX252_PCT_LEG_REPURCHASE_RATE);

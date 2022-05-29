@@ -38,7 +38,7 @@ public class Tag223PctCouponRate extends FIX42Abstract implements LogValuePairSt
     public final static double TESTA_PCT_COUPON_RATE
             = 0.0223D;
     public final static double TESTB_PCT_COUPON_RATE
-            = 0.0322D;
+            = 0.00223D;
 
     public Tag223PctCouponRate(MyPercentageType dataValue) {
         setFixType(FIX42.FIX223_PCT_COUPON_RATE);

@@ -37,7 +37,7 @@ public class Tag405PctEFPTrackingError extends FIX42Abstract implements LogValue
     public final static double TESTA_PCT_EFP_TRACKING_ERROR
             = 0.0405D;
     public final static double TESTB_PCT_EFP_TRACKING_ERROR
-            = 0.0504D;
+            = 0.00405D;
 
     public Tag405PctEFPTrackingError(MyPercentageType dataValue) {
         setFixType(FIX42.FIX405_PCT_EFP_TRACKING_ERROR);

@@ -35,7 +35,7 @@ public class Tag295NumNoQuoteEntries extends FIX42Abstract implements LogValuePa
     public final static int TESTA_NUM_NO_QUOTE_ENTRIES
             = 295;
     public final static int TESTB_NUM_NO_QUOTE_ENTRIES
-            = 592;
+            = 95;
 
     public Tag295NumNoQuoteEntries(MyNumInGroupType dataValue) {
         setFixType(FIX42.FIX295_NUM_NO_QUOTE_ENTRIES);

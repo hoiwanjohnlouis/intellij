@@ -35,7 +35,7 @@ public class Tag1085QtyDisplayLowQty extends FIX50Abstract implements LogValuePa
     public final static int TESTA_QTY_DISPLAY_LOW_QTY
             = 1085;
     public final static int TESTB_QTY_DISPLAY_LOW_QTY
-            = 5801;
+            = 85;
 
     public Tag1085QtyDisplayLowQty(MyQtyType dataValue) {
         setFixType(FIX50.FIX1085_QTY_DISPLAY_LOW_QTY);

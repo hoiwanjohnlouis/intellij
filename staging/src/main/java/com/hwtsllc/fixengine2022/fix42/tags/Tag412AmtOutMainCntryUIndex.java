@@ -33,9 +33,9 @@ public class Tag412AmtOutMainCntryUIndex extends FIX42Abstract implements LogVal
     private final MyAmtType dataValue;
 
     public final static double TESTA_AMT_OUT_MAIN_CNTRY_U_INDEX
-            = 4.12D;
+            = 0.412D;
     public final static double TESTB_AMT_OUT_MAIN_CNTRY_U_INDEX
-            = 2.14D;
+            = 0.0412D;
 
     public Tag412AmtOutMainCntryUIndex(MyAmtType dataValue) {
         setFixType(FIX42.FIX412_AMT_OUT_MAIN_CNTRY_U_INDEX);

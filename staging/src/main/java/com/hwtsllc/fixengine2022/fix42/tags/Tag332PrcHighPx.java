@@ -33,9 +33,9 @@ public class Tag332PrcHighPx extends FIX42Abstract implements LogValuePairString
     private final MyPriceType dataValue;
 
     public final static double TESTA_PRC_HIGH_PX
-            = 3.32D;
+            = 332.00D;
     public final static double TESTB_PRC_HIGH_PX
-            = 2.33D;
+            = 0.332D;
 
     public Tag332PrcHighPx(MyPriceType dataValue) {
         setFixType(FIX42.FIX332_PRC_HIGH_PX);

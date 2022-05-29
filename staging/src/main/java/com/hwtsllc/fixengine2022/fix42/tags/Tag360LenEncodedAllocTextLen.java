@@ -35,7 +35,7 @@ public class Tag360LenEncodedAllocTextLen extends FIX42Abstract implements LogVa
     public final static int TESTA_LEN_ENCODED_ALLOC_TEXT_LEN
             = 360;
     public final static int TESTB_LEN_ENCODED_ALLOC_TEXT_LEN
-            = 63;
+            = 60;
 
     public Tag360LenEncodedAllocTextLen(MyLengthType dataValue) {
         setFixType(FIX42.FIX360_LEN_ENCODED_ALLOC_TEXT_LEN);

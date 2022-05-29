@@ -38,9 +38,9 @@ public class Tag304IntTotNoQuoteEntries extends FIX42Abstract implements LogValu
     private final MyIntType dataValue;
 
     public final static int TESTA_INT_TOT_QUOTE_ENTRIES
-            = 60;
+            = 304;
     public final static int TESTB_INT_TOT_QUOTE_ENTRIES
-            = 30;
+            = 4;
 
     public Tag304IntTotNoQuoteEntries(MyIntType dataValue) {
         setFixType(FIX42.FIX304_INT_TOT_QUOTE_ENTRIES);

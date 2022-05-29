@@ -35,7 +35,7 @@ public class Tag428NumNoStrikes extends FIX42Abstract implements LogValuePairStr
     public final static int TESTA_NUM_NO_STRIKES
             = 428;
     public final static int TESTB_NUM_NO_STRIKES
-            = 824;
+            = 28;
 
     public Tag428NumNoStrikes(MyNumInGroupType dataValue) {
         setFixType(FIX42.FIX428_NUM_NO_STRIKES);

@@ -40,9 +40,9 @@ public class Tag251IntLegRepurchaseTerm extends FIX42Abstract implements LogValu
     private final MyIntType dataValue;
 
     public final static int TESTA_INT_LEG_REPURCHASE_TERM
-            = 60;
+            = 251;
     public final static int TESTB_INT_LEG_REPURCHASE_TERM
-            = 30;
+            = 51;
 
     public Tag251IntLegRepurchaseTerm(MyIntType dataValue) {
         setFixType(FIX42.FIX251_INT_LEG_REPURCHASE_TERM);

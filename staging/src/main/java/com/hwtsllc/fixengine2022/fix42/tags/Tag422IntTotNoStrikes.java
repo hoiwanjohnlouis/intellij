@@ -38,9 +38,9 @@ public class Tag422IntTotNoStrikes extends FIX42Abstract implements LogValuePair
     private final MyIntType dataValue;
 
     public final static int TESTA_INT_TOT_NO_STRIKES
-            = 60;
+            = 422;
     public final static int TESTB_INT_TOT_NO_STRIKES
-            = 30;
+            = 22;
 
     public Tag422IntTotNoStrikes(MyIntType dataValue) {
         setFixType(FIX42.FIX422_INT_TOT_NO_STRIKES);

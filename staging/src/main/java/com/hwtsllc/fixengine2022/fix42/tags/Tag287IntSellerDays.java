@@ -33,9 +33,9 @@ public class Tag287IntSellerDays extends FIX42Abstract implements LogValuePairSt
     private final MyIntType dataValue;
 
     public final static int TESTA_INT_SELLER_DAYS
-            = 60;
+            = 287;
     public final static int TESTB_INT_SELLER_DAYS
-            = 30;
+            = 87;
 
     public Tag287IntSellerDays(MyIntType dataValue) {
         setFixType(FIX42.FIX287_INT_SELLER_DAYS);

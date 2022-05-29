@@ -35,7 +35,7 @@ public class Tag387QtyTotalVolumeTraded extends FIX42Abstract implements LogValu
     public final static int TESTA_QTY_TOTAL_VOLUME_TRADED
             = 387;
     public final static int TESTB_QTY_TOTAL_VOLUME_TRADED
-            = 783;
+            = 87;
 
     public Tag387QtyTotalVolumeTraded(MyQtyType dataValue) {
         setFixType(FIX42.FIX387_QTY_TOTAL_VOLUME_TRADED);

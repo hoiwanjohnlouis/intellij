@@ -40,9 +40,9 @@ public class Tag244IntUnderlyingRepurchaseTerm extends FIX42Abstract implements 
     private final MyIntType dataValue;
 
     public final static int TESTA_INT_UNDERLYING_REPURCHASE_TERM
-            = 60;
+            = 244;
     public final static int TESTB_INT_UNDERLYING_REPURCHASE_TERM
-            = 30;
+            = 44;
 
     public Tag244IntUnderlyingRepurchaseTerm(MyIntType dataValue) {
         setFixType(FIX42.FIX244_INT_UNDERLYING_REPURCHASE_TERM);

@@ -37,7 +37,7 @@ public class Tag236PctYield extends FIX42Abstract implements LogValuePairString,
     public final static double TESTA_PCT_YIELD
             = 0.0236D;
     public final static double TESTB_PCT_YIELD
-            = 0.0632D;
+            = 0.00236D;
 
     public Tag236PctYield(MyPercentageType dataValue) {
         setFixType(FIX42.FIX236_PCT_YIELD);

@@ -35,9 +35,9 @@ public class Tag238AmtConcession extends FIX42Abstract implements LogValuePairSt
     private final MyAmtType dataValue;
 
     public final static double TESTA_AMT_CONCESSION
-            = 2.38D;
+            = 0.238D;
     public final static double TESTB_AMT_CONCESSION
-            = 8.32D;
+            = 0.0238D;
 
     public Tag238AmtConcession(MyAmtType dataValue) {
         setFixType(FIX42.FIX238_AMT_CONCESSION);

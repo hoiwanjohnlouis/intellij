@@ -35,7 +35,7 @@ public class Tag425QtyDayCumQty extends FIX42Abstract implements LogValuePairStr
     public final static int TESTA_QTY_DAY_CUM_QTY
             = 425;
     public final static int TESTB_QTY_DAY_CUM_QTY
-            = 524;
+            = 25;
 
     public Tag425QtyDayCumQty(MyQtyType dataValue) {
         setFixType(FIX42.FIX425_QTY_DAY_CUM_QTY);

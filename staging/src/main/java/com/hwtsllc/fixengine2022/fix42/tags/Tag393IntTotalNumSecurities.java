@@ -35,9 +35,9 @@ public class Tag393IntTotalNumSecurities extends FIX42Abstract implements LogVal
     private final MyIntType dataValue;
 
     public final static int TESTA_INT_TOTAL_NUM_SECURITIES
-            = 60;
+            = 393;
     public final static int TESTB_INT_TOTAL_NUM_SECURITIES
-            = 30;
+            = 93;
 
     public Tag393IntTotalNumSecurities(MyIntType dataValue) {
         setFixType(FIX42.FIX393_INT_TOTAL_NUM_SECURITIES);

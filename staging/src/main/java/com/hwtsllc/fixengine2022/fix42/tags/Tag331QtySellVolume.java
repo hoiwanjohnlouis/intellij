@@ -35,7 +35,7 @@ public class Tag331QtySellVolume extends FIX42Abstract implements LogValuePairSt
     public final static int TESTA_QTY_SELL_VOLUME
             = 331;
     public final static int TESTB_QTY_SELL_VOLUME
-            = 133;
+            = 31;
 
     public Tag331QtySellVolume(MyQtyType dataValue) {
         setFixType(FIX42.FIX331_QTY_SELL_VOLUME);

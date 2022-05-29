@@ -91,7 +91,7 @@ class Tag218PxoSpreadTest {
         oneElement = Tag218PxoSpread.TESTB_PXO_SPREAD;
         tagData = new Tag218PxoSpread( new MyPriceOffsetType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void TagToValuePairStringTest() {

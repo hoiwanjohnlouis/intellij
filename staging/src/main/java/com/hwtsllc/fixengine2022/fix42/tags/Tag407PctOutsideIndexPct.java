@@ -37,7 +37,7 @@ public class Tag407PctOutsideIndexPct extends FIX42Abstract implements LogValueP
     public final static double TESTA_PCT_OUTSIDE_INDEX_PCT
             = 0.0407D;
     public final static double TESTB_PCT_OUTSIDE_INDEX_PCT
-            = 0.0704D;
+            = 0.00407D;
 
     public Tag407PctOutsideIndexPct(MyPercentageType dataValue) {
         setFixType(FIX42.FIX407_PCT_OUTSIDE_INDEX_PCT);

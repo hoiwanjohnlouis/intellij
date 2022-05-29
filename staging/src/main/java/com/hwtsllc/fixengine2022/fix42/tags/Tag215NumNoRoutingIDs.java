@@ -34,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag215NumNoRoutingIDs extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyNumInGroupType dataValue;
 
-    public final static int TESTA_NUM_NO_ROUTING_IDS = 215; // fake data
-    public final static int TESTB_NUM_NO_ROUTING_IDS = 512;
+    public final static int TESTA_NUM_NO_ROUTING_IDS
+            = 215;
+    public final static int TESTB_NUM_NO_ROUTING_IDS
+            = 15;
 
     public Tag215NumNoRoutingIDs(MyNumInGroupType dataValue) {
         setFixType(FIX42.FIX215_NUM_NO_ROUTING_IDS);

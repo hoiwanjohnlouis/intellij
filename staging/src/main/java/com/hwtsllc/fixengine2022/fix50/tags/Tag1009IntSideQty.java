@@ -35,7 +35,7 @@ public class Tag1009IntSideQty extends FIX50Abstract implements LogValuePairStri
     public final static int TESTA_INT_SIDE_QTY
             = 1009;
     public final static int TESTB_INT_SIDE_QTY
-            = 9001;
+            = 9;
 
     public Tag1009IntSideQty(MyIntType dataValue) {
         setFixType(FIX50.FIX1009_INT_SIDE_QTY);

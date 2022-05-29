@@ -35,9 +35,9 @@ public class Tag366PrcAllocPrice extends FIX42Abstract implements LogValuePairSt
     private final MyPriceType dataValue;
 
     public final static double TESTA_PRC_ALLOC_PRICE
-            = 3.66D;
+            = 0.366D;
     public final static double TESTB_PRC_ALLOC_PRICE
-            = 6.63D;
+            = 0.0366D;
 
     public Tag366PrcAllocPrice(MyPriceType dataValue) {
         setFixType(FIX42.FIX366_PRC_ALLOC_PRICE);

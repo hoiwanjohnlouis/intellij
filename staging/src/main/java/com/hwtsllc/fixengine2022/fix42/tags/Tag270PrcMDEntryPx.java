@@ -33,9 +33,9 @@ public class Tag270PrcMDEntryPx extends FIX42Abstract implements LogValuePairStr
     private final MyPriceType dataValue;
 
     public final static double TESTA_PRC_MD_ENTRY_PX
-            = 2.70D;
+            = 0.270D;
     public final static double TESTB_PRC_MD_ENTRY_PX
-            = 7.20D;
+            = 0.0270D;
 
     public Tag270PrcMDEntryPx(MyPriceType dataValue) {
         setFixType(FIX42.FIX270_PRC_MD_ENTRY_PX);

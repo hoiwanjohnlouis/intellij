@@ -33,9 +33,9 @@ public class Tag264IntMarketDepth extends FIX42Abstract implements LogValuePairS
     private final MyIntType dataValue;
 
     public final static int TESTA_INT_MARKET_DEPTH
-            = 60;
+            = 264;
     public final static int TESTB_INT_MARKET_DEPTH
-            = 30;
+            = 64;
 
     public Tag264IntMarketDepth(MyIntType dataValue) {
         setFixType(FIX42.FIX264_INT_MARKET_DEPTH);

@@ -40,7 +40,7 @@ public class Tag369SeqLastMsgSeqNumProcessed extends FIX42Abstract implements Lo
     public final static int TESTA_SEQ_LAST_MSG_SEQ_NUM_PROCESSED
             = 369;
     public final static int TESTB_SEQ_LAST_MSG_SEQ_NUM_PROCESSED
-            = 963;
+            = 69;
 
     public Tag369SeqLastMsgSeqNumProcessed(final MySeqNumType dataValue) {
         setFixType(FIX42.FIX369_SEQ_LAST_MSG_SEQ_NUM_PROCESSED);

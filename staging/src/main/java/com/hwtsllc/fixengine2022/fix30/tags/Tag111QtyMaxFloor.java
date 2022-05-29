@@ -40,7 +40,7 @@ public class Tag111QtyMaxFloor extends FIX30Abstract implements LogValuePairStri
     public final static int TESTA_QTY_MAX_FLOOR
             = 111;
     public final static int TESTB_QTY_MAX_FLOOR
-            = 1111;
+            = 11;
 
     public Tag111QtyMaxFloor(MyQtyType dataValue) {
         setFixType(FIX30.FIX111_QTY_MAX_FLOOR);

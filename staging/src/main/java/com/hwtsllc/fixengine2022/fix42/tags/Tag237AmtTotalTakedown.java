@@ -36,9 +36,9 @@ public class Tag237AmtTotalTakedown extends FIX42Abstract implements LogValuePai
     private final MyAmtType dataValue;
 
     public final static double TESTA_AMT_TOTAL_TAKEDOWN
-            = 2.37D;
+            = 0.237D;
     public final static double TESTB_AMT_TOTAL_TAKEDOWN
-            = 7.32D;
+            = 0.0237D;
 
     public Tag237AmtTotalTakedown(MyAmtType dataValue) {
         setFixType(FIX42.FIX237_AMT_TOTAL_TAKEDOWN);

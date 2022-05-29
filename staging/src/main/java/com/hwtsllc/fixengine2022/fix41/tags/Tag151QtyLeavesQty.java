@@ -38,8 +38,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag151QtyLeavesQty extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyQtyType dataValue;
 
-    public final static int TESTA_QTY_LEAVES_QTY = 200; // fake data
-    public final static int TESTB_QTY_LEAVES_QTY = 400;
+    public final static int TESTA_QTY_LEAVES_QTY
+            = 151;
+    public final static int TESTB_QTY_LEAVES_QTY
+            = 15;
 
     public Tag151QtyLeavesQty(MyQtyType dataValue) {
         setFixType(FIX41.FIX151_QTY_LEAVES_QTY);

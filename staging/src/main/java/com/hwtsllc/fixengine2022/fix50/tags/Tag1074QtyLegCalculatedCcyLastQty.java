@@ -37,7 +37,7 @@ public class Tag1074QtyLegCalculatedCcyLastQty extends FIX50Abstract implements 
     public final static int TESTA_QTY_LEG_CALCULATED_CCY_LAST_QTY
             = 1074;
     public final static int TESTB_QTY_LEG_CALCULATED_CCY_LAST_QTY
-            = 4701;
+            = 74;
 
     public Tag1074QtyLegCalculatedCcyLastQty(MyQtyType dataValue) {
         setFixType(FIX50.FIX1074_QTY_LEG_CALCULATED_CCY_LAST_QTY);

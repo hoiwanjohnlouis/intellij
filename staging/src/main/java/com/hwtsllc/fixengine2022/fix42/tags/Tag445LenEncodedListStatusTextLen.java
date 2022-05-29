@@ -35,7 +35,7 @@ public class Tag445LenEncodedListStatusTextLen extends FIX42Abstract implements 
     public final static int TESTA_LEN_LIST_STATUS_ENCODED_TEXT_LEN
             = 445;
     public final static int TESTB_LEN_LIST_STATUS_ENCODED_TEXT_LEN
-            = 544;
+            = 45;
 
     public Tag445LenEncodedListStatusTextLen(MyLengthType dataValue) {
         setFixType(FIX42.FIX445_LEN_LIST_STATUS_ENCODED_TEXT_LEN);

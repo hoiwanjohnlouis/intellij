@@ -35,7 +35,7 @@ public class Tag362LenEncodedUnderlyingIssuerLen extends FIX42Abstract implement
     public final static int TESTA_LEN_ENCODED_UNDERLYING_ISSUER_LEN
             = 362;
     public final static int TESTB_LEN_ENCODED_UNDERLYING_ISSUER_LEN
-            = 263;
+            = 62;
 
     public Tag362LenEncodedUnderlyingIssuerLen(MyLengthType dataValue) {
         setFixType(FIX42.FIX362_LEN_ENCODED_UNDERLYING_ISSUER_LEN);

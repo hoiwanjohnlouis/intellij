@@ -35,7 +35,7 @@ public class Tag1058NumNoUndlyInstrumentParties extends FIX50Abstract implements
     public final static int TESTA_NUM_NO_UNDLY_INSTRUMENT_PARTIES
             = 1058;
     public final static int TESTB_NUM_NO_UNDLY_INSTRUMENT_PARTIES
-            = 8501;
+            = 58;
 
     public Tag1058NumNoUndlyInstrumentParties(MyNumInGroupType dataValue) {
         setFixType(FIX50.FIX1058_NUM_NO_UNDLY_INSTRUMENT_PARTIES);

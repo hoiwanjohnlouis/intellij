@@ -35,7 +35,7 @@ public class Tag1052NumNoInstrumentPartySubIDs extends FIX50Abstract implements 
     public final static int TESTA_NUM_NO_INSTRUMENT_PARTY_SUB_IDS
             = 1052;
     public final static int TESTB_NUM_NO_INSTRUMENT_PARTY_SUB_IDS
-            = 2501;
+            = 52;
 
     public Tag1052NumNoInstrumentPartySubIDs(MyNumInGroupType dataValue) {
         setFixType(FIX50.FIX1052_NUM_NO_INSTRUMENT_PARTY_SUB_IDS);

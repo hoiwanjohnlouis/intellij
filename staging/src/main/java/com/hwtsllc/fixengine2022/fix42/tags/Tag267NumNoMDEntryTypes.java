@@ -35,7 +35,7 @@ public class Tag267NumNoMDEntryTypes extends FIX42Abstract implements LogValuePa
     public final static int TESTA_NUM_NO_MD_ENTRY_TYPES
             = 267;
     public final static int TESTB_NUM_NO_MD_ENTRY_TYPES
-            = 762;
+            = 67;
 
     public Tag267NumNoMDEntryTypes(MyNumInGroupType dataValue) {
         setFixType(FIX42.FIX267_NUM_NO_MD_ENTRY_TYPES);

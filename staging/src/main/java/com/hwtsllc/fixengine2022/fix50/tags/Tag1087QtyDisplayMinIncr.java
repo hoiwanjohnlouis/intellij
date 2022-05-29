@@ -38,7 +38,7 @@ public class Tag1087QtyDisplayMinIncr extends FIX50Abstract implements LogValueP
     public final static int TESTA_QTY_DISPLAY_MIN_INCR
             = 1087;
     public final static int TESTB_QTY_DISPLAY_MIN_INCR
-            = 7801;
+            = 87;
 
     public Tag1087QtyDisplayMinIncr(MyQtyType dataValue) {
         setFixType(FIX50.FIX1087_QTY_DISPLAY_MIN_INCR);

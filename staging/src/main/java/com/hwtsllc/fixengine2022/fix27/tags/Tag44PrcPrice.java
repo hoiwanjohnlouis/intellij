@@ -31,8 +31,8 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag44PrcPrice extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceType dataValue;
 
-    public final static double TESTA_PRC_PRICE = 38.21D;
-    public final static double TESTB_PRC_PRICE = 38.17D;
+    public final static double TESTA_PRC_PRICE = 44D;
+    public final static double TESTB_PRC_PRICE = 0.44D;
 
     public Tag44PrcPrice(MyPriceType dataValue) {
         setFixType(FIX27.FIX44_PRC_PRICE);

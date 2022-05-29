@@ -35,7 +35,7 @@ public class Tag268NumNoMDEntries extends FIX42Abstract implements LogValuePairS
     public final static int TESTA_NUM_NO_MD_ENTRIES
             = 268;
     public final static int TESTB_NUM_NO_MD_ENTRIES
-            = 862;
+            = 68;
 
     public Tag268NumNoMDEntries(MyNumInGroupType dataValue) {
         setFixType(FIX42.FIX268_NUM_NO_MD_ENTRIES);

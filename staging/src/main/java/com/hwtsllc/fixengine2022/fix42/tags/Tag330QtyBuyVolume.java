@@ -35,7 +35,7 @@ public class Tag330QtyBuyVolume extends FIX42Abstract implements LogValuePairStr
     public final static int TESTA_QTY_BUY_VOLUME
             = 330;
     public final static int TESTB_QTY_BUY_VOLUME
-            = 33;
+            = 30;
 
     public Tag330QtyBuyVolume(MyQtyType dataValue) {
         setFixType(FIX42.FIX330_QTY_BUY_VOLUME);

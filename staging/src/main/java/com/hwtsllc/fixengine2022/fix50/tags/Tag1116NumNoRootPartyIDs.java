@@ -35,7 +35,7 @@ public class Tag1116NumNoRootPartyIDs extends FIX50Abstract implements LogValueP
     public final static int TESTA_NUM_NO_ROOT_PARTY_IDS
             = 1116;
     public final static int TESTB_NUM_NO_ROOT_PARTY_IDS
-            = 6111;
+            = 16;
 
     public Tag1116NumNoRootPartyIDs(MyNumInGroupType dataValue) {
         setFixType(FIX50.FIX1116_NUM_NO_ROOT_PARTY_IDS);

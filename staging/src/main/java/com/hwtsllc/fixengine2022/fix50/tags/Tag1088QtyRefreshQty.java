@@ -35,7 +35,7 @@ public class Tag1088QtyRefreshQty extends FIX50Abstract implements LogValuePairS
     public final static int TESTA_QTY_REFRESH_QTY
             = 1088;
     public final static int TESTB_QTY_REFRESH_QTY
-            = 8801;
+            = 88;
 
     public Tag1088QtyRefreshQty(MyQtyType dataValue) {
         setFixType(FIX50.FIX1088_QTY_REFRESH_QTY);

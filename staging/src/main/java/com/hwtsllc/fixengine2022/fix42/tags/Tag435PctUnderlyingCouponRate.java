@@ -37,7 +37,7 @@ public class Tag435PctUnderlyingCouponRate extends FIX42Abstract implements LogV
     public final static double TESTA_PCT_UNDERLYING_COUPON_RATE
             = 0.0435D;
     public final static double TESTB_PCT_UNDERLYING_COUPON_RATE
-            = 0.0534D;
+            = 0.00435D;
 
     public Tag435PctUnderlyingCouponRate(MyPercentageType dataValue) {
         setFixType(FIX42.FIX435_PCT_UNDERLYING_COUPON_RATE);

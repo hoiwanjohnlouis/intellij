@@ -35,7 +35,7 @@ public class Tag348LenEncodedIssuerLen extends FIX42Abstract implements LogValue
     public final static int TESTA_LEN_ENCODED_ISSUER_LEN
             = 348;
     public final static int TESTB_LEN_ENCODED_ISSUER_LEN
-            = 843;
+            = 48;
 
     public Tag348LenEncodedIssuerLen(MyLengthType dataValue) {
         setFixType(FIX42.FIX348_LEN_ENCODED_ISSUER_LEN);

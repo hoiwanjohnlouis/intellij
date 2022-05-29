@@ -36,9 +36,9 @@ public class Tag381AmtGrossTradeAmt extends FIX42Abstract implements LogValuePai
     private final MyAmtType dataValue;
 
     public final static double TESTA_AMT_GROSS_TRADE_AMT
-            = 3.81D;
+            = 0.381D;
     public final static double TESTB_AMT_GROSS_TRADE_AMT
-            = 1.83D;
+            = 0.0381D;
 
     public Tag381AmtGrossTradeAmt(MyAmtType dataValue) {
         setFixType(FIX42.FIX381_AMT_GROSS_TRADE_AMT);

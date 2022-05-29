@@ -35,7 +35,7 @@ public class Tag364LenEncodedUnderlyingSecurityDescLen extends FIX42Abstract imp
     public final static int TESTA_LEN_ENCODED_UNDERLYING_SECURITY_DESC_LEN
             = 364;
     public final static int TESTB_LEN_ENCODED_UNDERLYING_SECURITY_DESC_LEN
-            = 463;
+            = 64;
 
     public Tag364LenEncodedUnderlyingSecurityDescLen(MyLengthType dataValue) {
         setFixType(FIX42.FIX364_LEN_ENCODED_UNDERLYING_SECURITY_DESC_LEN);

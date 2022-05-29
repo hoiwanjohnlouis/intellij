@@ -33,7 +33,7 @@ public class Tag191PxoOfferForwardPoints extends FIX41Abstract implements LogVal
     private final MyPriceOffsetType dataValue;
 
     public final static double TESTA_PXO_OFFER_FORWARD_POINTS = 0.191D;
-    public final static double TESTB_PXO_OFFER_FORWARD_POINTS = 0.191D;
+    public final static double TESTB_PXO_OFFER_FORWARD_POINTS = 0.0191D;
 
     public Tag191PxoOfferForwardPoints(MyPriceOffsetType dataValue) {
         setFixType(FIX41.FIX191_PXO_OFFER_FORWARD_POINTS);

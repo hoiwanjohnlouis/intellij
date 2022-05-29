@@ -36,9 +36,9 @@ public class Tag389FloDiscretionOffsetValue extends FIX42Abstract implements Log
     private final MyFloatType dataValue;
 
     public final static float TESTA_FLO_DISCRETION_OFFSET_VALUE
-            = 3.89F;
+            = 0.389F;
     public final static float TESTB_FLO_DISCRETION_OFFSET_VALUE
-            = 9.83F;
+            = 0.0389F;
 
     public Tag389FloDiscretionOffsetValue(MyFloatType dataValue) {
         setFixType(FIX42.FIX389_FLO_DISCRETION_OFFSET_VALUE);

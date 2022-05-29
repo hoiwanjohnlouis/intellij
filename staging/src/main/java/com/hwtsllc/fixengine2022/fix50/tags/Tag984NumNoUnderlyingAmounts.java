@@ -35,7 +35,7 @@ public class Tag984NumNoUnderlyingAmounts extends FIX50Abstract implements LogVa
     public final static int TESTA_NUM_NO_UNDERLYING_AMOUNTS
             = 984;
     public final static int TESTB_NUM_NO_UNDERLYING_AMOUNTS
-            = 489;
+            = 84;
 
     public Tag984NumNoUnderlyingAmounts(MyNumInGroupType dataValue) {
         setFixType(FIX50.FIX984_NUM_NO_UNDERLYING_AMOUNTS);

@@ -35,7 +35,7 @@ public class Tag384NumNoMsgTypes extends FIX42Abstract implements LogValuePairSt
     public final static int TESTA_NUM_NO_MSG_TYPES
             = 384;
     public final static int TESTB_NUM_NO_MSG_TYPES
-            = 483;
+            = 84;
 
     public Tag384NumNoMsgTypes(MyNumInGroupType dataValue) {
         setFixType(FIX42.FIX384_NUM_NO_MSG_TYPES);

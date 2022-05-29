@@ -35,7 +35,7 @@ public class Tag420NumNoBidComponents extends FIX42Abstract implements LogValueP
     public final static int TESTA_NUM_NO_BID_COMPONENTS
             = 420;
     public final static int TESTB_NUM_NO_BID_COMPONENTS
-            = 24;
+            = 20;
 
     public Tag420NumNoBidComponents(MyNumInGroupType dataValue) {
         setFixType(FIX42.FIX420_NUM_NO_BID_COMPONENTS);

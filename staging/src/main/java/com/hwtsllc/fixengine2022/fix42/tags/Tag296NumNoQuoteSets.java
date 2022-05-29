@@ -35,7 +35,7 @@ public class Tag296NumNoQuoteSets extends FIX42Abstract implements LogValuePairS
     public final static int TESTA_NUM_NO_QUOTE_SETS
             = 296;
     public final static int TESTB_NUM_NO_QUOTE_SETS
-            = 692;
+            = 96;
 
     public Tag296NumNoQuoteSets(MyNumInGroupType dataValue) {
         setFixType(FIX42.FIX296_NUM_NO_QUOTE_SETS);

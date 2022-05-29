@@ -35,7 +35,7 @@ public class Tag1013IntSideTrdRegTimestampType extends FIX50Abstract implements 
     public final static int TESTA_INT_SIDE_TRD_REG_TIMESTAMP_TYPE
             = 1013;
     public final static int TESTB_INT_SIDE_TRD_REG_TIMESTAMP_TYPE
-            = 3101;
+            = 13;
 
     public Tag1013IntSideTrdRegTimestampType(MyIntType dataValue) {
         setFixType(FIX50.FIX1013_INT_SIDE_TRD_REG_TIMESTAMP_TYPE);

@@ -35,7 +35,7 @@ public class Tag971IntNTPositionLimit extends FIX50Abstract implements LogValueP
     public final static int TESTA_INT_NT_POSITION_LIMIT
             = 971;
     public final static int TESTB_INT_NT_POSITION_LIMIT
-            = 179;
+            = 71;
 
     public Tag971IntNTPositionLimit(MyIntType dataValue) {
         setFixType(FIX50.FIX971_INT_NT_POSITION_LIMIT);

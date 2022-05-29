@@ -31,7 +31,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag33NumNoLinesOfText extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyNumInGroupType dataValue;
 
-    public final static int TESTA_NUM_NO_LINES_OF_TEXT = 1;
+    public final static int TESTA_NUM_NO_LINES_OF_TEXT = 33;
     public final static int TESTB_NUM_NO_LINES_OF_TEXT = 3;
 
     public Tag33NumNoLinesOfText(MyNumInGroupType dataValue) {

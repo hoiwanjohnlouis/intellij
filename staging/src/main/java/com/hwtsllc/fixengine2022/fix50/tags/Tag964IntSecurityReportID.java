@@ -37,7 +37,7 @@ public class Tag964IntSecurityReportID extends FIX50Abstract implements LogValue
     public final static int TESTA_INT_SECURITY_REPORT_ID
             = 964;
     public final static int TESTB_INT_SECURITY_REPORT_ID
-            = 469;
+            = 64;
 
     public Tag964IntSecurityReportID(MyIntType dataValue) {
         setFixType(FIX50.FIX964_INT_SECURITY_REPORT_ID);

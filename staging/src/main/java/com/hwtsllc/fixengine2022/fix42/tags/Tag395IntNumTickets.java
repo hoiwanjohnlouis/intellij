@@ -33,9 +33,9 @@ public class Tag395IntNumTickets extends FIX42Abstract implements LogValuePairSt
     private final MyIntType dataValue;
 
     public final static int TESTA_INT_NUM_TICKETS
-            = 60;
+            = 395;
     public final static int TESTB_INT_NUM_TICKETS
-            = 30;
+            = 95;
 
     public Tag395IntNumTickets(MyIntType dataValue) {
         setFixType(FIX42.FIX395_INT_NUM_TICKETS);

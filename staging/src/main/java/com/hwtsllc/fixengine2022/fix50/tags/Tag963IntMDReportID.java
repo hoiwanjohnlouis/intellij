@@ -35,7 +35,7 @@ public class Tag963IntMDReportID extends FIX50Abstract implements LogValuePairSt
     public final static int TESTA_INT_MD_REPORT_ID
             = 963;
     public final static int TESTB_INT_MD_REPORT_ID
-            = 369;
+            = 63;
 
     public Tag963IntMDReportID(MyIntType dataValue) {
         setFixType(FIX50.FIX963_INT_MD_REPORT_ID);

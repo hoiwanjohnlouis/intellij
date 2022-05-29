@@ -35,7 +35,7 @@ public class Tag398NumNoBidDescriptors extends FIX42Abstract implements LogValue
     public final static int TESTA_NUM_NO_BID_DESCRIPTORS
             = 398;
     public final static int TESTB_NUM_NO_BID_DESCRIPTORS
-            = 893;
+            = 98;
 
     public Tag398NumNoBidDescriptors(MyNumInGroupType dataValue) {
         setFixType(FIX42.FIX398_NUM_NO_BID_DESCRIPTORS);

@@ -38,7 +38,7 @@ public class Tag424QtyDayOrderQty extends FIX42Abstract implements LogValuePairS
     public final static int TESTA_QTY_DAY_ORDER_QTY
             = 424;
     public final static int TESTB_QTY_DAY_ORDER_QTY
-            = 4240;
+            = 24;
 
     public Tag424QtyDayOrderQty(MyQtyType dataValue) {
         setFixType(FIX42.FIX424_QTY_DAY_ORDER_QTY);

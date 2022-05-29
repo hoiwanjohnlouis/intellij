@@ -33,9 +33,9 @@ public class Tag406AmtFairValue extends FIX42Abstract implements LogValuePairStr
     private final MyAmtType dataValue;
 
     public final static double TESTA_AMT_FAIR_VALUE
-            = 4.06D;
+            = 0.406D;
     public final static double TESTB_AMT_FAIR_VALUE
-            = 6.04D;
+            = 0.0406D;
 
     public Tag406AmtFairValue(MyAmtType dataValue) {
         setFixType(FIX42.FIX406_AMT_FAIR_VALUE);

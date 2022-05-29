@@ -45,9 +45,9 @@ public class Tag228FloFactor extends FIX42Abstract implements LogValuePairString
     private final MyFloatType dataValue;
 
     public final static float TESTA_FLO_FACTOR
-            = 2.28F;
+            = 0.228F;
     public final static float TESTB_FLO_FACTOR
-            = 8.22F;
+            = 0.0228F;
 
     public Tag228FloFactor(MyFloatType dataValue) {
         setFixType(FIX42.FIX228_FLO_FACTOR);

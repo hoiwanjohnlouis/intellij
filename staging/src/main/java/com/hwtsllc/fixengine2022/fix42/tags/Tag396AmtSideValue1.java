@@ -33,9 +33,9 @@ public class Tag396AmtSideValue1 extends FIX42Abstract implements LogValuePairSt
     private final MyAmtType dataValue;
 
     public final static double TESTA_AMT_SIDE_VALUE1
-            = 3.96D;
+            = 0.396D;
     public final static double TESTB_AMT_SIDE_VALUE1
-            = 6.93D;
+            = 0.0396D;
 
     public Tag396AmtSideValue1(MyAmtType dataValue) {
         setFixType(FIX42.FIX396_AMT_SIDE_VALUE1);

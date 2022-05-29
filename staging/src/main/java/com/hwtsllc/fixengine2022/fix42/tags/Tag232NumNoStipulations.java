@@ -37,7 +37,7 @@ public class Tag232NumNoStipulations extends FIX42Abstract implements LogValuePa
     public final static int TESTA_NUM_NO_STIPULATIONS
             = 232;
     public final static int TESTB_NUM_NO_STIPULATIONS
-            = 2320;
+            = 32;
 
     public Tag232NumNoStipulations(MyNumInGroupType dataValue) {
         setFixType(FIX42.FIX232_NUM_NO_STIPULATIONS);

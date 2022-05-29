@@ -40,9 +40,9 @@ public class Tag245PctUnderlyingRepurchaseRate extends FIX42Abstract implements 
     private final MyPercentageType dataValue;
 
     public final static double TESTA_PCT_UNDERLYING_REPURCHASE_RATE
-            = 0.0245D;
+            = 0.245D;
     public final static double TESTB_PCT_UNDERLYING_REPURCHASE_RATE
-            = 0.0542D;
+            = 0.0245D;
 
     public Tag245PctUnderlyingRepurchaseRate(MyPercentageType dataValue) {
         setFixType(FIX42.FIX245_PCT_UNDERLYING_REPURCHASE_RATE);

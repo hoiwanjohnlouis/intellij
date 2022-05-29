@@ -39,7 +39,7 @@ public class Tag1138QtyDisplayQty extends FIX50Abstract implements LogValuePairS
     public final static int TESTA_QTY_DISPLAY_QTY
             = 1138;
     public final static int TESTB_QTY_DISPLAY_QTY
-            = 8311;
+            = 38;
 
     public Tag1138QtyDisplayQty(MyQtyType dataValue) {
         setFixType(FIX50.FIX1138_QTY_DISPLAY_QTY);

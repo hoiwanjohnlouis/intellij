@@ -46,9 +46,9 @@ public class Tag231FloContractMultiplier extends FIX42Abstract implements LogVal
     private final MyFloatType dataValue;
 
     public final static float TESTA_FLO_CONTRACT_MULTIPLIER
-            = 2.31F;
+            = 0.231F;
     public final static float TESTB_FLO_CONTRACT_MULTIPLIER
-            = 1.32F;
+            = 0.0231F;
 
     public Tag231FloContractMultiplier(MyFloatType dataValue) {
         setFixType(FIX42.FIX231_FLO_CONTRACT_MULTIPLIER);

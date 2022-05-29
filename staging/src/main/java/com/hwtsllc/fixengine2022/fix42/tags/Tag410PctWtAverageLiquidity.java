@@ -37,7 +37,7 @@ public class Tag410PctWtAverageLiquidity extends FIX42Abstract implements LogVal
     public final static double TESTA_PCT_WT_AVERAGE_LIQUIDITY
             = 0.0410D;
     public final static double TESTB_PCT_WT_AVERAGE_LIQUIDITY
-            = 0.0014D;
+            = 0.00410D;
 
     public Tag410PctWtAverageLiquidity(MyPercentageType dataValue) {
         setFixType(FIX42.FIX410_PCT_WT_AVERAGE_LIQUIDITY);

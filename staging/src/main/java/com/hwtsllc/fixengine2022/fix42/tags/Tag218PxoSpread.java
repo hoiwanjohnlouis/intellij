@@ -45,8 +45,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag218PxoSpread extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceOffsetType dataValue;
 
-    public final static double TESTA_PXO_SPREAD = 0.218D;
-    public final static double TESTB_PXO_SPREAD = 0.812D;
+    public final static double TESTA_PXO_SPREAD
+            = 0.0218D;
+    public final static double TESTB_PXO_SPREAD
+            = 0.00218D;
 
     public Tag218PxoSpread(MyPriceOffsetType dataValue) {
         setFixType(FIX42.FIX218_PXO_SPREAD);

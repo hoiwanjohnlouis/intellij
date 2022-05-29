@@ -33,9 +33,9 @@ class Tag957NumNoStrategyParameters extends FIX50Abstract implements LogValuePai
     private final MyNumInGroupType dataValue;
 
     public final static int TESTA_NUM_NO_STRATEGY_PARAMETERS
-            = 453;
+            = 957;
     public final static int TESTB_NUM_NO_STRATEGY_PARAMETERS
-            = 354;
+            = 57;
 
     public Tag957NumNoStrategyParameters(MyNumInGroupType dataValue) {
         setFixType(FIX50.FIX957_NUM_NO_STRATEGY_PARAMETERS);

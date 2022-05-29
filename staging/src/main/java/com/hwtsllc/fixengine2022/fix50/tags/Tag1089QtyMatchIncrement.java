@@ -39,7 +39,7 @@ public class Tag1089QtyMatchIncrement extends FIX50Abstract implements LogValueP
     public final static int TESTA_QTY_MATCH_INCREMENT
             = 1089;
     public final static int TESTB_QTY_MATCH_INCREMENT
-            = 9801;
+            = 89;
 
     public Tag1089QtyMatchIncrement(MyQtyType dataValue) {
         setFixType(FIX50.FIX1089_QTY_MATCH_INCREMENT);

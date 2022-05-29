@@ -33,7 +33,7 @@ public class Tag202PrcStrikePrice extends FIX41Abstract implements LogValuePairS
     private final MyPriceType dataValue;
 
     public final static double TESTA_PRC_STRIKE_PRICE = 2.02D;
-    public final static double TESTB_PRC_STRIKE_PRICE = 2.02D;
+    public final static double TESTB_PRC_STRIKE_PRICE = 0.202D;
 
     public Tag202PrcStrikePrice(MyPriceType dataValue) {
         setFixType(FIX41.FIX202_PRC_STRIKE_PRICE);

@@ -26,7 +26,7 @@ public class Tag656FloSettlCurrBidFxRate extends FIX43Abstract implements LogVal
     private final MyFloatType dataValue;
 
     public final static float TESTA_FLO_SETTL_CURR_BID_FX_RATE = 0.656F;
-    public final static float TESTB_FLO_SETTL_CURR_BID_FX_RATE = 0.656F;
+    public final static float TESTB_FLO_SETTL_CURR_BID_FX_RATE = 0.0656F;
 
     public Tag656FloSettlCurrBidFxRate(MyFloatType dataValue) {
         setFixType(FIX43.FIX656_FLO_SETTL_CURR_BID_FX_RATE);

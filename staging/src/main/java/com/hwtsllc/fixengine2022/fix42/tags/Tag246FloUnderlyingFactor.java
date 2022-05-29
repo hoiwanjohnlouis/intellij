@@ -37,9 +37,9 @@ public class Tag246FloUnderlyingFactor extends FIX42Abstract implements LogValue
     private final MyFloatType dataValue;
 
     public final static float TESTA_FLO_UNDERLYING_FACTOR
-            = 2.46F;
+            = 0.246F;
     public final static float TESTB_FLO_UNDERLYING_FACTOR
-            = 6.42F;
+            = 0.0246F;
 
     public Tag246FloUnderlyingFactor(MyFloatType dataValue) {
         setFixType(FIX42.FIX246_FLO_UNDERLYING_FACTOR);

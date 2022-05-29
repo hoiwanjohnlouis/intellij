@@ -37,9 +37,9 @@ public class Tag253FloLegFactor extends FIX42Abstract implements LogValuePairStr
     private final MyFloatType dataValue;
 
     public final static float TESTA_FLO_LEG_FACTOR
-            = 2.35F;
+            = 0.253F;
     public final static float TESTB_FLO_LEG_FACTOR
-            = 5.32F;
+            = 0.0253F;
 
     public Tag253FloLegFactor(MyFloatType dataValue) {
         setFixType(FIX42.FIX253_FLO_LEG_FACTOR);

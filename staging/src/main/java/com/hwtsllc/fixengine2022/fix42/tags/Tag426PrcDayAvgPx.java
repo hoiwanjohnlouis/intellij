@@ -33,9 +33,9 @@ public class Tag426PrcDayAvgPx extends FIX42Abstract implements LogValuePairStri
     private final MyPriceType dataValue;
 
     public final static double TESTA_PRC_DAY_AVG_PX
-            = 4.26D;
+            = 0.426D;
     public final static double TESTB_PRC_DAY_AVG_PX
-            = 6.24D;
+            = 0.0426D;
 
     public Tag426PrcDayAvgPx(MyPriceType dataValue) {
         setFixType(FIX42.FIX426_PRC_DAY_AVG_PX);

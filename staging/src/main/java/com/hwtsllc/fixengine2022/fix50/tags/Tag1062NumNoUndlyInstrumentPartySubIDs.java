@@ -35,7 +35,7 @@ public class Tag1062NumNoUndlyInstrumentPartySubIDs extends FIX50Abstract implem
     public final static int TESTA_NUM_NO_UNDLY_INSTRUMENT_PARTY_SUB_IDS
             = 1062;
     public final static int TESTB_NUM_NO_UNDLY_INSTRUMENT_PARTY_SUB_IDS
-            = 2601;
+            = 62;
 
     public Tag1062NumNoUndlyInstrumentPartySubIDs(MyNumInGroupType dataValue) {
         setFixType(FIX50.FIX1062_NUM_NO_UNDLY_INSTRUMENT_PARTY_SUB_IDS);

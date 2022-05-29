@@ -35,7 +35,7 @@ public class Tag294QtyDefOfferSize extends FIX42Abstract implements LogValuePair
     public final static int TESTA_QTY_DEF_OFFER_SIZE
             = 294;
     public final static int TESTB_QTY_DEF_OFFER_SIZE
-            = 492;
+            = 94;
 
     public Tag294QtyDefOfferSize(MyQtyType dataValue) {
         setFixType(FIX42.FIX294_QTY_DEF_OFFER_SIZE);

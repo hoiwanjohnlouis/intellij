@@ -35,9 +35,9 @@ public class Tag316PrcUnderlyingStrikePrice extends FIX42Abstract implements Log
     private final MyPriceType dataValue;
 
     public final static double TESTA_PRC_UNDERLYING_STRIKE_PRICE
-            = 3.16D;
+            = 0.316D;
     public final static double TESTB_PRC_UNDERLYING_STRIKE_PRICE
-            = 6.13D;
+            = 0.0316D;
 
     public Tag316PrcUnderlyingStrikePrice(MyPriceType dataValue) {
         setFixType(FIX42.FIX316_PRC_UNDERLYING_STRIKE_PRICE);

@@ -35,7 +35,7 @@ public class Tag970IntPositionLimit extends FIX50Abstract implements LogValuePai
     public final static int TESTA_INT_POSITION_LIMIT
             = 970;
     public final static int TESTB_INT_POSITION_LIMIT
-            = 79;
+            = 70;
 
     public Tag970IntPositionLimit(MyIntType dataValue) {
         setFixType(FIX50.FIX970_INT_POSITION_LIMIT);

@@ -35,7 +35,7 @@ public class Tag1044QtyUnderlyingAdjustedQuantity extends FIX50Abstract implemen
     public final static int TESTA_QTY_UNDERLYING_ADJUSTED_QUANTITY
             = 1044;
     public final static int TESTB_QTY_UNDERLYING_ADJUSTED_QUANTITY
-            = 4401;
+            = 44;
 
     public Tag1044QtyUnderlyingAdjustedQuantity(MyQtyType dataValue) {
         setFixType(FIX50.FIX1044_QTY_UNDERLYING_ADJUSTED_QUANTITY);

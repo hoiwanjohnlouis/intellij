@@ -35,9 +35,9 @@ public class Tag968FloStrikeValue extends FIX50Abstract implements LogValuePairS
     private final MyFloatType dataValue;
 
     public final static float TESTA_FLO_STRIKE_VALUE
-            = 9.68F;
+            = 0.968F;
     public final static float TESTB_FLO_STRIKE_VALUE
-            = 8.69F;
+            = 0.0968F;
 
     public Tag968FloStrikeValue(MyFloatType dataValue) {
         setFixType( FIX50.FIX968_FLO_STRIKE_VALUE );

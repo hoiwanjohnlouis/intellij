@@ -35,9 +35,9 @@ public class Tag436FloUnderlyingContractMultiplier extends FIX42Abstract impleme
     private final MyFloatType dataValue;
 
     public final static float TESTA_FLO_UNDERLYING_CONTRACT_MULTIPLIER
-            = 4.36F;
+            = 0.436F;
     public final static float TESTB_FLO_UNDERLYING_CONTRACT_MULTIPLIER
-            = 6.34F;
+            = 0.0436F;
 
     public Tag436FloUnderlyingContractMultiplier(MyFloatType dataValue) {
         setFixType(FIX42.FIX436_FLO_UNDERLYING_CONTRACT_MULTIPLIER);

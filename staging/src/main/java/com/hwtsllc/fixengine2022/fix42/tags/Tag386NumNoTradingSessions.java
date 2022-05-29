@@ -35,7 +35,7 @@ public class Tag386NumNoTradingSessions extends FIX42Abstract implements LogValu
     public final static int TESTA_NUM_NO_TRADING_SESSIONS
             = 386;
     public final static int TESTB_NUM_NO_TRADING_SESSIONS
-            = 683;
+            = 86;
 
     public Tag386NumNoTradingSessions(MyNumInGroupType dataValue) {
         setFixType(FIX42.FIX386_NUM_NO_TRADING_SESSIONS);

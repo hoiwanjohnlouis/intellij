@@ -35,7 +35,7 @@ public class Tag350LenEncodedSecurityDescLen extends FIX42Abstract implements Lo
     public final static int TESTA_LEN_ENCODED_SECURITY_DESC_LEN
             = 350;
     public final static int TESTB_LEN_ENCODED_SECURITY_DESC_LEN
-            = 53;
+            = 50;
 
     public Tag350LenEncodedSecurityDescLen(MyLengthType dataValue) {
         setFixType(FIX42.FIX350_LEN_ENCODED_SECURITY_DESC_LEN);

@@ -33,9 +33,9 @@ public class Tag408AmtValueOfFutures extends FIX42Abstract implements LogValuePa
     private final MyAmtType dataValue;
 
     public final static double TESTA_AMT_VALUE_OF_FUTURES
-            = 4.08D;
+            = 0.408D;
     public final static double TESTB_AMT_VALUE_OF_FUTURES
-            = 8.04D;
+            = 0.0408D;
 
     public Tag408AmtValueOfFutures(MyAmtType dataValue) {
         setFixType(FIX42.FIX408_AMT_VALUE_OF_FUTURES);

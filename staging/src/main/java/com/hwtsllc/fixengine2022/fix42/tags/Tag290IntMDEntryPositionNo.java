@@ -34,9 +34,9 @@ public class Tag290IntMDEntryPositionNo extends FIX42Abstract implements LogValu
     private final MyIntType dataValue;
 
     public final static int TESTA_INT_MD_ENTRY_POSITION_NO
-            = 60;
+            = 290;
     public final static int TESTB_INT_MD_ENTRY_POSITION_NO
-            = 30;
+            = 90;
 
     public Tag290IntMDEntryPositionNo(MyIntType dataValue) {
         setFixType(FIX42.FIX290_INT_MD_ENTRY_POSITION_NO);

@@ -35,7 +35,7 @@ public class Tag981NumNoExpiration extends FIX50Abstract implements LogValuePair
     public final static int TESTA_NUM_NO_EXPIRATION
             = 981;
     public final static int TESTB_NUM_NO_EXPIRATION
-            = 189;
+            = 81;
 
     public Tag981NumNoExpiration(MyNumInGroupType dataValue) {
         setFixType(FIX50.FIX981_NUM_NO_EXPIRATION);

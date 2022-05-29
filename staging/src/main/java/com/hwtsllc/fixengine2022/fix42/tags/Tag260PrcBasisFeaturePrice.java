@@ -37,9 +37,9 @@ public class Tag260PrcBasisFeaturePrice extends FIX42Abstract implements LogValu
     private final MyPriceType dataValue;
 
     public final static double TESTA_PRC_BASIS_FEATURE_PRICE
-            = 2.60D;
+            = 0.260D;
     public final static double TESTB_PRC_BASIS_FEATURE_PRICE
-            = 6.2D;
+            = 0.0260D;
 
     public Tag260PrcBasisFeaturePrice(MyPriceType dataValue) {
         setFixType(FIX42.FIX260_PRC_BASIS_FEATURE_PRICE);

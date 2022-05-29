@@ -35,7 +35,7 @@ public class Tag1112QtyTriggerNewQty extends FIX50Abstract implements LogValuePa
     public final static int TESTA_QTY_TRIGGER_NEW_QTY
             = 1112;
     public final static int TESTB_QTY_TRIGGER_NEW_QTY
-            = 2111;
+            = 12;
 
     public Tag1112QtyTriggerNewQty(MyQtyType dataValue) {
         setFixType(FIX50.FIX1112_QTY_TRIGGER_NEW_QTY);

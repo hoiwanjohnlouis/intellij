@@ -40,9 +40,9 @@ public class Tag250IntLegRepoCollateralSecurityType extends FIX42Abstract implem
     private final MyIntType dataValue;
 
     public final static int TESTA_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE
-            = 60;
+            = 250;
     public final static int TESTB_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE
-            = 30;
+            = 50;
 
     public Tag250IntLegRepoCollateralSecurityType(MyIntType dataValue) {
         setFixType(FIX42.FIX250_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE);

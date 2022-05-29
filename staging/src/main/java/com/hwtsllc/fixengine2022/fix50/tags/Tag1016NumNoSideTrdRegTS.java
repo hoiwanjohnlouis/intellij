@@ -35,7 +35,7 @@ public class Tag1016NumNoSideTrdRegTS extends FIX50Abstract implements LogValueP
     public final static int TESTA_NUM_NO_SIDE_TRD_REG_TS
             = 1016;
     public final static int TESTB_NUM_NO_SIDE_TRD_REG_TS
-            = 6101;
+            = 16;
 
     public Tag1016NumNoSideTrdRegTS(MyNumInGroupType dataValue) {
         setFixType(FIX50.FIX1016_NUM_NO_SIDE_TRD_REG_TS);

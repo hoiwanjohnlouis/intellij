@@ -35,7 +35,7 @@ public class Tag1018NumNoInstrumentParties extends FIX50Abstract implements LogV
     public final static int TESTA_NUM_NO_INSTRUMENT_PARTIES
             = 1018;
     public final static int TESTB_NUM_NO_INSTRUMENT_PARTIES
-            = 8101;
+            = 18;
 
     public Tag1018NumNoInstrumentParties(MyNumInGroupType dataValue) {
         setFixType(FIX50.FIX1018_NUM_NO_INSTRUMENT_PARTIES);

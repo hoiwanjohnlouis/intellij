@@ -35,7 +35,7 @@ public class Tag1086QtyDisplayHighQty extends FIX50Abstract implements LogValueP
     public final static int TESTA_QTY_DISPLAY_HIGH_QTY
             = 1086;
     public final static int TESTB_QTY_DISPLAY_HIGH_QTY
-            = 6801;
+            = 86;
 
     public Tag1086QtyDisplayHighQty(MyQtyType dataValue) {
         setFixType(FIX50.FIX1086_QTY_DISPLAY_HIGH_QTY);

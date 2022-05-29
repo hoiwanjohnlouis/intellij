@@ -33,7 +33,7 @@ public class Tag99PrcStopPx extends FIX27Abstract implements LogValuePairString,
     private final MyPriceType dataValue;
 
     public final static double TESTA_PRC_STOP_PX = 0.99D;
-    public final static double TESTB_PRC_STOP_PX = 99.00D;
+    public final static double TESTB_PRC_STOP_PX = 0.099D;
 
     public Tag99PrcStopPx(MyPriceType dataValue) {
         setFixType(FIX27.FIX99_PRC_STOP_PX);

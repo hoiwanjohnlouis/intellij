@@ -38,7 +38,7 @@ public class Tag1082QtySecondaryDisplayQty extends FIX50Abstract implements LogV
     public final static int TESTA_QTY_SECONDARY_DISPLAY_QTY
             = 1082;
     public final static int TESTB_QTY_SECONDARY_DISPLAY_QTY
-            = 2801;
+            = 82;
 
     public Tag1082QtySecondaryDisplayQty(MyQtyType dataValue) {
         setFixType(FIX50.FIX1082_QTY_SECONDARY_DISPLAY_QTY);

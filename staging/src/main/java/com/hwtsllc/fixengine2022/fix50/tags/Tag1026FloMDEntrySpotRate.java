@@ -35,7 +35,7 @@ public class Tag1026FloMDEntrySpotRate extends FIX50Abstract implements LogValue
     public final static float TESTA_FLO_MD_ENTRY_SPOT_RATE
             = 0.1026F;
     public final static float TESTB_FLO_MD_ENTRY_SPOT_RATE
-            = -0.1026F;
+            = 0.01026F;
 
     public Tag1026FloMDEntrySpotRate(MyFloatType dataValue) {
         setFixType( FIX50.FIX1026_FLO_MD_ENTRY_SPOT_RATE );

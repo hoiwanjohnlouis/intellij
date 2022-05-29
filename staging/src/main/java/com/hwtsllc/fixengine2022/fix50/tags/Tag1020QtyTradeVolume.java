@@ -35,7 +35,7 @@ public class Tag1020QtyTradeVolume extends FIX50Abstract implements LogValuePair
     public final static int TESTA_QTY_TRADE_VOLUME
             = 1020;
     public final static int TESTB_QTY_TRADE_VOLUME
-            = 201;
+            = 20;
 
     public Tag1020QtyTradeVolume(MyQtyType dataValue) {
         setFixType(FIX50.FIX1020_QTY_TRADE_VOLUME);

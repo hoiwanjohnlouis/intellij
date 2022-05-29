@@ -35,7 +35,7 @@ public class Tag356LenEncodedSubjectLen extends FIX42Abstract implements LogValu
     public final static int TESTA_LEN_ENCODED_SUBJECT_LEN
             = 356;
     public final static int TESTB_LEN_ENCODED_SUBJECT_LEN
-            = 653;
+            = 56;
 
     public Tag356LenEncodedSubjectLen(MyLengthType dataValue) {
         setFixType(FIX42.FIX356_LEN_ENCODED_SUBJECT_LEN);

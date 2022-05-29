@@ -36,7 +36,7 @@ public class Tag319QtyRatioQty extends FIX42Abstract implements LogValuePairStri
     public final static int TESTA_QTY_RATIO_QTY
             = 319;
     public final static int TESTB_QTY_RATIO_QTY
-            = 913;
+            = 19;
 
     public Tag319QtyRatioQty(MyQtyType dataValue) {
         setFixType(FIX42.FIX319_QTY_RATIO_QTY);

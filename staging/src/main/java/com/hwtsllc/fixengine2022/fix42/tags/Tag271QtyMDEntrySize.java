@@ -35,7 +35,7 @@ public class Tag271QtyMDEntrySize extends FIX42Abstract implements LogValuePairS
     public final static int TESTA_QTY_MD_ENTRY_SIZE
             = 271;
     public final static int TESTB_QTY_MD_ENTRY_SIZE
-            = 172;
+            = 71;
 
     public Tag271QtyMDEntrySize(MyQtyType dataValue) {
         setFixType(FIX42.FIX271_QTY_MD_ENTRY_SIZE);

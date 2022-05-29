@@ -35,7 +35,7 @@ public class Tag293QtyDefBidSize extends FIX42Abstract implements LogValuePairSt
     public final static int TESTA_QTY_DEF_BID_SIZE
             = 293;
     public final static int TESTB_QTY_DEF_BID_SIZE
-            = 392;
+            = 93;
 
     public Tag293QtyDefBidSize(MyQtyType dataValue) {
         setFixType(FIX42.FIX293_QTY_DEF_BID_SIZE);

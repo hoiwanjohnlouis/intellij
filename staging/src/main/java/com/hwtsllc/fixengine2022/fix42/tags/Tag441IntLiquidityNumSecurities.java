@@ -33,9 +33,9 @@ public class Tag441IntLiquidityNumSecurities extends FIX42Abstract implements Lo
     private final MyIntType dataValue;
 
     public final static int TESTA_INT_LIQUIDITY_NUM_SECURITIES
-            = 60;
+            = 441;
     public final static int TESTB_INT_LIQUIDITY_NUM_SECURITIES
-            = 30;
+            = 41;
 
     public Tag441IntLiquidityNumSecurities(MyIntType dataValue) {
         setFixType(FIX42.FIX441_INT_LIQUIDITY_NUM_SECURITIES);

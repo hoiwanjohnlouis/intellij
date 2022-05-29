@@ -35,7 +35,7 @@ public class Tag1120NumNoRootPartySubIDs extends FIX50Abstract implements LogVal
     public final static int TESTA_NUM_NO_ROOT_PARTY_SUB_IDS
             = 1120;
     public final static int TESTB_NUM_NO_ROOT_PARTY_SUB_IDS
-            = 211;
+            = 20;
 
     public Tag1120NumNoRootPartySubIDs(MyNumInGroupType dataValue) {
         setFixType(FIX50.FIX1120_NUM_NO_ROOT_PARTY_SUB_IDS);

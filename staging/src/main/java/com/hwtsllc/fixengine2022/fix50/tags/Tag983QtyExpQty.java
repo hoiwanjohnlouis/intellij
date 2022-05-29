@@ -35,7 +35,7 @@ public class Tag983QtyExpQty extends FIX50Abstract implements LogValuePairString
     public final static int TESTA_QTY_EXP_QTY
             = 983;
     public final static int TESTB_QTY_EXP_QTY
-            = 389;
+            = 83;
 
     public Tag983QtyExpQty(MyQtyType dataValue) {
         setFixType(FIX50.FIX983_QTY_EXP_QTY);

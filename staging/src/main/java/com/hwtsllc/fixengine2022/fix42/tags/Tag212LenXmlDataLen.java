@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag212LenXmlDataLen extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyLengthType dataValue;
 
-    public final static int TESTA_LEN_XML_DATA_LEN = 123;
-    public final static int TESTB_LEN_XML_DATA_LEN = 456;
+    public final static int TESTA_LEN_XML_DATA_LEN
+            = 212;
+    public final static int TESTB_LEN_XML_DATA_LEN
+            = 12;
 
     public Tag212LenXmlDataLen(MyLengthType dataValue) {
         setFixType(FIX42.FIX212_LEN_XML_DATA_LEN);

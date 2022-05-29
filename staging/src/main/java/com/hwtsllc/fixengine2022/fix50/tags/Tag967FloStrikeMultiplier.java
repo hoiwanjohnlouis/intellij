@@ -37,7 +37,7 @@ public class Tag967FloStrikeMultiplier extends FIX50Abstract implements LogValue
     public final static float TESTA_FLO_STRIKE_MULTIPLIER
             = 0.967F;
     public final static float TESTB_FLO_STRIKE_MULTIPLIER
-            = 0.769F;
+            = 0.0967F;
 
     public Tag967FloStrikeMultiplier(MyFloatType dataValue) {
         setFixType( FIX50.FIX967_FLO_STRIKE_MULTIPLIER );

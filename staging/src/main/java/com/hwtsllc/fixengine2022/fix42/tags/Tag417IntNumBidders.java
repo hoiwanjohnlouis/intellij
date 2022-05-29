@@ -33,9 +33,9 @@ public class Tag417IntNumBidders extends FIX42Abstract implements LogValuePairSt
     private final MyIntType dataValue;
 
     public final static int TESTA_INT_NUM_BIDDERS
-            = 60;
+            = 417;
     public final static int TESTB_INT_NUM_BIDDERS
-            = 30;
+            = 17;
 
     public Tag417IntNumBidders(MyIntType dataValue) {
         setFixType(FIX42.FIX417_INT_NUM_BIDDERS);

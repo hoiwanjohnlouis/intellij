@@ -40,9 +40,9 @@ public class Tag243IntUnderlyingRepoCollateralSecurityType extends FIX42Abstract
     private final MyIntType dataValue;
 
     public final static int TESTA_INT_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE
-            = 60;
+            = 243;
     public final static int TESTB_INT_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE
-            = 30;
+            = 43;
 
     public Tag243IntUnderlyingRepoCollateralSecurityType(MyIntType dataValue) {
         setFixType(FIX42.FIX243_INT_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE);

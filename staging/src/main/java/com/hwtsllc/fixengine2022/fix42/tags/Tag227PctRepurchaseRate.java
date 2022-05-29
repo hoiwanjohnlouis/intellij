@@ -42,7 +42,7 @@ public class Tag227PctRepurchaseRate extends FIX42Abstract implements LogValuePa
     public final static double TESTA_PCT_REPURCHASE_RATE
             = 0.0227D;
     public final static double TESTB_PCT_REPURCHASE_RATE
-            = 0.0722D;
+            = 0.00227D;
 
     public Tag227PctRepurchaseRate(MyPercentageType dataValue) {
         setFixType(FIX42.FIX227_PCT_REPURCHASE_RATE);

@@ -35,7 +35,7 @@ public class Tag358LenEncodedHeadlineLen extends FIX42Abstract implements LogVal
     public final static int TESTA_LEN_ENCODED_HEADLINE_LEN
             = 358;
     public final static int TESTB_LEN_ENCODED_HEADLINE_LEN
-            = 853;
+            = 58;
 
     public Tag358LenEncodedHeadlineLen(MyLengthType dataValue) {
         setFixType(FIX42.FIX358_LEN_ENCODED_HEADLINE_LEN);

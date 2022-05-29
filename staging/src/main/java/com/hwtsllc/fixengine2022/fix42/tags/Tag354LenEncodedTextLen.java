@@ -35,7 +35,7 @@ public class Tag354LenEncodedTextLen extends FIX42Abstract implements LogValuePa
     public final static int TESTA_LEN_ENCODED_TEXT_LEN
             = 354;
     public final static int TESTB_LEN_ENCODED_TEXT_LEN
-            = 453;
+            = 54;
 
     public Tag354LenEncodedTextLen(MyLengthType dataValue) {
         setFixType(FIX42.FIX354_LEN_ENCODED_TEXT_LEN);

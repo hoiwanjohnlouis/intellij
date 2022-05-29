@@ -35,7 +35,7 @@ public class Tag383LenMaxMessageSize extends FIX42Abstract implements LogValuePa
     public final static int TESTA_LEN_MAX_MESSAGE_SIZE
             = 383;
     public final static int TESTB_LEN_MAX_MESSAGE_SIZE
-            = 3830;
+            = 83;
 
     public Tag383LenMaxMessageSize(MyLengthType dataValue) {
         setFixType(FIX42.FIX383_LEN_MAX_MESSAGE_SIZE);

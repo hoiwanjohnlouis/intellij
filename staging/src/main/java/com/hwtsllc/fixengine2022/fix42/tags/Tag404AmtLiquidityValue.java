@@ -33,9 +33,9 @@ public class Tag404AmtLiquidityValue extends FIX42Abstract implements LogValuePa
     private final MyAmtType dataValue;
 
     public final static double TESTA_AMT_LIQUIDITY_VALUE
-            = 4.04D;
+            = 0.404D;
     public final static double TESTB_AMT_LIQUIDITY_VALUE
-            = 40.4D;
+            = 0.0404D;
 
     public Tag404AmtLiquidityValue(MyAmtType dataValue) {
         setFixType(FIX42.FIX404_AMT_LIQUIDITY_VALUE);

@@ -35,7 +35,7 @@ public class Tag437QtyContraTradeQty extends FIX42Abstract implements LogValuePa
     public final static int TESTA_QTY_CONTRA_TRADE_QTY
             = 437;
     public final static int TESTB_QTY_CONTRA_TRADE_QTY
-            = 734;
+            = 37;
 
     public Tag437QtyContraTradeQty(MyQtyType dataValue) {
         setFixType(FIX42.FIX437_QTY_CONTRA_TRADE_QTY);

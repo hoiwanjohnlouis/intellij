@@ -35,7 +35,7 @@ public class Tag403PctLiquidityPctHigh extends FIX42Abstract implements LogValue
     public final static double TESTA_PCT_LIQUIDITY_PCT_HIGH
             = 0.0403D;
     public final static double TESTB_PCT_LIQUIDITY_PCT_HIGH
-            = 0.0304D;
+            = 0.00403D;
 
     public Tag403PctLiquidityPctHigh(MyPercentageType dataValue) {
         setFixType(FIX42.FIX403_PCT_LIQUIDITY_PCT_HIGH);
