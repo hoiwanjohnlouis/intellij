@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  579
+ *  TradeInputDevice
+ *  String
+ *  <p>
+ *  Specific device number, terminal number or station where trade was entered
+ */
 class Tag579StrTradeInputDeviceTest {
     @Test
     void FIX0579Test() {

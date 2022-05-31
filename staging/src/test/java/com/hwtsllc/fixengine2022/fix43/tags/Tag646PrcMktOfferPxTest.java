@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  646
+ *  MktOfferPx
+ *  Price
+ *  <p>
+ *  Used to indicate the best offer in a market
+ */
 class Tag646PrcMktOfferPxTest {
     @Test
     void FIX0646Test() {

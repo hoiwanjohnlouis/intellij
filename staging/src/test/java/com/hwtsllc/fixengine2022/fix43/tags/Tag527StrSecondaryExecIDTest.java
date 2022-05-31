@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  527
+ *  SecondaryExecID
+ *  String
+ *  <p>
+ *  Assigned by the party which accepts the order.
+ *  <p>
+ *  Can be used to provide the ExecID (17) used by an exchange or executing system.
+ */
 class Tag527StrSecondaryExecIDTest {
     @Test
     void FIX0527Test() {

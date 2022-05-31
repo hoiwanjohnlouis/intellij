@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  572
+ *  TradeReportRefID
+ *  String
+ *  <p>
+ *  Reference identifier used with CANCEL and REPLACE transaction types.
+ */
 public class Tag572StrTradeReportRefID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  562
+ *  MinTradeVol
+ *  Qty
+ *  <p>
+ *  The minimum trading volume for a security
+ */
 class Tag562QtyMinTradeVolTest {
     @Test
     void FIX0562Test() {

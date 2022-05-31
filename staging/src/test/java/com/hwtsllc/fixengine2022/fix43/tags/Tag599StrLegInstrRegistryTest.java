@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  599
+ *  LegInstrRegistry
+ *  String
+ *  <p>
+ *  Multileg instrument's individual leg security’s InstrRegistry.
+ *  <p>
+ *  See InstrRegistry (543) field for description
+ */
 class Tag599StrLegInstrRegistryTest {
     @Test
     void FIX0599Test() {

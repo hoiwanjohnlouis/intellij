@@ -22,11 +22,18 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  509
+ *  RegistDtls
+ *  String
+ *  <p>
+ *  Set of Registration name and address details, possibly including phone, fax etc.
+ */
 public class Tag509StrRegistDtls extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_REGIST_DTLS = "BilboBaggins-Tag509StrRegistDtls";
-    public final static String TESTB_STR_REGIST_DTLS = "Gandalf-Tag509StrRegistDtls";
+    public final static String TESTA_STR_REGIST_DTLS = "VeronicaLake-Tag509StrRegistDtls";
+    public final static String TESTB_STR_REGIST_DTLS = "BarbaraStanwyck-Tag509StrRegistDtls";
 
     public Tag509StrRegistDtls(MyStringType dataValue) {
         setFixType(FIX43.FIX509_STR_REGIST_DTLS);

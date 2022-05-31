@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  554
+ *  Password
+ *  String
+ *  <p>
+ *  Password or passphrase.
+ */
 class Tag554StrPasswordTest {
     @Test
     void FIX0554Test() {

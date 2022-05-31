@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  615
+ *  LegCouponRate
+ *  Percentage
+ *  <p>
+ *  Multileg instrument's individual  security’s CouponRate.
+ *  <p>
+ *  See CouponRate (223) field for description
+ */
 class Tag615PctLegCouponRateTest {
     @Test
     void FIX0615Test() {

@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  449
+ *  TotalVolumeTradedDate
+ *  UTCDateOnly
+ *  <p>
+ *  Deprecated in FIX.4.3 Date of TotalVolumeTraded (387).
+ *  <p>
+ *  (prior to FIX 4.4 field was of type UTCDate)
+ */
 // @Deprecated
 class Tag449UtcdTotalVolumeTradedDateTest {
     @Test

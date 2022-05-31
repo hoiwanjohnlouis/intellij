@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  580
+ *  NoDates
+ *  int
+ *  <p>
+ *  Number of Date fields provided in date range
+ */
 class Tag580IntNoDatesTest {
     @Test
     void FIX0580Test() {

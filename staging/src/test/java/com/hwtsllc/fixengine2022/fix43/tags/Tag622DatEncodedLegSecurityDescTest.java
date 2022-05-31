@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  622
+ *  EncodedLegSecurityDesc
+ *  data
+ *  <p>
+ *  Multileg instrument's individual  security’s EncodedSecurityDesc.
+ *  <p>
+ *  See EncodedSecurityDesc (35) field for description
+ */
 class Tag622DatEncodedLegSecurityDescTest {
     @Test
     void FIX0622Test() {

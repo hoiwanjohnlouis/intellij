@@ -23,6 +23,18 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  625
+ *  TradingSessionSubID
+ *  String
+ *  <p>
+ *  Optional market assigned sub identifier for a trading session.
+ *  <p>
+ *  Usage is determined by market or counterparties.
+ *  <p>
+ *  Used by US based futures markets to identify exchange specific execution
+ *  time bracket codes as required by US market regulations.
+ */
 class Tag625StrTradingSessionSubIDTest {
     @Test
     void FIX0625Test() {

@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  501
+ *  CashDistribPayRef
+ *  String
+ *  <p>
+ *  Free format Payment reference to assist with reconciliation of distributions.
+ */
 class Tag501StrCashDistribPayRefTest {
     @Test
     void FIX0501Test() {

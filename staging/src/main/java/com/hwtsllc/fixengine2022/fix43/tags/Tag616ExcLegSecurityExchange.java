@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyExchangeType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  616
+ *  LegSecurityExchange
+ *  Exchange
+ *  <p>
+ *  Multileg instrument's individual  security’s SecurityExchange.
+ *  <p>
+ *  See SecurityExchange (207) field for description
+ */
 public class Tag616ExcLegSecurityExchange extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyExchangeType dataValue;
 

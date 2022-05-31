@@ -20,16 +20,26 @@ import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Information is the same for TAGS 547
+ *  547
+ *  MDImplicitDelete
+ *  Boolean
+ *  <p>
+ *  Defines how a server handles distribution of a truncated book.  Defaults to broker option.
+ *  <p>
+ *  Valid values:
+ *  <p>    N - Server must send an explicit delete for bids or offers
+ *          falling outside the requested MarketDepth of the request
+ *  <p>    Y - Client has responsibility for implicitly deleting bids
+ *          or offers falling outside the MarketDepth of the request
  */
 public enum Enum547MDImplicitDelete implements LogFIXString, LogVerboseString {
     /*
      *  N, and Y types
      */
-    SERVER_SENDS_QUOTE_DELETE( "N", "SERVER_SENDS_QUOTE_DELETE",
+    NO( "N", "NO",
             "N - Server must send an explicit delete for bids or " +
                     "offers falling outside the requested MarketDepth of the request" ),
-    CLIENT_DELETES_QUOTE( "Y", "CLIENT_DELETES_QUOTE",
+    YES( "Y", "YES",
             "Y - Client has responsibility for implicitly deleting bids or " +
                     "offers falling outside the MarketDepth of the request" ),
     ;

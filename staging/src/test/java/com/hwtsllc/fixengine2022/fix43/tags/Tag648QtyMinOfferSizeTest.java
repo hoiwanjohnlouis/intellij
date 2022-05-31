@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  648
+ *  MinOfferSize
+ *  Qty
+ *  <p>
+ *  Used to indicate a minimum quantity for an offer.
+ *  <p>
+ *  If this field is used the OfferSize (135) field is interpreted as the maximum offer size.
+ */
 class Tag648QtyMinOfferSizeTest {
     @Test
     void FIX0648Test() {

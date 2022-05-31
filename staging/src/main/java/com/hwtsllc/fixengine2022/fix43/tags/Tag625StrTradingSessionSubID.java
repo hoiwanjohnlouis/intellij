@@ -22,6 +22,18 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  625
+ *  TradingSessionSubID
+ *  String
+ *  <p>
+ *  Optional market assigned sub identifier for a trading session.
+ *  <p>
+ *  Usage is determined by market or counterparties.
+ *  <p>
+ *  Used by US based futures markets to identify exchange specific execution
+ *  time bracket codes as required by US market regulations.
+ */
 public class Tag625StrTradingSessionSubID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

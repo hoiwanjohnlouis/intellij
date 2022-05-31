@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  576
+ *  NoClearingInstructions
+ *  NumInGroup
+ *  <p>
+ *  Number of clearing instructions
+ */
 public class Tag576NumNoClearingInstructions extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyNumInGroupType dataValue;
 

@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  543
+ *  InstrRegistry
+ *  String
+ *  <p>
+ *  Values may include BIC for the depository or custodian who maintain ownership records,
+ *  the ISO country code for the location of the record, or the value "ZZ" to specify
+ *  physical ownership of the security (e.g. stock certificate).
+ */
 class Tag543StrInstrRegistryTest {
     @Test
     void FIX0543Test() {

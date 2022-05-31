@@ -23,18 +23,31 @@ import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
-public class Tag464BoolTestMessageIndicator extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
+/**
+ *  547
+ *  MDImplicitDelete
+ *  Boolean
+ *  <p>
+ *  Defines how a server handles distribution of a truncated book.  Defaults to broker option.
+ *  <p>
+ *  Valid values:
+ *  <p>    N - Server must send an explicit delete for bids or offers
+ *          falling outside the requested MarketDepth of the request
+ *  <p>    Y - Client has responsibility for implicitly deleting bids
+ *          or offers falling outside the MarketDepth of the request
+ */
+public class Tag547EnuMDImplicitDelete extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final MyBooleanType dataValue;
 
-    public final static MyBooleanType TESTA_BOOL_TEST_MESSAGE_INDICATOR
+    public final static MyBooleanType TESTA_BOOL_MD_IMPLICIT_DELETE
             = MyBooleanType.NO ;
-    // N - False (Production)
-    public final static MyBooleanType TESTB_BOOL_TEST_MESSAGE_INDICATOR
+    // N - Server must send an explicit delete for bids or offers falling outside the requested MarketDepth of the request
+    public final static MyBooleanType TESTB_BOOL_MD_IMPLICIT_DELETE
             = MyBooleanType.YES;
-    // Y - True (Test)
+    // Y - Client has responsibility for implicitly deleting bids or offers falling outside the MarketDepth of the request
 
-    public Tag464BoolTestMessageIndicator(MyBooleanType dataValue) {
-        setFixType(FIX43.FIX464_BOOL_TEST_MESSAGE_INDICATOR);
+    public Tag547EnuMDImplicitDelete( MyBooleanType dataValue) {
+        setFixType(FIX43.FIX547_ENU_MD_IMPLICIT_DELETE );
         this.dataValue = dataValue;
     }
 
@@ -94,15 +107,15 @@ public class Tag464BoolTestMessageIndicator extends FIX43Abstract implements Log
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag464BoolTestMessageIndicator tagData;
+        Tag547EnuMDImplicitDelete tagData;
 
-        tagData = new Tag464BoolTestMessageIndicator(TESTA_BOOL_TEST_MESSAGE_INDICATOR);
+        tagData = new Tag547EnuMDImplicitDelete(TESTA_BOOL_MD_IMPLICIT_DELETE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
         System.out.println(tagData.toDataDescriptionString());
 
-        tagData = new Tag464BoolTestMessageIndicator(TESTB_BOOL_TEST_MESSAGE_INDICATOR);
+        tagData = new Tag547EnuMDImplicitDelete(TESTB_BOOL_MD_IMPLICIT_DELETE);
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());

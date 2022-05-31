@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  448
+ *  PartyID
+ *  String
+ *  <p>
+ *  Party identifier/code.  See PartyIDSource (447) and PartyRole (452).
+ *  <p>
+ *  See "Appendix 6-G – Use of <Parties> Component Block"
+ */
 class Tag448StrPartyIDTest {
     @Test
     void FIX0448Test() {

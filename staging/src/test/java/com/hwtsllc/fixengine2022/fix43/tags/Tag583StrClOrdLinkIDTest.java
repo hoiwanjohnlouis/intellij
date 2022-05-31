@@ -23,6 +23,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  583
+ *  ClOrdLinkID
+ *  String
+ *  <p>
+ *  Permits order originators to tie together groups of orders in which trades resulting
+ *  from orders are associated for a specific purpose.
+ *  <p>
+ *  For example the calculation of average execution price for a customer or to
+ *  associate lists submitted to a broker as waves of a larger program trade.
+ */
 class Tag583StrClOrdLinkIDTest {
     @Test
     void FIX0583Test() {

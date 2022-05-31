@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  605
+ *  LegSecurityAltID
+ *  String
+ *  <p>
+ *  Multileg instrument's individual  security’s SecurityAltID.
+ *  <p>
+ *  See SecurityAltID (455) field for description
+ */
 class Tag605StrLegSecurityAltIDTest {
     @Test
     void FIX0605Test() {

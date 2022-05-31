@@ -22,6 +22,14 @@ import com.hwtsllc.fixengine2022.datatypes.MyLocalMktDateType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  486
+ *  DateOfBirth
+ *  LocalMktDate
+ *  <p>
+ *  The date of birth applicable to the individual,
+ *  e.g. required to open some types of tax-exempt account.
+ */
 public class Tag486LmdDateOfBirth extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyLocalMktDateType dataValue;
 

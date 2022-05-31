@@ -22,11 +22,18 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  501
+ *  CashDistribPayRef
+ *  String
+ *  <p>
+ *  Free format Payment reference to assist with reconciliation of distributions.
+ */
 public class Tag501StrCashDistribPayRef extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_CASH_DISTRIB_PAY_REF = "BilboBaggins-Tag501StrCashDistribPayRef";
-    public final static String TESTB_STR_CASH_DISTRIB_PAY_REF = "Gandalf-Tag501StrCashDistribPayRef";
+    public final static String TESTA_STR_CASH_DISTRIB_PAY_REF = "KatherineHepburn-Tag501StrCashDistribPayRef";
+    public final static String TESTB_STR_CASH_DISTRIB_PAY_REF = "RosalindRussell-Tag501StrCashDistribPayRef";
 
     public Tag501StrCashDistribPayRef(MyStringType dataValue) {
         setFixType(FIX43.FIX501_STR_CASH_DISTRIB_PAY_REF);

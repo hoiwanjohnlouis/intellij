@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  584
+ *  MassStatusReqID
+ *  String
+ *  <p>
+ *  Value assigned by issuer of Mass Status Request to uniquely identify the request
+ */
 class Tag584StrMassStatusReqIDTest {
     @Test
     void FIX0584Test() {

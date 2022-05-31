@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  584
+ *  MassStatusReqID
+ *  String
+ *  <p>
+ *  Value assigned by issuer of Mass Status Request to uniquely identify the request
+ */
 public class Tag584StrMassStatusReqID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

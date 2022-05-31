@@ -22,6 +22,17 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  583
+ *  ClOrdLinkID
+ *  String
+ *  <p>
+ *  Permits order originators to tie together groups of orders in which trades resulting
+ *  from orders are associated for a specific purpose.
+ *  <p>
+ *  For example the calculation of average execution price for a customer or to
+ *  associate lists submitted to a broker as waves of a larger program trade.
+ */
 public class Tag583StrClOrdLinkID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

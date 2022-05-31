@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  557
+ *  TotNoSecurityTypes
+ *  int
+ *  <p>
+ *  Indicates total number of security types in the event that multiple Security Type messages are used to return results
+ *  <p>
+ *  (Prior to FIX 4.4 this field was named TotalNumSecurityTypes)
+ */
 class Tag557IntTotNoSecurityTypesTest {
     @Test
     void FIX0557Test() {

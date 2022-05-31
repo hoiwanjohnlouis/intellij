@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  539
+ *  NoNestedPartyIDs
+ *  NumInGroup
+ *  <p>
+ *  Number of NestedPartyID (524), NestedPartyIDSource (525), and NestedPartyRole (538) entries
+ */
 class Tag539NumNoNestedPartyIDsTest {
     @Test
     void FIX0539Test() {

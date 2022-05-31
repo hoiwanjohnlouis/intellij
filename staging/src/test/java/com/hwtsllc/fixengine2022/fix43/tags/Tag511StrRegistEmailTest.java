@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  511
+ *  RegistEmail
+ *  String
+ *  <p>
+ *  Email address relating to Registration name and address details
+ */
 class Tag511StrRegistEmailTest {
     @Test
     void FIX0511Test() {

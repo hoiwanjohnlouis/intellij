@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  614
+ *  LegContractMultiplier
+ *  float
+ *  <p>
+ *  Multileg instrument's individual  security’s ContractMultiplier.
+ *  <p>
+ *  See ContractMultiplier (23) field for description
+ */
 class Tag614FloLegContractMultiplierTest {
     @Test
     void FIX0614Test() {

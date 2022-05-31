@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  453
+ *  NoPartyIDs
+ *  NumInGroup
+ *  <p>
+ *  Number of PartyID (448), PartyIDSource (447), and PartyRole (452) entries
+ */
 class Tag453NumNoPartyIDsTest {
     @Test
     void FIX0453Test() {

@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  533
+ *  TotalAffectedOrders
+ *  int
+ *  <p>
+ *  Total number of orders affected by mass cancel request.
+ */
 class Tag533IntTotalAffectedOrdersTest {
     @Test
     void FIX0533Test() {

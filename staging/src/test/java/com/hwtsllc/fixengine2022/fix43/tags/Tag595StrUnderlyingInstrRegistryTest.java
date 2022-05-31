@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  595
+ *  UnderlyingInstrRegistry
+ *  String
+ *  <p>
+ *  Underlying security’s InstrRegistry.
+ *  <p>
+ *  See InstrRegistry (543) field for description
+ */
 class Tag595StrUnderlyingInstrRegistryTest {
     @Test
     void FIX0595Test() {

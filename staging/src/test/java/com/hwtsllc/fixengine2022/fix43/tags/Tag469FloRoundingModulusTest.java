@@ -23,6 +23,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  469
+ *  RoundingModulus
+ *  float
+ *  <p>
+ *  For CIV - a float value indicating the value to which rounding is required.
+ *  <p>
+ *  i.e. 0 means round to a multiple of 0 units/shares; 0.5 means round to a multiple of 0.5 units/shares.
+ *  <p>
+ *  The default, if RoundingDirection (468) is specified without RoundingModulus, is to round to a whole unit/share.
+ */
 class Tag469FloRoundingModulusTest {
     @Test
     void FIX0469Test() {

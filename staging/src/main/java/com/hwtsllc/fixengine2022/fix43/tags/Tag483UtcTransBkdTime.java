@@ -22,6 +22,17 @@ import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  483
+ *  TransBkdTime
+ *  UTCTimestamp
+ *  <p>
+ *  For CIV A date and time stamp to indicate the time a CIV order was booked by the fund manager.
+ *  <p>
+ *  For derivatives a date and time stamp to indicate when this order was booked with the agent prior to submission to the VMU.
+ *  <p>
+ *  Indicates the time at which the order was finalized between the buyer and seller prior to submission.
+ */
 public class Tag483UtcTransBkdTime extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyUTCTimestampType dataValue;
 

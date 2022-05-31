@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyUTCDateType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  449
+ *  TotalVolumeTradedDate
+ *  UTCDateOnly
+ *  <p>
+ *  Deprecated in FIX.4.3 Date of TotalVolumeTraded (387).
+ *  <p>
+ *  (prior to FIX 4.4 field was of type UTCDate)
+ */
 // @Deprecated
 public class Tag449UtcdTotalVolumeTradedDate extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyUTCDateType dataValue;

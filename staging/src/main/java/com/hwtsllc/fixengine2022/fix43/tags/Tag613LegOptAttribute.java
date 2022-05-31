@@ -16,5 +16,14 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
+/**
+ *  613
+ *  LegOptAttribute
+ *  char
+ *  <p>
+ *  Multileg instrument's individual  security’s OptAttribute.
+ *  <p>
+ *  See OptAttribute (206) field for description
+ */
 public class Tag613LegOptAttribute {
 }

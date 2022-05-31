@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  654
+ *  LegRefID
+ *  String
+ *  <p>
+ *  Unique indicator for a specific leg.
+ */
 class Tag654StrLegRefIDTest {
     @Test
     void FIX0654Test() {

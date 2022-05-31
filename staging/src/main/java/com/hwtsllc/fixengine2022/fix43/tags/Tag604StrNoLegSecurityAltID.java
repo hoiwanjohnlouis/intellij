@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  604
+ *  NoLegSecurityAltID
+ *  String
+ *  <p>
+ *  Multileg instrument's individual  security’s NoSecurityAltID.
+ *  <p>
+ *  See NoSecurityAltID (454) field for description
+ */
 public class Tag604StrNoLegSecurityAltID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

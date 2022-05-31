@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  596
+ *  LegCountryOfIssue
+ *  Country
+ *  <p>
+ *  Multileg instrument's individual leg security’s CountryOfIssue.
+ *  <p>
+ *  See CountryOfIssue (470) field for description
+ */
 class Tag596CouLegCountryOfIssueTest {
     @Test
     void FIX0596Test() {

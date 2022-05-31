@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  561
+ *  RoundLot
+ *  Qty
+ *  <p>
+ *  The trading lot size of a security
+ */
 public class Tag561QtyRoundLot extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyQtyType dataValue;
 

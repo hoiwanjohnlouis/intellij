@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyLocalMktDateType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  541
+ *  MaturityDate
+ *  LocalMktDate
+ *  <p>
+ *  Date of maturity.
+ */
 public class Tag541LmdMaturityDate extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyLocalMktDateType dataValue;
 

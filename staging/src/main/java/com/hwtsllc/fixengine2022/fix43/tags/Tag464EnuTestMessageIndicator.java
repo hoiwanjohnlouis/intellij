@@ -18,23 +18,34 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum464TestMessageIndicator;
 import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
-public class Tag547BoolMDImplicitDelete extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
-    private final MyBooleanType dataValue;
+/**
+ *  464
+ *  TestMessageIndicator
+ *  Boolean
+ *  <p>
+ *  Indicates whether or not this FIX Session is a "test" vs. "production" connection.
+ *  <p>
+ *  Useful for preventing "accidents".
+ *  <p>
+ *  Valid values:
+ *  <p>    N - False (Production)
+ *  <p>    Y - True (Test)
+ */
+public class Tag464EnuTestMessageIndicator extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
+    private final Enum464TestMessageIndicator dataValue;
 
-    public final static MyBooleanType TESTA_BOOL_MD_IMPLICIT_DELETE
-            = MyBooleanType.NO ;
-    // N - Server must send an explicit delete for bids or offers falling outside the requested MarketDepth of the request
-    public final static MyBooleanType TESTB_BOOL_MD_IMPLICIT_DELETE
-            = MyBooleanType.YES;
-    // Y - Client has responsibility for implicitly deleting bids or offers falling outside the MarketDepth of the request
+    public final static Enum464TestMessageIndicator TESTA_ENU_TEST_MESSAGE_INDICATOR
+            = Enum464TestMessageIndicator.NO ;
+    public final static Enum464TestMessageIndicator TESTB_ENU_TEST_MESSAGE_INDICATOR
+            = Enum464TestMessageIndicator.YES;
 
-    public Tag547BoolMDImplicitDelete(MyBooleanType dataValue) {
-        setFixType(FIX43.FIX547_BOOL_MD_IMPLICIT_DELETE);
+    public Tag464EnuTestMessageIndicator( Enum464TestMessageIndicator dataValue) {
+        setFixType(FIX43.FIX464_ENU_TEST_MESSAGE_INDICATOR );
         this.dataValue = dataValue;
     }
 
@@ -94,15 +105,15 @@ public class Tag547BoolMDImplicitDelete extends FIX43Abstract implements LogValu
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag547BoolMDImplicitDelete tagData;
+        Tag464EnuTestMessageIndicator tagData;
 
-        tagData = new Tag547BoolMDImplicitDelete(TESTA_BOOL_MD_IMPLICIT_DELETE);
+        tagData = new Tag464EnuTestMessageIndicator( TESTA_ENU_TEST_MESSAGE_INDICATOR );
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
         System.out.println(tagData.toDataDescriptionString());
 
-        tagData = new Tag547BoolMDImplicitDelete(TESTB_BOOL_MD_IMPLICIT_DELETE);
+        tagData = new Tag464EnuTestMessageIndicator( TESTB_ENU_TEST_MESSAGE_INDICATOR );
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());

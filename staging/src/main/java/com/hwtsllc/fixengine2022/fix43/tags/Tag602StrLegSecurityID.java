@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  602
+ *  LegSecurityID
+ *  String
+ *  <p>
+ *  Multileg instrument's individual  security’s SecurityID.
+ *  <p>
+ *  See SecurityID (48) field for description
+ */
 public class Tag602StrLegSecurityID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

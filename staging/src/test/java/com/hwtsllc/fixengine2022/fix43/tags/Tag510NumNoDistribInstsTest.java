@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  510
+ *  NoDistribInsts
+ *  NumInGroup
+ *  <p>
+ *  The number of Distribution Instructions on a Registration Instructions message
+ */
 class Tag510NumNoDistribInstsTest {
     @Test
     void FIX0510Test() {

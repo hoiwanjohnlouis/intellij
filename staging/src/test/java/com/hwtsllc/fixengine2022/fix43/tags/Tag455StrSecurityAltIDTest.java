@@ -23,6 +23,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  455
+ *  SecurityAltID
+ *  String
+ *  <p>
+ *  Alternate Security identifier value for this security of SecurityAltIDSource (456) type
+ *  <p>
+ *  (e.g. CUSIP, SEDOL, ISIN, etc).
+ *  <p>
+ *  Requires SecurityAltIDSource.
+ */
 class Tag455StrSecurityAltIDTest {
     @Test
     void FIX0455Test() {

@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  558
+ *  NoSecurityTypes
+ *  NumInGroup
+ *  <p>
+ *  Number of Security Type repeating group instances.
+ */
 public class Tag558NumNoSecurityTypes extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyNumInGroupType dataValue;
 

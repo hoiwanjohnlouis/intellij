@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  474
+ *  MailingDtls
+ *  String
+ *  <p>
+ *  Set of Correspondence address details, possibly including phone, fax, etc.
+ */
 public class Tag474StrMailingDtls extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

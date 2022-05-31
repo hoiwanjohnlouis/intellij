@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  498
+ *  CashDistribAgentName
+ *  String
+ *  <p>
+ *  Name of local agent bank if for cash distributions
+ */
 public class Tag498StrCashDistribAgentName extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

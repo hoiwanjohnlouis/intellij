@@ -17,33 +17,44 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum570PreviouslyReported;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag464TestMessageIndicatorEnuTest {
+/**
+ *  570
+ *  PreviouslyReported
+ *  Boolean
+ *  <p>
+ *  Indicates if the trade capture report was previously reported to the counterparty
+ *  <p>
+ *  Valid values:
+ *  <p>    N - Not reported to counterparty
+ *  <p>    Y - Previously reported to counterparty
+ */
+class Tag570EnuPreviouslyReportedTest {
     @Test
-    void FIX0464Test() {
-        FIX43 fixData = FIX43.FIX464_BOOL_TEST_MESSAGE_INDICATOR;
-        assertEquals( "464", fixData.toFIXIDString());
-        assertEquals( "TEST_MESSAGE_INDICATOR", fixData.toFIXNameString());
-        assertEquals( "TestMessageIndicator", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+    void FIX0570Test() {
+        FIX43 fixData = FIX43.FIX570_ENU_PREVIOUSLY_REPORTED;
+        assertEquals( "570", fixData.toFIXIDString());
+        assertEquals( "PREVIOUSLY_REPORTED", fixData.toFIXNameString());
+        assertEquals( "PreviouslyReported", fixData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
-    void Tag0464Test() {
-        Tag464BoolTestMessageIndicator tagData;
+    void Tag0570Test() {
+        Tag570EnuPreviouslyReported tagData;
 
-        tagData = new Tag464BoolTestMessageIndicator(MyBooleanType.NO);
+        tagData = new Tag570EnuPreviouslyReported( Enum570PreviouslyReported.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag464BoolTestMessageIndicator(MyBooleanType.YES);
+        tagData = new Tag570EnuPreviouslyReported(Enum570PreviouslyReported.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

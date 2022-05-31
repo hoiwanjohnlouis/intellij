@@ -18,20 +18,32 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum650LegalConfirm;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
-public class Tag636BoolWorkingIndicator extends FIX43Abstract implements LogValuePairString, LogVerboseString {
-    private final MyBooleanType dataValue;
+/**
+ *  650
+ *  LegalConfirm
+ *  Boolean
+ *  <p>
+ *  Indicates that this message is to serve as the final and legal confirmation.
+ *  <p>
+ *  Valid values:
+ *  <p>    N - Does not constitute a Legal Confirm
+ *  <p>    Y - Legal Confirm
+ */
+public class Tag650EnuLegalConfirm extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
+    private final Enum650LegalConfirm dataValue;
 
-    public final static MyBooleanType TESTA_BOOL_WORKING_INDICATOR = MyBooleanType.NO ;
-    // N - Order has been accepted but not yet in a working state
-    public final static MyBooleanType TESTB_BOOL_WORKING_INDICATOR = MyBooleanType.YES;
-    // Y - Order is currently being worked
+    public final static Enum650LegalConfirm TESTA_ENU_LEGAL_CONFIRM
+            = Enum650LegalConfirm.NO ;
+    public final static Enum650LegalConfirm TESTB_ENU_LEGAL_CONFIRM
+            = Enum650LegalConfirm.YES;
 
-    public Tag636BoolWorkingIndicator(MyBooleanType dataValue) {
-        setFixType(FIX43.FIX636_BOOL_WORKING_INDICATOR);
+    public Tag650EnuLegalConfirm(Enum650LegalConfirm dataValue) {
+        setFixType(FIX43.FIX650_ENU_LEGAL_CONFIRM );
         this.dataValue = dataValue;
     }
 
@@ -58,7 +70,28 @@ public class Tag636BoolWorkingIndicator extends FIX43Abstract implements LogValu
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the ID of the underlying Data
+     */
+    @Override
+    public String toDataIDString() {
+        return this.dataValue.toFIXIDString();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.toFIXNameString();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
+        return this.dataValue.toFIXDescriptionString();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -70,16 +103,18 @@ public class Tag636BoolWorkingIndicator extends FIX43Abstract implements LogValu
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag636BoolWorkingIndicator tagData;
+        Tag650EnuLegalConfirm tagData;
 
-        tagData = new Tag636BoolWorkingIndicator(TESTA_BOOL_WORKING_INDICATOR);
+        tagData = new Tag650EnuLegalConfirm( TESTA_ENU_LEGAL_CONFIRM );
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toDataDescriptionString());
 
-        tagData = new Tag636BoolWorkingIndicator(TESTB_BOOL_WORKING_INDICATOR);
+        tagData = new Tag650EnuLegalConfirm( TESTB_ENU_LEGAL_CONFIRM );
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
+        System.out.println(tagData.toDataDescriptionString());
     }
 }

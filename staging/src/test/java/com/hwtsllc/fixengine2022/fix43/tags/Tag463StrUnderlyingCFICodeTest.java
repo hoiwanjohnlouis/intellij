@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  463
+ *  UnderlyingCFICode
+ *  String
+ *  <p>
+ *  Underlying security’s CFICode.
+ *  <p>
+ *  Valid values:   see CFICode (461) field
+ */
 class Tag463StrUnderlyingCFICodeTest {
     @Test
     void FIX0463Test() {

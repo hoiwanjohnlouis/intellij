@@ -22,6 +22,14 @@ import com.hwtsllc.fixengine2022.datatypes.MyFloatType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  485
+ *  ExecPriceAdjustment
+ *  float
+ *  <p>
+ *  For CIV the amount or percentage by which the fund unit/share price was adjusted,
+ *  as indicated by ExecPriceType (484)
+ */
 public class Tag485FloExecPriceAdjustment extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyFloatType dataValue;
 

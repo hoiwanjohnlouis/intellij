@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  612
+ *  LegStrikePrice
+ *  Price
+ *  <p>
+ *  Multileg instrument's individual  security’s StrikePrice.
+ *  <p>
+ *  See StrikePrice (202) field for description
+ */
 public class Tag612PrcLegStrikePrice extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceType dataValue;
 

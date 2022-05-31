@@ -22,6 +22,17 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  548
+ *  CrossID
+ *  String
+ *  <p>
+ *  Identifier for a cross order.
+ *  <p>
+ *  Must be unique during a given trading day.
+ *  <p>
+ *  Recommend that firms use the order date as part of the CrossID for Good Till Cancel (GT) orders.
+ */
 public class Tag548StrCrossID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

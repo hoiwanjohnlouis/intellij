@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  579
+ *  TradeInputDevice
+ *  String
+ *  <p>
+ *  Specific device number, terminal number or station where trade was entered
+ */
 public class Tag579StrTradeInputDevice extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

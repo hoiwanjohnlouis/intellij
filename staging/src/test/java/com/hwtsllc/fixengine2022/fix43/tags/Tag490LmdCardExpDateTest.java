@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  490
+ *  CardExpDate
+ *  LocalMktDate
+ *  <p>
+ *  The expiry date of the payment card as specified on the card being used for payment.
+ */
 class Tag490LmdCardExpDateTest {
     @Test
     void FIX0490Test() {

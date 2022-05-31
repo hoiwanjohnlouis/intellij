@@ -22,11 +22,20 @@ import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  533
+ *  TotalAffectedOrders
+ *  int
+ *  <p>
+ *  Total number of orders affected by mass cancel request.
+ */
 public class Tag533IntTotalAffectedOrders extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_TOTAL_AFFECTED_ORDERS = 533;
-    public final static int TESTB_INT_TOTAL_AFFECTED_ORDERS = 335;
+    public final static int TESTA_INT_TOTAL_AFFECTED_ORDERS
+            = 533;
+    public final static int TESTB_INT_TOTAL_AFFECTED_ORDERS
+            = 335;
 
     public Tag533IntTotalAffectedOrders(MyIntType dataValue) {
         setFixType(FIX43.FIX533_INT_TOTAL_AFFECTED_ORDERS);

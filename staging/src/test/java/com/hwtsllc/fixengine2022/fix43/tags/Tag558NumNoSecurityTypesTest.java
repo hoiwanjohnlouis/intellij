@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  558
+ *  NoSecurityTypes
+ *  NumInGroup
+ *  <p>
+ *  Number of Security Type repeating group instances.
+ */
 class Tag558NumNoSecurityTypesTest {
     @Test
     void FIX0558Test() {

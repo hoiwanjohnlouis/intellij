@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  551
+ *  OrigCrossID
+ *  String
+ *  <p>
+ *  CrossID of the previous cross order (NOT the initial cross order of the day) as assigned by the institution.
+ *  <p>
+ *  Used to identify the previous cross order in Cross Cancel and Cross Cancel/Replace Requests.
+ */
 public class Tag551StrOrigCrossID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  467
+ *  IndividualAllocID
+ *  String
+ *  <p>
+ *  Unique identifier for a specific NoAllocs (78) repeating group instance
+ *  <p>
+ *  (e.g. for an AllocAccount).
+ */
 class Tag467StrIndividualAllocIDTest {
     @Test
     void FIX0467Test() {

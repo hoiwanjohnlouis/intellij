@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  451
+ *  NetChgPrevDay
+ *  PriceOffset
+ *  <p>
+ *  Net change from previous day’s closing price vs. last traded price.
+ */
 class Tag451PxoNetChgPrevDayTest {
     @Test
     void FIX0451Test() {

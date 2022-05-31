@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  657
+ *  SettlCurrOfferFxRate
+ *  float
+ *  <p>
+ *  Foreign exchange rate used to compute the offer "SettlCurrAmt" (119) from Currency (15) to SettlCurrency (120)
+ */
 class Tag657FloSettlCurrOfferFxRateTest {
     @Test
     void FIX0657Test() {

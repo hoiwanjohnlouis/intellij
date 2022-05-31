@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  580
+ *  NoDates
+ *  int
+ *  <p>
+ *  Number of Date fields provided in date range
+ */
 public class Tag580IntNoDates extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyIntType dataValue;
 

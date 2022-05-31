@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  448
+ *  PartyID
+ *  String
+ *  <p>
+ *  Party identifier/code.  See PartyIDSource (447) and PartyRole (452).
+ *  <p>
+ *  See "Appendix 6-G – Use of <Parties> Component Block"
+ */
 public class Tag448StrPartyID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

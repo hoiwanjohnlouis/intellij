@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  604
+ *  NoLegSecurityAltID
+ *  String
+ *  <p>
+ *  Multileg instrument's individual  security’s NoSecurityAltID.
+ *  <p>
+ *  See NoSecurityAltID (454) field for description
+ */
 class Tag604StrNoLegSecurityAltIDTest {
     @Test
     void FIX0604Test() {

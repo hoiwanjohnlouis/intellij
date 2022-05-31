@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  535
+ *  AffectedOrderID
+ *  String
+ *  <p>
+ *  OrderID (37) of an order affected by a mass cancel request.
+ */
 public class Tag535StrAffectedOrderID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

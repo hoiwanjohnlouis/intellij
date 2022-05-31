@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyPriceOffsetType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  451
+ *  NetChgPrevDay
+ *  PriceOffset
+ *  <p>
+ *  Net change from previous day’s closing price vs. last traded price.
+ */
 public class Tag451PxoNetChgPrevDay extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceOffsetType dataValue;
 

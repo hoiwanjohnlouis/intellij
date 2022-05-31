@@ -22,6 +22,17 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  494
+ *  Designation
+ *  String
+ *  <p>
+ *  Free format text defining the designation to be associated with a holding on the register.
+ *  <p>
+ *  Used to identify assets of a specific underlying investor using a common registration,
+ *  <p>
+ *  e.g. a broker’s nominee or street name.
+ */
 public class Tag494StrDesignation extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

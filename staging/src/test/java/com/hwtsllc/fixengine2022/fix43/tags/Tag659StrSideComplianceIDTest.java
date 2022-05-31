@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  659
+ *  SideComplianceID
+ *  String
+ *  <p>
+ *  ID within repeating group of sides which is used to represent this transaction for compliance purposes
+ *  <p>
+ *  (e.g. OATS reporting).
+ */
 class Tag659StrSideComplianceIDTest {
     @Test
     void FIX0659Test() {

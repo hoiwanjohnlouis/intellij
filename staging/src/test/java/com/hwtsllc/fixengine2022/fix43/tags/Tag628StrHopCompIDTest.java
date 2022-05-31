@@ -23,6 +23,22 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  628
+ *  HopCompID
+ *  String
+ *  <p>
+ *  Assigned value used to identify the third party firm which delivered a specific message
+ *  either from the firm which originated the message or from another third party
+ *  (if multiple "hops" are performed).
+ *  <p>
+ *  It is recommended that this value be the SenderCompID (49) of the third party.
+ *  <p>
+ *  Applicable when messages are communicated/re-distributed via third parties
+ *  which function as service bureaus or "hubs".
+ *  <p>
+ *  Only applicable if OnBehalfOfCompID (115) is being used.
+ */
 class Tag628StrHopCompIDTest {
     @Test
     void FIX0628Test() {

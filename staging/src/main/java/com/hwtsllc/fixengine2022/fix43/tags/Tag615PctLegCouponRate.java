@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  615
+ *  LegCouponRate
+ *  Percentage
+ *  <p>
+ *  Multileg instrument's individual  security’s CouponRate.
+ *  <p>
+ *  See CouponRate (223) field for description
+ */
 public class Tag615PctLegCouponRate extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyPercentageType dataValue;
 

@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  651
+ *  UnderlyingLastPx
+ *  Price
+ *  <p>
+ *  The calculated or traded price for the underlying instrument that corresponds to a derivative.
+ *  <p>
+ *  Used for transactions that include the cash instrument and the derivative.
+ */
 class Tag651PrcUnderlyingLastPxTest {
     @Test
     void FIX0651Test() {

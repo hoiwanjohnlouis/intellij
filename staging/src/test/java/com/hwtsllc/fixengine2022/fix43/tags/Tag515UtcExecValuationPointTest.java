@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  515
+ *  ExecValuationPoint
+ *  UTCTimestamp
+ *  <p>
+ *  For CIV - a date and time stamp to indicate the fund valuation point with respect to which a order was priced by the fund manager.
+ */
 class Tag515UtcExecValuationPointTest {
     @Test
     void FIX0515Test() {

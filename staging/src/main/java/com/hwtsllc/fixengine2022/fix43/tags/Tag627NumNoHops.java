@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  627
+ *  NoHops
+ *  NumInGroup
+ *  <p>
+ *  Number of HopCompID entries in repeating group.
+ */
 public class Tag627NumNoHops extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyNumInGroupType dataValue;
 

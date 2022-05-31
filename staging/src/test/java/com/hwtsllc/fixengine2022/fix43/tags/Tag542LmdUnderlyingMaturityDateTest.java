@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  542
+ *  UnderlyingMaturityDate
+ *  LocalMktDate
+ *  <p>
+ *  Underlying security’s maturity date.
+ *  <p>
+ *  See MaturityDate (541) field for description
+ */
 class Tag542LmdUnderlyingMaturityDateTest {
     @Test
     void FIX0542Test() {

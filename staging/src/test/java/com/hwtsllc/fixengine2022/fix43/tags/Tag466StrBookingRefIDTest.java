@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  466
+ *  BookingRefID
+ *  String
+ *  <p>
+ *  Common reference passed to a post-trade booking process
+ *  <p>
+ *  (e.g. industry matching utility).
+ */
 class Tag466StrBookingRefIDTest {
     @Test
     void FIX0466Test() {

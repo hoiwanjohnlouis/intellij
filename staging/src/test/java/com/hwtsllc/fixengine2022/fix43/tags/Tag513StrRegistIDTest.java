@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  513
+ *  RegistID
+ *  String
+ *  <p>
+ *  Unique identifier of the registration details as assigned by institution or intermediary.
+ */
 class Tag513StrRegistIDTest {
     @Test
     void FIX0513Test() {

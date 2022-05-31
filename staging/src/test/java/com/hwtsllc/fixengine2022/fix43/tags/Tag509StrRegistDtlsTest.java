@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  509
+ *  RegistDtls
+ *  String
+ *  <p>
+ *  Set of Registration name and address details, possibly including phone, fax etc.
+ */
 class Tag509StrRegistDtlsTest {
     @Test
     void FIX0509Test() {

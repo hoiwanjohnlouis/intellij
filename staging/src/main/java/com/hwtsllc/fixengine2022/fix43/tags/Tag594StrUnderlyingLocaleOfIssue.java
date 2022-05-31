@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  594
+ *  UnderlyingLocaleOfIssue
+ *  String
+ *  <p>
+ *  Underlying security’s LocaleOfIssue.
+ *  <p>
+ *  See LocaleOfIssue (472) field for description
+ */
 public class Tag594StrUnderlyingLocaleOfIssue extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

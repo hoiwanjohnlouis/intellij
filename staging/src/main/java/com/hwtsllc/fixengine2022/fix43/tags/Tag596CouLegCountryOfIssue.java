@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyCountryType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  596
+ *  LegCountryOfIssue
+ *  Country
+ *  <p>
+ *  Multileg instrument's individual leg security’s CountryOfIssue.
+ *  <p>
+ *  See CountryOfIssue (470) field for description
+ */
 public class Tag596CouLegCountryOfIssue extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyCountryType dataValue;
 

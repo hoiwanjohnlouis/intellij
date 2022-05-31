@@ -23,6 +23,24 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  461
+ *  CFICode
+ *  String
+ *  <p>
+ *  Indicates the type of security using ISO 10962 standard, Classification of Financial Instruments (CFI code) values.
+ *  <p>
+ *  ISO 10962 is maintained by ANNA (Association of National Numbering Agencies) acting as Registration Authority.
+ *  <p>
+ *  See "Appendix 6-B FIX Fields Based Upon Other Standards".
+ *  <p>
+ *  See also the Product (460) and SecurityType (167) fields.
+ *  <p>
+ *  It is recommended that CFICode be used instead of SecurityType (167) for non-Fixed Income instruments.
+ *  <p>
+ *  A subset of possible values applicable to FIX usage are identified in
+ *  "Appendix 6-D CFICode Usage - ISO 10962 Classification of Financial Instruments (CFI code)"
+ */
 class Tag461StrCFICodeTest {
     @Test
     void FIX0461Test() {

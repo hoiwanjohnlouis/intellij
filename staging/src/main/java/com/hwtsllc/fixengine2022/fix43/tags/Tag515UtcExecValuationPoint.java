@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  515
+ *  ExecValuationPoint
+ *  UTCTimestamp
+ *  <p>
+ *  For CIV - a date and time stamp to indicate the fund valuation point with respect to which a order was priced by the fund manager.
+ */
 public class Tag515UtcExecValuationPoint extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyUTCTimestampType dataValue;
 

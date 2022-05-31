@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  473
+ *  NoRegistDtls
+ *  NumInGroup
+ *  <p>
+ *  The number of registration details on a Registration Instructions message
+ */
 public class Tag473NumNoRegistDtls extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyNumInGroupType dataValue;
 

@@ -18,23 +18,38 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
-import com.hwtsllc.fixengine2022.interfaces.LogDataString;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum636WorkingIndicator;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
-public class Tag575BoolOddLot extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
-    private final MyBooleanType dataValue;
+/**
+ *  636
+ *  WorkingIndicator
+ *  Boolean
+ *  <p>
+ *  Indicates if the order is currently being worked.
+ *  <p>
+ *  Applicable only for OrdStatus = "New".
+ *  <p>
+ *  For open outcry markets this indicates that the order is being worked in the crowd.
+ *  <p>
+ *  For electronic markets it indicates that the order has transitioned
+ *  from a contingent order to a market order.
+ *  <p>
+ *  Valid values:
+ *  <p>    N - Order has been accepted but not yet in a working state
+ *  <p>    Y - Order is currently being worked
+ */
+public class Tag636EnuWorkingIndicator extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+    private final Enum636WorkingIndicator dataValue;
 
-    public final static MyBooleanType TESTA_BOOL_ODD_LOT
-            = MyBooleanType.NO ;
-    // N - Treat as round lot (default)
-    public final static MyBooleanType TESTB_BOOL_ODD_LOT
-            = MyBooleanType.YES;
-    // Y - Treat as odd lot
+    public final static Enum636WorkingIndicator TESTA_ENU_WORKING_INDICATOR
+            = Enum636WorkingIndicator.NO ;
+    public final static Enum636WorkingIndicator TESTB_ENU_WORKING_INDICATOR
+            = Enum636WorkingIndicator.YES;
 
-    public Tag575BoolOddLot(MyBooleanType dataValue) {
-        setFixType(FIX43.FIX575_BOOL_ODD_LOT);
+    public Tag636EnuWorkingIndicator( Enum636WorkingIndicator dataValue) {
+        setFixType(FIX43.FIX636_ENU_WORKING_INDICATOR );
         this.dataValue = dataValue;
     }
 
@@ -61,28 +76,7 @@ public class Tag575BoolOddLot extends FIX43Abstract implements LogValuePairStrin
                 .concat("]");
     }
     /**
-     * wrapper to return the ID of the underlying Data
-     */
-    @Override
-    public String toDataIDString() {
-        return this.dataValue.toFIXIDString();
-    }
-    /**
-     * wrapper to return the Name of the underlying Data
-     */
-    @Override
-    public String toDataNameString() {
-        return this.dataValue.toFIXNameString();
-    }
-    /**
-     * wrapper to return the Description of the underlying Data
-     */
-    @Override
-    public String toDataDescriptionString() {
-        return this.dataValue.toFIXDescriptionString();
-    }
-    /**
-     * standard wrapper to return a string describing the data
+     * standard wrapper to format a simple string describing the data
      */
     @Override
     public String toString() {
@@ -94,18 +88,16 @@ public class Tag575BoolOddLot extends FIX43Abstract implements LogValuePairStrin
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag575BoolOddLot tagData;
+        Tag636EnuWorkingIndicator tagData;
 
-        tagData = new Tag575BoolOddLot(TESTA_BOOL_ODD_LOT);
+        tagData = new Tag636EnuWorkingIndicator( TESTA_ENU_WORKING_INDICATOR );
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
-        tagData = new Tag575BoolOddLot(TESTB_BOOL_ODD_LOT);
+        tagData = new Tag636EnuWorkingIndicator( TESTB_ENU_WORKING_INDICATOR );
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

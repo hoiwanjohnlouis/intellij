@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  479
+ *  CommCurrency
+ *  Currency
+ *  <p>
+ *  Specifies currency to be  use for Commission (12) if the Commission currency is different from the Deal Currency
+ *  <p>
+ *  see "Appendix 6-A; Valid Currency Codes".
+ */
 class Tag479CcyCommCurrencyTest {
     @Test
     void FIX0479Test() {

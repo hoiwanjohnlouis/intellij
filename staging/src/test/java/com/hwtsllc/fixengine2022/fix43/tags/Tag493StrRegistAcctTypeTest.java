@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  493
+ *  RegistAcctType
+ *  String
+ *  <p>
+ *  For CIV – a  fund manager-defined code identifying which of the fund manager’s account types is required.
+ */
 class Tag493StrRegistAcctTypeTest {
     @Test
     void FIX0493Test() {

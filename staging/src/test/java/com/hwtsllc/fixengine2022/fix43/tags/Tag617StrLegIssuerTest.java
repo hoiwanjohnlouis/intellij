@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  617
+ *  LegIssuer
+ *  String
+ *  <p>
+ *  Multileg instrument's individual  security’s Issuer.
+ *  <p>
+ *  See Issuer (106) field for description
+ */
 class Tag617StrLegIssuerTest {
     @Test
     void FIX0617Test() {

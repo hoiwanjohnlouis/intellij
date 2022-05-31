@@ -22,11 +22,18 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  508
+ *  RegistRefID
+ *  String
+ *  <p>
+ *  Reference identifier for the RegistID (53) with Cancel and Replace RegistTransType (54) transaction types.
+ */
 public class Tag508StrRegistRefID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_REGIST_REF_ID = "BilboBaggins-Tag508StrRegistRefID";
-    public final static String TESTB_STR_REGIST_REF_ID = "Gandalf-Tag508StrRegistRefID";
+    public final static String TESTA_STR_REGIST_REF_ID = "JoanBlondell-Tag508StrRegistRefID";
+    public final static String TESTB_STR_REGIST_REF_ID = "CaroleLombard-Tag508StrRegistRefID";
 
     public Tag508StrRegistRefID(MyStringType dataValue) {
         setFixType(FIX43.FIX508_STR_REGIST_REF_ID);

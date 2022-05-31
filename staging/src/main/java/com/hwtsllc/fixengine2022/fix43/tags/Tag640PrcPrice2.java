@@ -22,7 +22,16 @@ import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
-public class Tag640PrcPrice2 extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+/**
+ *  640
+ *  Price2
+ *  Price
+ *  <p>
+ *  Deprecated in FIX.5.0 Price of the future part of a F/X swap order.
+ *  <p>
+ *  See Price (44) for description.
+ */
+public class  Tag640PrcPrice2 extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceType dataValue;
 
     public final static double TESTA_PRC_PRICE_2 = 6.40D;

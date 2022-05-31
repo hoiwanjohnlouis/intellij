@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyLocalMktDateType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  588
+ *  LegSettlDate
+ *  LocalMktDate
+ *  <p>
+ *  Refer to description for SettlDate[64]
+ */
 public class Tag588LmdLegSettlDate extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyLocalMktDateType dataValue;
 

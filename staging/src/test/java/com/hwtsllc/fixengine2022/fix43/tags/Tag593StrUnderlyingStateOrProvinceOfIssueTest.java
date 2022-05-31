@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  593
+ *  UnderlyingStateOrProvinceOfIssue
+ *  String
+ *  <p>
+ *  Underlying security’s StateOrProvinceOfIssue.
+ *  <p>
+ *  See StateOrProvinceOfIssue (471) field for description
+ */
 class Tag593StrUnderlyingStateOrProvinceOfIssueTest {
     @Test
     void FIX0593Test() {

@@ -24,26 +24,39 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag570BoolPreviouslyReportedTest {
+/**
+ *  547
+ *  MDImplicitDelete
+ *  Boolean
+ *  <p>
+ *  Defines how a server handles distribution of a truncated book.  Defaults to broker option.
+ *  <p>
+ *  Valid values:
+ *  <p>    N - Server must send an explicit delete for bids or offers
+ *          falling outside the requested MarketDepth of the request
+ *  <p>    Y - Client has responsibility for implicitly deleting bids
+ *          or offers falling outside the MarketDepth of the request
+ */
+class Tag547EnuMDImplicitDeleteTest {
     @Test
-    void FIX0570Test() {
-        FIX43 fixData = FIX43.FIX570_BOOL_PREVIOUSLY_REPORTED;
-        assertEquals( "570", fixData.toFIXIDString());
-        assertEquals( "PREVIOUSLY_REPORTED", fixData.toFIXNameString());
-        assertEquals( "PreviouslyReported", fixData.toFIXDescriptionString());
+    void FIX0547Test() {
+        FIX43 fixData = FIX43.FIX547_ENU_MD_IMPLICIT_DELETE;
+        assertEquals( "547", fixData.toFIXIDString());
+        assertEquals( "MD_IMPLICIT_DELETE", fixData.toFIXNameString());
+        assertEquals( "MDImplicitDelete", fixData.toFIXDescriptionString());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
-    void Tag0570Test() {
-        Tag570BoolPreviouslyReported tagData;
+    void Tag0547Test() {
+        Tag547EnuMDImplicitDelete tagData;
 
-        tagData = new Tag570BoolPreviouslyReported(MyBooleanType.NO);
+        tagData = new Tag547EnuMDImplicitDelete(MyBooleanType.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag570BoolPreviouslyReported(MyBooleanType.YES);
+        tagData = new Tag547EnuMDImplicitDelete(MyBooleanType.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

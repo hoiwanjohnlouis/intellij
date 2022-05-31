@@ -22,6 +22,20 @@ import com.hwtsllc.fixengine2022.datatypes.MySeqNumType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  630
+ *  HopRefID
+ *  SeqNum
+ *  <p>
+ *  Reference identifier assigned by HopCompID (628) associated with the message sent.
+ *  <p>
+ *  It is recommended that this value be the MsgSeqNum (34) of the message sent by the third party.
+ *  <p>
+ *  Applicable when messages are communicated/re-distributed via third parties
+ *  which function as service bureaus or "hubs".
+ *  <p>
+ *  Only applicable if OnBehalfOfCompID (115) is being used.
+ */
 public class Tag630SeqHopRefID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MySeqNumType dataValue;
 

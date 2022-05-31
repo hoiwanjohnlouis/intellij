@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  556
+ *  LegCurrency
+ *  Currency
+ *  <p>
+ *  Currency associated with a particular Leg's quantity
+ */
 class Tag556CcyLegCurrencyTest {
     @Test
     void FIX0556Test() {

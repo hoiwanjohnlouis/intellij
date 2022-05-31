@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  592
+ *  UnderlyingCountryOfIssue
+ *  Country
+ *  <p>
+ *  Underlying security’s CountryOfIssue.
+ *  <p>
+ *  See CountryOfIssue (470) field for description
+ */
 class Tag592CouUnderlyingCountryOfIssueTest {
     @Test
     void FIX0592Test() {

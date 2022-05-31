@@ -22,11 +22,18 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  489
+ *  CardNumber
+ *  String
+ *  <p>
+ *  The number of the payment card as specified on the card being used for payment.
+ */
 public class Tag489StrCardNumber extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_CARD_NUMBER = "BilboBaggins-Tag489StrCardNumber";
-    public final static String TESTB_STR_CARD_NUMBER = "Gandalf-Tag489StrCardNumber";
+    public final static String TESTA_STR_CARD_NUMBER = "JeanHarlow-Tag489StrCardNumber";
+    public final static String TESTB_STR_CARD_NUMBER = "ClaudetteColbert-Tag489StrCardNumber";
 
     public Tag489StrCardNumber(MyStringType dataValue) {
         setFixType(FIX43.FIX489_STR_CARD_NUMBER);

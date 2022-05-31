@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyLocalMktDateType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  490
+ *  CardExpDate
+ *  LocalMktDate
+ *  <p>
+ *  The expiry date of the payment card as specified on the card being used for payment.
+ */
 public class Tag490LmdCardExpDate extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyLocalMktDateType dataValue;
 

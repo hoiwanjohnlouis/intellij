@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  508
+ *  RegistRefID
+ *  String
+ *  <p>
+ *  Reference identifier for the RegistID (53) with Cancel and Replace RegistTransType (54) transaction types.
+ */
 class Tag508StrRegistRefIDTest {
     @Test
     void FIX0508Test() {

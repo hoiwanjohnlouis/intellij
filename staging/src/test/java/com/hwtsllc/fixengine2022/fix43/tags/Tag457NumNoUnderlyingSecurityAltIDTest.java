@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  457
+ *  NoUnderlyingSecurityAltID
+ *  NumInGroup
+ *  <p>
+ *  Number of UnderlyingSecurityAltID (458) entries.
+ */
 class Tag457NumNoUnderlyingSecurityAltIDTest {
     @Test
     void FIX0457Test() {

@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  619
+ *  EncodedLegIssuer
+ *  data
+ *  <p>
+ *  Multileg instrument's individual  security’s EncodedIssuer.
+ *  <p>
+ *  See EncodedIssuer (349) field for description
+ */
 class Tag619DatEncodedLegIssuerTest {
     @Test
     void FIX0619Test() {

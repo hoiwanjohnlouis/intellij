@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  571
+ *  TradeReportID
+ *  String
+ *  <p>
+ *  Unique identifier of trade capture report
+ */
 class Tag571StrTradeReportIDTest {
     @Test
     void FIX0571Test() {

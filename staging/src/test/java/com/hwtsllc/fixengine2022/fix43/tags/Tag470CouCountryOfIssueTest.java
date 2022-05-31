@@ -23,6 +23,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  470
+ *  CountryOfIssue
+ *  Country
+ *  <p>
+ *  ISO Country code of instrument issue (e.g. the country portion typically used in ISIN).
+ *  <p>
+ *  Can be used in conjunction with non-ISIN SecurityID (48)
+ *  <p>
+ *  (e.g. CUSIP for Municipal Bonds without ISIN) to provide uniqueness.
+ */
 class Tag470CouCountryOfIssueTest {
     @Test
     void FIX0470Test() {

@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  536
+ *  AffectedSecondaryOrderID
+ *  String
+ *  <p>
+ *  SecondaryOrderID (198) of an order affected by a mass cancel request.
+ */
 class Tag536StrAffectedSecondaryOrderIDTest {
     @Test
     void FIX0536Test() {

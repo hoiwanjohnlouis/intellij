@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  652
+ *  UnderlyingLastQty
+ *  Qty
+ *  <p>
+ *  The calculated or traded quantity for the underlying instrument that corresponds to a derivative.
+ *  <p>
+ *  Used for transactions that include the cash instrument and the derivative.
+ */
 public class Tag652QtyUnderlyingLastQty extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyQtyType dataValue;
 

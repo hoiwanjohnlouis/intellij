@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  520
+ *  ContAmtValue
+ *  float
+ *  <p>
+ *  Value of Contract Amount,
+ *  <p>
+ *  e.g. a financial amount or percentage as indicated by ContAmtType (519).
+ */
 class Tag520FloContAmtValueTest {
     @Test
     void FIX0520Test() {

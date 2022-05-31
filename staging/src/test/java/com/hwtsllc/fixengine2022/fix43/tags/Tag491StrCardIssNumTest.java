@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  491
+ *  CardIssNum
+ *  String
+ *  <p>
+ *  The issue number of the payment card as specified on the card being used for payment.
+ *  <p>
+ *  This is only applicable to certain types of card.
+ */
 class Tag491StrCardIssNumTest {
     @Test
     void FIX0491Test() {

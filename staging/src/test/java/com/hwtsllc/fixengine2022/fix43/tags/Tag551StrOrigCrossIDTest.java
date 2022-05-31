@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  551
+ *  OrigCrossID
+ *  String
+ *  <p>
+ *  CrossID of the previous cross order (NOT the initial cross order of the day) as assigned by the institution.
+ *  <p>
+ *  Used to identify the previous cross order in Cross Cancel and Cross Cancel/Replace Requests.
+ */
 class Tag551StrOrigCrossIDTest {
     @Test
     void FIX0551Test() {

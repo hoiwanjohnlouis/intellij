@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  482
+ *  MailingInst
+ *  String
+ *  <p>
+ *  Free format text to specify mailing instruction requirements, e.g. "no third party mailings".
+ */
 public class Tag482StrMailingInst extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

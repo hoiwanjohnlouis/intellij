@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  473
+ *  NoRegistDtls
+ *  NumInGroup
+ *  <p>
+ *  The number of registration details on a Registration Instructions message
+ */
 class Tag473NumNoRegistDtlsTest {
     @Test
     void FIX0473Test() {

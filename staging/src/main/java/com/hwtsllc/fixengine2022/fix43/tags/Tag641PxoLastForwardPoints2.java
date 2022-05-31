@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyPriceOffsetType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  641
+ *  LastForwardPoints2
+ *  PriceOffset
+ *  <p>
+ *  Deprecated in FIX.5.0 F/X forward points of the future part of a F/X swap order added to LastSpotRate (94).
+ *  <p>
+ *  May be a negative value.
+ */
 public class Tag641PxoLastForwardPoints2 extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceOffsetType dataValue;
 

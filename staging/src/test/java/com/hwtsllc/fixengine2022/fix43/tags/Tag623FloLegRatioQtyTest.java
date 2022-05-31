@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  623
+ *  LegRatioQty
+ *  float
+ *  <p>
+ *  The ratio of quantity for this individual leg relative to the entire multileg security.
+ */
 class Tag623FloLegRatioQtyTest {
     @Test
     void FIX0623Test() {

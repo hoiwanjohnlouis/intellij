@@ -23,6 +23,20 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  586
+ *  OrigOrdModTime
+ *  UTCTimestamp
+ *  <p>
+ *  The most recent (or current) modification TransactTime (tag 60) reported
+ *  on an Execution Report for the order.
+ *  <p>
+ *  The OrigOrdModTime is provided as an optional field on Order Cancel Request
+ *  and Order Cancel Replace Requests to identify that the state of the order has
+ *  not changed since the request was issued.
+ *  <p>
+ *  This is provided to support markets similar to Eurex and A/C/E.
+ */
 class Tag586UtcOrigOrdModTimeTest {
     @Test
     void FIX0586Test() {

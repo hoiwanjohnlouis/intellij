@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyLocalMktDateType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  611
+ *  LegMaturityDate
+ *  LocalMktDate
+ *  <p>
+ *  Multileg instrument's individual  security’s MaturityDate.
+ *  <p>
+ *  See MaturityDate (54) field for description
+ */
 public class Tag611LmdLegMaturityDate extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyLocalMktDateType dataValue;
 

@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  457
+ *  NoUnderlyingSecurityAltID
+ *  NumInGroup
+ *  <p>
+ *  Number of UnderlyingSecurityAltID (458) entries.
+ */
 public class Tag457NumNoUnderlyingSecurityAltID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyNumInGroupType dataValue;
 

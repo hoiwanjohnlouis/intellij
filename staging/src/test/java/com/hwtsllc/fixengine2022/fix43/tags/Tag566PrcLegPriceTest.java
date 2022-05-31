@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  566
+ *  LegPrice
+ *  Price
+ *  <p>
+ *  Price for leg of a multileg
+ *  <p>
+ *  See Price (44) field for description
+ */
 class Tag566PrcLegPriceTest {
     @Test
     void FIX0566Test() {

@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  588
+ *  LegSettlDate
+ *  LocalMktDate
+ *  <p>
+ *  Refer to description for SettlDate[64]
+ */
 class Tag588LmdLegSettlDateTest {
     @Test
     void FIX0588Test() {

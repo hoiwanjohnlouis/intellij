@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  471
+ *  StateOrProvinceOfIssue
+ *  String
+ *  <p>
+ *  A two-character state or province abbreviation.
+ */
 public class Tag471StrStateOrProvinceOfIssue extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

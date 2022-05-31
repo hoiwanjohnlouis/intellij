@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyCountryType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  592
+ *  UnderlyingCountryOfIssue
+ *  Country
+ *  <p>
+ *  Underlying security’s CountryOfIssue.
+ *  <p>
+ *  See CountryOfIssue (470) field for description
+ */
 public class Tag592CouUnderlyingCountryOfIssue extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyCountryType dataValue;
 

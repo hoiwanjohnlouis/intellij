@@ -23,6 +23,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  548
+ *  CrossID
+ *  String
+ *  <p>
+ *  Identifier for a cross order.
+ *  <p>
+ *  Must be unique during a given trading day.
+ *  <p>
+ *  Recommend that firms use the order date as part of the CrossID for Good Till Cancel (GT) orders.
+ */
 class Tag548StrCrossIDTest {
     @Test
     void FIX0548Test() {

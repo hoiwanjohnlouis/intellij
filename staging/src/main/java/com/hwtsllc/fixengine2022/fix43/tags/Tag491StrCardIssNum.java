@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  491
+ *  CardIssNum
+ *  String
+ *  <p>
+ *  The issue number of the payment card as specified on the card being used for payment.
+ *  <p>
+ *  This is only applicable to certain types of card.
+ */
 public class Tag491StrCardIssNum extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

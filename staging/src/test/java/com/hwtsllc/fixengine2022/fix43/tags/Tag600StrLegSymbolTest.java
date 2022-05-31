@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  600
+ *  LegSymbol
+ *  String
+ *  <p>
+ *  Multileg instrument's individual  security’s Symbol.
+ *  <p>
+ *  See Symbol (55) field for description
+ */
 class Tag600StrLegSymbolTest {
     @Test
     void FIX0600Test() {

@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  467
+ *  IndividualAllocID
+ *  String
+ *  <p>
+ *  Unique identifier for a specific NoAllocs (78) repeating group instance
+ *  <p>
+ *  (e.g. for an AllocAccount).
+ */
 public class Tag467StrIndividualAllocID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

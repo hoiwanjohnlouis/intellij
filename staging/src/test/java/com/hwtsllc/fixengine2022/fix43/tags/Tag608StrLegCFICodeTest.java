@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  608
+ *  LegCFICode
+ *  String
+ *  <p>
+ *  Multileg instrument's individual security’s CFICode.
+ *  <p>
+ *  See CFICode (461) field for description
+ */
 class Tag608StrLegCFICodeTest {
     @Test
     void FIX0608Test() {

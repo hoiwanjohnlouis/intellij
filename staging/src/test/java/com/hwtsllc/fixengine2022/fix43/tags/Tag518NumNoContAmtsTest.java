@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  518
+ *  NoContAmts
+ *  NumInGroup
+ *  <p>
+ *  The number of Contract Amount details on an Execution Report message
+ */
 class Tag518NumNoContAmtsTest {
     @Test
     void FIX0518Test() {

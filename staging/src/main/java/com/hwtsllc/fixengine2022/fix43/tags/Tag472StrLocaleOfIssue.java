@@ -22,6 +22,19 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  472
+ *  LocaleOfIssue
+ *  String
+ *  <p>
+ *  Identifies the locale. For Municipal Security Issuers other than state or province. Refer to
+ *  <p>
+ *  http://www.atmos.albany.edu/cgi/stagrep-cgi
+ *  <p>
+ *  Reference the IATA city codes for values.
+ *  <p>
+ *  Note IATA (International Air Transport Association) maintains the codes at www.iata.org.
+ */
 public class Tag472StrLocaleOfIssue extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

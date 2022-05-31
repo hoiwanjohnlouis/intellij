@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  652
+ *  UnderlyingLastQty
+ *  Qty
+ *  <p>
+ *  The calculated or traded quantity for the underlying instrument that corresponds to a derivative.
+ *  <p>
+ *  Used for transactions that include the cash instrument and the derivative.
+ */
 class Tag652QtyUnderlyingLastQtyTest {
     @Test
     void FIX0652Test() {

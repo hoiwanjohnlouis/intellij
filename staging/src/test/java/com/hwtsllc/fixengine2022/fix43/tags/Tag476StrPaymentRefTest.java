@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  476
+ *  PaymentRef
+ *  String
+ *  <p>
+ *  "Settlement Payment Reference" – A free format Payment reference to assist with reconciliation,
+ *  <p>
+ *  e.g. a Client and/or Order ID number.
+ */
 class Tag476StrPaymentRefTest {
     @Test
     void FIX0476Test() {

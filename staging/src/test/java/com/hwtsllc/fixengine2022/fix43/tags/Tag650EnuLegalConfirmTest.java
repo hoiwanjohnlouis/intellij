@@ -17,33 +17,44 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum650LegalConfirm;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag547BoolMDImplicitDeleteTest {
+/**
+ *  650
+ *  LegalConfirm
+ *  Boolean
+ *  <p>
+ *  Indicates that this message is to serve as the final and legal confirmation.
+ *  <p>
+ *  Valid values:
+ *  <p>    N - Does not constitute a Legal Confirm
+ *  <p>    Y - Legal Confirm
+ */
+class Tag650EnuLegalConfirmTest {
     @Test
-    void FIX0547Test() {
-        FIX43 fixData = FIX43.FIX547_BOOL_MD_IMPLICIT_DELETE;
-        assertEquals( "547", fixData.toFIXIDString());
-        assertEquals( "MD_IMPLICIT_DELETE", fixData.toFIXNameString());
-        assertEquals( "MDImplicitDelete", fixData.toFIXDescriptionString());
+    void FIX0650Test() {
+        FIX43 fixData = FIX43.FIX650_ENU_LEGAL_CONFIRM;
+        assertEquals( "650", fixData.toFIXIDString());
+        assertEquals( "LEGAL_CONFIRM", fixData.toFIXNameString());
+        assertEquals( "LegalConfirm", fixData.toFIXDescriptionString());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
-    void Tag0547Test() {
-        Tag547BoolMDImplicitDelete tagData;
+    void Tag0650Test() {
+        Tag650EnuLegalConfirm tagData;
 
-        tagData = new Tag547BoolMDImplicitDelete(MyBooleanType.NO);
+        tagData = new Tag650EnuLegalConfirm(Enum650LegalConfirm.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag547BoolMDImplicitDelete(MyBooleanType.YES);
+        tagData = new Tag650EnuLegalConfirm(Enum650LegalConfirm.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

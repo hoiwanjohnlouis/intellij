@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  496
+ *  RegistRejReasonText
+ *  String
+ *  <p>
+ *  Text indicating reason(s) why a Registration Instruction has been rejected.
+ */
 public class Tag496StrRegistRejReasonText extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  616
+ *  LegSecurityExchange
+ *  Exchange
+ *  <p>
+ *  Multileg instrument's individual  security’s SecurityExchange.
+ *  <p>
+ *  See SecurityExchange (207) field for description
+ */
 class Tag616ExcLegSecurityExchangeTest {
     @Test
     void FIX0616Test() {

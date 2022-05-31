@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  612
+ *  LegStrikePrice
+ *  Price
+ *  <p>
+ *  Multileg instrument's individual  security’s StrikePrice.
+ *  <p>
+ *  See StrikePrice (202) field for description
+ */
 class Tag612PrcLegStrikePriceTest {
     @Test
     void FIX0612Test() {

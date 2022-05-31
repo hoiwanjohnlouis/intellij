@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  561
+ *  RoundLot
+ *  Qty
+ *  <p>
+ *  The trading lot size of a security
+ */
 class Tag561QtyRoundLotTest {
     @Test
     void FIX0561Test() {

@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  453
+ *  NoPartyIDs
+ *  NumInGroup
+ *  <p>
+ *  Number of PartyID (448), PartyIDSource (447), and PartyRole (452) entries
+ */
 public class Tag453NumNoPartyIDs extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyNumInGroupType dataValue;
 

@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  534
+ *  NoAffectedOrders
+ *  int
+ *  <p>
+ *  Number of affected orders in the repeating group of order ids.
+ */
 class Tag534IntNoAffectedOrdersTest {
     @Test
     void FIX0534Test() {

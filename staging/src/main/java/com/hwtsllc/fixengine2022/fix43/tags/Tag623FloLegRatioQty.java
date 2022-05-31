@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyFloatType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  623
+ *  LegRatioQty
+ *  float
+ *  <p>
+ *  The ratio of quantity for this individual leg relative to the entire multileg security.
+ */
 public class Tag623FloLegRatioQty extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyFloatType dataValue;
 

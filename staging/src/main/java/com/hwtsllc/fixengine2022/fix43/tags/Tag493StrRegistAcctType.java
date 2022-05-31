@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  493
+ *  RegistAcctType
+ *  String
+ *  <p>
+ *  For CIV – a  fund manager-defined code identifying which of the fund manager’s account types is required.
+ */
 public class Tag493StrRegistAcctType extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

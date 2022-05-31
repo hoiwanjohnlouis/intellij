@@ -23,6 +23,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  494
+ *  Designation
+ *  String
+ *  <p>
+ *  Free format text defining the designation to be associated with a holding on the register.
+ *  <p>
+ *  Used to identify assets of a specific underlying investor using a common registration,
+ *  <p>
+ *  e.g. a broker’s nominee or street name.
+ */
 class Tag494StrDesignationTest {
     @Test
     void FIX0494Test() {

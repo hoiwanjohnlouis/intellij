@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  488
+ *  CardHolderName
+ *  String
+ *  <p>
+ *  The name of the payment card holder as specified on the card being used for payment.
+ */
 class Tag488StrCardHolderNameTest {
     @Test
     void FIX0488Test() {

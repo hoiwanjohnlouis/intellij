@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  642
+ *  BidForwardPoints2
+ *  PriceOffset
+ *  <p>
+ *  Deprecated in FIX.5.0 Bid F/X forward points of the future portion of a F/X swap quote added to spot rate.
+ *  <p>
+ *  May be a negative value.
+ */
 class Tag642PxoBidForwardPoints2Test {
     @Test
     void FIX0642Test() {

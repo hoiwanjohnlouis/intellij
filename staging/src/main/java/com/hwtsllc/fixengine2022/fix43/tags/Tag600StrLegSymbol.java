@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  600
+ *  LegSymbol
+ *  String
+ *  <p>
+ *  Multileg instrument's individual  security’s Symbol.
+ *  <p>
+ *  See Symbol (55) field for description
+ */
 public class Tag600StrLegSymbol extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  659
+ *  SideComplianceID
+ *  String
+ *  <p>
+ *  ID within repeating group of sides which is used to represent this transaction for compliance purposes
+ *  <p>
+ *  (e.g. OATS reporting).
+ */
 public class Tag659StrSideComplianceID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

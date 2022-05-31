@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyLocalMktDateType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  542
+ *  UnderlyingMaturityDate
+ *  LocalMktDate
+ *  <p>
+ *  Underlying security’s maturity date.
+ *  <p>
+ *  See MaturityDate (541) field for description
+ */
 public class Tag542LmdUnderlyingMaturityDate extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyLocalMktDateType dataValue;
 

@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  512
+ *  DistribPercentage
+ *  Percentage
+ *  <p>
+ *  The amount of each distribution to go to this beneficiary, expressed as a percentage
+ */
 class Tag512PctDistribPercentageTest {
     @Test
     void FIX0512Test() {

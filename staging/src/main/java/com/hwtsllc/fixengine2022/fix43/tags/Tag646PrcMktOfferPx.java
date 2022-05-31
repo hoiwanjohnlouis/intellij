@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  646
+ *  MktOfferPx
+ *  Price
+ *  <p>
+ *  Used to indicate the best offer in a market
+ */
 public class Tag646PrcMktOfferPx extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceType dataValue;
 

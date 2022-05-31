@@ -22,8 +22,21 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  547
+ *  MDImplicitDelete
+ *  Boolean
+ *  <p>
+ *  Defines how a server handles distribution of a truncated book.  Defaults to broker option.
+ *  <p>
+ *  Valid values:
+ *  <p>    N - Server must send an explicit delete for bids or offers
+ *          falling outside the requested MarketDepth of the request
+ *  <p>    Y - Client has responsibility for implicitly deleting bids
+ *          or offers falling outside the MarketDepth of the request
+ */
 class Enum547MDImplicitDeleteTest {
-    /**
+    /*
      *  Information is the same for TAGS 547
      */
     @Test
@@ -33,18 +46,18 @@ class Enum547MDImplicitDeleteTest {
         /*
          *  N, and Y types
          */
-        enumType = Enum547MDImplicitDelete.SERVER_SENDS_QUOTE_DELETE;
+        enumType = Enum547MDImplicitDelete.NO;
         assertEquals("N", enumType.toFIXIDString());
-        assertEquals("SERVER_SENDS_QUOTE_DELETE", enumType.toFIXNameString());
+        assertEquals("NO", enumType.toFIXNameString());
         assertEquals("N - Server must send an explicit delete for bids or offers falling outside the requested MarketDepth of the request", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
-        enumType = Enum547MDImplicitDelete.CLIENT_DELETES_QUOTE;
+        enumType = Enum547MDImplicitDelete.YES;
         assertEquals("Y", enumType.toFIXIDString());
-        assertEquals("CLIENT_DELETES_QUOTE", enumType.toFIXNameString());
+        assertEquals("YES", enumType.toFIXNameString());
         assertEquals("Y - Client has responsibility for implicitly deleting bids or offers falling outside the MarketDepth of the request", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());

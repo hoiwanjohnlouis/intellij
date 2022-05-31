@@ -22,11 +22,20 @@ import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  510
+ *  NoDistribInsts
+ *  NumInGroup
+ *  <p>
+ *  The number of Distribution Instructions on a Registration Instructions message
+ */
 public class Tag510NumNoDistribInsts extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyNumInGroupType dataValue;
 
-    public final static int TESTA_NUM_NO_DISTRIB_INSTS = 510;
-    public final static int TESTB_NUM_NO_DISTRIB_INSTS = 15;
+    public final static int TESTA_NUM_NO_DISTRIB_INSTS
+            = 510;
+    public final static int TESTB_NUM_NO_DISTRIB_INSTS
+            = 10;
 
     public Tag510NumNoDistribInsts(MyNumInGroupType dataValue) {
         setFixType(FIX43.FIX510_NUM_NO_DISTRIB_INSTS);

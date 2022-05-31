@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  634
+ *  OfferYield
+ *  Percentage
+ *  <p>
+ *  Offer yield
+ */
 class Tag634PctOfferYieldTest {
     @Test
     void FIX0634Test() {

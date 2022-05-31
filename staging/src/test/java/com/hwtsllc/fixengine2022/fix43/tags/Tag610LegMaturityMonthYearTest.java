@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  610
+ *  LegMaturityMonthYear
+ *  month-year
+ *  <p>
+ *  Multileg instrument's individual  security’s MaturityMonthYear.
+ *  <p>
+ *  See MaturityMonthYear (200) field for description
+ */
 class Tag610LegMaturityMonthYearTest {
     @Test
     void FIX0610Test() {

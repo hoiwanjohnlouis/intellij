@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  475
+ *  InvestorCountryOfResidence
+ *  Country
+ *  <p>
+ *  The ISO 366 Country code (2 character) identifying which country the beneficial investor is resident for tax purposes.
+ */
 class Tag475CouInvestorCountryOfResidenceTest {
     @Test
     void FIX0475Test() {

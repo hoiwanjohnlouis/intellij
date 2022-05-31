@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyDataType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  619
+ *  EncodedLegIssuer
+ *  data
+ *  <p>
+ *  Multileg instrument's individual  security’s EncodedIssuer.
+ *  <p>
+ *  See EncodedIssuer (349) field for description
+ */
 public class Tag619DatEncodedLegIssuer extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyDataType dataValue;
 

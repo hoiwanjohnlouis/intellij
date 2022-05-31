@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  521
+ *  ContAmtCurr
+ *  Currency
+ *  <p>
+ *  Specifies currency for the Contract amount if different from the Deal Currency
+ *  <p>
+ *  see "Appendix 6-A; Valid Currency Codes".
+ */
 class Tag521CcyContAmtCurrTest {
     @Test
     void FIX0521Test() {

@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  545
+ *  NestedPartySubID
+ *  String
+ *  <p>
+ *  PartySubID value within a nested repeating group.
+ *  <p>
+ *  Same values as  PartySubID (523)
+ */
 class Tag545StrNestedPartySubIDTest {
     @Test
     void FIX0545Test() {

@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  594
+ *  UnderlyingLocaleOfIssue
+ *  String
+ *  <p>
+ *  Underlying security’s LocaleOfIssue.
+ *  <p>
+ *  See LocaleOfIssue (472) field for description
+ */
 class Tag594StrUnderlyingLocaleOfIssueTest {
     @Test
     void FIX0594Test() {

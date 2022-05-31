@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  598
+ *  LegLocaleOfIssue
+ *  String
+ *  <p>
+ *  Multileg instrument's individual leg security’s LocaleOfIssue.
+ *  <p>
+ *  See LocaleOfIssue (472) field for description
+ */
 public class Tag598StrLegLocaleOfIssue extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

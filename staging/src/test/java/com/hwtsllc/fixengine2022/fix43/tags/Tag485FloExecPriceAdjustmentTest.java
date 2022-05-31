@@ -23,6 +23,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  485
+ *  ExecPriceAdjustment
+ *  float
+ *  <p>
+ *  For CIV the amount or percentage by which the fund unit/share price was adjusted,
+ *  as indicated by ExecPriceType (484)
+ */
 class Tag485FloExecPriceAdjustmentTest {
     @Test
     void FIX0485Test() {

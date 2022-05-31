@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  640
+ *  Price2
+ *  Price
+ *  <p>
+ *  Deprecated in FIX.5.0 Price of the future part of a F/X swap order.
+ *  <p>
+ *  See Price (44) for description.
+ */
 class Tag640PrcPrice2Test {
     @Test
     void FIX0640Test() {

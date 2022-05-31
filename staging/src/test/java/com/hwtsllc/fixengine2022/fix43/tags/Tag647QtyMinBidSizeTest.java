@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  647
+ *  MinBidSize
+ *  Qty
+ *  <p>
+ *  Used to indicate a minimum quantity for a bid.
+ *  <p>
+ *  If this field is used the BidSize (134) field is interpreted as the maximum bid size
+ */
 class Tag647QtyMinBidSizeTest {
     @Test
     void FIX0647Test() {

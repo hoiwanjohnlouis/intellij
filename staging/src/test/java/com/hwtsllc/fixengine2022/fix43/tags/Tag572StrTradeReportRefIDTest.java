@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  572
+ *  TradeReportRefID
+ *  String
+ *  <p>
+ *  Reference identifier used with CANCEL and REPLACE transaction types.
+ */
 class Tag572StrTradeReportRefIDTest {
     @Test
     void FIX0572Test() {

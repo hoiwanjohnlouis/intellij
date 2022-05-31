@@ -24,6 +24,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  553
+ *  Username
+ *  String
+ *  <p>
+ *  Userid or username.
+ */
 class Tag553StrUsernameTest {
     @Test
     void FIX0553Test() {

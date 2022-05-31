@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyPriceOffsetType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  639
+ *  PriceImprovement
+ *  PriceOffset
+ *  <p>
+ *  Amount of price improvement.
+ */
 public class Tag639PxoPriceImprovement extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceOffsetType dataValue;
 

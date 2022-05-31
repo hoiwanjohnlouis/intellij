@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  631
+ *  MidPx
+ *  Price
+ *  <p>
+ *  Mid price/rate
+ */
 public class Tag631PrcMidPx extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceType dataValue;
 

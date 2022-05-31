@@ -23,6 +23,20 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  629
+ *  HopSendingTime
+ *  UTCTimestamp
+ *  <p>
+ *  Time that HopCompID (628) sent the message.
+ *  <p>
+ *  It is recommended that this value be the SendingTime (52) of the message sent by the third party.
+ *  <p>
+ *  Applicable when messages are communicated/re-distributed via third parties
+ *  which function as service bureaus or "hubs".
+ *  <p>
+ *  Only applicable if OnBehalfOfCompID (115) is being used.
+ */
 class Tag629UtcHopSendingTimeTest {
     @Test
     void FIX0629Test() {

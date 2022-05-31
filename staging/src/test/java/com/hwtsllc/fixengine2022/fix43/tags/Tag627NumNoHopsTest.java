@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  627
+ *  NoHops
+ *  NumInGroup
+ *  <p>
+ *  Number of HopCompID entries in repeating group.
+ */
 class Tag627NumNoHopsTest {
     @Test
     void FIX0627Test() {

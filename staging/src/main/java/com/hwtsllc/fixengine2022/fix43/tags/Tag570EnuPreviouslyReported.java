@@ -18,23 +18,32 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum570PreviouslyReported;
 import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
-public class Tag570BoolPreviouslyReported extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
-    private final MyBooleanType dataValue;
+/**
+ *  570
+ *  PreviouslyReported
+ *  Boolean
+ *  <p>
+ *  Indicates if the trade capture report was previously reported to the counterparty
+ *  <p>
+ *  Valid values:
+ *  <p>    N - Not reported to counterparty
+ *  <p>    Y - Previously reported to counterparty
+ */
+public class Tag570EnuPreviouslyReported extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
+    private final Enum570PreviouslyReported dataValue;
 
-    public final static MyBooleanType TESTA_BOOL_SCOPE
-            = MyBooleanType.NO;
-    // N - Not reported to counterparty
-    public final static MyBooleanType TESTB_BOOL_SCOPE
-            = MyBooleanType.YES;
-    // Y - Previously reported to counterparty
+    public final static Enum570PreviouslyReported TESTA_ENU_PREVIOUSLY_REPORTED
+            = Enum570PreviouslyReported.NO;
+    public final static Enum570PreviouslyReported TESTB_ENU_PREVIOUSLY_REPORTED
+            = Enum570PreviouslyReported.YES;
 
-    public Tag570BoolPreviouslyReported(MyBooleanType dataValue) {
-        setFixType(FIX43.FIX546_ENU_MARKET_SCOPE);
+    public Tag570EnuPreviouslyReported( Enum570PreviouslyReported dataValue) {
+        setFixType(FIX43.FIX570_ENU_PREVIOUSLY_REPORTED);
         this.dataValue = dataValue;
     }
 
@@ -95,15 +104,15 @@ public class Tag570BoolPreviouslyReported extends FIX43Abstract implements LogVa
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag570BoolPreviouslyReported tagData;
+        Tag570EnuPreviouslyReported tagData;
 
-        tagData = new Tag570BoolPreviouslyReported(TESTA_BOOL_SCOPE);
+        tagData = new Tag570EnuPreviouslyReported( TESTA_ENU_PREVIOUSLY_REPORTED );
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
         System.out.println(tagData.toDataDescriptionString());
 
-        tagData = new Tag570BoolPreviouslyReported(TESTB_BOOL_SCOPE);
+        tagData = new Tag570EnuPreviouslyReported( TESTB_ENU_PREVIOUSLY_REPORTED );
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());

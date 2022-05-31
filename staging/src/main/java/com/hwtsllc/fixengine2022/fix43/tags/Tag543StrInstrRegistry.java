@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  543
+ *  InstrRegistry
+ *  String
+ *  <p>
+ *  Values may include BIC for the depository or custodian who maintain ownership records,
+ *  the ISO country code for the location of the record, or the value "ZZ" to specify
+ *  physical ownership of the security (e.g. stock certificate).
+ */
 public class Tag543StrInstrRegistry extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

@@ -22,6 +22,20 @@ import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  586
+ *  OrigOrdModTime
+ *  UTCTimestamp
+ *  <p>
+ *  The most recent (or current) modification TransactTime (tag 60) reported
+ *  on an Execution Report for the order.
+ *  <p>
+ *  The OrigOrdModTime is provided as an optional field on Order Cancel Request
+ *  and Order Cancel Replace Requests to identify that the state of the order has
+ *  not changed since the request was issued.
+ *  <p>
+ *  This is provided to support markets similar to Eurex and A/C/E.
+ */
 public class Tag586UtcOrigOrdModTime extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyUTCTimestampType dataValue;
 

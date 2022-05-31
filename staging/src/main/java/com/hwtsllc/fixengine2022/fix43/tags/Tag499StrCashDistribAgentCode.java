@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  499
+ *  CashDistribAgentCode
+ *  String
+ *  <p>
+ *  BIC (Bank Identification Code--Swift managed) code of agent bank for cash distributions
+ */
 public class Tag499StrCashDistribAgentCode extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

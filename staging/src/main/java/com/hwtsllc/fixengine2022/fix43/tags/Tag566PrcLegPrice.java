@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  566
+ *  LegPrice
+ *  Price
+ *  <p>
+ *  Price for leg of a multileg
+ *  <p>
+ *  See Price (44) field for description
+ */
 public class Tag566PrcLegPrice extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceType dataValue;
 

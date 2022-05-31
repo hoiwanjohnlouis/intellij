@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  499
+ *  CashDistribAgentCode
+ *  String
+ *  <p>
+ *  BIC (Bank Identification Code--Swift managed) code of agent bank for cash distributions
+ */
 class Tag499StrCashDistribAgentCodeTest {
     @Test
     void FIX0499Test() {

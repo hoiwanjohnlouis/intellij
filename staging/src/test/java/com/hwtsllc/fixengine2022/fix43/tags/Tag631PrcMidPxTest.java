@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  631
+ *  MidPx
+ *  Price
+ *  <p>
+ *  Mid price/rate
+ */
 class Tag631PrcMidPxTest {
     @Test
     void FIX0631Test() {

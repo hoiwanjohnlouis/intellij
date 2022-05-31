@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  476
+ *  PaymentRef
+ *  String
+ *  <p>
+ *  "Settlement Payment Reference" – A free format Payment reference to assist with reconciliation,
+ *  <p>
+ *  e.g. a Client and/or Order ID number.
+ */
 public class Tag476StrPaymentRef extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

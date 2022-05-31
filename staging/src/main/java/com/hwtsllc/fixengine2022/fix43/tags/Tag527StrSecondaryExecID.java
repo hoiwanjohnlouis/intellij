@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  527
+ *  SecondaryExecID
+ *  String
+ *  <p>
+ *  Assigned by the party which accepts the order.
+ *  <p>
+ *  Can be used to provide the ExecID (17) used by an exchange or executing system.
+ */
 public class Tag527StrSecondaryExecID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

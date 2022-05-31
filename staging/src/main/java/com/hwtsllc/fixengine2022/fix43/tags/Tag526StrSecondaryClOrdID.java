@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  526
+ *  SecondaryClOrdID
+ *  String
+ *  <p>
+ *  Assigned by the party which originates the order.
+ *  <p>
+ *  Can be used to provide the ClOrdID (11) used by an exchange or executing system.
+ */
 public class Tag526StrSecondaryClOrdID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

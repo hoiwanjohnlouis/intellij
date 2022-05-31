@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  450
+ *  TotalVolumeTraded Time
+ *  UTCTimeOnly
+ *  <p>
+ *  Deprecated in FIX.4.3
+ *  <p>
+ *  Time of TotalVolumeTraded (387).
+ */
 // @Deprecated
 class Tag450UtctTotalVolumeTradedTimeTest {
     @Test

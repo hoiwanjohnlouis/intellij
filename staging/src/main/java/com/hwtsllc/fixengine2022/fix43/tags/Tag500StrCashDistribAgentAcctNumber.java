@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  500
+ *  CashDistribAgentAcctNumber
+ *  String
+ *  <p>
+ *  Account number at agent bank for distributions.
+ */
 public class Tag500StrCashDistribAgentAcctNumber extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

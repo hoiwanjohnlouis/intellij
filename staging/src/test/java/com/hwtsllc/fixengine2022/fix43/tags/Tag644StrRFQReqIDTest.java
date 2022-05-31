@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  644
+ *  RFQReqID
+ *  String
+ *  <p>
+ *  RFQ Request ID – used to identify an RFQ Request.
+ */
 class Tag644StrRFQReqIDTest {
     @Test
     void FIX0644Test() {

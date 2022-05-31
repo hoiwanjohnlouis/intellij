@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  557
+ *  TotNoSecurityTypes
+ *  int
+ *  <p>
+ *  Indicates total number of security types in the event that multiple Security Type messages are used to return results
+ *  <p>
+ *  (Prior to FIX 4.4 this field was named TotalNumSecurityTypes)
+ */
 public class Tag557IntTotNoSecurityTypes extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyIntType dataValue;
 

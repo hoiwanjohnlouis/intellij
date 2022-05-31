@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  466
+ *  BookingRefID
+ *  String
+ *  <p>
+ *  Common reference passed to a post-trade booking process
+ *  <p>
+ *  (e.g. industry matching utility).
+ */
 public class Tag466StrBookingRefID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  540
+ *  TotalAccruedInterestAmt
+ *  Amt
+ *  <p>
+ *  Deprecated in FIX.4.4 Total Amount of Accrued Interest for convertible bonds and fixed income
+ */
 // @Deprecated
 public class Tag540AmtTotalAccruedInterestAmt extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyAmtType dataValue;

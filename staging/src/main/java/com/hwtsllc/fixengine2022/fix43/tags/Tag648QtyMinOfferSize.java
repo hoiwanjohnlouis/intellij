@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  648
+ *  MinOfferSize
+ *  Qty
+ *  <p>
+ *  Used to indicate a minimum quantity for an offer.
+ *  <p>
+ *  If this field is used the OfferSize (135) field is interpreted as the maximum offer size.
+ */
 public class Tag648QtyMinOfferSize extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyQtyType dataValue;
 

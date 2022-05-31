@@ -22,6 +22,17 @@ import com.hwtsllc.fixengine2022.datatypes.MyCountryType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  470
+ *  CountryOfIssue
+ *  Country
+ *  <p>
+ *  ISO Country code of instrument issue (e.g. the country portion typically used in ISIN).
+ *  <p>
+ *  Can be used in conjunction with non-ISIN SecurityID (48)
+ *  <p>
+ *  (e.g. CUSIP for Municipal Bonds without ISIN) to provide uniqueness.
+ */
 public class Tag470CouCountryOfIssue extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyCountryType dataValue;
 

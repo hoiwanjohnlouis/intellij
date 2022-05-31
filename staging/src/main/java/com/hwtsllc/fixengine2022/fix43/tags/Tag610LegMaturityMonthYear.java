@@ -16,5 +16,14 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
+/**
+ *  610
+ *  LegMaturityMonthYear
+ *  month-year
+ *  <p>
+ *  Multileg instrument's individual  security’s MaturityMonthYear.
+ *  <p>
+ *  See MaturityMonthYear (200) field for description
+ */
 public class Tag610LegMaturityMonthYear {
 }

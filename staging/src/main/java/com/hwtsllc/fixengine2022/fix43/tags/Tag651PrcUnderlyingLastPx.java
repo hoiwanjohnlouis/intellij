@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  651
+ *  UnderlyingLastPx
+ *  Price
+ *  <p>
+ *  The calculated or traded price for the underlying instrument that corresponds to a derivative.
+ *  <p>
+ *  Used for transactions that include the cash instrument and the derivative.
+ */
 public class Tag651PrcUnderlyingLastPx extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceType dataValue;
 

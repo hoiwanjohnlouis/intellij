@@ -23,6 +23,19 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  472
+ *  LocaleOfIssue
+ *  String
+ *  <p>
+ *  Identifies the locale. For Municipal Security Issuers other than state or province. Refer to
+ *  <p>
+ *  http://www.atmos.albany.edu/cgi/stagrep-cgi
+ *  <p>
+ *  Reference the IATA city codes for values.
+ *  <p>
+ *  Note IATA (International Air Transport Association) maintains the codes at www.iata.org.
+ */
 class Tag472StrLocaleOfIssueTest {
     @Test
     void FIX0472Test() {

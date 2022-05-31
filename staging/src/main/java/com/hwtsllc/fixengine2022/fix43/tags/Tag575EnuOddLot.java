@@ -18,23 +18,34 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum575OddLot;
 import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
-public class Tag650BoolLegalConfirm extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
-    private final MyBooleanType dataValue;
+/**
+ *  575
+ *  OddLot
+ *  Boolean
+ *  <p>
+ *  Deprecated in FIX.5.0 This trade is to be treated as an odd lot
+ *  <p>
+ *  If this field is not specified, the default will be "N"
+ *  <p>
+ *  Valid values:
+ *  <p>    N - Treat as round lot (default)
+ *  <p>    Y - Treat as odd lot
+ */
+public class Tag575EnuOddLot extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
+    private final Enum575OddLot dataValue;
 
-    public final static MyBooleanType TESTA_BOOL_LEGAL_CONFIRM
-            = MyBooleanType.NO ;
-    // N - Does not constitute a Legal Confirm
-    public final static MyBooleanType TESTB_BOOL_LEGAL_CONFIRM
-            = MyBooleanType.YES;
-    // Y - Legal Confirm
+    public final static Enum575OddLot TESTA_ENU_ODD_LOT
+            = Enum575OddLot.NO ;
+    public final static Enum575OddLot TESTB_ENU_ODD_LOT
+            = Enum575OddLot.YES;
 
-    public Tag650BoolLegalConfirm(MyBooleanType dataValue) {
-        setFixType(FIX43.FIX650_BOOL_LEGAL_CONFIRM);
+    public Tag575EnuOddLot( Enum575OddLot dataValue) {
+        setFixType(FIX43.FIX575_ENU_ODD_LOT );
         this.dataValue = dataValue;
     }
 
@@ -94,15 +105,15 @@ public class Tag650BoolLegalConfirm extends FIX43Abstract implements LogValuePai
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag650BoolLegalConfirm tagData;
+        Tag575EnuOddLot tagData;
 
-        tagData = new Tag650BoolLegalConfirm(TESTA_BOOL_LEGAL_CONFIRM);
+        tagData = new Tag575EnuOddLot( TESTA_ENU_ODD_LOT );
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());
         System.out.println(tagData.toDataDescriptionString());
 
-        tagData = new Tag650BoolLegalConfirm(TESTB_BOOL_LEGAL_CONFIRM);
+        tagData = new Tag575EnuOddLot( TESTB_ENU_ODD_LOT );
         System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
         System.out.println(tagData.toValuePairString());

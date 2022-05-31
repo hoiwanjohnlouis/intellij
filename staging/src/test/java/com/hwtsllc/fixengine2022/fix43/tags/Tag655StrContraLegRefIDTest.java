@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  655
+ *  ContraLegRefID
+ *  String
+ *  <p>
+ *  Unique indicator for a specific leg for the ContraBroker (375).
+ */
 class Tag655StrContraLegRefIDTest {
     @Test
     void FIX0655Test() {

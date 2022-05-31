@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  633
+ *  MidYield
+ *  Percentage
+ *  <p>
+ *  Mid yield
+ */
 public class Tag633PctMidYield extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyPercentageType dataValue;
 

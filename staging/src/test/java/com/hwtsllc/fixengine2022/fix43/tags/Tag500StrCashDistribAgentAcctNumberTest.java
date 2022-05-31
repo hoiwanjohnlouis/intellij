@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  500
+ *  CashDistribAgentAcctNumber
+ *  String
+ *  <p>
+ *  Account number at agent bank for distributions.
+ */
 class Tag500StrCashDistribAgentAcctNumberTest {
     @Test
     void FIX0500Test() {

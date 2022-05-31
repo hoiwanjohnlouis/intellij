@@ -23,6 +23,18 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  523
+ *  PartySubID
+ *  String
+ *  <p>
+ *  Sub-identifier
+ *  <p>
+ *  (e.g. Clearing Account for PartyRole (452)=Clearing Firm,
+ *        Locate ID # for PartyRole=Locate/Lending Firm, etc).
+ *  <p>
+ *  Not required when using PartyID (448), PartyIDSource (447), and PartyRole.
+ */
 class Tag523StrPartySubIDTest {
     @Test
     void FIX0523Test() {

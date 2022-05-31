@@ -23,6 +23,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  483
+ *  TransBkdTime
+ *  UTCTimestamp
+ *  <p>
+ *  For CIV A date and time stamp to indicate the time a CIV order was booked by the fund manager.
+ *  <p>
+ *  For derivatives a date and time stamp to indicate when this order was booked with the agent prior to submission to the VMU.
+ *  <p>
+ *  Indicates the time at which the order was finalized between the buyer and seller prior to submission.
+ */
 class Tag483UtcTransBkdTimeTest {
     @Test
     void FIX0483Test() {

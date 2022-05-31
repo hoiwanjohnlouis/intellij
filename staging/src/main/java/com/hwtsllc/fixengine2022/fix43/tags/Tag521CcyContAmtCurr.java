@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyCurrencyType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  521
+ *  ContAmtCurr
+ *  Currency
+ *  <p>
+ *  Specifies currency for the Contract amount if different from the Deal Currency
+ *  <p>
+ *  see "Appendix 6-A; Valid Currency Codes".
+ */
 public class Tag521CcyContAmtCurr extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyCurrencyType dataValue;
 

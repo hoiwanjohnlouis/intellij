@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyUTCTimeType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  450
+ *  TotalVolumeTraded Time
+ *  UTCTimeOnly
+ *  <p>
+ *  Deprecated in FIX.4.3
+ *  <p>
+ *  Time of TotalVolumeTraded (387).
+ */
 // @Deprecated
 public class Tag450UtctTotalVolumeTradedTime extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyUTCTimeType dataValue;

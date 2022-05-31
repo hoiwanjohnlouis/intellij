@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  598
+ *  LegLocaleOfIssue
+ *  String
+ *  <p>
+ *  Multileg instrument's individual leg security’s LocaleOfIssue.
+ *  <p>
+ *  See LocaleOfIssue (472) field for description
+ */
 class Tag598StrLegLocaleOfIssueTest {
     @Test
     void FIX0598Test() {

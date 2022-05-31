@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  504
+ *  PaymentDate
+ *  LocalMktDate
+ *  <p>
+ *  The date written on a cheque or date payment should be submitted to the relevant clearing system.
+ */
 class Tag504LmdPaymentDateTest {
     @Test
     void FIX0504Test() {

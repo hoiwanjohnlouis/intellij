@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  639
+ *  PriceImprovement
+ *  PriceOffset
+ *  <p>
+ *  Amount of price improvement.
+ */
 class Tag639PxoPriceImprovementTest {
     @Test
     void FIX0639Test() {

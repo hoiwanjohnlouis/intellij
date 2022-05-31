@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  634
+ *  OfferYield
+ *  Percentage
+ *  <p>
+ *  Offer yield
+ */
 public class Tag634PctOfferYield extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyPercentageType dataValue;
 

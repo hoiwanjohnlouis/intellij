@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  505
+ *  PaymentRemitterID
+ *  String
+ *  <p>
+ *  Identifies sender of a payment, e.g. the payment remitter or a customer reference number.
+ */
 class Tag505StrPaymentRemitterIDTest {
     @Test
     void FIX0505Test() {

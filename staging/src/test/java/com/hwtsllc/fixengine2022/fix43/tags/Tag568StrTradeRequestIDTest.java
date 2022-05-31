@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  568
+ *  TradeRequestID
+ *  String
+ *  <p>
+ *  Trade Capture Report Request ID
+ */
 class Tag568StrTradeRequestIDTest {
     @Test
     void FIX0568Test() {

@@ -17,33 +17,46 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum464TestMessageIndicator;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag650BoolLegalConfirmTest {
+/**
+ *  464
+ *  TestMessageIndicator
+ *  Boolean
+ *  <p>
+ *  Indicates whether or not this FIX Session is a "test" vs. "production" connection.
+ *  <p>
+ *  Useful for preventing "accidents".
+ *  <p>
+ *  Valid values:
+ *  <p>    N - False (Production)
+ *  <p>    Y - True (Test)
+ */
+class Tag464EnuTestMessageIndicatorTest {
     @Test
-    void FIX0650Test() {
-        FIX43 fixData = FIX43.FIX650_BOOL_LEGAL_CONFIRM;
-        assertEquals( "650", fixData.toFIXIDString());
-        assertEquals( "LEGAL_CONFIRM", fixData.toFIXNameString());
-        assertEquals( "LegalConfirm", fixData.toFIXDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+    void FIX0464Test() {
+        FIX43 fixData = FIX43.FIX464_ENU_TEST_MESSAGE_INDICATOR;
+        assertEquals( "464", fixData.toFIXIDString());
+        assertEquals( "TEST_MESSAGE_INDICATOR", fixData.toFIXNameString());
+        assertEquals( "TestMessageIndicator", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
-    void Tag0650Test() {
-        Tag650BoolLegalConfirm tagData;
+    void Tag0464Test() {
+        Tag464EnuTestMessageIndicator tagData;
 
-        tagData = new Tag650BoolLegalConfirm(MyBooleanType.NO);
+        tagData = new Tag464EnuTestMessageIndicator( Enum464TestMessageIndicator.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag650BoolLegalConfirm(MyBooleanType.YES);
+        tagData = new Tag464EnuTestMessageIndicator(Enum464TestMessageIndicator.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

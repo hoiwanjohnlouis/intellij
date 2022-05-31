@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyCurrencyType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  479
+ *  CommCurrency
+ *  Currency
+ *  <p>
+ *  Specifies currency to be  use for Commission (12) if the Commission currency is different from the Deal Currency
+ *  <p>
+ *  see "Appendix 6-A; Valid Currency Codes".
+ */
 public class Tag479CcyCommCurrency extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyCurrencyType dataValue;
 

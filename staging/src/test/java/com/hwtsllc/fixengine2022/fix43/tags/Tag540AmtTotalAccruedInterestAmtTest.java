@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  540
+ *  TotalAccruedInterestAmt
+ *  Amt
+ *  <p>
+ *  Deprecated in FIX.4.4 Total Amount of Accrued Interest for convertible bonds and fixed income
+ */
 // @Deprecated
 class Tag540AmtTotalAccruedInterestAmtTest {
     @Test

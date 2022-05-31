@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  555
+ *  NoLegs
+ *  NumInGroup
+ *  <p>
+ *  Number of InstrumentLeg repeating group instances.
+ */
 class Tag555NumNoLegsTest {
     @Test
     void FIX0555Test() {

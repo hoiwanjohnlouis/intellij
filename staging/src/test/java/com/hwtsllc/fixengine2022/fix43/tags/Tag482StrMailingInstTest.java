@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  482
+ *  MailingInst
+ *  String
+ *  <p>
+ *  Free format text to specify mailing instruction requirements, e.g. "no third party mailings".
+ */
 class Tag482StrMailingInstTest {
     @Test
     void FIX0482Test() {

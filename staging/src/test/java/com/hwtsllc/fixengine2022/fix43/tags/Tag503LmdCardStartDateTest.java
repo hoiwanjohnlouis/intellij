@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  503
+ *  CardStartDate
+ *  LocalMktDate
+ *  <p>
+ *  The start date of the card as specified on the card being used for payment.
+ */
 class Tag503LmdCardStartDateTest {
     @Test
     void FIX0503Test() {

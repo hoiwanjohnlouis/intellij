@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  637
+ *  LegLastPx
+ *  Price
+ *  <p>
+ *  Execution price assigned to a leg of a multileg instrument.
+ *  <p>
+ *  See LastPx (31) field for description and values
+ */
 class Tag637PrcLegLastPxTest {
     @Test
     void FIX0637Test() {

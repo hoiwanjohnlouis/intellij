@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  649
+ *  QuoteStatusReqID
+ *  String
+ *  <p>
+ *  Unique identifier for Quote Status Request.
+ */
 class Tag649StrQuoteStatusReqIDTest {
     @Test
     void FIX0649Test() {

@@ -22,6 +22,13 @@ import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  512
+ *  DistribPercentage
+ *  Percentage
+ *  <p>
+ *  The amount of each distribution to go to this beneficiary, expressed as a percentage
+ */
 public class Tag512PctDistribPercentage extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyPercentageType dataValue;
 

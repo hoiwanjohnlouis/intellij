@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  526
+ *  SecondaryClOrdID
+ *  String
+ *  <p>
+ *  Assigned by the party which originates the order.
+ *  <p>
+ *  Can be used to provide the ClOrdID (11) used by an exchange or executing system.
+ */
 class Tag526StrSecondaryClOrdIDTest {
     @Test
     void FIX0526Test() {

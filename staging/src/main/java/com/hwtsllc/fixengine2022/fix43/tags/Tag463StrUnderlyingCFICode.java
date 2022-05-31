@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  463
+ *  UnderlyingCFICode
+ *  String
+ *  <p>
+ *  Underlying security’s CFICode.
+ *  <p>
+ *  Valid values:   see CFICode (461) field
+ */
 public class Tag463StrUnderlyingCFICode extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  599
+ *  LegInstrRegistry
+ *  String
+ *  <p>
+ *  Multileg instrument's individual leg security’s InstrRegistry.
+ *  <p>
+ *  See InstrRegistry (543) field for description
+ */
 public class Tag599StrLegInstrRegistry extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

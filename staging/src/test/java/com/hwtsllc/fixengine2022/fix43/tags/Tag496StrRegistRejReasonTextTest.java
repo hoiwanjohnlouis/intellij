@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  496
+ *  RegistRejReasonText
+ *  String
+ *  <p>
+ *  Text indicating reason(s) why a Registration Instruction has been rejected.
+ */
 class Tag496StrRegistRejReasonTextTest {
     @Test
     void FIX0496Test() {

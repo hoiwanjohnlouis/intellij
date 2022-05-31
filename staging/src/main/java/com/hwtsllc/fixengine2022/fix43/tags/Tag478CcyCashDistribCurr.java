@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyCurrencyType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  478
+ *  CashDistribCurr
+ *  Currency
+ *  <p>
+ *  Specifies currency to be  use for Cash Distributions
+ *  <p>
+ *  see "Appendix 6-A; Valid Currency Codes".
+ */
 public class Tag478CcyCashDistribCurr extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyCurrencyType dataValue;
 

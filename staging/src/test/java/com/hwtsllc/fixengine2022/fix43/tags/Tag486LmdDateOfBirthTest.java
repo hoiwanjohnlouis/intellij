@@ -23,6 +23,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  486
+ *  DateOfBirth
+ *  LocalMktDate
+ *  <p>
+ *  The date of birth applicable to the individual,
+ *  e.g. required to open some types of tax-exempt account.
+ */
 class Tag486LmdDateOfBirthTest {
     @Test
     void FIX0486Test() {

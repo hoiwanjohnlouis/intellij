@@ -22,6 +22,15 @@ import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  524
+ *  NestedPartyID
+ *  String
+ *  <p>
+ *  PartyID value within a nested repeating group.
+ *  <p>
+ *  Same values as  PartyID (448)
+ */
 public class Tag524StrNestedPartyID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 

@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  474
+ *  MailingDtls
+ *  String
+ *  <p>
+ *  Set of Correspondence address details, possibly including phone, fax, etc.
+ */
 class Tag474StrMailingDtlsTest {
     @Test
     void FIX0474Test() {

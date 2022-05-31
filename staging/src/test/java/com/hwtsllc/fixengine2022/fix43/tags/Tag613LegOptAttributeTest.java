@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  613
+ *  LegOptAttribute
+ *  char
+ *  <p>
+ *  Multileg instrument's individual  security’s OptAttribute.
+ *  <p>
+ *  See OptAttribute (206) field for description
+ */
 class Tag613LegOptAttributeTest {
     @Test
     void FIX0613Test() {

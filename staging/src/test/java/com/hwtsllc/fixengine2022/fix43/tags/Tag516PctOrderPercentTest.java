@@ -23,6 +23,19 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  516
+ *  OrderPercent
+ *  Percentage
+ *  <p>
+ *  For CIV specifies the approximate order quantity desired.
+ *  <p>
+ *  For a CIV Sale it specifies percentage of investor’s total holding to be sold.
+ *  <p>
+ *  For a CIV switch/exchange it specifies percentage of investor’s cash realised from sales to be re-invested.
+ *  <p>
+ *  The executing broker, intermediary or fund manager is responsible for converting and calculating OrderQty (38) in shares/units for subsequent messages.
+ */
 class Tag516PctOrderPercentTest {
     @Test
     void FIX0516Test() {

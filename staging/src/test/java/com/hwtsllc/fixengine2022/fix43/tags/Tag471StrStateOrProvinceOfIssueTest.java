@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  471
+ *  StateOrProvinceOfIssue
+ *  String
+ *  <p>
+ *  A two-character state or province abbreviation.
+ */
 class Tag471StrStateOrProvinceOfIssueTest {
     @Test
     void FIX0471Test() {

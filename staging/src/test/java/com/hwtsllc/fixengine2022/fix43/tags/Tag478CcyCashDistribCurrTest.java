@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  478
+ *  CashDistribCurr
+ *  Currency
+ *  <p>
+ *  Specifies currency to be  use for Cash Distributions
+ *  <p>
+ *  see "Appendix 6-A; Valid Currency Codes".
+ */
 class Tag478CcyCashDistribCurrTest {
     @Test
     void FIX0478Test() {

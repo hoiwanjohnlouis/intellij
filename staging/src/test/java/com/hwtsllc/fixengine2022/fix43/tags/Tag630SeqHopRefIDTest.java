@@ -23,6 +23,20 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  630
+ *  HopRefID
+ *  SeqNum
+ *  <p>
+ *  Reference identifier assigned by HopCompID (628) associated with the message sent.
+ *  <p>
+ *  It is recommended that this value be the MsgSeqNum (34) of the message sent by the third party.
+ *  <p>
+ *  Applicable when messages are communicated/re-distributed via third parties
+ *  which function as service bureaus or "hubs".
+ *  <p>
+ *  Only applicable if OnBehalfOfCompID (115) is being used.
+ */
 class Tag630SeqHopRefIDTest {
     @Test
     void FIX0630Test() {

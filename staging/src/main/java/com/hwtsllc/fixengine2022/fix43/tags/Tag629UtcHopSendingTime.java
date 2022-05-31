@@ -22,6 +22,20 @@ import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  629
+ *  HopSendingTime
+ *  UTCTimestamp
+ *  <p>
+ *  Time that HopCompID (628) sent the message.
+ *  <p>
+ *  It is recommended that this value be the SendingTime (52) of the message sent by the third party.
+ *  <p>
+ *  Applicable when messages are communicated/re-distributed via third parties
+ *  which function as service bureaus or "hubs".
+ *  <p>
+ *  Only applicable if OnBehalfOfCompID (115) is being used.
+ */
 public class Tag629UtcHopSendingTime extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyUTCTimestampType dataValue;
 
