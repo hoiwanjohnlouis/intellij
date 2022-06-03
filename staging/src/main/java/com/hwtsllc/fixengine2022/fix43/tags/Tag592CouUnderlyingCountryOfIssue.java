@@ -34,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag592CouUnderlyingCountryOfIssue extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyCountryType dataValue;
 
-    public final static String TESTA_COU_UNDERLYING_COUNTRY_OF_ISSUE = "BilboBaggins-Tag592CouUnderlyingCountryOfIssue";
-    public final static String TESTB_COU_UNDERLYING_COUNTRY_OF_ISSUE = "Gandalf-Tag592CouUnderlyingCountryOfIssue";
+    public final static String TESTA_COU_UNDERLYING_COUNTRY_OF_ISSUE
+            = "BilboBaggins-Tag592CouUnderlyingCountryOfIssue";
+    public final static String TESTB_COU_UNDERLYING_COUNTRY_OF_ISSUE
+            = "Gandalf-Tag592CouUnderlyingCountryOfIssue";
 
     public Tag592CouUnderlyingCountryOfIssue(MyCountryType dataValue) {
         setFixType(FIX43.FIX592_COU_UNDERLYING_COUNTRY_OF_ISSUE);
@@ -80,13 +82,9 @@ public class Tag592CouUnderlyingCountryOfIssue extends FIX43Abstract implements 
         Tag592CouUnderlyingCountryOfIssue tagData;
 
         tagData = new Tag592CouUnderlyingCountryOfIssue(new MyCountryType(TESTA_COU_UNDERLYING_COUNTRY_OF_ISSUE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag592CouUnderlyingCountryOfIssue(new MyCountryType(TESTB_COU_UNDERLYING_COUNTRY_OF_ISSUE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

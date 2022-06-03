@@ -80,13 +80,9 @@ public class Tag617StrLegIssuer extends FIX43Abstract implements LogValuePairStr
         Tag617StrLegIssuer tagData;
 
         tagData = new Tag617StrLegIssuer(new MyStringType(TESTA_STR_LEG_ISSUER) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag617StrLegIssuer(new MyStringType(TESTB_STR_LEG_ISSUER) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -129,7 +129,7 @@ public enum Enum582CustOrderCapacity implements LogFIXString, LogVerboseString {
          * dump all the enum values
          */
         for (Enum582CustOrderCapacity oneEnum : Enum582CustOrderCapacity.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

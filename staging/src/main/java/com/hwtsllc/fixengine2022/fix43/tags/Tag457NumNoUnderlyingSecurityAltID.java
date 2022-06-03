@@ -78,13 +78,9 @@ public class Tag457NumNoUnderlyingSecurityAltID extends FIX43Abstract implements
         Tag457NumNoUnderlyingSecurityAltID tagData;
 
         tagData = new Tag457NumNoUnderlyingSecurityAltID(new MyNumInGroupType(TESTA_NUM_NO_UNDERLYING_SECURITY_ALT_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag457NumNoUnderlyingSecurityAltID(new MyNumInGroupType(TESTB_NUM_NO_UNDERLYING_SECURITY_ALT_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

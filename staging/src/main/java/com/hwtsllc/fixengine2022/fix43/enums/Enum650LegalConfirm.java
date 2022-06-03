@@ -116,7 +116,7 @@ public enum Enum650LegalConfirm implements LogFIXString, LogVerboseString {
          * dump all the enum values
          */
         for ( Enum650LegalConfirm oneEnum : Enum650LegalConfirm.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

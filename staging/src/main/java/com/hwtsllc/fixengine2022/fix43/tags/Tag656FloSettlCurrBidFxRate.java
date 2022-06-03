@@ -78,13 +78,9 @@ public class Tag656FloSettlCurrBidFxRate extends FIX43Abstract implements LogVal
         Tag656FloSettlCurrBidFxRate tagData;
 
         tagData = new Tag656FloSettlCurrBidFxRate(new MyFloatType(TESTA_FLO_SETTL_CURR_BID_FX_RATE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag656FloSettlCurrBidFxRate(new MyFloatType(TESTB_FLO_SETTL_CURR_BID_FX_RATE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

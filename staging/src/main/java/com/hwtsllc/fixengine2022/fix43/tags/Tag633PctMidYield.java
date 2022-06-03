@@ -78,13 +78,9 @@ public class Tag633PctMidYield extends FIX43Abstract implements LogValuePairStri
         Tag633PctMidYield tagData;
 
         tagData = new Tag633PctMidYield(new MyPercentageType(TESTA_PCT_MID_YIELD) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag633PctMidYield(new MyPercentageType(TESTB_PCT_MID_YIELD) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

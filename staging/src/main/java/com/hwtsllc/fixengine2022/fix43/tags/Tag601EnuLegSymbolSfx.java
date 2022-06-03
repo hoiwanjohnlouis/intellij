@@ -129,15 +129,9 @@ public class Tag601EnuLegSymbolSfx extends FIX43Abstract implements LogValuePair
         Tag601EnuLegSymbolSfx tagData;
 
         tagData = new Tag601EnuLegSymbolSfx(TESTA_ENU_LEG_SYMBOL_SFX);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag601EnuLegSymbolSfx(TESTB_ENU_LEG_SYMBOL_SFX);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

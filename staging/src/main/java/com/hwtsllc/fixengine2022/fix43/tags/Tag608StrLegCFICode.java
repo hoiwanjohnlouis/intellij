@@ -80,13 +80,9 @@ public class Tag608StrLegCFICode extends FIX43Abstract implements LogValuePairSt
         Tag608StrLegCFICode tagData;
 
         tagData = new Tag608StrLegCFICode(new MyStringType(TESTA_STR_LEG_CFI_CODE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag608StrLegCFICode(new MyStringType(TESTB_STR_LEG_CFI_CODE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

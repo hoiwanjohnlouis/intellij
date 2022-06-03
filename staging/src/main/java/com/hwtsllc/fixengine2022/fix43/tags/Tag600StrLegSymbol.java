@@ -80,13 +80,9 @@ public class Tag600StrLegSymbol extends FIX43Abstract implements LogValuePairStr
         Tag600StrLegSymbol tagData;
 
         tagData = new Tag600StrLegSymbol(new MyStringType(TESTA_STR_LEG_SYMBOL) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag600StrLegSymbol(new MyStringType(TESTB_STR_LEG_SYMBOL) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

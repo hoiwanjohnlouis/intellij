@@ -23,22 +23,24 @@ import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  605
- *  LegSecurityAltID
- *  String
+ *  613
+ *  LegOptAttribute
+ *  char
  *  <p>
- *  Multileg instrument's individual  security’s SecurityAltID.
+ *  Multileg instrument's individual  security’s OptAttribute.
  *  <p>
- *  See SecurityAltID (455) field for description
+ *  See OptAttribute (206) field for description
  */
-public class Tag605StrLegSecurityAltID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag613StrLegOptAttribute extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_LEG_SECURITY_ALT_ID = "BilboBaggins-Tag605StrLegSecurityAltID";
-    public final static String TESTB_STR_LEG_SECURITY_ALT_ID = "Gandalf-Tag605StrLegSecurityAltID";
+    public final static String TESTA_STR_LEG_OPT_ATTRIBUTE
+            = "RenataScotto-Tag613StrLegOptAttribute";
+    public final static String TESTB_STR_LEG_OPT_ATTRIBUTE
+            = "MirellaFreni-Tag613StrLegOptAttribute";
 
-    public Tag605StrLegSecurityAltID(MyStringType dataValue) {
-        setFixType(FIX43.FIX605_STR_LEG_SECURITY_ALT_ID);
+    public Tag613StrLegOptAttribute( MyStringType dataValue) {
+        setFixType( FIX43.FIX613_STR_LEG_OPT_ATTRIBUTE );
         this.dataValue = dataValue;
     }
 
@@ -77,12 +79,12 @@ public class Tag605StrLegSecurityAltID extends FIX43Abstract implements LogValue
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag605StrLegSecurityAltID tagData;
+        Tag613StrLegOptAttribute tagData;
 
-        tagData = new Tag605StrLegSecurityAltID(new MyStringType(TESTA_STR_LEG_SECURITY_ALT_ID) );
+        tagData = new Tag613StrLegOptAttribute(new MyStringType( TESTA_STR_LEG_OPT_ATTRIBUTE ) );
         System.out.println(tagData.toVerboseString());
 
-        tagData = new Tag605StrLegSecurityAltID(new MyStringType(TESTB_STR_LEG_SECURITY_ALT_ID) );
+        tagData = new Tag613StrLegOptAttribute(new MyStringType( TESTB_STR_LEG_OPT_ATTRIBUTE ) );
         System.out.println(tagData.toVerboseString());
     }
 }

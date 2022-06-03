@@ -118,7 +118,7 @@ public enum Enum591PreallocMethod implements LogFIXString, LogVerboseString {
          * dump all the enum values
          */
         for (Enum591PreallocMethod oneEnum : Enum591PreallocMethod.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

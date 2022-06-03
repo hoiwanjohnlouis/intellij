@@ -200,15 +200,9 @@ public class Tag603EnuLegSecurityIDSource extends FIX43Abstract implements LogVa
         Tag603EnuLegSecurityIDSource tagData;
 
         tagData = new Tag603EnuLegSecurityIDSource(TESTA_ENU_LEG_SECURITY_ID_SOURCE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag603EnuLegSecurityIDSource(TESTB_ENU_LEG_SECURITY_ID_SOURCE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

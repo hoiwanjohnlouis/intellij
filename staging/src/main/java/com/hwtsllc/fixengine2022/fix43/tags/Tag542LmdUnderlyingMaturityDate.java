@@ -34,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag542LmdUnderlyingMaturityDate extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyLocalMktDateType dataValue;
 
-    public final static String TESTA_LMD_UNDERLYING_MATURITY_DATE = "Frodo-Tag542LmdUnderlyingMaturityDate";
-    public final static String TESTB_LMD_UNDERLYING_MATURITY_DATE = "Gandalf-Tag542LmdUnderlyingMaturityDate";
+    public final static String TESTA_LMD_UNDERLYING_MATURITY_DATE
+            = "Frodo-Tag542LmdUnderlyingMaturityDate";
+    public final static String TESTB_LMD_UNDERLYING_MATURITY_DATE
+            = "Gandalf-Tag542LmdUnderlyingMaturityDate";
 
     public Tag542LmdUnderlyingMaturityDate(MyLocalMktDateType dataValue) {
         setFixType(FIX43.FIX542_LMD_UNDERLYING_MATURITY_DATE);
@@ -80,13 +82,9 @@ public class Tag542LmdUnderlyingMaturityDate extends FIX43Abstract implements Lo
         Tag542LmdUnderlyingMaturityDate tagData;
 
         tagData = new Tag542LmdUnderlyingMaturityDate(new MyLocalMktDateType(TESTA_LMD_UNDERLYING_MATURITY_DATE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag542LmdUnderlyingMaturityDate(new MyLocalMktDateType(TESTB_LMD_UNDERLYING_MATURITY_DATE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

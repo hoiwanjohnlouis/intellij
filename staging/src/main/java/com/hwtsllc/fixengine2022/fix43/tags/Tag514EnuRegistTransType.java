@@ -107,15 +107,9 @@ public class Tag514EnuRegistTransType extends FIX43Abstract implements LogValueP
         Tag514EnuRegistTransType tagData;
 
         tagData = new Tag514EnuRegistTransType(TESTA_ENU_REGIST_TRANS_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag514EnuRegistTransType(TESTB_ENU_REGIST_TRANS_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

@@ -107,15 +107,9 @@ public class Tag573EnuMatchStatus extends FIX43Abstract implements LogValuePairS
         Tag573EnuMatchStatus tagData;
 
         tagData = new Tag573EnuMatchStatus(TESTA_ENU_MATCH_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag573EnuMatchStatus(TESTB_ENU_MATCH_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

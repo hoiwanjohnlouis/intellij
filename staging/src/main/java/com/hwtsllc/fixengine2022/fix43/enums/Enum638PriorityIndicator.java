@@ -118,7 +118,7 @@ public enum Enum638PriorityIndicator implements LogFIXString, LogVerboseString {
          * dump all the enum values
          */
         for (Enum638PriorityIndicator oneEnum : Enum638PriorityIndicator.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

@@ -109,15 +109,9 @@ public class Tag559EnuSecurityListRequestType extends FIX43Abstract implements L
         Tag559EnuSecurityListRequestType tagData;
 
         tagData = new Tag559EnuSecurityListRequestType(TESTA_ENU_SECURITY_LIST_REQUEST_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag559EnuSecurityListRequestType(TESTB_ENU_SECURITY_LIST_REQUEST_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

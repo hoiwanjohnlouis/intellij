@@ -81,13 +81,9 @@ public class Tag450UtctTotalVolumeTradedTime extends FIX43Abstract implements Lo
         Tag450UtctTotalVolumeTradedTime tagData;
 
         tagData = new Tag450UtctTotalVolumeTradedTime(new MyUTCTimeType(TESTA_UTCT_TOTAL_VOLUME_TRADED_TIME) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag450UtctTotalVolumeTradedTime(new MyUTCTimeType(TESTB_UTCT_TOTAL_VOLUME_TRADED_TIME) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

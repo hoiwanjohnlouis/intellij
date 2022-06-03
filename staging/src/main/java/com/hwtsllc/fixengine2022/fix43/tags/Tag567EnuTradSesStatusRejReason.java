@@ -107,15 +107,9 @@ public class Tag567EnuTradSesStatusRejReason extends FIX43Abstract implements Lo
         Tag567EnuTradSesStatusRejReason tagData;
 
         tagData = new Tag567EnuTradSesStatusRejReason(TESTA_ENU_TRAD_SES_STATUS_REJ_REASON);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag567EnuTradSesStatusRejReason(TESTB_ENU_TRAD_SES_STATUS_REJ_REASON);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

@@ -124,7 +124,7 @@ public enum Enum559SecurityListRequestType implements LogFIXString, LogVerboseSt
          * dump all the enum values
          */
         for (Enum559SecurityListRequestType oneEnum : Enum559SecurityListRequestType.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

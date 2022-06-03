@@ -81,13 +81,9 @@ public class Tag449UtcdTotalVolumeTradedDate extends FIX43Abstract implements Lo
         Tag449UtcdTotalVolumeTradedDate tagData;
 
         tagData = new Tag449UtcdTotalVolumeTradedDate(new MyUTCDateType(TESTA_UTCD_TOTAL_VOLUME_TRADED_DATE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag449UtcdTotalVolumeTradedDate(new MyUTCDateType(TESTB_UTCD_TOTAL_VOLUME_TRADED_DATE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

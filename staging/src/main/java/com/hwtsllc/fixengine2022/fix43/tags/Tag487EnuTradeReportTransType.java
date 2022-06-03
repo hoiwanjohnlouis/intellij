@@ -113,15 +113,9 @@ public class Tag487EnuTradeReportTransType extends FIX43Abstract implements LogV
         Tag487EnuTradeReportTransType tagData;
 
         tagData = new Tag487EnuTradeReportTransType(TESTA_ENU_TRADE_REPORT_TRANS_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag487EnuTradeReportTransType(TESTB_ENU_TRADE_REPORT_TRANS_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

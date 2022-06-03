@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag493StrRegistAcctType extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_REGIST_ACCT_TYPE = "BilboBaggins-Tag493StrRegistAcctType";
-    public final static String TESTB_STR_REGIST_ACCT_TYPE = "Gandalf-Tag493StrRegistAcctType";
+    public final static String TESTA_STR_REGIST_ACCT_TYPE
+            = "BilboBaggins-Tag493StrRegistAcctType";
+    public final static String TESTB_STR_REGIST_ACCT_TYPE
+            = "Gandalf-Tag493StrRegistAcctType";
 
     public Tag493StrRegistAcctType(MyStringType dataValue) {
         setFixType(FIX43.FIX493_STR_REGIST_ACCT_TYPE);
@@ -78,13 +80,9 @@ public class Tag493StrRegistAcctType extends FIX43Abstract implements LogValuePa
         Tag493StrRegistAcctType tagData;
 
         tagData = new Tag493StrRegistAcctType(new MyStringType(TESTA_STR_REGIST_ACCT_TYPE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag493StrRegistAcctType(new MyStringType(TESTB_STR_REGIST_ACCT_TYPE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

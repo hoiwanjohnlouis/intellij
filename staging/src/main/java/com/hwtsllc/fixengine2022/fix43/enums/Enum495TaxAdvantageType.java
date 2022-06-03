@@ -203,7 +203,7 @@ public enum Enum495TaxAdvantageType implements LogFIXString, LogVerboseString {
          * dump all the enum values for review
          */
         for (Enum495TaxAdvantageType oneEnum : Enum495TaxAdvantageType.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

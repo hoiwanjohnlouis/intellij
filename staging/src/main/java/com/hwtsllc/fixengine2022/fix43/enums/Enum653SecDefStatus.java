@@ -129,7 +129,7 @@ public enum Enum653SecDefStatus implements LogFIXString, LogVerboseString {
          * dump all the enum values
          */
         for (Enum653SecDefStatus oneEnum : Enum653SecDefStatus.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

@@ -80,13 +80,9 @@ public class  Tag640PrcPrice2 extends FIX43Abstract implements LogValuePairStrin
         Tag640PrcPrice2 tagData;
 
         tagData = new Tag640PrcPrice2(new MyPriceType(TESTA_PRC_PRICE_2) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag640PrcPrice2(new MyPriceType(TESTB_PRC_PRICE_2) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

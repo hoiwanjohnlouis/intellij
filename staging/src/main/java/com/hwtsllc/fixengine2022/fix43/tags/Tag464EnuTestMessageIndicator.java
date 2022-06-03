@@ -108,15 +108,9 @@ public class Tag464EnuTestMessageIndicator extends FIX43Abstract implements LogV
         Tag464EnuTestMessageIndicator tagData;
 
         tagData = new Tag464EnuTestMessageIndicator( TESTA_ENU_TEST_MESSAGE_INDICATOR );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag464EnuTestMessageIndicator( TESTB_ENU_TEST_MESSAGE_INDICATOR );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

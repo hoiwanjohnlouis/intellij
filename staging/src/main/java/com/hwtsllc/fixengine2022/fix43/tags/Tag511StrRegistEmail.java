@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag511StrRegistEmail extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_REGIST_EMAIL = "BilboBaggins-Tag511StrRegistEmail";
-    public final static String TESTB_STR_REGIST_EMAIL = "Gandalf-Tag511StrRegistEmail";
+    public final static String TESTA_STR_REGIST_EMAIL
+            = "BilboBaggins-Tag511StrRegistEmail";
+    public final static String TESTB_STR_REGIST_EMAIL
+            = "Gandalf-Tag511StrRegistEmail";
 
     public Tag511StrRegistEmail(MyStringType dataValue) {
         setFixType(FIX43.FIX511_STR_REGIST_EMAIL);
@@ -78,13 +80,9 @@ public class Tag511StrRegistEmail extends FIX43Abstract implements LogValuePairS
         Tag511StrRegistEmail tagData;
 
         tagData = new Tag511StrRegistEmail(new MyStringType(TESTA_STR_REGIST_EMAIL) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag511StrRegistEmail(new MyStringType(TESTB_STR_REGIST_EMAIL) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

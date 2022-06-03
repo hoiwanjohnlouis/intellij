@@ -114,15 +114,9 @@ public class Tag532EnuMassCancelRejectReason extends FIX43Abstract implements Lo
         Tag532EnuMassCancelRejectReason tagData;
 
         tagData = new Tag532EnuMassCancelRejectReason(TESTA_ENU_MASS_CANCEL_REJECT_REASON);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag532EnuMassCancelRejectReason(TESTB_ENU_MASS_CANCEL_REJECT_REASON);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

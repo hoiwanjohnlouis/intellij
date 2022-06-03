@@ -152,7 +152,7 @@ public enum Enum577ClearingInstruction implements LogFIXString, LogVerboseString
          * dump all the enum values
          */
         for (Enum577ClearingInstruction oneEnum : Enum577ClearingInstruction.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

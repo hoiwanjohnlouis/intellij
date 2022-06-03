@@ -34,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag463StrUnderlyingCFICode extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_UNDERLYING_CFI_CODE = "BilboBaggins-Tag463StrUnderlyingCFICode";
-    public final static String TESTB_STR_UNDERLYING_CFI_CODE = "Gandalf-Tag463StrUnderlyingCFICode";
+    public final static String TESTA_STR_UNDERLYING_CFI_CODE
+            = "TheBigSleep-Tag463StrUnderlyingCFICode";
+    public final static String TESTB_STR_UNDERLYING_CFI_CODE
+            = "TheLongGoodbye-Tag463StrUnderlyingCFICode";
 
     public Tag463StrUnderlyingCFICode(MyStringType dataValue) {
         setFixType(FIX43.FIX463_STR_UNDERLYING_CFI_CODE);
@@ -80,13 +82,9 @@ public class Tag463StrUnderlyingCFICode extends FIX43Abstract implements LogValu
         Tag463StrUnderlyingCFICode tagData;
 
         tagData = new Tag463StrUnderlyingCFICode(new MyStringType(TESTA_STR_UNDERLYING_CFI_CODE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag463StrUnderlyingCFICode(new MyStringType(TESTB_STR_UNDERLYING_CFI_CODE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -82,13 +82,9 @@ public class Tag597StrLegStateOrProvinceOfIssue extends FIX43Abstract implements
         Tag597StrLegStateOrProvinceOfIssue tagData;
 
         tagData = new Tag597StrLegStateOrProvinceOfIssue(new MyStringType(TESTA_STR_LEG_STATE_OR_PROVINCE_OF_ISSUE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag597StrLegStateOrProvinceOfIssue(new MyStringType(TESTB_STR_LEG_STATE_OR_PROVINCE_OF_ISSUE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -262,15 +262,9 @@ public class Tag452EnuPartyRole extends FIX43Abstract implements LogValuePairStr
         Tag452EnuPartyRole tagData;
 
         tagData = new Tag452EnuPartyRole(TESTA_ENU_PARTY_ROLE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag452EnuPartyRole(TESTB_ENU_PARTY_ROLE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

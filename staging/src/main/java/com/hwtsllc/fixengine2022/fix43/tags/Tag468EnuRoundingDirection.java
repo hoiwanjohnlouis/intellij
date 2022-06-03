@@ -120,15 +120,9 @@ public class Tag468EnuRoundingDirection extends FIX43Abstract implements LogValu
         Tag468EnuRoundingDirection tagData;
 
         tagData = new Tag468EnuRoundingDirection(TESTA_ENU_ROUNDING_DIRECTION);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag468EnuRoundingDirection(TESTB_ENU_ROUNDING_DIRECTION);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

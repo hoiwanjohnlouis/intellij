@@ -107,15 +107,9 @@ public class Tag590EnuBookingUnit extends FIX43Abstract implements LogValuePairS
         Tag590EnuBookingUnit tagData;
 
         tagData = new Tag590EnuBookingUnit(TESTA_ENU_BOOKING_UNIT);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag590EnuBookingUnit(TESTB_ENU_BOOKING_UNIT);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

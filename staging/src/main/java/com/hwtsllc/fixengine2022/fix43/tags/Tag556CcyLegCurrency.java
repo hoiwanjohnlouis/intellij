@@ -78,13 +78,9 @@ public class Tag556CcyLegCurrency extends FIX43Abstract implements LogValuePairS
         Tag556CcyLegCurrency tagData;
 
         tagData = new Tag556CcyLegCurrency(new MyCurrencyType(TESTA_CCY_LEG_CURRENCY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag556CcyLegCurrency(new MyCurrencyType(TESTB_CCY_LEG_CURRENCY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

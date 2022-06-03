@@ -78,13 +78,9 @@ public class Tag454NumNoSecurityAltID extends FIX43Abstract implements LogValueP
         Tag454NumNoSecurityAltID tagData;
 
         tagData = new Tag454NumNoSecurityAltID(new MyNumInGroupType(TESTA_NUM_NO_SECURITY_ALT_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag454NumNoSecurityAltID(new MyNumInGroupType(TESTB_NUM_NO_SECURITY_ALT_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

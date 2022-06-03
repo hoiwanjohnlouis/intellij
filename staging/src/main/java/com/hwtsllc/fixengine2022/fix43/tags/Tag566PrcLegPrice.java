@@ -80,13 +80,9 @@ public class Tag566PrcLegPrice extends FIX43Abstract implements LogValuePairStri
         Tag566PrcLegPrice tagData;
 
         tagData = new Tag566PrcLegPrice(new MyPriceType(TESTA_PRC_LEG_PRICE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag566PrcLegPrice(new MyPriceType(TESTB_PRC_LEG_PRICE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

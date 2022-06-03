@@ -78,13 +78,9 @@ public class Tag623FloLegRatioQty extends FIX43Abstract implements LogValuePairS
         Tag623FloLegRatioQty tagData;
 
         tagData = new Tag623FloLegRatioQty(new MyFloatType(TESTA_FLO_LEG_RATIO_QTY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag623FloLegRatioQty(new MyFloatType(TESTB_FLO_LEG_RATIO_QTY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

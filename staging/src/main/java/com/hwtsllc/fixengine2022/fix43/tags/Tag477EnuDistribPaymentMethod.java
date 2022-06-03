@@ -122,15 +122,9 @@ public class Tag477EnuDistribPaymentMethod extends FIX43Abstract implements LogV
         Tag477EnuDistribPaymentMethod tagData;
 
         tagData = new Tag477EnuDistribPaymentMethod(TESTA_ENU_DISTRIB_PAYMENT_METHOD);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag477EnuDistribPaymentMethod(TESTB_ENU_DISTRIB_PAYMENT_METHOD);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

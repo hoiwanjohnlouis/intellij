@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag553StrUsername extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_USERNAME = "BilboBaggins-Tag553StrUsername";
-    public final static String TESTB_STR_USERNAME = "Gandalf-Tag553StrUsername";
+    public final static String TESTA_STR_USERNAME
+            = "LaurenBacall-Tag553StrUsername";
+    public final static String TESTB_STR_USERNAME
+            = "NormaShearer-Tag553StrUsername";
 
     public Tag553StrUsername(MyStringType dataValue) {
         setFixType(FIX43.FIX553_STR_PASSWORD);
@@ -78,23 +80,9 @@ public class Tag553StrUsername extends FIX43Abstract implements LogValuePairStri
         Tag553StrUsername tagData;
 
         tagData = new Tag553StrUsername( new MyStringType(TESTA_STR_USERNAME) );
-        System.out.println("t1.1:" + tagData);
-        System.out.println("t1.2:" + tagData.toVerboseString());
-        System.out.println("t1.3.FIXTypeName:" + tagData.toEnumNameString());
-        System.out.println("t1.4.FIXNumber:" + tagData.toFIXIDString());
-        System.out.println("t1.5.FIXName:" + tagData.toFIXNameString());
-        System.out.println("t1.6.FIXDescription:" + tagData.toFIXDescriptionString());
-        System.out.println("t1.7.DataValue:" + tagData.getDataValue());
-        System.out.println("t1.8.FixString:" + tagData.toValuePairString());
+        System.out.println(tagData.toVerboseString());
 
         tagData = new Tag553StrUsername( new MyStringType(TESTB_STR_USERNAME) );
-        System.out.println("t1.1:" + tagData);
-        System.out.println("t1.2:" + tagData.toVerboseString());
-        System.out.println("t1.3.FIXTypeName:" + tagData.toEnumNameString());
-        System.out.println("t1.4.FIXNumber:" + tagData.toFIXIDString());
-        System.out.println("t1.5.FIXName:" + tagData.toFIXNameString());
-        System.out.println("t1.6.FIXDescription:" + tagData.toFIXDescriptionString());
-        System.out.println("t1.7.DataValue:" + tagData.getDataValue());
-        System.out.println("t1.8.FixString:" + tagData.toValuePairString());
+        System.out.println(tagData.toVerboseString());
     }
 }

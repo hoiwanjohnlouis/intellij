@@ -78,13 +78,9 @@ public class Tag558NumNoSecurityTypes extends FIX43Abstract implements LogValueP
         Tag558NumNoSecurityTypes tagData;
 
         tagData = new Tag558NumNoSecurityTypes(new MyNumInGroupType(TESTA_NUM_NO_SECURITY_TYPES) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag558NumNoSecurityTypes(new MyNumInGroupType(TESTB_NUM_NO_SECURITY_TYPES) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

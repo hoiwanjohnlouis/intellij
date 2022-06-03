@@ -108,15 +108,9 @@ public class Tag563EnuMultiLegRptTypeReq extends FIX43Abstract implements LogVal
         Tag563EnuMultiLegRptTypeReq tagData;
 
         tagData = new Tag563EnuMultiLegRptTypeReq(TESTA_ENU_MULTI_LEG_RPT_TYPE_REQ);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag563EnuMultiLegRptTypeReq(TESTB_ENU_MULTI_LEG_RPT_TYPE_REQ);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

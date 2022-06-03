@@ -80,13 +80,9 @@ public class Tag651PrcUnderlyingLastPx extends FIX43Abstract implements LogValue
         Tag651PrcUnderlyingLastPx tagData;
 
         tagData = new Tag651PrcUnderlyingLastPx(new MyPriceType(TESTA_PRC_UNDERLYING_LAST_PX) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag651PrcUnderlyingLastPx(new MyPriceType(TESTB_PRC_UNDERLYING_LAST_PX) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -78,13 +78,9 @@ public class Tag580IntNoDates extends FIX43Abstract implements LogValuePairStrin
         Tag580IntNoDates tagData;
 
         tagData = new Tag580IntNoDates(new MyIntType(TESTA_INT_NO_DATES) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag580IntNoDates(new MyIntType(TESTB_INT_NO_DATES) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

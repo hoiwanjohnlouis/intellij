@@ -114,15 +114,9 @@ public class Tag550EnuCrossPrioritization extends FIX43Abstract implements LogVa
         Tag550EnuCrossPrioritization tagData;
 
         tagData = new Tag550EnuCrossPrioritization(TESTA_ENU_CROSS_PRIORITIZATION);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag550EnuCrossPrioritization(TESTB_ENU_CROSS_PRIORITIZATION);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

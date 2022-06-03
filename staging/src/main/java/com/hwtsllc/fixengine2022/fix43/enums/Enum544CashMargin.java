@@ -128,7 +128,7 @@ public enum Enum544CashMargin implements LogFIXString, LogVerboseString {
          * dump all the enum values
          */
         for (Enum544CashMargin oneEnum : Enum544CashMargin.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

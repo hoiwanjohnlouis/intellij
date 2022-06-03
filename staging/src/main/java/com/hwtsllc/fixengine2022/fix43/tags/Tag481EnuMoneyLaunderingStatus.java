@@ -109,15 +109,9 @@ public class Tag481EnuMoneyLaunderingStatus extends FIX43Abstract implements Log
         Tag481EnuMoneyLaunderingStatus tagData;
 
         tagData = new Tag481EnuMoneyLaunderingStatus(TESTA_ENU_MONEY_LAUNDERING_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag481EnuMoneyLaunderingStatus(TESTB_ENU_MONEY_LAUNDERING_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

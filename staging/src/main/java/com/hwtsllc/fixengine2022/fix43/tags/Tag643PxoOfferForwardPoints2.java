@@ -80,13 +80,9 @@ public class Tag643PxoOfferForwardPoints2 extends FIX43Abstract implements LogVa
         Tag643PxoOfferForwardPoints2 tagData;
 
         tagData = new Tag643PxoOfferForwardPoints2(new MyPriceOffsetType(TESTA_PXO_OFFER_FORWARD_POINTS_2) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag643PxoOfferForwardPoints2(new MyPriceOffsetType(TESTB_PXO_OFFER_FORWARD_POINTS_2) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

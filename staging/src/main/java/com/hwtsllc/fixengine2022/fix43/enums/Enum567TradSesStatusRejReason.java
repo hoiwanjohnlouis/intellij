@@ -124,7 +124,7 @@ public enum Enum567TradSesStatusRejReason implements LogFIXString, LogVerboseStr
          * dump all the enum values
          */
         for (Enum567TradSesStatusRejReason oneEnum : Enum567TradSesStatusRejReason.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

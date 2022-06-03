@@ -128,15 +128,9 @@ public class Tag564EnuLegPositionEffect extends FIX43Abstract implements LogValu
         Tag564EnuLegPositionEffect tagData;
 
         tagData = new Tag564EnuLegPositionEffect(TESTA_ENU_LEG_POSITION_EFFECT);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag564EnuLegPositionEffect(TESTB_ENU_LEG_POSITION_EFFECT);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

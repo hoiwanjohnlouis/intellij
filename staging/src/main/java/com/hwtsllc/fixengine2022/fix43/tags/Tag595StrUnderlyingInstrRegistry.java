@@ -34,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag595StrUnderlyingInstrRegistry extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_UNDERLYING_INSTR_REGISTRY = "BilboBaggins-Tag595StrUnderlyingInstrRegistry";
-    public final static String TESTB_STR_UNDERLYING_INSTR_REGISTRY = "Gandalf-Tag595StrUnderlyingInstrRegistry";
+    public final static String TESTA_STR_UNDERLYING_INSTR_REGISTRY
+            = "BilboBaggins-Tag595StrUnderlyingInstrRegistry";
+    public final static String TESTB_STR_UNDERLYING_INSTR_REGISTRY
+            = "Gandalf-Tag595StrUnderlyingInstrRegistry";
 
     public Tag595StrUnderlyingInstrRegistry(MyStringType dataValue) {
         setFixType(FIX43.FIX595_STR_UNDERLYING_INSTR_REGISTRY);
@@ -80,13 +82,9 @@ public class Tag595StrUnderlyingInstrRegistry extends FIX43Abstract implements L
         Tag595StrUnderlyingInstrRegistry tagData;
 
         tagData = new Tag595StrUnderlyingInstrRegistry(new MyStringType(TESTA_STR_UNDERLYING_INSTR_REGISTRY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag595StrUnderlyingInstrRegistry(new MyStringType(TESTB_STR_UNDERLYING_INSTR_REGISTRY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

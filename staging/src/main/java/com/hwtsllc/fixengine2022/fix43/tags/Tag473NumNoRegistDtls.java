@@ -78,13 +78,9 @@ public class Tag473NumNoRegistDtls extends FIX43Abstract implements LogValuePair
         Tag473NumNoRegistDtls tagData;
 
         tagData = new Tag473NumNoRegistDtls(new MyNumInGroupType(TESTA_NUM_NO_REGIST_DTLS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag473NumNoRegistDtls(new MyNumInGroupType(TESTB_NUM_NO_REGIST_DTLS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

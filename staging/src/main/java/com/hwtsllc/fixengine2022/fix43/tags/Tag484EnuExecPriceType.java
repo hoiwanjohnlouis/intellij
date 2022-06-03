@@ -115,15 +115,9 @@ public class Tag484EnuExecPriceType extends FIX43Abstract implements LogValuePai
         Tag484EnuExecPriceType tagData;
 
         tagData = new Tag484EnuExecPriceType(TESTA_ENU_EXEC_PRICE_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag484EnuExecPriceType(TESTB_ENU_EXEC_PRICE_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

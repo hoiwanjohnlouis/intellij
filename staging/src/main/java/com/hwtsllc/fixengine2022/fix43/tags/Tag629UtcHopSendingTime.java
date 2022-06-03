@@ -85,13 +85,9 @@ public class Tag629UtcHopSendingTime extends FIX43Abstract implements LogValuePa
         Tag629UtcHopSendingTime tagData;
 
         tagData = new Tag629UtcHopSendingTime(new MyUTCTimestampType(TESTA_UTC_HOP_SENDING_TIME) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag629UtcHopSendingTime(new MyUTCTimestampType(TESTB_UTC_HOP_SENDING_TIME) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

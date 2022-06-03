@@ -32,10 +32,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>
  *  See MaturityMonthYear (200) field for description
  */
-class Tag610LegMaturityMonthYearTest {
+class Tag610StrLegMaturityMonthYearTest {
     @Test
     void FIX0610Test() {
-        FIX43 fixData = FIX43.FIX610_LEG_MATURITY_MONTH_YEAR;
+        FIX43 fixData = FIX43.FIX610_STR_LEG_MATURITY_MONTH_YEAR;
         assertEquals( "610", fixData.toFIXIDString());
         assertEquals( "LEG_MATURITY_MONTH_YEAR", fixData.toFIXNameString());
         assertEquals( "LegMaturityMonthYear", fixData.toFIXDescriptionString());
@@ -45,7 +45,7 @@ class Tag610LegMaturityMonthYearTest {
     }
     @Test
     void Tag0610Test() {
-        Tag610LegMaturityMonthYear tagData;
+        Tag610StrLegMaturityMonthYear tagData;
 
     }
 }

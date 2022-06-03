@@ -154,7 +154,7 @@ public enum Enum519ContAmtType implements LogFIXString, LogVerboseString {
          * dump all the enum values
          */
         for (Enum519ContAmtType oneEnum : Enum519ContAmtType.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

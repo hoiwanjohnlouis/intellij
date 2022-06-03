@@ -148,7 +148,7 @@ public enum Enum658QuoteRequestRejectReason implements LogFIXString, LogVerboseS
          * dump all the enum values for review
          */
         for (Enum658QuoteRequestRejectReason oneEnum : Enum658QuoteRequestRejectReason.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

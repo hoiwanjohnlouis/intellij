@@ -108,15 +108,9 @@ public class Tag480EnuCancellationRights extends FIX43Abstract implements LogVal
         Tag480EnuCancellationRights tagData;
 
         tagData = new Tag480EnuCancellationRights(TESTA_ENU_CANCELLATION_RIGHTS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag480EnuCancellationRights(TESTB_ENU_CANCELLATION_RIGHTS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

@@ -36,8 +36,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag583StrClOrdLinkID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_CL_ORD_LINK_ID = "BilboBaggins-Tag583StrClOrdLinkID";
-    public final static String TESTB_STR_CL_ORD_LINK_ID = "Gandalf-Tag583StrClOrdLinkID";
+    public final static String TESTA_STR_CL_ORD_LINK_ID
+            = "BilboBaggins-Tag583StrClOrdLinkID";
+    public final static String TESTB_STR_CL_ORD_LINK_ID
+            = "Gandalf-Tag583StrClOrdLinkID";
 
     public Tag583StrClOrdLinkID(MyStringType dataValue) {
         setFixType(FIX43.FIX583_STR_CL_ORD_LINK_ID);
@@ -82,13 +84,9 @@ public class Tag583StrClOrdLinkID extends FIX43Abstract implements LogValuePairS
         Tag583StrClOrdLinkID tagData;
 
         tagData = new Tag583StrClOrdLinkID(new MyStringType(TESTA_STR_CL_ORD_LINK_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag583StrClOrdLinkID(new MyStringType(TESTB_STR_CL_ORD_LINK_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

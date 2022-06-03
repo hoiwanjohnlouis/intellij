@@ -118,7 +118,7 @@ public enum Enum464TestMessageIndicator implements LogFIXString, LogVerboseStrin
          * dump all the enum values
          */
         for ( Enum464TestMessageIndicator oneEnum : Enum464TestMessageIndicator.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

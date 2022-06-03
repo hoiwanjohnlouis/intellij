@@ -78,13 +78,9 @@ public class Tag655StrContraLegRefID extends FIX43Abstract implements LogValuePa
         Tag655StrContraLegRefID tagData;
 
         tagData = new Tag655StrContraLegRefID(new MyStringType(TESTA_STR_CONTRA_LEG_REF_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag655StrContraLegRefID(new MyStringType(TESTB_STR_CONTRA_LEG_REF_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -127,15 +127,9 @@ public class Tag492EnuPaymentMethod extends FIX43Abstract implements LogValuePai
         Tag492EnuPaymentMethod tagData;
 
         tagData = new Tag492EnuPaymentMethod(TESTA_ENU_PAYMENT_METHOD);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag492EnuPaymentMethod(TESTB_ENU_PAYMENT_METHOD);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

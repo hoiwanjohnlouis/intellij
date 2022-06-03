@@ -110,15 +110,9 @@ public class Tag560EnuSecurityRequestResult extends FIX43Abstract implements Log
         Tag560EnuSecurityRequestResult tagData;
 
         tagData = new Tag560EnuSecurityRequestResult(TESTA_ENU_SECURITY_REQUEST_RESULT);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag560EnuSecurityRequestResult(TESTB_ENU_SECURITY_REQUEST_RESULT);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

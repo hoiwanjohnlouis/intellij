@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag496StrRegistRejReasonText extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_REGIST_REJ_REASON_TEXT = "BilboBaggins-Tag496StrRegistRejReasonText";
-    public final static String TESTB_STR_REGIST_REJ_REASON_TEXT = "Gandalf-Tag496StrRegistRejReasonText";
+    public final static String TESTA_STR_REGIST_REJ_REASON_TEXT
+            = "BilboBaggins-Tag496StrRegistRejReasonText";
+    public final static String TESTB_STR_REGIST_REJ_REASON_TEXT
+            = "Gandalf-Tag496StrRegistRejReasonText";
 
     public Tag496StrRegistRejReasonText(MyStringType dataValue) {
         setFixType(FIX43.FIX496_STR_REGIST_REJ_REASON_TEXT);
@@ -78,13 +80,9 @@ public class Tag496StrRegistRejReasonText extends FIX43Abstract implements LogVa
         Tag496StrRegistRejReasonText tagData;
 
         tagData = new Tag496StrRegistRejReasonText(new MyStringType(TESTA_STR_REGIST_REJ_REASON_TEXT) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag496StrRegistRejReasonText(new MyStringType(TESTB_STR_REGIST_REJ_REASON_TEXT) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

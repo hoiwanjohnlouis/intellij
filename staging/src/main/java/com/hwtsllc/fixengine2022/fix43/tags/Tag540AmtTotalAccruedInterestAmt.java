@@ -79,13 +79,9 @@ public class Tag540AmtTotalAccruedInterestAmt extends FIX43Abstract implements L
         Tag540AmtTotalAccruedInterestAmt tagData;
 
         tagData = new Tag540AmtTotalAccruedInterestAmt(new MyAmtType(TESTA_AMT_TOTAL_ACCRUED_INTEREST_AMT) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag540AmtTotalAccruedInterestAmt(new MyAmtType(TESTB_AMT_TOTAL_ACCRUED_INTEREST_AMT) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

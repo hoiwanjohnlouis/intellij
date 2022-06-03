@@ -34,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag599StrLegInstrRegistry extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_LEG_INSTR_REGISTRY = "BilboBaggins-Tag599StrLegInstrRegistry";
-    public final static String TESTB_STR_LEG_INSTR_REGISTRY = "Gandalf-Tag599StrLegInstrRegistry";
+    public final static String TESTA_STR_LEG_INSTR_REGISTRY
+            = "BilboBaggins-Tag599StrLegInstrRegistry";
+    public final static String TESTB_STR_LEG_INSTR_REGISTRY
+            = "Gandalf-Tag599StrLegInstrRegistry";
 
     public Tag599StrLegInstrRegistry(MyStringType dataValue) {
         setFixType(FIX43.FIX599_STR_LEG_INSTR_REGISTRY);
@@ -80,13 +82,9 @@ public class Tag599StrLegInstrRegistry extends FIX43Abstract implements LogValue
         Tag599StrLegInstrRegistry tagData;
 
         tagData = new Tag599StrLegInstrRegistry(new MyStringType(TESTA_STR_LEG_INSTR_REGISTRY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag599StrLegInstrRegistry(new MyStringType(TESTB_STR_LEG_INSTR_REGISTRY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -118,15 +118,9 @@ public class Tag465EnuQuantityType extends FIX43Abstract implements LogValuePair
         Tag465EnuQuantityType tagData;
 
         tagData = new Tag465EnuQuantityType(TESTA_ENU_QUANTITY_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag465EnuQuantityType(TESTB_ENU_QUANTITY_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

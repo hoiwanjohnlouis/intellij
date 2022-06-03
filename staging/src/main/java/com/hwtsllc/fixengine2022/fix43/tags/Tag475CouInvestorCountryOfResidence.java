@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag475CouInvestorCountryOfResidence extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyCountryType dataValue;
 
-    public final static String TESTA_COU_INVESTOR_COUNTRY_OF_RESIDENCE = "BilboBaggins-Tag475CouInvestorCountryOfResidence";
-    public final static String TESTB_COU_INVESTOR_COUNTRY_OF_RESIDENCE = "Gandalf-Tag475CouInvestorCountryOfResidence";
+    public final static String TESTA_COU_INVESTOR_COUNTRY_OF_RESIDENCE
+            = "BilboBaggins-Tag475CouInvestorCountryOfResidence";
+    public final static String TESTB_COU_INVESTOR_COUNTRY_OF_RESIDENCE
+            = "Gandalf-Tag475CouInvestorCountryOfResidence";
 
     public Tag475CouInvestorCountryOfResidence(MyCountryType dataValue) {
         setFixType(FIX43.FIX475_COU_INVESTOR_COUNTRY_OF_RESIDENCE);
@@ -78,13 +80,9 @@ public class Tag475CouInvestorCountryOfResidence extends FIX43Abstract implement
         Tag475CouInvestorCountryOfResidence tagData;
 
         tagData = new Tag475CouInvestorCountryOfResidence(new MyCountryType(TESTA_COU_INVESTOR_COUNTRY_OF_RESIDENCE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag475CouInvestorCountryOfResidence(new MyCountryType(TESTB_COU_INVESTOR_COUNTRY_OF_RESIDENCE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

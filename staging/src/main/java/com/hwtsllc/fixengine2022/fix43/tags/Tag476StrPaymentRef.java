@@ -34,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag476StrPaymentRef extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_PAYMENT_REF = "BilboBaggins-Tag476StrPaymentRef";
-    public final static String TESTB_STR_PAYMENT_REF = "Gandalf-Tag476StrPaymentRef";
+    public final static String TESTA_STR_PAYMENT_REF
+            = "BilboBaggins-Tag476StrPaymentRef";
+    public final static String TESTB_STR_PAYMENT_REF
+            = "Gandalf-Tag476StrPaymentRef";
 
     public Tag476StrPaymentRef(MyStringType dataValue) {
         setFixType(FIX43.FIX476_STR_PAYMENT_REF);
@@ -80,13 +82,9 @@ public class Tag476StrPaymentRef extends FIX43Abstract implements LogValuePairSt
         Tag476StrPaymentRef tagData;
 
         tagData = new Tag476StrPaymentRef(new MyStringType(TESTA_STR_PAYMENT_REF) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag476StrPaymentRef(new MyStringType(TESTB_STR_PAYMENT_REF) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

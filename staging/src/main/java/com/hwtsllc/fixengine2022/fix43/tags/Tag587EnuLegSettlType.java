@@ -118,15 +118,9 @@ public class Tag587EnuLegSettlType extends FIX43Abstract implements LogValuePair
         Tag587EnuLegSettlType tagData;
 
         tagData = new Tag587EnuLegSettlType(TESTA_ENU_LEG_SETTL_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag587EnuLegSettlType(TESTB_ENU_LEG_SETTL_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

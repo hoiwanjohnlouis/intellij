@@ -125,7 +125,7 @@ public enum Enum563MultiLegRptTypeReq implements LogFIXString, LogVerboseString 
          * dump all the enum values
          */
         for (Enum563MultiLegRptTypeReq oneEnum : Enum563MultiLegRptTypeReq.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

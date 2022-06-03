@@ -123,7 +123,7 @@ public enum Enum573MatchStatus implements LogFIXString, LogVerboseString {
          * dump all the enum values
          */
         for (Enum573MatchStatus oneEnum : Enum573MatchStatus.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

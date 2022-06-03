@@ -146,7 +146,7 @@ public enum Enum477DistribPaymentMethod implements LogFIXString, LogVerboseStrin
          * dump all the enum values for review
          */
         for (Enum477DistribPaymentMethod oneEnum : Enum477DistribPaymentMethod.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

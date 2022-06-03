@@ -119,15 +119,9 @@ public class Tag529EnuOrderRestrictions extends FIX43Abstract implements LogValu
         Tag529EnuOrderRestrictions tagData;
 
         tagData = new Tag529EnuOrderRestrictions(TESTA_ENU_ORDER_RESTRICTIONS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag529EnuOrderRestrictions(TESTB_ENU_ORDER_RESTRICTIONS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

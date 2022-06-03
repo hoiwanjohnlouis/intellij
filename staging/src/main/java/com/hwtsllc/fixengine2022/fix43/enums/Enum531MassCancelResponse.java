@@ -141,7 +141,7 @@ public enum Enum531MassCancelResponse implements LogFIXString, LogVerboseString 
          * dump all the enum values
          */
         for (Enum531MassCancelResponse oneEnum : Enum531MassCancelResponse.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

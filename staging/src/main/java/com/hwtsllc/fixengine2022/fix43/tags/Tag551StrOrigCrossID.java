@@ -34,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag551StrOrigCrossID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_ORIG_CROSS_ID = "BilboBaggins-Tag551StrOrigCrossID";
-    public final static String TESTB_STR_ORIG_CROSS_ID = "Gandalf-Tag551StrOrigCrossID";
+    public final static String TESTA_STR_ORIG_CROSS_ID
+            = "BilboBaggins-Tag551StrOrigCrossID";
+    public final static String TESTB_STR_ORIG_CROSS_ID
+            = "Gandalf-Tag551StrOrigCrossID";
 
     public Tag551StrOrigCrossID(MyStringType dataValue) {
         setFixType(FIX43.FIX551_STR_ORIG_CROSS_ID);
@@ -80,13 +82,9 @@ public class Tag551StrOrigCrossID extends FIX43Abstract implements LogValuePairS
         Tag551StrOrigCrossID tagData;
 
         tagData = new Tag551StrOrigCrossID(new MyStringType(TESTA_STR_ORIG_CROSS_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag551StrOrigCrossID(new MyStringType(TESTB_STR_ORIG_CROSS_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

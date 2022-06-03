@@ -278,15 +278,9 @@ public class Tag609EnuLegSecurityType extends FIX43Abstract implements LogValueP
         Tag609EnuLegSecurityType tagData;
 
         tagData = new Tag609EnuLegSecurityType(TESTA_ENU_LEG_SECURITY_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag609EnuLegSecurityType(TESTB_ENU_LEG_SECURITY_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

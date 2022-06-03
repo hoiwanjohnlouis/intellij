@@ -78,13 +78,9 @@ public class Tag562QtyMinTradeVol extends FIX43Abstract implements LogValuePairS
         Tag562QtyMinTradeVol tagData;
 
         tagData = new Tag562QtyMinTradeVol(new MyQtyType(TESTA_QTY_MIN_TRADE_VOL) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag562QtyMinTradeVol(new MyQtyType(TESTB_QTY_MIN_TRADE_VOL) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

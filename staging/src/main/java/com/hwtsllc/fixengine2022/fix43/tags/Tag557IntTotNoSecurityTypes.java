@@ -80,13 +80,9 @@ public class Tag557IntTotNoSecurityTypes extends FIX43Abstract implements LogVal
         Tag557IntTotNoSecurityTypes tagData;
 
         tagData = new Tag557IntTotNoSecurityTypes(new MyIntType(TESTA_INT_TOT_NO_SECURITY_TYPES) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag557IntTotNoSecurityTypes(new MyIntType(TESTB_INT_TOT_NO_SECURITY_TYPES) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -78,13 +78,9 @@ public class Tag512PctDistribPercentage extends FIX43Abstract implements LogValu
         Tag512PctDistribPercentage tagData;
 
         tagData = new Tag512PctDistribPercentage(new MyPercentageType(TESTA_PCT_DISTRIB_PERCENTAGE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag512PctDistribPercentage(new MyPercentageType(TESTB_PCT_DISTRIB_PERCENTAGE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -23,22 +23,24 @@ import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  605
- *  LegSecurityAltID
- *  String
+ *  610
+ *  LegMaturityMonthYear
+ *  month-year
  *  <p>
- *  Multileg instrument's individual  security’s SecurityAltID.
+ *  Multileg instrument's individual  security’s MaturityMonthYear.
  *  <p>
- *  See SecurityAltID (455) field for description
+ *  See MaturityMonthYear (200) field for description
  */
-public class Tag605StrLegSecurityAltID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag610StrLegMaturityMonthYear extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_LEG_SECURITY_ALT_ID = "BilboBaggins-Tag605StrLegSecurityAltID";
-    public final static String TESTB_STR_LEG_SECURITY_ALT_ID = "Gandalf-Tag605StrLegSecurityAltID";
+    public final static String TESTA_STR_LEG_MATURITY_MONTH_YEAR
+            = "RosaPonselle-Tag610StrLegMaturityMonthYear";
+    public final static String TESTB_STR_LEG_MATURITY_MONTH_YEAR
+            = "GeraldineFarrar-Tag610StrLegMaturityMonthYear";
 
-    public Tag605StrLegSecurityAltID(MyStringType dataValue) {
-        setFixType(FIX43.FIX605_STR_LEG_SECURITY_ALT_ID);
+    public Tag610StrLegMaturityMonthYear(MyStringType dataValue) {
+        setFixType( FIX43.FIX610_STR_LEG_MATURITY_MONTH_YEAR );
         this.dataValue = dataValue;
     }
 
@@ -77,12 +79,12 @@ public class Tag605StrLegSecurityAltID extends FIX43Abstract implements LogValue
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag605StrLegSecurityAltID tagData;
+        Tag610StrLegMaturityMonthYear tagData;
 
-        tagData = new Tag605StrLegSecurityAltID(new MyStringType(TESTA_STR_LEG_SECURITY_ALT_ID) );
+        tagData = new Tag610StrLegMaturityMonthYear(new MyStringType( TESTA_STR_LEG_MATURITY_MONTH_YEAR ) );
         System.out.println(tagData.toVerboseString());
 
-        tagData = new Tag605StrLegSecurityAltID(new MyStringType(TESTB_STR_LEG_SECURITY_ALT_ID) );
+        tagData = new Tag610StrLegMaturityMonthYear(new MyStringType( TESTB_STR_LEG_MATURITY_MONTH_YEAR ) );
         System.out.println(tagData.toVerboseString());
     }
 }

@@ -32,10 +32,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>
  *  See OptAttribute (206) field for description
  */
-class Tag613LegOptAttributeTest {
+class Tag613StrLegOptAttributeTest {
     @Test
     void FIX0613Test() {
-        FIX43 fixData = FIX43.FIX613_LEG_OPT_ATTRIBUTE;
+        FIX43 fixData = FIX43.FIX613_STR_LEG_OPT_ATTRIBUTE;
         assertEquals( "613", fixData.toFIXIDString());
         assertEquals( "LEG_OPT_ATTRIBUTE", fixData.toFIXNameString());
         assertEquals( "LegOptAttribute", fixData.toFIXDescriptionString());
@@ -45,7 +45,7 @@ class Tag613LegOptAttributeTest {
     }
     @Test
     void Tag0613Test() {
-        Tag613LegOptAttribute tagData;
+        Tag613StrLegOptAttribute tagData;
 
     }
 }

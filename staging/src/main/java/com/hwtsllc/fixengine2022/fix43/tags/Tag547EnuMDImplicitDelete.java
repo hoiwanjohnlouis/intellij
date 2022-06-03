@@ -41,10 +41,8 @@ public class Tag547EnuMDImplicitDelete extends FIX43Abstract implements LogValue
 
     public final static MyBooleanType TESTA_BOOL_MD_IMPLICIT_DELETE
             = MyBooleanType.NO ;
-    // N - Server must send an explicit delete for bids or offers falling outside the requested MarketDepth of the request
     public final static MyBooleanType TESTB_BOOL_MD_IMPLICIT_DELETE
             = MyBooleanType.YES;
-    // Y - Client has responsibility for implicitly deleting bids or offers falling outside the MarketDepth of the request
 
     public Tag547EnuMDImplicitDelete( MyBooleanType dataValue) {
         setFixType(FIX43.FIX547_ENU_MD_IMPLICIT_DELETE );
@@ -110,15 +108,9 @@ public class Tag547EnuMDImplicitDelete extends FIX43Abstract implements LogValue
         Tag547EnuMDImplicitDelete tagData;
 
         tagData = new Tag547EnuMDImplicitDelete(TESTA_BOOL_MD_IMPLICIT_DELETE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag547EnuMDImplicitDelete(TESTB_BOOL_MD_IMPLICIT_DELETE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

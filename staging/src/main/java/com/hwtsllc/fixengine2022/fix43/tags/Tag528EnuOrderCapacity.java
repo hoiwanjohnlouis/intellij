@@ -118,15 +118,9 @@ public class Tag528EnuOrderCapacity extends FIX43Abstract implements LogValuePai
         Tag528EnuOrderCapacity tagData;
 
         tagData = new Tag528EnuOrderCapacity(TESTA_ENU_ORDER_CAPACITY);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag528EnuOrderCapacity(TESTB_ENU_ORDER_CAPACITY);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

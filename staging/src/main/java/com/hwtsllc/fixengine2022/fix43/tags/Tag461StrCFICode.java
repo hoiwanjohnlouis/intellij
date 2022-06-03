@@ -43,8 +43,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag461StrCFICode extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_CFI_CODE = "BilboBaggins-Tag461StrCFICode";
-    public final static String TESTB_STR_CFI_CODE = "Gandalf-Tag461StrCFICode";
+    public final static String TESTA_STR_CFI_CODE
+            = "ForWhomTheBellTolls-Tag461StrCFICode";
+    public final static String TESTB_STR_CFI_CODE
+            = "TheOldManAndTheSea-Tag461StrCFICode";
 
     public Tag461StrCFICode(MyStringType dataValue) {
         setFixType(FIX43.FIX461_STR_CFI_CODE);
@@ -89,13 +91,9 @@ public class Tag461StrCFICode extends FIX43Abstract implements LogValuePairStrin
         Tag461StrCFICode tagData;
 
         tagData = new Tag461StrCFICode(new MyStringType(TESTA_STR_CFI_CODE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag461StrCFICode(new MyStringType(TESTB_STR_CFI_CODE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

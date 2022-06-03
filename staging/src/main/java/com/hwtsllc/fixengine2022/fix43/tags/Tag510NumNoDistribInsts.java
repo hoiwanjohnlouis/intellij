@@ -80,13 +80,9 @@ public class Tag510NumNoDistribInsts extends FIX43Abstract implements LogValuePa
         Tag510NumNoDistribInsts tagData;
 
         tagData = new Tag510NumNoDistribInsts(new MyNumInGroupType(TESTA_NUM_NO_DISTRIB_INSTS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag510NumNoDistribInsts(new MyNumInGroupType(TESTB_NUM_NO_DISTRIB_INSTS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

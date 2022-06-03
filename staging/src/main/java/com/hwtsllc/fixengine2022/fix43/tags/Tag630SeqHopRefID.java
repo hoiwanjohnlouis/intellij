@@ -85,18 +85,9 @@ public class Tag630SeqHopRefID extends FIX43Abstract implements LogValuePairStri
         Tag630SeqHopRefID tagData;
 
         tagData = new Tag630SeqHopRefID(new MySeqNumType(TESTA_SEQ_HOP_REF_ID) );
-        System.out.println("initial values A");
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag630SeqHopRefID(new MySeqNumType(TESTB_SEQ_HOP_REF_ID) );
-        System.out.println("initial values B");
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
     }
 }

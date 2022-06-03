@@ -114,15 +114,9 @@ public class Tag531EnuMassCancelResponse extends FIX43Abstract implements LogVal
         Tag531EnuMassCancelResponse tagData;
 
         tagData = new Tag531EnuMassCancelResponse(TESTA_ENU_MASS_CANCEL_RESPONSE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag531EnuMassCancelResponse(TESTB_ENU_MASS_CANCEL_RESPONSE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

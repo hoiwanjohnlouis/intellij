@@ -127,15 +127,9 @@ public class Tag519EnuContAmtType extends FIX43Abstract implements LogValuePairS
         Tag519EnuContAmtType tagData;
 
         tagData = new Tag519EnuContAmtType(TESTA_ENU_CONT_AMT_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag519EnuContAmtType(TESTB_ENU_CONT_AMT_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

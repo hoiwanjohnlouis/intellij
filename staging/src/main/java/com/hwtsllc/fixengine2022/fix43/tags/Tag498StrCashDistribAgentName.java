@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag498StrCashDistribAgentName extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_CASH_DISTRIB_AGENT_NAME = "BilboBaggins-Tag498StrCashDistribAgentName";
-    public final static String TESTB_STR_CASH_DISTRIB_AGENT_NAME = "Gandalf-Tag498StrCashDistribAgentName";
+    public final static String TESTA_STR_CASH_DISTRIB_AGENT_NAME
+            = "BilboBaggins-Tag498StrCashDistribAgentName";
+    public final static String TESTB_STR_CASH_DISTRIB_AGENT_NAME
+            = "Gandalf-Tag498StrCashDistribAgentName";
 
     public Tag498StrCashDistribAgentName(MyStringType dataValue) {
         setFixType(FIX43.FIX498_STR_CASH_DISTRIB_AGENT_NAME);
@@ -78,13 +80,9 @@ public class Tag498StrCashDistribAgentName extends FIX43Abstract implements LogV
         Tag498StrCashDistribAgentName tagData;
 
         tagData = new Tag498StrCashDistribAgentName(new MyStringType(TESTA_STR_CASH_DISTRIB_AGENT_NAME) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag498StrCashDistribAgentName(new MyStringType(TESTB_STR_CASH_DISTRIB_AGENT_NAME) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

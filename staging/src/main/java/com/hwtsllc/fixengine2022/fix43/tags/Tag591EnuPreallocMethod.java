@@ -106,15 +106,9 @@ public class Tag591EnuPreallocMethod extends FIX43Abstract implements LogValuePa
         Tag591EnuPreallocMethod tagData;
 
         tagData = new Tag591EnuPreallocMethod(TESTA_ENU_PREALLOC_METHOD);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag591EnuPreallocMethod(TESTB_ENU_PREALLOC_METHOD);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

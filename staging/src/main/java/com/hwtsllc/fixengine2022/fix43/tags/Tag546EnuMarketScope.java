@@ -107,15 +107,9 @@ public class Tag546EnuMarketScope extends FIX43Abstract implements LogValuePairS
         Tag546EnuMarketScope tagData;
 
         tagData = new Tag546EnuMarketScope(TESTA_ENU_SCOPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag546EnuMarketScope(TESTB_ENU_SCOPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

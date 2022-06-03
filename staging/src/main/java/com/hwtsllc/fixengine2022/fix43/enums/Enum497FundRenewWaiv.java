@@ -119,7 +119,7 @@ public enum Enum497FundRenewWaiv implements LogFIXString, LogVerboseString {
          * dump all the enum values for review
          */
         for (Enum497FundRenewWaiv oneEnum : Enum497FundRenewWaiv.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

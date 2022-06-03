@@ -144,7 +144,7 @@ public enum Enum522OwnerType implements LogFIXString, LogVerboseString {
          * dump all the enum values
          */
         for (Enum522OwnerType oneEnum : Enum522OwnerType.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

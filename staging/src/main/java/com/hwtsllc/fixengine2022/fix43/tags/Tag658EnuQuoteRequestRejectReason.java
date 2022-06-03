@@ -119,15 +119,9 @@ public class Tag658EnuQuoteRequestRejectReason extends FIX43Abstract implements 
         Tag658EnuQuoteRequestRejectReason tagData;
 
         tagData = new Tag658EnuQuoteRequestRejectReason(TESTA_ENU_QUOTE_REQUEST_REJECT_REASON);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag658EnuQuoteRequestRejectReason(TESTB_ENU_QUOTE_REQUEST_REJECT_REASON);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

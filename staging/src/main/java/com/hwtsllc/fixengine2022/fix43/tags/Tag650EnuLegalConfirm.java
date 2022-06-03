@@ -106,15 +106,9 @@ public class Tag650EnuLegalConfirm extends FIX43Abstract implements LogValuePair
         Tag650EnuLegalConfirm tagData;
 
         tagData = new Tag650EnuLegalConfirm( TESTA_ENU_LEGAL_CONFIRM );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag650EnuLegalConfirm( TESTB_ENU_LEGAL_CONFIRM );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

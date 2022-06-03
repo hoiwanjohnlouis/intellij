@@ -91,13 +91,9 @@ public class Tag636EnuWorkingIndicator extends FIX43Abstract implements LogValue
         Tag636EnuWorkingIndicator tagData;
 
         tagData = new Tag636EnuWorkingIndicator( TESTA_ENU_WORKING_INDICATOR );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag636EnuWorkingIndicator( TESTB_ENU_WORKING_INDICATOR );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

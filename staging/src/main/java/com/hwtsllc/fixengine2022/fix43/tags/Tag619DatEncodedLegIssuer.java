@@ -80,18 +80,9 @@ public class Tag619DatEncodedLegIssuer extends FIX43Abstract implements LogValue
         Tag619DatEncodedLegIssuer tagData;
 
         tagData= new Tag619DatEncodedLegIssuer(new MyDataType(TESTA_DAT_ENCODED_LEG_ISSUER) );
-        System.out.println("initial values A");
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag619DatEncodedLegIssuer(new MyDataType(TESTB_DAT_ENCODED_LEG_ISSUER) );
-        System.out.println("initial values B");
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
     }
 }

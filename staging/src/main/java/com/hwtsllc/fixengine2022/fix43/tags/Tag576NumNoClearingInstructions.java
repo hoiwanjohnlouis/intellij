@@ -78,13 +78,9 @@ public class Tag576NumNoClearingInstructions extends FIX43Abstract implements Lo
         Tag576NumNoClearingInstructions tagData;
 
         tagData = new Tag576NumNoClearingInstructions(new MyNumInGroupType(TESTA_NUM_NO_CLEARING_INSTRUCTIONS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag576NumNoClearingInstructions(new MyNumInGroupType(TESTB_NUM_NO_CLEARING_INSTRUCTIONS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

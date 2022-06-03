@@ -37,8 +37,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag458StrUnderlyingSecurityAltID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_UNDERLYING_SECURITY_ALT_ID = "BilboBaggins-Tag458StrUnderlyingSecurityAltID";
-    public final static String TESTB_STR_UNDERLYING_SECURITY_ALT_ID = "Gandalf-Tag458StrUnderlyingSecurityAltID";
+    public final static String TESTA_STR_UNDERLYING_SECURITY_ALT_ID
+            = "AFarewellToArms-Tag458StrUnderlyingSecurityAltID";
+    public final static String TESTB_STR_UNDERLYING_SECURITY_ALT_ID
+            = "ToHaveAndHaveNot-Tag458StrUnderlyingSecurityAltID";
 
     public Tag458StrUnderlyingSecurityAltID(MyStringType dataValue) {
         setFixType(FIX43.FIX458_STR_UNDERLYING_SECURITY_ALT_ID);
@@ -83,13 +85,9 @@ public class Tag458StrUnderlyingSecurityAltID extends FIX43Abstract implements L
         Tag458StrUnderlyingSecurityAltID tagData;
 
         tagData = new Tag458StrUnderlyingSecurityAltID(new MyStringType(TESTA_STR_UNDERLYING_SECURITY_ALT_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag458StrUnderlyingSecurityAltID(new MyStringType(TESTB_STR_UNDERLYING_SECURITY_ALT_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -146,7 +146,7 @@ public enum Enum587LegSettlType implements LogFIXString, LogVerboseString {
          * dump all the enum values
          */
         for (Enum587LegSettlType oneEnum : Enum587LegSettlType.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

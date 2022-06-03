@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag584StrMassStatusReqID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_MASS_STATUS_REQ_ID = "BilboBaggins-Tag584StrMassStatusReqID";
-    public final static String TESTB_STR_MASS_STATUS_REQ_ID = "Gandalf-Tag584StrMassStatusReqID";
+    public final static String TESTA_STR_MASS_STATUS_REQ_ID
+            = "BilboBaggins-Tag584StrMassStatusReqID";
+    public final static String TESTB_STR_MASS_STATUS_REQ_ID
+            = "Gandalf-Tag584StrMassStatusReqID";
 
     public Tag584StrMassStatusReqID(MyStringType dataValue) {
         setFixType(FIX43.FIX584_STR_MASS_STATUS_REQ_ID);
@@ -78,13 +80,9 @@ public class Tag584StrMassStatusReqID extends FIX43Abstract implements LogValueP
         Tag584StrMassStatusReqID tagData;
 
         tagData = new Tag584StrMassStatusReqID(new MyStringType(TESTA_STR_MASS_STATUS_REQ_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag584StrMassStatusReqID(new MyStringType(TESTB_STR_MASS_STATUS_REQ_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

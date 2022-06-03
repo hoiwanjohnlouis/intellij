@@ -80,13 +80,9 @@ public class Tag648QtyMinOfferSize extends FIX43Abstract implements LogValuePair
         Tag648QtyMinOfferSize tagData;
 
         tagData = new Tag648QtyMinOfferSize(new MyQtyType(TESTA_QTY_MIN_OFFER_SIZE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag648QtyMinOfferSize(new MyQtyType(TESTB_QTY_MIN_OFFER_SIZE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

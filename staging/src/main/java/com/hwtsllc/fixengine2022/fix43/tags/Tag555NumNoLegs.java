@@ -78,13 +78,9 @@ public class Tag555NumNoLegs extends FIX43Abstract implements LogValuePairString
         Tag555NumNoLegs tagData;
 
         tagData = new Tag555NumNoLegs(new MyNumInGroupType(TESTA_NUM_NO_LEGS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag555NumNoLegs(new MyNumInGroupType(TESTB_NUM_NO_LEGS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

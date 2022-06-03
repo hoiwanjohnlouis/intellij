@@ -78,13 +78,9 @@ public class Tag644StrRFQReqID extends FIX43Abstract implements LogValuePairStri
         Tag644StrRFQReqID tagData;
 
         tagData = new Tag644StrRFQReqID(new MyStringType(TESTA_STR_RFQ_REQ_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag644StrRFQReqID(new MyStringType(TESTB_STR_RFQ_REQ_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

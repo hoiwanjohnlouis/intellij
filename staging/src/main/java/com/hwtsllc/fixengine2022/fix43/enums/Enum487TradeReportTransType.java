@@ -130,7 +130,7 @@ public enum Enum487TradeReportTransType implements LogFIXString, LogVerboseStrin
          * dump all the enum values for review
          */
         for (Enum487TradeReportTransType oneEnum : Enum487TradeReportTransType.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

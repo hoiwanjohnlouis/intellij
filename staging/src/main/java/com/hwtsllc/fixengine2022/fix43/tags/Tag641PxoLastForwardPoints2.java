@@ -80,13 +80,9 @@ public class Tag641PxoLastForwardPoints2 extends FIX43Abstract implements LogVal
         Tag641PxoLastForwardPoints2 tagData;
 
         tagData = new Tag641PxoLastForwardPoints2(new MyPriceOffsetType(TESTA_PXO_LAST_FORWARD_POINTS_2) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag641PxoLastForwardPoints2(new MyPriceOffsetType(TESTB_PXO_LAST_FORWARD_POINTS_2) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

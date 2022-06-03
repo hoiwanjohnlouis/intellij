@@ -78,13 +78,9 @@ public class Tag518NumNoContAmts extends FIX43Abstract implements LogValuePairSt
         Tag518NumNoContAmts tagData;
 
         tagData = new Tag518NumNoContAmts(new MyNumInGroupType(TESTA_NUM_NO_CONT_AMTS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag518NumNoContAmts(new MyNumInGroupType(TESTB_NUM_NO_CONT_AMTS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

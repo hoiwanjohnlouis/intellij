@@ -200,15 +200,9 @@ public class Tag459EnuUnderlyingSecurityAltIDSource extends FIX43Abstract implem
         Tag459EnuUnderlyingSecurityAltIDSource tagData;
 
         tagData = new Tag459EnuUnderlyingSecurityAltIDSource(TESTA_ENU_UNDERLYING_SECURITY_ALT_ID_SOURCE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag459EnuUnderlyingSecurityAltIDSource(TESTB_ENU_UNDERLYING_SECURITY_ALT_ID_SOURCE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

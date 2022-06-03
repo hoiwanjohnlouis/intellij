@@ -80,13 +80,9 @@ public class Tag637PrcLegLastPx extends FIX43Abstract implements LogValuePairStr
         Tag637PrcLegLastPx tagData;
 
         tagData = new Tag637PrcLegLastPx(new MyPriceType(TESTA_PRC_LEG_LAST_PX) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag637PrcLegLastPx(new MyPriceType(TESTB_PRC_LEG_LAST_PX) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

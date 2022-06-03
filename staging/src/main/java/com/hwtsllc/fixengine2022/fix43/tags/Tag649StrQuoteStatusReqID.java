@@ -78,13 +78,9 @@ public class Tag649StrQuoteStatusReqID extends FIX43Abstract implements LogValue
         Tag649StrQuoteStatusReqID tagData;
 
         tagData = new Tag649StrQuoteStatusReqID(new MyStringType(TESTA_STR_QUOTE_STATUS_REQ_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag649StrQuoteStatusReqID(new MyStringType(TESTB_STR_QUOTE_STATUS_REQ_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

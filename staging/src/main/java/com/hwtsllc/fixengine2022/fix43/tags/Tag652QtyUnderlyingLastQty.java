@@ -80,13 +80,9 @@ public class Tag652QtyUnderlyingLastQty extends FIX43Abstract implements LogValu
         Tag652QtyUnderlyingLastQty tagData;
 
         tagData = new Tag652QtyUnderlyingLastQty(new MyQtyType(TESTA_QTY_UNDERLYING_LAST_QTY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag652QtyUnderlyingLastQty(new MyQtyType(TESTB_QTY_UNDERLYING_LAST_QTY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

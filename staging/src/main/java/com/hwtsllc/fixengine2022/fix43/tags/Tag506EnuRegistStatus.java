@@ -108,15 +108,9 @@ public class Tag506EnuRegistStatus extends FIX43Abstract implements LogValuePair
         Tag506EnuRegistStatus tagData;
 
         tagData = new Tag506EnuRegistStatus(TESTA_ENU_REGIST_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag506EnuRegistStatus(TESTB_ENU_REGIST_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

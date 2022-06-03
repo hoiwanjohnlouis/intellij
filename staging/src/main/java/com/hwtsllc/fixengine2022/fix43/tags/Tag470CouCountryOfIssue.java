@@ -36,8 +36,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag470CouCountryOfIssue extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyCountryType dataValue;
 
-    public final static String TESTA_COU_COUNTRY = "BilboBaggins-Tag470CouCountryOfIssue";
-    public final static String TESTB_COU_COUNTRY = "Gandalf-Tag470CouCountryOfIssue";
+    public final static String TESTA_COU_COUNTRY
+            = "BilboBaggins-Tag470CouCountryOfIssue";
+    public final static String TESTB_COU_COUNTRY
+            = "Gandalf-Tag470CouCountryOfIssue";
 
     public Tag470CouCountryOfIssue(MyCountryType dataValue) {
         setFixType(FIX43.FIX470_COU_COUNTRY_OF_ISSUE);
@@ -82,13 +84,9 @@ public class Tag470CouCountryOfIssue extends FIX43Abstract implements LogValuePa
         Tag470CouCountryOfIssue tagData;
 
         tagData = new Tag470CouCountryOfIssue(new MyCountryType(TESTA_COU_COUNTRY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag470CouCountryOfIssue(new MyCountryType(TESTB_COU_COUNTRY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

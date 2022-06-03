@@ -78,13 +78,9 @@ public class Tag627NumNoHops extends FIX43Abstract implements LogValuePairString
         Tag627NumNoHops tagData;
 
         tagData = new Tag627NumNoHops(new MyNumInGroupType(TESTA_NUM_NO_HOPS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag627NumNoHops(new MyNumInGroupType(TESTB_NUM_NO_HOPS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

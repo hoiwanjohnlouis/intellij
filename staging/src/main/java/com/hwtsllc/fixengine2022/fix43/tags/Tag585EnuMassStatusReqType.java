@@ -113,15 +113,9 @@ public class Tag585EnuMassStatusReqType extends FIX43Abstract implements LogValu
         Tag585EnuMassStatusReqType tagData;
 
         tagData = new Tag585EnuMassStatusReqType(TESTA_ENU_MASS_STATUS_REQ_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag585EnuMassStatusReqType(TESTB_ENU_MASS_STATUS_REQ_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

@@ -80,13 +80,9 @@ public class Tag615PctLegCouponRate extends FIX43Abstract implements LogValuePai
         Tag615PctLegCouponRate tagData;
 
         tagData = new Tag615PctLegCouponRate(new MyPercentageType(TESTA_PCT_LEG_COUPON_RATE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag615PctLegCouponRate(new MyPercentageType(TESTB_PCT_LEG_COUPON_RATE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

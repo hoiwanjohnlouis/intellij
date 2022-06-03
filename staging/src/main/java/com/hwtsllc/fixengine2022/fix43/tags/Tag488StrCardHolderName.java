@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag488StrCardHolderName extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_CARD_HOLDER_NAME = "BilboBaggins-Tag488StrCardHolderName";
-    public final static String TESTB_STR_CARD_HOLDER_NAME = "Gandalf-Tag488StrCardHolderName";
+    public final static String TESTA_STR_CARD_HOLDER_NAME
+            = "BilboBaggins-Tag488StrCardHolderName";
+    public final static String TESTB_STR_CARD_HOLDER_NAME
+            = "Gandalf-Tag488StrCardHolderName";
 
     public Tag488StrCardHolderName(MyStringType dataValue) {
         setFixType(FIX43.FIX488_STR_CARD_HOLDER_NAME);
@@ -78,13 +80,9 @@ public class Tag488StrCardHolderName extends FIX43Abstract implements LogValuePa
         Tag488StrCardHolderName tagData;
 
         tagData = new Tag488StrCardHolderName(new MyStringType(TESTA_STR_CARD_HOLDER_NAME) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag488StrCardHolderName(new MyStringType(TESTB_STR_CARD_HOLDER_NAME) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -78,13 +78,9 @@ public class Tag631PrcMidPx extends FIX43Abstract implements LogValuePairString,
         Tag631PrcMidPx tagData;
 
         tagData = new Tag631PrcMidPx(new MyPriceType(TESTA_PRC_MID_PX) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag631PrcMidPx(new MyPriceType(TESTB_PRC_MID_PX) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

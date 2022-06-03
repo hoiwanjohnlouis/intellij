@@ -262,15 +262,9 @@ public class Tag538EnuNestedPartyRole extends FIX43Abstract implements LogValueP
         Tag538EnuNestedPartyRole tagData;
 
         tagData = new Tag538EnuNestedPartyRole(TESTA_ENU_NESTED_PARTY_ROLE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag538EnuNestedPartyRole(TESTB_ENU_NESTED_PARTY_ROLE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

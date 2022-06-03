@@ -80,13 +80,9 @@ public class Tag620StrLegSecurityDesc extends FIX43Abstract implements LogValueP
         Tag620StrLegSecurityDesc tagData;
 
         tagData = new Tag620StrLegSecurityDesc(new MyStringType(TESTA_STR_LEG_SECURITY_DESC) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag620StrLegSecurityDesc(new MyStringType(TESTB_STR_LEG_SECURITY_DESC) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

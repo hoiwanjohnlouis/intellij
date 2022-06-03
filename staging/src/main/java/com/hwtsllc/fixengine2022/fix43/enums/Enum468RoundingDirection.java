@@ -133,7 +133,7 @@ public enum Enum468RoundingDirection implements LogFIXString, LogVerboseString {
          * dump all the enum values for review
          */
         for (Enum468RoundingDirection oneEnum : Enum468RoundingDirection.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

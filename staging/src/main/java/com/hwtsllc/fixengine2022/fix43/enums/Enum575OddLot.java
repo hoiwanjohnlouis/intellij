@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.enums;
 
-import com.hwtsllc.fixengine2022.fix42.enums.Enum377SolicitedFlag;
 import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -120,7 +119,7 @@ public enum Enum575OddLot implements LogFIXString, LogVerboseString {
          * dump all the enum values
          */
         for ( Enum575OddLot oneEnum : Enum575OddLot.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

@@ -200,15 +200,9 @@ public class Tag606EnuLegSecurityAltIDSource extends FIX43Abstract implements Lo
         Tag606EnuLegSecurityAltIDSource tagData;
 
         tagData = new Tag606EnuLegSecurityAltIDSource(TESTA_ENU_LEG_SECURITY_ALT_ID_SOURCE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag606EnuLegSecurityAltIDSource(TESTB_ENU_LEG_SECURITY_ALT_ID_SOURCE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

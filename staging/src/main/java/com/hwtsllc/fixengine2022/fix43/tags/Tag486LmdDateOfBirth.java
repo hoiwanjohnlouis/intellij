@@ -33,8 +33,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag486LmdDateOfBirth extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyLocalMktDateType dataValue;
 
-    public final static String TESTA_LMD_DATE_OF_BIRTH = "Frodo-Tag486LmdDateOfBirth";
-    public final static String TESTB_LMD_DATE_OF_BIRTH = "Gandalf-Tag486LmdDateOfBirth";
+    public final static String TESTA_LMD_DATE_OF_BIRTH
+            = "Frodo-Tag486LmdDateOfBirth";
+    public final static String TESTB_LMD_DATE_OF_BIRTH
+            = "Gandalf-Tag486LmdDateOfBirth";
 
     public Tag486LmdDateOfBirth(MyLocalMktDateType dataValue) {
         setFixType(FIX43.FIX486_LMD_DATE_OF_BIRTH);
@@ -79,13 +81,9 @@ public class Tag486LmdDateOfBirth extends FIX43Abstract implements LogValuePairS
         Tag486LmdDateOfBirth tagData;
 
         tagData = new Tag486LmdDateOfBirth(new MyLocalMktDateType(TESTA_LMD_DATE_OF_BIRTH) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag486LmdDateOfBirth(new MyLocalMktDateType(TESTB_LMD_DATE_OF_BIRTH) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

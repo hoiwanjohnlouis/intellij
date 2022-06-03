@@ -247,7 +247,7 @@ public enum Enum574MatchType implements LogFIXString, LogVerboseString {
          * dump all the enum values
          */
         for (Enum574MatchType oneEnum : Enum574MatchType.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

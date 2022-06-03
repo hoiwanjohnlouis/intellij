@@ -117,15 +117,9 @@ public class Tag581EnuAccountType extends FIX43Abstract implements LogValuePairS
         Tag581EnuAccountType tagData;
 
         tagData = new Tag581EnuAccountType(TESTA_ENU_ACCOUNT_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag581EnuAccountType(TESTB_ENU_ACCOUNT_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

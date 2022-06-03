@@ -134,7 +134,7 @@ public enum Enum484PriceType implements LogFIXString, LogVerboseString {
          * dump all the enum values for review
          */
         for (Enum484PriceType oneEnum : Enum484PriceType.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

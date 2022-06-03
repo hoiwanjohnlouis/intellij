@@ -123,7 +123,7 @@ public enum Enum590BookingUnit implements LogFIXString, LogVerboseString {
          * dump all the enum values
          */
         for (Enum590BookingUnit oneEnum : Enum590BookingUnit.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

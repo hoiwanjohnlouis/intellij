@@ -78,13 +78,9 @@ public class Tag645PrcMktBidPx extends FIX43Abstract implements LogValuePairStri
         Tag645PrcMktBidPx tagData;
 
         tagData = new Tag645PrcMktBidPx(new MyPriceType(TESTA_PRC_MKT_BID_PX) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag645PrcMktBidPx(new MyPriceType(TESTB_PRC_MKT_BID_PX) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

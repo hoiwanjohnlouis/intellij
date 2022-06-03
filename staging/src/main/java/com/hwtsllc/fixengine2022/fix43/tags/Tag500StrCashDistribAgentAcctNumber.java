@@ -80,13 +80,9 @@ public class Tag500StrCashDistribAgentAcctNumber extends FIX43Abstract implement
         Tag500StrCashDistribAgentAcctNumber tagData;
 
         tagData = new Tag500StrCashDistribAgentAcctNumber(new MyStringType(TESTA_STR_CASH_DISTRIB_AGENT_ACCT_NUMBER) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag500StrCashDistribAgentAcctNumber(new MyStringType(TESTB_STR_CASH_DISTRIB_AGENT_ACCT_NUMBER) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

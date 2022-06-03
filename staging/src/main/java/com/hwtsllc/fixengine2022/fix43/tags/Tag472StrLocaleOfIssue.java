@@ -38,8 +38,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag472StrLocaleOfIssue extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_LOCALE_OF_ISSUE = "BilboBaggins-Tag472StrLocaleOfIssue";
-    public final static String TESTB_STR_LOCALE_OF_ISSUE = "Gandalf-Tag472StrLocaleOfIssue";
+    public final static String TESTA_STR_LOCALE_OF_ISSUE
+            = "BilboBaggins-Tag472StrLocaleOfIssue";
+    public final static String TESTB_STR_LOCALE_OF_ISSUE
+            = "Gandalf-Tag472StrLocaleOfIssue";
 
     public Tag472StrLocaleOfIssue(MyStringType dataValue) {
         setFixType(FIX43.FIX472_STR_LOCALE_OF_ISSUE);
@@ -84,13 +86,9 @@ public class Tag472StrLocaleOfIssue extends FIX43Abstract implements LogValuePai
         Tag472StrLocaleOfIssue tagData;
 
         tagData = new Tag472StrLocaleOfIssue(new MyStringType(TESTA_STR_LOCALE_OF_ISSUE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag472StrLocaleOfIssue(new MyStringType(TESTB_STR_LOCALE_OF_ISSUE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -78,13 +78,9 @@ public class Tag646PrcMktOfferPx extends FIX43Abstract implements LogValuePairSt
         Tag646PrcMktOfferPx tagData;
 
         tagData = new Tag646PrcMktOfferPx(new MyPriceType(TESTA_PRC_MKT_OFFER_PX) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag646PrcMktOfferPx(new MyPriceType(TESTB_PRC_MKT_OFFER_PX) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

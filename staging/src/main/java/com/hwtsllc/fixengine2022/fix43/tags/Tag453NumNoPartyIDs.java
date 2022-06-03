@@ -78,13 +78,9 @@ public class Tag453NumNoPartyIDs extends FIX43Abstract implements LogValuePairSt
         Tag453NumNoPartyIDs tagData;
 
         tagData = new Tag453NumNoPartyIDs(new MyNumInGroupType(TESTA_NUM_NO_PARTY_IDS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag453NumNoPartyIDs(new MyNumInGroupType(TESTB_NUM_NO_PARTY_IDS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

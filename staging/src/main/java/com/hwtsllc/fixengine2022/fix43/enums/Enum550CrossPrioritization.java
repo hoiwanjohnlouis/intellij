@@ -127,7 +127,7 @@ public enum Enum550CrossPrioritization implements LogFIXString, LogVerboseString
          * dump all the enum values
          */
         for (Enum550CrossPrioritization oneEnum : Enum550CrossPrioritization.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

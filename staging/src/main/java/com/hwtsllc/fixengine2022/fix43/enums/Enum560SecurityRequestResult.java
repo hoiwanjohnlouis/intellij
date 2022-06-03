@@ -133,7 +133,7 @@ public enum Enum560SecurityRequestResult implements LogFIXString, LogVerboseStri
          * dump all the enum values
          */
         for (Enum560SecurityRequestResult oneEnum : Enum560SecurityRequestResult.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

@@ -115,15 +115,9 @@ public class Tag544EnuCashMargin extends FIX43Abstract implements LogValuePairSt
         Tag544EnuCashMargin tagData;
 
         tagData = new Tag544EnuCashMargin(TESTA_ENU_CASH_MARGIN);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag544EnuCashMargin(TESTB_ENU_CASH_MARGIN);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

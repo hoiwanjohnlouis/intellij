@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag515UtcExecValuationPoint extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyUTCTimestampType dataValue;
 
-    public final static String TESTA_UTC_EXEC_VALUATION_POINT = "18991231-23:59:59.999";
-    public final static String TESTB_UTC_EXEC_VALUATION_POINT = "19001231-23:59:59.999";
+    public final static String TESTA_UTC_EXEC_VALUATION_POINT
+            = "18991231-23:59:59.999";
+    public final static String TESTB_UTC_EXEC_VALUATION_POINT
+            = "19001231-23:59:59.999";
 
     public Tag515UtcExecValuationPoint(MyUTCTimestampType dataValue) {
         setFixType(FIX43.FIX515_UTC_EXEC_VALUATION_POINT);
@@ -78,13 +80,9 @@ public class Tag515UtcExecValuationPoint extends FIX43Abstract implements LogVal
         Tag515UtcExecValuationPoint tagData;
 
         tagData = new Tag515UtcExecValuationPoint(new MyUTCTimestampType(TESTA_UTC_EXEC_VALUATION_POINT) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag515UtcExecValuationPoint(new MyUTCTimestampType(TESTB_UTC_EXEC_VALUATION_POINT) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -78,13 +78,9 @@ public class Tag654StrLegRefID extends FIX43Abstract implements LogValuePairStri
         Tag654StrLegRefID tagData;
 
         tagData = new Tag654StrLegRefID(new MyStringType(TESTA_STR_LEG_REF_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag654StrLegRefID(new MyStringType(TESTB_STR_LEG_REF_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

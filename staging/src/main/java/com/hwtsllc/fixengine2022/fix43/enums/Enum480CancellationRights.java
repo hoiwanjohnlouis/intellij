@@ -122,7 +122,7 @@ public enum Enum480CancellationRights implements LogFIXString, LogVerboseString 
          * dump all the enum values for review
          */
         for (Enum480CancellationRights oneEnum : Enum480CancellationRights.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

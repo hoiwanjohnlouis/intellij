@@ -80,13 +80,9 @@ public class Tag642PxoBidForwardPoints2 extends FIX43Abstract implements LogValu
         Tag642PxoBidForwardPoints2 tagData;
 
         tagData = new Tag642PxoBidForwardPoints2(new MyPriceOffsetType(TESTA_PXO_BID_FORWARD_POINTS_2) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag642PxoBidForwardPoints2(new MyPriceOffsetType(TESTB_PXO_BID_FORWARD_POINTS_2) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

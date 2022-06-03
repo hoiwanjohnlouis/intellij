@@ -80,13 +80,9 @@ public class Tag479CcyCommCurrency extends FIX43Abstract implements LogValuePair
         Tag479CcyCommCurrency tagData;
 
         tagData = new Tag479CcyCommCurrency(new MyCurrencyType(TESTA_CCY_COMM_CURRENCY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag479CcyCommCurrency(new MyCurrencyType(TESTB_CCY_COMM_CURRENCY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -80,13 +80,9 @@ public class Tag611LmdLegMaturityDate extends FIX43Abstract implements LogValueP
         Tag611LmdLegMaturityDate tagData;
 
         tagData = new Tag611LmdLegMaturityDate(new MyLocalMktDateType(TESTA_LMD_LEG_MATURITY_DATE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag611LmdLegMaturityDate(new MyLocalMktDateType(TESTB_LMD_LEG_MATURITY_DATE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

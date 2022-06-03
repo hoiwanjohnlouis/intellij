@@ -82,13 +82,9 @@ public class Tag594StrUnderlyingLocaleOfIssue extends FIX43Abstract implements L
         Tag594StrUnderlyingLocaleOfIssue tagData;
 
         tagData = new Tag594StrUnderlyingLocaleOfIssue(new MyStringType(TESTA_STR_UNDERLYING_LOCALE_OF_ISSUE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag594StrUnderlyingLocaleOfIssue(new MyStringType(TESTB_STR_UNDERLYING_LOCALE_OF_ISSUE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

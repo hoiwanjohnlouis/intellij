@@ -34,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag527StrSecondaryExecID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_SECONDARY_EXEC_ID = "BilboBaggins-Tag527StrSecondaryExecID";
-    public final static String TESTB_STR_SECONDARY_EXEC_ID = "Gandalf-Tag527StrSecondaryExecID";
+    public final static String TESTA_STR_SECONDARY_EXEC_ID
+            = "BilboBaggins-Tag527StrSecondaryExecID";
+    public final static String TESTB_STR_SECONDARY_EXEC_ID
+            = "Gandalf-Tag527StrSecondaryExecID";
 
     public Tag527StrSecondaryExecID(MyStringType dataValue) {
         setFixType(FIX43.FIX527_STR_SECONDARY_EXEC_ID);
@@ -80,13 +82,9 @@ public class Tag527StrSecondaryExecID extends FIX43Abstract implements LogValueP
         Tag527StrSecondaryExecID tagData;
 
         tagData = new Tag527StrSecondaryExecID(new MyStringType(TESTA_STR_SECONDARY_EXEC_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag527StrSecondaryExecID(new MyStringType(TESTB_STR_SECONDARY_EXEC_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

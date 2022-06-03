@@ -154,7 +154,7 @@ public enum Enum492PaymentMethod implements LogFIXString, LogVerboseString {
          * dump all the enum values for review
          */
         for (Enum492PaymentMethod oneEnum : Enum492PaymentMethod.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

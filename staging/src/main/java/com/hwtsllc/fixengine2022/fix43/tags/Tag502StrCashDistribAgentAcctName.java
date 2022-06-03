@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag502StrCashDistribAgentAcctName extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_CASH_DISTRIB_AGENT_ACCT_NAME = "BilboBaggins-Tag502StrCashDistribAgentAcctName";
-    public final static String TESTB_STR_CASH_DISTRIB_AGENT_ACCT_NAME = "Gandalf-Tag502StrCashDistribAgentAcctName";
+    public final static String TESTA_STR_CASH_DISTRIB_AGENT_ACCT_NAME
+            = "BilboBaggins-Tag502StrCashDistribAgentAcctName";
+    public final static String TESTB_STR_CASH_DISTRIB_AGENT_ACCT_NAME
+            = "Gandalf-Tag502StrCashDistribAgentAcctName";
 
     public Tag502StrCashDistribAgentAcctName(MyStringType dataValue) {
         setFixType(FIX43.FIX502_STR_CASH_DISTRIB_AGENT_ACCT_NAME);
@@ -78,13 +80,9 @@ public class Tag502StrCashDistribAgentAcctName extends FIX43Abstract implements 
         Tag502StrCashDistribAgentAcctName tagData;
 
         tagData = new Tag502StrCashDistribAgentAcctName(new MyStringType(TESTA_STR_CASH_DISTRIB_AGENT_ACCT_NAME) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag502StrCashDistribAgentAcctName(new MyStringType(TESTB_STR_CASH_DISTRIB_AGENT_ACCT_NAME) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

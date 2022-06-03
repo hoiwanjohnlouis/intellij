@@ -36,8 +36,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag469FloRoundingModulus extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyFloatType dataValue;
 
-    public final static float TESTA_FLO_ROUNDING_MODULUS = 0.469F;
-    public final static float TESTB_FLO_ROUNDING_MODULUS = 0.964F;
+    public final static float TESTA_FLO_ROUNDING_MODULUS
+            = 0.469F;
+    public final static float TESTB_FLO_ROUNDING_MODULUS
+            = 0.964F;
 
     public Tag469FloRoundingModulus(MyFloatType dataValue) {
         setFixType(FIX43.FIX469_FLO_ROUNDING_MODULUS);
@@ -82,13 +84,9 @@ public class Tag469FloRoundingModulus extends FIX43Abstract implements LogValueP
         Tag469FloRoundingModulus tagData;
 
         tagData = new Tag469FloRoundingModulus(new MyFloatType(TESTA_FLO_ROUNDING_MODULUS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag469FloRoundingModulus(new MyFloatType(TESTB_FLO_ROUNDING_MODULUS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

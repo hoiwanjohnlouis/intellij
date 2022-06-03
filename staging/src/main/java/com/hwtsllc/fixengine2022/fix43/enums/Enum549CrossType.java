@@ -145,7 +145,7 @@ public enum Enum549CrossType implements LogFIXString, LogVerboseString {
          * dump all the enum values
          */
         for (Enum549CrossType oneEnum : Enum549CrossType.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

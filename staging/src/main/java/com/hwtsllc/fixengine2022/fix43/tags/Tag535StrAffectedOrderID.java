@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag535StrAffectedOrderID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_AFFECTED_ORDER_ID = "BilboBaggins-Tag535StrAffectedOrderID";
-    public final static String TESTB_STR_AFFECTED_ORDER_ID = "Gandalf-Tag535StrAffectedOrderID";
+    public final static String TESTA_STR_AFFECTED_ORDER_ID
+            = "FayWray-Tag535StrAffectedOrderID";
+    public final static String TESTB_STR_AFFECTED_ORDER_ID
+            = "MaeClarke-Tag535StrAffectedOrderID";
 
     public Tag535StrAffectedOrderID(MyStringType dataValue) {
         setFixType(FIX43.FIX535_STR_AFFECTED_ORDER_ID);
@@ -78,13 +80,9 @@ public class Tag535StrAffectedOrderID extends FIX43Abstract implements LogValueP
         Tag535StrAffectedOrderID tagData;
 
         tagData = new Tag535StrAffectedOrderID(new MyStringType(TESTA_STR_AFFECTED_ORDER_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag535StrAffectedOrderID(new MyStringType(TESTB_STR_AFFECTED_ORDER_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -138,15 +138,9 @@ public class Tag462EnuUnderlyingProduct extends FIX43Abstract implements LogValu
         Tag462EnuUnderlyingProduct tagData;
 
         tagData = new Tag462EnuUnderlyingProduct(TESTA_ENU_UNDERLYING_PRODUCT);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag462EnuUnderlyingProduct(TESTB_ENU_UNDERLYING_PRODUCT);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

@@ -148,15 +148,9 @@ public class Tag495EnuTaxAdvantageType extends FIX43Abstract implements LogValue
         Tag495EnuTaxAdvantageType tagData;
 
         tagData = new Tag495EnuTaxAdvantageType(TESTA_ENU_TAX_ADVANTAGE_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag495EnuTaxAdvantageType(TESTB_ENU_TAX_ADVANTAGE_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

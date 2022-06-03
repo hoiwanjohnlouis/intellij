@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag568StrTradeRequestID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_TRADE_REQUEST_ID = "BilboBaggins-Tag568StrTradeRequestID";
-    public final static String TESTB_STR_TRADE_REQUEST_ID = "Gandalf-Tag568StrTradeRequestID";
+    public final static String TESTA_STR_TRADE_REQUEST_ID
+            = "RenataTebaldi-Tag568StrTradeRequestID";
+    public final static String TESTB_STR_TRADE_REQUEST_ID
+            = "GabriellaGatti-Tag568StrTradeRequestID";
 
     public Tag568StrTradeRequestID(MyStringType dataValue) {
         setFixType(FIX43.FIX568_STR_TRADE_REQUEST_ID);
@@ -78,13 +80,9 @@ public class Tag568StrTradeRequestID extends FIX43Abstract implements LogValuePa
         Tag568StrTradeRequestID tagData;
 
         tagData = new Tag568StrTradeRequestID(new MyStringType(TESTA_STR_TRADE_REQUEST_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag568StrTradeRequestID(new MyStringType(TESTB_STR_TRADE_REQUEST_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

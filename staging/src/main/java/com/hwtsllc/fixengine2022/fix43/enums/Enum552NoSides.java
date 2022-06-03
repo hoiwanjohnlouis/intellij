@@ -118,7 +118,7 @@ public enum Enum552NoSides implements LogFIXString, LogVerboseString {
          * dump all the enum values
          */
         for (Enum552NoSides oneEnum : Enum552NoSides.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

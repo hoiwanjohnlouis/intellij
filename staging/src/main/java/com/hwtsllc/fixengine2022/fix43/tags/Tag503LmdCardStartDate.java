@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag503LmdCardStartDate extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyLocalMktDateType dataValue;
 
-    public final static String TESTA_LMD_CARD_START_DATE = "Frodo-Tag503LmdCardStartDate";
-    public final static String TESTB_LMD_CARD_START_DATE = "Gandalf-Tag503LmdCardStartDate";
+    public final static String TESTA_LMD_CARD_START_DATE
+            = "Frodo-Tag503LmdCardStartDate";
+    public final static String TESTB_LMD_CARD_START_DATE
+            = "Gandalf-Tag503LmdCardStartDate";
 
     public Tag503LmdCardStartDate(MyLocalMktDateType dataValue) {
         setFixType(FIX43.FIX503_LMD_CARD_START_DATE);
@@ -78,13 +80,9 @@ public class Tag503LmdCardStartDate extends FIX43Abstract implements LogValuePai
         Tag503LmdCardStartDate tagData;
 
         tagData = new Tag503LmdCardStartDate(new MyLocalMktDateType(TESTA_LMD_CARD_START_DATE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag503LmdCardStartDate(new MyLocalMktDateType(TESTB_LMD_CARD_START_DATE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

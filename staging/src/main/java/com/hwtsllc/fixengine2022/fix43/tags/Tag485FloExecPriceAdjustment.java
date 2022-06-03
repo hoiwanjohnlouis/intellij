@@ -79,13 +79,9 @@ public class Tag485FloExecPriceAdjustment extends FIX43Abstract implements LogVa
         Tag485FloExecPriceAdjustment tagData;
 
         tagData = new Tag485FloExecPriceAdjustment(new MyFloatType(TESTA_FLO_EXEC_PRICE_ADJUSTMENT) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag485FloExecPriceAdjustment(new MyFloatType(TESTB_FLO_EXEC_PRICE_ADJUSTMENT) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -80,13 +80,9 @@ public class Tag659StrSideComplianceID extends FIX43Abstract implements LogValue
         Tag659StrSideComplianceID tagData;
 
         tagData = new Tag659StrSideComplianceID(new MyStringType(TESTA_STR_SIDE_COMPLIANCE_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag659StrSideComplianceID(new MyStringType(TESTB_STR_SIDE_COMPLIANCE_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

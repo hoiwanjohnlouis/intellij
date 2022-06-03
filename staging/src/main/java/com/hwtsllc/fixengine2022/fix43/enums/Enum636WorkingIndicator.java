@@ -123,7 +123,7 @@ public enum Enum636WorkingIndicator implements LogFIXString, LogVerboseString {
          * dump all the enum values
          */
         for ( Enum636WorkingIndicator oneEnum : Enum636WorkingIndicator.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

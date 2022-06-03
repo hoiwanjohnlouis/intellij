@@ -120,7 +120,7 @@ public enum Enum589DayBookingInst implements LogFIXString, LogVerboseString {
          * dump all the enum values
          */
         for (Enum589DayBookingInst oneEnum : Enum589DayBookingInst.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

@@ -121,15 +121,9 @@ public class Tag577EnuClearingInstruction extends FIX43Abstract implements LogVa
         Tag577EnuClearingInstruction tagData;
 
         tagData = new Tag577EnuClearingInstruction(TESTA_ENU_CLEARING_INSTRUCTION);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag577EnuClearingInstruction(TESTB_ENU_CLEARING_INSTRUCTION);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

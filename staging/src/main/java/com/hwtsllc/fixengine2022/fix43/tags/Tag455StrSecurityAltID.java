@@ -36,8 +36,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag455StrSecurityAltID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_SECURITY_ALT_ID = "BilboBaggins-Tag455StrSecurityAltID";
-    public final static String TESTB_STR_SECURITY_ALT_ID = "Gandalf-Tag455StrSecurityAltID";
+    public final static String TESTA_STR_SECURITY_ALT_ID
+            = "CauseForAlarm-Tag455StrSecurityAltID";
+    public final static String TESTB_STR_SECURITY_ALT_ID
+            = "PassageOfArms-Tag455StrSecurityAltID";
 
     public Tag455StrSecurityAltID(MyStringType dataValue) {
         setFixType(FIX43.FIX455_STR_SECURITY_ALT_ID);
@@ -82,13 +84,9 @@ public class Tag455StrSecurityAltID extends FIX43Abstract implements LogValuePai
         Tag455StrSecurityAltID tagData;
 
         tagData = new Tag455StrSecurityAltID(new MyStringType(TESTA_STR_SECURITY_ALT_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag455StrSecurityAltID(new MyStringType(TESTB_STR_SECURITY_ALT_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -83,13 +83,9 @@ public class Tag625StrTradingSessionSubID extends FIX43Abstract implements LogVa
         Tag625StrTradingSessionSubID tagData;
 
         tagData = new Tag625StrTradingSessionSubID(new MyStringType(TESTA_STR_TRADING_SESSION_SUB_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag625StrTradingSessionSubID(new MyStringType(TESTB_STR_TRADING_SESSION_SUB_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

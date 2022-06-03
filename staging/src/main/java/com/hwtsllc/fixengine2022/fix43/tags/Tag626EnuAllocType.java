@@ -129,15 +129,9 @@ public class Tag626EnuAllocType extends FIX43Abstract implements LogValuePairStr
         Tag626EnuAllocType tagData;
 
         tagData = new Tag626EnuAllocType(TESTA_ENU_ALLOC_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag626EnuAllocType(TESTB_ENU_ALLOC_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

@@ -34,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag545StrNestedPartySubID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_NESTED_PARTY_SUB_ID = "BilboBaggins-Tag545StrNestedPartySubID";
-    public final static String TESTB_STR_NESTED_PARTY_SUB_ID = "Gandalf-Tag545StrNestedPartySubID";
+    public final static String TESTA_STR_NESTED_PARTY_SUB_ID
+            = "BilboBaggins-Tag545StrNestedPartySubID";
+    public final static String TESTB_STR_NESTED_PARTY_SUB_ID
+            = "Gandalf-Tag545StrNestedPartySubID";
 
     public Tag545StrNestedPartySubID(MyStringType dataValue) {
         setFixType(FIX43.FIX545_STR_NESTED_PARTY_SUB_ID);
@@ -80,13 +82,9 @@ public class Tag545StrNestedPartySubID extends FIX43Abstract implements LogValue
         Tag545StrNestedPartySubID tagData;
 
         tagData = new Tag545StrNestedPartySubID(new MyStringType(TESTA_STR_NESTED_PARTY_SUB_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag545StrNestedPartySubID(new MyStringType(TESTB_STR_NESTED_PARTY_SUB_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

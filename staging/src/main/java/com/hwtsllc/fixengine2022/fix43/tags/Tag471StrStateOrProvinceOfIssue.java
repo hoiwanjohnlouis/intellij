@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag471StrStateOrProvinceOfIssue extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_STATE_OR_PROVINCE_OF_ISSUE = "BilboBaggins-Tag471StrStateOrProvinceOfIssue";
-    public final static String TESTB_STR_STATE_OR_PROVINCE_OF_ISSUE = "Gandalf-Tag471StrStateOrProvinceOfIssue";
+    public final static String TESTA_STR_STATE_OR_PROVINCE_OF_ISSUE
+            = "BilboBaggins-Tag471StrStateOrProvinceOfIssue";
+    public final static String TESTB_STR_STATE_OR_PROVINCE_OF_ISSUE
+            = "Gandalf-Tag471StrStateOrProvinceOfIssue";
 
     public Tag471StrStateOrProvinceOfIssue(MyStringType dataValue) {
         setFixType(FIX43.FIX471_STR_STATE_OR_PROVINCE_OF_ISSUE);
@@ -78,13 +80,9 @@ public class Tag471StrStateOrProvinceOfIssue extends FIX43Abstract implements Lo
         Tag471StrStateOrProvinceOfIssue tagData;
 
         tagData = new Tag471StrStateOrProvinceOfIssue(new MyStringType(TESTA_STR_STATE_OR_PROVINCE_OF_ISSUE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag471StrStateOrProvinceOfIssue(new MyStringType(TESTB_STR_STATE_OR_PROVINCE_OF_ISSUE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

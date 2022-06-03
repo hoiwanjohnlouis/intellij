@@ -135,7 +135,7 @@ public enum Enum528OrderCapacity implements LogFIXString, LogVerboseString {
          * dump all the enum values
          */
         for (Enum528OrderCapacity oneEnum : Enum528OrderCapacity.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

@@ -108,15 +108,9 @@ public class Tag575EnuOddLot extends FIX43Abstract implements LogValuePairString
         Tag575EnuOddLot tagData;
 
         tagData = new Tag575EnuOddLot( TESTA_ENU_ODD_LOT );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag575EnuOddLot( TESTB_ENU_ODD_LOT );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

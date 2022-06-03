@@ -122,15 +122,9 @@ public class Tag549EnuCrossType extends FIX43Abstract implements LogValuePairStr
         Tag549EnuCrossType tagData;
 
         tagData = new Tag549EnuCrossType(TESTA_ENU_CROSS_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag549EnuCrossType(TESTB_ENU_CROSS_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

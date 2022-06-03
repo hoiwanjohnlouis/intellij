@@ -34,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag543StrInstrRegistry extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_INSTR_REGISTRY = "BilboBaggins-Tag543StrInstrRegistry";
-    public final static String TESTB_STR_INSTR_REGISTRY = "Gandalf-Tag543StrInstrRegistry";
+    public final static String TESTA_STR_INSTR_REGISTRY
+            = "BilboBaggins-Tag543StrInstrRegistry";
+    public final static String TESTB_STR_INSTR_REGISTRY
+            = "Gandalf-Tag543StrInstrRegistry";
 
     public Tag543StrInstrRegistry(MyStringType dataValue) {
         setFixType(FIX43.FIX543_STR_INSTR_REGISTRY);
@@ -80,13 +82,9 @@ public class Tag543StrInstrRegistry extends FIX43Abstract implements LogValuePai
         Tag543StrInstrRegistry tagData;
 
         tagData = new Tag543StrInstrRegistry(new MyStringType(TESTA_STR_INSTR_REGISTRY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag543StrInstrRegistry(new MyStringType(TESTB_STR_INSTR_REGISTRY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

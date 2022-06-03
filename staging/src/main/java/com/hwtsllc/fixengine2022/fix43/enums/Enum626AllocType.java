@@ -164,7 +164,7 @@ public enum Enum626AllocType implements LogFIXString, LogVerboseString {
          * dump all the enum values
          */
         for (Enum626AllocType oneEnum : Enum626AllocType.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

@@ -39,8 +39,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag586UtcOrigOrdModTime extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyUTCTimestampType dataValue;
 
-    public final static String TESTA_UTC_ORIG_ORD_MOD_TIME = "18991231-23:59:59.999";
-    public final static String TESTB_UTC_ORIG_ORD_MOD_TIME = "19001231-23:59:59.999";
+    public final static String TESTA_UTC_ORIG_ORD_MOD_TIME
+            = "18991231-23:59:59.999";
+    public final static String TESTB_UTC_ORIG_ORD_MOD_TIME
+            = "19001231-23:59:59.999";
 
     public Tag586UtcOrigOrdModTime(MyUTCTimestampType dataValue) {
         setFixType(FIX43.FIX586_UTC_ORIG_ORD_MOD_TIME);
@@ -85,13 +87,9 @@ public class Tag586UtcOrigOrdModTime extends FIX43Abstract implements LogValuePa
         Tag586UtcOrigOrdModTime tagData;
 
         tagData = new Tag586UtcOrigOrdModTime(new MyUTCTimestampType(TESTA_UTC_ORIG_ORD_MOD_TIME) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag586UtcOrigOrdModTime(new MyUTCTimestampType(TESTB_UTC_ORIG_ORD_MOD_TIME) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

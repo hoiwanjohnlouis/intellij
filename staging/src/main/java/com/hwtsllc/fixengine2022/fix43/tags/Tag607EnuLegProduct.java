@@ -138,15 +138,9 @@ public class Tag607EnuLegProduct extends FIX43Abstract implements LogValuePairSt
         Tag607EnuLegProduct tagData;
 
         tagData = new Tag607EnuLegProduct(TESTA_ENU_LEG_PRODUCT);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag607EnuLegProduct(TESTB_ENU_LEG_PRODUCT);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

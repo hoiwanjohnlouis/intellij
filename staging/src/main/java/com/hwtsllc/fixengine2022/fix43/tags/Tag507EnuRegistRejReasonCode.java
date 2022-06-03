@@ -130,14 +130,10 @@ public class Tag507EnuRegistRejReasonCode extends FIX43Abstract implements LogVa
     public static void main(String[] args) {
         Tag507EnuRegistRejReasonCode tagData;
 
-        tagData = new Tag507EnuRegistRejReasonCode(TESTA_ENU_REGIST_REJ_REASON_CODE);
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
-        tagData = new Tag507EnuRegistRejReasonCode(TESTB_ENU_REGIST_REJ_REASON_CODE);
-        System.out.println(tagData);
-        System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());   }
+        tagData = new Tag507EnuRegistRejReasonCode( TESTA_ENU_REGIST_REJ_REASON_CODE );
+        System.out.println( tagData.toVerboseString() );
+
+        tagData = new Tag507EnuRegistRejReasonCode( TESTB_ENU_REGIST_REJ_REASON_CODE );
+        System.out.println( tagData.toVerboseString() );
+    }
 }

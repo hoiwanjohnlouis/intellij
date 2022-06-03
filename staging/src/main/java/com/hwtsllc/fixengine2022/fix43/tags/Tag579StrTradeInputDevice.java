@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag579StrTradeInputDevice extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_TRADE_INPUT_DEVICE = "BilboBaggins-Tag579StrTradeInputDevice";
-    public final static String TESTB_STR_TRADE_INPUT_DEVICE = "Gandalf-Tag579StrTradeInputDevice";
+    public final static String TESTA_STR_TRADE_INPUT_DEVICE
+            = "EmmaEames-Tag579StrTradeInputDevice";
+    public final static String TESTB_STR_TRADE_INPUT_DEVICE
+            = "NellieMelba-Tag579StrTradeInputDevice";
 
     public Tag579StrTradeInputDevice(MyStringType dataValue) {
         setFixType(FIX43.FIX579_STR_TRADE_INPUT_DEVICE);
@@ -78,13 +80,9 @@ public class Tag579StrTradeInputDevice extends FIX43Abstract implements LogValue
         Tag579StrTradeInputDevice tagData;
 
         tagData = new Tag579StrTradeInputDevice(new MyStringType(TESTA_STR_TRADE_INPUT_DEVICE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag579StrTradeInputDevice(new MyStringType(TESTB_STR_TRADE_INPUT_DEVICE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

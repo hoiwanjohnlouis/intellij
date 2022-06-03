@@ -80,13 +80,9 @@ public class Tag533IntTotalAffectedOrders extends FIX43Abstract implements LogVa
         Tag533IntTotalAffectedOrders tagData;
 
         tagData = new Tag533IntTotalAffectedOrders(new MyIntType(TESTA_INT_TOTAL_AFFECTED_ORDERS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag533IntTotalAffectedOrders(new MyIntType(TESTB_INT_TOTAL_AFFECTED_ORDERS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

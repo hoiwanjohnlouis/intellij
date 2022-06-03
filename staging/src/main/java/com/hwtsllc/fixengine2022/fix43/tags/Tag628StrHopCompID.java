@@ -87,13 +87,9 @@ public class Tag628StrHopCompID extends FIX43Abstract implements LogValuePairStr
         Tag628StrHopCompID tagData;
 
         tagData = new Tag628StrHopCompID(new MyStringType(TESTA_STR_HOP_COMP_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag628StrHopCompID(new MyStringType(TESTB_STR_HOP_COMP_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

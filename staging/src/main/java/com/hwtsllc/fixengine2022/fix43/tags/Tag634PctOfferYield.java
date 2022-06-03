@@ -78,13 +78,9 @@ public class Tag634PctOfferYield extends FIX43Abstract implements LogValuePairSt
         Tag634PctOfferYield tagData;
 
         tagData = new Tag634PctOfferYield(new MyPercentageType(TESTA_PCT_OFFER_YIELD) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag634PctOfferYield(new MyPercentageType(TESTB_PCT_OFFER_YIELD) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

@@ -107,15 +107,9 @@ public class Tag589EnuDayBookingInst extends FIX43Abstract implements LogValuePa
         Tag589EnuDayBookingInst tagData;
 
         tagData = new Tag589EnuDayBookingInst(TESTA_ENU_DAY_BOOKING_INST);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag589EnuDayBookingInst(TESTB_ENU_DAY_BOOKING_INST);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

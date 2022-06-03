@@ -110,15 +110,9 @@ public class Tag569EnuTradeRequestType extends FIX43Abstract implements LogValue
         Tag569EnuTradeRequestType tagData;
 
         tagData = new Tag569EnuTradeRequestType(TESTA_ENU_TRADE_REQUEST_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag569EnuTradeRequestType(TESTB_ENU_TRADE_REQUEST_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

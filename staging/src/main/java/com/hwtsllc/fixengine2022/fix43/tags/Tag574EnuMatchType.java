@@ -155,15 +155,9 @@ public class Tag574EnuMatchType extends FIX43Abstract implements LogValuePairStr
         Tag574EnuMatchType tagData;
 
         tagData = new Tag574EnuMatchType(TESTA_ENU_MATCH_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag574EnuMatchType(TESTB_ENU_MATCH_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

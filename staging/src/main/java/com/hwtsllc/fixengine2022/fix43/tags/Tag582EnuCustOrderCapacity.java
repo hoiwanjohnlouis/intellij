@@ -111,15 +111,9 @@ public class Tag582EnuCustOrderCapacity extends FIX43Abstract implements LogValu
         Tag582EnuCustOrderCapacity tagData;
 
         tagData = new Tag582EnuCustOrderCapacity(TESTA_ENU_CUST_ORDER_CAPACITY);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag582EnuCustOrderCapacity(TESTB_ENU_CUST_ORDER_CAPACITY);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

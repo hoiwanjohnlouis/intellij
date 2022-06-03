@@ -122,7 +122,7 @@ public enum Enum506RegistStatus implements LogFIXString, LogVerboseString {
          * dump all the enum values
          */
         for (Enum506RegistStatus oneEnum : Enum506RegistStatus.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

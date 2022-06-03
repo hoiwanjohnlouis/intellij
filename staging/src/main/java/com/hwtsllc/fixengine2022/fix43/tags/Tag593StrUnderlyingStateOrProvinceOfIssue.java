@@ -82,13 +82,9 @@ public class Tag593StrUnderlyingStateOrProvinceOfIssue extends FIX43Abstract imp
         Tag593StrUnderlyingStateOrProvinceOfIssue tagData;
 
         tagData = new Tag593StrUnderlyingStateOrProvinceOfIssue(new MyStringType(TESTA_STR_UNDERLYING_STATE_OR_PROVINCE_OF_ISSUE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag593StrUnderlyingStateOrProvinceOfIssue(new MyStringType(TESTB_STR_UNDERLYING_STATE_OR_PROVINCE_OF_ISSUE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

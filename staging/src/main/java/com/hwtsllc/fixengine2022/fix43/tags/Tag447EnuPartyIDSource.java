@@ -199,15 +199,9 @@ public class Tag447EnuPartyIDSource extends FIX43Abstract implements LogValuePai
         Tag447EnuPartyIDSource tagData;
 
         tagData = new Tag447EnuPartyIDSource(TESTA_ENU_PARTY_ID_SOURCE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag447EnuPartyIDSource(TESTB_ENU_PARTY_ID_SOURCE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

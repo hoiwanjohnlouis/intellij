@@ -78,13 +78,9 @@ public class Tag632PctBidYield extends FIX43Abstract implements LogValuePairStri
         Tag632PctBidYield tagData;
 
         tagData = new Tag632PctBidYield(new MyPercentageType(TESTA_PCT_BID_YIELD) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag632PctBidYield(new MyPercentageType(TESTB_PCT_BID_YIELD) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

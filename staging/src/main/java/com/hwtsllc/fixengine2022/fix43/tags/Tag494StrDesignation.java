@@ -36,8 +36,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag494StrDesignation extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_DESIGNATION = "BilboBaggins-Tag494StrDesignation";
-    public final static String TESTB_STR_DESIGNATION = "Gandalf-Tag494StrDesignation";
+    public final static String TESTA_STR_DESIGNATION
+            = "BilboBaggins-Tag494StrDesignation";
+    public final static String TESTB_STR_DESIGNATION
+            = "Gandalf-Tag494StrDesignation";
 
     public Tag494StrDesignation(MyStringType dataValue) {
         setFixType(FIX43.FIX494_STR_DESIGNATION);
@@ -82,13 +84,9 @@ public class Tag494StrDesignation extends FIX43Abstract implements LogValuePairS
         Tag494StrDesignation tagData;
 
         tagData = new Tag494StrDesignation(new MyStringType(TESTA_STR_DESIGNATION) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag494StrDesignation(new MyStringType(TESTB_STR_DESIGNATION) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

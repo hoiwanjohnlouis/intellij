@@ -80,13 +80,9 @@ public class Tag647QtyMinBidSize extends FIX43Abstract implements LogValuePairSt
         Tag647QtyMinBidSize tagData;
 
         tagData = new Tag647QtyMinBidSize(new MyQtyType(TESTA_QTY_MIN_BID_SIZE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag647QtyMinBidSize(new MyQtyType(TESTB_QTY_MIN_BID_SIZE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

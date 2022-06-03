@@ -120,7 +120,7 @@ public enum Enum517OwnershipType implements LogFIXString, LogVerboseString {
          * dump all the enum values
          */
         for (Enum517OwnershipType oneEnum : Enum517OwnershipType.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

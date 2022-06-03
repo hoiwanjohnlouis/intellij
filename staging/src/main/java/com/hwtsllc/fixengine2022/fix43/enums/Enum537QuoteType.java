@@ -140,7 +140,7 @@ public enum Enum537QuoteType implements LogFIXString, LogVerboseString {
          * dump all the enum values
          */
         for (Enum537QuoteType oneEnum : Enum537QuoteType.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

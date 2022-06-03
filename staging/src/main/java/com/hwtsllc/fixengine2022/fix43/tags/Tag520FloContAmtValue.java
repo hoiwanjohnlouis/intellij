@@ -80,13 +80,9 @@ public class Tag520FloContAmtValue extends FIX43Abstract implements LogValuePair
         Tag520FloContAmtValue tagData;
 
         tagData = new Tag520FloContAmtValue(new MyFloatType(TESTA_FLO_CONT_AMT_VALUE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag520FloContAmtValue(new MyFloatType(TESTB_FLO_CONT_AMT_VALUE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

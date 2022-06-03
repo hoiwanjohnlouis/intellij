@@ -199,15 +199,9 @@ public class Tag525EnuNestedPartyIDSource extends FIX43Abstract implements LogVa
         Tag525EnuNestedPartyIDSource tagData;
 
         tagData = new Tag525EnuNestedPartyIDSource(TESTA_ENU_NESTED_PARTY_ID_SOURCE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag525EnuNestedPartyIDSource(TESTB_ENU_NESTED_PARTY_ID_SOURCE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

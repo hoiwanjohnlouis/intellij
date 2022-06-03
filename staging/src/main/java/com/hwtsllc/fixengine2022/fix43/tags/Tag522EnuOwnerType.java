@@ -119,15 +119,9 @@ public class Tag522EnuOwnerType extends FIX43Abstract implements LogValuePairStr
         Tag522EnuOwnerType tagData;
 
         tagData = new Tag522EnuOwnerType(TESTA_ENU_OWNER_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag522EnuOwnerType(TESTB_ENU_OWNER_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

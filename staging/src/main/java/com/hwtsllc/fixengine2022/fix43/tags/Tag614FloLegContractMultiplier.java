@@ -80,13 +80,9 @@ public class Tag614FloLegContractMultiplier extends FIX43Abstract implements Log
         Tag614FloLegContractMultiplier tagData;
 
         tagData = new Tag614FloLegContractMultiplier(new MyFloatType(TESTA_FLO_LEG_CONTRACT_MULTIPLIER) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag614FloLegContractMultiplier(new MyFloatType(TESTB_FLO_LEG_CONTRACT_MULTIPLIER) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

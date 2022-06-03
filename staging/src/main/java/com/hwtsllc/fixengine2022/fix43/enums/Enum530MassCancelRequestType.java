@@ -137,7 +137,7 @@ public enum Enum530MassCancelRequestType implements LogFIXString, LogVerboseStri
          * dump all the enum values
          */
         for (Enum530MassCancelRequestType oneEnum : Enum530MassCancelRequestType.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

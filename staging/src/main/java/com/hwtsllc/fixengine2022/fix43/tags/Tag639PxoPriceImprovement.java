@@ -78,13 +78,9 @@ public class Tag639PxoPriceImprovement extends FIX43Abstract implements LogValue
         Tag639PxoPriceImprovement tagData;
 
         tagData = new Tag639PxoPriceImprovement(new MyPriceOffsetType(TESTA_PXO_PRICE_IMPROVEMENT) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag639PxoPriceImprovement(new MyPriceOffsetType(TESTB_PXO_PRICE_IMPROVEMENT) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

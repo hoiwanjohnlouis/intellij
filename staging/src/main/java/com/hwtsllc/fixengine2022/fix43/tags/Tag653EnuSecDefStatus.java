@@ -115,15 +115,9 @@ public class Tag653EnuSecDefStatus extends FIX43Abstract implements LogValuePair
         Tag653EnuSecDefStatus tagData;
 
         tagData = new Tag653EnuSecDefStatus(TESTA_ENU_SEC_DEF_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag653EnuSecDefStatus(TESTB_ENU_SEC_DEF_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

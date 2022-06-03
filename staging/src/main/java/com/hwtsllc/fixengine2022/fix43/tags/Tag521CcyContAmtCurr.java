@@ -80,13 +80,9 @@ public class Tag521CcyContAmtCurr extends FIX43Abstract implements LogValuePairS
         Tag521CcyContAmtCurr tagData;
 
         tagData = new Tag521CcyContAmtCurr(new MyCurrencyType(TESTA_CCY_CONT_AMT_CURR) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag521CcyContAmtCurr(new MyCurrencyType(TESTB_CCY_CONT_AMT_CURR) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

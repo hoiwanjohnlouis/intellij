@@ -80,13 +80,9 @@ public class Tag616ExcLegSecurityExchange extends FIX43Abstract implements LogVa
         Tag616ExcLegSecurityExchange tagData;
 
         tagData = new Tag616ExcLegSecurityExchange(new MyExchangeType(TESTA_EXC_LEG_SECURITY_EXCHANGE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag616ExcLegSecurityExchange(new MyExchangeType(TESTB_EXC_LEG_SECURITY_EXCHANGE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

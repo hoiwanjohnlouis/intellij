@@ -174,7 +174,7 @@ public enum Enum635ClearingFeeIndicator implements LogFIXString, LogVerboseStrin
          * dump all the enum values
          */
         for (Enum635ClearingFeeIndicator oneEnum : Enum635ClearingFeeIndicator.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

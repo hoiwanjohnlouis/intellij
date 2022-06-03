@@ -106,15 +106,9 @@ public class Tag638EnuPriorityIndicator extends FIX43Abstract implements LogValu
         Tag638EnuPriorityIndicator tagData;
 
         tagData = new Tag638EnuPriorityIndicator(TESTA_ENU_PRIORITY_INDICATOR);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag638EnuPriorityIndicator(TESTB_ENU_PRIORITY_INDICATOR);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

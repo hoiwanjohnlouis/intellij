@@ -129,15 +129,9 @@ public class Tag624EnuLegSide extends FIX43Abstract implements LogValuePairStrin
         Tag624EnuLegSide tagData;
 
         tagData = new Tag624EnuLegSide(TESTA_ENU_LEG_SIDE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag624EnuLegSide(TESTB_ENU_LEG_SIDE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

@@ -84,13 +84,9 @@ public class Tag516PctOrderPercent extends FIX43Abstract implements LogValuePair
         Tag516PctOrderPercent tagData;
 
         tagData = new Tag516PctOrderPercent(new MyPercentageType(TESTA_PCT_ORDER_PERCENT) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag516PctOrderPercent(new MyPercentageType(TESTB_PCT_ORDER_PERCENT) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

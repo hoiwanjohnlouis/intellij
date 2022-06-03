@@ -120,7 +120,7 @@ public enum Enum514RegistTransType implements LogFIXString, LogVerboseString {
          * dump all the enum values
          */
         for (Enum514RegistTransType oneEnum : Enum514RegistTransType.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

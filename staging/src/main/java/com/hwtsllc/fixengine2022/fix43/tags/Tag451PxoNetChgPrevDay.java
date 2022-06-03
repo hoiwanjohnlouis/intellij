@@ -78,13 +78,9 @@ public class Tag451PxoNetChgPrevDay extends FIX43Abstract implements LogValuePai
         Tag451PxoNetChgPrevDay tagData;
 
         tagData = new Tag451PxoNetChgPrevDay(new MyPriceOffsetType(TESTA_PXO_NET_CHG_PREV_DAY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag451PxoNetChgPrevDay(new MyPriceOffsetType(TESTB_PXO_NET_CHG_PREV_DAY) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

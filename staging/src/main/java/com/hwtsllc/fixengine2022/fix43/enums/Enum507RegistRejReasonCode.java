@@ -165,7 +165,7 @@ public enum Enum507RegistRejReasonCode implements LogFIXString, LogVerboseString
          * dump all the enum values
          */
         for (Enum507RegistRejReasonCode oneEnum : Enum507RegistRejReasonCode.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

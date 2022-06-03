@@ -124,7 +124,7 @@ public enum Enum547MDImplicitDelete implements LogFIXString, LogVerboseString {
          * dump all the enum values
          */
         for (Enum547MDImplicitDelete oneEnum : Enum547MDImplicitDelete.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

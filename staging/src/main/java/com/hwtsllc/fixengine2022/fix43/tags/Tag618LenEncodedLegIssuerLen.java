@@ -80,18 +80,9 @@ public class Tag618LenEncodedLegIssuerLen extends FIX43Abstract implements LogVa
         Tag618LenEncodedLegIssuerLen tagData;
 
         tagData = new Tag618LenEncodedLegIssuerLen(new MyLengthType(TESTA_LEN_ENCODED_LEG_ISSUER_LEN) );
-        System.out.println("initial values A");
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag618LenEncodedLegIssuerLen(new MyLengthType(TESTB_LEN_ENCODED_LEG_ISSUER_LEN) );
-        System.out.println("initial values B");
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println("Accessing FIXType Directly");
-        System.out.println("EnumName:" + tagData.toEnumNameString());
-        System.out.println("ID:" + tagData.toFIXIDString());
-        System.out.println("Name:" + tagData.toFIXNameString());
-        System.out.println("Description:" + tagData.toFIXDescriptionString());
     }
 }

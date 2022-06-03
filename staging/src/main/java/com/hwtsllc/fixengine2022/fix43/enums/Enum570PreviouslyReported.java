@@ -116,7 +116,7 @@ public enum Enum570PreviouslyReported implements LogFIXString, LogVerboseString 
          * dump all the enum values
          */
         for ( Enum570PreviouslyReported oneEnum : Enum570PreviouslyReported.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

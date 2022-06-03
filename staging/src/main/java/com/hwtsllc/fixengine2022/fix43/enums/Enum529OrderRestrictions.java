@@ -155,7 +155,7 @@ public enum Enum529OrderRestrictions implements LogFIXString, LogVerboseString {
          * dump all the enum values
          */
         for (Enum529OrderRestrictions oneEnum : Enum529OrderRestrictions.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

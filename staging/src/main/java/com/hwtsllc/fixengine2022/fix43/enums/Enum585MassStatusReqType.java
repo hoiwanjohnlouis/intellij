@@ -132,7 +132,7 @@ public enum Enum585MassStatusReqType implements LogFIXString, LogVerboseString {
          * dump all the enum values
          */
         for (Enum585MassStatusReqType oneEnum : Enum585MassStatusReqType.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

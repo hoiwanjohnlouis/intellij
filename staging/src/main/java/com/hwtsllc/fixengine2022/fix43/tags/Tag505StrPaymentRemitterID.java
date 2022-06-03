@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag505StrPaymentRemitterID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_PAYMENT_REMITTER_ID = "BilboBaggins-Tag505StrPaymentRemitterID";
-    public final static String TESTB_STR_PAYMENT_REMITTER_ID = "Gandalf-Tag505StrPaymentRemitterID";
+    public final static String TESTA_STR_PAYMENT_REMITTER_ID
+            = "BilboBaggins-Tag505StrPaymentRemitterID";
+    public final static String TESTB_STR_PAYMENT_REMITTER_ID
+            = "Gandalf-Tag505StrPaymentRemitterID";
 
     public Tag505StrPaymentRemitterID(MyStringType dataValue) {
         setFixType(FIX43.FIX505_STR_PAYMENT_REMITTER_ID);
@@ -78,13 +80,9 @@ public class Tag505StrPaymentRemitterID extends FIX43Abstract implements LogValu
         Tag505StrPaymentRemitterID tagData;
 
         tagData = new Tag505StrPaymentRemitterID(new MyStringType(TESTA_STR_PAYMENT_REMITTER_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag505StrPaymentRemitterID(new MyStringType(TESTB_STR_PAYMENT_REMITTER_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

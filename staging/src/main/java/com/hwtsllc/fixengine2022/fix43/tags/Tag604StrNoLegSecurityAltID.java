@@ -80,13 +80,9 @@ public class Tag604StrNoLegSecurityAltID extends FIX43Abstract implements LogVal
         Tag604StrNoLegSecurityAltID tagData;
 
         tagData = new Tag604StrNoLegSecurityAltID(new MyStringType(TESTA_STR_NO_LEG_SECURITY_ALT_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag604StrNoLegSecurityAltID(new MyStringType(TESTB_STR_NO_LEG_SECURITY_ALT_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

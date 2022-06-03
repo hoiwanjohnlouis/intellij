@@ -107,15 +107,9 @@ public class Tag570EnuPreviouslyReported extends FIX43Abstract implements LogVal
         Tag570EnuPreviouslyReported tagData;
 
         tagData = new Tag570EnuPreviouslyReported( TESTA_ENU_PREVIOUSLY_REPORTED );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag570EnuPreviouslyReported( TESTB_ENU_PREVIOUSLY_REPORTED );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

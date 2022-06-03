@@ -124,7 +124,7 @@ public enum Enum481MoneyLaunderingStatus implements LogFIXString, LogVerboseStri
          * dump all the enum values for review
          */
         for (Enum481MoneyLaunderingStatus oneEnum : Enum481MoneyLaunderingStatus.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

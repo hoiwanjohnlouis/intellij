@@ -124,15 +124,9 @@ public class Tag635EnuClearingFeeIndicator extends FIX43Abstract implements LogV
         Tag635EnuClearingFeeIndicator tagData;
 
         tagData = new Tag635EnuClearingFeeIndicator(TESTA_ENU_CLEARING_FEE_INDICATOR);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag635EnuClearingFeeIndicator(TESTB_ENU_CLEARING_FEE_INDICATOR);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

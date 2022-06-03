@@ -80,13 +80,9 @@ public class Tag478CcyCashDistribCurr extends FIX43Abstract implements LogValueP
         Tag478CcyCashDistribCurr tagData;
 
         tagData = new Tag478CcyCashDistribCurr(new MyCurrencyType(TESTA_CCY_CASH_DISTRIB_CURR) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag478CcyCashDistribCurr(new MyCurrencyType(TESTB_CCY_CASH_DISTRIB_CURR) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

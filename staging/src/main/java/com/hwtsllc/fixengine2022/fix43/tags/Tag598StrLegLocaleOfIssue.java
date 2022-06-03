@@ -34,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag598StrLegLocaleOfIssue extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_LEG_LOCALE_OF_ISSUE = "BilboBaggins-Tag598StrLegLocaleOfIssue";
-    public final static String TESTB_STR_LEG_LOCALE_OF_ISSUE = "Gandalf-Tag598StrLegLocaleOfIssue";
+    public final static String TESTA_STR_LEG_LOCALE_OF_ISSUE
+            = "BilboBaggins-Tag598StrLegLocaleOfIssue";
+    public final static String TESTB_STR_LEG_LOCALE_OF_ISSUE
+            = "Gandalf-Tag598StrLegLocaleOfIssue";
 
     public Tag598StrLegLocaleOfIssue(MyStringType dataValue) {
         setFixType(FIX43.FIX598_STR_LEG_LOCALE_OF_ISSUE);
@@ -80,13 +82,9 @@ public class Tag598StrLegLocaleOfIssue extends FIX43Abstract implements LogValue
         Tag598StrLegLocaleOfIssue tagData;
 
         tagData = new Tag598StrLegLocaleOfIssue(new MyStringType(TESTA_STR_LEG_LOCALE_OF_ISSUE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag598StrLegLocaleOfIssue(new MyStringType(TESTB_STR_LEG_LOCALE_OF_ISSUE) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

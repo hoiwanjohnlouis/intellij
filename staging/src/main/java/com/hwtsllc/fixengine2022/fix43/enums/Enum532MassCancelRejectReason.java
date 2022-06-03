@@ -139,7 +139,7 @@ public enum Enum532MassCancelRejectReason implements LogFIXString, LogVerboseStr
          * dump all the enum values
          */
         for (Enum532MassCancelRejectReason oneEnum : Enum532MassCancelRejectReason.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

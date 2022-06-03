@@ -107,15 +107,9 @@ public class Tag497EnuFundRenewWaiv extends FIX43Abstract implements LogValuePai
         Tag497EnuFundRenewWaiv tagData;
 
         tagData = new Tag497EnuFundRenewWaiv(TESTA_ENU_FUND_RENEW_WAIV);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag497EnuFundRenewWaiv(TESTB_ENU_FUND_RENEW_WAIV);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

@@ -112,15 +112,9 @@ public class Tag530EnuMassCancelRequestType extends FIX43Abstract implements Log
         Tag530EnuMassCancelRequestType tagData;
 
         tagData = new Tag530EnuMassCancelRequestType(TESTA_ENU_MASS_CANCEL_REQUEST_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag530EnuMassCancelRequestType(TESTB_ENU_MASS_CANCEL_REQUEST_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

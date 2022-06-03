@@ -78,13 +78,9 @@ public class Tag539NumNoNestedPartyIDs extends FIX43Abstract implements LogValue
         Tag539NumNoNestedPartyIDs tagData;
 
         tagData = new Tag539NumNoNestedPartyIDs(new MyNumInGroupType(TESTA_NUM_NO_NESTED_PARTY_IDS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag539NumNoNestedPartyIDs(new MyNumInGroupType(TESTB_NUM_NO_NESTED_PARTY_IDS) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

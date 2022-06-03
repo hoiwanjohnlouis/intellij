@@ -114,15 +114,9 @@ public class Tag565EnuLegCoveredOrUncovered extends FIX43Abstract implements Log
         Tag565EnuLegCoveredOrUncovered tagData;
 
         tagData = new Tag565EnuLegCoveredOrUncovered(TESTA_ENU_LEG_COVERED_OR_UNCOVERED);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag565EnuLegCoveredOrUncovered(TESTB_ENU_LEG_COVERED_OR_UNCOVERED);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }

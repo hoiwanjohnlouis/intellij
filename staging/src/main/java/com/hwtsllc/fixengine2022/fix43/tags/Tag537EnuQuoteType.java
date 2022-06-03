@@ -126,15 +126,9 @@ public class Tag537EnuQuoteType extends FIX43Abstract implements LogValuePairStr
         Tag537EnuQuoteType tagData;
 
         tagData = new Tag537EnuQuoteType(TESTA_ENU_QUOTE_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag537EnuQuoteType(TESTB_ENU_QUOTE_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataDescriptionString());
     }
 }
