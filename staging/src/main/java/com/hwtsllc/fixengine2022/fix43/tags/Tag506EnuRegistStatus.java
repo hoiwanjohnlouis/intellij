@@ -23,6 +23,19 @@ import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  506
+ *  RegistStatus
+ *  char
+ *  <p></p>
+ *  Registration status as returned by the broker or  (for CIV) the fund manager:
+ *  <p></p>
+ *  Valid values:
+ *  <p>    A - Accepted
+ *  <p>    R - Rejected
+ *  <p>    H - Held
+ *  <p>    N - Reminder - i.e. Registration Instructions are still outstanding
+ */
 public class Tag506EnuRegistStatus extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum506RegistStatus dataValue;
 

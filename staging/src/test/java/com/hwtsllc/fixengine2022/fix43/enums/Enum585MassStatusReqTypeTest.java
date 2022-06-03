@@ -22,8 +22,26 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  585
+ *  MassStatusReqType
+ *  int
+ *  <p></p>
+ *  Mass Status Request Type
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Status for orders for a Security
+ *  <p>    2 - Status for orders for an Underlying Security
+ *  <p>    3 - Status for orders for a Product
+ *  <p>    4 - Status for orders for a CFICode
+ *  <p>    5 - Status for orders for a SecurityType
+ *  <p></p>
+ *  <p>    6 - Status for orders for a trading session
+ *  <p>    7 - Status for all orders
+ *  <p>    8 - Status for orders for a PartyID
+ */
 class Enum585MassStatusReqTypeTest {
-    /**
+    /*
      *  Information is the same for TAGS 585
      */
     @Test
@@ -77,6 +95,7 @@ class Enum585MassStatusReqTypeTest {
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+
 
         enumType = Enum585MassStatusReqType.STATUS_ORDERS_FOR_SESSION;
         assertEquals("6", enumType.toFIXIDString());

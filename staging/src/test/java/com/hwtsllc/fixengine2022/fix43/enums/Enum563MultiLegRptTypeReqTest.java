@@ -22,8 +22,21 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  563
+ *  MultiLegRptTypeReq
+ *  int
+ *  <p></p>
+ *  Indicates the method of execution reporting requested by issuer of the order.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Report by mulitleg security only (do not report legs)
+ *  <p>    1 - Report by multileg security and by instrument legs belonging to the multileg security
+ *  <p>    2 - Report by instrument legs belonging to the multileg security only
+ *              (do not report status of multileg security)
+ */
 class Enum563MultiLegRptTypeReqTest {
-    /**
+    /*
      *  Information is the same for TAGS 563
      */
     @Test

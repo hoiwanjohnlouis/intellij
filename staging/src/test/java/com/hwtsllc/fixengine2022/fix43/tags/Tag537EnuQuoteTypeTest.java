@@ -17,12 +17,44 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum537QuoteType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  537
+ *  QuoteType
+ *  int
+ *  <p></p>
+ *  Identifies the type of quote.
+ *  <p></p>
+ *  An indicative quote is used to inform a counterparty of a market.
+ *  <p></p>
+ *  An indicative quote does not result directly in a trade.
+ *  <p></p>
+ *  A tradeable quote is submitted to a market and will result directly
+ *  in a trade against other orders and quotes in a market.
+ *  <p></p>
+ *  A restricted tradeable quote is submitted to a market
+ *  and within a certain restriction (possibly based upon price or quantity)
+ *  will automatically trade against orders.
+ *  <p></p>
+ *  Order that do not comply with restrictions are sent to
+ *  the quote issuer who can choose to accept or decline the order.
+ *  <p></p>
+ *  A counter quote is used in the negotiation model.
+ *  <p>
+ *  See Volume 7 – Product: Fixed Income for example usage.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Indicative
+ *  <p>    1 - Tradeable
+ *  <p>    2 - Restricted Tradeable
+ *  <p>    3 - Counter (tradeable)
+ */
 class Tag537EnuQuoteTypeTest {
     @Test
     void FIX0537Test() {
@@ -38,5 +70,23 @@ class Tag537EnuQuoteTypeTest {
     void Tag0537Test() {
         Tag537EnuQuoteType tagData;
 
+        /*
+         *  0-3 types
+         */
+        tagData = new Tag537EnuQuoteType( Enum537QuoteType.INDICATIVE );
+        assertEquals( Enum537QuoteType.INDICATIVE.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag537EnuQuoteType( Enum537QuoteType.TRADEABLE );
+        assertEquals( Enum537QuoteType.TRADEABLE.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag537EnuQuoteType( Enum537QuoteType.RESTRICTED_TRADEABLE );
+        assertEquals( Enum537QuoteType.RESTRICTED_TRADEABLE.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag537EnuQuoteType( Enum537QuoteType.COUNTER );
+        assertEquals( Enum537QuoteType.COUNTER.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

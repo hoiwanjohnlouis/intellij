@@ -23,6 +23,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  497
+ *  FundRenewWaiv
+ *  char
+ *  <p></p>
+ *  A one character code identifying whether
+ *  the Fund based renewal commission is to be waived.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    N - No
+ *  <p>    Y - Yes
+ */
 public class Tag497EnuFundRenewWaiv extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum497FundRenewWaiv dataValue;
 

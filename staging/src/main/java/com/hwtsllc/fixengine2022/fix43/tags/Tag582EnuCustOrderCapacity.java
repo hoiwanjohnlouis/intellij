@@ -23,6 +23,22 @@ import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  582
+ *  CustOrderCapacity
+ *  int
+ *  <p></p>
+ *  Capacity of customer placing the order
+ *  <p>
+ *  Primarily used by futures exchanges to indicate the CTICode (customer type indicator)
+ *  as required by the US CFTC (Commodity Futures Trading Commission).
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Member trading for their own account
+ *  <p>    2 - Clearing Firm trading for its proprietary account
+ *  <p>    3 - Member trading for another member
+ *  <p>    4 - All other
+ */
 public class Tag582EnuCustOrderCapacity extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum582CustOrderCapacity dataValue;
 

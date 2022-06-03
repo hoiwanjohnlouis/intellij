@@ -20,7 +20,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Information is the same for TAGS 514
+ *  514
+ *  RegistTransType
+ *  char
+ *  <p></p>
+ *  Identifies Registration Instructions transaction type
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - New
+ *  <p>    2 - Cancel
+ *  <p>    1 - Replace
  */
 public enum Enum514RegistTransType implements LogFIXString, LogVerboseString {
     /*

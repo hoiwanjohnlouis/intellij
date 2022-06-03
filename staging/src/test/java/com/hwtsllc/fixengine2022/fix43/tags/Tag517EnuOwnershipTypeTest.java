@@ -17,12 +17,25 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum517OwnershipType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  517
+ *  OwnershipType
+ *  char
+ *  <p></p>
+ *  The relationship between Registration parties.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    J - Joint Investors
+ *  <p>    T - Tenants in Common
+ *  <p>    2 - Joint Trustees
+ */
 class Tag517EnuOwnershipTypeTest {
     @Test
     void FIX0517Test() {
@@ -38,5 +51,29 @@ class Tag517EnuOwnershipTypeTest {
     void Tag0517Test() {
         Tag517EnuOwnershipType tagData;
 
+        /*
+         * J, T,and 2 types
+         */
+
+        /*
+         *  J, type
+         */
+        tagData = new Tag517EnuOwnershipType( Enum517OwnershipType.JOINT_INVESTORS );
+        assertEquals( Enum517OwnershipType.JOINT_INVESTORS.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        /*
+         *  T, type
+         */
+        tagData = new Tag517EnuOwnershipType( Enum517OwnershipType.TENANTS_IN_COMMON );
+        assertEquals( Enum517OwnershipType.TENANTS_IN_COMMON.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        /*
+         *  2, type
+         */
+        tagData = new Tag517EnuOwnershipType( Enum517OwnershipType.JOINT_TRUSTEES );
+        assertEquals( Enum517OwnershipType.JOINT_TRUSTEES.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

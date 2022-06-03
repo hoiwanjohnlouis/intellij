@@ -23,6 +23,38 @@ import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  519
+ *  ContAmtType
+ *  int
+ *  <p></p>
+ *  Type of ContAmtValue (520).
+ *  <p>
+ *  NOTE That Commission Amount / % in Contract Amounts is the commission actually charged,
+ *  rather than the commission instructions given in Fields 2/3.
+ *  <p></p>
+ *  For UK valid values include:
+ *  <p>
+ *  Valid values:
+ *  <p>    1 - Commission amount (actual)
+ *  <p>    2 - Commission percent (actual)
+ *  <p>    3 - Initial Charge Amount
+ *  <p>    4 - Initial Charge Percent
+ *  <p>    5 - Discount Amount
+ *  <p></p>
+ *  <p>    6 - Discount Percent
+ *  <p>    7 - Dilution Levy Amount
+ *  <p>    8 - Dilution Levy Percent
+ *  <p>    9 - Exit Charge Amount
+ *  <p>    10 - Exit Charge Percent
+ *  <p></p>
+ *  <p>    11 - Fund-Based Renewal Commission Percent (a.k.a. Trail commission)
+ *  <p>    12 - Projected Fund Value
+ *          (i.e. for investments intended to realise or exceed a specific future value)
+ *  <p>    13 - Fund-Based Renewal Commission Amount (based on Order value)
+ *  <p>    14 - Fund-Based Renewal Commission Amount (based on Projected Fund value)
+ *  <p>    15 - Net Settlement Amount
+ */
 public class Tag519EnuContAmtType extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum519ContAmtType dataValue;
 

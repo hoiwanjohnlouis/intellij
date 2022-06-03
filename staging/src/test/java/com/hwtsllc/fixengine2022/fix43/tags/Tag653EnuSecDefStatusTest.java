@@ -17,12 +17,32 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum653SecDefStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  653
+ *  SecDefStatus
+ *  int
+ *  <p></p>
+ *  Deprecated in FIX.4.2
+ *  <p></p>
+ *  State of a security definition request made to a market.
+ *  <p></p>
+ *  Useful for markets, such as derivatives markets, where market participants
+ *  are permitted to define instruments for subsequent trading
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Pending Approval
+ *  <p>    1 - Approved (Accepted)
+ *  <p>    2 - Rejected
+ *  <p>    3 - Unauthorized Request
+ *  <p>    4 - Invalid Definition Request
+ */
 // @Deprecated
 class Tag653EnuSecDefStatusTest {
     @Test
@@ -37,7 +57,29 @@ class Tag653EnuSecDefStatusTest {
     }
     @Test
     void Tag0653Test() {
-        Tag653EnuSecDefStatusTest tagData;
+        Tag653EnuSecDefStatus tagData;
 
+        /*
+         *  0-4 types
+         */
+        tagData = new Tag653EnuSecDefStatus( Enum653SecDefStatus.PENDING );
+        assertEquals( Enum653SecDefStatus.PENDING.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag653EnuSecDefStatus( Enum653SecDefStatus.APPROVED );
+        assertEquals( Enum653SecDefStatus.APPROVED.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag653EnuSecDefStatus( Enum653SecDefStatus.REJECTED );
+        assertEquals( Enum653SecDefStatus.REJECTED.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag653EnuSecDefStatus( Enum653SecDefStatus.UNAUTHORIZED );
+        assertEquals( Enum653SecDefStatus.UNAUTHORIZED.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag653EnuSecDefStatus( Enum653SecDefStatus.INVALID );
+        assertEquals( Enum653SecDefStatus.INVALID.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

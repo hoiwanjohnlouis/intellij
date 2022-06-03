@@ -22,8 +22,20 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  517
+ *  OwnershipType
+ *  char
+ *  <p></p>
+ *  The relationship between Registration parties.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    J - Joint Investors
+ *  <p>    T - Tenants in Common
+ *  <p>    2 - Joint Trustees
+ */
 class Enum517OwnershipTypeTest {
-    /**
+    /*
      *  Information is the same for TAGS 517
      */
     @Test

@@ -17,12 +17,37 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum658QuoteRequestRejectReason;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  658
+ *  QuoteRequestRejectReason
+ *  int
+ *  <p></p>
+ *  Reason Quote was rejected:
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Unknown Symbol (Security)
+ *  <p>    2 - Exchange (Security) Closed
+ *  <p>    3 - Quote Request Exceeds Limit
+ *  <p>    4 - Too Late to enter
+ *  <p>    5 - Invalid Price
+ *  <p></p>
+ *  <p>    6 - Not Authorized To Request Quote
+ *  <p>    7 - No Match For Inquiry
+ *  <p>    8 - No Market For Instrument
+ *  <p>    9 - No Inventory
+ *  <p>    10 - Pass
+ *  <p></p>
+ *  <p>    11 - Insufficient credit
+ *  <p>    99 - Other
+ *  <p>    or any value conforming to the data type Reserved100Plus
+ */
 class Tag658EnuQuoteRequestRejectReasonTest {
     @Test
     void FIX0658Test() {
@@ -38,5 +63,62 @@ class Tag658EnuQuoteRequestRejectReasonTest {
     void Tag0658Test() {
         Tag658EnuQuoteRequestRejectReason tagData;
 
+        /*
+         *  1-11, types
+         */
+        tagData = new Tag658EnuQuoteRequestRejectReason( Enum658QuoteRequestRejectReason.UNKNOWN_SYMBOL );
+        assertEquals( Enum658QuoteRequestRejectReason.UNKNOWN_SYMBOL.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag658EnuQuoteRequestRejectReason( Enum658QuoteRequestRejectReason.EXCHANGE_CLOSED );
+        assertEquals( Enum658QuoteRequestRejectReason.EXCHANGE_CLOSED.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag658EnuQuoteRequestRejectReason( Enum658QuoteRequestRejectReason.QUOTE_EXCEEDS_LIMIT );
+        assertEquals( Enum658QuoteRequestRejectReason.QUOTE_EXCEEDS_LIMIT.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag658EnuQuoteRequestRejectReason( Enum658QuoteRequestRejectReason.TOO_LATE_TO_ENTER );
+        assertEquals( Enum658QuoteRequestRejectReason.TOO_LATE_TO_ENTER.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag658EnuQuoteRequestRejectReason( Enum658QuoteRequestRejectReason.INVALID_PRICE );
+        assertEquals( Enum658QuoteRequestRejectReason.INVALID_PRICE.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        tagData = new Tag658EnuQuoteRequestRejectReason( Enum658QuoteRequestRejectReason.NOT_AUTHORIZED );
+        assertEquals( Enum658QuoteRequestRejectReason.NOT_AUTHORIZED.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag658EnuQuoteRequestRejectReason( Enum658QuoteRequestRejectReason.NO_MATCH_FOR_INQUIRY );
+        assertEquals( Enum658QuoteRequestRejectReason.NO_MATCH_FOR_INQUIRY.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag658EnuQuoteRequestRejectReason( Enum658QuoteRequestRejectReason.NO_MARKET_FOR_INSTRUMENT );
+        assertEquals( Enum658QuoteRequestRejectReason.NO_MARKET_FOR_INSTRUMENT.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag658EnuQuoteRequestRejectReason( Enum658QuoteRequestRejectReason.NO_INVENTORY );
+        assertEquals( Enum658QuoteRequestRejectReason.NO_INVENTORY.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag658EnuQuoteRequestRejectReason( Enum658QuoteRequestRejectReason.PASS );
+        assertEquals( Enum658QuoteRequestRejectReason.PASS.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        tagData = new Tag658EnuQuoteRequestRejectReason( Enum658QuoteRequestRejectReason.INSUFFICIENT_CREDIT );
+        assertEquals( Enum658QuoteRequestRejectReason.INSUFFICIENT_CREDIT.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+
+        /*
+         *  99 type
+         */
+        tagData = new Tag658EnuQuoteRequestRejectReason( Enum658QuoteRequestRejectReason.OTHER );
+        assertEquals( Enum658QuoteRequestRejectReason.OTHER.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

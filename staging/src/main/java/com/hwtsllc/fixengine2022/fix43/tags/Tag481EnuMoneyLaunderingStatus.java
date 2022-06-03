@@ -23,6 +23,20 @@ import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  481
+ *  MoneyLaunderingStatus
+ *  char
+ *  <p></p>
+ *  A one character code identifying Money laundering status.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    Y - Passed
+ *  <p>    N - Not Checked
+ *  <p>    1 - Exempt - Below the Limit
+ *  <p>    2 - Exempt - Client Money Type exemption
+ *  <p>    3 - Exempt - Authorised Credit or financial institution
+ */
 public class Tag481EnuMoneyLaunderingStatus extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum481MoneyLaunderingStatus dataValue;
 

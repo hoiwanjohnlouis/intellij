@@ -22,8 +22,20 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  514
+ *  RegistTransType
+ *  char
+ *  <p></p>
+ *  Identifies Registration Instructions transaction type
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - New
+ *  <p>    2 - Cancel
+ *  <p>    1 - Replace
+ */
 class Enum514RegistTransTypeTest {
-    /**
+    /*
      *  Information is the same for TAGS 514
      */
     @Test

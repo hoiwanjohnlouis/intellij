@@ -22,8 +22,21 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  480
+ *  CancellationRights
+ *  char
+ *  <p></p>
+ *  For CIV – A one character code identifying whether Cancellation rights/Cooling off period applies.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    Y - Yes
+ *  <p>    N - No - Execution Only
+ *  <p>    M - No - Waiver agreement
+ *  <p>    O - No - Institutional
+ */
 class Enum480CancellationRightsTest {
-    /**
+    /*
      *  Information is the same for TAGS 480
      */
     @Test

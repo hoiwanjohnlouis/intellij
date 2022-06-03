@@ -18,23 +18,37 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum552NoSides;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
-public class Tag552NumNoSides extends FIX43Abstract implements LogValuePairString, LogVerboseString {
-    private final MyNumInGroupType dataValue;
+/**
+ *  552
+ *  NoSides
+ *  NumInGroup
+ *  <p></p>
+ *  Number of Side repeating group instances.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - One Side
+ *  <p>    2 - Both Sides
+ */
+public class Tag552EnuNoSides extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
+    private final Enum552NoSides dataValue;
 
-    public final static int TESTA_NUM_NO_SIDES = 552;
-    public final static int TESTB_NUM_NO_SIDES = 255;
+    public final static Enum552NoSides TESTA_ENU_NO_SIDES
+            = Enum552NoSides.ONE_SIDE;
+    public final static Enum552NoSides TESTB_ENU_NO_SIDES
+            = Enum552NoSides.BOTH_SIDES;
 
-    public Tag552NumNoSides(MyNumInGroupType dataValue) {
-        setFixType(FIX43.FIX552_NUM_NO_SIDES);
+    public Tag552EnuNoSides( Enum552NoSides dataValue) {
+        setFixType(FIX43.FIX552_ENU_NO_SIDES );
         this.dataValue = dataValue;
     }
 
-    public int getDataValue() {
-        return this.dataValue.getDataValue();
+    public String getDataValue() {
+        return this.dataValue.toFIXIDString();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
@@ -43,7 +57,7 @@ public class Tag552NumNoSides extends FIX43Abstract implements LogValuePairStrin
     public String toValuePairString() {
         return toFIXIDString()
                 .concat("=")
-                .concat(dataValue.toString());
+                .concat(getDataValue());
     }
     /**
      * standard wrapper to format a detailed string describing this data field
@@ -56,7 +70,28 @@ public class Tag552NumNoSides extends FIX43Abstract implements LogValuePairStrin
                 .concat("]");
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the ID of the underlying Data
+     */
+    @Override
+    public String toDataIDString() {
+        return this.dataValue.toFIXIDString();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.toFIXNameString();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
+        return this.dataValue.toFIXDescriptionString();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -68,16 +103,12 @@ public class Tag552NumNoSides extends FIX43Abstract implements LogValuePairStrin
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag552NumNoSides tagData;
+        Tag552EnuNoSides tagData;
 
-        tagData = new Tag552NumNoSides(new MyNumInGroupType(TESTA_NUM_NO_SIDES) );
-        System.out.println(tagData);
+        tagData = new Tag552EnuNoSides( TESTA_ENU_NO_SIDES );
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
-        tagData = new Tag552NumNoSides(new MyNumInGroupType(TESTB_NUM_NO_SIDES) );
-        System.out.println(tagData);
+        tagData = new Tag552EnuNoSides( TESTB_ENU_NO_SIDES );
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

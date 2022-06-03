@@ -23,6 +23,38 @@ import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  492 (same as 492,)
+ *  PaymentMethod
+ *  int
+ *  <p></p>
+ *  A code identifying the Settlement payment method.
+ *  <p>
+ *  16 through 998 are reserved for future use
+ *  <p></p>
+ *  Values above 1000 are available for use by private agreement among counterparties
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - CREST
+ *  <p>    2 - NSCC
+ *  <p>    3 - Euroclear
+ *  <p>    4 - Clearstream
+ *  <p>    5 - Cheque
+ *  <p></p>
+ *  <p>    6 - Telegraphic Transfer
+ *  <p>    7 - Fed Wire
+ *  <p>    8 - Debit Card
+ *  <p>    9 - Direct Debit (BECS)
+ *  <p>    10 - Direct Credit (BECS)
+ *  <p></p>
+ *  <p>    11 - Credit Card
+ *  <p>    12 - ACH Debit
+ *  <p>    13 - ACH Credit
+ *  <p>    14 - BPAY
+ *  <p>    15 - High Value Clearing System (HVACS)
+ *  <p></p>
+ *  <p>    or any value conforming to the data type Reserved1000Plus
+ */
 public class Tag492EnuPaymentMethod extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum492PaymentMethod dataValue;
 

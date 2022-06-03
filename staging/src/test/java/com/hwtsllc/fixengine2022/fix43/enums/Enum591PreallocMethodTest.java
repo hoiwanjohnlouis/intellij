@@ -22,8 +22,19 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  591
+ *  PreallocMethod
+ *  char
+ *  <p></p>
+ *  Indicates the method of preallocation.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Pro-rata
+ *  <p>    1 - Do not pro-rata - discuss first
+ */
 class Enum591PreallocMethodTest {
-    /**
+    /*
      *  Information is the same for TAGS 591
      */
     @Test

@@ -17,12 +17,28 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum560SecurityRequestResult;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  560
+ *  SecurityRequestResult
+ *  int
+ *  <p></p>
+ *  The results returned to a Security Request message
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Valid request
+ *  <p>    1 - Invalid or unsupported request
+ *  <p>    2 - No instruments found that match selection criteria
+ *  <p>    3 - Not authorized to retrieve instrument data
+ *  <p>    4 - Instrument data temporarily unavailable
+ *  <p>    5 - Request for instrument data not supported
+ */
 class Tag560EnuSecurityRequestResultTest {
     @Test
     void FIX0560Test() {
@@ -38,5 +54,32 @@ class Tag560EnuSecurityRequestResultTest {
     void Tag0560Test() {
         Tag560EnuSecurityRequestResult tagData;
 
+        /*
+         *  0-5 types
+         */
+        tagData = new Tag560EnuSecurityRequestResult( Enum560SecurityRequestResult.VALID_REQUEST );
+        assertEquals( Enum560SecurityRequestResult.VALID_REQUEST.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag560EnuSecurityRequestResult( Enum560SecurityRequestResult.UNSUPPORTED_REQUEST );
+        assertEquals( Enum560SecurityRequestResult.UNSUPPORTED_REQUEST.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag560EnuSecurityRequestResult( Enum560SecurityRequestResult.NO_INSTRUMENTS_FOUND );
+        assertEquals( Enum560SecurityRequestResult.NO_INSTRUMENTS_FOUND.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag560EnuSecurityRequestResult( Enum560SecurityRequestResult.NOT_AUTHORIZED );
+        assertEquals( Enum560SecurityRequestResult.NOT_AUTHORIZED.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag560EnuSecurityRequestResult( Enum560SecurityRequestResult.INSTRUMENT_DATA_UNAVAILABLE );
+        assertEquals( Enum560SecurityRequestResult.INSTRUMENT_DATA_UNAVAILABLE.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        tagData = new Tag560EnuSecurityRequestResult( Enum560SecurityRequestResult.REQUEST_NOT_SUPPORTED );
+        assertEquals( Enum560SecurityRequestResult.REQUEST_NOT_SUPPORTED.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -23,6 +23,26 @@ import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  484
+ *  ExecPriceType
+ *  char
+ *  <p></p>
+ *  For CIV - Identifies how the execution price LastPx (31)
+ *  was calculated from the fund unit/share price(s) calculated
+ *  at the fund valuation point.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    B - Bid price
+ *  <p>    C - Creation price
+ *  <p>    D - Creation price plus adjustment percent
+ *  <p>    E - Creation price plus adjustment amount
+ *  <p>    O - Offer price
+ *  <p></p>
+ *  <p>    P - Offer price minus adjustment percent
+ *  <p>    Q - Offer price minus adjustment amount
+ *  <p>    S - Single price
+ */
 public class Tag484EnuExecPriceType extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum484PriceType dataValue;
 

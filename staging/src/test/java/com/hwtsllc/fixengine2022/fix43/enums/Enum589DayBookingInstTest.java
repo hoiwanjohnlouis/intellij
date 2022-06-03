@@ -22,8 +22,20 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  589
+ *  DayBookingInst
+ *  char
+ *  <p></p>
+ *  Indicates whether or not automatic booking can occur.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Can trigger booking without reference to the order initiator ("auto")
+ *  <p>    1 - Speak with order initiator before booking ("speak first")
+ *  <p>    2 - Accumulate
+ */
 class Enum589DayBookingInstTest {
-    /**
+    /*
      *  Information is the same for TAGS 589
      */
     @Test

@@ -17,12 +17,25 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum514RegistTransType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  514
+ *  RegistTransType
+ *  char
+ *  <p></p>
+ *  Identifies Registration Instructions transaction type
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - New
+ *  <p>    2 - Cancel
+ *  <p>    1 - Replace
+ */
 class Tag514EnuRegistTransTypeTest {
     @Test
     void FIX0514Test() {
@@ -38,5 +51,19 @@ class Tag514EnuRegistTransTypeTest {
     void Tag0514Test() {
         Tag514EnuRegistTransType tagData;
 
+        /*
+         * 0-2 types
+         */
+        tagData = new Tag514EnuRegistTransType( Enum514RegistTransType.NEW );
+        assertEquals( Enum514RegistTransType.NEW.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag514EnuRegistTransType( Enum514RegistTransType.REPLACE );
+        assertEquals( Enum514RegistTransType.REPLACE.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag514EnuRegistTransType( Enum514RegistTransType.CANCEL );
+        assertEquals( Enum514RegistTransType.CANCEL.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -23,6 +23,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  573
+ *  MatchStatus
+ *  char
+ *  <p></p>
+ *  The status of this trade with respect to matching or comparison.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Compared, matched or affirmed
+ *  <p>    1 - Uncompared, unmatched, or unaffired
+ *  <p>    2 - Advisory or alert
+ */
 public class Tag573EnuMatchStatus extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum573MatchStatus dataValue;
 

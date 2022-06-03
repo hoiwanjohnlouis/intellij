@@ -23,6 +23,17 @@ import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  638
+ *  PriorityIndicator
+ *  int
+ *  <p></p>
+ *  Indicates if a Cancel/Replace has caused an order to lose book priority.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Priority unchanged
+ *  <p>    1 - Lost Priority as result of order change
+ */
 public class Tag638EnuPriorityIndicator extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum638PriorityIndicator dataValue;
 

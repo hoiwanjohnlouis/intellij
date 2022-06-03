@@ -23,6 +23,28 @@ import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  465
+ *  QuantityType
+ *  int
+ *  <p></p>
+ *  Deprecated in FIX.4.4
+ *  <p></p>
+ *  Designates the type of quantities (e.g. OrderQty) specified.
+ *  <p>
+ *  Used for MBS and TIPS Fixed Income security types.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - SHARES
+ *  <p>    2 - BONDS
+ *  <p>    3 - CURRENTFACE
+ *  <p>    4 - ORIGINALFACE
+ *  <p>    5 - CURRENCY
+ *  <p></p>
+ *  <p>    6 - CONTRACTS
+ *  <p>    7 - OTHER
+ *  <p>    8 - PAR
+ */
 // @Deprecated
 public class Tag465EnuQuantityType extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum465QuantityType dataValue;

@@ -20,7 +20,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Information is the same for TAGS 497
+ *  497
+ *  FundRenewWaiv
+ *  char
+ *  <p></p>
+ *  A one character code identifying whether
+ *  the Fund based renewal commission is to be waived.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    N - No
+ *  <p>    Y - Yes
  */
 public enum Enum497FundRenewWaiv implements LogFIXString, LogVerboseString {
     /*

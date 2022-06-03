@@ -23,6 +23,20 @@ import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  559
+ *  SecurityListRequestType
+ *  int
+ *  <p></p>
+ *  Identifies the type/criteria of Security List Request
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Symbol
+ *  <p>    1 - SecurityType and/or CFICode
+ *  <p>    2 - Product
+ *  <p>    3 - TradingSessionID
+ *  <p>    4 - All Securities
+ */
 public class Tag559EnuSecurityListRequestType extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum559SecurityListRequestType dataValue;
 

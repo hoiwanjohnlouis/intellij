@@ -17,12 +17,24 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum638PriorityIndicator;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  638
+ *  PriorityIndicator
+ *  int
+ *  <p></p>
+ *  Indicates if a Cancel/Replace has caused an order to lose book priority.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Priority unchanged
+ *  <p>    1 - Lost Priority as result of order change
+ */
 class Tag638EnuPriorityIndicatorTest {
     @Test
     void FIX0638Test() {
@@ -38,5 +50,15 @@ class Tag638EnuPriorityIndicatorTest {
     void Tag0638Test() {
         Tag638EnuPriorityIndicator tagData;
 
+        /*
+         *  0-1 types
+         */
+        tagData = new Tag638EnuPriorityIndicator( Enum638PriorityIndicator.PRIORITY_UNCHANGED );
+        assertEquals( Enum638PriorityIndicator.PRIORITY_UNCHANGED.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag638EnuPriorityIndicator( Enum638PriorityIndicator.LOST_PRIORITY );
+        assertEquals( Enum638PriorityIndicator.LOST_PRIORITY.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

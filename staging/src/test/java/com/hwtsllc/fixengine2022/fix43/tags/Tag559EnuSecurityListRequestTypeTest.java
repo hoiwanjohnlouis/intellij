@@ -17,12 +17,27 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum559SecurityListRequestType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  559
+ *  SecurityListRequestType
+ *  int
+ *  <p></p>
+ *  Identifies the type/criteria of Security List Request
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Symbol
+ *  <p>    1 - SecurityType and/or CFICode
+ *  <p>    2 - Product
+ *  <p>    3 - TradingSessionID
+ *  <p>    4 - All Securities
+ */
 class Tag559EnuSecurityListRequestTypeTest {
     @Test
     void FIX0559Test() {
@@ -38,5 +53,27 @@ class Tag559EnuSecurityListRequestTypeTest {
     void Tag0559Test() {
         Tag559EnuSecurityListRequestType tagData;
 
+        /*
+         *  0-4 types
+         */
+        tagData = new Tag559EnuSecurityListRequestType( Enum559SecurityListRequestType.SYMBOL );
+        assertEquals( Enum559SecurityListRequestType.SYMBOL.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag559EnuSecurityListRequestType( Enum559SecurityListRequestType.SECURITY_TYPE );
+        assertEquals( Enum559SecurityListRequestType.SECURITY_TYPE.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag559EnuSecurityListRequestType( Enum559SecurityListRequestType.PRODUCT );
+        assertEquals( Enum559SecurityListRequestType.PRODUCT.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag559EnuSecurityListRequestType( Enum559SecurityListRequestType.TRADING_SESSION_ID );
+        assertEquals( Enum559SecurityListRequestType.TRADING_SESSION_ID.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag559EnuSecurityListRequestType( Enum559SecurityListRequestType.ALL_SECURITIES );
+        assertEquals( Enum559SecurityListRequestType.ALL_SECURITIES.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -22,8 +22,27 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  532
+ *  MassCancelRejectReason
+ *  int
+ *  <p></p>
+ *  Reason Order Mass Cancel Request was rejected
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Mass Cancel Not Supported
+ *  <p>    1 - Invalid or Unknown Security
+ *  <p>    2 - Invalid or Unkown Underlying security
+ *  <p>    3 - Invalid or Unknown Product
+ *  <p>    4 - Invalid or Unknown CFICode
+ *  <p></p>
+ *  <p>    5 - Invalid or Unknown SecurityType
+ *  <p>    6 - Invalid or Unknown Trading Session
+ *  <p>    99 - Other
+ *  <p>    or any value conforming to the data type Reserved100Plus
+ */
 class Enum532MassCancelRejectReasonTest {
-    /**
+    /*
      *  Information is the same for TAGS 532
      */
     @Test
@@ -81,6 +100,7 @@ class Enum532MassCancelRejectReasonTest {
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+
 
         enumType = Enum532MassCancelRejectReason.UNKNOWN_SECURITYTYPE;
         assertEquals("5", enumType.toFIXIDString());

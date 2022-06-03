@@ -17,12 +17,26 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum563MultiLegRptTypeReq;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  563
+ *  MultiLegRptTypeReq
+ *  int
+ *  <p></p>
+ *  Indicates the method of execution reporting requested by issuer of the order.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Report by mulitleg security only (do not report legs)
+ *  <p>    1 - Report by multileg security and by instrument legs belonging to the multileg security
+ *  <p>    2 - Report by instrument legs belonging to the multileg security only
+ *              (do not report status of multileg security)
+ */
 class Tag563EnuMultiLegRptTypeReqTest {
     @Test
     void FIX0563Test() {
@@ -38,5 +52,19 @@ class Tag563EnuMultiLegRptTypeReqTest {
     void Tag0563Test() {
         Tag563EnuMultiLegRptTypeReq tagData;
 
+        /*
+         *  0-2 types
+         */
+        tagData = new Tag563EnuMultiLegRptTypeReq( Enum563MultiLegRptTypeReq.MULITLEG_SECURITY_ONLY );
+        assertEquals( Enum563MultiLegRptTypeReq.MULITLEG_SECURITY_ONLY.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag563EnuMultiLegRptTypeReq( Enum563MultiLegRptTypeReq.MULTILEG_SECURITY_LEGS );
+        assertEquals( Enum563MultiLegRptTypeReq.MULTILEG_SECURITY_LEGS.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag563EnuMultiLegRptTypeReq( Enum563MultiLegRptTypeReq.INSTRUMENT_LEGS );
+        assertEquals( Enum563MultiLegRptTypeReq.INSTRUMENT_LEGS.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

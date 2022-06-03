@@ -23,6 +23,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  589
+ *  DayBookingInst
+ *  char
+ *  <p></p>
+ *  Indicates whether or not automatic booking can occur.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Can trigger booking without reference to the order initiator ("auto")
+ *  <p>    1 - Speak with order initiator before booking ("speak first")
+ *  <p>    2 - Accumulate
+ */
 public class Tag589EnuDayBookingInst extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum589DayBookingInst dataValue;
 

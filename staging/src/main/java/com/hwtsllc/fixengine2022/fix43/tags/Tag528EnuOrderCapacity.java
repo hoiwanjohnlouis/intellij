@@ -23,6 +23,29 @@ import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  528
+ *  OrderCapacity
+ *  char
+ *  <p></p>
+ *  Designates the capacity of the firm placing the order.
+ *  <p>
+ *  (as of FIX 4.3, this field replaced Rule80A (tag 47)
+ *  <p>
+ *  used in conjunction with OrderRestrictions (529) field)
+ *  <p>
+ *  (see Volume : "Glossary" for value definitions)
+ *  <p></p>
+ *  Valid values:
+ *  <p>    A - Agency
+ *  <p>    G - Proprietary
+ *  <p>    I - Individual
+ *  <p>    P - Principal
+ *              (Note for CMS purposes, "Principal" includes "Proprietary")
+ *  <p>    R - Riskless Principal
+ *  <p></p>
+ *  <p>    W - Agent for Other Member
+ */
 public class Tag528EnuOrderCapacity extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum528OrderCapacity dataValue;
 

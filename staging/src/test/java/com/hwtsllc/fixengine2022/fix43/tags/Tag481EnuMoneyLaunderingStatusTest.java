@@ -17,12 +17,27 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum481MoneyLaunderingStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  481
+ *  MoneyLaunderingStatus
+ *  char
+ *  <p></p>
+ *  A one character code identifying Money laundering status.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    Y - Passed
+ *  <p>    N - Not Checked
+ *  <p>    1 - Exempt - Below the Limit
+ *  <p>    2 - Exempt - Client Money Type exemption
+ *  <p>    3 - Exempt - Authorised Credit or financial institution
+ */
 class Tag481EnuMoneyLaunderingStatusTest {
     @Test
     void FIX0481Test() {
@@ -38,5 +53,37 @@ class Tag481EnuMoneyLaunderingStatusTest {
     void Tag0481Test() {
         Tag481EnuMoneyLaunderingStatus tagData;
 
+        /*
+         * Y, types
+         */
+        tagData = new Tag481EnuMoneyLaunderingStatus( Enum481MoneyLaunderingStatus.PASSED );
+        assertEquals( Enum481MoneyLaunderingStatus.PASSED.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+
+        /*
+         *  N, types
+         */
+        tagData = new Tag481EnuMoneyLaunderingStatus( Enum481MoneyLaunderingStatus.NOT_CHECKED );
+        assertEquals( Enum481MoneyLaunderingStatus.NOT_CHECKED.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+
+        /*
+         * 1-3, types
+         */
+        tagData = new Tag481EnuMoneyLaunderingStatus( Enum481MoneyLaunderingStatus.EXEMPT_BELOW_LIMIT );
+        assertEquals( Enum481MoneyLaunderingStatus.EXEMPT_BELOW_LIMIT.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag481EnuMoneyLaunderingStatus( Enum481MoneyLaunderingStatus.EXEMPT_CLIENT_MONEY );
+        assertEquals( Enum481MoneyLaunderingStatus.EXEMPT_CLIENT_MONEY.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag481EnuMoneyLaunderingStatus( Enum481MoneyLaunderingStatus.EXEMPT_AUTHORISED );
+        assertEquals( Enum481MoneyLaunderingStatus.EXEMPT_AUTHORISED.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

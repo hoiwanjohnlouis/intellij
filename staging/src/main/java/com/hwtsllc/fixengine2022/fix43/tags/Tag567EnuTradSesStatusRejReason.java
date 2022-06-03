@@ -23,6 +23,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  567
+ *  TradSesStatusRejReason
+ *  int
+ *  <p></p>
+ *  Indicates the reason a Trading Session Status Request was rejected.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Unknown or invalid TradingSessionID
+ *  <p>    99 - Other
+ *  <p>    or any value conforming to the data type Reserved100Plus
+ */
 public class Tag567EnuTradSesStatusRejReason extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum567TradSesStatusRejReason dataValue;
 

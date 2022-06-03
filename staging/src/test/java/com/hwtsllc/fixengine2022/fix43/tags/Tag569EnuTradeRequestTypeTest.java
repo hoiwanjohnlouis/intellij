@@ -17,12 +17,28 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum569TradeRequestType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  569
+ *  TradeRequestType
+ *  int
+ *  <p></p>
+ *  Type of Trade Capture Report.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - All Trades
+ *  <p>    1 - Matched trades matching criteria provided on request
+ *              (Parties, ExecID, TradeID, OrderID, Instrument, InputSource, etc.)
+ *  <p>    2 - Unmatched trades that match criteria
+ *  <p>    3 - Unreported trades that match criteria
+ *  <p>    4 - Advisories that match criteria
+ */
 class Tag569EnuTradeRequestTypeTest {
     @Test
     void FIX0569Test() {
@@ -38,5 +54,27 @@ class Tag569EnuTradeRequestTypeTest {
     void Tag0569Test() {
         Tag569EnuTradeRequestType tagData;
 
+        /*
+         *  0-4 types
+         */
+        tagData = new Tag569EnuTradeRequestType( Enum569TradeRequestType.ALL_TRADES );
+        assertEquals( Enum569TradeRequestType.ALL_TRADES.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag569EnuTradeRequestType( Enum569TradeRequestType.MATCHED_TRADES );
+        assertEquals( Enum569TradeRequestType.MATCHED_TRADES.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag569EnuTradeRequestType( Enum569TradeRequestType.UNMATCHED_TRADES );
+        assertEquals( Enum569TradeRequestType.UNMATCHED_TRADES.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag569EnuTradeRequestType( Enum569TradeRequestType.UNREPORTED_TRADES );
+        assertEquals( Enum569TradeRequestType.UNREPORTED_TRADES.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag569EnuTradeRequestType( Enum569TradeRequestType.ADVISORIES );
+        assertEquals( Enum569TradeRequestType.ADVISORIES.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

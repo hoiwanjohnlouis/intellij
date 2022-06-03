@@ -17,12 +17,32 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum531MassCancelResponse;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  531
+ *  MassCancelResponse
+ *  char
+ *  <p></p>
+ *  Specifies the action taken by counterparty order handling system
+ *  as a result of the Order Mass Cancel Request
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Cancel Request Rejected - See MassCancelRejectReason (532)
+ *  <p>    1 - Cancel orders for a security
+ *  <p>    2 - Cancel orders for an Underlying Security
+ *  <p>    3 - Cancel orders for a Product
+ *  <p>    4 - Cancel orders for a CFICode
+ *  <p></p>
+ *  <p>    5 - Cancel orders for a SecurityType
+ *  <p>    6 - Cancel orders for a trading session
+ *  <p>    7 - Cancel All Orders
+ */
 class Tag531EnuMassCancelResponseTest {
     @Test
     void FIX0531Test() {
@@ -38,5 +58,40 @@ class Tag531EnuMassCancelResponseTest {
     void Tag0531Test() {
         Tag531EnuMassCancelResponse tagData;
 
+        /*
+         *  0-7 types
+         */
+        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_REQUEST_REJECTED );
+        assertEquals( Enum531MassCancelResponse.CANCEL_REQUEST_REJECTED.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_SECURITY );
+        assertEquals( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_SECURITY.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_UNDERLYING );
+        assertEquals( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_UNDERLYING.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_PRODUCT );
+        assertEquals( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_PRODUCT.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_CFICODE );
+        assertEquals( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_CFICODE.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_SECURITYTYPE );
+        assertEquals( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_SECURITYTYPE.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_SESSION );
+        assertEquals( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_SESSION.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ALL_ORDERS );
+        assertEquals( Enum531MassCancelResponse.CANCEL_ALL_ORDERS.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

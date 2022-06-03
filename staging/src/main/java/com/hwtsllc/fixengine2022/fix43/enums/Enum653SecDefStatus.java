@@ -20,7 +20,23 @@ import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Information is the same for TAGS 653
+ *  653
+ *  SecDefStatus
+ *  int
+ *  <p></p>
+ *  Deprecated in FIX.4.2
+ *  <p></p>
+ *  State of a security definition request made to a market.
+ *  <p></p>
+ *  Useful for markets, such as derivatives markets, where market participants
+ *  are permitted to define instruments for subsequent trading
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Pending Approval
+ *  <p>    1 - Approved (Accepted)
+ *  <p>    2 - Rejected
+ *  <p>    3 - Unauthorized Request
+ *  <p>    4 - Invalid Definition Request
  */
 public enum Enum653SecDefStatus implements LogFIXString, LogVerboseString {
     /*

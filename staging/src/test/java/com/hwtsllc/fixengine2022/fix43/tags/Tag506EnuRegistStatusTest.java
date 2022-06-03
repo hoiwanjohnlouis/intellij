@@ -17,12 +17,26 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum506RegistStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  506
+ *  RegistStatus
+ *  char
+ *  <p></p>
+ *  Registration status as returned by the broker or  (for CIV) the fund manager:
+ *  <p></p>
+ *  Valid values:
+ *  <p>    A - Accepted
+ *  <p>    R - Rejected
+ *  <p>    H - Held
+ *  <p>    N - Reminder - i.e. Registration Instructions are still outstanding
+ */
 class Tag506EnuRegistStatusTest {
     @Test
     void FIX0506Test() {
@@ -38,5 +52,23 @@ class Tag506EnuRegistStatusTest {
     void Tag0506Test() {
         Tag506EnuRegistStatus tagData;
 
+        /*
+         * A, R, H, and N types
+         */
+        tagData = new Tag506EnuRegistStatus( Enum506RegistStatus.ACCEPTED );
+        assertEquals( Enum506RegistStatus.ACCEPTED.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag506EnuRegistStatus( Enum506RegistStatus.REJECTED );
+        assertEquals( Enum506RegistStatus.REJECTED.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag506EnuRegistStatus( Enum506RegistStatus.HELD );
+        assertEquals( Enum506RegistStatus.HELD.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag506EnuRegistStatus( Enum506RegistStatus.REMINDER );
+        assertEquals( Enum506RegistStatus.REMINDER.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

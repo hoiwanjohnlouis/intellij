@@ -23,7 +23,33 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  Information is the same for TAGS 635
+ *  635
+ *  ClearingFeeIndicator
+ *  String
+ *  <p></p>
+ *  Indicates type of fee being assessed of the customer
+ *  for trade executions at an exchange.
+ *  <p></p>
+ *  Applicable for futures markets only at this time.
+ *  <p></p>
+ *  (Values source CBOT, CME, NYBOT, and NYMEX):
+ *  Valid values:
+ *  <p>    1 - 1st year delegate trading for own account
+ *  <p>    2 - 2nd year delegate trading for own account
+ *  <p>    3 - 3rd year delegate trading for own account
+ *  <p>    4 - 4th year delegate trading for own account
+ *  <p>    5 - 5th year delegate trading for own account
+ *  <p></p>
+ *  <p>    9 - 6th year delegate trading for own account
+ *  <p>    B - CBOE Member
+ *  <p>    C - Non-member and Customer
+ *  <p>    E - Equity Member and Clearing Member
+ *  <p>    F - Full and Associate Member trading for own account and as floor brokers
+ *  <p></p>
+ *  <p>    H - 106.H and 106.J firms
+ *  <p>    I - GIM, IDEM and COM Membership Interest Holders
+ *  <p>    L - Lessee 106.F Employees
+ *  <p>    M - All other ownership types
  */
 class Enum635ClearingFeeIndicatorTest {
     @Test

@@ -22,8 +22,20 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  573
+ *  MatchStatus
+ *  char
+ *  <p></p>
+ *  The status of this trade with respect to matching or comparison.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Compared, matched or affirmed
+ *  <p>    1 - Uncompared, unmatched, or unaffired
+ *  <p>    2 - Advisory or alert
+ */
 class Enum573MatchStatusTest {
-    /**
+    /*
      *  Information is the same for TAGS 573
      */
     @Test

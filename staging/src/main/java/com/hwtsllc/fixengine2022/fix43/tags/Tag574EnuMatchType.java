@@ -23,6 +23,66 @@ import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  574
+ *  MatchType
+ *  String
+ *  <p></p>
+ *  The point in the matching process at which this trade was matched.
+ *  <p></p>
+ *  Valid values:
+ *  <p></p>
+ *  General Purpose
+ *  <p>    60 - One-Party Privately Negotiated Trade Report
+ *  <p>    61 - Two-Party Privately Negotiated Trade Report
+ *  <p>    62 - Continuous Auto-match
+ *  <p>    63 - Cross Auction
+ *  <p>    64 - Counter-Order Selection
+ *  <p></p>
+ *  <p>    65 - Call Auction
+ *  <p></p>
+ *  NASDAQ
+ *  <p>    M3 - ACT Accepted Trade
+ *  <p>    M4 - ACT Default Trade
+ *  <p>    M5 - ACT Default After M2
+ *  <p>    M6 - ACT M6 Match
+ *  <p></p>
+ *  NYSE and AMEX
+ *  <p>    A1 - Exact match on Trade Date, Stock Symbol, Quantity, Price, Trade Type,
+ *              and Special Trade Indicator, plus four badges and execution time (within two-minute window)
+ *  <p>    A2 - Exact match on Trade Date, Stock Symbol, Quantity, Price, Trade Type,
+ *              and Special Trade Indicator, plus four badges
+ *  <p>    A3 - Exact match on Trade Date, Stock Symbol, Quantity, Price, Trade Type,
+ *              and Special Trade Indicator, plus two badges and execution time (within two-minute window)
+ *  <p>    A4 - Exact match on Trade Date, Stock Symbol, Quantity, Price, Trade Type,
+ *              and Special Trade Indicator, plus two badges
+ *  <p>    A5 - Exact match on Trade Date, Stock Symbol, Quantity, Price, TradeType,
+ *              and Special Trade Indicator plus execution time (within two-minute window)
+ *  <p></p>
+ *  <p>    AQ - Compared records resulting from stamped advisories or specialist accepts/pair-offs
+ *  <p>    S1 - Summarized match using A1 exact match criteria except quantity is summaried
+ *  <p>    S2 - Summarized match using A2 exact match criteria except quantity is summarized
+ *  <p>    S3 - Summarized match using A3 exact match criteria except quantity is summarized
+ *  <p>    S4 - Summarized match using A4 exact match criteria except quantity is summarized
+ *  <p></p>
+ *  <p>    S5 - Summarized match using A5 exact match criteria except quantity is summarized
+ *  <p></p>
+ *  NYSE, AMEX and NASDAQ
+ *  <p>    M1 - Exact match on Trade Date, Stock Symbol, Quantity, Price, Trade Type,
+ *              and Special Trade Indicator minus badges And times: ACT M1 match
+ *  <p>    M2 - Summarized match minus badges and times: ACT M2 Match
+ *  <p>    MT - OCS Locked In: Non-ACT
+ *  <p></p>
+ *  OMX Order Routing
+ *  <p>    1 - One-Party Trade Report (privately negotiated trade)
+ *  <p>    2 - Two-Party Trade Report (privately negotiated trade)
+ *  <p>    3 - Confirmed Trade Report (reporting from recognized markets)
+ *  <p>    4 - Auto-match
+ *  <p>    5 - Cross Auction
+ *  <p></p>
+ *  <p>    6 - Counter-Order Selection
+ *  <p>    7 - Call Auction
+ */
 public class Tag574EnuMatchType extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum574MatchType dataValue;
 

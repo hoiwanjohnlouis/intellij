@@ -17,12 +17,25 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum497FundRenewWaiv;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  497
+ *  FundRenewWaiv
+ *  char
+ *  <p></p>
+ *  A one character code identifying whether
+ *  the Fund based renewal commission is to be waived.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    N - No
+ *  <p>    Y - Yes
+ */
 class Tag497EnuFundRenewWaivTest {
     @Test
     void FIX0497Test() {
@@ -38,5 +51,15 @@ class Tag497EnuFundRenewWaivTest {
     void Tag0497Test() {
         Tag497EnuFundRenewWaiv tagData;
 
+        /*
+         * N, Y types
+         */
+        tagData = new Tag497EnuFundRenewWaiv( Enum497FundRenewWaiv.NO );
+        assertEquals( Enum497FundRenewWaiv.NO.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag497EnuFundRenewWaiv( Enum497FundRenewWaiv.YES );
+        assertEquals( Enum497FundRenewWaiv.YES.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

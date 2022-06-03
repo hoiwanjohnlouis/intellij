@@ -20,7 +20,19 @@ import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Information is the same for TAGS 560
+ *  560
+ *  SecurityRequestResult
+ *  int
+ *  <p></p>
+ *  The results returned to a Security Request message
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Valid request
+ *  <p>    1 - Invalid or unsupported request
+ *  <p>    2 - No instruments found that match selection criteria
+ *  <p>    3 - Not authorized to retrieve instrument data
+ *  <p>    4 - Instrument data temporarily unavailable
+ *  <p>    5 - Request for instrument data not supported
  */
 public enum Enum560SecurityRequestResult implements LogFIXString, LogVerboseString {
     /*

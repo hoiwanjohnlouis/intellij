@@ -17,12 +17,32 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum550CrossPrioritization;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  550
+ *  CrossPrioritization
+ *  int
+ *  <p></p>
+ *  Indicates if one side or the other of a cross order should be prioritized.
+ *  <p></p>
+ *  The definition of prioritization is left to the market.
+ *  <p></p>
+ *  In some markets, - prioritization means which side of the cross order is applied to the market first.
+ *  <p></p>
+ *  In other markets, - prioritization may mean that the prioritized side is fully executed
+ *  (sometimes referred to as the side being protected).
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - None
+ *  <p>    1 - Buy side is prioritized
+ *  <p>    2 - Sell side is prioritized
+ */
 class Tag550EnuCrossPrioritizationTest {
     @Test
     void FIX0550Test() {
@@ -38,5 +58,19 @@ class Tag550EnuCrossPrioritizationTest {
     void Tag0550Test() {
         Tag550EnuCrossPrioritization tagData;
 
+        /*
+         *  0-2 types
+         */
+        tagData = new Tag550EnuCrossPrioritization( Enum550CrossPrioritization.NONE );
+        assertEquals( Enum550CrossPrioritization.NONE.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag550EnuCrossPrioritization( Enum550CrossPrioritization.BUY_PRIORITY );
+        assertEquals( Enum550CrossPrioritization.BUY_PRIORITY.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag550EnuCrossPrioritization( Enum550CrossPrioritization.SELL_PRIORITY );
+        assertEquals( Enum550CrossPrioritization.SELL_PRIORITY.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

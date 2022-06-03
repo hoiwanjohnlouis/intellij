@@ -22,8 +22,20 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  590
+ *  BookingUnit
+ *  char
+ *  <p></p>
+ *  Indicates what constitutes a bookable unit.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Each partial execution is a bookable unit
+ *  <p>    1 - Aggregate partial executions on this order, and book one trade per order
+ *  <p>    2 - Aggregate executions for this symbol, side, and settlement date
+ */
 class Enum590BookingUnitTest {
-    /**
+    /*
      *  Information is the same for TAGS 590
      */
     @Test

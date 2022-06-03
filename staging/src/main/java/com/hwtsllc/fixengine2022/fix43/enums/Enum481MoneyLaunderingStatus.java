@@ -20,7 +20,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Information is the same for TAGS 481
+ *  481
+ *  MoneyLaunderingStatus
+ *  char
+ *  <p></p>
+ *  A one character code identifying Money laundering status.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    Y - Passed
+ *  <p>    N - Not Checked
+ *  <p>    1 - Exempt - Below the Limit
+ *  <p>    2 - Exempt - Client Money Type exemption
+ *  <p>    3 - Exempt - Authorised Credit or financial institution
  */
 public enum Enum481MoneyLaunderingStatus implements LogFIXString, LogVerboseString {
     /*

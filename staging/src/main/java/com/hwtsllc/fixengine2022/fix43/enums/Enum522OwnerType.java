@@ -20,7 +20,28 @@ import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Information is the same for TAGS 522
+ *  522
+ *  OwnerType
+ *  int
+ *  <p></p>
+ *  Identifies the type of owner.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Individual Investor
+ *  <p>    2 - Public Company
+ *  <p>    3 - Private Company
+ *  <p>    4 - Individual Trustee
+ *  <p>    5 - Company Trustee
+ *  <p></p>
+ *  <p>    6 - Pension Plan
+ *  <p>    7 - Custodian Under Gifts to Minors Act
+ *  <p>    8 - Trusts
+ *  <p>    9 - Fiduciaries
+ *  <p>    10 - Networking Sub-account
+ *  <p></p>
+ *  <p>    11 - Non-profit organization
+ *  <p>    12 - Corporate Body
+ *  <p>    13 - Nominee
  */
 public enum Enum522OwnerType implements LogFIXString, LogVerboseString {
     /*

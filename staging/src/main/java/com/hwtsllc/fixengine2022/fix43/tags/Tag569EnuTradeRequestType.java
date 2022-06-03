@@ -23,6 +23,21 @@ import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  569
+ *  TradeRequestType
+ *  int
+ *  <p></p>
+ *  Type of Trade Capture Report.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - All Trades
+ *  <p>    1 - Matched trades matching criteria provided on request
+ *              (Parties, ExecID, TradeID, OrderID, Instrument, InputSource, etc.)
+ *  <p>    2 - Unmatched trades that match criteria
+ *  <p>    3 - Unreported trades that match criteria
+ *  <p>    4 - Advisories that match criteria
+ */
 public class Tag569EnuTradeRequestType extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum569TradeRequestType dataValue;
 

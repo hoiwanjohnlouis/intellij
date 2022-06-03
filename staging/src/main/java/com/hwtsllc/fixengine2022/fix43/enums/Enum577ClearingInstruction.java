@@ -20,7 +20,30 @@ import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Information is the same for TAGS 577
+ *  577
+ *  ClearingInstruction
+ *  int
+ *  <p></p>
+ *  Eligibility of this trade for clearing and central counterparty processing
+ *  values above 4000 are reserved for agreement between parties
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Process normally
+ *  <p>    1 - Exclude from all netting
+ *  <p>    2 - Bilateral netting only
+ *  <p>    3 - Ex clearing
+ *  <p>    4 - Special trade
+ *  <p></p>
+ *  <p>    5 - Multilateral netting
+ *  <p>    6 - Clear against central counterparty
+ *  <p>    7 - Exclude from central counterparty
+ *  <p>    8 - Manual mode (pre-posting and/or pre-giveup)
+ *  <p>    9 - Automatic posting mode (trade posting to the position account number specified)
+ *  <p></p>
+ *  <p>    10 - Automatic give-up mode (trade give-up to the give-up destination number specified)
+ *  <p>    11 - Qualified Service Representative QSR
+ *  <p>    12 - Customer trade
+ *  <p>    13 - Self clearing
  */
 public enum Enum577ClearingInstruction implements LogFIXString, LogVerboseString {
     /*

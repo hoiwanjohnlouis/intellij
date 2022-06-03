@@ -20,7 +20,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Information is the same for TAGS 552
+ *  552
+ *  NoSides
+ *  NumInGroup
+ *  <p></p>
+ *  Number of Side repeating group instances.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - One Side
+ *  <p>    2 - Both Sides
  */
 public enum Enum552NoSides implements LogFIXString, LogVerboseString {
     /*

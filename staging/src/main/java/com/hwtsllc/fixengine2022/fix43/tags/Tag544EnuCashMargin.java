@@ -23,6 +23,26 @@ import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  544
+ *  CashMargin
+ *  char
+ *  <p></p>
+ *  Identifies whether an order is a margin order or a non-margin order.
+ *  <p></p>
+ *  This is primarily used when sending orders to Japanese exchanges to
+ *  indicate sell margin or buy to cover.
+ *  <p></p>
+ *  The same tag could be assigned also by buy-side to indicate the intent
+ *  to sell or buy margin and the sell-side to accept or reject
+ *  <p></p>
+ *  (base on some validation criteria) the margin request.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Cash
+ *  <p>    2 - Margin Open
+ *  <p>    3 - Margin Close
+ */
 public class Tag544EnuCashMargin extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum544CashMargin dataValue;
 

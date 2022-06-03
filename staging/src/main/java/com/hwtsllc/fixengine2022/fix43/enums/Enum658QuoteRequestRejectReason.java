@@ -20,7 +20,28 @@ import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Information is the same for TAGS 658
+ *  658
+ *  QuoteRequestRejectReason
+ *  int
+ *  <p></p>
+ *  Reason Quote was rejected:
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Unknown Symbol (Security)
+ *  <p>    2 - Exchange (Security) Closed
+ *  <p>    3 - Quote Request Exceeds Limit
+ *  <p>    4 - Too Late to enter
+ *  <p>    5 - Invalid Price
+ *  <p></p>
+ *  <p>    6 - Not Authorized To Request Quote
+ *  <p>    7 - No Match For Inquiry
+ *  <p>    8 - No Market For Instrument
+ *  <p>    9 - No Inventory
+ *  <p>    10 - Pass
+ *  <p></p>
+ *  <p>    11 - Insufficient credit
+ *  <p>    99 - Other
+ *  <p>    or any value conforming to the data type Reserved100Plus
  */
 public enum Enum658QuoteRequestRejectReason implements LogFIXString, LogVerboseString {
     /*

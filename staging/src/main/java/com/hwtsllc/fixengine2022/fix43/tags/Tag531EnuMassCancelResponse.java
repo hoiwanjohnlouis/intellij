@@ -23,6 +23,25 @@ import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  531
+ *  MassCancelResponse
+ *  char
+ *  <p></p>
+ *  Specifies the action taken by counterparty order handling system
+ *  as a result of the Order Mass Cancel Request
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Cancel Request Rejected - See MassCancelRejectReason (532)
+ *  <p>    1 - Cancel orders for a security
+ *  <p>    2 - Cancel orders for an Underlying Security
+ *  <p>    3 - Cancel orders for a Product
+ *  <p>    4 - Cancel orders for a CFICode
+ *  <p></p>
+ *  <p>    5 - Cancel orders for a SecurityType
+ *  <p>    6 - Cancel orders for a trading session
+ *  <p>    7 - Cancel All Orders
+ */
 public class Tag531EnuMassCancelResponse extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum531MassCancelResponse dataValue;
 

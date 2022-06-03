@@ -23,6 +23,19 @@ import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  480
+ *  CancellationRights
+ *  char
+ *  <p></p>
+ *  For CIV – A one character code identifying whether Cancellation rights/Cooling off period applies.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    Y - Yes
+ *  <p>    N - No - Execution Only
+ *  <p>    M - No - Waiver agreement
+ *  <p>    O - No - Institutional
+ */
 public class Tag480EnuCancellationRights extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum480CancellationRights dataValue;
 

@@ -22,8 +22,39 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  537
+ *  QuoteType
+ *  int
+ *  <p></p>
+ *  Identifies the type of quote.
+ *  <p></p>
+ *  An indicative quote is used to inform a counterparty of a market.
+ *  <p></p>
+ *  An indicative quote does not result directly in a trade.
+ *  <p></p>
+ *  A tradeable quote is submitted to a market and will result directly
+ *  in a trade against other orders and quotes in a market.
+ *  <p></p>
+ *  A restricted tradeable quote is submitted to a market
+ *  and within a certain restriction (possibly based upon price or quantity)
+ *  will automatically trade against orders.
+ *  <p></p>
+ *  Order that do not comply with restrictions are sent to
+ *  the quote issuer who can choose to accept or decline the order.
+ *  <p></p>
+ *  A counter quote is used in the negotiation model.
+ *  <p>
+ *  See Volume 7 – Product: Fixed Income for example usage.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Indicative
+ *  <p>    1 - Tradeable
+ *  <p>    2 - Restricted Tradeable
+ *  <p>    3 - Counter (tradeable)
+ */
 class Enum537QuoteTypeTest {
-    /**
+    /*
      *  Information is the same for TAGS 537
      */
     @Test

@@ -23,6 +23,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  590
+ *  BookingUnit
+ *  char
+ *  <p></p>
+ *  Indicates what constitutes a bookable unit.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Each partial execution is a bookable unit
+ *  <p>    1 - Aggregate partial executions on this order, and book one trade per order
+ *  <p>    2 - Aggregate executions for this symbol, side, and settlement date
+ */
 public class Tag590EnuBookingUnit extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum590BookingUnit dataValue;
 

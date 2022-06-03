@@ -22,8 +22,26 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  487
+ *  TradeReportTransType
+ *  int
+ *  <p></p>
+ *  Identifies Trade Report message transaction type
+ *  <p></p>
+ *  (Prior to FIX 4.4 this field was of type char)
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - New
+ *  <p>    1 - Cancel
+ *  <p>    2 - Replace
+ *  <p>    3 - Release
+ *  <p>    4 - Reverse
+ *  <p></p>
+ *  <p>    5 - Cancel Due To Back Out of Trade
+ */
 class Enum487TradeReportTransTypeTest {
-    /**
+    /*
      *  Information is the same for TAGS 487
      */
     @Test

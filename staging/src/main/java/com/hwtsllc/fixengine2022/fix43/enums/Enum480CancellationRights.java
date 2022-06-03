@@ -20,7 +20,17 @@ import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Information is the same for TAGS 480
+ *  480
+ *  CancellationRights
+ *  char
+ *  <p></p>
+ *  For CIV – A one character code identifying whether Cancellation rights/Cooling off period applies.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    Y - Yes
+ *  <p>    N - No - Execution Only
+ *  <p>    M - No - Waiver agreement
+ *  <p>    O - No - Institutional
  */
 public enum Enum480CancellationRights implements LogFIXString, LogVerboseString {
     /*

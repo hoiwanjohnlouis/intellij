@@ -17,12 +17,40 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum477DistribPaymentMethod;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  477 (same as 477,)
+ *  DistribPaymentMethod
+ *  int
+ *  <p></p>
+ *  A code identifying the payment method for a (fractional) distribution.
+ *  13 through 998 are reserved for future use
+ *  <p>
+ *  Values above 1000 are available for use by private agreement among counterparties
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - CREST
+ *  <p>    2 - NSCC
+ *  <p>    3 - Euroclear
+ *  <p>    4 - Clearstream
+ *  <p>    5 - Cheque
+ *  <p></p>
+ *  <p>    6 - Telegraphic Transfer
+ *  <p>    7 - Fed Wire
+ *  <p>    8 - Direct Credit (BECS,BACS)
+ *  <p>    9 - ACH Debit
+ *  <p>    10 - BPAY
+ *  <p></p>
+ *  <p>    11 - High Value Clearing System HVACS
+ *  <p>    12 - Reinvest In Fund
+ *  <p>    or any value conforming to the data type Reserved1000Plus
+ */
 class Tag477EnuDistribPaymentMethodTest {
     @Test
     void FIX0477Test() {
@@ -38,5 +66,54 @@ class Tag477EnuDistribPaymentMethodTest {
     void Tag0477Test() {
         Tag477EnuDistribPaymentMethod tagData;
 
+        tagData = new Tag477EnuDistribPaymentMethod( Enum477DistribPaymentMethod.CREST );
+        assertEquals( Enum477DistribPaymentMethod.CREST.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag477EnuDistribPaymentMethod( Enum477DistribPaymentMethod.NSCC );
+        assertEquals( Enum477DistribPaymentMethod.NSCC.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag477EnuDistribPaymentMethod( Enum477DistribPaymentMethod.EUROCLEAR );
+        assertEquals( Enum477DistribPaymentMethod.EUROCLEAR.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag477EnuDistribPaymentMethod( Enum477DistribPaymentMethod.CLEARSTREAM );
+        assertEquals( Enum477DistribPaymentMethod.CLEARSTREAM.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag477EnuDistribPaymentMethod( Enum477DistribPaymentMethod.CHEQUE );
+        assertEquals( Enum477DistribPaymentMethod.CHEQUE.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        tagData = new Tag477EnuDistribPaymentMethod( Enum477DistribPaymentMethod.TELEGRAPHIC_TRANSFER );
+        assertEquals( Enum477DistribPaymentMethod.TELEGRAPHIC_TRANSFER.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag477EnuDistribPaymentMethod( Enum477DistribPaymentMethod.FED_WIRE );
+        assertEquals( Enum477DistribPaymentMethod.FED_WIRE.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag477EnuDistribPaymentMethod( Enum477DistribPaymentMethod.DIRECT_CREDIT );
+        assertEquals( Enum477DistribPaymentMethod.DIRECT_CREDIT.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag477EnuDistribPaymentMethod( Enum477DistribPaymentMethod.ACH_CREDIT );
+        assertEquals( Enum477DistribPaymentMethod.ACH_CREDIT.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag477EnuDistribPaymentMethod( Enum477DistribPaymentMethod.BPAY );
+        assertEquals( Enum477DistribPaymentMethod.BPAY.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        tagData = new Tag477EnuDistribPaymentMethod( Enum477DistribPaymentMethod.HIGH_VALUE_CLEARING_SYSTEM );
+        assertEquals( Enum477DistribPaymentMethod.HIGH_VALUE_CLEARING_SYSTEM.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag477EnuDistribPaymentMethod( Enum477DistribPaymentMethod.REINVEST_IN_FUND );
+        assertEquals( Enum477DistribPaymentMethod.REINVEST_IN_FUND.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

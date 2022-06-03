@@ -22,8 +22,23 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  569
+ *  TradeRequestType
+ *  int
+ *  <p></p>
+ *  Type of Trade Capture Report.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - All Trades
+ *  <p>    1 - Matched trades matching criteria provided on request
+ *              (Parties, ExecID, TradeID, OrderID, Instrument, InputSource, etc.)
+ *  <p>    2 - Unmatched trades that match criteria
+ *  <p>    3 - Unreported trades that match criteria
+ *  <p>    4 - Advisories that match criteria
+ */
 class Enum569TradeRequestTypeTest {
-    /**
+    /*
      *  Information is the same for TAGS 569
      */
     @Test

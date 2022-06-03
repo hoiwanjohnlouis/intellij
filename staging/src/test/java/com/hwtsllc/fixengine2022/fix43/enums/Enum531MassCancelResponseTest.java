@@ -22,8 +22,27 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  531
+ *  MassCancelResponse
+ *  char
+ *  <p></p>
+ *  Specifies the action taken by counterparty order handling system
+ *  as a result of the Order Mass Cancel Request
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Cancel Request Rejected - See MassCancelRejectReason (532)
+ *  <p>    1 - Cancel orders for a security
+ *  <p>    2 - Cancel orders for an Underlying Security
+ *  <p>    3 - Cancel orders for a Product
+ *  <p>    4 - Cancel orders for a CFICode
+ *  <p></p>
+ *  <p>    5 - Cancel orders for a SecurityType
+ *  <p>    6 - Cancel orders for a trading session
+ *  <p>    7 - Cancel All Orders
+ */
 class Enum531MassCancelResponseTest {
-    /**
+    /*
      *  Information is the same for TAGS 531
      */
     @Test

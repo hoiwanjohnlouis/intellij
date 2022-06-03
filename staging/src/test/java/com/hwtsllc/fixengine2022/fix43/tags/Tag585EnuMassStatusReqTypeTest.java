@@ -17,12 +17,31 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum585MassStatusReqType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  585
+ *  MassStatusReqType
+ *  int
+ *  <p></p>
+ *  Mass Status Request Type
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Status for orders for a Security
+ *  <p>    2 - Status for orders for an Underlying Security
+ *  <p>    3 - Status for orders for a Product
+ *  <p>    4 - Status for orders for a CFICode
+ *  <p>    5 - Status for orders for a SecurityType
+ *  <p></p>
+ *  <p>    6 - Status for orders for a trading session
+ *  <p>    7 - Status for all orders
+ *  <p>    8 - Status for orders for a PartyID
+ */
 class Tag585EnuMassStatusReqTypeTest {
     @Test
     void FIX0585Test() {
@@ -38,5 +57,40 @@ class Tag585EnuMassStatusReqTypeTest {
     void Tag0585Test() {
         Tag585EnuMassStatusReqType tagData;
 
+        /*
+         *  1-8 types
+         */
+        tagData = new Tag585EnuMassStatusReqType( Enum585MassStatusReqType.STATUS_ORDERS_FOR_SECURITY );
+        assertEquals( Enum585MassStatusReqType.STATUS_ORDERS_FOR_SECURITY.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag585EnuMassStatusReqType( Enum585MassStatusReqType.STATUS_ORDERS_FOR_UNDERLYING );
+        assertEquals( Enum585MassStatusReqType.STATUS_ORDERS_FOR_UNDERLYING.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag585EnuMassStatusReqType( Enum585MassStatusReqType.STATUS_ORDERS_FOR_PRODUCT );
+        assertEquals( Enum585MassStatusReqType.STATUS_ORDERS_FOR_PRODUCT.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag585EnuMassStatusReqType( Enum585MassStatusReqType.STATUS_ORDERS_FOR_CFICODE );
+        assertEquals( Enum585MassStatusReqType.STATUS_ORDERS_FOR_CFICODE.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag585EnuMassStatusReqType( Enum585MassStatusReqType.STATUS_ORDERS_FOR_SECURITYTYPE );
+        assertEquals( Enum585MassStatusReqType.STATUS_ORDERS_FOR_SECURITYTYPE.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        tagData = new Tag585EnuMassStatusReqType( Enum585MassStatusReqType.STATUS_ORDERS_FOR_SESSION );
+        assertEquals( Enum585MassStatusReqType.STATUS_ORDERS_FOR_SESSION.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag585EnuMassStatusReqType( Enum585MassStatusReqType.STATUS_ALL_ORDERS );
+        assertEquals( Enum585MassStatusReqType.STATUS_ALL_ORDERS.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag585EnuMassStatusReqType( Enum585MassStatusReqType.STATUS_ORDERS_FOR_PARTYID );
+        assertEquals( Enum585MassStatusReqType.STATUS_ORDERS_FOR_PARTYID.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

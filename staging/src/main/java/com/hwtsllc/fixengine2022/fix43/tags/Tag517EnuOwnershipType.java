@@ -23,6 +23,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  517
+ *  OwnershipType
+ *  char
+ *  <p></p>
+ *  The relationship between Registration parties.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    J - Joint Investors
+ *  <p>    T - Tenants in Common
+ *  <p>    2 - Joint Trustees
+ */
 public class Tag517EnuOwnershipType extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum517OwnershipType dataValue;
 

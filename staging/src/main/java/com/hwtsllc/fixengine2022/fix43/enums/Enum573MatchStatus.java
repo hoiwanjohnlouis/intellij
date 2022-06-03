@@ -20,7 +20,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Information is the same for TAGS 573
+ *  573
+ *  MatchStatus
+ *  char
+ *  <p></p>
+ *  The status of this trade with respect to matching or comparison.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Compared, matched or affirmed
+ *  <p>    1 - Uncompared, unmatched, or unaffired
+ *  <p>    2 - Advisory or alert
  */
 public enum Enum573MatchStatus implements LogFIXString, LogVerboseString {
     /*

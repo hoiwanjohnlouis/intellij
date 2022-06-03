@@ -22,8 +22,19 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  552
+ *  NoSides
+ *  NumInGroup
+ *  <p></p>
+ *  Number of Side repeating group instances.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - One Side
+ *  <p>    2 - Both Sides
+ */
 class Enum552NoSidesTest {
-    /**
+    /*
      *  Information is the same for TAGS 552
      */
     @Test

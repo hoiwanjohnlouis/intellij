@@ -22,8 +22,21 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  506
+ *  RegistStatus
+ *  char
+ *  <p></p>
+ *  Registration status as returned by the broker or  (for CIV) the fund manager:
+ *  <p></p>
+ *  Valid values:
+ *  <p>    A - Accepted
+ *  <p>    R - Rejected
+ *  <p>    H - Held
+ *  <p>    N - Reminder - i.e. Registration Instructions are still outstanding
+ */
 class Enum506RegistStatusTest {
-    /**
+    /*
      *  Information is the same for TAGS 506
      */
     @Test

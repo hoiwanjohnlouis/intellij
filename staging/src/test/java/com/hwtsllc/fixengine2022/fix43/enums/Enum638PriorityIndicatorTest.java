@@ -22,8 +22,19 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  638
+ *  PriorityIndicator
+ *  int
+ *  <p></p>
+ *  Indicates if a Cancel/Replace has caused an order to lose book priority.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Priority unchanged
+ *  <p>    1 - Lost Priority as result of order change
+ */
 class Enum638PriorityIndicatorTest {
-    /**
+    /*
      *  Information is the same for TAGS 638
      */
     @Test

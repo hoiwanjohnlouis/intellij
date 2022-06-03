@@ -22,8 +22,32 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  529
+ *  OrderRestrictions
+ *  MultipleCharValue
+ *  <p></p>
+ *  Restrictions associated with an order.
+ *  <p>
+ *  If more than one restriction is applicable to an order,
+ *  this field can contain multiple instructions separated by space.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Program Trade
+ *  <p>    2 - Index Arbitrage
+ *  <p>    3 - Non-Index Arbitrage
+ *  <p>    4 - Competing Market Maker
+ *  <p>    5 - Acting as Market Maker or Specialist in the security
+ *  <p></p>
+ *  <p>    6 - Acting as Market Maker of Specialist in the
+ *              underlying security of a derivative security
+ *  <p>    7 - Foreign Entity (of foreign government or regulatory jurisdiction)
+ *  <p>    8 - External Market Participant
+ *  <p>    9 - External Inter-connected Market Linkage
+ *  <p>    A - Riskless Arbitrage
+ */
 class Enum529OrderRestrictionsTest {
-    /**
+    /*
      *  Information is the same for TAGS 529
      */
     @Test
@@ -81,6 +105,7 @@ class Enum529OrderRestrictionsTest {
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+
 
         enumType = Enum529OrderRestrictions.SPECIALIST_IN_UNDERLYING_SECURITY;
         assertEquals("6", enumType.toFIXIDString());

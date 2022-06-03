@@ -17,12 +17,25 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum567TradSesStatusRejReason;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  567
+ *  TradSesStatusRejReason
+ *  int
+ *  <p></p>
+ *  Indicates the reason a Trading Session Status Request was rejected.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Unknown or invalid TradingSessionID
+ *  <p>    99 - Other
+ *  <p>    or any value conforming to the data type Reserved100Plus
+ */
 class Tag567EnuTradSesStatusRejReasonTest {
     @Test
     void FIX0567Test() {
@@ -38,5 +51,22 @@ class Tag567EnuTradSesStatusRejReasonTest {
     void Tag0567Test() {
         Tag567EnuTradSesStatusRejReason tagData;
 
+        /*
+         *  1, 99, type(s)
+         */
+
+        /*
+         *  1, type(s)
+         */
+        tagData = new Tag567EnuTradSesStatusRejReason( Enum567TradSesStatusRejReason.UNKNOWN_TRADING_SESSION_ID );
+        assertEquals( Enum567TradSesStatusRejReason.UNKNOWN_TRADING_SESSION_ID.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        /*
+         *  99, type(s)
+         */
+        tagData = new Tag567EnuTradSesStatusRejReason( Enum567TradSesStatusRejReason.OTHER );
+        assertEquals( Enum567TradSesStatusRejReason.OTHER.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

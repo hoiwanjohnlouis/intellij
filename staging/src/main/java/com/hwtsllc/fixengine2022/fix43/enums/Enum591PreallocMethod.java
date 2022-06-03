@@ -20,7 +20,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Information is the same for TAGS 591
+ *  591
+ *  PreallocMethod
+ *  char
+ *  <p></p>
+ *  Indicates the method of preallocation.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Pro-rata
+ *  <p>    1 - Do not pro-rata - discuss first
  */
 public enum Enum591PreallocMethod implements LogFIXString, LogVerboseString {
     /*

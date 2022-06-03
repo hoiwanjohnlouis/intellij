@@ -20,7 +20,17 @@ import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Information is the same for TAGS 563
+ *  563
+ *  MultiLegRptTypeReq
+ *  int
+ *  <p></p>
+ *  Indicates the method of execution reporting requested by issuer of the order.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Report by mulitleg security only (do not report legs)
+ *  <p>    1 - Report by multileg security and by instrument legs belonging to the multileg security
+ *  <p>    2 - Report by instrument legs belonging to the multileg security only
+ *              (do not report status of multileg security)
  */
 public enum Enum563MultiLegRptTypeReq implements LogFIXString, LogVerboseString {
     /*

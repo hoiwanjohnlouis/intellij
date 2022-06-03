@@ -17,12 +17,32 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum532MassCancelRejectReason;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  532
+ *  MassCancelRejectReason
+ *  int
+ *  <p></p>
+ *  Reason Order Mass Cancel Request was rejected
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Mass Cancel Not Supported
+ *  <p>    1 - Invalid or Unknown Security
+ *  <p>    2 - Invalid or Unkown Underlying security
+ *  <p>    3 - Invalid or Unknown Product
+ *  <p>    4 - Invalid or Unknown CFICode
+ *  <p></p>
+ *  <p>    5 - Invalid or Unknown SecurityType
+ *  <p>    6 - Invalid or Unknown Trading Session
+ *  <p>    99 - Other
+ *  <p>    or any value conforming to the data type Reserved100Plus
+ */
 class Tag532EnuMassCancelRejectReasonTest {
     @Test
     void FIX0532Test() {
@@ -38,5 +58,48 @@ class Tag532EnuMassCancelRejectReasonTest {
     void Tag0532Test() {
         Tag532EnuMassCancelRejectReason tagData;
 
+        /*
+         *  0-6, 99, types
+         */
+
+        /*
+         *  0-6, types
+         */
+        tagData = new Tag532EnuMassCancelRejectReason( Enum532MassCancelRejectReason.MASS_CANCEL_NOT_SUPPORTED );
+        assertEquals( Enum532MassCancelRejectReason.MASS_CANCEL_NOT_SUPPORTED.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag532EnuMassCancelRejectReason( Enum532MassCancelRejectReason.UNKNOWN_SECURITY );
+        assertEquals( Enum532MassCancelRejectReason.UNKNOWN_SECURITY.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag532EnuMassCancelRejectReason( Enum532MassCancelRejectReason.UNKNOWN_UNDERLYING );
+        assertEquals( Enum532MassCancelRejectReason.UNKNOWN_UNDERLYING.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag532EnuMassCancelRejectReason( Enum532MassCancelRejectReason.UNKNOWN_PRODUCT );
+        assertEquals( Enum532MassCancelRejectReason.UNKNOWN_PRODUCT.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag532EnuMassCancelRejectReason( Enum532MassCancelRejectReason.UNKNOWN_CFICODE );
+        assertEquals( Enum532MassCancelRejectReason.UNKNOWN_CFICODE.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        tagData = new Tag532EnuMassCancelRejectReason( Enum532MassCancelRejectReason.UNKNOWN_SECURITYTYPE );
+        assertEquals( Enum532MassCancelRejectReason.UNKNOWN_SECURITYTYPE.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag532EnuMassCancelRejectReason( Enum532MassCancelRejectReason.UNKNOWN_SESSION );
+        assertEquals( Enum532MassCancelRejectReason.UNKNOWN_SESSION.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        /*
+         *  99, type
+         */
+        tagData = new Tag532EnuMassCancelRejectReason( Enum532MassCancelRejectReason.OTHER );
+        assertEquals( Enum532MassCancelRejectReason.OTHER.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

@@ -22,8 +22,25 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  530
+ *  MassCancelRequestType
+ *  char
+ *  <p></p>
+ *  Specifies scope of Order Mass Cancel Request.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Cancel orders for a security
+ *  <p>    2 - Cancel orders for an underlying security
+ *  <p>    3 - Cancel orders for a Product
+ *  <p>    4 - Cancel orders for a CFICode
+ *  <p>    5 - Cancel orders for a SecurityType
+ *  <p></p>
+ *  <p>    6 - Cancel orders for a trading session
+ *  <p>    7 - Cancel all orders
+ */
 class Enum530MassCancelRequestTypeTest {
-    /**
+    /*
      *  Information is the same for TAGS 530
      */
     @Test
@@ -77,6 +94,7 @@ class Enum530MassCancelRequestTypeTest {
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+
 
         enumType = Enum530MassCancelRequestType.CANCEL_ORDERS_FOR_SESSION;
         assertEquals("6", enumType.toFIXIDString());

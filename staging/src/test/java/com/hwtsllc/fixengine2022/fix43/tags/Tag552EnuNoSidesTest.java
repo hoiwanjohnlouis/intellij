@@ -17,16 +17,28 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum552NoSides;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-class Tag552NumNoSidesTest {
+/**
+ *  552
+ *  NoSides
+ *  NumInGroup
+ *  <p></p>
+ *  Number of Side repeating group instances.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - One Side
+ *  <p>    2 - Both Sides
+ */
+class Tag552EnuNoSidesTest {
     @Test
     void FIX0552Test() {
-        FIX43 fixData = FIX43.FIX552_NUM_NO_SIDES;
+        FIX43 fixData = FIX43.FIX552_ENU_NO_SIDES;
         assertEquals( "552", fixData.toFIXIDString());
         assertEquals( "NO_SIDES", fixData.toFIXNameString());
         assertEquals( "NoSides", fixData.toFIXDescriptionString());
@@ -36,7 +48,17 @@ class Tag552NumNoSidesTest {
     }
     @Test
     void Tag0552Test() {
-        Tag552NumNoSides tagData;
+        Tag552EnuNoSides tagData;
 
+        /*
+         *  1-2 types
+         */
+        tagData = new Tag552EnuNoSides( Enum552NoSides.ONE_SIDE );
+        assertEquals( Enum552NoSides.ONE_SIDE.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag552EnuNoSides( Enum552NoSides.BOTH_SIDES );
+        assertEquals( Enum552NoSides.BOTH_SIDES.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

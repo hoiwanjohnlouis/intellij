@@ -20,7 +20,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Information is the same for TAGS 559
+ *  559
+ *  SecurityListRequestType
+ *  int
+ *  <p></p>
+ *  Identifies the type/criteria of Security List Request
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Symbol
+ *  <p>    1 - SecurityType and/or CFICode
+ *  <p>    2 - Product
+ *  <p>    3 - TradingSessionID
+ *  <p>    4 - All Securities
  */
 public enum Enum559SecurityListRequestType implements LogFIXString, LogVerboseString {
     /*

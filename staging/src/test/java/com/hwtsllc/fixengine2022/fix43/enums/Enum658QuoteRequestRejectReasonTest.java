@@ -23,7 +23,28 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  Information is the same for TAGS 658
+ *  658
+ *  QuoteRequestRejectReason
+ *  int
+ *  <p></p>
+ *  Reason Quote was rejected:
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Unknown Symbol (Security)
+ *  <p>    2 - Exchange (Security) Closed
+ *  <p>    3 - Quote Request Exceeds Limit
+ *  <p>    4 - Too Late to enter
+ *  <p>    5 - Invalid Price
+ *  <p></p>
+ *  <p>    6 - Not Authorized To Request Quote
+ *  <p>    7 - No Match For Inquiry
+ *  <p>    8 - No Market For Instrument
+ *  <p>    9 - No Inventory
+ *  <p>    10 - Pass
+ *  <p></p>
+ *  <p>    11 - Insufficient credit
+ *  <p>    99 - Other
+ *  <p>    or any value conforming to the data type Reserved100Plus
  */
 class Enum658QuoteRequestRejectReasonTest {
     @Test
@@ -78,6 +99,7 @@ class Enum658QuoteRequestRejectReasonTest {
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
+
         enumType = Enum658QuoteRequestRejectReason.NOT_AUTHORIZED;
         assertEquals("6", enumType.toFIXIDString());
         assertEquals("NOT_AUTHORIZED", enumType.toFIXNameString());
@@ -122,6 +144,7 @@ class Enum658QuoteRequestRejectReasonTest {
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+
 
         enumType = Enum658QuoteRequestRejectReason.INSUFFICIENT_CREDIT;
         assertEquals("11", enumType.toFIXIDString());

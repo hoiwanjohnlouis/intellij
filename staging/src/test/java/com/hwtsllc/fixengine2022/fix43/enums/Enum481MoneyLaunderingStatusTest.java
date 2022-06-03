@@ -22,10 +22,21 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  481
+ *  MoneyLaunderingStatus
+ *  char
+ *  <p></p>
+ *  A one character code identifying Money laundering status.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    Y - Passed
+ *  <p>    N - Not Checked
+ *  <p>    1 - Exempt - Below the Limit
+ *  <p>    2 - Exempt - Client Money Type exemption
+ *  <p>    3 - Exempt - Authorised Credit or financial institution
+ */
 class Enum481MoneyLaunderingStatusTest {
-    /**
-     *  Information is the same for TAGS 481
-     */
     @Test
     void Enum0481Test() {
         Enum481MoneyLaunderingStatus enumType;

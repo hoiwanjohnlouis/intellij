@@ -22,8 +22,20 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  497
+ *  FundRenewWaiv
+ *  char
+ *  <p></p>
+ *  A one character code identifying whether
+ *  the Fund based renewal commission is to be waived.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    N - No
+ *  <p>    Y - Yes
+ */
 class Enum497FundRenewWaivTest {
-    /**
+    /*
      *  Information is the same for TAGS 497
      */
     @Test

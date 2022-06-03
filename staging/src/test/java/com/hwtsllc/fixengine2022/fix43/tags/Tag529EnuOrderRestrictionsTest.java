@@ -17,12 +17,37 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum529OrderRestrictions;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  529
+ *  OrderRestrictions
+ *  MultipleCharValue
+ *  <p></p>
+ *  Restrictions associated with an order.
+ *  <p>
+ *  If more than one restriction is applicable to an order,
+ *  this field can contain multiple instructions separated by space.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Program Trade
+ *  <p>    2 - Index Arbitrage
+ *  <p>    3 - Non-Index Arbitrage
+ *  <p>    4 - Competing Market Maker
+ *  <p>    5 - Acting as Market Maker or Specialist in the security
+ *  <p></p>
+ *  <p>    6 - Acting as Market Maker of Specialist in the
+ *              underlying security of a derivative security
+ *  <p>    7 - Foreign Entity (of foreign government or regulatory jurisdiction)
+ *  <p>    8 - External Market Participant
+ *  <p>    9 - External Inter-connected Market Linkage
+ *  <p>    A - Riskless Arbitrage
+ */
 class Tag529EnuOrderRestrictionsTest {
     @Test
     void FIX0529Test() {
@@ -38,5 +63,56 @@ class Tag529EnuOrderRestrictionsTest {
     void Tag0529Test() {
         Tag529EnuOrderRestrictions tagData;
 
+        /*
+         *  1-9, A, types
+         */
+
+        /*
+         *  1-9, types
+         */
+        tagData = new Tag529EnuOrderRestrictions( Enum529OrderRestrictions.PROGRAM_TRADE );
+        assertEquals( Enum529OrderRestrictions.PROGRAM_TRADE.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag529EnuOrderRestrictions( Enum529OrderRestrictions.INDEX_ARBITRAGE );
+        assertEquals( Enum529OrderRestrictions.INDEX_ARBITRAGE.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag529EnuOrderRestrictions( Enum529OrderRestrictions.NON_INDEX_ARBITRAGE );
+        assertEquals( Enum529OrderRestrictions.NON_INDEX_ARBITRAGE.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag529EnuOrderRestrictions( Enum529OrderRestrictions.COMPETING_MARKET_MAKER );
+        assertEquals( Enum529OrderRestrictions.COMPETING_MARKET_MAKER.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag529EnuOrderRestrictions( Enum529OrderRestrictions.SPECIALIST_IN_SECURITY );
+        assertEquals( Enum529OrderRestrictions.SPECIALIST_IN_SECURITY.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        tagData = new Tag529EnuOrderRestrictions( Enum529OrderRestrictions.SPECIALIST_IN_UNDERLYING_SECURITY );
+        assertEquals( Enum529OrderRestrictions.SPECIALIST_IN_UNDERLYING_SECURITY.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag529EnuOrderRestrictions( Enum529OrderRestrictions.FOREIGN_ENTITY );
+        assertEquals( Enum529OrderRestrictions.FOREIGN_ENTITY.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag529EnuOrderRestrictions( Enum529OrderRestrictions.EXTERNAL_MARKET_PARTICIPANT );
+        assertEquals( Enum529OrderRestrictions.EXTERNAL_MARKET_PARTICIPANT.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag529EnuOrderRestrictions( Enum529OrderRestrictions.EXTERNAL_INTER_CONNECTED );
+        assertEquals( Enum529OrderRestrictions.EXTERNAL_INTER_CONNECTED.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        /*
+         *  A type
+         */
+        tagData = new Tag529EnuOrderRestrictions( Enum529OrderRestrictions.RISKLESS_ARBITRAGE );
+        assertEquals( Enum529OrderRestrictions.RISKLESS_ARBITRAGE.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

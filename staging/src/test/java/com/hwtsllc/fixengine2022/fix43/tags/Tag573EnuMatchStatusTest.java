@@ -17,12 +17,25 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum573MatchStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  573
+ *  MatchStatus
+ *  char
+ *  <p></p>
+ *  The status of this trade with respect to matching or comparison.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Compared, matched or affirmed
+ *  <p>    1 - Uncompared, unmatched, or unaffired
+ *  <p>    2 - Advisory or alert
+ */
 class Tag573EnuMatchStatusTest {
     @Test
     void FIX0573Test() {
@@ -38,5 +51,19 @@ class Tag573EnuMatchStatusTest {
     void Tag0573Test() {
         Tag573EnuMatchStatus tagData;
 
+        /*
+         *  0-2 types
+         */
+        tagData = new Tag573EnuMatchStatus( Enum573MatchStatus.COMPARED_MATCHED_AFFIRMED );
+        assertEquals( Enum573MatchStatus.COMPARED_MATCHED_AFFIRMED.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag573EnuMatchStatus( Enum573MatchStatus.UNCOMPARED_UNMATCHED_UNAFFIRMED );
+        assertEquals( Enum573MatchStatus.UNCOMPARED_UNMATCHED_UNAFFIRMED.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag573EnuMatchStatus( Enum573MatchStatus.ADVISORY );
+        assertEquals( Enum573MatchStatus.ADVISORY.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

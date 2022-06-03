@@ -17,12 +17,29 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum582CustOrderCapacity;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  582
+ *  CustOrderCapacity
+ *  int
+ *  <p></p>
+ *  Capacity of customer placing the order
+ *  <p>
+ *  Primarily used by futures exchanges to indicate the CTICode (customer type indicator)
+ *  as required by the US CFTC (Commodity Futures Trading Commission).
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Member trading for their own account
+ *  <p>    2 - Clearing Firm trading for its proprietary account
+ *  <p>    3 - Member trading for another member
+ *  <p>    4 - All other
+ */
 class Tag582EnuCustOrderCapacityTest {
     @Test
     void FIX0582Test() {
@@ -38,5 +55,23 @@ class Tag582EnuCustOrderCapacityTest {
     void Tag0582Test() {
         Tag582EnuCustOrderCapacity tagData;
 
+        /*
+         *  1-4 types
+         */
+        tagData = new Tag582EnuCustOrderCapacity( Enum582CustOrderCapacity.MEMBER_TRADING_ACCOUNT );
+        assertEquals( Enum582CustOrderCapacity.MEMBER_TRADING_ACCOUNT.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag582EnuCustOrderCapacity( Enum582CustOrderCapacity.CLEARING_FIRM_PROPRIETARY );
+        assertEquals( Enum582CustOrderCapacity.CLEARING_FIRM_PROPRIETARY.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag582EnuCustOrderCapacity( Enum582CustOrderCapacity.MEMBER_TRADING_FOR_ANOTHER );
+        assertEquals( Enum582CustOrderCapacity.MEMBER_TRADING_FOR_ANOTHER.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag582EnuCustOrderCapacity( Enum582CustOrderCapacity.ALL_OTHER );
+        assertEquals( Enum582CustOrderCapacity.ALL_OTHER.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

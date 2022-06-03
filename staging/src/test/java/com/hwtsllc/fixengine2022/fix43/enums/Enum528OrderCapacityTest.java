@@ -22,8 +22,31 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  528
+ *  OrderCapacity
+ *  char
+ *  <p></p>
+ *  Designates the capacity of the firm placing the order.
+ *  <p>
+ *  (as of FIX 4.3, this field replaced Rule80A (tag 47)
+ *  <p>
+ *  used in conjunction with OrderRestrictions (529) field)
+ *  <p>
+ *  (see Volume : "Glossary" for value definitions)
+ *  <p></p>
+ *  Valid values:
+ *  <p>    A - Agency
+ *  <p>    G - Proprietary
+ *  <p>    I - Individual
+ *  <p>    P - Principal
+ *              (Note for CMS purposes, "Principal" includes "Proprietary")
+ *  <p>    R - Riskless Principal
+ *  <p></p>
+ *  <p>    W - Agent for Other Member
+ */
 class Enum528OrderCapacityTest {
-    /**
+    /*
      *  Information is the same for TAGS 528
      */
     @Test
@@ -78,6 +101,7 @@ class Enum528OrderCapacityTest {
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+
 
         enumType = Enum528OrderCapacity.AGENT_FOR_OTHER_MEMBER;
         assertEquals("W", enumType.toFIXIDString());

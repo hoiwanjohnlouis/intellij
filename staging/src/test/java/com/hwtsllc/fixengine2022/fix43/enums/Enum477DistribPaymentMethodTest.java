@@ -22,29 +22,34 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  477 (same as 477,)
+ *  DistribPaymentMethod
+ *  int
+ *  <p></p>
+ *  A code identifying the payment method for a (fractional) distribution.
+ *  13 through 998 are reserved for future use
+ *  <p>
+ *  Values above 1000 are available for use by private agreement among counterparties
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - CREST
+ *  <p>    2 - NSCC
+ *  <p>    3 - Euroclear
+ *  <p>    4 - Clearstream
+ *  <p>    5 - Cheque
+ *  <p></p>
+ *  <p>    6 - Telegraphic Transfer
+ *  <p>    7 - Fed Wire
+ *  <p>    8 - Direct Credit (BECS,BACS)
+ *  <p>    9 - ACH Debit
+ *  <p>    10 - BPAY
+ *  <p></p>
+ *  <p>    11 - High Value Clearing System HVACS
+ *  <p>    12 - Reinvest In Fund
+ *  <p>    or any value conforming to the data type Reserved1000Plus
+ */
 class Enum477DistribPaymentMethodTest {
-    /**
-     *  477 (same as 477,)
-     *  DistribPaymentMethod
-     *  A code identifying the payment method for a (fractional) distribution.
-     *          13 through 998 are reserved for future use
-     Values above 1000 are available for use by private agreement among counterparties
-     *  Valid values:
-     *      1 - CREST
-     *      2 - NSCC
-     *      3 - Euroclear
-     *      4 - Clearstream
-     *      5 - Cheque
-     *      6 - Telegraphic Transfer
-     *      7 - Fed Wire
-     *      8 - Direct Credit (BECS,BACS)
-     *      9 - ACH Debit
-     *      10 - BPAY
-     *      11 - High Value Clearing System HVACS
-     *      12 - Reinvest In Fund
-     *
-     *      or any value conforming to the data type Reserved1000Plus
-     */
     @Test
     void Enum0477Test() {
         Enum477DistribPaymentMethod enumType;

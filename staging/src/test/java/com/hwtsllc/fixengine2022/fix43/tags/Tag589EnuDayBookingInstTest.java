@@ -17,12 +17,25 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum589DayBookingInst;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  589
+ *  DayBookingInst
+ *  char
+ *  <p></p>
+ *  Indicates whether or not automatic booking can occur.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Can trigger booking without reference to the order initiator ("auto")
+ *  <p>    1 - Speak with order initiator before booking ("speak first")
+ *  <p>    2 - Accumulate
+ */
 class Tag589EnuDayBookingInstTest {
     @Test
     void FIX0589Test() {
@@ -38,5 +51,19 @@ class Tag589EnuDayBookingInstTest {
     void Tag0589Test() {
         Tag589EnuDayBookingInst tagData;
 
+        /*
+         *  0-2 types
+         */
+        tagData = new Tag589EnuDayBookingInst( Enum589DayBookingInst.AUTO_BOOKING );
+        assertEquals( Enum589DayBookingInst.AUTO_BOOKING.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag589EnuDayBookingInst( Enum589DayBookingInst.VERBAL_BOOKING );
+        assertEquals( Enum589DayBookingInst.VERBAL_BOOKING.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag589EnuDayBookingInst( Enum589DayBookingInst.ACCUMULATE );
+        assertEquals( Enum589DayBookingInst.ACCUMULATE.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

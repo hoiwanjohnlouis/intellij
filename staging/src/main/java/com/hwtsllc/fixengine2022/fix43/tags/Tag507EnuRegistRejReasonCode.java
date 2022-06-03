@@ -23,6 +23,42 @@ import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  507
+ *  RegistRejReasonCode
+ *  int
+ *  <p></p>
+ *  Reason(s) why Registration Instructions has been rejected.
+ *  <p>
+ *  The reason may be further amplified in the RegistRejReasonCode field.
+ *  <p></p>
+ *  Possible values of reason code include:
+ *  <p>
+ *  Valid values:
+ *  <p>    1 - Invalid/unacceptable Account Type
+ *  <p>    2 - Invalid/unacceptable Tax Exempt Type
+ *  <p>    3 - Invalid/unacceptable Ownership Type
+ *  <p>    4 - Invalid/unacceptable No Reg Details
+ *  <p>    5 - Invalid/unacceptable Reg Seq No
+ *  <p></p>
+ *  <p>    6 - Invalid/unacceptable Reg Details
+ *  <p>    7 - Invalid/unacceptable Mailing Details
+ *  <p>    8 - Invalid/unacceptable Mailing Instructions
+ *  <p>    9 - Invalid/unacceptable Investor ID
+ *  <p>    10 - Invalid/unaceeptable Investor ID Source
+ *  <p></p>
+ *  <p>    11 - Invalid/unacceptable Date Of Birth
+ *  <p>    12 - Invalid/unacceptable Investor Country Of Residence
+ *  <p>    13 - Invalid/unacceptable No Distrib Instns
+ *  <p>    14 - Invalid/unacceptable Distrib Percentage
+ *  <p>    15 - Invalid/unacceptable Distrib Payment Method
+ *  <p></p>
+ *  <p>    16 - Invalid/unacceptable Cash Distrib Agent Acct Name
+ *  <p>    17 - Invalid/unacceptable Cash Distrib Agent Code
+ *  <p>    18 - Invalid/unacceptable Cash Distrib Agent Acct Num
+ *  <p>    99 - Other
+ *  <p>    or any value conforming to the data type Reserved100Plus
+ */
 public class Tag507EnuRegistRejReasonCode extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum507RegistRejReasonCode dataValue;
 

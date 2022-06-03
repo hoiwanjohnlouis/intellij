@@ -22,8 +22,42 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  626
+ *  AllocType
+ *  int
+ *  <p></p>
+ *  Describes the specific type or purpose of an Allocation message
+ *  (i.e. "Buyside Calculated")
+ *  <p></p>
+ *  (see Volume : "Glossary" for value definitions)
+ *  <p>
+ *  *** SOME VALUES HAVE BEEN REPLACED ***
+ *  <p>
+ *  *** See 'Replaced Features and Supported Approach' ***
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Calculated (includes MiscFees and NetMoney)
+ *  <p>    2 - Preliminary (without MiscFees and NetMoney)
+ *  <p>    3 - Sellside Calculated Using Preliminary
+ *              (includes MiscFees and NetMoney) (Replaced)
+ *  <p>    4 - Sellside Calculated Without Preliminary
+ *              (sent unsolicited by sellside, includes MiscFees and NetMoney) (Replaced)
+ *  <p>    5 - Ready-To-Book - Single Order
+ *  <p></p>
+ *  <p>    6 - Buyside Ready-To-Book - Combined Set of Orders (Replaced)
+ *  <p>    7 - Warehouse Instruction
+ *  <p>    8 - Request to Intermediary
+ *  <p>    9 - Accept
+ *  <p>    10 - Reject
+ *  <p></p>
+ *  <p>    11 - Accept Pending
+ *  <p>    12 - Incomplete Group
+ *  <p>    13 - Complete Group
+ *  <p>    14 - Reversal Pending
+ */
 class Enum626AllocTypeTest {
-    /**
+    /*
      *  Information is the same for TAGS 626
      */
     @Test

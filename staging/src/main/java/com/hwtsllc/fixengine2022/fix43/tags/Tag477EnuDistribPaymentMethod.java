@@ -23,6 +23,33 @@ import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  477 (same as 477,)
+ *  DistribPaymentMethod
+ *  int
+ *  <p></p>
+ *  A code identifying the payment method for a (fractional) distribution.
+ *  13 through 998 are reserved for future use
+ *  <p>
+ *  Values above 1000 are available for use by private agreement among counterparties
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - CREST
+ *  <p>    2 - NSCC
+ *  <p>    3 - Euroclear
+ *  <p>    4 - Clearstream
+ *  <p>    5 - Cheque
+ *  <p></p>
+ *  <p>    6 - Telegraphic Transfer
+ *  <p>    7 - Fed Wire
+ *  <p>    8 - Direct Credit (BECS,BACS)
+ *  <p>    9 - ACH Debit
+ *  <p>    10 - BPAY
+ *  <p></p>
+ *  <p>    11 - High Value Clearing System HVACS
+ *  <p>    12 - Reinvest In Fund
+ *  <p>    or any value conforming to the data type Reserved1000Plus
+ */
 public class Tag477EnuDistribPaymentMethod extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum477DistribPaymentMethod dataValue;
 

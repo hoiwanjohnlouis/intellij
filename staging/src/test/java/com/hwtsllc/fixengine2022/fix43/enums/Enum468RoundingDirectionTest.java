@@ -22,10 +22,32 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  468
+ *  RoundingDirection
+ *  char
+ *  <p></p>
+ *  Specifies which direction to round
+ *  <p>
+ *  For CIV – indicates whether or not the quantity of shares/units
+ *  is to be rounded and in which direction where CashOrdQty (152)
+ *  <p>
+ *  or (for CIV only) OrderPercent (516) are specified on an order.
+ *  <p></p>
+ *  The default is for rounding to be at the discretion of
+ *  the executing broker or fund manager.
+ *  <p>
+ *  <p>e.g. for an order specifying CashOrdQty or OrderPercent
+ *  <p>if the calculated number of shares/units was 325.76 and RoundingModulus (469) was
+ *  <p>0 - "round down" would give 320 units,
+ *  <p>1 - "round up" would give 330 units and "round to nearest" would give 320 units.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Round to nearest
+ *  <p>    1 - Round down
+ *  <p>    2 - Round up
+ */
 class Enum468RoundingDirectionTest {
-    /**
-     *  Information is the same for TAGS 468
-     */
     @Test
     void Enum0468Test() {
         Enum468RoundingDirection enumType;

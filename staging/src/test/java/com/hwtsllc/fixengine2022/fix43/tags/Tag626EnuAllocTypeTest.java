@@ -17,12 +17,47 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum626AllocType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  626
+ *  AllocType
+ *  int
+ *  <p></p>
+ *  Describes the specific type or purpose of an Allocation message
+ *  (i.e. "Buyside Calculated")
+ *  <p></p>
+ *  (see Volume : "Glossary" for value definitions)
+ *  <p>
+ *  *** SOME VALUES HAVE BEEN REPLACED ***
+ *  <p>
+ *  *** See 'Replaced Features and Supported Approach' ***
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Calculated (includes MiscFees and NetMoney)
+ *  <p>    2 - Preliminary (without MiscFees and NetMoney)
+ *  <p>    3 - Sellside Calculated Using Preliminary
+ *              (includes MiscFees and NetMoney) (Replaced)
+ *  <p>    4 - Sellside Calculated Without Preliminary
+ *              (sent unsolicited by sellside, includes MiscFees and NetMoney) (Replaced)
+ *  <p>    5 - Ready-To-Book - Single Order
+ *  <p></p>
+ *  <p>    6 - Buyside Ready-To-Book - Combined Set of Orders (Replaced)
+ *  <p>    7 - Warehouse Instruction
+ *  <p>    8 - Request to Intermediary
+ *  <p>    9 - Accept
+ *  <p>    10 - Reject
+ *  <p></p>
+ *  <p>    11 - Accept Pending
+ *  <p>    12 - Incomplete Group
+ *  <p>    13 - Complete Group
+ *  <p>    14 - Reversal Pending
+ */
 class Tag626EnuAllocTypeTest {
     @Test
     void FIX0626Test() {
@@ -38,5 +73,65 @@ class Tag626EnuAllocTypeTest {
     void Tag0626Test() {
         Tag626EnuAllocType tagData;
 
+        /*
+         *  1-14 types
+         */
+        tagData = new Tag626EnuAllocType( Enum626AllocType.CALCULATED_INCLUDES_MISCFEES_NETMONEY );
+        assertEquals( Enum626AllocType.CALCULATED_INCLUDES_MISCFEES_NETMONEY.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag626EnuAllocType( Enum626AllocType.PRELIMINARY_WITHOUT_MISCFEES_NETMONEY );
+        assertEquals( Enum626AllocType.PRELIMINARY_WITHOUT_MISCFEES_NETMONEY.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag626EnuAllocType( Enum626AllocType.SELLSIDE_USING_PRELIMINARY );
+        assertEquals( Enum626AllocType.SELLSIDE_USING_PRELIMINARY.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag626EnuAllocType( Enum626AllocType.SELLSIDE_WITHOUT_PRELIMINARY );
+        assertEquals( Enum626AllocType.SELLSIDE_WITHOUT_PRELIMINARY.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag626EnuAllocType( Enum626AllocType.READY_TO_BOOK_SINGLE_ORDER );
+        assertEquals( Enum626AllocType.READY_TO_BOOK_SINGLE_ORDER.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        tagData = new Tag626EnuAllocType( Enum626AllocType.BUYSIDE_READY_TO_BOOK );
+        assertEquals( Enum626AllocType.BUYSIDE_READY_TO_BOOK.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag626EnuAllocType( Enum626AllocType.WAREHOUSE_INSTRUCTION );
+        assertEquals( Enum626AllocType.WAREHOUSE_INSTRUCTION.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag626EnuAllocType( Enum626AllocType.REQUEST_INTERMEDIARY );
+        assertEquals( Enum626AllocType.REQUEST_INTERMEDIARY.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag626EnuAllocType( Enum626AllocType.ACCEPT );
+        assertEquals( Enum626AllocType.ACCEPT.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag626EnuAllocType( Enum626AllocType.REJECT );
+        assertEquals( Enum626AllocType.REJECT.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        tagData = new Tag626EnuAllocType( Enum626AllocType.ACCEPT_PENDING );
+        assertEquals( Enum626AllocType.ACCEPT_PENDING.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag626EnuAllocType( Enum626AllocType.INCOMPLETE_GROUP );
+        assertEquals( Enum626AllocType.INCOMPLETE_GROUP.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag626EnuAllocType( Enum626AllocType.COMPLETE_GROUP );
+        assertEquals( Enum626AllocType.COMPLETE_GROUP.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag626EnuAllocType( Enum626AllocType.REVERSAL_PENDING );
+        assertEquals( Enum626AllocType.REVERSAL_PENDING.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

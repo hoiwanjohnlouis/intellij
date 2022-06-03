@@ -17,12 +17,24 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum591PreallocMethod;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  591
+ *  PreallocMethod
+ *  char
+ *  <p></p>
+ *  Indicates the method of preallocation.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Pro-rata
+ *  <p>    1 - Do not pro-rata - discuss first
+ */
 class Tag591EnuPreallocMethodTest {
     @Test
     void FIX0591Test() {
@@ -38,5 +50,15 @@ class Tag591EnuPreallocMethodTest {
     void Tag0591Test() {
         Tag591EnuPreallocMethod tagData;
 
+        /*
+         *  0-1 types
+         */
+        tagData = new Tag591EnuPreallocMethod( Enum591PreallocMethod.PRO_RATA );
+        assertEquals( Enum591PreallocMethod.PRO_RATA.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag591EnuPreallocMethod( Enum591PreallocMethod.DO_NOT_PRO_RATA );
+        assertEquals( Enum591PreallocMethod.DO_NOT_PRO_RATA.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

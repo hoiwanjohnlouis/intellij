@@ -17,12 +17,25 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum590BookingUnit;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  590
+ *  BookingUnit
+ *  char
+ *  <p></p>
+ *  Indicates what constitutes a bookable unit.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Each partial execution is a bookable unit
+ *  <p>    1 - Aggregate partial executions on this order, and book one trade per order
+ *  <p>    2 - Aggregate executions for this symbol, side, and settlement date
+ */
 class Tag590EnuBookingUnitTest {
     @Test
     void FIX0590Test() {
@@ -38,5 +51,19 @@ class Tag590EnuBookingUnitTest {
     void Tag0590Test() {
         Tag590EnuBookingUnit tagData;
 
+        /*
+         *  0-2 types
+         */
+        tagData = new Tag590EnuBookingUnit( Enum590BookingUnit.PARTIAL_EXECUTION_BOOKABLE );
+        assertEquals( Enum590BookingUnit.PARTIAL_EXECUTION_BOOKABLE.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag590EnuBookingUnit( Enum590BookingUnit.AGGREGATE_PARTIAL_EXECUTION );
+        assertEquals( Enum590BookingUnit.AGGREGATE_PARTIAL_EXECUTION.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag590EnuBookingUnit( Enum590BookingUnit.AGGREGATE_EXECUTIONS );
+        assertEquals( Enum590BookingUnit.AGGREGATE_EXECUTIONS.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

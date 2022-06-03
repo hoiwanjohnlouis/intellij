@@ -20,7 +20,19 @@ import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Information is the same for TAGS 569
+ *  569
+ *  TradeRequestType
+ *  int
+ *  <p></p>
+ *  Type of Trade Capture Report.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - All Trades
+ *  <p>    1 - Matched trades matching criteria provided on request
+ *              (Parties, ExecID, TradeID, OrderID, Instrument, InputSource, etc.)
+ *  <p>    2 - Unmatched trades that match criteria
+ *  <p>    3 - Unreported trades that match criteria
+ *  <p>    4 - Advisories that match criteria
  */
 public enum Enum569TradeRequestType implements LogFIXString, LogVerboseString {
     /*

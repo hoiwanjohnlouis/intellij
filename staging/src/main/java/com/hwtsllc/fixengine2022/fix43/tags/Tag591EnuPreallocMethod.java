@@ -23,6 +23,17 @@ import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  591
+ *  PreallocMethod
+ *  char
+ *  <p></p>
+ *  Indicates the method of preallocation.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Pro-rata
+ *  <p>    1 - Do not pro-rata - discuss first
+ */
 public class Tag591EnuPreallocMethod extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum591PreallocMethod dataValue;
 

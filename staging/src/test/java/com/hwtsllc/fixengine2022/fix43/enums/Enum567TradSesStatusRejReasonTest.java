@@ -22,8 +22,20 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  567
+ *  TradSesStatusRejReason
+ *  int
+ *  <p></p>
+ *  Indicates the reason a Trading Session Status Request was rejected.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Unknown or invalid TradingSessionID
+ *  <p>    99 - Other
+ *  <p>    or any value conforming to the data type Reserved100Plus
+ */
 class Enum567TradSesStatusRejReasonTest {
-    /**
+    /*
      *  Information is the same for TAGS 567
      */
     @Test

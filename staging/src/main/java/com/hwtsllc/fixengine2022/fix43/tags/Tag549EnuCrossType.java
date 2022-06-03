@@ -23,6 +23,33 @@ import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  549
+ *  CrossType
+ *  int
+ *  <p></p>
+ *  Type of cross being submitted to a market
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Cross AON - cross tade which is executed complete or not.
+ *  <p>         Both sides are treated in the same manner. This is equivalent to an "All or None".
+ *  <p></p>
+ *  <p>    2 - Cross IOC - cross trade which is executed partially and the rest is cancelled.
+ *  <p>         One side is fully executed, the other side is partially executed with the remainder being cancelled.
+ *  <p>         This is equivalent to an IOC on the other side.
+ *  <p>         Note: CrossPrioritization (550) field may be used to
+ *                    indicate which side should fully execute in this scenario.
+ *  <p></p>
+ *  <p>    3 - Cross One Side - cross trade which is partially executed with the unfilled portions remaining active.
+ *  <p>         One side of the corss is fully executed (as denoted by the CrossPrioritization (550) field),
+ *              but the unfilled portion remains active.
+ *  <p></p>
+ *  <p>    4 - Cross Same Price - cross trade is executed with existing orders with the same price.
+ *  <p>         In this case other orders exist with the same price, the quantity of the Cross is
+ *              executed against the existing orders and quotes, the remainder of the cross
+ *              is executed against the other side of the cross.
+ *  <p>         The two sides potentially have different quantities.
+ */
 public class Tag549EnuCrossType extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum549CrossType dataValue;
 

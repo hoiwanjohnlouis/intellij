@@ -23,6 +23,21 @@ import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  560
+ *  SecurityRequestResult
+ *  int
+ *  <p></p>
+ *  The results returned to a Security Request message
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Valid request
+ *  <p>    1 - Invalid or unsupported request
+ *  <p>    2 - No instruments found that match selection criteria
+ *  <p>    3 - Not authorized to retrieve instrument data
+ *  <p>    4 - Instrument data temporarily unavailable
+ *  <p>    5 - Request for instrument data not supported
+ */
 public class Tag560EnuSecurityRequestResult extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum560SecurityRequestResult dataValue;
 

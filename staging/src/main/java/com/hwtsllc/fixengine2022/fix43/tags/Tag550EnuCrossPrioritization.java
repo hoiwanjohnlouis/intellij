@@ -23,6 +23,25 @@ import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  550
+ *  CrossPrioritization
+ *  int
+ *  <p></p>
+ *  Indicates if one side or the other of a cross order should be prioritized.
+ *  <p></p>
+ *  The definition of prioritization is left to the market.
+ *  <p></p>
+ *  In some markets, - prioritization means which side of the cross order is applied to the market first.
+ *  <p></p>
+ *  In other markets, - prioritization may mean that the prioritized side is fully executed
+ *  (sometimes referred to as the side being protected).
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - None
+ *  <p>    1 - Buy side is prioritized
+ *  <p>    2 - Sell side is prioritized
+ */
 public class Tag550EnuCrossPrioritization extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum550CrossPrioritization dataValue;
 

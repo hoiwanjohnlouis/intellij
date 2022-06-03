@@ -20,7 +20,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Information is the same for TAGS 517
+ *  517
+ *  OwnershipType
+ *  char
+ *  <p></p>
+ *  The relationship between Registration parties.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    J - Joint Investors
+ *  <p>    T - Tenants in Common
+ *  <p>    2 - Joint Trustees
  */
 public enum Enum517OwnershipType implements LogFIXString, LogVerboseString {
     /*

@@ -23,6 +23,24 @@ import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
+/**
+ *  487
+ *  TradeReportTransType
+ *  int
+ *  <p></p>
+ *  Identifies Trade Report message transaction type
+ *  <p></p>
+ *  (Prior to FIX 4.4 this field was of type char)
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - New
+ *  <p>    1 - Cancel
+ *  <p>    2 - Replace
+ *  <p>    3 - Release
+ *  <p>    4 - Reverse
+ *  <p></p>
+ *  <p>    5 - Cancel Due To Back Out of Trade
+ */
 public class Tag487EnuTradeReportTransType extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum487TradeReportTransType dataValue;
 

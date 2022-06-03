@@ -20,7 +20,17 @@ import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  Information is the same for TAGS 506
+ *  506
+ *  RegistStatus
+ *  char
+ *  <p></p>
+ *  Registration status as returned by the broker or  (for CIV) the fund manager:
+ *  <p></p>
+ *  Valid values:
+ *  <p>    A - Accepted
+ *  <p>    R - Rejected
+ *  <p>    H - Held
+ *  <p>    N - Reminder - i.e. Registration Instructions are still outstanding
  */
 public enum Enum506RegistStatus implements LogFIXString, LogVerboseString {
     /*

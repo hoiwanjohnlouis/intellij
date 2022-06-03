@@ -23,7 +23,27 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  Information is the same for TAGS 587
+ *  587
+ *  LegSettlType
+ *  char
+ *  <p></p>
+ *  Refer to values for SettlType[63]
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Regular / FX Spot settlement (T+1 or T+2 depending on currency)
+ *  <p>    1 - Cash (TOD / T+0)
+ *  <p>    2 - Next Day (TOM / T+1)
+ *  <p>    3 - T+2
+ *  <p>    4 - T+3
+ *  <p></p>
+ *  <p>    5 - T+4
+ *  <p>    6 - Future
+ *  <p>    7 - When And If Issued
+ *  <p>    8 - Sellers Option
+ *  <p>    9 - T+5
+ *  <p></p>
+ *  <p>    B - Broken date - for FX expressing non-standard tenor, SettlDate (64) must be specified
+ *  <p>    C - FX Spot Next settlement (Spot+1, aka next day)
  */
 class Enum587LegSettlTypeTest {
     @Test

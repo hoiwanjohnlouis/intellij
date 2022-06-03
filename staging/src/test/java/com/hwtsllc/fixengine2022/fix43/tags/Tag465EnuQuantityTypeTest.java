@@ -17,12 +17,35 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum465QuantityType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  465
+ *  QuantityType
+ *  int
+ *  <p></p>
+ *  Deprecated in FIX.4.4
+ *  <p></p>
+ *  Designates the type of quantities (e.g. OrderQty) specified.
+ *  <p>
+ *  Used for MBS and TIPS Fixed Income security types.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - SHARES
+ *  <p>    2 - BONDS
+ *  <p>    3 - CURRENTFACE
+ *  <p>    4 - ORIGINALFACE
+ *  <p>    5 - CURRENCY
+ *  <p></p>
+ *  <p>    6 - CONTRACTS
+ *  <p>    7 - OTHER
+ *  <p>    8 - PAR
+ */
 class Tag465EnuQuantityTypeTest {
     @Test
     void FIX0465Test() {
@@ -38,5 +61,37 @@ class Tag465EnuQuantityTypeTest {
     void Tag0465Test() {
         Tag465EnuQuantityType tagData;
 
+        tagData = new Tag465EnuQuantityType( Enum465QuantityType.SHARES );
+        assertEquals( Enum465QuantityType.SHARES.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag465EnuQuantityType( Enum465QuantityType.BONDS );
+        assertEquals( Enum465QuantityType.BONDS.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag465EnuQuantityType( Enum465QuantityType.CURRENT_FACE );
+        assertEquals( Enum465QuantityType.CURRENT_FACE.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag465EnuQuantityType( Enum465QuantityType.ORIGINAL_FACE );
+        assertEquals( Enum465QuantityType.ORIGINAL_FACE.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag465EnuQuantityType( Enum465QuantityType.CURRENCY );
+        assertEquals( Enum465QuantityType.CURRENCY.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        tagData = new Tag465EnuQuantityType( Enum465QuantityType.CONTRACTS );
+        assertEquals( Enum465QuantityType.CONTRACTS.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag465EnuQuantityType( Enum465QuantityType.OTHER );
+        assertEquals( Enum465QuantityType.OTHER.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag465EnuQuantityType( Enum465QuantityType.PAR );
+        assertEquals( Enum465QuantityType.PAR.toFIXIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }
