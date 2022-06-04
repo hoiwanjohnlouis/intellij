@@ -71,7 +71,20 @@ public class Tag569EnuTradeRequestType extends FIX43Abstract implements LogValue
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -114,5 +127,10 @@ public class Tag569EnuTradeRequestType extends FIX43Abstract implements LogValue
 
         tagData = new Tag569EnuTradeRequestType(TESTB_ENU_TRADE_REQUEST_TYPE);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum569TradeRequestType oneEnum : Enum569TradeRequestType.values()) {
+            System.out.println( new Tag569EnuTradeRequestType(oneEnum).toVerboseString() );
+        }
     }
 }

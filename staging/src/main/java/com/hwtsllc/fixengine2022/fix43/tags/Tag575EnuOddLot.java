@@ -69,7 +69,20 @@ public class Tag575EnuOddLot extends FIX43Abstract implements LogValuePairString
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -112,5 +125,10 @@ public class Tag575EnuOddLot extends FIX43Abstract implements LogValuePairString
 
         tagData = new Tag575EnuOddLot( TESTB_ENU_ODD_LOT );
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum575OddLot oneEnum : Enum575OddLot.values()) {
+            System.out.println( new Tag575EnuOddLot(oneEnum).toVerboseString() );
+        }
     }
 }

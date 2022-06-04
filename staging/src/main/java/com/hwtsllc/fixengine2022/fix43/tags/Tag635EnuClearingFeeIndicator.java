@@ -85,7 +85,20 @@ public class Tag635EnuClearingFeeIndicator extends FIX43Abstract implements LogV
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -128,5 +141,10 @@ public class Tag635EnuClearingFeeIndicator extends FIX43Abstract implements LogV
 
         tagData = new Tag635EnuClearingFeeIndicator(TESTB_ENU_CLEARING_FEE_INDICATOR);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum635ClearingFeeIndicator oneEnum : Enum635ClearingFeeIndicator.values()) {
+            System.out.println( new Tag635EnuClearingFeeIndicator(oneEnum).toVerboseString() );
+        }
     }
 }

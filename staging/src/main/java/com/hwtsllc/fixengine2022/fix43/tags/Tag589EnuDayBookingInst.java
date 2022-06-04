@@ -68,7 +68,20 @@ public class Tag589EnuDayBookingInst extends FIX43Abstract implements LogValuePa
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -111,5 +124,10 @@ public class Tag589EnuDayBookingInst extends FIX43Abstract implements LogValuePa
 
         tagData = new Tag589EnuDayBookingInst(TESTB_ENU_DAY_BOOKING_INST);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum589DayBookingInst oneEnum : Enum589DayBookingInst.values()) {
+            System.out.println( new Tag589EnuDayBookingInst(oneEnum).toVerboseString() );
+        }
     }
 }

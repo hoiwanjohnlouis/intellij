@@ -73,7 +73,20 @@ public class Tag530EnuMassCancelRequestType extends FIX43Abstract implements Log
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -116,5 +129,10 @@ public class Tag530EnuMassCancelRequestType extends FIX43Abstract implements Log
 
         tagData = new Tag530EnuMassCancelRequestType(TESTB_ENU_MASS_CANCEL_REQUEST_TYPE);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum530MassCancelRequestType oneEnum : Enum530MassCancelRequestType.values()) {
+            System.out.println( new Tag530EnuMassCancelRequestType(oneEnum).toVerboseString() );
+        }
     }
 }

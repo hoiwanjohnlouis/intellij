@@ -83,7 +83,20 @@ public class Tag549EnuCrossType extends FIX43Abstract implements LogValuePairStr
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -126,5 +139,10 @@ public class Tag549EnuCrossType extends FIX43Abstract implements LogValuePairStr
 
         tagData = new Tag549EnuCrossType(TESTB_ENU_CROSS_TYPE);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum549CrossType oneEnum : Enum549CrossType.values()) {
+            System.out.println( new Tag549EnuCrossType(oneEnum).toVerboseString() );
+        }
     }
 }

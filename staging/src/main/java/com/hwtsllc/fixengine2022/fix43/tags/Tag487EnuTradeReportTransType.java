@@ -74,7 +74,20 @@ public class Tag487EnuTradeReportTransType extends FIX43Abstract implements LogV
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -117,5 +130,10 @@ public class Tag487EnuTradeReportTransType extends FIX43Abstract implements LogV
 
         tagData = new Tag487EnuTradeReportTransType(TESTB_ENU_TRADE_REPORT_TRANS_TYPE);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum487TradeReportTransType oneEnum : Enum487TradeReportTransType.values()) {
+            System.out.println( new Tag487EnuTradeReportTransType(oneEnum).toVerboseString() );
+        }
     }
 }

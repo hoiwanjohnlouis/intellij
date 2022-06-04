@@ -69,7 +69,20 @@ public class Tag563EnuMultiLegRptTypeReq extends FIX43Abstract implements LogVal
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -112,5 +125,10 @@ public class Tag563EnuMultiLegRptTypeReq extends FIX43Abstract implements LogVal
 
         tagData = new Tag563EnuMultiLegRptTypeReq(TESTB_ENU_MULTI_LEG_RPT_TYPE_REQ);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum563MultiLegRptTypeReq oneEnum : Enum563MultiLegRptTypeReq.values()) {
+            System.out.println( new Tag563EnuMultiLegRptTypeReq(oneEnum).toVerboseString() );
+        }
     }
 }

@@ -67,7 +67,20 @@ public class Tag650EnuLegalConfirm extends FIX43Abstract implements LogValuePair
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -110,5 +123,10 @@ public class Tag650EnuLegalConfirm extends FIX43Abstract implements LogValuePair
 
         tagData = new Tag650EnuLegalConfirm( TESTB_ENU_LEGAL_CONFIRM );
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum650LegalConfirm oneEnum : Enum650LegalConfirm.values()) {
+            System.out.println( new Tag650EnuLegalConfirm(oneEnum).toVerboseString() );
+        }
     }
 }

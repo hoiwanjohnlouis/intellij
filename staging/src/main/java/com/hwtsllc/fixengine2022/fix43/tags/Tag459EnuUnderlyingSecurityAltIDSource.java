@@ -161,7 +161,20 @@ public class Tag459EnuUnderlyingSecurityAltIDSource extends FIX43Abstract implem
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -204,5 +217,10 @@ public class Tag459EnuUnderlyingSecurityAltIDSource extends FIX43Abstract implem
 
         tagData = new Tag459EnuUnderlyingSecurityAltIDSource(TESTB_ENU_UNDERLYING_SECURITY_ALT_ID_SOURCE);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
+            System.out.println( new Tag459EnuUnderlyingSecurityAltIDSource(oneEnum).toVerboseString() );
+        }
     }
 }

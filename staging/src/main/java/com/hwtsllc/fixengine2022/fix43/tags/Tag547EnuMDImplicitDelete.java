@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum547MDImplicitDelete;
 import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
@@ -37,14 +37,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *          or offers falling outside the MarketDepth of the request
  */
 public class Tag547EnuMDImplicitDelete extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
-    private final MyBooleanType dataValue;
+    private final Enum547MDImplicitDelete dataValue;
 
-    public final static MyBooleanType TESTA_BOOL_MD_IMPLICIT_DELETE
-            = MyBooleanType.NO ;
-    public final static MyBooleanType TESTB_BOOL_MD_IMPLICIT_DELETE
-            = MyBooleanType.YES;
+    public final static Enum547MDImplicitDelete TESTA_BOOL_MD_IMPLICIT_DELETE
+            = Enum547MDImplicitDelete.NO ;
+    public final static Enum547MDImplicitDelete TESTB_BOOL_MD_IMPLICIT_DELETE
+            = Enum547MDImplicitDelete.YES;
 
-    public Tag547EnuMDImplicitDelete( MyBooleanType dataValue) {
+    public Tag547EnuMDImplicitDelete( Enum547MDImplicitDelete dataValue) {
         setFixType(FIX43.FIX547_ENU_MD_IMPLICIT_DELETE );
         this.dataValue = dataValue;
     }
@@ -69,7 +69,20 @@ public class Tag547EnuMDImplicitDelete extends FIX43Abstract implements LogValue
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -112,5 +125,10 @@ public class Tag547EnuMDImplicitDelete extends FIX43Abstract implements LogValue
 
         tagData = new Tag547EnuMDImplicitDelete(TESTB_BOOL_MD_IMPLICIT_DELETE);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum547MDImplicitDelete oneEnum : Enum547MDImplicitDelete.values()) {
+            System.out.println( new Tag547EnuMDImplicitDelete(oneEnum).toVerboseString() );
+        }
     }
 }

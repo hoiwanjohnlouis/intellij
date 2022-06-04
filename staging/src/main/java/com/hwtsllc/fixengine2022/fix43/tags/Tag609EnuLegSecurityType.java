@@ -239,7 +239,20 @@ public class Tag609EnuLegSecurityType extends FIX43Abstract implements LogValueP
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -282,5 +295,10 @@ public class Tag609EnuLegSecurityType extends FIX43Abstract implements LogValueP
 
         tagData = new Tag609EnuLegSecurityType(TESTB_ENU_LEG_SECURITY_TYPE);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( MyEnumSecurityType oneEnum : MyEnumSecurityType.values()) {
+            System.out.println( new Tag609EnuLegSecurityType(oneEnum).toVerboseString() );
+        }
     }
 }

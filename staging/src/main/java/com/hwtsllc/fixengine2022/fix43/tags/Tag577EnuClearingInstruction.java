@@ -82,7 +82,20 @@ public class Tag577EnuClearingInstruction extends FIX43Abstract implements LogVa
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -125,5 +138,10 @@ public class Tag577EnuClearingInstruction extends FIX43Abstract implements LogVa
 
         tagData = new Tag577EnuClearingInstruction(TESTB_ENU_CLEARING_INSTRUCTION);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum577ClearingInstruction oneEnum : Enum577ClearingInstruction.values()) {
+            System.out.println( new Tag577EnuClearingInstruction(oneEnum).toVerboseString() );
+        }
     }
 }

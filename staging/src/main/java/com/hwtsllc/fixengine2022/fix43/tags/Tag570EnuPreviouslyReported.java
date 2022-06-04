@@ -67,7 +67,20 @@ public class Tag570EnuPreviouslyReported extends FIX43Abstract implements LogVal
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      /**
@@ -111,5 +124,10 @@ public class Tag570EnuPreviouslyReported extends FIX43Abstract implements LogVal
 
         tagData = new Tag570EnuPreviouslyReported( TESTB_ENU_PREVIOUSLY_REPORTED );
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum570PreviouslyReported oneEnum : Enum570PreviouslyReported.values()) {
+            System.out.println( new Tag570EnuPreviouslyReported(oneEnum).toVerboseString() );
+        }
     }
 }

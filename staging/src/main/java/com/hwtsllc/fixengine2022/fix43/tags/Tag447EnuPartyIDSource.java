@@ -160,7 +160,20 @@ public class Tag447EnuPartyIDSource extends FIX43Abstract implements LogValuePai
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -203,5 +216,10 @@ public class Tag447EnuPartyIDSource extends FIX43Abstract implements LogValuePai
 
         tagData = new Tag447EnuPartyIDSource(TESTB_ENU_PARTY_ID_SOURCE);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( MyEnumPartyIDSource oneEnum : MyEnumPartyIDSource.values()) {
+            System.out.println( new Tag447EnuPartyIDSource(oneEnum).toVerboseString() );
+        }
     }
 }

@@ -223,7 +223,20 @@ public class Tag538EnuNestedPartyRole extends FIX43Abstract implements LogValueP
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -266,5 +279,10 @@ public class Tag538EnuNestedPartyRole extends FIX43Abstract implements LogValueP
 
         tagData = new Tag538EnuNestedPartyRole(TESTB_ENU_NESTED_PARTY_ROLE);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( MyEnumPartyRole oneEnum : MyEnumPartyRole.values()) {
+            System.out.println( new Tag538EnuNestedPartyRole(oneEnum).toVerboseString() );
+        }
     }
 }

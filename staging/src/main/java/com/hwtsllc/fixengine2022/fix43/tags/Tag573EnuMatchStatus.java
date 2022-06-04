@@ -68,7 +68,20 @@ public class Tag573EnuMatchStatus extends FIX43Abstract implements LogValuePairS
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -111,5 +124,10 @@ public class Tag573EnuMatchStatus extends FIX43Abstract implements LogValuePairS
 
         tagData = new Tag573EnuMatchStatus(TESTB_ENU_MATCH_STATUS);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum573MatchStatus oneEnum : Enum573MatchStatus.values()) {
+            System.out.println( new Tag573EnuMatchStatus(oneEnum).toVerboseString() );
+        }
     }
 }

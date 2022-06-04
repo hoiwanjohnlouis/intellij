@@ -70,7 +70,20 @@ public class Tag559EnuSecurityListRequestType extends FIX43Abstract implements L
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -113,5 +126,10 @@ public class Tag559EnuSecurityListRequestType extends FIX43Abstract implements L
 
         tagData = new Tag559EnuSecurityListRequestType(TESTB_ENU_SECURITY_LIST_REQUEST_TYPE);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum559SecurityListRequestType oneEnum : Enum559SecurityListRequestType.values()) {
+            System.out.println( new Tag559EnuSecurityListRequestType(oneEnum).toVerboseString() );
+        }
     }
 }

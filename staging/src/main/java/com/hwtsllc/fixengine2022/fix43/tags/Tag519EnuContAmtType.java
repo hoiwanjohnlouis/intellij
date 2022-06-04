@@ -88,7 +88,20 @@ public class Tag519EnuContAmtType extends FIX43Abstract implements LogValuePairS
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -131,5 +144,10 @@ public class Tag519EnuContAmtType extends FIX43Abstract implements LogValuePairS
 
         tagData = new Tag519EnuContAmtType(TESTB_ENU_CONT_AMT_TYPE);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum519ContAmtType oneEnum : Enum519ContAmtType.values()) {
+            System.out.println( new Tag519EnuContAmtType(oneEnum).toVerboseString() );
+        }
     }
 }

@@ -76,7 +76,20 @@ public class Tag653EnuSecDefStatus extends FIX43Abstract implements LogValuePair
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -119,5 +132,10 @@ public class Tag653EnuSecDefStatus extends FIX43Abstract implements LogValuePair
 
         tagData = new Tag653EnuSecDefStatus(TESTB_ENU_SEC_DEF_STATUS);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum653SecDefStatus oneEnum : Enum653SecDefStatus.values()) {
+            System.out.println( new Tag653EnuSecDefStatus(oneEnum).toVerboseString() );
+        }
     }
 }

@@ -68,7 +68,20 @@ public class Tag590EnuBookingUnit extends FIX43Abstract implements LogValuePairS
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -111,5 +124,10 @@ public class Tag590EnuBookingUnit extends FIX43Abstract implements LogValuePairS
 
         tagData = new Tag590EnuBookingUnit(TESTB_ENU_BOOKING_UNIT);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum590BookingUnit oneEnum : Enum590BookingUnit.values()) {
+            System.out.println( new Tag590EnuBookingUnit(oneEnum).toVerboseString() );
+        }
     }
 }

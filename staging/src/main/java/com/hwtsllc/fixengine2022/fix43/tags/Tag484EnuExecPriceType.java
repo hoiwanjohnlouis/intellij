@@ -76,7 +76,20 @@ public class Tag484EnuExecPriceType extends FIX43Abstract implements LogValuePai
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -119,5 +132,10 @@ public class Tag484EnuExecPriceType extends FIX43Abstract implements LogValuePai
 
         tagData = new Tag484EnuExecPriceType(TESTB_ENU_EXEC_PRICE_TYPE);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum484PriceType oneEnum : Enum484PriceType.values()) {
+            System.out.println( new Tag484EnuExecPriceType(oneEnum).toVerboseString() );
+        }
     }
 }

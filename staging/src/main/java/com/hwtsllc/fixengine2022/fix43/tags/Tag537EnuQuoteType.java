@@ -87,7 +87,20 @@ public class Tag537EnuQuoteType extends FIX43Abstract implements LogValuePairStr
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -130,5 +143,10 @@ public class Tag537EnuQuoteType extends FIX43Abstract implements LogValuePairStr
 
         tagData = new Tag537EnuQuoteType(TESTB_ENU_QUOTE_TYPE);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum537QuoteType oneEnum : Enum537QuoteType.values()) {
+            System.out.println( new Tag537EnuQuoteType(oneEnum).toVerboseString() );
+        }
     }
 }

@@ -68,7 +68,20 @@ public class Tag514EnuRegistTransType extends FIX43Abstract implements LogValueP
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -111,5 +124,10 @@ public class Tag514EnuRegistTransType extends FIX43Abstract implements LogValueP
 
         tagData = new Tag514EnuRegistTransType(TESTB_ENU_REGIST_TRANS_TYPE);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum514RegistTransType oneEnum : Enum514RegistTransType.values()) {
+            System.out.println( new Tag514EnuRegistTransType(oneEnum).toVerboseString() );
+        }
     }
 }

@@ -67,7 +67,20 @@ public class Tag552EnuNoSides extends FIX43Abstract implements LogValuePairStrin
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -110,5 +123,10 @@ public class Tag552EnuNoSides extends FIX43Abstract implements LogValuePairStrin
 
         tagData = new Tag552EnuNoSides( TESTB_ENU_NO_SIDES );
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum552NoSides oneEnum : Enum552NoSides.values()) {
+            System.out.println( new Tag552EnuNoSides(oneEnum).toVerboseString() );
+        }
     }
 }

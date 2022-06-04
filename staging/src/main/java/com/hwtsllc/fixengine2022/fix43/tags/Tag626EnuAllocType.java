@@ -90,7 +90,20 @@ public class Tag626EnuAllocType extends FIX43Abstract implements LogValuePairStr
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -133,5 +146,10 @@ public class Tag626EnuAllocType extends FIX43Abstract implements LogValuePairStr
 
         tagData = new Tag626EnuAllocType(TESTB_ENU_ALLOC_TYPE);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum626AllocType oneEnum : Enum626AllocType.values()) {
+            System.out.println( new Tag626EnuAllocType(oneEnum).toVerboseString() );
+        }
     }
 }

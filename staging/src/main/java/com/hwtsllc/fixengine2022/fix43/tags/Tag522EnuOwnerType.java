@@ -80,7 +80,20 @@ public class Tag522EnuOwnerType extends FIX43Abstract implements LogValuePairStr
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -123,5 +136,10 @@ public class Tag522EnuOwnerType extends FIX43Abstract implements LogValuePairStr
 
         tagData = new Tag522EnuOwnerType(TESTB_ENU_OWNER_TYPE);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum522OwnerType oneEnum : Enum522OwnerType.values()) {
+            System.out.println( new Tag522EnuOwnerType(oneEnum).toVerboseString() );
+        }
     }
 }

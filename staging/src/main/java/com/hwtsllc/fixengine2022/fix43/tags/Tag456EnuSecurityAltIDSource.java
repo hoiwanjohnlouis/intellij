@@ -161,7 +161,20 @@ public class Tag456EnuSecurityAltIDSource extends FIX43Abstract implements LogVa
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -204,5 +217,10 @@ public class Tag456EnuSecurityAltIDSource extends FIX43Abstract implements LogVa
 
         tagData = new Tag456EnuSecurityAltIDSource(TESTB_ENU_SECURITY_ALT_ID_SOURCE);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
+            System.out.println( new Tag456EnuSecurityAltIDSource(oneEnum).toVerboseString() );
+        }
     }
 }

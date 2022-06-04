@@ -67,7 +67,20 @@ public class Tag638EnuPriorityIndicator extends FIX43Abstract implements LogValu
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -110,5 +123,10 @@ public class Tag638EnuPriorityIndicator extends FIX43Abstract implements LogValu
 
         tagData = new Tag638EnuPriorityIndicator(TESTB_ENU_PRIORITY_INDICATOR);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum638PriorityIndicator oneEnum : Enum638PriorityIndicator.values()) {
+            System.out.println( new Tag638EnuPriorityIndicator(oneEnum).toVerboseString() );
+        }
     }
 }

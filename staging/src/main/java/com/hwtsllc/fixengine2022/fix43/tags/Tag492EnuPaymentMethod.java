@@ -88,7 +88,20 @@ public class Tag492EnuPaymentMethod extends FIX43Abstract implements LogValuePai
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -131,5 +144,10 @@ public class Tag492EnuPaymentMethod extends FIX43Abstract implements LogValuePai
 
         tagData = new Tag492EnuPaymentMethod(TESTB_ENU_PAYMENT_METHOD);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum492PaymentMethod oneEnum : Enum492PaymentMethod.values()) {
+            System.out.println( new Tag492EnuPaymentMethod(oneEnum).toVerboseString() );
+        }
     }
 }

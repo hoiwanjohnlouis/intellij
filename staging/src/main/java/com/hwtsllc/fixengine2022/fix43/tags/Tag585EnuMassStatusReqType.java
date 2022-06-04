@@ -74,7 +74,20 @@ public class Tag585EnuMassStatusReqType extends FIX43Abstract implements LogValu
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -117,5 +130,10 @@ public class Tag585EnuMassStatusReqType extends FIX43Abstract implements LogValu
 
         tagData = new Tag585EnuMassStatusReqType(TESTB_ENU_MASS_STATUS_REQ_TYPE);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum585MassStatusReqType oneEnum : Enum585MassStatusReqType.values()) {
+            System.out.println( new Tag585EnuMassStatusReqType(oneEnum).toVerboseString() );
+        }
     }
 }

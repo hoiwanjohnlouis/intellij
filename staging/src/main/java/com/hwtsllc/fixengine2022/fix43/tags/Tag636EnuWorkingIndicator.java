@@ -19,6 +19,7 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum636WorkingIndicator;
+import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -40,7 +41,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    N - Order has been accepted but not yet in a working state
  *  <p>    Y - Order is currently being worked
  */
-public class Tag636EnuWorkingIndicator extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag636EnuWorkingIndicator extends FIX43Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum636WorkingIndicator dataValue;
 
     public final static Enum636WorkingIndicator TESTA_ENU_WORKING_INDICATOR
@@ -73,10 +74,44 @@ public class Tag636EnuWorkingIndicator extends FIX43Abstract implements LogValue
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
-     * standard wrapper to format a simple string describing the data
+     * wrapper to return the ID of the underlying Data
+     */
+    @Override
+    public String toDataIDString() {
+        return this.dataValue.toFIXIDString();
+    }
+    /**
+     * wrapper to return the Name of the underlying Data
+     */
+    @Override
+    public String toDataNameString() {
+        return this.dataValue.toFIXNameString();
+    }
+    /**
+     * wrapper to return the Description of the underlying Data
+     */
+    @Override
+    public String toDataDescriptionString() {
+        return this.dataValue.toFIXDescriptionString();
+    }
+    /**
+     * standard wrapper to return a string describing the data
      */
     @Override
     public String toString() {
@@ -95,5 +130,10 @@ public class Tag636EnuWorkingIndicator extends FIX43Abstract implements LogValue
 
         tagData = new Tag636EnuWorkingIndicator( TESTB_ENU_WORKING_INDICATOR );
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum636WorkingIndicator oneEnum : Enum636WorkingIndicator.values()) {
+            System.out.println( new Tag636EnuWorkingIndicator(oneEnum).toVerboseString() );
+        }
     }
 }

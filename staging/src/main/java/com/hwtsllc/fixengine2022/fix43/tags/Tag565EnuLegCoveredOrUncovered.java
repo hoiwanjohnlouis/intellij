@@ -75,7 +75,20 @@ public class Tag565EnuLegCoveredOrUncovered extends FIX43Abstract implements Log
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -118,5 +131,10 @@ public class Tag565EnuLegCoveredOrUncovered extends FIX43Abstract implements Log
 
         tagData = new Tag565EnuLegCoveredOrUncovered(TESTB_ENU_LEG_COVERED_OR_UNCOVERED);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( MyEnumCoveredOrUncovered oneEnum : MyEnumCoveredOrUncovered.values()) {
+            System.out.println( new Tag565EnuLegCoveredOrUncovered(oneEnum).toVerboseString() );
+        }
     }
 }

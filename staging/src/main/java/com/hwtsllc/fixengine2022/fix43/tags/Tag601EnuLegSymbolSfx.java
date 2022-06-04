@@ -90,7 +90,20 @@ public class Tag601EnuLegSymbolSfx extends FIX43Abstract implements LogValuePair
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -133,5 +146,10 @@ public class Tag601EnuLegSymbolSfx extends FIX43Abstract implements LogValuePair
 
         tagData = new Tag601EnuLegSymbolSfx(TESTB_ENU_LEG_SYMBOL_SFX);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
+            System.out.println( new Tag601EnuLegSymbolSfx(oneEnum).toVerboseString() );
+        }
     }
 }

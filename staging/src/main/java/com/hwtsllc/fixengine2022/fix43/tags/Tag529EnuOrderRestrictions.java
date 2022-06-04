@@ -80,7 +80,20 @@ public class Tag529EnuOrderRestrictions extends FIX43Abstract implements LogValu
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -123,5 +136,10 @@ public class Tag529EnuOrderRestrictions extends FIX43Abstract implements LogValu
 
         tagData = new Tag529EnuOrderRestrictions(TESTB_ENU_ORDER_RESTRICTIONS);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum529OrderRestrictions oneEnum : Enum529OrderRestrictions.values()) {
+            System.out.println( new Tag529EnuOrderRestrictions(oneEnum).toVerboseString() );
+        }
     }
 }

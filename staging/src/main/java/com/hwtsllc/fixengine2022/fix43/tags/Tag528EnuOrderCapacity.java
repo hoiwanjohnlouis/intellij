@@ -79,7 +79,20 @@ public class Tag528EnuOrderCapacity extends FIX43Abstract implements LogValuePai
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -122,5 +135,10 @@ public class Tag528EnuOrderCapacity extends FIX43Abstract implements LogValuePai
 
         tagData = new Tag528EnuOrderCapacity(TESTB_ENU_ORDER_CAPACITY);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum528OrderCapacity oneEnum : Enum528OrderCapacity.values()) {
+            System.out.println( new Tag528EnuOrderCapacity(oneEnum).toVerboseString() );
+        }
     }
 }

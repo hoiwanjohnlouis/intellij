@@ -79,7 +79,20 @@ public class Tag587EnuLegSettlType extends FIX43Abstract implements LogValuePair
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -122,5 +135,10 @@ public class Tag587EnuLegSettlType extends FIX43Abstract implements LogValuePair
 
         tagData = new Tag587EnuLegSettlType(TESTB_ENU_LEG_SETTL_TYPE);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum587LegSettlType oneEnum : Enum587LegSettlType.values()) {
+            System.out.println( new Tag587EnuLegSettlType(oneEnum).toVerboseString() );
+        }
     }
 }

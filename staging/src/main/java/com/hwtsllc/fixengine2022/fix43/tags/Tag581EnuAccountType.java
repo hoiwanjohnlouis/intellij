@@ -78,7 +78,20 @@ public class Tag581EnuAccountType extends FIX43Abstract implements LogValuePairS
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -121,5 +134,10 @@ public class Tag581EnuAccountType extends FIX43Abstract implements LogValuePairS
 
         tagData = new Tag581EnuAccountType(TESTB_ENU_ACCOUNT_TYPE);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( MyEnumAccountType oneEnum : MyEnumAccountType.values()) {
+            System.out.println( new Tag581EnuAccountType(oneEnum).toVerboseString() );
+        }
     }
 }

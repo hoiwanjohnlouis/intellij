@@ -116,7 +116,20 @@ public class Tag574EnuMatchType extends FIX43Abstract implements LogValuePairStr
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -159,5 +172,10 @@ public class Tag574EnuMatchType extends FIX43Abstract implements LogValuePairStr
 
         tagData = new Tag574EnuMatchType(TESTB_ENU_MATCH_TYPE);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum574MatchType oneEnum : Enum574MatchType.values()) {
+            System.out.println( new Tag574EnuMatchType(oneEnum).toVerboseString() );
+        }
     }
 }

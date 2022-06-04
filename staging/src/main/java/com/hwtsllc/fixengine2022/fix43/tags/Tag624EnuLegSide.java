@@ -90,7 +90,20 @@ public class Tag624EnuLegSide extends FIX43Abstract implements LogValuePairStrin
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -133,5 +146,10 @@ public class Tag624EnuLegSide extends FIX43Abstract implements LogValuePairStrin
 
         tagData = new Tag624EnuLegSide(TESTB_ENU_LEG_SIDE);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( MyEnumSide oneEnum : MyEnumSide.values()) {
+            System.out.println( new Tag624EnuLegSide(oneEnum).toVerboseString() );
+        }
     }
 }

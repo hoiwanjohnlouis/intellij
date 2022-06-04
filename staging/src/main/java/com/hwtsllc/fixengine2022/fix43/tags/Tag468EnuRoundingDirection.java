@@ -81,7 +81,20 @@ public class Tag468EnuRoundingDirection extends FIX43Abstract implements LogValu
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -124,5 +137,10 @@ public class Tag468EnuRoundingDirection extends FIX43Abstract implements LogValu
 
         tagData = new Tag468EnuRoundingDirection(TESTB_ENU_ROUNDING_DIRECTION);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum468RoundingDirection oneEnum : Enum468RoundingDirection.values()) {
+            System.out.println( new Tag468EnuRoundingDirection(oneEnum).toVerboseString() );
+        }
     }
 }

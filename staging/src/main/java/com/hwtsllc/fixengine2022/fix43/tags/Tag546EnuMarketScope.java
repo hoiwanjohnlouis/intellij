@@ -68,7 +68,20 @@ public class Tag546EnuMarketScope extends FIX43Abstract implements LogValuePairS
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -111,5 +124,10 @@ public class Tag546EnuMarketScope extends FIX43Abstract implements LogValuePairS
 
         tagData = new Tag546EnuMarketScope(TESTB_ENU_SCOPE);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( MyEnumMarketScope oneEnum : MyEnumMarketScope.values()) {
+            System.out.println( new Tag546EnuMarketScope(oneEnum).toVerboseString() );
+        }
     }
 }

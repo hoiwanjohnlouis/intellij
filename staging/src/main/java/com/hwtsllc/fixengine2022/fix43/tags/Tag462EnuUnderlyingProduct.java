@@ -99,7 +99,20 @@ public class Tag462EnuUnderlyingProduct extends FIX43Abstract implements LogValu
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -142,5 +155,10 @@ public class Tag462EnuUnderlyingProduct extends FIX43Abstract implements LogValu
 
         tagData = new Tag462EnuUnderlyingProduct(TESTB_ENU_UNDERLYING_PRODUCT);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( MyEnumProduct oneEnum : MyEnumProduct.values()) {
+            System.out.println( new Tag462EnuUnderlyingProduct(oneEnum).toVerboseString() );
+        }
     }
 }

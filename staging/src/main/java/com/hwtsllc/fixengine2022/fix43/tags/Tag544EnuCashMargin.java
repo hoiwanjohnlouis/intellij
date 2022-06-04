@@ -76,7 +76,20 @@ public class Tag544EnuCashMargin extends FIX43Abstract implements LogValuePairSt
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -119,5 +132,10 @@ public class Tag544EnuCashMargin extends FIX43Abstract implements LogValuePairSt
 
         tagData = new Tag544EnuCashMargin(TESTB_ENU_CASH_MARGIN);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum544CashMargin oneEnum : Enum544CashMargin.values()) {
+            System.out.println( new Tag544EnuCashMargin(oneEnum).toVerboseString() );
+        }
     }
 }

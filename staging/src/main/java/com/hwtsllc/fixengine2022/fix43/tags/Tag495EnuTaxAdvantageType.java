@@ -109,7 +109,20 @@ public class Tag495EnuTaxAdvantageType extends FIX43Abstract implements LogValue
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -152,5 +165,10 @@ public class Tag495EnuTaxAdvantageType extends FIX43Abstract implements LogValue
 
         tagData = new Tag495EnuTaxAdvantageType(TESTB_ENU_TAX_ADVANTAGE_TYPE);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum495TaxAdvantageType oneEnum : Enum495TaxAdvantageType.values()) {
+            System.out.println( new Tag495EnuTaxAdvantageType(oneEnum).toVerboseString() );
+        }
     }
 }

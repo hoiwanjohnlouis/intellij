@@ -67,7 +67,20 @@ public class Tag591EnuPreallocMethod extends FIX43Abstract implements LogValuePa
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -110,5 +123,10 @@ public class Tag591EnuPreallocMethod extends FIX43Abstract implements LogValuePa
 
         tagData = new Tag591EnuPreallocMethod(TESTB_ENU_PREALLOC_METHOD);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum591PreallocMethod oneEnum : Enum591PreallocMethod.values()) {
+            System.out.println( new Tag591EnuPreallocMethod(oneEnum).toVerboseString() );
+        }
     }
 }

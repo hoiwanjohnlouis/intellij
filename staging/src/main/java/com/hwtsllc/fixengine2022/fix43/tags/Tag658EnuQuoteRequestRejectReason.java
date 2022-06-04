@@ -80,7 +80,20 @@ public class Tag658EnuQuoteRequestRejectReason extends FIX43Abstract implements 
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -123,5 +136,10 @@ public class Tag658EnuQuoteRequestRejectReason extends FIX43Abstract implements 
 
         tagData = new Tag658EnuQuoteRequestRejectReason(TESTB_ENU_QUOTE_REQUEST_REJECT_REASON);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum658QuoteRequestRejectReason oneEnum : Enum658QuoteRequestRejectReason.values()) {
+            System.out.println( new Tag658EnuQuoteRequestRejectReason(oneEnum).toVerboseString() );
+        }
     }
 }

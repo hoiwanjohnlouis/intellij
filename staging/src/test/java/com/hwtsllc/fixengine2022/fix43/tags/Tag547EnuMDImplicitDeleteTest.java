@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
+import com.hwtsllc.fixengine2022.fix43.enums.Enum547MDImplicitDelete;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -52,11 +52,11 @@ class Tag547EnuMDImplicitDeleteTest {
     void Tag0547Test() {
         Tag547EnuMDImplicitDelete tagData;
 
-        tagData = new Tag547EnuMDImplicitDelete(MyBooleanType.NO);
+        tagData = new Tag547EnuMDImplicitDelete( Enum547MDImplicitDelete.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag547EnuMDImplicitDelete(MyBooleanType.YES);
+        tagData = new Tag547EnuMDImplicitDelete(Enum547MDImplicitDelete.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

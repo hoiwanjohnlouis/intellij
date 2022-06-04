@@ -160,7 +160,20 @@ public class Tag525EnuNestedPartyIDSource extends FIX43Abstract implements LogVa
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -203,5 +216,10 @@ public class Tag525EnuNestedPartyIDSource extends FIX43Abstract implements LogVa
 
         tagData = new Tag525EnuNestedPartyIDSource(TESTB_ENU_NESTED_PARTY_ID_SOURCE);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( MyEnumPartyIDSource oneEnum : MyEnumPartyIDSource.values()) {
+            System.out.println( new Tag525EnuNestedPartyIDSource(oneEnum).toVerboseString() );
+        }
     }
 }

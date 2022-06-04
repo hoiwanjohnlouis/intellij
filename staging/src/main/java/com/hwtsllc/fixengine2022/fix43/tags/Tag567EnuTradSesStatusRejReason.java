@@ -68,7 +68,20 @@ public class Tag567EnuTradSesStatusRejReason extends FIX43Abstract implements Lo
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -111,5 +124,10 @@ public class Tag567EnuTradSesStatusRejReason extends FIX43Abstract implements Lo
 
         tagData = new Tag567EnuTradSesStatusRejReason(TESTB_ENU_TRAD_SES_STATUS_REJ_REASON);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum567TradSesStatusRejReason oneEnum : Enum567TradSesStatusRejReason.values()) {
+            System.out.println( new Tag567EnuTradSesStatusRejReason(oneEnum).toVerboseString() );
+        }
     }
 }

@@ -69,7 +69,20 @@ public class Tag464EnuTestMessageIndicator extends FIX43Abstract implements LogV
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -112,5 +125,10 @@ public class Tag464EnuTestMessageIndicator extends FIX43Abstract implements LogV
 
         tagData = new Tag464EnuTestMessageIndicator( TESTB_ENU_TEST_MESSAGE_INDICATOR );
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( Enum464TestMessageIndicator oneEnum : Enum464TestMessageIndicator.values()) {
+            System.out.println( new Tag464EnuTestMessageIndicator(oneEnum).toVerboseString() );
+        }
     }
 }

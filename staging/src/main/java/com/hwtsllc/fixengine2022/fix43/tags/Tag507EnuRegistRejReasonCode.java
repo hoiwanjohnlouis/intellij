@@ -92,7 +92,20 @@ public class Tag507EnuRegistRejReasonCode extends FIX43Abstract implements LogVa
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -135,5 +148,10 @@ public class Tag507EnuRegistRejReasonCode extends FIX43Abstract implements LogVa
 
         tagData = new Tag507EnuRegistRejReasonCode( TESTB_ENU_REGIST_REJ_REASON_CODE );
         System.out.println( tagData.toVerboseString() );
+
+        // loop around the ENUM and process
+        for ( Enum507RegistRejReasonCode oneEnum : Enum507RegistRejReasonCode.values()) {
+            System.out.println( new Tag507EnuRegistRejReasonCode(oneEnum).toVerboseString() );
+        }
     }
 }

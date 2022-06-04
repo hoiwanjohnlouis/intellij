@@ -99,7 +99,20 @@ public class Tag607EnuLegProduct extends FIX43Abstract implements LogValuePairSt
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -142,5 +155,10 @@ public class Tag607EnuLegProduct extends FIX43Abstract implements LogValuePairSt
 
         tagData = new Tag607EnuLegProduct(TESTB_ENU_LEG_PRODUCT);
         System.out.println(tagData.toVerboseString());
+
+        // loop around the ENUM and process
+        for ( MyEnumProduct oneEnum : MyEnumProduct.values()) {
+            System.out.println( new Tag607EnuLegProduct(oneEnum).toVerboseString() );
+        }
     }
 }
