@@ -17,6 +17,8 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.MyCountryType;
+import com.hwtsllc.fixengine2022.fix42.tags.Tag475CouInvestorCountryOfResidence;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -45,5 +47,65 @@ class Tag475CouInvestorCountryOfResidenceTest {
     void Tag0475Test() {
         Tag475CouInvestorCountryOfResidence tagData;
 
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag475CouInvestorCountryOfResidence tagData;
+        String oneElement;
+
+        oneElement = Tag475CouInvestorCountryOfResidence.TESTA_COU_COUNTRY;
+        tagData = new Tag475CouInvestorCountryOfResidence( new MyCountryType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag475CouInvestorCountryOfResidence.TESTB_COU_COUNTRY;
+        tagData = new Tag475CouInvestorCountryOfResidence( new MyCountryType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag475CouInvestorCountryOfResidence tagData;
+        String oneElement;
+
+        oneElement = Tag475CouInvestorCountryOfResidence.TESTB_COU_COUNTRY;
+        tagData = new Tag475CouInvestorCountryOfResidence( new MyCountryType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag475CouInvestorCountryOfResidence tagData;
+        String oneElement;
+
+        oneElement = Tag475CouInvestorCountryOfResidence.TESTB_COU_COUNTRY;
+        tagData = new Tag475CouInvestorCountryOfResidence( new MyCountryType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag475CouInvestorCountryOfResidence tagData;
+        String oneElement;
+
+        oneElement = Tag475CouInvestorCountryOfResidence.TESTB_COU_COUNTRY;
+        tagData = new Tag475CouInvestorCountryOfResidence( new MyCountryType( oneElement ) );
+        assertEquals( oneElement, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag475CouInvestorCountryOfResidence tagData;
+        String oneElement;
+
+        oneElement = Tag475CouInvestorCountryOfResidence.TESTA_COU_COUNTRY;
+        tagData = new Tag475CouInvestorCountryOfResidence( new MyCountryType( oneElement ) );
+        assertEquals( "Tag475CouInvestorCountryOfResidence\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

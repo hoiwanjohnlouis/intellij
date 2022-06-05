@@ -17,6 +17,8 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
+import com.hwtsllc.fixengine2022.fix42.tags.Tag555NumNoLegs;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -45,5 +47,65 @@ class Tag555NumNoLegsTest {
     void Tag0555Test() {
         Tag555NumNoLegs tagData;
 
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag555NumNoLegs tagData;
+        int oneElement;
+
+        oneElement = Tag555NumNoLegs.TESTA_NUM_NO_ROUTING_IDS;
+        tagData = new Tag555NumNoLegs( new MyNumInGroupType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag555NumNoLegs.TESTB_NUM_NO_ROUTING_IDS;
+        tagData = new Tag555NumNoLegs( new MyNumInGroupType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag555NumNoLegs tagData;
+        int oneElement;
+
+        oneElement = Tag555NumNoLegs.TESTB_NUM_NO_ROUTING_IDS;
+        tagData = new Tag555NumNoLegs( new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag555NumNoLegs tagData;
+        int oneElement;
+
+        oneElement = Tag555NumNoLegs.TESTB_NUM_NO_ROUTING_IDS;
+        tagData = new Tag555NumNoLegs( new MyNumInGroupType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag555NumNoLegs tagData;
+        int oneElement;
+
+        oneElement = Tag555NumNoLegs.TESTB_NUM_NO_ROUTING_IDS;
+        tagData = new Tag555NumNoLegs( new MyNumInGroupType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag555NumNoLegs tagData;
+        int oneElement;
+
+        oneElement = Tag555NumNoLegs.TESTA_NUM_NO_ROUTING_IDS;
+        tagData = new Tag555NumNoLegs( new MyNumInGroupType( oneElement ) );
+        assertEquals( "Tag555NumNoLegs\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

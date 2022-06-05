@@ -17,6 +17,8 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.MyFloatType;
+import com.hwtsllc.fixengine2022.fix42.tags.Tag623FloLegRatioQty;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -45,5 +47,62 @@ class Tag623FloLegRatioQtyTest {
     void Tag0623Test() {
         Tag623FloLegRatioQty tagData;
 
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag623FloLegRatioQty tagData;
+        float oneElement;
+
+        oneElement = Tag623FloLegRatioQty.TESTB_FLO_UNDERLYING_CONTRACT_MULTIPLIER;
+        tagData = new Tag623FloLegRatioQty( new MyFloatType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag623FloLegRatioQty tagData;
+        float oneElement;
+
+        oneElement = Tag623FloLegRatioQty.TESTB_FLO_UNDERLYING_CONTRACT_MULTIPLIER;
+        tagData = new Tag623FloLegRatioQty( new MyFloatType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag623FloLegRatioQty tagData;
+        float oneElement;
+
+        oneElement = Tag623FloLegRatioQty.TESTB_FLO_UNDERLYING_CONTRACT_MULTIPLIER;
+        tagData = new Tag623FloLegRatioQty( new MyFloatType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+    @Test
+    void TagToStringTest() {
+        Tag623FloLegRatioQty tagData;
+        float oneElement;
+
+        oneElement = Tag623FloLegRatioQty.TESTB_FLO_UNDERLYING_CONTRACT_MULTIPLIER;
+        tagData = new Tag623FloLegRatioQty( new MyFloatType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag623FloLegRatioQty tagData;
+        float oneElement;
+
+        oneElement = Tag623FloLegRatioQty.TESTA_FLO_UNDERLYING_CONTRACT_MULTIPLIER;
+        tagData = new Tag623FloLegRatioQty( new MyFloatType( oneElement ) );
+        assertEquals( "Tag623FloLegRatioQty\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement +
+                        "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

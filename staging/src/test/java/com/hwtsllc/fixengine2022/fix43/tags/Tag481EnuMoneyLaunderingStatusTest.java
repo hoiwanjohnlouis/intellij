@@ -17,6 +17,8 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.tags.Tag481EnuMoneyLaunderingStatus;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum481MoneyLaunderingStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -85,5 +87,70 @@ class Tag481EnuMoneyLaunderingStatusTest {
         tagData = new Tag481EnuMoneyLaunderingStatus( Enum481MoneyLaunderingStatus.EXEMPT_AUTHORISED );
         assertEquals( Enum481MoneyLaunderingStatus.EXEMPT_AUTHORISED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag481EnuMoneyLaunderingStatus tagData;
+
+        // loop around the ENUM and process
+        for ( Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+            tagData = new Tag481EnuMoneyLaunderingStatus(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag481EnuMoneyLaunderingStatus tagData;
+
+        // loop around the ENUM and process
+        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+            tagData = new Tag481EnuMoneyLaunderingStatus(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag481EnuMoneyLaunderingStatus tagData;
+
+        // loop around the ENUM and process
+        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+            tagData = new Tag481EnuMoneyLaunderingStatus(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag481EnuMoneyLaunderingStatus tagData;
+
+        // loop around the ENUM and process
+        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+            tagData = new Tag481EnuMoneyLaunderingStatus(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag481EnuMoneyLaunderingStatus tagData;
+
+        // loop around the ENUM and process
+        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+            tagData = new Tag481EnuMoneyLaunderingStatus(oneEnum);
+            assertEquals( "Tag481EnuMoneyLaunderingStatus\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
     }
 }

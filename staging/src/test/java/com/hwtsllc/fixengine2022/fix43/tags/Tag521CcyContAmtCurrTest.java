@@ -17,6 +17,8 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.MyCurrencyType;
+import com.hwtsllc.fixengine2022.fix42.tags.Tag521CcyContAmtCurr;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -47,5 +49,65 @@ class Tag521CcyContAmtCurrTest {
     void Tag0521Test() {
         Tag521CcyContAmtCurr tagData;
 
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag521CcyContAmtCurr tagData;
+        String oneElement;
+
+        oneElement = Tag521CcyContAmtCurr.TESTA_CCY_BENCHMARK_CURVE_CURRENCY;
+        tagData = new Tag521CcyContAmtCurr( new MyCurrencyType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag521CcyContAmtCurr.TESTB_CCY_BENCHMARK_CURVE_CURRENCY;
+        tagData = new Tag521CcyContAmtCurr( new MyCurrencyType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag521CcyContAmtCurr tagData;
+        String oneElement;
+
+        oneElement = Tag521CcyContAmtCurr.TESTB_CCY_BENCHMARK_CURVE_CURRENCY;
+        tagData = new Tag521CcyContAmtCurr( new MyCurrencyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag521CcyContAmtCurr tagData;
+        String oneElement;
+
+        oneElement = Tag521CcyContAmtCurr.TESTB_CCY_BENCHMARK_CURVE_CURRENCY;
+        tagData = new Tag521CcyContAmtCurr( new MyCurrencyType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag521CcyContAmtCurr tagData;
+        String oneElement;
+
+        oneElement = Tag521CcyContAmtCurr.TESTB_CCY_BENCHMARK_CURVE_CURRENCY;
+        tagData = new Tag521CcyContAmtCurr( new MyCurrencyType( oneElement ) );
+        assertEquals( oneElement, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag521CcyContAmtCurr tagData;
+        String oneElement;
+
+        oneElement = Tag521CcyContAmtCurr.TESTA_CCY_BENCHMARK_CURVE_CURRENCY;
+        tagData = new Tag521CcyContAmtCurr( new MyCurrencyType( oneElement ) );
+        assertEquals( "Tag521CcyContAmtCurr\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

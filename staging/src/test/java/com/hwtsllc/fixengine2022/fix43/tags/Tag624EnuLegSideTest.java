@@ -18,6 +18,8 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumSide;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.tags.Tag624EnuLegSide;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -147,5 +149,70 @@ class Tag624EnuLegSideTest {
         tagData = new Tag624EnuLegSide(MyEnumSide.BORROW_FINANCING);
         assertEquals(MyEnumSide.BORROW_FINANCING.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag624EnuLegSide tagData;
+
+        // loop around the ENUM and process
+        for ( Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+            tagData = new Tag624EnuLegSide(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag624EnuLegSide tagData;
+
+        // loop around the ENUM and process
+        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+            tagData = new Tag624EnuLegSide(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag624EnuLegSide tagData;
+
+        // loop around the ENUM and process
+        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+            tagData = new Tag624EnuLegSide(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag624EnuLegSide tagData;
+
+        // loop around the ENUM and process
+        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+            tagData = new Tag624EnuLegSide(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag624EnuLegSide tagData;
+
+        // loop around the ENUM and process
+        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+            tagData = new Tag624EnuLegSide(oneEnum);
+            assertEquals( "Tag624EnuLegSide\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
     }
 }

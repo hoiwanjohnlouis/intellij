@@ -17,6 +17,8 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.MySeqNumType;
+import com.hwtsllc.fixengine2022.fix42.tags.Tag630SeqHopRefID;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -52,5 +54,65 @@ class Tag630SeqHopRefIDTest {
     void Tag0630Test() {
         Tag630SeqHopRefID tagData;
 
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag630SeqHopRefID tagData;
+        int oneElement;
+
+        oneElement = Tag630SeqHopRefID.TESTA_SEQ_LAST_MSG_SEQ_NUM_PROCESSED;
+        tagData = new Tag630SeqHopRefID( new MySeqNumType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag630SeqHopRefID.TESTB_SEQ_LAST_MSG_SEQ_NUM_PROCESSED;
+        tagData = new Tag630SeqHopRefID( new MySeqNumType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag630SeqHopRefID tagData;
+        int oneElement;
+
+        oneElement = Tag630SeqHopRefID.TESTB_SEQ_LAST_MSG_SEQ_NUM_PROCESSED;
+        tagData = new Tag630SeqHopRefID( new MySeqNumType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_SEQ_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag630SeqHopRefID tagData;
+        int oneElement;
+
+        oneElement = Tag630SeqHopRefID.TESTB_SEQ_LAST_MSG_SEQ_NUM_PROCESSED;
+        tagData = new Tag630SeqHopRefID( new MySeqNumType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag630SeqHopRefID tagData;
+        int oneElement;
+
+        oneElement = Tag630SeqHopRefID.TESTB_SEQ_LAST_MSG_SEQ_NUM_PROCESSED;
+        tagData = new Tag630SeqHopRefID( new MySeqNumType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag630SeqHopRefID tagData;
+        int oneElement;
+
+        oneElement = Tag630SeqHopRefID.TESTA_SEQ_LAST_MSG_SEQ_NUM_PROCESSED;
+        tagData = new Tag630SeqHopRefID( new MySeqNumType( oneElement ) );
+        assertEquals( "Tag630SeqHopRefID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

@@ -17,6 +17,8 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
+import com.hwtsllc.fixengine2022.fix42.tags.Tag576NumNoClearingInstructions;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -45,5 +47,65 @@ class Tag576NumNoClearingInstructionsTest {
     void Tag0576Test() {
         Tag576NumNoClearingInstructions tagData;
 
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag576NumNoClearingInstructions tagData;
+        int oneElement;
+
+        oneElement = Tag576NumNoClearingInstructions.TESTA_NUM_NO_ROUTING_IDS;
+        tagData = new Tag576NumNoClearingInstructions( new MyNumInGroupType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag576NumNoClearingInstructions.TESTB_NUM_NO_ROUTING_IDS;
+        tagData = new Tag576NumNoClearingInstructions( new MyNumInGroupType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag576NumNoClearingInstructions tagData;
+        int oneElement;
+
+        oneElement = Tag576NumNoClearingInstructions.TESTB_NUM_NO_ROUTING_IDS;
+        tagData = new Tag576NumNoClearingInstructions( new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag576NumNoClearingInstructions tagData;
+        int oneElement;
+
+        oneElement = Tag576NumNoClearingInstructions.TESTB_NUM_NO_ROUTING_IDS;
+        tagData = new Tag576NumNoClearingInstructions( new MyNumInGroupType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag576NumNoClearingInstructions tagData;
+        int oneElement;
+
+        oneElement = Tag576NumNoClearingInstructions.TESTB_NUM_NO_ROUTING_IDS;
+        tagData = new Tag576NumNoClearingInstructions( new MyNumInGroupType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag576NumNoClearingInstructions tagData;
+        int oneElement;
+
+        oneElement = Tag576NumNoClearingInstructions.TESTA_NUM_NO_ROUTING_IDS;
+        tagData = new Tag576NumNoClearingInstructions( new MyNumInGroupType( oneElement ) );
+        assertEquals( "Tag576NumNoClearingInstructions\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

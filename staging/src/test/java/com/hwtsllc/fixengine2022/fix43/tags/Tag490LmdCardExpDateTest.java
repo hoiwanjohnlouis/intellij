@@ -17,6 +17,8 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.MyLocalMktDateType;
+import com.hwtsllc.fixengine2022.fix42.tags.Tag490LmdCardExpDate;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -45,5 +47,65 @@ class Tag490LmdCardExpDateTest {
     void Tag0490Test() {
         Tag490LmdCardExpDate tagData;
 
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag490LmdCardExpDate tagData;
+        String oneElement;
+
+        oneElement = Tag490LmdCardExpDate.TESTA_LMD_COUPON_PAYMENT_DATE;
+        tagData = new Tag490LmdCardExpDate( new MyLocalMktDateType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag490LmdCardExpDate.TESTB_LMD_COUPON_PAYMENT_DATE;
+        tagData = new Tag490LmdCardExpDate( new MyLocalMktDateType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag490LmdCardExpDate tagData;
+        String oneElement;
+
+        oneElement = Tag490LmdCardExpDate.TESTB_LMD_COUPON_PAYMENT_DATE;
+        tagData = new Tag490LmdCardExpDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag490LmdCardExpDate tagData;
+        String oneElement;
+
+        oneElement = Tag490LmdCardExpDate.TESTB_LMD_COUPON_PAYMENT_DATE;
+        tagData = new Tag490LmdCardExpDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag490LmdCardExpDate tagData;
+        String oneElement;
+
+        oneElement = Tag490LmdCardExpDate.TESTB_LMD_COUPON_PAYMENT_DATE;
+        tagData = new Tag490LmdCardExpDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( oneElement, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag490LmdCardExpDate tagData;
+        String oneElement;
+
+        oneElement = Tag490LmdCardExpDate.TESTA_LMD_COUPON_PAYMENT_DATE;
+        tagData = new Tag490LmdCardExpDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( "Tag490LmdCardExpDate\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

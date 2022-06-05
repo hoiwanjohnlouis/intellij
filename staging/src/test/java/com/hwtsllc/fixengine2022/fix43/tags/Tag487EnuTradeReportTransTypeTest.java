@@ -17,6 +17,8 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.tags.Tag487EnuTradeReportTransType;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum487TradeReportTransType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -84,5 +86,70 @@ class Tag487EnuTradeReportTransTypeTest {
         tagData = new Tag487EnuTradeReportTransType( Enum487TradeReportTransType.CANCEL_BACK_OUT_TRADE );
         assertEquals( Enum487TradeReportTransType.CANCEL_BACK_OUT_TRADE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag487EnuTradeReportTransType tagData;
+
+        // loop around the ENUM and process
+        for ( Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+            tagData = new Tag487EnuTradeReportTransType(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag487EnuTradeReportTransType tagData;
+
+        // loop around the ENUM and process
+        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+            tagData = new Tag487EnuTradeReportTransType(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag487EnuTradeReportTransType tagData;
+
+        // loop around the ENUM and process
+        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+            tagData = new Tag487EnuTradeReportTransType(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag487EnuTradeReportTransType tagData;
+
+        // loop around the ENUM and process
+        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+            tagData = new Tag487EnuTradeReportTransType(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag487EnuTradeReportTransType tagData;
+
+        // loop around the ENUM and process
+        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+            tagData = new Tag487EnuTradeReportTransType(oneEnum);
+            assertEquals( "Tag487EnuTradeReportTransType\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
     }
 }

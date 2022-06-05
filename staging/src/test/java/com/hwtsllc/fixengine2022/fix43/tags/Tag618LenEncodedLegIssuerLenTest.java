@@ -17,6 +17,8 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.MyLengthType;
+import com.hwtsllc.fixengine2022.fix42.tags.Tag618LenEncodedLegIssuerLen;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -47,5 +49,65 @@ class Tag618LenEncodedLegIssuerLenTest {
     void Tag0618Test() {
         Tag618LenEncodedLegIssuerLen tagData;
 
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag618LenEncodedLegIssuerLen tagData;
+        int oneElement;
+
+        oneElement = Tag618LenEncodedLegIssuerLen.TESTA_LEN_XML_DATA_LEN;
+        tagData = new Tag618LenEncodedLegIssuerLen( new MyLengthType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag618LenEncodedLegIssuerLen.TESTB_LEN_XML_DATA_LEN;
+        tagData = new Tag618LenEncodedLegIssuerLen( new MyLengthType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag618LenEncodedLegIssuerLen tagData;
+        int oneElement;
+
+        oneElement = Tag618LenEncodedLegIssuerLen.TESTB_LEN_XML_DATA_LEN;
+        tagData = new Tag618LenEncodedLegIssuerLen( new MyLengthType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag618LenEncodedLegIssuerLen tagData;
+        int oneElement;
+
+        oneElement = Tag618LenEncodedLegIssuerLen.TESTB_LEN_XML_DATA_LEN;
+        tagData = new Tag618LenEncodedLegIssuerLen( new MyLengthType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag618LenEncodedLegIssuerLen tagData;
+        int oneElement;
+
+        oneElement = Tag618LenEncodedLegIssuerLen.TESTB_LEN_XML_DATA_LEN;
+        tagData = new Tag618LenEncodedLegIssuerLen( new MyLengthType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag618LenEncodedLegIssuerLen tagData;
+        int oneElement;
+
+        oneElement = Tag618LenEncodedLegIssuerLen.TESTA_LEN_XML_DATA_LEN;
+        tagData = new Tag618LenEncodedLegIssuerLen( new MyLengthType( oneElement ) );
+        assertEquals( "Tag618LenEncodedLegIssuerLen\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

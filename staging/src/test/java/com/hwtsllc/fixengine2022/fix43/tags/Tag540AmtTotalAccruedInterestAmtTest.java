@@ -17,6 +17,8 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
+import com.hwtsllc.fixengine2022.fix42.tags.Tag540AmtTotalAccruedInterestAmt;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -46,5 +48,65 @@ class Tag540AmtTotalAccruedInterestAmtTest {
     void Tag0540Test() {
         Tag540AmtTotalAccruedInterestAmt tagData;
 
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag540AmtTotalAccruedInterestAmt tagData;
+        double oneElement;
+
+        oneElement = Tag540AmtTotalAccruedInterestAmt.TESTA_AMT_TOTAL_TAKEDOWN;
+        tagData = new Tag540AmtTotalAccruedInterestAmt( new MyAmtType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag540AmtTotalAccruedInterestAmt.TESTB_AMT_TOTAL_TAKEDOWN;
+        tagData = new Tag540AmtTotalAccruedInterestAmt( new MyAmtType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag540AmtTotalAccruedInterestAmt tagData;
+        double oneElement;
+
+        oneElement = Tag540AmtTotalAccruedInterestAmt.TESTB_AMT_TOTAL_TAKEDOWN;
+        tagData = new Tag540AmtTotalAccruedInterestAmt( new MyAmtType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag540AmtTotalAccruedInterestAmt tagData;
+        double oneElement;
+
+        oneElement = Tag540AmtTotalAccruedInterestAmt.TESTB_AMT_TOTAL_TAKEDOWN;
+        tagData = new Tag540AmtTotalAccruedInterestAmt( new MyAmtType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag540AmtTotalAccruedInterestAmt tagData;
+        double oneElement;
+
+        oneElement = Tag540AmtTotalAccruedInterestAmt.TESTB_AMT_TOTAL_TAKEDOWN;
+        tagData = new Tag540AmtTotalAccruedInterestAmt( new MyAmtType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag540AmtTotalAccruedInterestAmt tagData;
+        double oneElement;
+
+        oneElement = Tag540AmtTotalAccruedInterestAmt.TESTA_AMT_TOTAL_TAKEDOWN;
+        tagData = new Tag540AmtTotalAccruedInterestAmt( new MyAmtType( oneElement ) );
+        assertEquals( "Tag540AmtTotalAccruedInterestAmt\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

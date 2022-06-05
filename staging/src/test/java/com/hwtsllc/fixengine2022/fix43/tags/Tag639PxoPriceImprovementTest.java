@@ -17,6 +17,8 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.MyPriceOffsetType;
+import com.hwtsllc.fixengine2022.fix42.tags.Tag639PxoPriceImprovement;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -45,5 +47,66 @@ class Tag639PxoPriceImprovementTest {
     void Tag0639Test() {
         Tag639PxoPriceImprovement tagData;
 
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag639PxoPriceImprovement tagData;
+        double oneElement;
+
+        oneElement = Tag639PxoPriceImprovement.TESTA_PXO_SPREAD;
+        tagData = new Tag639PxoPriceImprovement( new MyPriceOffsetType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag639PxoPriceImprovement.TESTB_PXO_SPREAD;
+        tagData = new Tag639PxoPriceImprovement( new MyPriceOffsetType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag639PxoPriceImprovement tagData;
+        double oneElement;
+
+        oneElement = Tag639PxoPriceImprovement.TESTB_PXO_SPREAD;
+        tagData = new Tag639PxoPriceImprovement( new MyPriceOffsetType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag639PxoPriceImprovement tagData;
+        double oneElement;
+
+        oneElement = Tag639PxoPriceImprovement.TESTB_PXO_SPREAD;
+        tagData = new Tag639PxoPriceImprovement( new MyPriceOffsetType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag639PxoPriceImprovement tagData;
+        double oneElement;
+
+        oneElement = Tag639PxoPriceImprovement.TESTB_PXO_SPREAD;
+        tagData = new Tag639PxoPriceImprovement( new MyPriceOffsetType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
+                tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag639PxoPriceImprovement tagData;
+        double oneElement;
+
+        oneElement = Tag639PxoPriceImprovement.TESTA_PXO_SPREAD;
+        tagData = new Tag639PxoPriceImprovement( new MyPriceOffsetType( oneElement ) );
+        assertEquals( "Tag639PxoPriceImprovement\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

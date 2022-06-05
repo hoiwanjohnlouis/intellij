@@ -17,6 +17,8 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
+import com.hwtsllc.fixengine2022.fix42.tags.Tag629UtcHopSendingTime;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -52,5 +54,65 @@ class Tag629UtcHopSendingTimeTest {
     void Tag0629Test() {
         Tag629UtcHopSendingTime tagData;
 
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag629UtcHopSendingTime tagData;
+        String oneElement;
+
+        oneElement = Tag629UtcHopSendingTime.TESTA_UTC_TRAD_SES_START_TIME;
+        tagData = new Tag629UtcHopSendingTime( new MyUTCTimestampType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag629UtcHopSendingTime.TESTB_UTC_TRAD_SES_START_TIME;
+        tagData = new Tag629UtcHopSendingTime( new MyUTCTimestampType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag629UtcHopSendingTime tagData;
+        String oneElement;
+
+        oneElement = Tag629UtcHopSendingTime.TESTB_UTC_TRAD_SES_START_TIME;
+        tagData = new Tag629UtcHopSendingTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag629UtcHopSendingTime tagData;
+        String oneElement;
+
+        oneElement = Tag629UtcHopSendingTime.TESTB_UTC_TRAD_SES_START_TIME;
+        tagData = new Tag629UtcHopSendingTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag629UtcHopSendingTime tagData;
+        String oneElement;
+
+        oneElement = Tag629UtcHopSendingTime.TESTB_UTC_TRAD_SES_START_TIME;
+        tagData = new Tag629UtcHopSendingTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag629UtcHopSendingTime tagData;
+        String oneElement;
+
+        oneElement = Tag629UtcHopSendingTime.TESTA_UTC_TRAD_SES_START_TIME;
+        tagData = new Tag629UtcHopSendingTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( "Tag629UtcHopSendingTime\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toVerboseString() );
     }
 }

@@ -17,6 +17,8 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.fix42.tags.Tag605StrLegSecurityAltID;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -47,5 +49,61 @@ class Tag605StrLegSecurityAltIDTest {
     void Tag0605Test() {
         Tag605StrLegSecurityAltID tagData;
 
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag605StrLegSecurityAltID tagData;
+        String oneElement;
+
+        oneElement = Tag605StrLegSecurityAltID.TESTB_STR_SETTL_INST_REF_ID;
+        tagData = new Tag605StrLegSecurityAltID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag605StrLegSecurityAltID tagData;
+        String oneElement;
+
+        oneElement = Tag605StrLegSecurityAltID.TESTB_STR_SETTL_INST_REF_ID;
+        tagData = new Tag605StrLegSecurityAltID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag605StrLegSecurityAltID tagData;
+        String oneElement;
+
+        oneElement = Tag605StrLegSecurityAltID.TESTB_STR_SETTL_INST_REF_ID;
+        tagData = new Tag605StrLegSecurityAltID( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag605StrLegSecurityAltID tagData;
+        String oneElement;
+
+        oneElement = Tag605StrLegSecurityAltID.TESTB_STR_SETTL_INST_REF_ID;
+        tagData = new Tag605StrLegSecurityAltID(new MyStringType(oneElement));
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag605StrLegSecurityAltID tagData;
+        String oneElement;
+
+        oneElement = Tag605StrLegSecurityAltID.TESTA_STR_SETTL_INST_REF_ID;
+        tagData = new Tag605StrLegSecurityAltID( new MyStringType( oneElement ) );
+        assertEquals( "Tag605StrLegSecurityAltID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

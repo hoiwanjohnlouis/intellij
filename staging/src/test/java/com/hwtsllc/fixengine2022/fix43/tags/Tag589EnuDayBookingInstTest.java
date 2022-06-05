@@ -17,6 +17,8 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
+import com.hwtsllc.fixengine2022.fix42.tags.Tag589EnuDayBookingInst;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum589DayBookingInst;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -65,5 +67,70 @@ class Tag589EnuDayBookingInstTest {
         tagData = new Tag589EnuDayBookingInst( Enum589DayBookingInst.ACCUMULATE );
         assertEquals( Enum589DayBookingInst.ACCUMULATE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag589EnuDayBookingInst tagData;
+
+        // loop around the ENUM and process
+        for ( Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+            tagData = new Tag589EnuDayBookingInst(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag589EnuDayBookingInst tagData;
+
+        // loop around the ENUM and process
+        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+            tagData = new Tag589EnuDayBookingInst(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag589EnuDayBookingInst tagData;
+
+        // loop around the ENUM and process
+        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+            tagData = new Tag589EnuDayBookingInst(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag589EnuDayBookingInst tagData;
+
+        // loop around the ENUM and process
+        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+            tagData = new Tag589EnuDayBookingInst(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag589EnuDayBookingInst tagData;
+
+        // loop around the ENUM and process
+        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+            tagData = new Tag589EnuDayBookingInst(oneEnum);
+            assertEquals( "Tag589EnuDayBookingInst\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
     }
 }

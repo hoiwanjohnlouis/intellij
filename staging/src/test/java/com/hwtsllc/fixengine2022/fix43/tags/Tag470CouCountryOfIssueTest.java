@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.MyCountryType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -49,5 +50,65 @@ class Tag470CouCountryOfIssueTest {
     void Tag0470Test() {
         Tag470CouCountryOfIssue tagData;
 
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag470CouCountryOfIssue tagData;
+        String oneElement;
+
+        oneElement = Tag470CouCountryOfIssue.TESTA_COU_COUNTRY_OF_ISSUE;
+        tagData = new Tag470CouCountryOfIssue( new MyCountryType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag470CouCountryOfIssue.TESTB_COU_COUNTRY_OF_ISSUE;
+        tagData = new Tag470CouCountryOfIssue( new MyCountryType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag470CouCountryOfIssue tagData;
+        String oneElement;
+
+        oneElement = Tag470CouCountryOfIssue.TESTB_COU_COUNTRY_OF_ISSUE;
+        tagData = new Tag470CouCountryOfIssue( new MyCountryType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag470CouCountryOfIssue tagData;
+        String oneElement;
+
+        oneElement = Tag470CouCountryOfIssue.TESTB_COU_COUNTRY_OF_ISSUE;
+        tagData = new Tag470CouCountryOfIssue( new MyCountryType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag470CouCountryOfIssue tagData;
+        String oneElement;
+
+        oneElement = Tag470CouCountryOfIssue.TESTB_COU_COUNTRY_OF_ISSUE;
+        tagData = new Tag470CouCountryOfIssue( new MyCountryType( oneElement ) );
+        assertEquals( oneElement, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag470CouCountryOfIssue tagData;
+        String oneElement;
+
+        oneElement = Tag470CouCountryOfIssue.TESTA_COU_COUNTRY_OF_ISSUE;
+        tagData = new Tag470CouCountryOfIssue( new MyCountryType( oneElement ) );
+        assertEquals( "Tag470CouCountryOfIssue\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }
 }

@@ -17,6 +17,8 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.MyUTCTimeType;
+import com.hwtsllc.fixengine2022.fix42.tags.Tag450UtctTotalVolumeTradedTime;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -48,5 +50,65 @@ class Tag450UtctTotalVolumeTradedTimeTest {
     void Tag0450Test() {
         Tag450UtctTotalVolumeTradedTime tagData;
 
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag450UtctTotalVolumeTradedTime tagData;
+        String oneElement;
+
+        oneElement = Tag450UtctTotalVolumeTradedTime.TESTA_UTCT_MD_ENTRY_TIME;
+        tagData = new Tag450UtctTotalVolumeTradedTime(new MyUTCTimeType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag450UtctTotalVolumeTradedTime.TESTB_UTCT_MD_ENTRY_TIME;
+        tagData = new Tag450UtctTotalVolumeTradedTime(new MyUTCTimeType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag450UtctTotalVolumeTradedTime tagData;
+        String oneElement;
+
+        oneElement = Tag450UtctTotalVolumeTradedTime.TESTB_UTCT_MD_ENTRY_TIME;
+        tagData = new Tag450UtctTotalVolumeTradedTime(new MyUTCTimeType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_UTCT_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag450UtctTotalVolumeTradedTime tagData;
+        String oneElement;
+
+        oneElement = Tag450UtctTotalVolumeTradedTime.TESTB_UTCT_MD_ENTRY_TIME;
+        tagData = new Tag450UtctTotalVolumeTradedTime(new MyUTCTimeType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_UTCT_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag450UtctTotalVolumeTradedTime tagData;
+        String oneElement;
+
+        oneElement = Tag450UtctTotalVolumeTradedTime.TESTB_UTCT_MD_ENTRY_TIME;
+        tagData = new Tag450UtctTotalVolumeTradedTime(new MyUTCTimeType( oneElement ) );
+        assertEquals( oneElement, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_UTCT_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag450UtctTotalVolumeTradedTime tagData;
+        String oneElement;
+
+        oneElement = Tag450UtctTotalVolumeTradedTime.TESTA_UTCT_MD_ENTRY_TIME;
+        tagData = new Tag450UtctTotalVolumeTradedTime(new MyUTCTimeType( oneElement ) );
+        assertEquals( "Tag450UtctTotalVolumeTradedTime\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString() );
+        assertNotEquals( MyTestValues.JUNK_UTCT_DATA_VALUE, tagData.toVerboseString() );
     }
 }

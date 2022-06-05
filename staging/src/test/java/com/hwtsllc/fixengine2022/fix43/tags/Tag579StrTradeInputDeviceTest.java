@@ -17,6 +17,8 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.fix42.tags.Tag579StrTradeInputDevice;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -45,5 +47,61 @@ class Tag579StrTradeInputDeviceTest {
     void Tag0579Test() {
         Tag579StrTradeInputDevice tagData;
 
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag579StrTradeInputDevice tagData;
+        String oneElement;
+
+        oneElement = Tag579StrTradeInputDevice.TESTB_STR_SETTL_INST_REF_ID;
+        tagData = new Tag579StrTradeInputDevice( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag579StrTradeInputDevice tagData;
+        String oneElement;
+
+        oneElement = Tag579StrTradeInputDevice.TESTB_STR_SETTL_INST_REF_ID;
+        tagData = new Tag579StrTradeInputDevice( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag579StrTradeInputDevice tagData;
+        String oneElement;
+
+        oneElement = Tag579StrTradeInputDevice.TESTB_STR_SETTL_INST_REF_ID;
+        tagData = new Tag579StrTradeInputDevice( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag579StrTradeInputDevice tagData;
+        String oneElement;
+
+        oneElement = Tag579StrTradeInputDevice.TESTB_STR_SETTL_INST_REF_ID;
+        tagData = new Tag579StrTradeInputDevice(new MyStringType(oneElement));
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag579StrTradeInputDevice tagData;
+        String oneElement;
+
+        oneElement = Tag579StrTradeInputDevice.TESTA_STR_SETTL_INST_REF_ID;
+        tagData = new Tag579StrTradeInputDevice( new MyStringType( oneElement ) );
+        assertEquals( "Tag579StrTradeInputDevice\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

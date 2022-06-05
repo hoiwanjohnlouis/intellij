@@ -17,6 +17,8 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.fix42.tags.Tag628StrHopCompID;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -54,5 +56,61 @@ class Tag628StrHopCompIDTest {
     void Tag0628Test() {
         Tag628StrHopCompID tagData;
 
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag628StrHopCompID tagData;
+        String oneElement;
+
+        oneElement = Tag628StrHopCompID.TESTB_STR_SETTL_INST_REF_ID;
+        tagData = new Tag628StrHopCompID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag628StrHopCompID tagData;
+        String oneElement;
+
+        oneElement = Tag628StrHopCompID.TESTB_STR_SETTL_INST_REF_ID;
+        tagData = new Tag628StrHopCompID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag628StrHopCompID tagData;
+        String oneElement;
+
+        oneElement = Tag628StrHopCompID.TESTB_STR_SETTL_INST_REF_ID;
+        tagData = new Tag628StrHopCompID( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag628StrHopCompID tagData;
+        String oneElement;
+
+        oneElement = Tag628StrHopCompID.TESTB_STR_SETTL_INST_REF_ID;
+        tagData = new Tag628StrHopCompID(new MyStringType(oneElement));
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag628StrHopCompID tagData;
+        String oneElement;
+
+        oneElement = Tag628StrHopCompID.TESTA_STR_SETTL_INST_REF_ID;
+        tagData = new Tag628StrHopCompID( new MyStringType( oneElement ) );
+        assertEquals( "Tag628StrHopCompID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }
