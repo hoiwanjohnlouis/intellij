@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag483UtcTransBkdTime;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -50,18 +49,28 @@ class Tag483UtcTransBkdTimeTest {
     @Test
     void Tag0483Test() {
         Tag483UtcTransBkdTime tagData;
+        String oneElement;
 
+        oneElement = Tag483UtcTransBkdTime.TESTA_UTC_TRANS_BKD_TIME;
+        tagData = new Tag483UtcTransBkdTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
+
+        oneElement = Tag483UtcTransBkdTime.TESTB_UTC_TRANS_BKD_TIME;
+        tagData = new Tag483UtcTransBkdTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void PrintFIXTagTest() {
         Tag483UtcTransBkdTime tagData;
         String oneElement;
 
-        oneElement = Tag483UtcTransBkdTime.TESTA_UTC_TRAD_SES_START_TIME;
+        oneElement = Tag483UtcTransBkdTime.TESTA_UTC_TRANS_BKD_TIME;
         tagData = new Tag483UtcTransBkdTime( new MyUTCTimestampType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag483UtcTransBkdTime.TESTB_UTC_TRAD_SES_START_TIME;
+        oneElement = Tag483UtcTransBkdTime.TESTB_UTC_TRANS_BKD_TIME;
         tagData = new Tag483UtcTransBkdTime( new MyUTCTimestampType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -70,7 +79,7 @@ class Tag483UtcTransBkdTimeTest {
         Tag483UtcTransBkdTime tagData;
         String oneElement;
 
-        oneElement = Tag483UtcTransBkdTime.TESTB_UTC_TRAD_SES_START_TIME;
+        oneElement = Tag483UtcTransBkdTime.TESTB_UTC_TRANS_BKD_TIME;
         tagData = new Tag483UtcTransBkdTime( new MyUTCTimestampType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
@@ -80,7 +89,7 @@ class Tag483UtcTransBkdTimeTest {
         Tag483UtcTransBkdTime tagData;
         String oneElement;
 
-        oneElement = Tag483UtcTransBkdTime.TESTB_UTC_TRAD_SES_START_TIME;
+        oneElement = Tag483UtcTransBkdTime.TESTB_UTC_TRANS_BKD_TIME;
         tagData = new Tag483UtcTransBkdTime( new MyUTCTimestampType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toValuePairString() );
@@ -90,7 +99,7 @@ class Tag483UtcTransBkdTimeTest {
         Tag483UtcTransBkdTime tagData;
         String oneElement;
 
-        oneElement = Tag483UtcTransBkdTime.TESTB_UTC_TRAD_SES_START_TIME;
+        oneElement = Tag483UtcTransBkdTime.TESTB_UTC_TRANS_BKD_TIME;
         tagData = new Tag483UtcTransBkdTime( new MyUTCTimestampType( oneElement ) );
         assertEquals( oneElement, tagData.toString() );
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toString() );
@@ -100,7 +109,7 @@ class Tag483UtcTransBkdTimeTest {
         Tag483UtcTransBkdTime tagData;
         String oneElement;
 
-        oneElement = Tag483UtcTransBkdTime.TESTA_UTC_TRAD_SES_START_TIME;
+        oneElement = Tag483UtcTransBkdTime.TESTA_UTC_TRANS_BKD_TIME;
         tagData = new Tag483UtcTransBkdTime( new MyUTCTimestampType( oneElement ) );
         assertEquals( "Tag483UtcTransBkdTime\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

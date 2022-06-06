@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag615PctLegCouponRate;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -48,18 +47,28 @@ class Tag615PctLegCouponRateTest {
     @Test
     void Tag0615Test() {
         Tag615PctLegCouponRate tagData;
+        double oneElement;
 
+        oneElement = Tag615PctLegCouponRate.TESTA_PCT_LEG_COUPON_RATE;
+        tagData = new Tag615PctLegCouponRate( new MyPercentageType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag615PctLegCouponRate.TESTB_PCT_LEG_COUPON_RATE;
+        tagData = new Tag615PctLegCouponRate( new MyPercentageType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void PrintFIXTagTest() {
         Tag615PctLegCouponRate tagData;
         double oneElement;
 
-        oneElement = Tag615PctLegCouponRate.TESTA_PCT_COUPON_RATE;
+        oneElement = Tag615PctLegCouponRate.TESTA_PCT_LEG_COUPON_RATE;
         tagData = new Tag615PctLegCouponRate( new MyPercentageType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag615PctLegCouponRate.TESTB_PCT_COUPON_RATE;
+        oneElement = Tag615PctLegCouponRate.TESTB_PCT_LEG_COUPON_RATE;
         tagData = new Tag615PctLegCouponRate( new MyPercentageType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -68,17 +77,17 @@ class Tag615PctLegCouponRateTest {
         Tag615PctLegCouponRate tagData;
         double oneElement;
 
-        oneElement = Tag615PctLegCouponRate.TESTB_PCT_COUPON_RATE;
+        oneElement = Tag615PctLegCouponRate.TESTB_PCT_LEG_COUPON_RATE;
         tagData = new Tag615PctLegCouponRate( new MyPercentageType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void TagToValuePairStringTest() {
         Tag615PctLegCouponRate tagData;
         double oneElement;
 
-        oneElement = Tag615PctLegCouponRate.TESTB_PCT_COUPON_RATE;
+        oneElement = Tag615PctLegCouponRate.TESTB_PCT_LEG_COUPON_RATE;
         tagData = new Tag615PctLegCouponRate( new MyPercentageType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
@@ -88,7 +97,7 @@ class Tag615PctLegCouponRateTest {
         Tag615PctLegCouponRate tagData;
         double oneElement;
 
-        oneElement = Tag615PctLegCouponRate.TESTB_PCT_COUPON_RATE;
+        oneElement = Tag615PctLegCouponRate.TESTB_PCT_LEG_COUPON_RATE;
         tagData = new Tag615PctLegCouponRate( new MyPercentageType( oneElement ) );
         assertEquals( String.valueOf( oneElement ), tagData.toString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
@@ -98,7 +107,7 @@ class Tag615PctLegCouponRateTest {
         Tag615PctLegCouponRate tagData;
         double oneElement;
 
-        oneElement = Tag615PctLegCouponRate.TESTA_PCT_COUPON_RATE;
+        oneElement = Tag615PctLegCouponRate.TESTA_PCT_LEG_COUPON_RATE;
         tagData = new Tag615PctLegCouponRate( new MyPercentageType( oneElement ) );
         assertEquals( "Tag615PctLegCouponRate\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

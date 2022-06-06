@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag583StrClOrdLinkID;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -50,14 +49,28 @@ class Tag583StrClOrdLinkIDTest {
     @Test
     void Tag0583Test() {
         Tag583StrClOrdLinkID tagData;
+        String oneElement;
 
+        oneElement = Tag583StrClOrdLinkID.TESTA_STR_CL_ORD_LINK_ID;
+        tagData = new Tag583StrClOrdLinkID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag583StrClOrdLinkID.TESTB_STR_CL_ORD_LINK_ID;
+        tagData = new Tag583StrClOrdLinkID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void PrintFIXTagTest() {
         Tag583StrClOrdLinkID tagData;
         String oneElement;
 
-        oneElement = Tag583StrClOrdLinkID.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag583StrClOrdLinkID.TESTA_STR_CL_ORD_LINK_ID;
+        tagData = new Tag583StrClOrdLinkID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag583StrClOrdLinkID.TESTB_STR_CL_ORD_LINK_ID;
         tagData = new Tag583StrClOrdLinkID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -66,7 +79,7 @@ class Tag583StrClOrdLinkIDTest {
         Tag583StrClOrdLinkID tagData;
         String oneElement;
 
-        oneElement = Tag583StrClOrdLinkID.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag583StrClOrdLinkID.TESTB_STR_CL_ORD_LINK_ID;
         tagData = new Tag583StrClOrdLinkID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -76,7 +89,7 @@ class Tag583StrClOrdLinkIDTest {
         Tag583StrClOrdLinkID tagData;
         String oneElement;
 
-        oneElement = Tag583StrClOrdLinkID.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag583StrClOrdLinkID.TESTB_STR_CL_ORD_LINK_ID;
         tagData = new Tag583StrClOrdLinkID( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -86,7 +99,7 @@ class Tag583StrClOrdLinkIDTest {
         Tag583StrClOrdLinkID tagData;
         String oneElement;
 
-        oneElement = Tag583StrClOrdLinkID.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag583StrClOrdLinkID.TESTB_STR_CL_ORD_LINK_ID;
         tagData = new Tag583StrClOrdLinkID(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -96,7 +109,7 @@ class Tag583StrClOrdLinkIDTest {
         Tag583StrClOrdLinkID tagData;
         String oneElement;
 
-        oneElement = Tag583StrClOrdLinkID.TESTA_STR_SETTL_INST_REF_ID;
+        oneElement = Tag583StrClOrdLinkID.TESTA_STR_CL_ORD_LINK_ID;
         tagData = new Tag583StrClOrdLinkID( new MyStringType( oneElement ) );
         assertEquals( "Tag583StrClOrdLinkID\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

@@ -17,8 +17,6 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag506EnuRegistStatus;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum506RegistStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -78,7 +76,7 @@ class Tag506EnuRegistStatusTest {
         Tag506EnuRegistStatus tagData;
 
         // loop around the ENUM and process
-        for ( Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for ( Enum506RegistStatus oneEnum : Enum506RegistStatus.values()) {
             tagData = new Tag506EnuRegistStatus(oneEnum);
             System.out.println( tagData.toVerboseString() );
         }
@@ -88,7 +86,7 @@ class Tag506EnuRegistStatusTest {
         Tag506EnuRegistStatus tagData;
 
         // loop around the ENUM and process
-        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for (Enum506RegistStatus oneEnum : Enum506RegistStatus.values()) {
             tagData = new Tag506EnuRegistStatus(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -99,7 +97,7 @@ class Tag506EnuRegistStatusTest {
         Tag506EnuRegistStatus tagData;
 
         // loop around the ENUM and process
-        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for (Enum506RegistStatus oneEnum : Enum506RegistStatus.values()) {
             tagData = new Tag506EnuRegistStatus(oneEnum);
             assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
@@ -111,7 +109,7 @@ class Tag506EnuRegistStatusTest {
         Tag506EnuRegistStatus tagData;
 
         // loop around the ENUM and process
-        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for (Enum506RegistStatus oneEnum : Enum506RegistStatus.values()) {
             tagData = new Tag506EnuRegistStatus(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -122,7 +120,7 @@ class Tag506EnuRegistStatusTest {
         Tag506EnuRegistStatus tagData;
 
         // loop around the ENUM and process
-        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for (Enum506RegistStatus oneEnum : Enum506RegistStatus.values()) {
             tagData = new Tag506EnuRegistStatus(oneEnum);
             assertEquals( "Tag506EnuRegistStatus\n" +
                             "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

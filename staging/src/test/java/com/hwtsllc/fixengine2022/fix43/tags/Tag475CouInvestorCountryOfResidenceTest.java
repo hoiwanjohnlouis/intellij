@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyCountryType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag475CouInvestorCountryOfResidence;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -46,18 +45,28 @@ class Tag475CouInvestorCountryOfResidenceTest {
     @Test
     void Tag0475Test() {
         Tag475CouInvestorCountryOfResidence tagData;
+        String oneElement;
 
+        oneElement = Tag475CouInvestorCountryOfResidence.TESTA_COU_INVESTOR_COUNTRY_OF_RESIDENCE;
+        tagData = new Tag475CouInvestorCountryOfResidence( new MyCountryType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag475CouInvestorCountryOfResidence.TESTB_COU_INVESTOR_COUNTRY_OF_RESIDENCE;
+        tagData = new Tag475CouInvestorCountryOfResidence( new MyCountryType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void PrintFIXTagTest() {
         Tag475CouInvestorCountryOfResidence tagData;
         String oneElement;
 
-        oneElement = Tag475CouInvestorCountryOfResidence.TESTA_COU_COUNTRY;
+        oneElement = Tag475CouInvestorCountryOfResidence.TESTA_COU_INVESTOR_COUNTRY_OF_RESIDENCE;
         tagData = new Tag475CouInvestorCountryOfResidence( new MyCountryType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag475CouInvestorCountryOfResidence.TESTB_COU_COUNTRY;
+        oneElement = Tag475CouInvestorCountryOfResidence.TESTB_COU_INVESTOR_COUNTRY_OF_RESIDENCE;
         tagData = new Tag475CouInvestorCountryOfResidence( new MyCountryType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -66,7 +75,7 @@ class Tag475CouInvestorCountryOfResidenceTest {
         Tag475CouInvestorCountryOfResidence tagData;
         String oneElement;
 
-        oneElement = Tag475CouInvestorCountryOfResidence.TESTB_COU_COUNTRY;
+        oneElement = Tag475CouInvestorCountryOfResidence.TESTB_COU_INVESTOR_COUNTRY_OF_RESIDENCE;
         tagData = new Tag475CouInvestorCountryOfResidence( new MyCountryType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -76,7 +85,7 @@ class Tag475CouInvestorCountryOfResidenceTest {
         Tag475CouInvestorCountryOfResidence tagData;
         String oneElement;
 
-        oneElement = Tag475CouInvestorCountryOfResidence.TESTB_COU_COUNTRY;
+        oneElement = Tag475CouInvestorCountryOfResidence.TESTB_COU_INVESTOR_COUNTRY_OF_RESIDENCE;
         tagData = new Tag475CouInvestorCountryOfResidence( new MyCountryType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -86,7 +95,7 @@ class Tag475CouInvestorCountryOfResidenceTest {
         Tag475CouInvestorCountryOfResidence tagData;
         String oneElement;
 
-        oneElement = Tag475CouInvestorCountryOfResidence.TESTB_COU_COUNTRY;
+        oneElement = Tag475CouInvestorCountryOfResidence.TESTB_COU_INVESTOR_COUNTRY_OF_RESIDENCE;
         tagData = new Tag475CouInvestorCountryOfResidence( new MyCountryType( oneElement ) );
         assertEquals( oneElement, tagData.toString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
@@ -96,7 +105,7 @@ class Tag475CouInvestorCountryOfResidenceTest {
         Tag475CouInvestorCountryOfResidence tagData;
         String oneElement;
 
-        oneElement = Tag475CouInvestorCountryOfResidence.TESTA_COU_COUNTRY;
+        oneElement = Tag475CouInvestorCountryOfResidence.TESTA_COU_INVESTOR_COUNTRY_OF_RESIDENCE;
         tagData = new Tag475CouInvestorCountryOfResidence( new MyCountryType( oneElement ) );
         assertEquals( "Tag475CouInvestorCountryOfResidence\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

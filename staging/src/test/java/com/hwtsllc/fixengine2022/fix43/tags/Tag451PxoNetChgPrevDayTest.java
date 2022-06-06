@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceOffsetType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag451PxoNetChgPrevDay;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -46,18 +45,28 @@ class Tag451PxoNetChgPrevDayTest {
     @Test
     void Tag0451Test() {
         Tag451PxoNetChgPrevDay tagData;
+        double oneElement;
 
+        oneElement = Tag451PxoNetChgPrevDay.TESTA_PXO_NET_CHG_PREV_DAY;
+        tagData = new Tag451PxoNetChgPrevDay( new MyPriceOffsetType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag451PxoNetChgPrevDay.TESTB_PXO_NET_CHG_PREV_DAY;
+        tagData = new Tag451PxoNetChgPrevDay( new MyPriceOffsetType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void PrintFIXTagTest() {
         Tag451PxoNetChgPrevDay tagData;
         double oneElement;
 
-        oneElement = Tag451PxoNetChgPrevDay.TESTA_PXO_SPREAD;
+        oneElement = Tag451PxoNetChgPrevDay.TESTA_PXO_NET_CHG_PREV_DAY;
         tagData = new Tag451PxoNetChgPrevDay( new MyPriceOffsetType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag451PxoNetChgPrevDay.TESTB_PXO_SPREAD;
+        oneElement = Tag451PxoNetChgPrevDay.TESTB_PXO_NET_CHG_PREV_DAY;
         tagData = new Tag451PxoNetChgPrevDay( new MyPriceOffsetType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -66,7 +75,7 @@ class Tag451PxoNetChgPrevDayTest {
         Tag451PxoNetChgPrevDay tagData;
         double oneElement;
 
-        oneElement = Tag451PxoNetChgPrevDay.TESTB_PXO_SPREAD;
+        oneElement = Tag451PxoNetChgPrevDay.TESTB_PXO_NET_CHG_PREV_DAY;
         tagData = new Tag451PxoNetChgPrevDay( new MyPriceOffsetType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue() );
@@ -76,7 +85,7 @@ class Tag451PxoNetChgPrevDayTest {
         Tag451PxoNetChgPrevDay tagData;
         double oneElement;
 
-        oneElement = Tag451PxoNetChgPrevDay.TESTB_PXO_SPREAD;
+        oneElement = Tag451PxoNetChgPrevDay.TESTB_PXO_NET_CHG_PREV_DAY;
         tagData = new Tag451PxoNetChgPrevDay( new MyPriceOffsetType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -86,7 +95,7 @@ class Tag451PxoNetChgPrevDayTest {
         Tag451PxoNetChgPrevDay tagData;
         double oneElement;
 
-        oneElement = Tag451PxoNetChgPrevDay.TESTB_PXO_SPREAD;
+        oneElement = Tag451PxoNetChgPrevDay.TESTB_PXO_NET_CHG_PREV_DAY;
         tagData = new Tag451PxoNetChgPrevDay( new MyPriceOffsetType( oneElement ) );
         assertEquals( String.valueOf( oneElement ), tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
@@ -97,7 +106,7 @@ class Tag451PxoNetChgPrevDayTest {
         Tag451PxoNetChgPrevDay tagData;
         double oneElement;
 
-        oneElement = Tag451PxoNetChgPrevDay.TESTA_PXO_SPREAD;
+        oneElement = Tag451PxoNetChgPrevDay.TESTA_PXO_NET_CHG_PREV_DAY;
         tagData = new Tag451PxoNetChgPrevDay( new MyPriceOffsetType( oneElement ) );
         assertEquals( "Tag451PxoNetChgPrevDay\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

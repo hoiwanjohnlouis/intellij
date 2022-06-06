@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyFloatType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag469FloRoundingModulus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -50,14 +49,24 @@ class Tag469FloRoundingModulusTest {
     @Test
     void Tag0469Test() {
         Tag469FloRoundingModulus tagData;
+        float oneElement;
 
+        oneElement = Tag469FloRoundingModulus.TESTA_FLO_ROUNDING_MODULUS;
+        tagData = new Tag469FloRoundingModulus( new MyFloatType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
+
+        oneElement = Tag469FloRoundingModulus.TESTB_FLO_ROUNDING_MODULUS;
+        tagData = new Tag469FloRoundingModulus( new MyFloatType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void PrintFIXTagTest() {
         Tag469FloRoundingModulus tagData;
         float oneElement;
 
-        oneElement = Tag469FloRoundingModulus.TESTB_FLO_UNDERLYING_CONTRACT_MULTIPLIER;
+        oneElement = Tag469FloRoundingModulus.TESTB_FLO_ROUNDING_MODULUS;
         tagData = new Tag469FloRoundingModulus( new MyFloatType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -66,17 +75,17 @@ class Tag469FloRoundingModulusTest {
         Tag469FloRoundingModulus tagData;
         float oneElement;
 
-        oneElement = Tag469FloRoundingModulus.TESTB_FLO_UNDERLYING_CONTRACT_MULTIPLIER;
+        oneElement = Tag469FloRoundingModulus.TESTB_FLO_ROUNDING_MODULUS;
         tagData = new Tag469FloRoundingModulus( new MyFloatType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {
         Tag469FloRoundingModulus tagData;
         float oneElement;
 
-        oneElement = Tag469FloRoundingModulus.TESTB_FLO_UNDERLYING_CONTRACT_MULTIPLIER;
+        oneElement = Tag469FloRoundingModulus.TESTB_FLO_ROUNDING_MODULUS;
         tagData = new Tag469FloRoundingModulus( new MyFloatType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -86,7 +95,7 @@ class Tag469FloRoundingModulusTest {
         Tag469FloRoundingModulus tagData;
         float oneElement;
 
-        oneElement = Tag469FloRoundingModulus.TESTB_FLO_UNDERLYING_CONTRACT_MULTIPLIER;
+        oneElement = Tag469FloRoundingModulus.TESTB_FLO_ROUNDING_MODULUS;
         tagData = new Tag469FloRoundingModulus( new MyFloatType( oneElement ) );
         assertEquals( String.valueOf( oneElement ), tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -96,7 +105,7 @@ class Tag469FloRoundingModulusTest {
         Tag469FloRoundingModulus tagData;
         float oneElement;
 
-        oneElement = Tag469FloRoundingModulus.TESTA_FLO_UNDERLYING_CONTRACT_MULTIPLIER;
+        oneElement = Tag469FloRoundingModulus.TESTA_FLO_ROUNDING_MODULUS;
         tagData = new Tag469FloRoundingModulus( new MyFloatType( oneElement ) );
         assertEquals( "Tag469FloRoundingModulus\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

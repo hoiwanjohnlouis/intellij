@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyExchangeType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag616ExcLegSecurityExchange;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -48,18 +47,28 @@ class Tag616ExcLegSecurityExchangeTest {
     @Test
     void Tag0616Test() {
         Tag616ExcLegSecurityExchange tagData;
+        String oneElement;
 
+        oneElement = Tag616ExcLegSecurityExchange.TESTA_EXC_LEG_SECURITY_EXCHANGE;
+        tagData = new Tag616ExcLegSecurityExchange( new MyExchangeType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_EXC_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag616ExcLegSecurityExchange.TESTB_EXC_LEG_SECURITY_EXCHANGE;
+        tagData = new Tag616ExcLegSecurityExchange( new MyExchangeType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_EXC_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void PrintFIXTagTest() {
         Tag616ExcLegSecurityExchange tagData;
         String oneElement;
 
-        oneElement = Tag616ExcLegSecurityExchange.TESTA_EXC_MD_MKT;
+        oneElement = Tag616ExcLegSecurityExchange.TESTA_EXC_LEG_SECURITY_EXCHANGE;
         tagData = new Tag616ExcLegSecurityExchange( new MyExchangeType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag616ExcLegSecurityExchange.TESTB_EXC_MD_MKT;
+        oneElement = Tag616ExcLegSecurityExchange.TESTB_EXC_LEG_SECURITY_EXCHANGE;
         tagData = new Tag616ExcLegSecurityExchange( new MyExchangeType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -68,17 +77,17 @@ class Tag616ExcLegSecurityExchangeTest {
         Tag616ExcLegSecurityExchange tagData;
         String oneElement;
 
-        oneElement = Tag616ExcLegSecurityExchange.TESTB_EXC_MD_MKT;
+        oneElement = Tag616ExcLegSecurityExchange.TESTB_EXC_LEG_SECURITY_EXCHANGE;
         tagData = new Tag616ExcLegSecurityExchange( new MyExchangeType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_EXC_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void TagToValuePairStringTest() {
         Tag616ExcLegSecurityExchange tagData;
         String oneElement;
 
-        oneElement = Tag616ExcLegSecurityExchange.TESTB_EXC_MD_MKT;
+        oneElement = Tag616ExcLegSecurityExchange.TESTB_EXC_LEG_SECURITY_EXCHANGE;
         tagData = new Tag616ExcLegSecurityExchange( new MyExchangeType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -88,7 +97,7 @@ class Tag616ExcLegSecurityExchangeTest {
         Tag616ExcLegSecurityExchange tagData;
         String oneElement;
 
-        oneElement = Tag616ExcLegSecurityExchange.TESTB_EXC_MD_MKT;
+        oneElement = Tag616ExcLegSecurityExchange.TESTB_EXC_LEG_SECURITY_EXCHANGE;
         tagData = new Tag616ExcLegSecurityExchange( new MyExchangeType( oneElement ) );
         assertEquals( oneElement, tagData.toString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
@@ -98,7 +107,7 @@ class Tag616ExcLegSecurityExchangeTest {
         Tag616ExcLegSecurityExchange tagData;
         String oneElement;
 
-        oneElement = Tag616ExcLegSecurityExchange.TESTA_EXC_MD_MKT;
+        oneElement = Tag616ExcLegSecurityExchange.TESTA_EXC_LEG_SECURITY_EXCHANGE;
         tagData = new Tag616ExcLegSecurityExchange( new MyExchangeType( oneElement ) );
         assertEquals( "Tag616ExcLegSecurityExchange\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

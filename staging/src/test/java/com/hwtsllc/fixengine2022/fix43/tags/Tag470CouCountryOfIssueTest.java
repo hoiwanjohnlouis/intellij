@@ -49,7 +49,17 @@ class Tag470CouCountryOfIssueTest {
     @Test
     void Tag0470Test() {
         Tag470CouCountryOfIssue tagData;
+        String oneElement;
 
+        oneElement = Tag470CouCountryOfIssue.TESTA_COU_COUNTRY_OF_ISSUE;
+        tagData = new Tag470CouCountryOfIssue( new MyCountryType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag470CouCountryOfIssue.TESTB_COU_COUNTRY_OF_ISSUE;
+        tagData = new Tag470CouCountryOfIssue( new MyCountryType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void PrintFIXTagTest() {

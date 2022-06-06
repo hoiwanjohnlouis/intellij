@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyDataType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag619DatEncodedLegIssuer;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -48,14 +47,28 @@ class Tag619DatEncodedLegIssuerTest {
     @Test
     void Tag0619Test() {
         Tag619DatEncodedLegIssuer tagData;
+        String oneElement;
 
+        oneElement = Tag619DatEncodedLegIssuer.TESTA_DAT_ENCODED_LEG_ISSUER;
+        tagData = new Tag619DatEncodedLegIssuer( new MyDataType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        oneElement = Tag619DatEncodedLegIssuer.TESTB_DAT_ENCODED_LEG_ISSUER;
+        tagData = new Tag619DatEncodedLegIssuer( new MyDataType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void PrintFIXTagTest() {
         Tag619DatEncodedLegIssuer tagData;
         String oneElement;
 
-        oneElement = Tag619DatEncodedLegIssuer.TESTB_DAT_LIST_STATUS_ENCODED_TEXT;
+        oneElement = Tag619DatEncodedLegIssuer.TESTA_DAT_ENCODED_LEG_ISSUER;
+        tagData = new Tag619DatEncodedLegIssuer( new MyDataType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag619DatEncodedLegIssuer.TESTB_DAT_ENCODED_LEG_ISSUER;
         tagData = new Tag619DatEncodedLegIssuer( new MyDataType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -64,7 +77,7 @@ class Tag619DatEncodedLegIssuerTest {
         Tag619DatEncodedLegIssuer tagData;
         String oneElement;
 
-        oneElement = Tag619DatEncodedLegIssuer.TESTB_DAT_LIST_STATUS_ENCODED_TEXT;
+        oneElement = Tag619DatEncodedLegIssuer.TESTB_DAT_ENCODED_LEG_ISSUER;
         tagData = new Tag619DatEncodedLegIssuer( new MyDataType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -74,7 +87,7 @@ class Tag619DatEncodedLegIssuerTest {
         Tag619DatEncodedLegIssuer tagData;
         String oneElement;
 
-        oneElement = Tag619DatEncodedLegIssuer.TESTB_DAT_LIST_STATUS_ENCODED_TEXT;
+        oneElement = Tag619DatEncodedLegIssuer.TESTB_DAT_ENCODED_LEG_ISSUER;
         tagData = new Tag619DatEncodedLegIssuer( new MyDataType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -84,7 +97,7 @@ class Tag619DatEncodedLegIssuerTest {
         Tag619DatEncodedLegIssuer tagData;
         String oneElement;
 
-        oneElement = Tag619DatEncodedLegIssuer.TESTB_DAT_LIST_STATUS_ENCODED_TEXT;
+        oneElement = Tag619DatEncodedLegIssuer.TESTB_DAT_ENCODED_LEG_ISSUER;
         tagData = new Tag619DatEncodedLegIssuer( new MyDataType( oneElement ) );
         assertEquals( oneElement, tagData.toString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -94,7 +107,7 @@ class Tag619DatEncodedLegIssuerTest {
         Tag619DatEncodedLegIssuer tagData;
         String oneElement;
 
-        oneElement = Tag619DatEncodedLegIssuer.TESTA_DAT_LIST_STATUS_ENCODED_TEXT;
+        oneElement = Tag619DatEncodedLegIssuer.TESTA_DAT_ENCODED_LEG_ISSUER;
         tagData = new Tag619DatEncodedLegIssuer( new MyDataType( oneElement ) );
         assertEquals( "Tag619DatEncodedLegIssuer\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

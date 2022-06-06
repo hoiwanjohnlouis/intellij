@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyLocalMktDateType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag541LmdMaturityDate;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -46,18 +45,28 @@ class Tag541LmdMaturityDateTest {
     @Test
     void Tag0541Test() {
         Tag541LmdMaturityDate tagData;
+        String oneElement;
 
+        oneElement = Tag541LmdMaturityDate.TESTA_LMD_MATURITY_DATE;
+        tagData = new Tag541LmdMaturityDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag541LmdMaturityDate.TESTB_LMD_MATURITY_DATE;
+        tagData = new Tag541LmdMaturityDate( new MyLocalMktDateType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void PrintFIXTagTest() {
         Tag541LmdMaturityDate tagData;
         String oneElement;
 
-        oneElement = Tag541LmdMaturityDate.TESTA_LMD_COUPON_PAYMENT_DATE;
+        oneElement = Tag541LmdMaturityDate.TESTA_LMD_MATURITY_DATE;
         tagData = new Tag541LmdMaturityDate( new MyLocalMktDateType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag541LmdMaturityDate.TESTB_LMD_COUPON_PAYMENT_DATE;
+        oneElement = Tag541LmdMaturityDate.TESTB_LMD_MATURITY_DATE;
         tagData = new Tag541LmdMaturityDate( new MyLocalMktDateType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -66,17 +75,17 @@ class Tag541LmdMaturityDateTest {
         Tag541LmdMaturityDate tagData;
         String oneElement;
 
-        oneElement = Tag541LmdMaturityDate.TESTB_LMD_COUPON_PAYMENT_DATE;
+        oneElement = Tag541LmdMaturityDate.TESTB_LMD_MATURITY_DATE;
         tagData = new Tag541LmdMaturityDate( new MyLocalMktDateType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void TagToValuePairStringTest() {
         Tag541LmdMaturityDate tagData;
         String oneElement;
 
-        oneElement = Tag541LmdMaturityDate.TESTB_LMD_COUPON_PAYMENT_DATE;
+        oneElement = Tag541LmdMaturityDate.TESTB_LMD_MATURITY_DATE;
         tagData = new Tag541LmdMaturityDate( new MyLocalMktDateType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -86,7 +95,7 @@ class Tag541LmdMaturityDateTest {
         Tag541LmdMaturityDate tagData;
         String oneElement;
 
-        oneElement = Tag541LmdMaturityDate.TESTB_LMD_COUPON_PAYMENT_DATE;
+        oneElement = Tag541LmdMaturityDate.TESTB_LMD_MATURITY_DATE;
         tagData = new Tag541LmdMaturityDate( new MyLocalMktDateType( oneElement ) );
         assertEquals( oneElement, tagData.toString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
@@ -96,7 +105,7 @@ class Tag541LmdMaturityDateTest {
         Tag541LmdMaturityDate tagData;
         String oneElement;
 
-        oneElement = Tag541LmdMaturityDate.TESTA_LMD_COUPON_PAYMENT_DATE;
+        oneElement = Tag541LmdMaturityDate.TESTA_LMD_MATURITY_DATE;
         tagData = new Tag541LmdMaturityDate( new MyLocalMktDateType( oneElement ) );
         assertEquals( "Tag541LmdMaturityDate\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

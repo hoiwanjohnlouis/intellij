@@ -25,6 +25,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class MyPriceOffsetType implements LogVerboseString {
     private final double dataValue;
 
+    public final static double TESTA_PXO_PRICE_OFFSET_TYPE = 0.005D;
+    public final static double TESTB_PXO_PRICE_OFFSET_TYPE = 0.0025D;
+
     public MyPriceOffsetType(final double dataValue) {
         this.dataValue = dataValue;
     }
@@ -54,7 +57,13 @@ public class MyPriceOffsetType implements LogVerboseString {
      * @param args Not used.
      */
     public static void main(String[] args) {
-        MyPriceOffsetType dataType = new MyPriceOffsetType( 0.005D );
+        MyPriceOffsetType dataType;
+
+        dataType = new MyPriceOffsetType(TESTA_PXO_PRICE_OFFSET_TYPE);
+        System.out.println(dataType);
+        System.out.println(dataType.toVerboseString());
+
+        dataType = new MyPriceOffsetType(TESTB_PXO_PRICE_OFFSET_TYPE);
         System.out.println(dataType);
         System.out.println(dataType.toVerboseString());
     }

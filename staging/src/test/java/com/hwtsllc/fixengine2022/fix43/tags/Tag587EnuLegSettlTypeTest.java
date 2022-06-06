@@ -17,8 +17,6 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag587EnuLegSettlType;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum587LegSettlType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -129,7 +127,7 @@ class Tag587EnuLegSettlTypeTest {
         Tag587EnuLegSettlType tagData;
 
         // loop around the ENUM and process
-        for ( Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for ( Enum587LegSettlType oneEnum : Enum587LegSettlType.values()) {
             tagData = new Tag587EnuLegSettlType(oneEnum);
             System.out.println( tagData.toVerboseString() );
         }
@@ -139,7 +137,7 @@ class Tag587EnuLegSettlTypeTest {
         Tag587EnuLegSettlType tagData;
 
         // loop around the ENUM and process
-        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for (Enum587LegSettlType oneEnum : Enum587LegSettlType.values()) {
             tagData = new Tag587EnuLegSettlType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -150,7 +148,7 @@ class Tag587EnuLegSettlTypeTest {
         Tag587EnuLegSettlType tagData;
 
         // loop around the ENUM and process
-        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for (Enum587LegSettlType oneEnum : Enum587LegSettlType.values()) {
             tagData = new Tag587EnuLegSettlType(oneEnum);
             assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
@@ -162,7 +160,7 @@ class Tag587EnuLegSettlTypeTest {
         Tag587EnuLegSettlType tagData;
 
         // loop around the ENUM and process
-        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for (Enum587LegSettlType oneEnum : Enum587LegSettlType.values()) {
             tagData = new Tag587EnuLegSettlType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -173,7 +171,7 @@ class Tag587EnuLegSettlTypeTest {
         Tag587EnuLegSettlType tagData;
 
         // loop around the ENUM and process
-        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for (Enum587LegSettlType oneEnum : Enum587LegSettlType.values()) {
             tagData = new Tag587EnuLegSettlType(oneEnum);
             assertEquals( "Tag587EnuLegSettlType\n" +
                             "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

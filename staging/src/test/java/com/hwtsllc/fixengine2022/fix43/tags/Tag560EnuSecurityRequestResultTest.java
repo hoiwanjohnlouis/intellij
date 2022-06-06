@@ -17,8 +17,6 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag560EnuSecurityRequestResult;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum560SecurityRequestResult;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -89,7 +87,7 @@ class Tag560EnuSecurityRequestResultTest {
         Tag560EnuSecurityRequestResult tagData;
 
         // loop around the ENUM and process
-        for ( Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for ( Enum560SecurityRequestResult oneEnum : Enum560SecurityRequestResult.values()) {
             tagData = new Tag560EnuSecurityRequestResult(oneEnum);
             System.out.println( tagData.toVerboseString() );
         }
@@ -99,7 +97,7 @@ class Tag560EnuSecurityRequestResultTest {
         Tag560EnuSecurityRequestResult tagData;
 
         // loop around the ENUM and process
-        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for (Enum560SecurityRequestResult oneEnum : Enum560SecurityRequestResult.values()) {
             tagData = new Tag560EnuSecurityRequestResult(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -110,7 +108,7 @@ class Tag560EnuSecurityRequestResultTest {
         Tag560EnuSecurityRequestResult tagData;
 
         // loop around the ENUM and process
-        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for (Enum560SecurityRequestResult oneEnum : Enum560SecurityRequestResult.values()) {
             tagData = new Tag560EnuSecurityRequestResult(oneEnum);
             assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
@@ -122,7 +120,7 @@ class Tag560EnuSecurityRequestResultTest {
         Tag560EnuSecurityRequestResult tagData;
 
         // loop around the ENUM and process
-        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for (Enum560SecurityRequestResult oneEnum : Enum560SecurityRequestResult.values()) {
             tagData = new Tag560EnuSecurityRequestResult(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -133,7 +131,7 @@ class Tag560EnuSecurityRequestResultTest {
         Tag560EnuSecurityRequestResult tagData;
 
         // loop around the ENUM and process
-        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for (Enum560SecurityRequestResult oneEnum : Enum560SecurityRequestResult.values()) {
             tagData = new Tag560EnuSecurityRequestResult(oneEnum);
             assertEquals( "Tag560EnuSecurityRequestResult\n" +
                             "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

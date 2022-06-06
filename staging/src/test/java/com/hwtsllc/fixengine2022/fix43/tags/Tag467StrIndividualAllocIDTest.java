@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag467StrIndividualAllocID;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -48,14 +47,28 @@ class Tag467StrIndividualAllocIDTest {
     @Test
     void Tag0467Test() {
         Tag467StrIndividualAllocID tagData;
+        String oneElement;
 
+        oneElement = Tag467StrIndividualAllocID.TESTA_STR_INDIVIDUAL_ALLOC_ID;
+        tagData = new Tag467StrIndividualAllocID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag467StrIndividualAllocID.TESTB_STR_INDIVIDUAL_ALLOC_ID;
+        tagData = new Tag467StrIndividualAllocID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void PrintFIXTagTest() {
         Tag467StrIndividualAllocID tagData;
         String oneElement;
 
-        oneElement = Tag467StrIndividualAllocID.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag467StrIndividualAllocID.TESTA_STR_INDIVIDUAL_ALLOC_ID;
+        tagData = new Tag467StrIndividualAllocID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag467StrIndividualAllocID.TESTB_STR_INDIVIDUAL_ALLOC_ID;
         tagData = new Tag467StrIndividualAllocID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -64,7 +77,7 @@ class Tag467StrIndividualAllocIDTest {
         Tag467StrIndividualAllocID tagData;
         String oneElement;
 
-        oneElement = Tag467StrIndividualAllocID.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag467StrIndividualAllocID.TESTB_STR_INDIVIDUAL_ALLOC_ID;
         tagData = new Tag467StrIndividualAllocID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -74,7 +87,7 @@ class Tag467StrIndividualAllocIDTest {
         Tag467StrIndividualAllocID tagData;
         String oneElement;
 
-        oneElement = Tag467StrIndividualAllocID.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag467StrIndividualAllocID.TESTB_STR_INDIVIDUAL_ALLOC_ID;
         tagData = new Tag467StrIndividualAllocID( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -84,7 +97,7 @@ class Tag467StrIndividualAllocIDTest {
         Tag467StrIndividualAllocID tagData;
         String oneElement;
 
-        oneElement = Tag467StrIndividualAllocID.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag467StrIndividualAllocID.TESTB_STR_INDIVIDUAL_ALLOC_ID;
         tagData = new Tag467StrIndividualAllocID(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -94,7 +107,7 @@ class Tag467StrIndividualAllocIDTest {
         Tag467StrIndividualAllocID tagData;
         String oneElement;
 
-        oneElement = Tag467StrIndividualAllocID.TESTA_STR_SETTL_INST_REF_ID;
+        oneElement = Tag467StrIndividualAllocID.TESTA_STR_INDIVIDUAL_ALLOC_ID;
         tagData = new Tag467StrIndividualAllocID( new MyStringType( oneElement ) );
         assertEquals( "Tag467StrIndividualAllocID\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

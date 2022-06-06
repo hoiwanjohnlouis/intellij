@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag554StrPassword;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -46,17 +45,32 @@ class Tag554StrPasswordTest {
     @Test
     void Tag0554Test() {
         Tag554StrPassword tagData;
+        String oneElement;
 
         tagData = new Tag554StrPassword(new MyStringType("JohnWick") );
         assertEquals( "JohnWick", tagData.getDataValue());
         assertNotEquals( "goodbye JohnWick", tagData.getDataValue());
+
+        oneElement = Tag554StrPassword.TESTA_STR_PASSWORD;
+        tagData = new Tag554StrPassword( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag554StrPassword.TESTB_STR_PASSWORD;
+        tagData = new Tag554StrPassword( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void PrintFIXTagTest() {
         Tag554StrPassword tagData;
         String oneElement;
 
-        oneElement = Tag554StrPassword.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag554StrPassword.TESTA_STR_PASSWORD;
+        tagData = new Tag554StrPassword( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag554StrPassword.TESTB_STR_PASSWORD;
         tagData = new Tag554StrPassword( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -65,7 +79,7 @@ class Tag554StrPasswordTest {
         Tag554StrPassword tagData;
         String oneElement;
 
-        oneElement = Tag554StrPassword.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag554StrPassword.TESTB_STR_PASSWORD;
         tagData = new Tag554StrPassword( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -75,7 +89,7 @@ class Tag554StrPasswordTest {
         Tag554StrPassword tagData;
         String oneElement;
 
-        oneElement = Tag554StrPassword.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag554StrPassword.TESTB_STR_PASSWORD;
         tagData = new Tag554StrPassword( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -85,7 +99,7 @@ class Tag554StrPasswordTest {
         Tag554StrPassword tagData;
         String oneElement;
 
-        oneElement = Tag554StrPassword.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag554StrPassword.TESTB_STR_PASSWORD;
         tagData = new Tag554StrPassword(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -95,7 +109,7 @@ class Tag554StrPasswordTest {
         Tag554StrPassword tagData;
         String oneElement;
 
-        oneElement = Tag554StrPassword.TESTA_STR_SETTL_INST_REF_ID;
+        oneElement = Tag554StrPassword.TESTA_STR_PASSWORD;
         tagData = new Tag554StrPassword( new MyStringType( oneElement ) );
         assertEquals( "Tag554StrPassword\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

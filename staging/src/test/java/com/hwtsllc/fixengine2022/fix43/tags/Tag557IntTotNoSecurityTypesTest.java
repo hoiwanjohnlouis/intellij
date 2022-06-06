@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyIntType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag557IntTotNoSecurityTypes;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -48,18 +47,28 @@ class Tag557IntTotNoSecurityTypesTest {
     @Test
     void Tag0557Test() {
         Tag557IntTotNoSecurityTypes tagData;
+        int oneElement;
 
+        oneElement = Tag557IntTotNoSecurityTypes.TESTA_INT_TOT_NO_SECURITY_TYPES;
+        tagData = new Tag557IntTotNoSecurityTypes( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+
+        oneElement = Tag557IntTotNoSecurityTypes.TESTB_INT_TOT_NO_SECURITY_TYPES;
+        tagData = new Tag557IntTotNoSecurityTypes( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void PrintFIXTagTest() {
         Tag557IntTotNoSecurityTypes tagData;
         int oneElement;
 
-        oneElement = Tag557IntTotNoSecurityTypes.TESTA_INT_LIQUIDITY_NUM_SECURITIES;
+        oneElement = Tag557IntTotNoSecurityTypes.TESTA_INT_TOT_NO_SECURITY_TYPES;
         tagData = new Tag557IntTotNoSecurityTypes( new MyIntType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag557IntTotNoSecurityTypes.TESTB_INT_LIQUIDITY_NUM_SECURITIES;
+        oneElement = Tag557IntTotNoSecurityTypes.TESTB_INT_TOT_NO_SECURITY_TYPES;
         tagData = new Tag557IntTotNoSecurityTypes( new MyIntType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -68,7 +77,7 @@ class Tag557IntTotNoSecurityTypesTest {
         Tag557IntTotNoSecurityTypes tagData;
         int oneElement;
 
-        oneElement = Tag557IntTotNoSecurityTypes.TESTB_INT_LIQUIDITY_NUM_SECURITIES;
+        oneElement = Tag557IntTotNoSecurityTypes.TESTB_INT_TOT_NO_SECURITY_TYPES;
         tagData = new Tag557IntTotNoSecurityTypes( new MyIntType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
@@ -78,7 +87,7 @@ class Tag557IntTotNoSecurityTypesTest {
         Tag557IntTotNoSecurityTypes tagData;
         int oneElement;
 
-        oneElement = Tag557IntTotNoSecurityTypes.TESTB_INT_LIQUIDITY_NUM_SECURITIES;
+        oneElement = Tag557IntTotNoSecurityTypes.TESTB_INT_TOT_NO_SECURITY_TYPES;
         tagData = new Tag557IntTotNoSecurityTypes( new MyIntType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -88,7 +97,7 @@ class Tag557IntTotNoSecurityTypesTest {
         Tag557IntTotNoSecurityTypes tagData;
         int oneElement;
 
-        oneElement = Tag557IntTotNoSecurityTypes.TESTB_INT_LIQUIDITY_NUM_SECURITIES;
+        oneElement = Tag557IntTotNoSecurityTypes.TESTB_INT_TOT_NO_SECURITY_TYPES;
         tagData = new Tag557IntTotNoSecurityTypes( new MyIntType( oneElement ) );
         assertEquals( String.valueOf( oneElement ), tagData.toString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
@@ -98,7 +107,7 @@ class Tag557IntTotNoSecurityTypesTest {
         Tag557IntTotNoSecurityTypes tagData;
         int oneElement;
 
-        oneElement = Tag557IntTotNoSecurityTypes.TESTA_INT_LIQUIDITY_NUM_SECURITIES;
+        oneElement = Tag557IntTotNoSecurityTypes.TESTA_INT_TOT_NO_SECURITY_TYPES;
         tagData = new Tag557IntTotNoSecurityTypes( new MyIntType( oneElement ) );
         assertEquals( "Tag557IntTotNoSecurityTypes\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

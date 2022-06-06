@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MySeqNumType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag630SeqHopRefID;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -53,18 +52,28 @@ class Tag630SeqHopRefIDTest {
     @Test
     void Tag0630Test() {
         Tag630SeqHopRefID tagData;
+        int oneElement;
 
+        oneElement = Tag630SeqHopRefID.TESTA_SEQ_HOP_REF_ID;
+        tagData = new Tag630SeqHopRefID( new MySeqNumType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_SEQ_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag630SeqHopRefID.TESTB_SEQ_HOP_REF_ID;
+        tagData = new Tag630SeqHopRefID( new MySeqNumType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_SEQ_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void PrintFIXTagTest() {
         Tag630SeqHopRefID tagData;
         int oneElement;
 
-        oneElement = Tag630SeqHopRefID.TESTA_SEQ_LAST_MSG_SEQ_NUM_PROCESSED;
+        oneElement = Tag630SeqHopRefID.TESTA_SEQ_HOP_REF_ID;
         tagData = new Tag630SeqHopRefID( new MySeqNumType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag630SeqHopRefID.TESTB_SEQ_LAST_MSG_SEQ_NUM_PROCESSED;
+        oneElement = Tag630SeqHopRefID.TESTB_SEQ_HOP_REF_ID;
         tagData = new Tag630SeqHopRefID( new MySeqNumType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -73,7 +82,7 @@ class Tag630SeqHopRefIDTest {
         Tag630SeqHopRefID tagData;
         int oneElement;
 
-        oneElement = Tag630SeqHopRefID.TESTB_SEQ_LAST_MSG_SEQ_NUM_PROCESSED;
+        oneElement = Tag630SeqHopRefID.TESTB_SEQ_HOP_REF_ID;
         tagData = new Tag630SeqHopRefID( new MySeqNumType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_SEQ_DATA_VALUE, tagData.getDataValue() );
@@ -83,7 +92,7 @@ class Tag630SeqHopRefIDTest {
         Tag630SeqHopRefID tagData;
         int oneElement;
 
-        oneElement = Tag630SeqHopRefID.TESTB_SEQ_LAST_MSG_SEQ_NUM_PROCESSED;
+        oneElement = Tag630SeqHopRefID.TESTB_SEQ_HOP_REF_ID;
         tagData = new Tag630SeqHopRefID( new MySeqNumType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -93,7 +102,7 @@ class Tag630SeqHopRefIDTest {
         Tag630SeqHopRefID tagData;
         int oneElement;
 
-        oneElement = Tag630SeqHopRefID.TESTB_SEQ_LAST_MSG_SEQ_NUM_PROCESSED;
+        oneElement = Tag630SeqHopRefID.TESTB_SEQ_HOP_REF_ID;
         tagData = new Tag630SeqHopRefID( new MySeqNumType( oneElement ) );
         assertEquals( String.valueOf( oneElement ), tagData.toString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
@@ -103,7 +112,7 @@ class Tag630SeqHopRefIDTest {
         Tag630SeqHopRefID tagData;
         int oneElement;
 
-        oneElement = Tag630SeqHopRefID.TESTA_SEQ_LAST_MSG_SEQ_NUM_PROCESSED;
+        oneElement = Tag630SeqHopRefID.TESTA_SEQ_HOP_REF_ID;
         tagData = new Tag630SeqHopRefID( new MySeqNumType( oneElement ) );
         assertEquals( "Tag630SeqHopRefID\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

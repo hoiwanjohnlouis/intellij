@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag645PrcMktBidPx;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -46,18 +45,28 @@ class Tag645PrcMktBidPxTest {
     @Test
     void Tag0645Test() {
         Tag645PrcMktBidPx tagData;
+        double oneElement;
 
+        oneElement = Tag645PrcMktBidPx.TESTA_PRC_MKT_BID_PX;
+        tagData = new Tag645PrcMktBidPx( new MyPriceType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag645PrcMktBidPx.TESTB_PRC_MKT_BID_PX;
+        tagData = new Tag645PrcMktBidPx( new MyPriceType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void PrintFIXTagTest() {
         Tag645PrcMktBidPx tagData;
         double oneElement;
 
-        oneElement = Tag645PrcMktBidPx.TESTA_PRC_BASIS_FEATURE_PRICE;
+        oneElement = Tag645PrcMktBidPx.TESTA_PRC_MKT_BID_PX;
         tagData = new Tag645PrcMktBidPx( new MyPriceType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag645PrcMktBidPx.TESTB_PRC_BASIS_FEATURE_PRICE;
+        oneElement = Tag645PrcMktBidPx.TESTB_PRC_MKT_BID_PX;
         tagData = new Tag645PrcMktBidPx( new MyPriceType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -66,7 +75,7 @@ class Tag645PrcMktBidPxTest {
         Tag645PrcMktBidPx tagData;
         double oneElement;
 
-        oneElement = Tag645PrcMktBidPx.TESTB_PRC_BASIS_FEATURE_PRICE;
+        oneElement = Tag645PrcMktBidPx.TESTB_PRC_MKT_BID_PX;
         tagData = new Tag645PrcMktBidPx( new MyPriceType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue() );
@@ -76,7 +85,7 @@ class Tag645PrcMktBidPxTest {
         Tag645PrcMktBidPx tagData;
         double oneElement;
 
-        oneElement = Tag645PrcMktBidPx.TESTB_PRC_BASIS_FEATURE_PRICE;
+        oneElement = Tag645PrcMktBidPx.TESTB_PRC_MKT_BID_PX;
         tagData = new Tag645PrcMktBidPx( new MyPriceType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -86,7 +95,7 @@ class Tag645PrcMktBidPxTest {
         Tag645PrcMktBidPx tagData;
         double oneElement;
 
-        oneElement = Tag645PrcMktBidPx.TESTB_PRC_BASIS_FEATURE_PRICE;
+        oneElement = Tag645PrcMktBidPx.TESTB_PRC_MKT_BID_PX;
         tagData = new Tag645PrcMktBidPx( new MyPriceType( oneElement ) );
         assertEquals( String.valueOf( oneElement ), tagData.toString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
@@ -96,7 +105,7 @@ class Tag645PrcMktBidPxTest {
         Tag645PrcMktBidPx tagData;
         double oneElement;
 
-        oneElement = Tag645PrcMktBidPx.TESTA_PRC_BASIS_FEATURE_PRICE;
+        oneElement = Tag645PrcMktBidPx.TESTA_PRC_MKT_BID_PX;
         tagData = new Tag645PrcMktBidPx( new MyPriceType( oneElement ) );
         assertEquals( "Tag645PrcMktBidPx\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyFloatType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag657FloSettlCurrOfferFxRate;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -46,14 +45,28 @@ class Tag657FloSettlCurrOfferFxRateTest {
     @Test
     void Tag0657Test() {
         Tag657FloSettlCurrOfferFxRate tagData;
+        float oneElement;
 
+        oneElement = Tag657FloSettlCurrOfferFxRate.TESTA_FLO_SETTL_CURR_OFFER_FX_RATE;
+        tagData = new Tag657FloSettlCurrOfferFxRate( new MyFloatType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
+
+        oneElement = Tag657FloSettlCurrOfferFxRate.TESTB_FLO_SETTL_CURR_OFFER_FX_RATE;
+        tagData = new Tag657FloSettlCurrOfferFxRate( new MyFloatType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void PrintFIXTagTest() {
         Tag657FloSettlCurrOfferFxRate tagData;
         float oneElement;
 
-        oneElement = Tag657FloSettlCurrOfferFxRate.TESTB_FLO_UNDERLYING_CONTRACT_MULTIPLIER;
+        oneElement = Tag657FloSettlCurrOfferFxRate.TESTA_FLO_SETTL_CURR_OFFER_FX_RATE;
+        tagData = new Tag657FloSettlCurrOfferFxRate( new MyFloatType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag657FloSettlCurrOfferFxRate.TESTB_FLO_SETTL_CURR_OFFER_FX_RATE;
         tagData = new Tag657FloSettlCurrOfferFxRate( new MyFloatType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -62,17 +75,17 @@ class Tag657FloSettlCurrOfferFxRateTest {
         Tag657FloSettlCurrOfferFxRate tagData;
         float oneElement;
 
-        oneElement = Tag657FloSettlCurrOfferFxRate.TESTB_FLO_UNDERLYING_CONTRACT_MULTIPLIER;
+        oneElement = Tag657FloSettlCurrOfferFxRate.TESTB_FLO_SETTL_CURR_OFFER_FX_RATE;
         tagData = new Tag657FloSettlCurrOfferFxRate( new MyFloatType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {
         Tag657FloSettlCurrOfferFxRate tagData;
         float oneElement;
 
-        oneElement = Tag657FloSettlCurrOfferFxRate.TESTB_FLO_UNDERLYING_CONTRACT_MULTIPLIER;
+        oneElement = Tag657FloSettlCurrOfferFxRate.TESTB_FLO_SETTL_CURR_OFFER_FX_RATE;
         tagData = new Tag657FloSettlCurrOfferFxRate( new MyFloatType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -82,7 +95,7 @@ class Tag657FloSettlCurrOfferFxRateTest {
         Tag657FloSettlCurrOfferFxRate tagData;
         float oneElement;
 
-        oneElement = Tag657FloSettlCurrOfferFxRate.TESTB_FLO_UNDERLYING_CONTRACT_MULTIPLIER;
+        oneElement = Tag657FloSettlCurrOfferFxRate.TESTB_FLO_SETTL_CURR_OFFER_FX_RATE;
         tagData = new Tag657FloSettlCurrOfferFxRate( new MyFloatType( oneElement ) );
         assertEquals( String.valueOf( oneElement ), tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -92,7 +105,7 @@ class Tag657FloSettlCurrOfferFxRateTest {
         Tag657FloSettlCurrOfferFxRate tagData;
         float oneElement;
 
-        oneElement = Tag657FloSettlCurrOfferFxRate.TESTA_FLO_UNDERLYING_CONTRACT_MULTIPLIER;
+        oneElement = Tag657FloSettlCurrOfferFxRate.TESTA_FLO_SETTL_CURR_OFFER_FX_RATE;
         tagData = new Tag657FloSettlCurrOfferFxRate( new MyFloatType( oneElement ) );
         assertEquals( "Tag657FloSettlCurrOfferFxRate\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

@@ -17,8 +17,6 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag519EnuContAmtType;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum519ContAmtType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -143,7 +141,7 @@ class Tag519EnuContAmtTypeTest {
         Tag519EnuContAmtType tagData;
 
         // loop around the ENUM and process
-        for ( Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for ( Enum519ContAmtType oneEnum : Enum519ContAmtType.values()) {
             tagData = new Tag519EnuContAmtType(oneEnum);
             System.out.println( tagData.toVerboseString() );
         }
@@ -153,7 +151,7 @@ class Tag519EnuContAmtTypeTest {
         Tag519EnuContAmtType tagData;
 
         // loop around the ENUM and process
-        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for (Enum519ContAmtType oneEnum : Enum519ContAmtType.values()) {
             tagData = new Tag519EnuContAmtType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -164,7 +162,7 @@ class Tag519EnuContAmtTypeTest {
         Tag519EnuContAmtType tagData;
 
         // loop around the ENUM and process
-        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for (Enum519ContAmtType oneEnum : Enum519ContAmtType.values()) {
             tagData = new Tag519EnuContAmtType(oneEnum);
             assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
@@ -176,7 +174,7 @@ class Tag519EnuContAmtTypeTest {
         Tag519EnuContAmtType tagData;
 
         // loop around the ENUM and process
-        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for (Enum519ContAmtType oneEnum : Enum519ContAmtType.values()) {
             tagData = new Tag519EnuContAmtType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -187,7 +185,7 @@ class Tag519EnuContAmtTypeTest {
         Tag519EnuContAmtType tagData;
 
         // loop around the ENUM and process
-        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for (Enum519ContAmtType oneEnum : Enum519ContAmtType.values()) {
             tagData = new Tag519EnuContAmtType(oneEnum);
             assertEquals( "Tag519EnuContAmtType\n" +
                             "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

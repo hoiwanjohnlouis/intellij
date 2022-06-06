@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyFloatType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag485FloExecPriceAdjustment;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -47,14 +46,28 @@ class Tag485FloExecPriceAdjustmentTest {
     @Test
     void Tag0485Test() {
         Tag485FloExecPriceAdjustment tagData;
+        float oneElement;
 
+        oneElement = Tag485FloExecPriceAdjustment.TESTA_FLO_EXEC_PRICE_ADJUSTMENT;
+        tagData = new Tag485FloExecPriceAdjustment( new MyFloatType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
+
+        oneElement = Tag485FloExecPriceAdjustment.TESTB_FLO_EXEC_PRICE_ADJUSTMENT;
+        tagData = new Tag485FloExecPriceAdjustment( new MyFloatType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void PrintFIXTagTest() {
         Tag485FloExecPriceAdjustment tagData;
         float oneElement;
 
-        oneElement = Tag485FloExecPriceAdjustment.TESTB_FLO_UNDERLYING_CONTRACT_MULTIPLIER;
+        oneElement = Tag485FloExecPriceAdjustment.TESTA_FLO_EXEC_PRICE_ADJUSTMENT;
+        tagData = new Tag485FloExecPriceAdjustment( new MyFloatType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag485FloExecPriceAdjustment.TESTB_FLO_EXEC_PRICE_ADJUSTMENT;
         tagData = new Tag485FloExecPriceAdjustment( new MyFloatType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -63,17 +76,17 @@ class Tag485FloExecPriceAdjustmentTest {
         Tag485FloExecPriceAdjustment tagData;
         float oneElement;
 
-        oneElement = Tag485FloExecPriceAdjustment.TESTB_FLO_UNDERLYING_CONTRACT_MULTIPLIER;
+        oneElement = Tag485FloExecPriceAdjustment.TESTB_FLO_EXEC_PRICE_ADJUSTMENT;
         tagData = new Tag485FloExecPriceAdjustment( new MyFloatType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {
         Tag485FloExecPriceAdjustment tagData;
         float oneElement;
 
-        oneElement = Tag485FloExecPriceAdjustment.TESTB_FLO_UNDERLYING_CONTRACT_MULTIPLIER;
+        oneElement = Tag485FloExecPriceAdjustment.TESTB_FLO_EXEC_PRICE_ADJUSTMENT;
         tagData = new Tag485FloExecPriceAdjustment( new MyFloatType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -83,7 +96,7 @@ class Tag485FloExecPriceAdjustmentTest {
         Tag485FloExecPriceAdjustment tagData;
         float oneElement;
 
-        oneElement = Tag485FloExecPriceAdjustment.TESTB_FLO_UNDERLYING_CONTRACT_MULTIPLIER;
+        oneElement = Tag485FloExecPriceAdjustment.TESTB_FLO_EXEC_PRICE_ADJUSTMENT;
         tagData = new Tag485FloExecPriceAdjustment( new MyFloatType( oneElement ) );
         assertEquals( String.valueOf( oneElement ), tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -93,7 +106,7 @@ class Tag485FloExecPriceAdjustmentTest {
         Tag485FloExecPriceAdjustment tagData;
         float oneElement;
 
-        oneElement = Tag485FloExecPriceAdjustment.TESTA_FLO_UNDERLYING_CONTRACT_MULTIPLIER;
+        oneElement = Tag485FloExecPriceAdjustment.TESTA_FLO_EXEC_PRICE_ADJUSTMENT;
         tagData = new Tag485FloExecPriceAdjustment( new MyFloatType( oneElement ) );
         assertEquals( "Tag485FloExecPriceAdjustment\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

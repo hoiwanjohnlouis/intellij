@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag648QtyMinOfferSize;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -55,11 +54,11 @@ class Tag648QtyMinOfferSizeTest {
         Tag648QtyMinOfferSize tagData;
         int oneElement;
 
-        oneElement = Tag648QtyMinOfferSize.TESTA_QTY_MD_ENTRY_SIZE;
+        oneElement = Tag648QtyMinOfferSize.TESTA_QTY_MIN_OFFER_SIZE;
         tagData = new Tag648QtyMinOfferSize( new MyQtyType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag648QtyMinOfferSize.TESTB_QTY_MD_ENTRY_SIZE;
+        oneElement = Tag648QtyMinOfferSize.TESTB_QTY_MIN_OFFER_SIZE;
         tagData = new Tag648QtyMinOfferSize( new MyQtyType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -68,7 +67,7 @@ class Tag648QtyMinOfferSizeTest {
         Tag648QtyMinOfferSize tagData;
         int oneElement;
 
-        oneElement = Tag648QtyMinOfferSize.TESTB_QTY_MD_ENTRY_SIZE;
+        oneElement = Tag648QtyMinOfferSize.TESTB_QTY_MIN_OFFER_SIZE;
         tagData = new Tag648QtyMinOfferSize( new MyQtyType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
@@ -78,7 +77,7 @@ class Tag648QtyMinOfferSizeTest {
         Tag648QtyMinOfferSize tagData;
         int oneElement;
 
-        oneElement = Tag648QtyMinOfferSize.TESTB_QTY_MD_ENTRY_SIZE;
+        oneElement = Tag648QtyMinOfferSize.TESTB_QTY_MIN_OFFER_SIZE;
         tagData = new Tag648QtyMinOfferSize( new MyQtyType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -88,7 +87,7 @@ class Tag648QtyMinOfferSizeTest {
         Tag648QtyMinOfferSize tagData;
         int oneElement;
 
-        oneElement = Tag648QtyMinOfferSize.TESTB_QTY_MD_ENTRY_SIZE;
+        oneElement = Tag648QtyMinOfferSize.TESTB_QTY_MIN_OFFER_SIZE;
         tagData = new Tag648QtyMinOfferSize( new MyQtyType( oneElement ) );
         assertEquals( String.valueOf( oneElement ), tagData.toString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
@@ -98,7 +97,7 @@ class Tag648QtyMinOfferSizeTest {
         Tag648QtyMinOfferSize tagData;
         int oneElement;
 
-        oneElement = Tag648QtyMinOfferSize.TESTA_QTY_MD_ENTRY_SIZE;
+        oneElement = Tag648QtyMinOfferSize.TESTA_QTY_MIN_OFFER_SIZE;
         tagData = new Tag648QtyMinOfferSize( new MyQtyType( oneElement ) );
         assertEquals( "Tag648QtyMinOfferSize\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

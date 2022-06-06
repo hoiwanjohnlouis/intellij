@@ -17,8 +17,6 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag465EnuQuantityType;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum465QuantityType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -101,7 +99,7 @@ class Tag465EnuQuantityTypeTest {
         Tag465EnuQuantityType tagData;
 
         // loop around the ENUM and process
-        for ( Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for ( Enum465QuantityType oneEnum : Enum465QuantityType.values()) {
             tagData = new Tag465EnuQuantityType(oneEnum);
             System.out.println( tagData.toVerboseString() );
         }
@@ -111,7 +109,7 @@ class Tag465EnuQuantityTypeTest {
         Tag465EnuQuantityType tagData;
 
         // loop around the ENUM and process
-        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for (Enum465QuantityType oneEnum : Enum465QuantityType.values()) {
             tagData = new Tag465EnuQuantityType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -122,7 +120,7 @@ class Tag465EnuQuantityTypeTest {
         Tag465EnuQuantityType tagData;
 
         // loop around the ENUM and process
-        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for (Enum465QuantityType oneEnum : Enum465QuantityType.values()) {
             tagData = new Tag465EnuQuantityType(oneEnum);
             assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
@@ -134,7 +132,7 @@ class Tag465EnuQuantityTypeTest {
         Tag465EnuQuantityType tagData;
 
         // loop around the ENUM and process
-        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for (Enum465QuantityType oneEnum : Enum465QuantityType.values()) {
             tagData = new Tag465EnuQuantityType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -145,7 +143,7 @@ class Tag465EnuQuantityTypeTest {
         Tag465EnuQuantityType tagData;
 
         // loop around the ENUM and process
-        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for (Enum465QuantityType oneEnum : Enum465QuantityType.values()) {
             tagData = new Tag465EnuQuantityType(oneEnum);
             assertEquals( "Tag465EnuQuantityType\n" +
                             "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

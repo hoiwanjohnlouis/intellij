@@ -17,8 +17,6 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag650EnuLegalConfirm;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum650LegalConfirm;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -65,7 +63,7 @@ class Tag650EnuLegalConfirmTest {
         Tag650EnuLegalConfirm tagData;
 
         // loop around the ENUM and process
-        for ( Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for ( Enum650LegalConfirm oneEnum : Enum650LegalConfirm.values()) {
             tagData = new Tag650EnuLegalConfirm(oneEnum);
             System.out.println( tagData.toVerboseString() );
         }
@@ -75,7 +73,7 @@ class Tag650EnuLegalConfirmTest {
         Tag650EnuLegalConfirm tagData;
 
         // loop around the ENUM and process
-        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for (Enum650LegalConfirm oneEnum : Enum650LegalConfirm.values()) {
             tagData = new Tag650EnuLegalConfirm(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -86,7 +84,7 @@ class Tag650EnuLegalConfirmTest {
         Tag650EnuLegalConfirm tagData;
 
         // loop around the ENUM and process
-        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for (Enum650LegalConfirm oneEnum : Enum650LegalConfirm.values()) {
             tagData = new Tag650EnuLegalConfirm(oneEnum);
             assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
@@ -98,7 +96,7 @@ class Tag650EnuLegalConfirmTest {
         Tag650EnuLegalConfirm tagData;
 
         // loop around the ENUM and process
-        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for (Enum650LegalConfirm oneEnum : Enum650LegalConfirm.values()) {
             tagData = new Tag650EnuLegalConfirm(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -109,7 +107,7 @@ class Tag650EnuLegalConfirmTest {
         Tag650EnuLegalConfirm tagData;
 
         // loop around the ENUM and process
-        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for (Enum650LegalConfirm oneEnum : Enum650LegalConfirm.values()) {
             tagData = new Tag650EnuLegalConfirm(oneEnum);
             assertEquals( "Tag650EnuLegalConfirm\n" +
                             "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

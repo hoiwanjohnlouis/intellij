@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag457NumNoUnderlyingSecurityAltID;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -46,18 +45,28 @@ class Tag457NumNoUnderlyingSecurityAltIDTest {
     @Test
     void Tag0457Test() {
         Tag457NumNoUnderlyingSecurityAltID tagData;
+        int oneElement;
 
+        oneElement = Tag457NumNoUnderlyingSecurityAltID.TESTA_NUM_NO_UNDERLYING_SECURITY_ALT_ID;
+        tagData = new Tag457NumNoUnderlyingSecurityAltID( new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag457NumNoUnderlyingSecurityAltID.TESTB_NUM_NO_UNDERLYING_SECURITY_ALT_ID;
+        tagData = new Tag457NumNoUnderlyingSecurityAltID( new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void PrintFIXTagTest() {
         Tag457NumNoUnderlyingSecurityAltID tagData;
         int oneElement;
 
-        oneElement = Tag457NumNoUnderlyingSecurityAltID.TESTA_NUM_NO_ROUTING_IDS;
+        oneElement = Tag457NumNoUnderlyingSecurityAltID.TESTA_NUM_NO_UNDERLYING_SECURITY_ALT_ID;
         tagData = new Tag457NumNoUnderlyingSecurityAltID( new MyNumInGroupType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag457NumNoUnderlyingSecurityAltID.TESTB_NUM_NO_ROUTING_IDS;
+        oneElement = Tag457NumNoUnderlyingSecurityAltID.TESTB_NUM_NO_UNDERLYING_SECURITY_ALT_ID;
         tagData = new Tag457NumNoUnderlyingSecurityAltID( new MyNumInGroupType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -66,7 +75,7 @@ class Tag457NumNoUnderlyingSecurityAltIDTest {
         Tag457NumNoUnderlyingSecurityAltID tagData;
         int oneElement;
 
-        oneElement = Tag457NumNoUnderlyingSecurityAltID.TESTB_NUM_NO_ROUTING_IDS;
+        oneElement = Tag457NumNoUnderlyingSecurityAltID.TESTB_NUM_NO_UNDERLYING_SECURITY_ALT_ID;
         tagData = new Tag457NumNoUnderlyingSecurityAltID( new MyNumInGroupType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue() );
@@ -76,7 +85,7 @@ class Tag457NumNoUnderlyingSecurityAltIDTest {
         Tag457NumNoUnderlyingSecurityAltID tagData;
         int oneElement;
 
-        oneElement = Tag457NumNoUnderlyingSecurityAltID.TESTB_NUM_NO_ROUTING_IDS;
+        oneElement = Tag457NumNoUnderlyingSecurityAltID.TESTB_NUM_NO_UNDERLYING_SECURITY_ALT_ID;
         tagData = new Tag457NumNoUnderlyingSecurityAltID( new MyNumInGroupType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -86,7 +95,7 @@ class Tag457NumNoUnderlyingSecurityAltIDTest {
         Tag457NumNoUnderlyingSecurityAltID tagData;
         int oneElement;
 
-        oneElement = Tag457NumNoUnderlyingSecurityAltID.TESTB_NUM_NO_ROUTING_IDS;
+        oneElement = Tag457NumNoUnderlyingSecurityAltID.TESTB_NUM_NO_UNDERLYING_SECURITY_ALT_ID;
         tagData = new Tag457NumNoUnderlyingSecurityAltID( new MyNumInGroupType( oneElement ) );
         assertEquals( String.valueOf( oneElement ), tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -96,7 +105,7 @@ class Tag457NumNoUnderlyingSecurityAltIDTest {
         Tag457NumNoUnderlyingSecurityAltID tagData;
         int oneElement;
 
-        oneElement = Tag457NumNoUnderlyingSecurityAltID.TESTA_NUM_NO_ROUTING_IDS;
+        oneElement = Tag457NumNoUnderlyingSecurityAltID.TESTA_NUM_NO_UNDERLYING_SECURITY_ALT_ID;
         tagData = new Tag457NumNoUnderlyingSecurityAltID( new MyNumInGroupType( oneElement ) );
         assertEquals( "Tag457NumNoUnderlyingSecurityAltID\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

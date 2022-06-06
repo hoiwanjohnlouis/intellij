@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag562QtyMinTradeVol;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -53,11 +52,11 @@ class Tag562QtyMinTradeVolTest {
         Tag562QtyMinTradeVol tagData;
         int oneElement;
 
-        oneElement = Tag562QtyMinTradeVol.TESTA_QTY_MD_ENTRY_SIZE;
+        oneElement = Tag562QtyMinTradeVol.TESTA_QTY_MIN_TRADE_VOL;
         tagData = new Tag562QtyMinTradeVol( new MyQtyType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag562QtyMinTradeVol.TESTB_QTY_MD_ENTRY_SIZE;
+        oneElement = Tag562QtyMinTradeVol.TESTB_QTY_MIN_TRADE_VOL;
         tagData = new Tag562QtyMinTradeVol( new MyQtyType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -66,7 +65,7 @@ class Tag562QtyMinTradeVolTest {
         Tag562QtyMinTradeVol tagData;
         int oneElement;
 
-        oneElement = Tag562QtyMinTradeVol.TESTB_QTY_MD_ENTRY_SIZE;
+        oneElement = Tag562QtyMinTradeVol.TESTB_QTY_MIN_TRADE_VOL;
         tagData = new Tag562QtyMinTradeVol( new MyQtyType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
@@ -76,7 +75,7 @@ class Tag562QtyMinTradeVolTest {
         Tag562QtyMinTradeVol tagData;
         int oneElement;
 
-        oneElement = Tag562QtyMinTradeVol.TESTB_QTY_MD_ENTRY_SIZE;
+        oneElement = Tag562QtyMinTradeVol.TESTB_QTY_MIN_TRADE_VOL;
         tagData = new Tag562QtyMinTradeVol( new MyQtyType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -86,7 +85,7 @@ class Tag562QtyMinTradeVolTest {
         Tag562QtyMinTradeVol tagData;
         int oneElement;
 
-        oneElement = Tag562QtyMinTradeVol.TESTB_QTY_MD_ENTRY_SIZE;
+        oneElement = Tag562QtyMinTradeVol.TESTB_QTY_MIN_TRADE_VOL;
         tagData = new Tag562QtyMinTradeVol( new MyQtyType( oneElement ) );
         assertEquals( String.valueOf( oneElement ), tagData.toString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
@@ -96,7 +95,7 @@ class Tag562QtyMinTradeVolTest {
         Tag562QtyMinTradeVol tagData;
         int oneElement;
 
-        oneElement = Tag562QtyMinTradeVol.TESTA_QTY_MD_ENTRY_SIZE;
+        oneElement = Tag562QtyMinTradeVol.TESTA_QTY_MIN_TRADE_VOL;
         tagData = new Tag562QtyMinTradeVol( new MyQtyType( oneElement ) );
         assertEquals( "Tag562QtyMinTradeVol\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag654StrLegRefID;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -46,14 +45,28 @@ class Tag654StrLegRefIDTest {
     @Test
     void Tag0654Test() {
         Tag654StrLegRefID tagData;
+        String oneElement;
 
+        oneElement = Tag654StrLegRefID.TESTA_STR_LEG_REF_ID;
+        tagData = new Tag654StrLegRefID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag654StrLegRefID.TESTB_STR_LEG_REF_ID;
+        tagData = new Tag654StrLegRefID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void PrintFIXTagTest() {
         Tag654StrLegRefID tagData;
         String oneElement;
 
-        oneElement = Tag654StrLegRefID.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag654StrLegRefID.TESTA_STR_LEG_REF_ID;
+        tagData = new Tag654StrLegRefID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag654StrLegRefID.TESTB_STR_LEG_REF_ID;
         tagData = new Tag654StrLegRefID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -62,7 +75,7 @@ class Tag654StrLegRefIDTest {
         Tag654StrLegRefID tagData;
         String oneElement;
 
-        oneElement = Tag654StrLegRefID.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag654StrLegRefID.TESTB_STR_LEG_REF_ID;
         tagData = new Tag654StrLegRefID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -72,7 +85,7 @@ class Tag654StrLegRefIDTest {
         Tag654StrLegRefID tagData;
         String oneElement;
 
-        oneElement = Tag654StrLegRefID.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag654StrLegRefID.TESTB_STR_LEG_REF_ID;
         tagData = new Tag654StrLegRefID( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -82,7 +95,7 @@ class Tag654StrLegRefIDTest {
         Tag654StrLegRefID tagData;
         String oneElement;
 
-        oneElement = Tag654StrLegRefID.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag654StrLegRefID.TESTB_STR_LEG_REF_ID;
         tagData = new Tag654StrLegRefID(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -92,7 +105,7 @@ class Tag654StrLegRefIDTest {
         Tag654StrLegRefID tagData;
         String oneElement;
 
-        oneElement = Tag654StrLegRefID.TESTA_STR_SETTL_INST_REF_ID;
+        oneElement = Tag654StrLegRefID.TESTA_STR_LEG_REF_ID;
         tagData = new Tag654StrLegRefID( new MyStringType( oneElement ) );
         assertEquals( "Tag654StrLegRefID\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

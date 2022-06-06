@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag632PctBidYield;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -46,18 +45,28 @@ class Tag632PctBidYieldTest {
     @Test
     void Tag0632Test() {
         Tag632PctBidYield tagData;
+        double oneElement;
 
+        oneElement = Tag632PctBidYield.TESTA_PCT_BID_YIELD;
+        tagData = new Tag632PctBidYield( new MyPercentageType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag632PctBidYield.TESTB_PCT_BID_YIELD;
+        tagData = new Tag632PctBidYield( new MyPercentageType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void PrintFIXTagTest() {
         Tag632PctBidYield tagData;
         double oneElement;
 
-        oneElement = Tag632PctBidYield.TESTA_PCT_COUPON_RATE;
+        oneElement = Tag632PctBidYield.TESTA_PCT_BID_YIELD;
         tagData = new Tag632PctBidYield( new MyPercentageType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag632PctBidYield.TESTB_PCT_COUPON_RATE;
+        oneElement = Tag632PctBidYield.TESTB_PCT_BID_YIELD;
         tagData = new Tag632PctBidYield( new MyPercentageType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -66,17 +75,17 @@ class Tag632PctBidYieldTest {
         Tag632PctBidYield tagData;
         double oneElement;
 
-        oneElement = Tag632PctBidYield.TESTB_PCT_COUPON_RATE;
+        oneElement = Tag632PctBidYield.TESTB_PCT_BID_YIELD;
         tagData = new Tag632PctBidYield( new MyPercentageType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void TagToValuePairStringTest() {
         Tag632PctBidYield tagData;
         double oneElement;
 
-        oneElement = Tag632PctBidYield.TESTB_PCT_COUPON_RATE;
+        oneElement = Tag632PctBidYield.TESTB_PCT_BID_YIELD;
         tagData = new Tag632PctBidYield( new MyPercentageType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
@@ -86,7 +95,7 @@ class Tag632PctBidYieldTest {
         Tag632PctBidYield tagData;
         double oneElement;
 
-        oneElement = Tag632PctBidYield.TESTB_PCT_COUPON_RATE;
+        oneElement = Tag632PctBidYield.TESTB_PCT_BID_YIELD;
         tagData = new Tag632PctBidYield( new MyPercentageType( oneElement ) );
         assertEquals( String.valueOf( oneElement ), tagData.toString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
@@ -96,7 +105,7 @@ class Tag632PctBidYieldTest {
         Tag632PctBidYield tagData;
         double oneElement;
 
-        oneElement = Tag632PctBidYield.TESTA_PCT_COUPON_RATE;
+        oneElement = Tag632PctBidYield.TESTA_PCT_BID_YIELD;
         tagData = new Tag632PctBidYield( new MyPercentageType( oneElement ) );
         assertEquals( "Tag632PctBidYield\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

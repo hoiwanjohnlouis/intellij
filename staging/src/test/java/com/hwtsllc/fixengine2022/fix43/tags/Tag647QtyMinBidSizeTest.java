@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag647QtyMinBidSizeOfferSize;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -48,59 +47,69 @@ class Tag647QtyMinBidSizeTest {
     @Test
     void Tag0647Test() {
         Tag647QtyMinBidSize tagData;
+        int oneElement;
 
+        oneElement = Tag647QtyMinBidSize.TESTA_QTY_MIN_BID_SIZE;
+        tagData = new Tag647QtyMinBidSize( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+
+        oneElement = Tag647QtyMinBidSize.TESTB_QTY_MIN_BID_SIZE;
+        tagData = new Tag647QtyMinBidSize( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void PrintFIXTagTest() {
-        Tag647QtyMinBidSizeOfferSize tagData;
+        Tag647QtyMinBidSize tagData;
         int oneElement;
 
-        oneElement = Tag647QtyMinBidSizeOfferSize.TESTA_QTY_MD_ENTRY_SIZE;
-        tagData = new Tag647QtyMinBidSizeOfferSize( new MyQtyType( oneElement ) );
+        oneElement = Tag647QtyMinBidSize.TESTA_QTY_MIN_BID_SIZE;
+        tagData = new Tag647QtyMinBidSize( new MyQtyType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag647QtyMinBidSizeOfferSize.TESTB_QTY_MD_ENTRY_SIZE;
-        tagData = new Tag647QtyMinBidSizeOfferSize( new MyQtyType( oneElement ) );
+        oneElement = Tag647QtyMinBidSize.TESTB_QTY_MIN_BID_SIZE;
+        tagData = new Tag647QtyMinBidSize( new MyQtyType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
     @Test
     void TagGetDataValueTest() {
-        Tag647QtyMinBidSizeOfferSize tagData;
+        Tag647QtyMinBidSize tagData;
         int oneElement;
 
-        oneElement = Tag647QtyMinBidSizeOfferSize.TESTB_QTY_MD_ENTRY_SIZE;
-        tagData = new Tag647QtyMinBidSizeOfferSize( new MyQtyType( oneElement ) );
+        oneElement = Tag647QtyMinBidSize.TESTB_QTY_MIN_BID_SIZE;
+        tagData = new Tag647QtyMinBidSize( new MyQtyType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag647QtyMinBidSizeOfferSize tagData;
+        Tag647QtyMinBidSize tagData;
         int oneElement;
 
-        oneElement = Tag647QtyMinBidSizeOfferSize.TESTB_QTY_MD_ENTRY_SIZE;
-        tagData = new Tag647QtyMinBidSizeOfferSize( new MyQtyType( oneElement ) );
+        oneElement = Tag647QtyMinBidSize.TESTB_QTY_MIN_BID_SIZE;
+        tagData = new Tag647QtyMinBidSize( new MyQtyType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
     }
     @Test
     void TagToStringTest() {
-        Tag647QtyMinBidSizeOfferSize tagData;
+        Tag647QtyMinBidSize tagData;
         int oneElement;
 
-        oneElement = Tag647QtyMinBidSizeOfferSize.TESTB_QTY_MD_ENTRY_SIZE;
-        tagData = new Tag647QtyMinBidSizeOfferSize( new MyQtyType( oneElement ) );
+        oneElement = Tag647QtyMinBidSize.TESTB_QTY_MIN_BID_SIZE;
+        tagData = new Tag647QtyMinBidSize( new MyQtyType( oneElement ) );
         assertEquals( String.valueOf( oneElement ), tagData.toString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag647QtyMinBidSizeOfferSize tagData;
+        Tag647QtyMinBidSize tagData;
         int oneElement;
 
-        oneElement = Tag647QtyMinBidSizeOfferSize.TESTA_QTY_MD_ENTRY_SIZE;
-        tagData = new Tag647QtyMinBidSizeOfferSize( new MyQtyType( oneElement ) );
-        assertEquals( "Tag647QtyMinBidSizeOfferSize\n" +
+        oneElement = Tag647QtyMinBidSize.TESTA_QTY_MIN_BID_SIZE;
+        tagData = new Tag647QtyMinBidSize( new MyQtyType( oneElement ) );
+        assertEquals( "Tag647QtyMinBidSize\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                         "\tFIXName[" + tagData.toFIXNameString() + "]\n" +

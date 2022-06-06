@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag523StrPartySubID;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -51,14 +50,28 @@ class Tag523StrPartySubIDTest {
     @Test
     void Tag0523Test() {
         Tag523StrPartySubID tagData;
+        String oneElement;
 
+        oneElement = Tag523StrPartySubID.TESTA_STR_PARTY_SUB_ID;
+        tagData = new Tag523StrPartySubID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag523StrPartySubID.TESTB_STR_PARTY_SUB_ID;
+        tagData = new Tag523StrPartySubID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void PrintFIXTagTest() {
         Tag523StrPartySubID tagData;
         String oneElement;
 
-        oneElement = Tag523StrPartySubID.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag523StrPartySubID.TESTA_STR_PARTY_SUB_ID;
+        tagData = new Tag523StrPartySubID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag523StrPartySubID.TESTB_STR_PARTY_SUB_ID;
         tagData = new Tag523StrPartySubID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -67,7 +80,7 @@ class Tag523StrPartySubIDTest {
         Tag523StrPartySubID tagData;
         String oneElement;
 
-        oneElement = Tag523StrPartySubID.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag523StrPartySubID.TESTB_STR_PARTY_SUB_ID;
         tagData = new Tag523StrPartySubID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -77,7 +90,7 @@ class Tag523StrPartySubIDTest {
         Tag523StrPartySubID tagData;
         String oneElement;
 
-        oneElement = Tag523StrPartySubID.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag523StrPartySubID.TESTB_STR_PARTY_SUB_ID;
         tagData = new Tag523StrPartySubID( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -87,7 +100,7 @@ class Tag523StrPartySubIDTest {
         Tag523StrPartySubID tagData;
         String oneElement;
 
-        oneElement = Tag523StrPartySubID.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag523StrPartySubID.TESTB_STR_PARTY_SUB_ID;
         tagData = new Tag523StrPartySubID(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -97,7 +110,7 @@ class Tag523StrPartySubIDTest {
         Tag523StrPartySubID tagData;
         String oneElement;
 
-        oneElement = Tag523StrPartySubID.TESTA_STR_SETTL_INST_REF_ID;
+        oneElement = Tag523StrPartySubID.TESTA_STR_PARTY_SUB_ID;
         tagData = new Tag523StrPartySubID( new MyStringType( oneElement ) );
         assertEquals( "Tag523StrPartySubID\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

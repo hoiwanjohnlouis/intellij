@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag652QtyUnderlyingLastQty;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -48,18 +47,28 @@ class Tag652QtyUnderlyingLastQtyTest {
     @Test
     void Tag0652Test() {
         Tag652QtyUnderlyingLastQty tagData;
+        int oneElement;
 
+        oneElement = Tag652QtyUnderlyingLastQty.TESTA_QTY_UNDERLYING_LAST_QTY;
+        tagData = new Tag652QtyUnderlyingLastQty( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+
+        oneElement = Tag652QtyUnderlyingLastQty.TESTB_QTY_UNDERLYING_LAST_QTY;
+        tagData = new Tag652QtyUnderlyingLastQty( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void PrintFIXTagTest() {
         Tag652QtyUnderlyingLastQty tagData;
         int oneElement;
 
-        oneElement = Tag652QtyUnderlyingLastQty.TESTA_QTY_MD_ENTRY_SIZE;
+        oneElement = Tag652QtyUnderlyingLastQty.TESTA_QTY_UNDERLYING_LAST_QTY;
         tagData = new Tag652QtyUnderlyingLastQty( new MyQtyType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag652QtyUnderlyingLastQty.TESTB_QTY_MD_ENTRY_SIZE;
+        oneElement = Tag652QtyUnderlyingLastQty.TESTB_QTY_UNDERLYING_LAST_QTY;
         tagData = new Tag652QtyUnderlyingLastQty( new MyQtyType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -68,7 +77,7 @@ class Tag652QtyUnderlyingLastQtyTest {
         Tag652QtyUnderlyingLastQty tagData;
         int oneElement;
 
-        oneElement = Tag652QtyUnderlyingLastQty.TESTB_QTY_MD_ENTRY_SIZE;
+        oneElement = Tag652QtyUnderlyingLastQty.TESTB_QTY_UNDERLYING_LAST_QTY;
         tagData = new Tag652QtyUnderlyingLastQty( new MyQtyType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
@@ -78,7 +87,7 @@ class Tag652QtyUnderlyingLastQtyTest {
         Tag652QtyUnderlyingLastQty tagData;
         int oneElement;
 
-        oneElement = Tag652QtyUnderlyingLastQty.TESTB_QTY_MD_ENTRY_SIZE;
+        oneElement = Tag652QtyUnderlyingLastQty.TESTB_QTY_UNDERLYING_LAST_QTY;
         tagData = new Tag652QtyUnderlyingLastQty( new MyQtyType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -88,7 +97,7 @@ class Tag652QtyUnderlyingLastQtyTest {
         Tag652QtyUnderlyingLastQty tagData;
         int oneElement;
 
-        oneElement = Tag652QtyUnderlyingLastQty.TESTB_QTY_MD_ENTRY_SIZE;
+        oneElement = Tag652QtyUnderlyingLastQty.TESTB_QTY_UNDERLYING_LAST_QTY;
         tagData = new Tag652QtyUnderlyingLastQty( new MyQtyType( oneElement ) );
         assertEquals( String.valueOf( oneElement ), tagData.toString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
@@ -98,7 +107,7 @@ class Tag652QtyUnderlyingLastQtyTest {
         Tag652QtyUnderlyingLastQty tagData;
         int oneElement;
 
-        oneElement = Tag652QtyUnderlyingLastQty.TESTA_QTY_MD_ENTRY_SIZE;
+        oneElement = Tag652QtyUnderlyingLastQty.TESTA_QTY_UNDERLYING_LAST_QTY;
         tagData = new Tag652QtyUnderlyingLastQty( new MyQtyType( oneElement ) );
         assertEquals( "Tag652QtyUnderlyingLastQty\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

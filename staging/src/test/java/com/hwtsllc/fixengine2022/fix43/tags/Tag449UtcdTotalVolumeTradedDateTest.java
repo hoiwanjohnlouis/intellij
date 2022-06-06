@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyUTCDateType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag449UtcdTotalVolumeTradedDate;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -49,18 +48,28 @@ class Tag449UtcdTotalVolumeTradedDateTest {
     @Test
     void Tag0449Test() {
         Tag449UtcdTotalVolumeTradedDate tagData;
+        String oneElement;
 
+        oneElement = Tag449UtcdTotalVolumeTradedDate.TESTA_UTCD_TOTAL_VOLUME_TRADED_DATE;
+        tagData = new Tag449UtcdTotalVolumeTradedDate( new MyUTCDateType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_UTCD_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag449UtcdTotalVolumeTradedDate.TESTB_UTCD_TOTAL_VOLUME_TRADED_DATE;
+        tagData = new Tag449UtcdTotalVolumeTradedDate( new MyUTCDateType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_UTCD_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void PrintFIXTagTest() {
         Tag449UtcdTotalVolumeTradedDate tagData;
         String oneElement;
 
-        oneElement = Tag449UtcdTotalVolumeTradedDate.TESTA_UTCD_MD_ENTRY_DATE;
+        oneElement = Tag449UtcdTotalVolumeTradedDate.TESTA_UTCD_TOTAL_VOLUME_TRADED_DATE;
         tagData = new Tag449UtcdTotalVolumeTradedDate( new MyUTCDateType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag449UtcdTotalVolumeTradedDate.TESTB_UTCD_MD_ENTRY_DATE;
+        oneElement = Tag449UtcdTotalVolumeTradedDate.TESTB_UTCD_TOTAL_VOLUME_TRADED_DATE;
         tagData = new Tag449UtcdTotalVolumeTradedDate( new MyUTCDateType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -69,7 +78,7 @@ class Tag449UtcdTotalVolumeTradedDateTest {
         Tag449UtcdTotalVolumeTradedDate tagData;
         String oneElement;
 
-        oneElement = Tag449UtcdTotalVolumeTradedDate.TESTB_UTCD_MD_ENTRY_DATE;
+        oneElement = Tag449UtcdTotalVolumeTradedDate.TESTB_UTCD_TOTAL_VOLUME_TRADED_DATE;
         tagData = new Tag449UtcdTotalVolumeTradedDate( new MyUTCDateType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_UTCD_DATA_VALUE, tagData.getDataValue() );
@@ -79,7 +88,7 @@ class Tag449UtcdTotalVolumeTradedDateTest {
         Tag449UtcdTotalVolumeTradedDate tagData;
         String oneElement;
 
-        oneElement = Tag449UtcdTotalVolumeTradedDate.TESTB_UTCD_MD_ENTRY_DATE;
+        oneElement = Tag449UtcdTotalVolumeTradedDate.TESTB_UTCD_TOTAL_VOLUME_TRADED_DATE;
         tagData = new Tag449UtcdTotalVolumeTradedDate( new MyUTCDateType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_UTCD_DATA_VALUE, tagData.toValuePairString() );
@@ -89,7 +98,7 @@ class Tag449UtcdTotalVolumeTradedDateTest {
         Tag449UtcdTotalVolumeTradedDate tagData;
         String oneElement;
 
-        oneElement = Tag449UtcdTotalVolumeTradedDate.TESTB_UTCD_MD_ENTRY_DATE;
+        oneElement = Tag449UtcdTotalVolumeTradedDate.TESTB_UTCD_TOTAL_VOLUME_TRADED_DATE;
         tagData = new Tag449UtcdTotalVolumeTradedDate( new MyUTCDateType( oneElement ) );
         assertEquals( oneElement, tagData.toString() );
         assertNotEquals( MyTestValues.JUNK_UTCD_DATA_VALUE, tagData.toString() );
@@ -99,7 +108,7 @@ class Tag449UtcdTotalVolumeTradedDateTest {
         Tag449UtcdTotalVolumeTradedDate tagData;
         String oneElement;
 
-        oneElement = Tag449UtcdTotalVolumeTradedDate.TESTA_UTCD_MD_ENTRY_DATE;
+        oneElement = Tag449UtcdTotalVolumeTradedDate.TESTA_UTCD_TOTAL_VOLUME_TRADED_DATE;
         tagData = new Tag449UtcdTotalVolumeTradedDate( new MyUTCDateType( oneElement ) );
         assertEquals( "Tag449UtcdTotalVolumeTradedDate\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

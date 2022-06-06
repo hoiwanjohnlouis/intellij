@@ -17,8 +17,6 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag582EnuCustOrderCapacity;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum582CustOrderCapacity;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -81,7 +79,7 @@ class Tag582EnuCustOrderCapacityTest {
         Tag582EnuCustOrderCapacity tagData;
 
         // loop around the ENUM and process
-        for ( Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for ( Enum582CustOrderCapacity oneEnum : Enum582CustOrderCapacity.values()) {
             tagData = new Tag582EnuCustOrderCapacity(oneEnum);
             System.out.println( tagData.toVerboseString() );
         }
@@ -91,7 +89,7 @@ class Tag582EnuCustOrderCapacityTest {
         Tag582EnuCustOrderCapacity tagData;
 
         // loop around the ENUM and process
-        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for (Enum582CustOrderCapacity oneEnum : Enum582CustOrderCapacity.values()) {
             tagData = new Tag582EnuCustOrderCapacity(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -102,7 +100,7 @@ class Tag582EnuCustOrderCapacityTest {
         Tag582EnuCustOrderCapacity tagData;
 
         // loop around the ENUM and process
-        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for (Enum582CustOrderCapacity oneEnum : Enum582CustOrderCapacity.values()) {
             tagData = new Tag582EnuCustOrderCapacity(oneEnum);
             assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
@@ -114,7 +112,7 @@ class Tag582EnuCustOrderCapacityTest {
         Tag582EnuCustOrderCapacity tagData;
 
         // loop around the ENUM and process
-        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for (Enum582CustOrderCapacity oneEnum : Enum582CustOrderCapacity.values()) {
             tagData = new Tag582EnuCustOrderCapacity(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -125,7 +123,7 @@ class Tag582EnuCustOrderCapacityTest {
         Tag582EnuCustOrderCapacity tagData;
 
         // loop around the ENUM and process
-        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for (Enum582CustOrderCapacity oneEnum : Enum582CustOrderCapacity.values()) {
             tagData = new Tag582EnuCustOrderCapacity(oneEnum);
             assertEquals( "Tag582EnuCustOrderCapacity\n" +
                             "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

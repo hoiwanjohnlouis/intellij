@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag627NumNoHops;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -46,18 +45,28 @@ class Tag627NumNoHopsTest {
     @Test
     void Tag0627Test() {
         Tag627NumNoHops tagData;
+        int oneElement;
 
+        oneElement = Tag627NumNoHops.TESTA_NUM_NO_HOPS;
+        tagData = new Tag627NumNoHops( new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag627NumNoHops.TESTB_NUM_NO_HOPS;
+        tagData = new Tag627NumNoHops( new MyNumInGroupType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void PrintFIXTagTest() {
         Tag627NumNoHops tagData;
         int oneElement;
 
-        oneElement = Tag627NumNoHops.TESTA_NUM_NO_ROUTING_IDS;
+        oneElement = Tag627NumNoHops.TESTA_NUM_NO_HOPS;
         tagData = new Tag627NumNoHops( new MyNumInGroupType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag627NumNoHops.TESTB_NUM_NO_ROUTING_IDS;
+        oneElement = Tag627NumNoHops.TESTB_NUM_NO_HOPS;
         tagData = new Tag627NumNoHops( new MyNumInGroupType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -66,7 +75,7 @@ class Tag627NumNoHopsTest {
         Tag627NumNoHops tagData;
         int oneElement;
 
-        oneElement = Tag627NumNoHops.TESTB_NUM_NO_ROUTING_IDS;
+        oneElement = Tag627NumNoHops.TESTB_NUM_NO_HOPS;
         tagData = new Tag627NumNoHops( new MyNumInGroupType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue() );
@@ -76,7 +85,7 @@ class Tag627NumNoHopsTest {
         Tag627NumNoHops tagData;
         int oneElement;
 
-        oneElement = Tag627NumNoHops.TESTB_NUM_NO_ROUTING_IDS;
+        oneElement = Tag627NumNoHops.TESTB_NUM_NO_HOPS;
         tagData = new Tag627NumNoHops( new MyNumInGroupType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -86,7 +95,7 @@ class Tag627NumNoHopsTest {
         Tag627NumNoHops tagData;
         int oneElement;
 
-        oneElement = Tag627NumNoHops.TESTB_NUM_NO_ROUTING_IDS;
+        oneElement = Tag627NumNoHops.TESTB_NUM_NO_HOPS;
         tagData = new Tag627NumNoHops( new MyNumInGroupType( oneElement ) );
         assertEquals( String.valueOf( oneElement ), tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -96,7 +105,7 @@ class Tag627NumNoHopsTest {
         Tag627NumNoHops tagData;
         int oneElement;
 
-        oneElement = Tag627NumNoHops.TESTA_NUM_NO_ROUTING_IDS;
+        oneElement = Tag627NumNoHops.TESTA_NUM_NO_HOPS;
         tagData = new Tag627NumNoHops( new MyNumInGroupType( oneElement ) );
         assertEquals( "Tag627NumNoHops\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

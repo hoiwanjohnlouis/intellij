@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag600StrLegSymbol;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -48,14 +47,28 @@ class Tag600StrLegSymbolTest {
     @Test
     void Tag0600Test() {
         Tag600StrLegSymbol tagData;
+        String oneElement;
 
+        oneElement = Tag600StrLegSymbol.TESTA_STR_LEG_SYMBOL;
+        tagData = new Tag600StrLegSymbol( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag600StrLegSymbol.TESTB_STR_LEG_SYMBOL;
+        tagData = new Tag600StrLegSymbol( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void PrintFIXTagTest() {
         Tag600StrLegSymbol tagData;
         String oneElement;
 
-        oneElement = Tag600StrLegSymbol.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag600StrLegSymbol.TESTA_STR_LEG_SYMBOL;
+        tagData = new Tag600StrLegSymbol( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag600StrLegSymbol.TESTB_STR_LEG_SYMBOL;
         tagData = new Tag600StrLegSymbol( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -64,7 +77,7 @@ class Tag600StrLegSymbolTest {
         Tag600StrLegSymbol tagData;
         String oneElement;
 
-        oneElement = Tag600StrLegSymbol.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag600StrLegSymbol.TESTB_STR_LEG_SYMBOL;
         tagData = new Tag600StrLegSymbol( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -74,7 +87,7 @@ class Tag600StrLegSymbolTest {
         Tag600StrLegSymbol tagData;
         String oneElement;
 
-        oneElement = Tag600StrLegSymbol.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag600StrLegSymbol.TESTB_STR_LEG_SYMBOL;
         tagData = new Tag600StrLegSymbol( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -84,7 +97,7 @@ class Tag600StrLegSymbolTest {
         Tag600StrLegSymbol tagData;
         String oneElement;
 
-        oneElement = Tag600StrLegSymbol.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag600StrLegSymbol.TESTB_STR_LEG_SYMBOL;
         tagData = new Tag600StrLegSymbol(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -94,7 +107,7 @@ class Tag600StrLegSymbolTest {
         Tag600StrLegSymbol tagData;
         String oneElement;
 
-        oneElement = Tag600StrLegSymbol.TESTA_STR_SETTL_INST_REF_ID;
+        oneElement = Tag600StrLegSymbol.TESTA_STR_LEG_SYMBOL;
         tagData = new Tag600StrLegSymbol( new MyStringType( oneElement ) );
         assertEquals( "Tag600StrLegSymbol\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

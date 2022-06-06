@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag489StrCardNumber;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -46,14 +45,28 @@ class Tag489StrCardNumberTest {
     @Test
     void Tag0489Test() {
         Tag489StrCardNumber tagData;
+        String oneElement;
 
+        oneElement = Tag489StrCardNumber.TESTA_STR_CARD_NUMBER;
+        tagData = new Tag489StrCardNumber( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag489StrCardNumber.TESTB_STR_CARD_NUMBER;
+        tagData = new Tag489StrCardNumber( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void PrintFIXTagTest() {
         Tag489StrCardNumber tagData;
         String oneElement;
 
-        oneElement = Tag489StrCardNumber.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag489StrCardNumber.TESTA_STR_CARD_NUMBER;
+        tagData = new Tag489StrCardNumber( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag489StrCardNumber.TESTB_STR_CARD_NUMBER;
         tagData = new Tag489StrCardNumber( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -62,7 +75,7 @@ class Tag489StrCardNumberTest {
         Tag489StrCardNumber tagData;
         String oneElement;
 
-        oneElement = Tag489StrCardNumber.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag489StrCardNumber.TESTB_STR_CARD_NUMBER;
         tagData = new Tag489StrCardNumber( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -72,7 +85,7 @@ class Tag489StrCardNumberTest {
         Tag489StrCardNumber tagData;
         String oneElement;
 
-        oneElement = Tag489StrCardNumber.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag489StrCardNumber.TESTB_STR_CARD_NUMBER;
         tagData = new Tag489StrCardNumber( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -82,7 +95,7 @@ class Tag489StrCardNumberTest {
         Tag489StrCardNumber tagData;
         String oneElement;
 
-        oneElement = Tag489StrCardNumber.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag489StrCardNumber.TESTB_STR_CARD_NUMBER;
         tagData = new Tag489StrCardNumber(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -92,7 +105,7 @@ class Tag489StrCardNumberTest {
         Tag489StrCardNumber tagData;
         String oneElement;
 
-        oneElement = Tag489StrCardNumber.TESTA_STR_SETTL_INST_REF_ID;
+        oneElement = Tag489StrCardNumber.TESTA_STR_CARD_NUMBER;
         tagData = new Tag489StrCardNumber( new MyStringType( oneElement ) );
         assertEquals( "Tag489StrCardNumber\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

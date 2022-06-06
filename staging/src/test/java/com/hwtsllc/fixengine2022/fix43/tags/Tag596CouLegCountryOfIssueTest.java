@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyCountryType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag596CouLegCountryOfIssue;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -48,18 +47,28 @@ class Tag596CouLegCountryOfIssueTest {
     @Test
     void Tag0596Test() {
         Tag596CouLegCountryOfIssue tagData;
+        String oneElement;
 
+        oneElement = Tag596CouLegCountryOfIssue.TESTA_COU_LEG_COUNTRY_OF_ISSUE;
+        tagData = new Tag596CouLegCountryOfIssue( new MyCountryType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag596CouLegCountryOfIssue.TESTB_COU_LEG_COUNTRY_OF_ISSUE;
+        tagData = new Tag596CouLegCountryOfIssue( new MyCountryType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void PrintFIXTagTest() {
         Tag596CouLegCountryOfIssue tagData;
         String oneElement;
 
-        oneElement = Tag596CouLegCountryOfIssue.TESTA_COU_COUNTRY;
+        oneElement = Tag596CouLegCountryOfIssue.TESTA_COU_LEG_COUNTRY_OF_ISSUE;
         tagData = new Tag596CouLegCountryOfIssue( new MyCountryType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag596CouLegCountryOfIssue.TESTB_COU_COUNTRY;
+        oneElement = Tag596CouLegCountryOfIssue.TESTB_COU_LEG_COUNTRY_OF_ISSUE;
         tagData = new Tag596CouLegCountryOfIssue( new MyCountryType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -68,7 +77,7 @@ class Tag596CouLegCountryOfIssueTest {
         Tag596CouLegCountryOfIssue tagData;
         String oneElement;
 
-        oneElement = Tag596CouLegCountryOfIssue.TESTB_COU_COUNTRY;
+        oneElement = Tag596CouLegCountryOfIssue.TESTB_COU_LEG_COUNTRY_OF_ISSUE;
         tagData = new Tag596CouLegCountryOfIssue( new MyCountryType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -78,7 +87,7 @@ class Tag596CouLegCountryOfIssueTest {
         Tag596CouLegCountryOfIssue tagData;
         String oneElement;
 
-        oneElement = Tag596CouLegCountryOfIssue.TESTB_COU_COUNTRY;
+        oneElement = Tag596CouLegCountryOfIssue.TESTB_COU_LEG_COUNTRY_OF_ISSUE;
         tagData = new Tag596CouLegCountryOfIssue( new MyCountryType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -88,7 +97,7 @@ class Tag596CouLegCountryOfIssueTest {
         Tag596CouLegCountryOfIssue tagData;
         String oneElement;
 
-        oneElement = Tag596CouLegCountryOfIssue.TESTB_COU_COUNTRY;
+        oneElement = Tag596CouLegCountryOfIssue.TESTB_COU_LEG_COUNTRY_OF_ISSUE;
         tagData = new Tag596CouLegCountryOfIssue( new MyCountryType( oneElement ) );
         assertEquals( oneElement, tagData.toString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
@@ -98,7 +107,7 @@ class Tag596CouLegCountryOfIssueTest {
         Tag596CouLegCountryOfIssue tagData;
         String oneElement;
 
-        oneElement = Tag596CouLegCountryOfIssue.TESTA_COU_COUNTRY;
+        oneElement = Tag596CouLegCountryOfIssue.TESTA_COU_LEG_COUNTRY_OF_ISSUE;
         tagData = new Tag596CouLegCountryOfIssue( new MyCountryType( oneElement ) );
         assertEquals( "Tag596CouLegCountryOfIssue\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

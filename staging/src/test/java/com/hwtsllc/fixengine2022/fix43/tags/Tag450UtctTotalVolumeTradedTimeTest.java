@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyUTCTimeType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag450UtctTotalVolumeTradedTime;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -49,18 +48,28 @@ class Tag450UtctTotalVolumeTradedTimeTest {
     @Test
     void Tag0450Test() {
         Tag450UtctTotalVolumeTradedTime tagData;
+        String oneElement;
 
+        oneElement = Tag450UtctTotalVolumeTradedTime.TESTA_UTCT_TOTAL_VOLUME_TRADED_TIME;
+        tagData = new Tag450UtctTotalVolumeTradedTime(new MyUTCTimeType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_UTCT_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag450UtctTotalVolumeTradedTime.TESTB_UTCT_TOTAL_VOLUME_TRADED_TIME;
+        tagData = new Tag450UtctTotalVolumeTradedTime(new MyUTCTimeType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_UTCT_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void PrintFIXTagTest() {
         Tag450UtctTotalVolumeTradedTime tagData;
         String oneElement;
 
-        oneElement = Tag450UtctTotalVolumeTradedTime.TESTA_UTCT_MD_ENTRY_TIME;
+        oneElement = Tag450UtctTotalVolumeTradedTime.TESTA_UTCT_TOTAL_VOLUME_TRADED_TIME;
         tagData = new Tag450UtctTotalVolumeTradedTime(new MyUTCTimeType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag450UtctTotalVolumeTradedTime.TESTB_UTCT_MD_ENTRY_TIME;
+        oneElement = Tag450UtctTotalVolumeTradedTime.TESTB_UTCT_TOTAL_VOLUME_TRADED_TIME;
         tagData = new Tag450UtctTotalVolumeTradedTime(new MyUTCTimeType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -69,7 +78,7 @@ class Tag450UtctTotalVolumeTradedTimeTest {
         Tag450UtctTotalVolumeTradedTime tagData;
         String oneElement;
 
-        oneElement = Tag450UtctTotalVolumeTradedTime.TESTB_UTCT_MD_ENTRY_TIME;
+        oneElement = Tag450UtctTotalVolumeTradedTime.TESTB_UTCT_TOTAL_VOLUME_TRADED_TIME;
         tagData = new Tag450UtctTotalVolumeTradedTime(new MyUTCTimeType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_UTCT_DATA_VALUE, tagData.getDataValue() );
@@ -79,7 +88,7 @@ class Tag450UtctTotalVolumeTradedTimeTest {
         Tag450UtctTotalVolumeTradedTime tagData;
         String oneElement;
 
-        oneElement = Tag450UtctTotalVolumeTradedTime.TESTB_UTCT_MD_ENTRY_TIME;
+        oneElement = Tag450UtctTotalVolumeTradedTime.TESTB_UTCT_TOTAL_VOLUME_TRADED_TIME;
         tagData = new Tag450UtctTotalVolumeTradedTime(new MyUTCTimeType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_UTCT_DATA_VALUE, tagData.toValuePairString() );
@@ -89,7 +98,7 @@ class Tag450UtctTotalVolumeTradedTimeTest {
         Tag450UtctTotalVolumeTradedTime tagData;
         String oneElement;
 
-        oneElement = Tag450UtctTotalVolumeTradedTime.TESTB_UTCT_MD_ENTRY_TIME;
+        oneElement = Tag450UtctTotalVolumeTradedTime.TESTB_UTCT_TOTAL_VOLUME_TRADED_TIME;
         tagData = new Tag450UtctTotalVolumeTradedTime(new MyUTCTimeType( oneElement ) );
         assertEquals( oneElement, tagData.toString() );
         assertNotEquals( MyTestValues.JUNK_UTCT_DATA_VALUE, tagData.toString() );
@@ -99,7 +108,7 @@ class Tag450UtctTotalVolumeTradedTimeTest {
         Tag450UtctTotalVolumeTradedTime tagData;
         String oneElement;
 
-        oneElement = Tag450UtctTotalVolumeTradedTime.TESTA_UTCT_MD_ENTRY_TIME;
+        oneElement = Tag450UtctTotalVolumeTradedTime.TESTA_UTCT_TOTAL_VOLUME_TRADED_TIME;
         tagData = new Tag450UtctTotalVolumeTradedTime(new MyUTCTimeType( oneElement ) );
         assertEquals( "Tag450UtctTotalVolumeTradedTime\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

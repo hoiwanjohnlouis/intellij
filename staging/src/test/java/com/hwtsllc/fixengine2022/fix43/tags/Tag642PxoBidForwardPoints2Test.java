@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceOffsetType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag642PxoBidForwardPoints2;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -48,18 +47,28 @@ class Tag642PxoBidForwardPoints2Test {
     @Test
     void Tag0642Test() {
         Tag642PxoBidForwardPoints2 tagData;
+        double oneElement;
 
+        oneElement = Tag642PxoBidForwardPoints2.TESTA_PXO_BID_FORWARD_POINTS_2;
+        tagData = new Tag642PxoBidForwardPoints2( new MyPriceOffsetType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag642PxoBidForwardPoints2.TESTB_PXO_BID_FORWARD_POINTS_2;
+        tagData = new Tag642PxoBidForwardPoints2( new MyPriceOffsetType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void PrintFIXTagTest() {
         Tag642PxoBidForwardPoints2 tagData;
         double oneElement;
 
-        oneElement = Tag642PxoBidForwardPoints2.TESTA_PXO_SPREAD;
+        oneElement = Tag642PxoBidForwardPoints2.TESTA_PXO_BID_FORWARD_POINTS_2;
         tagData = new Tag642PxoBidForwardPoints2( new MyPriceOffsetType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag642PxoBidForwardPoints2.TESTB_PXO_SPREAD;
+        oneElement = Tag642PxoBidForwardPoints2.TESTB_PXO_BID_FORWARD_POINTS_2;
         tagData = new Tag642PxoBidForwardPoints2( new MyPriceOffsetType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -68,7 +77,7 @@ class Tag642PxoBidForwardPoints2Test {
         Tag642PxoBidForwardPoints2 tagData;
         double oneElement;
 
-        oneElement = Tag642PxoBidForwardPoints2.TESTB_PXO_SPREAD;
+        oneElement = Tag642PxoBidForwardPoints2.TESTB_PXO_BID_FORWARD_POINTS_2;
         tagData = new Tag642PxoBidForwardPoints2( new MyPriceOffsetType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue() );
@@ -78,7 +87,7 @@ class Tag642PxoBidForwardPoints2Test {
         Tag642PxoBidForwardPoints2 tagData;
         double oneElement;
 
-        oneElement = Tag642PxoBidForwardPoints2.TESTB_PXO_SPREAD;
+        oneElement = Tag642PxoBidForwardPoints2.TESTB_PXO_BID_FORWARD_POINTS_2;
         tagData = new Tag642PxoBidForwardPoints2( new MyPriceOffsetType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -88,7 +97,7 @@ class Tag642PxoBidForwardPoints2Test {
         Tag642PxoBidForwardPoints2 tagData;
         double oneElement;
 
-        oneElement = Tag642PxoBidForwardPoints2.TESTB_PXO_SPREAD;
+        oneElement = Tag642PxoBidForwardPoints2.TESTB_PXO_BID_FORWARD_POINTS_2;
         tagData = new Tag642PxoBidForwardPoints2( new MyPriceOffsetType( oneElement ) );
         assertEquals( String.valueOf( oneElement ), tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
@@ -99,7 +108,7 @@ class Tag642PxoBidForwardPoints2Test {
         Tag642PxoBidForwardPoints2 tagData;
         double oneElement;
 
-        oneElement = Tag642PxoBidForwardPoints2.TESTA_PXO_SPREAD;
+        oneElement = Tag642PxoBidForwardPoints2.TESTA_PXO_BID_FORWARD_POINTS_2;
         tagData = new Tag642PxoBidForwardPoints2( new MyPriceOffsetType( oneElement ) );
         assertEquals( "Tag642PxoBidForwardPoints2\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyCurrencyType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag479CcyCommCurrency;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -48,18 +47,28 @@ class Tag479CcyCommCurrencyTest {
     @Test
     void Tag0479Test() {
         Tag479CcyCommCurrency tagData;
+        String oneElement;
 
+        oneElement = Tag479CcyCommCurrency.TESTA_CCY_COMM_CURRENCY;
+        tagData = new Tag479CcyCommCurrency( new MyCurrencyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag479CcyCommCurrency.TESTB_CCY_COMM_CURRENCY;
+        tagData = new Tag479CcyCommCurrency( new MyCurrencyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void PrintFIXTagTest() {
         Tag479CcyCommCurrency tagData;
         String oneElement;
 
-        oneElement = Tag479CcyCommCurrency.TESTA_CCY_BENCHMARK_CURVE_CURRENCY;
+        oneElement = Tag479CcyCommCurrency.TESTA_CCY_COMM_CURRENCY;
         tagData = new Tag479CcyCommCurrency( new MyCurrencyType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag479CcyCommCurrency.TESTB_CCY_BENCHMARK_CURVE_CURRENCY;
+        oneElement = Tag479CcyCommCurrency.TESTB_CCY_COMM_CURRENCY;
         tagData = new Tag479CcyCommCurrency( new MyCurrencyType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -68,7 +77,7 @@ class Tag479CcyCommCurrencyTest {
         Tag479CcyCommCurrency tagData;
         String oneElement;
 
-        oneElement = Tag479CcyCommCurrency.TESTB_CCY_BENCHMARK_CURVE_CURRENCY;
+        oneElement = Tag479CcyCommCurrency.TESTB_CCY_COMM_CURRENCY;
         tagData = new Tag479CcyCommCurrency( new MyCurrencyType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -78,7 +87,7 @@ class Tag479CcyCommCurrencyTest {
         Tag479CcyCommCurrency tagData;
         String oneElement;
 
-        oneElement = Tag479CcyCommCurrency.TESTB_CCY_BENCHMARK_CURVE_CURRENCY;
+        oneElement = Tag479CcyCommCurrency.TESTB_CCY_COMM_CURRENCY;
         tagData = new Tag479CcyCommCurrency( new MyCurrencyType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -88,7 +97,7 @@ class Tag479CcyCommCurrencyTest {
         Tag479CcyCommCurrency tagData;
         String oneElement;
 
-        oneElement = Tag479CcyCommCurrency.TESTB_CCY_BENCHMARK_CURVE_CURRENCY;
+        oneElement = Tag479CcyCommCurrency.TESTB_CCY_COMM_CURRENCY;
         tagData = new Tag479CcyCommCurrency( new MyCurrencyType( oneElement ) );
         assertEquals( oneElement, tagData.toString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
@@ -98,7 +107,7 @@ class Tag479CcyCommCurrencyTest {
         Tag479CcyCommCurrency tagData;
         String oneElement;
 
-        oneElement = Tag479CcyCommCurrency.TESTA_CCY_BENCHMARK_CURVE_CURRENCY;
+        oneElement = Tag479CcyCommCurrency.TESTA_CCY_COMM_CURRENCY;
         tagData = new Tag479CcyCommCurrency( new MyCurrencyType( oneElement ) );
         assertEquals( "Tag479CcyCommCurrency\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

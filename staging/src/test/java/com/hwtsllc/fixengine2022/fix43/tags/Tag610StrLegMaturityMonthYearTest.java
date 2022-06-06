@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag610StrLegMaturityMonthYear;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -48,14 +47,28 @@ class Tag610StrLegMaturityMonthYearTest {
     @Test
     void Tag0610Test() {
         Tag610StrLegMaturityMonthYear tagData;
+        String oneElement;
 
+        oneElement = Tag610StrLegMaturityMonthYear.TESTA_STR_LEG_MATURITY_MONTH_YEAR;
+        tagData = new Tag610StrLegMaturityMonthYear( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+
+        oneElement = Tag610StrLegMaturityMonthYear.TESTB_STR_LEG_MATURITY_MONTH_YEAR;
+        tagData = new Tag610StrLegMaturityMonthYear( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
     }
     @Test
     void PrintFIXTagTest() {
         Tag610StrLegMaturityMonthYear tagData;
         String oneElement;
 
-        oneElement = Tag610StrLegMaturityMonthYear.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag610StrLegMaturityMonthYear.TESTA_STR_LEG_MATURITY_MONTH_YEAR;
+        tagData = new Tag610StrLegMaturityMonthYear( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag610StrLegMaturityMonthYear.TESTB_STR_LEG_MATURITY_MONTH_YEAR;
         tagData = new Tag610StrLegMaturityMonthYear( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -64,7 +77,12 @@ class Tag610StrLegMaturityMonthYearTest {
         Tag610StrLegMaturityMonthYear tagData;
         String oneElement;
 
-        oneElement = Tag610StrLegMaturityMonthYear.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag610StrLegMaturityMonthYear.TESTA_STR_LEG_MATURITY_MONTH_YEAR;
+        tagData = new Tag610StrLegMaturityMonthYear( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag610StrLegMaturityMonthYear.TESTB_STR_LEG_MATURITY_MONTH_YEAR;
         tagData = new Tag610StrLegMaturityMonthYear( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -74,7 +92,7 @@ class Tag610StrLegMaturityMonthYearTest {
         Tag610StrLegMaturityMonthYear tagData;
         String oneElement;
 
-        oneElement = Tag610StrLegMaturityMonthYear.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag610StrLegMaturityMonthYear.TESTB_STR_LEG_MATURITY_MONTH_YEAR;
         tagData = new Tag610StrLegMaturityMonthYear( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -84,7 +102,7 @@ class Tag610StrLegMaturityMonthYearTest {
         Tag610StrLegMaturityMonthYear tagData;
         String oneElement;
 
-        oneElement = Tag610StrLegMaturityMonthYear.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag610StrLegMaturityMonthYear.TESTB_STR_LEG_MATURITY_MONTH_YEAR;
         tagData = new Tag610StrLegMaturityMonthYear(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -94,7 +112,7 @@ class Tag610StrLegMaturityMonthYearTest {
         Tag610StrLegMaturityMonthYear tagData;
         String oneElement;
 
-        oneElement = Tag610StrLegMaturityMonthYear.TESTA_STR_SETTL_INST_REF_ID;
+        oneElement = Tag610StrLegMaturityMonthYear.TESTA_STR_LEG_MATURITY_MONTH_YEAR;
         tagData = new Tag610StrLegMaturityMonthYear( new MyStringType( oneElement ) );
         assertEquals( "Tag610StrLegMaturityMonthYear\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

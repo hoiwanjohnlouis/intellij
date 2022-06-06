@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag513StrRegistID;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -46,14 +45,28 @@ class Tag513StrRegistIDTest {
     @Test
     void Tag0513Test() {
         Tag513StrRegistID tagData;
+        String oneElement;
 
+        oneElement = Tag513StrRegistID.TESTA_STR_REGIST_ID;
+        tagData = new Tag513StrRegistID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag513StrRegistID.TESTB_STR_REGIST_ID;
+        tagData = new Tag513StrRegistID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void PrintFIXTagTest() {
         Tag513StrRegistID tagData;
         String oneElement;
 
-        oneElement = Tag513StrRegistID.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag513StrRegistID.TESTA_STR_REGIST_ID;
+        tagData = new Tag513StrRegistID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag513StrRegistID.TESTB_STR_REGIST_ID;
         tagData = new Tag513StrRegistID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -62,7 +75,7 @@ class Tag513StrRegistIDTest {
         Tag513StrRegistID tagData;
         String oneElement;
 
-        oneElement = Tag513StrRegistID.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag513StrRegistID.TESTB_STR_REGIST_ID;
         tagData = new Tag513StrRegistID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -72,7 +85,7 @@ class Tag513StrRegistIDTest {
         Tag513StrRegistID tagData;
         String oneElement;
 
-        oneElement = Tag513StrRegistID.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag513StrRegistID.TESTB_STR_REGIST_ID;
         tagData = new Tag513StrRegistID( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -82,7 +95,7 @@ class Tag513StrRegistIDTest {
         Tag513StrRegistID tagData;
         String oneElement;
 
-        oneElement = Tag513StrRegistID.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag513StrRegistID.TESTB_STR_REGIST_ID;
         tagData = new Tag513StrRegistID(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -92,7 +105,7 @@ class Tag513StrRegistIDTest {
         Tag513StrRegistID tagData;
         String oneElement;
 
-        oneElement = Tag513StrRegistID.TESTA_STR_SETTL_INST_REF_ID;
+        oneElement = Tag513StrRegistID.TESTA_STR_REGIST_ID;
         tagData = new Tag513StrRegistID( new MyStringType( oneElement ) );
         assertEquals( "Tag513StrRegistID\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

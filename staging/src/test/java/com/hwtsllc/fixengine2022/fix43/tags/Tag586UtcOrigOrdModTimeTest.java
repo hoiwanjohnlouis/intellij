@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag586UtcOrigOrdModTime;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -53,18 +52,28 @@ class Tag586UtcOrigOrdModTimeTest {
     @Test
     void Tag0586Test() {
         Tag586UtcOrigOrdModTime tagData;
+        String oneElement;
 
+        oneElement = Tag586UtcOrigOrdModTime.TESTA_UTC_ORIG_ORD_MOD_TIME;
+        tagData = new Tag586UtcOrigOrdModTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
+
+        oneElement = Tag586UtcOrigOrdModTime.TESTB_UTC_ORIG_ORD_MOD_TIME;
+        tagData = new Tag586UtcOrigOrdModTime( new MyUTCTimestampType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void PrintFIXTagTest() {
         Tag586UtcOrigOrdModTime tagData;
         String oneElement;
 
-        oneElement = Tag586UtcOrigOrdModTime.TESTA_UTC_TRAD_SES_START_TIME;
+        oneElement = Tag586UtcOrigOrdModTime.TESTA_UTC_ORIG_ORD_MOD_TIME;
         tagData = new Tag586UtcOrigOrdModTime( new MyUTCTimestampType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag586UtcOrigOrdModTime.TESTB_UTC_TRAD_SES_START_TIME;
+        oneElement = Tag586UtcOrigOrdModTime.TESTB_UTC_ORIG_ORD_MOD_TIME;
         tagData = new Tag586UtcOrigOrdModTime( new MyUTCTimestampType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -73,7 +82,7 @@ class Tag586UtcOrigOrdModTimeTest {
         Tag586UtcOrigOrdModTime tagData;
         String oneElement;
 
-        oneElement = Tag586UtcOrigOrdModTime.TESTB_UTC_TRAD_SES_START_TIME;
+        oneElement = Tag586UtcOrigOrdModTime.TESTB_UTC_ORIG_ORD_MOD_TIME;
         tagData = new Tag586UtcOrigOrdModTime( new MyUTCTimestampType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
@@ -83,7 +92,7 @@ class Tag586UtcOrigOrdModTimeTest {
         Tag586UtcOrigOrdModTime tagData;
         String oneElement;
 
-        oneElement = Tag586UtcOrigOrdModTime.TESTB_UTC_TRAD_SES_START_TIME;
+        oneElement = Tag586UtcOrigOrdModTime.TESTB_UTC_ORIG_ORD_MOD_TIME;
         tagData = new Tag586UtcOrigOrdModTime( new MyUTCTimestampType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toValuePairString() );
@@ -93,7 +102,7 @@ class Tag586UtcOrigOrdModTimeTest {
         Tag586UtcOrigOrdModTime tagData;
         String oneElement;
 
-        oneElement = Tag586UtcOrigOrdModTime.TESTB_UTC_TRAD_SES_START_TIME;
+        oneElement = Tag586UtcOrigOrdModTime.TESTB_UTC_ORIG_ORD_MOD_TIME;
         tagData = new Tag586UtcOrigOrdModTime( new MyUTCTimestampType( oneElement ) );
         assertEquals( oneElement, tagData.toString() );
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toString() );
@@ -103,7 +112,7 @@ class Tag586UtcOrigOrdModTimeTest {
         Tag586UtcOrigOrdModTime tagData;
         String oneElement;
 
-        oneElement = Tag586UtcOrigOrdModTime.TESTA_UTC_TRAD_SES_START_TIME;
+        oneElement = Tag586UtcOrigOrdModTime.TESTA_UTC_ORIG_ORD_MOD_TIME;
         tagData = new Tag586UtcOrigOrdModTime( new MyUTCTimestampType( oneElement ) );
         assertEquals( "Tag586UtcOrigOrdModTime\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

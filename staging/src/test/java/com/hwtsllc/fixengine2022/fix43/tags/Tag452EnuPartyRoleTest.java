@@ -18,8 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumPartyRole;
-import com.hwtsllc.fixengine2022.fix42.enums.Enum216RoutingType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag452EnuPartyRole;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -550,7 +548,7 @@ class Tag452EnuPartyRoleTest {
         Tag452EnuPartyRole tagData;
 
         // loop around the ENUM and process
-        for ( Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for ( MyEnumPartyRole oneEnum : MyEnumPartyRole.values()) {
             tagData = new Tag452EnuPartyRole(oneEnum);
             System.out.println( tagData.toVerboseString() );
         }
@@ -560,7 +558,7 @@ class Tag452EnuPartyRoleTest {
         Tag452EnuPartyRole tagData;
 
         // loop around the ENUM and process
-        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for (MyEnumPartyRole oneEnum : MyEnumPartyRole.values()) {
             tagData = new Tag452EnuPartyRole(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -571,7 +569,7 @@ class Tag452EnuPartyRoleTest {
         Tag452EnuPartyRole tagData;
 
         // loop around the ENUM and process
-        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for (MyEnumPartyRole oneEnum : MyEnumPartyRole.values()) {
             tagData = new Tag452EnuPartyRole(oneEnum);
             assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
@@ -583,7 +581,7 @@ class Tag452EnuPartyRoleTest {
         Tag452EnuPartyRole tagData;
 
         // loop around the ENUM and process
-        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for (MyEnumPartyRole oneEnum : MyEnumPartyRole.values()) {
             tagData = new Tag452EnuPartyRole(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -594,7 +592,7 @@ class Tag452EnuPartyRoleTest {
         Tag452EnuPartyRole tagData;
 
         // loop around the ENUM and process
-        for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+        for (MyEnumPartyRole oneEnum : MyEnumPartyRole.values()) {
             tagData = new Tag452EnuPartyRole(oneEnum);
             assertEquals( "Tag452EnuPartyRole\n" +
                             "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

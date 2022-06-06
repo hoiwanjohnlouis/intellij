@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag463StrUnderlyingCFICode;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -48,14 +47,28 @@ class Tag463StrUnderlyingCFICodeTest {
     @Test
     void Tag0463Test() {
         Tag463StrUnderlyingCFICode tagData;
+        String oneElement;
 
+        oneElement = Tag463StrUnderlyingCFICode.TESTA_STR_UNDERLYING_CFI_CODE;
+        tagData = new Tag463StrUnderlyingCFICode( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag463StrUnderlyingCFICode.TESTB_STR_UNDERLYING_CFI_CODE;
+        tagData = new Tag463StrUnderlyingCFICode( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void PrintFIXTagTest() {
         Tag463StrUnderlyingCFICode tagData;
         String oneElement;
 
-        oneElement = Tag463StrUnderlyingCFICode.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag463StrUnderlyingCFICode.TESTA_STR_UNDERLYING_CFI_CODE;
+        tagData = new Tag463StrUnderlyingCFICode( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag463StrUnderlyingCFICode.TESTB_STR_UNDERLYING_CFI_CODE;
         tagData = new Tag463StrUnderlyingCFICode( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -64,7 +77,7 @@ class Tag463StrUnderlyingCFICodeTest {
         Tag463StrUnderlyingCFICode tagData;
         String oneElement;
 
-        oneElement = Tag463StrUnderlyingCFICode.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag463StrUnderlyingCFICode.TESTB_STR_UNDERLYING_CFI_CODE;
         tagData = new Tag463StrUnderlyingCFICode( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -74,7 +87,7 @@ class Tag463StrUnderlyingCFICodeTest {
         Tag463StrUnderlyingCFICode tagData;
         String oneElement;
 
-        oneElement = Tag463StrUnderlyingCFICode.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag463StrUnderlyingCFICode.TESTB_STR_UNDERLYING_CFI_CODE;
         tagData = new Tag463StrUnderlyingCFICode( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -84,7 +97,7 @@ class Tag463StrUnderlyingCFICodeTest {
         Tag463StrUnderlyingCFICode tagData;
         String oneElement;
 
-        oneElement = Tag463StrUnderlyingCFICode.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag463StrUnderlyingCFICode.TESTB_STR_UNDERLYING_CFI_CODE;
         tagData = new Tag463StrUnderlyingCFICode(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -94,7 +107,7 @@ class Tag463StrUnderlyingCFICodeTest {
         Tag463StrUnderlyingCFICode tagData;
         String oneElement;
 
-        oneElement = Tag463StrUnderlyingCFICode.TESTA_STR_SETTL_INST_REF_ID;
+        oneElement = Tag463StrUnderlyingCFICode.TESTA_STR_UNDERLYING_CFI_CODE;
         tagData = new Tag463StrUnderlyingCFICode( new MyStringType( oneElement ) );
         assertEquals( "Tag463StrUnderlyingCFICode\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

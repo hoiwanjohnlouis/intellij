@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag604StrNoLegSecurityAltID;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -48,14 +47,28 @@ class Tag604StrNoLegSecurityAltIDTest {
     @Test
     void Tag0604Test() {
         Tag604StrNoLegSecurityAltID tagData;
+        String oneElement;
 
+        oneElement = Tag604StrNoLegSecurityAltID.TESTA_STR_NO_LEG_SECURITY_ALT_ID;
+        tagData = new Tag604StrNoLegSecurityAltID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag604StrNoLegSecurityAltID.TESTB_STR_NO_LEG_SECURITY_ALT_ID;
+        tagData = new Tag604StrNoLegSecurityAltID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void PrintFIXTagTest() {
         Tag604StrNoLegSecurityAltID tagData;
         String oneElement;
 
-        oneElement = Tag604StrNoLegSecurityAltID.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag604StrNoLegSecurityAltID.TESTA_STR_NO_LEG_SECURITY_ALT_ID;
+        tagData = new Tag604StrNoLegSecurityAltID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag604StrNoLegSecurityAltID.TESTB_STR_NO_LEG_SECURITY_ALT_ID;
         tagData = new Tag604StrNoLegSecurityAltID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -64,7 +77,7 @@ class Tag604StrNoLegSecurityAltIDTest {
         Tag604StrNoLegSecurityAltID tagData;
         String oneElement;
 
-        oneElement = Tag604StrNoLegSecurityAltID.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag604StrNoLegSecurityAltID.TESTB_STR_NO_LEG_SECURITY_ALT_ID;
         tagData = new Tag604StrNoLegSecurityAltID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -74,7 +87,7 @@ class Tag604StrNoLegSecurityAltIDTest {
         Tag604StrNoLegSecurityAltID tagData;
         String oneElement;
 
-        oneElement = Tag604StrNoLegSecurityAltID.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag604StrNoLegSecurityAltID.TESTB_STR_NO_LEG_SECURITY_ALT_ID;
         tagData = new Tag604StrNoLegSecurityAltID( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -84,7 +97,7 @@ class Tag604StrNoLegSecurityAltIDTest {
         Tag604StrNoLegSecurityAltID tagData;
         String oneElement;
 
-        oneElement = Tag604StrNoLegSecurityAltID.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag604StrNoLegSecurityAltID.TESTB_STR_NO_LEG_SECURITY_ALT_ID;
         tagData = new Tag604StrNoLegSecurityAltID(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -94,7 +107,7 @@ class Tag604StrNoLegSecurityAltIDTest {
         Tag604StrNoLegSecurityAltID tagData;
         String oneElement;
 
-        oneElement = Tag604StrNoLegSecurityAltID.TESTA_STR_SETTL_INST_REF_ID;
+        oneElement = Tag604StrNoLegSecurityAltID.TESTA_STR_NO_LEG_SECURITY_ALT_ID;
         tagData = new Tag604StrNoLegSecurityAltID( new MyStringType( oneElement ) );
         assertEquals( "Tag604StrNoLegSecurityAltID\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

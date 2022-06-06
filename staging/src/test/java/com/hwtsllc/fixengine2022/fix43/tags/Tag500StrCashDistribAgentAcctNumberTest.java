@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag500StrCashDistribAgentAcctNumber;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -46,14 +45,28 @@ class Tag500StrCashDistribAgentAcctNumberTest {
     @Test
     void Tag0500Test() {
         Tag500StrCashDistribAgentAcctNumber tagData;
+        String oneElement;
 
+        oneElement = Tag500StrCashDistribAgentAcctNumber.TESTA_STR_CASH_DISTRIB_AGENT_ACCT_NUMBER;
+        tagData = new Tag500StrCashDistribAgentAcctNumber( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag500StrCashDistribAgentAcctNumber.TESTB_STR_CASH_DISTRIB_AGENT_ACCT_NUMBER;
+        tagData = new Tag500StrCashDistribAgentAcctNumber( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void PrintFIXTagTest() {
         Tag500StrCashDistribAgentAcctNumber tagData;
         String oneElement;
 
-        oneElement = Tag500StrCashDistribAgentAcctNumber.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag500StrCashDistribAgentAcctNumber.TESTA_STR_CASH_DISTRIB_AGENT_ACCT_NUMBER;
+        tagData = new Tag500StrCashDistribAgentAcctNumber( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag500StrCashDistribAgentAcctNumber.TESTB_STR_CASH_DISTRIB_AGENT_ACCT_NUMBER;
         tagData = new Tag500StrCashDistribAgentAcctNumber( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -62,7 +75,7 @@ class Tag500StrCashDistribAgentAcctNumberTest {
         Tag500StrCashDistribAgentAcctNumber tagData;
         String oneElement;
 
-        oneElement = Tag500StrCashDistribAgentAcctNumber.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag500StrCashDistribAgentAcctNumber.TESTB_STR_CASH_DISTRIB_AGENT_ACCT_NUMBER;
         tagData = new Tag500StrCashDistribAgentAcctNumber( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -72,7 +85,7 @@ class Tag500StrCashDistribAgentAcctNumberTest {
         Tag500StrCashDistribAgentAcctNumber tagData;
         String oneElement;
 
-        oneElement = Tag500StrCashDistribAgentAcctNumber.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag500StrCashDistribAgentAcctNumber.TESTB_STR_CASH_DISTRIB_AGENT_ACCT_NUMBER;
         tagData = new Tag500StrCashDistribAgentAcctNumber( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -82,7 +95,7 @@ class Tag500StrCashDistribAgentAcctNumberTest {
         Tag500StrCashDistribAgentAcctNumber tagData;
         String oneElement;
 
-        oneElement = Tag500StrCashDistribAgentAcctNumber.TESTB_STR_SETTL_INST_REF_ID;
+        oneElement = Tag500StrCashDistribAgentAcctNumber.TESTB_STR_CASH_DISTRIB_AGENT_ACCT_NUMBER;
         tagData = new Tag500StrCashDistribAgentAcctNumber(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -92,7 +105,7 @@ class Tag500StrCashDistribAgentAcctNumberTest {
         Tag500StrCashDistribAgentAcctNumber tagData;
         String oneElement;
 
-        oneElement = Tag500StrCashDistribAgentAcctNumber.TESTA_STR_SETTL_INST_REF_ID;
+        oneElement = Tag500StrCashDistribAgentAcctNumber.TESTA_STR_CASH_DISTRIB_AGENT_ACCT_NUMBER;
         tagData = new Tag500StrCashDistribAgentAcctNumber( new MyStringType( oneElement ) );
         assertEquals( "Tag500StrCashDistribAgentAcctNumber\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
