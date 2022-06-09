@@ -20,9 +20,14 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  769
  *  TrdRegTimestamp
  *  UTCTimestamp
- *  Traded - Regulatory timestamp value.
+ *  <p></p>
+ *  Traded / Regulatory timestamp value.
+ *  <p></p>
  *  Use to store time information required by government regulators
- *  or self regulatory organizations (such as an exchange or clearing house).
+ *  <p>
+ *  or self-regulatory organizations
+ *  <p>
+ *  (such as an exchange or clearing house).
  */
 public class Tag769TrdRegTimestamp {
 }

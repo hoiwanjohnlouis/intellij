@@ -160,7 +160,20 @@ public class Tag758EnuNested2PartyIDSource extends FIX44Abstract implements LogV
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -199,13 +212,14 @@ public class Tag758EnuNested2PartyIDSource extends FIX44Abstract implements LogV
         Tag758EnuNested2PartyIDSource tagData;
 
         tagData = new Tag758EnuNested2PartyIDSource(TESTA_ENU_NESTED_2_PARTY_ID_SOURCE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag758EnuNested2PartyIDSource(TESTB_ENU_NESTED_2_PARTY_ID_SOURCE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( MyEnumPartyIDSource oneEnum : MyEnumPartyIDSource.values()) {
+            System.out.println( new Tag758EnuNested2PartyIDSource(oneEnum).toVerboseString() );
+        }
     }
 }

@@ -16,9 +16,9 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.MyEnumPriceType;
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumPriceType;
 import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
@@ -117,7 +117,20 @@ public class Tag663EnuBenchmarkPriceType extends FIX44Abstract implements LogVal
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -156,13 +169,14 @@ public class Tag663EnuBenchmarkPriceType extends FIX44Abstract implements LogVal
         Tag663EnuBenchmarkPriceType tagData;
 
         tagData = new Tag663EnuBenchmarkPriceType(TESTA_ENU_BENCHMARK_PRICE_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag663EnuBenchmarkPriceType(TESTB_ENU_BENCHMARK_PRICE_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( MyEnumPriceType oneEnum : MyEnumPriceType.values()) {
+            System.out.println( new Tag663EnuBenchmarkPriceType(oneEnum).toVerboseString() );
+        }
     }
 }

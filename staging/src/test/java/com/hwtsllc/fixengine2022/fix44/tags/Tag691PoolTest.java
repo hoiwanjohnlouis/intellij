@@ -27,7 +27,8 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  691
  *  Pool
  *  String
- *  For Fixed Income, identifies MBS - ABS pool.
+ *  <p></p>
+ *  For Fixed Income, identifies MBS / ABS pool.
  */
 class Tag691PoolTest {
     @Test

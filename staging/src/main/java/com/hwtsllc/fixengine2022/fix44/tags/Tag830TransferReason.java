@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  830
  *  TransferReason
  *  String
+ *  <p></p>
  *  Reason trade is being transferred
  */
 public class Tag830TransferReason {

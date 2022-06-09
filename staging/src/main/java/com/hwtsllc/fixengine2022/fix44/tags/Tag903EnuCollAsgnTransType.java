@@ -27,13 +27,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  903
  *  CollAsgnTransType
  *  int
+ *  <p></p>
  *  Collateral Assignment Transaction Type
+ *  <p></p>
  *  Valid values:
- *      0 - New
- *      1 - Replace
- *      2 - Cancel
- *      3 - Release
- *      4 - Reverse
+ *  <p>    0 - New
+ *  <p>    1 - Replace
+ *  <p>    2 - Cancel
+ *  <p>    3 - Release
+ *  <p>    4 - Reverse
  */
 public class Tag903EnuCollAsgnTransType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum903CollAsgnTransType dataValue;
@@ -68,7 +70,20 @@ public class Tag903EnuCollAsgnTransType extends FIX44Abstract implements LogValu
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -107,13 +122,14 @@ public class Tag903EnuCollAsgnTransType extends FIX44Abstract implements LogValu
         Tag903EnuCollAsgnTransType tagData;
 
         tagData = new Tag903EnuCollAsgnTransType(TESTA_ENU_COLL_ASGN_TRANS_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag903EnuCollAsgnTransType(TESTB_ENU_COLL_ASGN_TRANS_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum903CollAsgnTransType oneEnum : Enum903CollAsgnTransType.values()) {
+            System.out.println( new Tag903EnuCollAsgnTransType(oneEnum).toVerboseString() );
+        }
     }
 }

@@ -20,7 +20,9 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  873
  *  DatedDate
  *  LocalMktDate
+ *  <p></p>
  *  The effective date of a new securities issue determined by its underwriters.
+ *  <p></p>
  *  Often but not always the same as the Issue Date and the Interest Accrual Date
  */
 public class Tag873DatedDate {

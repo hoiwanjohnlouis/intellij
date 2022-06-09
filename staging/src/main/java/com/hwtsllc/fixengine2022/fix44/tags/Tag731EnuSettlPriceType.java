@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum731SettlPriceType;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumSettlPriceType;
 import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
@@ -26,20 +26,30 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  731 (same as 731, 733)
  *  SettlPriceType
+ *  int
+ *  <p></p>
  *  Type of settlement price
+ *  <p></p>
+ *  733 (same as 731, 733)
+ *  UnderlyingSettlPriceType
+ *  int
+ *  <p></p>
+ *  Underlying security’s SettlPriceType.
+ *  See SettlPriceType (731) field for description
+ *  <p></p>
  *  Valid values:
- *      1 - Final
- *      2 - Theoretical
+ *  <p>    1 - Final
+ *  <p>    2 - Theoretical
  */
 public class Tag731EnuSettlPriceType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
-    private final Enum731SettlPriceType dataValue;
+    private final MyEnumSettlPriceType dataValue;
 
-    public final static Enum731SettlPriceType TESTA_ENU_SETTL_PRICE_TYPE
-            = Enum731SettlPriceType.THEORETICAL;
-    public final static Enum731SettlPriceType TESTB_ENU_SETTL_PRICE_TYPE
-            = Enum731SettlPriceType.FINAL;
+    public final static MyEnumSettlPriceType TESTA_ENU_SETTL_PRICE_TYPE
+            = MyEnumSettlPriceType.THEORETICAL;
+    public final static MyEnumSettlPriceType TESTB_ENU_SETTL_PRICE_TYPE
+            = MyEnumSettlPriceType.FINAL;
 
-    public Tag731EnuSettlPriceType(Enum731SettlPriceType dataValue) {
+    public Tag731EnuSettlPriceType( MyEnumSettlPriceType dataValue) {
         setFixType(FIX44.FIX731_ENU_SETTL_PRICE_TYPE);
         this.dataValue = dataValue;
     }
@@ -64,7 +74,20 @@ public class Tag731EnuSettlPriceType extends FIX44Abstract implements LogValuePa
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -103,13 +126,14 @@ public class Tag731EnuSettlPriceType extends FIX44Abstract implements LogValuePa
         Tag731EnuSettlPriceType tagData;
 
         tagData = new Tag731EnuSettlPriceType(TESTA_ENU_SETTL_PRICE_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag731EnuSettlPriceType(TESTB_ENU_SETTL_PRICE_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( MyEnumSettlPriceType oneEnum : MyEnumSettlPriceType.values()) {
+            System.out.println( new Tag731EnuSettlPriceType(oneEnum).toVerboseString() );
+        }
     }
 }

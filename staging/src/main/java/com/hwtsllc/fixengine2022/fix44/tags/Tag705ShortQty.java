@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  705
  *  ShortQty
  *  Qty
+ *  <p></p>
  *  Short Quantity
  */
 public class Tag705ShortQty {

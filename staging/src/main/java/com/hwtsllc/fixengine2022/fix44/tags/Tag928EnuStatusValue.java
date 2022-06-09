@@ -27,12 +27,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  928
  *  StatusValue
  *  int
+ *  <p></p>
  *  Indicates the status of a network connection
+ *  <p></p>
  *  Valid values:
- *      1 - Connected
- *      2 - Not Connected - down expected up
- *      3 - Not Connected - down expected down
- *      4 - In Process
+ *  <p>    1 - Connected
+ *  <p>    2 - Not Connected - down, expected up
+ *  <p>    3 - Not Connected - down, expected down
+ *  <p>    4 - In Process
  */
 public class Tag928EnuStatusValue extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum928StatusValue dataValue;
@@ -67,7 +69,20 @@ public class Tag928EnuStatusValue extends FIX44Abstract implements LogValuePairS
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -106,13 +121,14 @@ public class Tag928EnuStatusValue extends FIX44Abstract implements LogValuePairS
         Tag928EnuStatusValue tagData;
 
         tagData = new Tag928EnuStatusValue(TESTA_ENU_STATUS_VALUE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag928EnuStatusValue(TESTB_ENU_STATUS_VALUE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum928StatusValue oneEnum : Enum928StatusValue.values()) {
+            System.out.println( new Tag928EnuStatusValue(oneEnum).toVerboseString() );
+        }
     }
 }

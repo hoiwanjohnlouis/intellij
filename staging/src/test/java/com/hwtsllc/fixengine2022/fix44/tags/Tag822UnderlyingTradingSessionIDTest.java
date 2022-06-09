@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  822
  *  UnderlyingTradingSessionID
  *  String
+ *  <p></p>
  *  Trading Session in which the underlying instrument trades
  */
 class Tag822UnderlyingTradingSessionIDTest {

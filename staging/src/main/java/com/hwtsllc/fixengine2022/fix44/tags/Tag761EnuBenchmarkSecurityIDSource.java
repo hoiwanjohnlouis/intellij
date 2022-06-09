@@ -161,7 +161,20 @@ public class Tag761EnuBenchmarkSecurityIDSource extends FIX44Abstract implements
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -200,13 +213,14 @@ public class Tag761EnuBenchmarkSecurityIDSource extends FIX44Abstract implements
         Tag761EnuBenchmarkSecurityIDSource tagData;
 
         tagData = new Tag761EnuBenchmarkSecurityIDSource(TESTA_ENU_BENCHMARK_SECURITY_ID_SOURCE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag761EnuBenchmarkSecurityIDSource(TESTB_ENU_BENCHMARK_SECURITY_ID_SOURCE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
+            System.out.println( new Tag761EnuBenchmarkSecurityIDSource(oneEnum).toVerboseString() );
+        }
     }
 }

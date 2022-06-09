@@ -26,13 +26,15 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  903
  *  CollAsgnTransType
  *  int
+ *  <p></p>
  *  Collateral Assignment Transaction Type
+ *  <p></p>
  *  Valid values:
- *      0 - New
- *      1 - Replace
- *      2 - Cancel
- *      3 - Release
- *      4 - Reverse
+ *  <p>    0 - New
+ *  <p>    1 - Replace
+ *  <p>    2 - Cancel
+ *  <p>    3 - Release
+ *  <p>    4 - Reverse
  */
 class Enum903CollAsgnTransTypeTest {
     @Test

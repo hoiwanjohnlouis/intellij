@@ -27,8 +27,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  889
  *  UnderlyingStipValue
  *  String
+ *  <p></p>
  *  Value of stipulation.
- *          Same values as StipulationValue (234)
+ *  <p></p>
+ *  Same values as StipulationValue (234)
  */
 class Tag889UnderlyingStipValueTest {
     @Test

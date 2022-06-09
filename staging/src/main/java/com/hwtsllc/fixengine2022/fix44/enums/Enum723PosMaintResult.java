@@ -20,16 +20,19 @@ import com.hwtsllc.fixengine2022.interfaces.LogFIXString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- * 723
- * PosMaintResult
- * Result of Position Maintenance Request.
- * 4000+ Reserved and available for bi-laterally agreed upon user-defined values
- * Valid values:
- * 0 - Successful Completion - no warnings or errors
- * 1 - Rejected
- * 99 - Other
- * <p>
- * or any value conforming to the data type Reserved100Plus
+ *  723
+ *  PosMaintResult
+ *  int
+ *  <p></p>
+ *  Result of Position Maintenance Request.
+ *  <p></p>
+ *  4000+ Reserved and available for bi-laterally agreed upon user-defined values
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Successful Completion - no warnings or errors
+ *  <p>    1 - Rejected
+ *  <p>    99 - Other
+ *  <p>    or any value conforming to the data type Reserved100Plus
  */
 public enum Enum723PosMaintResult implements LogFIXString, LogVerboseString {
     SUCCESSFUL("0", "SUCCESSFUL", "0 - Successful Completion - no warnings or errors"),
@@ -123,6 +126,7 @@ public enum Enum723PosMaintResult implements LogFIXString, LogVerboseString {
          */
         for (Enum723PosMaintResult oneEnum : Enum723PosMaintResult.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

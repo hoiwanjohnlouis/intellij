@@ -22,19 +22,23 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  709
+ *  PosTransType
+ *  int
+ *  <p></p>
+ *  Identifies the type of position transaction
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Exercise
+ *  <p>    2 - Do Not Exercise
+ *  <p>    3 - Position Adjustment
+ *  <p>    4 - Position Change Submission or Margin Disposition
+ *  <p>    5 - Pledge
+ *  <p></p>
+ *  <p>    6 - Large Trader Submission
+ */
 class Enum709PosTransTypeTest {
-    /**
-     *  709
-     *  PosTransType
-     *  Identifies the type of position transaction
-     *  Valid values:
-     *      1 - Exercise
-     *      2 - Do Not Exercise
-     *      3 - Position Adjustment
-     *      4 - Position Change Submission or Margin Disposition
-     *      5 - Pledge
-     *      6 - Large Trader Submission
-     */
     @Test
     void EnumTest() {
         Enum709PosTransType enumType;

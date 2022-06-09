@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  721
  *  PosMaintRptID
  *  String
+ *  <p></p>
  *  Unique identifier for this position report
  */
 public class Tag721PosMaintRptID {

@@ -27,8 +27,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  764
  *  LegSecuritySubType
  *  String
+ *  <p></p>
  *  SecuritySubType of the leg instrument.
- *          See SecuritySubType (762) field for description
+ *  <p></p>
+ *  See SecuritySubType (762) field for description
  */
 class Tag764LegSecuritySubTypeTest {
     @Test

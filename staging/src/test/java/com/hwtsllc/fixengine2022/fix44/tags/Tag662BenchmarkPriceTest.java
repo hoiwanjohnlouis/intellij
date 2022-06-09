@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  662
  *  BenchmarkPrice
  *  Price
+ *  <p></p>
  *  Specifies the price of the benchmark.
  */
 class Tag662BenchmarkPriceTest {

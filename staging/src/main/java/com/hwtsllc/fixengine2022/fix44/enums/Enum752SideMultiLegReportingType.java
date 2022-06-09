@@ -22,12 +22,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  752
  *  SideMultiLegReportingType
+ *  int
+ *  <p></p>
  *  Used to indicate if the side being reported on Trade Capture Report
  *  represents a leg of a multileg instrument or a single security.
+ *  <p></p>
  *  Valid values:
- *      1 - Single Security (default if not specified)
- *      2 - Individual leg of a multileg security
- *      3 - Multileg Security
+ *  <p>    1 - Single Security (default if not specified)
+ *  <p>    2 - Individual leg of a multileg security
+ *  <p>    3 - Multileg Security
  */
 public enum Enum752SideMultiLegReportingType implements LogFIXString, LogVerboseString {
     SINGLE_SECURITY( "1", "SINGLE_SECURITY", "1 - Single Security (default if not specified)" ),
@@ -116,6 +119,7 @@ public enum Enum752SideMultiLegReportingType implements LogFIXString, LogVerbose
          */
         for (Enum752SideMultiLegReportingType oneEnum : Enum752SideMultiLegReportingType.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

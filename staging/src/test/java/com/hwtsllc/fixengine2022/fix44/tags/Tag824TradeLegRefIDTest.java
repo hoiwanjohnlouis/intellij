@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  824
  *  TradeLegRefID
  *  String
+ *  <p></p>
  *  Reference to the leg of a multileg instrument to which this trade refers
  */
 class Tag824TradeLegRefIDTest {

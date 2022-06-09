@@ -26,11 +26,14 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  857
  *  AllocNoOrdersType
  *  int
+ *  <p></p>
  *  Indicates how the orders being booked and allocated by an Allocation Instruction or Allocation
+ *  <p></p>
  *  Report message are identified, i.e. by explicit definition in the NoOrders group or not.
+ *  <p></p>
  *  Valid values:
- *      0 - Not Specified
- *      1 - Explicit List Provided
+ *  <p>    0 - Not Specified
+ *  <p>    1 - Explicit List Provided
  */
 class Enum857AllocNoOrdersTypeTest {
     @Test

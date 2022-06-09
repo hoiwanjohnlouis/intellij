@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  734
  *  PriorSettlPrice
  *  Price
+ *  <p></p>
  *  Previous settlement price
  */
 public class Tag734PriorSettlPrice {

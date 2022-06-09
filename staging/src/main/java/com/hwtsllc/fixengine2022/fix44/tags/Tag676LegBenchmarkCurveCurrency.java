@@ -20,8 +20,10 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  676
  *  LegBenchmarkCurveCurrency
  *  Currency
+ *  <p></p>
  *  LegBenchmarkPrice (679) currency
- *        See BenchmarkCurveCurrency (220) for description and valid values.
+ *  <p></p>
+ *  See BenchmarkCurveCurrency (220) for description and valid values.
  */
 public class Tag676LegBenchmarkCurveCurrency {
 }

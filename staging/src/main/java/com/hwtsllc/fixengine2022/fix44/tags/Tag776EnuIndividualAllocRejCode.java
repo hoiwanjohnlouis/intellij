@@ -87,7 +87,20 @@ public class Tag776EnuIndividualAllocRejCode extends FIX44Abstract implements Lo
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -126,13 +139,14 @@ public class Tag776EnuIndividualAllocRejCode extends FIX44Abstract implements Lo
         Tag776EnuIndividualAllocRejCode tagData;
 
         tagData = new Tag776EnuIndividualAllocRejCode(TESTA_ENU_INDIVIDUAL_ALLOC_REJ_CODE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag776EnuIndividualAllocRejCode(TESTB_ENU_INDIVIDUAL_ALLOC_REJ_CODE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( MyEnumAllocRejCode oneEnum : MyEnumAllocRejCode.values()) {
+            System.out.println( new Tag776EnuIndividualAllocRejCode(oneEnum).toVerboseString() );
+        }
     }
 }

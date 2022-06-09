@@ -20,8 +20,10 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  673
  *  LegAllocQty
  *  Qty
+ *  <p></p>
  *  Leg allocation quantity.
- *        See AllocQty (80) for description and valid values.
+ *  <p></p>
+ *  See AllocQty (80) for description and valid values.
  */
 public class Tag673LegAllocQty {
 }

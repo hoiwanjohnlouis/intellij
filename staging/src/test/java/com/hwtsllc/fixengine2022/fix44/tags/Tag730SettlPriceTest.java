@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  730
+ *  SettlPrice
+ *  Price
+ *  <p></p>
+ *  Settlement price
+ */
 class Tag730SettlPriceTest {
     @Test
     void FIX0730Test() {

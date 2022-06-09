@@ -27,8 +27,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  684
  *  LegOfferPx
  *  Price
+ *  <p></p>
  *  Offer price of this leg.
- *        See OfferPx (133) for description and valid values
+ *  <p></p>
+ *  See OfferPx (133) for description and valid values
  */
 class Tag684LegOfferPxTest {
     @Test

@@ -160,7 +160,20 @@ public class Tag888EnuUnderlyingStipType extends FIX44Abstract implements LogVal
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -199,13 +212,14 @@ public class Tag888EnuUnderlyingStipType extends FIX44Abstract implements LogVal
         Tag888EnuUnderlyingStipType tagData;
 
         tagData = new Tag888EnuUnderlyingStipType(TESTA_ENU_UNDERLYING_STIP_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag888EnuUnderlyingStipType(TESTB_ENU_UNDERLYING_STIP_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( MyEnumStipulationType oneEnum : MyEnumStipulationType.values()) {
+            System.out.println( new Tag888EnuUnderlyingStipType(oneEnum).toVerboseString() );
+        }
     }
 }

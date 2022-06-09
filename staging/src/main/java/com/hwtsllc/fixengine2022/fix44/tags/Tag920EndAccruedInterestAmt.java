@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  920
  *  EndAccruedInterestAmt
  *  Amt
+ *  <p></p>
  *  Accrued Interest Amount applicable to a financing transaction on the End Date.
  */
 public class Tag920EndAccruedInterestAmt {

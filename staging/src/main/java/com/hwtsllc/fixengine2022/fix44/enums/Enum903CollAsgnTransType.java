@@ -23,13 +23,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  903
  *  CollAsgnTransType
  *  int
+ *  <p></p>
  *  Collateral Assignment Transaction Type
+ *  <p></p>
  *  Valid values:
- *      0 - New
- *      1 - Replace
- *      2 - Cancel
- *      3 - Release
- *      4 - Reverse
+ *  <p>    0 - New
+ *  <p>    1 - Replace
+ *  <p>    2 - Cancel
+ *  <p>    3 - Release
+ *  <p>    4 - Reverse
  */
 public enum Enum903CollAsgnTransType implements LogFIXString, LogVerboseString {
     NEW( "0", "NEW", "0 - New" ),
@@ -120,6 +122,7 @@ public enum Enum903CollAsgnTransType implements LogFIXString, LogVerboseString {
          */
         for (Enum903CollAsgnTransType oneEnum : Enum903CollAsgnTransType.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

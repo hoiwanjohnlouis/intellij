@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  821
  *  OrderInputDevice
  *  String
+ *  <p></p>
  *  Specific device number, terminal number or station where order was entered
  */
 class Tag821OrderInputDeviceTest {

@@ -23,22 +23,27 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  946
  *  CollInquiryResult
  *  int
+ *  <p></p>
  *  Result returned in response to Collateral Inquiry
+ *  <p></p>
  *  4000+ Reserved and available for bi-laterally agreed upon user-defined values
+ *  <p></p>
  *  Valid values:
- *      0 - Successful (default)
- *      1 - Invalid or unknown instrument
- *      2 - Invalid or unknown collateral type
- *      3 - Invalid Parties
- *      4 - Invalid Transport Type requested
- *      5 - Invalid Destination requested
- *      6 - No collateral found for the trade specified
- *      7 - No collateral found for the order specified
- *      8 - Collateral inquiry type not supported
- *      9 - Unauthorized for collateral inquiry
- *      99 - Other (further information in Text (58) field)
- *
- *      or any value conforming to the data type Reserved100Plus
+ *  <p>    0 - Successful (default)
+ *  <p>    1 - Invalid or unknown instrument
+ *  <p>    2 - Invalid or unknown collateral type
+ *  <p>    3 - Invalid Parties
+ *  <p>    4 - Invalid Transport Type requested
+ *  <p></p>
+ *  <p>    5 - Invalid Destination requested
+ *  <p>    6 - No collateral found for the trade specified
+ *  <p>    7 - No collateral found for the order specified
+ *  <p>    8 - Collateral inquiry type not supported
+ *  <p>    9 - Unauthorized for collateral inquiry
+ *  <p></p>
+ *  <p>    99 - Other (further information in Text (58) field)
+ *  <p></p>
+ *  <p>    or any value conforming to the data type Reserved100Plus
  */
 public enum Enum946CollInquiryResult implements LogFIXString, LogVerboseString {
     SUCCESSFUL( "0", "SUCCESSFUL", "0 - Successful (default)" ),
@@ -137,6 +142,7 @@ public enum Enum946CollInquiryResult implements LogFIXString, LogVerboseString {
          */
         for (Enum946CollInquiryResult oneEnum : Enum946CollInquiryResult.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

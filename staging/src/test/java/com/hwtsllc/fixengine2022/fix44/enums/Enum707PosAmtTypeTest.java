@@ -22,22 +22,26 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  707
+ *  PosAmtType
+ *  String
+ *  <p></p>
+ *  Type of Position amount
+ *  <p></p>
+ *  Valid values:
+ *  <p>    CASH - Cash Amount (Corporate Event)
+ *  <p>    CRES - Cash Residual Amount
+ *  <p>    FMTM - Final Mark-to-Market Amount
+ *  <p>    IMTM - Incremental Mark-to-Market Amount
+ *  <p>    PREM - Premium Amount
+ *  <p></p>
+ *  <p>    SMTM - Start-of-Day Mark-to-Market Amount
+ *  <p>    TVAR - Trade Variation Amount
+ *  <p>    VADJ - Value Adjusted Amount
+ *  <p>    SETL - Settlement Value
+ */
 class Enum707PosAmtTypeTest {
-    /**
-     *  707
-     *  PosAmtType
-     *  Type of Position amount
-     *  Valid values:
-     *      CASH - Cash Amount (Corporate Event)
-     *      CRES - Cash Residual Amount
-     *      FMTM - Final Mark-to-Market Amount
-     *      IMTM - Incremental Mark-to-Market Amount
-     *      PREM - Premium Amount
-     *      SMTM - Start-of-Day Mark-to-Market Amount
-     *      TVAR - Trade Variation Amount
-     *      VADJ - Value Adjusted Amount
-     *      SETL - Settlement Value
-     */
     @Test
     void EnumTest() {
         Enum707PosAmtType enumType;

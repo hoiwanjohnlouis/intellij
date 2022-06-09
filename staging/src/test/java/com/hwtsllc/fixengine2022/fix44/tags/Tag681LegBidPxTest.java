@@ -27,8 +27,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  681
  *  LegBidPx
  *  Price
+ *  <p></p>
  *  Bid price of this leg.
- *        See BidPx (32) for description and valid values.
+ *  <p></p>
+ *  See BidPx (32) for description and valid values.
  */
 class Tag681LegBidPxTest {
     @Test

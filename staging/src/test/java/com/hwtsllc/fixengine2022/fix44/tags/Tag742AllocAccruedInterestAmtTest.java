@@ -27,7 +27,9 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  742
  *  AllocAccruedInterestAmt
  *  Amt
- *  Amount of Accrued Interest for convertible bonds and fixed income at the allocation-level.
+ *  <p></p>
+ *  Amount of Accrued Interest for convertible bonds
+ *  and fixed income at the allocation-level.
  */
 class Tag742AllocAccruedInterestAmtTest {
     @Test

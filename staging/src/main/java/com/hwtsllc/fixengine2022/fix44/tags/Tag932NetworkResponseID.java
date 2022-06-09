@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  932
  *  NetworkResponseID
  *  String
+ *  <p></p>
  *  Unique identifier for a network response.
  */
 public class Tag932NetworkResponseID {

@@ -27,7 +27,9 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  713
  *  OrigPosReqRefID
  *  String
- *  Reference to the PosReqID (710) of a previous maintenance request that is being replaced or canceled.
+ *  <p></p>
+ *  Reference to the PosReqID (710) of a previous maintenance request
+ *  that is being replaced or canceled.
  */
 class Tag713OrigPosReqRefIDTest {
     @Test

@@ -27,14 +27,17 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 /**
  *  723
  *  PosMaintResult
+ *  int
+ *  <p></p>
  *  Result of Position Maintenance Request.
+ *  <p></p>
  *  4000+ Reserved and available for bi-laterally agreed upon user-defined values
+ *  <p></p>
  *  Valid values:
- *      0 - Successful Completion - no warnings or errors
- *      1 - Rejected
- *      99 - Other
- *
- *      or any value conforming to the data type Reserved100Plus
+ *  <p>    0 - Successful Completion - no warnings or errors
+ *  <p>    1 - Rejected
+ *  <p>    99 - Other
+ *  <p>    or any value conforming to the data type Reserved100Plus
  */
 class Tag723EnuPosMaintResultTest {
     @Test

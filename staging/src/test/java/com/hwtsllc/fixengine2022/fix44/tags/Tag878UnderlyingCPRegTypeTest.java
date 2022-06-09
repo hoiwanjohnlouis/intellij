@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  878
  *  UnderlyingCPRegType
  *  String
+ *  <p></p>
  *  The registration type of the underlying commercial paper issuance
  */
 class Tag878UnderlyingCPRegTypeTest {

@@ -26,10 +26,12 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  827
  *  ExpirationCycle
  *  int
+ *  <p></p>
  *  Part of trading cycle when an instrument expires. Field is applicable for derivatives.
+ *  <p></p>
  *  Valid values:
- *      0 - Expire on trading session close (default)
- *      1 - Expire on trading session open
+ *  <p>    0 - Expire on trading session close (default)
+ *  <p>    1 - Expire on trading session open
  */
 class Enum827ExpirationCycleTest {
     @Test

@@ -27,20 +27,24 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 /**
  *  749
  *  TradeRequestResult
+ *  int
+ *  <p></p>
  *  Result of Trade Request
+ *  <p></p>
  *  4000+ Reserved and available for bi-laterally agreed upon user-defined values
+ *  <p></p>
  *  Valid values:
- *      0 - Successful (default)
- *      1 - Invalid or unknown instrument
- *      2 - Invalid type of trade requested
- *      3 - Invalid parties
- *      4 - Invalid transport type requested
- *      5 - Invalid destination requested
- *      8 - TradeRequestType not supported
- *      9 - Unauthorized for Trade Capture Report Request
- *      99 - Other
- *
- *      or any value conforming to the data type Reserved100Plus
+ *  <p>    0 - Successful (default)
+ *  <p>    1 - Invalid or unknown instrument
+ *  <p>    2 - Invalid type of trade requested
+ *  <p>    3 - Invalid parties
+ *  <p>    4 - Invalid transport type requested
+ *  <p></p>
+ *  <p>    5 - Invalid destination requested
+ *  <p>    8 - TradeRequestType not supported
+ *  <p>    9 - Unauthorized for Trade Capture Report Request
+ *  <p>    99 - Other
+ *  <p>    or any value conforming to the data type Reserved100Plus
  */
 class Tag749EnuTradeRequestResultTest {
     @Test

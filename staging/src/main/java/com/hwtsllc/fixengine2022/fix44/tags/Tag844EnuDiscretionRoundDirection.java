@@ -77,7 +77,20 @@ public class Tag844EnuDiscretionRoundDirection extends FIX44Abstract implements 
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -116,13 +129,14 @@ public class Tag844EnuDiscretionRoundDirection extends FIX44Abstract implements 
         Tag844EnuDiscretionRoundDirection tagData;
 
         tagData = new Tag844EnuDiscretionRoundDirection(TESTA_ENU_DISCRETION_ROUND_DIRECTION);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag844EnuDiscretionRoundDirection(TESTB_ENU_DISCRETION_ROUND_DIRECTION);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( MyEnumRoundDirection oneEnum : MyEnumRoundDirection.values()) {
+            System.out.println( new Tag844EnuDiscretionRoundDirection(oneEnum).toVerboseString() );
+        }
     }
 }

@@ -22,17 +22,21 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  751
  *  TradeReportRejectReason
+ *  int
+ *  <p></p>
  *  Reason Trade Capture Request was rejected.
+ *  <p></p>
  *  4000+ Reserved and available for bi-laterally agreed upon user-defined values
+ *  <p></p>
  *  Valid values:
- *      0 - Successful (default)
- *      1 - Invalid party information
- *      2 - Unknown instrument
- *      3 - Unauthorized to report trades
- *      4 - Invalid trade type
- *      99 - Other
- *
- *      or any value conforming to the data type Reserved100Plus
+ *  <p>    0 - Successful (default)
+ *  <p>    1 - Invalid party information
+ *  <p>    2 - Unknown instrument
+ *  <p>    3 - Unauthorized to report trades
+ *  <p>    4 - Invalid trade type
+ *  <p></p>
+ *  <p>    99 - Other
+ *  <p>    or any value conforming to the data type Reserved100Plus
  */
 public enum Enum751TradeReportRejectReason implements LogFIXString, LogVerboseString {
     SUCCESSFUL( "0", "SUCCESSFUL", "0 - Successful (default)" ),
@@ -40,6 +44,7 @@ public enum Enum751TradeReportRejectReason implements LogFIXString, LogVerboseSt
     UNKNOWN_INSTRUMENT( "2", "UNKNOWN_INSTRUMENT", "2 - Unknown instrument" ),
     UNAUTHORIZED_TO_REPORT_TRADES( "3", "UNAUTHORIZED_TO_REPORT_TRADES", "3 - Unauthorized to report trades" ),
     INVALID_TRADE_TYPE( "4", "INVALID_TRADE_TYPE", "4 - Invalid trade type" ),
+
     OTHER( "99", "OTHER", "99 - Other" ),
     ;
 
@@ -124,6 +129,7 @@ public enum Enum751TradeReportRejectReason implements LogFIXString, LogVerboseSt
          */
         for (Enum751TradeReportRejectReason oneEnum : Enum751TradeReportRejectReason.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

@@ -26,14 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  709
  *  PosTransType
+ *  int
+ *  <p></p>
  *  Identifies the type of position transaction
+ *  <p></p>
  *  Valid values:
- *      1 - Exercise
- *      2 - Do Not Exercise
- *      3 - Position Adjustment
- *      4 - Position Change Submission or Margin Disposition
- *      5 - Pledge
- *      6 - Large Trader Submission
+ *  <p>    1 - Exercise
+ *  <p>    2 - Do Not Exercise
+ *  <p>    3 - Position Adjustment
+ *  <p>    4 - Position Change Submission or Margin Disposition
+ *  <p>    5 - Pledge
+ *  <p></p>
+ *  <p>    6 - Large Trader Submission
  */
 public class Tag709EnuPosTransType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum709PosTransType dataValue;
@@ -68,7 +72,20 @@ public class Tag709EnuPosTransType extends FIX44Abstract implements LogValuePair
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -107,13 +124,14 @@ public class Tag709EnuPosTransType extends FIX44Abstract implements LogValuePair
         Tag709EnuPosTransType tagData;
 
         tagData = new Tag709EnuPosTransType(TESTA_ENU_POS_TRANS_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag709EnuPosTransType(TESTB_ENU_POS_TRANS_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum709PosTransType oneEnum : Enum709PosTransType.values()) {
+            System.out.println( new Tag709EnuPosTransType(oneEnum).toVerboseString() );
+        }
     }
 }

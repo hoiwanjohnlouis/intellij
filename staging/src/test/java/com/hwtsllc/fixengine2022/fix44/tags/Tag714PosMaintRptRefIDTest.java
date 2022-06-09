@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  714
  *  PosMaintRptRefID
  *  String
+ *  <p></p>
  *  Reference to a PosMaintRptID (721) from a previous Position Maintenance Report
  *  that is being replaced or canceled.
  */

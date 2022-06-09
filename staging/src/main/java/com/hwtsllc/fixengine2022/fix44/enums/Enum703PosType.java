@@ -22,31 +22,38 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  703
  *  PosType
+ *  String
+ *  <p></p>
  *  Used to identify the type of quantity that is being returned.
+ *  <p></p>
  *  Valid values:
- *      ALC - Allocation Trade Qty
- *      AS - Option Assignment
- *      ASF - As-of Trade Qty
- *      DLV - Delivery Qty
- *      ETR - Electronic Trade Qty
- *      EX - Option Exercise Qty
- *      FIN - End-of-Day Qty
- *      IAS - Intra-spread Qty
- *      IES - Inter-spread Qty
- *      PA - Adjustment Qty
- *      PIT - Pit Trade Qty
- *      SOD - Start-of-Day Qty
- *      SPL - Integral Split
- *      TA - Transaction from Assignment
- *      TOT - Total Transaction Qty
- *      TQ - Transaction Quantity
- *      TRF - Transfer Trade Qty
- *      TX - Transaction from Exercise
- *      XM - Cross Margin Qty
- *      RCV - Receive Quantity
- *      CAA - Corporate Action Adjustment
- *      DN - Delivery Notice Qty
- *      EP - Exchange for Physical Qty
+ *  <p>    ALC - Allocation Trade Qty
+ *  <p>    AS - Option Assignment
+ *  <p>    ASF - As-of Trade Qty
+ *  <p>    DLV - Delivery Qty
+ *  <p>    ETR - Electronic Trade Qty
+ *  <p></p>
+ *  <p>    EX - Option Exercise Qty
+ *  <p>    FIN - End-of-Day Qty
+ *  <p>    IAS - Intra-spread Qty
+ *  <p>    IES - Inter-spread Qty
+ *  <p>    PA - Adjustment Qty
+ *  <p></p>
+ *  <p>    PIT - Pit Trade Qty
+ *  <p>    SOD - Start-of-Day Qty
+ *  <p>    SPL - Integral Split
+ *  <p>    TA - Transaction from Assignment
+ *  <p>    TOT - Total Transaction Qty
+ *  <p></p>
+ *  <p>    TQ - Transaction Quantity
+ *  <p>    TRF - Transfer Trade Qty
+ *  <p>    TX - Transaction from Exercise
+ *  <p>    XM - Cross Margin Qty
+ *  <p>    RCV - Receive Quantity
+ *  <p></p>
+ *  <p>    CAA - Corporate Action Adjustment
+ *  <p>    DN - Delivery Notice Qty
+ *  <p>    EP - Exchange for Physical Qty
  */
 public enum Enum703PosType implements LogFIXString, LogVerboseString {
     ALLOCATION_TRADE_QTY( "ALC", "ALLOCATION_TRADE_QTY", "ALC - Allocation Trade Qty" ),
@@ -54,21 +61,25 @@ public enum Enum703PosType implements LogFIXString, LogVerboseString {
     AS_OF_TRADE_QTY( "ASF", "AS_OF_TRADE_QTY", "ASF - As-of Trade Qty" ),
     DELIVERY_QTY( "DLV", "DELIVERY_QTY", "DLV - Delivery Qty" ),
     ELECTRONIC_TRADE_QTY( "ETR", "ELECTRONIC_TRADE_QTY", "ETR - Electronic Trade Qty" ),
+
     OPTION_EXERCISE_QTY( "EX", "OPTION_EXERCISE_QTY", "EX - Option Exercise Qty" ),
     END_OF_DAY_QTY( "FIN", "END_OF_DAY_QTY", "FIN - End-of-Day Qty" ),
     INTRA_SPREAD_QTY( "IAS", "INTRA_SPREAD_QTY", "IAS - Intra-spread Qty" ),
     INTER_SPREAD_QTY( "IES", "INTER_SPREAD_QTY", "IES - Inter-spread Qty" ),
     ADJUSTMENT_QTY( "PA", "ADJUSTMENT_QTY", "PA - Adjustment Qty" ),
+
     PIT_TRADE_QTY( "PIT", "PIT_TRADE_QTY", "PIT - Pit Trade Qty" ),
     START_OF_DAY_QTY( "SOD", "START_OF_DAY_QTY", "SOD - Start-of-Day Qty" ),
     INTEGRAL_SPLIT( "SPL", "INTEGRAL_SPLIT", "SPL - Integral Split" ),
     TRANSACTION_FROM_ASSIGNMENT( "TA", "TRANSACTION_FROM_ASSIGNMENT", "TA - Transaction from Assignment" ),
     TOTAL_TRANSACTION_QTY( "TOT", "TOTAL_TRANSACTION_QTY", "TOT - Total Transaction Qty" ),
+
     TRANSACTION_QUANTITY( "TQ", "TRANSACTION_QUANTITY", "TQ - Transaction Quantity" ),
     TRANSFER_TRADE_QTY( "TRF", "TRANSFER_TRADE_QTY", "TRF - Transfer Trade Qty" ),
     TRANSACTION_FROM_EXERCISE( "TX", "TRANSACTION_FROM_EXERCISE", "TX - Transaction from Exercise" ),
     CROSS_MARGIN_QTY( "XM", "CROSS_MARGIN_QTY", "XM - Cross Margin Qty" ),
     RECEIVE_QUANTITY( "RCV", "RECEIVE_QUANTITY", "RCV - Receive Quantity" ),
+
     CORPORATE_ACTION_ADJUSTMENT( "CAA", "CORPORATE_ACTION_ADJUSTMENT", "CAA - Corporate Action Adjustment" ),
     DELIVERY_NOTICE_QTY( "DN", "DELIVERY_NOTICE_QTY", "DN - Delivery Notice Qty" ),
     EXCHANGE_FOR_PHYSICAL_QTY( "EP", "EXCHANGE_FOR_PHYSICAL_QTY", "EP - Exchange for Physical Qty" ),
@@ -155,6 +166,7 @@ public enum Enum703PosType implements LogFIXString, LogVerboseString {
          */
         for (Enum703PosType oneEnum : Enum703PosType.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

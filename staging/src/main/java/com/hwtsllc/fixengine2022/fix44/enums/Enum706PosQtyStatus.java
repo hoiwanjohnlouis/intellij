@@ -22,11 +22,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  706
  *  PosQtyStatus
+ *  String
+ *  <p></p>
  *  Status of this position.
+ *  <p></p>
  *  Valid values:
- *  0 - Submitted
- *  1 - Accepted
- *  2 - Rejected
+ *  <p>    0 - Submitted
+ *  <p>    1 - Accepted
+ *  <p>    2 - Rejected
  */
 public enum Enum706PosQtyStatus implements LogFIXString, LogVerboseString {
     SUBMITTED( "0", "SUBMITTED", "0 - Submitted" ),
@@ -115,6 +118,7 @@ public enum Enum706PosQtyStatus implements LogFIXString, LogVerboseString {
          */
         for (Enum706PosQtyStatus oneEnum : Enum706PosQtyStatus.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  867
  *  EventPx
  *  Price
+ *  <p></p>
  *  Predetermined price of issue at event, if applicable
  */
 class Tag867EventPxTest {

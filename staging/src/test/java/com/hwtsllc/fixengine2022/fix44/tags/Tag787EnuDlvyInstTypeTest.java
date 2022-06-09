@@ -27,10 +27,14 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 /**
  *  787
  *  DlvyInstType
- *  Used to indicate whether a delivery instruction is used for securities or cash settlement.
+ *  char
+ *  <p></p>
+ *  Used to indicate whether a delivery instruction is used for securities
+ *  or cash settlement.
+ *  <p></p>
  *  Valid values:
- *      C - Cash
- *      S - Securities
+ *  <p>    C - Cash
+ *  <p>    S - Securities
  */
 class Tag787EnuDlvyInstTypeTest {
     @Test

@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  670
  *  NoLegAllocs
  *  NumInGroup
+ *  <p></p>
  *  Number of Allocations for the leg
  */
 class Tag670NoLegAllocsTest {

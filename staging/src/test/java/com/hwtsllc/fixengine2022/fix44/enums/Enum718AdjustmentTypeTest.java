@@ -22,8 +22,21 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  718
+ *  AdjustmentType
+ *  int
+ *  <p></p>
+ *  Type of adjustment to be applied, used for PCS and PAJ
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Process Request As Margin Disposition
+ *  <p>    1 - Delta Plus
+ *  <p>    2 - Delta Minus
+ *  <p>    3 - Final
+ */
 class Enum718AdjustmentTypeTest {
-    /**
+    /*
      *  718
      *  AdjustmentType
      *  Type of adjustment to be applied, used for PCS and PAJ

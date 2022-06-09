@@ -28,13 +28,15 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  910
  *  CollStatus
  *  int
+ *  <p></p>
  *  Collateral Status
+ *  <p></p>
  *  Valid values:
- *      0 - Unassigned
- *      1 - Partially Assigned
- *      2 - Assignment Proposed
- *      3 - Assigned (Accepted)
- *      4 - Challenged
+ *  <p>    0 - Unassigned
+ *  <p>    1 - Partially Assigned
+ *  <p>    2 - Assignment Proposed
+ *  <p>    3 - Assigned (Accepted)
+ *  <p>    4 - Challenged
  */
 class Tag910EnuCollStatusTest {
     @Test

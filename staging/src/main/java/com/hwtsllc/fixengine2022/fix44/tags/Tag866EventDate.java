@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  866
  *  EventDate
  *  LocalMktDate
+ *  <p></p>
  *  Date of event
  */
 public class Tag866EventDate {

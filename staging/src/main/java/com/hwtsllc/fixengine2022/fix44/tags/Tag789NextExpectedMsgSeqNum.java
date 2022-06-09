@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  789
  *  NextExpectedMsgSeqNum
  *  SeqNum
+ *  <p></p>
  *  Next expected MsgSeqNum value to be received.
  */
 public class Tag789NextExpectedMsgSeqNum {

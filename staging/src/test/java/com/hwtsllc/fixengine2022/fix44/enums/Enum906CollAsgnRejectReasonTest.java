@@ -26,17 +26,21 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  906
  *  CollAsgnRejectReason
  *  int
+ *  <p></p>
  *  Collateral Assignment Reject Reason
+ *  <p></p>
  *  Valid values:
- *      0 - Unknown deal (order or trade)
- *      1 - Unknown or invalid instrument
- *      2 - Unauthorized transaction
- *      3 - Insufficient collateral
- *      4 - Invalid type of collateral
- *      5 - Excessive substitution
- *      99 - Other
- *
- *  or any value conforming to the data type Reserved100Plus
+ *  <p>    0 - Unknown deal (order or trade)
+ *  <p>    1 - Unknown or invalid instrument
+ *  <p>    2 - Unauthorized transaction
+ *  <p>    3 - Insufficient collateral
+ *  <p>    4 - Invalid type of collateral
+ *  <p></p>
+ *  <p>    5 - Excessive substitution
+ *  <p></p>
+ *  <p>    99 - Other
+ *  <p></p>
+ *  <p>    or any value conforming to the data type Reserved100Plus
  */
 class Enum906CollAsgnRejectReasonTest {
     @Test

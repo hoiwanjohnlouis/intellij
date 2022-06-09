@@ -27,13 +27,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  945
  *  CollInquiryStatus
  *  int
+ *  <p></p>
  *  Status of Collateral Inquiry
+ *  <p></p>
  *  Valid values:
- *      0 - Accepted
- *      1 - Accepted With Warnings
- *      2 - Completed
- *      3 - Completed With Warnings
- *      4 - Rejected
+ *  <p>    0 - Accepted
+ *  <p>    1 - Accepted With Warnings
+ *  <p>    2 - Completed
+ *  <p>    3 - Completed With Warnings
+ *  <p>    4 - Rejected
  */
 public class Tag945EnuCollInquiryStatus extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum945CollInquiryStatus dataValue;
@@ -68,7 +70,20 @@ public class Tag945EnuCollInquiryStatus extends FIX44Abstract implements LogValu
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -107,13 +122,14 @@ public class Tag945EnuCollInquiryStatus extends FIX44Abstract implements LogValu
         Tag945EnuCollInquiryStatus tagData;
 
         tagData = new Tag945EnuCollInquiryStatus(TESTA_ENU_COLL_INQUIRY_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag945EnuCollInquiryStatus(TESTB_ENU_COLL_INQUIRY_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum945CollInquiryStatus oneEnum : Enum945CollInquiryStatus.values()) {
+            System.out.println( new Tag945EnuCollInquiryStatus(oneEnum).toVerboseString() );
+        }
     }
 }

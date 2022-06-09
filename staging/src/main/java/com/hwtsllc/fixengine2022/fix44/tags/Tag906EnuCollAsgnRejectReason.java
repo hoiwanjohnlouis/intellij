@@ -27,17 +27,21 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  906
  *  CollAsgnRejectReason
  *  int
+ *  <p></p>
  *  Collateral Assignment Reject Reason
+ *  <p></p>
  *  Valid values:
- *      0 - Unknown deal (order or trade)
- *      1 - Unknown or invalid instrument
- *      2 - Unauthorized transaction
- *      3 - Insufficient collateral
- *      4 - Invalid type of collateral
- *      5 - Excessive substitution
- *      99 - Other
- *
- *  or any value conforming to the data type Reserved100Plus
+ *  <p>    0 - Unknown deal (order or trade)
+ *  <p>    1 - Unknown or invalid instrument
+ *  <p>    2 - Unauthorized transaction
+ *  <p>    3 - Insufficient collateral
+ *  <p>    4 - Invalid type of collateral
+ *  <p></p>
+ *  <p>    5 - Excessive substitution
+ *  <p></p>
+ *  <p>    99 - Other
+ *  <p></p>
+ *  <p>    or any value conforming to the data type Reserved100Plus
  */
 public class Tag906EnuCollAsgnRejectReason extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum906CollAsgnRejectReason dataValue;
@@ -72,7 +76,20 @@ public class Tag906EnuCollAsgnRejectReason extends FIX44Abstract implements LogV
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -111,13 +128,14 @@ public class Tag906EnuCollAsgnRejectReason extends FIX44Abstract implements LogV
         Tag906EnuCollAsgnRejectReason tagData;
 
         tagData = new Tag906EnuCollAsgnRejectReason(TESTA_ENU_COLL_ASGN_REJECT_REASON);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag906EnuCollAsgnRejectReason(TESTB_ENU_COLL_ASGN_REJECT_REASON);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum906CollAsgnRejectReason oneEnum : Enum906CollAsgnRejectReason.values()) {
+            System.out.println( new Tag906EnuCollAsgnRejectReason(oneEnum).toVerboseString() );
+        }
     }
 }

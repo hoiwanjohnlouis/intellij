@@ -27,7 +27,9 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  820
  *  TradeLinkID
  *  String
+ *  <p></p>
  *  Used to link a group of trades together.
+ *  <p></p>
  *  Useful for linking a group of trades together for average price calculations.
  */
 class Tag820TradeLinkIDTest {

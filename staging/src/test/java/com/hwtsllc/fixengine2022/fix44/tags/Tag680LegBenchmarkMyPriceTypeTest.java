@@ -27,8 +27,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  680
  *  LegBenchmarkPriceType
  *  int
+ *  <p></p>
  *  The price type of the LegBenchmarkPrice.
- *        See BenchmarkPriceType (663) for description and valid values.
+ *  <p></p>
+ *  See BenchmarkPriceType (663) for description and valid values.
  */
 class Tag680LegBenchmarkMyPriceTypeTest {
     @Test

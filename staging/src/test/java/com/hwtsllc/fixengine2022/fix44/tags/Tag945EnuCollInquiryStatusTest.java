@@ -28,13 +28,15 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  945
  *  CollInquiryStatus
  *  int
+ *  <p></p>
  *  Status of Collateral Inquiry
+ *  <p></p>
  *  Valid values:
- *      0 - Accepted
- *      1 - Accepted With Warnings
- *      2 - Completed
- *      3 - Completed With Warnings
- *      4 - Rejected
+ *  <p>    0 - Accepted
+ *  <p>    1 - Accepted With Warnings
+ *  <p>    2 - Completed
+ *  <p>    3 - Completed With Warnings
+ *  <p>    4 - Rejected
  */
 class Tag945EnuCollInquiryStatusTest {
     @Test

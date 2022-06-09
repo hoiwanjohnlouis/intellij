@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  925
  *  NewPassword
  *  String
+ *  <p></p>
  *  New Password or passphrase
  */
 public class Tag925StrNewPassword {

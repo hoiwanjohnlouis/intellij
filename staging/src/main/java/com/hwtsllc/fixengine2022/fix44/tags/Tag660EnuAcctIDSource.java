@@ -80,7 +80,20 @@ public class Tag660EnuAcctIDSource extends FIX44Abstract implements LogValuePair
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying ENUM data
@@ -119,19 +132,14 @@ public class Tag660EnuAcctIDSource extends FIX44Abstract implements LogValuePair
         Tag660EnuAcctIDSource tagData;
 
         tagData = new Tag660EnuAcctIDSource(TESTA_ENU_ACCT_ID_SOURCE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataIDString());
-        System.out.println(tagData.toDataNameString());
-        System.out.println(tagData.toDataDescriptionString());
 
         tagData = new Tag660EnuAcctIDSource(TESTB_ENU_ACCT_ID_SOURCE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
-        System.out.println(tagData.toDataIDString());
-        System.out.println(tagData.toDataNameString());
-        System.out.println(tagData.toDataDescriptionString());
+
+        // loop around the ENUM and process
+        for ( MyEnumAcctIDSource oneEnum : MyEnumAcctIDSource.values()) {
+            System.out.println( new Tag660EnuAcctIDSource(oneEnum).toVerboseString() );
+        }
     }
 }

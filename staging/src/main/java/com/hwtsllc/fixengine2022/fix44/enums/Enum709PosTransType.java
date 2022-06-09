@@ -22,14 +22,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  709
  *  PosTransType
+ *  int
+ *  <p></p>
  *  Identifies the type of position transaction
+ *  <p></p>
  *  Valid values:
- *      1 - Exercise
- *      2 - Do Not Exercise
- *      3 - Position Adjustment
- *      4 - Position Change Submission or Margin Disposition
- *      5 - Pledge
- *      6 - Large Trader Submission
+ *  <p>    1 - Exercise
+ *  <p>    2 - Do Not Exercise
+ *  <p>    3 - Position Adjustment
+ *  <p>    4 - Position Change Submission or Margin Disposition
+ *  <p>    5 - Pledge
+ *  <p></p>
+ *  <p>    6 - Large Trader Submission
  */
 public enum Enum709PosTransType implements LogFIXString, LogVerboseString {
     EXERCISE( "1", "EXERCISE", "1 - Exercise" ),
@@ -37,6 +41,7 @@ public enum Enum709PosTransType implements LogFIXString, LogVerboseString {
     POSITION_ADJUSTMENT( "3", "POSITION_ADJUSTMENT", "3 - Position Adjustment" ),
     MARGIN_DISPOSITION( "4", "MARGIN_DISPOSITION", "4 - Position Change Submission or Margin Disposition" ),
     PLEDGE( "5", "PLEDGE", "5 - Pledge" ),
+
     LARGE_TRADER_SUBMISSION( "6", "LARGE_TRADER_SUBMISSION", "6 - Large Trader Submission" ),
     ;
 
@@ -121,6 +126,7 @@ public enum Enum709PosTransType implements LogFIXString, LogVerboseString {
          */
         for (Enum709PosTransType oneEnum : Enum709PosTransType.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

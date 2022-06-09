@@ -28,16 +28,19 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  896
  *  CollInquiryQualifier
  *  int
+ *  <p></p>
  *  Collateral inquiry qualifiers:
+ *  <p></p>
  *  Valid values:
- *      0 - Trade Date
- *      1 - GC Instrument
- *      2 - Collateral Instrument
- *      3 - Substitution Eligible
- *      4 - Not Assigned
- *      5 - Partially Assigned
- *      6 - Fully Assigned
- *      7 - Outstanding Trades (Today < end date)
+ *  <p>    0 - Trade Date
+ *  <p>    1 - GC Instrument
+ *  <p>    2 - Collateral Instrument
+ *  <p>    3 - Substitution Eligible
+ *  <p>    4 - Not Assigned
+ *  <p></p>
+ *  <p>    5 - Partially Assigned
+ *  <p>    6 - Fully Assigned
+ *  <p>    7 - Outstanding Trades (Today < end date)
  */
 class Tag896EnuCollInquiryQualifierTest {
     @Test

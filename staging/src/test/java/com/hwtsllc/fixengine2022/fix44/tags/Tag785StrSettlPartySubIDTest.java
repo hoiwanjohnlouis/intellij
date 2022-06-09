@@ -28,8 +28,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  785
  *  SettlPartySubID
  *  String
+ *  <p></p>
  *  PartySubID value within a settlement parties component.
- *          Same values as  PartySubID (523)
+ *  <p></p>
+ *  Same values as  PartySubID (523)
  */
 class Tag785StrSettlPartySubIDTest {
     @Test

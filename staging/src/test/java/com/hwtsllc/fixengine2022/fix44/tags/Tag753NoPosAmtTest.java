@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  753
  *  NoPosAmt
  *  NumInGroup
+ *  <p></p>
  *  Number of position amount entries.
  */
 class Tag753NoPosAmtTest {

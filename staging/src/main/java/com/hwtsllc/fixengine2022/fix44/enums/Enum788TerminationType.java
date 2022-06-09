@@ -22,12 +22,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  788
  *  TerminationType
+ *  int
+ *  <p></p>
  *  Type of financing termination.
+ *  <p></p>
  *  Valid values:
- *      1 - Overnight
- *      2 - Term
- *      3 - Flexible
- *      4 - Open
+ *  <p>    1 - Overnight
+ *  <p>    2 - Term
+ *  <p>    3 - Flexible
+ *  <p>    4 - Open
  */
 public enum Enum788TerminationType implements LogFIXString, LogVerboseString {
     OVERNIGHT( "1", "OVERNIGHT", "1 - Overnight" ),
@@ -117,6 +120,7 @@ public enum Enum788TerminationType implements LogFIXString, LogVerboseString {
          */
         for (Enum788TerminationType oneEnum : Enum788TerminationType.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

@@ -23,14 +23,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  847
  *  TargetStrategy
  *  int
+ *  <p></p>
  *  The target strategy of the order
+ *  <p></p>
  *  1000+  = Reserved and available for bi-laterally agreed upon user defined values
+ *  <p></p>
  *  Valid values:
- *      1 - VWAP
- *      2 - Participate (i.e. aim to be x percent of the market volume)
- *      3 - Minimize market impact
- *
- *  or any value conforming to the data type Reserved1000Plus
+ *  <p>    1 - VWAP
+ *  <p>    2 - Participate (i.e. aim to be x percent of the market volume)
+ *  <p>    3 - Minimize market impact
+ *  <p>    or any value conforming to the data type Reserved1000Plus
  */
 public enum Enum847TargetStrategy implements LogFIXString, LogVerboseString {
     VWAP( "1", "VWAP", "1 - VWAP" ),
@@ -119,6 +121,7 @@ public enum Enum847TargetStrategy implements LogFIXString, LogVerboseString {
          */
         for (Enum847TargetStrategy oneEnum : Enum847TargetStrategy.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

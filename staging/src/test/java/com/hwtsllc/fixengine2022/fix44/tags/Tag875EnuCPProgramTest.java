@@ -28,13 +28,16 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  875
  *  CPProgram
  *  int
+ *  <p></p>
  *  The program under which a commercial paper is issued
+ *  <p></p>
  *  Valid values:
- *      1 - 3(a)(3)
- *      2 - 4(2)
- *      99 - Other
- *
- *  or any value conforming to the data type Reserved100Plus
+ *  <p>    1 - 3(a)(3)
+ *  <p>    2 - 4(2)
+ *  <p></p>
+ *  <p>    99 - Other
+ *  <p></p>
+ *  <p>    or any value conforming to the data type Reserved100Plus
  */
 class Tag875EnuCPProgramTest {
     @Test

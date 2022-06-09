@@ -27,7 +27,9 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  948
  *  NoNested3PartyIDs
  *  NumInGroup
- *  Number of Nested3PartyID (949), Nested3PartyIDSource (950), and Nested3PartyRole (95) entries
+ *  <p></p>
+ *  Number of Nested3PartyID (949), Nested3PartyIDSource (950),
+ *  and Nested3PartyRole (95) entries
  */
 class Tag948NoNested3PartyIDsTest {
     @Test

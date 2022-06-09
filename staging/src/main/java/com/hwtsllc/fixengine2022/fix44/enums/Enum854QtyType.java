@@ -23,11 +23,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  854
  *  QtyType
  *  int
+ *  <p></p>
  *  Type of quantity specified in a quantity field:
+ *  <p></p>
  *  Valid values:
- *      0 - Units (shares, par, currency)
- *      1 - Contracts (if used - must specify ContractMultiplier (tag 231))
- *      2 - Units of Measure per Time Unit (if used - must specify UnitofMeasure (tag 996) and TimeUnit (tag 997))
+ *  <p>    0 - Units (shares, par, currency)
+ *  <p>    1 - Contracts (if used - must specify ContractMultiplier (tag 231))
+ *  <p>    2 - Units of Measure per Time Unit
+ *          (if used - must specify UnitofMeasure (tag 996) and TimeUnit (tag 997))
  */
 public enum Enum854QtyType implements LogFIXString, LogVerboseString {
     UNITS( "0", "UNITS", "0 - Units (shares, par, currency)" ),
@@ -116,6 +119,7 @@ public enum Enum854QtyType implements LogFIXString, LogVerboseString {
          */
         for (Enum854QtyType oneEnum : Enum854QtyType.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

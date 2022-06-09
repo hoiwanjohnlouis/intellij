@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  885
  *  UnderlyingCurrentValue
  *  Amt
+ *  <p></p>
  *  Currency value currently attributed to this collateral
  */
 public class Tag885UnderlyingCurrentValue {

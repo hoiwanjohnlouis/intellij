@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  792
  *  SettlInstReqRejCode
+ *  int
+ *  <p></p>
  *  Identifies reason for rejection (of a settlement instruction request message).
+ *  <p></p>
  *  Valid values:
- *      0 - Unable to process request
- *      1 - Unknown account
- *      2 - No matching settlement instructions found
- *      99 - Other
- *
- *      or any value conforming to the data type Reserved100Plus
+ *  <p>    0 - Unable to process request
+ *  <p>    1 - Unknown account
+ *  <p>    2 - No matching settlement instructions found
+ *  <p>    99 - Other
+ *  <p>    or any value conforming to the data type Reserved100Plus
  */
 public class Tag792EnuSettlInstReqRejCode extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum792SettlInstReqRejCode dataValue;
@@ -68,7 +70,20 @@ public class Tag792EnuSettlInstReqRejCode extends FIX44Abstract implements LogVa
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -107,13 +122,14 @@ public class Tag792EnuSettlInstReqRejCode extends FIX44Abstract implements LogVa
         Tag792EnuSettlInstReqRejCode tagData;
 
         tagData = new Tag792EnuSettlInstReqRejCode(TESTA_ENU_SETTL_INST_REQ_REJ_CODE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag792EnuSettlInstReqRejCode(TESTB_ENU_SETTL_INST_REQ_REJ_CODE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum792SettlInstReqRejCode oneEnum : Enum792SettlInstReqRejCode.values()) {
+            System.out.println( new Tag792EnuSettlInstReqRejCode(oneEnum).toVerboseString() );
+        }
     }
 }

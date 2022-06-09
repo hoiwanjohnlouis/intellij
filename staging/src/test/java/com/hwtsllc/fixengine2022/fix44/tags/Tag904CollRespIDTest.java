@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  904
  *  CollRespID
  *  String
+ *  <p></p>
  *  Collateral Response Identifier
  */
 class Tag904CollRespIDTest {

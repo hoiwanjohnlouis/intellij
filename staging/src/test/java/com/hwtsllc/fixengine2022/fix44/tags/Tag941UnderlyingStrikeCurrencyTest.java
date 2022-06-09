@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  941
  *  UnderlyingStrikeCurrency
  *  Currency
+ *  <p></p>
  *  Currency in which the strike price of an underlying instrument is denominated
  */
 class Tag941UnderlyingStrikeCurrencyTest {

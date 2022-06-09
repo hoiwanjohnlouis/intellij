@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  734
  *  PriorSettlPrice
  *  Price
+ *  <p></p>
  *  Previous settlement price
  */
 class Tag734PriorSettlPriceTest {

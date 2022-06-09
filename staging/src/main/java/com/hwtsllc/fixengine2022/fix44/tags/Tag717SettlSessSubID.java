@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  717
  *  SettlSessSubID
  *  String
+ *  <p></p>
  *  SubID value associated with SettlSessID (716)
  */
 public class Tag717SettlSessSubID {

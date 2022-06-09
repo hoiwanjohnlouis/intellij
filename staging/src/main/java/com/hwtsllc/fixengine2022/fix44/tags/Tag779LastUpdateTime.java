@@ -20,7 +20,9 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  779
  *  LastUpdateTime
  *  UTCTimestamp
- *  Timestamp of last update to data item (or creation if no updates made since creation).
+ *  <p></p>
+ *  Timestamp of last update to data item
+ *  (or creation if no updates made since creation).
  */
 public class Tag779LastUpdateTime {
 }

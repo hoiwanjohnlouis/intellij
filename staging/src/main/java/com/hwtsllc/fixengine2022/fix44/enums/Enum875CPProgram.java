@@ -23,13 +23,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  875
  *  CPProgram
  *  int
+ *  <p></p>
  *  The program under which a commercial paper is issued
+ *  <p></p>
  *  Valid values:
- *      1 - 3(a)(3)
- *      2 - 4(2)
- *      99 - Other
- *
- *  or any value conforming to the data type Reserved100Plus
+ *  <p>    1 - 3(a)(3)
+ *  <p>    2 - 4(2)
+ *  <p></p>
+ *  <p>    99 - Other
+ *  <p></p>
+ *  <p>    or any value conforming to the data type Reserved100Plus
  */
 public enum Enum875CPProgram implements LogFIXString, LogVerboseString {
     THREE( "1", "THREE", "1 - 3(a)(3)" ),
@@ -118,6 +121,7 @@ public enum Enum875CPProgram implements LogFIXString, LogVerboseString {
          */
         for (Enum875CPProgram oneEnum : Enum875CPProgram.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

@@ -24,16 +24,19 @@ import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- * 723
- * PosMaintResult
- * Result of Position Maintenance Request.
- * 4000+ Reserved and available for bi-laterally agreed upon user-defined values
- * Valid values:
- * 0 - Successful Completion - no warnings or errors
- * 1 - Rejected
- * 99 - Other
- * <p>
- * or any value conforming to the data type Reserved100Plus
+ *  723
+ *  PosMaintResult
+ *  int
+ *  <p></p>
+ *  Result of Position Maintenance Request.
+ *  <p></p>
+ *  4000+ Reserved and available for bi-laterally agreed upon user-defined values
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Successful Completion - no warnings or errors
+ *  <p>    1 - Rejected
+ *  <p>    99 - Other
+ *  <p>    or any value conforming to the data type Reserved100Plus
  */
 public class Tag723EnuPosMaintResult extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum723PosMaintResult dataValue;
@@ -68,7 +71,20 @@ public class Tag723EnuPosMaintResult extends FIX44Abstract implements LogValuePa
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -107,13 +123,14 @@ public class Tag723EnuPosMaintResult extends FIX44Abstract implements LogValuePa
         Tag723EnuPosMaintResult tagData;
 
         tagData = new Tag723EnuPosMaintResult(TESTA_ENU_POS_MAINT_RESULT);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag723EnuPosMaintResult(TESTB_ENU_POS_MAINT_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum723PosMaintResult oneEnum : Enum723PosMaintResult.values()) {
+            System.out.println( new Tag723EnuPosMaintResult(oneEnum).toVerboseString() );
+        }
     }
 }

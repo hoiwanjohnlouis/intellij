@@ -26,17 +26,21 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  707
  *  PosAmtType
+ *  String
+ *  <p></p>
  *  Type of Position amount
+ *  <p></p>
  *  Valid values:
- *      CASH - Cash Amount (Corporate Event)
- *      CRES - Cash Residual Amount
- *      FMTM - Final Mark-to-Market Amount
- *      IMTM - Incremental Mark-to-Market Amount
- *      PREM - Premium Amount
- *      SMTM - Start-of-Day Mark-to-Market Amount
- *      TVAR - Trade Variation Amount
- *      VADJ - Value Adjusted Amount
- *      SETL - Settlement Value
+ *  <p>    CASH - Cash Amount (Corporate Event)
+ *  <p>    CRES - Cash Residual Amount
+ *  <p>    FMTM - Final Mark-to-Market Amount
+ *  <p>    IMTM - Incremental Mark-to-Market Amount
+ *  <p>    PREM - Premium Amount
+ *  <p></p>
+ *  <p>    SMTM - Start-of-Day Mark-to-Market Amount
+ *  <p>    TVAR - Trade Variation Amount
+ *  <p>    VADJ - Value Adjusted Amount
+ *  <p>    SETL - Settlement Value
  */
 public class Tag707EnuPosAmtType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum707PosAmtType dataValue;
@@ -71,7 +75,20 @@ public class Tag707EnuPosAmtType extends FIX44Abstract implements LogValuePairSt
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -110,13 +127,14 @@ public class Tag707EnuPosAmtType extends FIX44Abstract implements LogValuePairSt
         Tag707EnuPosAmtType tagData;
 
         tagData = new Tag707EnuPosAmtType(TESTA_ENU_POS_AMT_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag707EnuPosAmtType(TESTB_ENU_POS_AMT_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum707PosAmtType oneEnum : Enum707PosAmtType.values()) {
+            System.out.println( new Tag707EnuPosAmtType(oneEnum).toVerboseString() );
+        }
     }
 }

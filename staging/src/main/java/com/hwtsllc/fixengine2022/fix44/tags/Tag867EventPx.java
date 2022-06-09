@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  867
  *  EventPx
  *  Price
+ *  <p></p>
  *  Predetermined price of issue at event, if applicable
  */
 public class Tag867EventPx {

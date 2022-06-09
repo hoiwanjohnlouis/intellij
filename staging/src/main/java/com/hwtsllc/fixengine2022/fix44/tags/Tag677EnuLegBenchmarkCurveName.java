@@ -87,7 +87,20 @@ public class Tag677EnuLegBenchmarkCurveName extends FIX44Abstract implements Log
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -126,13 +139,14 @@ public class Tag677EnuLegBenchmarkCurveName extends FIX44Abstract implements Log
         Tag677EnuLegBenchmarkCurveName tagData;
 
         tagData = new Tag677EnuLegBenchmarkCurveName(TESTA_ENU_LEG_BENCHMARK_CURVE_NAME);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag677EnuLegBenchmarkCurveName(TESTB_ENU_LEG_BENCHMARK_CURVE_NAME);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( MyEnumBenchmarkCurveName oneEnum : MyEnumBenchmarkCurveName.values()) {
+            System.out.println( new Tag677EnuLegBenchmarkCurveName(oneEnum).toVerboseString() );
+        }
     }
 }

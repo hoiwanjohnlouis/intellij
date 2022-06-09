@@ -22,19 +22,23 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  724
+ *  PosReqType
+ *  int
+ *  <p></p>
+ *  Used to specify the type of position request being made.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Positions
+ *  <p>    1 - Trades
+ *  <p>    2 - Exercises
+ *  <p>    3 - Assignments
+ *  <p>    4 - Settlement Activity
+ *  <p></p>
+ *  <p>    5 - Backout Message
+ */
 class Enum724PosReqTypeTest {
-    /**
-     *  724
-     *  PosReqType
-     *  Used to specify the type of position request being made.
-     *  Valid values:
-     *      0 - Positions
-     *      1 - Trades
-     *      2 - Exercises
-     *      3 - Assignments
-     *      4 - Settlement Activity
-     *      5 - Backout Message
-     */
     @Test
     void EnumTest() {
         Enum724PosReqType enumType;

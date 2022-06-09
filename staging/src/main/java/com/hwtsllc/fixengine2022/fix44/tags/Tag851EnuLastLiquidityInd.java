@@ -27,13 +27,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  851
  *  LastLiquidityInd
  *  int
+ *  <p></p>
  *  Indicator to identify whether this fill was a result of a liquidity provider providing
  *  or liquidity taker taking the liquidity.
+ *  <p></p>
  *  Applicable only for OrdStatus of Partial or Filled.
+ *  <p></p>
  *  Valid values:
- *      1 - Added Liquidity
- *      2 - Removed Liquidity
- *      3 - Liquidity Routed Out
+ *  <p>    1 - Added Liquidity
+ *  <p>    2 - Removed Liquidity
+ *  <p>    3 - Liquidity Routed Out
  */
 public class Tag851EnuLastLiquidityInd extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum851LastLiquidityInd dataValue;
@@ -68,7 +71,20 @@ public class Tag851EnuLastLiquidityInd extends FIX44Abstract implements LogValue
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -107,13 +123,14 @@ public class Tag851EnuLastLiquidityInd extends FIX44Abstract implements LogValue
         Tag851EnuLastLiquidityInd tagData;
 
         tagData = new Tag851EnuLastLiquidityInd(TESTA_ENU_LAST_LIQUIDITY_IND);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag851EnuLastLiquidityInd(TESTB_ENU_LAST_LIQUIDITY_IND);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum851LastLiquidityInd oneEnum : Enum851LastLiquidityInd.values()) {
+            System.out.println( new Tag851EnuLastLiquidityInd(oneEnum).toVerboseString() );
+        }
     }
 }

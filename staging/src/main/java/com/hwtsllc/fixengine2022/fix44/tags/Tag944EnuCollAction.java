@@ -27,11 +27,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  944
  *  CollAction
  *  int
+ *  <p></p>
  *  Action proposed for an Underlying Instrument instance.
+ *  <p></p>
  *  Valid values:
- *      0 - Retain
- *      1 - Add
- *      2 - Remove
+ *  <p>    0 - Retain
+ *  <p>    1 - Add
+ *  <p>    2 - Remove
  */
 public class Tag944EnuCollAction extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum944CollAction dataValue;
@@ -66,7 +68,20 @@ public class Tag944EnuCollAction extends FIX44Abstract implements LogValuePairSt
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -105,13 +120,14 @@ public class Tag944EnuCollAction extends FIX44Abstract implements LogValuePairSt
         Tag944EnuCollAction tagData;
 
         tagData = new Tag944EnuCollAction(TESTA_ENU_COLL_ACTION);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag944EnuCollAction(TESTB_ENU_COLL_ACTION);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum944CollAction oneEnum : Enum944CollAction.values()) {
+            System.out.println( new Tag944EnuCollAction(oneEnum).toVerboseString() );
+        }
     }
 }

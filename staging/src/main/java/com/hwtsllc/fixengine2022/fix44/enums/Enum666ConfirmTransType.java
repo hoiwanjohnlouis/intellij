@@ -22,11 +22,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  666
  *  ConfirmTransType
+ *  int
+ *  <p></p>
  *  Identifies the Confirmation transaction type.
+ *  <p></p>
  *  Valid values:
- *      0 - New
- *      1 - Replace
- *      2 - Cancel
+ *  <p>    0 - New
+ *  <p>    1 - Replace
+ *  <p>    2 - Cancel
  */
 public enum Enum666ConfirmTransType implements LogFIXString, LogVerboseString {
     NEW( "0", "NEW", "0 - New" ),
@@ -115,6 +118,7 @@ public enum Enum666ConfirmTransType implements LogFIXString, LogVerboseString {
          */
         for (Enum666ConfirmTransType oneEnum : Enum666ConfirmTransType.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

@@ -28,11 +28,14 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  854
  *  QtyType
  *  int
+ *  <p></p>
  *  Type of quantity specified in a quantity field:
+ *  <p></p>
  *  Valid values:
- *      0 - Units (shares, par, currency)
- *      1 - Contracts (if used - must specify ContractMultiplier (tag 231))
- *      2 - Units of Measure per Time Unit (if used - must specify UnitofMeasure (tag 996) and TimeUnit (tag 997))
+ *  <p>    0 - Units (shares, par, currency)
+ *  <p>    1 - Contracts (if used - must specify ContractMultiplier (tag 231))
+ *  <p>    2 - Units of Measure per Time Unit
+ *          (if used - must specify UnitofMeasure (tag 996) and TimeUnit (tag 997))
  */
 class Tag854EnuQtyTypeTest {
     @Test

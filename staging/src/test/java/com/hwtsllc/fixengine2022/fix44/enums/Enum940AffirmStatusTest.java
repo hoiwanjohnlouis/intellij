@@ -26,11 +26,13 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  940
  *  AffirmStatus
  *  int
+ *  <p></p>
  *  Identifies the status of the ConfirmationAck.
+ *  <p></p>
  *  Valid values:
- *      1 - Received
- *      2 - Confirm rejected, i.e. not affirmed
- *      3 - Affirmed
+ *  <p>    1 - Received
+ *  <p>    2 - Confirm rejected, i.e. not affirmed
+ *  <p>    3 - Affirmed
  */
 class Enum940AffirmStatusTest {
     @Test

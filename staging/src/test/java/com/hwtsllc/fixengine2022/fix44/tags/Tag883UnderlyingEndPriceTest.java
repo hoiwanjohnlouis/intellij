@@ -27,7 +27,9 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  883
  *  UnderlyingEndPrice
  *  Price
- *  Price (percent-of-par or per unit) of the underlying security or basket at the end of the agreement.
+ *  <p></p>
+ *  Price (percent-of-par or per unit) of the underlying security
+ *  or basket at the end of the agreement.
  */
 class Tag883UnderlyingEndPriceTest {
     @Test

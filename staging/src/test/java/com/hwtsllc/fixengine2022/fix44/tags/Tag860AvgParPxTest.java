@@ -27,7 +27,9 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  860
  *  AvgParPx
  *  Price
- *  Used to express average price as percent of par (used where AvgPx field is expressed in some other way)
+ *  <p></p>
+ *  Used to express average price as percent of par
+ *  (used where AvgPx field is expressed in some other way)
  */
 class Tag860AvgParPxTest {
     @Test

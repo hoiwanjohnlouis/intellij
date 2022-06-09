@@ -27,12 +27,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  905
  *  CollAsgnRespType
  *  int
+ *  <p></p>
  *  Collateral Assignment Response Type
+ *  <p></p>
  *  Valid values:
- *      0 - Received
- *      1 - Accepted
- *      2 - Declined
- *      3 - Rejected
+ *  <p>    0 - Received
+ *  <p>    1 - Accepted
+ *  <p>    2 - Declined
+ *  <p>    3 - Rejected
  */
 public class Tag905EnuCollAsgnRespType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum905CollAsgnRespType dataValue;
@@ -67,7 +69,20 @@ public class Tag905EnuCollAsgnRespType extends FIX44Abstract implements LogValue
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -106,13 +121,14 @@ public class Tag905EnuCollAsgnRespType extends FIX44Abstract implements LogValue
         Tag905EnuCollAsgnRespType tagData;
 
         tagData = new Tag905EnuCollAsgnRespType(TESTA_ENU_COLL_ASGN_RESP_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag905EnuCollAsgnRespType(TESTB_ENU_COLL_ASGN_RESP_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum905CollAsgnRespType oneEnum : Enum905CollAsgnRespType.values()) {
+            System.out.println( new Tag905EnuCollAsgnRespType(oneEnum).toVerboseString() );
+        }
     }
 }

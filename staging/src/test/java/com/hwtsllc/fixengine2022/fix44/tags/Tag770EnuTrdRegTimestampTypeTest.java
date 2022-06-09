@@ -27,18 +27,24 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 /**
  *  770
  *  TrdRegTimestampType
+ *  int
+ *  <p></p>
  *  Traded / Regulatory timestamp type.
+ *  <p></p>
  *  Note of Applicability:
- *      values are required in US futures markets by the CFTC to
- *      support computerized trade reconstruction.
+ *  <p>    Values are required in US futures markets by the CFTC to
+ *         support computerized trade reconstruction.
+ *  <p></p>
  *      (see Volume : "Glossary" for value definitions)
+ *  <p></p>
  *  Valid values:
- *      1 - Execution Time
- *      2 - Time In
- *      3 - Time Out
- *      4 - Broker Receipt
- *      5 - Broker Execution
- *      6 - Desk Receipt
+ *  <p>    1 - Execution Time
+ *  <p>    2 - Time In
+ *  <p>    3 - Time Out
+ *  <p>    4 - Broker Receipt
+ *  <p>    5 - Broker Execution
+ *  <p></p>
+ *  <p>    6 - Desk Receipt
  */
 class Tag770EnuTrdRegTimestampTypeTest {
     @Test

@@ -27,8 +27,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  671
  *  LegAllocAccount
  *  String
+ *  <p></p>
  *  Allocation Account for the leg
- *        See AllocAccount (79) for description and valid values.
+ *  <p></p>
+ *  See AllocAccount (79) for description and valid values.
  */
 class Tag671LegAllocAccountTest {
     @Test

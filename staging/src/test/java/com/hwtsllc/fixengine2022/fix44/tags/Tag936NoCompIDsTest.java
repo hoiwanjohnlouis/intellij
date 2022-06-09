@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  936
  *  NoCompIDs
  *  NumInGroup
+ *  <p></p>
  *  Number of CompID entries in a repeating group.
  */
 class Tag936NoCompIDsTest {

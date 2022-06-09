@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  863
  *  OrderCapacityQty
  *  Qty
+ *  <p></p>
  *  Quantity executed under a specific OrderCapacity
  *  (e.g. quantity executed as agent, quantity executed as principal)
  */

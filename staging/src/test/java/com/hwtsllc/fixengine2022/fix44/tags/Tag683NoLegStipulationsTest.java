@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  683
  *  NoLegStipulations
  *  NumInGroup
+ *  <p></p>
  *  Number of leg stipulation entries
  */
 class Tag683NoLegStipulationsTest {

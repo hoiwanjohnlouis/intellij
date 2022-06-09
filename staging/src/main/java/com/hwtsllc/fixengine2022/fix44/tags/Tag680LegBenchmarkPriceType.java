@@ -20,8 +20,10 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  680
  *  LegBenchmarkPriceType
  *  int
+ *  <p></p>
  *  The price type of the LegBenchmarkPrice.
- *        See BenchmarkPriceType (663) for description and valid values.
+ *  <p></p>
+ *  See BenchmarkPriceType (663) for description and valid values.
  */
 public class Tag680LegBenchmarkPriceType {
 }

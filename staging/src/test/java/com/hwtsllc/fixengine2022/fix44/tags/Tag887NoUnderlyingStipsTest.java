@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  887
  *  NoUnderlyingStips
  *  NumInGroup
+ *  <p></p>
  *  Number of underlying stipulation entries
  */
 class Tag887NoUnderlyingStipsTest {

@@ -20,8 +20,11 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  881
  *  SecondaryTradeReportRefID
  *  String
- *  Deprecated in FIX.5.0 Used to refer to a previous SecondaryTradeReportRefID
- *  when amending the transaction (cancel, replace, release, or reversal).
+ *  <p></p>
+ *  Deprecated in FIX.5.0
+ *  <p></p>
+ *  Used to refer to a previous SecondaryTradeReportRefID when amending the transaction
+ *  (cancel, replace, release, or reversal).
  */
 public class Tag881SecondaryTradeReportRefID {
 }

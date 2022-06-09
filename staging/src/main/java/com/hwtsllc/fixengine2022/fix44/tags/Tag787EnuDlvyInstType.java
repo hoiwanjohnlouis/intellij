@@ -26,10 +26,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  787
  *  DlvyInstType
- *  Used to indicate whether a delivery instruction is used for securities or cash settlement.
+ *  char
+ *  <p></p>
+ *  Used to indicate whether a delivery instruction is used for securities
+ *  or cash settlement.
+ *  <p></p>
  *  Valid values:
- *      C - Cash
- *      S - Securities
+ *  <p>    C - Cash
+ *  <p>    S - Securities
  */
 public class Tag787EnuDlvyInstType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum787DlvyInstType dataValue;
@@ -64,7 +68,20 @@ public class Tag787EnuDlvyInstType extends FIX44Abstract implements LogValuePair
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -103,13 +120,14 @@ public class Tag787EnuDlvyInstType extends FIX44Abstract implements LogValuePair
         Tag787EnuDlvyInstType tagData;
 
         tagData = new Tag787EnuDlvyInstType(TESTA_ENU_DLVY_INST_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag787EnuDlvyInstType(TESTB_ENU_DLVY_INST_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum787DlvyInstType oneEnum : Enum787DlvyInstType.values()) {
+            System.out.println( new Tag787EnuDlvyInstType(oneEnum).toVerboseString() );
+        }
     }
 }

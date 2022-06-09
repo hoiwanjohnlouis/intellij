@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  934
  *  LastNetworkResponseID
  *  String
+ *  <p></p>
  *  Identifier of the previous Network Response message sent to a counterparty,
  *  used to allow incremental updates.
  */

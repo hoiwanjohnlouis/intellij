@@ -20,8 +20,11 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  848
  *  TargetStrategyParameters
  *  String
- *  Deprecated in FIX.5.0 Field to allow further specification of the TargetStrategy.
- *  Usage to be agreed between counterparties
+ *  <p></p>
+ *  Deprecated in FIX.5.0
+ *  <p></p>
+ *  Field to allow further specification of the TargetStrategy
+ *  - usage to be agreed between counterparties
  */
 public class Tag848TargetStrategyParameters {
 }

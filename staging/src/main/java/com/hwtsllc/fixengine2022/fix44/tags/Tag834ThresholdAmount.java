@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  834
  *  ThresholdAmount
  *  PriceOffset
+ *  <p></p>
  *  Amount that a position has to be in the money before it is exercised.
  */
 public class Tag834ThresholdAmount {

@@ -27,7 +27,9 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  779
  *  LastUpdateTime
  *  UTCTimestamp
- *  Timestamp of last update to data item (or creation if no updates made since creation).
+ *  <p></p>
+ *  Timestamp of last update to data item
+ *  (or creation if no updates made since creation).
  */
 class Tag779LastUpdateTimeTest {
     @Test

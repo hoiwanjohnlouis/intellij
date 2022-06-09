@@ -25,14 +25,17 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
  *  665
- *  Identifies the status of the Confirmation.
  *  ConfirmStatus
+ *  int
+ *  <p></p>
+ *  Identifies the status of the Confirmation.
+ *  <p></p>
  *  Valid values:
- *      1 - Received
- *      2 - Mismatched Account
- *      3 - Missing Settlement Instructions
- *      4 - Confirmed
- *      5 - Request Rejected
+ *  <p>    1 - Received
+ *  <p>    2 - Mismatched Account
+ *  <p>    3 - Missing Settlement Instructions
+ *  <p>    4 - Confirmed
+ *  <p>    5 - Request Rejected
  */
 public class Tag665EnuConfirmStatus extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum665ConfirmStatus dataValue;
@@ -67,7 +70,20 @@ public class Tag665EnuConfirmStatus extends FIX44Abstract implements LogValuePai
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -106,13 +122,14 @@ public class Tag665EnuConfirmStatus extends FIX44Abstract implements LogValuePai
         Tag665EnuConfirmStatus tagData;
 
         tagData = new Tag665EnuConfirmStatus(TESTA_ENU_CONFIRM_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag665EnuConfirmStatus(TESTB_ENU_CONFIRM_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum665ConfirmStatus oneEnum : Enum665ConfirmStatus.values()) {
+            System.out.println( new Tag665EnuConfirmStatus(oneEnum).toVerboseString() );
+        }
     }
 }

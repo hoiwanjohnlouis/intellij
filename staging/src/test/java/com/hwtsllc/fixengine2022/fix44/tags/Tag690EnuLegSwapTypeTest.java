@@ -27,14 +27,19 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 /**
  *  690
  *  LegSwapType
- *  For Fixed Income, used instead of LegQty (687) or LegOrderQty (685)
- *      to requests the respondent to calculate the quantity based on the
+ *  int
+ *  <p></p>
+ *  For Fixed Income
+ *  <p></p>
+ *  Used instead of LegQty (687) or LegOrderQty (685)
+ *      to request the respondent to calculate the quantity based on the
  *      quantity on the opposite side of the swap.
+ *  <p></p>
  *  Valid values:
- *      1 - Par For Par
- *      2 - Modified Duration
- *      4 - Risk
- *      5 - Proceeds
+ *  <p>    1 - Par For Par
+ *  <p>    2 - Modified Duration
+ *  <p>    4 - Risk
+ *  <p>    5 - Proceeds
  */
 class Tag690EnuLegSwapTypeTest {
     @Test

@@ -26,14 +26,17 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  712
  *  PosMaintAction
+ *  int
+ *  <p></p>
  *  Maintenance Action to be performed.
+ *  <p></p>
  *  Valid values:
- *      1 - New - used to increment the overall transaction quantity
- *      2 - Replace - used to override the overall transaction quantity
+ *  <p>    1 - New - used to increment the overall transaction quantity
+ *  <p>    2 - Replace - used to override the overall transaction quantity
  *                      or specifically add messages based on the reference ID
- *      3 - Cancel - used to remove the overall transaction or specific
+ *  <p>    3 - Cancel - used to remove the overall transaction or specific
  *                      add messages based on reference ID
- *      4 - Reverse - used to completely back-out the transaction
+ *  <p>    4 - Reverse - used to completely back-out the transaction
  *                      such that the transaction never existed
  */
 public class Tag712EnuPosMaintAction extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
@@ -69,7 +72,20 @@ public class Tag712EnuPosMaintAction extends FIX44Abstract implements LogValuePa
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -108,13 +124,14 @@ public class Tag712EnuPosMaintAction extends FIX44Abstract implements LogValuePa
         Tag712EnuPosMaintAction tagData;
 
         tagData = new Tag712EnuPosMaintAction(TESTA_ENU_POS_MAINT_ACTION);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag712EnuPosMaintAction(TESTB_ENU_POS_MAINT_ACTION);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum712PosMaintAction oneEnum : Enum712PosMaintAction.values()) {
+            System.out.println( new Tag712EnuPosMaintAction(oneEnum).toVerboseString() );
+        }
     }
 }

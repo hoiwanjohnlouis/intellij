@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  933
  *  NetworkRequestID
  *  String
+ *  <p></p>
  *  Unique identifier for a network resquest.
  */
 public class Tag933NetworkRequestID {

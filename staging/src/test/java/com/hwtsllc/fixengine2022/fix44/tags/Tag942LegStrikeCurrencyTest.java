@@ -27,7 +27,9 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  942
  *  LegStrikeCurrency
  *  Currency
- *  Currency in which the strike price of a instrument leg of a multileg instrument is denominated
+ *  <p></p>
+ *  Currency in which the strike price of a instrument leg of
+ *  a multileg instrument is denominated
  */
 class Tag942LegStrikeCurrencyTest {
     @Test

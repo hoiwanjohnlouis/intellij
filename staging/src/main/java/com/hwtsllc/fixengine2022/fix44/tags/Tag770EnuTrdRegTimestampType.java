@@ -26,18 +26,24 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  770
  *  TrdRegTimestampType
+ *  int
+ *  <p></p>
  *  Traded / Regulatory timestamp type.
+ *  <p></p>
  *  Note of Applicability:
- *      values are required in US futures markets by the CFTC to
- *      support computerized trade reconstruction.
+ *  <p>    Values are required in US futures markets by the CFTC to
+ *         support computerized trade reconstruction.
+ *  <p></p>
  *      (see Volume : "Glossary" for value definitions)
+ *  <p></p>
  *  Valid values:
- *      1 - Execution Time
- *      2 - Time In
- *      3 - Time Out
- *      4 - Broker Receipt
- *      5 - Broker Execution
- *      6 - Desk Receipt
+ *  <p>    1 - Execution Time
+ *  <p>    2 - Time In
+ *  <p>    3 - Time Out
+ *  <p>    4 - Broker Receipt
+ *  <p>    5 - Broker Execution
+ *  <p></p>
+ *  <p>    6 - Desk Receipt
  */
 public class Tag770EnuTrdRegTimestampType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum770TrdRegTimestampType dataValue;
@@ -72,7 +78,20 @@ public class Tag770EnuTrdRegTimestampType extends FIX44Abstract implements LogVa
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -111,13 +130,14 @@ public class Tag770EnuTrdRegTimestampType extends FIX44Abstract implements LogVa
         Tag770EnuTrdRegTimestampType tagData;
 
         tagData = new Tag770EnuTrdRegTimestampType(TESTA_ENU_TRD_REG_TIMESTAMP_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag770EnuTrdRegTimestampType(TESTB_ENU_TRD_REG_TIMESTAMP_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum770TrdRegTimestampType oneEnum : Enum770TrdRegTimestampType.values()) {
+            System.out.println( new Tag770EnuTrdRegTimestampType(oneEnum).toVerboseString() );
+        }
     }
 }

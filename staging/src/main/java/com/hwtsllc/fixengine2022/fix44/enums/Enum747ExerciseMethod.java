@@ -22,10 +22,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  747
  *  ExerciseMethod
+ *  int
+ *  <p></p>
  *  Exercise Method used to in performing assignment.
+ *  <p></p>
  *  Valid values:
- *      A - Automatic
- *      M - Manual
+ *  <p>    A - Automatic
+ *  <p>    M - Manual
  */
 public enum Enum747ExerciseMethod implements LogFIXString, LogVerboseString {
     AUTOMATIC( "A", "AUTOMATIC", "A - Automatic" ),
@@ -113,6 +116,7 @@ public enum Enum747ExerciseMethod implements LogFIXString, LogVerboseString {
          */
         for (Enum747ExerciseMethod oneEnum : Enum747ExerciseMethod.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

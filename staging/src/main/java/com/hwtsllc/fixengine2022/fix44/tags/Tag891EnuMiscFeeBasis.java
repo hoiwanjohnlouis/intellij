@@ -27,11 +27,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  891
  *  MiscFeeBasis
  *  int
+ *  <p></p>
  *  Defines the unit for a miscellaneous fee.
+ *  <p></p>
  *  Valid values:
- *      0 - Absolute
- *      1 - Per Unit
- *      2 - Percentage
+ *  <p>    0 - Absolute
+ *  <p>    1 - Per Unit
+ *  <p>    2 - Percentage
  */
 public class Tag891EnuMiscFeeBasis extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum891MiscFeeBasis dataValue;
@@ -66,7 +68,20 @@ public class Tag891EnuMiscFeeBasis extends FIX44Abstract implements LogValuePair
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -105,13 +120,14 @@ public class Tag891EnuMiscFeeBasis extends FIX44Abstract implements LogValuePair
         Tag891EnuMiscFeeBasis tagData;
 
         tagData = new Tag891EnuMiscFeeBasis(TESTA_ENU_MISC_FEE_BASIS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag891EnuMiscFeeBasis(TESTB_ENU_MISC_FEE_BASIS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum891MiscFeeBasis oneEnum : Enum891MiscFeeBasis.values()) {
+            System.out.println( new Tag891EnuMiscFeeBasis(oneEnum).toVerboseString() );
+        }
     }
 }

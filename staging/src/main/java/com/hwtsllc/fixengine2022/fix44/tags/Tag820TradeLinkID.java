@@ -20,7 +20,9 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  820
  *  TradeLinkID
  *  String
+ *  <p></p>
  *  Used to link a group of trades together.
+ *  <p></p>
  *  Useful for linking a group of trades together for average price calculations.
  */
 public class Tag820TradeLinkID {

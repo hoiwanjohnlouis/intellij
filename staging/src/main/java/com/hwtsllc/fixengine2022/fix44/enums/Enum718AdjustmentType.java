@@ -22,12 +22,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  718
  *  AdjustmentType
+ *  int
+ *  <p></p>
  *  Type of adjustment to be applied, used for PCS and PAJ
+ *  <p></p>
  *  Valid values:
- *      0 - Process Request As Margin Disposition
- *      1 - Delta Plus
- *      2 - Delta Minus
- *      3 - Final
+ *  <p>    0 - Process Request As Margin Disposition
+ *  <p>    1 - Delta Plus
+ *  <p>    2 - Delta Minus
+ *  <p>    3 - Final
  */
 public enum Enum718AdjustmentType implements LogFIXString, LogVerboseString {
     MARGIN_DISPOSITION( "0", "MARGIN_DISPOSITION", "0 - Process Request As Margin Disposition" ),
@@ -117,6 +120,7 @@ public enum Enum718AdjustmentType implements LogFIXString, LogVerboseString {
          */
         for (Enum718AdjustmentType oneEnum : Enum718AdjustmentType.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

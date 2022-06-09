@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  938
  *  NoCollInquiryQualifier
  *  NumInGroup
+ *  <p></p>
  *  Number of CollInquiryQualifier entries in a repeating group.
  */
 class Tag938NoCollInquiryQualifierTest {

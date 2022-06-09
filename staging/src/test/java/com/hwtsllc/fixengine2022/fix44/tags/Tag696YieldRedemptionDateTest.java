@@ -27,7 +27,9 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  696
  *  YieldRedemptionDate
  *  LocalMktDate
+ *  <p></p>
  *  Date to which the yield has been calculated
+ *  <p>
  *  (i.e. maturity, par call or current call, pre-refunded date).
  */
 class Tag696YieldRedemptionDateTest {

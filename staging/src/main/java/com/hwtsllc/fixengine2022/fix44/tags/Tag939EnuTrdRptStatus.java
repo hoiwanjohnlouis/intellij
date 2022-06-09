@@ -27,11 +27,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  939
  *  TrdRptStatus
  *  int
+ *  <p></p>
  *  Trade Report Status
+ *  <p></p>
  *  Valid values:
- *      0 - Accepted
- *      1 - Rejected
- *      3 - Accepted with errors
+ *  <p>    0 - Accepted
+ *  <p>    1 - Rejected
+ *  <p>    3 - Accepted with errors
  */
 public class Tag939EnuTrdRptStatus extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum939TrdRptStatus dataValue;
@@ -66,7 +68,20 @@ public class Tag939EnuTrdRptStatus extends FIX44Abstract implements LogValuePair
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -105,13 +120,14 @@ public class Tag939EnuTrdRptStatus extends FIX44Abstract implements LogValuePair
         Tag939EnuTrdRptStatus tagData;
 
         tagData = new Tag939EnuTrdRptStatus(TESTA_ENU_TRD_RPT_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag939EnuTrdRptStatus(TESTB_ENU_TRD_RPT_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum939TrdRptStatus oneEnum : Enum939TrdRptStatus.values()) {
+            System.out.println( new Tag939EnuTrdRptStatus(oneEnum).toVerboseString() );
+        }
     }
 }

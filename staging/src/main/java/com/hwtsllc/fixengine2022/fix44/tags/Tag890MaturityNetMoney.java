@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  890
  *  MaturityNetMoney
  *  Amt
+ *  <p></p>
  *  Net Money at maturity if Zero Coupon and maturity value is different from par value
  */
 public class Tag890MaturityNetMoney {

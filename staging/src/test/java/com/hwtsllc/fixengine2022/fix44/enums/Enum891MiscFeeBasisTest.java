@@ -26,11 +26,13 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  891
  *  MiscFeeBasis
  *  int
+ *  <p></p>
  *  Defines the unit for a miscellaneous fee.
+ *  <p></p>
  *  Valid values:
- *      0 - Absolute
- *      1 - Per Unit
- *      2 - Percentage
+ *  <p>    0 - Absolute
+ *  <p>    1 - Per Unit
+ *  <p>    2 - Percentage
  */
 class Enum891MiscFeeBasisTest {
     @Test

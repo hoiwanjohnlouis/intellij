@@ -26,8 +26,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  785
  *  SettlPartySubID
  *  String
+ *  <p></p>
  *  PartySubID value within a settlement parties component.
- *          Same values as  PartySubID (523)
+ *  <p></p>
+ *  Same values as  PartySubID (523)
  */
 public class Tag785StrSettlPartySubID extends FIX44Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
@@ -60,7 +62,11 @@ public class Tag785StrSettlPartySubID extends FIX44Abstract implements LogValueP
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -78,13 +84,9 @@ public class Tag785StrSettlPartySubID extends FIX44Abstract implements LogValueP
         Tag785StrSettlPartySubID tagData;
 
         tagData = new Tag785StrSettlPartySubID(new MyStringType(TESTA_STR_SETTL_PARTY_SUB_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag785StrSettlPartySubID(new MyStringType(TESTB_STR_SETTL_PARTY_SUB_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

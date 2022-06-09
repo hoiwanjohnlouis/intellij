@@ -22,17 +22,21 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  725
+ *  ResponseTransportType
+ *  int
+ *  <p></p>
+ *  Identifies how the response to the request should be transmitted.
+ *  <p></p>
+ *  Details specified via ResponseDestination (726).
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Inband - transport the request was sent over (default)
+ *  <p>    1 - Out of Band - pre-arranged out-of-band delivery mechanism
+ *              (i.e. FTP, HTTP, NDM, etc.) between counterparties
+ */
 class Enum725ResponseTransportTypeTest {
-    /**
-     *  725
-     *  ResponseTransportType
-     *  Identifies how the response to the request should be transmitted.
-     *              Details specified via ResponseDestination (726).
-     *  Valid values:
-     *      0 - Inband - transport the request was sent over (default)
-     *      1 - Out of Band - pre-arranged out-of-band delivery mechanism
-     *              (i.e. FTP, HTTP, NDM, etc.) between counterparties
-     */
     @Test
     void EnumTest() {
         Enum725ResponseTransportType enumType;

@@ -27,10 +27,15 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  669
  *  LastParPx
  *  Price
+ *  <p></p>
  *  Last price expressed in percent-of-par.
- *  Conditionally required for Fixed Income trades when
- *  LastPx (31) is expressed in Yield, Spread, Discount or any other type.
- *  Usage: Execution Report and Allocation Report repeating executions block (from sellside).
+ *  <p></p>
+ *  Conditionally required for Fixed Income trades
+ *  when LastPx (31) is expressed in Yield, Spread, Discount or any other type.
+ *  <p></p>
+ *  Usage: Execution Report and Allocation Report repeating executions block
+ *  <p></p>
+ *  (from sellside).
  */
 class Tag669LastParPxTest {
     @Test

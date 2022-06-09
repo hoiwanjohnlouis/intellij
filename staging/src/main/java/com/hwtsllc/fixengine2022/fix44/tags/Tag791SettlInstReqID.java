@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  791
  *  SettlInstReqID
  *  String
+ *  <p></p>
  *  Unique ID of settlement instruction request message
  */
 public class Tag791SettlInstReqID {

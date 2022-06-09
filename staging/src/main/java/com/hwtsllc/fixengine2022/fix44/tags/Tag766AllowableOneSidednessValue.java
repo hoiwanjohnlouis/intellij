@@ -20,8 +20,9 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  766
  *  AllowableOneSidednessValue
  *  Amt
- *  The maximum amount that execution of one side of a program trade
- *  can exceed execution of the other.
+ *  <p></p>
+ *  The maximum amount that execution of
+ *  one side of a program trade can exceed execution of the other.
  */
 public class Tag766AllowableOneSidednessValue {
 }

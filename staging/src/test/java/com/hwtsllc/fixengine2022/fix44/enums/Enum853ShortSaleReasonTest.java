@@ -26,15 +26,18 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  853
  *  ShortSaleReason
  *  int
+ *  <p></p>
  *  Reason for short sale.
+ *  <p></p>
  *  Valid values:
- *      0 - Dealer Sold Short
- *      1 - Dealer Sold Short Exempt
- *      2 - Selling Customer Sold Short
- *      3 - Selling Customer Sold Short Exempt
- *      4 - Qualified Service Representative (QSR) or Automatic Give-up (AGU) Contra Side Sold Short
- *
- *      5 - QSR or AGU Contra Side Sold Short Exempt
+ *  <p>    0 - Dealer Sold Short
+ *  <p>    1 - Dealer Sold Short Exempt
+ *  <p>    2 - Selling Customer Sold Short
+ *  <p>    3 - Selling Customer Sold Short Exempt
+ *  <p>    4 - Qualified Service Representative (QSR)
+ *              or Automatic Give-up (AGU) Contra Side Sold Short
+ *  <p></p>
+ *  <p>    5 - QSR or AGU Contra Side Sold Short Exempt
  */
 class Enum853ShortSaleReasonTest {
     @Test

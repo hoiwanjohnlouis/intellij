@@ -27,24 +27,29 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  856
  *  TradeReportType
  *  int
+ *  <p></p>
  *  Type of Trade Report
+ *  <p></p>
  *  Valid values:
- *      0 - Submit
- *      1 - Alleged
- *      2 - Accept
- *      3 - Decline
- *      4 - Addendum
- *      5 - No/Was
- *      6 - Trade Report Cancel
- *      7 - (Locked-In) Trade Break
- *      8 - Defaulted
- *      9 - Invalid CMTA
- *      10 - Pended
- *      11 - Alleged New
- *      12 - Alleged Addendum
- *      13 - Alleged No/Was
- *      14 - Alleged Trade Report Cancel
- *      15 - Alleged (Locked-In) Trade Break
+ *  <p>    0 - Submit
+ *  <p>    1 - Alleged
+ *  <p>    2 - Accept
+ *  <p>    3 - Decline
+ *  <p>    4 - Addendum
+ *  <p></p>
+ *  <p>    5 - No-Was
+ *  <p>    6 - Trade Report Cancel
+ *  <p>    7 - (Locked-In) Trade Break
+ *  <p>    8 - Defaulted
+ *  <p>    9 - Invalid CMTA
+ *  <p></p>
+ *  <p>    10 - Pended
+ *  <p>    11 - Alleged New
+ *  <p>    12 - Alleged Addendum
+ *  <p>    13 - Alleged No-Was
+ *  <p>    14 - Alleged Trade Report Cancel
+ *  <p></p>
+ *  <p>    15 - Alleged (Locked-In) Trade Break
  */
 public class Tag856EnuTradeReportType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum856TradeReportType dataValue;
@@ -79,7 +84,20 @@ public class Tag856EnuTradeReportType extends FIX44Abstract implements LogValueP
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -118,13 +136,14 @@ public class Tag856EnuTradeReportType extends FIX44Abstract implements LogValueP
         Tag856EnuTradeReportType tagData;
 
         tagData = new Tag856EnuTradeReportType(TESTA_ENU_TRADE_REPORT_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag856EnuTradeReportType(TESTB_ENU_TRADE_REPORT_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum856TradeReportType oneEnum : Enum856TradeReportType.values()) {
+            System.out.println( new Tag856EnuTradeReportType(oneEnum).toVerboseString() );
+        }
     }
 }

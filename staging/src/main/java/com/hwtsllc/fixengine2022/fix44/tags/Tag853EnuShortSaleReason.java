@@ -27,15 +27,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  853
  *  ShortSaleReason
  *  int
+ *  <p></p>
  *  Reason for short sale.
+ *  <p></p>
  *  Valid values:
- *      0 - Dealer Sold Short
- *      1 - Dealer Sold Short Exempt
- *      2 - Selling Customer Sold Short
- *      3 - Selling Customer Sold Short Exempt
- *      4 - Qualified Service Representative (QSR) or Automatic Give-up (AGU) Contra Side Sold Short
- *
- *      5 - QSR or AGU Contra Side Sold Short Exempt
+ *  <p>    0 - Dealer Sold Short
+ *  <p>    1 - Dealer Sold Short Exempt
+ *  <p>    2 - Selling Customer Sold Short
+ *  <p>    3 - Selling Customer Sold Short Exempt
+ *  <p>    4 - Qualified Service Representative (QSR)
+ *              or Automatic Give-up (AGU) Contra Side Sold Short
+ *  <p></p>
+ *  <p>    5 - QSR or AGU Contra Side Sold Short Exempt
  */
 public class Tag853EnuShortSaleReason extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum853ShortSaleReason dataValue;
@@ -70,7 +73,20 @@ public class Tag853EnuShortSaleReason extends FIX44Abstract implements LogValueP
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -109,13 +125,14 @@ public class Tag853EnuShortSaleReason extends FIX44Abstract implements LogValueP
         Tag853EnuShortSaleReason tagData;
 
         tagData = new Tag853EnuShortSaleReason(TESTA_ENU_SHORT_SALE_REASON);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag853EnuShortSaleReason(TESTB_ENU_SHORT_SALE_REASON);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum853ShortSaleReason oneEnum : Enum853ShortSaleReason.values()) {
+            System.out.println( new Tag853EnuShortSaleReason(oneEnum).toVerboseString() );
+        }
     }
 }

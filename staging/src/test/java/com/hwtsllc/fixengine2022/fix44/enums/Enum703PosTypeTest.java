@@ -22,36 +22,43 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  703
+ *  PosType
+ *  String
+ *  <p></p>
+ *  Used to identify the type of quantity that is being returned.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    ALC - Allocation Trade Qty
+ *  <p>    AS - Option Assignment
+ *  <p>    ASF - As-of Trade Qty
+ *  <p>    DLV - Delivery Qty
+ *  <p>    ETR - Electronic Trade Qty
+ *  <p></p>
+ *  <p>    EX - Option Exercise Qty
+ *  <p>    FIN - End-of-Day Qty
+ *  <p>    IAS - Intra-spread Qty
+ *  <p>    IES - Inter-spread Qty
+ *  <p>    PA - Adjustment Qty
+ *  <p></p>
+ *  <p>    PIT - Pit Trade Qty
+ *  <p>    SOD - Start-of-Day Qty
+ *  <p>    SPL - Integral Split
+ *  <p>    TA - Transaction from Assignment
+ *  <p>    TOT - Total Transaction Qty
+ *  <p></p>
+ *  <p>    TQ - Transaction Quantity
+ *  <p>    TRF - Transfer Trade Qty
+ *  <p>    TX - Transaction from Exercise
+ *  <p>    XM - Cross Margin Qty
+ *  <p>    RCV - Receive Quantity
+ *  <p></p>
+ *  <p>    CAA - Corporate Action Adjustment
+ *  <p>    DN - Delivery Notice Qty
+ *  <p>    EP - Exchange for Physical Qty
+ */
 class Enum703PosTypeTest {
-    /**
-     *  703
-     *  PosType
-     *  Used to identify the type of quantity that is being returned.
-     *  Valid values:
-     *      ALC - Allocation Trade Qty
-     *      AS - Option Assignment
-     *      ASF - As-of Trade Qty
-     *      DLV - Delivery Qty
-     *      ETR - Electronic Trade Qty
-     *      EX - Option Exercise Qty
-     *      FIN - End-of-Day Qty
-     *      IAS - Intra-spread Qty
-     *      IES - Inter-spread Qty
-     *      PA - Adjustment Qty
-     *      PIT - Pit Trade Qty
-     *      SOD - Start-of-Day Qty
-     *      SPL - Integral Split
-     *      TA - Transaction from Assignment
-     *      TOT - Total Transaction Qty
-     *      TQ - Transaction Quantity
-     *      TRF - Transfer Trade Qty
-     *      TX - Transaction from Exercise
-     *      XM - Cross Margin Qty
-     *      RCV - Receive Quantity
-     *      CAA - Corporate Action Adjustment
-     *      DN - Delivery Notice Qty
-     *      EP - Exchange for Physical Qty
-     */
     @Test
     void EnumTest() {
         Enum703PosType enumType;

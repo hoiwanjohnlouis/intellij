@@ -27,11 +27,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  940
  *  AffirmStatus
  *  int
+ *  <p></p>
  *  Identifies the status of the ConfirmationAck.
+ *  <p></p>
  *  Valid values:
- *      1 - Received
- *      2 - Confirm rejected, i.e. not affirmed
- *      3 - Affirmed
+ *  <p>    1 - Received
+ *  <p>    2 - Confirm rejected, i.e. not affirmed
+ *  <p>    3 - Affirmed
  */
 public class Tag940EnuAffirmStatus extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum940AffirmStatus dataValue;
@@ -66,7 +68,20 @@ public class Tag940EnuAffirmStatus extends FIX44Abstract implements LogValuePair
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -105,13 +120,14 @@ public class Tag940EnuAffirmStatus extends FIX44Abstract implements LogValuePair
         Tag940EnuAffirmStatus tagData;
 
         tagData = new Tag940EnuAffirmStatus(TESTA_ENU_AFFIRM_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag940EnuAffirmStatus(TESTB_ENU_AFFIRM_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum940AffirmStatus oneEnum : Enum940AffirmStatus.values()) {
+            System.out.println( new Tag940EnuAffirmStatus(oneEnum).toVerboseString() );
+        }
     }
 }

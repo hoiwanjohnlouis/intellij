@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  955
  *  LegContractSettlMonth
  *  month-year
+ *  <p></p>
  *  Specifies when the contract (i.e. MBS/TBA) will settle.
  */
 public class Tag955LegContractSettlMonth {

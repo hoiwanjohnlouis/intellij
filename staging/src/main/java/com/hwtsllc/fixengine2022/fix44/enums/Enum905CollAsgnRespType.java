@@ -23,12 +23,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  905
  *  CollAsgnRespType
  *  int
+ *  <p></p>
  *  Collateral Assignment Response Type
+ *  <p></p>
  *  Valid values:
- *      0 - Received
- *      1 - Accepted
- *      2 - Declined
- *      3 - Rejected
+ *  <p>    0 - Received
+ *  <p>    1 - Accepted
+ *  <p>    2 - Declined
+ *  <p>    3 - Rejected
  */
 public enum Enum905CollAsgnRespType implements LogFIXString, LogVerboseString {
     RECEIVED( "0", "RECEIVED", "0 - Received" ),
@@ -118,6 +120,7 @@ public enum Enum905CollAsgnRespType implements LogFIXString, LogVerboseString {
          */
         for (Enum905CollAsgnRespType oneEnum : Enum905CollAsgnRespType.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

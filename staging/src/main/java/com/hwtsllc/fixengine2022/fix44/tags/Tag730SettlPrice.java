@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  730
  *  SettlPrice
  *  Price
+ *  <p></p>
  *  Settlement price
  */
 public class Tag730SettlPrice {

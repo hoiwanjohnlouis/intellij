@@ -20,7 +20,9 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  948
  *  NoNested3PartyIDs
  *  NumInGroup
- *  Number of Nested3PartyID (949), Nested3PartyIDSource (950), and Nested3PartyRole (95) entries
+ *  <p></p>
+ *  Number of Nested3PartyID (949), Nested3PartyIDSource (950),
+ *  and Nested3PartyRole (95) entries
  */
 public class Tag948NoNested3PartyIDs {
 }

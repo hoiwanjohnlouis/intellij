@@ -27,11 +27,14 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 /**
  *  773
  *  ConfirmType
+ *  int
+ *  <p></p>
  *  Identifies the type of Confirmation message being sent.
+ *  <p></p>
  *  Valid values:
- *      1 - Status
- *      2 - Confirmation
- *      3 - Confirmation Request Rejected (reason can be stated in Text (58) field)
+ *  <p>    1 - Status
+ *  <p>    2 - Confirmation
+ *  <p>    3 - Confirmation Request Rejected (reason can be stated in Text (58) field)
  */
 class Tag773EnuConfirmTypeTest {
     @Test

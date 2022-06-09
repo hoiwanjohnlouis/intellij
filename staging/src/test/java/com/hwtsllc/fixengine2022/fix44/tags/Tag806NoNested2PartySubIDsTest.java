@@ -23,6 +23,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  806
+ *  NoNested2PartySubIDs
+ *  NumInGroup
+ *  <p></p>
+ *  Number of Nested2PartySubID (760) and Nested2PartySubIDType (807) entries.
+ *  <p></p>
+ *  Second instance of <NestedParties>.
+ */
 class Tag806NoNested2PartySubIDsTest {
     @Test
     void FIX0806Test() {

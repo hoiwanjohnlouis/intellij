@@ -27,10 +27,12 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  827
  *  ExpirationCycle
  *  int
+ *  <p></p>
  *  Part of trading cycle when an instrument expires. Field is applicable for derivatives.
+ *  <p></p>
  *  Valid values:
- *      0 - Expire on trading session close (default)
- *      1 - Expire on trading session open
+ *  <p>    0 - Expire on trading session close (default)
+ *  <p>    1 - Expire on trading session open
  */
 public class Tag827EnuExpirationCycle extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum827ExpirationCycle dataValue;
@@ -65,7 +67,20 @@ public class Tag827EnuExpirationCycle extends FIX44Abstract implements LogValueP
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -104,13 +119,14 @@ public class Tag827EnuExpirationCycle extends FIX44Abstract implements LogValueP
         Tag827EnuExpirationCycle tagData;
 
         tagData = new Tag827EnuExpirationCycle(TESTA_ENU_EXPIRATION_CYCLE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag827EnuExpirationCycle(TESTB_ENU_EXPIRATION_CYCLE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum827ExpirationCycle oneEnum : Enum827ExpirationCycle.values()) {
+            System.out.println( new Tag827EnuExpirationCycle(oneEnum).toVerboseString() );
+        }
     }
 }

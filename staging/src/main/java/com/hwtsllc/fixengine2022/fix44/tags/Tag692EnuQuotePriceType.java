@@ -26,19 +26,24 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  692
  *  QuotePriceType
+ *  int
+ *  <p></p>
  *  Code to represent price type requested in Quote.
- *      If the Quote Request is for a Swap values 1-8 apply to all legs.
+ *  <p></p>
+ *  If the Quote Request is for a Swap values 1-8 apply to all legs.
+ *  <p></p>
  *  Valid values:
- *      1 - Percent (percent of par)
- *      2 - Per Share (e.g. cents per share)
- *      3 - Fixed Amount (absolute value)
- *      4 - Discount - percentage points below par
- *      5 - Premium - percentage points over par
- *      6 - Spread - basis points relative to benchmark
- *      7 - TED Price
- *      8 - TED Yield
- *      9 - Yield Spread (swaps)
- *      10 - Yield
+ *  <p>    1 - Percent (percent of par)
+ *  <p>    2 - Per Share (e.g. cents per share)
+ *  <p>    3 - Fixed Amount (absolute value)
+ *  <p>    4 - Discount - percentage points below par
+ *  <p>    5 - Premium - percentage points over par
+ *  <p></p>
+ *  <p>    6 - Spread - basis points relative to benchmark
+ *  <p>    7 - TED Price
+ *  <p>    8 - TED Yield
+ *  <p>    9 - Yield Spread (swaps)
+ *  <p>    10 - Yield
  */
 public class Tag692EnuQuotePriceType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum692QuotePriceType dataValue;
@@ -73,7 +78,20 @@ public class Tag692EnuQuotePriceType extends FIX44Abstract implements LogValuePa
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -112,13 +130,14 @@ public class Tag692EnuQuotePriceType extends FIX44Abstract implements LogValuePa
         Tag692EnuQuotePriceType tagData;
 
         tagData = new Tag692EnuQuotePriceType(TESTA_ENU_QUOTE_PRICE_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag692EnuQuotePriceType(TESTB_ENU_QUOTE_PRICE_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum692QuotePriceType oneEnum : Enum692QuotePriceType.values()) {
+            System.out.println( new Tag692EnuQuotePriceType(oneEnum).toVerboseString() );
+        }
     }
 }

@@ -27,12 +27,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  924
  *  UserRequestType
  *  int
+ *  <p></p>
  *  Indicates the action required by a User Request Message
+ *  <p></p>
  *  Valid values:
- *      1 - Log On User
- *      2 - Log Off User
- *      3 - Change Password For User
- *      4 - Request Individual User Status
+ *  <p>    1 - Log On User
+ *  <p>    2 - Log Off User
+ *  <p>    3 - Change Password For User
+ *  <p>    4 - Request Individual User Status
  */
 public class Tag924EnuUserRequestType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum924UserRequestType dataValue;
@@ -67,7 +69,20 @@ public class Tag924EnuUserRequestType extends FIX44Abstract implements LogValueP
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -106,13 +121,14 @@ public class Tag924EnuUserRequestType extends FIX44Abstract implements LogValueP
         Tag924EnuUserRequestType tagData;
 
         tagData = new Tag924EnuUserRequestType(TESTA_ENU_USER_REQUEST_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag924EnuUserRequestType(TESTB_ENU_USER_REQUEST_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum924UserRequestType oneEnum : Enum924UserRequestType.values()) {
+            System.out.println( new Tag924EnuUserRequestType(oneEnum).toVerboseString() );
+        }
     }
 }

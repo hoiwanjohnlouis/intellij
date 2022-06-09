@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  704
  *  LongQty
  *  Qty
+ *  <p></p>
  *  Long Quantity
  */
 class Tag704LongQtyTest {

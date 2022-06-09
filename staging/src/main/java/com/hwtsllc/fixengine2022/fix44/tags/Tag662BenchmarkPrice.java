@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  662
  *  BenchmarkPrice
  *  Price
+ *  <p></p>
  *  Specifies the price of the benchmark.
  */
 public class Tag662BenchmarkPrice {

@@ -27,8 +27,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  943
  *  TimeBracket
  *  String
+ *  <p></p>
  *  A code that represents a time interval in which a fill or trade occurred.
- *          Required for US futures markets.
+ *  <p></p>
+ *  Required for US futures markets.
  */
 class Tag943TimeBracketTest {
     @Test

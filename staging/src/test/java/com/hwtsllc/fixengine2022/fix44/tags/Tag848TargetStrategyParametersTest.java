@@ -27,8 +27,11 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  848
  *  TargetStrategyParameters
  *  String
- *  Deprecated in FIX.5.0 Field to allow further specification of the TargetStrategy.
- *  Usage to be agreed between counterparties
+ *  <p></p>
+ *  Deprecated in FIX.5.0
+ *  <p></p>
+ *  Field to allow further specification of the TargetStrategy
+ *  - usage to be agreed between counterparties
  */
 class Tag848TargetStrategyParametersTest {
     @Test

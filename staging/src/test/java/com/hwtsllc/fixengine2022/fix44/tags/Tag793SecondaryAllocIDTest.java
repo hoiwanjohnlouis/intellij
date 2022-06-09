@@ -27,11 +27,14 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  793
  *  SecondaryAllocID
  *  String
+ *  <p></p>
  *  Secondary allocation identifier.
- *  Unlike the AllocID (70), this can be shared across
- *  a number of allocation instruction or allocation report messages,
- *  thereby making it possible to pass an identifier for an
- *  original allocation message on multiple messages
+ *  <p></p>
+ *  Unlike the AllocID (70),
+ *  this can be shared across a number of allocation instruction
+ *  or allocation report messages, thereby making it possible to
+ *  pass an identifier for an original allocation message on multiple messages
+ *  <p></p>
  *  (e.g. from one party to a second to a third, across cancel and replace messages etc.).
  */
 class Tag793SecondaryAllocIDTest {

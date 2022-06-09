@@ -26,12 +26,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  788
  *  TerminationType
+ *  int
+ *  <p></p>
  *  Type of financing termination.
+ *  <p></p>
  *  Valid values:
- *      1 - Overnight
- *      2 - Term
- *      3 - Flexible
- *      4 - Open
+ *  <p>    1 - Overnight
+ *  <p>    2 - Term
+ *  <p>    3 - Flexible
+ *  <p>    4 - Open
  */
 public class Tag788EnuTerminationType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum788TerminationType dataValue;
@@ -66,7 +69,20 @@ public class Tag788EnuTerminationType extends FIX44Abstract implements LogValueP
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -105,13 +121,14 @@ public class Tag788EnuTerminationType extends FIX44Abstract implements LogValueP
         Tag788EnuTerminationType tagData;
 
         tagData = new Tag788EnuTerminationType(TESTA_ENU_TERMINATION_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag788EnuTerminationType(TESTB_ENU_TERMINATION_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum788TerminationType oneEnum : Enum788TerminationType.values()) {
+            System.out.println( new Tag788EnuTerminationType(oneEnum).toVerboseString() );
+        }
     }
 }

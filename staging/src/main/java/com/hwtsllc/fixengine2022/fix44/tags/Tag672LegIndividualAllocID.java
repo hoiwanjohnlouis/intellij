@@ -20,8 +20,10 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  672
  *  LegIndividualAllocID
  *  String
+ *  <p></p>
  *  Reference for the individual allocation ticket
- *        See IndividualAllocID (467) for description and valid values.
+ *  <p></p>
+ *  See IndividualAllocID (467) for description and valid values.
  */
 public class Tag672LegIndividualAllocID {
 }

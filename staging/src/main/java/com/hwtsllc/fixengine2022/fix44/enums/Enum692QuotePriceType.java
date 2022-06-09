@@ -22,19 +22,24 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  692
  *  QuotePriceType
+ *  int
+ *  <p></p>
  *  Code to represent price type requested in Quote.
- *      If the Quote Request is for a Swap values 1-8 apply to all legs.
+ *  <p></p>
+ *  If the Quote Request is for a Swap values 1-8 apply to all legs.
+ *  <p></p>
  *  Valid values:
- *      1 - Percent (percent of par)
- *      2 - Per Share (e.g. cents per share)
- *      3 - Fixed Amount (absolute value)
- *      4 - Discount - percentage points below par
- *      5 - Premium - percentage points over par
- *      6 - Spread - basis points relative to benchmark
- *      7 - TED Price
- *      8 - TED Yield
- *      9 - Yield Spread (swaps)
- *      10 - Yield
+ *  <p>    1 - Percent (percent of par)
+ *  <p>    2 - Per Share (e.g. cents per share)
+ *  <p>    3 - Fixed Amount (absolute value)
+ *  <p>    4 - Discount - percentage points below par
+ *  <p>    5 - Premium - percentage points over par
+ *  <p></p>
+ *  <p>    6 - Spread - basis points relative to benchmark
+ *  <p>    7 - TED Price
+ *  <p>    8 - TED Yield
+ *  <p>    9 - Yield Spread (swaps)
+ *  <p>    10 - Yield
  */
 public enum Enum692QuotePriceType implements LogFIXString, LogVerboseString {
     PERCENT( "1", "PERCENT", "1 - Percent (percent of par)" ),
@@ -42,6 +47,7 @@ public enum Enum692QuotePriceType implements LogFIXString, LogVerboseString {
     FIXED_AMOUNT( "3", "FIXED_AMOUNT", "3 - Fixed Amount (absolute value)" ),
     DISCOUNT( "4", "DISCOUNT", "4 - Discount - percentage points below par" ),
     PREMIUM( "5", "PREMIUM", "5 - Premium - percentage points over par" ),
+
     SPREAD( "6", "SPREAD", "6 - Spread - basis points relative to benchmark" ),
     TED_PRICE( "7", "TED_PRICE", "7 - TED Price" ),
     TED_YIELD( "8", "TED_YIELD", "8 - TED Yield" ),
@@ -130,6 +136,7 @@ public enum Enum692QuotePriceType implements LogFIXString, LogVerboseString {
          */
         for (Enum692QuotePriceType oneEnum : Enum692QuotePriceType.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

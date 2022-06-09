@@ -22,14 +22,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  724
  *  PosReqType
+ *  int
+ *  <p></p>
  *  Used to specify the type of position request being made.
+ *  <p></p>
  *  Valid values:
- *      0 - Positions
- *      1 - Trades
- *      2 - Exercises
- *      3 - Assignments
- *      4 - Settlement Activity
- *      5 - Backout Message
+ *  <p>    0 - Positions
+ *  <p>    1 - Trades
+ *  <p>    2 - Exercises
+ *  <p>    3 - Assignments
+ *  <p>    4 - Settlement Activity
+ *  <p></p>
+ *  <p>    5 - Backout Message
  */
 public enum Enum724PosReqType implements LogFIXString, LogVerboseString {
     POSITIONS( "0", "POSITIONS", "0 - Positions" ),
@@ -37,6 +41,7 @@ public enum Enum724PosReqType implements LogFIXString, LogVerboseString {
     EXERCISES( "2", "EXERCISES", "2 - Exercises" ),
     ASSIGNMENTS( "3", "ASSIGNMENTS", "3 - Assignments" ),
     SETTLEMENT_ACTIVITY( "4", "SETTLEMENT_ACTIVITY", "4 - Settlement Activity" ),
+
     BACKOUT_MESSAGE( "5", "BACKOUT_MESSAGE", "5 - Backout Message" ),
     ;
 
@@ -121,6 +126,7 @@ public enum Enum724PosReqType implements LogFIXString, LogVerboseString {
          */
         for (Enum724PosReqType oneEnum : Enum724PosReqType.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

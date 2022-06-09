@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  884
  *  UnderlyingStartValue
  *  Amt
+ *  <p></p>
  *  Currency value attributed to this collateral at the start of the agreement
  */
 class Tag884UnderlyingStartValueTest {

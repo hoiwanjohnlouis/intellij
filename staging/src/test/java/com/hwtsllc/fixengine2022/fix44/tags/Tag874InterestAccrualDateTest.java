@@ -27,8 +27,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  874
  *  InterestAccrualDate
  *  LocalMktDate
- *  The start date used for calculating accrued interest on debt instruments
- *  which are being sold between interest payment dates.
+ *  <p></p>
+ *  The start date used for calculating accrued interest on
+ *  debt instruments which are being sold between interest payment dates.
+ *  <p></p>
  *  Often but not always the same as the Issue Date and the Dated Date
  */
 class Tag874InterestAccrualDateTest {

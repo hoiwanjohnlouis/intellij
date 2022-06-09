@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  717
  *  SettlSessSubID
  *  String
+ *  <p></p>
  *  SubID value associated with SettlSessID (716)
  */
 class Tag717SettlSessSubIDTest {

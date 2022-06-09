@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  824
  *  TradeLegRefID
  *  String
+ *  <p></p>
  *  Reference to the leg of a multileg instrument to which this trade refers
  */
 public class Tag824TradeLegRefID {

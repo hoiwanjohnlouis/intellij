@@ -26,12 +26,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  718
  *  AdjustmentType
+ *  int
+ *  <p></p>
  *  Type of adjustment to be applied, used for PCS and PAJ
+ *  <p></p>
  *  Valid values:
- *      0 - Process Request As Margin Disposition
- *      1 - Delta Plus
- *      2 - Delta Minus
- *      3 - Final
+ *  <p>    0 - Process Request As Margin Disposition
+ *  <p>    1 - Delta Plus
+ *  <p>    2 - Delta Minus
+ *  <p>    3 - Final
  */
 public class Tag718EnuAdjustmentType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum718AdjustmentType dataValue;
@@ -66,7 +69,20 @@ public class Tag718EnuAdjustmentType extends FIX44Abstract implements LogValuePa
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -105,13 +121,14 @@ public class Tag718EnuAdjustmentType extends FIX44Abstract implements LogValuePa
         Tag718EnuAdjustmentType tagData;
 
         tagData = new Tag718EnuAdjustmentType(TESTA_ENU_ADJUSTMENT_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag718EnuAdjustmentType(TESTB_ENU_ADJUSTMENT_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum718AdjustmentType oneEnum : Enum718AdjustmentType.values()) {
+            System.out.println( new Tag718EnuAdjustmentType(oneEnum).toVerboseString() );
+        }
     }
 }

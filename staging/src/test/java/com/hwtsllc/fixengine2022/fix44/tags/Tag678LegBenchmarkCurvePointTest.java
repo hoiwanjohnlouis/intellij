@@ -27,8 +27,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  678
  *  LegBenchmarkCurvePoint
  *  String
+ *  <p></p>
  *  Identifies the point on the Leg Benchmark Curve.
- *        See BenchmarkCurvePoint (222) for description and valid values.
+ *  <p></p>
+ *  See BenchmarkCurvePoint (222) for description and valid values.
  */
 class Tag678LegBenchmarkCurvePointTest {
     @Test

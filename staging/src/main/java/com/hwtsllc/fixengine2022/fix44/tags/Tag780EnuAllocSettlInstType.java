@@ -26,14 +26,17 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  780
  *  AllocSettlInstType
+ *  int
+ *  <p></p>
  *  Used to indicate whether settlement instructions are provided on an
  *  allocation instruction message, and if not, how they are to be derived.
+ *  <p></p>
  *  Valid values:
- *      0 - Use default instructions
- *      1 - Derive from parameters provided
- *      2 - Full details provided
- *      3 - SSI DB IDs provided
- *      4 - Phone for instructions
+ *  <p>    0 - Use default instructions
+ *  <p>    1 - Derive from parameters provided
+ *  <p>    2 - Full details provided
+ *  <p>    3 - SSI DB IDs provided
+ *  <p>    4 - Phone for instructions
  */
 public class Tag780EnuAllocSettlInstType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum780AllocSettlInstType dataValue;
@@ -68,7 +71,20 @@ public class Tag780EnuAllocSettlInstType extends FIX44Abstract implements LogVal
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -107,13 +123,14 @@ public class Tag780EnuAllocSettlInstType extends FIX44Abstract implements LogVal
         Tag780EnuAllocSettlInstType tagData;
 
         tagData = new Tag780EnuAllocSettlInstType(TESTA_ENU_ALLOC_SETTL_INST_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag780EnuAllocSettlInstType(TESTB_ENU_ALLOC_SETTL_INST_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum780AllocSettlInstType oneEnum : Enum780AllocSettlInstType.values()) {
+            System.out.println( new Tag780EnuAllocSettlInstType(oneEnum).toVerboseString() );
+        }
     }
 }

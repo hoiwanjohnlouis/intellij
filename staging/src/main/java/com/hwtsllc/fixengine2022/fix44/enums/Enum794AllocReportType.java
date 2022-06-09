@@ -22,18 +22,23 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  794
  *  AllocReportType
+ *  int
+ *  <p></p>
  *  Describes the specific type or purpose of an Allocation Report message
+ *  <p></p>
  *  Valid values:
- *      2 - Preliminary Request to Intermediary
- *      3 - Sellside Calculated Using Preliminary (includes MiscFees and NetMoney)
- *      4 - Sellside Calculated Without Preliminary (sent unsolicited by sellside, includes MiscFees and NetMoney)
- *      5 - Warehouse Recap
- *      8 - Request to Intermediary
- *      9 - Accept
- *      10 - Reject
- *      11 - Accept Pending
- *      12 - Complete
- *      14 - Reverse Pending
+ *  <p>    2 - Preliminary Request to Intermediary
+ *  <p>    3 - Sellside Calculated Using Preliminary (includes MiscFees and NetMoney)
+ *  <p>    4 - Sellside Calculated Without Preliminary
+ *          (sent unsolicited by sellside, includes MiscFees and NetMoney)
+ *  <p>    5 - Warehouse Recap
+ *  <p>    8 - Request to Intermediary
+ *  <p></p>
+ *  <p>    9 - Accept
+ *  <p>    10 - Reject
+ *  <p>    11 - Accept Pending
+ *  <p>    12 - Complete
+ *  <p>    14 - Reverse Pending
  */
 public enum Enum794AllocReportType implements LogFIXString, LogVerboseString {
     PRELIMINARY_REQUEST( "2", "PRELIMINARY_REQUEST", "2 - Preliminary Request to Intermediary" ),
@@ -41,6 +46,7 @@ public enum Enum794AllocReportType implements LogFIXString, LogVerboseString {
     SELLSIDE_WITHOUT_PRELIMINARY( "4", "SELLSIDE_WITHOUT_PRELIMINARY", "4 - Sellside Calculated Without Preliminary (sent unsolicited by sellside, includes MiscFees and NetMoney)" ),
     WAREHOUSE_RECAP( "5", "WAREHOUSE_RECAP", "5 - Warehouse Recap" ),
     REQUEST_TO_INTERMEDIARY( "8", "REQUEST_TO_INTERMEDIARY", "8 - Request to Intermediary" ),
+
     ACCEPT( "9", "ACCEPT", "9 - Accept" ),
     REJECT( "10", "REJECT", "10 - Reject" ),
     ACCEPT_PENDING( "11", "ACCEPT_PENDING", "11 - Accept Pending" ),
@@ -129,6 +135,7 @@ public enum Enum794AllocReportType implements LogFIXString, LogVerboseString {
          */
         for (Enum794AllocReportType oneEnum : Enum794AllocReportType.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

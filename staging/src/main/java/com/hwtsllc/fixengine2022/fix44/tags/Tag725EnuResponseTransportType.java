@@ -26,11 +26,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  725
  *  ResponseTransportType
+ *  int
+ *  <p></p>
  *  Identifies how the response to the request should be transmitted.
- *              Details specified via ResponseDestination (726).
+ *  <p></p>
+ *  Details specified via ResponseDestination (726).
+ *  <p></p>
  *  Valid values:
- *      0 - Inband - transport the request was sent over (default)
- *      1 - Out of Band - pre-arranged out-of-band delivery mechanism
+ *  <p>    0 - Inband - transport the request was sent over (default)
+ *  <p>    1 - Out of Band - pre-arranged out-of-band delivery mechanism
  *              (i.e. FTP, HTTP, NDM, etc.) between counterparties
  */
 public class Tag725EnuResponseTransportType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
@@ -66,7 +70,20 @@ public class Tag725EnuResponseTransportType extends FIX44Abstract implements Log
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -105,13 +122,14 @@ public class Tag725EnuResponseTransportType extends FIX44Abstract implements Log
         Tag725EnuResponseTransportType tagData;
 
         tagData = new Tag725EnuResponseTransportType(TESTA_ENU_RESPONSE_TRANSPORT_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag725EnuResponseTransportType(TESTB_ENU_RESPONSE_TRANSPORT_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum725ResponseTransportType oneEnum : Enum725ResponseTransportType.values()) {
+            System.out.println( new Tag725EnuResponseTransportType(oneEnum).toVerboseString() );
+        }
     }
 }

@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  834
  *  ThresholdAmount
  *  PriceOffset
+ *  <p></p>
  *  Amount that a position has to be in the money before it is exercised.
  */
 class Tag834ThresholdAmountTest {

@@ -26,8 +26,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  782
  *  SettlPartyID
  *  String
+ *  <p></p>
  *  PartyID value within a settlement parties component. Nested repeating group.
- *          Same values as  PartyID (448)
+ *  <p></p>
+ *  Same values as  PartyID (448)
  */
 public class Tag782StrSettlPartyID extends FIX44Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
@@ -60,7 +62,11 @@ public class Tag782StrSettlPartyID extends FIX44Abstract implements LogValuePair
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -78,13 +84,9 @@ public class Tag782StrSettlPartyID extends FIX44Abstract implements LogValuePair
         Tag782StrSettlPartyID tagData;
 
         tagData = new Tag782StrSettlPartyID(new MyStringType(TESTA_STR_SETTL_PARTY_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag782StrSettlPartyID(new MyStringType(TESTB_STR_SETTL_PARTY_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

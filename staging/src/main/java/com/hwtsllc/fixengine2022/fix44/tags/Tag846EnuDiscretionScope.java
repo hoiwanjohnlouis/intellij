@@ -18,7 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyEnumPegDiscretionScope;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumDiscretionOrPegScope;
 import com.hwtsllc.fixengine2022.interfaces.LogDataString;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
@@ -43,14 +43,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    4 - National excluding local
  */
 public class Tag846EnuDiscretionScope extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
-    private final MyEnumPegDiscretionScope dataValue;
+    private final MyEnumDiscretionOrPegScope dataValue;
 
-    public final static MyEnumPegDiscretionScope TESTA_ENU_DISCRETION_SCOPE
-            = MyEnumPegDiscretionScope.NATIONAL;
-    public final static MyEnumPegDiscretionScope TESTB_ENU_DISCRETION_SCOPE
-            = MyEnumPegDiscretionScope.NATIONAL_EXCLUDING_LOCAL;
+    public final static MyEnumDiscretionOrPegScope TESTA_ENU_DISCRETION_SCOPE
+            = MyEnumDiscretionOrPegScope.NATIONAL;
+    public final static MyEnumDiscretionOrPegScope TESTB_ENU_DISCRETION_SCOPE
+            = MyEnumDiscretionOrPegScope.NATIONAL_EXCLUDING_LOCAL;
 
-    public Tag846EnuDiscretionScope(MyEnumPegDiscretionScope dataValue) {
+    public Tag846EnuDiscretionScope( MyEnumDiscretionOrPegScope dataValue) {
         setFixType(FIX44.FIX846_ENU_DISCRETION_SCOPE);
         this.dataValue = dataValue;
     }
@@ -75,7 +75,20 @@ public class Tag846EnuDiscretionScope extends FIX44Abstract implements LogValueP
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -114,13 +127,14 @@ public class Tag846EnuDiscretionScope extends FIX44Abstract implements LogValueP
         Tag846EnuDiscretionScope tagData;
 
         tagData = new Tag846EnuDiscretionScope(TESTA_ENU_DISCRETION_SCOPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag846EnuDiscretionScope(TESTB_ENU_DISCRETION_SCOPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( MyEnumDiscretionOrPegScope oneEnum : MyEnumDiscretionOrPegScope.values()) {
+            System.out.println( new Tag846EnuDiscretionScope(oneEnum).toVerboseString() );
+        }
     }
 }

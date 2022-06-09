@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  902
  *  CollAsgnID
  *  String
+ *  <p></p>
  *  Collateral Assignment Identifier
  */
 class Tag902CollAsgnIDTest {

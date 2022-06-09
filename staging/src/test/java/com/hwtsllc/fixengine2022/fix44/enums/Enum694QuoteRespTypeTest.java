@@ -22,8 +22,24 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  694
+ *  QuoteRespType
+ *  int
+ *  <p></p>
+ *  Identifies the type of Quote Response.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Hit/Lift
+ *  <p>    2 - Counter
+ *  <p>    3 - Expired
+ *  <p>    4 - Cover
+ *  <p>    5 - Done Away
+ *  <p></p>
+ *  <p>    6 - Pass
+ */
 class Enum694QuoteRespTypeTest {
-    /**
+    /*
      *  694
      *  QuoteRespType
      *  Identifies the type of Quote Response.

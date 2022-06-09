@@ -27,11 +27,15 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  825
  *  ExchangeRule
  *  String
+ *  <p></p>
  *  Used to report any exchange rules that apply to this trade.
- *          Primarily intended for US futures markets.
- *          Certain trading practices are permitted by the CFTC,
- *          such as large lot trading, block trading, all or none trades.
- *          If the rules are used, the exchanges are required to indicate these rules on the trade.
+ *  <p></p>
+ *  Primarily intended for US futures markets.
+ *  <p></p>
+ *  Certain trading practices are permitted by the CFTC,
+ *  such as large lot trading, block trading, all or none trades.
+ *  <p></p>
+ *  If the rules are used, the exchanges are required to indicate these rules on the trade.
  */
 class Tag825ExchangeRuleTest {
     @Test

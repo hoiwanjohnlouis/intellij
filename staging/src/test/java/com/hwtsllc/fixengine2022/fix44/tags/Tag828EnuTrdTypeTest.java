@@ -28,59 +28,69 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  828
  *  TrdType
  *  int
+ *  <p></p>
  *  Type of Trade:
  *  Valid values:
- *      0 - Regular Trade
- *      1 - Block Trade
- *      2 - EFP (Exchange for physical)
- *      3 - Transfer
- *      4 - Late Trade
- *      5 - T Trade
- *      6 - Weighted Average Price Trade
- *      7 - Bunched Trade
- *      8 - Late Bunched Trade
- *      9 - Prior Reference Price Trade
- *      10 - After Hours Trade
- *      11 - Exchange for Risk (EFR)
- *      12 - Exchange for Swap (EFS)
- *      13 - Exchange of Futures for (in Market) Futures (EFM) (e,g, full sized for mini)
- *      14 - Exchange of Options for Options (EOO)
- *      15 - Trading at Settlement
- *      16 - All or None
- *      17 - Futures Large Order Execution
- *      18 - Exchange of Futures for Futures (external market) (EFF)
- *      19 - Option Interim Trade
- *      20 - Option Cabinet Trade
- *      22 - Privately Negotiated Trades
- *      23 - Substitution of Futures for Forwards
- *
- *      MiFID Values
- *      24 - Error trade
- *      25 - Special cum dividend (CD)
- *      26 - Special ex dividend (XD)
- *      27 - Special cum coupon (CC)
- *      28 - Special ex coupon (XC)
- *      29 - Cash settlement (CS)
- *      30 - Special price (usually net- or all-in price) (SP)
- *      31 - Guaranteed delivery (GD)
- *      32 - Special cum rights (CR)
- *      33 - Special ex rights (XR)
- *      34 - Special cum capital repayments (CP)
- *      35 - Special ex capital repayments (XP)
- *      36 - Special cum bonus (CB)
- *      37 - Special ex bonus (XB)
- *      38 - Block trade (same as large trade)
- *      39 - Worked principal trade (UK-specific)
- *      40 - Block Trades - after market
- *      41 - Name change
- *      42 - Portfolio transfer
- *      43 - Prorogation buy - Euronext Paris only.
- *                  Is used to defer settlement under French SRD (deferred settlement system).
- *                  Trades must be reported as crosses at zero price.
- *      44 - Prorogation sell - see prorogation buy
- *      45 - Option exercise
- *      46 - Delta neutral transaction
- *      47 - Financing transaction (includes repo and stock lending)
+ *  <p>    0 - Regular Trade
+ *  <p>    1 - Block Trade
+ *  <p>    2 - EFP (Exchange for physical)
+ *  <p>    3 - Transfer
+ *  <p>    4 - Late Trade
+ *  <p></p>
+ *  <p>    5 - T Trade
+ *  <p>    6 - Weighted Average Price Trade
+ *  <p>    7 - Bunched Trade
+ *  <p>    8 - Late Bunched Trade
+ *  <p>    9 - Prior Reference Price Trade
+ *  <p></p>
+ *  <p>    10 - After Hours Trade
+ *  <p>    11 - Exchange for Risk (EFR)
+ *  <p>    12 - Exchange for Swap (EFS)
+ *  <p>    13 - Exchange of Futures for (in Market) Futures (EFM)
+ *              (e,g, full sized for mini)
+ *  <p>    14 - Exchange of Options for Options (EOO)
+ *  <p></p>
+ *  <p>    15 - Trading at Settlement
+ *  <p>    16 - All or None
+ *  <p>    17 - Futures Large Order Execution
+ *  <p>    18 - Exchange of Futures for Futures (external market) (EFF)
+ *  <p>    19 - Option Interim Trade
+ *  <p></p>
+ *  <p>    20 - Option Cabinet Trade
+ *  <p>    22 - Privately Negotiated Trades
+ *  <p>    23 - Substitution of Futures for Forwards
+ *  <p></p>
+ *  <p>    MiFID Values
+ *  <p>    24 - Error trade
+ *  <p>    25 - Special cum dividend (CD)
+ *  <p>    26 - Special ex dividend (XD)
+ *  <p>    27 - Special cum coupon (CC)
+ *  <p>    28 - Special ex coupon (XC)
+ *  <p></p>
+ *  <p>    29 - Cash settlement (CS)
+ *  <p>    30 - Special price (usually net- or all-in price) (SP)
+ *  <p>    31 - Guaranteed delivery (GD)
+ *  <p>    32 - Special cum rights (CR)
+ *  <p>    33 - Special ex rights (XR)
+ *  <p></p>
+ *  <p>    34 - Special cum capital repayments (CP)
+ *  <p>    35 - Special ex capital repayments (XP)
+ *  <p>    36 - Special cum bonus (CB)
+ *  <p>    37 - Special ex bonus (XB)
+ *  <p>    38 - Block trade (same as large trade)
+ *  <p></p>
+ *  <p>    39 - Worked principal trade (UK-specific)
+ *  <p>    40 - Block Trades - after market
+ *  <p>    41 - Name change
+ *  <p>    42 - Portfolio transfer
+ *  <p>    43 - Prorogation buy - Euronext Paris only.
+ *  <p>         Is used to defer settlement under French SRD (deferred settlement system).
+ *  <p>         Trades must be reported as crosses at zero price.
+ *  <p></p>
+ *  <p>    44 - Prorogation sell - see prorogation buy
+ *  <p>    45 - Option exercise
+ *  <p>    46 - Delta neutral transaction
+ *  <p>    47 - Financing transaction (includes repo and stock lending)
  */
 class Tag828EnuTrdTypeTest {
     @Test

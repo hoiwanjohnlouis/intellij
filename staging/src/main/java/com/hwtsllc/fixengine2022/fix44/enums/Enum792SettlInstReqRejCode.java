@@ -22,14 +22,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  792
  *  SettlInstReqRejCode
+ *  int
+ *  <p></p>
  *  Identifies reason for rejection (of a settlement instruction request message).
+ *  <p></p>
  *  Valid values:
- *      0 - Unable to process request
- *      1 - Unknown account
- *      2 - No matching settlement instructions found
- *      99 - Other
- *
- *      or any value conforming to the data type Reserved100Plus
+ *  <p>    0 - Unable to process request
+ *  <p>    1 - Unknown account
+ *  <p>    2 - No matching settlement instructions found
+ *  <p>    99 - Other
+ *  <p>    or any value conforming to the data type Reserved100Plus
  */
 public enum Enum792SettlInstReqRejCode implements LogFIXString, LogVerboseString {
     UNABLE_TO_PROCESS_REQUEST( "0", "UNABLE_TO_PROCESS_REQUEST", "0 - Unable to process request" ),
@@ -119,6 +121,7 @@ public enum Enum792SettlInstReqRejCode implements LogFIXString, LogVerboseString
          */
         for (Enum792SettlInstReqRejCode oneEnum : Enum792SettlInstReqRejCode.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

@@ -26,14 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  724
  *  PosReqType
+ *  int
+ *  <p></p>
  *  Used to specify the type of position request being made.
+ *  <p></p>
  *  Valid values:
- *      0 - Positions
- *      1 - Trades
- *      2 - Exercises
- *      3 - Assignments
- *      4 - Settlement Activity
- *      5 - Backout Message
+ *  <p>    0 - Positions
+ *  <p>    1 - Trades
+ *  <p>    2 - Exercises
+ *  <p>    3 - Assignments
+ *  <p>    4 - Settlement Activity
+ *  <p></p>
+ *  <p>    5 - Backout Message
  */
 public class Tag724EnuPosReqType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum724PosReqType dataValue;
@@ -68,7 +72,20 @@ public class Tag724EnuPosReqType extends FIX44Abstract implements LogValuePairSt
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -107,13 +124,14 @@ public class Tag724EnuPosReqType extends FIX44Abstract implements LogValuePairSt
         Tag724EnuPosReqType tagData;
 
         tagData = new Tag724EnuPosReqType(TESTA_ENU_POS_REQ_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag724EnuPosReqType(TESTB_ENU_POS_REQ_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum724PosReqType oneEnum : Enum724PosReqType.values()) {
+            System.out.println( new Tag724EnuPosReqType(oneEnum).toVerboseString() );
+        }
     }
 }

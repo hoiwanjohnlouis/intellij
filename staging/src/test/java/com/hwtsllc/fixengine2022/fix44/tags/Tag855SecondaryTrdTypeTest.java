@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  855
  *  SecondaryTrdType
  *  int
+ *  <p></p>
  *  Additional TrdType (see tag 828) assigned to a trade by trade match system.
  */
 class Tag855SecondaryTrdTypeTest {

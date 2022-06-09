@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  855
  *  SecondaryTrdType
  *  int
+ *  <p></p>
  *  Additional TrdType (see tag 828) assigned to a trade by trade match system.
  */
 public class Tag855SecondaryTrdType {

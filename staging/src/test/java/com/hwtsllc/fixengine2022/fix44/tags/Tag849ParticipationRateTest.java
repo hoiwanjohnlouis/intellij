@@ -27,9 +27,13 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  849
  *  ParticipationRate
  *  Percentage
- *  Deprecated in FIX.5.0 For a TargetStrategy=Participate order
- *  specifies the target participation rate. For other order types this is
- *  a volume limit (i.e. do not be more than this percent of the market volume)
+ *  <p></p>
+ *  Deprecated in FIX.5.0
+ *  <p></p>
+ *  For a TargetStrategy=Participate order specifies the target particpation rate.
+ *  <p></p>
+ *  For other order types this is a volume limit
+ *  (i.e. do not be more than this percent of the market volume)
  */
 class Tag849ParticipationRateTest {
     @Test

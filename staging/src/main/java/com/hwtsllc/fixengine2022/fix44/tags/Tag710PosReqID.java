@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  710
  *  PosReqID
  *  String
+ *  <p></p>
  *  Unique identifier for the position maintenance request as assigned by the submitter
  */
 public class Tag710PosReqID {

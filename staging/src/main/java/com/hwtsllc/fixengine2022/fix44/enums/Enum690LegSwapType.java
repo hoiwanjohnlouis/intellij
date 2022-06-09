@@ -22,14 +22,19 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  690
  *  LegSwapType
- *  For Fixed Income, used instead of LegQty (687) or LegOrderQty (685)
- *      to requests the respondent to calculate the quantity based on the
+ *  int
+ *  <p></p>
+ *  For Fixed Income
+ *  <p></p>
+ *  Used instead of LegQty (687) or LegOrderQty (685)
+ *      to request the respondent to calculate the quantity based on the
  *      quantity on the opposite side of the swap.
+ *  <p></p>
  *  Valid values:
- *      1 - Par For Par
- *      2 - Modified Duration
- *      4 - Risk
- *      5 - Proceeds
+ *  <p>    1 - Par For Par
+ *  <p>    2 - Modified Duration
+ *  <p>    4 - Risk
+ *  <p>    5 - Proceeds
  */
 public enum Enum690LegSwapType implements LogFIXString, LogVerboseString {
     PAR_FOR_PAR( "1", "PAR_FOR_PAR", "1 - Par For Par" ),
@@ -119,6 +124,7 @@ public enum Enum690LegSwapType implements LogFIXString, LogVerboseString {
          */
         for (Enum690LegSwapType oneEnum : Enum690LegSwapType.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

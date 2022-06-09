@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  667
  *  ContractSettlMonth
  *  month-year
+ *  <p></p>
  *  Specifies when the contract (i.e. MBS/TBA) will settle.
  */
 class Tag667ContractSettlMonthTest {

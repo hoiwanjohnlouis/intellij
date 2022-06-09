@@ -20,8 +20,10 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  689
  *  LegStipulationValue
  *  String
+ *  <p></p>
  *  For Fixed Income, value of stipulation.
- *        See StipulationValue (234) for description and valid values
+ *  <p></p>
+ *  See StipulationValue (234) for description and valid values
  */
 public class Tag689LegStipulationValue {
 }

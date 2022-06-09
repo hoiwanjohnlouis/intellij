@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  727
  *  TotalNumPosReports
  *  int
+ *  <p></p>
  *  Total number of Position Reports being returned.
  */
 class Tag727TotalNumPosReportsTest {

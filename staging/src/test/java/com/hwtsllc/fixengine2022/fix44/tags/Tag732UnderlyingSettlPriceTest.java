@@ -27,8 +27,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  732
  *  UnderlyingSettlPrice
  *  Price
+ *  <p></p>
  *  Underlying security’s SettlPrice.
- *          See SettlPrice (730) field for description
+ *  <p></p>
+ *  See SettlPrice (730) field for description
  */
 class Tag732UnderlyingSettlPriceTest {
     @Test

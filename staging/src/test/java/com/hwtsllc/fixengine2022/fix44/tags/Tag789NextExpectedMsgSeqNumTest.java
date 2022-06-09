@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  789
  *  NextExpectedMsgSeqNum
  *  SeqNum
+ *  <p></p>
  *  Next expected MsgSeqNum value to be received.
  */
 class Tag789NextExpectedMsgSeqNumTest {

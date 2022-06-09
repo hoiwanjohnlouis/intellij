@@ -22,22 +22,26 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  751
+ *  TradeReportRejectReason
+ *  int
+ *  <p></p>
+ *  Reason Trade Capture Request was rejected.
+ *  <p></p>
+ *  4000+ Reserved and available for bi-laterally agreed upon user-defined values
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Successful (default)
+ *  <p>    1 - Invalid party information
+ *  <p>    2 - Unknown instrument
+ *  <p>    3 - Unauthorized to report trades
+ *  <p>    4 - Invalid trade type
+ *  <p></p>
+ *  <p>    99 - Other
+ *  <p>    or any value conforming to the data type Reserved100Plus
+ */
 class Enum751TradeReportRejectReasonTest {
-    /**
-     *  751
-     *  TradeReportRejectReason
-     *  Reason Trade Capture Request was rejected.
-     *  4000+ Reserved and available for bi-laterally agreed upon user-defined values
-     *  Valid values:
-     *      0 - Successful (default)
-     *      1 - Invalid party information
-     *      2 - Unknown instrument
-     *      3 - Unauthorized to report trades
-     *      4 - Invalid trade type
-     *      99 - Other
-     *
-     *      or any value conforming to the data type Reserved100Plus
-     */
     @Test
     void EnumTest() {
         Enum751TradeReportRejectReason enumType;

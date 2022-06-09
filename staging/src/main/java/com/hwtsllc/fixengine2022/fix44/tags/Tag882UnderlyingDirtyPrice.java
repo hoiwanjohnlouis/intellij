@@ -20,8 +20,10 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  882
  *  UnderlyingDirtyPrice
  *  Price
+ *  <p></p>
  *  Price (percent-of-par or per unit) of the underlying security or basket.
- *  "Dirty" means it includes accrued interest
+ *  <p></p>
+ *  'Dirty' means it includes accrued interest
  */
 public class Tag882UnderlyingDirtyPrice {
 }

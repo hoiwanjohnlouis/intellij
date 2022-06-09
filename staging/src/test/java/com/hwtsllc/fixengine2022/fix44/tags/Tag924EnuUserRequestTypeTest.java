@@ -28,12 +28,14 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  924
  *  UserRequestType
  *  int
+ *  <p></p>
  *  Indicates the action required by a User Request Message
+ *  <p></p>
  *  Valid values:
- *      1 - Log On User
- *      2 - Log Off User
- *      3 - Change Password For User
- *      4 - Request Individual User Status
+ *  <p>    1 - Log On User
+ *  <p>    2 - Log Off User
+ *  <p>    3 - Change Password For User
+ *  <p>    4 - Request Individual User Status
  */
 class Tag924EnuUserRequestTypeTest {
     @Test

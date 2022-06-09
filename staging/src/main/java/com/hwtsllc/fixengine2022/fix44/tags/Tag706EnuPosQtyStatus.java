@@ -26,11 +26,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  706
  *  PosQtyStatus
+ *  String
+ *  <p></p>
  *  Status of this position.
+ *  <p></p>
  *  Valid values:
- *  0 - Submitted
- *  1 - Accepted
- *  2 - Rejected
+ *  <p>    0 - Submitted
+ *  <p>    1 - Accepted
+ *  <p>    2 - Rejected
  */
 public class Tag706EnuPosQtyStatus extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum706PosQtyStatus dataValue;
@@ -65,7 +68,20 @@ public class Tag706EnuPosQtyStatus extends FIX44Abstract implements LogValuePair
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -104,13 +120,14 @@ public class Tag706EnuPosQtyStatus extends FIX44Abstract implements LogValuePair
         Tag706EnuPosQtyStatus tagData;
 
         tagData = new Tag706EnuPosQtyStatus(TESTA_ENU_POS_QTY_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag706EnuPosQtyStatus(TESTB_ENU_POS_QTY_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum706PosQtyStatus oneEnum : Enum706PosQtyStatus.values()) {
+            System.out.println( new Tag706EnuPosQtyStatus(oneEnum).toVerboseString() );
+        }
     }
 }

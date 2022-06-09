@@ -27,9 +27,12 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  892
  *  TotNoAllocs
  *  int
+ *  <p></p>
  *  Total number of NoAlloc entries across all messages.
+ *  <p></p>
  *  Should be the sum of all NoAllocs in each message that has
  *  repeating NoAlloc entries related to the same AllocID or AllocReportID.
+ *  <p></p>
  *  Used to support fragmentation.
  */
 class Tag892TotNoAllocsTest {

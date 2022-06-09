@@ -22,15 +22,18 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  747
+ *  ExerciseMethod
+ *  int
+ *  <p></p>
+ *  Exercise Method used to in performing assignment.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    A - Automatic
+ *  <p>    M - Manual
+ */
 class Enum747ExerciseMethodTest {
-    /**
-     *  747
-     *  ExerciseMethod
-     *  Exercise Method used to in performing assignment.
-     *  Valid values:
-     *      A - Automatic
-     *      M - Manual
-     */
     @Test
     void EnumTest() {
         Enum747ExerciseMethod enumType;

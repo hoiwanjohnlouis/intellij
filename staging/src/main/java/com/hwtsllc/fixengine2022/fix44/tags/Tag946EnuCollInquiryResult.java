@@ -27,22 +27,27 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  946
  *  CollInquiryResult
  *  int
+ *  <p></p>
  *  Result returned in response to Collateral Inquiry
+ *  <p></p>
  *  4000+ Reserved and available for bi-laterally agreed upon user-defined values
+ *  <p></p>
  *  Valid values:
- *      0 - Successful (default)
- *      1 - Invalid or unknown instrument
- *      2 - Invalid or unknown collateral type
- *      3 - Invalid Parties
- *      4 - Invalid Transport Type requested
- *      5 - Invalid Destination requested
- *      6 - No collateral found for the trade specified
- *      7 - No collateral found for the order specified
- *      8 - Collateral inquiry type not supported
- *      9 - Unauthorized for collateral inquiry
- *      99 - Other (further information in Text (58) field)
- *
- *      or any value conforming to the data type Reserved100Plus
+ *  <p>    0 - Successful (default)
+ *  <p>    1 - Invalid or unknown instrument
+ *  <p>    2 - Invalid or unknown collateral type
+ *  <p>    3 - Invalid Parties
+ *  <p>    4 - Invalid Transport Type requested
+ *  <p></p>
+ *  <p>    5 - Invalid Destination requested
+ *  <p>    6 - No collateral found for the trade specified
+ *  <p>    7 - No collateral found for the order specified
+ *  <p>    8 - Collateral inquiry type not supported
+ *  <p>    9 - Unauthorized for collateral inquiry
+ *  <p></p>
+ *  <p>    99 - Other (further information in Text (58) field)
+ *  <p></p>
+ *  <p>    or any value conforming to the data type Reserved100Plus
  */
 public class Tag946EnuCollInquiryResult extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum946CollInquiryResult dataValue;
@@ -77,7 +82,20 @@ public class Tag946EnuCollInquiryResult extends FIX44Abstract implements LogValu
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -116,13 +134,14 @@ public class Tag946EnuCollInquiryResult extends FIX44Abstract implements LogValu
         Tag946EnuCollInquiryResult tagData;
 
         tagData = new Tag946EnuCollInquiryResult(TESTA_ENU_COLL_INQUIRY_RESULT);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag946EnuCollInquiryResult(TESTB_ENU_COLL_INQUIRY_RESULT);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum946CollInquiryResult oneEnum : Enum946CollInquiryResult.values()) {
+            System.out.println( new Tag946EnuCollInquiryResult(oneEnum).toVerboseString() );
+        }
     }
 }

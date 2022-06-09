@@ -23,11 +23,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  891
  *  MiscFeeBasis
  *  int
+ *  <p></p>
  *  Defines the unit for a miscellaneous fee.
+ *  <p></p>
  *  Valid values:
- *      0 - Absolute
- *      1 - Per Unit
- *      2 - Percentage
+ *  <p>    0 - Absolute
+ *  <p>    1 - Per Unit
+ *  <p>    2 - Percentage
  */
 public enum Enum891MiscFeeBasis implements LogFIXString, LogVerboseString {
     ABSOLUTE( "0", "ABSOLUTE", "0 - Absolute" ),
@@ -116,6 +118,7 @@ public enum Enum891MiscFeeBasis implements LogFIXString, LogVerboseString {
          */
         for (Enum891MiscFeeBasis oneEnum : Enum891MiscFeeBasis.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

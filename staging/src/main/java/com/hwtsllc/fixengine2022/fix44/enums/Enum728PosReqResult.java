@@ -22,17 +22,21 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  728
  *  PosReqResult
+ *  int
+ *  <p></p>
  *  Result of Request for Position
+ *  <p></p>
  *  4000+ Reserved and available for bi-laterally agreed upon user-defined values
+ *  <p></p>
  *  Valid values:
- *      0 - Valid request
- *      1 - Invalid or unsupported request
- *      2 - No positions found that match criteria
- *      3 - Not authorized to request positions
- *      4 - Request for position not supported
- *      99 - Other (use Text (58) in conjunction with this code for an explanation)
- *
- *      or any value conforming to the data type Reserved100Plus
+ *  <p>    0 - Valid request
+ *  <p>    1 - Invalid or unsupported request
+ *  <p>    2 - No positions found that match criteria
+ *  <p>    3 - Not authorized to request positions
+ *  <p>    4 - Request for position not supported
+ *  <p></p>
+ *  <p>    99 - Other (use Text (58) in conjunction with this code for an explanation)
+ *  <p>    or any value conforming to the data type Reserved100Plus
  */
 public enum Enum728PosReqResult implements LogFIXString, LogVerboseString {
     VALID_REQUEST( "0", "VALID_REQUEST", "0 - Valid request" ),
@@ -40,6 +44,7 @@ public enum Enum728PosReqResult implements LogFIXString, LogVerboseString {
     NO_POSITIONS_FOUND( "2", "NO_POSITIONS_FOUND", "2 - No positions found that match criteria" ),
     NOT_AUTHORIZED( "3", "NOT_AUTHORIZED", "3 - Not authorized to request positions" ),
     REQUEST_NOT_SUPPORTED( "4", "REQUEST_NOT_SUPPORTED", "4 - Request for position not supported" ),
+
     OTHER( "99", "OTHER", "99 - Other (use Text (58) in conjunction with this code for an explanation)" ),
     ;
 
@@ -124,6 +129,7 @@ public enum Enum728PosReqResult implements LogFIXString, LogVerboseString {
          */
         for (Enum728PosReqResult oneEnum : Enum728PosReqResult.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

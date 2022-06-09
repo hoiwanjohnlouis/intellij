@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  714
  *  PosMaintRptRefID
  *  String
+ *  <p></p>
  *  Reference to a PosMaintRptID (721) from a previous Position Maintenance Report
  *  that is being replaced or canceled.
  */

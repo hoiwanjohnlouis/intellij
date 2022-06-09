@@ -26,12 +26,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  716
  *  SettlSessID
+ *  String
+ *  <p></p>
  *  Identifies a specific settlement session
+ *  <p></p>
  *  Valid values:
- *      ITD - Intraday
- *      RTH - Regular Trading Hours
- *      ETH - Electronic Trading Hours
- *      EOD - End Of Day
+ *  <p>    ITD - Intraday
+ *  <p>    RTH - Regular Trading Hours
+ *  <p>    ETH - Electronic Trading Hours
+ *  <p>    EOD - End Of Day
  */
 public class Tag716EnuSettlSessID extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum716SettlSessID dataValue;
@@ -66,7 +69,20 @@ public class Tag716EnuSettlSessID extends FIX44Abstract implements LogValuePairS
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -105,13 +121,14 @@ public class Tag716EnuSettlSessID extends FIX44Abstract implements LogValuePairS
         Tag716EnuSettlSessID tagData;
 
         tagData = new Tag716EnuSettlSessID(TESTA_ENU_SETTL_SESS_ID);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag716EnuSettlSessID(TESTB_ENU_SETTL_SESS_ID);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum716SettlSessID oneEnum : Enum716SettlSessID.values()) {
+            System.out.println( new Tag716EnuSettlSessID(oneEnum).toVerboseString() );
+        }
     }
 }

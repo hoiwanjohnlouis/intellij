@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  697
  *  YieldRedemptionPrice
  *  Price
+ *  <p></p>
  *  Price to which the yield has been calculated.
  */
 class Tag697YieldRedemptionPriceTest {

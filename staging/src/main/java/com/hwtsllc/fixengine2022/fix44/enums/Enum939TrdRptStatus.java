@@ -23,11 +23,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  939
  *  TrdRptStatus
  *  int
+ *  <p></p>
  *  Trade Report Status
+ *  <p></p>
  *  Valid values:
- *      0 - Accepted
- *      1 - Rejected
- *      3 - Accepted with errors
+ *  <p>    0 - Accepted
+ *  <p>    1 - Rejected
+ *  <p>    3 - Accepted with errors
  */
 public enum Enum939TrdRptStatus implements LogFIXString, LogVerboseString {
     ACCEPTED( "0", "ACCEPTED", "0 - Accepted" ),
@@ -116,6 +118,7 @@ public enum Enum939TrdRptStatus implements LogFIXString, LogVerboseString {
          */
         for (Enum939TrdRptStatus oneEnum : Enum939TrdRptStatus.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

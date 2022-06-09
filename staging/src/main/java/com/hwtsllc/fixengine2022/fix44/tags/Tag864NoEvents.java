@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  864
  *  NoEvents
  *  NumInGroup
+ *  <p></p>
  *  Number of  repeating EventType entries.
  */
 public class Tag864NoEvents {

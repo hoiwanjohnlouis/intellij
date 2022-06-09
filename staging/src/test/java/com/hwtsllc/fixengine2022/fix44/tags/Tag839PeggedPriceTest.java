@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  839
  *  PeggedPrice
  *  Price
+ *  <p></p>
  *  The price the order is currently pegged at
  */
 class Tag839PeggedPriceTest {

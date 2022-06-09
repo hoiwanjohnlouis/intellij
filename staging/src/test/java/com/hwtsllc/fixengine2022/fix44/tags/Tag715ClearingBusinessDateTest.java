@@ -27,7 +27,8 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  715
  *  ClearingBusinessDate
  *  LocalMktDate
- *  The "Clearing Business Date" referred to by this maintenance request.
+ *  <p></p>
+ *  The 'Clearing Business Date' referred to by this maintenance request.
  */
 class Tag715ClearingBusinessDateTest {
     @Test

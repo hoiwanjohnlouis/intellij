@@ -20,8 +20,9 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  915
  *  AgreementDate
  *  LocalMktDate
- *  A reference to the date the underlying agreement specified
- *  by AgreementID and AgreementDesc was executed.
+ *  <p></p>
+ *  A reference to the date the underlying agreement specified by
+ *  AgreementID and AgreementDesc was executed.
  */
 public class Tag915AgreementDate {
 }

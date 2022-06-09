@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  778
  *  NoSettlInst
  *  NumInGroup
+ *  <p></p>
  *  Number of settlement instructions within repeating group.
  */
 class Tag778NoSettlInstTest {

@@ -27,8 +27,11 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  881
  *  SecondaryTradeReportRefID
  *  String
- *  Deprecated in FIX.5.0 Used to refer to a previous SecondaryTradeReportRefID
- *  when amending the transaction (cancel, replace, release, or reversal).
+ *  <p></p>
+ *  Deprecated in FIX.5.0
+ *  <p></p>
+ *  Used to refer to a previous SecondaryTradeReportRefID when amending the transaction
+ *  (cancel, replace, release, or reversal).
  */
 class Tag881SecondaryTradeReportRefIDTest {
     @Test

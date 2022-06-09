@@ -27,10 +27,13 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 /**
  *  668
  *  DeliveryForm
+ *  int
+ *  <p></p>
  *  Identifies the form of delivery.
+ *  <p></p>
  *  Valid values:
- *      1 - Book Entry (default)
- *      2 - Bearer
+ *  <p>    1 - Book Entry (default)
+ *  <p>    2 - Bearer
  */
 class Tag668EnuDeliveryFormTest {
     @Test

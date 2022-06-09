@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  886
  *  UnderlyingEndValue
  *  Amt
+ *  <p></p>
  *  Currency value attributed to this collateral at the end of the agreement
  */
 public class Tag886UnderlyingEndValue {

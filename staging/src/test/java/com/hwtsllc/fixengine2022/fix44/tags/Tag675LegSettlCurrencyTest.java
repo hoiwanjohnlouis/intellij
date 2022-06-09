@@ -27,8 +27,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  675
  *  LegSettlCurrency
  *  Currency
+ *  <p></p>
  *  Identifies settlement currency for the Leg.
- *        See SettlCurrency (20) for description and valid values
+ *  <p></p>
+ *  See SettlCurrency (20) for description and valid values
  */
 class Tag675LegSettlCurrencyTest {
     @Test

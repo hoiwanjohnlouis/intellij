@@ -26,11 +26,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  750
  *  TradeRequestStatus
+ *  int
+ *  <p></p>
  *  Status of Trade Request.
+ *  <p></p>
  *  Valid values:
- *      0 - Accepted
- *      1 - Completed
- *      2 - Rejected
+ *  <p>    0 - Accepted
+ *  <p>    1 - Completed
+ *  <p>    2 - Rejected
  */
 public class Tag750EnuTradeRequestStatus extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum750TradeRequestStatus dataValue;
@@ -65,7 +68,20 @@ public class Tag750EnuTradeRequestStatus extends FIX44Abstract implements LogVal
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -104,13 +120,14 @@ public class Tag750EnuTradeRequestStatus extends FIX44Abstract implements LogVal
         Tag750EnuTradeRequestStatus tagData;
 
         tagData = new Tag750EnuTradeRequestStatus(TESTA_ENU_TRADE_REQUEST_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag750EnuTradeRequestStatus(TESTB_ENU_TRADE_REQUEST_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum750TradeRequestStatus oneEnum : Enum750TradeRequestStatus.values()) {
+            System.out.println( new Tag750EnuTradeRequestStatus(oneEnum).toVerboseString() );
+        }
     }
 }

@@ -26,31 +26,38 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  703
  *  PosType
+ *  String
+ *  <p></p>
  *  Used to identify the type of quantity that is being returned.
+ *  <p></p>
  *  Valid values:
- *      ALC - Allocation Trade Qty
- *      AS - Option Assignment
- *      ASF - As-of Trade Qty
- *      DLV - Delivery Qty
- *      ETR - Electronic Trade Qty
- *      EX - Option Exercise Qty
- *      FIN - End-of-Day Qty
- *      IAS - Intra-spread Qty
- *      IES - Inter-spread Qty
- *      PA - Adjustment Qty
- *      PIT - Pit Trade Qty
- *      SOD - Start-of-Day Qty
- *      SPL - Integral Split
- *      TA - Transaction from Assignment
- *      TOT - Total Transaction Qty
- *      TQ - Transaction Quantity
- *      TRF - Transfer Trade Qty
- *      TX - Transaction from Exercise
- *      XM - Cross Margin Qty
- *      RCV - Receive Quantity
- *      CAA - Corporate Action Adjustment
- *      DN - Delivery Notice Qty
- *      EP - Exchange for Physical Qty
+ *  <p>    ALC - Allocation Trade Qty
+ *  <p>    AS - Option Assignment
+ *  <p>    ASF - As-of Trade Qty
+ *  <p>    DLV - Delivery Qty
+ *  <p>    ETR - Electronic Trade Qty
+ *  <p></p>
+ *  <p>    EX - Option Exercise Qty
+ *  <p>    FIN - End-of-Day Qty
+ *  <p>    IAS - Intra-spread Qty
+ *  <p>    IES - Inter-spread Qty
+ *  <p>    PA - Adjustment Qty
+ *  <p></p>
+ *  <p>    PIT - Pit Trade Qty
+ *  <p>    SOD - Start-of-Day Qty
+ *  <p>    SPL - Integral Split
+ *  <p>    TA - Transaction from Assignment
+ *  <p>    TOT - Total Transaction Qty
+ *  <p></p>
+ *  <p>    TQ - Transaction Quantity
+ *  <p>    TRF - Transfer Trade Qty
+ *  <p>    TX - Transaction from Exercise
+ *  <p>    XM - Cross Margin Qty
+ *  <p>    RCV - Receive Quantity
+ *  <p></p>
+ *  <p>    CAA - Corporate Action Adjustment
+ *  <p>    DN - Delivery Notice Qty
+ *  <p>    EP - Exchange for Physical Qty
  */
 public class Tag703EnuPosType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum703PosType dataValue;
@@ -85,7 +92,20 @@ public class Tag703EnuPosType extends FIX44Abstract implements LogValuePairStrin
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -124,13 +144,14 @@ public class Tag703EnuPosType extends FIX44Abstract implements LogValuePairStrin
         Tag703EnuPosType tagData;
 
         tagData = new Tag703EnuPosType(TESTA_ENU_POS_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag703EnuPosType(TESTB_ENU_POS_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum703PosType oneEnum : Enum703PosType.values()) {
+            System.out.println( new Tag703EnuPosType(oneEnum).toVerboseString() );
+        }
     }
 }

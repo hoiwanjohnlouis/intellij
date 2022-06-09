@@ -96,7 +96,20 @@ public class Tag695EnuQuoteQualifier extends FIX44Abstract implements LogValuePa
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -135,13 +148,14 @@ public class Tag695EnuQuoteQualifier extends FIX44Abstract implements LogValuePa
         Tag695EnuQuoteQualifier tagData;
 
         tagData = new Tag695EnuQuoteQualifier(TESTA_ENU_QUOTE_QUALIFIER);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag695EnuQuoteQualifier(TESTB_ENU_QUOTE_QUALIFIER);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( MyEnumQualifier oneEnum : MyEnumQualifier.values()) {
+            System.out.println( new Tag695EnuQuoteQualifier(oneEnum).toVerboseString() );
+        }
     }
 }

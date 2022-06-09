@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  693
  *  QuoteRespID
  *  String
+ *  <p></p>
  *  Message reference for Quote Response
  */
 class Tag693QuoteRespIDTest {

@@ -26,12 +26,14 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  919
  *  DeliveryType
  *  int
+ *  <p></p>
  *  Identifies type of settlement
+ *  <p></p>
  *  Valid values:
- *      0 - Versus Payment: Deliver (if sell) or Receive (if buy) vs. (against) Payment
- *      1 - Free: Deliver (if sell) or Receive (if buy) Free
- *      2 - Tri-Party
- *      3 - Hold In Custody
+ *  <p>    0 - Versus Payment: Deliver (if sell) or Receive (if buy) vs. (against) Payment
+ *  <p>    1 - Free: Deliver (if sell) or Receive (if buy) Free
+ *  <p>    2 - Tri-Party
+ *  <p>    3 - Hold In Custody
  */
 class Enum919DeliveryTypeTest {
     @Test

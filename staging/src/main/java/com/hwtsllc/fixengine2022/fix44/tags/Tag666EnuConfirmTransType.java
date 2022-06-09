@@ -26,11 +26,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  666
  *  ConfirmTransType
+ *  int
+ *  <p></p>
  *  Identifies the Confirmation transaction type.
+ *  <p></p>
  *  Valid values:
- *      0 - New
- *      1 - Replace
- *      2 - Cancel
+ *  <p>    0 - New
+ *  <p>    1 - Replace
+ *  <p>    2 - Cancel
  */
 public class Tag666EnuConfirmTransType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum666ConfirmTransType dataValue;
@@ -65,7 +68,20 @@ public class Tag666EnuConfirmTransType extends FIX44Abstract implements LogValue
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -104,13 +120,14 @@ public class Tag666EnuConfirmTransType extends FIX44Abstract implements LogValue
         Tag666EnuConfirmTransType tagData;
 
         tagData = new Tag666EnuConfirmTransType(TESTA_ENU_CONFIRM_TRANS_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag666EnuConfirmTransType(TESTB_ENU_CONFIRM_TRANS_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum666ConfirmTransType oneEnum : Enum666ConfirmTransType.values()) {
+            System.out.println( new Tag666EnuConfirmTransType(oneEnum).toVerboseString() );
+        }
     }
 }

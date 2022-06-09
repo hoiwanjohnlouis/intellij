@@ -22,17 +22,21 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  707
  *  PosAmtType
+ *  String
+ *  <p></p>
  *  Type of Position amount
+ *  <p></p>
  *  Valid values:
- *      CASH - Cash Amount (Corporate Event)
- *      CRES - Cash Residual Amount
- *      FMTM - Final Mark-to-Market Amount
- *      IMTM - Incremental Mark-to-Market Amount
- *      PREM - Premium Amount
- *      SMTM - Start-of-Day Mark-to-Market Amount
- *      TVAR - Trade Variation Amount
- *      VADJ - Value Adjusted Amount
- *      SETL - Settlement Value
+ *  <p>    CASH - Cash Amount (Corporate Event)
+ *  <p>    CRES - Cash Residual Amount
+ *  <p>    FMTM - Final Mark-to-Market Amount
+ *  <p>    IMTM - Incremental Mark-to-Market Amount
+ *  <p>    PREM - Premium Amount
+ *  <p></p>
+ *  <p>    SMTM - Start-of-Day Mark-to-Market Amount
+ *  <p>    TVAR - Trade Variation Amount
+ *  <p>    VADJ - Value Adjusted Amount
+ *  <p>    SETL - Settlement Value
  */
 public enum Enum707PosAmtType implements LogFIXString, LogVerboseString {
     CASH_AMOUNT( "CASH", "CASH_AMOUNT", "CASH - Cash Amount (Corporate Event)" ),
@@ -40,6 +44,7 @@ public enum Enum707PosAmtType implements LogFIXString, LogVerboseString {
     FINAL_MARK_TO_MARKET_AMOUNT( "FMTM", "FINAL_MARK_TO_MARKET_AMOUNT", "FMTM - Final Mark-to-Market Amount" ),
     INCREMENTAL_MARK_TO_MARKET_AMOUNT( "IMTM", "INCREMENTAL_MARK_TO_MARKET_AMOUNT", "IMTM - Incremental Mark-to-Market Amount" ),
     PREMIUM_AMOUNT( "PREM", "PREMIUM_AMOUNT", "PREM - Premium Amount" ),
+
     START_OF_DAY_MARK_TO_MARKET_AMOUNT( "SMTM", "START_OF_DAY_MARK_TO_MARKET_AMOUNT", "SMTM - Start-of-Day Mark-to-Market Amount" ),
     TRADE_VARIATION_AMOUNT( "TVAR", "TRADE_VARIATION_AMOUNT", "TVAR - Trade Variation Amount" ),
     VALUE_ADJUSTED_AMOUNT( "VADJ", "VALUE_ADJUSTED_AMOUNT", "VADJ - Value Adjusted Amount" ),
@@ -127,6 +132,7 @@ public enum Enum707PosAmtType implements LogFIXString, LogVerboseString {
          */
         for (Enum707PosAmtType oneEnum : Enum707PosAmtType.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

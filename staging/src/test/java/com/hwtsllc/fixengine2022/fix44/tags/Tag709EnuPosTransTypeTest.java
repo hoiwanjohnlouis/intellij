@@ -27,14 +27,18 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 /**
  *  709
  *  PosTransType
+ *  int
+ *  <p></p>
  *  Identifies the type of position transaction
+ *  <p></p>
  *  Valid values:
- *      1 - Exercise
- *      2 - Do Not Exercise
- *      3 - Position Adjustment
- *      4 - Position Change Submission or Margin Disposition
- *      5 - Pledge
- *      6 - Large Trader Submission
+ *  <p>    1 - Exercise
+ *  <p>    2 - Do Not Exercise
+ *  <p>    3 - Position Adjustment
+ *  <p>    4 - Position Change Submission or Margin Disposition
+ *  <p>    5 - Pledge
+ *  <p></p>
+ *  <p>    6 - Large Trader Submission
  */
 class Tag709EnuPosTransTypeTest {
     @Test

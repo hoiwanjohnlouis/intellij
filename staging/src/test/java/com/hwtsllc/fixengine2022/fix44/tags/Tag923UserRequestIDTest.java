@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  923
  *  UserRequestID
  *  String
+ *  <p></p>
  *  Unique identifier for a User Request.
  */
 class Tag923UserRequestIDTest {

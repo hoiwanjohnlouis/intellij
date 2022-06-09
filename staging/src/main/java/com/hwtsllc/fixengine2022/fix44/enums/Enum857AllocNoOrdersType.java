@@ -23,11 +23,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  857
  *  AllocNoOrdersType
  *  int
+ *  <p></p>
  *  Indicates how the orders being booked and allocated by an Allocation Instruction or Allocation
+ *  <p></p>
  *  Report message are identified, i.e. by explicit definition in the NoOrders group or not.
+ *  <p></p>
  *  Valid values:
- *      0 - Not Specified
- *      1 - Explicit List Provided
+ *  <p>    0 - Not Specified
+ *  <p>    1 - Explicit List Provided
  */
 public enum Enum857AllocNoOrdersType implements LogFIXString, LogVerboseString {
     NOT_SPECIFIED( "0", "NOT_SPECIFIED", "0 - Not Specified" ),
@@ -115,6 +118,7 @@ public enum Enum857AllocNoOrdersType implements LogFIXString, LogVerboseString {
          */
         for (Enum857AllocNoOrdersType oneEnum : Enum857AllocNoOrdersType.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

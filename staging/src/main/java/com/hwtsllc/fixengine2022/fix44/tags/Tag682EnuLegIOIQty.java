@@ -78,7 +78,20 @@ public class Tag682EnuLegIOIQty extends FIX44Abstract implements LogValuePairStr
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -117,13 +130,14 @@ public class Tag682EnuLegIOIQty extends FIX44Abstract implements LogValuePairStr
         Tag682EnuLegIOIQty tagData;
 
         tagData = new Tag682EnuLegIOIQty(TESTA_ENU_LEG_IOI_QTY);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag682EnuLegIOIQty(TESTB_ENU_LEG_IOI_QTY);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( MyEnumIOIQty oneEnum : MyEnumIOIQty.values()) {
+            System.out.println( new Tag682EnuLegIOIQty(oneEnum).toVerboseString() );
+        }
     }
 }

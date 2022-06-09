@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  772
  *  ConfirmRefID
  *  String
+ *  <p></p>
  *  Reference identifier to be used with ConfirmTransType (666) = Replace or Cancel
  */
 class Tag772ConfirmRefIDTest {

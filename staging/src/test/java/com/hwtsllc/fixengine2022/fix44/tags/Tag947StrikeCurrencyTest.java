@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  947
  *  StrikeCurrency
  *  Currency
+ *  <p></p>
  *  Currency in which the StrikePrice is denominated.
  */
 class Tag947StrikeCurrencyTest {

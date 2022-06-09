@@ -23,6 +23,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  800
+ *  OrderBookingQty
+ *  Qty
+ *  <p></p>
+ *  Quantity of the order that is being booked out as part of
+ *  an Allocation Instruction or Allocation Report message
+ */
 class Tag800OrderBookingQtyTest {
     @Test
     void FIX0800Test() {

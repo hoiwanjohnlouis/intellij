@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  925
  *  NewPassword
  *  String
+ *  <p></p>
  *  New Password or passphrase
  */
 class Tag925StrNewPasswordTest {

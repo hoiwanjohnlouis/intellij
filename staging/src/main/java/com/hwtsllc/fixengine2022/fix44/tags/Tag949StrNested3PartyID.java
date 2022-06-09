@@ -26,8 +26,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  949
  *  Nested3PartyID
  *  String
+ *  <p></p>
  *  PartyID value within a "third instance" Nested repeating group.
- *              Same values as  PartyID (448)
+ *  <p></p>
+ *  Same values as  PartyID (448)
  */
 public class Tag949StrNested3PartyID extends FIX44Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;

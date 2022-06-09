@@ -26,12 +26,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  752
  *  SideMultiLegReportingType
+ *  int
+ *  <p></p>
  *  Used to indicate if the side being reported on Trade Capture Report
  *  represents a leg of a multileg instrument or a single security.
+ *  <p></p>
  *  Valid values:
- *      1 - Single Security (default if not specified)
- *      2 - Individual leg of a multileg security
- *      3 - Multileg Security
+ *  <p>    1 - Single Security (default if not specified)
+ *  <p>    2 - Individual leg of a multileg security
+ *  <p>    3 - Multileg Security
  */
 public class Tag752EnuSideMultiLegReportingType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum752SideMultiLegReportingType dataValue;
@@ -66,7 +69,20 @@ public class Tag752EnuSideMultiLegReportingType extends FIX44Abstract implements
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -105,13 +121,14 @@ public class Tag752EnuSideMultiLegReportingType extends FIX44Abstract implements
         Tag752EnuSideMultiLegReportingType tagData;
 
         tagData = new Tag752EnuSideMultiLegReportingType(TESTA_ENU_SIDE_MULTI_LEG_REPORTING_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag752EnuSideMultiLegReportingType(TESTB_ENU_SIDE_MULTI_LEG_REPORTING_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum752SideMultiLegReportingType oneEnum : Enum752SideMultiLegReportingType.values()) {
+            System.out.println( new Tag752EnuSideMultiLegReportingType(oneEnum).toVerboseString() );
+        }
     }
 }

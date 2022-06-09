@@ -26,10 +26,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  668
  *  DeliveryForm
+ *  int
+ *  <p></p>
  *  Identifies the form of delivery.
+ *  <p></p>
  *  Valid values:
- *      1 - Book Entry (default)
- *      2 - Bearer
+ *  <p>    1 - Book Entry (default)
+ *  <p>    2 - Bearer
  */
 public class Tag668EnuDeliveryForm extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum668DeliveryForm dataValue;
@@ -64,7 +67,20 @@ public class Tag668EnuDeliveryForm extends FIX44Abstract implements LogValuePair
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -103,13 +119,14 @@ public class Tag668EnuDeliveryForm extends FIX44Abstract implements LogValuePair
         Tag668EnuDeliveryForm tagData;
 
         tagData = new Tag668EnuDeliveryForm(TESTA_ENU_DELIVERY_FORM);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag668EnuDeliveryForm(TESTB_ENU_DELIVERY_FORM);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum668DeliveryForm oneEnum : Enum668DeliveryForm.values()) {
+            System.out.println( new Tag668EnuDeliveryForm(oneEnum).toVerboseString() );
+        }
     }
 }

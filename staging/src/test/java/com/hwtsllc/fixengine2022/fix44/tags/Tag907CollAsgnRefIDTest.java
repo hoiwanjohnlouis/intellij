@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  907
  *  CollAsgnRefID
  *  String
+ *  <p></p>
  *  Collateral Assignment Identifier to which a transaction refers
  */
 class Tag907CollAsgnRefIDTest {

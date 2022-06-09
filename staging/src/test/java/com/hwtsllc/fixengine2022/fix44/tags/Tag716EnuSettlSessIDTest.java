@@ -27,12 +27,15 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 /**
  *  716
  *  SettlSessID
+ *  String
+ *  <p></p>
  *  Identifies a specific settlement session
+ *  <p></p>
  *  Valid values:
- *      ITD - Intraday
- *      RTH - Regular Trading Hours
- *      ETH - Electronic Trading Hours
- *      EOD - End Of Day
+ *  <p>    ITD - Intraday
+ *  <p>    RTH - Regular Trading Hours
+ *  <p>    ETH - Electronic Trading Hours
+ *  <p>    EOD - End Of Day
  */
 class Tag716EnuSettlSessIDTest {
     @Test

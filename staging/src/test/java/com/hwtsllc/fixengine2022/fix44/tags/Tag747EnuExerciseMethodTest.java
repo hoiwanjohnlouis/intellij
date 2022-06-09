@@ -27,10 +27,13 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 /**
  *  747
  *  ExerciseMethod
+ *  int
+ *  <p></p>
  *  Exercise Method used to in performing assignment.
+ *  <p></p>
  *  Valid values:
- *      A - Automatic
- *      M - Manual
+ *  <p>    A - Automatic
+ *  <p>    M - Manual
  */
 class Tag747EnuExerciseMethodTest {
     @Test

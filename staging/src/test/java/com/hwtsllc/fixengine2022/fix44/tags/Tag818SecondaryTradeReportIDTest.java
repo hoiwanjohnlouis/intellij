@@ -27,8 +27,11 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  818
  *  SecondaryTradeReportID
  *  String
- *  Deprecated in FIX.5.0 Secondary trade report identifier
- *  - can be used to associate an additional identifier with a trade.
+ *  <p></p>
+ *  Deprecated in FIX.5.0
+ *  <p></p>
+ *  Secondary trade report identifier - can be used to associate
+ *  an additional identifier with a trade.
  */
 class Tag818SecondaryTradeReportIDTest {
     @Test

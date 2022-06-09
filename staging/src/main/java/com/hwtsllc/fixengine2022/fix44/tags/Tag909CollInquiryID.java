@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  909
  *  CollInquiryID
  *  String
+ *  <p></p>
  *  Collateral Inquiry Identifier
  */
 public class Tag909CollInquiryID {

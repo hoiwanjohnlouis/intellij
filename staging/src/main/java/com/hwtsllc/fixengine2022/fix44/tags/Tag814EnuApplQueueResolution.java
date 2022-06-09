@@ -76,7 +76,20 @@ public class Tag814EnuApplQueueResolution extends FIX44Abstract implements LogVa
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -115,13 +128,14 @@ public class Tag814EnuApplQueueResolution extends FIX44Abstract implements LogVa
         Tag814EnuApplQueueResolution tagData;
 
         tagData = new Tag814EnuApplQueueResolution(TESTA_ENU_APPL_QUEUE_RESOLUTION);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag814EnuApplQueueResolution(TESTB_ENU_APPL_QUEUE_RESOLUTION);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( MyEnumApplQueue oneEnum : MyEnumApplQueue.values()) {
+            System.out.println( new Tag814EnuApplQueueResolution(oneEnum).toVerboseString() );
+        }
     }
 }

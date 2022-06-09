@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  878
  *  UnderlyingCPRegType
  *  String
+ *  <p></p>
  *  The registration type of the underlying commercial paper issuance
  */
 public class Tag878UnderlyingCPRegType {

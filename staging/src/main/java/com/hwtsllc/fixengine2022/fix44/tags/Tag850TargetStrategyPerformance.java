@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  850
  *  TargetStrategyPerformance
  *  float
+ *  <p></p>
  *  For communication of the performance of the order versus the target strategy
  */
 public class Tag850TargetStrategyPerformance {

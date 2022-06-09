@@ -22,24 +22,29 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  692
+ *  QuotePriceType
+ *  int
+ *  <p></p>
+ *  Code to represent price type requested in Quote.
+ *  <p></p>
+ *  If the Quote Request is for a Swap values 1-8 apply to all legs.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Percent (percent of par)
+ *  <p>    2 - Per Share (e.g. cents per share)
+ *  <p>    3 - Fixed Amount (absolute value)
+ *  <p>    4 - Discount - percentage points below par
+ *  <p>    5 - Premium - percentage points over par
+ *  <p></p>
+ *  <p>    6 - Spread - basis points relative to benchmark
+ *  <p>    7 - TED Price
+ *  <p>    8 - TED Yield
+ *  <p>    9 - Yield Spread (swaps)
+ *  <p>    10 - Yield
+ */
 class Enum692QuotePriceTypeTest {
-    /**
-     *  692
-     *  QuotePriceType
-     *  Code to represent price type requested in Quote.
-     *      If the Quote Request is for a Swap values 1-8 apply to all legs.
-     *  Valid values:
-     *      1 - Percent (percent of par)
-     *      2 - Per Share (e.g. cents per share)
-     *      3 - Fixed Amount (absolute value)
-     *      4 - Discount - percentage points below par
-     *      5 - Premium - percentage points over par
-     *      6 - Spread - basis points relative to benchmark
-     *      7 - TED Price
-     *      8 - TED Yield
-     *      9 - Yield Spread (swaps)
-     *      10 - Yield
-     */
     @Test
     void EnumTest() {
         Enum692QuotePriceType enumType;

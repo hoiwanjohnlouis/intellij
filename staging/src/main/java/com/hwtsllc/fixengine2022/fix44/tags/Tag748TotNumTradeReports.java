@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  748
  *  TotNumTradeReports
  *  int
+ *  <p></p>
  *  Total number of trade reports returned.
  */
 public class Tag748TotNumTradeReports {

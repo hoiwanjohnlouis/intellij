@@ -27,14 +27,18 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 /**
  *  694
  *  QuoteRespType
+ *  int
+ *  <p></p>
  *  Identifies the type of Quote Response.
+ *  <p></p>
  *  Valid values:
- *      1 - Hit/Lift
- *      2 - Counter
- *      3 - Expired
- *      4 - Cover
- *      5 - Done Away
- *      6 - Pass
+ *  <p>    1 - Hit/Lift
+ *  <p>    2 - Counter
+ *  <p>    3 - Expired
+ *  <p>    4 - Cover
+ *  <p>    5 - Done Away
+ *  <p></p>
+ *  <p>    6 - Pass
  */
 class Tag694EnuQuoteRespTypeTest {
     @Test

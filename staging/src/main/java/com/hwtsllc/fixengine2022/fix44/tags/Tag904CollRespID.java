@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  904
  *  CollRespID
  *  String
+ *  <p></p>
  *  Collateral Response Identifier
  */
 public class Tag904CollRespID {

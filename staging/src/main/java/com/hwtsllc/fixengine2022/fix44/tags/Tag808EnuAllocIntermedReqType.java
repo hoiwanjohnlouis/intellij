@@ -27,17 +27,21 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  808
  *  AllocIntermedReqType
  *  int
+ *  <p></p>
  *  Response to allocation to be communicated to a counterparty through an intermediary,
  *  i.e. clearing house.
+ *  <p></p>
  *  Used in conjunction with AllocType = Request to Intermediary
  *  and AllocReportType = Request to Intermediary
+ *  <p></p>
  *  Valid values:
- *      1 - Pending Accept
- *      2 - Pending Release
- *      3 - Pending Reversal
- *      4 - Accept
- *      5 - Block Level Reject
- *      6 - Account Level Reject
+ *  <p>    1 - Pending Accept
+ *  <p>    2 - Pending Release
+ *  <p>    3 - Pending Reversal
+ *  <p>    4 - Accept
+ *  <p>    5 - Block Level Reject
+ *  <p></p>
+ *  <p>    6 - Account Level Reject
  */
 public class Tag808EnuAllocIntermedReqType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum808AllocIntermedReqType dataValue;
@@ -72,7 +76,20 @@ public class Tag808EnuAllocIntermedReqType extends FIX44Abstract implements LogV
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -111,13 +128,14 @@ public class Tag808EnuAllocIntermedReqType extends FIX44Abstract implements LogV
         Tag808EnuAllocIntermedReqType tagData;
 
         tagData = new Tag808EnuAllocIntermedReqType(TESTA_ENU_ALLOC_INTERMED_REQ_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag808EnuAllocIntermedReqType(TESTB_ENU_ALLOC_INTERMED_REQ_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum808AllocIntermedReqType oneEnum : Enum808AllocIntermedReqType.values()) {
+            System.out.println( new Tag808EnuAllocIntermedReqType(oneEnum).toVerboseString() );
+        }
     }
 }

@@ -26,14 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  694
  *  QuoteRespType
+ *  int
+ *  <p></p>
  *  Identifies the type of Quote Response.
+ *  <p></p>
  *  Valid values:
- *      1 - Hit/Lift
- *      2 - Counter
- *      3 - Expired
- *      4 - Cover
- *      5 - Done Away
- *      6 - Pass
+ *  <p>    1 - Hit/Lift
+ *  <p>    2 - Counter
+ *  <p>    3 - Expired
+ *  <p>    4 - Cover
+ *  <p>    5 - Done Away
+ *  <p></p>
+ *  <p>    6 - Pass
  */
 public class Tag694EnuQuoteRespType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum694QuoteRespType dataValue;
@@ -68,7 +72,20 @@ public class Tag694EnuQuoteRespType extends FIX44Abstract implements LogValuePai
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -107,13 +124,14 @@ public class Tag694EnuQuoteRespType extends FIX44Abstract implements LogValuePai
         Tag694EnuQuoteRespType tagData;
 
         tagData = new Tag694EnuQuoteRespType(TESTA_ENU_QUOTE_RESP_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag694EnuQuoteRespType(TESTB_ENU_QUOTE_RESP_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum694QuoteRespType oneEnum : Enum694QuoteRespType.values()) {
+            System.out.println( new Tag694EnuQuoteRespType(oneEnum).toVerboseString() );
+        }
     }
 }

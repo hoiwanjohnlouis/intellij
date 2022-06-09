@@ -20,7 +20,9 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  742
  *  AllocAccruedInterestAmt
  *  Amt
- *  Amount of Accrued Interest for convertible bonds and fixed income at the allocation-level.
+ *  <p></p>
+ *  Amount of Accrued Interest for convertible bonds
+ *  and fixed income at the allocation-level.
  */
 public class Tag742AllocAccruedInterestAmt {
 }

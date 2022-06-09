@@ -26,8 +26,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  760
  *  Nested2PartySubID
  *  String
+ *  <p></p>
  *  PartySubID value within a "second instance" Nested repeating group.
- *          Same values as  PartySubID (523)
+ *  <p></p>
+ *  Same values as  PartySubID (523)
  */
 public class Tag760StrNested2PartySubID extends FIX44Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
@@ -60,7 +62,11 @@ public class Tag760StrNested2PartySubID extends FIX44Abstract implements LogValu
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -78,13 +84,9 @@ public class Tag760StrNested2PartySubID extends FIX44Abstract implements LogValu
         Tag760StrNested2PartySubID tagData;
 
         tagData = new Tag760StrNested2PartySubID(new MyStringType(TESTA_STR_NESTED_2_PARTY_SUB_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag760StrNested2PartySubID(new MyStringType(TESTB_STR_NESTED_2_PARTY_SUB_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

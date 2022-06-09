@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  859
  *  ConfirmReqID
  *  String
+ *  <p></p>
  *  Unique identifier for a Confirmation Request message
  */
 public class Tag859ConfirmReqID {

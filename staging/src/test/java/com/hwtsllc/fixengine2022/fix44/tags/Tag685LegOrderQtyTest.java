@@ -27,8 +27,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  685
  *  LegOrderQty
  *  Qty
+ *  <p></p>
  *  Quantity ordered of this leg.
- *        See OrderQty (38) for description and valid values
+ *  <p></p>
+ *  See OrderQty (38) for description and valid values
  */
 class Tag685LegOrderQtyTest {
     @Test

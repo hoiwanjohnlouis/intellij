@@ -76,7 +76,20 @@ public class Tag837EnuPegLimitType extends FIX44Abstract implements LogValuePair
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -115,13 +128,14 @@ public class Tag837EnuPegLimitType extends FIX44Abstract implements LogValuePair
         Tag837EnuPegLimitType tagData;
 
         tagData = new Tag837EnuPegLimitType(TESTA_ENU_PEG_LIMIT_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag837EnuPegLimitType(TESTB_ENU_PEG_LIMIT_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( MyEnumLimitType oneEnum : MyEnumLimitType.values()) {
+            System.out.println( new Tag837EnuPegLimitType(oneEnum).toVerboseString() );
+        }
     }
 }

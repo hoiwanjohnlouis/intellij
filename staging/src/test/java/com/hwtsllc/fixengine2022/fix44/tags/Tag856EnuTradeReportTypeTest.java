@@ -28,24 +28,29 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  856
  *  TradeReportType
  *  int
+ *  <p></p>
  *  Type of Trade Report
+ *  <p></p>
  *  Valid values:
- *      0 - Submit
- *      1 - Alleged
- *      2 - Accept
- *      3 - Decline
- *      4 - Addendum
- *      5 - No/Was
- *      6 - Trade Report Cancel
- *      7 - (Locked-In) Trade Break
- *      8 - Defaulted
- *      9 - Invalid CMTA
- *      10 - Pended
- *      11 - Alleged New
- *      12 - Alleged Addendum
- *      13 - Alleged No/Was
- *      14 - Alleged Trade Report Cancel
- *      15 - Alleged (Locked-In) Trade Break
+ *  <p>    0 - Submit
+ *  <p>    1 - Alleged
+ *  <p>    2 - Accept
+ *  <p>    3 - Decline
+ *  <p>    4 - Addendum
+ *  <p></p>
+ *  <p>    5 - No-Was
+ *  <p>    6 - Trade Report Cancel
+ *  <p>    7 - (Locked-In) Trade Break
+ *  <p>    8 - Defaulted
+ *  <p>    9 - Invalid CMTA
+ *  <p></p>
+ *  <p>    10 - Pended
+ *  <p>    11 - Alleged New
+ *  <p>    12 - Alleged Addendum
+ *  <p>    13 - Alleged No-Was
+ *  <p>    14 - Alleged Trade Report Cancel
+ *  <p></p>
+ *  <p>    15 - Alleged (Locked-In) Trade Break
  */
 class Tag856EnuTradeReportTypeTest {
     @Test

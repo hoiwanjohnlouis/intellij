@@ -75,7 +75,20 @@ public class Tag842EnuDiscretionOffsetType extends FIX44Abstract implements LogV
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -114,13 +127,14 @@ public class Tag842EnuDiscretionOffsetType extends FIX44Abstract implements LogV
         Tag842EnuDiscretionOffsetType tagData;
 
         tagData = new Tag842EnuDiscretionOffsetType(TESTA_ENU_DISCRETION_OFFSET_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag842EnuDiscretionOffsetType(TESTB_ENU_DISCRETION_OFFSET_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( MyEnumOffsetType oneEnum : MyEnumOffsetType.values()) {
+            System.out.println( new Tag842EnuDiscretionOffsetType(oneEnum).toVerboseString() );
+        }
     }
 }

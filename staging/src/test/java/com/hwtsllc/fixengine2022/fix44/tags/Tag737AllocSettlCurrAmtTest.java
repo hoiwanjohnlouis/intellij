@@ -27,7 +27,9 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  737
  *  AllocSettlCurrAmt
  *  Amt
+ *  <p></p>
  *  Total amount due expressed in settlement currency
+ *  <p>
  *  (includes the effect of the forex transaction) for a specific AllocAccount (79).
  */
 class Tag737AllocSettlCurrAmtTest {

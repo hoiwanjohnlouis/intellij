@@ -20,8 +20,10 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  679
  *  LegBenchmarkPrice
  *  Price
+ *  <p></p>
  *  Used to identify the price of the benchmark security.
- *        See BenchmarkPrice (662) for description and valid values.
+ *  <p></p>
+ *  See BenchmarkPrice (662) for description and valid values.
  */
 public class Tag679LegBenchmarkPrice {
 }

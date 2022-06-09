@@ -23,15 +23,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  853
  *  ShortSaleReason
  *  int
+ *  <p></p>
  *  Reason for short sale.
+ *  <p></p>
  *  Valid values:
- *      0 - Dealer Sold Short
- *      1 - Dealer Sold Short Exempt
- *      2 - Selling Customer Sold Short
- *      3 - Selling Customer Sold Short Exempt
- *      4 - Qualified Service Representative (QSR) or Automatic Give-up (AGU) Contra Side Sold Short
- *
- *      5 - QSR or AGU Contra Side Sold Short Exempt
+ *  <p>    0 - Dealer Sold Short
+ *  <p>    1 - Dealer Sold Short Exempt
+ *  <p>    2 - Selling Customer Sold Short
+ *  <p>    3 - Selling Customer Sold Short Exempt
+ *  <p>    4 - Qualified Service Representative (QSR)
+ *              or Automatic Give-up (AGU) Contra Side Sold Short
+ *  <p></p>
+ *  <p>    5 - QSR or AGU Contra Side Sold Short Exempt
  */
 public enum Enum853ShortSaleReason implements LogFIXString, LogVerboseString {
     DEALER_SOLD_SHORT( "0", "DEALER_SOLD_SHORT", "0 - Dealer Sold Short" ),
@@ -124,6 +127,7 @@ public enum Enum853ShortSaleReason implements LogFIXString, LogVerboseString {
          */
         for (Enum853ShortSaleReason oneEnum : Enum853ShortSaleReason.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

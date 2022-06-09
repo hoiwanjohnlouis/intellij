@@ -27,8 +27,9 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  766
  *  AllowableOneSidednessValue
  *  Amt
- *  The maximum amount that execution of one side of a program trade
- *  can exceed execution of the other.
+ *  <p></p>
+ *  The maximum amount that execution of
+ *  one side of a program trade can exceed execution of the other.
  */
 class Tag766AllowableOneSidednessValueTest {
     @Test

@@ -22,15 +22,19 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  787
+ *  DlvyInstType
+ *  char
+ *  <p></p>
+ *  Used to indicate whether a delivery instruction is used for securities
+ *  or cash settlement.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    C - Cash
+ *  <p>    S - Securities
+ */
 class Enum787DlvyInstTypeTest {
-    /**
-     *  787
-     *  DlvyInstType
-     *  Used to indicate whether a delivery instruction is used for securities or cash settlement.
-     *  Valid values:
-     *      C - Cash
-     *      S - Securities
-     */
     @Test
     void EnumTest() {
         Enum787DlvyInstType enumType;

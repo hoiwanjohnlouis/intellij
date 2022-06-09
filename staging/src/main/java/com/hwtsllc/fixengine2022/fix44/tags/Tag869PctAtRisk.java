@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  869
  *  PctAtRisk
  *  Percentage
+ *  <p></p>
  *  Percent at risk due to lowest possible call.
  */
 public class Tag869PctAtRisk {

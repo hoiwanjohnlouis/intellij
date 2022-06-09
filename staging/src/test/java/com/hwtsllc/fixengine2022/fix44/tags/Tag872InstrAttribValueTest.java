@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  872
  *  InstrAttribValue
  *  String
+ *  <p></p>
  *  Attribute value appropriate to the  InstrAttribType (87) field.
  */
 class Tag872InstrAttribValueTest {

@@ -22,18 +22,21 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  665
+ *  ConfirmStatus
+ *  int
+ *  <p></p>
+ *  Identifies the status of the Confirmation.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Received
+ *  <p>    2 - Mismatched Account
+ *  <p>    3 - Missing Settlement Instructions
+ *  <p>    4 - Confirmed
+ *  <p>    5 - Request Rejected
+ */
 class Enum665ConfirmStatusTest {
-    /**
-     *  665
-     *  Identifies the status of the Confirmation.
-     *  ConfirmStatus
-     *  Valid values:
-     *      1 - Received
-     *      2 - Mismatched Account
-     *      3 - Missing Settlement Instructions
-     *      4 - Confirmed
-     *      5 - Request Rejected
-     */
     @Test
     void EnumTest() {
         Enum665ConfirmStatus enumType;

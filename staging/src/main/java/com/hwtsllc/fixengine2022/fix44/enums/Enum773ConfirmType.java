@@ -22,11 +22,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  773
  *  ConfirmType
+ *  int
+ *  <p></p>
  *  Identifies the type of Confirmation message being sent.
+ *  <p></p>
  *  Valid values:
- *      1 - Status
- *      2 - Confirmation
- *      3 - Confirmation Request Rejected (reason can be stated in Text (58) field)
+ *  <p>    1 - Status
+ *  <p>    2 - Confirmation
+ *  <p>    3 - Confirmation Request Rejected (reason can be stated in Text (58) field)
  */
 public enum Enum773ConfirmType implements LogFIXString, LogVerboseString {
     STATUS( "1", "STATUS", "1 - Status" ),
@@ -115,6 +118,7 @@ public enum Enum773ConfirmType implements LogFIXString, LogVerboseString {
          */
         for (Enum773ConfirmType oneEnum : Enum773ConfirmType.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

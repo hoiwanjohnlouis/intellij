@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  930
  *  RefCompID
  *  String
+ *  <p></p>
  *  Assigned value used to identify a firm.
  */
 class Tag930RefCompIDTest {

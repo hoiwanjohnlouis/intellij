@@ -22,13 +22,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  774
  *  ConfirmRejReason
+ *  int
+ *  <p></p>
  *  Identifies the reason for rejecting a Confirmation.
+ *  <p></p>
  *  Valid values:
- *      1 - Mismatched account
- *      2 - Missing settlement instructions
- *      99 - Other
- *
- *      or any value conforming to the data type Reserved100Plus
+ *  <p>    1 - Mismatched account
+ *  <p>    2 - Missing settlement instructions
+ *  <p>    99 - Other
+ *  <p>    or any value conforming to the data type Reserved100Plus
  */
 public enum Enum774ConfirmRejReason implements LogFIXString, LogVerboseString {
     MISMATCHED_ACCOUNT( "1", "MISMATCHED_ACCOUNT", "1 - Mismatched account" ),
@@ -117,6 +119,7 @@ public enum Enum774ConfirmRejReason implements LogFIXString, LogVerboseString {
          */
         for (Enum774ConfirmRejReason oneEnum : Enum774ConfirmRejReason.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

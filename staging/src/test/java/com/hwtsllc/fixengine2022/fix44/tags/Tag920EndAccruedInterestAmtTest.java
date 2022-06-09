@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  920
  *  EndAccruedInterestAmt
  *  Amt
+ *  <p></p>
  *  Accrued Interest Amount applicable to a financing transaction on the End Date.
  */
 class Tag920EndAccruedInterestAmtTest {

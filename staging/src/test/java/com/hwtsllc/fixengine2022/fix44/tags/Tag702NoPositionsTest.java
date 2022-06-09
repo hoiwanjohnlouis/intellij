@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  702
  *  NoPositions
  *  NumInGroup
+ *  <p></p>
  *  Number of position entries.
  */
 class Tag702NoPositionsTest {

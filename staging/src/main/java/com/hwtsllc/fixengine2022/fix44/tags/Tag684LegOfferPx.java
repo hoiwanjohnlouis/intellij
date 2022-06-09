@@ -20,8 +20,10 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  684
  *  LegOfferPx
  *  Price
+ *  <p></p>
  *  Offer price of this leg.
- *        See OfferPx (133) for description and valid values
+ *  <p></p>
+ *  See OfferPx (133) for description and valid values
  */
 public class Tag684LegOfferPx {
 }

@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  708
  *  PosAmt
  *  Amt
+ *  <p></p>
  *  Position amount
  */
 public class Tag708PosAmt {

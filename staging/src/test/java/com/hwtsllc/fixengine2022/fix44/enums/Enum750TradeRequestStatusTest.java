@@ -22,16 +22,19 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  750
+ *  TradeRequestStatus
+ *  int
+ *  <p></p>
+ *  Status of Trade Request.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Accepted
+ *  <p>    1 - Completed
+ *  <p>    2 - Rejected
+ */
 class Enum750TradeRequestStatusTest {
-    /**
-     *  750
-     *  TradeRequestStatus
-     *  Status of Trade Request.
-     *  Valid values:
-     *      0 - Accepted
-     *      1 - Completed
-     *      2 - Rejected
-     */
     @Test
     void EnumTest() {
         Enum750TradeRequestStatus enumType;

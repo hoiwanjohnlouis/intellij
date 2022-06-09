@@ -22,13 +22,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  796
  *  AllocCancReplaceReason
- *  Reason for cancelling or replacing an Allocation Instruction or Allocation Report message
+ *  int
+ *  <p></p>
+ *  Reason for cancelling or replacing an Allocation Instruction
+ *  or Allocation Report message
+ *  <p></p>
  *  Valid values:
- *      1 - Original details incomplete or incorrect
- *      2 - Change in underlying order details
- *      99 - Other
- *
- *      or any value conforming to the data type Reserved100Plus
+ *  <p>    1 - Original details incomplete or incorrect
+ *  <p>    2 - Change in underlying order details
+ *  <p>    99 - Other
+ *  <p>    or any value conforming to the data type Reserved100Plus
  */
 public enum Enum796AllocCancReplaceReason implements LogFIXString, LogVerboseString {
     ORIGINAL_DETAILS_INCOMPLETE( "1", "ORIGINAL_DETAILS_INCOMPLETE", "1 - Original details incomplete or incorrect" ),
@@ -117,6 +120,7 @@ public enum Enum796AllocCancReplaceReason implements LogFIXString, LogVerboseStr
          */
         for (Enum796AllocCancReplaceReason oneEnum : Enum796AllocCancReplaceReason.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

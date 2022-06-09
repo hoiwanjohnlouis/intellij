@@ -23,18 +23,19 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  865
  *  EventType
  *  int
+ *  <p></p>
  *  Code to represent the type of event
+ *  <p></p>
  *  Valid values:
- *      1 - Put
- *      2 - Call
- *      3 - Tender
- *      4 - Sinking Fund Call
- *      5 - Activation
- *
- *      6 - Inactivation
- *      99 - Other
- *
- *      or any value conforming to the data type Reserved100Plus
+ *  <p>    1 - Put
+ *  <p>    2 - Call
+ *  <p>    3 - Tender
+ *  <p>    4 - Sinking Fund Call
+ *  <p>    5 - Activation
+ *  <p></p>
+ *  <p>    6 - Inactivation
+ *  <p>    99 - Other
+ *  <p>    or any value conforming to the data type Reserved100Plus
  */
 public enum Enum865EventType implements LogFIXString, LogVerboseString {
     PUT( "1", "PUT", "1 - Put" ),
@@ -42,6 +43,7 @@ public enum Enum865EventType implements LogFIXString, LogVerboseString {
     TENDER( "3", "TENDER", "3 - Tender" ),
     SINKING_FUND_CALL( "4", "SINKING_FUND_CALL", "4 - Sinking Fund Call" ),
     ACTIVATION( "5", "ACTIVATION", "5 - Activation" ),
+
     INACTIVATION( "6", "INACTIVATION", "6 - Inactivation" ),
     OTHER( "99", "OTHER", "99 - Other" ),
     ;
@@ -127,6 +129,7 @@ public enum Enum865EventType implements LogFIXString, LogVerboseString {
          */
         for (Enum865EventType oneEnum : Enum865EventType.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

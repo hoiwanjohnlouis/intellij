@@ -163,7 +163,20 @@ public class Tag786EnuSettlPartySubIDType extends FIX44Abstract implements LogVa
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -202,13 +215,14 @@ public class Tag786EnuSettlPartySubIDType extends FIX44Abstract implements LogVa
         Tag786EnuSettlPartySubIDType tagData;
 
         tagData = new Tag786EnuSettlPartySubIDType(TESTA_ENU_SETTL_PARTY_SUB_ID_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag786EnuSettlPartySubIDType(TESTB_ENU_SETTL_PARTY_SUB_ID_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( MyEnumPartySubIDType oneEnum : MyEnumPartySubIDType.values()) {
+            System.out.println( new Tag786EnuSettlPartySubIDType(oneEnum).toVerboseString() );
+        }
     }
 }

@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  745
  *  AssignmentUnit
  *  Qty
+ *  <p></p>
  *  Quantity Increment used in performing assignment.
  */
 class Tag745AssignmentUnitTest {

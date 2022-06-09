@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  739
  *  LegDatedDate
  *  LocalMktDate
+ *  <p></p>
  *  The effective date of a new securities issue determined by its underwriters.
  *  Often but not always the same as the Issue Date and the Interest Accrual Date
  */

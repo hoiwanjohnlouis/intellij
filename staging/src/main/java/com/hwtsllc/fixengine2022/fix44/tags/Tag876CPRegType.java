@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  876
  *  CPRegType
  *  String
+ *  <p></p>
  *  The registration type of a commercial paper issuance
  */
 public class Tag876CPRegType {

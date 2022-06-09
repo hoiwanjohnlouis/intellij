@@ -26,13 +26,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  774
  *  ConfirmRejReason
+ *  int
+ *  <p></p>
  *  Identifies the reason for rejecting a Confirmation.
+ *  <p></p>
  *  Valid values:
- *      1 - Mismatched account
- *      2 - Missing settlement instructions
- *      99 - Other
- *
- *      or any value conforming to the data type Reserved100Plus
+ *  <p>    1 - Mismatched account
+ *  <p>    2 - Missing settlement instructions
+ *  <p>    99 - Other
+ *  <p>    or any value conforming to the data type Reserved100Plus
  */
 public class Tag774EnuConfirmRejReason extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum774ConfirmRejReason dataValue;
@@ -67,7 +69,20 @@ public class Tag774EnuConfirmRejReason extends FIX44Abstract implements LogValue
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -106,13 +121,14 @@ public class Tag774EnuConfirmRejReason extends FIX44Abstract implements LogValue
         Tag774EnuConfirmRejReason tagData;
 
         tagData = new Tag774EnuConfirmRejReason(TESTA_ENU_CONFIRM_REJ_REASON);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag774EnuConfirmRejReason(TESTB_ENU_CONFIRM_REJ_REASON);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum774ConfirmRejReason oneEnum : Enum774ConfirmRejReason.values()) {
+            System.out.println( new Tag774EnuConfirmRejReason(oneEnum).toVerboseString() );
+        }
     }
 }

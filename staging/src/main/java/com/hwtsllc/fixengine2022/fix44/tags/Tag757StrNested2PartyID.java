@@ -27,13 +27,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  Nested2PartyID
  *  String
  *  PartyID value within a "second instance" Nested repeating group.
- *          Same values as  PartyID (448)
+ *  Same values as  PartyID (448)
  */
 public class Tag757StrNested2PartyID extends FIX44Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_NESTED_2_PARTY_ID = "BilboBaggins-Tag757StrNested2PartyID";
-    public final static String TESTB_STR_NESTED_2_PARTY_ID = "Gandalf-Tag757StrNested2PartyID";
+    public final static String TESTA_STR_NESTED_2_PARTY_ID = "ScarletJohansson-Tag757StrNested2PartyID";
+    public final static String TESTB_STR_NESTED_2_PARTY_ID = "JenniferLawrence-Tag757StrNested2PartyID";
 
     public Tag757StrNested2PartyID(MyStringType dataValue) {
         setFixType(FIX44.FIX757_STR_NESTED_2_PARTY_ID);
@@ -60,7 +60,11 @@ public class Tag757StrNested2PartyID extends FIX44Abstract implements LogValuePa
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
     }
     /**
      * standard wrapper to format a simple string describing the data
@@ -78,13 +82,9 @@ public class Tag757StrNested2PartyID extends FIX44Abstract implements LogValuePa
         Tag757StrNested2PartyID tagData;
 
         tagData = new Tag757StrNested2PartyID(new MyStringType(TESTA_STR_NESTED_2_PARTY_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag757StrNested2PartyID(new MyStringType(TESTB_STR_NESTED_2_PARTY_ID) );
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
     }
 }

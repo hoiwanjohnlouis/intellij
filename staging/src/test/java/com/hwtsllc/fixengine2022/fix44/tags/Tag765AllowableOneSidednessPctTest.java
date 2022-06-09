@@ -27,8 +27,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  765
  *  AllowableOneSidednessPct
  *  Percentage
- *  The maximum percentage that execution of one side of a program trade
- *  can exceed execution of the other.
+ *  <p></p>
+ *  The maximum percentage that execution of
+ *  <p></p>
+ *  one side of a program trade can exceed execution of the other.
  */
 class Tag765AllowableOneSidednessPctTest {
     @Test

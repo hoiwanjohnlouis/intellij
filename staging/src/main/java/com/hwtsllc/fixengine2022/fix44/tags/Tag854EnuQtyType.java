@@ -27,11 +27,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  854
  *  QtyType
  *  int
+ *  <p></p>
  *  Type of quantity specified in a quantity field:
+ *  <p></p>
  *  Valid values:
- *      0 - Units (shares, par, currency)
- *      1 - Contracts (if used - must specify ContractMultiplier (tag 231))
- *      2 - Units of Measure per Time Unit (if used - must specify UnitofMeasure (tag 996) and TimeUnit (tag 997))
+ *  <p>    0 - Units (shares, par, currency)
+ *  <p>    1 - Contracts (if used - must specify ContractMultiplier (tag 231))
+ *  <p>    2 - Units of Measure per Time Unit
+ *          (if used - must specify UnitofMeasure (tag 996) and TimeUnit (tag 997))
  */
 public class Tag854EnuQtyType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum854QtyType dataValue;
@@ -66,7 +69,20 @@ public class Tag854EnuQtyType extends FIX44Abstract implements LogValuePairStrin
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -105,13 +121,14 @@ public class Tag854EnuQtyType extends FIX44Abstract implements LogValuePairStrin
         Tag854EnuQtyType tagData;
 
         tagData = new Tag854EnuQtyType(TESTA_ENU_QTY_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag854EnuQtyType(TESTB_ENU_QTY_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum854QtyType oneEnum : Enum854QtyType.values()) {
+            System.out.println( new Tag854EnuQtyType(oneEnum).toVerboseString() );
+        }
     }
 }

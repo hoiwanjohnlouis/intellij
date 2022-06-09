@@ -28,8 +28,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  782
  *  SettlPartyID
  *  String
+ *  <p></p>
  *  PartyID value within a settlement parties component. Nested repeating group.
- *          Same values as  PartyID (448)
+ *  <p></p>
+ *  Same values as  PartyID (448)
  */
 class Tag782StrSettlPartyIDTest {
     @Test

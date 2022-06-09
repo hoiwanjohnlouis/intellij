@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  795
  *  AllocReportRefID
  *  String
+ *  <p></p>
  *  Reference identifier to be used with AllocTransType (7) = Replace or Cancel
  */
 class Tag795AllocReportRefIDTest {

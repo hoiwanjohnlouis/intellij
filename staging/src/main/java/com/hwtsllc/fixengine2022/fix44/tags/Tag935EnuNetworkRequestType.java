@@ -27,13 +27,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  935
  *  NetworkRequestType
  *  int
- *  Indicates the type and level of details required for a Network Status Request Message Boolean logic applies
- *  e.g. If you want to subscribe for changes to certain id’s then UserRequestType = 0 (8+2), Snapshot for certain ID’s = 9 (8+1)
+ *  <p></p>
+ *  Indicates the type and level of details required for a
+ *  Network Status Request Message Boolean logic applies
+ *  <p></p>
+ *  e.g. If you want to subscribe for changes to certain id’s
+ *  then UserRequestType = 0 (8+2), Snapshot for certain ID’s = 9 (8+1)
+ *  <p></p>
  *  Valid values:
- *      1 - Snapshot
- *      2 - Subscribe
- *      4 - Stop Subscribing
- *      8 - Level of Detail, then NoCompID's becomes required
+ *  <p>    1 - Snapshot
+ *  <p>    2 - Subscribe
+ *  <p>    4 - Stop Subscribing
+ *  <p>    8 - Level of Detail, then NoCompID's becomes required
  */
 public class Tag935EnuNetworkRequestType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum935NetworkRequestType dataValue;
@@ -68,7 +73,20 @@ public class Tag935EnuNetworkRequestType extends FIX44Abstract implements LogVal
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -107,13 +125,14 @@ public class Tag935EnuNetworkRequestType extends FIX44Abstract implements LogVal
         Tag935EnuNetworkRequestType tagData;
 
         tagData = new Tag935EnuNetworkRequestType(TESTA_ENU_NETWORK_REQUEST_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag935EnuNetworkRequestType(TESTB_ENU_NETWORK_REQUEST_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum935NetworkRequestType oneEnum : Enum935NetworkRequestType.values()) {
+            System.out.println( new Tag935EnuNetworkRequestType(oneEnum).toVerboseString() );
+        }
     }
 }

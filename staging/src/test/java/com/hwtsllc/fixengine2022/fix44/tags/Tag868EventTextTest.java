@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  868
  *  EventText
  *  String
+ *  <p></p>
  *  Comments related to the event.
  */
 class Tag868EventTextTest {

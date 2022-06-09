@@ -26,10 +26,12 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  937
  *  NetworkStatusResponseType
  *  int
+ *  <p></p>
  *  Indicates the type of Network Response Message.
+ *  <p></p>
  *  Valid values:
- *      1 - Full
- *      2 - Incremental Update
+ *  <p>    1 - Full
+ *  <p>    2 - Incremental Update
  */
 class Enum937NetworkStatusResponseTypeTest {
     @Test

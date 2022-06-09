@@ -20,8 +20,10 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  812
  *  ApplQueueMax
  *  int
- *  Used to specify the maximum number of application messages that can be queued
- *  before a corrective action needs to take place to resolve the queuing issue.
+ *  <p></p>
+ *  Used to specify the maximum number of application messages
+ *  that can be queued before a corrective action needs to take
+ *  place to resolve the queuing issue.
  */
 public class Tag812ApplQueueMax {
 }

@@ -26,14 +26,17 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
  *  665
- *  Identifies the status of the Confirmation.
  *  ConfirmStatus
+ *  int
+ *  <p></p>
+ *  Identifies the status of the Confirmation.
+ *  <p></p>
  *  Valid values:
- *      1 - Received
- *      2 - Mismatched Account
- *      3 - Missing Settlement Instructions
- *      4 - Confirmed
- *      5 - Request Rejected
+ *  <p>    1 - Received
+ *  <p>    2 - Mismatched Account
+ *  <p>    3 - Missing Settlement Instructions
+ *  <p>    4 - Confirmed
+ *  <p>    5 - Request Rejected
  */
 class Tag665EnuConfirmStatusTest {
     @Test

@@ -23,11 +23,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  940
  *  AffirmStatus
  *  int
+ *  <p></p>
  *  Identifies the status of the ConfirmationAck.
+ *  <p></p>
  *  Valid values:
- *      1 - Received
- *      2 - Confirm rejected, i.e. not affirmed
- *      3 - Affirmed
+ *  <p>    1 - Received
+ *  <p>    2 - Confirm rejected, i.e. not affirmed
+ *  <p>    3 - Affirmed
  */
 public enum Enum940AffirmStatus implements LogFIXString, LogVerboseString {
     RECEIVED( "1", "RECEIVED", "1 - Received" ),
@@ -116,6 +118,7 @@ public enum Enum940AffirmStatus implements LogFIXString, LogVerboseString {
          */
         for (Enum940AffirmStatus oneEnum : Enum940AffirmStatus.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

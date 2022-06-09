@@ -27,11 +27,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  819
  *  AvgPxIndicator
  *  int
+ *  <p></p>
  *  Average Pricing Indicator
+ *  <p></p>
  *  Valid values:
- *      0 - No Average Pricing
- *      1 - Trade is part of an average price group identified by the TradeLinkID (820)
- *      2 - Last trade is the average price group identified by the TradeLinkID (820)
+ *  <p>    0 - No Average Pricing
+ *  <p>    1 - Trade is part of an average price group identified by the TradeLinkID (820)
+ *  <p>    2 - Last trade is the average price group identified by the TradeLinkID (820)
  */
 public class Tag819EnuAvgPxIndicator extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum819AvgPxIndicator dataValue;
@@ -66,7 +68,20 @@ public class Tag819EnuAvgPxIndicator extends FIX44Abstract implements LogValuePa
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -105,13 +120,14 @@ public class Tag819EnuAvgPxIndicator extends FIX44Abstract implements LogValuePa
         Tag819EnuAvgPxIndicator tagData;
 
         tagData = new Tag819EnuAvgPxIndicator(TESTA_ENU_AVG_PX_INDICATOR);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag819EnuAvgPxIndicator(TESTB_ENU_AVG_PX_INDICATOR);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum819AvgPxIndicator oneEnum : Enum819AvgPxIndicator.values()) {
+            System.out.println( new Tag819EnuAvgPxIndicator(oneEnum).toVerboseString() );
+        }
     }
 }

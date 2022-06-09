@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  683
  *  NoLegStipulations
  *  NumInGroup
+ *  <p></p>
  *  Number of leg stipulation entries
  */
 public class Tag683NoLegStipulations {

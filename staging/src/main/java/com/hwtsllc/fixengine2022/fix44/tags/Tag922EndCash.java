@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  922
  *  EndCash
  *  Amt
+ *  <p></p>
  *  Ending dirty cash consideration of a financing deal.
  *  i.e. reimbursed to the buyer on the End Date.
  */

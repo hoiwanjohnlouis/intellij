@@ -26,20 +26,24 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  749
  *  TradeRequestResult
+ *  int
+ *  <p></p>
  *  Result of Trade Request
+ *  <p></p>
  *  4000+ Reserved and available for bi-laterally agreed upon user-defined values
+ *  <p></p>
  *  Valid values:
- *      0 - Successful (default)
- *      1 - Invalid or unknown instrument
- *      2 - Invalid type of trade requested
- *      3 - Invalid parties
- *      4 - Invalid transport type requested
- *      5 - Invalid destination requested
- *      8 - TradeRequestType not supported
- *      9 - Unauthorized for Trade Capture Report Request
- *      99 - Other
- *
- *      or any value conforming to the data type Reserved100Plus
+ *  <p>    0 - Successful (default)
+ *  <p>    1 - Invalid or unknown instrument
+ *  <p>    2 - Invalid type of trade requested
+ *  <p>    3 - Invalid parties
+ *  <p>    4 - Invalid transport type requested
+ *  <p></p>
+ *  <p>    5 - Invalid destination requested
+ *  <p>    8 - TradeRequestType not supported
+ *  <p>    9 - Unauthorized for Trade Capture Report Request
+ *  <p>    99 - Other
+ *  <p>    or any value conforming to the data type Reserved100Plus
  */
 public class Tag749EnuTradeRequestResult extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum749TradeRequestResult dataValue;
@@ -74,7 +78,20 @@ public class Tag749EnuTradeRequestResult extends FIX44Abstract implements LogVal
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -113,13 +130,14 @@ public class Tag749EnuTradeRequestResult extends FIX44Abstract implements LogVal
         Tag749EnuTradeRequestResult tagData;
 
         tagData = new Tag749EnuTradeRequestResult(TESTA_ENU_TRADE_REQUEST_RESULT);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag749EnuTradeRequestResult(TESTB_ENU_TRADE_REQUEST_RESULT);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum749TradeRequestResult oneEnum : Enum749TradeRequestResult.values()) {
+            System.out.println( new Tag749EnuTradeRequestResult(oneEnum).toVerboseString() );
+        }
     }
 }

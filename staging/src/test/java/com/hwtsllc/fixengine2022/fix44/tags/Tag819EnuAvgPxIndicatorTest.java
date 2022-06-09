@@ -28,11 +28,13 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  819
  *  AvgPxIndicator
  *  int
+ *  <p></p>
  *  Average Pricing Indicator
+ *  <p></p>
  *  Valid values:
- *      0 - No Average Pricing
- *      1 - Trade is part of an average price group identified by the TradeLinkID (820)
- *      2 - Last trade is the average price group identified by the TradeLinkID (820)
+ *  <p>    0 - No Average Pricing
+ *  <p>    1 - Trade is part of an average price group identified by the TradeLinkID (820)
+ *  <p>    2 - Last trade is the average price group identified by the TradeLinkID (820)
  */
 class Tag819EnuAvgPxIndicatorTest {
     @Test

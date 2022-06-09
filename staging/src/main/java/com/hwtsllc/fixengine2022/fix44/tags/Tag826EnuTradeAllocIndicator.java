@@ -27,14 +27,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  826
  *  TradeAllocIndicator
  *  int
+ *  <p></p>
  *  Identifies how the trade is to be allocated
+ *  <p></p>
  *  Valid values:
- *      0 - Allocation not required
- *      1 - Allocation required (give-up trade) allocation information not provided (incomplete)
- *      2 - Use allocation provided with the trade
- *      3 - Allocation give-up executor
- *      4 - Allocation from executor
- *      5 - Allocation to claim account
+ *  <p>    0 - Allocation not required
+ *  <p>    1 - Allocation required (give-up trade) allocation information not
+ *          provided (incomplete)
+ *  <p>    2 - Use allocation provided with the trade
+ *  <p>    3 - Allocation give-up executor
+ *  <p>    4 - Allocation from executor
+ *  <p></p>
+ *  <p>    5 - Allocation to claim account
  */
 public class Tag826EnuTradeAllocIndicator extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum826TradeAllocIndicator dataValue;
@@ -69,7 +73,20 @@ public class Tag826EnuTradeAllocIndicator extends FIX44Abstract implements LogVa
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -108,13 +125,14 @@ public class Tag826EnuTradeAllocIndicator extends FIX44Abstract implements LogVa
         Tag826EnuTradeAllocIndicator tagData;
 
         tagData = new Tag826EnuTradeAllocIndicator(TESTA_ENU_TRADE_ALLOC_INDICATOR);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag826EnuTradeAllocIndicator(TESTB_ENU_TRADE_ALLOC_INDICATOR);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum826TradeAllocIndicator oneEnum : Enum826TradeAllocIndicator.values()) {
+            System.out.println( new Tag826EnuTradeAllocIndicator(oneEnum).toVerboseString() );
+        }
     }
 }

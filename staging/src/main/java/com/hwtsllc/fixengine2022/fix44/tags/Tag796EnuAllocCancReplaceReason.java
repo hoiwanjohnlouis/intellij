@@ -26,13 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  796
  *  AllocCancReplaceReason
- *  Reason for cancelling or replacing an Allocation Instruction or Allocation Report message
+ *  int
+ *  <p></p>
+ *  Reason for cancelling or replacing an Allocation Instruction
+ *  or Allocation Report message
+ *  <p></p>
  *  Valid values:
- *      1 - Original details incomplete or incorrect
- *      2 - Change in underlying order details
- *      99 - Other
- *
- *      or any value conforming to the data type Reserved100Plus
+ *  <p>    1 - Original details incomplete or incorrect
+ *  <p>    2 - Change in underlying order details
+ *  <p>    99 - Other
+ *  <p>    or any value conforming to the data type Reserved100Plus
  */
 public class Tag796EnuAllocCancReplaceReason extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum796AllocCancReplaceReason dataValue;
@@ -67,7 +70,20 @@ public class Tag796EnuAllocCancReplaceReason extends FIX44Abstract implements Lo
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -106,13 +122,14 @@ public class Tag796EnuAllocCancReplaceReason extends FIX44Abstract implements Lo
         Tag796EnuAllocCancReplaceReason tagData;
 
         tagData = new Tag796EnuAllocCancReplaceReason(TESTA_ENU_ALLOC_CANC_REPLACE_REASON);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag796EnuAllocCancReplaceReason(TESTB_ENU_ALLOC_CANC_REPLACE_REASON);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum796AllocCancReplaceReason oneEnum : Enum796AllocCancReplaceReason.values()) {
+            System.out.println( new Tag796EnuAllocCancReplaceReason(oneEnum).toVerboseString() );
+        }
     }
 }

@@ -23,6 +23,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  913
+ *  AgreementDesc
+ *  String
+ *  <p></p>
+ *  The full name of the base standard agreement, annexes and amendments
+ *  in place between the principals applicable to a financing transaction.
+ */
 class Tag913AgreementDescTest {
     @Test
     void FIX0913Test() {

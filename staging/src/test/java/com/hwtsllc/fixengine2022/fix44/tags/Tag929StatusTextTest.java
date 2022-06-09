@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  929
  *  StatusText
  *  String
+ *  <p></p>
  *  A text description associated with a network status.
  */
 class Tag929StatusTextTest {

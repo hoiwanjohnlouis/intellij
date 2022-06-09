@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  745
  *  AssignmentUnit
  *  Qty
+ *  <p></p>
  *  Quantity Increment used in performing assignment.
  */
 public class Tag745AssignmentUnit {

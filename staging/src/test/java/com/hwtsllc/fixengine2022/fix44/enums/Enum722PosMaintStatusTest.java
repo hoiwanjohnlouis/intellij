@@ -22,18 +22,21 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  722
+ *  PosMaintStatus
+ *  int
+ *  <p></p>
+ *  Status of Position Maintenance Request
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Accepted
+ *  <p>    1 - Accepted With Warnings
+ *  <p>    2 - Rejected
+ *  <p>    3 - Completed
+ *  <p>    4 - Completed With Warnings
+ */
 class Enum722PosMaintStatusTest {
-    /**
-     *  722
-     *  PosMaintStatus
-     *  Status of Position Maintenance Request
-     *  Valid values:
-     *      0 - Accepted
-     *      1 - Accepted With Warnings
-     *      2 - Rejected
-     *      3 - Completed
-     *      4 - Completed With Warnings
-     */
     @Test
     void EnumTest() {
         Enum722PosMaintStatus enumType;

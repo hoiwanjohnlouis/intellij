@@ -20,8 +20,10 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  861
  *  ReportedPx
  *  Price
- *  Reported price (used to differentiate from AvgPx on a confirmation of a marked-up
- *  or marked-down principal trade)
+ *  <p></p>
+ *  Reported price
+ *  (used to differentiate from AvgPx on a confirmation
+ *  of a marked-up or marked-down principal trade)
  */
 public class Tag861ReportedPx {
 }

@@ -22,23 +22,29 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  770
+ *  TrdRegTimestampType
+ *  int
+ *  <p></p>
+ *  Traded / Regulatory timestamp type.
+ *  <p></p>
+ *  Note of Applicability:
+ *  <p>    Values are required in US futures markets by the CFTC to
+ *         support computerized trade reconstruction.
+ *  <p></p>
+ *      (see Volume : "Glossary" for value definitions)
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Execution Time
+ *  <p>    2 - Time In
+ *  <p>    3 - Time Out
+ *  <p>    4 - Broker Receipt
+ *  <p>    5 - Broker Execution
+ *  <p></p>
+ *  <p>    6 - Desk Receipt
+ */
 class Enum770TrdRegTimestampTypeTest {
-    /**
-     *  770
-     *  TrdRegTimestampType
-     *  Traded / Regulatory timestamp type.
-     *  Note of Applicability:
-     *      values are required in US futures markets by the CFTC to
-     *      support computerized trade reconstruction.
-     *      (see Volume : "Glossary" for value definitions)
-     *  Valid values:
-     *      1 - Execution Time
-     *      2 - Time In
-     *      3 - Time Out
-     *      4 - Broker Receipt
-     *      5 - Broker Execution
-     *      6 - Desk Receipt
-     */
     @Test
     void EnumTest() {
         Enum770TrdRegTimestampType enumType;

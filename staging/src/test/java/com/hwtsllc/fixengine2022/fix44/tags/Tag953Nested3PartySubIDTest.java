@@ -27,8 +27,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  953
  *  Nested3PartySubID
  *  String
+ *  <p></p>
  *  PartySubID value within a "third instance" Nested repeating group.
- *          Same values as  PartySubID (523)
+ *  <p></p>
+ *  Same values as  PartySubID (523)
  */
 class Tag953Nested3PartySubIDTest {
     @Test

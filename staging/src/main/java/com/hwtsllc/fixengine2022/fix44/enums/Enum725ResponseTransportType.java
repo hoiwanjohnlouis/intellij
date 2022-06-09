@@ -22,11 +22,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  725
  *  ResponseTransportType
+ *  int
+ *  <p></p>
  *  Identifies how the response to the request should be transmitted.
- *              Details specified via ResponseDestination (726).
+ *  <p></p>
+ *  Details specified via ResponseDestination (726).
+ *  <p></p>
  *  Valid values:
- *      0 - Inband - transport the request was sent over (default)
- *      1 - Out of Band - pre-arranged out-of-band delivery mechanism
+ *  <p>    0 - Inband - transport the request was sent over (default)
+ *  <p>    1 - Out of Band - pre-arranged out-of-band delivery mechanism
  *              (i.e. FTP, HTTP, NDM, etc.) between counterparties
  */
 public enum Enum725ResponseTransportType implements LogFIXString, LogVerboseString {
@@ -118,6 +122,7 @@ public enum Enum725ResponseTransportType implements LogFIXString, LogVerboseStri
          */
         for (Enum725ResponseTransportType oneEnum : Enum725ResponseTransportType.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

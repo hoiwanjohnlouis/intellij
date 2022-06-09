@@ -22,16 +22,19 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  706
+ *  PosQtyStatus
+ *  String
+ *  <p></p>
+ *  Status of this position.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Submitted
+ *  <p>    1 - Accepted
+ *  <p>    2 - Rejected
+ */
 class Enum706PosQtyStatusTest {
-    /**
-     *  706
-     *  PosQtyStatus
-     *  Status of this position.
-     *  Valid values:
-     *  0 - Submitted
-     *  1 - Accepted
-     *  2 - Rejected
-     */
     @Test
     void EnumTest() {
         Enum706PosQtyStatus enumType;

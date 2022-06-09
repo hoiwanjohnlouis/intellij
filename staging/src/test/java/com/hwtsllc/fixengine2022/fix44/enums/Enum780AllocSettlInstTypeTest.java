@@ -22,19 +22,22 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  780
+ *  AllocSettlInstType
+ *  int
+ *  <p></p>
+ *  Used to indicate whether settlement instructions are provided on an
+ *  allocation instruction message, and if not, how they are to be derived.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - Use default instructions
+ *  <p>    1 - Derive from parameters provided
+ *  <p>    2 - Full details provided
+ *  <p>    3 - SSI DB IDs provided
+ *  <p>    4 - Phone for instructions
+ */
 class Enum780AllocSettlInstTypeTest {
-    /**
-     *  780
-     *  AllocSettlInstType
-     *  Used to indicate whether settlement instructions are provided on an
-     *  allocation instruction message, and if not, how they are to be derived.
-     *  Valid values:
-     *      0 - Use default instructions
-     *      1 - Derive from parameters provided
-     *      2 - Full details provided
-     *      3 - SSI DB IDs provided
-     *      4 - Phone for instructions
-     */
     @Test
     void EnumTest() {
         Enum780AllocSettlInstType enumType;

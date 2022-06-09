@@ -20,7 +20,9 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  713
  *  OrigPosReqRefID
  *  String
- *  Reference to the PosReqID (710) of a previous maintenance request that is being replaced or canceled.
+ *  <p></p>
+ *  Reference to the PosReqID (710) of a previous maintenance request
+ *  that is being replaced or canceled.
  */
 public class Tag713OrigPosReqRefID {
 }

@@ -27,8 +27,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  673
  *  LegAllocQty
  *  Qty
+ *  <p></p>
  *  Leg allocation quantity.
- *        See AllocQty (80) for description and valid values.
+ *  <p></p>
+ *  See AllocQty (80) for description and valid values.
  */
 class Tag673LegAllocQtyTest {
     @Test

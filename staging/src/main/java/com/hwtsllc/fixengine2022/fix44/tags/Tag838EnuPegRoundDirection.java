@@ -77,7 +77,20 @@ public class Tag838EnuPegRoundDirection extends FIX44Abstract implements LogValu
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -116,13 +129,14 @@ public class Tag838EnuPegRoundDirection extends FIX44Abstract implements LogValu
         Tag838EnuPegRoundDirection tagData;
 
         tagData = new Tag838EnuPegRoundDirection(TESTA_ENU_PEG_ROUND_DIRECTION);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag838EnuPegRoundDirection(TESTB_ENU_PEG_ROUND_DIRECTION);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( MyEnumRoundDirection oneEnum : MyEnumRoundDirection.values()) {
+            System.out.println( new Tag838EnuPegRoundDirection(oneEnum).toVerboseString() );
+        }
     }
 }

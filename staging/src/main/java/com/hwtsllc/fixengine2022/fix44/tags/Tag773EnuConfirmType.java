@@ -26,11 +26,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  773
  *  ConfirmType
+ *  int
+ *  <p></p>
  *  Identifies the type of Confirmation message being sent.
+ *  <p></p>
  *  Valid values:
- *      1 - Status
- *      2 - Confirmation
- *      3 - Confirmation Request Rejected (reason can be stated in Text (58) field)
+ *  <p>    1 - Status
+ *  <p>    2 - Confirmation
+ *  <p>    3 - Confirmation Request Rejected (reason can be stated in Text (58) field)
  */
 public class Tag773EnuConfirmType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum773ConfirmType dataValue;
@@ -65,7 +68,20 @@ public class Tag773EnuConfirmType extends FIX44Abstract implements LogValuePairS
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -104,13 +120,14 @@ public class Tag773EnuConfirmType extends FIX44Abstract implements LogValuePairS
         Tag773EnuConfirmType tagData;
 
         tagData = new Tag773EnuConfirmType(TESTA_ENU_CONFIRM_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag773EnuConfirmType(TESTB_ENU_CONFIRM_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum773ConfirmType oneEnum : Enum773ConfirmType.values()) {
+            System.out.println( new Tag773EnuConfirmType(oneEnum).toVerboseString() );
+        }
     }
 }

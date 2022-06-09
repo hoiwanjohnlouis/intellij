@@ -23,13 +23,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  935
  *  NetworkRequestType
  *  int
- *  Indicates the type and level of details required for a Network Status Request Message Boolean logic applies
- *  e.g. If you want to subscribe for changes to certain id’s then UserRequestType = 0 (8+2), Snapshot for certain ID’s = 9 (8+1)
+ *  <p></p>
+ *  Indicates the type and level of details required for a
+ *  Network Status Request Message Boolean logic applies
+ *  <p></p>
+ *  e.g. If you want to subscribe for changes to certain id’s
+ *  then UserRequestType = 0 (8+2), Snapshot for certain ID’s = 9 (8+1)
+ *  <p></p>
  *  Valid values:
- *      1 - Snapshot
- *      2 - Subscribe
- *      4 - Stop Subscribing
- *      8 - Level of Detail, then NoCompID's becomes required
+ *  <p>    1 - Snapshot
+ *  <p>    2 - Subscribe
+ *  <p>    4 - Stop Subscribing
+ *  <p>    8 - Level of Detail, then NoCompID's becomes required
  */
 public enum Enum935NetworkRequestType implements LogFIXString, LogVerboseString {
     SNAPSHOT( "1", "SNAPSHOT", "1 - Snapshot" ),
@@ -119,6 +124,7 @@ public enum Enum935NetworkRequestType implements LogFIXString, LogVerboseString 
          */
         for (Enum935NetworkRequestType oneEnum : Enum935NetworkRequestType.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

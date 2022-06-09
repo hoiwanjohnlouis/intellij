@@ -27,17 +27,21 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 /**
  *  728
  *  PosReqResult
+ *  int
+ *  <p></p>
  *  Result of Request for Position
+ *  <p></p>
  *  4000+ Reserved and available for bi-laterally agreed upon user-defined values
+ *  <p></p>
  *  Valid values:
- *      0 - Valid request
- *      1 - Invalid or unsupported request
- *      2 - No positions found that match criteria
- *      3 - Not authorized to request positions
- *      4 - Request for position not supported
- *      99 - Other (use Text (58) in conjunction with this code for an explanation)
- *
- *      or any value conforming to the data type Reserved100Plus
+ *  <p>    0 - Valid request
+ *  <p>    1 - Invalid or unsupported request
+ *  <p>    2 - No positions found that match criteria
+ *  <p>    3 - Not authorized to request positions
+ *  <p>    4 - Request for position not supported
+ *  <p></p>
+ *  <p>    99 - Other (use Text (58) in conjunction with this code for an explanation)
+ *  <p>    or any value conforming to the data type Reserved100Plus
  */
 class Tag728EnuPosReqResultTest {
     @Test

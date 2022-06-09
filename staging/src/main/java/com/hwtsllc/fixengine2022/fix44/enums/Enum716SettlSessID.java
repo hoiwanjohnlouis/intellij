@@ -22,12 +22,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  716
  *  SettlSessID
+ *  String
+ *  <p></p>
  *  Identifies a specific settlement session
+ *  <p></p>
  *  Valid values:
- *      ITD - Intraday
- *      RTH - Regular Trading Hours
- *      ETH - Electronic Trading Hours
- *      EOD - End Of Day
+ *  <p>    ITD - Intraday
+ *  <p>    RTH - Regular Trading Hours
+ *  <p>    ETH - Electronic Trading Hours
+ *  <p>    EOD - End Of Day
  */
 public enum Enum716SettlSessID implements LogFIXString, LogVerboseString {
     INTRADAY( "ITD", "INTRADAY", "ITD - Intraday" ),
@@ -117,6 +120,7 @@ public enum Enum716SettlSessID implements LogFIXString, LogVerboseString {
          */
         for (Enum716SettlSessID oneEnum : Enum716SettlSessID.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  914
  *  AgreementID
  *  String
+ *  <p></p>
  *  A common reference to the applicable standing agreement
  *  between the counterparties to a financing transaction.
  */

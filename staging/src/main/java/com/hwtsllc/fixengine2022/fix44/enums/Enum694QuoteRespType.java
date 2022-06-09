@@ -22,14 +22,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  694
  *  QuoteRespType
+ *  int
+ *  <p></p>
  *  Identifies the type of Quote Response.
+ *  <p></p>
  *  Valid values:
- *      1 - Hit/Lift
- *      2 - Counter
- *      3 - Expired
- *      4 - Cover
- *      5 - Done Away
- *      6 - Pass
+ *  <p>    1 - Hit/Lift
+ *  <p>    2 - Counter
+ *  <p>    3 - Expired
+ *  <p>    4 - Cover
+ *  <p>    5 - Done Away
+ *  <p></p>
+ *  <p>    6 - Pass
  */
 public enum Enum694QuoteRespType implements LogFIXString, LogVerboseString {
     HIT_OR_LIFT( "1", "HIT_OR_LIFT", "1 - Hit/Lift" ),
@@ -122,6 +126,7 @@ public enum Enum694QuoteRespType implements LogFIXString, LogVerboseString {
          */
         for (Enum694QuoteRespType oneEnum : Enum694QuoteRespType.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

@@ -26,13 +26,17 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  775
  *  BookingType
+ *  int
+ *  <p></p>
  *  Method for booking out this order.
- *      Used when notifying a broker that an order to be settled by that broker
- *      is to be booked out as an OTC derivative (e.g. CFD or similar).
+ *  <p></p>
+ *  Used when notifying a broker that an order to be settled by that broker
+ *  is to be booked out as an OTC derivative (e.g. CFD or similar).
+ *  <p></p>
  *  Valid values:
- *      0 - Regular booking
- *      1 - CFD (Contract for difference)
- *      2 - Total Return Swap
+ *  <p>    0 - Regular booking
+ *  <p>    1 - CFD (Contract for difference)
+ *  <p>    2 - Total Return Swap
  */
 public class Tag775EnuBookingType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum775BookingType dataValue;
@@ -67,7 +71,20 @@ public class Tag775EnuBookingType extends FIX44Abstract implements LogValuePairS
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -106,13 +123,14 @@ public class Tag775EnuBookingType extends FIX44Abstract implements LogValuePairS
         Tag775EnuBookingType tagData;
 
         tagData = new Tag775EnuBookingType(TESTA_ENU_BOOKING_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag775EnuBookingType(TESTB_ENU_BOOKING_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum775BookingType oneEnum : Enum775BookingType.values()) {
+            System.out.println( new Tag775EnuBookingType(oneEnum).toVerboseString() );
+        }
     }
 }

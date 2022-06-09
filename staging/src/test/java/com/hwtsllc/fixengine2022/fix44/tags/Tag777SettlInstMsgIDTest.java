@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  777
  *  SettlInstMsgID
  *  String
+ *  <p></p>
  *  Unique identifier for Settlement Instruction message.
  */
 class Tag777SettlInstMsgIDTest {

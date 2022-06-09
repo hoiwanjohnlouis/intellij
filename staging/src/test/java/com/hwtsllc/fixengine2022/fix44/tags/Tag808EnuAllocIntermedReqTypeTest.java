@@ -28,17 +28,21 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  808
  *  AllocIntermedReqType
  *  int
+ *  <p></p>
  *  Response to allocation to be communicated to a counterparty through an intermediary,
  *  i.e. clearing house.
+ *  <p></p>
  *  Used in conjunction with AllocType = Request to Intermediary
  *  and AllocReportType = Request to Intermediary
+ *  <p></p>
  *  Valid values:
- *      1 - Pending Accept
- *      2 - Pending Release
- *      3 - Pending Reversal
- *      4 - Accept
- *      5 - Block Level Reject
- *      6 - Account Level Reject
+ *  <p>    1 - Pending Accept
+ *  <p>    2 - Pending Release
+ *  <p>    3 - Pending Reversal
+ *  <p>    4 - Accept
+ *  <p>    5 - Block Level Reject
+ *  <p></p>
+ *  <p>    6 - Account Level Reject
  */
 class Tag808EnuAllocIntermedReqTypeTest {
     @Test

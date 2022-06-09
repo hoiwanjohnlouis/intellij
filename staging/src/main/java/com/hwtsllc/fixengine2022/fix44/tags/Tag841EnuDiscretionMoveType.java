@@ -73,7 +73,20 @@ public class Tag841EnuDiscretionMoveType extends FIX44Abstract implements LogVal
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -112,13 +125,14 @@ public class Tag841EnuDiscretionMoveType extends FIX44Abstract implements LogVal
         Tag841EnuDiscretionMoveType tagData;
 
         tagData = new Tag841EnuDiscretionMoveType(TESTA_ENU_DISCRETION_MOVE_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag841EnuDiscretionMoveType(TESTB_ENU_DISCRETION_MOVE_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( MyEnumMoveType oneEnum : MyEnumMoveType.values()) {
+            System.out.println( new Tag841EnuDiscretionMoveType(oneEnum).toVerboseString() );
+        }
     }
 }

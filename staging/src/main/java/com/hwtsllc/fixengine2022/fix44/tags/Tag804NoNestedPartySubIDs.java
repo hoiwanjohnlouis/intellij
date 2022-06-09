@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  804
  *  NoNestedPartySubIDs
  *  NumInGroup
+ *  <p></p>
  *  Number of NestedPartySubID (545) and NestedPartySubIDType (805) entries
  */
 public class Tag804NoNestedPartySubIDs {

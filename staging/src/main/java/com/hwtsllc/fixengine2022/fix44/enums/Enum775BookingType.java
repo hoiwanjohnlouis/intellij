@@ -22,13 +22,17 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  775
  *  BookingType
+ *  int
+ *  <p></p>
  *  Method for booking out this order.
- *      Used when notifying a broker that an order to be settled by that broker
- *      is to be booked out as an OTC derivative (e.g. CFD or similar).
+ *  <p></p>
+ *  Used when notifying a broker that an order to be settled by that broker
+ *  is to be booked out as an OTC derivative (e.g. CFD or similar).
+ *  <p></p>
  *  Valid values:
- *      0 - Regular booking
- *      1 - CFD (Contract for difference)
- *      2 - Total Return Swap
+ *  <p>    0 - Regular booking
+ *  <p>    1 - CFD (Contract for difference)
+ *  <p>    2 - Total Return Swap
  */
 public enum Enum775BookingType implements LogFIXString, LogVerboseString {
     REGULAR_BOOKING( "0", "REGULAR_BOOKING", "0 - Regular booking" ),
@@ -117,6 +121,7 @@ public enum Enum775BookingType implements LogFIXString, LogVerboseString {
          */
         for (Enum775BookingType oneEnum : Enum775BookingType.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  772
  *  ConfirmRefID
  *  String
+ *  <p></p>
  *  Reference identifier to be used with ConfirmTransType (666) = Replace or Cancel
  */
 public class Tag772ConfirmRefID {

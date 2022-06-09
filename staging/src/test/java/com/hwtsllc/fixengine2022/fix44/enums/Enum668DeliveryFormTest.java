@@ -22,15 +22,18 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  668
+ *  DeliveryForm
+ *  int
+ *  <p></p>
+ *  Identifies the form of delivery.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    1 - Book Entry (default)
+ *  <p>    2 - Bearer
+ */
 class Enum668DeliveryFormTest {
-    /**
-     *  668
-     *  DeliveryForm
-     *  Identifies the form of delivery.
-     *  Valid values:
-     *      1 - Book Entry (default)
-     *      2 - Bearer
-     */
     @Test
     void EnumTest() {
         Enum668DeliveryForm enumType;

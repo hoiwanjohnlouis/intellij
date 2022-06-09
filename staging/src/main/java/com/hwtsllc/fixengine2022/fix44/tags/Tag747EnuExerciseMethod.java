@@ -26,10 +26,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  747
  *  ExerciseMethod
+ *  int
+ *  <p></p>
  *  Exercise Method used to in performing assignment.
+ *  <p></p>
  *  Valid values:
- *      A - Automatic
- *      M - Manual
+ *  <p>    A - Automatic
+ *  <p>    M - Manual
  */
 public class Tag747EnuExerciseMethod extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum747ExerciseMethod dataValue;
@@ -64,7 +67,20 @@ public class Tag747EnuExerciseMethod extends FIX44Abstract implements LogValuePa
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -103,13 +119,14 @@ public class Tag747EnuExerciseMethod extends FIX44Abstract implements LogValuePa
         Tag747EnuExerciseMethod tagData;
 
         tagData = new Tag747EnuExerciseMethod(TESTA_ENU_EXERCISE_METHOD);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag747EnuExerciseMethod(TESTB_ENU_EXERCISE_METHOD);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum747ExerciseMethod oneEnum : Enum747ExerciseMethod.values()) {
+            System.out.println( new Tag747EnuExerciseMethod(oneEnum).toVerboseString() );
+        }
     }
 }

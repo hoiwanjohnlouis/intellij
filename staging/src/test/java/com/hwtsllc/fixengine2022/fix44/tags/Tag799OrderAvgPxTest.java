@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  799
  *  OrderAvgPx
  *  Price
+ *  <p></p>
  *  Average price for a specific order
  */
 class Tag799OrderAvgPxTest {

@@ -22,18 +22,24 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  770
  *  TrdRegTimestampType
+ *  int
+ *  <p></p>
  *  Traded / Regulatory timestamp type.
+ *  <p></p>
  *  Note of Applicability:
- *      values are required in US futures markets by the CFTC to
- *      support computerized trade reconstruction.
+ *  <p>    Values are required in US futures markets by the CFTC to
+ *         support computerized trade reconstruction.
+ *  <p></p>
  *      (see Volume : "Glossary" for value definitions)
+ *  <p></p>
  *  Valid values:
- *      1 - Execution Time
- *      2 - Time In
- *      3 - Time Out
- *      4 - Broker Receipt
- *      5 - Broker Execution
- *      6 - Desk Receipt
+ *  <p>    1 - Execution Time
+ *  <p>    2 - Time In
+ *  <p>    3 - Time Out
+ *  <p>    4 - Broker Receipt
+ *  <p>    5 - Broker Execution
+ *  <p></p>
+ *  <p>    6 - Desk Receipt
  */
 public enum Enum770TrdRegTimestampType implements LogFIXString, LogVerboseString {
     EXECUTION_TIME( "1", "EXECUTION_TIME", "1 - Execution Time" ),
@@ -41,6 +47,7 @@ public enum Enum770TrdRegTimestampType implements LogFIXString, LogVerboseString
     TIME_OUT( "3", "TIME_OUT", "3 - Time Out" ),
     BROKER_RECEIPT( "4", "BROKER_RECEIPT", "4 - Broker Receipt" ),
     BROKER_EXECUTION( "5", "BROKER_EXECUTION", "5 - Broker Execution" ),
+
     DESK_RECEIPT( "6", "DESK_RECEIPT", "6 - Desk Receipt" ),
     ;
 
@@ -125,6 +132,7 @@ public enum Enum770TrdRegTimestampType implements LogFIXString, LogVerboseString
          */
         for (Enum770TrdRegTimestampType oneEnum : Enum770TrdRegTimestampType.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

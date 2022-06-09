@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  927
  *  UserStatusText
  *  String
+ *  <p></p>
  *  A text description associated with a user status.
  */
 class Tag927UserStatusTextTest {

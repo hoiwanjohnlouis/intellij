@@ -223,7 +223,20 @@ public class Tag784EnuSettlPartyRole extends FIX44Abstract implements LogValuePa
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -262,13 +275,14 @@ public class Tag784EnuSettlPartyRole extends FIX44Abstract implements LogValuePa
         Tag784EnuSettlPartyRole tagData;
 
         tagData = new Tag784EnuSettlPartyRole(TESTA_ENU_SETTL_PARTY_ROLE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag784EnuSettlPartyRole(TESTB_ENU_SETTL_PARTY_ROLE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( MyEnumPartyRole oneEnum : MyEnumPartyRole.values()) {
+            System.out.println( new Tag784EnuSettlPartyRole(oneEnum).toVerboseString() );
+        }
     }
 }

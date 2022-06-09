@@ -23,11 +23,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  819
  *  AvgPxIndicator
  *  int
+ *  <p></p>
  *  Average Pricing Indicator
+ *  <p></p>
  *  Valid values:
- *      0 - No Average Pricing
- *      1 - Trade is part of an average price group identified by the TradeLinkID (820)
- *      2 - Last trade is the average price group identified by the TradeLinkID (820)
+ *  <p>    0 - No Average Pricing
+ *  <p>    1 - Trade is part of an average price group identified by the TradeLinkID (820)
+ *  <p>    2 - Last trade is the average price group identified by the TradeLinkID (820)
  */
 public enum Enum819AvgPxIndicator implements LogFIXString, LogVerboseString {
     NO_PRICING( "0", "NO_PRICING", "0 - No Average Pricing" ),
@@ -116,6 +118,7 @@ public enum Enum819AvgPxIndicator implements LogFIXString, LogVerboseString {
          */
         for (Enum819AvgPxIndicator oneEnum : Enum819AvgPxIndicator.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

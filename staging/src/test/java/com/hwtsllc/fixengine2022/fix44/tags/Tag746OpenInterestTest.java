@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  746
  *  OpenInterest
  *  Amt
+ *  <p></p>
  *  Open interest that was eligible for assignment.
  */
 class Tag746OpenInterestTest {

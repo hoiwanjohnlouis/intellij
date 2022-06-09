@@ -23,12 +23,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  928
  *  StatusValue
  *  int
+ *  <p></p>
  *  Indicates the status of a network connection
+ *  <p></p>
  *  Valid values:
- *      1 - Connected
- *      2 - Not Connected - down expected up
- *      3 - Not Connected - down expected down
- *      4 - In Process
+ *  <p>    1 - Connected
+ *  <p>    2 - Not Connected - down, expected up
+ *  <p>    3 - Not Connected - down, expected down
+ *  <p>    4 - In Process
  */
 public enum Enum928StatusValue implements LogFIXString, LogVerboseString {
     CONNECTED( "1", "CONNECTED", "1 - Connected" ),
@@ -118,6 +120,7 @@ public enum Enum928StatusValue implements LogFIXString, LogVerboseString {
          */
         for (Enum928StatusValue oneEnum : Enum928StatusValue.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

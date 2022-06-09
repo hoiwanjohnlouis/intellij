@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  741
  *  AllocInterestAtMaturity
  *  Amt
+ *  <p></p>
  *  Amount of interest (i.e. lump-sum) at maturity at the account-level.
  */
 public class Tag741AllocInterestAtMaturity {

@@ -27,12 +27,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  919
  *  DeliveryType
  *  int
+ *  <p></p>
  *  Identifies type of settlement
+ *  <p></p>
  *  Valid values:
- *      0 - Versus Payment: Deliver (if sell) or Receive (if buy) vs. (against) Payment
- *      1 - Free: Deliver (if sell) or Receive (if buy) Free
- *      2 - Tri-Party
- *      3 - Hold In Custody
+ *  <p>    0 - Versus Payment: Deliver (if sell) or Receive (if buy) vs. (against) Payment
+ *  <p>    1 - Free: Deliver (if sell) or Receive (if buy) Free
+ *  <p>    2 - Tri-Party
+ *  <p>    3 - Hold In Custody
  */
 public class Tag919EnuDeliveryType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum919DeliveryType dataValue;
@@ -67,7 +69,20 @@ public class Tag919EnuDeliveryType extends FIX44Abstract implements LogValuePair
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -106,13 +121,14 @@ public class Tag919EnuDeliveryType extends FIX44Abstract implements LogValuePair
         Tag919EnuDeliveryType tagData;
 
         tagData = new Tag919EnuDeliveryType(TESTA_ENU_DELIVERY_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag919EnuDeliveryType(TESTB_ENU_DELIVERY_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum919DeliveryType oneEnum : Enum919DeliveryType.values()) {
+            System.out.println( new Tag919EnuDeliveryType(oneEnum).toVerboseString() );
+        }
     }
 }

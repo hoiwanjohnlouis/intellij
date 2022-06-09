@@ -28,14 +28,18 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  826
  *  TradeAllocIndicator
  *  int
+ *  <p></p>
  *  Identifies how the trade is to be allocated
+ *  <p></p>
  *  Valid values:
- *      0 - Allocation not required
- *      1 - Allocation required (give-up trade) allocation information not provided (incomplete)
- *      2 - Use allocation provided with the trade
- *      3 - Allocation give-up executor
- *      4 - Allocation from executor
- *      5 - Allocation to claim account
+ *  <p>    0 - Allocation not required
+ *  <p>    1 - Allocation required (give-up trade) allocation information not
+ *          provided (incomplete)
+ *  <p>    2 - Use allocation provided with the trade
+ *  <p>    3 - Allocation give-up executor
+ *  <p>    4 - Allocation from executor
+ *  <p></p>
+ *  <p>    5 - Allocation to claim account
  */
 class Tag826EnuTradeAllocIndicatorTest {
     @Test

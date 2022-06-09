@@ -27,11 +27,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  857
  *  AllocNoOrdersType
  *  int
+ *  <p></p>
  *  Indicates how the orders being booked and allocated by an Allocation Instruction or Allocation
+ *  <p></p>
  *  Report message are identified, i.e. by explicit definition in the NoOrders group or not.
+ *  <p></p>
  *  Valid values:
- *      0 - Not Specified
- *      1 - Explicit List Provided
+ *  <p>    0 - Not Specified
+ *  <p>    1 - Explicit List Provided
  */
 public class Tag857EnuAllocNoOrdersType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum857AllocNoOrdersType dataValue;
@@ -66,7 +69,20 @@ public class Tag857EnuAllocNoOrdersType extends FIX44Abstract implements LogValu
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -105,13 +121,14 @@ public class Tag857EnuAllocNoOrdersType extends FIX44Abstract implements LogValu
         Tag857EnuAllocNoOrdersType tagData;
 
         tagData = new Tag857EnuAllocNoOrdersType(TESTA_ENU_ALLOC_NO_ORDERS_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag857EnuAllocNoOrdersType(TESTB_ENU_ALLOC_NO_ORDERS_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum857AllocNoOrdersType oneEnum : Enum857AllocNoOrdersType.values()) {
+            System.out.println( new Tag857EnuAllocNoOrdersType(oneEnum).toVerboseString() );
+        }
     }
 }

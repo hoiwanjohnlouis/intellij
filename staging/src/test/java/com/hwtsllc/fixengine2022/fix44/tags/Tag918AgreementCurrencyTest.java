@@ -27,7 +27,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  918
  *  AgreementCurrency
  *  Currency
- *  Contractual currency forming the basis of a financing agreement and associated transactions.
+ *  <p></p>
+ *  Contractual currency forming the basis of a financing agreement
+ *  and associated transactions.
+ *  <p></p>
  *  Usually, but not always, the same as the trade currency.
  */
 class Tag918AgreementCurrencyTest {

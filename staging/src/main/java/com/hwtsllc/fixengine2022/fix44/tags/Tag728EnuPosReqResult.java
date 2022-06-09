@@ -26,17 +26,21 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  728
  *  PosReqResult
+ *  int
+ *  <p></p>
  *  Result of Request for Position
+ *  <p></p>
  *  4000+ Reserved and available for bi-laterally agreed upon user-defined values
+ *  <p></p>
  *  Valid values:
- *      0 - Valid request
- *      1 - Invalid or unsupported request
- *      2 - No positions found that match criteria
- *      3 - Not authorized to request positions
- *      4 - Request for position not supported
- *      99 - Other (use Text (58) in conjunction with this code for an explanation)
- *
- *      or any value conforming to the data type Reserved100Plus
+ *  <p>    0 - Valid request
+ *  <p>    1 - Invalid or unsupported request
+ *  <p>    2 - No positions found that match criteria
+ *  <p>    3 - Not authorized to request positions
+ *  <p>    4 - Request for position not supported
+ *  <p></p>
+ *  <p>    99 - Other (use Text (58) in conjunction with this code for an explanation)
+ *  <p>    or any value conforming to the data type Reserved100Plus
  */
 public class Tag728EnuPosReqResult extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum728PosReqResult dataValue;
@@ -71,7 +75,20 @@ public class Tag728EnuPosReqResult extends FIX44Abstract implements LogValuePair
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -110,13 +127,14 @@ public class Tag728EnuPosReqResult extends FIX44Abstract implements LogValuePair
         Tag728EnuPosReqResult tagData;
 
         tagData = new Tag728EnuPosReqResult(TESTA_ENU_POS_REQ_RESULT);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag728EnuPosReqResult(TESTB_ENU_POS_REQ_RESULT);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum728PosReqResult oneEnum : Enum728PosReqResult.values()) {
+            System.out.println( new Tag728EnuPosReqResult(oneEnum).toVerboseString() );
+        }
     }
 }

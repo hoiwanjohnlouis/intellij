@@ -23,13 +23,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  851
  *  LastLiquidityInd
  *  int
+ *  <p></p>
  *  Indicator to identify whether this fill was a result of a liquidity provider providing
  *  or liquidity taker taking the liquidity.
+ *  <p></p>
  *  Applicable only for OrdStatus of Partial or Filled.
+ *  <p></p>
  *  Valid values:
- *      1 - Added Liquidity
- *      2 - Removed Liquidity
- *      3 - Liquidity Routed Out
+ *  <p>    1 - Added Liquidity
+ *  <p>    2 - Removed Liquidity
+ *  <p>    3 - Liquidity Routed Out
  */
 public enum Enum851LastLiquidityInd implements LogFIXString, LogVerboseString {
     ADDED( "1", "ADDED", "1 - Added Liquidity" ),
@@ -118,6 +121,7 @@ public enum Enum851LastLiquidityInd implements LogFIXString, LogVerboseString {
          */
         for (Enum851LastLiquidityInd oneEnum : Enum851LastLiquidityInd.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

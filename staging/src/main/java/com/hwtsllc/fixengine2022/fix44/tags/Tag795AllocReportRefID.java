@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  795
  *  AllocReportRefID
  *  String
+ *  <p></p>
  *  Reference identifier to be used with AllocTransType (7) = Replace or Cancel
  */
 public class Tag795AllocReportRefID {

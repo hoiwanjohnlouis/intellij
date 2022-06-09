@@ -27,13 +27,15 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 /**
  *  774
  *  ConfirmRejReason
+ *  int
+ *  <p></p>
  *  Identifies the reason for rejecting a Confirmation.
+ *  <p></p>
  *  Valid values:
- *      1 - Mismatched account
- *      2 - Missing settlement instructions
- *      99 - Other
- *
- *      or any value conforming to the data type Reserved100Plus
+ *  <p>    1 - Mismatched account
+ *  <p>    2 - Missing settlement instructions
+ *  <p>    99 - Other
+ *  <p>    or any value conforming to the data type Reserved100Plus
  */
 class Tag774EnuConfirmRejReasonTest {
     @Test

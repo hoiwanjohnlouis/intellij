@@ -22,14 +22,17 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  780
  *  AllocSettlInstType
+ *  int
+ *  <p></p>
  *  Used to indicate whether settlement instructions are provided on an
  *  allocation instruction message, and if not, how they are to be derived.
+ *  <p></p>
  *  Valid values:
- *      0 - Use default instructions
- *      1 - Derive from parameters provided
- *      2 - Full details provided
- *      3 - SSI DB IDs provided
- *      4 - Phone for instructions
+ *  <p>    0 - Use default instructions
+ *  <p>    1 - Derive from parameters provided
+ *  <p>    2 - Full details provided
+ *  <p>    3 - SSI DB IDs provided
+ *  <p>    4 - Phone for instructions
  */
 public enum Enum780AllocSettlInstType implements LogFIXString, LogVerboseString {
     USE_DEFAULTS( "0", "USE_DEFAULTS", "0 - Use default instructions" ),
@@ -120,6 +123,7 @@ public enum Enum780AllocSettlInstType implements LogFIXString, LogVerboseString 
          */
         for (Enum780AllocSettlInstType oneEnum : Enum780AllocSettlInstType.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

@@ -26,11 +26,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  729
  *  PosReqStatus
+ *  int
+ *  <p></p>
  *  Status of Request for Positions
+ *  <p></p>
  *  Valid values:
- *      0 - Completed
- *      1 - Completed With Warnings
- *      2 - Rejected
+ *  <p>    0 - Completed
+ *  <p>    1 - Completed With Warnings
+ *  <p>    2 - Rejected
  */
 public class Tag729EnuPosReqStatus extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum729PosReqStatus dataValue;
@@ -65,7 +68,20 @@ public class Tag729EnuPosReqStatus extends FIX44Abstract implements LogValuePair
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -104,13 +120,14 @@ public class Tag729EnuPosReqStatus extends FIX44Abstract implements LogValuePair
         Tag729EnuPosReqStatus tagData;
 
         tagData = new Tag729EnuPosReqStatus(TESTA_ENU_POS_REQ_RESULT);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag729EnuPosReqStatus(TESTB_ENU_POS_REQ_RESULT);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum729PosReqStatus oneEnum : Enum729PosReqStatus.values()) {
+            System.out.println( new Tag729EnuPosReqStatus(oneEnum).toVerboseString() );
+        }
     }
 }

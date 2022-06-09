@@ -27,13 +27,18 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  900
  *  TotalNetValue
  *  Amt
+ *  <p></p>
  *  TotalNetValue is determined as follows:
- *      At the initial collateral assignment TotalNetValue is the sum of
- *      (UnderlyingStartValue * (1-haircut)).
- *      In a collateral substitution TotalNetValue is the sum of
- *      (UnderlyingCurrentValue * (1-haircut)).
- *      For listed derivatives clearing margin management,
- *      this is the collateral value which equals (Market value * haircut)
+ *  <p></p>
+ *  At the initial collateral assignment TotalNetValue is the sum of
+ *  (UnderlyingStartValue * (1-haircut)).
+ *  <p></p>
+ *  In a collateral substitution TotalNetValue is the sum of
+ *  (UnderlyingCurrentValue * (1-haircut)).
+ *  <p></p>
+ *  For listed derivatives clearing margin management,
+ *  this is the collateral value which equals
+ *  (Market value * haircut)
  */
 class Tag900TotalNetValueTest {
     @Test

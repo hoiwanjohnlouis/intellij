@@ -27,8 +27,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  861
  *  ReportedPx
  *  Price
- *  Reported price (used to differentiate from AvgPx on a confirmation of a marked-up
- *  or marked-down principal trade)
+ *  <p></p>
+ *  Reported price
+ *  (used to differentiate from AvgPx on a confirmation
+ *  of a marked-up or marked-down principal trade)
  */
 class Tag861ReportedPxTest {
     @Test

@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  879
  *  UnderlyingQty
  *  Qty
+ *  <p></p>
  *  Unit amount of the underlying security (par, shares, currency, etc.)
  */
 public class Tag879UnderlyingQty {

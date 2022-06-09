@@ -27,8 +27,11 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  740
  *  LegPool
  *  String
- *  For Fixed Income, identifies MBS - ABS pool for a specific leg of a multi-leg instrument.
- *          See Pool (691) for description and valid values.
+ *  <p></p>
+ *  For Fixed Income, identifies MBS / ABS pool for a specific leg of
+ *  a multi-leg instrument.
+ *  <p></p>
+ *  See Pool (691) for description and valid values.
  */
 class Tag740LegPoolTest {
     @Test

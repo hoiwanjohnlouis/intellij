@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  858
  *  SharedCommission
  *  Amt
+ *  <p></p>
  *  Commission to be shared with a third party,
  *  e.g. as part of a directed brokerage commission sharing arrangement.
  */

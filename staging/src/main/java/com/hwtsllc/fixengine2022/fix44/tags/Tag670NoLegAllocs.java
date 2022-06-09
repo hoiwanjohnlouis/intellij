@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  670
  *  NoLegAllocs
  *  NumInGroup
+ *  <p></p>
  *  Number of Allocations for the leg
  */
 public class Tag670NoLegAllocs {

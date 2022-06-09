@@ -22,16 +22,19 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  666
+ *  ConfirmTransType
+ *  int
+ *  <p></p>
+ *  Identifies the Confirmation transaction type.
+ *  <p></p>
+ *  Valid values:
+ *  <p>    0 - New
+ *  <p>    1 - Replace
+ *  <p>    2 - Cancel
+ */
 class Enum666ConfirmTransTypeTest {
-    /**
-     *  666
-     *  ConfirmTransType
-     *  Identifies the Confirmation transaction type.
-     *  Valid values:
-     *      0 - New
-     *      1 - Replace
-     *      2 - Cancel
-     */
     @Test
     void EnumTest() {
         Enum666ConfirmTransType enumType;

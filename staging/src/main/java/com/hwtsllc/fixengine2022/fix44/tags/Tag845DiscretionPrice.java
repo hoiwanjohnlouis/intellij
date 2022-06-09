@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  845
  *  DiscretionPrice
  *  Price
+ *  <p></p>
  *  The current discretionary price of the order
  */
 public class Tag845DiscretionPrice {

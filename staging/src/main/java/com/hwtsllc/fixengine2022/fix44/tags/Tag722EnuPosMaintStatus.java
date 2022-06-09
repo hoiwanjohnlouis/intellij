@@ -26,13 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  722
  *  PosMaintStatus
+ *  int
+ *  <p></p>
  *  Status of Position Maintenance Request
+ *  <p></p>
  *  Valid values:
- *      0 - Accepted
- *      1 - Accepted With Warnings
- *      2 - Rejected
- *      3 - Completed
- *      4 - Completed With Warnings
+ *  <p>    0 - Accepted
+ *  <p>    1 - Accepted With Warnings
+ *  <p>    2 - Rejected
+ *  <p>    3 - Completed
+ *  <p>    4 - Completed With Warnings
  */
 public class Tag722EnuPosMaintStatus extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum722PosMaintStatus dataValue;
@@ -67,7 +70,20 @@ public class Tag722EnuPosMaintStatus extends FIX44Abstract implements LogValuePa
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -106,13 +122,14 @@ public class Tag722EnuPosMaintStatus extends FIX44Abstract implements LogValuePa
         Tag722EnuPosMaintStatus tagData;
 
         tagData = new Tag722EnuPosMaintStatus(TESTA_ENU_POS_MAINT_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag722EnuPosMaintStatus(TESTB_ENU_POS_MAINT_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum722PosMaintStatus oneEnum : Enum722PosMaintStatus.values()) {
+            System.out.println( new Tag722EnuPosMaintStatus(oneEnum).toVerboseString() );
+        }
     }
 }

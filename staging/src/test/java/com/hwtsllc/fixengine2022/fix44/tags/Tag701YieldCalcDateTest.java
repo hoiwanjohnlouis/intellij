@@ -27,7 +27,9 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  701
  *  YieldCalcDate
  *  LocalMktDate
+ *  <p></p>
  *  Include as needed to clarify yield irregularities associated with date,
+ *  <p>
  *  e.g. when it falls on a non-business day.
  */
 class Tag701YieldCalcDateTest {

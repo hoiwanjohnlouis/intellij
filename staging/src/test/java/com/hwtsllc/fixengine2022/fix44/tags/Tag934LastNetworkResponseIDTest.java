@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  934
  *  LastNetworkResponseID
  *  String
+ *  <p></p>
  *  Identifier of the previous Network Response message sent to a counterparty,
  *  used to allow incremental updates.
  */

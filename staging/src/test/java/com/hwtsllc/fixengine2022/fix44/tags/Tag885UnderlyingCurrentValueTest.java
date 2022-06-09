@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  885
  *  UnderlyingCurrentValue
  *  Amt
+ *  <p></p>
  *  Currency value currently attributed to this collateral
  */
 class Tag885UnderlyingCurrentValueTest {

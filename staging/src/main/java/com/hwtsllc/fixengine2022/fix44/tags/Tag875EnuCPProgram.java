@@ -27,13 +27,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  875
  *  CPProgram
  *  int
+ *  <p></p>
  *  The program under which a commercial paper is issued
+ *  <p></p>
  *  Valid values:
- *      1 - 3(a)(3)
- *      2 - 4(2)
- *      99 - Other
- *
- *  or any value conforming to the data type Reserved100Plus
+ *  <p>    1 - 3(a)(3)
+ *  <p>    2 - 4(2)
+ *  <p></p>
+ *  <p>    99 - Other
+ *  <p></p>
+ *  <p>    or any value conforming to the data type Reserved100Plus
  */
 public class Tag875EnuCPProgram extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum875CPProgram dataValue;
@@ -68,7 +71,20 @@ public class Tag875EnuCPProgram extends FIX44Abstract implements LogValuePairStr
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -107,13 +123,14 @@ public class Tag875EnuCPProgram extends FIX44Abstract implements LogValuePairStr
         Tag875EnuCPProgram tagData;
 
         tagData = new Tag875EnuCPProgram(TESTA_ENU_CP_PROGRAM);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag875EnuCPProgram(TESTB_ENU_CP_PROGRAM);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum875CPProgram oneEnum : Enum875CPProgram.values()) {
+            System.out.println( new Tag875EnuCPProgram(oneEnum).toVerboseString() );
+        }
     }
 }

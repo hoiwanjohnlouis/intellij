@@ -27,8 +27,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  763
  *  UnderlyingSecuritySubType
  *  String
+ *  <p></p>
  *  Underlying security’s SecuritySubType.
- *          See SecuritySubType (762) field for description
+ *  <p></p>
+ *  See SecuritySubType (762) field for description
  */
 class Tag763UnderlyingSecuritySubTypeTest {
     @Test

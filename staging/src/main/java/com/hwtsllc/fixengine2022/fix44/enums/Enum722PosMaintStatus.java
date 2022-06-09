@@ -22,13 +22,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  722
  *  PosMaintStatus
+ *  int
+ *  <p></p>
  *  Status of Position Maintenance Request
+ *  <p></p>
  *  Valid values:
- *      0 - Accepted
- *      1 - Accepted With Warnings
- *      2 - Rejected
- *      3 - Completed
- *      4 - Completed With Warnings
+ *  <p>    0 - Accepted
+ *  <p>    1 - Accepted With Warnings
+ *  <p>    2 - Rejected
+ *  <p>    3 - Completed
+ *  <p>    4 - Completed With Warnings
  */
 public enum Enum722PosMaintStatus implements LogFIXString, LogVerboseString {
     ACCEPTED( "0", "ACCEPTED", "0 - Accepted" ),
@@ -119,6 +122,7 @@ public enum Enum722PosMaintStatus implements LogFIXString, LogVerboseString {
          */
         for (Enum722PosMaintStatus oneEnum : Enum722PosMaintStatus.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

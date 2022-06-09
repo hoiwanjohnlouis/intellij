@@ -23,10 +23,12 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  827
  *  ExpirationCycle
  *  int
+ *  <p></p>
  *  Part of trading cycle when an instrument expires. Field is applicable for derivatives.
+ *  <p></p>
  *  Valid values:
- *      0 - Expire on trading session close (default)
- *      1 - Expire on trading session open
+ *  <p>    0 - Expire on trading session close (default)
+ *  <p>    1 - Expire on trading session open
  */
 public enum Enum827ExpirationCycle implements LogFIXString, LogVerboseString {
     EXPIRE_ON_CLOSE( "0", "EXPIRE_ON_CLOSE", "0 - Expire on trading session close (default)" ),
@@ -114,6 +116,7 @@ public enum Enum827ExpirationCycle implements LogFIXString, LogVerboseString {
          */
         for (Enum827ExpirationCycle oneEnum : Enum827ExpirationCycle.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

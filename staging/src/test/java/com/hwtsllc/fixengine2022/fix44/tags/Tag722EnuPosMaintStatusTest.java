@@ -27,13 +27,16 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 /**
  *  722
  *  PosMaintStatus
+ *  int
+ *  <p></p>
  *  Status of Position Maintenance Request
+ *  <p></p>
  *  Valid values:
- *      0 - Accepted
- *      1 - Accepted With Warnings
- *      2 - Rejected
- *      3 - Completed
- *      4 - Completed With Warnings
+ *  <p>    0 - Accepted
+ *  <p>    1 - Accepted With Warnings
+ *  <p>    2 - Rejected
+ *  <p>    3 - Completed
+ *  <p>    4 - Completed With Warnings
  */
 class Tag722EnuPosMaintStatusTest {
     @Test

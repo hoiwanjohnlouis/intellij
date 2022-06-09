@@ -27,8 +27,9 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  915
  *  AgreementDate
  *  LocalMktDate
- *  A reference to the date the underlying agreement specified
- *  by AgreementID and AgreementDesc was executed.
+ *  <p></p>
+ *  A reference to the date the underlying agreement specified by
+ *  AgreementID and AgreementDesc was executed.
  */
 class Tag915AgreementDateTest {
     @Test

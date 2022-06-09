@@ -27,11 +27,14 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 /**
  *  750
  *  TradeRequestStatus
+ *  int
+ *  <p></p>
  *  Status of Trade Request.
+ *  <p></p>
  *  Valid values:
- *      0 - Accepted
- *      1 - Completed
- *      2 - Rejected
+ *  <p>    0 - Accepted
+ *  <p>    1 - Completed
+ *  <p>    2 - Rejected
  */
 class Tag750EnuTradeRequestStatusTest {
     @Test

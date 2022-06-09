@@ -25,13 +25,17 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 /**
  *  775
  *  BookingType
+ *  int
+ *  <p></p>
  *  Method for booking out this order.
- *      Used when notifying a broker that an order to be settled by that broker
- *      is to be booked out as an OTC derivative (e.g. CFD or similar).
+ *  <p></p>
+ *  Used when notifying a broker that an order to be settled by that broker
+ *  is to be booked out as an OTC derivative (e.g. CFD or similar).
+ *  <p></p>
  *  Valid values:
- *      0 - Regular booking
- *      1 - CFD (Contract for difference)
- *      2 - Total Return Swap
+ *  <p>    0 - Regular booking
+ *  <p>    1 - CFD (Contract for difference)
+ *  <p>    2 - Total Return Swap
  */
 class Enum775BookingTypeTest {
     @Test

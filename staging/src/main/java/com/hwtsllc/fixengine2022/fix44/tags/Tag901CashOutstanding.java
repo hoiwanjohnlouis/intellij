@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  901
  *  CashOutstanding
  *  Amt
+ *  <p></p>
  *  Starting consideration less repayments
  */
 public class Tag901CashOutstanding {

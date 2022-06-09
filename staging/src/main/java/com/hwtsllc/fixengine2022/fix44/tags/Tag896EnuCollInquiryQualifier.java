@@ -27,16 +27,19 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  896
  *  CollInquiryQualifier
  *  int
+ *  <p></p>
  *  Collateral inquiry qualifiers:
+ *  <p></p>
  *  Valid values:
- *      0 - Trade Date
- *      1 - GC Instrument
- *      2 - Collateral Instrument
- *      3 - Substitution Eligible
- *      4 - Not Assigned
- *      5 - Partially Assigned
- *      6 - Fully Assigned
- *      7 - Outstanding Trades (Today < end date)
+ *  <p>    0 - Trade Date
+ *  <p>    1 - GC Instrument
+ *  <p>    2 - Collateral Instrument
+ *  <p>    3 - Substitution Eligible
+ *  <p>    4 - Not Assigned
+ *  <p></p>
+ *  <p>    5 - Partially Assigned
+ *  <p>    6 - Fully Assigned
+ *  <p>    7 - Outstanding Trades (Today < end date)
  */
 public class Tag896EnuCollInquiryQualifier extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum896CollInquiryQualifier dataValue;
@@ -71,7 +74,20 @@ public class Tag896EnuCollInquiryQualifier extends FIX44Abstract implements LogV
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -110,13 +126,14 @@ public class Tag896EnuCollInquiryQualifier extends FIX44Abstract implements LogV
         Tag896EnuCollInquiryQualifier tagData;
 
         tagData = new Tag896EnuCollInquiryQualifier(TESTA_ENU_COLL_INQUIRY_QUALIFIER);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag896EnuCollInquiryQualifier(TESTB_ENU_COLL_INQUIRY_QUALIFIER);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum896CollInquiryQualifier oneEnum : Enum896CollInquiryQualifier.values()) {
+            System.out.println( new Tag896EnuCollInquiryQualifier(oneEnum).toVerboseString() );
+        }
     }
 }

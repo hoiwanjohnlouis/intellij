@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  870
  *  NoInstrAttrib
  *  NumInGroup
+ *  <p></p>
  *  Number of repeating InstrAttribType entries.
  */
 class Tag870NoInstrAttribTest {

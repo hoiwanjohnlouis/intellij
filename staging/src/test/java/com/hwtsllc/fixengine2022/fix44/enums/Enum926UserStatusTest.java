@@ -26,14 +26,17 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  926
  *  UserStatus
  *  int
+ *  <p></p>
  *  Indicates the status of a user
+ *  <p></p>
  *  Valid values:
- *      1 - Logged In
- *      2 - Not Logged In
- *      3 - User Not Recognised
- *      4 - Password Incorrect
- *      5 - Password Changed
- *      6 - Other
+ *  <p>    1 - Logged In
+ *  <p>    2 - Not Logged In
+ *  <p>    3 - User Not Recognised
+ *  <p>    4 - Password Incorrect
+ *  <p>    5 - Password Changed
+ *  <p></p>
+ *  <p>    6 - Other
  */
 class Enum926UserStatusTest {
     @Test

@@ -28,12 +28,14 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  905
  *  CollAsgnRespType
  *  int
+ *  <p></p>
  *  Collateral Assignment Response Type
+ *  <p></p>
  *  Valid values:
- *      0 - Received
- *      1 - Accepted
- *      2 - Declined
- *      3 - Rejected
+ *  <p>    0 - Received
+ *  <p>    1 - Accepted
+ *  <p>    2 - Declined
+ *  <p>    3 - Rejected
  */
 class Tag905EnuCollAsgnRespTypeTest {
     @Test

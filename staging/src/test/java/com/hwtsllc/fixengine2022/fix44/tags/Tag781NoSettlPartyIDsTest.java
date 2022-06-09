@@ -27,7 +27,9 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  781
  *  NoSettlPartyIDs
  *  NumInGroup
- *  Number of SettlPartyID (782), SettlPartyIDSource (783), and SettlPartyRole (784) entries
+ *  <p></p>
+ *  Number of SettlPartyID (782), SettlPartyIDSource (783),
+ *  and SettlPartyRole (784) entries
  */
 class Tag781NoSettlPartyIDsTest {
     @Test

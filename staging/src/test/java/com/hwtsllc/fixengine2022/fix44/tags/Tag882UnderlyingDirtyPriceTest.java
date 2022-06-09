@@ -27,8 +27,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  882
  *  UnderlyingDirtyPrice
  *  Price
+ *  <p></p>
  *  Price (percent-of-par or per unit) of the underlying security or basket.
- *  "Dirty" means it includes accrued interest
+ *  <p></p>
+ *  'Dirty' means it includes accrued interest
  */
 class Tag882UnderlyingDirtyPriceTest {
     @Test

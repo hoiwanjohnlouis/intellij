@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  832
  *  TotNumAssignmentReports
  *  int
+ *  <p></p>
  *  Total Number of Assignment Reports being returned to a firm
  */
 class Tag832TotNumAssignmentReportsTest {

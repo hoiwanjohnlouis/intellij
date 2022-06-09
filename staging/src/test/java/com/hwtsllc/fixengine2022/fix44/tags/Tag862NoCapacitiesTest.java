@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  862
  *  NoCapacities
  *  NumInGroup
+ *  <p></p>
  *  Number of  repeating OrderCapacity entries.
  */
 class Tag862NoCapacitiesTest {

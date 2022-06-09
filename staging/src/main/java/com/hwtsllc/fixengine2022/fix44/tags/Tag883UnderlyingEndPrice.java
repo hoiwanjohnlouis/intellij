@@ -20,7 +20,9 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  883
  *  UnderlyingEndPrice
  *  Price
- *  Price (percent-of-par or per unit) of the underlying security or basket at the end of the agreement.
+ *  <p></p>
+ *  Price (percent-of-par or per unit) of the underlying security
+ *  or basket at the end of the agreement.
  */
 public class Tag883UnderlyingEndPrice {
 }

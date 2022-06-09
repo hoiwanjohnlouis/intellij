@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  884
  *  UnderlyingStartValue
  *  Amt
+ *  <p></p>
  *  Currency value attributed to this collateral at the start of the agreement
  */
 public class Tag884UnderlyingStartValue {

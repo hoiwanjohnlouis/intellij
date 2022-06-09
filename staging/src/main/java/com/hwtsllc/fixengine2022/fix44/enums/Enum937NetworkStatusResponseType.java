@@ -23,10 +23,12 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  937
  *  NetworkStatusResponseType
  *  int
+ *  <p></p>
  *  Indicates the type of Network Response Message.
+ *  <p></p>
  *  Valid values:
- *      1 - Full
- *      2 - Incremental Update
+ *  <p>    1 - Full
+ *  <p>    2 - Incremental Update
  */
 public enum Enum937NetworkStatusResponseType implements LogFIXString, LogVerboseString {
     FULL( "1", "FULL", "1 - Full" ),
@@ -114,6 +116,7 @@ public enum Enum937NetworkStatusResponseType implements LogFIXString, LogVerbose
          */
         for (Enum937NetworkStatusResponseType oneEnum : Enum937NetworkStatusResponseType.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

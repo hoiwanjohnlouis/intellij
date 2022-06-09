@@ -75,7 +75,20 @@ public class Tag836EnuPegOffsetType extends FIX44Abstract implements LogValuePai
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -114,13 +127,14 @@ public class Tag836EnuPegOffsetType extends FIX44Abstract implements LogValuePai
         Tag836EnuPegOffsetType tagData;
 
         tagData = new Tag836EnuPegOffsetType(TESTA_ENU_PEG_OFFSET_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag836EnuPegOffsetType(TESTB_ENU_PEG_OFFSET_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( MyEnumOffsetType oneEnum : MyEnumOffsetType.values()) {
+            System.out.println( new Tag836EnuPegOffsetType(oneEnum).toVerboseString() );
+        }
     }
 }

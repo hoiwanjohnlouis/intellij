@@ -22,10 +22,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  787
  *  DlvyInstType
- *  Used to indicate whether a delivery instruction is used for securities or cash settlement.
+ *  char
+ *  <p></p>
+ *  Used to indicate whether a delivery instruction is used for securities
+ *  or cash settlement.
+ *  <p></p>
  *  Valid values:
- *      C - Cash
- *      S - Securities
+ *  <p>    C - Cash
+ *  <p>    S - Securities
  */
 public enum Enum787DlvyInstType implements LogFIXString, LogVerboseString {
     CASH( "C", "CASH", "C - Cash" ),
@@ -113,6 +117,7 @@ public enum Enum787DlvyInstType implements LogFIXString, LogVerboseString {
          */
         for (Enum787DlvyInstType oneEnum : Enum787DlvyInstType.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  850
  *  TargetStrategyPerformance
  *  float
+ *  <p></p>
  *  For communication of the performance of the order versus the target strategy
  */
 class Tag850TargetStrategyPerformanceTest {

@@ -27,14 +27,17 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  926
  *  UserStatus
  *  int
+ *  <p></p>
  *  Indicates the status of a user
+ *  <p></p>
  *  Valid values:
- *      1 - Logged In
- *      2 - Not Logged In
- *      3 - User Not Recognised
- *      4 - Password Incorrect
- *      5 - Password Changed
- *      6 - Other
+ *  <p>    1 - Logged In
+ *  <p>    2 - Not Logged In
+ *  <p>    3 - User Not Recognised
+ *  <p>    4 - Password Incorrect
+ *  <p>    5 - Password Changed
+ *  <p></p>
+ *  <p>    6 - Other
  */
 public class Tag926EnuUserStatus extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum926UserStatus dataValue;
@@ -69,7 +72,20 @@ public class Tag926EnuUserStatus extends FIX44Abstract implements LogValuePairSt
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -108,13 +124,14 @@ public class Tag926EnuUserStatus extends FIX44Abstract implements LogValuePairSt
         Tag926EnuUserStatus tagData;
 
         tagData = new Tag926EnuUserStatus(TESTA_ENU_USER_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag926EnuUserStatus(TESTB_ENU_USER_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum926UserStatus oneEnum : Enum926UserStatus.values()) {
+            System.out.println( new Tag926EnuUserStatus(oneEnum).toVerboseString() );
+        }
     }
 }

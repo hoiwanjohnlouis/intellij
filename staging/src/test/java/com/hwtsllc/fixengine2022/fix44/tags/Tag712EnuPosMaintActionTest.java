@@ -27,14 +27,17 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 /**
  *  712
  *  PosMaintAction
+ *  int
+ *  <p></p>
  *  Maintenance Action to be performed.
+ *  <p></p>
  *  Valid values:
- *      1 - New - used to increment the overall transaction quantity
- *      2 - Replace - used to override the overall transaction quantity
+ *  <p>    1 - New - used to increment the overall transaction quantity
+ *  <p>    2 - Replace - used to override the overall transaction quantity
  *                      or specifically add messages based on the reference ID
- *      3 - Cancel - used to remove the overall transaction or specific
+ *  <p>    3 - Cancel - used to remove the overall transaction or specific
  *                      add messages based on reference ID
- *      4 - Reverse - used to completely back-out the transaction
+ *  <p>    4 - Reverse - used to completely back-out the transaction
  *                      such that the transaction never existed
  */
 class Tag712EnuPosMaintActionTest {

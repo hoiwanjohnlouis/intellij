@@ -27,8 +27,9 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  813
  *  ApplQueueDepth
  *  int
- *  Current number of application messages that were queued at the time
- *  that the message was created by the counterparty.
+ *  <p></p>
+ *  Current number of application messages that were queued
+ *  at the time that the message was created by the counterparty.
  */
 class Tag813ApplQueueDepthTest {
     @Test

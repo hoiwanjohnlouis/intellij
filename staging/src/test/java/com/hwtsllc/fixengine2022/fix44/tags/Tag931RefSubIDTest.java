@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  931
  *  RefSubID
  *  String
+ *  <p></p>
  *  Assigned value used to identify specific elements within a firm.
  */
 class Tag931RefSubIDTest {

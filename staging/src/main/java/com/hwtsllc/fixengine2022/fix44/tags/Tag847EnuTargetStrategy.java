@@ -27,14 +27,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  847
  *  TargetStrategy
  *  int
+ *  <p></p>
  *  The target strategy of the order
+ *  <p></p>
  *  1000+  = Reserved and available for bi-laterally agreed upon user defined values
+ *  <p></p>
  *  Valid values:
- *      1 - VWAP
- *      2 - Participate (i.e. aim to be x percent of the market volume)
- *      3 - Minimize market impact
- *
- *  or any value conforming to the data type Reserved1000Plus
+ *  <p>    1 - VWAP
+ *  <p>    2 - Participate (i.e. aim to be x percent of the market volume)
+ *  <p>    3 - Minimize market impact
+ *  <p>    or any value conforming to the data type Reserved1000Plus
  */
 public class Tag847EnuTargetStrategy extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum847TargetStrategy dataValue;
@@ -69,7 +71,20 @@ public class Tag847EnuTargetStrategy extends FIX44Abstract implements LogValuePa
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -108,13 +123,14 @@ public class Tag847EnuTargetStrategy extends FIX44Abstract implements LogValuePa
         Tag847EnuTargetStrategy tagData;
 
         tagData = new Tag847EnuTargetStrategy(TESTA_ENU_TARGET_STRATEGY);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag847EnuTargetStrategy(TESTB_ENU_TARGET_STRATEGY);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum847TargetStrategy oneEnum : Enum847TargetStrategy.values()) {
+            System.out.println( new Tag847EnuTargetStrategy(oneEnum).toVerboseString() );
+        }
     }
 }

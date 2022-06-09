@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  708
  *  PosAmt
  *  Amt
+ *  <p></p>
  *  Position amount
  */
 class Tag708PosAmtTest {

@@ -26,16 +26,19 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  895
  *  CollAsgnReason
  *  int
+ *  <p></p>
  *  Reason for Collateral Assignment
+ *  <p></p>
  *  Valid values:
- *      0 - Initial
- *      1 - Scheduled
- *      2 - Time Warning
- *      3 - Margin Deficiency
- *      4 - Margin Excess
- *      5 - Forward Collateral Demand
- *      6 - Event of default
- *      7 - Adverse tax event
+ *  <p>    0 - Initial
+ *  <p>    1 - Scheduled
+ *  <p>    2 - Time Warning
+ *  <p>    3 - Margin Deficiency
+ *  <p>    4 - Margin Excess
+ *  <p></p>
+ *  <p>    5 - Forward Collateral Demand
+ *  <p>    6 - Event of default
+ *  <p>    7 - Adverse tax event
  */
 class Enum895CollAsgnReasonTest {
     @Test

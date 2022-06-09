@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  897
  *  NoTrades
  *  NumInGroup
+ *  <p></p>
  *  Number of trades in repeating group.
  */
 class Tag897NoTradesTest {

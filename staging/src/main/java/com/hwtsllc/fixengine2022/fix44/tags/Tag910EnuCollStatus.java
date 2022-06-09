@@ -27,13 +27,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  910
  *  CollStatus
  *  int
+ *  <p></p>
  *  Collateral Status
+ *  <p></p>
  *  Valid values:
- *      0 - Unassigned
- *      1 - Partially Assigned
- *      2 - Assignment Proposed
- *      3 - Assigned (Accepted)
- *      4 - Challenged
+ *  <p>    0 - Unassigned
+ *  <p>    1 - Partially Assigned
+ *  <p>    2 - Assignment Proposed
+ *  <p>    3 - Assigned (Accepted)
+ *  <p>    4 - Challenged
  */
 public class Tag910EnuCollStatus extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum910CollStatus dataValue;
@@ -68,7 +70,20 @@ public class Tag910EnuCollStatus extends FIX44Abstract implements LogValuePairSt
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -107,13 +122,14 @@ public class Tag910EnuCollStatus extends FIX44Abstract implements LogValuePairSt
         Tag910EnuCollStatus tagData;
 
         tagData = new Tag910EnuCollStatus(TESTA_ENU_COLL_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag910EnuCollStatus(TESTB_ENU_COLL_STATUS);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum910CollStatus oneEnum : Enum910CollStatus.values()) {
+            System.out.println( new Tag910EnuCollStatus(oneEnum).toVerboseString() );
+        }
     }
 }

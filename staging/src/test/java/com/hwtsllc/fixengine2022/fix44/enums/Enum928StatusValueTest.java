@@ -26,12 +26,14 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  928
  *  StatusValue
  *  int
+ *  <p></p>
  *  Indicates the status of a network connection
+ *  <p></p>
  *  Valid values:
- *      1 - Connected
- *      2 - Not Connected - down expected up
- *      3 - Not Connected - down expected down
- *      4 - In Process
+ *  <p>    1 - Connected
+ *  <p>    2 - Not Connected - down, expected up
+ *  <p>    3 - Not Connected - down, expected down
+ *  <p>    4 - In Process
  */
 class Enum928StatusValueTest {
     @Test

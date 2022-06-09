@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  864
  *  NoEvents
  *  NumInGroup
+ *  <p></p>
  *  Number of  repeating EventType entries.
  */
 class Tag864NoEventsTest {

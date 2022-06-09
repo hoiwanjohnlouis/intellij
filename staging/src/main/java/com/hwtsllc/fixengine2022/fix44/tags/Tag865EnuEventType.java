@@ -27,18 +27,19 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  865
  *  EventType
  *  int
+ *  <p></p>
  *  Code to represent the type of event
+ *  <p></p>
  *  Valid values:
- *      1 - Put
- *      2 - Call
- *      3 - Tender
- *      4 - Sinking Fund Call
- *      5 - Activation
- *
- *      6 - Inactivation
- *      99 - Other
- *
- *      or any value conforming to the data type Reserved100Plus
+ *  <p>    1 - Put
+ *  <p>    2 - Call
+ *  <p>    3 - Tender
+ *  <p>    4 - Sinking Fund Call
+ *  <p>    5 - Activation
+ *  <p></p>
+ *  <p>    6 - Inactivation
+ *  <p>    99 - Other
+ *  <p>    or any value conforming to the data type Reserved100Plus
  */
 public class Tag865EnuEventType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum865EventType dataValue;
@@ -73,7 +74,20 @@ public class Tag865EnuEventType extends FIX44Abstract implements LogValuePairStr
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -112,13 +126,14 @@ public class Tag865EnuEventType extends FIX44Abstract implements LogValuePairStr
         Tag865EnuEventType tagData;
 
         tagData = new Tag865EnuEventType(TESTA_ENU_EVENT_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag865EnuEventType(TESTB_ENU_EVENT_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum865EventType oneEnum : Enum865EventType.values()) {
+            System.out.println( new Tag865EnuEventType(oneEnum).toVerboseString() );
+        }
     }
 }

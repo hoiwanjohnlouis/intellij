@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  768
  *  NoTrdRegTimestamps
  *  NumInGroup
+ *  <p></p>
  *  Number of TrdRegTimestamp (769) entries
  */
 class Tag768NoTrdRegTimestampsTest {

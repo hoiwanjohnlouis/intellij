@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.datatypes.MyEnumPegDiscretionScope;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumDiscretionOrPegScope;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -58,20 +58,20 @@ class Tag846EnuDiscretionScopeTest {
     void Tag0846Test() {
         Tag846EnuDiscretionScope tagData;
 
-        tagData = new Tag846EnuDiscretionScope(MyEnumPegDiscretionScope.LOCAL);
-        assertEquals( MyEnumPegDiscretionScope.LOCAL.toFIXIDString(), tagData.getDataValue());
+        tagData = new Tag846EnuDiscretionScope( MyEnumDiscretionOrPegScope.LOCAL);
+        assertEquals( MyEnumDiscretionOrPegScope.LOCAL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag846EnuDiscretionScope(MyEnumPegDiscretionScope.NATIONAL);
-        assertEquals( MyEnumPegDiscretionScope.NATIONAL.toFIXIDString(), tagData.getDataValue());
+        tagData = new Tag846EnuDiscretionScope( MyEnumDiscretionOrPegScope.NATIONAL);
+        assertEquals( MyEnumDiscretionOrPegScope.NATIONAL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag846EnuDiscretionScope(MyEnumPegDiscretionScope.GLOBAL);
-        assertEquals( MyEnumPegDiscretionScope.GLOBAL.toFIXIDString(), tagData.getDataValue());
+        tagData = new Tag846EnuDiscretionScope( MyEnumDiscretionOrPegScope.GLOBAL);
+        assertEquals( MyEnumDiscretionOrPegScope.GLOBAL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag846EnuDiscretionScope(MyEnumPegDiscretionScope.NATIONAL_EXCLUDING_LOCAL);
-        assertEquals( MyEnumPegDiscretionScope.NATIONAL_EXCLUDING_LOCAL.toFIXIDString(), tagData.getDataValue());
+        tagData = new Tag846EnuDiscretionScope( MyEnumDiscretionOrPegScope.NATIONAL_EXCLUDING_LOCAL);
+        assertEquals( MyEnumDiscretionOrPegScope.NATIONAL_EXCLUDING_LOCAL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
 }

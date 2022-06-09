@@ -28,11 +28,13 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  944
  *  CollAction
  *  int
+ *  <p></p>
  *  Action proposed for an Underlying Instrument instance.
+ *  <p></p>
  *  Valid values:
- *      0 - Retain
- *      1 - Add
- *      2 - Remove
+ *  <p>    0 - Retain
+ *  <p>    1 - Add
+ *  <p>    2 - Remove
  */
 class Tag944EnuCollActionTest {
     @Test

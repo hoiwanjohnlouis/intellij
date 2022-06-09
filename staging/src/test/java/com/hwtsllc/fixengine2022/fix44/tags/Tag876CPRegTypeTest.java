@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  876
  *  CPRegType
  *  String
+ *  <p></p>
  *  The registration type of a commercial paper issuance
  */
 class Tag876CPRegTypeTest {

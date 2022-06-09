@@ -23,14 +23,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  826
  *  TradeAllocIndicator
  *  int
+ *  <p></p>
  *  Identifies how the trade is to be allocated
+ *  <p></p>
  *  Valid values:
- *      0 - Allocation not required
- *      1 - Allocation required (give-up trade) allocation information not provided (incomplete)
- *      2 - Use allocation provided with the trade
- *      3 - Allocation give-up executor
- *      4 - Allocation from executor
- *      5 - Allocation to claim account
+ *  <p>    0 - Allocation not required
+ *  <p>    1 - Allocation required (give-up trade) allocation information not
+ *          provided (incomplete)
+ *  <p>    2 - Use allocation provided with the trade
+ *  <p>    3 - Allocation give-up executor
+ *  <p>    4 - Allocation from executor
+ *  <p></p>
+ *  <p>    5 - Allocation to claim account
  */
 public enum Enum826TradeAllocIndicator implements LogFIXString, LogVerboseString {
     NOT_REQUIRED( "0", "NOT_REQUIRED", "0 - Allocation not required" ),
@@ -123,6 +127,7 @@ public enum Enum826TradeAllocIndicator implements LogFIXString, LogVerboseString
          */
         for (Enum826TradeAllocIndicator oneEnum : Enum826TradeAllocIndicator.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

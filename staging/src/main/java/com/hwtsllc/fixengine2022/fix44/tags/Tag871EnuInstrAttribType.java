@@ -27,33 +27,40 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  871
  *  InstrAttribType
  *  int
+ *  <p></p>
  *  Code to represent the type of instrument attribute
+ *  <p></p>
  *  Valid values:
- *      1 - Flat (securities pay interest on a current basis but are traded without interest)
- *      2 - Zero coupon
- *      3 - Interest bearing (for Euro commercial paper when not issued at discount)
- *      4 - No periodic payments
- *      5 - Variable rate
- *      6 - Less fee for put
- *      7 - Stepped coupon
- *      8 - Coupon period (if not semi-annual). Supply redemption date in the InstrAttribValue (872) field.
- *      9 - When [and if] issued
- *      10 - Original issue discount
- *      11 - Callable, puttable
- *      12 - Escrowed to Maturity
- *      13 - Escrowed to redemption date - callable. Supply redemption date in the InstrAttribValue (872) field
- *      14 - Pre-refunded
- *      15 - In default
- *      16 - Unrated
- *      17 - Taxable
- *      18 - Indexed
- *      19 - Subject To Alternative Minimum Tax
- *      20 - Original issue discount price. Supply price in the InstrAttribValue (872) field
- *      21 - Callable below maturity value
- *      22 - Callable without notice by mail to holder unless registered
- *      99 - Text. Supply the text of the attribute or disclaimer in the InstrAttribValue (872) field.
- *
- *      or any value conforming to the data type Reserved100Plus
+ *  <p>    1 - Flat (securities pay interest on a current basis but are traded without interest)
+ *  <p>    2 - Zero coupon
+ *  <p>    3 - Interest bearing (for Euro commercial paper when not issued at discount)
+ *  <p>    4 - No periodic payments
+ *  <p>    5 - Variable rate
+ *  <p></p>
+ *  <p>    6 - Less fee for put
+ *  <p>    7 - Stepped coupon
+ *  <p>    8 - Coupon period (if not semi-annual). Supply redemption date in the InstrAttribValue (872) field.
+ *  <p>    9 - When [and if] issued
+ *  <p>    10 - Original issue discount
+ *  <p></p>
+ *  <p>    11 - Callable, puttable
+ *  <p>    12 - Escrowed to Maturity
+ *  <p>    13 - Escrowed to redemption date - callable. Supply redemption date in the InstrAttribValue (872) field
+ *  <p>    14 - Pre-refunded
+ *  <p>    15 - In default
+ *  <p></p>
+ *  <p>    16 - Unrated
+ *  <p>    17 - Taxable
+ *  <p>    18 - Indexed
+ *  <p>    19 - Subject To Alternative Minimum Tax
+ *  <p>    20 - Original issue discount price. Supply price in the InstrAttribValue (872) field
+ *  <p></p>
+ *  <p>    21 - Callable below maturity value
+ *  <p>    22 - Callable without notice by mail to holder unless registered
+ *  <p></p>
+ *  <p>    99 - Text. Supply the text of the attribute or disclaimer in the InstrAttribValue (872) field.
+ *  <p></p>
+ *  <p>    or any value conforming to the data type Reserved100Plus
  */
 public class Tag871EnuInstrAttribType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum871InstrAttribType dataValue;
@@ -88,7 +95,20 @@ public class Tag871EnuInstrAttribType extends FIX44Abstract implements LogValueP
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -127,13 +147,14 @@ public class Tag871EnuInstrAttribType extends FIX44Abstract implements LogValueP
         Tag871EnuInstrAttribType tagData;
 
         tagData = new Tag871EnuInstrAttribType(TESTA_ENU_INSTR_ATTRIB_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag871EnuInstrAttribType(TESTB_ENU_INSTR_ATTRIB_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum871InstrAttribType oneEnum : Enum871InstrAttribType.values()) {
+            System.out.println( new Tag871EnuInstrAttribType(oneEnum).toVerboseString() );
+        }
     }
 }

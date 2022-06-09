@@ -26,14 +26,19 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  690
  *  LegSwapType
- *  For Fixed Income, used instead of LegQty (687) or LegOrderQty (685)
- *      to requests the respondent to calculate the quantity based on the
+ *  int
+ *  <p></p>
+ *  For Fixed Income
+ *  <p></p>
+ *  Used instead of LegQty (687) or LegOrderQty (685)
+ *      to request the respondent to calculate the quantity based on the
  *      quantity on the opposite side of the swap.
+ *  <p></p>
  *  Valid values:
- *      1 - Par For Par
- *      2 - Modified Duration
- *      4 - Risk
- *      5 - Proceeds
+ *  <p>    1 - Par For Par
+ *  <p>    2 - Modified Duration
+ *  <p>    4 - Risk
+ *  <p>    5 - Proceeds
  */
 public class Tag690EnuLegSwapType extends FIX44Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum690LegSwapType dataValue;
@@ -68,7 +73,20 @@ public class Tag690EnuLegSwapType extends FIX44Abstract implements LogValuePairS
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -107,13 +125,14 @@ public class Tag690EnuLegSwapType extends FIX44Abstract implements LogValuePairS
         Tag690EnuLegSwapType tagData;
 
         tagData = new Tag690EnuLegSwapType(TESTA_ENU_LEG_SWAP_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag690EnuLegSwapType(TESTB_ENU_LEG_SWAP_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( Enum690LegSwapType oneEnum : Enum690LegSwapType.values()) {
+            System.out.println( new Tag690EnuLegSwapType(oneEnum).toVerboseString() );
+        }
     }
 }

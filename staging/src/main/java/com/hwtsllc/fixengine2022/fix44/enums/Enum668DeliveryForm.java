@@ -22,10 +22,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  668
  *  DeliveryForm
+ *  int
+ *  <p></p>
  *  Identifies the form of delivery.
+ *  <p></p>
  *  Valid values:
- *      1 - Book Entry (default)
- *      2 - Bearer
+ *  <p>    1 - Book Entry (default)
+ *  <p>    2 - Bearer
  */
 public enum Enum668DeliveryForm implements LogFIXString, LogVerboseString {
     BOOK_ENTRY( "1", "BOOK_ENTRY", "1 - Book Entry (default)" ),
@@ -113,6 +116,7 @@ public enum Enum668DeliveryForm implements LogFIXString, LogVerboseString {
          */
         for (Enum668DeliveryForm oneEnum : Enum668DeliveryForm.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

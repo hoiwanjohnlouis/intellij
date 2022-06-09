@@ -76,7 +76,20 @@ public class Tag843EnuDiscretionLimitType extends FIX44Abstract implements LogVa
         return super.toVerboseString()
                 .concat("\n\tDataValue[")
                 .concat(toString())
-                .concat("]");
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                .concat("\n\tDataID[")
+                .concat(toDataIDString())
+                .concat("]")
+                .concat("\n\tDataName[")
+                .concat(toDataNameString())
+                .concat("]")
+                .concat("\n\tDataDescription[")
+                .concat(toDataDescriptionString())
+                .concat("]")
+                ;
     }
     /**
      * wrapper to return the ID of the underlying Data
@@ -115,13 +128,14 @@ public class Tag843EnuDiscretionLimitType extends FIX44Abstract implements LogVa
         Tag843EnuDiscretionLimitType tagData;
 
         tagData = new Tag843EnuDiscretionLimitType(TESTA_ENU_DISCRETION_LIMIT_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
 
         tagData = new Tag843EnuDiscretionLimitType(TESTB_ENU_DISCRETION_LIMIT_TYPE);
-        System.out.println(tagData);
         System.out.println(tagData.toVerboseString());
-        System.out.println(tagData.toValuePairString());
+
+        // loop around the ENUM and process
+        for ( MyEnumLimitType oneEnum : MyEnumLimitType.values()) {
+            System.out.println( new Tag843EnuDiscretionLimitType(oneEnum).toVerboseString() );
+        }
     }
 }

@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  704
  *  LongQty
  *  Qty
+ *  <p></p>
  *  Long Quantity
  */
 public class Tag704LongQty {

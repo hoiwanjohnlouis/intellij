@@ -20,8 +20,10 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  685
  *  LegOrderQty
  *  Qty
+ *  <p></p>
  *  Quantity ordered of this leg.
- *        See OrderQty (38) for description and valid values
+ *  <p></p>
+ *  See OrderQty (38) for description and valid values
  */
 public class Tag685LegOrderQty {
 }

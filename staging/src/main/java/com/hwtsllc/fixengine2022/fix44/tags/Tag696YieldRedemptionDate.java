@@ -20,7 +20,9 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  696
  *  YieldRedemptionDate
  *  LocalMktDate
+ *  <p></p>
  *  Date to which the yield has been calculated
+ *  <p>
  *  (i.e. maturity, par call or current call, pre-refunded date).
  */
 public class Tag696YieldRedemptionDate {

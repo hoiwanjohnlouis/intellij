@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  821
  *  OrderInputDevice
  *  String
+ *  <p></p>
  *  Specific device number, terminal number or station where order was entered
  */
 public class Tag821OrderInputDevice {

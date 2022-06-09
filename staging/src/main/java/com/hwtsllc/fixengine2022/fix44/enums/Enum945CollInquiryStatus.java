@@ -23,13 +23,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  945
  *  CollInquiryStatus
  *  int
+ *  <p></p>
  *  Status of Collateral Inquiry
+ *  <p></p>
  *  Valid values:
- *      0 - Accepted
- *      1 - Accepted With Warnings
- *      2 - Completed
- *      3 - Completed With Warnings
- *      4 - Rejected
+ *  <p>    0 - Accepted
+ *  <p>    1 - Accepted With Warnings
+ *  <p>    2 - Completed
+ *  <p>    3 - Completed With Warnings
+ *  <p>    4 - Rejected
  */
 public enum Enum945CollInquiryStatus implements LogFIXString, LogVerboseString {
     ACCEPTED( "0", "ACCEPTED", "0 - Accepted" ),
@@ -120,6 +122,7 @@ public enum Enum945CollInquiryStatus implements LogFIXString, LogVerboseString {
          */
         for (Enum945CollInquiryStatus oneEnum : Enum945CollInquiryStatus.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  923
  *  UserRequestID
  *  String
+ *  <p></p>
  *  Unique identifier for a User Request.
  */
 public class Tag923UserRequestID {

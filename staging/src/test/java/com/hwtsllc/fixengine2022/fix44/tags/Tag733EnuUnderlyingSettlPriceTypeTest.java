@@ -17,21 +17,30 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumSettlPriceType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum733UnderlyingSettlPriceType;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
+ *  731 (same as 731, 733)
+ *  SettlPriceType
+ *  int
+ *  <p></p>
+ *  Type of settlement price
+ *  <p></p>
  *  733 (same as 731, 733)
  *  UnderlyingSettlPriceType
+ *  int
+ *  <p></p>
  *  Underlying security’s SettlPriceType.
- *              See SettlPriceType (731) field for description
+ *  See SettlPriceType (731) field for description
+ *  <p></p>
  *  Valid values:
- *      1 - Final
- *      2 - Theoretical
+ *  <p>    1 - Final
+ *  <p>    2 - Theoretical
  */
 class Tag733EnuUnderlyingSettlPriceTypeTest {
     @Test
@@ -48,11 +57,11 @@ class Tag733EnuUnderlyingSettlPriceTypeTest {
     void Tag0733Test() {
         Tag733EnuUnderlyingSettlPriceType tagData;
 
-        tagData = new Tag733EnuUnderlyingSettlPriceType(Enum733UnderlyingSettlPriceType.FINAL);
+        tagData = new Tag733EnuUnderlyingSettlPriceType( MyEnumSettlPriceType.FINAL);
         assertEquals( "1", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag733EnuUnderlyingSettlPriceType(Enum733UnderlyingSettlPriceType.THEORETICAL);
+        tagData = new Tag733EnuUnderlyingSettlPriceType( MyEnumSettlPriceType.THEORETICAL);
         assertEquals( "2", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }

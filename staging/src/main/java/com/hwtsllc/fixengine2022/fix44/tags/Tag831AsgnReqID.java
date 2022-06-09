@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  831
  *  AsgnReqID
  *  String
+ *  <p></p>
  *  Unique identifier for the Assignment Report Request
  */
 public class Tag831AsgnReqID {

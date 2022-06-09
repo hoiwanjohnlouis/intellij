@@ -20,6 +20,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  693
  *  QuoteRespID
  *  String
+ *  <p></p>
  *  Message reference for Quote Response
  */
 public class Tag693QuoteRespID {

@@ -26,14 +26,16 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  847
  *  TargetStrategy
  *  int
+ *  <p></p>
  *  The target strategy of the order
+ *  <p></p>
  *  1000+  = Reserved and available for bi-laterally agreed upon user defined values
+ *  <p></p>
  *  Valid values:
- *      1 - VWAP
- *      2 - Participate (i.e. aim to be x percent of the market volume)
- *      3 - Minimize market impact
- *
- *  or any value conforming to the data type Reserved1000Plus
+ *  <p>    1 - VWAP
+ *  <p>    2 - Participate (i.e. aim to be x percent of the market volume)
+ *  <p>    3 - Minimize market impact
+ *  <p>    or any value conforming to the data type Reserved1000Plus
  */
 class Enum847TargetStrategyTest {
     @Test

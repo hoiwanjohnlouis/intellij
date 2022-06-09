@@ -23,11 +23,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  944
  *  CollAction
  *  int
+ *  <p></p>
  *  Action proposed for an Underlying Instrument instance.
+ *  <p></p>
  *  Valid values:
- *      0 - Retain
- *      1 - Add
- *      2 - Remove
+ *  <p>    0 - Retain
+ *  <p>    1 - Add
+ *  <p>    2 - Remove
  */
 public enum Enum944CollAction implements LogFIXString, LogVerboseString {
     RETAIN( "0", "RETAIN", "0 - Retain" ),
@@ -116,6 +118,7 @@ public enum Enum944CollAction implements LogFIXString, LogVerboseString {
          */
         for (Enum944CollAction oneEnum : Enum944CollAction.values()) {
             System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

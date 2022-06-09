@@ -20,7 +20,9 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  781
  *  NoSettlPartyIDs
  *  NumInGroup
- *  Number of SettlPartyID (782), SettlPartyIDSource (783), and SettlPartyRole (784) entries
+ *  <p></p>
+ *  Number of SettlPartyID (782), SettlPartyIDSource (783),
+ *  and SettlPartyRole (784) entries
  */
 public class Tag781NoSettlPartyIDs {
 }

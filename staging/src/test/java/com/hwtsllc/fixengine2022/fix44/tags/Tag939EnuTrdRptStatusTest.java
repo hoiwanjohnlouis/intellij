@@ -28,11 +28,13 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  939
  *  TrdRptStatus
  *  int
+ *  <p></p>
  *  Trade Report Status
+ *  <p></p>
  *  Valid values:
- *      0 - Accepted
- *      1 - Rejected
- *      3 - Accepted with errors
+ *  <p>    0 - Accepted
+ *  <p>    1 - Rejected
+ *  <p>    3 - Accepted with errors
  */
 class Tag939EnuTrdRptStatusTest {
     @Test

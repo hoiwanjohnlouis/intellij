@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  845
  *  DiscretionPrice
  *  Price
+ *  <p></p>
  *  The current discretionary price of the order
  */
 class Tag845DiscretionPriceTest {

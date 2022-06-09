@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  710
  *  PosReqID
  *  String
+ *  <p></p>
  *  Unique identifier for the position maintenance request as assigned by the submitter
  */
 class Tag710PosReqIDTest {

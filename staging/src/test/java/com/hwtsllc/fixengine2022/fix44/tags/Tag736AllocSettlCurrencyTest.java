@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  736
  *  AllocSettlCurrency
  *  Currency
+ *  <p></p>
  *  Currency code of settlement denomination for a specific AllocAccount (79).
  */
 class Tag736AllocSettlCurrencyTest {

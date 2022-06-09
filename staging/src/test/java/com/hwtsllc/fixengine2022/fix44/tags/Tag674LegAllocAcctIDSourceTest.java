@@ -27,8 +27,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  674
  *  LegAllocAcctIDSource
  *  String
+ *  <p></p>
  *  The source of the LegAllocAccount (671)
- *        See AllocAcctIDSource (661) for description and valid values.
+ *  <p></p>
+ *  See AllocAcctIDSource (661) for description and valid values.
  */
 class Tag674LegAllocAcctIDSourceTest {
     @Test

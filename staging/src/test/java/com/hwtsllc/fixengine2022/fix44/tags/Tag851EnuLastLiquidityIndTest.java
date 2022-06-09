@@ -28,13 +28,16 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  851
  *  LastLiquidityInd
  *  int
+ *  <p></p>
  *  Indicator to identify whether this fill was a result of a liquidity provider providing
  *  or liquidity taker taking the liquidity.
+ *  <p></p>
  *  Applicable only for OrdStatus of Partial or Filled.
+ *  <p></p>
  *  Valid values:
- *      1 - Added Liquidity
- *      2 - Removed Liquidity
- *      3 - Liquidity Routed Out
+ *  <p>    1 - Added Liquidity
+ *  <p>    2 - Removed Liquidity
+ *  <p>    3 - Liquidity Routed Out
  */
 class Tag851EnuLastLiquidityIndTest {
     @Test

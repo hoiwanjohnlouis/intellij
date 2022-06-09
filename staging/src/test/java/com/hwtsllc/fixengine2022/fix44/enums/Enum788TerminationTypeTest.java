@@ -25,12 +25,15 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 /**
  *  788
  *  TerminationType
+ *  int
+ *  <p></p>
  *  Type of financing termination.
+ *  <p></p>
  *  Valid values:
- *      1 - Overnight
- *      2 - Term
- *      3 - Flexible
- *      4 - Open
+ *  <p>    1 - Overnight
+ *  <p>    2 - Term
+ *  <p>    3 - Flexible
+ *  <p>    4 - Open
  */
 class Enum788TerminationTypeTest {
     @Test

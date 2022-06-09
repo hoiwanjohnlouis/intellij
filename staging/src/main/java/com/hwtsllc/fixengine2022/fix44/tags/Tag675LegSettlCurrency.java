@@ -20,8 +20,10 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  675
  *  LegSettlCurrency
  *  Currency
+ *  <p></p>
  *  Identifies settlement currency for the Leg.
- *        See SettlCurrency (20) for description and valid values
+ *  <p></p>
+ *  See SettlCurrency (20) for description and valid values
  */
 public class Tag675LegSettlCurrency {
 }

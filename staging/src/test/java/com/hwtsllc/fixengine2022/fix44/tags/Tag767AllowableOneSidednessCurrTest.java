@@ -27,8 +27,9 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  767
  *  AllowableOneSidednessCurr
  *  Currency
- *  The currency that AllowableOneSidednessValue (766) is expressed in
- *  if AllowableOneSidednessValue is used.
+ *  <p></p>
+ *  The currency that AllowableOneSidednessValue (766)
+ *  is expressed in if AllowableOneSidednessValue is used.
  */
 class Tag767AllowableOneSidednessCurrTest {
     @Test

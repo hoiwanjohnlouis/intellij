@@ -23,6 +23,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+/**
+ *  911
+ *  TotNumReports
+ *  int
+ *  <p></p>
+ *  Total number or reports returned in response to a request
+ */
 class Tag911TotNumReportsTest {
     @Test
     void FIX0911Test() {
