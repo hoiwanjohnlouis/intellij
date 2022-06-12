@@ -33,9 +33,9 @@ public class Tag977StrContIntRptID extends FIX50Abstract implements LogValuePair
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_CONT_INT_RPT_ID
-            = "BilboBaggins-Tag977StrContIntRptID";
+            = "MiriamHopkins-Tag977StrContIntRptID";
     public final static String TESTB_STR_CONT_INT_RPT_ID
-            = "Gandalf-Tag977StrContIntRptID";
+            = "MarleneDietrich-Tag977StrContIntRptID";
 
     public Tag977StrContIntRptID(MyStringType dataValue) {
         setFixType(FIX50.FIX977_STR_CONT_INT_RPT_ID);

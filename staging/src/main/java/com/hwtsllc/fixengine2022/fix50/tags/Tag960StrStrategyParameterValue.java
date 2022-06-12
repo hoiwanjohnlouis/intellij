@@ -33,9 +33,9 @@ public class Tag960StrStrategyParameterValue extends FIX50Abstract implements Lo
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_STRATEGY_PARAMETER_VALUE
-            = "BilboBaggins-Tag960StrStrategyParameterValue";
+            = "NatalieDessay-Tag960StrStrategyParameterValue";
     public final static String TESTB_STR_STRATEGY_PARAMETER_VALUE
-            = "Gandalf-Tag960StrStrategyParameterValue";
+            = "LorraineHuntLieberson-Tag960StrStrategyParameterValue";
 
     public Tag960StrStrategyParameterValue(MyStringType dataValue) {
         setFixType(FIX50.FIX960_STR_STRATEGY_PARAMETER_VALUE);

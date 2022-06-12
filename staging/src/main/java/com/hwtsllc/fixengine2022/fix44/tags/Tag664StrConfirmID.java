@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag664StrConfirmID extends FIX44Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_SIDE_COMPLIANCE_ID = "KimHaNeul-Tag664StrConfirmID";
-    public final static String TESTB_STR_SIDE_COMPLIANCE_ID = "SonYeJin-Tag664StrConfirmID";
+    public final static String TESTA_STR_SIDE_COMPLIANCE_ID
+            = "KimHaNeul-Tag664StrConfirmID";
+    public final static String TESTB_STR_SIDE_COMPLIANCE_ID
+            = "SonYeJin-Tag664StrConfirmID";
 
     public Tag664StrConfirmID(MyStringType dataValue) {
         setFixType( FIX44.FIX664_STR_CONFIRM_ID );

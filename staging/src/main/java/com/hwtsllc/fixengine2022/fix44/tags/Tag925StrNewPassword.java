@@ -16,6 +16,12 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
+import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
+
 /**
  *  925
  *  NewPassword
@@ -23,5 +29,64 @@ package com.hwtsllc.fixengine2022.fix44.tags;
  *  <p></p>
  *  New Password or passphrase
  */
-public class Tag925StrNewPassword {
+public class Tag925StrNewPassword extends FIX44Abstract implements LogValuePairString, LogVerboseString {
+    private final MyStringType dataValue;
+
+    public final static String TESTA_STR_NEW_PASSWORD
+            = "ChristenPress-Tag925StrNewPassword";
+    public final static String TESTB_STR_NEW_PASSWORD
+            = "AlexMorgan-Tag925StrNewPassword";
+
+    public Tag925StrNewPassword(MyStringType dataValue) {
+        setFixType( FIX44.FIX925_STR_NEW_PASSWORD );
+        this.dataValue = dataValue;
+    }
+
+    public String getDataValue() {
+        return this.dataValue.getDataValue();
+    }
+    /**
+     * standard wrapper to retrieve the build a standard fix message for this tag
+     */
+    @Override
+    public String toValuePairString() {
+        return toFIXIDString()
+                .concat("=")
+                .concat(dataValue.toString());
+    }
+    /**
+     * standard wrapper to format a detailed string describing this data field
+     */
+    @Override
+    public String toVerboseString() {
+        return super.toVerboseString()
+                .concat("\n\tDataValue[")
+                .concat(toString())
+                .concat("]")
+                .concat("\n\tValuePair[")
+                .concat(toValuePairString())
+                .concat("]")
+                ;
+    }
+    /**
+     * standard wrapper to format a simple string describing the data
+     */
+    @Override
+    public String toString() {
+        return String.valueOf(getDataValue());
+    }
+
+    /**
+     *
+     * @param args   no args used at this time
+     */
+    public static void main(String[] args) {
+        Tag925StrNewPassword tagData;
+
+        tagData = new Tag925StrNewPassword(new MyStringType( TESTA_STR_NEW_PASSWORD ) );
+        System.out.println(tagData.toVerboseString());
+
+        tagData = new Tag925StrNewPassword(new MyStringType( TESTB_STR_NEW_PASSWORD ) );
+        System.out.println(tagData.toVerboseString());
+    }
 }

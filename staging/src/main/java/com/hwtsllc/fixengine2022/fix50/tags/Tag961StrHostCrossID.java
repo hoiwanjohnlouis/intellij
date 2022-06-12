@@ -41,9 +41,9 @@ public class Tag961StrHostCrossID extends FIX50Abstract implements LogValuePairS
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_HOST_CROSS_ID
-            = "BilboBaggins-Tag961StrHostCrossID";
+            = "HiromiOshima-Tag961StrHostCrossID";
     public final static String TESTB_STR_HOST_CROSS_ID
-            = "Gandalf-Tag961StrHostCrossID";
+            = "HopeMarieCarlton-Tag961StrHostCrossID";
 
     public Tag961StrHostCrossID(MyStringType dataValue) {
         setFixType(FIX50.FIX961_STR_HOST_CROSS_ID);

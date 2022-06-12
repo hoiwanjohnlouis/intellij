@@ -33,9 +33,9 @@ public class Tag979StrInputSource extends FIX50Abstract implements LogValuePairS
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_INPUT_SOURCE
-            = "BilboBaggins-Tag979StrInputSource";
+            = "AllisonParks-Tag979StrInputSource";
     public final static String TESTB_STR_INPUT_SOURCE
-            = "Gandalf-Tag979StrInputSource";
+            = "CynthiaMyers-Tag979StrInputSource";
 
     public Tag979StrInputSource(MyStringType dataValue) {
         setFixType(FIX50.FIX979_STR_INPUT_SOURCE);

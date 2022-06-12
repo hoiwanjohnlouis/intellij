@@ -33,9 +33,9 @@ public class Tag958StrStrategyParameterName extends FIX50Abstract implements Log
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_STRATEGY_PARAMETER_NAME
-            = "BilboBaggins-Tag958StrStrategyParameterName";
+            = "FiorenzaCossotto-Tag958StrStrategyParameterName";
     public final static String TESTB_STR_STRATEGY_PARAMETER_NAME
-            = "Gandalf-Tag958StrStrategyParameterName";
+            = "ConchitaSupervía-Tag958StrStrategyParameterName";
 
     public Tag958StrStrategyParameterName(MyStringType dataValue) {
         setFixType(FIX50.FIX958_STR_STRATEGY_PARAMETER_NAME);

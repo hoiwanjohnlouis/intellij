@@ -33,9 +33,9 @@ public class Tag966StrSettleOnOpenFlag extends FIX50Abstract implements LogValue
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_SETTLE_ON_OPEN_FLAG
-            = "BilboBaggins-Tag966StrSettleOnOpenFlag";
+            = "AngieDickinson-Tag966StrSettleOnOpenFlag";
     public final static String TESTB_STR_SETTLE_ON_OPEN_FLAG
-            = "Gandalf-Tag966StrSettleOnOpenFlag";
+            = "JaneRussell-Tag966StrSettleOnOpenFlag";
 
     public Tag966StrSettleOnOpenFlag(MyStringType dataValue) {
         setFixType(FIX50.FIX966_STR_SETTLE_ON_OPEN_FLAG);

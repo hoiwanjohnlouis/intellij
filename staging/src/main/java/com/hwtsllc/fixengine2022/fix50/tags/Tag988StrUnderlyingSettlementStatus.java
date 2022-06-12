@@ -37,9 +37,9 @@ public class Tag988StrUnderlyingSettlementStatus extends FIX50Abstract implement
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_UNDERLYING_SETTLEMENT_STATUS
-            = "BilboBaggins-Tag988StrUnderlyingSettlementStatus";
+            = "CrystalSmith-Tag988StrUnderlyingSettlementStatus";
     public final static String TESTB_STR_UNDERLYING_SETTLEMENT_STATUS
-            = "Gandalf-Tag988StrUnderlyingSettlementStatus";
+            = "PaigeYoung-Tag988StrUnderlyingSettlementStatus";
 
     public Tag988StrUnderlyingSettlementStatus(MyStringType dataValue) {
         setFixType(FIX50.FIX988_STR_UNDERLYING_SETTLEMENT_STATUS);
