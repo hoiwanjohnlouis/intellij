@@ -47,6 +47,17 @@ class Tag782StrSettlPartyIDTest {
     @Test
     void Tag0782Test() {
         Tag782StrSettlPartyID tagData;
+        String oneElement;
+
+        oneElement = Tag782StrSettlPartyID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        tagData = new Tag782StrSettlPartyID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag782StrSettlPartyID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        tagData = new Tag782StrSettlPartyID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag782StrSettlPartyID(new MyStringType(Tag782StrSettlPartyID.TESTA_STR_SETTL_PARTY_ID));
         assertEquals( Tag782StrSettlPartyID.TESTA_STR_SETTL_PARTY_ID, tagData.getDataValue());
@@ -55,5 +66,65 @@ class Tag782StrSettlPartyIDTest {
         tagData = new Tag782StrSettlPartyID(new MyStringType(Tag782StrSettlPartyID.TESTB_STR_SETTL_PARTY_ID));
         assertEquals( Tag782StrSettlPartyID.TESTB_STR_SETTL_PARTY_ID, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag782StrSettlPartyID tagData;
+        String oneElement;
+
+        oneElement = Tag782StrSettlPartyID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        tagData = new Tag782StrSettlPartyID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag782StrSettlPartyID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        tagData = new Tag782StrSettlPartyID( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag782StrSettlPartyID tagData;
+        String oneElement;
+
+        oneElement = Tag782StrSettlPartyID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        tagData = new Tag782StrSettlPartyID( new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag782StrSettlPartyID tagData;
+        String oneElement;
+
+        oneElement = Tag782StrSettlPartyID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        tagData = new Tag782StrSettlPartyID( new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag782StrSettlPartyID tagData;
+        String oneElement;
+
+        oneElement = Tag782StrSettlPartyID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        tagData = new Tag782StrSettlPartyID(new MyStringType(oneElement));
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag782StrSettlPartyID tagData;
+        String oneElement;
+
+        oneElement = Tag782StrSettlPartyID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        tagData = new Tag782StrSettlPartyID( new MyStringType( oneElement ) );
+        assertEquals( "Tag782StrSettlPartyID\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }
