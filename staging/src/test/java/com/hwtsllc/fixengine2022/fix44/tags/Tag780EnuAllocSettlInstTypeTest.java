@@ -17,8 +17,8 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum780AllocSettlInstType;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -73,5 +73,70 @@ class Tag780EnuAllocSettlInstTypeTest {
         tagData = new Tag780EnuAllocSettlInstType( Enum780AllocSettlInstType.PHONE_FOR_INSTRUCTIONS );
         assertEquals( Enum780AllocSettlInstType.PHONE_FOR_INSTRUCTIONS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag780EnuAllocSettlInstType tagData;
+
+        // loop around the ENUM and process
+        for ( Enum780AllocSettlInstType oneEnum : Enum780AllocSettlInstType.values()) {
+            tagData = new Tag780EnuAllocSettlInstType(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag780EnuAllocSettlInstType tagData;
+
+        // loop around the ENUM and process
+        for (Enum780AllocSettlInstType oneEnum : Enum780AllocSettlInstType.values()) {
+            tagData = new Tag780EnuAllocSettlInstType(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag780EnuAllocSettlInstType tagData;
+
+        // loop around the ENUM and process
+        for (Enum780AllocSettlInstType oneEnum : Enum780AllocSettlInstType.values()) {
+            tagData = new Tag780EnuAllocSettlInstType(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag780EnuAllocSettlInstType tagData;
+
+        // loop around the ENUM and process
+        for (Enum780AllocSettlInstType oneEnum : Enum780AllocSettlInstType.values()) {
+            tagData = new Tag780EnuAllocSettlInstType(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag780EnuAllocSettlInstType tagData;
+
+        // loop around the ENUM and process
+        for (Enum780AllocSettlInstType oneEnum : Enum780AllocSettlInstType.values()) {
+            tagData = new Tag780EnuAllocSettlInstType(oneEnum);
+            assertEquals( "Tag780EnuAllocSettlInstType\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
     }
 }

@@ -71,4 +71,69 @@ class Tag712EnuPosMaintActionTest {
         assertEquals( Enum712PosMaintAction.REVERSE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag712EnuPosMaintAction tagData;
+
+        // loop around the ENUM and process
+        for ( Enum712PosMaintAction oneEnum : Enum712PosMaintAction.values()) {
+            tagData = new Tag712EnuPosMaintAction(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag712EnuPosMaintAction tagData;
+
+        // loop around the ENUM and process
+        for (Enum712PosMaintAction oneEnum : Enum712PosMaintAction.values()) {
+            tagData = new Tag712EnuPosMaintAction(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag712EnuPosMaintAction tagData;
+
+        // loop around the ENUM and process
+        for (Enum712PosMaintAction oneEnum : Enum712PosMaintAction.values()) {
+            tagData = new Tag712EnuPosMaintAction(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag712EnuPosMaintAction tagData;
+
+        // loop around the ENUM and process
+        for (Enum712PosMaintAction oneEnum : Enum712PosMaintAction.values()) {
+            tagData = new Tag712EnuPosMaintAction(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag712EnuPosMaintAction tagData;
+
+        // loop around the ENUM and process
+        for (Enum712PosMaintAction oneEnum : Enum712PosMaintAction.values()) {
+            tagData = new Tag712EnuPosMaintAction(oneEnum);
+            assertEquals( "Tag712EnuPosMaintAction\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
 }

@@ -65,4 +65,69 @@ class Tag733EnuUnderlyingSettlPriceTypeTest {
         assertEquals( "2", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag733EnuUnderlyingSettlPriceType tagData;
+
+        // loop around the ENUM and process
+        for ( MyEnumSettlPriceType oneEnum : MyEnumSettlPriceType.values()) {
+            tagData = new Tag733EnuUnderlyingSettlPriceType(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag733EnuUnderlyingSettlPriceType tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumSettlPriceType oneEnum : MyEnumSettlPriceType.values()) {
+            tagData = new Tag733EnuUnderlyingSettlPriceType(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag733EnuUnderlyingSettlPriceType tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumSettlPriceType oneEnum : MyEnumSettlPriceType.values()) {
+            tagData = new Tag733EnuUnderlyingSettlPriceType(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag733EnuUnderlyingSettlPriceType tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumSettlPriceType oneEnum : MyEnumSettlPriceType.values()) {
+            tagData = new Tag733EnuUnderlyingSettlPriceType(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag733EnuUnderlyingSettlPriceType tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumSettlPriceType oneEnum : MyEnumSettlPriceType.values()) {
+            tagData = new Tag733EnuUnderlyingSettlPriceType(oneEnum);
+            assertEquals( "Tag733EnuUnderlyingSettlPriceType\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
 }

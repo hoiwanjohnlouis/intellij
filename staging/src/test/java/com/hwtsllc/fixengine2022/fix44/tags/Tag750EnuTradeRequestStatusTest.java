@@ -63,4 +63,69 @@ class Tag750EnuTradeRequestStatusTest {
         assertEquals( Enum750TradeRequestStatus.REJECTED.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag750EnuTradeRequestStatus tagData;
+
+        // loop around the ENUM and process
+        for ( Enum750TradeRequestStatus oneEnum : Enum750TradeRequestStatus.values()) {
+            tagData = new Tag750EnuTradeRequestStatus(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag750EnuTradeRequestStatus tagData;
+
+        // loop around the ENUM and process
+        for (Enum750TradeRequestStatus oneEnum : Enum750TradeRequestStatus.values()) {
+            tagData = new Tag750EnuTradeRequestStatus(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag750EnuTradeRequestStatus tagData;
+
+        // loop around the ENUM and process
+        for (Enum750TradeRequestStatus oneEnum : Enum750TradeRequestStatus.values()) {
+            tagData = new Tag750EnuTradeRequestStatus(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag750EnuTradeRequestStatus tagData;
+
+        // loop around the ENUM and process
+        for (Enum750TradeRequestStatus oneEnum : Enum750TradeRequestStatus.values()) {
+            tagData = new Tag750EnuTradeRequestStatus(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag750EnuTradeRequestStatus tagData;
+
+        // loop around the ENUM and process
+        for (Enum750TradeRequestStatus oneEnum : Enum750TradeRequestStatus.values()) {
+            tagData = new Tag750EnuTradeRequestStatus(oneEnum);
+            assertEquals( "Tag750EnuTradeRequestStatus\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
 }

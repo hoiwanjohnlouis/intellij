@@ -16,8 +16,8 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.MyEnumPriceType;
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyEnumPriceType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -186,5 +186,70 @@ class Tag686EnuLegPriceTypeTest {
         tagData = new Tag686EnuLegPriceType(MyEnumPriceType.TICKS_IN_ONE_TWENTY_EIGHTS);
         assertEquals( MyEnumPriceType.TICKS_IN_ONE_TWENTY_EIGHTS.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag686EnuLegPriceType tagData;
+
+        // loop around the ENUM and process
+        for ( MyEnumPriceType oneEnum : MyEnumPriceType.values()) {
+            tagData = new Tag686EnuLegPriceType(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag686EnuLegPriceType tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumPriceType oneEnum : MyEnumPriceType.values()) {
+            tagData = new Tag686EnuLegPriceType(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag686EnuLegPriceType tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumPriceType oneEnum : MyEnumPriceType.values()) {
+            tagData = new Tag686EnuLegPriceType(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag686EnuLegPriceType tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumPriceType oneEnum : MyEnumPriceType.values()) {
+            tagData = new Tag686EnuLegPriceType(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag686EnuLegPriceType tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumPriceType oneEnum : MyEnumPriceType.values()) {
+            tagData = new Tag686EnuLegPriceType(oneEnum);
+            assertEquals( "Tag686EnuLegPriceType\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
     }
 }

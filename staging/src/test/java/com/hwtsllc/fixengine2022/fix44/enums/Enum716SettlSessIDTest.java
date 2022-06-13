@@ -36,16 +36,6 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    EOD - End Of Day
  */
 class Enum716SettlSessIDTest {
-    /*
-     *  716
-     *  SettlSessID
-     *  Identifies a specific settlement session
-     *  Valid values:
-     *      ITD - Intraday
-     *      RTH - Regular Trading Hours
-     *      ETH - Electronic Trading Hours
-     *      EOD - End Of Day
-     */
     @Test
     void EnumTest() {
         Enum716SettlSessID enumType;

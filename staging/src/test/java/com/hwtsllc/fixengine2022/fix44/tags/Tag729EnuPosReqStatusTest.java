@@ -17,8 +17,8 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum729PosReqStatus;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -62,5 +62,70 @@ class Tag729EnuPosReqStatusTest {
         tagData = new Tag729EnuPosReqStatus(Enum729PosReqStatus.REJECTED);
         assertEquals( Enum729PosReqStatus.REJECTED.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag729EnuPosReqStatus tagData;
+
+        // loop around the ENUM and process
+        for ( Enum729PosReqStatus oneEnum : Enum729PosReqStatus.values()) {
+            tagData = new Tag729EnuPosReqStatus(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag729EnuPosReqStatus tagData;
+
+        // loop around the ENUM and process
+        for (Enum729PosReqStatus oneEnum : Enum729PosReqStatus.values()) {
+            tagData = new Tag729EnuPosReqStatus(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag729EnuPosReqStatus tagData;
+
+        // loop around the ENUM and process
+        for (Enum729PosReqStatus oneEnum : Enum729PosReqStatus.values()) {
+            tagData = new Tag729EnuPosReqStatus(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag729EnuPosReqStatus tagData;
+
+        // loop around the ENUM and process
+        for (Enum729PosReqStatus oneEnum : Enum729PosReqStatus.values()) {
+            tagData = new Tag729EnuPosReqStatus(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag729EnuPosReqStatus tagData;
+
+        // loop around the ENUM and process
+        for (Enum729PosReqStatus oneEnum : Enum729PosReqStatus.values()) {
+            tagData = new Tag729EnuPosReqStatus(oneEnum);
+            assertEquals( "Tag729EnuPosReqStatus\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
     }
 }

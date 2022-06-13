@@ -17,8 +17,8 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -72,5 +72,70 @@ class Tag665EnuConfirmStatusTest {
         tagData = new Tag665EnuConfirmStatus(Enum665ConfirmStatus.REJECTED);
         assertEquals( Enum665ConfirmStatus.REJECTED.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag665EnuConfirmStatus tagData;
+
+        // loop around the ENUM and process
+        for ( Enum665ConfirmStatus oneEnum : Enum665ConfirmStatus.values()) {
+            tagData = new Tag665EnuConfirmStatus(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag665EnuConfirmStatus tagData;
+
+        // loop around the ENUM and process
+        for (Enum665ConfirmStatus oneEnum : Enum665ConfirmStatus.values()) {
+            tagData = new Tag665EnuConfirmStatus(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag665EnuConfirmStatus tagData;
+
+        // loop around the ENUM and process
+        for (Enum665ConfirmStatus oneEnum : Enum665ConfirmStatus.values()) {
+            tagData = new Tag665EnuConfirmStatus(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag665EnuConfirmStatus tagData;
+
+        // loop around the ENUM and process
+        for (Enum665ConfirmStatus oneEnum : Enum665ConfirmStatus.values()) {
+            tagData = new Tag665EnuConfirmStatus(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag665EnuConfirmStatus tagData;
+
+        // loop around the ENUM and process
+        for (Enum665ConfirmStatus oneEnum : Enum665ConfirmStatus.values()) {
+            tagData = new Tag665EnuConfirmStatus(oneEnum);
+            assertEquals( "Tag665EnuConfirmStatus\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
     }
 }

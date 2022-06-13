@@ -17,8 +17,8 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum946CollInquiryResult;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -109,5 +109,70 @@ class Tag946EnuCollInquiryResultTest {
         tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.OTHER );
         assertEquals( Enum946CollInquiryResult.OTHER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag946EnuCollInquiryResult tagData;
+
+        // loop around the ENUM and process
+        for ( Enum946CollInquiryResult oneEnum : Enum946CollInquiryResult.values()) {
+            tagData = new Tag946EnuCollInquiryResult(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag946EnuCollInquiryResult tagData;
+
+        // loop around the ENUM and process
+        for (Enum946CollInquiryResult oneEnum : Enum946CollInquiryResult.values()) {
+            tagData = new Tag946EnuCollInquiryResult(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag946EnuCollInquiryResult tagData;
+
+        // loop around the ENUM and process
+        for (Enum946CollInquiryResult oneEnum : Enum946CollInquiryResult.values()) {
+            tagData = new Tag946EnuCollInquiryResult(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag946EnuCollInquiryResult tagData;
+
+        // loop around the ENUM and process
+        for (Enum946CollInquiryResult oneEnum : Enum946CollInquiryResult.values()) {
+            tagData = new Tag946EnuCollInquiryResult(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag946EnuCollInquiryResult tagData;
+
+        // loop around the ENUM and process
+        for (Enum946CollInquiryResult oneEnum : Enum946CollInquiryResult.values()) {
+            tagData = new Tag946EnuCollInquiryResult(oneEnum);
+            assertEquals( "Tag946EnuCollInquiryResult\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
     }
 }

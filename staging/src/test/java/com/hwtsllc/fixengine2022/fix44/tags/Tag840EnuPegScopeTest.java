@@ -74,4 +74,69 @@ class Tag840EnuPegScopeTest {
         assertEquals( MyEnumDiscretionOrPegScope.NATIONAL_EXCLUDING_LOCAL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag840EnuPegScope tagData;
+
+        // loop around the ENUM and process
+        for ( MyEnumDiscretionOrPegScope oneEnum : MyEnumDiscretionOrPegScope.values()) {
+            tagData = new Tag840EnuPegScope(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag840EnuPegScope tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumDiscretionOrPegScope oneEnum : MyEnumDiscretionOrPegScope.values()) {
+            tagData = new Tag840EnuPegScope(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag840EnuPegScope tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumDiscretionOrPegScope oneEnum : MyEnumDiscretionOrPegScope.values()) {
+            tagData = new Tag840EnuPegScope(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag840EnuPegScope tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumDiscretionOrPegScope oneEnum : MyEnumDiscretionOrPegScope.values()) {
+            tagData = new Tag840EnuPegScope(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag840EnuPegScope tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumDiscretionOrPegScope oneEnum : MyEnumDiscretionOrPegScope.values()) {
+            tagData = new Tag840EnuPegScope(oneEnum);
+            assertEquals( "Tag840EnuPegScope\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
 }

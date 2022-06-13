@@ -283,4 +283,69 @@ class Tag807EnuNested2PartySubIDTypeTest {
         assertEquals( MyEnumPartySubIDType.EXECUTION_VENUE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag807EnuNested2PartySubIDType tagData;
+
+        // loop around the ENUM and process
+        for ( MyEnumPartySubIDType oneEnum : MyEnumPartySubIDType.values()) {
+            tagData = new Tag807EnuNested2PartySubIDType(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag807EnuNested2PartySubIDType tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumPartySubIDType oneEnum : MyEnumPartySubIDType.values()) {
+            tagData = new Tag807EnuNested2PartySubIDType(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag807EnuNested2PartySubIDType tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumPartySubIDType oneEnum : MyEnumPartySubIDType.values()) {
+            tagData = new Tag807EnuNested2PartySubIDType(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag807EnuNested2PartySubIDType tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumPartySubIDType oneEnum : MyEnumPartySubIDType.values()) {
+            tagData = new Tag807EnuNested2PartySubIDType(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag807EnuNested2PartySubIDType tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumPartySubIDType oneEnum : MyEnumPartySubIDType.values()) {
+            tagData = new Tag807EnuNested2PartySubIDType(oneEnum);
+            assertEquals( "Tag807EnuNested2PartySubIDType\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
 }

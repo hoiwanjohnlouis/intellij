@@ -58,4 +58,69 @@ class Tag797EnuCopyMsgIndicatorTest {
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag797EnuCopyMsgIndicator tagData;
+
+        // loop around the ENUM and process
+        for ( Enum797CopyMsgIndicator oneEnum : Enum797CopyMsgIndicator.values()) {
+            tagData = new Tag797EnuCopyMsgIndicator(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag797EnuCopyMsgIndicator tagData;
+
+        // loop around the ENUM and process
+        for (Enum797CopyMsgIndicator oneEnum : Enum797CopyMsgIndicator.values()) {
+            tagData = new Tag797EnuCopyMsgIndicator(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag797EnuCopyMsgIndicator tagData;
+
+        // loop around the ENUM and process
+        for (Enum797CopyMsgIndicator oneEnum : Enum797CopyMsgIndicator.values()) {
+            tagData = new Tag797EnuCopyMsgIndicator(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag797EnuCopyMsgIndicator tagData;
+
+        // loop around the ENUM and process
+        for (Enum797CopyMsgIndicator oneEnum : Enum797CopyMsgIndicator.values()) {
+            tagData = new Tag797EnuCopyMsgIndicator(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag797EnuCopyMsgIndicator tagData;
+
+        // loop around the ENUM and process
+        for (Enum797CopyMsgIndicator oneEnum : Enum797CopyMsgIndicator.values()) {
+            tagData = new Tag797EnuCopyMsgIndicator(oneEnum);
+            assertEquals( "Tag797EnuCopyMsgIndicator\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
 }

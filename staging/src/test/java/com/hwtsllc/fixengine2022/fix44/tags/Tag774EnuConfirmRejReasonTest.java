@@ -64,4 +64,69 @@ class Tag774EnuConfirmRejReasonTest {
         assertEquals( Enum774ConfirmRejReason.OTHER.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag774EnuConfirmRejReason tagData;
+
+        // loop around the ENUM and process
+        for ( Enum774ConfirmRejReason oneEnum : Enum774ConfirmRejReason.values()) {
+            tagData = new Tag774EnuConfirmRejReason(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag774EnuConfirmRejReason tagData;
+
+        // loop around the ENUM and process
+        for (Enum774ConfirmRejReason oneEnum : Enum774ConfirmRejReason.values()) {
+            tagData = new Tag774EnuConfirmRejReason(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag774EnuConfirmRejReason tagData;
+
+        // loop around the ENUM and process
+        for (Enum774ConfirmRejReason oneEnum : Enum774ConfirmRejReason.values()) {
+            tagData = new Tag774EnuConfirmRejReason(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag774EnuConfirmRejReason tagData;
+
+        // loop around the ENUM and process
+        for (Enum774ConfirmRejReason oneEnum : Enum774ConfirmRejReason.values()) {
+            tagData = new Tag774EnuConfirmRejReason(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag774EnuConfirmRejReason tagData;
+
+        // loop around the ENUM and process
+        for (Enum774ConfirmRejReason oneEnum : Enum774ConfirmRejReason.values()) {
+            tagData = new Tag774EnuConfirmRejReason(oneEnum);
+            assertEquals( "Tag774EnuConfirmRejReason\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
 }

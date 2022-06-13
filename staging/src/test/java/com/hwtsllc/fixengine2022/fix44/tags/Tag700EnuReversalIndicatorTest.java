@@ -58,4 +58,69 @@ class Tag700EnuReversalIndicatorTest {
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+    @Test
+    void PrintFIXTagTest() {
+        Tag700EnuReversalIndicator tagData;
+
+        // loop around the ENUM and process
+        for ( Enum700ReversalIndicator oneEnum : Enum700ReversalIndicator.values()) {
+            tagData = new Tag700EnuReversalIndicator(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag700EnuReversalIndicator tagData;
+
+        // loop around the ENUM and process
+        for (Enum700ReversalIndicator oneEnum : Enum700ReversalIndicator.values()) {
+            tagData = new Tag700EnuReversalIndicator(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag700EnuReversalIndicator tagData;
+
+        // loop around the ENUM and process
+        for (Enum700ReversalIndicator oneEnum : Enum700ReversalIndicator.values()) {
+            tagData = new Tag700EnuReversalIndicator(oneEnum);
+            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+                    tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
+        Tag700EnuReversalIndicator tagData;
+
+        // loop around the ENUM and process
+        for (Enum700ReversalIndicator oneEnum : Enum700ReversalIndicator.values()) {
+            tagData = new Tag700EnuReversalIndicator(oneEnum);
+            assertEquals( tagData.toDataIDString(), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag700EnuReversalIndicator tagData;
+
+        // loop around the ENUM and process
+        for (Enum700ReversalIndicator oneEnum : Enum700ReversalIndicator.values()) {
+            tagData = new Tag700EnuReversalIndicator(oneEnum);
+            assertEquals( "Tag700EnuReversalIndicator\n" +
+                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataID[" + tagData.toDataIDString() + "]\n" +
+                            "\tDataName[" + tagData.toDataNameString() + "]\n" +
+                            "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
 }
