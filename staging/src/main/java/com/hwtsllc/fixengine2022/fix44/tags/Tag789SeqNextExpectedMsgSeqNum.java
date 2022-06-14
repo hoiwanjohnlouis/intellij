@@ -14,38 +14,31 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix43.tags;
+package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MySeqNumType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  630
- *  HopRefID
+ *  789
+ *  NextExpectedMsgSeqNum
  *  SeqNum
- *  <p>
- *  Reference identifier assigned by HopCompID (628) associated with the message sent.
- *  <p>
- *  It is recommended that this value be the MsgSeqNum (34) of the message sent by the third party.
- *  <p>
- *  Applicable when messages are communicated/re-distributed via third parties
- *  which function as service bureaus or "hubs".
- *  <p>
- *  Only applicable if OnBehalfOfCompID (115) is being used.
+ *  <p></p>
+ *  Next expected MsgSeqNum value to be received.
  */
-public class Tag630SeqHopRefID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag789SeqNextExpectedMsgSeqNum extends FIX44Abstract implements LogValuePairString, LogVerboseString {
     private final MySeqNumType dataValue;
 
-    public final static int TESTA_SEQ_HOP_REF_ID
-            = 630;
-    public final static int TESTB_SEQ_HOP_REF_ID
-            = 36;
+    public final static int TESTA_SEQ_NEXT_EXPECTED_MSG_SEQ_NUM
+            = 789;
+    public final static int TESTB_SEQ_NEXT_EXPECTED_MSG_SEQ_NUM
+            = 89;
 
-    public Tag630SeqHopRefID(final MySeqNumType dataValue) {
-        setFixType(FIX43.FIX630_SEQ_HOP_REF_ID);
+    public Tag789SeqNextExpectedMsgSeqNum(final MySeqNumType dataValue) {
+        setFixType( FIX44.FIX789_SEQ_NEXT_EXPECTED_MSG_SEQ_NUM );
         this.dataValue = dataValue;
     }
 
@@ -88,12 +81,12 @@ public class Tag630SeqHopRefID extends FIX43Abstract implements LogValuePairStri
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag630SeqHopRefID tagData;
+        Tag789SeqNextExpectedMsgSeqNum tagData;
 
-        tagData = new Tag630SeqHopRefID(new MySeqNumType(TESTA_SEQ_HOP_REF_ID) );
+        tagData = new Tag789SeqNextExpectedMsgSeqNum(new MySeqNumType( TESTA_SEQ_NEXT_EXPECTED_MSG_SEQ_NUM ) );
         System.out.println(tagData.toVerboseString());
 
-        tagData = new Tag630SeqHopRefID(new MySeqNumType(TESTB_SEQ_HOP_REF_ID) );
+        tagData = new Tag789SeqNextExpectedMsgSeqNum(new MySeqNumType( TESTB_SEQ_NEXT_EXPECTED_MSG_SEQ_NUM ) );
         System.out.println(tagData.toVerboseString());
     }
 }
