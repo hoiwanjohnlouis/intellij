@@ -50,27 +50,26 @@ class Tag881StrSecondaryTradeReportRefIDTest {
         Tag881StrSecondaryTradeReportRefID tagData;
         String oneElement;
 
-        oneElement = Tag881StrSecondaryTradeReportRefID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag881StrSecondaryTradeReportRefID.TESTA_STR_SECONDARY_TRADE_REPORT_REF_ID;
         tagData = new Tag881StrSecondaryTradeReportRefID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag881StrSecondaryTradeReportRefID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag881StrSecondaryTradeReportRefID.TESTB_STR_SECONDARY_TRADE_REPORT_REF_ID;
         tagData = new Tag881StrSecondaryTradeReportRefID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag881StrSecondaryTradeReportRefID tagData;
         String oneElement;
 
-        oneElement = Tag881StrSecondaryTradeReportRefID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag881StrSecondaryTradeReportRefID.TESTA_STR_SECONDARY_TRADE_REPORT_REF_ID;
         tagData = new Tag881StrSecondaryTradeReportRefID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag881StrSecondaryTradeReportRefID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag881StrSecondaryTradeReportRefID.TESTB_STR_SECONDARY_TRADE_REPORT_REF_ID;
         tagData = new Tag881StrSecondaryTradeReportRefID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -79,7 +78,7 @@ class Tag881StrSecondaryTradeReportRefIDTest {
         Tag881StrSecondaryTradeReportRefID tagData;
         String oneElement;
 
-        oneElement = Tag881StrSecondaryTradeReportRefID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag881StrSecondaryTradeReportRefID.TESTB_STR_SECONDARY_TRADE_REPORT_REF_ID;
         tagData = new Tag881StrSecondaryTradeReportRefID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -89,7 +88,7 @@ class Tag881StrSecondaryTradeReportRefIDTest {
         Tag881StrSecondaryTradeReportRefID tagData;
         String oneElement;
 
-        oneElement = Tag881StrSecondaryTradeReportRefID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag881StrSecondaryTradeReportRefID.TESTB_STR_SECONDARY_TRADE_REPORT_REF_ID;
         tagData = new Tag881StrSecondaryTradeReportRefID( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -99,7 +98,7 @@ class Tag881StrSecondaryTradeReportRefIDTest {
         Tag881StrSecondaryTradeReportRefID tagData;
         String oneElement;
 
-        oneElement = Tag881StrSecondaryTradeReportRefID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag881StrSecondaryTradeReportRefID.TESTB_STR_SECONDARY_TRADE_REPORT_REF_ID;
         tagData = new Tag881StrSecondaryTradeReportRefID(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -109,7 +108,7 @@ class Tag881StrSecondaryTradeReportRefIDTest {
         Tag881StrSecondaryTradeReportRefID tagData;
         String oneElement;
 
-        oneElement = Tag881StrSecondaryTradeReportRefID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag881StrSecondaryTradeReportRefID.TESTA_STR_SECONDARY_TRADE_REPORT_REF_ID;
         tagData = new Tag881StrSecondaryTradeReportRefID( new MyStringType( oneElement ) );
         assertEquals( "Tag881StrSecondaryTradeReportRefID\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

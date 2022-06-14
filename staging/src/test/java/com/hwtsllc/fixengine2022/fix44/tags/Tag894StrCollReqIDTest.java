@@ -47,27 +47,26 @@ class Tag894StrCollReqIDTest {
         Tag894StrCollReqID tagData;
         String oneElement;
 
-        oneElement = Tag894StrCollReqID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag894StrCollReqID.TESTA_STR_COLL_REQ_ID;
         tagData = new Tag894StrCollReqID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag894StrCollReqID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag894StrCollReqID.TESTB_STR_COLL_REQ_ID;
         tagData = new Tag894StrCollReqID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag894StrCollReqID tagData;
         String oneElement;
 
-        oneElement = Tag894StrCollReqID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag894StrCollReqID.TESTA_STR_COLL_REQ_ID;
         tagData = new Tag894StrCollReqID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag894StrCollReqID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag894StrCollReqID.TESTB_STR_COLL_REQ_ID;
         tagData = new Tag894StrCollReqID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -76,7 +75,7 @@ class Tag894StrCollReqIDTest {
         Tag894StrCollReqID tagData;
         String oneElement;
 
-        oneElement = Tag894StrCollReqID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag894StrCollReqID.TESTB_STR_COLL_REQ_ID;
         tagData = new Tag894StrCollReqID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -86,7 +85,7 @@ class Tag894StrCollReqIDTest {
         Tag894StrCollReqID tagData;
         String oneElement;
 
-        oneElement = Tag894StrCollReqID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag894StrCollReqID.TESTB_STR_COLL_REQ_ID;
         tagData = new Tag894StrCollReqID( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -96,7 +95,7 @@ class Tag894StrCollReqIDTest {
         Tag894StrCollReqID tagData;
         String oneElement;
 
-        oneElement = Tag894StrCollReqID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag894StrCollReqID.TESTB_STR_COLL_REQ_ID;
         tagData = new Tag894StrCollReqID(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -106,7 +105,7 @@ class Tag894StrCollReqIDTest {
         Tag894StrCollReqID tagData;
         String oneElement;
 
-        oneElement = Tag894StrCollReqID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag894StrCollReqID.TESTA_STR_COLL_REQ_ID;
         tagData = new Tag894StrCollReqID( new MyStringType( oneElement ) );
         assertEquals( "Tag894StrCollReqID\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

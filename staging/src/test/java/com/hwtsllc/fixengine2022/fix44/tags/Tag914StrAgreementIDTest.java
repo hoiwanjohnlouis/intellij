@@ -48,27 +48,26 @@ class Tag914StrAgreementIDTest {
         Tag914StrAgreementID tagData;
         String oneElement;
 
-        oneElement = Tag914StrAgreementID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag914StrAgreementID.TESTA_STR_AGREEMENT_ID;
         tagData = new Tag914StrAgreementID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag914StrAgreementID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag914StrAgreementID.TESTB_STR_AGREEMENT_ID;
         tagData = new Tag914StrAgreementID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag914StrAgreementID tagData;
         String oneElement;
 
-        oneElement = Tag914StrAgreementID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag914StrAgreementID.TESTA_STR_AGREEMENT_ID;
         tagData = new Tag914StrAgreementID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag914StrAgreementID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag914StrAgreementID.TESTB_STR_AGREEMENT_ID;
         tagData = new Tag914StrAgreementID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -77,7 +76,7 @@ class Tag914StrAgreementIDTest {
         Tag914StrAgreementID tagData;
         String oneElement;
 
-        oneElement = Tag914StrAgreementID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag914StrAgreementID.TESTB_STR_AGREEMENT_ID;
         tagData = new Tag914StrAgreementID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -87,7 +86,7 @@ class Tag914StrAgreementIDTest {
         Tag914StrAgreementID tagData;
         String oneElement;
 
-        oneElement = Tag914StrAgreementID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag914StrAgreementID.TESTB_STR_AGREEMENT_ID;
         tagData = new Tag914StrAgreementID( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -97,7 +96,7 @@ class Tag914StrAgreementIDTest {
         Tag914StrAgreementID tagData;
         String oneElement;
 
-        oneElement = Tag914StrAgreementID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag914StrAgreementID.TESTB_STR_AGREEMENT_ID;
         tagData = new Tag914StrAgreementID(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -107,7 +106,7 @@ class Tag914StrAgreementIDTest {
         Tag914StrAgreementID tagData;
         String oneElement;
 
-        oneElement = Tag914StrAgreementID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag914StrAgreementID.TESTA_STR_AGREEMENT_ID;
         tagData = new Tag914StrAgreementID( new MyStringType( oneElement ) );
         assertEquals( "Tag914StrAgreementID\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

@@ -47,27 +47,26 @@ class Tag777StrSettlInstMsgIDTest {
         Tag777StrSettlInstMsgID tagData;
         String oneElement;
 
-        oneElement = Tag777StrSettlInstMsgID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag777StrSettlInstMsgID.TESTA_STR_SETTL_INST_MSG_ID;
         tagData = new Tag777StrSettlInstMsgID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag777StrSettlInstMsgID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag777StrSettlInstMsgID.TESTB_STR_SETTL_INST_MSG_ID;
         tagData = new Tag777StrSettlInstMsgID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag777StrSettlInstMsgID tagData;
         String oneElement;
 
-        oneElement = Tag777StrSettlInstMsgID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag777StrSettlInstMsgID.TESTA_STR_SETTL_INST_MSG_ID;
         tagData = new Tag777StrSettlInstMsgID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag777StrSettlInstMsgID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag777StrSettlInstMsgID.TESTB_STR_SETTL_INST_MSG_ID;
         tagData = new Tag777StrSettlInstMsgID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -76,7 +75,7 @@ class Tag777StrSettlInstMsgIDTest {
         Tag777StrSettlInstMsgID tagData;
         String oneElement;
 
-        oneElement = Tag777StrSettlInstMsgID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag777StrSettlInstMsgID.TESTB_STR_SETTL_INST_MSG_ID;
         tagData = new Tag777StrSettlInstMsgID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -86,7 +85,7 @@ class Tag777StrSettlInstMsgIDTest {
         Tag777StrSettlInstMsgID tagData;
         String oneElement;
 
-        oneElement = Tag777StrSettlInstMsgID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag777StrSettlInstMsgID.TESTB_STR_SETTL_INST_MSG_ID;
         tagData = new Tag777StrSettlInstMsgID( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -96,7 +95,7 @@ class Tag777StrSettlInstMsgIDTest {
         Tag777StrSettlInstMsgID tagData;
         String oneElement;
 
-        oneElement = Tag777StrSettlInstMsgID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag777StrSettlInstMsgID.TESTB_STR_SETTL_INST_MSG_ID;
         tagData = new Tag777StrSettlInstMsgID(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -106,7 +105,7 @@ class Tag777StrSettlInstMsgIDTest {
         Tag777StrSettlInstMsgID tagData;
         String oneElement;
 
-        oneElement = Tag777StrSettlInstMsgID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag777StrSettlInstMsgID.TESTA_STR_SETTL_INST_MSG_ID;
         tagData = new Tag777StrSettlInstMsgID( new MyStringType( oneElement ) );
         assertEquals( "Tag777StrSettlInstMsgID\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

@@ -49,27 +49,26 @@ class Tag699StrBenchmarkSecurityIDTest {
         Tag699StrBenchmarkSecurityID tagData;
         String oneElement;
 
-        oneElement = Tag699StrBenchmarkSecurityID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag699StrBenchmarkSecurityID.TESTA_STR_BENCHMARK_SECURITY_ID;
         tagData = new Tag699StrBenchmarkSecurityID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag699StrBenchmarkSecurityID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag699StrBenchmarkSecurityID.TESTB_STR_BENCHMARK_SECURITY_ID;
         tagData = new Tag699StrBenchmarkSecurityID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag699StrBenchmarkSecurityID tagData;
         String oneElement;
 
-        oneElement = Tag699StrBenchmarkSecurityID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag699StrBenchmarkSecurityID.TESTA_STR_BENCHMARK_SECURITY_ID;
         tagData = new Tag699StrBenchmarkSecurityID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag699StrBenchmarkSecurityID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag699StrBenchmarkSecurityID.TESTB_STR_BENCHMARK_SECURITY_ID;
         tagData = new Tag699StrBenchmarkSecurityID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -78,7 +77,7 @@ class Tag699StrBenchmarkSecurityIDTest {
         Tag699StrBenchmarkSecurityID tagData;
         String oneElement;
 
-        oneElement = Tag699StrBenchmarkSecurityID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag699StrBenchmarkSecurityID.TESTB_STR_BENCHMARK_SECURITY_ID;
         tagData = new Tag699StrBenchmarkSecurityID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -88,7 +87,7 @@ class Tag699StrBenchmarkSecurityIDTest {
         Tag699StrBenchmarkSecurityID tagData;
         String oneElement;
 
-        oneElement = Tag699StrBenchmarkSecurityID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag699StrBenchmarkSecurityID.TESTB_STR_BENCHMARK_SECURITY_ID;
         tagData = new Tag699StrBenchmarkSecurityID( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -98,7 +97,7 @@ class Tag699StrBenchmarkSecurityIDTest {
         Tag699StrBenchmarkSecurityID tagData;
         String oneElement;
 
-        oneElement = Tag699StrBenchmarkSecurityID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag699StrBenchmarkSecurityID.TESTB_STR_BENCHMARK_SECURITY_ID;
         tagData = new Tag699StrBenchmarkSecurityID(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -108,7 +107,7 @@ class Tag699StrBenchmarkSecurityIDTest {
         Tag699StrBenchmarkSecurityID tagData;
         String oneElement;
 
-        oneElement = Tag699StrBenchmarkSecurityID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag699StrBenchmarkSecurityID.TESTA_STR_BENCHMARK_SECURITY_ID;
         tagData = new Tag699StrBenchmarkSecurityID( new MyStringType( oneElement ) );
         assertEquals( "Tag699StrBenchmarkSecurityID\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

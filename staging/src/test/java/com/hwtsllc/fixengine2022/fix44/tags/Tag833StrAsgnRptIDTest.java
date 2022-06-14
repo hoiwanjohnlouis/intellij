@@ -47,27 +47,26 @@ class Tag833StrAsgnRptIDTest {
         Tag833StrAsgnRptID tagData;
         String oneElement;
 
-        oneElement = Tag833StrAsgnRptID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag833StrAsgnRptID.TESTA_STR_ASGN_RPT_ID;
         tagData = new Tag833StrAsgnRptID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag833StrAsgnRptID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag833StrAsgnRptID.TESTB_STR_ASGN_RPT_ID;
         tagData = new Tag833StrAsgnRptID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag833StrAsgnRptID tagData;
         String oneElement;
 
-        oneElement = Tag833StrAsgnRptID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag833StrAsgnRptID.TESTA_STR_ASGN_RPT_ID;
         tagData = new Tag833StrAsgnRptID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag833StrAsgnRptID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag833StrAsgnRptID.TESTB_STR_ASGN_RPT_ID;
         tagData = new Tag833StrAsgnRptID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -76,7 +75,7 @@ class Tag833StrAsgnRptIDTest {
         Tag833StrAsgnRptID tagData;
         String oneElement;
 
-        oneElement = Tag833StrAsgnRptID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag833StrAsgnRptID.TESTB_STR_ASGN_RPT_ID;
         tagData = new Tag833StrAsgnRptID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -86,7 +85,7 @@ class Tag833StrAsgnRptIDTest {
         Tag833StrAsgnRptID tagData;
         String oneElement;
 
-        oneElement = Tag833StrAsgnRptID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag833StrAsgnRptID.TESTB_STR_ASGN_RPT_ID;
         tagData = new Tag833StrAsgnRptID( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -96,7 +95,7 @@ class Tag833StrAsgnRptIDTest {
         Tag833StrAsgnRptID tagData;
         String oneElement;
 
-        oneElement = Tag833StrAsgnRptID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag833StrAsgnRptID.TESTB_STR_ASGN_RPT_ID;
         tagData = new Tag833StrAsgnRptID(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -106,7 +105,7 @@ class Tag833StrAsgnRptIDTest {
         Tag833StrAsgnRptID tagData;
         String oneElement;
 
-        oneElement = Tag833StrAsgnRptID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag833StrAsgnRptID.TESTA_STR_ASGN_RPT_ID;
         tagData = new Tag833StrAsgnRptID( new MyStringType( oneElement ) );
         assertEquals( "Tag833StrAsgnRptID\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

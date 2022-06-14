@@ -47,27 +47,26 @@ class Tag878StrUnderlyingCPRegTypeTest {
         Tag878StrUnderlyingCPRegType tagData;
         String oneElement;
 
-        oneElement = Tag878StrUnderlyingCPRegType.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag878StrUnderlyingCPRegType.TESTA_STR_UNDERLYING_CP_REGTYPE;
         tagData = new Tag878StrUnderlyingCPRegType( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag878StrUnderlyingCPRegType.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag878StrUnderlyingCPRegType.TESTB_STR_UNDERLYING_CP_REGTYPE;
         tagData = new Tag878StrUnderlyingCPRegType( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag878StrUnderlyingCPRegType tagData;
         String oneElement;
 
-        oneElement = Tag878StrUnderlyingCPRegType.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag878StrUnderlyingCPRegType.TESTA_STR_UNDERLYING_CP_REGTYPE;
         tagData = new Tag878StrUnderlyingCPRegType( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag878StrUnderlyingCPRegType.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag878StrUnderlyingCPRegType.TESTB_STR_UNDERLYING_CP_REGTYPE;
         tagData = new Tag878StrUnderlyingCPRegType( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -76,7 +75,7 @@ class Tag878StrUnderlyingCPRegTypeTest {
         Tag878StrUnderlyingCPRegType tagData;
         String oneElement;
 
-        oneElement = Tag878StrUnderlyingCPRegType.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag878StrUnderlyingCPRegType.TESTB_STR_UNDERLYING_CP_REGTYPE;
         tagData = new Tag878StrUnderlyingCPRegType( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -86,7 +85,7 @@ class Tag878StrUnderlyingCPRegTypeTest {
         Tag878StrUnderlyingCPRegType tagData;
         String oneElement;
 
-        oneElement = Tag878StrUnderlyingCPRegType.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag878StrUnderlyingCPRegType.TESTB_STR_UNDERLYING_CP_REGTYPE;
         tagData = new Tag878StrUnderlyingCPRegType( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -96,7 +95,7 @@ class Tag878StrUnderlyingCPRegTypeTest {
         Tag878StrUnderlyingCPRegType tagData;
         String oneElement;
 
-        oneElement = Tag878StrUnderlyingCPRegType.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag878StrUnderlyingCPRegType.TESTB_STR_UNDERLYING_CP_REGTYPE;
         tagData = new Tag878StrUnderlyingCPRegType(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -106,7 +105,7 @@ class Tag878StrUnderlyingCPRegTypeTest {
         Tag878StrUnderlyingCPRegType tagData;
         String oneElement;
 
-        oneElement = Tag878StrUnderlyingCPRegType.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag878StrUnderlyingCPRegType.TESTA_STR_UNDERLYING_CP_REGTYPE;
         tagData = new Tag878StrUnderlyingCPRegType( new MyStringType( oneElement ) );
         assertEquals( "Tag878StrUnderlyingCPRegType\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

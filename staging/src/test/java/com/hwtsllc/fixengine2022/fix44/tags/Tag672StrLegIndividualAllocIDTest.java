@@ -49,27 +49,26 @@ class Tag672StrLegIndividualAllocIDTest {
         Tag672StrLegIndividualAllocID tagData;
         String oneElement;
 
-        oneElement = Tag672StrLegIndividualAllocID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag672StrLegIndividualAllocID.TESTA_STR_LEG_INDIVIDUAL_ALLOC_ID;
         tagData = new Tag672StrLegIndividualAllocID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag672StrLegIndividualAllocID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag672StrLegIndividualAllocID.TESTB_STR_LEG_INDIVIDUAL_ALLOC_ID;
         tagData = new Tag672StrLegIndividualAllocID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag672StrLegIndividualAllocID tagData;
         String oneElement;
 
-        oneElement = Tag672StrLegIndividualAllocID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag672StrLegIndividualAllocID.TESTA_STR_LEG_INDIVIDUAL_ALLOC_ID;
         tagData = new Tag672StrLegIndividualAllocID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag672StrLegIndividualAllocID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag672StrLegIndividualAllocID.TESTB_STR_LEG_INDIVIDUAL_ALLOC_ID;
         tagData = new Tag672StrLegIndividualAllocID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -78,7 +77,7 @@ class Tag672StrLegIndividualAllocIDTest {
         Tag672StrLegIndividualAllocID tagData;
         String oneElement;
 
-        oneElement = Tag672StrLegIndividualAllocID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag672StrLegIndividualAllocID.TESTB_STR_LEG_INDIVIDUAL_ALLOC_ID;
         tagData = new Tag672StrLegIndividualAllocID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -88,7 +87,7 @@ class Tag672StrLegIndividualAllocIDTest {
         Tag672StrLegIndividualAllocID tagData;
         String oneElement;
 
-        oneElement = Tag672StrLegIndividualAllocID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag672StrLegIndividualAllocID.TESTB_STR_LEG_INDIVIDUAL_ALLOC_ID;
         tagData = new Tag672StrLegIndividualAllocID( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -98,7 +97,7 @@ class Tag672StrLegIndividualAllocIDTest {
         Tag672StrLegIndividualAllocID tagData;
         String oneElement;
 
-        oneElement = Tag672StrLegIndividualAllocID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag672StrLegIndividualAllocID.TESTB_STR_LEG_INDIVIDUAL_ALLOC_ID;
         tagData = new Tag672StrLegIndividualAllocID(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -108,7 +107,7 @@ class Tag672StrLegIndividualAllocIDTest {
         Tag672StrLegIndividualAllocID tagData;
         String oneElement;
 
-        oneElement = Tag672StrLegIndividualAllocID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag672StrLegIndividualAllocID.TESTA_STR_LEG_INDIVIDUAL_ALLOC_ID;
         tagData = new Tag672StrLegIndividualAllocID( new MyStringType( oneElement ) );
         assertEquals( "Tag672StrLegIndividualAllocID\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

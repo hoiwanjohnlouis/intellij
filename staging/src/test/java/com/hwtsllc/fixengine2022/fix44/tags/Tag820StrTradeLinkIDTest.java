@@ -49,27 +49,26 @@ class Tag820StrTradeLinkIDTest {
         Tag820StrTradeLinkID tagData;
         String oneElement;
 
-        oneElement = Tag820StrTradeLinkID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag820StrTradeLinkID.TESTA_STR_TRADE_LINK_ID;
         tagData = new Tag820StrTradeLinkID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag820StrTradeLinkID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag820StrTradeLinkID.TESTB_STR_TRADE_LINK_ID;
         tagData = new Tag820StrTradeLinkID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag820StrTradeLinkID tagData;
         String oneElement;
 
-        oneElement = Tag820StrTradeLinkID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag820StrTradeLinkID.TESTA_STR_TRADE_LINK_ID;
         tagData = new Tag820StrTradeLinkID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag820StrTradeLinkID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag820StrTradeLinkID.TESTB_STR_TRADE_LINK_ID;
         tagData = new Tag820StrTradeLinkID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -78,7 +77,7 @@ class Tag820StrTradeLinkIDTest {
         Tag820StrTradeLinkID tagData;
         String oneElement;
 
-        oneElement = Tag820StrTradeLinkID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag820StrTradeLinkID.TESTB_STR_TRADE_LINK_ID;
         tagData = new Tag820StrTradeLinkID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -88,7 +87,7 @@ class Tag820StrTradeLinkIDTest {
         Tag820StrTradeLinkID tagData;
         String oneElement;
 
-        oneElement = Tag820StrTradeLinkID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag820StrTradeLinkID.TESTB_STR_TRADE_LINK_ID;
         tagData = new Tag820StrTradeLinkID( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -98,7 +97,7 @@ class Tag820StrTradeLinkIDTest {
         Tag820StrTradeLinkID tagData;
         String oneElement;
 
-        oneElement = Tag820StrTradeLinkID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag820StrTradeLinkID.TESTB_STR_TRADE_LINK_ID;
         tagData = new Tag820StrTradeLinkID(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -108,7 +107,7 @@ class Tag820StrTradeLinkIDTest {
         Tag820StrTradeLinkID tagData;
         String oneElement;
 
-        oneElement = Tag820StrTradeLinkID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag820StrTradeLinkID.TESTA_STR_TRADE_LINK_ID;
         tagData = new Tag820StrTradeLinkID( new MyStringType( oneElement ) );
         assertEquals( "Tag820StrTradeLinkID\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

@@ -45,27 +45,26 @@ class Tag771StrTrdRegTimestampOriginTest {
         Tag771StrTrdRegTimestampOrigin tagData;
         String oneElement;
 
-        oneElement = Tag771StrTrdRegTimestampOrigin.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag771StrTrdRegTimestampOrigin.TESTA_STR_TRD_REG_TIMESTAMP_ORIGIN;
         tagData = new Tag771StrTrdRegTimestampOrigin( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag771StrTrdRegTimestampOrigin.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag771StrTrdRegTimestampOrigin.TESTB_STR_TRD_REG_TIMESTAMP_ORIGIN;
         tagData = new Tag771StrTrdRegTimestampOrigin( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag771StrTrdRegTimestampOrigin tagData;
         String oneElement;
 
-        oneElement = Tag771StrTrdRegTimestampOrigin.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag771StrTrdRegTimestampOrigin.TESTA_STR_TRD_REG_TIMESTAMP_ORIGIN;
         tagData = new Tag771StrTrdRegTimestampOrigin( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag771StrTrdRegTimestampOrigin.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag771StrTrdRegTimestampOrigin.TESTB_STR_TRD_REG_TIMESTAMP_ORIGIN;
         tagData = new Tag771StrTrdRegTimestampOrigin( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -74,7 +73,7 @@ class Tag771StrTrdRegTimestampOriginTest {
         Tag771StrTrdRegTimestampOrigin tagData;
         String oneElement;
 
-        oneElement = Tag771StrTrdRegTimestampOrigin.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag771StrTrdRegTimestampOrigin.TESTB_STR_TRD_REG_TIMESTAMP_ORIGIN;
         tagData = new Tag771StrTrdRegTimestampOrigin( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -84,7 +83,7 @@ class Tag771StrTrdRegTimestampOriginTest {
         Tag771StrTrdRegTimestampOrigin tagData;
         String oneElement;
 
-        oneElement = Tag771StrTrdRegTimestampOrigin.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag771StrTrdRegTimestampOrigin.TESTB_STR_TRD_REG_TIMESTAMP_ORIGIN;
         tagData = new Tag771StrTrdRegTimestampOrigin( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -94,7 +93,7 @@ class Tag771StrTrdRegTimestampOriginTest {
         Tag771StrTrdRegTimestampOrigin tagData;
         String oneElement;
 
-        oneElement = Tag771StrTrdRegTimestampOrigin.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag771StrTrdRegTimestampOrigin.TESTB_STR_TRD_REG_TIMESTAMP_ORIGIN;
         tagData = new Tag771StrTrdRegTimestampOrigin(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -104,7 +103,7 @@ class Tag771StrTrdRegTimestampOriginTest {
         Tag771StrTrdRegTimestampOrigin tagData;
         String oneElement;
 
-        oneElement = Tag771StrTrdRegTimestampOrigin.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag771StrTrdRegTimestampOrigin.TESTA_STR_TRD_REG_TIMESTAMP_ORIGIN;
         tagData = new Tag771StrTrdRegTimestampOrigin( new MyStringType( oneElement ) );
         assertEquals( "Tag771StrTrdRegTimestampOrigin\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

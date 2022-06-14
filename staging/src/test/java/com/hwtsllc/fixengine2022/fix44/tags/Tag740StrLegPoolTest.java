@@ -50,27 +50,26 @@ class Tag740StrLegPoolTest {
         Tag740StrLegPool tagData;
         String oneElement;
 
-        oneElement = Tag740StrLegPool.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag740StrLegPool.TESTA_STR_LEG_POOL;
         tagData = new Tag740StrLegPool( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag740StrLegPool.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag740StrLegPool.TESTB_STR_LEG_POOL;
         tagData = new Tag740StrLegPool( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag740StrLegPool tagData;
         String oneElement;
 
-        oneElement = Tag740StrLegPool.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag740StrLegPool.TESTA_STR_LEG_POOL;
         tagData = new Tag740StrLegPool( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag740StrLegPool.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag740StrLegPool.TESTB_STR_LEG_POOL;
         tagData = new Tag740StrLegPool( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -79,7 +78,7 @@ class Tag740StrLegPoolTest {
         Tag740StrLegPool tagData;
         String oneElement;
 
-        oneElement = Tag740StrLegPool.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag740StrLegPool.TESTB_STR_LEG_POOL;
         tagData = new Tag740StrLegPool( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -89,7 +88,7 @@ class Tag740StrLegPoolTest {
         Tag740StrLegPool tagData;
         String oneElement;
 
-        oneElement = Tag740StrLegPool.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag740StrLegPool.TESTB_STR_LEG_POOL;
         tagData = new Tag740StrLegPool( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -99,7 +98,7 @@ class Tag740StrLegPoolTest {
         Tag740StrLegPool tagData;
         String oneElement;
 
-        oneElement = Tag740StrLegPool.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag740StrLegPool.TESTB_STR_LEG_POOL;
         tagData = new Tag740StrLegPool(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -109,7 +108,7 @@ class Tag740StrLegPoolTest {
         Tag740StrLegPool tagData;
         String oneElement;
 
-        oneElement = Tag740StrLegPool.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag740StrLegPool.TESTA_STR_LEG_POOL;
         tagData = new Tag740StrLegPool( new MyStringType( oneElement ) );
         assertEquals( "Tag740StrLegPool\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

@@ -47,27 +47,26 @@ class Tag824StrTradeLegRefIDTest {
         Tag824StrTradeLegRefID tagData;
         String oneElement;
 
-        oneElement = Tag824StrTradeLegRefID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag824StrTradeLegRefID.TESTA_STR_TRADE_LEG_REF_ID;
         tagData = new Tag824StrTradeLegRefID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag824StrTradeLegRefID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag824StrTradeLegRefID.TESTB_STR_TRADE_LEG_REF_ID;
         tagData = new Tag824StrTradeLegRefID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag824StrTradeLegRefID tagData;
         String oneElement;
 
-        oneElement = Tag824StrTradeLegRefID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag824StrTradeLegRefID.TESTA_STR_TRADE_LEG_REF_ID;
         tagData = new Tag824StrTradeLegRefID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag824StrTradeLegRefID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag824StrTradeLegRefID.TESTB_STR_TRADE_LEG_REF_ID;
         tagData = new Tag824StrTradeLegRefID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -76,7 +75,7 @@ class Tag824StrTradeLegRefIDTest {
         Tag824StrTradeLegRefID tagData;
         String oneElement;
 
-        oneElement = Tag824StrTradeLegRefID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag824StrTradeLegRefID.TESTB_STR_TRADE_LEG_REF_ID;
         tagData = new Tag824StrTradeLegRefID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -86,7 +85,7 @@ class Tag824StrTradeLegRefIDTest {
         Tag824StrTradeLegRefID tagData;
         String oneElement;
 
-        oneElement = Tag824StrTradeLegRefID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag824StrTradeLegRefID.TESTB_STR_TRADE_LEG_REF_ID;
         tagData = new Tag824StrTradeLegRefID( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -96,7 +95,7 @@ class Tag824StrTradeLegRefIDTest {
         Tag824StrTradeLegRefID tagData;
         String oneElement;
 
-        oneElement = Tag824StrTradeLegRefID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag824StrTradeLegRefID.TESTB_STR_TRADE_LEG_REF_ID;
         tagData = new Tag824StrTradeLegRefID(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -106,7 +105,7 @@ class Tag824StrTradeLegRefIDTest {
         Tag824StrTradeLegRefID tagData;
         String oneElement;
 
-        oneElement = Tag824StrTradeLegRefID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag824StrTradeLegRefID.TESTA_STR_TRADE_LEG_REF_ID;
         tagData = new Tag824StrTradeLegRefID( new MyStringType( oneElement ) );
         assertEquals( "Tag824StrTradeLegRefID\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

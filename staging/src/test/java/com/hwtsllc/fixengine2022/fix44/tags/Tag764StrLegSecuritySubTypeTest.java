@@ -49,27 +49,26 @@ class Tag764StrLegSecuritySubTypeTest {
         Tag764StrLegSecuritySubType tagData;
         String oneElement;
 
-        oneElement = Tag764StrLegSecuritySubType.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag764StrLegSecuritySubType.TESTA_STR_LEG_SECURITY_SUB_TYPE;
         tagData = new Tag764StrLegSecuritySubType( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag764StrLegSecuritySubType.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag764StrLegSecuritySubType.TESTB_STR_LEG_SECURITY_SUB_TYPE;
         tagData = new Tag764StrLegSecuritySubType( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag764StrLegSecuritySubType tagData;
         String oneElement;
 
-        oneElement = Tag764StrLegSecuritySubType.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag764StrLegSecuritySubType.TESTA_STR_LEG_SECURITY_SUB_TYPE;
         tagData = new Tag764StrLegSecuritySubType( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag764StrLegSecuritySubType.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag764StrLegSecuritySubType.TESTB_STR_LEG_SECURITY_SUB_TYPE;
         tagData = new Tag764StrLegSecuritySubType( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -78,7 +77,7 @@ class Tag764StrLegSecuritySubTypeTest {
         Tag764StrLegSecuritySubType tagData;
         String oneElement;
 
-        oneElement = Tag764StrLegSecuritySubType.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag764StrLegSecuritySubType.TESTB_STR_LEG_SECURITY_SUB_TYPE;
         tagData = new Tag764StrLegSecuritySubType( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -88,7 +87,7 @@ class Tag764StrLegSecuritySubTypeTest {
         Tag764StrLegSecuritySubType tagData;
         String oneElement;
 
-        oneElement = Tag764StrLegSecuritySubType.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag764StrLegSecuritySubType.TESTB_STR_LEG_SECURITY_SUB_TYPE;
         tagData = new Tag764StrLegSecuritySubType( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -98,7 +97,7 @@ class Tag764StrLegSecuritySubTypeTest {
         Tag764StrLegSecuritySubType tagData;
         String oneElement;
 
-        oneElement = Tag764StrLegSecuritySubType.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag764StrLegSecuritySubType.TESTB_STR_LEG_SECURITY_SUB_TYPE;
         tagData = new Tag764StrLegSecuritySubType(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -108,7 +107,7 @@ class Tag764StrLegSecuritySubTypeTest {
         Tag764StrLegSecuritySubType tagData;
         String oneElement;
 
-        oneElement = Tag764StrLegSecuritySubType.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag764StrLegSecuritySubType.TESTA_STR_LEG_SECURITY_SUB_TYPE;
         tagData = new Tag764StrLegSecuritySubType( new MyStringType( oneElement ) );
         assertEquals( "Tag764StrLegSecuritySubType\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

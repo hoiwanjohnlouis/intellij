@@ -49,19 +49,14 @@ class Tag949StrNested3PartyIDTest {
         Tag949StrNested3PartyID tagData;
         String oneElement;
 
-        oneElement = Tag949StrNested3PartyID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag949StrNested3PartyID.TESTA_STR_NESTED_3_PARTY_ID;
         tagData = new Tag949StrNested3PartyID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag949StrNested3PartyID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag949StrNested3PartyID.TESTB_STR_NESTED_3_PARTY_ID;
         tagData = new Tag949StrNested3PartyID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        tagData = new Tag949StrNested3PartyID(
-                new MyStringType(Tag949StrNested3PartyID.TESTA_STR_NESTED_3_PARTY_ID));
-        assertEquals( Tag949StrNested3PartyID.TESTA_STR_NESTED_3_PARTY_ID, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
@@ -69,11 +64,11 @@ class Tag949StrNested3PartyIDTest {
         Tag949StrNested3PartyID tagData;
         String oneElement;
 
-        oneElement = Tag949StrNested3PartyID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag949StrNested3PartyID.TESTA_STR_NESTED_3_PARTY_ID;
         tagData = new Tag949StrNested3PartyID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag949StrNested3PartyID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag949StrNested3PartyID.TESTB_STR_NESTED_3_PARTY_ID;
         tagData = new Tag949StrNested3PartyID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -82,7 +77,7 @@ class Tag949StrNested3PartyIDTest {
         Tag949StrNested3PartyID tagData;
         String oneElement;
 
-        oneElement = Tag949StrNested3PartyID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag949StrNested3PartyID.TESTB_STR_NESTED_3_PARTY_ID;
         tagData = new Tag949StrNested3PartyID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -92,7 +87,7 @@ class Tag949StrNested3PartyIDTest {
         Tag949StrNested3PartyID tagData;
         String oneElement;
 
-        oneElement = Tag949StrNested3PartyID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag949StrNested3PartyID.TESTB_STR_NESTED_3_PARTY_ID;
         tagData = new Tag949StrNested3PartyID( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -102,7 +97,7 @@ class Tag949StrNested3PartyIDTest {
         Tag949StrNested3PartyID tagData;
         String oneElement;
 
-        oneElement = Tag949StrNested3PartyID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag949StrNested3PartyID.TESTB_STR_NESTED_3_PARTY_ID;
         tagData = new Tag949StrNested3PartyID(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -112,7 +107,7 @@ class Tag949StrNested3PartyIDTest {
         Tag949StrNested3PartyID tagData;
         String oneElement;
 
-        oneElement = Tag949StrNested3PartyID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag949StrNested3PartyID.TESTA_STR_NESTED_3_PARTY_ID;
         tagData = new Tag949StrNested3PartyID( new MyStringType( oneElement ) );
         assertEquals( "Tag949StrNested3PartyID\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

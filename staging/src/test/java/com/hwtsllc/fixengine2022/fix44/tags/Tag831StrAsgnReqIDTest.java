@@ -47,27 +47,26 @@ class Tag831StrAsgnReqIDTest {
         Tag831StrAsgnReqID tagData;
         String oneElement;
 
-        oneElement = Tag831StrAsgnReqID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag831StrAsgnReqID.TESTA_STR_ASGN_REQ_ID;
         tagData = new Tag831StrAsgnReqID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag831StrAsgnReqID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag831StrAsgnReqID.TESTB_STR_ASGN_REQ_ID;
         tagData = new Tag831StrAsgnReqID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag831StrAsgnReqID tagData;
         String oneElement;
 
-        oneElement = Tag831StrAsgnReqID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag831StrAsgnReqID.TESTA_STR_ASGN_REQ_ID;
         tagData = new Tag831StrAsgnReqID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag831StrAsgnReqID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag831StrAsgnReqID.TESTB_STR_ASGN_REQ_ID;
         tagData = new Tag831StrAsgnReqID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -76,7 +75,7 @@ class Tag831StrAsgnReqIDTest {
         Tag831StrAsgnReqID tagData;
         String oneElement;
 
-        oneElement = Tag831StrAsgnReqID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag831StrAsgnReqID.TESTB_STR_ASGN_REQ_ID;
         tagData = new Tag831StrAsgnReqID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -86,7 +85,7 @@ class Tag831StrAsgnReqIDTest {
         Tag831StrAsgnReqID tagData;
         String oneElement;
 
-        oneElement = Tag831StrAsgnReqID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag831StrAsgnReqID.TESTB_STR_ASGN_REQ_ID;
         tagData = new Tag831StrAsgnReqID( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -96,7 +95,7 @@ class Tag831StrAsgnReqIDTest {
         Tag831StrAsgnReqID tagData;
         String oneElement;
 
-        oneElement = Tag831StrAsgnReqID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag831StrAsgnReqID.TESTB_STR_ASGN_REQ_ID;
         tagData = new Tag831StrAsgnReqID(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -106,7 +105,7 @@ class Tag831StrAsgnReqIDTest {
         Tag831StrAsgnReqID tagData;
         String oneElement;
 
-        oneElement = Tag831StrAsgnReqID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag831StrAsgnReqID.TESTA_STR_ASGN_REQ_ID;
         tagData = new Tag831StrAsgnReqID( new MyStringType( oneElement ) );
         assertEquals( "Tag831StrAsgnReqID\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

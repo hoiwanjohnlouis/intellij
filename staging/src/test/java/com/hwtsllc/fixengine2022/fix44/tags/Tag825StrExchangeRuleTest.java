@@ -54,27 +54,26 @@ class Tag825StrExchangeRuleTest {
         Tag825StrExchangeRule tagData;
         String oneElement;
 
-        oneElement = Tag825StrExchangeRule.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag825StrExchangeRule.TESTA_STR_EXCHANGE_RULE;
         tagData = new Tag825StrExchangeRule( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag825StrExchangeRule.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag825StrExchangeRule.TESTB_STR_EXCHANGE_RULE;
         tagData = new Tag825StrExchangeRule( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag825StrExchangeRule tagData;
         String oneElement;
 
-        oneElement = Tag825StrExchangeRule.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag825StrExchangeRule.TESTA_STR_EXCHANGE_RULE;
         tagData = new Tag825StrExchangeRule( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag825StrExchangeRule.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag825StrExchangeRule.TESTB_STR_EXCHANGE_RULE;
         tagData = new Tag825StrExchangeRule( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -83,7 +82,7 @@ class Tag825StrExchangeRuleTest {
         Tag825StrExchangeRule tagData;
         String oneElement;
 
-        oneElement = Tag825StrExchangeRule.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag825StrExchangeRule.TESTB_STR_EXCHANGE_RULE;
         tagData = new Tag825StrExchangeRule( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -93,7 +92,7 @@ class Tag825StrExchangeRuleTest {
         Tag825StrExchangeRule tagData;
         String oneElement;
 
-        oneElement = Tag825StrExchangeRule.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag825StrExchangeRule.TESTB_STR_EXCHANGE_RULE;
         tagData = new Tag825StrExchangeRule( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -103,7 +102,7 @@ class Tag825StrExchangeRuleTest {
         Tag825StrExchangeRule tagData;
         String oneElement;
 
-        oneElement = Tag825StrExchangeRule.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag825StrExchangeRule.TESTB_STR_EXCHANGE_RULE;
         tagData = new Tag825StrExchangeRule(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -113,7 +112,7 @@ class Tag825StrExchangeRuleTest {
         Tag825StrExchangeRule tagData;
         String oneElement;
 
-        oneElement = Tag825StrExchangeRule.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag825StrExchangeRule.TESTA_STR_EXCHANGE_RULE;
         tagData = new Tag825StrExchangeRule( new MyStringType( oneElement ) );
         assertEquals( "Tag825StrExchangeRule\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

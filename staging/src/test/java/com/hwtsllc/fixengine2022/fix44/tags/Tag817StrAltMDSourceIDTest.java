@@ -49,27 +49,26 @@ class Tag817StrAltMDSourceIDTest {
         Tag817StrAltMDSourceID tagData;
         String oneElement;
 
-        oneElement = Tag817StrAltMDSourceID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag817StrAltMDSourceID.TESTA_STR_ALT_MD_SOURCE_ID;
         tagData = new Tag817StrAltMDSourceID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag817StrAltMDSourceID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag817StrAltMDSourceID.TESTB_STR_ALT_MD_SOURCE_ID;
         tagData = new Tag817StrAltMDSourceID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag817StrAltMDSourceID tagData;
         String oneElement;
 
-        oneElement = Tag817StrAltMDSourceID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag817StrAltMDSourceID.TESTA_STR_ALT_MD_SOURCE_ID;
         tagData = new Tag817StrAltMDSourceID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag817StrAltMDSourceID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag817StrAltMDSourceID.TESTB_STR_ALT_MD_SOURCE_ID;
         tagData = new Tag817StrAltMDSourceID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -78,7 +77,7 @@ class Tag817StrAltMDSourceIDTest {
         Tag817StrAltMDSourceID tagData;
         String oneElement;
 
-        oneElement = Tag817StrAltMDSourceID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag817StrAltMDSourceID.TESTB_STR_ALT_MD_SOURCE_ID;
         tagData = new Tag817StrAltMDSourceID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -88,7 +87,7 @@ class Tag817StrAltMDSourceIDTest {
         Tag817StrAltMDSourceID tagData;
         String oneElement;
 
-        oneElement = Tag817StrAltMDSourceID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag817StrAltMDSourceID.TESTB_STR_ALT_MD_SOURCE_ID;
         tagData = new Tag817StrAltMDSourceID( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -98,7 +97,7 @@ class Tag817StrAltMDSourceIDTest {
         Tag817StrAltMDSourceID tagData;
         String oneElement;
 
-        oneElement = Tag817StrAltMDSourceID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag817StrAltMDSourceID.TESTB_STR_ALT_MD_SOURCE_ID;
         tagData = new Tag817StrAltMDSourceID(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -108,7 +107,7 @@ class Tag817StrAltMDSourceIDTest {
         Tag817StrAltMDSourceID tagData;
         String oneElement;
 
-        oneElement = Tag817StrAltMDSourceID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag817StrAltMDSourceID.TESTA_STR_ALT_MD_SOURCE_ID;
         tagData = new Tag817StrAltMDSourceID( new MyStringType( oneElement ) );
         assertEquals( "Tag817StrAltMDSourceID\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

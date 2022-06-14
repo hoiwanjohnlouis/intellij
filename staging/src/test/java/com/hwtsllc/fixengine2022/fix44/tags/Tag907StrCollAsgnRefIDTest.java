@@ -47,27 +47,26 @@ class Tag907StrCollAsgnRefIDTest {
         Tag907StrCollAsgnRefID tagData;
         String oneElement;
 
-        oneElement = Tag907StrCollAsgnRefID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag907StrCollAsgnRefID.TESTA_STR_COLL_ASGN_REF_ID;
         tagData = new Tag907StrCollAsgnRefID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag907StrCollAsgnRefID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag907StrCollAsgnRefID.TESTB_STR_COLL_ASGN_REF_ID;
         tagData = new Tag907StrCollAsgnRefID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag907StrCollAsgnRefID tagData;
         String oneElement;
 
-        oneElement = Tag907StrCollAsgnRefID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag907StrCollAsgnRefID.TESTA_STR_COLL_ASGN_REF_ID;
         tagData = new Tag907StrCollAsgnRefID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag907StrCollAsgnRefID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag907StrCollAsgnRefID.TESTB_STR_COLL_ASGN_REF_ID;
         tagData = new Tag907StrCollAsgnRefID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -76,7 +75,7 @@ class Tag907StrCollAsgnRefIDTest {
         Tag907StrCollAsgnRefID tagData;
         String oneElement;
 
-        oneElement = Tag907StrCollAsgnRefID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag907StrCollAsgnRefID.TESTB_STR_COLL_ASGN_REF_ID;
         tagData = new Tag907StrCollAsgnRefID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -86,7 +85,7 @@ class Tag907StrCollAsgnRefIDTest {
         Tag907StrCollAsgnRefID tagData;
         String oneElement;
 
-        oneElement = Tag907StrCollAsgnRefID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag907StrCollAsgnRefID.TESTB_STR_COLL_ASGN_REF_ID;
         tagData = new Tag907StrCollAsgnRefID( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -96,7 +95,7 @@ class Tag907StrCollAsgnRefIDTest {
         Tag907StrCollAsgnRefID tagData;
         String oneElement;
 
-        oneElement = Tag907StrCollAsgnRefID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag907StrCollAsgnRefID.TESTB_STR_COLL_ASGN_REF_ID;
         tagData = new Tag907StrCollAsgnRefID(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -106,7 +105,7 @@ class Tag907StrCollAsgnRefIDTest {
         Tag907StrCollAsgnRefID tagData;
         String oneElement;
 
-        oneElement = Tag907StrCollAsgnRefID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag907StrCollAsgnRefID.TESTA_STR_COLL_ASGN_REF_ID;
         tagData = new Tag907StrCollAsgnRefID( new MyStringType( oneElement ) );
         assertEquals( "Tag907StrCollAsgnRefID\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

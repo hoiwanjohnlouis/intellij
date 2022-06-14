@@ -48,27 +48,26 @@ class Tag713StrOrigPosReqRefIDTest {
         Tag713StrOrigPosReqRefID tagData;
         String oneElement;
 
-        oneElement = Tag713StrOrigPosReqRefID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag713StrOrigPosReqRefID.TESTA_STR_ORIG_POS_REQ_REF_ID;
         tagData = new Tag713StrOrigPosReqRefID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag713StrOrigPosReqRefID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag713StrOrigPosReqRefID.TESTB_STR_ORIG_POS_REQ_REF_ID;
         tagData = new Tag713StrOrigPosReqRefID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag713StrOrigPosReqRefID tagData;
         String oneElement;
 
-        oneElement = Tag713StrOrigPosReqRefID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag713StrOrigPosReqRefID.TESTA_STR_ORIG_POS_REQ_REF_ID;
         tagData = new Tag713StrOrigPosReqRefID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag713StrOrigPosReqRefID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag713StrOrigPosReqRefID.TESTB_STR_ORIG_POS_REQ_REF_ID;
         tagData = new Tag713StrOrigPosReqRefID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -77,7 +76,7 @@ class Tag713StrOrigPosReqRefIDTest {
         Tag713StrOrigPosReqRefID tagData;
         String oneElement;
 
-        oneElement = Tag713StrOrigPosReqRefID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag713StrOrigPosReqRefID.TESTB_STR_ORIG_POS_REQ_REF_ID;
         tagData = new Tag713StrOrigPosReqRefID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -87,7 +86,7 @@ class Tag713StrOrigPosReqRefIDTest {
         Tag713StrOrigPosReqRefID tagData;
         String oneElement;
 
-        oneElement = Tag713StrOrigPosReqRefID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag713StrOrigPosReqRefID.TESTB_STR_ORIG_POS_REQ_REF_ID;
         tagData = new Tag713StrOrigPosReqRefID( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -97,7 +96,7 @@ class Tag713StrOrigPosReqRefIDTest {
         Tag713StrOrigPosReqRefID tagData;
         String oneElement;
 
-        oneElement = Tag713StrOrigPosReqRefID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag713StrOrigPosReqRefID.TESTB_STR_ORIG_POS_REQ_REF_ID;
         tagData = new Tag713StrOrigPosReqRefID(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -107,7 +106,7 @@ class Tag713StrOrigPosReqRefIDTest {
         Tag713StrOrigPosReqRefID tagData;
         String oneElement;
 
-        oneElement = Tag713StrOrigPosReqRefID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag713StrOrigPosReqRefID.TESTA_STR_ORIG_POS_REQ_REF_ID;
         tagData = new Tag713StrOrigPosReqRefID( new MyStringType( oneElement ) );
         assertEquals( "Tag713StrOrigPosReqRefID\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

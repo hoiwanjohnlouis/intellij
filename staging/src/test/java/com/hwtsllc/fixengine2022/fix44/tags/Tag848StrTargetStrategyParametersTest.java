@@ -50,27 +50,26 @@ class Tag848StrTargetStrategyParametersTest {
         Tag848StrTargetStrategyParameters tagData;
         String oneElement;
 
-        oneElement = Tag848StrTargetStrategyParameters.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag848StrTargetStrategyParameters.TESTA_STR_TARGET_STRATEGY_PARAMETERS;
         tagData = new Tag848StrTargetStrategyParameters( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag848StrTargetStrategyParameters.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag848StrTargetStrategyParameters.TESTB_STR_TARGET_STRATEGY_PARAMETERS;
         tagData = new Tag848StrTargetStrategyParameters( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag848StrTargetStrategyParameters tagData;
         String oneElement;
 
-        oneElement = Tag848StrTargetStrategyParameters.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag848StrTargetStrategyParameters.TESTA_STR_TARGET_STRATEGY_PARAMETERS;
         tagData = new Tag848StrTargetStrategyParameters( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag848StrTargetStrategyParameters.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag848StrTargetStrategyParameters.TESTB_STR_TARGET_STRATEGY_PARAMETERS;
         tagData = new Tag848StrTargetStrategyParameters( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -79,7 +78,7 @@ class Tag848StrTargetStrategyParametersTest {
         Tag848StrTargetStrategyParameters tagData;
         String oneElement;
 
-        oneElement = Tag848StrTargetStrategyParameters.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag848StrTargetStrategyParameters.TESTB_STR_TARGET_STRATEGY_PARAMETERS;
         tagData = new Tag848StrTargetStrategyParameters( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -89,7 +88,7 @@ class Tag848StrTargetStrategyParametersTest {
         Tag848StrTargetStrategyParameters tagData;
         String oneElement;
 
-        oneElement = Tag848StrTargetStrategyParameters.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag848StrTargetStrategyParameters.TESTB_STR_TARGET_STRATEGY_PARAMETERS;
         tagData = new Tag848StrTargetStrategyParameters( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -99,7 +98,7 @@ class Tag848StrTargetStrategyParametersTest {
         Tag848StrTargetStrategyParameters tagData;
         String oneElement;
 
-        oneElement = Tag848StrTargetStrategyParameters.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag848StrTargetStrategyParameters.TESTB_STR_TARGET_STRATEGY_PARAMETERS;
         tagData = new Tag848StrTargetStrategyParameters(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -109,7 +108,7 @@ class Tag848StrTargetStrategyParametersTest {
         Tag848StrTargetStrategyParameters tagData;
         String oneElement;
 
-        oneElement = Tag848StrTargetStrategyParameters.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag848StrTargetStrategyParameters.TESTA_STR_TARGET_STRATEGY_PARAMETERS;
         tagData = new Tag848StrTargetStrategyParameters( new MyStringType( oneElement ) );
         assertEquals( "Tag848StrTargetStrategyParameters\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

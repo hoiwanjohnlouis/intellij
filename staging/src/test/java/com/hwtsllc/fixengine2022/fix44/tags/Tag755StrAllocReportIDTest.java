@@ -47,27 +47,26 @@ class Tag755StrAllocReportIDTest {
         Tag755StrAllocReportID tagData;
         String oneElement;
 
-        oneElement = Tag755StrAllocReportID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag755StrAllocReportID.TESTA_STR_ALLOC_REPORT_ID;
         tagData = new Tag755StrAllocReportID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag755StrAllocReportID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag755StrAllocReportID.TESTB_STR_ALLOC_REPORT_ID;
         tagData = new Tag755StrAllocReportID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag755StrAllocReportID tagData;
         String oneElement;
 
-        oneElement = Tag755StrAllocReportID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag755StrAllocReportID.TESTA_STR_ALLOC_REPORT_ID;
         tagData = new Tag755StrAllocReportID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag755StrAllocReportID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag755StrAllocReportID.TESTB_STR_ALLOC_REPORT_ID;
         tagData = new Tag755StrAllocReportID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -76,7 +75,7 @@ class Tag755StrAllocReportIDTest {
         Tag755StrAllocReportID tagData;
         String oneElement;
 
-        oneElement = Tag755StrAllocReportID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag755StrAllocReportID.TESTB_STR_ALLOC_REPORT_ID;
         tagData = new Tag755StrAllocReportID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -86,7 +85,7 @@ class Tag755StrAllocReportIDTest {
         Tag755StrAllocReportID tagData;
         String oneElement;
 
-        oneElement = Tag755StrAllocReportID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag755StrAllocReportID.TESTB_STR_ALLOC_REPORT_ID;
         tagData = new Tag755StrAllocReportID( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -96,7 +95,7 @@ class Tag755StrAllocReportIDTest {
         Tag755StrAllocReportID tagData;
         String oneElement;
 
-        oneElement = Tag755StrAllocReportID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag755StrAllocReportID.TESTB_STR_ALLOC_REPORT_ID;
         tagData = new Tag755StrAllocReportID(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -106,7 +105,7 @@ class Tag755StrAllocReportIDTest {
         Tag755StrAllocReportID tagData;
         String oneElement;
 
-        oneElement = Tag755StrAllocReportID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag755StrAllocReportID.TESTA_STR_ALLOC_REPORT_ID;
         tagData = new Tag755StrAllocReportID( new MyStringType( oneElement ) );
         assertEquals( "Tag755StrAllocReportID\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

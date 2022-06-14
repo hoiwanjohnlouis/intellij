@@ -47,27 +47,26 @@ class Tag872StrInstrAttribValueTest {
         Tag872StrInstrAttribValue tagData;
         String oneElement;
 
-        oneElement = Tag872StrInstrAttribValue.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag872StrInstrAttribValue.TESTA_STR_INSTR_ATTRIB_VALUE;
         tagData = new Tag872StrInstrAttribValue( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag872StrInstrAttribValue.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag872StrInstrAttribValue.TESTB_STR_INSTR_ATTRIB_VALUE;
         tagData = new Tag872StrInstrAttribValue( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag872StrInstrAttribValue tagData;
         String oneElement;
 
-        oneElement = Tag872StrInstrAttribValue.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag872StrInstrAttribValue.TESTA_STR_INSTR_ATTRIB_VALUE;
         tagData = new Tag872StrInstrAttribValue( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag872StrInstrAttribValue.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag872StrInstrAttribValue.TESTB_STR_INSTR_ATTRIB_VALUE;
         tagData = new Tag872StrInstrAttribValue( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -76,7 +75,7 @@ class Tag872StrInstrAttribValueTest {
         Tag872StrInstrAttribValue tagData;
         String oneElement;
 
-        oneElement = Tag872StrInstrAttribValue.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag872StrInstrAttribValue.TESTB_STR_INSTR_ATTRIB_VALUE;
         tagData = new Tag872StrInstrAttribValue( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -86,7 +85,7 @@ class Tag872StrInstrAttribValueTest {
         Tag872StrInstrAttribValue tagData;
         String oneElement;
 
-        oneElement = Tag872StrInstrAttribValue.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag872StrInstrAttribValue.TESTB_STR_INSTR_ATTRIB_VALUE;
         tagData = new Tag872StrInstrAttribValue( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -96,7 +95,7 @@ class Tag872StrInstrAttribValueTest {
         Tag872StrInstrAttribValue tagData;
         String oneElement;
 
-        oneElement = Tag872StrInstrAttribValue.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag872StrInstrAttribValue.TESTB_STR_INSTR_ATTRIB_VALUE;
         tagData = new Tag872StrInstrAttribValue(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -106,7 +105,7 @@ class Tag872StrInstrAttribValueTest {
         Tag872StrInstrAttribValue tagData;
         String oneElement;
 
-        oneElement = Tag872StrInstrAttribValue.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag872StrInstrAttribValue.TESTA_STR_INSTR_ATTRIB_VALUE;
         tagData = new Tag872StrInstrAttribValue( new MyStringType( oneElement ) );
         assertEquals( "Tag872StrInstrAttribValue\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

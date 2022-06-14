@@ -47,68 +47,67 @@ class Tag932StrNetworkResponseIDTest {
         Tag932StrNetworkResponseID tagData;
         String oneElement;
 
-        oneElement = Tag664StrConfirmID.TESTA_STR_SIDE_COMPLIANCE_ID;
-        tagData = new Tag664StrConfirmID( new MyStringType( oneElement ) );
+        oneElement = Tag932StrNetworkResponseID.TESTA_STR_NETWORK_RESPONSE_ID;
+        tagData = new Tag932StrNetworkResponseID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag664StrConfirmID.TESTB_STR_SIDE_COMPLIANCE_ID;
-        tagData = new Tag664StrConfirmID( new MyStringType( oneElement ) );
+        oneElement = Tag932StrNetworkResponseID.TESTB_STR_NETWORK_RESPONSE_ID;
+        tagData = new Tag932StrNetworkResponseID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
-        Tag664StrConfirmID tagData;
+        Tag932StrNetworkResponseID tagData;
         String oneElement;
 
-        oneElement = Tag664StrConfirmID.TESTA_STR_SIDE_COMPLIANCE_ID;
-        tagData = new Tag664StrConfirmID( new MyStringType( oneElement ) );
+        oneElement = Tag932StrNetworkResponseID.TESTA_STR_NETWORK_RESPONSE_ID;
+        tagData = new Tag932StrNetworkResponseID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag664StrConfirmID.TESTB_STR_SIDE_COMPLIANCE_ID;
-        tagData = new Tag664StrConfirmID( new MyStringType( oneElement ) );
+        oneElement = Tag932StrNetworkResponseID.TESTB_STR_NETWORK_RESPONSE_ID;
+        tagData = new Tag932StrNetworkResponseID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
     @Test
     void TagGetDataValueTest() {
-        Tag664StrConfirmID tagData;
+        Tag932StrNetworkResponseID tagData;
         String oneElement;
 
-        oneElement = Tag664StrConfirmID.TESTB_STR_SIDE_COMPLIANCE_ID;
-        tagData = new Tag664StrConfirmID( new MyStringType( oneElement ) );
+        oneElement = Tag932StrNetworkResponseID.TESTB_STR_NETWORK_RESPONSE_ID;
+        tagData = new Tag932StrNetworkResponseID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag664StrConfirmID tagData;
+        Tag932StrNetworkResponseID tagData;
         String oneElement;
 
-        oneElement = Tag664StrConfirmID.TESTB_STR_SIDE_COMPLIANCE_ID;
-        tagData = new Tag664StrConfirmID( new MyStringType( oneElement ) );
+        oneElement = Tag932StrNetworkResponseID.TESTB_STR_NETWORK_RESPONSE_ID;
+        tagData = new Tag932StrNetworkResponseID( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
     }
     @Test
     void TagToStringTest() {
-        Tag664StrConfirmID tagData;
+        Tag932StrNetworkResponseID tagData;
         String oneElement;
 
-        oneElement = Tag664StrConfirmID.TESTB_STR_SIDE_COMPLIANCE_ID;
-        tagData = new Tag664StrConfirmID(new MyStringType(oneElement));
+        oneElement = Tag932StrNetworkResponseID.TESTB_STR_NETWORK_RESPONSE_ID;
+        tagData = new Tag932StrNetworkResponseID(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag664StrConfirmID tagData;
+        Tag932StrNetworkResponseID tagData;
         String oneElement;
 
-        oneElement = Tag664StrConfirmID.TESTA_STR_SIDE_COMPLIANCE_ID;
-        tagData = new Tag664StrConfirmID( new MyStringType( oneElement ) );
-        assertEquals( "Tag664StrConfirmID\n" +
+        oneElement = Tag932StrNetworkResponseID.TESTA_STR_NETWORK_RESPONSE_ID;
+        tagData = new Tag932StrNetworkResponseID( new MyStringType( oneElement ) );
+        assertEquals( "Tag932StrNetworkResponseID\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                         "\tFIXName[" + tagData.toFIXNameString() + "]\n" +

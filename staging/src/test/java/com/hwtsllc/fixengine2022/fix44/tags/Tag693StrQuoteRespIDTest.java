@@ -47,27 +47,26 @@ class Tag693StrQuoteRespIDTest {
         Tag693StrQuoteRespID tagData;
         String oneElement;
 
-        oneElement = Tag693StrQuoteRespID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag693StrQuoteRespID.TESTA_STR_QUOTE_RESP_ID;
         tagData = new Tag693StrQuoteRespID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag693StrQuoteRespID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag693StrQuoteRespID.TESTB_STR_QUOTE_RESP_ID;
         tagData = new Tag693StrQuoteRespID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag693StrQuoteRespID tagData;
         String oneElement;
 
-        oneElement = Tag693StrQuoteRespID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag693StrQuoteRespID.TESTA_STR_QUOTE_RESP_ID;
         tagData = new Tag693StrQuoteRespID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag693StrQuoteRespID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag693StrQuoteRespID.TESTB_STR_QUOTE_RESP_ID;
         tagData = new Tag693StrQuoteRespID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -76,7 +75,7 @@ class Tag693StrQuoteRespIDTest {
         Tag693StrQuoteRespID tagData;
         String oneElement;
 
-        oneElement = Tag693StrQuoteRespID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag693StrQuoteRespID.TESTB_STR_QUOTE_RESP_ID;
         tagData = new Tag693StrQuoteRespID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -86,7 +85,7 @@ class Tag693StrQuoteRespIDTest {
         Tag693StrQuoteRespID tagData;
         String oneElement;
 
-        oneElement = Tag693StrQuoteRespID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag693StrQuoteRespID.TESTB_STR_QUOTE_RESP_ID;
         tagData = new Tag693StrQuoteRespID( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -96,7 +95,7 @@ class Tag693StrQuoteRespIDTest {
         Tag693StrQuoteRespID tagData;
         String oneElement;
 
-        oneElement = Tag693StrQuoteRespID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag693StrQuoteRespID.TESTB_STR_QUOTE_RESP_ID;
         tagData = new Tag693StrQuoteRespID(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -106,7 +105,7 @@ class Tag693StrQuoteRespIDTest {
         Tag693StrQuoteRespID tagData;
         String oneElement;
 
-        oneElement = Tag693StrQuoteRespID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag693StrQuoteRespID.TESTA_STR_QUOTE_RESP_ID;
         tagData = new Tag693StrQuoteRespID( new MyStringType( oneElement ) );
         assertEquals( "Tag693StrQuoteRespID\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

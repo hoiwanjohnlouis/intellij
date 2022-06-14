@@ -47,27 +47,26 @@ class Tag868StrEventTextTest {
         Tag868StrEventText tagData;
         String oneElement;
 
-        oneElement = Tag868StrEventText.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag868StrEventText.TESTA_STR_EVENT_TEXT;
         tagData = new Tag868StrEventText( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag868StrEventText.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag868StrEventText.TESTB_STR_EVENT_TEXT;
         tagData = new Tag868StrEventText( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag868StrEventText tagData;
         String oneElement;
 
-        oneElement = Tag868StrEventText.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag868StrEventText.TESTA_STR_EVENT_TEXT;
         tagData = new Tag868StrEventText( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag868StrEventText.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag868StrEventText.TESTB_STR_EVENT_TEXT;
         tagData = new Tag868StrEventText( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -76,7 +75,7 @@ class Tag868StrEventTextTest {
         Tag868StrEventText tagData;
         String oneElement;
 
-        oneElement = Tag868StrEventText.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag868StrEventText.TESTB_STR_EVENT_TEXT;
         tagData = new Tag868StrEventText( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -86,7 +85,7 @@ class Tag868StrEventTextTest {
         Tag868StrEventText tagData;
         String oneElement;
 
-        oneElement = Tag868StrEventText.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag868StrEventText.TESTB_STR_EVENT_TEXT;
         tagData = new Tag868StrEventText( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -96,7 +95,7 @@ class Tag868StrEventTextTest {
         Tag868StrEventText tagData;
         String oneElement;
 
-        oneElement = Tag868StrEventText.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag868StrEventText.TESTB_STR_EVENT_TEXT;
         tagData = new Tag868StrEventText(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -106,7 +105,7 @@ class Tag868StrEventTextTest {
         Tag868StrEventText tagData;
         String oneElement;
 
-        oneElement = Tag868StrEventText.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag868StrEventText.TESTA_STR_EVENT_TEXT;
         tagData = new Tag868StrEventText( new MyStringType( oneElement ) );
         assertEquals( "Tag868StrEventText\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

@@ -47,27 +47,26 @@ class Tag929StrStatusTextTest {
         Tag929StrStatusText tagData;
         String oneElement;
 
-        oneElement = Tag929StrStatusText.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag929StrStatusText.TESTA_STR_STATUS_TEXT;
         tagData = new Tag929StrStatusText( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag929StrStatusText.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag929StrStatusText.TESTB_STR_STATUS_TEXT;
         tagData = new Tag929StrStatusText( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag929StrStatusText tagData;
         String oneElement;
 
-        oneElement = Tag929StrStatusText.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag929StrStatusText.TESTA_STR_STATUS_TEXT;
         tagData = new Tag929StrStatusText( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag929StrStatusText.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag929StrStatusText.TESTB_STR_STATUS_TEXT;
         tagData = new Tag929StrStatusText( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -76,7 +75,7 @@ class Tag929StrStatusTextTest {
         Tag929StrStatusText tagData;
         String oneElement;
 
-        oneElement = Tag929StrStatusText.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag929StrStatusText.TESTB_STR_STATUS_TEXT;
         tagData = new Tag929StrStatusText( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -86,7 +85,7 @@ class Tag929StrStatusTextTest {
         Tag929StrStatusText tagData;
         String oneElement;
 
-        oneElement = Tag929StrStatusText.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag929StrStatusText.TESTB_STR_STATUS_TEXT;
         tagData = new Tag929StrStatusText( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -96,7 +95,7 @@ class Tag929StrStatusTextTest {
         Tag929StrStatusText tagData;
         String oneElement;
 
-        oneElement = Tag929StrStatusText.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag929StrStatusText.TESTB_STR_STATUS_TEXT;
         tagData = new Tag929StrStatusText(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -106,7 +105,7 @@ class Tag929StrStatusTextTest {
         Tag929StrStatusText tagData;
         String oneElement;
 
-        oneElement = Tag929StrStatusText.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag929StrStatusText.TESTA_STR_STATUS_TEXT;
         tagData = new Tag929StrStatusText( new MyStringType( oneElement ) );
         assertEquals( "Tag929StrStatusText\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

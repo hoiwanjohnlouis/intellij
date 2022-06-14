@@ -52,27 +52,26 @@ class Tag726StrResponseDestinationTest {
         Tag726StrResponseDestination tagData;
         String oneElement;
 
-        oneElement = Tag726StrResponseDestination.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag726StrResponseDestination.TESTA_STR_RESPONSE_DESTINATION;
         tagData = new Tag726StrResponseDestination( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag726StrResponseDestination.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag726StrResponseDestination.TESTB_STR_RESPONSE_DESTINATION;
         tagData = new Tag726StrResponseDestination( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag726StrResponseDestination tagData;
         String oneElement;
 
-        oneElement = Tag726StrResponseDestination.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag726StrResponseDestination.TESTA_STR_RESPONSE_DESTINATION;
         tagData = new Tag726StrResponseDestination( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag726StrResponseDestination.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag726StrResponseDestination.TESTB_STR_RESPONSE_DESTINATION;
         tagData = new Tag726StrResponseDestination( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -81,7 +80,7 @@ class Tag726StrResponseDestinationTest {
         Tag726StrResponseDestination tagData;
         String oneElement;
 
-        oneElement = Tag726StrResponseDestination.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag726StrResponseDestination.TESTB_STR_RESPONSE_DESTINATION;
         tagData = new Tag726StrResponseDestination( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -91,7 +90,7 @@ class Tag726StrResponseDestinationTest {
         Tag726StrResponseDestination tagData;
         String oneElement;
 
-        oneElement = Tag726StrResponseDestination.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag726StrResponseDestination.TESTB_STR_RESPONSE_DESTINATION;
         tagData = new Tag726StrResponseDestination( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -101,7 +100,7 @@ class Tag726StrResponseDestinationTest {
         Tag726StrResponseDestination tagData;
         String oneElement;
 
-        oneElement = Tag726StrResponseDestination.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag726StrResponseDestination.TESTB_STR_RESPONSE_DESTINATION;
         tagData = new Tag726StrResponseDestination(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -111,7 +110,7 @@ class Tag726StrResponseDestinationTest {
         Tag726StrResponseDestination tagData;
         String oneElement;
 
-        oneElement = Tag726StrResponseDestination.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag726StrResponseDestination.TESTA_STR_RESPONSE_DESTINATION;
         tagData = new Tag726StrResponseDestination( new MyStringType( oneElement ) );
         assertEquals( "Tag726StrResponseDestination\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

@@ -47,27 +47,26 @@ class Tag830StrTransferReasonTest {
         Tag830StrTransferReason tagData;
         String oneElement;
 
-        oneElement = Tag830StrTransferReason.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag830StrTransferReason.TESTA_STR_TRANSFER_REASON;
         tagData = new Tag830StrTransferReason( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag830StrTransferReason.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag830StrTransferReason.TESTB_STR_TRANSFER_REASON;
         tagData = new Tag830StrTransferReason( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag830StrTransferReason tagData;
         String oneElement;
 
-        oneElement = Tag830StrTransferReason.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag830StrTransferReason.TESTA_STR_TRANSFER_REASON;
         tagData = new Tag830StrTransferReason( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag830StrTransferReason.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag830StrTransferReason.TESTB_STR_TRANSFER_REASON;
         tagData = new Tag830StrTransferReason( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -76,7 +75,7 @@ class Tag830StrTransferReasonTest {
         Tag830StrTransferReason tagData;
         String oneElement;
 
-        oneElement = Tag830StrTransferReason.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag830StrTransferReason.TESTB_STR_TRANSFER_REASON;
         tagData = new Tag830StrTransferReason( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -86,7 +85,7 @@ class Tag830StrTransferReasonTest {
         Tag830StrTransferReason tagData;
         String oneElement;
 
-        oneElement = Tag830StrTransferReason.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag830StrTransferReason.TESTB_STR_TRANSFER_REASON;
         tagData = new Tag830StrTransferReason( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -96,7 +95,7 @@ class Tag830StrTransferReasonTest {
         Tag830StrTransferReason tagData;
         String oneElement;
 
-        oneElement = Tag830StrTransferReason.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag830StrTransferReason.TESTB_STR_TRANSFER_REASON;
         tagData = new Tag830StrTransferReason(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -106,7 +105,7 @@ class Tag830StrTransferReasonTest {
         Tag830StrTransferReason tagData;
         String oneElement;
 
-        oneElement = Tag830StrTransferReason.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag830StrTransferReason.TESTA_STR_TRANSFER_REASON;
         tagData = new Tag830StrTransferReason( new MyStringType( oneElement ) );
         assertEquals( "Tag830StrTransferReason\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

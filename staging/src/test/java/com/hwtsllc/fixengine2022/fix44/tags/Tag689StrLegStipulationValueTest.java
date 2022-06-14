@@ -49,27 +49,26 @@ class Tag689StrLegStipulationValueTest {
         Tag689StrLegStipulationValue tagData;
         String oneElement;
 
-        oneElement = Tag689StrLegStipulationValue.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag689StrLegStipulationValue.TESTA_STR_LEG_STIPULATION_VALUE;
         tagData = new Tag689StrLegStipulationValue( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag689StrLegStipulationValue.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag689StrLegStipulationValue.TESTB_STR_LEG_STIPULATION_VALUE;
         tagData = new Tag689StrLegStipulationValue( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag689StrLegStipulationValue tagData;
         String oneElement;
 
-        oneElement = Tag689StrLegStipulationValue.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag689StrLegStipulationValue.TESTA_STR_LEG_STIPULATION_VALUE;
         tagData = new Tag689StrLegStipulationValue( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag689StrLegStipulationValue.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag689StrLegStipulationValue.TESTB_STR_LEG_STIPULATION_VALUE;
         tagData = new Tag689StrLegStipulationValue( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -78,7 +77,7 @@ class Tag689StrLegStipulationValueTest {
         Tag689StrLegStipulationValue tagData;
         String oneElement;
 
-        oneElement = Tag689StrLegStipulationValue.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag689StrLegStipulationValue.TESTB_STR_LEG_STIPULATION_VALUE;
         tagData = new Tag689StrLegStipulationValue( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -88,7 +87,7 @@ class Tag689StrLegStipulationValueTest {
         Tag689StrLegStipulationValue tagData;
         String oneElement;
 
-        oneElement = Tag689StrLegStipulationValue.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag689StrLegStipulationValue.TESTB_STR_LEG_STIPULATION_VALUE;
         tagData = new Tag689StrLegStipulationValue( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -98,7 +97,7 @@ class Tag689StrLegStipulationValueTest {
         Tag689StrLegStipulationValue tagData;
         String oneElement;
 
-        oneElement = Tag689StrLegStipulationValue.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag689StrLegStipulationValue.TESTB_STR_LEG_STIPULATION_VALUE;
         tagData = new Tag689StrLegStipulationValue(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -108,7 +107,7 @@ class Tag689StrLegStipulationValueTest {
         Tag689StrLegStipulationValue tagData;
         String oneElement;
 
-        oneElement = Tag689StrLegStipulationValue.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag689StrLegStipulationValue.TESTA_STR_LEG_STIPULATION_VALUE;
         tagData = new Tag689StrLegStipulationValue( new MyStringType( oneElement ) );
         assertEquals( "Tag689StrLegStipulationValue\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

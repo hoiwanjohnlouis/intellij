@@ -47,27 +47,26 @@ class Tag822StrUnderlyingTradingSessionIDTest {
         Tag822StrUnderlyingTradingSessionID tagData;
         String oneElement;
 
-        oneElement = Tag822StrUnderlyingTradingSessionID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag822StrUnderlyingTradingSessionID.TESTA_STR_UNDERLYING_TRADING_SESSION_ID;
         tagData = new Tag822StrUnderlyingTradingSessionID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag822StrUnderlyingTradingSessionID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag822StrUnderlyingTradingSessionID.TESTB_STR_UNDERLYING_TRADING_SESSION_ID;
         tagData = new Tag822StrUnderlyingTradingSessionID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag822StrUnderlyingTradingSessionID tagData;
         String oneElement;
 
-        oneElement = Tag822StrUnderlyingTradingSessionID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag822StrUnderlyingTradingSessionID.TESTA_STR_UNDERLYING_TRADING_SESSION_ID;
         tagData = new Tag822StrUnderlyingTradingSessionID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag822StrUnderlyingTradingSessionID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag822StrUnderlyingTradingSessionID.TESTB_STR_UNDERLYING_TRADING_SESSION_ID;
         tagData = new Tag822StrUnderlyingTradingSessionID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -76,7 +75,7 @@ class Tag822StrUnderlyingTradingSessionIDTest {
         Tag822StrUnderlyingTradingSessionID tagData;
         String oneElement;
 
-        oneElement = Tag822StrUnderlyingTradingSessionID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag822StrUnderlyingTradingSessionID.TESTB_STR_UNDERLYING_TRADING_SESSION_ID;
         tagData = new Tag822StrUnderlyingTradingSessionID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -86,7 +85,7 @@ class Tag822StrUnderlyingTradingSessionIDTest {
         Tag822StrUnderlyingTradingSessionID tagData;
         String oneElement;
 
-        oneElement = Tag822StrUnderlyingTradingSessionID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag822StrUnderlyingTradingSessionID.TESTB_STR_UNDERLYING_TRADING_SESSION_ID;
         tagData = new Tag822StrUnderlyingTradingSessionID( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -96,7 +95,7 @@ class Tag822StrUnderlyingTradingSessionIDTest {
         Tag822StrUnderlyingTradingSessionID tagData;
         String oneElement;
 
-        oneElement = Tag822StrUnderlyingTradingSessionID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag822StrUnderlyingTradingSessionID.TESTB_STR_UNDERLYING_TRADING_SESSION_ID;
         tagData = new Tag822StrUnderlyingTradingSessionID(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -106,7 +105,7 @@ class Tag822StrUnderlyingTradingSessionIDTest {
         Tag822StrUnderlyingTradingSessionID tagData;
         String oneElement;
 
-        oneElement = Tag822StrUnderlyingTradingSessionID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag822StrUnderlyingTradingSessionID.TESTA_STR_UNDERLYING_TRADING_SESSION_ID;
         tagData = new Tag822StrUnderlyingTradingSessionID( new MyStringType( oneElement ) );
         assertEquals( "Tag822StrUnderlyingTradingSessionID\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

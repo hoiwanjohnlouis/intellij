@@ -54,27 +54,26 @@ class Tag793StrSecondaryAllocIDTest {
         Tag793StrSecondaryAllocID tagData;
         String oneElement;
 
-        oneElement = Tag793StrSecondaryAllocID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag793StrSecondaryAllocID.TESTA_STR_SECONDARY_ALLOC_ID;
         tagData = new Tag793StrSecondaryAllocID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag793StrSecondaryAllocID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag793StrSecondaryAllocID.TESTB_STR_SECONDARY_ALLOC_ID;
         tagData = new Tag793StrSecondaryAllocID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag793StrSecondaryAllocID tagData;
         String oneElement;
 
-        oneElement = Tag793StrSecondaryAllocID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag793StrSecondaryAllocID.TESTA_STR_SECONDARY_ALLOC_ID;
         tagData = new Tag793StrSecondaryAllocID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag793StrSecondaryAllocID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag793StrSecondaryAllocID.TESTB_STR_SECONDARY_ALLOC_ID;
         tagData = new Tag793StrSecondaryAllocID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -83,7 +82,7 @@ class Tag793StrSecondaryAllocIDTest {
         Tag793StrSecondaryAllocID tagData;
         String oneElement;
 
-        oneElement = Tag793StrSecondaryAllocID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag793StrSecondaryAllocID.TESTB_STR_SECONDARY_ALLOC_ID;
         tagData = new Tag793StrSecondaryAllocID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -93,7 +92,7 @@ class Tag793StrSecondaryAllocIDTest {
         Tag793StrSecondaryAllocID tagData;
         String oneElement;
 
-        oneElement = Tag793StrSecondaryAllocID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag793StrSecondaryAllocID.TESTB_STR_SECONDARY_ALLOC_ID;
         tagData = new Tag793StrSecondaryAllocID( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -103,7 +102,7 @@ class Tag793StrSecondaryAllocIDTest {
         Tag793StrSecondaryAllocID tagData;
         String oneElement;
 
-        oneElement = Tag793StrSecondaryAllocID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag793StrSecondaryAllocID.TESTB_STR_SECONDARY_ALLOC_ID;
         tagData = new Tag793StrSecondaryAllocID(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -113,7 +112,7 @@ class Tag793StrSecondaryAllocIDTest {
         Tag793StrSecondaryAllocID tagData;
         String oneElement;
 
-        oneElement = Tag793StrSecondaryAllocID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag793StrSecondaryAllocID.TESTA_STR_SECONDARY_ALLOC_ID;
         tagData = new Tag793StrSecondaryAllocID( new MyStringType( oneElement ) );
         assertEquals( "Tag793StrSecondaryAllocID\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

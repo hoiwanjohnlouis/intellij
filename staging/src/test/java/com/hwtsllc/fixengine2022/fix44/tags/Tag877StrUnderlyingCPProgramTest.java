@@ -47,27 +47,26 @@ class Tag877StrUnderlyingCPProgramTest {
         Tag877StrUnderlyingCPProgram tagData;
         String oneElement;
 
-        oneElement = Tag877StrUnderlyingCPProgram.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag877StrUnderlyingCPProgram.TESTA_STR_UNDERLYING_CP_PROGRAM;
         tagData = new Tag877StrUnderlyingCPProgram( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag877StrUnderlyingCPProgram.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag877StrUnderlyingCPProgram.TESTB_STR_UNDERLYING_CP_PROGRAM;
         tagData = new Tag877StrUnderlyingCPProgram( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag877StrUnderlyingCPProgram tagData;
         String oneElement;
 
-        oneElement = Tag877StrUnderlyingCPProgram.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag877StrUnderlyingCPProgram.TESTA_STR_UNDERLYING_CP_PROGRAM;
         tagData = new Tag877StrUnderlyingCPProgram( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag877StrUnderlyingCPProgram.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag877StrUnderlyingCPProgram.TESTB_STR_UNDERLYING_CP_PROGRAM;
         tagData = new Tag877StrUnderlyingCPProgram( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -76,7 +75,7 @@ class Tag877StrUnderlyingCPProgramTest {
         Tag877StrUnderlyingCPProgram tagData;
         String oneElement;
 
-        oneElement = Tag877StrUnderlyingCPProgram.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag877StrUnderlyingCPProgram.TESTB_STR_UNDERLYING_CP_PROGRAM;
         tagData = new Tag877StrUnderlyingCPProgram( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -86,7 +85,7 @@ class Tag877StrUnderlyingCPProgramTest {
         Tag877StrUnderlyingCPProgram tagData;
         String oneElement;
 
-        oneElement = Tag877StrUnderlyingCPProgram.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag877StrUnderlyingCPProgram.TESTB_STR_UNDERLYING_CP_PROGRAM;
         tagData = new Tag877StrUnderlyingCPProgram( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -96,7 +95,7 @@ class Tag877StrUnderlyingCPProgramTest {
         Tag877StrUnderlyingCPProgram tagData;
         String oneElement;
 
-        oneElement = Tag877StrUnderlyingCPProgram.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag877StrUnderlyingCPProgram.TESTB_STR_UNDERLYING_CP_PROGRAM;
         tagData = new Tag877StrUnderlyingCPProgram(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -106,7 +105,7 @@ class Tag877StrUnderlyingCPProgramTest {
         Tag877StrUnderlyingCPProgram tagData;
         String oneElement;
 
-        oneElement = Tag877StrUnderlyingCPProgram.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag877StrUnderlyingCPProgram.TESTA_STR_UNDERLYING_CP_PROGRAM;
         tagData = new Tag877StrUnderlyingCPProgram( new MyStringType( oneElement ) );
         assertEquals( "Tag877StrUnderlyingCPProgram\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

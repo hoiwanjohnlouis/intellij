@@ -49,36 +49,26 @@ class Tag760StrNested2PartySubIDTest {
         Tag760StrNested2PartySubID tagData;
         String oneElement;
 
-        oneElement = Tag760StrNested2PartySubID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag760StrNested2PartySubID.TESTA_STR_NESTED_2_PARTY_SUB_ID;
         tagData = new Tag760StrNested2PartySubID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag760StrNested2PartySubID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag760StrNested2PartySubID.TESTB_STR_NESTED_2_PARTY_SUB_ID;
         tagData = new Tag760StrNested2PartySubID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        tagData =
-                new Tag760StrNested2PartySubID(new MyStringType(Tag760StrNested2PartySubID.TESTA_STR_NESTED_2_PARTY_SUB_ID));
-        assertEquals( Tag760StrNested2PartySubID.TESTA_STR_NESTED_2_PARTY_SUB_ID, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData =
-                new Tag760StrNested2PartySubID(new MyStringType(Tag760StrNested2PartySubID.TESTB_STR_NESTED_2_PARTY_SUB_ID));
-        assertEquals( Tag760StrNested2PartySubID.TESTB_STR_NESTED_2_PARTY_SUB_ID, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void PrintFIXTagTest() {
         Tag760StrNested2PartySubID tagData;
         String oneElement;
 
-        oneElement = Tag760StrNested2PartySubID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag760StrNested2PartySubID.TESTA_STR_NESTED_2_PARTY_SUB_ID;
         tagData = new Tag760StrNested2PartySubID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag760StrNested2PartySubID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag760StrNested2PartySubID.TESTB_STR_NESTED_2_PARTY_SUB_ID;
         tagData = new Tag760StrNested2PartySubID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -87,7 +77,7 @@ class Tag760StrNested2PartySubIDTest {
         Tag760StrNested2PartySubID tagData;
         String oneElement;
 
-        oneElement = Tag760StrNested2PartySubID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag760StrNested2PartySubID.TESTB_STR_NESTED_2_PARTY_SUB_ID;
         tagData = new Tag760StrNested2PartySubID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -97,7 +87,7 @@ class Tag760StrNested2PartySubIDTest {
         Tag760StrNested2PartySubID tagData;
         String oneElement;
 
-        oneElement = Tag760StrNested2PartySubID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag760StrNested2PartySubID.TESTB_STR_NESTED_2_PARTY_SUB_ID;
         tagData = new Tag760StrNested2PartySubID( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -107,7 +97,7 @@ class Tag760StrNested2PartySubIDTest {
         Tag760StrNested2PartySubID tagData;
         String oneElement;
 
-        oneElement = Tag760StrNested2PartySubID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag760StrNested2PartySubID.TESTB_STR_NESTED_2_PARTY_SUB_ID;
         tagData = new Tag760StrNested2PartySubID(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -117,7 +107,7 @@ class Tag760StrNested2PartySubIDTest {
         Tag760StrNested2PartySubID tagData;
         String oneElement;
 
-        oneElement = Tag760StrNested2PartySubID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag760StrNested2PartySubID.TESTA_STR_NESTED_2_PARTY_SUB_ID;
         tagData = new Tag760StrNested2PartySubID( new MyStringType( oneElement ) );
         assertEquals( "Tag760StrNested2PartySubID\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

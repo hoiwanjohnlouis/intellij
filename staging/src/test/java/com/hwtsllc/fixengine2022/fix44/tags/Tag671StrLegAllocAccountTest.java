@@ -49,27 +49,26 @@ class Tag671StrLegAllocAccountTest {
         Tag671StrLegAllocAccount tagData;
         String oneElement;
 
-        oneElement = Tag671StrLegAllocAccount.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag671StrLegAllocAccount.TESTA_STR_LEG_ALLOC_ACCOUNT;
         tagData = new Tag671StrLegAllocAccount( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag671StrLegAllocAccount.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag671StrLegAllocAccount.TESTB_STR_LEG_ALLOC_ACCOUNT;
         tagData = new Tag671StrLegAllocAccount( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag671StrLegAllocAccount tagData;
         String oneElement;
 
-        oneElement = Tag671StrLegAllocAccount.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag671StrLegAllocAccount.TESTA_STR_LEG_ALLOC_ACCOUNT;
         tagData = new Tag671StrLegAllocAccount( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag671StrLegAllocAccount.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag671StrLegAllocAccount.TESTB_STR_LEG_ALLOC_ACCOUNT;
         tagData = new Tag671StrLegAllocAccount( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -78,7 +77,7 @@ class Tag671StrLegAllocAccountTest {
         Tag671StrLegAllocAccount tagData;
         String oneElement;
 
-        oneElement = Tag671StrLegAllocAccount.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag671StrLegAllocAccount.TESTB_STR_LEG_ALLOC_ACCOUNT;
         tagData = new Tag671StrLegAllocAccount( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -88,7 +87,7 @@ class Tag671StrLegAllocAccountTest {
         Tag671StrLegAllocAccount tagData;
         String oneElement;
 
-        oneElement = Tag671StrLegAllocAccount.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag671StrLegAllocAccount.TESTB_STR_LEG_ALLOC_ACCOUNT;
         tagData = new Tag671StrLegAllocAccount( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -98,7 +97,7 @@ class Tag671StrLegAllocAccountTest {
         Tag671StrLegAllocAccount tagData;
         String oneElement;
 
-        oneElement = Tag671StrLegAllocAccount.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag671StrLegAllocAccount.TESTB_STR_LEG_ALLOC_ACCOUNT;
         tagData = new Tag671StrLegAllocAccount(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -108,7 +107,7 @@ class Tag671StrLegAllocAccountTest {
         Tag671StrLegAllocAccount tagData;
         String oneElement;
 
-        oneElement = Tag671StrLegAllocAccount.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag671StrLegAllocAccount.TESTA_STR_LEG_ALLOC_ACCOUNT;
         tagData = new Tag671StrLegAllocAccount( new MyStringType( oneElement ) );
         assertEquals( "Tag671StrLegAllocAccount\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

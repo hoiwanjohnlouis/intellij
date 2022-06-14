@@ -47,27 +47,26 @@ class Tag821StrOrderInputDeviceTest {
         Tag821StrOrderInputDevice tagData;
         String oneElement;
 
-        oneElement = Tag821StrOrderInputDevice.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag821StrOrderInputDevice.TESTA_STR_ORDER_INPUT_DEVICE;
         tagData = new Tag821StrOrderInputDevice( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag821StrOrderInputDevice.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag821StrOrderInputDevice.TESTB_STR_ORDER_INPUT_DEVICE;
         tagData = new Tag821StrOrderInputDevice( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag821StrOrderInputDevice tagData;
         String oneElement;
 
-        oneElement = Tag821StrOrderInputDevice.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag821StrOrderInputDevice.TESTA_STR_ORDER_INPUT_DEVICE;
         tagData = new Tag821StrOrderInputDevice( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag821StrOrderInputDevice.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag821StrOrderInputDevice.TESTB_STR_ORDER_INPUT_DEVICE;
         tagData = new Tag821StrOrderInputDevice( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -76,7 +75,7 @@ class Tag821StrOrderInputDeviceTest {
         Tag821StrOrderInputDevice tagData;
         String oneElement;
 
-        oneElement = Tag821StrOrderInputDevice.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag821StrOrderInputDevice.TESTB_STR_ORDER_INPUT_DEVICE;
         tagData = new Tag821StrOrderInputDevice( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -86,7 +85,7 @@ class Tag821StrOrderInputDeviceTest {
         Tag821StrOrderInputDevice tagData;
         String oneElement;
 
-        oneElement = Tag821StrOrderInputDevice.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag821StrOrderInputDevice.TESTB_STR_ORDER_INPUT_DEVICE;
         tagData = new Tag821StrOrderInputDevice( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -96,7 +95,7 @@ class Tag821StrOrderInputDeviceTest {
         Tag821StrOrderInputDevice tagData;
         String oneElement;
 
-        oneElement = Tag821StrOrderInputDevice.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag821StrOrderInputDevice.TESTB_STR_ORDER_INPUT_DEVICE;
         tagData = new Tag821StrOrderInputDevice(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -106,7 +105,7 @@ class Tag821StrOrderInputDeviceTest {
         Tag821StrOrderInputDevice tagData;
         String oneElement;
 
-        oneElement = Tag821StrOrderInputDevice.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag821StrOrderInputDevice.TESTA_STR_ORDER_INPUT_DEVICE;
         tagData = new Tag821StrOrderInputDevice( new MyStringType( oneElement ) );
         assertEquals( "Tag821StrOrderInputDevice\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

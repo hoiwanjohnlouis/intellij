@@ -50,27 +50,26 @@ class Tag818StrSecondaryTradeReportIDTest {
         Tag818StrSecondaryTradeReportID tagData;
         String oneElement;
 
-        oneElement = Tag818StrSecondaryTradeReportID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag818StrSecondaryTradeReportID.TESTA_STR_SECONDARY_TRADE_REPORT_ID;
         tagData = new Tag818StrSecondaryTradeReportID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag818StrSecondaryTradeReportID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag818StrSecondaryTradeReportID.TESTB_STR_SECONDARY_TRADE_REPORT_ID;
         tagData = new Tag818StrSecondaryTradeReportID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag818StrSecondaryTradeReportID tagData;
         String oneElement;
 
-        oneElement = Tag818StrSecondaryTradeReportID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag818StrSecondaryTradeReportID.TESTA_STR_SECONDARY_TRADE_REPORT_ID;
         tagData = new Tag818StrSecondaryTradeReportID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag818StrSecondaryTradeReportID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag818StrSecondaryTradeReportID.TESTB_STR_SECONDARY_TRADE_REPORT_ID;
         tagData = new Tag818StrSecondaryTradeReportID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -79,7 +78,7 @@ class Tag818StrSecondaryTradeReportIDTest {
         Tag818StrSecondaryTradeReportID tagData;
         String oneElement;
 
-        oneElement = Tag818StrSecondaryTradeReportID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag818StrSecondaryTradeReportID.TESTB_STR_SECONDARY_TRADE_REPORT_ID;
         tagData = new Tag818StrSecondaryTradeReportID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -89,7 +88,7 @@ class Tag818StrSecondaryTradeReportIDTest {
         Tag818StrSecondaryTradeReportID tagData;
         String oneElement;
 
-        oneElement = Tag818StrSecondaryTradeReportID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag818StrSecondaryTradeReportID.TESTB_STR_SECONDARY_TRADE_REPORT_ID;
         tagData = new Tag818StrSecondaryTradeReportID( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -99,7 +98,7 @@ class Tag818StrSecondaryTradeReportIDTest {
         Tag818StrSecondaryTradeReportID tagData;
         String oneElement;
 
-        oneElement = Tag818StrSecondaryTradeReportID.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag818StrSecondaryTradeReportID.TESTB_STR_SECONDARY_TRADE_REPORT_ID;
         tagData = new Tag818StrSecondaryTradeReportID(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -109,7 +108,7 @@ class Tag818StrSecondaryTradeReportIDTest {
         Tag818StrSecondaryTradeReportID tagData;
         String oneElement;
 
-        oneElement = Tag818StrSecondaryTradeReportID.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag818StrSecondaryTradeReportID.TESTA_STR_SECONDARY_TRADE_REPORT_ID;
         tagData = new Tag818StrSecondaryTradeReportID( new MyStringType( oneElement ) );
         assertEquals( "Tag818StrSecondaryTradeReportID\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

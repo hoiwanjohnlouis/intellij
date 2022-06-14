@@ -49,27 +49,26 @@ class Tag763StrUnderlyingSecuritySubTypeTest {
         Tag763StrUnderlyingSecuritySubType tagData;
         String oneElement;
 
-        oneElement = Tag763StrUnderlyingSecuritySubType.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag763StrUnderlyingSecuritySubType.TESTA_STR_UNDERLYING_SECURITY_SUB_TYPE;
         tagData = new Tag763StrUnderlyingSecuritySubType( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag763StrUnderlyingSecuritySubType.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag763StrUnderlyingSecuritySubType.TESTB_STR_UNDERLYING_SECURITY_SUB_TYPE;
         tagData = new Tag763StrUnderlyingSecuritySubType( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
     }
     @Test
     void PrintFIXTagTest() {
         Tag763StrUnderlyingSecuritySubType tagData;
         String oneElement;
 
-        oneElement = Tag763StrUnderlyingSecuritySubType.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag763StrUnderlyingSecuritySubType.TESTA_STR_UNDERLYING_SECURITY_SUB_TYPE;
         tagData = new Tag763StrUnderlyingSecuritySubType( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag763StrUnderlyingSecuritySubType.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag763StrUnderlyingSecuritySubType.TESTB_STR_UNDERLYING_SECURITY_SUB_TYPE;
         tagData = new Tag763StrUnderlyingSecuritySubType( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
@@ -78,7 +77,7 @@ class Tag763StrUnderlyingSecuritySubTypeTest {
         Tag763StrUnderlyingSecuritySubType tagData;
         String oneElement;
 
-        oneElement = Tag763StrUnderlyingSecuritySubType.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag763StrUnderlyingSecuritySubType.TESTB_STR_UNDERLYING_SECURITY_SUB_TYPE;
         tagData = new Tag763StrUnderlyingSecuritySubType( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -88,7 +87,7 @@ class Tag763StrUnderlyingSecuritySubTypeTest {
         Tag763StrUnderlyingSecuritySubType tagData;
         String oneElement;
 
-        oneElement = Tag763StrUnderlyingSecuritySubType.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag763StrUnderlyingSecuritySubType.TESTB_STR_UNDERLYING_SECURITY_SUB_TYPE;
         tagData = new Tag763StrUnderlyingSecuritySubType( new MyStringType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -98,7 +97,7 @@ class Tag763StrUnderlyingSecuritySubTypeTest {
         Tag763StrUnderlyingSecuritySubType tagData;
         String oneElement;
 
-        oneElement = Tag763StrUnderlyingSecuritySubType.TESTB_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag763StrUnderlyingSecuritySubType.TESTB_STR_UNDERLYING_SECURITY_SUB_TYPE;
         tagData = new Tag763StrUnderlyingSecuritySubType(new MyStringType(oneElement));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -108,7 +107,7 @@ class Tag763StrUnderlyingSecuritySubTypeTest {
         Tag763StrUnderlyingSecuritySubType tagData;
         String oneElement;
 
-        oneElement = Tag763StrUnderlyingSecuritySubType.TESTA_STR_SIDE_COMPLIANCE_ID;
+        oneElement = Tag763StrUnderlyingSecuritySubType.TESTA_STR_UNDERLYING_SECURITY_SUB_TYPE;
         tagData = new Tag763StrUnderlyingSecuritySubType( new MyStringType( oneElement ) );
         assertEquals( "Tag763StrUnderlyingSecuritySubType\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
