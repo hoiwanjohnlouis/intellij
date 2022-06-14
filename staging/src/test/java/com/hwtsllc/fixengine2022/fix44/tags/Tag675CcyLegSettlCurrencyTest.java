@@ -24,28 +24,28 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  676
- *  LegBenchmarkCurveCurrency
+ *  675
+ *  LegSettlCurrency
  *  Currency
  *  <p></p>
- *  LegBenchmarkPrice (679) currency
+ *  Identifies settlement currency for the Leg.
  *  <p></p>
- *  See BenchmarkCurveCurrency (220) for description and valid values.
+ *  See SettlCurrency (20) for description and valid values
  */
-class Tag676LegBenchmarkCurveCurrencyTest {
+class Tag675CcyLegSettlCurrencyTest {
     @Test
-    void FIX0676Test() {
-        FIX44 fixData = FIX44.FIX676_LEG_BENCHMARK_CURVE_CURRENCY;
-        assertEquals( "676", fixData.toFIXIDString());
-        assertEquals( "LEG_BENCHMARK_CURVE_CURRENCY", fixData.toFIXNameString());
-        assertEquals( "LegBenchmarkCurveCurrency", fixData.toFIXDescriptionString());
+    void FIX0675Test() {
+        FIX44 fixData = FIX44.FIX675_CCY_LEG_SETTL_CURRENCY;
+        assertEquals( "675", fixData.toFIXIDString());
+        assertEquals( "LEG_SETTL_CURRENCY", fixData.toFIXNameString());
+        assertEquals( "LegSettlCurrency", fixData.toFIXDescriptionString());
         assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
         assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
         assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
-    void Tag0676Test() {
-        Tag676LegBenchmarkCurveCurrency tagData;
+    void Tag0675Test() {
+        Tag675CcyLegSettlCurrency tagData;
 
     }
 }

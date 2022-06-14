@@ -31,10 +31,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  The currency that AllowableOneSidednessValue (766)
  *  is expressed in if AllowableOneSidednessValue is used.
  */
-class Tag767AllowableOneSidednessCurrTest {
+class Tag767CcyAllowableOneSidednessCurrTest {
     @Test
     void FIX0767Test() {
-        FIX44 fixData = FIX44.FIX767_ALLOWABLE_ONE_SIDEDNESS_CURR;
+        FIX44 fixData = FIX44.FIX767_CCY_ALLOWABLE_ONE_SIDEDNESS_CURR;
         assertEquals( "767", fixData.toFIXIDString());
         assertEquals( "ALLOWABLE_ONE_SIDEDNESS_CURR", fixData.toFIXNameString());
         assertEquals( "AllowableOneSidednessCurr", fixData.toFIXDescriptionString());
@@ -44,7 +44,7 @@ class Tag767AllowableOneSidednessCurrTest {
     }
     @Test
     void Tag0767Test() {
-        Tag767AllowableOneSidednessCurr tagData;
+        Tag767CcyAllowableOneSidednessCurr tagData;
 
     }
 }

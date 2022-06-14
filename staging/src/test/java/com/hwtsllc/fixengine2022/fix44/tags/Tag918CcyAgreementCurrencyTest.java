@@ -33,10 +33,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p></p>
  *  Usually, but not always, the same as the trade currency.
  */
-class Tag918AgreementCurrencyTest {
+class Tag918CcyAgreementCurrencyTest {
     @Test
     void FIX0918Test() {
-        FIX44 fixData = FIX44.FIX918_AGREEMENT_CURRENCY;
+        FIX44 fixData = FIX44.FIX918_CCY_AGREEMENT_CURRENCY;
         assertEquals( "918", fixData.toFIXIDString());
         assertEquals( "AGREEMENT_CURRENCY", fixData.toFIXNameString());
         assertEquals( "AgreementCurrency", fixData.toFIXDescriptionString());
@@ -46,7 +46,7 @@ class Tag918AgreementCurrencyTest {
     }
     @Test
     void Tag0918Test() {
-        Tag918AgreementCurrency tagData;
+        Tag918CcyAgreementCurrency tagData;
 
     }
 }

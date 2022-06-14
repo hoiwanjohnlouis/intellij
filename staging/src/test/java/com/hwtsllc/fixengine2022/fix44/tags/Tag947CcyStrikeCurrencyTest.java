@@ -24,26 +24,26 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  941
- *  UnderlyingStrikeCurrency
+ *  947
+ *  StrikeCurrency
  *  Currency
  *  <p></p>
- *  Currency in which the strike price of an underlying instrument is denominated
+ *  Currency in which the StrikePrice is denominated.
  */
-class Tag941UnderlyingStrikeCurrencyTest {
+class Tag947CcyStrikeCurrencyTest {
     @Test
-    void FIX0941Test() {
-        FIX44 fixData = FIX44.FIX941_UNDERLYING_STRIKE_CURRENCY;
-        assertEquals( "941", fixData.toFIXIDString());
-        assertEquals( "UNDERLYING_STRIKE_CURRENCY", fixData.toFIXNameString());
-        assertEquals( "UnderlyingStrikeCurrency", fixData.toFIXDescriptionString());
+    void FIX0947Test() {
+        FIX44 fixData = FIX44.FIX947_CCY_STRIKE_CURRENCY;
+        assertEquals( "947", fixData.toFIXIDString());
+        assertEquals( "STRIKE_CURRENCY", fixData.toFIXNameString());
+        assertEquals( "StrikeCurrency", fixData.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
-    void Tag0941Test() {
-        Tag941UnderlyingStrikeCurrency tagData;
+    void Tag0947Test() {
+        Tag947CcyStrikeCurrency tagData;
 
     }
 }

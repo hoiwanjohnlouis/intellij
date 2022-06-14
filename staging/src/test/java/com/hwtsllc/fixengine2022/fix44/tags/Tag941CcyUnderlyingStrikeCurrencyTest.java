@@ -24,26 +24,26 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  736
- *  AllocSettlCurrency
+ *  941
+ *  UnderlyingStrikeCurrency
  *  Currency
  *  <p></p>
- *  Currency code of settlement denomination for a specific AllocAccount (79).
+ *  Currency in which the strike price of an underlying instrument is denominated
  */
-class Tag736AllocSettlCurrencyTest {
+class Tag941CcyUnderlyingStrikeCurrencyTest {
     @Test
-    void FIX0736Test() {
-        FIX44 fixData = FIX44.FIX736_ALLOC_SETTL_CURRENCY;
-        assertEquals( "736", fixData.toFIXIDString());
-        assertEquals( "ALLOC_SETTL_CURRENCY", fixData.toFIXNameString());
-        assertEquals( "AllocSettlCurrency", fixData.toFIXDescriptionString());
+    void FIX0941Test() {
+        FIX44 fixData = FIX44.FIX941_CCY_UNDERLYING_STRIKE_CURRENCY;
+        assertEquals( "941", fixData.toFIXIDString());
+        assertEquals( "UNDERLYING_STRIKE_CURRENCY", fixData.toFIXNameString());
+        assertEquals( "UnderlyingStrikeCurrency", fixData.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
     }
     @Test
-    void Tag0736Test() {
-        Tag736AllocSettlCurrency tagData;
+    void Tag0941Test() {
+        Tag941CcyUnderlyingStrikeCurrency tagData;
 
     }
 }
