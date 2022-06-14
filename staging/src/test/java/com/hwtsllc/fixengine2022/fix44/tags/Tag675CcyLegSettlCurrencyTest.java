@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.MyCurrencyType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -46,6 +47,76 @@ class Tag675CcyLegSettlCurrencyTest {
     @Test
     void Tag0675Test() {
         Tag675CcyLegSettlCurrency tagData;
+        String oneElement;
 
+        oneElement = Tag675CcyLegSettlCurrency.TESTA_CCY_LEG_SETTL_CURRENCY;
+        tagData = new Tag675CcyLegSettlCurrency( new MyCurrencyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        oneElement = Tag675CcyLegSettlCurrency.TESTB_CCY_LEG_SETTL_CURRENCY;
+        tagData = new Tag675CcyLegSettlCurrency( new MyCurrencyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void PrintFIXTagTest() {
+        Tag675CcyLegSettlCurrency tagData;
+        String oneElement;
+
+        oneElement = Tag675CcyLegSettlCurrency.TESTA_CCY_LEG_SETTL_CURRENCY;
+        tagData = new Tag675CcyLegSettlCurrency( new MyCurrencyType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag675CcyLegSettlCurrency.TESTB_CCY_LEG_SETTL_CURRENCY;
+        tagData = new Tag675CcyLegSettlCurrency( new MyCurrencyType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag675CcyLegSettlCurrency tagData;
+        String oneElement;
+
+        oneElement = Tag675CcyLegSettlCurrency.TESTB_CCY_LEG_SETTL_CURRENCY;
+        tagData = new Tag675CcyLegSettlCurrency( new MyCurrencyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void TagToValuePairStringTest() {
+        Tag675CcyLegSettlCurrency tagData;
+        String oneElement;
+
+        oneElement = Tag675CcyLegSettlCurrency.TESTB_CCY_LEG_SETTL_CURRENCY;
+        tagData = new Tag675CcyLegSettlCurrency( new MyCurrencyType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    }
+    @Test
+    void TagToStringTest() {
+        Tag675CcyLegSettlCurrency tagData;
+        String oneElement;
+
+        oneElement = Tag675CcyLegSettlCurrency.TESTB_CCY_LEG_SETTL_CURRENCY;
+        tagData = new Tag675CcyLegSettlCurrency( new MyCurrencyType( oneElement ) );
+        assertEquals( oneElement, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+    @Test
+    void TagToVerboseStringTest() {
+        Tag675CcyLegSettlCurrency tagData;
+        String oneElement;
+
+        oneElement = Tag675CcyLegSettlCurrency.TESTA_CCY_LEG_SETTL_CURRENCY;
+        tagData = new Tag675CcyLegSettlCurrency( new MyCurrencyType( oneElement ) );
+        assertEquals( "Tag675CcyLegSettlCurrency\n" +
+                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }
