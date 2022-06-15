@@ -14,31 +14,36 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix43.tags;
+package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  512
- *  DistribPercentage
+ *  849
+ *  ParticipationRate
  *  Percentage
- *  <p>
- *  The amount of each distribution to go to this beneficiary, expressed as a percentage
+ *  <p></p>
+ *  Deprecated in FIX.5.0
+ *  <p></p>
+ *  For a TargetStrategy=Participate order specifies the target particpation rate.
+ *  <p></p>
+ *  For other order types this is a volume limit
+ *  (i.e. do not be more than this percent of the market volume)
  */
-public class Tag512PctDistribPercentage extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag849PctParticipationRate extends FIX44Abstract implements LogValuePairString, LogVerboseString {
     private final MyPercentageType dataValue;
 
-    public final static double TESTA_PCT_DISTRIB_PERCENTAGE
-            = 0.0512D;
-    public final static double TESTB_PCT_DISTRIB_PERCENTAGE
-            = 0.0215D;
+    public final static double TESTA_PCT_PARTICIPATION_RATE
+            = 0.849D;
+    public final static double TESTB_PCT_PARTICIPATION_RATE
+            = 0.49D;
 
-    public Tag512PctDistribPercentage(MyPercentageType dataValue) {
-        setFixType(FIX43.FIX512_PCT_DISTRIB_PERCENTAGE);
+    public Tag849PctParticipationRate(MyPercentageType dataValue) {
+        setFixType( FIX44.FIX849_PCT_PARTICIPATION_RATE );
         this.dataValue = dataValue;
     }
 
@@ -81,12 +86,12 @@ public class Tag512PctDistribPercentage extends FIX43Abstract implements LogValu
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag512PctDistribPercentage tagData;
+        Tag849PctParticipationRate tagData;
 
-        tagData = new Tag512PctDistribPercentage(new MyPercentageType(TESTA_PCT_DISTRIB_PERCENTAGE) );
+        tagData = new Tag849PctParticipationRate(new MyPercentageType( TESTA_PCT_PARTICIPATION_RATE ) );
         System.out.println(tagData.toVerboseString());
 
-        tagData = new Tag512PctDistribPercentage(new MyPercentageType(TESTB_PCT_DISTRIB_PERCENTAGE) );
+        tagData = new Tag849PctParticipationRate(new MyPercentageType( TESTB_PCT_PARTICIPATION_RATE ) );
         System.out.println(tagData.toVerboseString());
     }
 }
