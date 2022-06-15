@@ -14,31 +14,31 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix43.tags;
+package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceOffsetType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  451
- *  NetChgPrevDay
+ *  834
+ *  ThresholdAmount
  *  PriceOffset
- *  <p>
- *  Net change from previous day’s closing price vs. last traded price.
+ *  <p></p>
+ *  Amount that a position has to be in the money before it is exercised.
  */
-public class Tag451PxoNetChgPrevDay extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag834PxoThresholdAmount extends FIX44Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceOffsetType dataValue;
 
-    public final static double TESTA_PXO_NET_CHG_PREV_DAY
-            = 0.451D;
-    public final static double TESTB_PXO_NET_CHG_PREV_DAY
-            = 0.154D;
+    public final static double TESTA_PXO_THRESHOLD_AMOUNT
+            = 0.834D;
+    public final static double TESTB_PXO_THRESHOLD_AMOUNT
+            = 0.34D;
 
-    public Tag451PxoNetChgPrevDay(MyPriceOffsetType dataValue) {
-        setFixType(FIX43.FIX451_PXO_NET_CHG_PREV_DAY);
+    public Tag834PxoThresholdAmount(MyPriceOffsetType dataValue) {
+        setFixType( FIX44.FIX834_PXO_THRESHOLD_AMOUNT );
         this.dataValue = dataValue;
     }
 
@@ -81,12 +81,12 @@ public class Tag451PxoNetChgPrevDay extends FIX43Abstract implements LogValuePai
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag451PxoNetChgPrevDay tagData;
+        Tag834PxoThresholdAmount tagData;
 
-        tagData = new Tag451PxoNetChgPrevDay(new MyPriceOffsetType(TESTA_PXO_NET_CHG_PREV_DAY) );
+        tagData = new Tag834PxoThresholdAmount(new MyPriceOffsetType( TESTA_PXO_THRESHOLD_AMOUNT ) );
         System.out.println(tagData.toVerboseString());
 
-        tagData = new Tag451PxoNetChgPrevDay(new MyPriceOffsetType(TESTB_PXO_NET_CHG_PREV_DAY) );
+        tagData = new Tag834PxoThresholdAmount(new MyPriceOffsetType( TESTB_PXO_THRESHOLD_AMOUNT ) );
         System.out.println(tagData.toVerboseString());
     }
 }
