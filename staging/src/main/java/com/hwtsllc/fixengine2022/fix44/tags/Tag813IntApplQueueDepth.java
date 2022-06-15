@@ -14,31 +14,32 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix43.tags;
+package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  534
- *  NoAffectedOrders
+ *  813
+ *  ApplQueueDepth
  *  int
- *  <p>
- *  Number of affected orders in the repeating group of order ids.
+ *  <p></p>
+ *  Current number of application messages that were queued
+ *  at the time that the message was created by the counterparty.
  */
-public class Tag534IntNoAffectedOrders extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag813IntApplQueueDepth extends FIX44Abstract implements LogValuePairString, LogVerboseString {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_NO_AFFECTED_ORDERS
-            = 534;
-    public final static int TESTB_INT_NO_AFFECTED_ORDERS
-            = 435;
+    public final static int TESTA_INT_APPL_QUEUE_DEPTH
+            = 813;
+    public final static int TESTB_INT_APPL_QUEUE_DEPTH
+            = 13;
 
-    public Tag534IntNoAffectedOrders(MyIntType dataValue) {
-        setFixType(FIX43.FIX534_INT_NO_AFFECTED_ORDERS);
+    public Tag813IntApplQueueDepth(MyIntType dataValue) {
+        setFixType( FIX44.FIX813_INT_APPL_QUEUE_DEPTH );
         this.dataValue = dataValue;
     }
 
@@ -81,12 +82,12 @@ public class Tag534IntNoAffectedOrders extends FIX43Abstract implements LogValue
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag534IntNoAffectedOrders tagData;
+        Tag813IntApplQueueDepth tagData;
 
-        tagData = new Tag534IntNoAffectedOrders(new MyIntType(TESTA_INT_NO_AFFECTED_ORDERS) );
+        tagData = new Tag813IntApplQueueDepth(new MyIntType( TESTA_INT_APPL_QUEUE_DEPTH ) );
         System.out.println(tagData.toVerboseString());
 
-        tagData = new Tag534IntNoAffectedOrders(new MyIntType(TESTB_INT_NO_AFFECTED_ORDERS) );
+        tagData = new Tag813IntApplQueueDepth(new MyIntType( TESTB_INT_APPL_QUEUE_DEPTH ) );
         System.out.println(tagData.toVerboseString());
     }
 }

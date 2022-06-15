@@ -14,31 +14,33 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix43.tags;
+package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  534
- *  NoAffectedOrders
+ *  812
+ *  ApplQueueMax
  *  int
- *  <p>
- *  Number of affected orders in the repeating group of order ids.
+ *  <p></p>
+ *  Used to specify the maximum number of application messages
+ *  that can be queued before a corrective action needs to take
+ *  place to resolve the queuing issue.
  */
-public class Tag534IntNoAffectedOrders extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag812IntApplQueueMax extends FIX44Abstract implements LogValuePairString, LogVerboseString {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_NO_AFFECTED_ORDERS
-            = 534;
-    public final static int TESTB_INT_NO_AFFECTED_ORDERS
-            = 435;
+    public final static int TESTA_INT_APPL_QUEUE_MAX
+            = 812;
+    public final static int TESTB_INT_APPL_QUEUE_MAX
+            = 12;
 
-    public Tag534IntNoAffectedOrders(MyIntType dataValue) {
-        setFixType(FIX43.FIX534_INT_NO_AFFECTED_ORDERS);
+    public Tag812IntApplQueueMax(MyIntType dataValue) {
+        setFixType( FIX44.FIX812_INT_APPL_QUEUE_MAX );
         this.dataValue = dataValue;
     }
 
@@ -81,12 +83,12 @@ public class Tag534IntNoAffectedOrders extends FIX43Abstract implements LogValue
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag534IntNoAffectedOrders tagData;
+        Tag812IntApplQueueMax tagData;
 
-        tagData = new Tag534IntNoAffectedOrders(new MyIntType(TESTA_INT_NO_AFFECTED_ORDERS) );
+        tagData = new Tag812IntApplQueueMax(new MyIntType( TESTA_INT_APPL_QUEUE_MAX ) );
         System.out.println(tagData.toVerboseString());
 
-        tagData = new Tag534IntNoAffectedOrders(new MyIntType(TESTB_INT_NO_AFFECTED_ORDERS) );
+        tagData = new Tag812IntApplQueueMax(new MyIntType( TESTB_INT_APPL_QUEUE_MAX ) );
         System.out.println(tagData.toVerboseString());
     }
 }

@@ -14,31 +14,31 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix43.tags;
+package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  534
- *  NoAffectedOrders
+ *  748
+ *  TotNumTradeReports
  *  int
- *  <p>
- *  Number of affected orders in the repeating group of order ids.
+ *  <p></p>
+ *  Total number of trade reports returned.
  */
-public class Tag534IntNoAffectedOrders extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag748IntTotNumTradeReports extends FIX44Abstract implements LogValuePairString, LogVerboseString {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_NO_AFFECTED_ORDERS
-            = 534;
-    public final static int TESTB_INT_NO_AFFECTED_ORDERS
-            = 435;
+    public final static int TESTA_INT_TOT_NUM_TRADE_REPORTS
+            = 748;
+    public final static int TESTB_INT_TOT_NUM_TRADE_REPORTS
+            = 48;
 
-    public Tag534IntNoAffectedOrders(MyIntType dataValue) {
-        setFixType(FIX43.FIX534_INT_NO_AFFECTED_ORDERS);
+    public Tag748IntTotNumTradeReports(MyIntType dataValue) {
+        setFixType( FIX44.FIX748_INT_TOT_NUM_TRADE_REPORTS );
         this.dataValue = dataValue;
     }
 
@@ -81,12 +81,12 @@ public class Tag534IntNoAffectedOrders extends FIX43Abstract implements LogValue
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag534IntNoAffectedOrders tagData;
+        Tag748IntTotNumTradeReports tagData;
 
-        tagData = new Tag534IntNoAffectedOrders(new MyIntType(TESTA_INT_NO_AFFECTED_ORDERS) );
+        tagData = new Tag748IntTotNumTradeReports(new MyIntType( TESTA_INT_TOT_NUM_TRADE_REPORTS ) );
         System.out.println(tagData.toVerboseString());
 
-        tagData = new Tag534IntNoAffectedOrders(new MyIntType(TESTB_INT_NO_AFFECTED_ORDERS) );
+        tagData = new Tag748IntTotNumTradeReports(new MyIntType( TESTB_INT_TOT_NUM_TRADE_REPORTS ) );
         System.out.println(tagData.toVerboseString());
     }
 }

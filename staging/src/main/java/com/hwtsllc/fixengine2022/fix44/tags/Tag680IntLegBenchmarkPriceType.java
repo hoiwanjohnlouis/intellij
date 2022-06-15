@@ -14,31 +14,33 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix43.tags;
+package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  534
- *  NoAffectedOrders
+ *  680
+ *  LegBenchmarkPriceType
  *  int
- *  <p>
- *  Number of affected orders in the repeating group of order ids.
+ *  <p></p>
+ *  The price type of the LegBenchmarkPrice.
+ *  <p></p>
+ *  See BenchmarkPriceType (663) for description and valid values.
  */
-public class Tag534IntNoAffectedOrders extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag680IntLegBenchmarkPriceType extends FIX44Abstract implements LogValuePairString, LogVerboseString {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_NO_AFFECTED_ORDERS
-            = 534;
-    public final static int TESTB_INT_NO_AFFECTED_ORDERS
-            = 435;
+    public final static int TESTA_INT_LEG_BENCHMARK_PRICE_TYPE
+            = 680;
+    public final static int TESTB_INT_LEG_BENCHMARK_PRICE_TYPE
+            = 80;
 
-    public Tag534IntNoAffectedOrders(MyIntType dataValue) {
-        setFixType(FIX43.FIX534_INT_NO_AFFECTED_ORDERS);
+    public Tag680IntLegBenchmarkPriceType(MyIntType dataValue) {
+        setFixType( FIX44.FIX680_INT_LEG_BENCHMARK_PRICE_TYPE );
         this.dataValue = dataValue;
     }
 
@@ -81,12 +83,12 @@ public class Tag534IntNoAffectedOrders extends FIX43Abstract implements LogValue
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag534IntNoAffectedOrders tagData;
+        Tag680IntLegBenchmarkPriceType tagData;
 
-        tagData = new Tag534IntNoAffectedOrders(new MyIntType(TESTA_INT_NO_AFFECTED_ORDERS) );
+        tagData = new Tag680IntLegBenchmarkPriceType(new MyIntType( TESTA_INT_LEG_BENCHMARK_PRICE_TYPE ) );
         System.out.println(tagData.toVerboseString());
 
-        tagData = new Tag534IntNoAffectedOrders(new MyIntType(TESTB_INT_NO_AFFECTED_ORDERS) );
+        tagData = new Tag680IntLegBenchmarkPriceType(new MyIntType( TESTB_INT_LEG_BENCHMARK_PRICE_TYPE ) );
         System.out.println(tagData.toVerboseString());
     }
 }

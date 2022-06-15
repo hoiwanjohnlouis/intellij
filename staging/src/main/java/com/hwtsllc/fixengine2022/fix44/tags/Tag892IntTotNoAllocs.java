@@ -14,31 +14,36 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix43.tags;
+package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  534
- *  NoAffectedOrders
+ *  892
+ *  TotNoAllocs
  *  int
- *  <p>
- *  Number of affected orders in the repeating group of order ids.
+ *  <p></p>
+ *  Total number of NoAlloc entries across all messages.
+ *  <p></p>
+ *  Should be the sum of all NoAllocs in each message that has
+ *  repeating NoAlloc entries related to the same AllocID or AllocReportID.
+ *  <p></p>
+ *  Used to support fragmentation.
  */
-public class Tag534IntNoAffectedOrders extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag892IntTotNoAllocs extends FIX44Abstract implements LogValuePairString, LogVerboseString {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_NO_AFFECTED_ORDERS
-            = 534;
-    public final static int TESTB_INT_NO_AFFECTED_ORDERS
-            = 435;
+    public final static int TESTA_INT_TOT_NO_ALLOCS
+            = 892;
+    public final static int TESTB_INT_TOT_NO_ALLOCS
+            = 92;
 
-    public Tag534IntNoAffectedOrders(MyIntType dataValue) {
-        setFixType(FIX43.FIX534_INT_NO_AFFECTED_ORDERS);
+    public Tag892IntTotNoAllocs(MyIntType dataValue) {
+        setFixType( FIX44.FIX892_INT_TOT_NO_ALLOCS );
         this.dataValue = dataValue;
     }
 
@@ -81,12 +86,12 @@ public class Tag534IntNoAffectedOrders extends FIX43Abstract implements LogValue
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag534IntNoAffectedOrders tagData;
+        Tag892IntTotNoAllocs tagData;
 
-        tagData = new Tag534IntNoAffectedOrders(new MyIntType(TESTA_INT_NO_AFFECTED_ORDERS) );
+        tagData = new Tag892IntTotNoAllocs(new MyIntType( TESTA_INT_TOT_NO_ALLOCS ) );
         System.out.println(tagData.toVerboseString());
 
-        tagData = new Tag534IntNoAffectedOrders(new MyIntType(TESTB_INT_NO_AFFECTED_ORDERS) );
+        tagData = new Tag892IntTotNoAllocs(new MyIntType( TESTB_INT_TOT_NO_ALLOCS ) );
         System.out.println(tagData.toVerboseString());
     }
 }
