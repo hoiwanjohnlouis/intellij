@@ -48,59 +48,80 @@ class Tag110QtyMinQtyTest {
     @Test
     void Tag0110Test() {
         Tag110QtyMinQty tagData;
+        int oneElement;
 
-        tagData = new Tag110QtyMinQty(new MyQtyType(11) );
-        assertEquals( 11, tagData.getDataValue());
+        oneElement = 11;
+        tagData = new Tag110QtyMinQty( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+
+        oneElement = Tag110QtyMinQty.TESTA_QTY_MIN_QTY;
+        tagData = new Tag110QtyMinQty( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+
+        oneElement = Tag110QtyMinQty.TESTB_QTY_MIN_QTY;
+        tagData = new Tag110QtyMinQty( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void PrintFIXTagTest() {
         Tag110QtyMinQty tagData;
+        int oneElement;
 
-        tagData = new Tag110QtyMinQty(new MyQtyType(Tag110QtyMinQty.TESTB_QTY_MIN_QTY));
+        oneElement = Tag110QtyMinQty.TESTA_QTY_MIN_QTY;
+        tagData = new Tag110QtyMinQty( new MyQtyType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag110QtyMinQty.TESTB_QTY_MIN_QTY;
+        tagData = new Tag110QtyMinQty( new MyQtyType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
     @Test
     void TagGetDataValueTest() {
         Tag110QtyMinQty tagData;
+        int oneElement;
 
-        tagData = new Tag110QtyMinQty(new MyQtyType(Tag110QtyMinQty.TESTB_QTY_MIN_QTY));
-        assertEquals( Tag110QtyMinQty.TESTB_QTY_MIN_QTY, tagData.getDataValue());
+        oneElement = Tag110QtyMinQty.TESTB_QTY_MIN_QTY;
+        tagData = new Tag110QtyMinQty( new MyQtyType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {
         Tag110QtyMinQty tagData;
+        int oneElement;
 
-        tagData = new Tag110QtyMinQty(new MyQtyType(Tag110QtyMinQty.TESTB_QTY_MIN_QTY));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag110QtyMinQty.TESTB_QTY_MIN_QTY,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag110QtyMinQty.TESTB_QTY_MIN_QTY;
+        tagData = new Tag110QtyMinQty( new MyQtyType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
     @Test
     void TagToStringTest() {
         Tag110QtyMinQty tagData;
+        int oneElement;
 
-        tagData = new Tag110QtyMinQty(new MyQtyType(Tag110QtyMinQty.TESTB_QTY_MIN_QTY));
-        assertEquals( String.valueOf(Tag110QtyMinQty.TESTB_QTY_MIN_QTY),
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag110QtyMinQty.TESTB_QTY_MIN_QTY;
+        tagData = new Tag110QtyMinQty( new MyQtyType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
     @Test
     void TagToVerboseStringTest() {
         Tag110QtyMinQty tagData;
+        int oneElement;
 
-        tagData = new Tag110QtyMinQty(new MyQtyType(Tag110QtyMinQty.TESTA_QTY_MIN_QTY));
+        oneElement = Tag110QtyMinQty.TESTA_QTY_MIN_QTY;
+        tagData = new Tag110QtyMinQty( new MyQtyType( oneElement ) );
         assertEquals( "Tag110QtyMinQty\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                         "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag110QtyMinQty.TESTA_QTY_MIN_QTY + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag110QtyMinQty.TESTA_QTY_MIN_QTY + "]",
-                tagData.toVerboseString());
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]", tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

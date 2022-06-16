@@ -49,14 +49,22 @@ class Tag113EnuReportToExchTest {
     @Test
     void Tag0113Test() {
         Tag113EnuReportToExch tagData;
+        Enum113ReportToExch oneElement;
 
-        tagData = new Tag113EnuReportToExch(Enum113ReportToExch.NO);
+        oneElement = Enum113ReportToExch.NO;
+        tagData = new Tag113EnuReportToExch( oneElement );
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag113EnuReportToExch(Enum113ReportToExch.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        // loop around the ENUM and process
+        for ( Enum113ReportToExch oneEnum : Enum113ReportToExch.values()) {
+            tagData = new Tag113EnuReportToExch( oneEnum );
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
     void PrintFIXTagTest() {

@@ -79,12 +79,14 @@ class Tag104EnuIOIQualifierTest {
     @Test
     void Tag0104Test() {
         Tag104EnuIOIQualifier tagData;
+        MyEnumQualifier oneElement;
 
         /*
          * A-Z IOI Qualifier types
          */
-        tagData = new Tag104EnuIOIQualifier(MyEnumQualifier.ALL_OR_NONE);
-        assertEquals( MyEnumQualifier.ALL_OR_NONE.toFIXIDString(), tagData.getDataValue());
+        oneElement = MyEnumQualifier.ALL_OR_NONE;
+        tagData = new Tag104EnuIOIQualifier( oneElement );
+        assertEquals( oneElement.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag104EnuIOIQualifier(MyEnumQualifier.MARKET_ON_CLOSE);
@@ -157,6 +159,13 @@ class Tag104EnuIOIQualifierTest {
         tagData = new Tag104EnuIOIQualifier(MyEnumQualifier.PRE_OPEN);
         assertEquals( MyEnumQualifier.PRE_OPEN.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        // loop around the ENUM and process
+        for (MyEnumQualifier oneEnum : MyEnumQualifier.values()) {
+            tagData = new Tag104EnuIOIQualifier(oneEnum);
+            assertEquals( oneEnum.toFIXIDString(), tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        }
     }
     @Test
     void PrintFIXTagTest() {

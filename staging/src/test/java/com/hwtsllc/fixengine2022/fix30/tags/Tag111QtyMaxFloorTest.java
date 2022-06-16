@@ -51,59 +51,80 @@ class Tag111QtyMaxFloorTest {
     @Test
     void Tag0111Test() {
         Tag111QtyMaxFloor tagData;
+        int oneElement;
 
-        tagData = new Tag111QtyMaxFloor(new MyQtyType(200) );
-        assertEquals( 200, tagData.getDataValue());
+        oneElement = 200;
+        tagData = new Tag111QtyMaxFloor( new MyQtyType(oneElement) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+
+        oneElement = Tag111QtyMaxFloor.TESTA_QTY_MAX_FLOOR;
+        tagData = new Tag111QtyMaxFloor( new MyQtyType(oneElement) );
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+
+        oneElement = Tag111QtyMaxFloor.TESTB_QTY_MAX_FLOOR;
+        tagData = new Tag111QtyMaxFloor( new MyQtyType(oneElement) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void PrintFIXTagTest() {
         Tag111QtyMaxFloor tagData;
+        int oneElement;
 
-        tagData = new Tag111QtyMaxFloor(new MyQtyType(Tag111QtyMaxFloor.TESTB_QTY_MAX_FLOOR));
+        oneElement = Tag111QtyMaxFloor.TESTA_QTY_MAX_FLOOR;
+        tagData = new Tag111QtyMaxFloor( new MyQtyType(oneElement) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag111QtyMaxFloor.TESTB_QTY_MAX_FLOOR;
+        tagData = new Tag111QtyMaxFloor( new MyQtyType(oneElement) );
         System.out.println( tagData.toVerboseString() );
     }
     @Test
     void TagGetDataValueTest() {
         Tag111QtyMaxFloor tagData;
+        int oneElement;
 
-        tagData = new Tag111QtyMaxFloor(new MyQtyType(Tag111QtyMaxFloor.TESTB_QTY_MAX_FLOOR));
-        assertEquals( Tag111QtyMaxFloor.TESTB_QTY_MAX_FLOOR, tagData.getDataValue());
+        oneElement = Tag111QtyMaxFloor.TESTB_QTY_MAX_FLOOR;
+        tagData = new Tag111QtyMaxFloor( new MyQtyType(oneElement) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {
         Tag111QtyMaxFloor tagData;
+        int oneElement;
 
-        tagData = new Tag111QtyMaxFloor(new MyQtyType(Tag111QtyMaxFloor.TESTB_QTY_MAX_FLOOR));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag111QtyMaxFloor.TESTB_QTY_MAX_FLOOR,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag111QtyMaxFloor.TESTB_QTY_MAX_FLOOR;
+        tagData = new Tag111QtyMaxFloor( new MyQtyType(oneElement) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
     @Test
     void TagToStringTest() {
         Tag111QtyMaxFloor tagData;
+        int oneElement;
 
-        tagData = new Tag111QtyMaxFloor(new MyQtyType(Tag111QtyMaxFloor.TESTB_QTY_MAX_FLOOR));
-        assertEquals( String.valueOf(Tag111QtyMaxFloor.TESTB_QTY_MAX_FLOOR),
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag111QtyMaxFloor.TESTB_QTY_MAX_FLOOR;
+        tagData = new Tag111QtyMaxFloor( new MyQtyType(oneElement) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
     @Test
     void TagToVerboseStringTest() {
         Tag111QtyMaxFloor tagData;
+        int oneElement;
 
-        tagData = new Tag111QtyMaxFloor(new MyQtyType(Tag111QtyMaxFloor.TESTA_QTY_MAX_FLOOR));
+        oneElement = Tag111QtyMaxFloor.TESTA_QTY_MAX_FLOOR;
+        tagData = new Tag111QtyMaxFloor( new MyQtyType(oneElement) );
         assertEquals( "Tag111QtyMaxFloor\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                         "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag111QtyMaxFloor.TESTA_QTY_MAX_FLOOR + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag111QtyMaxFloor.TESTA_QTY_MAX_FLOOR + "]",
-                tagData.toVerboseString());
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]", tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

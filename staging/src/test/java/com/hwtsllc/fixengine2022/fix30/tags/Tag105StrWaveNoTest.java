@@ -47,58 +47,80 @@ class Tag105StrWaveNoTest {
     @Test
     void Tag0105Test() {
         Tag105StrWaveNo tagData;
+        String oneElement;
 
-        tagData = new Tag105StrWaveNo(new MyStringType("interested in Mahlers 4th Symphony") );
-        assertEquals("interested in Mahlers 4th Symphony", tagData.getDataValue() );
+        oneElement = "interested in Mahlers 4th Symphony";
+        tagData = new Tag105StrWaveNo(new MyStringType( oneElement ) );
+        assertEquals(oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        oneElement = Tag105StrWaveNo.TESTA_STR_WAVE_NO;
+        tagData = new Tag105StrWaveNo(new MyStringType( oneElement ) );
+        assertEquals(oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        oneElement = Tag105StrWaveNo.TESTB_STR_WAVE_NO;
+        tagData = new Tag105StrWaveNo(new MyStringType( oneElement ) );
+        assertEquals(oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void PrintFIXTagTest() {
         Tag105StrWaveNo tagData;
+        String oneElement;
 
-        tagData = new Tag105StrWaveNo(new MyStringType(Tag105StrWaveNo.TESTB_STR_WAVE_NO));
+        oneElement = Tag105StrWaveNo.TESTA_STR_WAVE_NO;
+        tagData = new Tag105StrWaveNo(new MyStringType( oneElement ));
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag105StrWaveNo.TESTB_STR_WAVE_NO;
+        tagData = new Tag105StrWaveNo(new MyStringType( oneElement ));
         System.out.println( tagData.toVerboseString() );
     }
     @Test
     void TagGetDataValueTest() {
         Tag105StrWaveNo tagData;
+        String oneElement;
 
-        tagData = new Tag105StrWaveNo(new MyStringType(Tag105StrWaveNo.TESTB_STR_WAVE_NO));
-        assertEquals( Tag105StrWaveNo.TESTB_STR_WAVE_NO, tagData.getDataValue());
+        oneElement = Tag105StrWaveNo.TESTB_STR_WAVE_NO;
+        tagData = new Tag105StrWaveNo(new MyStringType( oneElement ));
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {
         Tag105StrWaveNo tagData;
+        String oneElement;
 
-        tagData = new Tag105StrWaveNo(new MyStringType(Tag105StrWaveNo.TESTB_STR_WAVE_NO));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag105StrWaveNo.TESTB_STR_WAVE_NO,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag105StrWaveNo.TESTB_STR_WAVE_NO;
+        tagData = new Tag105StrWaveNo(new MyStringType( oneElement ));
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
     @Test
     void TagToStringTest() {
         Tag105StrWaveNo tagData;
+        String oneElement;
 
-        tagData = new Tag105StrWaveNo(new MyStringType(Tag105StrWaveNo.TESTB_STR_WAVE_NO));
-        assertEquals( Tag105StrWaveNo.TESTB_STR_WAVE_NO,
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag105StrWaveNo.TESTB_STR_WAVE_NO;
+        tagData = new Tag105StrWaveNo(new MyStringType( oneElement ));
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
     @Test
     void TagToVerboseStringTest() {
         Tag105StrWaveNo tagData;
+        String oneElement;
 
-        tagData = new Tag105StrWaveNo(new MyStringType(Tag105StrWaveNo.TESTA_STR_WAVE_NO));
+        oneElement = Tag105StrWaveNo.TESTA_STR_WAVE_NO;
+        tagData = new Tag105StrWaveNo(new MyStringType( oneElement ));
         assertEquals( "Tag105StrWaveNo\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                         "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag105StrWaveNo.TESTA_STR_WAVE_NO + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag105StrWaveNo.TESTA_STR_WAVE_NO + "]",
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

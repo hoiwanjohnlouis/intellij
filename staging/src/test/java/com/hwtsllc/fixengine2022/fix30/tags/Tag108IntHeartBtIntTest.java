@@ -46,59 +46,80 @@ class Tag108IntHeartBtIntTest {
     @Test
     void Tag0108Test() {
         Tag108IntHeartBtInt tagData;
+        int oneElement;
 
-        tagData = new Tag108IntHeartBtInt(new MyIntType(60) );
-        assertEquals(60, tagData.getDataValue() );
+        oneElement = 45;
+        tagData = new Tag108IntHeartBtInt( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+
+        oneElement = Tag108IntHeartBtInt.TESTA_INT_HEART_BT_INT;
+        tagData = new Tag108IntHeartBtInt( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+
+        oneElement = Tag108IntHeartBtInt.TESTB_INT_HEART_BT_INT;
+        tagData = new Tag108IntHeartBtInt( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void PrintFIXTagTest() {
         Tag108IntHeartBtInt tagData;
+        int oneElement;
 
-        tagData = new Tag108IntHeartBtInt(new MyIntType(Tag108IntHeartBtInt.TESTB_INT_HEART_BT_INT));
+        oneElement = Tag108IntHeartBtInt.TESTA_INT_HEART_BT_INT;
+        tagData = new Tag108IntHeartBtInt( new MyIntType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag108IntHeartBtInt.TESTB_INT_HEART_BT_INT;
+        tagData = new Tag108IntHeartBtInt( new MyIntType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
     @Test
     void TagGetDataValueTest() {
         Tag108IntHeartBtInt tagData;
+        int oneElement;
 
-        tagData = new Tag108IntHeartBtInt(new MyIntType(Tag108IntHeartBtInt.TESTB_INT_HEART_BT_INT));
-        assertEquals( Tag108IntHeartBtInt.TESTB_INT_HEART_BT_INT, tagData.getDataValue());
+        oneElement = Tag108IntHeartBtInt.TESTB_INT_HEART_BT_INT;
+        tagData = new Tag108IntHeartBtInt( new MyIntType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {
         Tag108IntHeartBtInt tagData;
+        int oneElement;
 
-        tagData = new Tag108IntHeartBtInt(new MyIntType(Tag108IntHeartBtInt.TESTB_INT_HEART_BT_INT));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag108IntHeartBtInt.TESTB_INT_HEART_BT_INT,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag108IntHeartBtInt.TESTB_INT_HEART_BT_INT;
+        tagData = new Tag108IntHeartBtInt( new MyIntType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
     @Test
     void TagToStringTest() {
         Tag108IntHeartBtInt tagData;
+        int oneElement;
 
-        tagData = new Tag108IntHeartBtInt(new MyIntType(Tag108IntHeartBtInt.TESTB_INT_HEART_BT_INT));
-        assertEquals( String.valueOf(Tag108IntHeartBtInt.TESTB_INT_HEART_BT_INT),
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag108IntHeartBtInt.TESTB_INT_HEART_BT_INT;
+        tagData = new Tag108IntHeartBtInt( new MyIntType( oneElement ) );
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
     @Test
     void TagToVerboseStringTest() {
         Tag108IntHeartBtInt tagData;
+        int oneElement;
 
-        tagData = new Tag108IntHeartBtInt(new MyIntType(Tag108IntHeartBtInt.TESTA_INT_HEART_BT_INT));
+        oneElement = Tag108IntHeartBtInt.TESTA_INT_HEART_BT_INT;
+        tagData = new Tag108IntHeartBtInt( new MyIntType( oneElement ) );
         assertEquals( "Tag108IntHeartBtInt\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                         "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag108IntHeartBtInt.TESTA_INT_HEART_BT_INT + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag108IntHeartBtInt.TESTA_INT_HEART_BT_INT + "]",
-                tagData.toVerboseString());
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]", tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

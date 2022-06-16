@@ -46,58 +46,80 @@ class Tag107StrSecurityDescTest {
     @Test
     void Tag0107Test() {
         Tag107StrSecurityDesc tagData;
+        String oneElement;
 
-        tagData = new Tag107StrSecurityDesc(new MyStringType("International Widgets, Inc.") );
-        assertEquals("International Widgets, Inc.", tagData.getDataValue() );
+        oneElement = "International Widgets, Inc.";
+        tagData = new Tag107StrSecurityDesc(new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        oneElement = Tag107StrSecurityDesc.TESTA_STR_SECURITY_DESC;
+        tagData = new Tag107StrSecurityDesc(new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        oneElement = Tag107StrSecurityDesc.TESTB_STR_SECURITY_DESC;
+        tagData = new Tag107StrSecurityDesc(new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void PrintFIXTagTest() {
         Tag107StrSecurityDesc tagData;
+        String oneElement;
 
-        tagData = new Tag107StrSecurityDesc(new MyStringType(Tag107StrSecurityDesc.TESTB_STR_SECURITY_DESC));
+        oneElement = Tag107StrSecurityDesc.TESTA_STR_SECURITY_DESC;
+        tagData = new Tag107StrSecurityDesc(new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag107StrSecurityDesc.TESTB_STR_SECURITY_DESC;
+        tagData = new Tag107StrSecurityDesc(new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
     @Test
     void TagGetDataValueTest() {
         Tag107StrSecurityDesc tagData;
+        String oneElement;
 
-        tagData = new Tag107StrSecurityDesc(new MyStringType(Tag107StrSecurityDesc.TESTB_STR_SECURITY_DESC));
-        assertEquals( Tag107StrSecurityDesc.TESTB_STR_SECURITY_DESC, tagData.getDataValue());
+        oneElement = Tag107StrSecurityDesc.TESTB_STR_SECURITY_DESC;
+        tagData = new Tag107StrSecurityDesc(new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {
         Tag107StrSecurityDesc tagData;
+        String oneElement;
 
-        tagData = new Tag107StrSecurityDesc(new MyStringType(Tag107StrSecurityDesc.TESTB_STR_SECURITY_DESC));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag107StrSecurityDesc.TESTB_STR_SECURITY_DESC,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag107StrSecurityDesc.TESTB_STR_SECURITY_DESC;
+        tagData = new Tag107StrSecurityDesc(new MyStringType( oneElement ) );
+        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
     @Test
     void TagToStringTest() {
         Tag107StrSecurityDesc tagData;
+        String oneElement;
 
-        tagData = new Tag107StrSecurityDesc(new MyStringType(Tag107StrSecurityDesc.TESTB_STR_SECURITY_DESC));
-        assertEquals( Tag107StrSecurityDesc.TESTB_STR_SECURITY_DESC,
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag107StrSecurityDesc.TESTB_STR_SECURITY_DESC;
+        tagData = new Tag107StrSecurityDesc(new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
     @Test
     void TagToVerboseStringTest() {
         Tag107StrSecurityDesc tagData;
+        String oneElement;
 
-        tagData = new Tag107StrSecurityDesc(new MyStringType(Tag107StrSecurityDesc.TESTA_STR_SECURITY_DESC));
+        oneElement = Tag107StrSecurityDesc.TESTA_STR_SECURITY_DESC;
+        tagData = new Tag107StrSecurityDesc(new MyStringType( oneElement ) );
         assertEquals( "Tag107StrSecurityDesc\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                         "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag107StrSecurityDesc.TESTA_STR_SECURITY_DESC + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag107StrSecurityDesc.TESTA_STR_SECURITY_DESC + "]",
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
