@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum718AdjustmentType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -39,7 +40,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag718EnuAdjustmentTypeTest {
     @Test
-    void FIX0718Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX718_ENU_ADJUSTMENT_TYPE;
         assertEquals( "718", fixData.toFIXIDString());
         assertEquals( "ADJUSTMENT_TYPE", fixData.toFIXNameString());
@@ -51,10 +52,17 @@ class Tag718EnuAdjustmentTypeTest {
     @Test
     void Tag0718Test() {
         Tag718EnuAdjustmentType tagData;
+        Enum665ConfirmStatus oneElement;
 
         tagData = new Tag718EnuAdjustmentType(Enum718AdjustmentType.MARGIN_DISPOSITION);
         assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "718", fixData.toFIXIDString());
+        assertEquals( "ADJUSTMENT_TYPE", fixData.toFIXNameString());
+        assertEquals( "AdjustmentType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         tagData = new Tag718EnuAdjustmentType(Enum718AdjustmentType.DELTA_PLUS);
         assertEquals( "1", tagData.getDataValue());

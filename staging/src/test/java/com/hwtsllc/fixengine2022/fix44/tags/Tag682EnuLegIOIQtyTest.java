@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumIOIQty;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -48,7 +49,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag682EnuLegIOIQtyTest {
     @Test
-    void FIX0682Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX682_ENU_LEG_IOI_QTY;
         assertEquals( "682", fixData.toFIXIDString());
         assertEquals( "LEG_IOI_QTY", fixData.toFIXNameString());
@@ -60,10 +61,17 @@ class Tag682EnuLegIOIQtyTest {
     @Test
     void Tag0682Test() {
         Tag682EnuLegIOIQty tagData;
+        Enum665ConfirmStatus oneElement;
 
         tagData = new Tag682EnuLegIOIQty(MyEnumIOIQty.ONE_BILLION);
         assertEquals( MyEnumIOIQty.ONE_BILLION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "682", fixData.toFIXIDString());
+        assertEquals( "LEG_IOI_QTY", fixData.toFIXNameString());
+        assertEquals( "LegIOIQty", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         tagData = new Tag682EnuLegIOIQty(MyEnumIOIQty.SMALL);
         assertEquals( MyEnumIOIQty.SMALL.toFIXIDString(), tagData.getDataValue());

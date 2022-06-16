@@ -36,7 +36,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag848StrTargetStrategyParametersTest {
     @Test
-    void FIX0848Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX848_STR_TARGET_STRATEGY_PARAMETERS;
         assertEquals( "848", fixData.toFIXIDString());
         assertEquals( "TARGET_STRATEGY_PARAMETERS", fixData.toFIXNameString());
@@ -54,6 +54,12 @@ class Tag848StrTargetStrategyParametersTest {
         tagData = new Tag848StrTargetStrategyParameters( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "848", fixData.toFIXIDString());
+        assertEquals( "TARGET_STRATEGY_PARAMETERS", fixData.toFIXNameString());
+        assertEquals( "TargetStrategyParameters", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         oneElement = Tag848StrTargetStrategyParameters.TESTB_STR_TARGET_STRATEGY_PARAMETERS;
         tagData = new Tag848StrTargetStrategyParameters( new MyStringType( oneElement ) );

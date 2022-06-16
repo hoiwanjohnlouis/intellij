@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumPartyIDSource;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -130,7 +131,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag950EnuNested3PartyIDSourceTest {
     @Test
-    void FIX0950Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX950_ENU_NESTED_3_PARTY_ID_SOURCE;
         assertEquals( "950", fixData.toFIXIDString());
         assertEquals( "NESTED_3_PARTY_ID_SOURCE", fixData.toFIXNameString());
@@ -142,7 +143,7 @@ class Tag950EnuNested3PartyIDSourceTest {
     @Test
     void Tag0950Test() {
         Tag950EnuNested3PartyIDSource tagData;
-
+        Enum665ConfirmStatus oneElement;
 
         /*
          * All PartyRoles
@@ -151,6 +152,12 @@ class Tag950EnuNested3PartyIDSourceTest {
         tagData = new Tag950EnuNested3PartyIDSource(MyEnumPartyIDSource.BANK_IDENTIFICATION_CODE);
         assertEquals( MyEnumPartyIDSource.BANK_IDENTIFICATION_CODE.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "950", fixData.toFIXIDString());
+        assertEquals( "NESTED_3_PARTY_ID_SOURCE", fixData.toFIXNameString());
+        assertEquals( "Nested3PartyIDSource", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         tagData = new Tag950EnuNested3PartyIDSource(MyEnumPartyIDSource.GENERAL_IDENTIFIER);
         assertEquals( MyEnumPartyIDSource.GENERAL_IDENTIFIER.toFIXIDString(), tagData.getDataValue() );

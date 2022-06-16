@@ -32,8 +32,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag631PrcMidPx extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceType dataValue;
 
-    public final static double TESTA_PRC_MID_PX = 6.31D;
-    public final static double TESTB_PRC_MID_PX = 1.36D;
+    public final static double TESTA_PRC_MID_PX
+            = 6.31D;
+    public final static double TESTB_PRC_MID_PX
+            = 1.36D;
 
     public Tag631PrcMidPx(MyPriceType dataValue) {
         setFixType(FIX43.FIX631_PRC_MID_PX);

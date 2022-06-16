@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum895CollAsgnReason;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -44,7 +45,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag895EnuCollAsgnReasonTest {
     @Test
-    void FIX0895Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX895_ENU_COLL_ASGN_REASON;
         assertEquals( "895", fixData.toFIXIDString());
         assertEquals( "COLL_ASGN_REASON", fixData.toFIXNameString());
@@ -56,10 +57,17 @@ class Tag895EnuCollAsgnReasonTest {
     @Test
     void Tag0895Test() {
         Tag895EnuCollAsgnReason tagData;
+        Enum665ConfirmStatus oneElement;
 
         tagData = new Tag895EnuCollAsgnReason( Enum895CollAsgnReason.INITIAL );
         assertEquals( Enum895CollAsgnReason.INITIAL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "895", fixData.toFIXIDString());
+        assertEquals( "COLL_ASGN_REASON", fixData.toFIXNameString());
+        assertEquals( "CollAsgnReason", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         tagData = new Tag895EnuCollAsgnReason( Enum895CollAsgnReason.SCHEDULED );
         assertEquals( Enum895CollAsgnReason.SCHEDULED.toFIXIDString(), tagData.getDataValue());

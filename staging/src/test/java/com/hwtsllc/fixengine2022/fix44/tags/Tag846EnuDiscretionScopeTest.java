@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumDiscretionOrPegScope;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -45,7 +46,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag846EnuDiscretionScopeTest {
     @Test
-    void FIX0846Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX846_ENU_DISCRETION_SCOPE;
         assertEquals( "846", fixData.toFIXIDString());
         assertEquals( "DISCRETION_SCOPE", fixData.toFIXNameString());
@@ -57,10 +58,17 @@ class Tag846EnuDiscretionScopeTest {
     @Test
     void Tag0846Test() {
         Tag846EnuDiscretionScope tagData;
+        Enum665ConfirmStatus oneElement;
 
         tagData = new Tag846EnuDiscretionScope( MyEnumDiscretionOrPegScope.LOCAL);
         assertEquals( MyEnumDiscretionOrPegScope.LOCAL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "846", fixData.toFIXIDString());
+        assertEquals( "DISCRETION_SCOPE", fixData.toFIXNameString());
+        assertEquals( "DiscretionScope", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         tagData = new Tag846EnuDiscretionScope( MyEnumDiscretionOrPegScope.NATIONAL);
         assertEquals( MyEnumDiscretionOrPegScope.NATIONAL.toFIXIDString(), tagData.getDataValue());

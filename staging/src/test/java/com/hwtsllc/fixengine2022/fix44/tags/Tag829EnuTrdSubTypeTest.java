@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum829TrdSubType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -109,7 +110,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag829EnuTrdSubTypeTest {
     @Test
-    void FIX0829Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX829_ENU_TRD_SUB_TYPE;
         assertEquals( "829", fixData.toFIXIDString());
         assertEquals( "TRD_SUB_TYPE", fixData.toFIXNameString());
@@ -121,10 +122,17 @@ class Tag829EnuTrdSubTypeTest {
     @Test
     void Tag0829Test() {
         Tag829EnuTrdSubType tagData;
+        Enum665ConfirmStatus oneElement;
 
         tagData = new Tag829EnuTrdSubType(Enum829TrdSubType.CMTA);
         assertEquals( Enum829TrdSubType.CMTA.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "829", fixData.toFIXIDString());
+        assertEquals( "TRD_SUB_TYPE", fixData.toFIXNameString());
+        assertEquals( "TrdSubType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         tagData = new Tag829EnuTrdSubType(Enum829TrdSubType.INTERNAL_TRANSFER);
         assertEquals( Enum829TrdSubType.INTERNAL_TRANSFER.toFIXIDString(), tagData.getDataValue());

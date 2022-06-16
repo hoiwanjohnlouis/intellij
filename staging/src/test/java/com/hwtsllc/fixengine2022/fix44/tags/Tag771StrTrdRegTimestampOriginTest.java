@@ -31,7 +31,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag771StrTrdRegTimestampOriginTest {
     @Test
-    void FIX0771Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX771_STR_TRD_REG_TIMESTAMP_ORIGIN;
         assertEquals( "771", fixData.toFIXIDString());
         assertEquals( "TRD_REG_TIMESTAMP_ORIGIN", fixData.toFIXNameString());
@@ -49,6 +49,12 @@ class Tag771StrTrdRegTimestampOriginTest {
         tagData = new Tag771StrTrdRegTimestampOrigin( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "771", fixData.toFIXIDString());
+        assertEquals( "TRD_REG_TIMESTAMP_ORIGIN", fixData.toFIXNameString());
+        assertEquals( "TrdRegTimestampOrigin", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         oneElement = Tag771StrTrdRegTimestampOrigin.TESTB_STR_TRD_REG_TIMESTAMP_ORIGIN;
         tagData = new Tag771StrTrdRegTimestampOrigin( new MyStringType( oneElement ) );

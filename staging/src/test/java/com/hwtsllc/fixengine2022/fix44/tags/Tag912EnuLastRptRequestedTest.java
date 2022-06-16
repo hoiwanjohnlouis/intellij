@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum912LastRptRequested;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -38,7 +39,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag912EnuLastRptRequestedTest {
     @Test
-    void FIX0912Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX912_ENU_LAST_RPT_REQUESTED;
         assertEquals( "912", fixData.toFIXIDString());
         assertEquals( "LAST_RPT_REQUESTED", fixData.toFIXNameString());
@@ -50,10 +51,17 @@ class Tag912EnuLastRptRequestedTest {
     @Test
     void Tag0912Test() {
         Tag912EnuLastRptRequested tagData;
+        Enum665ConfirmStatus oneElement;
 
         tagData = new Tag912EnuLastRptRequested( Enum912LastRptRequested.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "912", fixData.toFIXIDString());
+        assertEquals( "LAST_RPT_REQUESTED", fixData.toFIXNameString());
+        assertEquals( "LastRptRequested", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         tagData = new Tag912EnuLastRptRequested( Enum912LastRptRequested.YES);
         assertEquals( "Y", tagData.getDataValue());

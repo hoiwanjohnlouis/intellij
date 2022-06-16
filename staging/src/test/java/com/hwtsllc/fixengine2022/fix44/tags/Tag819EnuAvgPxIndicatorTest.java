@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum819AvgPxIndicator;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -38,7 +39,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag819EnuAvgPxIndicatorTest {
     @Test
-    void FIX0819Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX819_ENU_AVG_PX_INDICATOR;
         assertEquals( "819", fixData.toFIXIDString());
         assertEquals( "AVG_PX_INDICATOR", fixData.toFIXNameString());
@@ -50,10 +51,17 @@ class Tag819EnuAvgPxIndicatorTest {
     @Test
     void Tag0819Test() {
         Tag819EnuAvgPxIndicator tagData;
+        Enum665ConfirmStatus oneElement;
 
         tagData = new Tag819EnuAvgPxIndicator(Enum819AvgPxIndicator.NO_PRICING);
         assertEquals( Enum819AvgPxIndicator.NO_PRICING.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "819", fixData.toFIXIDString());
+        assertEquals( "AVG_PX_INDICATOR", fixData.toFIXNameString());
+        assertEquals( "AvgPxIndicator", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         tagData = new Tag819EnuAvgPxIndicator(Enum819AvgPxIndicator.PART_OF_APG);
         assertEquals( Enum819AvgPxIndicator.PART_OF_APG.toFIXIDString(), tagData.getDataValue());

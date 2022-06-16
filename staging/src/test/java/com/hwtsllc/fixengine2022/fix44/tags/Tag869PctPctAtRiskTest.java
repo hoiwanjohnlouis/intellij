@@ -33,7 +33,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag869PctPctAtRiskTest {
     @Test
-    void FIX0869Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX869_PCT_PCT_AT_RISK;
         assertEquals( "869", fixData.toFIXIDString());
         assertEquals( "PCT_AT_RISK", fixData.toFIXNameString());
@@ -51,6 +51,12 @@ class Tag869PctPctAtRiskTest {
         tagData = new Tag869PctPctAtRisk( new MyPercentageType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "869", tagData.toFIXIDString());
+        assertEquals( "PCT_AT_RISK", tagData.toFIXNameString());
+        assertEquals( "PctAtRisk", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag869PctPctAtRisk.TESTB_PCT_PCT_AT_RISK;
         tagData = new Tag869PctPctAtRisk( new MyPercentageType( oneElement ) );

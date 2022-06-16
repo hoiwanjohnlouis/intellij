@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumPartySubIDType;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -133,7 +134,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag786EnuSettlPartySubIDTypeTest {
     @Test
-    void FIX0786Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX786_ENU_SETTL_PARTY_SUB_ID_TYPE;
         assertEquals( "786", fixData.toFIXIDString());
         assertEquals( "SETTL_PARTY_SUB_ID_TYPE", fixData.toFIXNameString());
@@ -145,6 +146,7 @@ class Tag786EnuSettlPartySubIDTypeTest {
     @Test
     void Tag0786Test() {
         Tag786EnuSettlPartySubIDType tagData;
+        Enum665ConfirmStatus oneElement;
 
         /*
          *  1-32
@@ -152,6 +154,12 @@ class Tag786EnuSettlPartySubIDTypeTest {
         tagData = new Tag786EnuSettlPartySubIDType(MyEnumPartySubIDType.FIRM);
         assertEquals( MyEnumPartySubIDType.FIRM.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "786", fixData.toFIXIDString());
+        assertEquals( "SETTL_PARTY_SUB_ID_TYPE", fixData.toFIXNameString());
+        assertEquals( "SettlPartySubIDType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         tagData = new Tag786EnuSettlPartySubIDType(MyEnumPartySubIDType.PERSON);
         assertEquals( MyEnumPartySubIDType.PERSON.toFIXIDString(), tagData.getDataValue());

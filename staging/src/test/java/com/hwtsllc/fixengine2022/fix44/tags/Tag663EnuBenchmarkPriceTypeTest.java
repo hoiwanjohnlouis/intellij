@@ -87,7 +87,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag663EnuBenchmarkPriceTypeTest {
     @Test
-    void FIX0663Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX663_ENU_BENCHMARK_PRICE_TYPE;
         assertEquals( "663", fixData.toFIXIDString());
         assertEquals( "BENCHMARK_PRICE_TYPE", fixData.toFIXNameString());
@@ -99,6 +99,7 @@ class Tag663EnuBenchmarkPriceTypeTest {
     @Test
     void Tag0663Test() {
         Tag663EnuBenchmarkPriceType tagData;
+        MyEnumPriceType oneElement;
 
         /*
          * 1-11, 13-19 msg types
@@ -107,9 +108,16 @@ class Tag663EnuBenchmarkPriceTypeTest {
         /*
          * 1-11 msg types
          */
-        tagData = new Tag663EnuBenchmarkPriceType(MyEnumPriceType.PERCENTAGE);
-        assertEquals( MyEnumPriceType.PERCENTAGE.toFIXIDString(), tagData.getDataValue());
+        oneElement = MyEnumPriceType.PERCENTAGE;
+        tagData = new Tag663EnuBenchmarkPriceType( oneElement );
+        assertEquals( oneElement.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "663", tagData.toFIXIDString());
+        assertEquals( "BENCHMARK_PRICE_TYPE", tagData.toFIXNameString());
+        assertEquals( "BenchmarkPriceType", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag663EnuBenchmarkPriceType(MyEnumPriceType.PER_UNIT);
         assertEquals( MyEnumPriceType.PER_UNIT.toFIXIDString(), tagData.getDataValue());

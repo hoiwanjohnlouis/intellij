@@ -33,7 +33,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag850FloTargetStrategyPerformanceTest {
     @Test
-    void FIX0850Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX850_FLO_TARGET_STRATEGY_PERFORMANCE;
         assertEquals( "850", fixData.toFIXIDString());
         assertEquals( "TARGET_STRATEGY_PERFORMANCE", fixData.toFIXNameString());
@@ -51,6 +51,12 @@ class Tag850FloTargetStrategyPerformanceTest {
         tagData = new Tag850FloTargetStrategyPerformance( new MyFloatType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "850", tagData.toFIXIDString());
+        assertEquals( "TARGET_STRATEGY_PERFORMANCE", tagData.toFIXNameString());
+        assertEquals( "TargetStrategyPerformance", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag850FloTargetStrategyPerformance.TESTB_FLO_TARGET_STRATEGY_PERFORMANCE;
         tagData = new Tag850FloTargetStrategyPerformance( new MyFloatType( oneElement ) );

@@ -33,7 +33,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag902StrCollAsgnIDTest {
     @Test
-    void FIX0902Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX902_STR_COLL_ASGN_ID;
         assertEquals( "902", fixData.toFIXIDString());
         assertEquals( "COLL_ASGN_ID", fixData.toFIXNameString());
@@ -51,6 +51,12 @@ class Tag902StrCollAsgnIDTest {
         tagData = new Tag902StrCollAsgnID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "902", fixData.toFIXIDString());
+        assertEquals( "COLL_ASGN_ID", fixData.toFIXNameString());
+        assertEquals( "CollAsgnID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         oneElement = Tag902StrCollAsgnID.TESTB_STR_COLL_ASGN_ID;
         tagData = new Tag902StrCollAsgnID( new MyStringType( oneElement ) );

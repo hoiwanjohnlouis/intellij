@@ -35,7 +35,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag676CcyLegBenchmarkCurveCurrencyTest {
     @Test
-    void FIX0676Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX676_CCY_LEG_BENCHMARK_CURVE_CURRENCY;
         assertEquals( "676", fixData.toFIXIDString());
         assertEquals( "LEG_BENCHMARK_CURVE_CURRENCY", fixData.toFIXNameString());
@@ -53,6 +53,12 @@ class Tag676CcyLegBenchmarkCurveCurrencyTest {
         tagData = new Tag676CcyLegBenchmarkCurveCurrency( new MyCurrencyType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "676", tagData.toFIXIDString());
+        assertEquals( "LEG_BENCHMARK_CURVE_CURRENCY", tagData.toFIXNameString());
+        assertEquals( "LegBenchmarkCurveCurrency", tagData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag676CcyLegBenchmarkCurveCurrency.TESTB_CCY_LEG_BENCHMARK_CURVE_CURRENCY;
         tagData = new Tag676CcyLegBenchmarkCurveCurrency( new MyCurrencyType( oneElement ) );

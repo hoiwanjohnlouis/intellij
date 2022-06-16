@@ -39,7 +39,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag769UtcTrdRegTimestampTest {
     @Test
-    void FIX0769Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX769_UTC_TRD_REG_TIMESTAMP;
         assertEquals( "769", fixData.toFIXIDString());
         assertEquals( "TRD_REG_TIMESTAMP", fixData.toFIXNameString());
@@ -57,6 +57,12 @@ class Tag769UtcTrdRegTimestampTest {
         tagData = new Tag769UtcTrdRegTimestamp( new MyUTCTimestampType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "769", tagData.toFIXIDString());
+        assertEquals( "TRD_REG_TIMESTAMP", tagData.toFIXNameString());
+        assertEquals( "TrdRegTimestamp", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag769UtcTrdRegTimestamp.TESTB_UTC_TRD_REG_TIMESTAMP;
         tagData = new Tag769UtcTrdRegTimestamp( new MyUTCTimestampType( oneElement ) );

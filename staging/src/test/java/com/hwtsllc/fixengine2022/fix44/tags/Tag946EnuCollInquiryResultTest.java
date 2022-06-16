@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum946CollInquiryResult;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -52,7 +53,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag946EnuCollInquiryResultTest {
     @Test
-    void FIX0946Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX946_ENU_COLL_INQUIRY_RESULT;
         assertEquals( "946", fixData.toFIXIDString());
         assertEquals( "COLL_INQUIRY_RESULT", fixData.toFIXNameString());
@@ -64,10 +65,17 @@ class Tag946EnuCollInquiryResultTest {
     @Test
     void Tag0946Test() {
         Tag946EnuCollInquiryResult tagData;
+        Enum665ConfirmStatus oneElement;
 
         tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.SUCCESSFUL );
         assertEquals( Enum946CollInquiryResult.SUCCESSFUL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "946", fixData.toFIXIDString());
+        assertEquals( "COLL_INQUIRY_RESULT", fixData.toFIXNameString());
+        assertEquals( "CollInquiryResult", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.INVALID_INSTRUMENT );
         assertEquals( Enum946CollInquiryResult.INVALID_INSTRUMENT.toFIXIDString(), tagData.getDataValue());

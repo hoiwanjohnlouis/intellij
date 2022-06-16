@@ -35,7 +35,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag765PctAllowableOneSidednessPctTest {
     @Test
-    void FIX0765Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX765_PCT_ALLOWABLE_ONE_SIDEDNESS_PCT;
         assertEquals( "765", fixData.toFIXIDString());
         assertEquals( "ALLOWABLE_ONE_SIDEDNESS_PCT", fixData.toFIXNameString());
@@ -53,6 +53,12 @@ class Tag765PctAllowableOneSidednessPctTest {
         tagData = new Tag765PctAllowableOneSidednessPct( new MyPercentageType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "765", tagData.toFIXIDString());
+        assertEquals( "ALLOWABLE_ONE_SIDEDNESS_PCT", tagData.toFIXNameString());
+        assertEquals( "AllowableOneSidednessPct", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag765PctAllowableOneSidednessPct.TESTB_PCT_ALLOWABLE_ONE_SIDEDNESS_PCT;
         tagData = new Tag765PctAllowableOneSidednessPct( new MyPercentageType( oneElement ) );

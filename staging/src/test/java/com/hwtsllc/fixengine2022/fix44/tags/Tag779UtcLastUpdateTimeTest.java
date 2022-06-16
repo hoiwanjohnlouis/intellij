@@ -34,7 +34,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag779UtcLastUpdateTimeTest {
     @Test
-    void FIX0779Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX779_UTC_LAST_UPDATE_TIME;
         assertEquals( "779", fixData.toFIXIDString());
         assertEquals( "LAST_UPDATE_TIME", fixData.toFIXNameString());
@@ -52,6 +52,12 @@ class Tag779UtcLastUpdateTimeTest {
         tagData = new Tag779UtcLastUpdateTime( new MyUTCTimestampType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "779", tagData.toFIXIDString());
+        assertEquals( "LAST_UPDATE_TIME", tagData.toFIXNameString());
+        assertEquals( "LastUpdateTime", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag779UtcLastUpdateTime.TESTB_UTC_LAST_UPDATE_TIME;
         tagData = new Tag779UtcLastUpdateTime( new MyUTCTimestampType( oneElement ) );

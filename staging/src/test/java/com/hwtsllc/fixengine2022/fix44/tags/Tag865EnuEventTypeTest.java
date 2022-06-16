@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum865EventType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -44,7 +45,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag865EnuEventTypeTest {
     @Test
-    void FIX0865Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX865_ENU_EVENT_TYPE;
         assertEquals( "865", fixData.toFIXIDString());
         assertEquals( "EVENT_TYPE", fixData.toFIXNameString());
@@ -56,10 +57,17 @@ class Tag865EnuEventTypeTest {
     @Test
     void Tag0865Test() {
         Tag865EnuEventType tagData;
+        Enum665ConfirmStatus oneElement;
 
         tagData = new Tag865EnuEventType( Enum865EventType.PUT );
         assertEquals( Enum865EventType.PUT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "865", fixData.toFIXIDString());
+        assertEquals( "EVENT_TYPE", fixData.toFIXNameString());
+        assertEquals( "EventType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         tagData = new Tag865EnuEventType( Enum865EventType.CALL );
         assertEquals( Enum865EventType.CALL.toFIXIDString(), tagData.getDataValue());

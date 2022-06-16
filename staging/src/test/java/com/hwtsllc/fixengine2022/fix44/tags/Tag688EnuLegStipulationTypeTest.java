@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumStipulationType;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -130,7 +131,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag688EnuLegStipulationTypeTest {
     @Test
-    void FIX0688Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX688_ENU_LEG_STIPULATION_TYPE;
         assertEquals( "688", fixData.toFIXIDString());
         assertEquals( "LEG_STIPULATION_TYPE", fixData.toFIXNameString());
@@ -142,10 +143,17 @@ class Tag688EnuLegStipulationTypeTest {
     @Test
     void Tag0688Test() {
         Tag688EnuLegStipulationType tagData;
+        Enum665ConfirmStatus oneElement;
 
         tagData = new Tag688EnuLegStipulationType(MyEnumStipulationType.ALTERNATIVE_MINIMUM_TAX);
         assertEquals( MyEnumStipulationType.ALTERNATIVE_MINIMUM_TAX.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "688", fixData.toFIXIDString());
+        assertEquals( "LEG_STIPULATION_TYPE", fixData.toFIXNameString());
+        assertEquals( "LegStipulationType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         tagData = new Tag688EnuLegStipulationType(MyEnumStipulationType.AUTO_REINVESTMENT);
         assertEquals( MyEnumStipulationType.AUTO_REINVESTMENT.toFIXIDString(), tagData.getDataValue());

@@ -35,7 +35,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag812IntApplQueueMaxTest {
     @Test
-    void FIX0812Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX812_INT_APPL_QUEUE_MAX;
         assertEquals( "812", fixData.toFIXIDString());
         assertEquals( "APPL_QUEUE_MAX", fixData.toFIXNameString());
@@ -53,6 +53,12 @@ class Tag812IntApplQueueMaxTest {
         tagData = new Tag812IntApplQueueMax( new MyIntType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "812", tagData.toFIXIDString());
+        assertEquals( "APPL_QUEUE_MAX", tagData.toFIXNameString());
+        assertEquals( "ApplQueueMax", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag812IntApplQueueMax.TESTB_INT_APPL_QUEUE_MAX;
         tagData = new Tag812IntApplQueueMax( new MyIntType( oneElement ) );

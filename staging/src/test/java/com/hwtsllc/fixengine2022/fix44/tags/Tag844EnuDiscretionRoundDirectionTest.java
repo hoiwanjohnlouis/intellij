@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumRoundDirection;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -47,7 +48,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag844EnuDiscretionRoundDirectionTest {
     @Test
-    void FIX0844Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX844_ENU_DISCRETION_ROUND_DIRECTION;
         assertEquals( "844", fixData.toFIXIDString());
         assertEquals( "DISCRETION_ROUND_DIRECTION", fixData.toFIXNameString());
@@ -59,10 +60,17 @@ class Tag844EnuDiscretionRoundDirectionTest {
     @Test
     void Tag0844Test() {
         Tag844EnuDiscretionRoundDirection tagData;
+        Enum665ConfirmStatus oneElement;
 
         tagData = new Tag844EnuDiscretionRoundDirection(MyEnumRoundDirection.AGGRESSIVE);
         assertEquals( MyEnumRoundDirection.AGGRESSIVE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "844", fixData.toFIXIDString());
+        assertEquals( "DISCRETION_ROUND_DIRECTION", fixData.toFIXNameString());
+        assertEquals( "DiscretionRoundDirection", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         tagData = new Tag844EnuDiscretionRoundDirection(MyEnumRoundDirection.PASSIVE);
         assertEquals( MyEnumRoundDirection.PASSIVE.toFIXIDString(), tagData.getDataValue());

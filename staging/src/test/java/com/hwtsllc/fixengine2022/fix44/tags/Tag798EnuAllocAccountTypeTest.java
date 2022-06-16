@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumAccountType;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -48,7 +49,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag798EnuAllocAccountTypeTest {
     @Test
-    void FIX0798Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX798_ENU_ALLOC_ACCOUNT_TYPE;
         assertEquals( "798", fixData.toFIXIDString());
         assertEquals( "ALLOC_ACCOUNT_TYPE", fixData.toFIXNameString());
@@ -60,6 +61,7 @@ class Tag798EnuAllocAccountTypeTest {
     @Test
     void Tag0798Test() {
         Tag798EnuAllocAccountType tagData;
+        Enum665ConfirmStatus oneElement;
 
         /*
          *  1-4, types
@@ -67,6 +69,12 @@ class Tag798EnuAllocAccountTypeTest {
         tagData = new Tag798EnuAllocAccountType(MyEnumAccountType.CUSTOMER_BOOK);
         assertEquals( MyEnumAccountType.CUSTOMER_BOOK.toFIXIDString(), tagData.getDataValue());
         assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "798", fixData.toFIXIDString());
+        assertEquals( "ALLOC_ACCOUNT_TYPE", fixData.toFIXNameString());
+        assertEquals( "AllocAccountType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         tagData = new Tag798EnuAllocAccountType(MyEnumAccountType.NON_CUSTOMER_BOOK);
         assertEquals( MyEnumAccountType.NON_CUSTOMER_BOOK.toFIXIDString(), tagData.getDataValue());

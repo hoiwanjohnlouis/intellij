@@ -38,7 +38,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag849PctParticipationRateTest {
     @Test
-    void FIX0849Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX849_PCT_PARTICIPATION_RATE;
         assertEquals( "849", fixData.toFIXIDString());
         assertEquals( "PARTICIPATION_RATE", fixData.toFIXNameString());
@@ -56,6 +56,12 @@ class Tag849PctParticipationRateTest {
         tagData = new Tag849PctParticipationRate( new MyPercentageType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "849", tagData.toFIXIDString());
+        assertEquals( "PARTICIPATION_RATE", tagData.toFIXNameString());
+        assertEquals( "ParticipationRate", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag849PctParticipationRate.TESTB_PCT_PARTICIPATION_RATE;
         tagData = new Tag849PctParticipationRate( new MyPercentageType( oneElement ) );

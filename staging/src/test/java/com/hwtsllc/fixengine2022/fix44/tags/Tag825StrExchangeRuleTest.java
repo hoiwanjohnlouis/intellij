@@ -40,7 +40,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag825StrExchangeRuleTest {
     @Test
-    void FIX0825Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX825_STR_EXCHANGE_RULE;
         assertEquals( "825", fixData.toFIXIDString());
         assertEquals( "EXCHANGE_RULE", fixData.toFIXNameString());
@@ -58,6 +58,12 @@ class Tag825StrExchangeRuleTest {
         tagData = new Tag825StrExchangeRule( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "825", fixData.toFIXIDString());
+        assertEquals( "EXCHANGE_RULE", fixData.toFIXNameString());
+        assertEquals( "ExchangeRule", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         oneElement = Tag825StrExchangeRule.TESTB_STR_EXCHANGE_RULE;
         tagData = new Tag825StrExchangeRule( new MyStringType( oneElement ) );

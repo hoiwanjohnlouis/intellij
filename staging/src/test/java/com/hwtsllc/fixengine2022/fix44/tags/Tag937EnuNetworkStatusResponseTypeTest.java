@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum937NetworkStatusResponseType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -37,7 +38,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag937EnuNetworkStatusResponseTypeTest {
     @Test
-    void FIX0937Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX937_ENU_NETWORK_STATUS_RESPONSE_TYPE;
         assertEquals( "937", fixData.toFIXIDString());
         assertEquals( "NETWORK_STATUS_RESPONSE_TYPE", fixData.toFIXNameString());
@@ -49,10 +50,17 @@ class Tag937EnuNetworkStatusResponseTypeTest {
     @Test
     void Tag0937Test() {
         Tag937EnuNetworkStatusResponseType tagData;
+        Enum665ConfirmStatus oneElement;
 
         tagData = new Tag937EnuNetworkStatusResponseType( Enum937NetworkStatusResponseType.FULL );
         assertEquals( Enum937NetworkStatusResponseType.FULL.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "937", fixData.toFIXIDString());
+        assertEquals( "NETWORK_STATUS_RESPONSE_TYPE", fixData.toFIXNameString());
+        assertEquals( "NetworkStatusResponseType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         tagData = new Tag937EnuNetworkStatusResponseType( Enum937NetworkStatusResponseType.INCREMENTAL );
         assertEquals( Enum937NetworkStatusResponseType.INCREMENTAL.toFIXIDString(), tagData.getDataValue());

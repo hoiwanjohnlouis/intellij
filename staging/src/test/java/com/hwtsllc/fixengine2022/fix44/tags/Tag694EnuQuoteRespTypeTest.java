@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum694QuoteRespType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -42,7 +43,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag694EnuQuoteRespTypeTest {
     @Test
-    void FIX0694Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX694_ENU_QUOTE_RESP_TYPE;
         assertEquals( "694", fixData.toFIXIDString());
         assertEquals( "QUOTE_RESP_TYPE", fixData.toFIXNameString());
@@ -54,10 +55,17 @@ class Tag694EnuQuoteRespTypeTest {
     @Test
     void Tag0694Test() {
         Tag694EnuQuoteRespType tagData;
+        Enum665ConfirmStatus oneElement;
 
         tagData = new Tag694EnuQuoteRespType(Enum694QuoteRespType.HIT_OR_LIFT);
         assertEquals( Enum694QuoteRespType.HIT_OR_LIFT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "694", fixData.toFIXIDString());
+        assertEquals( "QUOTE_RESP_TYPE", fixData.toFIXNameString());
+        assertEquals( "QuoteRespType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         tagData = new Tag694EnuQuoteRespType(Enum694QuoteRespType.COUNTER);
         assertEquals( Enum694QuoteRespType.COUNTER.toFIXIDString(), tagData.getDataValue());

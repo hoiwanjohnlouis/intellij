@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum770TrdRegTimestampType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -48,7 +49,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag770EnuTrdRegTimestampTypeTest {
     @Test
-    void FIX0770Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX770_ENU_TRD_REG_TIMESTAMP_TYPE;
         assertEquals( "770", fixData.toFIXIDString());
         assertEquals( "TRD_REG_TIMESTAMP_TYPE", fixData.toFIXNameString());
@@ -60,10 +61,17 @@ class Tag770EnuTrdRegTimestampTypeTest {
     @Test
     void Tag0770Test() {
         Tag770EnuTrdRegTimestampType tagData;
+        Enum665ConfirmStatus oneElement;
 
         tagData = new Tag770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.EXECUTION_TIME);
         assertEquals( Enum770TrdRegTimestampType.EXECUTION_TIME.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "770", fixData.toFIXIDString());
+        assertEquals( "TRD_REG_TIMESTAMP_TYPE", fixData.toFIXNameString());
+        assertEquals( "TrdRegTimestampType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         tagData = new Tag770EnuTrdRegTimestampType(Enum770TrdRegTimestampType.TIME_IN);
         assertEquals( Enum770TrdRegTimestampType.TIME_IN.toFIXIDString(), tagData.getDataValue());

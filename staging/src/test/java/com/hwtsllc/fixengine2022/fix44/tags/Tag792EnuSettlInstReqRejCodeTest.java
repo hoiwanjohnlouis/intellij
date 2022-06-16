@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum792SettlInstReqRejCode;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -40,7 +41,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag792EnuSettlInstReqRejCodeTest {
     @Test
-    void FIX0792Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX792_ENU_SETTL_INST_REQ_REJ_CODE;
         assertEquals( "792", fixData.toFIXIDString());
         assertEquals( "SETTL_INST_REQ_REJ_CODE", fixData.toFIXNameString());
@@ -52,10 +53,17 @@ class Tag792EnuSettlInstReqRejCodeTest {
     @Test
     void Tag0792Test() {
         Tag792EnuSettlInstReqRejCode tagData;
+        Enum665ConfirmStatus oneElement;
 
         tagData = new Tag792EnuSettlInstReqRejCode( Enum792SettlInstReqRejCode.UNABLE_TO_PROCESS_REQUEST );
         assertEquals( Enum792SettlInstReqRejCode.UNABLE_TO_PROCESS_REQUEST.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "792", fixData.toFIXIDString());
+        assertEquals( "SETTL_INST_REQ_REJ_CODE", fixData.toFIXNameString());
+        assertEquals( "SettlInstReqRejCode", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         tagData = new Tag792EnuSettlInstReqRejCode( Enum792SettlInstReqRejCode.UNKNOWN_ACCOUNT );
         assertEquals( Enum792SettlInstReqRejCode.UNKNOWN_ACCOUNT.toFIXIDString(), tagData.getDataValue());

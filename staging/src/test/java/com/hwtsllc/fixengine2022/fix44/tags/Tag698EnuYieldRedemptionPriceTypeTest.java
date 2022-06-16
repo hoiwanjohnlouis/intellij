@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumPriceType;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -87,7 +88,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag698EnuYieldRedemptionPriceTypeTest {
     @Test
-    void FIX0698Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX698_ENU_YIELD_REDEMPTION_PRICE_TYPE;
         assertEquals( "698", fixData.toFIXIDString());
         assertEquals( "YIELD_REDEMPTION_PRICE_TYPE", fixData.toFIXNameString());
@@ -99,6 +100,7 @@ class Tag698EnuYieldRedemptionPriceTypeTest {
     @Test
     void Tag0698Test() {
         Tag698EnuYieldRedemptionPriceType tagData;
+        Enum665ConfirmStatus oneElement;
 
         /*
          * 1-11, 13-19 msg types
@@ -110,6 +112,12 @@ class Tag698EnuYieldRedemptionPriceTypeTest {
         tagData = new Tag698EnuYieldRedemptionPriceType(MyEnumPriceType.PERCENTAGE);
         assertEquals( MyEnumPriceType.PERCENTAGE.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "698", fixData.toFIXIDString());
+        assertEquals( "YIELD_REDEMPTION_PRICE_TYPE", fixData.toFIXNameString());
+        assertEquals( "YieldRedemptionPriceType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         tagData = new Tag698EnuYieldRedemptionPriceType(MyEnumPriceType.PER_UNIT);
         assertEquals( MyEnumPriceType.PER_UNIT.toFIXIDString(), tagData.getDataValue());

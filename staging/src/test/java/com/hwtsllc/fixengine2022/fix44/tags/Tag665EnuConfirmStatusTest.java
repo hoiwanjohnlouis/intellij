@@ -40,7 +40,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag665EnuConfirmStatusTest {
     @Test
-    void FIX0665Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX665_ENU_CONFIRM_STATUS;
         assertEquals( "665", fixData.toFIXIDString());
         assertEquals( "CONFIRM_STATUS", fixData.toFIXNameString());
@@ -52,10 +52,18 @@ class Tag665EnuConfirmStatusTest {
     @Test
     void Tag0665Test() {
         Tag665EnuConfirmStatus tagData;
+        Enum665ConfirmStatus oneElement;
 
-        tagData = new Tag665EnuConfirmStatus(Enum665ConfirmStatus.RECEIVED);
-        assertEquals( Enum665ConfirmStatus.RECEIVED.toFIXIDString(), tagData.getDataValue());
+        oneElement = Enum665ConfirmStatus.RECEIVED;
+        tagData = new Tag665EnuConfirmStatus( oneElement );
+        assertEquals( oneElement.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "665", tagData.toFIXIDString());
+        assertEquals( "CONFIRM_STATUS", tagData.toFIXNameString());
+        assertEquals( "ConfirmStatus", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag665EnuConfirmStatus(Enum665ConfirmStatus.MISMATCHED_ACCOUNT);
         assertEquals( Enum665ConfirmStatus.MISMATCHED_ACCOUNT.toFIXIDString(), tagData.getDataValue());

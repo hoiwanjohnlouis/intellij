@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumAssignmentMethod;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -44,7 +45,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag744EnuAssignmentMethodTest {
     @Test
-    void FIX0744Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX744_ENU_ASSIGNMENT_METHOD;
         assertEquals( "744", fixData.toFIXIDString());
         assertEquals( "ASSIGNMENT_METHOD", fixData.toFIXNameString());
@@ -56,10 +57,17 @@ class Tag744EnuAssignmentMethodTest {
     @Test
     void Tag0744Test() {
         Tag744EnuAssignmentMethod tagData;
+        Enum665ConfirmStatus oneElement;
 
         tagData = new Tag744EnuAssignmentMethod( MyEnumAssignmentMethod.PRO_RATA );
         assertEquals( MyEnumAssignmentMethod.PRO_RATA.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "744", fixData.toFIXIDString());
+        assertEquals( "ASSIGNMENT_METHOD", fixData.toFIXNameString());
+        assertEquals( "AssignmentMethod", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         tagData = new Tag744EnuAssignmentMethod( MyEnumAssignmentMethod.RANDOM );
         assertEquals( MyEnumAssignmentMethod.RANDOM.toFIXIDString(), tagData.getDataValue());

@@ -35,7 +35,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag671StrLegAllocAccountTest {
     @Test
-    void FIX0671Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX671_STR_LEG_ALLOC_ACCOUNT;
         assertEquals( "671", fixData.toFIXIDString());
         assertEquals( "LEG_ALLOC_ACCOUNT", fixData.toFIXNameString());
@@ -53,6 +53,12 @@ class Tag671StrLegAllocAccountTest {
         tagData = new Tag671StrLegAllocAccount( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "671", tagData.toFIXIDString());
+        assertEquals( "LEG_ALLOC_ACCOUNT", tagData.toFIXNameString());
+        assertEquals( "LegAllocAccount", tagData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag671StrLegAllocAccount.TESTB_STR_LEG_ALLOC_ACCOUNT;
         tagData = new Tag671StrLegAllocAccount( new MyStringType( oneElement ) );

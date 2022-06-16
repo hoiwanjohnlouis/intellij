@@ -33,7 +33,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag834PxoThresholdAmountTest {
     @Test
-    void FIX0834Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX834_PXO_THRESHOLD_AMOUNT;
         assertEquals( "834", fixData.toFIXIDString());
         assertEquals( "THRESHOLD_AMOUNT", fixData.toFIXNameString());
@@ -51,6 +51,12 @@ class Tag834PxoThresholdAmountTest {
         tagData = new Tag834PxoThresholdAmount( new MyPriceOffsetType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "834", tagData.toFIXIDString());
+        assertEquals( "THRESHOLD_AMOUNT", tagData.toFIXNameString());
+        assertEquals( "ThresholdAmount", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag834PxoThresholdAmount.TESTB_PXO_THRESHOLD_AMOUNT;
         tagData = new Tag834PxoThresholdAmount( new MyPriceOffsetType( oneElement ) );

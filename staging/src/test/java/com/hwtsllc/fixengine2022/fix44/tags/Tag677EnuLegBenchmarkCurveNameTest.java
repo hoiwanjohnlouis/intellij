@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumBenchmarkCurveName;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -57,7 +58,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag677EnuLegBenchmarkCurveNameTest {
     @Test
-    void FIX0677Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX677_ENU_LEG_BENCHMARK_CURVE_NAME;
         assertEquals( "677", fixData.toFIXIDString());
         assertEquals( "LEG_BENCHMARK_CURVE_NAME", fixData.toFIXNameString());
@@ -69,10 +70,17 @@ class Tag677EnuLegBenchmarkCurveNameTest {
     @Test
     void Tag0677Test() {
         Tag677EnuLegBenchmarkCurveName tagData;
+        Enum665ConfirmStatus oneElement;
 
         tagData = new Tag677EnuLegBenchmarkCurveName(MyEnumBenchmarkCurveName.EONIA);
         assertEquals( MyEnumBenchmarkCurveName.EONIA.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "677", fixData.toFIXIDString());
+        assertEquals( "LEG_BENCHMARK_CURVE_NAME", fixData.toFIXNameString());
+        assertEquals( "LegBenchmarkCurveName", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         tagData = new Tag677EnuLegBenchmarkCurveName(MyEnumBenchmarkCurveName.EUREPO);
         assertEquals( MyEnumBenchmarkCurveName.EUREPO.toFIXIDString(), tagData.getDataValue());

@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum775BookingType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -41,7 +42,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag775EnuBookingTypeTest {
     @Test
-    void FIX0775Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX775_ENU_BOOKING_TYPE;
         assertEquals( "775", fixData.toFIXIDString());
         assertEquals( "BOOKING_TYPE", fixData.toFIXNameString());
@@ -53,10 +54,17 @@ class Tag775EnuBookingTypeTest {
     @Test
     void Tag0775Test() {
         Tag775EnuBookingType tagData;
+        Enum665ConfirmStatus oneElement;
 
         tagData = new Tag775EnuBookingType(Enum775BookingType.REGULAR_BOOKING);
         assertEquals( Enum775BookingType.REGULAR_BOOKING.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "775", fixData.toFIXIDString());
+        assertEquals( "BOOKING_TYPE", fixData.toFIXNameString());
+        assertEquals( "BookingType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         tagData = new Tag775EnuBookingType(Enum775BookingType.CONTRACT_FOR_DIFFERENCE);
         assertEquals( Enum775BookingType.CONTRACT_FOR_DIFFERENCE.toFIXIDString(), tagData.getDataValue());

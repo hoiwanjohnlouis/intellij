@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumSettlPriceType;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -44,7 +45,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag731EnuSettlPriceTypeTest {
     @Test
-    void FIX0731Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX731_ENU_SETTL_PRICE_TYPE;
         assertEquals( "731", fixData.toFIXIDString());
         assertEquals( "SETTL_PRICE_TYPE", fixData.toFIXNameString());
@@ -56,10 +57,17 @@ class Tag731EnuSettlPriceTypeTest {
     @Test
     void Tag0731Test() {
         Tag731EnuSettlPriceType tagData;
+        Enum665ConfirmStatus oneElement;
 
         tagData = new Tag731EnuSettlPriceType( MyEnumSettlPriceType.FINAL);
         assertEquals( "1", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "731", fixData.toFIXIDString());
+        assertEquals( "SETTL_PRICE_TYPE", fixData.toFIXNameString());
+        assertEquals( "SettlPriceType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         tagData = new Tag731EnuSettlPriceType( MyEnumSettlPriceType.THEORETICAL);
         assertEquals( "2", tagData.getDataValue() );

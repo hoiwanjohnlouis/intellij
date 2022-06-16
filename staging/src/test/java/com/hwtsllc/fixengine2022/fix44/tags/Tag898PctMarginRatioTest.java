@@ -37,7 +37,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag898PctMarginRatioTest {
     @Test
-    void FIX0898Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX898_PCT_MARGIN_RATIO;
         assertEquals( "898", fixData.toFIXIDString());
         assertEquals( "MARGIN_RATIO", fixData.toFIXNameString());
@@ -55,6 +55,12 @@ class Tag898PctMarginRatioTest {
         tagData = new Tag898PctMarginRatio( new MyPercentageType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "898", tagData.toFIXIDString());
+        assertEquals( "MARGIN_RATIO", tagData.toFIXNameString());
+        assertEquals( "MarginRatio", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag898PctMarginRatio.TESTB_PCT_MARGIN_RATIO;
         tagData = new Tag898PctMarginRatio( new MyPercentageType( oneElement ) );

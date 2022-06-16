@@ -35,7 +35,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag674StrLegAllocAcctIDSourceTest {
     @Test
-    void FIX0674Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX674_STR_LEG_ALLOC_ACCT_ID_SOURCE;
         assertEquals( "674", fixData.toFIXIDString());
         assertEquals( "LEG_ALLOC_ACCT_ID_SOURCE", fixData.toFIXNameString());
@@ -53,6 +53,12 @@ class Tag674StrLegAllocAcctIDSourceTest {
         tagData = new Tag674StrLegAllocAcctIDSource( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "674", tagData.toFIXIDString());
+        assertEquals( "LEG_ALLOC_ACCT_ID_SOURCE", tagData.toFIXNameString());
+        assertEquals( "LegAllocAcctIDSource", tagData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag674StrLegAllocAcctIDSource.TESTB_STR_LEG_ALLOC_ACCT_ID_SOURCE;
         tagData = new Tag674StrLegAllocAcctIDSource( new MyStringType( oneElement ) );

@@ -50,7 +50,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag660EnuAcctIDSourceTest {
     @Test
-    void FIX0660Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX660_ENU_ACCT_ID_SOURCE;
         assertEquals( "660", fixData.toFIXIDString());
         assertEquals( "ACCT_ID_SOURCE", fixData.toFIXNameString());
@@ -62,10 +62,18 @@ class Tag660EnuAcctIDSourceTest {
     @Test
     void Tag0660Test() {
         Tag660EnuAcctIDSource tagData;
+        MyEnumAcctIDSource oneElement;
 
-        tagData = new Tag660EnuAcctIDSource(MyEnumAcctIDSource.BIC);
-        assertEquals( MyEnumAcctIDSource.BIC.toFIXIDString(), tagData.getDataValue());
+        oneElement = MyEnumAcctIDSource.BIC;
+        tagData = new Tag660EnuAcctIDSource( oneElement );
+        assertEquals( oneElement.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "660", tagData.toFIXIDString());
+        assertEquals( "ACCT_ID_SOURCE", tagData.toFIXNameString());
+        assertEquals( "AcctIDSource", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag660EnuAcctIDSource(MyEnumAcctIDSource.SID);
         assertEquals( MyEnumAcctIDSource.SID.toFIXIDString(), tagData.getDataValue());

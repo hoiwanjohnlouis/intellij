@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum924UserRequestType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -39,7 +40,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag924EnuUserRequestTypeTest {
     @Test
-    void FIX0924Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX924_ENU_USER_REQUEST_TYPE;
         assertEquals( "924", fixData.toFIXIDString());
         assertEquals( "USER_REQUEST_TYPE", fixData.toFIXNameString());
@@ -51,10 +52,17 @@ class Tag924EnuUserRequestTypeTest {
     @Test
     void Tag0924Test() {
         Tag924EnuUserRequestType tagData;
+        Enum665ConfirmStatus oneElement;
 
         tagData = new Tag924EnuUserRequestType( Enum924UserRequestType.LOG_ON );
         assertEquals( Enum924UserRequestType.LOG_ON.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "924", fixData.toFIXIDString());
+        assertEquals( "USER_REQUEST_TYPE", fixData.toFIXNameString());
+        assertEquals( "UserRequestType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         tagData = new Tag924EnuUserRequestType( Enum924UserRequestType.LOG_OFF );
         assertEquals( Enum924UserRequestType.LOG_OFF.toFIXIDString(), tagData.getDataValue());

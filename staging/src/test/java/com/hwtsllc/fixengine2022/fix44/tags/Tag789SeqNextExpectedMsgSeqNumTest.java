@@ -33,7 +33,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag789SeqNextExpectedMsgSeqNumTest {
     @Test
-    void FIX0789Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX789_SEQ_NEXT_EXPECTED_MSG_SEQ_NUM;
         assertEquals( "789", fixData.toFIXIDString());
         assertEquals( "NEXT_EXPECTED_MSG_SEQ_NUM", fixData.toFIXNameString());
@@ -51,6 +51,12 @@ class Tag789SeqNextExpectedMsgSeqNumTest {
         tagData = new Tag789SeqNextExpectedMsgSeqNum( new MySeqNumType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_SEQ_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "789", tagData.toFIXIDString());
+        assertEquals( "NEXT_EXPECTED_MSG_SEQ_NUM", tagData.toFIXNameString());
+        assertEquals( "NextExpectedMsgSeqNum", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag789SeqNextExpectedMsgSeqNum.TESTB_SEQ_NEXT_EXPECTED_MSG_SEQ_NUM;
         tagData = new Tag789SeqNextExpectedMsgSeqNum( new MySeqNumType( oneElement ) );

@@ -33,7 +33,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag821StrOrderInputDeviceTest {
     @Test
-    void FIX0821Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX821_STR_ORDER_INPUT_DEVICE;
         assertEquals( "821", fixData.toFIXIDString());
         assertEquals( "ORDER_INPUT_DEVICE", fixData.toFIXNameString());
@@ -51,6 +51,12 @@ class Tag821StrOrderInputDeviceTest {
         tagData = new Tag821StrOrderInputDevice( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "821", fixData.toFIXIDString());
+        assertEquals( "ORDER_INPUT_DEVICE", fixData.toFIXNameString());
+        assertEquals( "OrderInputDevice", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         oneElement = Tag821StrOrderInputDevice.TESTB_STR_ORDER_INPUT_DEVICE;
         tagData = new Tag821StrOrderInputDevice( new MyStringType( oneElement ) );

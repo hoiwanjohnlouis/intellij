@@ -18,6 +18,7 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumApplQueue;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -46,7 +47,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag815EnuApplQueueActionTest {
     @Test
-    void FIX0815Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX815_ENU_APPL_QUEUE_ACTION;
         assertEquals( "815", fixData.toFIXIDString());
         assertEquals( "APPL_QUEUE_ACTION", fixData.toFIXNameString());
@@ -58,10 +59,17 @@ class Tag815EnuApplQueueActionTest {
     @Test
     void Tag0815Test() {
         Tag815EnuApplQueueAction tagData;
+        Enum665ConfirmStatus oneElement;
 
         tagData = new Tag815EnuApplQueueAction(MyEnumApplQueue.NO_ACTION);
         assertEquals( MyEnumApplQueue.NO_ACTION.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "815", fixData.toFIXIDString());
+        assertEquals( "APPL_QUEUE_ACTION", fixData.toFIXNameString());
+        assertEquals( "ApplQueueAction", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         tagData = new Tag815EnuApplQueueAction(MyEnumApplQueue.QUEUE_FLUSHED);
         assertEquals( MyEnumApplQueue.QUEUE_FLUSHED.toFIXIDString(), tagData.getDataValue());

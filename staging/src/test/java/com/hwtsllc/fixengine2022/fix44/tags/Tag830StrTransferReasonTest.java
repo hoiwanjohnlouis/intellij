@@ -33,7 +33,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag830StrTransferReasonTest {
     @Test
-    void FIX0830Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX830_STR_TRANSFER_REASON;
         assertEquals( "830", fixData.toFIXIDString());
         assertEquals( "TRANSFER_REASON", fixData.toFIXNameString());
@@ -51,6 +51,12 @@ class Tag830StrTransferReasonTest {
         tagData = new Tag830StrTransferReason( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "830", fixData.toFIXIDString());
+        assertEquals( "TRANSFER_REASON", fixData.toFIXNameString());
+        assertEquals( "TransferReason", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         oneElement = Tag830StrTransferReason.TESTB_STR_TRANSFER_REASON;
         tagData = new Tag830StrTransferReason( new MyStringType( oneElement ) );

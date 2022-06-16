@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum690LegSwapType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -43,7 +44,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag690EnuLegSwapTypeTest {
     @Test
-    void FIX0690Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX690_ENU_LEG_SWAP_TYPE;
         assertEquals( "690", fixData.toFIXIDString());
         assertEquals( "LEG_SWAP_TYPE", fixData.toFIXNameString());
@@ -55,10 +56,17 @@ class Tag690EnuLegSwapTypeTest {
     @Test
     void Tag0690Test() {
         Tag690EnuLegSwapType tagData;
+        Enum665ConfirmStatus oneElement;
 
         tagData = new Tag690EnuLegSwapType(Enum690LegSwapType.PAR_FOR_PAR);
         assertEquals( Enum690LegSwapType.PAR_FOR_PAR.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "690", fixData.toFIXIDString());
+        assertEquals( "LEG_SWAP_TYPE", fixData.toFIXNameString());
+        assertEquals( "LegSwapType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         tagData = new Tag690EnuLegSwapType(Enum690LegSwapType.MODIFIED_DURATION);
         assertEquals( Enum690LegSwapType.MODIFIED_DURATION.toFIXIDString(), tagData.getDataValue());

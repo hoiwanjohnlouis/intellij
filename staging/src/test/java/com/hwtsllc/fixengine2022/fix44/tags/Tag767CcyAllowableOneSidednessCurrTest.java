@@ -34,7 +34,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag767CcyAllowableOneSidednessCurrTest {
     @Test
-    void FIX0767Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX767_CCY_ALLOWABLE_ONE_SIDEDNESS_CURR;
         assertEquals( "767", fixData.toFIXIDString());
         assertEquals( "ALLOWABLE_ONE_SIDEDNESS_CURR", fixData.toFIXNameString());
@@ -52,6 +52,12 @@ class Tag767CcyAllowableOneSidednessCurrTest {
         tagData = new Tag767CcyAllowableOneSidednessCurr( new MyCurrencyType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "767", tagData.toFIXIDString());
+        assertEquals( "ALLOWABLE_ONE_SIDEDNESS_CURR", tagData.toFIXNameString());
+        assertEquals( "AllowableOneSidednessCurr", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag767CcyAllowableOneSidednessCurr.TESTB_CCY_ALLOWABLE_ONE_SIDEDNESS_CURR;
         tagData = new Tag767CcyAllowableOneSidednessCurr( new MyCurrencyType( oneElement ) );

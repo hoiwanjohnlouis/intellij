@@ -34,7 +34,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 class Tag680IntLegBenchmarkPriceTypeTest {
     @Test
-    void FIX0680Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX680_INT_LEG_BENCHMARK_PRICE_TYPE;
         assertEquals( "680", fixData.toFIXIDString());
         assertEquals( "LEG_BENCHMARK_PRICE_TYPE", fixData.toFIXNameString());
@@ -52,6 +52,12 @@ class Tag680IntLegBenchmarkPriceTypeTest {
         tagData = new Tag680IntLegBenchmarkPriceType( new MyIntType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "680", tagData.toFIXIDString());
+        assertEquals( "LEG_BENCHMARK_PRICE_TYPE", tagData.toFIXNameString());
+        assertEquals( "LegBenchmarkPriceType", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag680IntLegBenchmarkPriceType.TESTB_INT_LEG_BENCHMARK_PRICE_TYPE;
         tagData = new Tag680IntLegBenchmarkPriceType( new MyIntType( oneElement ) );

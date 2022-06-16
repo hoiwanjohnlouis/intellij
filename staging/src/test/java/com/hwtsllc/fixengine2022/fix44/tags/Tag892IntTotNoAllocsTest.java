@@ -38,7 +38,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag892IntTotNoAllocsTest {
     @Test
-    void FIX0892Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX892_INT_TOT_NO_ALLOCS;
         assertEquals( "892", fixData.toFIXIDString());
         assertEquals( "TOT_NO_ALLOCS", fixData.toFIXNameString());
@@ -56,6 +56,12 @@ class Tag892IntTotNoAllocsTest {
         tagData = new Tag892IntTotNoAllocs( new MyIntType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "892", tagData.toFIXIDString());
+        assertEquals( "TOT_NO_ALLOCS", tagData.toFIXNameString());
+        assertEquals( "TotNoAllocs", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag892IntTotNoAllocs.TESTB_INT_TOT_NO_ALLOCS;
         tagData = new Tag892IntTotNoAllocs( new MyIntType( oneElement ) );

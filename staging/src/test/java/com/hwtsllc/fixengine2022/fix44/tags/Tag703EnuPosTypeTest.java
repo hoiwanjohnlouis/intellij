@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum703PosType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -62,7 +63,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag703EnuPosTypeTest {
     @Test
-    void FIX0703Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX703_ENU_POS_TYPE;
         assertEquals( "703", fixData.toFIXIDString());
         assertEquals( "POS_TYPE", fixData.toFIXNameString());
@@ -74,10 +75,17 @@ class Tag703EnuPosTypeTest {
     @Test
     void Tag0703Test() {
         Tag703EnuPosType tagData;
+        Enum665ConfirmStatus oneElement;
 
         tagData = new Tag703EnuPosType(Enum703PosType.ALLOCATION_TRADE_QTY);
         assertEquals( Enum703PosType.ALLOCATION_TRADE_QTY.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "703", fixData.toFIXIDString());
+        assertEquals( "POS_TYPE", fixData.toFIXNameString());
+        assertEquals( "PosType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         tagData = new Tag703EnuPosType(Enum703PosType.OPTION_ASSIGNMENT);
         assertEquals( Enum703PosType.OPTION_ASSIGNMENT.toFIXIDString(), tagData.getDataValue());

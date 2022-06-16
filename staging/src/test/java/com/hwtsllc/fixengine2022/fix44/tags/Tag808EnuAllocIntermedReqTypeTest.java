@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum808AllocIntermedReqType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -46,7 +47,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag808EnuAllocIntermedReqTypeTest {
     @Test
-    void FIX0808Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX808_ENU_ALLOC_INTERMED_REQ_TYPE;
         assertEquals( "808", fixData.toFIXIDString());
         assertEquals( "ALLOC_INTERMED_REQ_TYPE", fixData.toFIXNameString());
@@ -58,10 +59,17 @@ class Tag808EnuAllocIntermedReqTypeTest {
     @Test
     void Tag0808Test() {
         Tag808EnuAllocIntermedReqType tagData;
+        Enum665ConfirmStatus oneElement;
 
         tagData = new Tag808EnuAllocIntermedReqType( Enum808AllocIntermedReqType.PENDING_ACCEPT );
         assertEquals( Enum808AllocIntermedReqType.PENDING_ACCEPT.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "808", fixData.toFIXIDString());
+        assertEquals( "ALLOC_INTERMED_REQ_TYPE", fixData.toFIXNameString());
+        assertEquals( "AllocIntermedReqType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         tagData = new Tag808EnuAllocIntermedReqType( Enum808AllocIntermedReqType.PENDING_RELEASE );
         assertEquals( Enum808AllocIntermedReqType.PENDING_RELEASE.toFIXIDString(), tagData.getDataValue());

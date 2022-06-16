@@ -35,7 +35,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag757StrNested2PartyIDTest {
     @Test
-    void FIX0757Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX757_STR_NESTED_2_PARTY_ID;
         assertEquals( "757", fixData.toFIXIDString());
         assertEquals( "NESTED_2_PARTY_ID", fixData.toFIXNameString());
@@ -53,6 +53,12 @@ class Tag757StrNested2PartyIDTest {
         tagData = new Tag757StrNested2PartyID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "757", fixData.toFIXIDString());
+        assertEquals( "NESTED_2_PARTY_ID", fixData.toFIXNameString());
+        assertEquals( "Nested2PartyID", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         oneElement = Tag757StrNested2PartyID.TESTB_STR_NESTED_2_PARTY_ID;
         tagData = new Tag757StrNested2PartyID( new MyStringType( oneElement ) );

@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum719ContraryInstructionIndicator;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -38,7 +39,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag719EnuContraryInstructionIndicatorTest {
     @Test
-    void FIX0719Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX719_ENU_CONTRARY_INSTRUCTION_INDICATOR;
         assertEquals( "719", fixData.toFIXIDString());
         assertEquals( "CONTRARY_INSTRUCTION_INDICATOR", fixData.toFIXNameString());
@@ -50,10 +51,17 @@ class Tag719EnuContraryInstructionIndicatorTest {
     @Test
     void Tag0719Test() {
         Tag719EnuContraryInstructionIndicator tagData;
+        Enum665ConfirmStatus oneElement;
 
         tagData = new Tag719EnuContraryInstructionIndicator( Enum719ContraryInstructionIndicator.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "719", fixData.toFIXIDString());
+        assertEquals( "CONTRARY_INSTRUCTION_INDICATOR", fixData.toFIXNameString());
+        assertEquals( "ContraryInstructionIndicator", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         tagData = new Tag719EnuContraryInstructionIndicator(Enum719ContraryInstructionIndicator.YES);
         assertEquals( "Y", tagData.getDataValue());

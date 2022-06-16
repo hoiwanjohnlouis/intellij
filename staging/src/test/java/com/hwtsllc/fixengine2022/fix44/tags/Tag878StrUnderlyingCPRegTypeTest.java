@@ -33,7 +33,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag878StrUnderlyingCPRegTypeTest {
     @Test
-    void FIX0878Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX878_STR_UNDERLYING_CP_REGTYPE;
         assertEquals( "878", fixData.toFIXIDString());
         assertEquals( "UNDERLYING_CP_REGTYPE", fixData.toFIXNameString());
@@ -51,6 +51,12 @@ class Tag878StrUnderlyingCPRegTypeTest {
         tagData = new Tag878StrUnderlyingCPRegType( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "878", fixData.toFIXIDString());
+        assertEquals( "UNDERLYING_CP_REGTYPE", fixData.toFIXNameString());
+        assertEquals( "UnderlyingCPRegType", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         oneElement = Tag878StrUnderlyingCPRegType.TESTB_STR_UNDERLYING_CP_REGTYPE;
         tagData = new Tag878StrUnderlyingCPRegType( new MyStringType( oneElement ) );

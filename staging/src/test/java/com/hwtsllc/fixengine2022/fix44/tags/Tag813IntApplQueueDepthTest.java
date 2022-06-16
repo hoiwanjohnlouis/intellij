@@ -34,7 +34,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag813IntApplQueueDepthTest {
     @Test
-    void FIX0813Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX813_INT_APPL_QUEUE_DEPTH;
         assertEquals( "813", fixData.toFIXIDString());
         assertEquals( "APPL_QUEUE_DEPTH", fixData.toFIXNameString());
@@ -52,6 +52,12 @@ class Tag813IntApplQueueDepthTest {
         tagData = new Tag813IntApplQueueDepth( new MyIntType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "813", tagData.toFIXIDString());
+        assertEquals( "APPL_QUEUE_DEPTH", tagData.toFIXNameString());
+        assertEquals( "ApplQueueDepth", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag813IntApplQueueDepth.TESTB_INT_APPL_QUEUE_DEPTH;
         tagData = new Tag813IntApplQueueDepth( new MyIntType( oneElement ) );

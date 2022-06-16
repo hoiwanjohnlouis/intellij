@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum722PosMaintStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -40,7 +41,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag722EnuPosMaintStatusTest {
     @Test
-    void FIX0722Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX722_ENU_POS_MAINT_STATUS;
         assertEquals( "722", fixData.toFIXIDString());
         assertEquals( "POS_MAINT_STATUS", fixData.toFIXNameString());
@@ -52,10 +53,17 @@ class Tag722EnuPosMaintStatusTest {
     @Test
     void Tag0722Test() {
         Tag722EnuPosMaintStatus tagData;
+        Enum665ConfirmStatus oneElement;
 
         tagData = new Tag722EnuPosMaintStatus(Enum722PosMaintStatus.ACCEPTED);
         assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "722", fixData.toFIXIDString());
+        assertEquals( "POS_MAINT_STATUS", fixData.toFIXNameString());
+        assertEquals( "PosMaintStatus", fixData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
 
         tagData = new Tag722EnuPosMaintStatus(Enum722PosMaintStatus.ACCEPTED_WITH_WARNINGS);
         assertEquals( "1", tagData.getDataValue());

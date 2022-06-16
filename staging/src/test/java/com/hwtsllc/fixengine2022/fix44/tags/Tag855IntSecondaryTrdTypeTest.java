@@ -33,7 +33,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag855IntSecondaryTrdTypeTest {
     @Test
-    void FIX0855Test() {
+    void FIXTest() {
         FIX44 fixData = FIX44.FIX855_INT_SECONDARY_TRD_TYPE;
         assertEquals( "855", fixData.toFIXIDString());
         assertEquals( "SECONDARY_TRD_TYPE", fixData.toFIXNameString());
@@ -51,6 +51,12 @@ class Tag855IntSecondaryTrdTypeTest {
         tagData = new Tag855IntSecondaryTrdType( new MyIntType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "855", tagData.toFIXIDString());
+        assertEquals( "SECONDARY_TRD_TYPE", tagData.toFIXNameString());
+        assertEquals( "SecondaryTrdType", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag855IntSecondaryTrdType.TESTB_INT_SECONDARY_TRD_TYPE;
         tagData = new Tag855IntSecondaryTrdType( new MyIntType( oneElement ) );
