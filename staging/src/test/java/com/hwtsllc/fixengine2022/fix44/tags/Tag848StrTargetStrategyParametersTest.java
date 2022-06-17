@@ -54,12 +54,12 @@ class Tag848StrTargetStrategyParametersTest {
         tagData = new Tag848StrTargetStrategyParameters( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "848", fixData.toFIXIDString());
-        assertEquals( "TARGET_STRATEGY_PARAMETERS", fixData.toFIXNameString());
-        assertEquals( "TargetStrategyParameters", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "848", tagData.toFIXIDString());
+        assertEquals( "TARGET_STRATEGY_PARAMETERS", tagData.toFIXNameString());
+        assertEquals( "TargetStrategyParameters", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag848StrTargetStrategyParameters.TESTB_STR_TARGET_STRATEGY_PARAMETERS;
         tagData = new Tag848StrTargetStrategyParameters( new MyStringType( oneElement ) );

@@ -51,12 +51,12 @@ class Tag822StrUnderlyingTradingSessionIDTest {
         tagData = new Tag822StrUnderlyingTradingSessionID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "822", fixData.toFIXIDString());
-        assertEquals( "UNDERLYING_TRADING_SESSION_ID", fixData.toFIXNameString());
-        assertEquals( "UnderlyingTradingSessionID", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "822", tagData.toFIXIDString());
+        assertEquals( "UNDERLYING_TRADING_SESSION_ID", tagData.toFIXNameString());
+        assertEquals( "UnderlyingTradingSessionID", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag822StrUnderlyingTradingSessionID.TESTB_STR_UNDERLYING_TRADING_SESSION_ID;
         tagData = new Tag822StrUnderlyingTradingSessionID( new MyStringType( oneElement ) );

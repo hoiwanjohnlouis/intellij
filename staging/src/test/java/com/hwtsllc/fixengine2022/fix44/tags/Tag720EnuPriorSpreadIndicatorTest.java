@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum720PriorSpreadIndicator;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -50,17 +49,18 @@ class Tag720EnuPriorSpreadIndicatorTest {
     @Test
     void Tag0720Test() {
         Tag720EnuPriorSpreadIndicator tagData;
-        Enum665ConfirmStatus oneElement;
+        Enum720PriorSpreadIndicator oneElement;
 
-        tagData = new Tag720EnuPriorSpreadIndicator( Enum720PriorSpreadIndicator.NO);
+        oneElement = Enum720PriorSpreadIndicator.NO;
+        tagData = new Tag720EnuPriorSpreadIndicator( oneElement );
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "720", fixData.toFIXIDString());
-        assertEquals( "PRIOR_SPREAD_INDICATOR", fixData.toFIXNameString());
-        assertEquals( "PriorSpreadIndicator", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "720", tagData.toFIXIDString());
+        assertEquals( "PRIOR_SPREAD_INDICATOR", tagData.toFIXNameString());
+        assertEquals( "PriorSpreadIndicator", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag720EnuPriorSpreadIndicator(Enum720PriorSpreadIndicator.YES);
         assertEquals( "Y", tagData.getDataValue());

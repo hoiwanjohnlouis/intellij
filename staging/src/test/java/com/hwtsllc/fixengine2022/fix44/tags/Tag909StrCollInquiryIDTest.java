@@ -51,12 +51,12 @@ class Tag909StrCollInquiryIDTest {
         tagData = new Tag909StrCollInquiryID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "909", fixData.toFIXIDString());
-        assertEquals( "COLL_INQUIRY_ID", fixData.toFIXNameString());
-        assertEquals( "CollInquiryID", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "909", tagData.toFIXIDString());
+        assertEquals( "COLL_INQUIRY_ID", tagData.toFIXNameString());
+        assertEquals( "CollInquiryID", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag909StrCollInquiryID.TESTB_STR_COLL_INQUIRY_ID;
         tagData = new Tag909StrCollInquiryID( new MyStringType( oneElement ) );

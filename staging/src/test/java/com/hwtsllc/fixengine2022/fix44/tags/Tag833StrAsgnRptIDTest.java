@@ -51,12 +51,12 @@ class Tag833StrAsgnRptIDTest {
         tagData = new Tag833StrAsgnRptID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "833", fixData.toFIXIDString());
-        assertEquals( "ASGN_RPT_ID", fixData.toFIXNameString());
-        assertEquals( "AsgnRptID", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "833", tagData.toFIXIDString());
+        assertEquals( "ASGN_RPT_ID", tagData.toFIXNameString());
+        assertEquals( "AsgnRptID", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag833StrAsgnRptID.TESTB_STR_ASGN_RPT_ID;
         tagData = new Tag833StrAsgnRptID( new MyStringType( oneElement ) );

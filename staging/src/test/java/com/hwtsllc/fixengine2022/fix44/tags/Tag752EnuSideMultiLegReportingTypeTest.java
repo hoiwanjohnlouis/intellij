@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum752SideMultiLegReportingType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -52,17 +51,18 @@ class Tag752EnuSideMultiLegReportingTypeTest {
     @Test
     void Tag0752Test() {
         Tag752EnuSideMultiLegReportingType tagData;
-        Enum665ConfirmStatus oneElement;
+        Enum752SideMultiLegReportingType oneElement;
 
-        tagData = new Tag752EnuSideMultiLegReportingType(Enum752SideMultiLegReportingType.SINGLE_SECURITY);
-        assertEquals( Enum752SideMultiLegReportingType.SINGLE_SECURITY.toFIXIDString(), tagData.getDataValue());
+        oneElement = Enum752SideMultiLegReportingType.SINGLE_SECURITY;
+        tagData = new Tag752EnuSideMultiLegReportingType( oneElement );
+        assertEquals( oneElement.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "752", fixData.toFIXIDString());
-        assertEquals( "SIDE_MULTI_LEG_REPORTING_TYPE", fixData.toFIXNameString());
-        assertEquals( "SideMultiLegReportingType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "752", tagData.toFIXIDString());
+        assertEquals( "SIDE_MULTI_LEG_REPORTING_TYPE", tagData.toFIXNameString());
+        assertEquals( "SideMultiLegReportingType", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag752EnuSideMultiLegReportingType(Enum752SideMultiLegReportingType.INDIVIDUAL_LEG);
         assertEquals( Enum752SideMultiLegReportingType.INDIVIDUAL_LEG.toFIXIDString(), tagData.getDataValue());

@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum787DlvyInstType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -51,17 +50,18 @@ class Tag787EnuDlvyInstTypeTest {
     @Test
     void Tag0787Test() {
         Tag787EnuDlvyInstType tagData;
-        Enum665ConfirmStatus oneElement;
+        Enum787DlvyInstType oneElement;
 
-        tagData = new Tag787EnuDlvyInstType( Enum787DlvyInstType.CASH );
-        assertEquals( Enum787DlvyInstType.CASH.toFIXIDString(), tagData.getDataValue());
+        oneElement = Enum787DlvyInstType.CASH;
+        tagData = new Tag787EnuDlvyInstType( oneElement );
+        assertEquals( oneElement.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "787", fixData.toFIXIDString());
-        assertEquals( "DLVY_INST_TYPE", fixData.toFIXNameString());
-        assertEquals( "DlvyInstType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "787", tagData.toFIXIDString());
+        assertEquals( "DLVY_INST_TYPE", tagData.toFIXNameString());
+        assertEquals( "DlvyInstType", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag787EnuDlvyInstType( Enum787DlvyInstType.SECURITIES);
         assertEquals( Enum787DlvyInstType.SECURITIES.toFIXIDString(), tagData.getDataValue());

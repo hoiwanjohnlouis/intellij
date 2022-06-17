@@ -136,7 +136,7 @@ public class Tag950EnuNested3PartyIDSource extends FIX44Abstract implements LogV
             = MyEnumPartyIDSource.BANK_IDENTIFICATION_CODE;
 
     public Tag950EnuNested3PartyIDSource(MyEnumPartyIDSource dataValue) {
-        setFixType(FIX44.FIX783_ENU_SETTL_PARTY_ID_SOURCE);
+        setFixType(FIX44.FIX950_ENU_NESTED_3_PARTY_ID_SOURCE);
         this.dataValue = dataValue;
     }
 

@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumAllocRejCode;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -70,20 +69,21 @@ class Tag776EnuIndividualAllocRejCodeTest {
     @Test
     void Tag0776Test() {
         Tag776EnuIndividualAllocRejCode tagData;
-        Enum665ConfirmStatus oneElement;
+        MyEnumAllocRejCode oneElement;
 
         /*
          * 0-13 AllocRejCode types
          */
-        tagData = new Tag776EnuIndividualAllocRejCode(MyEnumAllocRejCode.UNKNOWN_ACCOUNT);
+        oneElement = MyEnumAllocRejCode.UNKNOWN_ACCOUNT;
+        tagData = new Tag776EnuIndividualAllocRejCode( oneElement );
         assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "776", fixData.toFIXIDString());
-        assertEquals( "INDIVIDUAL_ALLOC_REJ_CODE", fixData.toFIXNameString());
-        assertEquals( "IndividualAllocRejCode", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "776", tagData.toFIXIDString());
+        assertEquals( "INDIVIDUAL_ALLOC_REJ_CODE", tagData.toFIXNameString());
+        assertEquals( "IndividualAllocRejCode", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag776EnuIndividualAllocRejCode(MyEnumAllocRejCode.INCORRECT_QUANTITY);
         assertEquals( "1", tagData.getDataValue());

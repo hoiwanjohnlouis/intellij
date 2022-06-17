@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumRoundDirection;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -60,20 +59,21 @@ class Tag838EnuPegRoundDirectionTest {
     @Test
     void Tag0838Test() {
         Tag838EnuPegRoundDirection tagData;
-        Enum665ConfirmStatus oneElement;
+        MyEnumRoundDirection oneElement;
 
-        tagData = new Tag838EnuPegRoundDirection(MyEnumRoundDirection.AGGRESSIVE);
-        assertEquals( MyEnumRoundDirection.AGGRESSIVE.toFIXIDString(), tagData.getDataValue());
+        oneElement = MyEnumRoundDirection.AGGRESSIVE;
+        tagData = new Tag838EnuPegRoundDirection( oneElement );
+        assertEquals( "1", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "838", fixData.toFIXIDString());
-        assertEquals( "PEG_ROUND_DIRECTION", fixData.toFIXNameString());
-        assertEquals( "PegRoundDirection", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "838", tagData.toFIXIDString());
+        assertEquals( "PEG_ROUND_DIRECTION", tagData.toFIXNameString());
+        assertEquals( "PegRoundDirection", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag838EnuPegRoundDirection(MyEnumRoundDirection.PASSIVE);
-        assertEquals( MyEnumRoundDirection.PASSIVE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( "2", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test

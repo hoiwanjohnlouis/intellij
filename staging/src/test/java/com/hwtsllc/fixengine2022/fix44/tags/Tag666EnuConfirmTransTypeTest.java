@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum666ConfirmTransType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -51,17 +50,18 @@ class Tag666EnuConfirmTransTypeTest {
     @Test
     void Tag0666Test() {
         Tag666EnuConfirmTransType tagData;
-        Enum665ConfirmStatus oneElement;
+        Enum666ConfirmTransType oneElement;
 
-        tagData = new Tag666EnuConfirmTransType(Enum666ConfirmTransType.NEW);
-        assertEquals( Enum666ConfirmTransType.NEW.toFIXIDString(), tagData.getDataValue());
+        oneElement = Enum666ConfirmTransType.NEW;
+        tagData = new Tag666EnuConfirmTransType( oneElement );
+        assertEquals( oneElement.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "666", fixData.toFIXIDString());
-        assertEquals( "CONFIRM_TRANS_TYPE", fixData.toFIXNameString());
-        assertEquals( "ConfirmTransType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "666", tagData.toFIXIDString());
+        assertEquals( "CONFIRM_TRANS_TYPE", tagData.toFIXNameString());
+        assertEquals( "ConfirmTransType", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag666EnuConfirmTransType(Enum666ConfirmTransType.REPLACE);
         assertEquals( Enum666ConfirmTransType.REPLACE.toFIXIDString(), tagData.getDataValue());

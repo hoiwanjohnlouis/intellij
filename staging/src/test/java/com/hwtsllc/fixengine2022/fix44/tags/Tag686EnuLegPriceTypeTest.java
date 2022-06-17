@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumPriceType;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -100,7 +99,7 @@ class Tag686EnuLegPriceTypeTest {
     @Test
     void Tag0686Test() {
         Tag686EnuLegPriceType tagData;
-        Enum665ConfirmStatus oneElement;
+        MyEnumPriceType oneElement;
 
         /*
          * 1-11, 13-19 msg types
@@ -109,15 +108,16 @@ class Tag686EnuLegPriceTypeTest {
         /*
          * 1-11 msg types
          */
-        tagData = new Tag686EnuLegPriceType(MyEnumPriceType.PERCENTAGE);
-        assertEquals( MyEnumPriceType.PERCENTAGE.toFIXIDString(), tagData.getDataValue());
+        oneElement = MyEnumPriceType.PERCENTAGE;
+        tagData = new Tag686EnuLegPriceType( oneElement );
+        assertEquals( oneElement.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "686", fixData.toFIXIDString());
-        assertEquals( "LEG_PRICE_TYPE", fixData.toFIXNameString());
-        assertEquals( "LegPriceType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "686", tagData.toFIXIDString());
+        assertEquals( "LEG_PRICE_TYPE", tagData.toFIXNameString());
+        assertEquals( "LegPriceType", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag686EnuLegPriceType(MyEnumPriceType.PER_UNIT);
         assertEquals( MyEnumPriceType.PER_UNIT.toFIXIDString(), tagData.getDataValue());

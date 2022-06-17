@@ -51,12 +51,12 @@ class Tag710StrPosReqIDTest {
         tagData = new Tag710StrPosReqID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "710", fixData.toFIXIDString());
-        assertEquals( "POS_REQ_ID", fixData.toFIXNameString());
-        assertEquals( "PosReqID", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "710", tagData.toFIXIDString());
+        assertEquals( "POS_REQ_ID", tagData.toFIXNameString());
+        assertEquals( "PosReqID", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag710StrPosReqID.TESTB_STR_POS_REQ_ID;
         tagData = new Tag710StrPosReqID( new MyStringType( oneElement ) );

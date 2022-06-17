@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumStipulationType;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -143,17 +142,18 @@ class Tag888EnuUnderlyingStipTypeTest {
     @Test
     void Tag0888Test() {
         Tag888EnuUnderlyingStipType tagData;
-        Enum665ConfirmStatus oneElement;
+        MyEnumStipulationType oneElement;
 
-        tagData = new Tag888EnuUnderlyingStipType(MyEnumStipulationType.ALTERNATIVE_MINIMUM_TAX);
-        assertEquals( MyEnumStipulationType.ALTERNATIVE_MINIMUM_TAX.toFIXIDString(), tagData.getDataValue());
+        oneElement = MyEnumStipulationType.ALTERNATIVE_MINIMUM_TAX;
+        tagData = new Tag888EnuUnderlyingStipType( oneElement );
+        assertEquals( oneElement.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "888", fixData.toFIXIDString());
-        assertEquals( "UNDERLYING_STIP_TYPE", fixData.toFIXNameString());
-        assertEquals( "UnderlyingStipType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "888", tagData.toFIXIDString());
+        assertEquals( "UNDERLYING_STIP_TYPE", tagData.toFIXNameString());
+        assertEquals( "UnderlyingStipType", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag888EnuUnderlyingStipType(MyEnumStipulationType.AUTO_REINVESTMENT);
         assertEquals( MyEnumStipulationType.AUTO_REINVESTMENT.toFIXIDString(), tagData.getDataValue());

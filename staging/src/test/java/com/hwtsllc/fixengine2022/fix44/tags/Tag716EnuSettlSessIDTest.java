@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum716SettlSessID;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -52,17 +51,18 @@ class Tag716EnuSettlSessIDTest {
     @Test
     void Tag0716Test() {
         Tag716EnuSettlSessID tagData;
-        Enum665ConfirmStatus oneElement;
+        Enum716SettlSessID oneElement;
 
-        tagData = new Tag716EnuSettlSessID(Enum716SettlSessID.INTRADAY);
+        oneElement = Enum716SettlSessID.INTRADAY;
+        tagData = new Tag716EnuSettlSessID( oneElement );
         assertEquals( "ITD", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "716", fixData.toFIXIDString());
-        assertEquals( "SETTL_SESS_ID", fixData.toFIXNameString());
-        assertEquals( "SettlSessID", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "716", tagData.toFIXIDString());
+        assertEquals( "SETTL_SESS_ID", tagData.toFIXNameString());
+        assertEquals( "SettlSessID", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag716EnuSettlSessID(Enum716SettlSessID.REGULAR_TRADING_HOURS);
         assertEquals( "RTH", tagData.getDataValue());

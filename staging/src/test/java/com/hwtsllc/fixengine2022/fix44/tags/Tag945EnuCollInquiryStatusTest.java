@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum945CollInquiryStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -53,17 +52,18 @@ class Tag945EnuCollInquiryStatusTest {
     @Test
     void Tag0945Test() {
         Tag945EnuCollInquiryStatus tagData;
-        Enum665ConfirmStatus oneElement;
+        Enum945CollInquiryStatus oneElement;
 
-        tagData = new Tag945EnuCollInquiryStatus( Enum945CollInquiryStatus.ACCEPTED );
-        assertEquals( Enum945CollInquiryStatus.ACCEPTED.toFIXIDString(), tagData.getDataValue());
+        oneElement = Enum945CollInquiryStatus.ACCEPTED;
+        tagData = new Tag945EnuCollInquiryStatus( oneElement );
+        assertEquals( oneElement.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "945", fixData.toFIXIDString());
-        assertEquals( "COLL_INQUIRY_STATUS", fixData.toFIXNameString());
-        assertEquals( "CollInquiryStatus", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "945", tagData.toFIXIDString());
+        assertEquals( "COLL_INQUIRY_STATUS", tagData.toFIXNameString());
+        assertEquals( "CollInquiryStatus", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag945EnuCollInquiryStatus( Enum945CollInquiryStatus.ACCEPTED_WITH_WARNINGS );
         assertEquals( Enum945CollInquiryStatus.ACCEPTED_WITH_WARNINGS.toFIXIDString(), tagData.getDataValue());

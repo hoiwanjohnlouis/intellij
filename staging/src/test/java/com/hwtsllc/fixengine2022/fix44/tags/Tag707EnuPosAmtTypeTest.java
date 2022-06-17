@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum707PosAmtType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -58,17 +57,18 @@ class Tag707EnuPosAmtTypeTest {
     @Test
     void Tag0707Test() {
         Tag707EnuPosAmtType tagData;
-        Enum665ConfirmStatus oneElement;
+        Enum707PosAmtType oneElement;
 
-        tagData = new Tag707EnuPosAmtType(Enum707PosAmtType.CASH_AMOUNT);
-        assertEquals( Enum707PosAmtType.CASH_AMOUNT.toFIXIDString(), tagData.getDataValue());
+        oneElement = Enum707PosAmtType.CASH_AMOUNT;
+        tagData = new Tag707EnuPosAmtType( oneElement );
+        assertEquals( oneElement.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "707", fixData.toFIXIDString());
-        assertEquals( "POS_AMT_TYPE", fixData.toFIXNameString());
-        assertEquals( "PosAmtType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "707", tagData.toFIXIDString());
+        assertEquals( "POS_AMT_TYPE", tagData.toFIXNameString());
+        assertEquals( "PosAmtType", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag707EnuPosAmtType(Enum707PosAmtType.CASH_RESIDUAL_AMOUNT);
         assertEquals( Enum707PosAmtType.CASH_RESIDUAL_AMOUNT.toFIXIDString(), tagData.getDataValue());

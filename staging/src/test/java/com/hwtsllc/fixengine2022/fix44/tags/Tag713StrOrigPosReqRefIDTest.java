@@ -52,12 +52,12 @@ class Tag713StrOrigPosReqRefIDTest {
         tagData = new Tag713StrOrigPosReqRefID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "713", fixData.toFIXIDString());
-        assertEquals( "ORIG_POS_REQ_REF_ID", fixData.toFIXNameString());
-        assertEquals( "OrigPosReqRefID", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "713", tagData.toFIXIDString());
+        assertEquals( "ORIG_POS_REQ_REF_ID", tagData.toFIXNameString());
+        assertEquals( "OrigPosReqRefID", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag713StrOrigPosReqRefID.TESTB_STR_ORIG_POS_REQ_REF_ID;
         tagData = new Tag713StrOrigPosReqRefID( new MyStringType( oneElement ) );

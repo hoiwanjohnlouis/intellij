@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum728PosReqResult;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -58,17 +57,18 @@ class Tag728EnuPosReqResultTest {
     @Test
     void Tag0728Test() {
         Tag728EnuPosReqResult tagData;
-        Enum665ConfirmStatus oneElement;
+        Enum728PosReqResult oneElement;
 
-        tagData = new Tag728EnuPosReqResult(Enum728PosReqResult.VALID_REQUEST);
+        oneElement = Enum728PosReqResult.VALID_REQUEST;
+        tagData = new Tag728EnuPosReqResult( oneElement );
         assertEquals( "0", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "728", fixData.toFIXIDString());
-        assertEquals( "POS_REQ_RESULT", fixData.toFIXNameString());
-        assertEquals( "PosReqResult", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "728", tagData.toFIXIDString());
+        assertEquals( "POS_REQ_RESULT", tagData.toFIXNameString());
+        assertEquals( "PosReqResult", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag728EnuPosReqResult(Enum728PosReqResult.UNSUPPORTED_REQUEST);
         assertEquals( "1", tagData.getDataValue() );

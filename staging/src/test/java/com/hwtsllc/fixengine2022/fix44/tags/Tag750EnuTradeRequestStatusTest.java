@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum750TradeRequestStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -51,17 +50,18 @@ class Tag750EnuTradeRequestStatusTest {
     @Test
     void Tag0750Test() {
         Tag750EnuTradeRequestStatus tagData;
-        Enum665ConfirmStatus oneElement;
+        Enum750TradeRequestStatus oneElement;
 
-        tagData = new Tag750EnuTradeRequestStatus(Enum750TradeRequestStatus.ACCEPTED);
-        assertEquals( Enum750TradeRequestStatus.ACCEPTED.toFIXIDString(), tagData.getDataValue() );
+        oneElement = Enum750TradeRequestStatus.ACCEPTED;
+        tagData = new Tag750EnuTradeRequestStatus( oneElement );
+        assertEquals( oneElement.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "750", fixData.toFIXIDString());
-        assertEquals( "TRADE_REQUEST_STATUS", fixData.toFIXNameString());
-        assertEquals( "TradeRequestStatus", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "750", tagData.toFIXIDString());
+        assertEquals( "TRADE_REQUEST_STATUS", tagData.toFIXNameString());
+        assertEquals( "TradeRequestStatus", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag750EnuTradeRequestStatus(Enum750TradeRequestStatus.COMPLETED);
         assertEquals( Enum750TradeRequestStatus.COMPLETED.toFIXIDString(), tagData.getDataValue() );

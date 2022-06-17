@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum719ContraryInstructionIndicator;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -51,17 +50,18 @@ class Tag719EnuContraryInstructionIndicatorTest {
     @Test
     void Tag0719Test() {
         Tag719EnuContraryInstructionIndicator tagData;
-        Enum665ConfirmStatus oneElement;
+        Enum719ContraryInstructionIndicator oneElement;
 
-        tagData = new Tag719EnuContraryInstructionIndicator( Enum719ContraryInstructionIndicator.NO);
+        oneElement = Enum719ContraryInstructionIndicator.NO;
+        tagData = new Tag719EnuContraryInstructionIndicator( oneElement );
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "719", fixData.toFIXIDString());
-        assertEquals( "CONTRARY_INSTRUCTION_INDICATOR", fixData.toFIXNameString());
-        assertEquals( "ContraryInstructionIndicator", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "719", tagData.toFIXIDString());
+        assertEquals( "CONTRARY_INSTRUCTION_INDICATOR", tagData.toFIXNameString());
+        assertEquals( "ContraryInstructionIndicator", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag719EnuContraryInstructionIndicator(Enum719ContraryInstructionIndicator.YES);
         assertEquals( "Y", tagData.getDataValue());

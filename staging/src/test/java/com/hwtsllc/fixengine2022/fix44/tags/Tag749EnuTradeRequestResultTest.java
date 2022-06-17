@@ -66,12 +66,12 @@ class Tag749EnuTradeRequestResultTest {
         tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.SUCCESSFUL);
         assertEquals( Enum749TradeRequestResult.SUCCESSFUL.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "749", fixData.toFIXIDString());
-        assertEquals( "TRADE_REQUEST_RESULT", fixData.toFIXNameString());
-        assertEquals( "TradeRequestResult", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "749", tagData.toFIXIDString());
+        assertEquals( "TRADE_REQUEST_RESULT", tagData.toFIXNameString());
+        assertEquals( "TradeRequestResult", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.UNKNOWN_INSTRUMENT);
         assertEquals( Enum749TradeRequestResult.UNKNOWN_INSTRUMENT.toFIXIDString(), tagData.getDataValue() );

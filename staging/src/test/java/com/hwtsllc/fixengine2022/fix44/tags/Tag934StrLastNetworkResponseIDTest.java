@@ -52,12 +52,12 @@ class Tag934StrLastNetworkResponseIDTest {
         tagData = new Tag934StrLastNetworkResponseID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "934", fixData.toFIXIDString());
-        assertEquals( "LAST_NETWORK_RESPONSE_ID", fixData.toFIXNameString());
-        assertEquals( "LastNetworkResponseID", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "934", tagData.toFIXIDString());
+        assertEquals( "LAST_NETWORK_RESPONSE_ID", tagData.toFIXNameString());
+        assertEquals( "LastNetworkResponseID", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag934StrLastNetworkResponseID.TESTB_STR_LAST_NETWORK_RESPONSE_ID;
         tagData = new Tag934StrLastNetworkResponseID( new MyStringType( oneElement ) );

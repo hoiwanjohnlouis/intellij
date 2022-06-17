@@ -51,12 +51,12 @@ class Tag877StrUnderlyingCPProgramTest {
         tagData = new Tag877StrUnderlyingCPProgram( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "877", fixData.toFIXIDString());
-        assertEquals( "UNDERLYING_CP_PROGRAM", fixData.toFIXNameString());
-        assertEquals( "UnderlyingCPProgram", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "877", tagData.toFIXIDString());
+        assertEquals( "UNDERLYING_CP_PROGRAM", tagData.toFIXNameString());
+        assertEquals( "UnderlyingCPProgram", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag877StrUnderlyingCPProgram.TESTB_STR_UNDERLYING_CP_PROGRAM;
         tagData = new Tag877StrUnderlyingCPProgram( new MyStringType( oneElement ) );

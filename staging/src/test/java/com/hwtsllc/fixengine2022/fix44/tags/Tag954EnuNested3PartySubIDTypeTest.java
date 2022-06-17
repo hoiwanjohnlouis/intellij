@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumPartySubIDType;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -146,20 +145,21 @@ class Tag954EnuNested3PartySubIDTypeTest {
     @Test
     void Tag0954Test() {
         Tag954EnuNested3PartySubIDType tagData;
-        Enum665ConfirmStatus oneElement;
+        MyEnumPartySubIDType oneElement;
 
         /*
          *  1-32
          */
-        tagData = new Tag954EnuNested3PartySubIDType(MyEnumPartySubIDType.FIRM);
-        assertEquals( MyEnumPartySubIDType.FIRM.toFIXIDString(), tagData.getDataValue());
+        oneElement = MyEnumPartySubIDType.FIRM;
+        tagData = new Tag954EnuNested3PartySubIDType( oneElement );
+        assertEquals( oneElement.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "954", fixData.toFIXIDString());
-        assertEquals( "NESTED_3_PARTY_SUB_ID_TYPE", fixData.toFIXNameString());
-        assertEquals( "Nested3PartySubIDType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "954", tagData.toFIXIDString());
+        assertEquals( "NESTED_3_PARTY_SUB_ID_TYPE", tagData.toFIXNameString());
+        assertEquals( "Nested3PartySubIDType", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag954EnuNested3PartySubIDType(MyEnumPartySubIDType.PERSON);
         assertEquals( MyEnumPartySubIDType.PERSON.toFIXIDString(), tagData.getDataValue());

@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum692QuotePriceType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -61,17 +60,18 @@ class Tag692EnuQuotePriceTypeTest {
     @Test
     void Tag0692Test() {
         Tag692EnuQuotePriceType tagData;
-        Enum665ConfirmStatus oneElement;
+        Enum692QuotePriceType oneElement;
 
-        tagData = new Tag692EnuQuotePriceType(Enum692QuotePriceType.PERCENT);
-        assertEquals( Enum692QuotePriceType.PERCENT.toFIXIDString(), tagData.getDataValue());
+        oneElement = Enum692QuotePriceType.PERCENT;
+        tagData = new Tag692EnuQuotePriceType( oneElement );
+        assertEquals( oneElement.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "692", fixData.toFIXIDString());
-        assertEquals( "QUOTE_PRICE_TYPE", fixData.toFIXNameString());
-        assertEquals( "QuotePriceType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "692", tagData.toFIXIDString());
+        assertEquals( "QUOTE_PRICE_TYPE", tagData.toFIXNameString());
+        assertEquals( "QuotePriceType", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag692EnuQuotePriceType(Enum692QuotePriceType.PER_SHARE);
         assertEquals( Enum692QuotePriceType.PER_SHARE.toFIXIDString(), tagData.getDataValue());

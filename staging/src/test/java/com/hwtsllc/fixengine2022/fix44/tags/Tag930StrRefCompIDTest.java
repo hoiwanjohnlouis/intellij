@@ -51,12 +51,12 @@ class Tag930StrRefCompIDTest {
         tagData = new Tag930StrRefCompID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "930", fixData.toFIXIDString());
-        assertEquals( "REF_COMP_ID", fixData.toFIXNameString());
-        assertEquals( "RefCompID", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "930", tagData.toFIXIDString());
+        assertEquals( "REF_COMP_ID", tagData.toFIXNameString());
+        assertEquals( "RefCompID", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag930StrRefCompID.TESTB_STR_REF_COMP_ID;
         tagData = new Tag930StrRefCompID( new MyStringType( oneElement ) );

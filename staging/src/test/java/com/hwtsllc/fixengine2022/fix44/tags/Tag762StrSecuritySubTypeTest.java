@@ -61,12 +61,12 @@ class Tag762StrSecuritySubTypeTest {
         tagData = new Tag762StrSecuritySubType( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "762", fixData.toFIXIDString());
-        assertEquals( "SECURITY_SUB_TYPE", fixData.toFIXNameString());
-        assertEquals( "SecuritySubType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "762", tagData.toFIXIDString());
+        assertEquals( "SECURITY_SUB_TYPE", tagData.toFIXNameString());
+        assertEquals( "SecuritySubType", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag762StrSecuritySubType.TESTB_STR_SECURITY_SUB_TYPE;
         tagData = new Tag762StrSecuritySubType( new MyStringType( oneElement ) );

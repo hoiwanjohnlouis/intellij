@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum712PosMaintAction;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -55,17 +54,18 @@ class Tag712EnuPosMaintActionTest {
     @Test
     void Tag0712Test() {
         Tag712EnuPosMaintAction tagData;
-        Enum665ConfirmStatus oneElement;
+        Enum712PosMaintAction oneElement;
 
-        tagData = new Tag712EnuPosMaintAction( Enum712PosMaintAction.NEW );
-        assertEquals( Enum712PosMaintAction.NEW.toFIXIDString(), tagData.getDataValue());
+        oneElement = Enum712PosMaintAction.NEW;
+        tagData = new Tag712EnuPosMaintAction( oneElement );
+        assertEquals( oneElement.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "712", fixData.toFIXIDString());
-        assertEquals( "POS_MAINT_ACTION", fixData.toFIXNameString());
-        assertEquals( "PosMaintAction", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "712", tagData.toFIXIDString());
+        assertEquals( "POS_MAINT_ACTION", tagData.toFIXNameString());
+        assertEquals( "PosMaintAction", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag712EnuPosMaintAction( Enum712PosMaintAction.REPLACE );
         assertEquals( Enum712PosMaintAction.REPLACE.toFIXIDString(), tagData.getDataValue());

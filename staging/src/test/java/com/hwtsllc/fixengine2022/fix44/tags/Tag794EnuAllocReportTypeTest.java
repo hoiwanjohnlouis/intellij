@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum794AllocReportType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -60,17 +59,18 @@ class Tag794EnuAllocReportTypeTest {
     @Test
     void Tag0794Test() {
         Tag794EnuAllocReportType tagData;
-        Enum665ConfirmStatus oneElement;
+        Enum794AllocReportType oneElement;
 
-        tagData = new Tag794EnuAllocReportType(Enum794AllocReportType.PRELIMINARY_REQUEST);
+        oneElement = Enum794AllocReportType.PRELIMINARY_REQUEST;
+        tagData = new Tag794EnuAllocReportType( oneElement );
         assertEquals( "2", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "794", fixData.toFIXIDString());
-        assertEquals( "ALLOC_REPORT_TYPE", fixData.toFIXNameString());
-        assertEquals( "AllocReportType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "794", tagData.toFIXIDString());
+        assertEquals( "ALLOC_REPORT_TYPE", tagData.toFIXNameString());
+        assertEquals( "AllocReportType", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag794EnuAllocReportType(Enum794AllocReportType.SELLSIDE_USING_PRELIMINARY);
         assertEquals( "3", tagData.getDataValue());

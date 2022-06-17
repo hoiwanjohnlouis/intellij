@@ -51,12 +51,12 @@ class Tag693StrQuoteRespIDTest {
         tagData = new Tag693StrQuoteRespID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "693", fixData.toFIXIDString());
-        assertEquals( "QUOTE_RESP_ID", fixData.toFIXNameString());
-        assertEquals( "QuoteRespID", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "693", tagData.toFIXIDString());
+        assertEquals( "QUOTE_RESP_ID", tagData.toFIXNameString());
+        assertEquals( "QuoteRespID", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag693StrQuoteRespID.TESTB_STR_QUOTE_RESP_ID;
         tagData = new Tag693StrQuoteRespID( new MyStringType( oneElement ) );

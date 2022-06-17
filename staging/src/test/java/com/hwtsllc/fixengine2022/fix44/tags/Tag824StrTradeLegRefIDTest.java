@@ -51,12 +51,12 @@ class Tag824StrTradeLegRefIDTest {
         tagData = new Tag824StrTradeLegRefID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "824", fixData.toFIXIDString());
-        assertEquals( "TRADE_LEG_REF_ID", fixData.toFIXNameString());
-        assertEquals( "TradeLegRefID", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "824", tagData.toFIXIDString());
+        assertEquals( "TRADE_LEG_REF_ID", tagData.toFIXNameString());
+        assertEquals( "TradeLegRefID", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag824StrTradeLegRefID.TESTB_STR_TRADE_LEG_REF_ID;
         tagData = new Tag824StrTradeLegRefID( new MyStringType( oneElement ) );

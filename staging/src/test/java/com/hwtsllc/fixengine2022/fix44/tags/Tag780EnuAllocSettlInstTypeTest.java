@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum780AllocSettlInstType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -54,17 +53,18 @@ class Tag780EnuAllocSettlInstTypeTest {
     @Test
     void Tag0780Test() {
         Tag780EnuAllocSettlInstType tagData;
-        Enum665ConfirmStatus oneElement;
+        Enum780AllocSettlInstType oneElement;
 
-        tagData = new Tag780EnuAllocSettlInstType( Enum780AllocSettlInstType.USE_DEFAULTS );
-        assertEquals( Enum780AllocSettlInstType.USE_DEFAULTS.toFIXIDString(), tagData.getDataValue());
+        oneElement = Enum780AllocSettlInstType.USE_DEFAULTS;
+        tagData = new Tag780EnuAllocSettlInstType( oneElement );
+        assertEquals( oneElement.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "780", fixData.toFIXIDString());
-        assertEquals( "ALLOC_SETTL_INST_TYPE", fixData.toFIXNameString());
-        assertEquals( "AllocSettlInstType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "780", tagData.toFIXIDString());
+        assertEquals( "ALLOC_SETTL_INST_TYPE", tagData.toFIXNameString());
+        assertEquals( "AllocSettlInstType", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag780EnuAllocSettlInstType( Enum780AllocSettlInstType.DERIVE_FROM_PARAMETERS );
         assertEquals( Enum780AllocSettlInstType.DERIVE_FROM_PARAMETERS.toFIXIDString(), tagData.getDataValue());

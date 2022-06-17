@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum871InstrAttribType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -78,17 +77,18 @@ class Tag871EnuInstrAttribTypeTest {
     @Test
     void Tag0871Test() {
         Tag871EnuInstrAttribType tagData;
-        Enum665ConfirmStatus oneElement;
+        Enum871InstrAttribType oneElement;
 
-        tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.FLAT);
-        assertEquals( Enum871InstrAttribType.FLAT.toFIXIDString(), tagData.getDataValue());
+        oneElement = Enum871InstrAttribType.FLAT;
+        tagData = new Tag871EnuInstrAttribType( oneElement );
+        assertEquals( oneElement.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "871", fixData.toFIXIDString());
-        assertEquals( "INSTR_ATTRIB_TYPE", fixData.toFIXNameString());
-        assertEquals( "InstrAttribType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "871", tagData.toFIXIDString());
+        assertEquals( "INSTR_ATTRIB_TYPE", tagData.toFIXNameString());
+        assertEquals( "InstrAttribType", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag871EnuInstrAttribType(Enum871InstrAttribType.ZERO_COUPON);
         assertEquals( Enum871InstrAttribType.ZERO_COUPON.toFIXIDString(), tagData.getDataValue());

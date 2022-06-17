@@ -58,12 +58,12 @@ class Tag825StrExchangeRuleTest {
         tagData = new Tag825StrExchangeRule( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "825", fixData.toFIXIDString());
-        assertEquals( "EXCHANGE_RULE", fixData.toFIXNameString());
-        assertEquals( "ExchangeRule", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "825", tagData.toFIXIDString());
+        assertEquals( "EXCHANGE_RULE", tagData.toFIXNameString());
+        assertEquals( "ExchangeRule", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag825StrExchangeRule.TESTB_STR_EXCHANGE_RULE;
         tagData = new Tag825StrExchangeRule( new MyStringType( oneElement ) );

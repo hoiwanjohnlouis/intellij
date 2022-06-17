@@ -51,12 +51,12 @@ class Tag876StrCPRegTypeTest {
         tagData = new Tag876StrCPRegType( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "876", fixData.toFIXIDString());
-        assertEquals( "CP_REG_TYPE", fixData.toFIXNameString());
-        assertEquals( "CPRegType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "876", tagData.toFIXIDString());
+        assertEquals( "CP_REG_TYPE", tagData.toFIXNameString());
+        assertEquals( "CPRegType", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag876StrCPRegType.TESTB_STR_CP_REG_TYPE;
         tagData = new Tag876StrCPRegType( new MyStringType( oneElement ) );

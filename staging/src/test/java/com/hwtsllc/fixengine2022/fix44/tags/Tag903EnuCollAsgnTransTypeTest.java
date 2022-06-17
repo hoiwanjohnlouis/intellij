@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum903CollAsgnTransType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -53,17 +52,18 @@ class Tag903EnuCollAsgnTransTypeTest {
     @Test
     void Tag0903Test() {
         Tag903EnuCollAsgnTransType tagData;
-        Enum665ConfirmStatus oneElement;
+        Enum903CollAsgnTransType oneElement;
 
-        tagData = new Tag903EnuCollAsgnTransType( Enum903CollAsgnTransType.NEW );
-        assertEquals( Enum903CollAsgnTransType.NEW.toFIXIDString(), tagData.getDataValue());
+        oneElement = Enum903CollAsgnTransType.NEW;
+        tagData = new Tag903EnuCollAsgnTransType( oneElement );
+        assertEquals( oneElement.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "903", fixData.toFIXIDString());
-        assertEquals( "COLL_ASGN_TRANS_TYPE", fixData.toFIXNameString());
-        assertEquals( "CollAsgnTransType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "903", tagData.toFIXIDString());
+        assertEquals( "COLL_ASGN_TRANS_TYPE", tagData.toFIXNameString());
+        assertEquals( "CollAsgnTransType", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag903EnuCollAsgnTransType( Enum903CollAsgnTransType.REPLACE );
         assertEquals( Enum903CollAsgnTransType.REPLACE.toFIXIDString(), tagData.getDataValue());

@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum747ExerciseMethod;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -50,17 +49,18 @@ class Tag747EnuExerciseMethodTest {
     @Test
     void Tag0747Test() {
         Tag747EnuExerciseMethod tagData;
-        Enum665ConfirmStatus oneElement;
+        Enum747ExerciseMethod oneElement;
 
-        tagData = new Tag747EnuExerciseMethod(Enum747ExerciseMethod.AUTOMATIC);
+        oneElement = Enum747ExerciseMethod.AUTOMATIC;
+        tagData = new Tag747EnuExerciseMethod( oneElement );
         assertEquals( Enum747ExerciseMethod.AUTOMATIC.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "747", fixData.toFIXIDString());
-        assertEquals( "EXERCISE_METHOD", fixData.toFIXNameString());
-        assertEquals( "ExerciseMethod", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "747", tagData.toFIXIDString());
+        assertEquals( "EXERCISE_METHOD", tagData.toFIXNameString());
+        assertEquals( "ExerciseMethod", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag747EnuExerciseMethod(Enum747ExerciseMethod.MANUAL);
         assertEquals( Enum747ExerciseMethod.MANUAL.toFIXIDString(), tagData.getDataValue());

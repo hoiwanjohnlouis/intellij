@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum857AllocNoOrdersType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -52,20 +51,22 @@ class Tag857EnuAllocNoOrdersTypeTest {
     @Test
     void Tag0857Test() {
         Tag857EnuAllocNoOrdersType tagData;
-        Enum665ConfirmStatus oneElement;
+        Enum857AllocNoOrdersType oneElement;
 
-        tagData = new Tag857EnuAllocNoOrdersType( Enum857AllocNoOrdersType.NOT_SPECIFIED );
-        assertEquals( Enum857AllocNoOrdersType.NOT_SPECIFIED.toFIXIDString(), tagData.getDataValue());
+        oneElement = Enum857AllocNoOrdersType.NOT_SPECIFIED;
+        tagData = new Tag857EnuAllocNoOrdersType( oneElement );
+        assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "857", fixData.toFIXIDString());
-        assertEquals( "ALLOC_NO_ORDERS_TYPE", fixData.toFIXNameString());
-        assertEquals( "AllocNoOrdersType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "857", tagData.toFIXIDString());
+        assertEquals( "ALLOC_NO_ORDERS_TYPE", tagData.toFIXNameString());
+        assertEquals( "AllocNoOrdersType", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
-        tagData = new Tag857EnuAllocNoOrdersType( Enum857AllocNoOrdersType.LIST_PROVIDED );
-        assertEquals( Enum857AllocNoOrdersType.LIST_PROVIDED.toFIXIDString(), tagData.getDataValue());
+        oneElement = Enum857AllocNoOrdersType.LIST_PROVIDED;
+        tagData = new Tag857EnuAllocNoOrdersType( oneElement );
+        assertEquals( "1", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test

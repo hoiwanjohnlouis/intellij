@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumSettlPriceType;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -57,17 +56,18 @@ class Tag733EnuUnderlyingSettlPriceTypeTest {
     @Test
     void Tag0733Test() {
         Tag733EnuUnderlyingSettlPriceType tagData;
-        Enum665ConfirmStatus oneElement;
+        MyEnumSettlPriceType oneElement;
 
-        tagData = new Tag733EnuUnderlyingSettlPriceType( MyEnumSettlPriceType.FINAL);
+        oneElement = MyEnumSettlPriceType.FINAL;
+        tagData = new Tag733EnuUnderlyingSettlPriceType( oneElement );
         assertEquals( "1", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "733", fixData.toFIXIDString());
-        assertEquals( "UNDERLYING_SETTL_PRICE_TYPE", fixData.toFIXNameString());
-        assertEquals( "UnderlyingSettlPriceType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "733", tagData.toFIXIDString());
+        assertEquals( "UNDERLYING_SETTL_PRICE_TYPE", tagData.toFIXNameString());
+        assertEquals( "UnderlyingSettlPriceType", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag733EnuUnderlyingSettlPriceType( MyEnumSettlPriceType.THEORETICAL);
         assertEquals( "2", tagData.getDataValue() );

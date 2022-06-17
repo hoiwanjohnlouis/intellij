@@ -51,12 +51,12 @@ class Tag795StrAllocReportRefIDTest {
         tagData = new Tag795StrAllocReportRefID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "795", fixData.toFIXIDString());
-        assertEquals( "ALLOC_REPORT_REF_ID", fixData.toFIXNameString());
-        assertEquals( "AllocReportRefID", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "795", tagData.toFIXIDString());
+        assertEquals( "ALLOC_REPORT_REF_ID", tagData.toFIXNameString());
+        assertEquals( "AllocReportRefID", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag795StrAllocReportRefID.TESTB_STR_ALLOC_REPORT_REF_ID;
         tagData = new Tag795StrAllocReportRefID( new MyStringType( oneElement ) );

@@ -51,12 +51,12 @@ class Tag859StrConfirmReqIDTest {
         tagData = new Tag859StrConfirmReqID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "859", fixData.toFIXIDString());
-        assertEquals( "CONFIRM_REQ_ID", fixData.toFIXNameString());
-        assertEquals( "ConfirmReqID", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "859", tagData.toFIXIDString());
+        assertEquals( "CONFIRM_REQ_ID", tagData.toFIXNameString());
+        assertEquals( "ConfirmReqID", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag859StrConfirmReqID.TESTB_STR_CONFIRM_REQ_ID;
         tagData = new Tag859StrConfirmReqID( new MyStringType( oneElement ) );

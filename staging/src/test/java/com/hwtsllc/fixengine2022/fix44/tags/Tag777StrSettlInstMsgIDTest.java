@@ -51,12 +51,12 @@ class Tag777StrSettlInstMsgIDTest {
         tagData = new Tag777StrSettlInstMsgID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "777", fixData.toFIXIDString());
-        assertEquals( "SETTL_INST_MSG_ID", fixData.toFIXNameString());
-        assertEquals( "SettlInstMsgID", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "777", tagData.toFIXIDString());
+        assertEquals( "SETTL_INST_MSG_ID", tagData.toFIXNameString());
+        assertEquals( "SettlInstMsgID", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag777StrSettlInstMsgID.TESTB_STR_SETTL_INST_MSG_ID;
         tagData = new Tag777StrSettlInstMsgID( new MyStringType( oneElement ) );

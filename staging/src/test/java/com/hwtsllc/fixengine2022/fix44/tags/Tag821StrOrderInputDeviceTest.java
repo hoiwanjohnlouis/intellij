@@ -51,12 +51,12 @@ class Tag821StrOrderInputDeviceTest {
         tagData = new Tag821StrOrderInputDevice( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "821", fixData.toFIXIDString());
-        assertEquals( "ORDER_INPUT_DEVICE", fixData.toFIXNameString());
-        assertEquals( "OrderInputDevice", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "821", tagData.toFIXIDString());
+        assertEquals( "ORDER_INPUT_DEVICE", tagData.toFIXNameString());
+        assertEquals( "OrderInputDevice", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag821StrOrderInputDevice.TESTB_STR_ORDER_INPUT_DEVICE;
         tagData = new Tag821StrOrderInputDevice( new MyStringType( oneElement ) );

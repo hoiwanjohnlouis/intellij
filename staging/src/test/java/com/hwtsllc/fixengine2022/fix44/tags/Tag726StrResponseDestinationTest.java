@@ -56,12 +56,12 @@ class Tag726StrResponseDestinationTest {
         tagData = new Tag726StrResponseDestination( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "726", fixData.toFIXIDString());
-        assertEquals( "RESPONSE_DESTINATION", fixData.toFIXNameString());
-        assertEquals( "ResponseDestination", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "726", tagData.toFIXIDString());
+        assertEquals( "RESPONSE_DESTINATION", tagData.toFIXNameString());
+        assertEquals( "ResponseDestination", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag726StrResponseDestination.TESTB_STR_RESPONSE_DESTINATION;
         tagData = new Tag726StrResponseDestination( new MyStringType( oneElement ) );

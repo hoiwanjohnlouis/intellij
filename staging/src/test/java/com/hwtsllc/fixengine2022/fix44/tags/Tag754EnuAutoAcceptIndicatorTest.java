@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum754AutoAcceptIndicator;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -51,17 +50,18 @@ class Tag754EnuAutoAcceptIndicatorTest {
     @Test
     void Tag0754Test() {
         Tag754EnuAutoAcceptIndicator tagData;
-        Enum665ConfirmStatus oneElement;
+        Enum754AutoAcceptIndicator oneElement;
 
-        tagData = new Tag754EnuAutoAcceptIndicator( Enum754AutoAcceptIndicator.NO);
+        oneElement = Enum754AutoAcceptIndicator.NO;
+        tagData = new Tag754EnuAutoAcceptIndicator( oneElement );
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "754", fixData.toFIXIDString());
-        assertEquals( "AUTO_ACCEPT_INDICATOR", fixData.toFIXNameString());
-        assertEquals( "AutoAcceptIndicator", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "754", tagData.toFIXIDString());
+        assertEquals( "AUTO_ACCEPT_INDICATOR", tagData.toFIXNameString());
+        assertEquals( "AutoAcceptIndicator", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag754EnuAutoAcceptIndicator( Enum754AutoAcceptIndicator.YES);
         assertEquals( "Y", tagData.getDataValue());

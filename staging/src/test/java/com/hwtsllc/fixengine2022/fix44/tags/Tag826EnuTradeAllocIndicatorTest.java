@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum826TradeAllocIndicator;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -56,17 +55,18 @@ class Tag826EnuTradeAllocIndicatorTest {
     @Test
     void Tag0826Test() {
         Tag826EnuTradeAllocIndicator tagData;
-        Enum665ConfirmStatus oneElement;
+        Enum826TradeAllocIndicator oneElement;
 
-        tagData = new Tag826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.NOT_REQUIRED );
-        assertEquals( Enum826TradeAllocIndicator.NOT_REQUIRED.toFIXIDString(), tagData.getDataValue());
+        oneElement = Enum826TradeAllocIndicator.NOT_REQUIRED;
+        tagData = new Tag826EnuTradeAllocIndicator( oneElement );
+        assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "826", fixData.toFIXIDString());
-        assertEquals( "TRADE_ALLOC_INDICATOR", fixData.toFIXNameString());
-        assertEquals( "TradeAllocIndicator", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "826", tagData.toFIXIDString());
+        assertEquals( "TRADE_ALLOC_INDICATOR", tagData.toFIXNameString());
+        assertEquals( "TradeAllocIndicator", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag826EnuTradeAllocIndicator( Enum826TradeAllocIndicator.REQUIRED );
         assertEquals( Enum826TradeAllocIndicator.REQUIRED.toFIXIDString(), tagData.getDataValue());

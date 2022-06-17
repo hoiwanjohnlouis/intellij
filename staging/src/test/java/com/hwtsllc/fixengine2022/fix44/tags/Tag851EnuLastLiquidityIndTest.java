@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum851LastLiquidityInd;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -54,24 +53,27 @@ class Tag851EnuLastLiquidityIndTest {
     @Test
     void Tag0851Test() {
         Tag851EnuLastLiquidityInd tagData;
-        Enum665ConfirmStatus oneElement;
+        Enum851LastLiquidityInd oneElement;
 
-        tagData = new Tag851EnuLastLiquidityInd( Enum851LastLiquidityInd.ADDED );
-        assertEquals( Enum851LastLiquidityInd.ADDED.toFIXIDString(), tagData.getDataValue());
+        oneElement = Enum851LastLiquidityInd.ADDED;
+        tagData = new Tag851EnuLastLiquidityInd( oneElement );
+        assertEquals( "1", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "851", fixData.toFIXIDString());
-        assertEquals( "LAST_LIQUIDITY_IND", fixData.toFIXNameString());
-        assertEquals( "LastLiquidityInd", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "851", tagData.toFIXIDString());
+        assertEquals( "LAST_LIQUIDITY_IND", tagData.toFIXNameString());
+        assertEquals( "LastLiquidityInd", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
-        tagData = new Tag851EnuLastLiquidityInd( Enum851LastLiquidityInd.REMOVED );
-        assertEquals( Enum851LastLiquidityInd.REMOVED.toFIXIDString(), tagData.getDataValue());
+        oneElement = Enum851LastLiquidityInd.REMOVED;
+        tagData = new Tag851EnuLastLiquidityInd( oneElement );
+        assertEquals( "2", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag851EnuLastLiquidityInd( Enum851LastLiquidityInd.ROUTED_OUT );
-        assertEquals( Enum851LastLiquidityInd.ROUTED_OUT.toFIXIDString(), tagData.getDataValue());
+        oneElement = Enum851LastLiquidityInd.ROUTED_OUT;
+        tagData = new Tag851EnuLastLiquidityInd( oneElement );
+        assertEquals( "3", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test

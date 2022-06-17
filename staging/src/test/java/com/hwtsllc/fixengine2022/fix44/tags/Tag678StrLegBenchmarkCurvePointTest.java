@@ -53,12 +53,12 @@ class Tag678StrLegBenchmarkCurvePointTest {
         tagData = new Tag678StrLegBenchmarkCurvePoint( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "678", fixData.toFIXIDString());
-        assertEquals( "LEG_BENCHMARK_CURVE_POINT", fixData.toFIXNameString());
-        assertEquals( "LegBenchmarkCurvePoint", fixData.toFIXDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "678", tagData.toFIXIDString());
+        assertEquals( "LEG_BENCHMARK_CURVE_POINT", tagData.toFIXNameString());
+        assertEquals( "LegBenchmarkCurvePoint", tagData.toFIXDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag678StrLegBenchmarkCurvePoint.TESTB_STR_LEG_BENCHMARK_CURVE_POINT;
         tagData = new Tag678StrLegBenchmarkCurvePoint( new MyStringType( oneElement ) );

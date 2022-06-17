@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum788TerminationType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -52,17 +51,18 @@ class Tag788EnuTerminationTypeTest {
     @Test
     void Tag0788Test() {
         Tag788EnuTerminationType tagData;
-        Enum665ConfirmStatus oneElement;
+        Enum788TerminationType oneElement;
 
-        tagData = new Tag788EnuTerminationType( Enum788TerminationType.OVERNIGHT );
-        assertEquals( Enum788TerminationType.OVERNIGHT.toFIXIDString(), tagData.getDataValue());
+        oneElement = Enum788TerminationType.OVERNIGHT;
+        tagData = new Tag788EnuTerminationType( oneElement );
+        assertEquals( oneElement.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "788", fixData.toFIXIDString());
-        assertEquals( "TERMINATION_TYPE", fixData.toFIXNameString());
-        assertEquals( "TerminationType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "788", tagData.toFIXIDString());
+        assertEquals( "TERMINATION_TYPE", tagData.toFIXNameString());
+        assertEquals( "TerminationType", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag788EnuTerminationType( Enum788TerminationType.TERM );
         assertEquals( Enum788TerminationType.TERM.toFIXIDString(), tagData.getDataValue());

@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum856TradeReportType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -67,17 +66,18 @@ class Tag856EnuTradeReportTypeTest {
     @Test
     void Tag0856Test() {
         Tag856EnuTradeReportType tagData;
-        Enum665ConfirmStatus oneElement;
+        Enum856TradeReportType oneElement;
 
-        tagData = new Tag856EnuTradeReportType(Enum856TradeReportType.SUBMIT);
-        assertEquals( Enum856TradeReportType.SUBMIT.toFIXIDString(), tagData.getDataValue());
+        oneElement = Enum856TradeReportType.SUBMIT;
+        tagData = new Tag856EnuTradeReportType( oneElement );
+        assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "856", fixData.toFIXIDString());
-        assertEquals( "TRADE_REPORT_TYPE", fixData.toFIXNameString());
-        assertEquals( "TradeReportType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "856", tagData.toFIXIDString());
+        assertEquals( "TRADE_REPORT_TYPE", tagData.toFIXNameString());
+        assertEquals( "TradeReportType", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag856EnuTradeReportType(Enum856TradeReportType.ALLEGED);
         assertEquals( Enum856TradeReportType.ALLEGED.toFIXIDString(), tagData.getDataValue());

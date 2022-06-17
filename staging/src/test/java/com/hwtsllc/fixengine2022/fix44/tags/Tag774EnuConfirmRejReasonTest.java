@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum774ConfirmRejReason;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -52,17 +51,18 @@ class Tag774EnuConfirmRejReasonTest {
     @Test
     void Tag0774Test() {
         Tag774EnuConfirmRejReason tagData;
-        Enum665ConfirmStatus oneElement;
+        Enum774ConfirmRejReason oneElement;
 
-        tagData = new Tag774EnuConfirmRejReason(Enum774ConfirmRejReason.MISMATCHED_ACCOUNT);
-        assertEquals( Enum774ConfirmRejReason.MISMATCHED_ACCOUNT.toFIXIDString(), tagData.getDataValue());
+        oneElement = Enum774ConfirmRejReason.MISMATCHED_ACCOUNT;
+        tagData = new Tag774EnuConfirmRejReason( oneElement );
+        assertEquals( "1", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "774", fixData.toFIXIDString());
-        assertEquals( "CONFIRM_REJ_REASON", fixData.toFIXNameString());
-        assertEquals( "ConfirmRejReason", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "774", tagData.toFIXIDString());
+        assertEquals( "CONFIRM_REJ_REASON", tagData.toFIXNameString());
+        assertEquals( "ConfirmRejReason", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag774EnuConfirmRejReason(Enum774ConfirmRejReason.MISSING_INSTRUCTIONS);
         assertEquals( Enum774ConfirmRejReason.MISSING_INSTRUCTIONS.toFIXIDString(), tagData.getDataValue());

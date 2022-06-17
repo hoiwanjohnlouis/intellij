@@ -51,12 +51,12 @@ class Tag880StrTrdMatchIDTest {
         tagData = new Tag880StrTrdMatchID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "880", fixData.toFIXIDString());
-        assertEquals( "TRD_MATCH_ID", fixData.toFIXNameString());
-        assertEquals( "TrdMatchID", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "880", tagData.toFIXIDString());
+        assertEquals( "TRD_MATCH_ID", tagData.toFIXNameString());
+        assertEquals( "TrdMatchID", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag880StrTrdMatchID.TESTB_STR_TRD_MATCH_ID;
         tagData = new Tag880StrTrdMatchID( new MyStringType( oneElement ) );

@@ -58,12 +58,12 @@ class Tag793StrSecondaryAllocIDTest {
         tagData = new Tag793StrSecondaryAllocID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "793", fixData.toFIXIDString());
-        assertEquals( "SECONDARY_ALLOC_ID", fixData.toFIXNameString());
-        assertEquals( "SecondaryAllocID", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "793", tagData.toFIXIDString());
+        assertEquals( "SECONDARY_ALLOC_ID", tagData.toFIXNameString());
+        assertEquals( "SecondaryAllocID", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag793StrSecondaryAllocID.TESTB_STR_SECONDARY_ALLOC_ID;
         tagData = new Tag793StrSecondaryAllocID( new MyStringType( oneElement ) );

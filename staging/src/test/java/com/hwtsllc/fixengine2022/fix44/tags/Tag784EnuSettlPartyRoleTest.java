@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumPartyRole;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -206,7 +205,7 @@ class Tag784EnuSettlPartyRoleTest {
     @Test
     void Tag0784Test() {
         Tag784EnuSettlPartyRole tagData;
-        Enum665ConfirmStatus oneElement;
+        MyEnumPartyRole oneElement;
 
         /*
          * 1-22, 24-78 msg types
@@ -215,15 +214,16 @@ class Tag784EnuSettlPartyRoleTest {
         /*
          *  1-22, msg types
          */
-        tagData = new Tag784EnuSettlPartyRole(MyEnumPartyRole.EXECUTING_FIRM);
+        oneElement = MyEnumPartyRole.EXECUTING_FIRM;
+        tagData = new Tag784EnuSettlPartyRole( oneElement );
         assertEquals( MyEnumPartyRole.EXECUTING_FIRM.toFIXIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "784", fixData.toFIXIDString());
-        assertEquals( "SETTL_PARTY_ROLE", fixData.toFIXNameString());
-        assertEquals( "SettlPartyRole", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "784", tagData.toFIXIDString());
+        assertEquals( "SETTL_PARTY_ROLE", tagData.toFIXNameString());
+        assertEquals( "SettlPartyRole", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag784EnuSettlPartyRole(MyEnumPartyRole.BROKER_OF_CREDIT);
         assertEquals( MyEnumPartyRole.BROKER_OF_CREDIT.toFIXIDString(), tagData.getDataValue() );

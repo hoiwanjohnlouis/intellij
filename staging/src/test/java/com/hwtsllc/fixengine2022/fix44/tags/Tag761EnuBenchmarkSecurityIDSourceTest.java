@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumSecurityIDSource;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -144,20 +143,21 @@ class Tag761EnuBenchmarkSecurityIDSourceTest {
     @Test
     void Tag0761Test() {
         Tag761EnuBenchmarkSecurityIDSource tagData;
-        Enum665ConfirmStatus oneElement;
+        MyEnumSecurityIDSource oneElement;
 
         /*
          * 1-9 Security ID Source
          */
-        tagData = new Tag761EnuBenchmarkSecurityIDSource(MyEnumSecurityIDSource.CUSIP);
+        oneElement = MyEnumSecurityIDSource.CUSIP;
+        tagData = new Tag761EnuBenchmarkSecurityIDSource( oneElement );
         assertEquals( "1", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "761", fixData.toFIXIDString());
-        assertEquals( "BENCHMARK_SECURITY_ID_SOURCE", fixData.toFIXNameString());
-        assertEquals( "BenchmarkSecurityIDSource", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "761", tagData.toFIXIDString());
+        assertEquals( "BENCHMARK_SECURITY_ID_SOURCE", tagData.toFIXNameString());
+        assertEquals( "BenchmarkSecurityIDSource", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag761EnuBenchmarkSecurityIDSource(MyEnumSecurityIDSource.SEDOL);
         assertEquals( "2", tagData.getDataValue());

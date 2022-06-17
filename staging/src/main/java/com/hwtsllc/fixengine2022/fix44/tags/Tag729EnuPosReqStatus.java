@@ -44,7 +44,7 @@ public class Tag729EnuPosReqStatus extends FIX44Abstract implements LogValuePair
             = Enum729PosReqStatus.REJECTED;
 
     public Tag729EnuPosReqStatus(Enum729PosReqStatus dataValue) {
-        setFixType(FIX44.FIX728_ENU_POS_REQ_RESULT);
+        setFixType(FIX44.FIX729_ENU_POS_REQ_STATUS);
         this.dataValue = dataValue;
     }
 

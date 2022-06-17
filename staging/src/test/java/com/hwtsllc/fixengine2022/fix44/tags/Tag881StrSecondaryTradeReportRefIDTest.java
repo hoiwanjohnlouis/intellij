@@ -54,12 +54,12 @@ class Tag881StrSecondaryTradeReportRefIDTest {
         tagData = new Tag881StrSecondaryTradeReportRefID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "881", fixData.toFIXIDString());
-        assertEquals( "SECONDARY_TRADE_REPORT_REF_ID", fixData.toFIXNameString());
-        assertEquals( "SecondaryTradeReportRefID", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "881", tagData.toFIXIDString());
+        assertEquals( "SECONDARY_TRADE_REPORT_REF_ID", tagData.toFIXNameString());
+        assertEquals( "SecondaryTradeReportRefID", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         oneElement = Tag881StrSecondaryTradeReportRefID.TESTB_STR_SECONDARY_TRADE_REPORT_REF_ID;
         tagData = new Tag881StrSecondaryTradeReportRefID( new MyStringType( oneElement ) );

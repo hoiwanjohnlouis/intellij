@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumBenchmarkCurveName;
-import com.hwtsllc.fixengine2022.fix44.enums.Enum665ConfirmStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -70,17 +69,18 @@ class Tag677EnuLegBenchmarkCurveNameTest {
     @Test
     void Tag0677Test() {
         Tag677EnuLegBenchmarkCurveName tagData;
-        Enum665ConfirmStatus oneElement;
+        MyEnumBenchmarkCurveName oneElement;
 
-        tagData = new Tag677EnuLegBenchmarkCurveName(MyEnumBenchmarkCurveName.EONIA);
-        assertEquals( MyEnumBenchmarkCurveName.EONIA.toFIXIDString(), tagData.getDataValue());
+        oneElement = MyEnumBenchmarkCurveName.EONIA;
+        tagData = new Tag677EnuLegBenchmarkCurveName( oneElement );
+        assertEquals( oneElement.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "677", fixData.toFIXIDString());
-        assertEquals( "LEG_BENCHMARK_CURVE_NAME", fixData.toFIXNameString());
-        assertEquals( "LegBenchmarkCurveName", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "677", tagData.toFIXIDString());
+        assertEquals( "LEG_BENCHMARK_CURVE_NAME", tagData.toFIXNameString());
+        assertEquals( "LegBenchmarkCurveName", tagData.toFIXDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
 
         tagData = new Tag677EnuLegBenchmarkCurveName(MyEnumBenchmarkCurveName.EUREPO);
         assertEquals( MyEnumBenchmarkCurveName.EUREPO.toFIXIDString(), tagData.getDataValue());
