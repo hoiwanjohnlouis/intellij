@@ -14,11 +14,11 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix41.tags;
+package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX41;
-import com.hwtsllc.fixengine2022.datatypes.FIX41Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.datatypes.FIX43;
+import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MyMonthYearType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
@@ -26,30 +26,55 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  200
  *  MaturityMonthYear
  *  month-year
- *  <p>
- *  Can be used with standardized derivatives vs. the MaturityDate (54) field.
+ *  <p>     Can be used with standardized derivatives vs. the MaturityDate (54) field.
+ *  <p></p>
+ *  313
+ *  UnderlyingMaturityMonthYear
+ *  month-year
+ *  <p>     Underlying security’s MaturityMonthYear.
+ *  <p>     Can be used with standardized derivatives vs. the UnderlyingMaturityDate (542) field.
+ *  <p>     See MaturityMonthYear (200) field for description
+ *  <p></p>
+ *  610
+ *  LegMaturityMonthYear
+ *  month-year
+ *  <p>     Multileg instrument's individual  security’s MaturityMonthYear.
+ *  <p>     See MaturityMonthYear (200) field for description
+ *  <p></p>
+ *  667
+ *  ContractSettlMonth
+ *  month-year
+ *  <p>     Specifies when the contract (i.e. MBS/TBA) will settle.
+ *  <p></p>
+ *  955
+ *  LegContractSettlMonth
+ *  month-year
+ *  <p>     Specifies when the contract (i.e. MBS/TBA) will settle.
+ *  <p></p>
  *  Month and Year of the maturity (used for standardized futures and options).
  *  <p>    Format:
  *  <p>    YYYYMM      (i.e. 99903)
  *  <p>    YYYYMMDD (20030323)
  *  <p>    YYYYMMwN (200303w) for week
- *  <p>
+ *  <p></p>
  *  A specific date or can be appended to the MaturityMonthYear.
- *  <p>
+ *  <p></p>
  *  For instance, if multiple standard products exist that mature in the same Year and Month,
  *  but actually mature at a different time, a value can be appended, such as "w" or "w2"
  *  to indicate week as opposed to week 2 expiration.
- *  <p>
+ *  <p></p>
  *  Likewise, the date (0-3) can be appended to indicate a specific expiration (maturity date).
  */
-public class Tag200StrMaturityMonthYear extends FIX41Abstract implements LogValuePairString, LogVerboseString {
-    private final MyStringType dataValue;
+public class Tag610MmyLegMaturityMonthYear extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+    private final MyMonthYearType dataValue;
 
-    public final static String TESTA_STR_MATURITY_MONTH_YEAR = "Frodo-Tag200StrMaturityMonthYear";
-    public final static String TESTB_STR_MATURITY_MONTH_YEAR = "Gandalf-Tag200StrMaturityMonthYear";
+    public final static String TESTA_MMY_LEG_MATURITY_MONTH_YEAR
+            = "RosaPonselle-Tag610MmyLegMaturityMonthYear";
+    public final static String TESTB_MMY_LEG_MATURITY_MONTH_YEAR
+            = "GeraldineFarrar-Tag610MmyLegMaturityMonthYear";
 
-    public Tag200StrMaturityMonthYear(MyStringType dataValue) {
-        setFixType(FIX41.FIX200_STR_MATURITY_MONTH_YEAR);
+    public Tag610MmyLegMaturityMonthYear( MyMonthYearType dataValue) {
+        setFixType( FIX43.FIX610_MMY_LEG_MATURITY_MONTH_YEAR );
         this.dataValue = dataValue;
     }
 
@@ -92,12 +117,12 @@ public class Tag200StrMaturityMonthYear extends FIX41Abstract implements LogValu
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag200StrMaturityMonthYear tagData;
+        Tag610MmyLegMaturityMonthYear tagData;
 
-        tagData = new Tag200StrMaturityMonthYear(new MyStringType(TESTA_STR_MATURITY_MONTH_YEAR) );
-        System.out.println( tagData.toVerboseString() );
+        tagData = new Tag610MmyLegMaturityMonthYear(new MyMonthYearType( TESTA_MMY_LEG_MATURITY_MONTH_YEAR ) );
+        System.out.println(tagData.toVerboseString());
 
-        tagData = new Tag200StrMaturityMonthYear(new MyStringType(TESTB_STR_MATURITY_MONTH_YEAR) );
-        System.out.println( tagData.toVerboseString() );
+        tagData = new Tag610MmyLegMaturityMonthYear(new MyMonthYearType( TESTB_MMY_LEG_MATURITY_MONTH_YEAR ) );
+        System.out.println(tagData.toVerboseString());
     }
 }

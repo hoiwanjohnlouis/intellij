@@ -14,35 +14,31 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix42.tags;
+package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.datatypes.FIX42Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
+import com.hwtsllc.fixengine2022.datatypes.MyLocalMktDateType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  313
- *  UnderlyingMaturityMonthYear
- *  month-year
- *  <p>
- *  Underlying security’s MaturityMonthYear.
- *  <p>
- *  Can be used with standardized derivatives vs. the UnderlyingMaturityDate (542) field.
- *  <p>
- *  See MaturityMonthYear (200) field for description
+ *  743
+ *  DeliveryDate
+ *  LocalMktDate
+ *  <p></p>
+ *  Date of delivery.
  */
-public class Tag313StrUnderlyingMaturityMonthYear extends FIX42Abstract implements LogValuePairString, LogVerboseString {
-    private final MyStringType dataValue;
+public class Tag743LmdDeliveryDate extends FIX44Abstract implements LogValuePairString, LogVerboseString {
+    private final MyLocalMktDateType dataValue;
 
-    public final static String TESTA_STR_UNDERLYING_MATURITY_MONTH_YEAR
-            = "BilboBaggins-Tag313StrUnderlyingMaturityMonthYear";
-    public final static String TESTB_STR_UNDERLYING_MATURITY_MONTH_YEAR
-            = "Gandalf-Tag313StrUnderlyingMaturityMonthYear";
+    public final static String TESTA_LMD_DELIVERY_DATE
+            = "SarahShahi-Tag743LmdDeliveryDate";
+    public final static String TESTB_LMD_DELIVERY_DATE
+            = "VirginiaMayo-Tag743LmdDeliveryDate";
 
-    public Tag313StrUnderlyingMaturityMonthYear(MyStringType dataValue) {
-        setFixType(FIX42.FIX313_STR_UNDERLYING_MATURITY_MONTH_YEAR);
+    public Tag743LmdDeliveryDate(MyLocalMktDateType dataValue) {
+        setFixType( FIX44.FIX743_LMD_DELIVERY_DATE );
         this.dataValue = dataValue;
     }
 
@@ -85,12 +81,12 @@ public class Tag313StrUnderlyingMaturityMonthYear extends FIX42Abstract implemen
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag313StrUnderlyingMaturityMonthYear tagData;
+        Tag743LmdDeliveryDate tagData;
 
-        tagData = new Tag313StrUnderlyingMaturityMonthYear(new MyStringType(TESTA_STR_UNDERLYING_MATURITY_MONTH_YEAR) );
+        tagData = new Tag743LmdDeliveryDate(new MyLocalMktDateType( TESTA_LMD_DELIVERY_DATE ) );
         System.out.println(tagData.toVerboseString());
 
-        tagData = new Tag313StrUnderlyingMaturityMonthYear(new MyStringType(TESTB_STR_UNDERLYING_MATURITY_MONTH_YEAR) );
+        tagData = new Tag743LmdDeliveryDate(new MyLocalMktDateType( TESTB_LMD_DELIVERY_DATE ) );
         System.out.println(tagData.toVerboseString());
     }
 }

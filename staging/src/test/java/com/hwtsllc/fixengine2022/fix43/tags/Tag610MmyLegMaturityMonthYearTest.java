@@ -17,7 +17,7 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.datatypes.MyMonthYearType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -25,18 +25,52 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
+ *  200
+ *  MaturityMonthYear
+ *  month-year
+ *  <p>     Can be used with standardized derivatives vs. the MaturityDate (54) field.
+ *  <p></p>
+ *  313
+ *  UnderlyingMaturityMonthYear
+ *  month-year
+ *  <p>     Underlying security’s MaturityMonthYear.
+ *  <p>     Can be used with standardized derivatives vs. the UnderlyingMaturityDate (542) field.
+ *  <p>     See MaturityMonthYear (200) field for description
+ *  <p></p>
  *  610
  *  LegMaturityMonthYear
  *  month-year
- *  <p>
- *  Multileg instrument's individual  security’s MaturityMonthYear.
- *  <p>
- *  See MaturityMonthYear (200) field for description
+ *  <p>     Multileg instrument's individual  security’s MaturityMonthYear.
+ *  <p>     See MaturityMonthYear (200) field for description
+ *  <p></p>
+ *  667
+ *  ContractSettlMonth
+ *  month-year
+ *  <p>     Specifies when the contract (i.e. MBS/TBA) will settle.
+ *  <p></p>
+ *  955
+ *  LegContractSettlMonth
+ *  month-year
+ *  <p>     Specifies when the contract (i.e. MBS/TBA) will settle.
+ *  <p></p>
+ *  Month and Year of the maturity (used for standardized futures and options).
+ *  <p>    Format:
+ *  <p>    YYYYMM      (i.e. 99903)
+ *  <p>    YYYYMMDD (20030323)
+ *  <p>    YYYYMMwN (200303w) for week
+ *  <p></p>
+ *  A specific date or can be appended to the MaturityMonthYear.
+ *  <p></p>
+ *  For instance, if multiple standard products exist that mature in the same Year and Month,
+ *  but actually mature at a different time, a value can be appended, such as "w" or "w2"
+ *  to indicate week as opposed to week 2 expiration.
+ *  <p></p>
+ *  Likewise, the date (0-3) can be appended to indicate a specific expiration (maturity date).
  */
-class Tag610StrLegMaturityMonthYearTest {
+class Tag610MmyLegMaturityMonthYearTest {
     @Test
     void FIX0610Test() {
-        FIX43 fixData = FIX43.FIX610_STR_LEG_MATURITY_MONTH_YEAR;
+        FIX43 fixData = FIX43.FIX610_MMY_LEG_MATURITY_MONTH_YEAR;
         assertEquals( "610", fixData.toFIXIDString());
         assertEquals( "LEG_MATURITY_MONTH_YEAR", fixData.toFIXNameString());
         assertEquals( "LegMaturityMonthYear", fixData.toFIXDescriptionString());
@@ -46,75 +80,75 @@ class Tag610StrLegMaturityMonthYearTest {
     }
     @Test
     void Tag0610Test() {
-        Tag610StrLegMaturityMonthYear tagData;
+        Tag610MmyLegMaturityMonthYear tagData;
         String oneElement;
 
-        oneElement = Tag610StrLegMaturityMonthYear.TESTA_STR_LEG_MATURITY_MONTH_YEAR;
-        tagData = new Tag610StrLegMaturityMonthYear( new MyStringType( oneElement ) );
+        oneElement = Tag610MmyLegMaturityMonthYear.TESTA_MMY_LEG_MATURITY_MONTH_YEAR;
+        tagData = new Tag610MmyLegMaturityMonthYear( new MyMonthYearType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
 
-        oneElement = Tag610StrLegMaturityMonthYear.TESTB_STR_LEG_MATURITY_MONTH_YEAR;
-        tagData = new Tag610StrLegMaturityMonthYear( new MyStringType( oneElement ) );
+        oneElement = Tag610MmyLegMaturityMonthYear.TESTB_MMY_LEG_MATURITY_MONTH_YEAR;
+        tagData = new Tag610MmyLegMaturityMonthYear( new MyMonthYearType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
     }
     @Test
     void PrintFIXTagTest() {
-        Tag610StrLegMaturityMonthYear tagData;
+        Tag610MmyLegMaturityMonthYear tagData;
         String oneElement;
 
-        oneElement = Tag610StrLegMaturityMonthYear.TESTA_STR_LEG_MATURITY_MONTH_YEAR;
-        tagData = new Tag610StrLegMaturityMonthYear( new MyStringType( oneElement ) );
+        oneElement = Tag610MmyLegMaturityMonthYear.TESTA_MMY_LEG_MATURITY_MONTH_YEAR;
+        tagData = new Tag610MmyLegMaturityMonthYear( new MyMonthYearType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag610StrLegMaturityMonthYear.TESTB_STR_LEG_MATURITY_MONTH_YEAR;
-        tagData = new Tag610StrLegMaturityMonthYear( new MyStringType( oneElement ) );
+        oneElement = Tag610MmyLegMaturityMonthYear.TESTB_MMY_LEG_MATURITY_MONTH_YEAR;
+        tagData = new Tag610MmyLegMaturityMonthYear( new MyMonthYearType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
     @Test
     void TagGetDataValueTest() {
-        Tag610StrLegMaturityMonthYear tagData;
+        Tag610MmyLegMaturityMonthYear tagData;
         String oneElement;
 
-        oneElement = Tag610StrLegMaturityMonthYear.TESTA_STR_LEG_MATURITY_MONTH_YEAR;
-        tagData = new Tag610StrLegMaturityMonthYear( new MyStringType( oneElement ) );
+        oneElement = Tag610MmyLegMaturityMonthYear.TESTA_MMY_LEG_MATURITY_MONTH_YEAR;
+        tagData = new Tag610MmyLegMaturityMonthYear( new MyMonthYearType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-        oneElement = Tag610StrLegMaturityMonthYear.TESTB_STR_LEG_MATURITY_MONTH_YEAR;
-        tagData = new Tag610StrLegMaturityMonthYear( new MyStringType( oneElement ) );
+        oneElement = Tag610MmyLegMaturityMonthYear.TESTB_MMY_LEG_MATURITY_MONTH_YEAR;
+        tagData = new Tag610MmyLegMaturityMonthYear( new MyMonthYearType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag610StrLegMaturityMonthYear tagData;
+        Tag610MmyLegMaturityMonthYear tagData;
         String oneElement;
 
-        oneElement = Tag610StrLegMaturityMonthYear.TESTB_STR_LEG_MATURITY_MONTH_YEAR;
-        tagData = new Tag610StrLegMaturityMonthYear( new MyStringType( oneElement ) );
+        oneElement = Tag610MmyLegMaturityMonthYear.TESTB_MMY_LEG_MATURITY_MONTH_YEAR;
+        tagData = new Tag610MmyLegMaturityMonthYear( new MyMonthYearType( oneElement ) );
         assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
     }
     @Test
     void TagToStringTest() {
-        Tag610StrLegMaturityMonthYear tagData;
+        Tag610MmyLegMaturityMonthYear tagData;
         String oneElement;
 
-        oneElement = Tag610StrLegMaturityMonthYear.TESTB_STR_LEG_MATURITY_MONTH_YEAR;
-        tagData = new Tag610StrLegMaturityMonthYear(new MyStringType(oneElement));
+        oneElement = Tag610MmyLegMaturityMonthYear.TESTB_MMY_LEG_MATURITY_MONTH_YEAR;
+        tagData = new Tag610MmyLegMaturityMonthYear(new MyMonthYearType( oneElement ));
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag610StrLegMaturityMonthYear tagData;
+        Tag610MmyLegMaturityMonthYear tagData;
         String oneElement;
 
-        oneElement = Tag610StrLegMaturityMonthYear.TESTA_STR_LEG_MATURITY_MONTH_YEAR;
-        tagData = new Tag610StrLegMaturityMonthYear( new MyStringType( oneElement ) );
-        assertEquals( "Tag610StrLegMaturityMonthYear\n" +
+        oneElement = Tag610MmyLegMaturityMonthYear.TESTA_MMY_LEG_MATURITY_MONTH_YEAR;
+        tagData = new Tag610MmyLegMaturityMonthYear( new MyMonthYearType( oneElement ) );
+        assertEquals( "Tag610MmyLegMaturityMonthYear\n" +
                         "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                         "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
