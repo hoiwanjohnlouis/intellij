@@ -14,31 +14,33 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix43.tags;
+package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  561
- *  RoundLot
+ *  685
+ *  LegOrderQty
  *  Qty
- *  <p>
- *  The trading lot size of a security
+ *  <p></p>
+ *  Quantity ordered of this leg.
+ *  <p></p>
+ *  See OrderQty (38) for description and valid values
  */
-public class Tag561QtyRoundLot extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag685QtyLegOrderQty extends FIX44Abstract implements LogValuePairString, LogVerboseString {
     private final MyQtyType dataValue;
 
-    public final static int TESTA_QTY_ROUND_LOT
-            = 561;
-    public final static int TESTB_QTY_ROUND_LOT
-            = 61;
+    public final static int TESTA_QTY_LEG_ORDER_QTY
+            = 685;
+    public final static int TESTB_QTY_LEG_ORDER_QTY
+            = 85;
 
-    public Tag561QtyRoundLot(MyQtyType dataValue) {
-        setFixType(FIX43.FIX561_QTY_ROUND_LOT);
+    public Tag685QtyLegOrderQty(MyQtyType dataValue) {
+        setFixType( FIX44.FIX685_QTY_LEG_ORDER_QTY );
         this.dataValue = dataValue;
     }
 
@@ -81,12 +83,12 @@ public class Tag561QtyRoundLot extends FIX43Abstract implements LogValuePairStri
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag561QtyRoundLot tagData;
+        Tag685QtyLegOrderQty tagData;
 
-        tagData = new Tag561QtyRoundLot(new MyQtyType(TESTA_QTY_ROUND_LOT) );
+        tagData = new Tag685QtyLegOrderQty(new MyQtyType( TESTA_QTY_LEG_ORDER_QTY ) );
         System.out.println(tagData.toVerboseString());
 
-        tagData = new Tag561QtyRoundLot(new MyQtyType(TESTB_QTY_ROUND_LOT) );
+        tagData = new Tag685QtyLegOrderQty(new MyQtyType( TESTB_QTY_LEG_ORDER_QTY ) );
         System.out.println(tagData.toVerboseString());
     }
 }

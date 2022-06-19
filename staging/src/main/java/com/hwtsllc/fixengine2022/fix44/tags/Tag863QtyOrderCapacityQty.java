@@ -14,31 +14,32 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix43.tags;
+package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  561
- *  RoundLot
+ *  863
+ *  OrderCapacityQty
  *  Qty
- *  <p>
- *  The trading lot size of a security
+ *  <p></p>
+ *  Quantity executed under a specific OrderCapacity
+ *  (e.g. quantity executed as agent, quantity executed as principal)
  */
-public class Tag561QtyRoundLot extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag863QtyOrderCapacityQty extends FIX44Abstract implements LogValuePairString, LogVerboseString {
     private final MyQtyType dataValue;
 
-    public final static int TESTA_QTY_ROUND_LOT
-            = 561;
-    public final static int TESTB_QTY_ROUND_LOT
-            = 61;
+    public final static int TESTA_QTY_ORDER_CAPACITY_QTY
+            = 863;
+    public final static int TESTB_QTY_ORDER_CAPACITY_QTY
+            = 63;
 
-    public Tag561QtyRoundLot(MyQtyType dataValue) {
-        setFixType(FIX43.FIX561_QTY_ROUND_LOT);
+    public Tag863QtyOrderCapacityQty(MyQtyType dataValue) {
+        setFixType( FIX44.FIX863_QTY_ORDER_CAPACITY_QTY );
         this.dataValue = dataValue;
     }
 
@@ -81,12 +82,12 @@ public class Tag561QtyRoundLot extends FIX43Abstract implements LogValuePairStri
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag561QtyRoundLot tagData;
+        Tag863QtyOrderCapacityQty tagData;
 
-        tagData = new Tag561QtyRoundLot(new MyQtyType(TESTA_QTY_ROUND_LOT) );
+        tagData = new Tag863QtyOrderCapacityQty(new MyQtyType( TESTA_QTY_ORDER_CAPACITY_QTY ) );
         System.out.println(tagData.toVerboseString());
 
-        tagData = new Tag561QtyRoundLot(new MyQtyType(TESTB_QTY_ROUND_LOT) );
+        tagData = new Tag863QtyOrderCapacityQty(new MyQtyType( TESTB_QTY_ORDER_CAPACITY_QTY ) );
         System.out.println(tagData.toVerboseString());
     }
 }

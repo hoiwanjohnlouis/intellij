@@ -14,31 +14,31 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix43.tags;
+package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  561
- *  RoundLot
+ *  704
+ *  LongQty
  *  Qty
- *  <p>
- *  The trading lot size of a security
+ *  <p></p>
+ *  Long Quantity
  */
-public class Tag561QtyRoundLot extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag704QtyLongQty extends FIX44Abstract implements LogValuePairString, LogVerboseString {
     private final MyQtyType dataValue;
 
-    public final static int TESTA_QTY_ROUND_LOT
-            = 561;
-    public final static int TESTB_QTY_ROUND_LOT
-            = 61;
+    public final static int TESTA_QTY_LONG_QTY
+            = 704;
+    public final static int TESTB_QTY_LONG_QTY
+            = 4;
 
-    public Tag561QtyRoundLot(MyQtyType dataValue) {
-        setFixType(FIX43.FIX561_QTY_ROUND_LOT);
+    public Tag704QtyLongQty(MyQtyType dataValue) {
+        setFixType( FIX44.FIX704_QTY_LONG_QTY );
         this.dataValue = dataValue;
     }
 
@@ -81,12 +81,12 @@ public class Tag561QtyRoundLot extends FIX43Abstract implements LogValuePairStri
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag561QtyRoundLot tagData;
+        Tag704QtyLongQty tagData;
 
-        tagData = new Tag561QtyRoundLot(new MyQtyType(TESTA_QTY_ROUND_LOT) );
+        tagData = new Tag704QtyLongQty(new MyQtyType( TESTA_QTY_LONG_QTY ) );
         System.out.println(tagData.toVerboseString());
 
-        tagData = new Tag561QtyRoundLot(new MyQtyType(TESTB_QTY_ROUND_LOT) );
+        tagData = new Tag704QtyLongQty(new MyQtyType( TESTB_QTY_LONG_QTY ) );
         System.out.println(tagData.toVerboseString());
     }
 }
