@@ -14,31 +14,33 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix43.tags;
+package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  453
- *  NoPartyIDs
+ *  806
+ *  NoNested2PartySubIDs
  *  NumInGroup
- *  <p>
- *  Number of PartyID (448), PartyIDSource (447), and PartyRole (452) entries
+ *  <p></p>
+ *  Number of Nested2PartySubID (760) and Nested2PartySubIDType (807) entries.
+ *  <p></p>
+ *  Second instance of <NestedParties>.
  */
-public class Tag453NumNoPartyIDs extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag806NumNoNested2PartySubIDs extends FIX44Abstract implements LogValuePairString, LogVerboseString {
     private final MyNumInGroupType dataValue;
 
-    public final static int TESTA_NUM_NO_PARTY_IDS
-            = 453;
-    public final static int TESTB_NUM_NO_PARTY_IDS
-            = 354;
+    public final static int TESTA_NUM_NO_NESTED_2_PARTY_SUB_IDS
+            = 806;
+    public final static int TESTB_NUM_NO_NESTED_2_PARTY_SUB_IDS
+            = 6;
 
-    public Tag453NumNoPartyIDs(MyNumInGroupType dataValue) {
-        setFixType(FIX43.FIX453_NUM_NO_PARTY_IDS);
+    public Tag806NumNoNested2PartySubIDs(MyNumInGroupType dataValue) {
+        setFixType( FIX44.FIX806_NUM_NO_NESTED_2_PARTY_SUB_IDS );
         this.dataValue = dataValue;
     }
 
@@ -81,12 +83,12 @@ public class Tag453NumNoPartyIDs extends FIX43Abstract implements LogValuePairSt
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag453NumNoPartyIDs tagData;
+        Tag806NumNoNested2PartySubIDs tagData;
 
-        tagData = new Tag453NumNoPartyIDs(new MyNumInGroupType(TESTA_NUM_NO_PARTY_IDS) );
+        tagData = new Tag806NumNoNested2PartySubIDs(new MyNumInGroupType( TESTA_NUM_NO_NESTED_2_PARTY_SUB_IDS ) );
         System.out.println(tagData.toVerboseString());
 
-        tagData = new Tag453NumNoPartyIDs(new MyNumInGroupType(TESTB_NUM_NO_PARTY_IDS) );
+        tagData = new Tag806NumNoNested2PartySubIDs(new MyNumInGroupType( TESTB_NUM_NO_NESTED_2_PARTY_SUB_IDS ) );
         System.out.println(tagData.toVerboseString());
     }
 }

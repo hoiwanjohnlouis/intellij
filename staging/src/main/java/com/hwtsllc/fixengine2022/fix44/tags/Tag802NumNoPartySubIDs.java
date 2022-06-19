@@ -14,31 +14,31 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix43.tags;
+package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  453
- *  NoPartyIDs
+ *  802
+ *  NoPartySubIDs
  *  NumInGroup
- *  <p>
- *  Number of PartyID (448), PartyIDSource (447), and PartyRole (452) entries
+ *  <p></p>
+ *  Number of PartySubID (523)and PartySubIDType (803) entries
  */
-public class Tag453NumNoPartyIDs extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag802NumNoPartySubIDs extends FIX44Abstract implements LogValuePairString, LogVerboseString {
     private final MyNumInGroupType dataValue;
 
-    public final static int TESTA_NUM_NO_PARTY_IDS
-            = 453;
-    public final static int TESTB_NUM_NO_PARTY_IDS
-            = 354;
+    public final static int TESTA_NUM_NO_PARTY_SUB_IDS
+            = 802;
+    public final static int TESTB_NUM_NO_PARTY_SUB_IDS
+            = 2;
 
-    public Tag453NumNoPartyIDs(MyNumInGroupType dataValue) {
-        setFixType(FIX43.FIX453_NUM_NO_PARTY_IDS);
+    public Tag802NumNoPartySubIDs(MyNumInGroupType dataValue) {
+        setFixType( FIX44.FIX802_NUM_NO_PARTY_SUB_IDS );
         this.dataValue = dataValue;
     }
 
@@ -81,12 +81,12 @@ public class Tag453NumNoPartyIDs extends FIX43Abstract implements LogValuePairSt
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag453NumNoPartyIDs tagData;
+        Tag802NumNoPartySubIDs tagData;
 
-        tagData = new Tag453NumNoPartyIDs(new MyNumInGroupType(TESTA_NUM_NO_PARTY_IDS) );
+        tagData = new Tag802NumNoPartySubIDs(new MyNumInGroupType( TESTA_NUM_NO_PARTY_SUB_IDS ) );
         System.out.println(tagData.toVerboseString());
 
-        tagData = new Tag453NumNoPartyIDs(new MyNumInGroupType(TESTB_NUM_NO_PARTY_IDS) );
+        tagData = new Tag802NumNoPartySubIDs(new MyNumInGroupType( TESTB_NUM_NO_PARTY_SUB_IDS ) );
         System.out.println(tagData.toVerboseString());
     }
 }

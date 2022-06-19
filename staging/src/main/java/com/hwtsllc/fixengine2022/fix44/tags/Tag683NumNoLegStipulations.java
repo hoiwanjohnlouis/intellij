@@ -14,31 +14,31 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix43.tags;
+package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  453
- *  NoPartyIDs
+ *  683
+ *  NoLegStipulations
  *  NumInGroup
- *  <p>
- *  Number of PartyID (448), PartyIDSource (447), and PartyRole (452) entries
+ *  <p></p>
+ *  Number of leg stipulation entries
  */
-public class Tag453NumNoPartyIDs extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag683NumNoLegStipulations extends FIX44Abstract implements LogValuePairString, LogVerboseString {
     private final MyNumInGroupType dataValue;
 
-    public final static int TESTA_NUM_NO_PARTY_IDS
-            = 453;
-    public final static int TESTB_NUM_NO_PARTY_IDS
-            = 354;
+    public final static int TESTA_NUM_NO_LEG_STIPULATIONS
+            = 683;
+    public final static int TESTB_NUM_NO_LEG_STIPULATIONS
+            = 83;
 
-    public Tag453NumNoPartyIDs(MyNumInGroupType dataValue) {
-        setFixType(FIX43.FIX453_NUM_NO_PARTY_IDS);
+    public Tag683NumNoLegStipulations(MyNumInGroupType dataValue) {
+        setFixType( FIX44.FIX683_NUM_NO_LEG_STIPULATIONS );
         this.dataValue = dataValue;
     }
 
@@ -81,12 +81,12 @@ public class Tag453NumNoPartyIDs extends FIX43Abstract implements LogValuePairSt
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag453NumNoPartyIDs tagData;
+        Tag683NumNoLegStipulations tagData;
 
-        tagData = new Tag453NumNoPartyIDs(new MyNumInGroupType(TESTA_NUM_NO_PARTY_IDS) );
+        tagData = new Tag683NumNoLegStipulations(new MyNumInGroupType( TESTA_NUM_NO_LEG_STIPULATIONS ) );
         System.out.println(tagData.toVerboseString());
 
-        tagData = new Tag453NumNoPartyIDs(new MyNumInGroupType(TESTB_NUM_NO_PARTY_IDS) );
+        tagData = new Tag683NumNoLegStipulations(new MyNumInGroupType( TESTB_NUM_NO_LEG_STIPULATIONS ) );
         System.out.println(tagData.toVerboseString());
     }
 }
