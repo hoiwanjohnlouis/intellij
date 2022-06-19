@@ -14,32 +14,31 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix43.tags;
+package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  540
- *  TotalAccruedInterestAmt
+ *  884
+ *  UnderlyingStartValue
  *  Amt
- *  <p>
- *  Deprecated in FIX.4.4 Total Amount of Accrued Interest for convertible bonds and fixed income
+ *  <p></p>
+ *  Currency value attributed to this collateral at the start of the agreement
  */
-// @Deprecated
-public class Tag540AmtTotalAccruedInterestAmt extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag884AmtUnderlyingStartValue extends FIX44Abstract implements LogValuePairString, LogVerboseString {
     private final MyAmtType dataValue;
 
-    public final static double TESTA_AMT_TOTAL_ACCRUED_INTEREST_AMT
-            = 5.40D;
-    public final static double TESTB_AMT_TOTAL_ACCRUED_INTEREST_AMT
-            = 4.5D;
+    public final static double TESTA_AMT_UNDERLYING_START_VALUE
+            = 8.84D;
+    public final static double TESTB_AMT_UNDERLYING_START_VALUE
+            = 0.084D;
 
-    public Tag540AmtTotalAccruedInterestAmt(MyAmtType dataValue) {
-        setFixType(FIX43.FIX540_AMT_TOTAL_ACCRUED_INTEREST_AMT);
+    public Tag884AmtUnderlyingStartValue(MyAmtType dataValue) {
+        setFixType( FIX44.FIX884_AMT_UNDERLYING_START_VALUE );
         this.dataValue = dataValue;
     }
 
@@ -82,12 +81,12 @@ public class Tag540AmtTotalAccruedInterestAmt extends FIX43Abstract implements L
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag540AmtTotalAccruedInterestAmt tagData;
+        Tag884AmtUnderlyingStartValue tagData;
 
-        tagData = new Tag540AmtTotalAccruedInterestAmt(new MyAmtType(TESTA_AMT_TOTAL_ACCRUED_INTEREST_AMT) );
+        tagData = new Tag884AmtUnderlyingStartValue(new MyAmtType( TESTA_AMT_UNDERLYING_START_VALUE ) );
         System.out.println(tagData.toVerboseString());
 
-        tagData = new Tag540AmtTotalAccruedInterestAmt(new MyAmtType(TESTB_AMT_TOTAL_ACCRUED_INTEREST_AMT) );
+        tagData = new Tag884AmtUnderlyingStartValue(new MyAmtType( TESTB_AMT_UNDERLYING_START_VALUE ) );
         System.out.println(tagData.toVerboseString());
     }
 }

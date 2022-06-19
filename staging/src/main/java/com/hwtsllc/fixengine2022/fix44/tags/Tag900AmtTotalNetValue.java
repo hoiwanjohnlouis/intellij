@@ -14,32 +14,41 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix43.tags;
+package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  540
- *  TotalAccruedInterestAmt
+ *  900
+ *  TotalNetValue
  *  Amt
- *  <p>
- *  Deprecated in FIX.4.4 Total Amount of Accrued Interest for convertible bonds and fixed income
+ *  <p></p>
+ *  TotalNetValue is determined as follows:
+ *  <p></p>
+ *  At the initial collateral assignment TotalNetValue is the sum of
+ *  (UnderlyingStartValue * (1-haircut)).
+ *  <p></p>
+ *  In a collateral substitution TotalNetValue is the sum of
+ *  (UnderlyingCurrentValue * (1-haircut)).
+ *  <p></p>
+ *  For listed derivatives clearing margin management,
+ *  this is the collateral value which equals
+ *  (Market value * haircut)
  */
-// @Deprecated
-public class Tag540AmtTotalAccruedInterestAmt extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag900AmtTotalNetValue extends FIX44Abstract implements LogValuePairString, LogVerboseString {
     private final MyAmtType dataValue;
 
-    public final static double TESTA_AMT_TOTAL_ACCRUED_INTEREST_AMT
-            = 5.40D;
-    public final static double TESTB_AMT_TOTAL_ACCRUED_INTEREST_AMT
-            = 4.5D;
+    public final static double TESTA_AMT_TOTAL_NET_VALUE
+            = 9.00D;
+    public final static double TESTB_AMT_TOTAL_NET_VALUE
+            = 0.000D;
 
-    public Tag540AmtTotalAccruedInterestAmt(MyAmtType dataValue) {
-        setFixType(FIX43.FIX540_AMT_TOTAL_ACCRUED_INTEREST_AMT);
+    public Tag900AmtTotalNetValue(MyAmtType dataValue) {
+        setFixType( FIX44.FIX900_AMT_TOTAL_NET_VALUE );
         this.dataValue = dataValue;
     }
 
@@ -82,12 +91,12 @@ public class Tag540AmtTotalAccruedInterestAmt extends FIX43Abstract implements L
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag540AmtTotalAccruedInterestAmt tagData;
+        Tag900AmtTotalNetValue tagData;
 
-        tagData = new Tag540AmtTotalAccruedInterestAmt(new MyAmtType(TESTA_AMT_TOTAL_ACCRUED_INTEREST_AMT) );
+        tagData = new Tag900AmtTotalNetValue(new MyAmtType( TESTA_AMT_TOTAL_NET_VALUE ) );
         System.out.println(tagData.toVerboseString());
 
-        tagData = new Tag540AmtTotalAccruedInterestAmt(new MyAmtType(TESTB_AMT_TOTAL_ACCRUED_INTEREST_AMT) );
+        tagData = new Tag900AmtTotalNetValue(new MyAmtType( TESTB_AMT_TOTAL_NET_VALUE ) );
         System.out.println(tagData.toVerboseString());
     }
 }

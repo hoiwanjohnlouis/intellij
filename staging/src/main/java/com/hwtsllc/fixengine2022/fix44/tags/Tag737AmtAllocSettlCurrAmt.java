@@ -14,32 +14,33 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix43.tags;
+package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  540
- *  TotalAccruedInterestAmt
+ *  737
+ *  AllocSettlCurrAmt
  *  Amt
+ *  <p></p>
+ *  Total amount due expressed in settlement currency
  *  <p>
- *  Deprecated in FIX.4.4 Total Amount of Accrued Interest for convertible bonds and fixed income
+ *  (includes the effect of the forex transaction) for a specific AllocAccount (79).
  */
-// @Deprecated
-public class Tag540AmtTotalAccruedInterestAmt extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag737AmtAllocSettlCurrAmt extends FIX44Abstract implements LogValuePairString, LogVerboseString {
     private final MyAmtType dataValue;
 
-    public final static double TESTA_AMT_TOTAL_ACCRUED_INTEREST_AMT
-            = 5.40D;
-    public final static double TESTB_AMT_TOTAL_ACCRUED_INTEREST_AMT
-            = 4.5D;
+    public final static double TESTA_AMT_ALLOC_SETTL_CURR_AMT
+            = 7.37D;
+    public final static double TESTB_AMT_ALLOC_SETTL_CURR_AMT
+            = 0.037D;
 
-    public Tag540AmtTotalAccruedInterestAmt(MyAmtType dataValue) {
-        setFixType(FIX43.FIX540_AMT_TOTAL_ACCRUED_INTEREST_AMT);
+    public Tag737AmtAllocSettlCurrAmt(MyAmtType dataValue) {
+        setFixType( FIX44.FIX737_AMT_ALLOC_SETTL_CURR_AMT );
         this.dataValue = dataValue;
     }
 
@@ -82,12 +83,12 @@ public class Tag540AmtTotalAccruedInterestAmt extends FIX43Abstract implements L
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag540AmtTotalAccruedInterestAmt tagData;
+        Tag737AmtAllocSettlCurrAmt tagData;
 
-        tagData = new Tag540AmtTotalAccruedInterestAmt(new MyAmtType(TESTA_AMT_TOTAL_ACCRUED_INTEREST_AMT) );
+        tagData = new Tag737AmtAllocSettlCurrAmt(new MyAmtType( TESTA_AMT_ALLOC_SETTL_CURR_AMT ) );
         System.out.println(tagData.toVerboseString());
 
-        tagData = new Tag540AmtTotalAccruedInterestAmt(new MyAmtType(TESTB_AMT_TOTAL_ACCRUED_INTEREST_AMT) );
+        tagData = new Tag737AmtAllocSettlCurrAmt(new MyAmtType( TESTB_AMT_ALLOC_SETTL_CURR_AMT ) );
         System.out.println(tagData.toVerboseString());
     }
 }

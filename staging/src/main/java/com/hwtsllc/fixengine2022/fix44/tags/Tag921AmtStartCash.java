@@ -14,32 +14,32 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix43.tags;
+package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
-import com.hwtsllc.fixengine2022.datatypes.FIX43Abstract;
+import com.hwtsllc.fixengine2022.datatypes.FIX44;
+import com.hwtsllc.fixengine2022.datatypes.FIX44Abstract;
 import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  540
- *  TotalAccruedInterestAmt
+ *  921
+ *  StartCash
  *  Amt
- *  <p>
- *  Deprecated in FIX.4.4 Total Amount of Accrued Interest for convertible bonds and fixed income
+ *  <p></p>
+ *  Starting dirty cash consideration of a financing deal,
+ *  i.e. paid to the seller on the Start Date.
  */
-// @Deprecated
-public class Tag540AmtTotalAccruedInterestAmt extends FIX43Abstract implements LogValuePairString, LogVerboseString {
+public class Tag921AmtStartCash extends FIX44Abstract implements LogValuePairString, LogVerboseString {
     private final MyAmtType dataValue;
 
-    public final static double TESTA_AMT_TOTAL_ACCRUED_INTEREST_AMT
-            = 5.40D;
-    public final static double TESTB_AMT_TOTAL_ACCRUED_INTEREST_AMT
-            = 4.5D;
+    public final static double TESTA_AMT_START_CASH
+            = 9.21D;
+    public final static double TESTB_AMT_START_CASH
+            = 0.021D;
 
-    public Tag540AmtTotalAccruedInterestAmt(MyAmtType dataValue) {
-        setFixType(FIX43.FIX540_AMT_TOTAL_ACCRUED_INTEREST_AMT);
+    public Tag921AmtStartCash(MyAmtType dataValue) {
+        setFixType( FIX44.FIX921_AMT_START_CASH );
         this.dataValue = dataValue;
     }
 
@@ -82,12 +82,12 @@ public class Tag540AmtTotalAccruedInterestAmt extends FIX43Abstract implements L
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag540AmtTotalAccruedInterestAmt tagData;
+        Tag921AmtStartCash tagData;
 
-        tagData = new Tag540AmtTotalAccruedInterestAmt(new MyAmtType(TESTA_AMT_TOTAL_ACCRUED_INTEREST_AMT) );
+        tagData = new Tag921AmtStartCash(new MyAmtType( TESTA_AMT_START_CASH ) );
         System.out.println(tagData.toVerboseString());
 
-        tagData = new Tag540AmtTotalAccruedInterestAmt(new MyAmtType(TESTB_AMT_TOTAL_ACCRUED_INTEREST_AMT) );
+        tagData = new Tag921AmtStartCash(new MyAmtType( TESTB_AMT_START_CASH ) );
         System.out.println(tagData.toVerboseString());
     }
 }
