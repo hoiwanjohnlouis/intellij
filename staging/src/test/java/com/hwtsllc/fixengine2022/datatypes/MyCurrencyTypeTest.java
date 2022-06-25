@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -24,7 +25,30 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class MyCurrencyTypeTest {
     @Test
     void CurrencyTypeTest() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
+        MyCurrencyType dataType;
+        String oneElement;
+
+        oneElement = MyCurrencyType.TESTA_MY_CURRENCY_TYPE;
+        dataType = new MyCurrencyType( oneElement );
+        assertEquals( oneElement, dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.getDataValue());
+
+        oneElement = MyCurrencyType.TESTB_MY_CURRENCY_TYPE;
+        dataType = new MyCurrencyType( oneElement );
+        assertEquals( oneElement, dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        MyCurrencyType dataType;
+        String oneElement;
+
+        oneElement = MyCurrencyType.TESTA_MY_CURRENCY_TYPE;
+        dataType = new MyCurrencyType( oneElement );
+        System.out.println( dataType.toVerboseString() );
+
+        oneElement = MyCurrencyType.TESTB_MY_CURRENCY_TYPE;
+        dataType = new MyCurrencyType( oneElement );
+        System.out.println( dataType.toVerboseString() );
     }
 }

@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -24,7 +25,34 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class MyFloatTypeTest {
     @Test
     void FloatTypeTest() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
+        MyFloatType dataType;
+        float oneElement;
+
+        oneElement = MyFloatType.TESTA_MY_FLOAT_TYPE;
+        dataType = new MyFloatType( oneElement );
+        assertEquals( oneElement, dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, dataType.getDataValue());
+
+        oneElement = MyFloatType.TESTB_MY_FLOAT_TYPE;
+        dataType = new MyFloatType( oneElement );
+        assertEquals( oneElement, dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, dataType.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        MyFloatType dataType;
+        float oneElement;
+
+        oneElement = 0.657F;
+        dataType = new MyFloatType( oneElement );
+        System.out.println( dataType.toVerboseString() );
+
+        oneElement = MyFloatType.TESTA_MY_FLOAT_TYPE;
+        dataType = new MyFloatType( oneElement );
+        System.out.println( dataType.toVerboseString() );
+
+        oneElement = MyFloatType.TESTB_MY_FLOAT_TYPE;
+        dataType = new MyFloatType( oneElement );
+        System.out.println( dataType.toVerboseString() );
     }
 }

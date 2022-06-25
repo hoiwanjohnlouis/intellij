@@ -26,9 +26,38 @@ class MySeqNumTypeTest {
     @Test
     void SeqNumTypeTest() {
         MySeqNumType dataType;
+        int oneElement;
 
-        dataType = new MySeqNumType( 777777 );
-        assertEquals(  777777 , dataType.getDataValue() );
+        oneElement = 777777;
+        dataType = new MySeqNumType( oneElement );
+        assertEquals(  oneElement , dataType.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_SEQ_DATA_VALUE, dataType.getDataValue());
+
+        oneElement = MySeqNumType.TESTA_MY_SEQ_NUM_TYPE;
+        dataType = new MySeqNumType( oneElement );
+        assertEquals(  oneElement , dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_SEQ_DATA_VALUE, dataType.getDataValue());
+
+        oneElement = MySeqNumType.TESTB_MY_SEQ_NUM_TYPE;
+        dataType = new MySeqNumType( oneElement );
+        assertEquals(  oneElement , dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_SEQ_DATA_VALUE, dataType.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        MySeqNumType dataType;
+        int oneElement;
+
+        oneElement = 841;
+        dataType = new MySeqNumType( oneElement );
+        System.out.println( dataType.toVerboseString() );
+
+        oneElement = MySeqNumType.TESTA_MY_SEQ_NUM_TYPE;
+        dataType = new MySeqNumType( oneElement );
+        System.out.println( dataType.toVerboseString() );
+
+        oneElement = MySeqNumType.TESTB_MY_SEQ_NUM_TYPE;
+        dataType = new MySeqNumType( oneElement );
+        System.out.println( dataType.toVerboseString() );
     }
 }

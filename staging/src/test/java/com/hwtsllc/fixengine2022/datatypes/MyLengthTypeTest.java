@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -24,7 +25,34 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class MyLengthTypeTest {
     @Test
     void LengthTypeTest() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
+        MyLengthType dataType;
+        int oneElement;
+
+        oneElement = MyLengthType.TESTA_MY_LENGTH_TYPE;
+        dataType = new MyLengthType( oneElement );
+        assertEquals( oneElement, dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, dataType.getDataValue());
+
+        oneElement = MyLengthType.TESTB_MY_LENGTH_TYPE;
+        dataType = new MyLengthType( oneElement );
+        assertEquals( oneElement, dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, dataType.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        MyLengthType dataType;
+        int oneElement;
+
+        oneElement = 512;
+        dataType = new MyLengthType( oneElement );
+        System.out.println( dataType.toVerboseString() );
+
+        oneElement = MyLengthType.TESTA_MY_LENGTH_TYPE;
+        dataType = new MyLengthType( oneElement );
+        System.out.println( dataType.toVerboseString() );
+
+        oneElement = MyLengthType.TESTB_MY_LENGTH_TYPE;
+        dataType = new MyLengthType( oneElement );
+        System.out.println( dataType.toVerboseString() );
     }
 }

@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -23,7 +24,30 @@ import static org.junit.jupiter.api.Assertions.*;
 class MyUTCDateTypeTest {
     @Test
     void UTCDateTypeTest() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
+        MyUTCDateType dataType;
+        String oneElement;
+
+        oneElement = MyUTCDateType.TESTA_MY_UTC_DATE_TYPE;
+        dataType = new MyUTCDateType( oneElement );
+        assertEquals( oneElement, dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_UTCD_DATA_VALUE, dataType.getDataValue());
+
+        oneElement = MyUTCDateType.TESTB_MY_UTC_DATE_TYPE;
+        dataType = new MyUTCDateType( oneElement );
+        assertEquals( oneElement, dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_UTCD_DATA_VALUE, dataType.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        MyUTCDateType dataType;
+        String oneElement;
+
+        oneElement = MyUTCDateType.TESTA_MY_UTC_DATE_TYPE;
+        dataType = new MyUTCDateType( oneElement );
+        System.out.println( dataType.toVerboseString() );
+
+        oneElement = MyUTCDateType.TESTB_MY_UTC_DATE_TYPE;
+        dataType = new MyUTCDateType( oneElement );
+        System.out.println( dataType.toVerboseString() );
     }
 }

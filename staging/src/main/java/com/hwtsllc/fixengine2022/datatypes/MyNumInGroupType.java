@@ -26,6 +26,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class MyNumInGroupType implements LogVerboseString {
     private final int dataValue;
 
+    public final static int TESTA_MY_NUM_IN_GROUP_TYPE
+            = 16;
+    public final static int TESTB_MY_NUM_IN_GROUP_TYPE
+            = 32;
+
     public MyNumInGroupType(final int dataValue) {
         this.dataValue = dataValue;
     }
@@ -55,8 +60,12 @@ public class MyNumInGroupType implements LogVerboseString {
      * @param args Not used.
      */
     public static void main(String[] args) {
-        MyNumInGroupType dataType = new MyNumInGroupType(12345);
-        System.out.println(dataType);
+        MyNumInGroupType dataType;
+
+        dataType = new MyNumInGroupType( TESTA_MY_NUM_IN_GROUP_TYPE );
+        System.out.println(dataType.toVerboseString());
+
+        dataType = new MyNumInGroupType( TESTB_MY_NUM_IN_GROUP_TYPE );
         System.out.println(dataType.toVerboseString());
     }
 }

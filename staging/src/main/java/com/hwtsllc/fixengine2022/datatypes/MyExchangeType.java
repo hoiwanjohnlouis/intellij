@@ -25,6 +25,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class MyExchangeType implements LogVerboseString {
     private final String dataValue;
 
+    public final static String TESTA_MY_EXCHANGE_TYPE
+            = "LisaBatiashvili-MyExchangeType";
+    public final static String TESTB_MY_EXCHANGE_TYPE
+            = "NadjaSalernoSonnenberg-MyExchangeType";
+
     public MyExchangeType(final String dataValue) {
         this.dataValue = dataValue;
     }
@@ -54,8 +59,12 @@ public class MyExchangeType implements LogVerboseString {
      * @param args Not used.
      */
     public static void main(String[] args) {
-        MyExchangeType dataType = new MyExchangeType("12345");
-        System.out.println(dataType);
+        MyExchangeType dataType;
+
+        dataType = new MyExchangeType( TESTA_MY_EXCHANGE_TYPE );
+        System.out.println(dataType.toVerboseString());
+
+        dataType = new MyExchangeType( TESTB_MY_EXCHANGE_TYPE );
         System.out.println(dataType.toVerboseString());
     }
 }

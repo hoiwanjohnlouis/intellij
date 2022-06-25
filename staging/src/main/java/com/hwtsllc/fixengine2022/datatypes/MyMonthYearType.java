@@ -65,6 +65,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class MyMonthYearType implements LogVerboseString {
     private final String dataValue;
 
+    public final static String TESTA_MY_MONTH_YEAR_TYPE
+            = "20030323";
+    public final static String TESTB_MY_MONTH_YEAR_TYPE
+            = "200303w2";
+
     public MyMonthYearType(final String dataValue) {
         this.dataValue = dataValue;
     }
@@ -96,8 +101,10 @@ public class MyMonthYearType implements LogVerboseString {
     public static void main(String[] args) {
         MyMonthYearType dataType;
 
-        dataType = new MyMonthYearType("14991231");
-        System.out.println(dataType);
+        dataType = new MyMonthYearType( TESTA_MY_MONTH_YEAR_TYPE );
+        System.out.println(dataType.toVerboseString());
+
+        dataType = new MyMonthYearType( TESTB_MY_MONTH_YEAR_TYPE );
         System.out.println(dataType.toVerboseString());
     }
 }

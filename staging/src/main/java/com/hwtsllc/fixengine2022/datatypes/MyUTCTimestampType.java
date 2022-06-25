@@ -40,6 +40,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class MyUTCTimestampType implements LogVerboseString {
     private final String dataValue;
 
+    public final static String TESTA_MY_UTC_TIMESTAMP_TYPE
+            = "14000101-00:00:00.001";
+    public final static String TESTB_MY_UTC_TIMESTAMP_TYPE
+            = "15000101-00:00:00.002";
+
     public MyUTCTimestampType(final String dataValue) {
         this.dataValue = dataValue;
     }
@@ -71,8 +76,10 @@ public class MyUTCTimestampType implements LogVerboseString {
     public static void main(String[] args) {
         MyUTCTimestampType dataType;
 
-        dataType = new MyUTCTimestampType("18991231 235959");
-        System.out.println(dataType);
+        dataType = new MyUTCTimestampType( TESTA_MY_UTC_TIMESTAMP_TYPE );
+        System.out.println(dataType.toVerboseString());
+
+        dataType = new MyUTCTimestampType( TESTB_MY_UTC_TIMESTAMP_TYPE );
         System.out.println(dataType.toVerboseString());
     }
 }

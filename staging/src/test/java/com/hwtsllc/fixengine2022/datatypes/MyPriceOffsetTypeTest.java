@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -24,7 +25,34 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class MyPriceOffsetTypeTest {
     @Test
     void PriceOffsetTypeTest() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
+        MyPriceOffsetType dataType;
+        double oneElement;
+
+        oneElement = MyPriceOffsetType.TESTA_MY_PRICE_OFFSET_TYPE;
+        dataType = new MyPriceOffsetType( oneElement );
+        assertEquals( oneElement, dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, dataType.getDataValue());
+
+        oneElement = MyPriceOffsetType.TESTB_MY_PRICE_OFFSET_TYPE;
+        dataType = new MyPriceOffsetType( oneElement );
+        assertEquals( oneElement, dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, dataType.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        MyPriceOffsetType dataType;
+        double oneElement;
+
+        oneElement = 0.00782D;
+        dataType = new MyPriceOffsetType( oneElement );
+        System.out.println( dataType.toVerboseString() );
+
+        oneElement = MyPriceOffsetType.TESTA_MY_PRICE_OFFSET_TYPE;
+        dataType = new MyPriceOffsetType( oneElement );
+        System.out.println( dataType.toVerboseString() );
+
+        oneElement = MyPriceOffsetType.TESTB_MY_PRICE_OFFSET_TYPE;
+        dataType = new MyPriceOffsetType( oneElement );
+        System.out.println( dataType.toVerboseString() );
     }
 }

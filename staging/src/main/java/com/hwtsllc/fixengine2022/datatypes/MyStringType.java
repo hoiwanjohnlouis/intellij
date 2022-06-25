@@ -21,6 +21,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class MyStringType implements LogVerboseString {
     private final String dataValue;
 
+    public final static String TESTA_MY_STRING_TYPE
+            = "YvonneDeCarlo-MyStringType";
+    public final static String TESTB_MY_STRING_TYPE
+            = "VivianLeigh-MyStringType";
+
     public MyStringType(final String dataValue) {
         this.dataValue = dataValue;
     }
@@ -50,8 +55,12 @@ public class MyStringType implements LogVerboseString {
      * @param args Not used.
      */
     public static void main(String[] args) {
-        MyStringType dataType = new MyStringType("12345");
-        System.out.println(dataType);
+        MyStringType dataType;
+
+        dataType = new MyStringType(TESTA_MY_STRING_TYPE);
+        System.out.println(dataType.toVerboseString());
+
+        dataType = new MyStringType(TESTB_MY_STRING_TYPE);
         System.out.println(dataType.toVerboseString());
     }
 }

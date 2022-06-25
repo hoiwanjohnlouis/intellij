@@ -26,6 +26,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class MyQtyType implements LogVerboseString {
     private final int dataValue;
 
+    public final static int TESTA_MY_QTY_TYPE
+            = 128;
+    public final static int TESTB_MY_QTY_TYPE
+            = 256;
+
     public MyQtyType(final int dataValue) {
         this.dataValue = dataValue;
     }
@@ -58,8 +63,10 @@ public class MyQtyType implements LogVerboseString {
     public static void main(String[] args) {
         MyQtyType dataType;
 
-        dataType = new MyQtyType(12345);
-        System.out.println(dataType);
+        dataType = new MyQtyType( TESTA_MY_QTY_TYPE );
+        System.out.println(dataType.toVerboseString());
+
+        dataType = new MyQtyType( TESTB_MY_QTY_TYPE );
         System.out.println(dataType.toVerboseString());
     }
 }

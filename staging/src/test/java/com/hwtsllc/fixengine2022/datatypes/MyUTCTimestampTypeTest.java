@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -24,7 +25,30 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class MyUTCTimestampTypeTest {
     @Test
     void UTCTimestampTypeTest() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
+        MyUTCTimestampType dataType;
+        String oneElement;
+
+        oneElement = MyUTCTimestampType.TESTA_MY_UTC_TIMESTAMP_TYPE;
+        dataType = new MyUTCTimestampType( oneElement );
+        assertEquals( oneElement, dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, dataType.getDataValue());
+
+        oneElement = MyUTCTimestampType.TESTB_MY_UTC_TIMESTAMP_TYPE;
+        dataType = new MyUTCTimestampType( oneElement );
+        assertEquals( oneElement, dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, dataType.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        MyUTCTimestampType dataType;
+        String oneElement;
+
+        oneElement = MyUTCTimestampType.TESTA_MY_UTC_TIMESTAMP_TYPE;
+        dataType = new MyUTCTimestampType( oneElement );
+        System.out.println( dataType.toVerboseString() );
+
+        oneElement = MyUTCTimestampType.TESTB_MY_UTC_TIMESTAMP_TYPE;
+        dataType = new MyUTCTimestampType( oneElement );
+        System.out.println( dataType.toVerboseString() );
     }
 }

@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -24,7 +25,30 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class MyDataTypeTest {
     @Test
     void DataTypeTest() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
+        MyDataType dataType;
+        String oneElement;
+
+        oneElement = MyDataType.TESTA_MY_DATA_TYPE;
+        dataType = new MyDataType( oneElement );
+        assertEquals( oneElement, dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, dataType.getDataValue());
+
+        oneElement = MyDataType.TESTB_MY_DATA_TYPE;
+        dataType = new MyDataType( oneElement );
+        assertEquals( oneElement, dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, dataType.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        MyDataType dataType;
+        String oneElement;
+
+        oneElement = MyDataType.TESTA_MY_DATA_TYPE;
+        dataType = new MyDataType( oneElement );
+        System.out.println( dataType.toVerboseString() );
+
+        oneElement = MyDataType.TESTB_MY_DATA_TYPE;
+        dataType = new MyDataType( oneElement );
+        System.out.println( dataType.toVerboseString() );
     }
 }

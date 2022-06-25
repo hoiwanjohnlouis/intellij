@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -65,8 +66,31 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 class MyMonthYearTypeTest {
     @Test
-    void UTCDateTypeTest() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
+    void MonthYearTypeTest() {
+        MyMonthYearType dataType;
+        String oneElement;
+
+        oneElement = MyMonthYearType.TESTA_MY_MONTH_YEAR_TYPE;
+        dataType = new MyMonthYearType( oneElement );
+        assertEquals( oneElement, dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.getDataValue());
+
+        oneElement = MyMonthYearType.TESTB_MY_MONTH_YEAR_TYPE;
+        dataType = new MyMonthYearType( oneElement );
+        assertEquals( oneElement, dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        MyMonthYearType dataType;
+        String oneElement;
+
+        oneElement = MyMonthYearType.TESTA_MY_MONTH_YEAR_TYPE;
+        dataType = new MyMonthYearType( oneElement );
+        System.out.println( dataType.toVerboseString() );
+
+        oneElement = MyMonthYearType.TESTB_MY_MONTH_YEAR_TYPE;
+        dataType = new MyMonthYearType( oneElement );
+        System.out.println( dataType.toVerboseString() );
     }
 }

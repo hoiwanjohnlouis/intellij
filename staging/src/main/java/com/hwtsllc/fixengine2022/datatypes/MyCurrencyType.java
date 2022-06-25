@@ -25,6 +25,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class MyCurrencyType implements LogVerboseString {
     private final String dataValue;
 
+    public final static String TESTA_MY_CURRENCY_TYPE
+            = "USD-MyCurrencyType";
+    public final static String TESTB_MY_CURRENCY_TYPE
+            = "CHF-MyCurrencyType";
+
     public MyCurrencyType(final String dataValue) {
         this.dataValue = dataValue;
     }
@@ -54,8 +59,12 @@ public class MyCurrencyType implements LogVerboseString {
      * @param args Not used.
      */
     public static void main(String[] args) {
-        MyCurrencyType dataType = new MyCurrencyType("USD");
-        System.out.println(dataType);
+        MyCurrencyType dataType;
+
+        dataType = new MyCurrencyType( TESTA_MY_CURRENCY_TYPE );
+        System.out.println(dataType.toVerboseString());
+
+        dataType = new MyCurrencyType( TESTB_MY_CURRENCY_TYPE );
         System.out.println(dataType.toVerboseString());
     }
 }

@@ -26,9 +26,38 @@ class MyQtyTypeTest {
     @Test
     void QtyTypeTest() {
         MyQtyType dataType;
+        int oneElement;
 
-        dataType = new MyQtyType( 999999 );
-        assertEquals(  999999 , dataType.getDataValue() );
+        oneElement = 999999;
+        dataType = new MyQtyType( oneElement );
+        assertEquals(  oneElement , dataType.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, dataType.getDataValue());
+
+        oneElement = MyQtyType.TESTA_MY_QTY_TYPE;
+        dataType = new MyQtyType( oneElement );
+        assertEquals(  oneElement , dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, dataType.getDataValue());
+
+        oneElement = MyQtyType.TESTB_MY_QTY_TYPE;
+        dataType = new MyQtyType( oneElement );
+        assertEquals(  oneElement , dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, dataType.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        MyQtyType dataType;
+        int oneElement;
+
+        oneElement = 162;
+        dataType = new MyQtyType( oneElement );
+        System.out.println( dataType.toVerboseString() );
+
+        oneElement = MyQtyType.TESTA_MY_QTY_TYPE;
+        dataType = new MyQtyType( oneElement );
+        System.out.println( dataType.toVerboseString() );
+
+        oneElement = MyQtyType.TESTB_MY_QTY_TYPE;
+        dataType = new MyQtyType( oneElement );
+        System.out.println( dataType.toVerboseString() );
     }
 }

@@ -26,9 +26,38 @@ class MyAmtTypeTest {
     @Test
     void AmtTypeTest() {
         MyAmtType dataType;
+        double oneElement;
 
-        dataType = new MyAmtType( 00.23D );
-        assertEquals(  00.23D , dataType.getDataValue() );
+        oneElement = 0.23D;
+        dataType = new MyAmtType( oneElement );
+        assertEquals(  oneElement , dataType.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, dataType.getDataValue());
+
+        oneElement = MyAmtType.TESTA_MY_AMT_TYPE;
+        dataType = new MyAmtType( oneElement );
+        assertEquals(  oneElement , dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, dataType.getDataValue());
+
+        oneElement = MyAmtType.TESTB_MY_AMT_TYPE;
+        dataType = new MyAmtType( oneElement );
+        assertEquals(  oneElement , dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, dataType.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        MyAmtType dataType;
+        double oneElement;
+
+        oneElement = 0.23D;
+        dataType = new MyAmtType( oneElement );
+        System.out.println( dataType.toVerboseString() );
+
+        oneElement = MyAmtType.TESTA_MY_AMT_TYPE;
+        dataType = new MyAmtType( oneElement );
+        System.out.println( dataType.toVerboseString() );
+
+        oneElement = MyAmtType.TESTB_MY_AMT_TYPE;
+        dataType = new MyAmtType( oneElement );
+        System.out.println( dataType.toVerboseString() );
     }
 }

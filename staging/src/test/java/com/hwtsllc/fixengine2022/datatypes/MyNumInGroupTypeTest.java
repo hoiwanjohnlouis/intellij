@@ -26,9 +26,38 @@ class MyNumInGroupTypeTest {
     @Test
     void NumInGroupTypeTest() {
         MyNumInGroupType dataType;
+        int oneElement;
 
-        dataType = new MyNumInGroupType( 888888 );
-        assertEquals(  888888 , dataType.getDataValue() );
+        oneElement = 888888;
+        dataType = new MyNumInGroupType( oneElement );
+        assertEquals(  oneElement , dataType.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, dataType.getDataValue());
+
+        oneElement = MyNumInGroupType.TESTA_MY_NUM_IN_GROUP_TYPE;
+        dataType = new MyNumInGroupType( oneElement );
+        assertEquals(  oneElement , dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, dataType.getDataValue());
+
+        oneElement = MyNumInGroupType.TESTB_MY_NUM_IN_GROUP_TYPE;
+        dataType = new MyNumInGroupType( oneElement );
+        assertEquals(  oneElement , dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, dataType.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        MyNumInGroupType dataType;
+        int oneElement;
+
+        oneElement = 273;
+        dataType = new MyNumInGroupType( oneElement );
+        System.out.println( dataType.toVerboseString() );
+
+        oneElement = MyNumInGroupType.TESTA_MY_NUM_IN_GROUP_TYPE;
+        dataType = new MyNumInGroupType( oneElement );
+        System.out.println( dataType.toVerboseString() );
+
+        oneElement = MyNumInGroupType.TESTB_MY_NUM_IN_GROUP_TYPE;
+        dataType = new MyNumInGroupType( oneElement );
+        System.out.println( dataType.toVerboseString() );
     }
 }

@@ -24,6 +24,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class MyUTCTimeType implements LogVerboseString {
     private final String dataValue;
 
+    public final static String TESTA_MY_UTC_TIME_TYPE
+            = "00:00:00.789";
+    public final static String TESTB_MY_UTC_TIME_TYPE
+            = "00:00:00.123";
+
     public MyUTCTimeType(final String dataValue) {
         this.dataValue = dataValue;
     }
@@ -55,8 +60,10 @@ public class MyUTCTimeType implements LogVerboseString {
     public static void main(String[] args) {
         MyUTCTimeType dataType;
 
-        dataType = new MyUTCTimeType("120000");
-        System.out.println(dataType);
+        dataType = new MyUTCTimeType( TESTA_MY_UTC_TIME_TYPE );
+        System.out.println(dataType.toVerboseString());
+
+        dataType = new MyUTCTimeType( TESTB_MY_UTC_TIME_TYPE );
         System.out.println(dataType.toVerboseString());
     }
 }

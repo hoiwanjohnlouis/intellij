@@ -26,6 +26,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class MyTZTimeOnlyType implements LogVerboseString {
     private final String dataValue;
 
+    public final static String TESTA_MY_TZ_TIME_ONLY_TYPE
+            = "00:00:12.435";
+    public final static String TESTB_MY_TZ_TIME_ONLY_TYPE
+            = "00:00:34.617";
+
     public MyTZTimeOnlyType(final String dataValue) {
         this.dataValue = dataValue;
     }
@@ -57,7 +62,10 @@ public class MyTZTimeOnlyType implements LogVerboseString {
     public static void main(String[] args) {
         MyTZTimeOnlyType dataType;
 
-        dataType = new MyTZTimeOnlyType("120000");
+        dataType = new MyTZTimeOnlyType(TESTA_MY_TZ_TIME_ONLY_TYPE);
+        System.out.println(dataType.toVerboseString());
+
+        dataType = new MyTZTimeOnlyType(TESTB_MY_TZ_TIME_ONLY_TYPE);
         System.out.println(dataType.toVerboseString());
     }
 }

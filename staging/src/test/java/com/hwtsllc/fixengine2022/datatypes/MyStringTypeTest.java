@@ -26,9 +26,34 @@ class MyStringTypeTest {
     @Test
     void StringTypeTest() {
         MyStringType dataType;
+        String oneElement;
 
-        dataType = new MyStringType( "The Quick Brown Fox Jumped Over The Lazy Dog" );
-        assertEquals( "The Quick Brown Fox Jumped Over The Lazy Dog", dataType.getDataValue() );
+        oneElement = "The Quick Brown Fox Jumped Over The Lazy Dog";
+        dataType = new MyStringType( oneElement );
+        assertEquals( oneElement, dataType.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.getDataValue());
+
+        oneElement = MyStringType.TESTA_MY_STRING_TYPE;
+        dataType = new MyStringType( oneElement );
+        assertEquals( oneElement, dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.getDataValue());
+
+        oneElement = MyStringType.TESTB_MY_STRING_TYPE;
+        dataType = new MyStringType( oneElement );
+        assertEquals( oneElement, dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        MyStringType dataType;
+        String oneElement;
+
+        oneElement = MyStringType.TESTA_MY_STRING_TYPE;
+        dataType = new MyStringType( oneElement );
+        System.out.println( dataType.toVerboseString() );
+
+        oneElement = MyStringType.TESTB_MY_STRING_TYPE;
+        dataType = new MyStringType( oneElement );
+        System.out.println( dataType.toVerboseString() );
     }
 }

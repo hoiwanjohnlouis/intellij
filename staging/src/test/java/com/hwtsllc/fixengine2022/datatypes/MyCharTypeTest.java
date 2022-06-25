@@ -25,13 +25,47 @@ class MyCharTypeTest {
     @Test
     void CharTypeTest() {
         MyCharType dataType;
+        char oneElement;
 
-        dataType = new MyCharType( '2' );
-        assertEquals( '2', dataType.getDataValue() );
+        oneElement = 's';
+        dataType = new MyCharType( oneElement );
+        assertEquals( oneElement, dataType.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_CHA_DATA_VALUE, dataType.getDataValue());
 
-        dataType = new MyCharType( 'A' );
-        assertEquals( 'A', dataType.getDataValue() );
+        oneElement = '0';
+        dataType = new MyCharType( oneElement );
+        assertEquals( oneElement, dataType.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_CHA_DATA_VALUE, dataType.getDataValue());
+
+        oneElement = MyCharType.TESTA_MY_CHAR_TYPE;
+        dataType = new MyCharType( oneElement );
+        assertEquals( oneElement, dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_CHA_DATA_VALUE, dataType.getDataValue());
+
+        oneElement = MyCharType.TESTB_MY_CHAR_TYPE;
+        dataType = new MyCharType( oneElement );
+        assertEquals( oneElement, dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_CHA_DATA_VALUE, dataType.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        MyCharType dataType;
+        char oneElement;
+
+        oneElement = '7';
+        dataType = new MyCharType( oneElement );
+        System.out.println( dataType.toVerboseString() );
+
+        oneElement = 'f';
+        dataType = new MyCharType( oneElement );
+        System.out.println( dataType.toVerboseString() );
+
+        oneElement = MyCharType.TESTA_MY_CHAR_TYPE;
+        dataType = new MyCharType( oneElement );
+        System.out.println( dataType.toVerboseString() );
+
+        oneElement = MyCharType.TESTB_MY_CHAR_TYPE;
+        dataType = new MyCharType( oneElement );
+        System.out.println( dataType.toVerboseString() );
     }
 }

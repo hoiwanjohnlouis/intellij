@@ -26,6 +26,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class MySeqNumType implements LogVerboseString {
     private final int dataValue;
 
+    public final static int TESTA_MY_SEQ_NUM_TYPE
+            = 512;
+    public final static int TESTB_MY_SEQ_NUM_TYPE
+            = 1024;
+
     public MySeqNumType(final int dataValue) {
         this.dataValue = dataValue;
     }
@@ -56,8 +61,12 @@ public class MySeqNumType implements LogVerboseString {
      * @param args Not used.
      */
     public static void main(String[] args) {
-        MySeqNumType dataType = new MySeqNumType(12345);
-        System.out.println(dataType);
+        MySeqNumType dataType;
+
+        dataType = new MySeqNumType( TESTA_MY_SEQ_NUM_TYPE );
+        System.out.println(dataType.toVerboseString());
+
+        dataType = new MySeqNumType( TESTB_MY_SEQ_NUM_TYPE );
         System.out.println(dataType.toVerboseString());
     }
 }

@@ -25,6 +25,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class MyAmtType implements LogVerboseString {
     private final double dataValue;
 
+    public final static double TESTA_MY_AMT_TYPE
+            = 0.01024D;
+    public final static double TESTB_MY_AMT_TYPE
+            = 0.2048D;
+
     public MyAmtType(final double dataValue) {
         this.dataValue = dataValue;
     }
@@ -54,8 +59,12 @@ public class MyAmtType implements LogVerboseString {
      * @param args Not used.
      */
     public static void main(String[] args) {
-        MyAmtType dataType = new MyAmtType(12345D);
-        System.out.println(dataType);
+        MyAmtType dataType;
+
+        dataType = new MyAmtType( TESTA_MY_AMT_TYPE );
+        System.out.println(dataType.toVerboseString());
+
+        dataType = new MyAmtType( TESTB_MY_AMT_TYPE );
         System.out.println(dataType.toVerboseString());
     }
 }

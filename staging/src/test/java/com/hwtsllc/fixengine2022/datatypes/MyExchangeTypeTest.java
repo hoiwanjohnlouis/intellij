@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -24,7 +25,30 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class MyExchangeTypeTest {
     @Test
     void ExchangeTypeTest() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
+        MyExchangeType dataType;
+        String oneElement;
+
+        oneElement = MyExchangeType.TESTA_MY_EXCHANGE_TYPE;
+        dataType = new MyExchangeType( oneElement );
+        assertEquals( oneElement, dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_EXC_DATA_VALUE, dataType.getDataValue());
+
+        oneElement = MyExchangeType.TESTB_MY_EXCHANGE_TYPE;
+        dataType = new MyExchangeType( oneElement );
+        assertEquals( oneElement, dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_EXC_DATA_VALUE, dataType.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        MyExchangeType dataType;
+        String oneElement;
+
+        oneElement = MyExchangeType.TESTA_MY_EXCHANGE_TYPE;
+        dataType = new MyExchangeType( oneElement );
+        System.out.println( dataType.toVerboseString() );
+
+        oneElement = MyExchangeType.TESTB_MY_EXCHANGE_TYPE;
+        dataType = new MyExchangeType( oneElement );
+        System.out.println( dataType.toVerboseString() );
     }
 }

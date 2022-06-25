@@ -21,6 +21,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class MyCountryType implements LogVerboseString {
     private final String dataValue;
 
+    public final static String TESTA_MY_COUNTRY_TYPE
+            = "USA-MyCountryType";
+    public final static String TESTB_MY_COUNTRY_TYPE
+            = "FRA-MyCountryType";
+
     public MyCountryType(final String dataValue) {
         this.dataValue = dataValue;
     }
@@ -50,8 +55,12 @@ public class MyCountryType implements LogVerboseString {
      * @param args Not used.
      */
     public static void main(String[] args) {
-        MyCountryType dataType = new MyCountryType("USA");
-        System.out.println(dataType);
+        MyCountryType dataType;
+
+        dataType = new MyCountryType( TESTA_MY_COUNTRY_TYPE );
+        System.out.println(dataType.toVerboseString());
+
+        dataType = new MyCountryType( TESTB_MY_COUNTRY_TYPE );
         System.out.println(dataType.toVerboseString());
     }
 }

@@ -25,6 +25,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class MyFloatType implements LogVerboseString {
     private final float dataValue;
 
+    public final static float TESTA_MY_FLOAT_TYPE
+            = 0.8192F;
+    public final static float TESTB_MY_FLOAT_TYPE
+            = 0.06144F;
+
     public MyFloatType(final float dataValue) {
         this.dataValue = dataValue;
     }
@@ -54,8 +59,12 @@ public class MyFloatType implements LogVerboseString {
      * @param args Not used.
      */
     public static void main(String[] args) {
-        MyFloatType dataType = new MyFloatType(1234.78F);
-        System.out.println(dataType);
+        MyFloatType dataType;
+
+        dataType = new MyFloatType( TESTA_MY_FLOAT_TYPE );
+        System.out.println(dataType.toVerboseString());
+
+        dataType = new MyFloatType( TESTB_MY_FLOAT_TYPE );
         System.out.println(dataType.toVerboseString());
     }
 }

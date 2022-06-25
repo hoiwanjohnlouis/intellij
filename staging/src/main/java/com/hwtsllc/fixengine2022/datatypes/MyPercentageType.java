@@ -25,8 +25,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class MyPercentageType implements LogVerboseString {
     private final double dataValue;
 
-    public final static double TESTA_PCT_PERCENTAGE_TYPE = 0.025D;
-    public final static double TESTB_PCT_PERCENTAGE_TYPE = 0.015D;
+    public final static double TESTA_MY_PERCENTAGE_TYPE
+            = 0.3072D;
+    public final static double TESTB_MY_PERCENTAGE_TYPE
+            = 0.04096D;
 
     public MyPercentageType(final double dataValue) {
         this.dataValue = dataValue;
@@ -59,12 +61,10 @@ public class MyPercentageType implements LogVerboseString {
     public static void main(String[] args) {
         MyPercentageType dataType;
 
-        dataType = new MyPercentageType( TESTA_PCT_PERCENTAGE_TYPE );
-        System.out.println(dataType);
+        dataType = new MyPercentageType( TESTA_MY_PERCENTAGE_TYPE );
         System.out.println(dataType.toVerboseString());
 
-        dataType = new MyPercentageType( TESTB_PCT_PERCENTAGE_TYPE );
-        System.out.println(dataType);
+        dataType = new MyPercentageType( TESTB_MY_PERCENTAGE_TYPE );
         System.out.println(dataType.toVerboseString());
     }
 }

@@ -25,6 +25,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class MyPriceType implements LogVerboseString {
     private final double dataValue;
 
+    public final static double TESTA_MY_PRICE_TYPE
+            = 0.2048D;
+    public final static double TESTB_MY_PRICE_TYPE
+            = 0.01024D;
+
     public MyPriceType(final double dataValue) {
         this.dataValue = dataValue;
     }
@@ -54,8 +59,12 @@ public class MyPriceType implements LogVerboseString {
      * @param args Not used.
      */
     public static void main(String[] args) {
-        MyPriceType dataType = new MyPriceType( 12345D );
-        System.out.println(dataType);
+        MyPriceType dataType;
+
+        dataType = new MyPriceType( TESTA_MY_PRICE_TYPE );
+        System.out.println(dataType.toVerboseString());
+
+        dataType = new MyPriceType( TESTB_MY_PRICE_TYPE );
         System.out.println(dataType.toVerboseString());
     }
 }

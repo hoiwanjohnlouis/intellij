@@ -180,8 +180,6 @@ class MyEnumMsgTypeTest {
     void Enum0035Test() {
         MyEnumMsgType enumType;
 
-
-
         /*
          *  0-9, msg types
          *  A-Z, msg types, skipping "I", and "O"
@@ -189,8 +187,6 @@ class MyEnumMsgTypeTest {
          *  AA-AZ, msg types
          *  BA-BP, msg types
          */
-
-
 
         /*
          *  0-9, msg types
@@ -275,8 +271,6 @@ class MyEnumMsgTypeTest {
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
-
-
 
         /*
          *  A-Z, msg types, skipping "I", and "O"
@@ -468,8 +462,6 @@ class MyEnumMsgTypeTest {
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
-
-
 
         /*
          *  a-z, msg types
@@ -687,8 +679,6 @@ class MyEnumMsgTypeTest {
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
-
-
         /*
          *  AA-AZ, msg types
          */
@@ -904,8 +894,6 @@ class MyEnumMsgTypeTest {
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
-
-
 
         /*
          *  BA-BP, msg types

@@ -26,6 +26,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class MyLengthType implements LogVerboseString {
     private final int dataValue;
 
+    public final static int TESTA_MY_LENGTH_TYPE
+            = 88888;
+    public final static int TESTB_MY_LENGTH_TYPE
+            = 66666;
+
     public MyLengthType(final int dataValue) {
         this.dataValue = dataValue;
     }
@@ -56,8 +61,12 @@ public class MyLengthType implements LogVerboseString {
      * @param args Not used.
      */
     public static void main(String[] args) {
-        MyLengthType dataType = new MyLengthType(12345);
-        System.out.println(dataType);
+        MyLengthType dataType;
+
+        dataType = new MyLengthType( TESTA_MY_LENGTH_TYPE );
+        System.out.println(dataType.toVerboseString());
+
+        dataType = new MyLengthType( TESTB_MY_LENGTH_TYPE );
         System.out.println(dataType.toVerboseString());
     }
 }

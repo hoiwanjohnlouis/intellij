@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -24,7 +25,34 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class MyPercentageTypeTest {
     @Test
     void PercentageTypeTest() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
+        MyPercentageType dataType;
+        double oneElement;
+
+        oneElement = MyPercentageType.TESTA_MY_PERCENTAGE_TYPE;
+        dataType = new MyPercentageType( oneElement );
+        assertEquals( oneElement, dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, dataType.getDataValue());
+
+        oneElement = MyPercentageType.TESTB_MY_PERCENTAGE_TYPE;
+        dataType = new MyPercentageType( oneElement );
+        assertEquals( oneElement, dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, dataType.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        MyPercentageType dataType;
+        double oneElement;
+
+        oneElement = 0.0875D;
+        dataType = new MyPercentageType( oneElement );
+        System.out.println( dataType.toVerboseString() );
+
+        oneElement = MyPercentageType.TESTA_MY_PERCENTAGE_TYPE;
+        dataType = new MyPercentageType( oneElement );
+        System.out.println( dataType.toVerboseString() );
+
+        oneElement = MyPercentageType.TESTB_MY_PERCENTAGE_TYPE;
+        dataType = new MyPercentageType( oneElement );
+        System.out.println( dataType.toVerboseString() );
     }
 }

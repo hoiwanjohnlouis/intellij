@@ -25,6 +25,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class MyLocalMktDateType implements LogVerboseString {
     private final String dataValue;
 
+    public final static String TESTA_MY_LOCAL_MKT_DATE_TYPE
+            = "VeronicaLake-MyLocalMktDateType";
+    public final static String TESTB_MY_LOCAL_MKT_DATE_TYPE
+            = "JaneRussell-MyLocalMktDateType";
+
     public MyLocalMktDateType(final String dataValue) {
         this.dataValue = dataValue;
     }
@@ -54,8 +59,12 @@ public class MyLocalMktDateType implements LogVerboseString {
      * @param args Not used.
      */
     public static void main(String[] args) {
-        MyLocalMktDateType dataType = new MyLocalMktDateType("12345");
-        System.out.println(dataType);
+        MyLocalMktDateType dataType;
+
+        dataType = new MyLocalMktDateType(TESTA_MY_LOCAL_MKT_DATE_TYPE);
+        System.out.println(dataType.toVerboseString());
+
+        dataType = new MyLocalMktDateType(TESTB_MY_LOCAL_MKT_DATE_TYPE);
         System.out.println(dataType.toVerboseString());
     }
 }

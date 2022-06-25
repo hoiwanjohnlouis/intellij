@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX41;
-import com.hwtsllc.fixengine2022.datatypes.MyBooleanType;
 import com.hwtsllc.fixengine2022.fix41.enums.Enum208NotifyBrokerOfCredit;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -51,12 +50,12 @@ class Tag208EnuNotifyBrokerOfCreditTest {
     void Tag0208Test() {
         Tag208EnuNotifyBrokerOfCredit tagData;
 
-        tagData = new Tag208EnuNotifyBrokerOfCredit(Enum208NotifyBrokerOfCredit.NO);
-        assertEquals( MyBooleanType.NO.toFIXIDString(), tagData.getDataValue());
+        tagData = new Tag208EnuNotifyBrokerOfCredit( Enum208NotifyBrokerOfCredit.NO);
+        assertEquals( Enum208NotifyBrokerOfCredit.NO.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-        tagData = new Tag208EnuNotifyBrokerOfCredit(Enum208NotifyBrokerOfCredit.YES);
-        assertEquals( MyBooleanType.YES.toFIXIDString(), tagData.getDataValue());
+        tagData = new Tag208EnuNotifyBrokerOfCredit( Enum208NotifyBrokerOfCredit.YES);
+        assertEquals( Enum208NotifyBrokerOfCredit.YES.toFIXIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -64,7 +63,7 @@ class Tag208EnuNotifyBrokerOfCreditTest {
         Tag208EnuNotifyBrokerOfCredit tagData;
 
         // loop around the ENUM and process
-        for (Enum208NotifyBrokerOfCredit oneEnum : Enum208NotifyBrokerOfCredit.values()) {
+        for ( Enum208NotifyBrokerOfCredit oneEnum : Enum208NotifyBrokerOfCredit.values()) {
             tagData = new Tag208EnuNotifyBrokerOfCredit(oneEnum);
             System.out.println( tagData.toVerboseString() );
         }
@@ -74,7 +73,7 @@ class Tag208EnuNotifyBrokerOfCreditTest {
         Tag208EnuNotifyBrokerOfCredit tagData;
 
         // loop around the ENUM and process
-        for (Enum208NotifyBrokerOfCredit oneEnum : Enum208NotifyBrokerOfCredit.values()) {
+        for ( Enum208NotifyBrokerOfCredit oneEnum : Enum208NotifyBrokerOfCredit.values()) {
             tagData = new Tag208EnuNotifyBrokerOfCredit(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -85,7 +84,7 @@ class Tag208EnuNotifyBrokerOfCreditTest {
         Tag208EnuNotifyBrokerOfCredit tagData;
 
         // loop around the ENUM and process
-        for (Enum208NotifyBrokerOfCredit oneEnum : Enum208NotifyBrokerOfCredit.values()) {
+        for ( Enum208NotifyBrokerOfCredit oneEnum : Enum208NotifyBrokerOfCredit.values()) {
             tagData = new Tag208EnuNotifyBrokerOfCredit(oneEnum);
             assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
@@ -97,7 +96,7 @@ class Tag208EnuNotifyBrokerOfCreditTest {
         Tag208EnuNotifyBrokerOfCredit tagData;
 
         // loop around the ENUM and process
-        for (Enum208NotifyBrokerOfCredit oneEnum : Enum208NotifyBrokerOfCredit.values()) {
+        for ( Enum208NotifyBrokerOfCredit oneEnum : Enum208NotifyBrokerOfCredit.values()) {
             tagData = new Tag208EnuNotifyBrokerOfCredit(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -108,7 +107,7 @@ class Tag208EnuNotifyBrokerOfCreditTest {
         Tag208EnuNotifyBrokerOfCredit tagData;
 
         // loop around the ENUM and process
-        for (Enum208NotifyBrokerOfCredit oneEnum : Enum208NotifyBrokerOfCredit.values()) {
+        for ( Enum208NotifyBrokerOfCredit oneEnum : Enum208NotifyBrokerOfCredit.values()) {
             tagData = new Tag208EnuNotifyBrokerOfCredit(oneEnum);
             assertEquals( "Tag208EnuNotifyBrokerOfCredit\n" +
                             "\tEnumName[" + tagData.toEnumNameString() + "]\n" +

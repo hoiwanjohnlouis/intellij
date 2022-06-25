@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -24,7 +25,30 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class MyLocalMktDateTypeTest {
     @Test
     void LocalMktDateTypeTest() {
-        assertEquals(1,1);
-        assertNotEquals(2,1);
+        MyLocalMktDateType dataType;
+        String oneElement;
+
+        oneElement = MyLocalMktDateType.TESTA_MY_LOCAL_MKT_DATE_TYPE;
+        dataType = new MyLocalMktDateType( oneElement );
+        assertEquals( oneElement, dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, dataType.getDataValue());
+
+        oneElement = MyLocalMktDateType.TESTB_MY_LOCAL_MKT_DATE_TYPE;
+        dataType = new MyLocalMktDateType( oneElement );
+        assertEquals( oneElement, dataType.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, dataType.getDataValue());
+    }
+    @Test
+    void PrintFIXTagTest() {
+        MyLocalMktDateType dataType;
+        String oneElement;
+
+        oneElement = MyLocalMktDateType.TESTA_MY_LOCAL_MKT_DATE_TYPE;
+        dataType = new MyLocalMktDateType( oneElement );
+        System.out.println( dataType.toVerboseString() );
+
+        oneElement = MyLocalMktDateType.TESTB_MY_LOCAL_MKT_DATE_TYPE;
+        dataType = new MyLocalMktDateType( oneElement );
+        System.out.println( dataType.toVerboseString() );
     }
 }

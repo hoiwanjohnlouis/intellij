@@ -39,6 +39,7 @@ import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
  *  <p>                 INT = MyIntType field, saved as int
  *  <p>                 LEN = MyLengthType field, saved as int
  *  <p>                 LMD = MyLocalMktDateType field, saved as String
+ *  <p>                 MMY = MyMonthYearType field, saved as String
  *  <p>                 NUM = MyNumInGroupType field, saved as int
  *  <p>                 PCT = MyPercentageType field, saved as String
  *  <p>                 PRC = MyPriceType field, saved as String
