@@ -26,16 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  58
  *  Text
  *  String
+ *  <p></p>
  *  Free format text string
+ *  <p></p>
  *  (Note: this field does not have a specified maximum length)
  */
 public class Tag58StrText extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_TEXT
-            = "BilboBaggins-Tag58StrText";
+            = "JoanCrawford-Tag58StrText";
     public final static String TESTB_STR_TEXT
-            = "Gandalf-Tag58StrText";
+            = "ConstanceBennett-Tag58StrText";
 
     public Tag58StrText(MyStringType dataValue) {
         setFixType(FIX27.FIX58_STR_TEXT);
@@ -50,7 +52,7 @@ public class Tag58StrText extends FIX27Abstract implements LogValuePairString, L
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

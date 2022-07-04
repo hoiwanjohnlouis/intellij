@@ -51,7 +51,7 @@ public class Tag934StrLastNetworkResponseID extends FIX44Abstract implements Log
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

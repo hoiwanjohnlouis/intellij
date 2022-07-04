@@ -50,12 +50,12 @@ class Tag219EnuBenchmarkTest {
     @Test
     void FIX0219Test() {
         FIX42 fixData = FIX42.FIX219_ENU_BENCHMARK;
-        assertEquals( "219", fixData.toFIXIDString());
-        assertEquals( "BENCHMARK", fixData.toFIXNameString());
-        assertEquals( "Benchmark (no longer used)", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "219", fixData.toEnumIDString());
+        assertEquals( "BENCHMARK", fixData.toEnumNameString());
+        assertEquals( "Benchmark (no longer used)", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0219Test() {
@@ -65,47 +65,47 @@ class Tag219EnuBenchmarkTest {
          * 1-9 msg types
          */
         tagData = new Tag219EnuBenchmark(Enum219Benchmark.CURVE);
-        assertEquals( Enum219Benchmark.CURVE.toFIXIDString(),
+        assertEquals( Enum219Benchmark.CURVE.toEnumIDString(),
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag219EnuBenchmark(Enum219Benchmark.FIVE_YEAR);
-        assertEquals( Enum219Benchmark.FIVE_YEAR.toFIXIDString(),
+        assertEquals( Enum219Benchmark.FIVE_YEAR.toEnumIDString(),
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag219EnuBenchmark(Enum219Benchmark.OLD_FIVE_YEAR);
-        assertEquals( Enum219Benchmark.OLD_FIVE_YEAR.toFIXIDString(),
+        assertEquals( Enum219Benchmark.OLD_FIVE_YEAR.toEnumIDString(),
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag219EnuBenchmark(Enum219Benchmark.TEN_YEAR);
-        assertEquals( Enum219Benchmark.TEN_YEAR.toFIXIDString(),
+        assertEquals( Enum219Benchmark.TEN_YEAR.toEnumIDString(),
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag219EnuBenchmark(Enum219Benchmark.OLD_TEN_YEAR);
-        assertEquals( Enum219Benchmark.OLD_TEN_YEAR.toFIXIDString(),
+        assertEquals( Enum219Benchmark.OLD_TEN_YEAR.toEnumIDString(),
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag219EnuBenchmark(Enum219Benchmark.THIRTY_YEAR);
-        assertEquals( Enum219Benchmark.THIRTY_YEAR.toFIXIDString(),
+        assertEquals( Enum219Benchmark.THIRTY_YEAR.toEnumIDString(),
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag219EnuBenchmark(Enum219Benchmark.OLD_THIRTY_YEAR);
-        assertEquals( Enum219Benchmark.OLD_THIRTY_YEAR.toFIXIDString(),
+        assertEquals( Enum219Benchmark.OLD_THIRTY_YEAR.toEnumIDString(),
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag219EnuBenchmark(Enum219Benchmark.THREE_MONTH);
-        assertEquals( Enum219Benchmark.THREE_MONTH.toFIXIDString(),
+        assertEquals( Enum219Benchmark.THREE_MONTH.toEnumIDString(),
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag219EnuBenchmark(Enum219Benchmark.SIX_MONTH);
-        assertEquals( Enum219Benchmark.SIX_MONTH.toFIXIDString(),
+        assertEquals( Enum219Benchmark.SIX_MONTH.toEnumIDString(),
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
@@ -137,7 +137,7 @@ class Tag219EnuBenchmarkTest {
         // loop around the ENUM and process
         for (Enum219Benchmark oneEnum : Enum219Benchmark.values()) {
             tagData = new Tag219EnuBenchmark(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -161,12 +161,12 @@ class Tag219EnuBenchmarkTest {
         for (Enum219Benchmark oneEnum : Enum219Benchmark.values()) {
             tagData = new Tag219EnuBenchmark(oneEnum);
             assertEquals( "Tag219EnuBenchmark\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

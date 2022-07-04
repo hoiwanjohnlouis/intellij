@@ -27,30 +27,36 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  103
  *  OrdRejReason
  *  int
+ *  <p></p>
  *  Code to identify reason for order rejection.
+ *  <p></p>
  *  Note: Values 3, 4, and 5 will be used when rejecting an
  *        order due to pre-allocation information errors.
+ *  <p></p>
  *  Valid values:
- *      0 - Broker - Exchange option
- *      1 - Unknown symbol
- *      2 - Exchange closed
- *      3 - Order exceeds limit
- *      4 - Too late to enter
- *      5 - Unknown order
- *      6 - Duplicate Order (e.g. dupe ClOrdID)
- *      7 - Duplicate of a verbally communicated order
- *      8 - Stale order
- *      9 - Trade along required
- *      10 - Invalid Investor ID
- *      11 - Unsupported order characteristic
- *      12 - Surveillence Option
- *      13 - Incorrect quantity
- *      14 - Incorrect allocated quantity
- *      15 - Unknown account(s)
- *      18 - Invalid price increment
- *      99 - Other
- *
- *      or any value conforming to the data type Reserved100Plus
+ *  <p>    0 - Broker - Exchange option
+ *  <p>    1 - Unknown symbol
+ *  <p>    2 - Exchange closed
+ *  <p>    3 - Order exceeds limit
+ *  <p>    4 - Too late to enter
+ *  <p></p>
+ *  <p>    5 - Unknown order
+ *  <p>    6 - Duplicate Order (e.g. dupe ClOrdID)
+ *  <p>    7 - Duplicate of a verbally communicated order
+ *  <p>    8 - Stale order
+ *  <p>    9 - Trade along required
+ *  <p></p>
+ *  <p>    10 - Invalid Investor ID
+ *  <p>    11 - Unsupported order characteristic
+ *  <p>    12 - Surveillance Option
+ *  <p>    13 - Incorrect quantity
+ *  <p>    14 - Incorrect allocated quantity
+ *  <p></p>
+ *  <p>    15 - Unknown account(s)
+ *  <p>    18 - Invalid price increment
+ *  <p>    99 - Other
+ *  <p></p>
+ *  <p>    Or any value conforming to the data type Reserved100Plus
  */
 public class Tag103EnuOrdRejReason extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum103OrdRejReason dataValue;
@@ -66,14 +72,14 @@ public class Tag103EnuOrdRejReason extends FIX27Abstract implements LogValuePair
     }
 
     public String getDataValue() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(getDataValue());
     }
@@ -105,21 +111,21 @@ public class Tag103EnuOrdRejReason extends FIX27Abstract implements LogValuePair
      */
     @Override
     public String toDataIDString() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * wrapper to return the Name of the underlying Data
      */
     @Override
     public String toDataNameString() {
-        return this.dataValue.toFIXNameString();
+        return this.dataValue.toEnumNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data
      */
     @Override
     public String toDataDescriptionString() {
-        return this.dataValue.toFIXDescriptionString();
+        return this.dataValue.toEnumDescriptionString();
     }
     /**
      * standard wrapper to return a string describing the data

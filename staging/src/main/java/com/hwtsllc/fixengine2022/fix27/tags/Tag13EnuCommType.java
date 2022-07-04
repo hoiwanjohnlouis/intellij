@@ -27,14 +27,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  13
  *  CommType
  *  char
+ *  <p></p>
  *  Commission type
+ *  <p></p>
  *  Valid values:
- *      1 - Per Unit (implying shares, par, currency, etc.)
- *      2 - Percent
- *      3 - Absolute (total monetary amount)
- *      4 - Percentage waived - cash discount (for CIV buy orders)
- *      5 - Percentage waived -= enhanced units (for CIV buy orders)
- *      6 - Points per bond or contract
+ *  <p>    1 - Per Unit (implying shares, par, currency, etc.)
+ *  <p>    2 - Percent
+ *  <p>    3 - Absolute (total monetary amount)
+ *  <p>    4 - Percentage waived - cash discount (for CIV buy orders)
+ *  <p>    5 - Percentage waived -= enhanced units (for CIV buy orders)
+ *  <p>    6 - Points per bond or contract
  *          (supply ContractMultiplier (231) in the <Instrument> component block
  *           if the object security is denominated in a size other than the
  *           industry default - 1000 par for bonds)
@@ -53,14 +55,14 @@ public class Tag13EnuCommType extends FIX27Abstract implements LogValuePairStrin
     }
 
     public String getDataValue() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(getDataValue());
     }
@@ -92,21 +94,21 @@ public class Tag13EnuCommType extends FIX27Abstract implements LogValuePairStrin
      */
     @Override
     public String toDataIDString() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * wrapper to return the Name of the underlying Data
      */
     @Override
     public String toDataNameString() {
-        return this.dataValue.toFIXNameString();
+        return this.dataValue.toEnumNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data
      */
     @Override
     public String toDataDescriptionString() {
-        return this.dataValue.toFIXDescriptionString();
+        return this.dataValue.toEnumDescriptionString();
     }
     /**
      * standard wrapper to return a string describing the data

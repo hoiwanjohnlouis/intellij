@@ -36,12 +36,12 @@ class Tag813IntApplQueueDepthTest {
     @Test
     void FIXTest() {
         FIX44 fixData = FIX44.FIX813_INT_APPL_QUEUE_DEPTH;
-        assertEquals( "813", fixData.toFIXIDString());
-        assertEquals( "APPL_QUEUE_DEPTH", fixData.toFIXNameString());
-        assertEquals( "ApplQueueDepth", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "813", fixData.toEnumIDString());
+        assertEquals( "APPL_QUEUE_DEPTH", fixData.toEnumNameString());
+        assertEquals( "ApplQueueDepth", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0813Test() {
@@ -52,12 +52,12 @@ class Tag813IntApplQueueDepthTest {
         tagData = new Tag813IntApplQueueDepth( new MyIntType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "813", tagData.toFIXIDString());
-        assertEquals( "APPL_QUEUE_DEPTH", tagData.toFIXNameString());
-        assertEquals( "ApplQueueDepth", tagData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
+        assertEquals( "813", tagData.toEnumIDString());
+        assertEquals( "APPL_QUEUE_DEPTH", tagData.toEnumNameString());
+        assertEquals( "ApplQueueDepth", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         oneElement = Tag813IntApplQueueDepth.TESTB_INT_APPL_QUEUE_DEPTH;
         tagData = new Tag813IntApplQueueDepth( new MyIntType( oneElement ) );
@@ -94,7 +94,7 @@ class Tag813IntApplQueueDepthTest {
 
         oneElement = Tag813IntApplQueueDepth.TESTB_INT_APPL_QUEUE_DEPTH;
         tagData = new Tag813IntApplQueueDepth( new MyIntType( oneElement ) );
-        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
     }
     @Test
@@ -115,12 +115,12 @@ class Tag813IntApplQueueDepthTest {
         oneElement = Tag813IntApplQueueDepth.TESTA_INT_APPL_QUEUE_DEPTH;
         tagData = new Tag813IntApplQueueDepth( new MyIntType( oneElement ) );
         assertEquals( "Tag813IntApplQueueDepth\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
                 tagData.toVerboseString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }

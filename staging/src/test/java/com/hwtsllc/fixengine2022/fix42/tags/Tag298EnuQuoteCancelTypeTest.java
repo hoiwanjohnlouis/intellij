@@ -43,12 +43,12 @@ class Tag298EnuQuoteCancelTypeTest {
     @Test
     void FIX0298Test() {
         FIX42 fixData = FIX42.FIX298_ENU_QUOTE_CANCEL_TYPE;
-        assertEquals( "298", fixData.toFIXIDString());
-        assertEquals( "QUOTE_CANCEL_TYPE", fixData.toFIXNameString());
-        assertEquals( "QuoteCancelType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "298", fixData.toEnumIDString());
+        assertEquals( "QUOTE_CANCEL_TYPE", fixData.toEnumNameString());
+        assertEquals( "QuoteCancelType", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0298Test() {
@@ -58,23 +58,23 @@ class Tag298EnuQuoteCancelTypeTest {
          * 1-5 msg types
          */
         tagData = new Tag298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_FOR_SYMBOL);
-        assertEquals( Enum298QuoteCancelType.CANCEL_FOR_SYMBOL.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum298QuoteCancelType.CANCEL_FOR_SYMBOL.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_FOR_SECURITY_TYPE);
-        assertEquals( Enum298QuoteCancelType.CANCEL_FOR_SECURITY_TYPE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum298QuoteCancelType.CANCEL_FOR_SECURITY_TYPE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_FOR_UNDERLYING_SYMBOL);
-        assertEquals( Enum298QuoteCancelType.CANCEL_FOR_UNDERLYING_SYMBOL.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum298QuoteCancelType.CANCEL_FOR_UNDERLYING_SYMBOL.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_ALL_QUOTES);
-        assertEquals( Enum298QuoteCancelType.CANCEL_ALL_QUOTES.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum298QuoteCancelType.CANCEL_ALL_QUOTES.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_QUOTEID_QUOTE);
-        assertEquals( Enum298QuoteCancelType.CANCEL_QUOTEID_QUOTE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum298QuoteCancelType.CANCEL_QUOTEID_QUOTE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -105,7 +105,7 @@ class Tag298EnuQuoteCancelTypeTest {
         // loop around the ENUM and process
         for (Enum298QuoteCancelType oneEnum : Enum298QuoteCancelType.values()) {
             tagData = new Tag298EnuQuoteCancelType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -129,12 +129,12 @@ class Tag298EnuQuoteCancelTypeTest {
         for (Enum298QuoteCancelType oneEnum : Enum298QuoteCancelType.values()) {
             tagData = new Tag298EnuQuoteCancelType(oneEnum);
             assertEquals( "Tag298EnuQuoteCancelType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

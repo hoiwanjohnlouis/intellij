@@ -35,12 +35,12 @@ class Tag556CcyLegCurrencyTest {
     @Test
     void FIX0556Test() {
         FIX43 fixData = FIX43.FIX556_CCY_LEG_CURRENCY;
-        assertEquals( "556", fixData.toFIXIDString());
-        assertEquals( "LEG_CURRENCY", fixData.toFIXNameString());
-        assertEquals( "LegCurrency", fixData.toFIXDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "556", fixData.toEnumIDString());
+        assertEquals( "LEG_CURRENCY", fixData.toEnumNameString());
+        assertEquals( "LegCurrency", fixData.toEnumDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0556Test() {
@@ -87,7 +87,7 @@ class Tag556CcyLegCurrencyTest {
 
         oneElement = Tag556CcyLegCurrency.TESTB_CCY_LEG_CURRENCY;
         tagData = new Tag556CcyLegCurrency( new MyCurrencyType( oneElement ) );
-        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
     }
     @Test
@@ -108,12 +108,12 @@ class Tag556CcyLegCurrencyTest {
         oneElement = Tag556CcyLegCurrency.TESTA_CCY_LEG_CURRENCY;
         tagData = new Tag556CcyLegCurrency( new MyCurrencyType( oneElement ) );
         assertEquals( "Tag556CcyLegCurrency\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

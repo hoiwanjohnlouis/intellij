@@ -37,12 +37,12 @@ class Tag889StrUnderlyingStipValueTest {
     @Test
     void FIXTest() {
         FIX44 fixData = FIX44.FIX889_STR_UNDERLYING_STIP_VALUE;
-        assertEquals( "889", fixData.toFIXIDString());
-        assertEquals( "UNDERLYING_STIP_VALUE", fixData.toFIXNameString());
-        assertEquals( "UnderlyingStipValue", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "889", fixData.toEnumIDString());
+        assertEquals( "UNDERLYING_STIP_VALUE", fixData.toEnumNameString());
+        assertEquals( "UnderlyingStipValue", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0889Test() {
@@ -53,12 +53,12 @@ class Tag889StrUnderlyingStipValueTest {
         tagData = new Tag889StrUnderlyingStipValue( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "889", tagData.toFIXIDString());
-        assertEquals( "UNDERLYING_STIP_VALUE", tagData.toFIXNameString());
-        assertEquals( "UnderlyingStipValue", tagData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
+        assertEquals( "889", tagData.toEnumIDString());
+        assertEquals( "UNDERLYING_STIP_VALUE", tagData.toEnumNameString());
+        assertEquals( "UnderlyingStipValue", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         oneElement = Tag889StrUnderlyingStipValue.TESTB_STR_UNDERLYING_STIP_VALUE;
         tagData = new Tag889StrUnderlyingStipValue( new MyStringType( oneElement ) );
@@ -95,7 +95,7 @@ class Tag889StrUnderlyingStipValueTest {
 
         oneElement = Tag889StrUnderlyingStipValue.TESTB_STR_UNDERLYING_STIP_VALUE;
         tagData = new Tag889StrUnderlyingStipValue( new MyStringType( oneElement ) );
-        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
     }
     @Test
@@ -116,12 +116,12 @@ class Tag889StrUnderlyingStipValueTest {
         oneElement = Tag889StrUnderlyingStipValue.TESTA_STR_UNDERLYING_STIP_VALUE;
         tagData = new Tag889StrUnderlyingStipValue( new MyStringType( oneElement ) );
         assertEquals( "Tag889StrUnderlyingStipValue\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

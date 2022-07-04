@@ -35,12 +35,12 @@ class Tag164StrEmailThreadIDTest {
     @Test
     void FIX0164Test() {
         FIX41 fixData = FIX41.FIX164_STR_EMAIL_THREAD_ID;
-        assertEquals( "164", fixData.toFIXIDString());
-        assertEquals( "EMAIL_THREAD_ID", fixData.toFIXNameString());
-        assertEquals( "EmailThreadID", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "164", fixData.toEnumIDString());
+        assertEquals( "EMAIL_THREAD_ID", fixData.toEnumNameString());
+        assertEquals( "EmailThreadID", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0164Test() {
@@ -74,7 +74,7 @@ class Tag164StrEmailThreadIDTest {
         Tag164StrEmailThreadID tagData;
 
         tagData = new Tag164StrEmailThreadID(new MyStringType(Tag164StrEmailThreadID.TESTB_STR_EMAIL_THREAD_ID));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag164StrEmailThreadID.TESTB_STR_EMAIL_THREAD_ID,
+        assertEquals( tagData.toEnumIDString() + "=" + Tag164StrEmailThreadID.TESTB_STR_EMAIL_THREAD_ID,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toValuePairString());
@@ -95,12 +95,12 @@ class Tag164StrEmailThreadIDTest {
 
         tagData = new Tag164StrEmailThreadID(new MyStringType(Tag164StrEmailThreadID.TESTA_STR_EMAIL_THREAD_ID));
         assertEquals( "Tag164StrEmailThreadID\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + Tag164StrEmailThreadID.TESTA_STR_EMAIL_THREAD_ID + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag164StrEmailThreadID.TESTA_STR_EMAIL_THREAD_ID + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag164StrEmailThreadID.TESTA_STR_EMAIL_THREAD_ID + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

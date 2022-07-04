@@ -50,12 +50,12 @@ class Tag368EnuQuoteEntryRejectReasonTest {
     @Test
     void FIX0368Test() {
         FIX42 fixData = FIX42.FIX368_ENU_QUOTE_ENTRY_REJECT_REASON;
-        assertEquals( "368", fixData.toFIXIDString());
-        assertEquals( "QUOTE_ENTRY_REJECT_REASON", fixData.toFIXNameString());
-        assertEquals( "QuoteEntryRejectReason", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "368", fixData.toEnumIDString());
+        assertEquals( "QUOTE_ENTRY_REJECT_REASON", fixData.toEnumNameString());
+        assertEquals( "QuoteEntryRejectReason", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0368Test() {
@@ -65,43 +65,43 @@ class Tag368EnuQuoteEntryRejectReasonTest {
          * 1-9, 99 msg types
          */
         tagData = new Tag368EnuQuoteEntryRejectReason(Enum368QuoteEntryRejectReason.UNKNOWN_SYMBOL);
-        assertEquals( Enum368QuoteEntryRejectReason.UNKNOWN_SYMBOL.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum368QuoteEntryRejectReason.UNKNOWN_SYMBOL.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag368EnuQuoteEntryRejectReason(Enum368QuoteEntryRejectReason.EXCHANGE_CLOSED);
-        assertEquals( Enum368QuoteEntryRejectReason.EXCHANGE_CLOSED.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum368QuoteEntryRejectReason.EXCHANGE_CLOSED.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag368EnuQuoteEntryRejectReason(Enum368QuoteEntryRejectReason.QUOTE_EXCEEDS_LIMIT);
-        assertEquals( Enum368QuoteEntryRejectReason.QUOTE_EXCEEDS_LIMIT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum368QuoteEntryRejectReason.QUOTE_EXCEEDS_LIMIT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag368EnuQuoteEntryRejectReason(Enum368QuoteEntryRejectReason.TOO_LATE_TO_ENTER);
-        assertEquals( Enum368QuoteEntryRejectReason.TOO_LATE_TO_ENTER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum368QuoteEntryRejectReason.TOO_LATE_TO_ENTER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag368EnuQuoteEntryRejectReason(Enum368QuoteEntryRejectReason.UNKNOWN_QUOTE);
-        assertEquals( Enum368QuoteEntryRejectReason.UNKNOWN_QUOTE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum368QuoteEntryRejectReason.UNKNOWN_QUOTE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag368EnuQuoteEntryRejectReason(Enum368QuoteEntryRejectReason.DUPLICATE_QUOTE);
-        assertEquals( Enum368QuoteEntryRejectReason.DUPLICATE_QUOTE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum368QuoteEntryRejectReason.DUPLICATE_QUOTE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag368EnuQuoteEntryRejectReason(Enum368QuoteEntryRejectReason.INVALID_BID_ASK_SPREAD);
-        assertEquals( Enum368QuoteEntryRejectReason.INVALID_BID_ASK_SPREAD.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum368QuoteEntryRejectReason.INVALID_BID_ASK_SPREAD.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag368EnuQuoteEntryRejectReason(Enum368QuoteEntryRejectReason.INVALID_PRICE);
-        assertEquals( Enum368QuoteEntryRejectReason.INVALID_PRICE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum368QuoteEntryRejectReason.INVALID_PRICE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag368EnuQuoteEntryRejectReason(Enum368QuoteEntryRejectReason.NOT_AUTHORIZED_TO_QUOTE_SECURITY);
-        assertEquals( Enum368QuoteEntryRejectReason.NOT_AUTHORIZED_TO_QUOTE_SECURITY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum368QuoteEntryRejectReason.NOT_AUTHORIZED_TO_QUOTE_SECURITY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag368EnuQuoteEntryRejectReason(Enum368QuoteEntryRejectReason.OTHER);
-        assertEquals( Enum368QuoteEntryRejectReason.OTHER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum368QuoteEntryRejectReason.OTHER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -132,7 +132,7 @@ class Tag368EnuQuoteEntryRejectReasonTest {
         // loop around the ENUM and process
         for (Enum368QuoteEntryRejectReason oneEnum : Enum368QuoteEntryRejectReason.values()) {
             tagData = new Tag368EnuQuoteEntryRejectReason(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -156,12 +156,12 @@ class Tag368EnuQuoteEntryRejectReasonTest {
         for (Enum368QuoteEntryRejectReason oneEnum : Enum368QuoteEntryRejectReason.values()) {
             tagData = new Tag368EnuQuoteEntryRejectReason(oneEnum);
             assertEquals( "Tag368EnuQuoteEntryRejectReason\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

@@ -44,40 +44,40 @@ class Tag1107EnuTriggerPriceTypeTest {
     @Test
     void FIX1107Test() {
         FIX50 fixData = FIX50.FIX1107_ENU_TRIGGER_PRICE_TYPE;
-        assertEquals( "1107", fixData.toFIXIDString());
-        assertEquals( "TRIGGER_PRICE_TYPE", fixData.toFIXNameString());
-        assertEquals( "TriggerPriceType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "1107", fixData.toEnumIDString());
+        assertEquals( "TRIGGER_PRICE_TYPE", fixData.toEnumNameString());
+        assertEquals( "TriggerPriceType", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag1107Test() {
         Tag1107EnuTriggerPriceType tagData;
 
         tagData = new Tag1107EnuTriggerPriceType( Enum1107TriggerPriceType.BEST_OFFER );
-        assertEquals( Enum1107TriggerPriceType.BEST_OFFER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum1107TriggerPriceType.BEST_OFFER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1107EnuTriggerPriceType( Enum1107TriggerPriceType.LAST_TRADE );
-        assertEquals( Enum1107TriggerPriceType.LAST_TRADE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum1107TriggerPriceType.LAST_TRADE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1107EnuTriggerPriceType( Enum1107TriggerPriceType.BEST_BID );
-        assertEquals( Enum1107TriggerPriceType.BEST_BID.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum1107TriggerPriceType.BEST_BID.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1107EnuTriggerPriceType( Enum1107TriggerPriceType.BEST_BID_OR_LAST_TRADE );
-        assertEquals( Enum1107TriggerPriceType.BEST_BID_OR_LAST_TRADE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum1107TriggerPriceType.BEST_BID_OR_LAST_TRADE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1107EnuTriggerPriceType( Enum1107TriggerPriceType.BEST_OFFER_OR_LAST_TRADE );
-        assertEquals( Enum1107TriggerPriceType.BEST_OFFER_OR_LAST_TRADE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum1107TriggerPriceType.BEST_OFFER_OR_LAST_TRADE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag1107EnuTriggerPriceType( Enum1107TriggerPriceType.BEST_MID );
-        assertEquals( Enum1107TriggerPriceType.BEST_MID.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum1107TriggerPriceType.BEST_MID.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -108,7 +108,7 @@ class Tag1107EnuTriggerPriceTypeTest {
         // loop around the ENUM and process
         for (Enum1107TriggerPriceType oneEnum : Enum1107TriggerPriceType.values()) {
             tagData = new Tag1107EnuTriggerPriceType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -132,12 +132,12 @@ class Tag1107EnuTriggerPriceTypeTest {
         for (Enum1107TriggerPriceType oneEnum : Enum1107TriggerPriceType.values()) {
             tagData = new Tag1107EnuTriggerPriceType(oneEnum);
             assertEquals( "Tag1107EnuTriggerPriceType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

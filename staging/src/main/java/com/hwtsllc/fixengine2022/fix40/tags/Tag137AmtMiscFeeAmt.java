@@ -47,7 +47,7 @@ public class Tag137AmtMiscFeeAmt extends FIX40Abstract implements LogValuePairSt
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

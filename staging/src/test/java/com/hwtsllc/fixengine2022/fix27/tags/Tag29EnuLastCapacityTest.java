@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum29LastCapacity;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,25 +27,16 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  29
  *  LastCapacity
  *  char
+ *  <p></p>
  *  Broker capacity in order execution
+ *  <p></p>
  *  Valid values:
- *      1 - Agent
- *      2 - Cross as agent
- *      3 - Cross as principal
- *      4 - Principal
+ *  <p>    1 - Agent
+ *  <p>    2 - Cross as agent
+ *  <p>    3 - Cross as principal
+ *  <p>    4 - Principal
  */
 class Tag29EnuLastCapacityTest {
-    @Test
-    void FIX0029Test() {
-        FIX27 fixData = FIX27.FIX29_ENU_LAST_CAPACITY;
-        assertEquals( "LAST_CAPACITY", fixData.toFIXNameString());
-        assertEquals( "29", fixData.toFIXIDString());
-        assertEquals( "LastCapacity", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
-    }
     @Test
     void Tag0029Test() {
         Tag29EnuLastCapacity tagData;
@@ -68,6 +58,23 @@ class Tag29EnuLastCapacityTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
+    void FIXTest() {
+        Tag29EnuLastCapacity tagData;
+
+        // loop around the ENUM and process
+        for (Enum29LastCapacity oneEnum : Enum29LastCapacity.values()) {
+            tagData = new Tag29EnuLastCapacity(oneEnum);
+            assertEquals( "FIX29_ENU_LAST_CAPACITY", tagData.toEnumLabelString());
+            assertEquals( "LAST_CAPACITY", tagData.toEnumNameString());
+            assertEquals( "29", tagData.toEnumIDString());
+            assertEquals( "LastCapacity", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void PrintFIXTagTest() {
         Tag29EnuLastCapacity tagData;
 
@@ -85,6 +92,7 @@ class Tag29EnuLastCapacityTest {
         for (Enum29LastCapacity oneEnum : Enum29LastCapacity.values()) {
             tagData = new Tag29EnuLastCapacity(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
@@ -95,7 +103,7 @@ class Tag29EnuLastCapacityTest {
         // loop around the ENUM and process
         for (Enum29LastCapacity oneEnum : Enum29LastCapacity.values()) {
             tagData = new Tag29EnuLastCapacity(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -119,12 +127,12 @@ class Tag29EnuLastCapacityTest {
         for (Enum29LastCapacity oneEnum : Enum29LastCapacity.values()) {
             tagData = new Tag29EnuLastCapacity(oneEnum);
             assertEquals( "Tag29EnuLastCapacity\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

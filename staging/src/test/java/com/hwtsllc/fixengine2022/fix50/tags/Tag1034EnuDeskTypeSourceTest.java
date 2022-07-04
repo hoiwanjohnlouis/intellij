@@ -46,19 +46,19 @@ class Tag1034EnuDeskTypeSourceTest {
     @Test
     void FIX1034Test() {
         FIX50 fixData = FIX50.FIX1034_ENU_DESK_TYPE_SOURCE;
-        assertEquals( "1034", fixData.toFIXIDString());
-        assertEquals( "DESK_TYPE_SOURCE", fixData.toFIXNameString());
-        assertEquals( "DeskTypeSource", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "1034", fixData.toEnumIDString());
+        assertEquals( "DESK_TYPE_SOURCE", fixData.toEnumNameString());
+        assertEquals( "DeskTypeSource", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag1034Test() {
         Tag1034EnuDeskTypeSource tagData;
 
         tagData = new Tag1034EnuDeskTypeSource( MyEnumOrderSource.NASD_OATS );
-        assertEquals( MyEnumOrderSource.NASD_OATS.toFIXIDString(), tagData.getDataValue() );
+        assertEquals( MyEnumOrderSource.NASD_OATS.toEnumIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
@@ -89,7 +89,7 @@ class Tag1034EnuDeskTypeSourceTest {
         // loop around the ENUM and process
         for (MyEnumOrderSource oneEnum : MyEnumOrderSource.values()) {
             tagData = new Tag1034EnuDeskTypeSource(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -113,12 +113,12 @@ class Tag1034EnuDeskTypeSourceTest {
         for (MyEnumOrderSource oneEnum : MyEnumOrderSource.values()) {
             tagData = new Tag1034EnuDeskTypeSource(oneEnum);
             assertEquals( "Tag1034EnuDeskTypeSource\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

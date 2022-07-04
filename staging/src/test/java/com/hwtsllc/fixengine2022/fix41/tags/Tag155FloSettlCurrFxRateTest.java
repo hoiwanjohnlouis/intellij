@@ -35,12 +35,12 @@ class Tag155FloSettlCurrFxRateTest {
     @Test
     void FIX0155Test() {
         FIX41 fixData = FIX41.FIX155_FLO_SETTL_CURR_FX_RATE;
-        assertEquals( "155", fixData.toFIXIDString());
-        assertEquals( "SETTL_CURR_FX_RATE", fixData.toFIXNameString());
-        assertEquals( "SettlCurrFxRate", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "155", fixData.toEnumIDString());
+        assertEquals( "SETTL_CURR_FX_RATE", fixData.toEnumNameString());
+        assertEquals( "SettlCurrFxRate", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0155Test() {
@@ -78,7 +78,7 @@ class Tag155FloSettlCurrFxRateTest {
         float oneElement;
 
         tagData = new Tag155FloSettlCurrFxRate(new MyFloatType(Tag155FloSettlCurrFxRate.TESTB_FLO_SETTL_CURR_FX_RATE));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag155FloSettlCurrFxRate.TESTB_FLO_SETTL_CURR_FX_RATE,
+        assertEquals( tagData.toEnumIDString() + "=" + Tag155FloSettlCurrFxRate.TESTB_FLO_SETTL_CURR_FX_RATE,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toValuePairString());
@@ -101,12 +101,12 @@ class Tag155FloSettlCurrFxRateTest {
 
         tagData = new Tag155FloSettlCurrFxRate(new MyFloatType(Tag155FloSettlCurrFxRate.TESTA_FLO_SETTL_CURR_FX_RATE));
         assertEquals( "Tag155FloSettlCurrFxRate\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + Tag155FloSettlCurrFxRate.TESTA_FLO_SETTL_CURR_FX_RATE + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag155FloSettlCurrFxRate.TESTA_FLO_SETTL_CURR_FX_RATE + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag155FloSettlCurrFxRate.TESTA_FLO_SETTL_CURR_FX_RATE + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

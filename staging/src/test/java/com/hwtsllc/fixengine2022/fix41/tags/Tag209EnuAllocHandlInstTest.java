@@ -40,27 +40,27 @@ class Tag209EnuAllocHandlInstTest {
     @Test
     void FIX0209Test() {
         FIX41 fixData = FIX41.FIX209_ENU_ALLOC_HANDL_INST;
-        assertEquals( "209", fixData.toFIXIDString());
-        assertEquals( "ALLOC_HANDL_INST", fixData.toFIXNameString());
-        assertEquals( "AllocHandlInst", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "209", fixData.toEnumIDString());
+        assertEquals( "ALLOC_HANDL_INST", fixData.toEnumNameString());
+        assertEquals( "AllocHandlInst", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0209Test() {
         Tag209EnuAllocHandlInst tagData;
 
         tagData = new Tag209EnuAllocHandlInst(Enum209AllocHandlInst.MATCH);
-        assertEquals( Enum209AllocHandlInst.MATCH.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum209AllocHandlInst.MATCH.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag209EnuAllocHandlInst(Enum209AllocHandlInst.FORWARD);
-        assertEquals( Enum209AllocHandlInst.FORWARD.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum209AllocHandlInst.FORWARD.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag209EnuAllocHandlInst(Enum209AllocHandlInst.FORWARD_AND_MATCH);
-        assertEquals( Enum209AllocHandlInst.FORWARD_AND_MATCH.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum209AllocHandlInst.FORWARD_AND_MATCH.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -91,7 +91,7 @@ class Tag209EnuAllocHandlInstTest {
         // loop around the ENUM and process
         for (Enum209AllocHandlInst oneEnum : Enum209AllocHandlInst.values()) {
             tagData = new Tag209EnuAllocHandlInst(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -115,12 +115,12 @@ class Tag209EnuAllocHandlInstTest {
         for (Enum209AllocHandlInst oneEnum : Enum209AllocHandlInst.values()) {
             tagData = new Tag209EnuAllocHandlInst(oneEnum);
             assertEquals( "Tag209EnuAllocHandlInst\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

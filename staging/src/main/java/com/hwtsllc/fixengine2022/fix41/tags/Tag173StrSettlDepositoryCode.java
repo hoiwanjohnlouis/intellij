@@ -50,7 +50,7 @@ public class Tag173StrSettlDepositoryCode extends FIX41Abstract implements LogVa
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

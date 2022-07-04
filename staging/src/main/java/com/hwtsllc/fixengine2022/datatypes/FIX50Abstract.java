@@ -26,20 +26,20 @@ public abstract class FIX50Abstract implements LogFIXString, LogVerboseString {
         this.fixValue = fixType;
     }
     @Override
+    public String toEnumLabelString() {
+        return fixValue.toEnumLabelString();
+    }
+    @Override
+    public String toEnumIDString() {
+        return String.valueOf(fixValue.toEnumIDString());
+    }
+    @Override
     public String toEnumNameString() {
         return fixValue.toEnumNameString();
     }
     @Override
-    public String toFIXIDString() {
-        return String.valueOf(fixValue.toFIXIDString());
-    }
-    @Override
-    public String toFIXNameString() {
-        return fixValue.toFIXNameString();
-    }
-    @Override
-    public String toFIXDescriptionString() {
-        return fixValue.toFIXDescriptionString();
+    public String toEnumDescriptionString() {
+        return fixValue.toEnumDescriptionString();
     }
     /**
      * standard wrapper to format a detailed string describing this enum
@@ -48,29 +48,29 @@ public abstract class FIX50Abstract implements LogFIXString, LogVerboseString {
     public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
-                .concat(toEnumNameString())
+                .concat( toEnumLabelString())
                 .concat("]")
                 .concat("\n\tFIXID[")
-                .concat(String.valueOf(toFIXIDString()))
+                .concat(String.valueOf( toEnumIDString()))
                 .concat("]")
                 .concat("\n\tFIXName[")
-                .concat(toFIXNameString())
+                .concat( toEnumNameString())
                 .concat("]")
                 .concat("\n\tFIXDescription[")
-                .concat(toFIXDescriptionString())
+                .concat( toEnumDescriptionString())
                 .concat("]");
     }
     @Override
     public String toString() {
         return this.getClass().getSimpleName()
                 .concat("=[")
-                .concat(toEnumNameString())
+                .concat( toEnumLabelString())
                 .concat(",")
-                .concat(String.valueOf(toFIXIDString()))
+                .concat(String.valueOf( toEnumIDString()))
                 .concat(",")
-                .concat(toFIXNameString())
+                .concat( toEnumNameString())
                 .concat(",")
-                .concat(toFIXDescriptionString())
+                .concat( toEnumDescriptionString())
                 .concat("]");
     }
 }

@@ -50,7 +50,7 @@ public class Tag379StrBusinessRejectRefID extends FIX42Abstract implements LogVa
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

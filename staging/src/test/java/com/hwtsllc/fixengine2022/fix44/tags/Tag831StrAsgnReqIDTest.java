@@ -35,12 +35,12 @@ class Tag831StrAsgnReqIDTest {
     @Test
     void FIXTest() {
         FIX44 fixData = FIX44.FIX831_STR_ASGN_REQ_ID;
-        assertEquals( "831", fixData.toFIXIDString());
-        assertEquals( "ASGN_REQ_ID", fixData.toFIXNameString());
-        assertEquals( "AsgnReqID", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "831", fixData.toEnumIDString());
+        assertEquals( "ASGN_REQ_ID", fixData.toEnumNameString());
+        assertEquals( "AsgnReqID", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0831Test() {
@@ -51,12 +51,12 @@ class Tag831StrAsgnReqIDTest {
         tagData = new Tag831StrAsgnReqID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "831", tagData.toFIXIDString());
-        assertEquals( "ASGN_REQ_ID", tagData.toFIXNameString());
-        assertEquals( "AsgnReqID", tagData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
+        assertEquals( "831", tagData.toEnumIDString());
+        assertEquals( "ASGN_REQ_ID", tagData.toEnumNameString());
+        assertEquals( "AsgnReqID", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         oneElement = Tag831StrAsgnReqID.TESTB_STR_ASGN_REQ_ID;
         tagData = new Tag831StrAsgnReqID( new MyStringType( oneElement ) );
@@ -93,7 +93,7 @@ class Tag831StrAsgnReqIDTest {
 
         oneElement = Tag831StrAsgnReqID.TESTB_STR_ASGN_REQ_ID;
         tagData = new Tag831StrAsgnReqID( new MyStringType( oneElement ) );
-        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
     }
     @Test
@@ -114,12 +114,12 @@ class Tag831StrAsgnReqIDTest {
         oneElement = Tag831StrAsgnReqID.TESTA_STR_ASGN_REQ_ID;
         tagData = new Tag831StrAsgnReqID( new MyStringType( oneElement ) );
         assertEquals( "Tag831StrAsgnReqID\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

@@ -39,19 +39,19 @@ class Enum1109TriggerPriceDirectionTest {
         Enum1109TriggerPriceDirection enumType;
 
         enumType = Enum1109TriggerPriceDirection.TRIGGER_UP;
-        assertEquals( "U", enumType.toFIXIDString() );
-        assertEquals( "TRIGGER_UP", enumType.toFIXNameString() );
-        assertEquals( "U - Trigger if the price of the specified type goes UP to or through the specified Trigger Price", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "U", enumType.toEnumIDString() );
+        assertEquals( "TRIGGER_UP", enumType.toEnumNameString() );
+        assertEquals( "U - Trigger if the price of the specified type goes UP to or through the specified Trigger Price", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1109TriggerPriceDirection.TRIGGER_DOWN;
-        assertEquals( "D", enumType.toFIXIDString() );
-        assertEquals( "TRIGGER_DOWN", enumType.toFIXNameString() );
-        assertEquals( "D - Trigger if the price of the specified type goes DOWN to or through the specified Trigger Price", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "D", enumType.toEnumIDString() );
+        assertEquals( "TRIGGER_DOWN", enumType.toEnumNameString() );
+        assertEquals( "D - Trigger if the price of the specified type goes DOWN to or through the specified Trigger Price", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

@@ -50,7 +50,7 @@ public class Tag614FloLegContractMultiplier extends FIX43Abstract implements Log
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

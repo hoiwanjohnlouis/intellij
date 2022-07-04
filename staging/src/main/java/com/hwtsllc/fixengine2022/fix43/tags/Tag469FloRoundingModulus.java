@@ -54,7 +54,7 @@ public class Tag469FloRoundingModulus extends FIX43Abstract implements LogValueP
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

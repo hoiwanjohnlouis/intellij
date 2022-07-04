@@ -33,62 +33,97 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag2StrAdvIDTest {
     @Test
-    void FIX0002Test() {
+    void FIXTest() {
         FIX27 fixData = FIX27.FIX2_STR_ADV_ID;
-        assertEquals( "ADV_ID", fixData.toFIXNameString());
-        assertEquals( "2", fixData.toFIXIDString());
-        assertEquals( "AdvID", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "ADV_ID", fixData.toEnumNameString());
+        assertEquals( "2", fixData.toEnumIDString());
+        assertEquals( "AdvID", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
+    @Test
+    void Tag0002Test() {
+        Tag2StrAdvID tagData;
+        String oneElement;
+
+        oneElement = Tag2StrAdvID.TESTA_STR_ADV_ID;
+        tagData = new Tag2StrAdvID(new MyStringType( oneElement ));
+        verifyTagInformation( oneElement, tagData );
+
+        oneElement = Tag2StrAdvID.TESTB_STR_ADV_ID;
+        tagData = new Tag2StrAdvID(new MyStringType( oneElement ));
+        verifyTagInformation( oneElement, tagData );
+    }
+
+    private void verifyTagInformation( String oneElement, Tag2StrAdvID tagData ) {
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "ADV_ID", tagData.toEnumNameString());
+        assertEquals( "2", tagData.toEnumIDString());
+        assertEquals( "AdvID", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void PrintFIXTagTest() {
         Tag2StrAdvID tagData;
+        String oneElement;
 
-        tagData = new Tag2StrAdvID(new MyStringType(Tag2StrAdvID.TESTB_STR_ADV_ID));
+        oneElement = Tag2StrAdvID.TESTA_STR_ADV_ID;
+        tagData = new Tag2StrAdvID(new MyStringType( oneElement ));
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag2StrAdvID.TESTB_STR_ADV_ID;
+        tagData = new Tag2StrAdvID(new MyStringType( oneElement ));
         System.out.println( tagData.toVerboseString() );
     }
     @Test
     void TagGetDataValueTest() {
         Tag2StrAdvID tagData;
+        String oneElement;
 
-        tagData = new Tag2StrAdvID(new MyStringType(Tag2StrAdvID.TESTB_STR_ADV_ID));
-        assertEquals( Tag2StrAdvID.TESTB_STR_ADV_ID, tagData.getDataValue());
+        oneElement = Tag2StrAdvID.TESTB_STR_ADV_ID;
+        tagData = new Tag2StrAdvID(new MyStringType( oneElement ));
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {
         Tag2StrAdvID tagData;
+        String oneElement;
 
-        tagData = new Tag2StrAdvID(new MyStringType(Tag2StrAdvID.TESTB_STR_ADV_ID));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag2StrAdvID.TESTB_STR_ADV_ID,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag2StrAdvID.TESTB_STR_ADV_ID;
+        tagData = new Tag2StrAdvID(new MyStringType( oneElement ));
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
     @Test
     void TagToStringTest() {
         Tag2StrAdvID tagData;
+        String oneElement;
 
-        tagData = new Tag2StrAdvID(new MyStringType(Tag2StrAdvID.TESTB_STR_ADV_ID));
-        assertEquals( Tag2StrAdvID.TESTB_STR_ADV_ID,
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag2StrAdvID.TESTB_STR_ADV_ID;
+        tagData = new Tag2StrAdvID(new MyStringType( oneElement ));
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
     @Test
     void TagToVerboseStringTest() {
         Tag2StrAdvID tagData;
+        String oneElement;
 
-        tagData = new Tag2StrAdvID(new MyStringType(Tag2StrAdvID.TESTA_STR_ADV_ID));
+        oneElement = Tag2StrAdvID.TESTA_STR_ADV_ID;
+        tagData = new Tag2StrAdvID(new MyStringType( oneElement ));
         assertEquals( "Tag2StrAdvID\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag2StrAdvID.TESTA_STR_ADV_ID + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag2StrAdvID.TESTA_STR_ADV_ID + "]",
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

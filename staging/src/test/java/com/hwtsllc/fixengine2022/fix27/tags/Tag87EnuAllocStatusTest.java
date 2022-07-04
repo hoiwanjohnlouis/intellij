@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum87AllocStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,29 +27,21 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  87
  *  AllocStatus
  *  int
+ *  <p></p>
  *  Identifies status of allocation.
+ *  <p></p>
  *  Valid values:
- *      0 - accepted (successfully processed)
- *      1 - block level reject
- *      2 - account level reject
- *      3 - received (received, not yet processed)
- *      4 - incomplete
- *      5 - rejected by intermediary
- *      6 - allocation pending
- *      7 - reversed
+ *  <p>    0 - accepted (successfully processed)
+ *  <p>    1 - block level reject
+ *  <p>    2 - account level reject
+ *  <p>    3 - received (received, not yet processed)
+ *  <p>    4 - incomplete
+ *  <p></p>
+ *  <p>    5 - rejected by intermediary
+ *  <p>    6 - allocation pending
+ *  <p>    7 - reversed
  */
 class Tag87EnuAllocStatusTest {
-    @Test
-    void FIX0087Test() {
-        FIX27 fixData = FIX27.FIX87_ENU_ALLOC_STATUS;
-        assertEquals( "ALLOC_STATUS", fixData.toFIXNameString());
-        assertEquals( "87", fixData.toFIXIDString());
-        assertEquals( "AllocStatus", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
-    }
     @Test
     void Tag0087Test() {
         Tag87EnuAllocStatus tagData;
@@ -92,6 +83,23 @@ class Tag87EnuAllocStatusTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
+    void FIXTest() {
+        Tag87EnuAllocStatus tagData;
+
+        // loop around the ENUM and process
+        for (Enum87AllocStatus oneEnum : Enum87AllocStatus.values()) {
+            tagData = new Tag87EnuAllocStatus(oneEnum);
+            assertEquals( "FIX87_ENU_ALLOC_STATUS", tagData.toEnumLabelString());
+            assertEquals( "ALLOC_STATUS", tagData.toEnumNameString());
+            assertEquals( "87", tagData.toEnumIDString());
+            assertEquals( "AllocStatus", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void PrintFIXTagTest() {
         Tag87EnuAllocStatus tagData;
 
@@ -109,6 +117,7 @@ class Tag87EnuAllocStatusTest {
         for (Enum87AllocStatus oneEnum : Enum87AllocStatus.values()) {
             tagData = new Tag87EnuAllocStatus(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
@@ -119,7 +128,7 @@ class Tag87EnuAllocStatusTest {
         // loop around the ENUM and process
         for (Enum87AllocStatus oneEnum : Enum87AllocStatus.values()) {
             tagData = new Tag87EnuAllocStatus(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -143,12 +152,12 @@ class Tag87EnuAllocStatusTest {
         for (Enum87AllocStatus oneEnum : Enum87AllocStatus.values()) {
             tagData = new Tag87EnuAllocStatus(oneEnum);
             assertEquals( "Tag87EnuAllocStatus\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

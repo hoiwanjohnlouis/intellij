@@ -47,7 +47,7 @@ public class Tag36SeqNewSeqNo extends FIX27Abstract implements LogValuePairStrin
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

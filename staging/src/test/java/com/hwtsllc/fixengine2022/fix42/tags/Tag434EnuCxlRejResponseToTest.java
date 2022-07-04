@@ -40,12 +40,12 @@ class Tag434EnuCxlRejResponseToTest {
     @Test
     void FIX0434Test() {
         FIX42 fixData = FIX42.FIX434_ENU_CXL_REJ_RESPONSE_TO;
-        assertEquals( "434", fixData.toFIXIDString());
-        assertEquals( "CXL_REJ_RESPONSE_TO", fixData.toFIXNameString());
-        assertEquals( "CxlRejResponseTo", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "434", fixData.toEnumIDString());
+        assertEquals( "CXL_REJ_RESPONSE_TO", fixData.toEnumNameString());
+        assertEquals( "CxlRejResponseTo", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0434Test() {
@@ -55,11 +55,11 @@ class Tag434EnuCxlRejResponseToTest {
          * 1-2 msg types
          */
         tagData = new Tag434EnuCxlRejResponseTo(Enum434CxlRejResponseTo.ORDER_CANCEL_REQUEST);
-        assertEquals( Enum434CxlRejResponseTo.ORDER_CANCEL_REQUEST.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum434CxlRejResponseTo.ORDER_CANCEL_REQUEST.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag434EnuCxlRejResponseTo(Enum434CxlRejResponseTo.ORDER_MODIFICATION_REQUEST);
-        assertEquals( Enum434CxlRejResponseTo.ORDER_MODIFICATION_REQUEST.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum434CxlRejResponseTo.ORDER_MODIFICATION_REQUEST.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -90,7 +90,7 @@ class Tag434EnuCxlRejResponseToTest {
         // loop around the ENUM and process
         for (Enum434CxlRejResponseTo oneEnum : Enum434CxlRejResponseTo.values()) {
             tagData = new Tag434EnuCxlRejResponseTo(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -114,12 +114,12 @@ class Tag434EnuCxlRejResponseToTest {
         for (Enum434CxlRejResponseTo oneEnum : Enum434CxlRejResponseTo.values()) {
             tagData = new Tag434EnuCxlRejResponseTo(oneEnum);
             assertEquals( "Tag434EnuCxlRejResponseTo\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

@@ -26,22 +26,25 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  59
  *  TimeInForce
  *  char
+ *  <p></p>
  *  Specifies how long the order remains in effect.
- *
+ *  <p></p>
  *  Absence of this field is interpreted as DAY.
- *
+ *  <p></p>
  *  NOTE not applicable to CIV Orders.
+ *  <p>
  *  (see Volume : "Glossary" for value definitions)
- *
+ *  <p></p>
  *  Valid values:
- *      0 - Day (or session)
- *      1 - Good Till Cancel (GTC)
- *      2 - At the Opening (OPG)
- *      3 - Immediate Or Cancel (IOC)
- *      4 - Fill Or Kill (FOK)
- *      5 - Good Till Crossing (GTX)
- *      6 - Good Till Date (GTD)
- *      7 - At the Close
+ *  <p>    0 - Day (or session)
+ *  <p>    1 - Good Till Cancel (GTC)
+ *  <p>    2 - At the Opening (OPG)
+ *  <p>    3 - Immediate Or Cancel (IOC)
+ *  <p>    4 - Fill Or Kill (FOK)
+ *  <p></p>
+ *  <p>    5 - Good Till Crossing (GTX)
+ *  <p>    6 - Good Till Date (GTD)
+ *  <p>    7 - At the Close
  */
 class Enum59TimeInForceTest {
     @Test
@@ -52,68 +55,68 @@ class Enum59TimeInForceTest {
          * 0-7 msg types
          */
         enumType = Enum59TimeInForce.DAY;
-        assertEquals("0", enumType.toFIXIDString());
-        assertEquals("DAY", enumType.toFIXNameString());
-        assertEquals("0 - Day (or session)", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("0", enumType.toEnumIDString());
+        assertEquals("DAY", enumType.toEnumNameString());
+        assertEquals("0 - Day (or session)", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum59TimeInForce.GOOD_TILL_CANCEL;
-        assertEquals("1", enumType.toFIXIDString());
-        assertEquals("GOOD_TILL_CANCEL", enumType.toFIXNameString());
-        assertEquals("1 - Good Till Cancel (GTC)", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("1", enumType.toEnumIDString());
+        assertEquals("GOOD_TILL_CANCEL", enumType.toEnumNameString());
+        assertEquals("1 - Good Till Cancel (GTC)", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum59TimeInForce.AT_THE_OPENING;
-        assertEquals("2", enumType.toFIXIDString());
-        assertEquals("AT_THE_OPENING", enumType.toFIXNameString());
-        assertEquals("2 - At the Opening (OPG)", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("2", enumType.toEnumIDString());
+        assertEquals("AT_THE_OPENING", enumType.toEnumNameString());
+        assertEquals("2 - At the Opening (OPG)", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum59TimeInForce.IMMEDIATE_OR_CANCEL;
-        assertEquals("3", enumType.toFIXIDString());
-        assertEquals("IMMEDIATE_OR_CANCEL", enumType.toFIXNameString());
-        assertEquals("3 - Immediate Or Cancel (IOC)", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("3", enumType.toEnumIDString());
+        assertEquals("IMMEDIATE_OR_CANCEL", enumType.toEnumNameString());
+        assertEquals("3 - Immediate Or Cancel (IOC)", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum59TimeInForce.FILL_OR_KILL;
-        assertEquals("4", enumType.toFIXIDString());
-        assertEquals("FILL_OR_KILL", enumType.toFIXNameString());
-        assertEquals("4 - Fill Or Kill (FOK)", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("4", enumType.toEnumIDString());
+        assertEquals("FILL_OR_KILL", enumType.toEnumNameString());
+        assertEquals("4 - Fill Or Kill (FOK)", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = Enum59TimeInForce.GOOD_TILL_CROSSING;
-        assertEquals("5", enumType.toFIXIDString());
-        assertEquals("GOOD_TILL_CROSSING", enumType.toFIXNameString());
-        assertEquals("5 - Good Till Crossing (GTX)", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("5", enumType.toEnumIDString());
+        assertEquals("GOOD_TILL_CROSSING", enumType.toEnumNameString());
+        assertEquals("5 - Good Till Crossing (GTX)", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum59TimeInForce.GOOD_TILL_DATE;
-        assertEquals("6", enumType.toFIXIDString());
-        assertEquals("GOOD_TILL_DATE", enumType.toFIXNameString());
-        assertEquals("6 - Good Till Date (GTD)", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("6", enumType.toEnumIDString());
+        assertEquals("GOOD_TILL_DATE", enumType.toEnumNameString());
+        assertEquals("6 - Good Till Date (GTD)", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum59TimeInForce.AT_THE_CLOSE;
-        assertEquals("7", enumType.toFIXIDString());
-        assertEquals("AT_THE_CLOSE", enumType.toFIXNameString());
-        assertEquals("7 - At the Close", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("7", enumType.toEnumIDString());
+        assertEquals("AT_THE_CLOSE", enumType.toEnumNameString());
+        assertEquals("7 - At the Close", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

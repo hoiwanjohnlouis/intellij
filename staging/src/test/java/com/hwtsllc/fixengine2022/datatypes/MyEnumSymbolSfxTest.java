@@ -62,19 +62,19 @@ class MyEnumSymbolSfxTest {
         MyEnumSymbolSfx enumType;
 
         enumType = MyEnumSymbolSfx.EUCP;
-        assertEquals( "CD", enumType.toFIXIDString());
-        assertEquals( "EUCP", enumType.toFIXNameString());
-        assertEquals( "CD - EUCP with lump-sum interest rather than discount price", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "CD", enumType.toEnumIDString());
+        assertEquals( "EUCP", enumType.toEnumNameString());
+        assertEquals( "CD - EUCP with lump-sum interest rather than discount price", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumSymbolSfx.WHEN_ISSUED;
-        assertEquals( "WI", enumType.toFIXIDString());
-        assertEquals( "WHEN_ISSUED", enumType.toFIXNameString());
-        assertEquals( "WI - When-Issued for a security to be reissued under an old CUSIP or ISIN", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "WI", enumType.toEnumIDString());
+        assertEquals( "WHEN_ISSUED", enumType.toEnumNameString());
+        assertEquals( "WI - When-Issued for a security to be reissued under an old CUSIP or ISIN", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

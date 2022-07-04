@@ -39,19 +39,19 @@ class Enum974UnderlyingCashTypeTest {
         Enum974UnderlyingCashType enumType;
 
         enumType = Enum974UnderlyingCashType.FIXED;
-        assertEquals( "FIXED", enumType.toFIXIDString() );
-        assertEquals( "FIXED", enumType.toFIXNameString() );
-        assertEquals( "FIXED - FIXED", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "FIXED", enumType.toEnumIDString() );
+        assertEquals( "FIXED", enumType.toEnumNameString() );
+        assertEquals( "FIXED - FIXED", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum974UnderlyingCashType.DIFF;
-        assertEquals( "DIFF", enumType.toFIXIDString() );
-        assertEquals( "DIFF", enumType.toFIXNameString() );
-        assertEquals( "DIFF - DIFF", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "DIFF", enumType.toEnumIDString() );
+        assertEquals( "DIFF", enumType.toEnumNameString() );
+        assertEquals( "DIFF - DIFF", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

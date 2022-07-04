@@ -36,12 +36,12 @@ class Tag767CcyAllowableOneSidednessCurrTest {
     @Test
     void FIXTest() {
         FIX44 fixData = FIX44.FIX767_CCY_ALLOWABLE_ONE_SIDEDNESS_CURR;
-        assertEquals( "767", fixData.toFIXIDString());
-        assertEquals( "ALLOWABLE_ONE_SIDEDNESS_CURR", fixData.toFIXNameString());
-        assertEquals( "AllowableOneSidednessCurr", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "767", fixData.toEnumIDString());
+        assertEquals( "ALLOWABLE_ONE_SIDEDNESS_CURR", fixData.toEnumNameString());
+        assertEquals( "AllowableOneSidednessCurr", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0767Test() {
@@ -52,12 +52,12 @@ class Tag767CcyAllowableOneSidednessCurrTest {
         tagData = new Tag767CcyAllowableOneSidednessCurr( new MyCurrencyType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "767", tagData.toFIXIDString());
-        assertEquals( "ALLOWABLE_ONE_SIDEDNESS_CURR", tagData.toFIXNameString());
-        assertEquals( "AllowableOneSidednessCurr", tagData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
+        assertEquals( "767", tagData.toEnumIDString());
+        assertEquals( "ALLOWABLE_ONE_SIDEDNESS_CURR", tagData.toEnumNameString());
+        assertEquals( "AllowableOneSidednessCurr", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         oneElement = Tag767CcyAllowableOneSidednessCurr.TESTB_CCY_ALLOWABLE_ONE_SIDEDNESS_CURR;
         tagData = new Tag767CcyAllowableOneSidednessCurr( new MyCurrencyType( oneElement ) );
@@ -94,7 +94,7 @@ class Tag767CcyAllowableOneSidednessCurrTest {
 
         oneElement = Tag767CcyAllowableOneSidednessCurr.TESTB_CCY_ALLOWABLE_ONE_SIDEDNESS_CURR;
         tagData = new Tag767CcyAllowableOneSidednessCurr( new MyCurrencyType( oneElement ) );
-        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
     }
     @Test
@@ -115,12 +115,12 @@ class Tag767CcyAllowableOneSidednessCurrTest {
         oneElement = Tag767CcyAllowableOneSidednessCurr.TESTA_CCY_ALLOWABLE_ONE_SIDEDNESS_CURR;
         tagData = new Tag767CcyAllowableOneSidednessCurr( new MyCurrencyType( oneElement ) );
         assertEquals( "Tag767CcyAllowableOneSidednessCurr\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

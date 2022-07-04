@@ -50,7 +50,7 @@ public class Tag1062NumNoUndlyInstrumentPartySubIDs extends FIX50Abstract implem
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

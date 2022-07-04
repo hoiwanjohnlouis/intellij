@@ -50,7 +50,7 @@ public class Tag985AmtUnderlyingPayAmount extends FIX50Abstract implements LogVa
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

@@ -23,30 +23,33 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  39
  *  OrdStatus
  *  char
+ *  <p></p>
  *  Identifies current status of order.
- *
+ *  <p></p>
  *  *** SOME VALUES HAVE BEEN REPLACED ***
+ *  <p>
  *  *** See Replaced Features and Supported Approach ***
+ *  <p>
  *      (see Volume : "Glossary" for value definitions)
- *
+ *  <p></p>
  *  Valid values:
- *      0 - New
- *      1 - Partially filled
- *      2 - Filled
- *      3 - Done for day
- *      4 - Canceled
- *
- *      5 - Replaced (No longer used)
- *      6 - Pending Cancel (i.e. result of Order Cancel Request)
- *      7 - Stopped
- *      8 - Rejected
- *      9 - Suspended
- *
- *      A - Pending New
- *      B - Calculated
- *      C - Expired
- *      D - Accepted for Bidding
- *      E - Pending Replace (i.e. result of Order Cancel/Replace Request)
+ *  <p>    0 - New
+ *  <p>    1 - Partially filled
+ *  <p>    2 - Filled
+ *  <p>    3 - Done for day
+ *  <p>    4 - Canceled
+ *  <p></p>
+ *  <p>    5 - Replaced (No longer used)
+ *  <p>    6 - Pending Cancel (i.e. result of Order Cancel Request)
+ *  <p>    7 - Stopped
+ *  <p>    8 - Rejected
+ *  <p>    9 - Suspended
+ *  <p></p>
+ *  <p>    A - Pending New
+ *  <p>    B - Calculated
+ *  <p>    C - Expired
+ *  <p>    D - Accepted for Bidding
+ *  <p>    E - Pending Replace (i.e. result of Order Cancel/Replace Request)
  */
 public enum Enum39OrdStatus implements LogFIXString, LogVerboseString {
     NEW("0", "NEW", "0 - New" ),
@@ -84,28 +87,28 @@ public enum Enum39OrdStatus implements LogFIXString, LogVerboseString {
      * standard wrapper to retrieve the specific enum name
      */
     @Override
-    public String toEnumNameString() {
+    public String toEnumLabelString() {
         return this.name();
     }
     /**
      * standard wrapper to retrieve the specific fix action code for this enum. eg: the first field
      */
     @Override
-    public String toFIXIDString() {
+    public String toEnumIDString() {
         return id;
     }
     /**
      * standard wrapper to retrieve the specific fix name for this enum. eg: the second field
      */
     @Override
-    public String toFIXNameString() {
+    public String toEnumNameString() {
         return name;
     }
     /**
      * standard wrapper to retrieve the specific fix description for this enum. eg: the third field
      */
     @Override
-    public String toFIXDescriptionString() {
+    public String toEnumDescriptionString() {
         return description;
     }
     /**
@@ -115,16 +118,16 @@ public enum Enum39OrdStatus implements LogFIXString, LogVerboseString {
     public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
-                .concat(toEnumNameString())
+                .concat( toEnumLabelString())
                 .concat("]")
                 .concat("\n\tAction[")
-                .concat(toFIXIDString())
+                .concat( toEnumIDString())
                 .concat("]")
                 .concat("\n\tName[")
-                .concat(toFIXNameString())
+                .concat( toEnumNameString())
                 .concat("]")
                 .concat("\n\tDescription[")
-                .concat(toFIXDescriptionString())
+                .concat( toEnumDescriptionString())
                 .concat("]");
     }
     /**
@@ -132,13 +135,13 @@ public enum Enum39OrdStatus implements LogFIXString, LogVerboseString {
      */
     @Override
     public String toString() {
-        return toEnumNameString()
+        return toEnumLabelString()
                 .concat("=[")
-                .concat(toFIXIDString())
+                .concat( toEnumIDString())
                 .concat(",")
-                .concat(toFIXNameString())
+                .concat( toEnumNameString())
                 .concat(",")
-                .concat(toFIXDescriptionString())
+                .concat( toEnumDescriptionString())
                 .concat("]");
     }
 

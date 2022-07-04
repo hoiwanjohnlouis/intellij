@@ -44,12 +44,12 @@ class Tag712EnuPosMaintActionTest {
     @Test
     void FIXTest() {
         FIX44 fixData = FIX44.FIX712_ENU_POS_MAINT_ACTION;
-        assertEquals( "712", fixData.toFIXIDString());
-        assertEquals( "POS_MAINT_ACTION", fixData.toFIXNameString());
-        assertEquals( "PosMaintAction", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "712", fixData.toEnumIDString());
+        assertEquals( "POS_MAINT_ACTION", fixData.toEnumNameString());
+        assertEquals( "PosMaintAction", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0712Test() {
@@ -58,25 +58,25 @@ class Tag712EnuPosMaintActionTest {
 
         oneElement = Enum712PosMaintAction.NEW;
         tagData = new Tag712EnuPosMaintAction( oneElement );
-        assertEquals( oneElement.toFIXIDString(), tagData.getDataValue());
+        assertEquals( oneElement.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "712", tagData.toFIXIDString());
-        assertEquals( "POS_MAINT_ACTION", tagData.toFIXNameString());
-        assertEquals( "PosMaintAction", tagData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
+        assertEquals( "712", tagData.toEnumIDString());
+        assertEquals( "POS_MAINT_ACTION", tagData.toEnumNameString());
+        assertEquals( "PosMaintAction", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         tagData = new Tag712EnuPosMaintAction( Enum712PosMaintAction.REPLACE );
-        assertEquals( Enum712PosMaintAction.REPLACE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum712PosMaintAction.REPLACE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag712EnuPosMaintAction( Enum712PosMaintAction.CANCEL );
-        assertEquals( Enum712PosMaintAction.CANCEL.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum712PosMaintAction.CANCEL.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag712EnuPosMaintAction( Enum712PosMaintAction.REVERSE );
-        assertEquals( Enum712PosMaintAction.REVERSE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum712PosMaintAction.REVERSE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -107,7 +107,7 @@ class Tag712EnuPosMaintActionTest {
         // loop around the ENUM and process
         for (Enum712PosMaintAction oneEnum : Enum712PosMaintAction.values()) {
             tagData = new Tag712EnuPosMaintAction(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -131,12 +131,12 @@ class Tag712EnuPosMaintActionTest {
         for (Enum712PosMaintAction oneEnum : Enum712PosMaintAction.values()) {
             tagData = new Tag712EnuPosMaintAction(oneEnum);
             assertEquals( "Tag712EnuPosMaintAction\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

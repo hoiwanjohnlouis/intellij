@@ -40,12 +40,12 @@ class Tag517EnuOwnershipTypeTest {
     @Test
     void FIX0517Test() {
         FIX43 fixData = FIX43.FIX517_ENU_OWNERSHIP_TYPE;
-        assertEquals( "517", fixData.toFIXIDString());
-        assertEquals( "OWNERSHIP_TYPE", fixData.toFIXNameString());
-        assertEquals( "OwnershipType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "517", fixData.toEnumIDString());
+        assertEquals( "OWNERSHIP_TYPE", fixData.toEnumNameString());
+        assertEquals( "OwnershipType", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0517Test() {
@@ -59,21 +59,21 @@ class Tag517EnuOwnershipTypeTest {
          *  J, type
          */
         tagData = new Tag517EnuOwnershipType( Enum517OwnershipType.JOINT_INVESTORS );
-        assertEquals( Enum517OwnershipType.JOINT_INVESTORS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum517OwnershipType.JOINT_INVESTORS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         /*
          *  T, type
          */
         tagData = new Tag517EnuOwnershipType( Enum517OwnershipType.TENANTS_IN_COMMON );
-        assertEquals( Enum517OwnershipType.TENANTS_IN_COMMON.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum517OwnershipType.TENANTS_IN_COMMON.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         /*
          *  2, type
          */
         tagData = new Tag517EnuOwnershipType( Enum517OwnershipType.JOINT_TRUSTEES );
-        assertEquals( Enum517OwnershipType.JOINT_TRUSTEES.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum517OwnershipType.JOINT_TRUSTEES.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -104,7 +104,7 @@ class Tag517EnuOwnershipTypeTest {
         // loop around the ENUM and process
         for (Enum517OwnershipType oneEnum : Enum517OwnershipType.values()) {
             tagData = new Tag517EnuOwnershipType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -128,12 +128,12 @@ class Tag517EnuOwnershipTypeTest {
         for (Enum517OwnershipType oneEnum : Enum517OwnershipType.values()) {
             tagData = new Tag517EnuOwnershipType(oneEnum);
             assertEquals( "Tag517EnuOwnershipType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

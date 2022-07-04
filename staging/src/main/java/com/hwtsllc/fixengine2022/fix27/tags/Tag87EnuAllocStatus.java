@@ -27,16 +27,19 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  87
  *  AllocStatus
  *  int
+ *  <p></p>
  *  Identifies status of allocation.
+ *  <p></p>
  *  Valid values:
- *      0 - accepted (successfully processed)
- *      1 - block level reject
- *      2 - account level reject
- *      3 - received (received, not yet processed)
- *      4 - incomplete
- *      5 - rejected by intermediary
- *      6 - allocation pending
- *      7 - reversed
+ *  <p>    0 - accepted (successfully processed)
+ *  <p>    1 - block level reject
+ *  <p>    2 - account level reject
+ *  <p>    3 - received (received, not yet processed)
+ *  <p>    4 - incomplete
+ *  <p></p>
+ *  <p>    5 - rejected by intermediary
+ *  <p>    6 - allocation pending
+ *  <p>    7 - reversed
  */
 public class Tag87EnuAllocStatus extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum87AllocStatus dataValue;
@@ -52,14 +55,14 @@ public class Tag87EnuAllocStatus extends FIX27Abstract implements LogValuePairSt
     }
 
     public String getDataValue() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(getDataValue());
     }
@@ -91,21 +94,21 @@ public class Tag87EnuAllocStatus extends FIX27Abstract implements LogValuePairSt
      */
     @Override
     public String toDataIDString() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * wrapper to return the Name of the underlying Data
      */
     @Override
     public String toDataNameString() {
-        return this.dataValue.toFIXNameString();
+        return this.dataValue.toEnumNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data
      */
     @Override
     public String toDataDescriptionString() {
-        return this.dataValue.toFIXDescriptionString();
+        return this.dataValue.toEnumDescriptionString();
     }
     /**
      * standard wrapper to return a string describing the data

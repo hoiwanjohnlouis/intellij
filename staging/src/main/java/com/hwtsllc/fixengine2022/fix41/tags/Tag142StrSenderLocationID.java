@@ -48,7 +48,7 @@ public class Tag142StrSenderLocationID extends FIX41Abstract implements LogValue
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

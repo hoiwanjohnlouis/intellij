@@ -38,12 +38,12 @@ class Tag365DatEncodedUnderlyingSecurityDescTest {
     @Test
     void FIX0365Test() {
         FIX42 fixData = FIX42.FIX365_DAT_ENCODED_UNDERLYING_SECURITY_DESC;
-        assertEquals( "365", fixData.toFIXIDString());
-        assertEquals( "ENCODED_UNDERLYING_SECURITY_DESC", fixData.toFIXNameString());
-        assertEquals( "EncodedUnderlyingSecurityDesc", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "365", fixData.toEnumIDString());
+        assertEquals( "ENCODED_UNDERLYING_SECURITY_DESC", fixData.toEnumNameString());
+        assertEquals( "EncodedUnderlyingSecurityDesc", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0365Test() {
@@ -90,7 +90,7 @@ class Tag365DatEncodedUnderlyingSecurityDescTest {
 
         oneElement = Tag365DatEncodedUnderlyingSecurityDesc.TESTB_DAT_ENCODED_UNDERLYING_SECURITY_DESC;
         tagData = new Tag365DatEncodedUnderlyingSecurityDesc( new MyDataType( oneElement ) );
-        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
     @Test
@@ -111,12 +111,12 @@ class Tag365DatEncodedUnderlyingSecurityDescTest {
         oneElement = Tag365DatEncodedUnderlyingSecurityDesc.TESTA_DAT_ENCODED_UNDERLYING_SECURITY_DESC;
         tagData = new Tag365DatEncodedUnderlyingSecurityDesc( new MyDataType( oneElement ) );
         assertEquals( "Tag365DatEncodedUnderlyingSecurityDesc\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
                 tagData.toVerboseString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }

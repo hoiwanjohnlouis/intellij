@@ -35,13 +35,13 @@ class Tag89DatSignatureTest {
     @Test
     void FIX0089Test() {
         FIX27 fixData = FIX27.FIX89_DAT_SIGNATURE;
-        assertEquals( "SIGNATURE", fixData.toFIXNameString());
-        assertEquals( "89", fixData.toFIXIDString());
-        assertEquals( "Signature", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "SIGNATURE", fixData.toEnumNameString());
+        assertEquals( "89", fixData.toEnumIDString());
+        assertEquals( "Signature", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0089Test() {
@@ -71,7 +71,7 @@ class Tag89DatSignatureTest {
         Tag89DatSignature tagData;
 
         tagData = new Tag89DatSignature(new MyDataType(Tag89DatSignature.TESTB_DAT_SIGNATURE));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag89DatSignature.TESTB_DAT_SIGNATURE,
+        assertEquals( tagData.toEnumIDString() + "=" + Tag89DatSignature.TESTB_DAT_SIGNATURE,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toValuePairString());
@@ -92,12 +92,12 @@ class Tag89DatSignatureTest {
 
         tagData = new Tag89DatSignature(new MyDataType(Tag89DatSignature.TESTA_DAT_SIGNATURE));
         assertEquals( "Tag89DatSignature\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + Tag89DatSignature.TESTA_DAT_SIGNATURE + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag89DatSignature.TESTA_DAT_SIGNATURE + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag89DatSignature.TESTA_DAT_SIGNATURE + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

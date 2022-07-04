@@ -26,16 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  26
  *  IOIRefID
  *  String
+ *  <p></p>
  *  Reference identifier used with CANCEL and REPLACE, transaction types.
+ *  <p></p>
  *  (Prior to FIX 4.1 this field was of type int)
  */
 public class Tag26StrIOIRefID extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_IOI_REF_ID
-            = "BilboBaggins-Tag26StrIOIRefID";
+            = "LeeHyoRi-Tag26StrIOIRefID";
     public final static String TESTB_STR_IOI_REF_ID
-            = "Gandalf-Tag26StrIOIRefID";
+            = "KimTaeRi-Tag26StrIOIRefID";
 
     public Tag26StrIOIRefID(MyStringType dataValue) {
         setFixType(FIX27.FIX26_STR_IOI_REF_ID);
@@ -50,7 +52,7 @@ public class Tag26StrIOIRefID extends FIX27Abstract implements LogValuePairStrin
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

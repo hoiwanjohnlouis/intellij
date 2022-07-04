@@ -55,7 +55,7 @@ public class Tag849PctParticipationRate extends FIX44Abstract implements LogValu
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

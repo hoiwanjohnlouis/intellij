@@ -48,12 +48,12 @@ class Tag843EnuDiscretionLimitTypeTest {
     @Test
     void FIXTest() {
         FIX44 fixData = FIX44.FIX843_ENU_DISCRETION_LIMIT_TYPE;
-        assertEquals( "843", fixData.toFIXIDString());
-        assertEquals( "DISCRETION_LIMIT_TYPE", fixData.toFIXNameString());
-        assertEquals( "DiscretionLimitType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "843", fixData.toEnumIDString());
+        assertEquals( "DISCRETION_LIMIT_TYPE", fixData.toEnumNameString());
+        assertEquals( "DiscretionLimitType", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0843Test() {
@@ -64,12 +64,12 @@ class Tag843EnuDiscretionLimitTypeTest {
         tagData = new Tag843EnuDiscretionLimitType( oneElement );
         assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "843", tagData.toFIXIDString());
-        assertEquals( "DISCRETION_LIMIT_TYPE", tagData.toFIXNameString());
-        assertEquals( "DiscretionLimitType", tagData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
+        assertEquals( "843", tagData.toEnumIDString());
+        assertEquals( "DISCRETION_LIMIT_TYPE", tagData.toEnumNameString());
+        assertEquals( "DiscretionLimitType", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         tagData = new Tag843EnuDiscretionLimitType(MyEnumLimitType.STRICT);
         assertEquals( "1", tagData.getDataValue());
@@ -107,7 +107,7 @@ class Tag843EnuDiscretionLimitTypeTest {
         // loop around the ENUM and process
         for (MyEnumLimitType oneEnum : MyEnumLimitType.values()) {
             tagData = new Tag843EnuDiscretionLimitType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -131,12 +131,12 @@ class Tag843EnuDiscretionLimitTypeTest {
         for (MyEnumLimitType oneEnum : MyEnumLimitType.values()) {
             tagData = new Tag843EnuDiscretionLimitType(oneEnum);
             assertEquals( "Tag843EnuDiscretionLimitType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

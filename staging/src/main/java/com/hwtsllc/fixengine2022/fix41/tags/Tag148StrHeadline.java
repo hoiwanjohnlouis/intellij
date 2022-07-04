@@ -48,7 +48,7 @@ public class Tag148StrHeadline extends FIX41Abstract implements LogValuePairStri
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

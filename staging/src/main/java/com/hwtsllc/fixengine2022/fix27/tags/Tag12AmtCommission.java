@@ -48,7 +48,7 @@ public class Tag12AmtCommission extends FIX27Abstract implements LogValuePairStr
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

@@ -40,27 +40,27 @@ class Tag546EnuScopeTest {
     @Test
     void FIX0546Test() {
         FIX43 fixData = FIX43.FIX546_ENU_MARKET_SCOPE;
-        assertEquals( "546", fixData.toFIXIDString());
-        assertEquals( "MARKET_SCOPE", fixData.toFIXNameString());
-        assertEquals( "MarketScope", fixData.toFIXDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "546", fixData.toEnumIDString());
+        assertEquals( "MARKET_SCOPE", fixData.toEnumNameString());
+        assertEquals( "MarketScope", fixData.toEnumDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0546Test() {
         Tag546EnuScope tagData;
 
         tagData = new Tag546EnuScope( Enum546Scope.LOCAL_MARKET);
-        assertEquals( Enum546Scope.LOCAL_MARKET.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum546Scope.LOCAL_MARKET.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag546EnuScope( Enum546Scope.NATIONAL);
-        assertEquals( Enum546Scope.NATIONAL.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum546Scope.NATIONAL.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag546EnuScope( Enum546Scope.GLOBAL);
-        assertEquals( Enum546Scope.GLOBAL.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum546Scope.GLOBAL.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -91,7 +91,7 @@ class Tag546EnuScopeTest {
         // loop around the ENUM and process
         for ( Enum546Scope oneEnum : Enum546Scope.values()) {
             tagData = new Tag546EnuScope(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -115,12 +115,12 @@ class Tag546EnuScopeTest {
         for ( Enum546Scope oneEnum : Enum546Scope.values()) {
             tagData = new Tag546EnuScope(oneEnum);
             assertEquals( "Tag546EnuScope\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

@@ -26,8 +26,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  37
  *  OrderID
  *  String
+ *  <p></p>
  *  Unique identifier for Order as assigned by sell-side (broker, exchange, ECN).
+ *  <p></p>
  *  Uniqueness must be guaranteed within a single trading day.
+ *  <p></p>
  *  Firms which accept multi-day orders should consider
  *  embedding a date within the OrderID field to assure uniqueness across days.
  */
@@ -35,9 +38,9 @@ public class Tag37StrOrderID extends FIX27Abstract implements LogValuePairString
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_ORDER_ID
-            = "BilboBaggins-Tag37StrOrderID";
+            = "AnnaMayWong-Tag37StrOrderID";
     public final static String TESTB_STR_ORDER_ID
-            = "Gandalf-Tag37StrOrderID";
+            = "MiriamHopkins-Tag37StrOrderID";
 
     public Tag37StrOrderID(MyStringType dataValue) {
         setFixType(FIX27.FIX37_STR_ORDER_ID);
@@ -52,7 +55,7 @@ public class Tag37StrOrderID extends FIX27Abstract implements LogValuePairString
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

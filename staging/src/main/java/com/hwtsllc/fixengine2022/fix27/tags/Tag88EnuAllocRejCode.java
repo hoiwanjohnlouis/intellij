@@ -27,28 +27,30 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  88 (same as 88, 776)
  *  AllocRejCode
  *  int
- *  <p>
+ *  <p></p>
  *  Identifies reason for rejection.
  *  <p></p>
  *  776 (same as 88, 776)
  *  IndividualAllocRejCode
  *  int
- *  <p>
+ *  <p></p>
  *  Identified reason for rejecting an individual AllocAccount (79) detail.
- *  <p>
- *  Same values as  AllocRejCode (88)
+ *  <p></p>
+ *      Same values as  AllocRejCode (88)
  *  <p></p>
  *  Valid values:
  *  <p>    0 - Unknown account(s)
  *  <p>    1 - Incorrect quantity
- *  <p>    2 - Incorrect averageg price
+ *  <p>    2 - Incorrect average price
  *  <p>    3 - Unknown executing broker mnemonic
  *  <p>    4 - Commission difference
+ *  <p></p>
  *  <p>    5 - Unknown OrderID (37)
  *  <p>    6 - Unknown ListID (66)
  *  <p>    7 - Other (further in Text (58))
  *  <p>    8 - Incorrect allocated quantity
  *  <p>    9 - Calculation difference
+ *  <p></p>
  *  <p>    10 - Unknown or stale ExecID
  *  <p>    11 - Mismatched data
  *  <p>    12 - Unknown ClOrdID
@@ -68,14 +70,14 @@ public class Tag88EnuAllocRejCode extends FIX27Abstract implements LogValuePairS
     }
 
     public String getDataValue() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(getDataValue());
     }
@@ -107,21 +109,21 @@ public class Tag88EnuAllocRejCode extends FIX27Abstract implements LogValuePairS
      */
     @Override
     public String toDataIDString() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * wrapper to return the Name of the underlying Data
      */
     @Override
     public String toDataNameString() {
-        return this.dataValue.toFIXNameString();
+        return this.dataValue.toEnumNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data
      */
     @Override
     public String toDataDescriptionString() {
-        return this.dataValue.toFIXDescriptionString();
+        return this.dataValue.toEnumDescriptionString();
     }
     /**
      * standard wrapper to return a string describing the data

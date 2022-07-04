@@ -26,14 +26,16 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  13
  *  CommType
  *  char
+ *  <p></p>
  *  Commission type
+ *  <p></p>
  *  Valid values:
- *      1 - Per Unit (implying shares, par, currency, etc.)
- *      2 - Percent
- *      3 - Absolute (total monetary amount)
- *      4 - Percentage waived - cash discount (for CIV buy orders)
- *      5 - Percentage waived -= enhanced units (for CIV buy orders)
- *      6 - Points per bond or contract
+ *  <p>    1 - Per Unit (implying shares, par, currency, etc.)
+ *  <p>    2 - Percent
+ *  <p>    3 - Absolute (total monetary amount)
+ *  <p>    4 - Percentage waived - cash discount (for CIV buy orders)
+ *  <p>    5 - Percentage waived -= enhanced units (for CIV buy orders)
+ *  <p>    6 - Points per bond or contract
  *          (supply ContractMultiplier (231) in the <Instrument> component block
  *           if the object security is denominated in a size other than the
  *           industry default - 1000 par for bonds)
@@ -44,51 +46,51 @@ class Enum13CommTypeTest {
         Enum13CommType enumType;
 
         enumType = Enum13CommType.PER_UNIT;
-        assertEquals("1", enumType.toFIXIDString());
-        assertEquals("PER_UNIT", enumType.toFIXNameString());
-        assertEquals("1 - Per Unit (implying shares, par, currency, etc.)", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("1", enumType.toEnumIDString());
+        assertEquals("PER_UNIT", enumType.toEnumNameString());
+        assertEquals("1 - Per Unit (implying shares, par, currency, etc.)", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum13CommType.PERCENT;
-        assertEquals("2", enumType.toFIXIDString());
-        assertEquals("PERCENT", enumType.toFIXNameString());
-        assertEquals("2 - Percent", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("2", enumType.toEnumIDString());
+        assertEquals("PERCENT", enumType.toEnumNameString());
+        assertEquals("2 - Percent", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum13CommType.ABSOLUTE;
-        assertEquals("3", enumType.toFIXIDString());
-        assertEquals("ABSOLUTE", enumType.toFIXNameString());
-        assertEquals("3 - Absolute (total monetary amount)", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("3", enumType.toEnumIDString());
+        assertEquals("ABSOLUTE", enumType.toEnumNameString());
+        assertEquals("3 - Absolute (total monetary amount)", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum13CommType.PERCENTAGE_WAIVED_CASH_DISCOUNT;
-        assertEquals("4", enumType.toFIXIDString());
-        assertEquals("PERCENTAGE_WAIVED_CASH_DISCOUNT", enumType.toFIXNameString());
-        assertEquals("4 - Percentage waived - cash discount (for CIV buy orders)", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("4", enumType.toEnumIDString());
+        assertEquals("PERCENTAGE_WAIVED_CASH_DISCOUNT", enumType.toEnumNameString());
+        assertEquals("4 - Percentage waived - cash discount (for CIV buy orders)", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum13CommType.PERCENTAGE_WAIVED_ENHANCED_UNITS;
-        assertEquals("5", enumType.toFIXIDString());
-        assertEquals("PERCENTAGE_WAIVED_ENHANCED_UNITS", enumType.toFIXNameString());
-        assertEquals("5 - Percentage waived - enhanced units (for CIV buy orders)", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("5", enumType.toEnumIDString());
+        assertEquals("PERCENTAGE_WAIVED_ENHANCED_UNITS", enumType.toEnumNameString());
+        assertEquals("5 - Percentage waived - enhanced units (for CIV buy orders)", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum13CommType.POINTS_PER_BOND;
-        assertEquals("6", enumType.toFIXIDString());
-        assertEquals("POINTS_PER_BOND", enumType.toFIXNameString());
-        assertEquals("6 - Points per bond or contract", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("6", enumType.toEnumIDString());
+        assertEquals("POINTS_PER_BOND", enumType.toEnumNameString());
+        assertEquals("6 - Points per bond or contract", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

@@ -35,13 +35,13 @@ class Tag42UtcOrigTimeTest {
     @Test
     void FIX0042Test() {
         FIX27 fixData = FIX27.FIX42_UTC_ORIG_TIME;
-        assertEquals( "ORIG_TIME", fixData.toFIXNameString());
-        assertEquals( "42", fixData.toFIXIDString());
-        assertEquals( "OrigTime", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "ORIG_TIME", fixData.toEnumNameString());
+        assertEquals( "42", fixData.toEnumIDString());
+        assertEquals( "OrigTime", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0042Test() {
@@ -93,7 +93,7 @@ class Tag42UtcOrigTimeTest {
 
         oneElement = Tag42UtcOrigTime.TESTB_UTC_ORIG_TIME;
         tagData = new Tag42UtcOrigTime( new MyUTCTimestampType( oneElement ) );
-        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toValuePairString() );
     }
     @Test
@@ -114,12 +114,12 @@ class Tag42UtcOrigTimeTest {
         oneElement = Tag42UtcOrigTime.TESTA_UTC_ORIG_TIME;
         tagData = new Tag42UtcOrigTime( new MyUTCTimestampType( oneElement ) );
         assertEquals( "Tag42UtcOrigTime\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
                 tagData.toVerboseString() );
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toVerboseString() );
     }

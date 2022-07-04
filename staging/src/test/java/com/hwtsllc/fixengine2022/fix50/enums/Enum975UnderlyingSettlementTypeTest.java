@@ -40,27 +40,27 @@ class Enum975UnderlyingSettlementTypeTest {
         Enum975UnderlyingSettlementType enumType;
 
         enumType = Enum975UnderlyingSettlementType.T_PLUS_1;
-        assertEquals( "2", enumType.toFIXIDString() );
-        assertEquals( "T_PLUS_1", enumType.toFIXNameString() );
-        assertEquals( "2 - T+1", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "2", enumType.toEnumIDString() );
+        assertEquals( "T_PLUS_1", enumType.toEnumNameString() );
+        assertEquals( "2 - T+1", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum975UnderlyingSettlementType.T_PLUS_3;
-        assertEquals( "4", enumType.toFIXIDString() );
-        assertEquals( "T_PLUS_3", enumType.toFIXNameString() );
-        assertEquals( "4 - T+3", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "4", enumType.toEnumIDString() );
+        assertEquals( "T_PLUS_3", enumType.toEnumNameString() );
+        assertEquals( "4 - T+3", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum975UnderlyingSettlementType.T_PLUS_4;
-        assertEquals( "5", enumType.toFIXIDString() );
-        assertEquals( "T_PLUS_4", enumType.toFIXNameString() );
-        assertEquals( "5 - T+4", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "5", enumType.toEnumIDString() );
+        assertEquals( "T_PLUS_4", enumType.toEnumNameString() );
+        assertEquals( "5 - T+4", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

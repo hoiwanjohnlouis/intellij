@@ -48,7 +48,7 @@ public class Tag649StrQuoteStatusReqID extends FIX43Abstract implements LogValue
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

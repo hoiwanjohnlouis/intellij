@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumIOIQty;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -47,40 +46,46 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    U - Undisclosed Quantity
  */
 class Tag27EnuIOIQtyTest {
-
-    @Test
-    void FIX0027Test() {
-        FIX27 fixData = FIX27.FIX27_ENU_IOI_SHARES;
-        assertEquals( "IOI_SHARES", fixData.toFIXNameString());
-        assertEquals( "27", fixData.toFIXIDString());
-        assertEquals( "IOIShares", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
-    }
     @Test
     void Tag0027Test() {
         Tag27EnuIOIQty tagData;
 
         tagData = new Tag27EnuIOIQty(MyEnumIOIQty.ONE_BILLION);
-        assertEquals( MyEnumIOIQty.ONE_BILLION.toFIXIDString(), tagData.getDataValue());
+        assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag27EnuIOIQty(MyEnumIOIQty.SMALL);
-        assertEquals( MyEnumIOIQty.SMALL.toFIXIDString(), tagData.getDataValue());
+        assertEquals( "S", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag27EnuIOIQty(MyEnumIOIQty.MEDIUM);
-        assertEquals( MyEnumIOIQty.MEDIUM.toFIXIDString(), tagData.getDataValue());
+        assertEquals( "M", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag27EnuIOIQty(MyEnumIOIQty.LARGE);
-        assertEquals( MyEnumIOIQty.LARGE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( "L", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag27EnuIOIQty(MyEnumIOIQty.UNDISCLOSED_QUANTITY);
-        assertEquals( MyEnumIOIQty.UNDISCLOSED_QUANTITY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( "U", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void FIXTest() {
+        Tag27EnuIOIQty tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumIOIQty oneEnum : MyEnumIOIQty.values()) {
+            tagData = new Tag27EnuIOIQty(oneEnum);
+            assertEquals( "FIX27_ENU_IOI_SHARES", tagData.toEnumLabelString());
+            assertEquals( "IOI_SHARES", tagData.toEnumNameString());
+            assertEquals( "27", tagData.toEnumIDString());
+            assertEquals( "IOIShares", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void PrintFIXTagTest() {
@@ -100,6 +105,7 @@ class Tag27EnuIOIQtyTest {
         for (MyEnumIOIQty oneEnum : MyEnumIOIQty.values()) {
             tagData = new Tag27EnuIOIQty(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
@@ -110,8 +116,7 @@ class Tag27EnuIOIQtyTest {
         // loop around the ENUM and process
         for (MyEnumIOIQty oneEnum : MyEnumIOIQty.values()) {
             tagData = new Tag27EnuIOIQty(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -134,12 +139,12 @@ class Tag27EnuIOIQtyTest {
         for (MyEnumIOIQty oneEnum : MyEnumIOIQty.values()) {
             tagData = new Tag27EnuIOIQty(oneEnum);
             assertEquals( "Tag27EnuIOIQty\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

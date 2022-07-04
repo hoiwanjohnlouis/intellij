@@ -42,12 +42,12 @@ class Tag401EnuSideValueIndTest {
     @Test
     void FIX0401Test() {
         FIX42 fixData = FIX42.FIX401_ENU_SIDE_VALUE_IND;
-        assertEquals( "401", fixData.toFIXIDString());
-        assertEquals( "SIDE_VALUE_IND", fixData.toFIXNameString());
-        assertEquals( "SideValueInd", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "401", fixData.toEnumIDString());
+        assertEquals( "SIDE_VALUE_IND", fixData.toEnumNameString());
+        assertEquals( "SideValueInd", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0401Test() {
@@ -57,11 +57,11 @@ class Tag401EnuSideValueIndTest {
          * 1-2 msg types
          */
         tagData = new Tag401EnuSideValueInd(Enum401SideValueInd.SIDE_VALUE_1);
-        assertEquals( Enum401SideValueInd.SIDE_VALUE_1.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum401SideValueInd.SIDE_VALUE_1.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag401EnuSideValueInd(Enum401SideValueInd.SIDE_VALUE_2);
-        assertEquals( Enum401SideValueInd.SIDE_VALUE_2.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum401SideValueInd.SIDE_VALUE_2.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -92,7 +92,7 @@ class Tag401EnuSideValueIndTest {
         // loop around the ENUM and process
         for (Enum401SideValueInd oneEnum : Enum401SideValueInd.values()) {
             tagData = new Tag401EnuSideValueInd(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -116,12 +116,12 @@ class Tag401EnuSideValueIndTest {
         for (Enum401SideValueInd oneEnum : Enum401SideValueInd.values()) {
             tagData = new Tag401EnuSideValueInd(oneEnum);
             assertEquals( "Tag401EnuSideValueInd\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

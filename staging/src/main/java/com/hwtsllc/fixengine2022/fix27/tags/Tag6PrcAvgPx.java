@@ -52,7 +52,7 @@ public class Tag6PrcAvgPx extends FIX27Abstract implements LogValuePairString, L
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

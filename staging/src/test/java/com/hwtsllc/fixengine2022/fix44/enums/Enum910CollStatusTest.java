@@ -42,43 +42,43 @@ class Enum910CollStatusTest {
         Enum910CollStatus enumType;
 
         enumType = Enum910CollStatus.UNASSIGNED;
-        assertEquals( "0", enumType.toFIXIDString() );
-        assertEquals( "UNASSIGNED", enumType.toFIXNameString() );
-        assertEquals( "0 - Unassigned", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "0", enumType.toEnumIDString() );
+        assertEquals( "UNASSIGNED", enumType.toEnumNameString() );
+        assertEquals( "0 - Unassigned", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum910CollStatus.PARTIALLY_ASSIGNED;
-        assertEquals( "1", enumType.toFIXIDString() );
-        assertEquals( "PARTIALLY_ASSIGNED", enumType.toFIXNameString() );
-        assertEquals( "1 - Partially Assigned", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "1", enumType.toEnumIDString() );
+        assertEquals( "PARTIALLY_ASSIGNED", enumType.toEnumNameString() );
+        assertEquals( "1 - Partially Assigned", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum910CollStatus.ASSIGNMENT_PROPOSED;
-        assertEquals( "2", enumType.toFIXIDString() );
-        assertEquals( "ASSIGNMENT_PROPOSED", enumType.toFIXNameString() );
-        assertEquals( "2 - Assignment Proposed", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "2", enumType.toEnumIDString() );
+        assertEquals( "ASSIGNMENT_PROPOSED", enumType.toEnumNameString() );
+        assertEquals( "2 - Assignment Proposed", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum910CollStatus.ASSIGNED;
-        assertEquals( "3", enumType.toFIXIDString() );
-        assertEquals( "ASSIGNED", enumType.toFIXNameString() );
-        assertEquals( "3 - Assigned (Accepted)", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "3", enumType.toEnumIDString() );
+        assertEquals( "ASSIGNED", enumType.toEnumNameString() );
+        assertEquals( "3 - Assigned (Accepted)", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum910CollStatus.CHALLENGED;
-        assertEquals( "4", enumType.toFIXIDString() );
-        assertEquals( "CHALLENGED", enumType.toFIXNameString() );
-        assertEquals( "4 - Challenged", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "4", enumType.toEnumIDString() );
+        assertEquals( "CHALLENGED", enumType.toEnumNameString() );
+        assertEquals( "4 - Challenged", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

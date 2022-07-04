@@ -52,7 +52,7 @@ public class Tag817StrAltMDSourceID extends FIX44Abstract implements LogValuePai
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

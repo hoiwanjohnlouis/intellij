@@ -50,7 +50,7 @@ public class Tag604StrNoLegSecurityAltID extends FIX43Abstract implements LogVal
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

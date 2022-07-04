@@ -40,27 +40,27 @@ class Tag1101EnuTriggerActionTest {
     @Test
     void FIX1101Test() {
         FIX50 fixData = FIX50.FIX1101_ENU_TRIGGER_ACTION;
-        assertEquals( "1101", fixData.toFIXIDString());
-        assertEquals( "TRIGGER_ACTION", fixData.toFIXNameString());
-        assertEquals( "TriggerAction", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "1101", fixData.toEnumIDString());
+        assertEquals( "TRIGGER_ACTION", fixData.toEnumNameString());
+        assertEquals( "TriggerAction", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag1101Test() {
         Tag1101EnuTriggerAction tagData;
 
         tagData = new Tag1101EnuTriggerAction( Enum1101TriggerAction.ACTIVATE );
-        assertEquals( Enum1101TriggerAction.ACTIVATE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum1101TriggerAction.ACTIVATE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1101EnuTriggerAction( Enum1101TriggerAction.MODIFY );
-        assertEquals( Enum1101TriggerAction.MODIFY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum1101TriggerAction.MODIFY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1101EnuTriggerAction( Enum1101TriggerAction.CANCEL );
-        assertEquals( Enum1101TriggerAction.CANCEL.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum1101TriggerAction.CANCEL.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -91,7 +91,7 @@ class Tag1101EnuTriggerActionTest {
         // loop around the ENUM and process
         for (Enum1101TriggerAction oneEnum : Enum1101TriggerAction.values()) {
             tagData = new Tag1101EnuTriggerAction(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -115,12 +115,12 @@ class Tag1101EnuTriggerActionTest {
         for (Enum1101TriggerAction oneEnum : Enum1101TriggerAction.values()) {
             tagData = new Tag1101EnuTriggerAction(oneEnum);
             assertEquals( "Tag1101EnuTriggerAction\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

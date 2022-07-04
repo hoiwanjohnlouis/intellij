@@ -52,7 +52,7 @@ public class Tag436FloUnderlyingContractMultiplier extends FIX42Abstract impleme
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

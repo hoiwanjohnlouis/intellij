@@ -37,12 +37,12 @@ class Tag678StrLegBenchmarkCurvePointTest {
     @Test
     void FIXTest() {
         FIX44 fixData = FIX44.FIX678_STR_LEG_BENCHMARK_CURVE_POINT;
-        assertEquals( "678", fixData.toFIXIDString());
-        assertEquals( "LEG_BENCHMARK_CURVE_POINT", fixData.toFIXNameString());
-        assertEquals( "LegBenchmarkCurvePoint", fixData.toFIXDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "678", fixData.toEnumIDString());
+        assertEquals( "LEG_BENCHMARK_CURVE_POINT", fixData.toEnumNameString());
+        assertEquals( "LegBenchmarkCurvePoint", fixData.toEnumDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0678Test() {
@@ -53,12 +53,12 @@ class Tag678StrLegBenchmarkCurvePointTest {
         tagData = new Tag678StrLegBenchmarkCurvePoint( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "678", tagData.toFIXIDString());
-        assertEquals( "LEG_BENCHMARK_CURVE_POINT", tagData.toFIXNameString());
-        assertEquals( "LegBenchmarkCurvePoint", tagData.toFIXDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, tagData.toFIXIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
+        assertEquals( "678", tagData.toEnumIDString());
+        assertEquals( "LEG_BENCHMARK_CURVE_POINT", tagData.toEnumNameString());
+        assertEquals( "LegBenchmarkCurvePoint", tagData.toEnumDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         oneElement = Tag678StrLegBenchmarkCurvePoint.TESTB_STR_LEG_BENCHMARK_CURVE_POINT;
         tagData = new Tag678StrLegBenchmarkCurvePoint( new MyStringType( oneElement ) );
@@ -95,7 +95,7 @@ class Tag678StrLegBenchmarkCurvePointTest {
 
         oneElement = Tag678StrLegBenchmarkCurvePoint.TESTB_STR_LEG_BENCHMARK_CURVE_POINT;
         tagData = new Tag678StrLegBenchmarkCurvePoint( new MyStringType( oneElement ) );
-        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
     }
     @Test
@@ -116,12 +116,12 @@ class Tag678StrLegBenchmarkCurvePointTest {
         oneElement = Tag678StrLegBenchmarkCurvePoint.TESTA_STR_LEG_BENCHMARK_CURVE_POINT;
         tagData = new Tag678StrLegBenchmarkCurvePoint( new MyStringType( oneElement ) );
         assertEquals( "Tag678StrLegBenchmarkCurvePoint\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

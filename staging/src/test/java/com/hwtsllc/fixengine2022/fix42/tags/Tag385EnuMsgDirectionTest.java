@@ -39,12 +39,12 @@ class Tag385EnuMsgDirectionTest {
     @Test
     void FIX0385Test() {
         FIX42 fixData = FIX42.FIX385_ENU_MSG_DIRECTION;
-        assertEquals( "385", fixData.toFIXIDString());
-        assertEquals( "MSG_DIRECTION", fixData.toFIXNameString());
-        assertEquals( "MsgDirection", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "385", fixData.toEnumIDString());
+        assertEquals( "MSG_DIRECTION", fixData.toEnumNameString());
+        assertEquals( "MsgDirection", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0385Test() {
@@ -54,11 +54,11 @@ class Tag385EnuMsgDirectionTest {
          * R, and S msg types
          */
         tagData = new Tag385EnuMsgDirection(Enum385MsgDirection.RECEIVE);
-        assertEquals( Enum385MsgDirection.RECEIVE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum385MsgDirection.RECEIVE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag385EnuMsgDirection(Enum385MsgDirection.SEND);
-        assertEquals( Enum385MsgDirection.SEND.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum385MsgDirection.SEND.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -89,7 +89,7 @@ class Tag385EnuMsgDirectionTest {
         // loop around the ENUM and process
         for (Enum385MsgDirection oneEnum : Enum385MsgDirection.values()) {
             tagData = new Tag385EnuMsgDirection(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -113,12 +113,12 @@ class Tag385EnuMsgDirectionTest {
         for (Enum385MsgDirection oneEnum : Enum385MsgDirection.values()) {
             tagData = new Tag385EnuMsgDirection(oneEnum);
             assertEquals( "Tag385EnuMsgDirection\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

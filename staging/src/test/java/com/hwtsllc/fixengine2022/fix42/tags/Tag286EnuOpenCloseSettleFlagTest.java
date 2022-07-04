@@ -44,12 +44,12 @@ class Tag286EnuOpenCloseSettleFlagTest {
     @Test
     void FIX0286Test() {
         FIX42 fixData = FIX42.FIX286_ENU_OPEN_CLOSE_SETTLE_FLAG;
-        assertEquals( "286", fixData.toFIXIDString());
-        assertEquals( "OPEN_CLOSE_SETTLE_FLAG", fixData.toFIXNameString());
-        assertEquals( "OpenCloseSettleFlag", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "286", fixData.toEnumIDString());
+        assertEquals( "OPEN_CLOSE_SETTLE_FLAG", fixData.toEnumNameString());
+        assertEquals( "OpenCloseSettleFlag", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0286Test() {
@@ -59,27 +59,27 @@ class Tag286EnuOpenCloseSettleFlagTest {
          * 0-5 msg types
          */
         tagData = new Tag286EnuOpenCloseSettleFlag(Enum286OpenCLoseSettlFlag.DAILY_OPEN_OR_CLOSE_OR_SETTLEMENT);
-        assertEquals( Enum286OpenCLoseSettlFlag.DAILY_OPEN_OR_CLOSE_OR_SETTLEMENT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum286OpenCLoseSettlFlag.DAILY_OPEN_OR_CLOSE_OR_SETTLEMENT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag286EnuOpenCloseSettleFlag(Enum286OpenCLoseSettlFlag.SESSION_OPEN_OR_CLOSE_OR_SETTLEMENT);
-        assertEquals( Enum286OpenCLoseSettlFlag.SESSION_OPEN_OR_CLOSE_OR_SETTLEMENT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum286OpenCLoseSettlFlag.SESSION_OPEN_OR_CLOSE_OR_SETTLEMENT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag286EnuOpenCloseSettleFlag(Enum286OpenCLoseSettlFlag.DELIVERY_SETTLEMENT);
-        assertEquals( Enum286OpenCLoseSettlFlag.DELIVERY_SETTLEMENT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum286OpenCLoseSettlFlag.DELIVERY_SETTLEMENT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag286EnuOpenCloseSettleFlag(Enum286OpenCLoseSettlFlag.EXPECTED);
-        assertEquals( Enum286OpenCLoseSettlFlag.EXPECTED.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum286OpenCLoseSettlFlag.EXPECTED.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag286EnuOpenCloseSettleFlag(Enum286OpenCLoseSettlFlag.PREVIOUS_BUSINESS_DAY);
-        assertEquals( Enum286OpenCLoseSettlFlag.PREVIOUS_BUSINESS_DAY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum286OpenCLoseSettlFlag.PREVIOUS_BUSINESS_DAY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag286EnuOpenCloseSettleFlag(Enum286OpenCLoseSettlFlag.THEORETICAL_PRICE_VALUE);
-        assertEquals( Enum286OpenCLoseSettlFlag.THEORETICAL_PRICE_VALUE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum286OpenCLoseSettlFlag.THEORETICAL_PRICE_VALUE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -110,7 +110,7 @@ class Tag286EnuOpenCloseSettleFlagTest {
         // loop around the ENUM and process
         for (Enum286OpenCLoseSettlFlag oneEnum : Enum286OpenCLoseSettlFlag.values()) {
             tagData = new Tag286EnuOpenCloseSettleFlag(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -134,12 +134,12 @@ class Tag286EnuOpenCloseSettleFlagTest {
         for (Enum286OpenCLoseSettlFlag oneEnum : Enum286OpenCLoseSettlFlag.values()) {
             tagData = new Tag286EnuOpenCloseSettleFlag(oneEnum);
             assertEquals( "Tag286EnuOpenCloseSettleFlag\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

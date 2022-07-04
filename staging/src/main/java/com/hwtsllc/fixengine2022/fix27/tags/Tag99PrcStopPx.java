@@ -48,7 +48,7 @@ public class Tag99PrcStopPx extends FIX27Abstract implements LogValuePairString,
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

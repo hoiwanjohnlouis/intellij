@@ -35,12 +35,12 @@ class Tag191PxoOfferForwardPointsTest {
     @Test
     void FIX0191Test() {
         FIX41 fixData = FIX41.FIX191_PXO_OFFER_FORWARD_POINTS;
-        assertEquals( "191", fixData.toFIXIDString());
-        assertEquals( "OFFER_FORWARD_POINTS", fixData.toFIXNameString());
-        assertEquals( "OfferForwardPoints", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "191", fixData.toEnumIDString());
+        assertEquals( "OFFER_FORWARD_POINTS", fixData.toEnumNameString());
+        assertEquals( "OfferForwardPoints", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0191Test() {
@@ -79,7 +79,7 @@ class Tag191PxoOfferForwardPointsTest {
 
         tagData = new Tag191PxoOfferForwardPoints(
                 new MyPriceOffsetType(Tag191PxoOfferForwardPoints.TESTB_PXO_OFFER_FORWARD_POINTS));
-        assertEquals( tagData.toFIXIDString() + "=" +
+        assertEquals( tagData.toEnumIDString() + "=" +
                         Tag191PxoOfferForwardPoints.TESTB_PXO_OFFER_FORWARD_POINTS,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
@@ -103,12 +103,12 @@ class Tag191PxoOfferForwardPointsTest {
         tagData = new Tag191PxoOfferForwardPoints(
                 new MyPriceOffsetType(Tag191PxoOfferForwardPoints.TESTA_PXO_OFFER_FORWARD_POINTS));
         assertEquals( "Tag191PxoOfferForwardPoints\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + Tag191PxoOfferForwardPoints.TESTA_PXO_OFFER_FORWARD_POINTS + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" +
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" +
                                             Tag191PxoOfferForwardPoints.TESTA_PXO_OFFER_FORWARD_POINTS + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());

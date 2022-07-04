@@ -43,12 +43,12 @@ class Tag279EnuMDUpdateActionTest {
     @Test
     void FIX0279Test() {
         FIX42 fixData = FIX42.FIX279_ENU_MD_UPDATE_ACTION;
-        assertEquals( "279", fixData.toFIXIDString());
-        assertEquals( "MD_UPDATE_ACTION", fixData.toFIXNameString());
-        assertEquals( "MDUpdateAction", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "279", fixData.toEnumIDString());
+        assertEquals( "MD_UPDATE_ACTION", fixData.toEnumNameString());
+        assertEquals( "MDUpdateAction", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0279Test() {
@@ -58,23 +58,23 @@ class Tag279EnuMDUpdateActionTest {
          * 0-4 msg types
          */
         tagData = new Tag279EnuMDUpdateAction(Enum279MDUpdateAction.NEW);
-        assertEquals( Enum279MDUpdateAction.NEW.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum279MDUpdateAction.NEW.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag279EnuMDUpdateAction(Enum279MDUpdateAction.CHANGE);
-        assertEquals( Enum279MDUpdateAction.CHANGE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum279MDUpdateAction.CHANGE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag279EnuMDUpdateAction(Enum279MDUpdateAction.DELETE);
-        assertEquals( Enum279MDUpdateAction.DELETE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum279MDUpdateAction.DELETE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag279EnuMDUpdateAction(Enum279MDUpdateAction.DELETE_THRU);
-        assertEquals( Enum279MDUpdateAction.DELETE_THRU.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum279MDUpdateAction.DELETE_THRU.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag279EnuMDUpdateAction(Enum279MDUpdateAction.DELETE_FROM);
-        assertEquals( Enum279MDUpdateAction.DELETE_FROM.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum279MDUpdateAction.DELETE_FROM.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -105,7 +105,7 @@ class Tag279EnuMDUpdateActionTest {
         // loop around the ENUM and process
         for (Enum279MDUpdateAction oneEnum : Enum279MDUpdateAction.values()) {
             tagData = new Tag279EnuMDUpdateAction(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -129,12 +129,12 @@ class Tag279EnuMDUpdateActionTest {
         for (Enum279MDUpdateAction oneEnum : Enum279MDUpdateAction.values()) {
             tagData = new Tag279EnuMDUpdateAction(oneEnum);
             assertEquals( "Tag279EnuMDUpdateAction\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

@@ -40,19 +40,19 @@ class Enum1015AsOfIndicatorTest {
         Enum1015AsOfIndicator enumType;
 
         enumType = Enum1015AsOfIndicator.FALSE;
-        assertEquals( "0", enumType.toFIXIDString() );
-        assertEquals( "FALSE", enumType.toFIXNameString() );
-        assertEquals( "0 - false - trade is not an AsOf trade", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "0", enumType.toEnumIDString() );
+        assertEquals( "FALSE", enumType.toEnumNameString() );
+        assertEquals( "0 - false - trade is not an AsOf trade", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1015AsOfIndicator.TRUE;
-        assertEquals( "1", enumType.toFIXIDString() );
-        assertEquals( "TRUE", enumType.toFIXNameString() );
-        assertEquals( "1 - true - trade is an AsOf  trade", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "1", enumType.toEnumIDString() );
+        assertEquals( "TRUE", enumType.toEnumNameString() );
+        assertEquals( "1 - true - trade is an AsOf  trade", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

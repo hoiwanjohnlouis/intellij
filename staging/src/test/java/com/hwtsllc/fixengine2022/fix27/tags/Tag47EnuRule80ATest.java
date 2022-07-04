@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum47Rule80A;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,69 +27,169 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  47
  *  Rule80A(No Longer Used)
  *  char
+ *  <p></p>
  *  Deprecated in FIX.4.3
+ *  <p></p>
  *  Note that the name of this field is changing to 'OrderCapacity' as Rule80A is a
  *  very US market-specific term. Other world markets need to convey similar information,
  *  however, often a subset of the US values.
- *
+ *  <p></p>
  *      See the 'Rule80A (aka OrderCapacity) Usage by Market' appendix
  *      for market-specific usage of this field.
- *
+ *  <p></p>
  *  Valid values:
- *      A - Agency single order
- *      B - Short exempt transaction (refer to A type)
- *      C - Program order, non-index arb, for Member firm/org
- *      D - Program order, index arb, for Member firm/org
- *      E - Short Exempt Transaction for Principal
+ *  <p>    A - Agency single order
+ *  <p>    B - Short exempt transaction (refer to A type)
+ *  <p>    C - Program order, non-index arb, for Member firm/org
+ *  <p>    D - Program order, index arb, for Member firm/org
+ *  <p>    E - Short Exempt Transaction for Principal
  *          (was incorrectly identified in the FIX spec as "Registered Equity Market Maker trades")
- *
- *      F - Short exempt transaction (refer to W type)
- *      H - Short exempt transaction (refer to I type)
- *      I - Individual Investor, single order
- *      J - Program Order, index arb, for individual customer
- *      K - Program Order, non-index arb, for individual customer
- *
- *      L - Short exempt transaction for member competing market-maker affliated with the firm clearing the trade
+ *  <p></p>
+ *  <p>    F - Short exempt transaction (refer to W type)
+ *  <p>    H - Short exempt transaction (refer to I type)
+ *  <p>    I - Individual Investor, single order
+ *  <p>    J - Program Order, index arb, for individual customer
+ *  <p>    K - Program Order, non-index arb, for individual customer
+ *  <p></p>
+ *  <p>    L - Short exempt transaction for member competing market-maker affiliated with the firm clearing the trade
  *          (refer to P and O types)
- *      M - Program Order, index arb, for other member
- *      N - Program Order, non-index arb, for other member
- *      O - Proprietary transactions for competing market-maker that is affiliated with the clearing member
+ *  <p>    M - Program Order, index arb, for other member
+ *  <p>    N - Program Order, non-index arb, for other member
+ *  <p>    O - Proprietary transactions for competing market-maker that is affiliated with the clearing member
  *          (was incorrectly identified in the FIX spec as "Competing dealer trades")
- *      P - Principal
- *
- *      R - Transactions for the account of a non-member compting market-maker
+ *  <p>    P - Principal
+ *  <p></p>
+ *  <p>    R - Transactions for the account of a non-member competing market-maker
  *          (was incorrectly identified in the FIX spec as "Competing dealer trades")
- *      S - Specialist trades
- *      T - Transactions for the account of an unaffiliated member's competing market-maker
+ *  <p>    S - Specialist trades
+ *  <p>    T - Transactions for the account of an unaffiliated member's competing market-maker
  *          (was incorrectly identified in the FIX spec as "Competing dealer trades")
- *      U - Program Order, index arb, for other agency
- *      W - All other orders as agent for other member
- *
- *      X - Short exempt transaction for member competing market-maker not affiliated with the firm clearing the trade
+ *  <p>    U - Program Order, index arb, for other agency
+ *  <p>    W - All other orders as agent for other member
+ *  <p></p>
+ *  <p>    X - Short exempt transaction for member competing market-maker not affiliated with the firm clearing the trade
  *      (refer to W and T types)
- *      Y - Program Order, non-index arb, for other agency
- *      Z - Short exempt transaction for non-member competing market-maker (refer to A and R types)
+ *  <p>    Y - Program Order, non-index arb, for other agency
+ *  <p>    Z - Short exempt transaction for non-member competing market-maker (refer to A and R types)
  */
 // @Deprecated
 class Tag47EnuRule80ATest {
-    @Test
-    void FIX0047Test() {
-        FIX27 fixData = FIX27.FIX47_ENU_RULE_80_A;
-        assertEquals( "RULE_80_A", fixData.toFIXNameString());
-        assertEquals( "47", fixData.toFIXIDString());
-        assertEquals( "Rule80A (no longer used)", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
-    }
     @Test
     void Tag0047Test() {
         Tag47EnuRule80A tagData;
 
         tagData = new Tag47EnuRule80A(Enum47Rule80A.AGENCY_SINGLE_ORDER);
-        assertEquals( Enum47Rule80A.AGENCY_SINGLE_ORDER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( "A", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag47EnuRule80A(Enum47Rule80A.SHORT_EXEMPT_A);
+        assertEquals( "B", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag47EnuRule80A(Enum47Rule80A.PROGRAM_NON_INDEX_ARB_MEMBER);
+        assertEquals( "C", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag47EnuRule80A(Enum47Rule80A.PROGRAM_INDEX_ARB_MEMBER);
+        assertEquals( "D", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag47EnuRule80A(Enum47Rule80A.SHORT_EXEMPT_P);
+        assertEquals( "E", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        tagData = new Tag47EnuRule80A(Enum47Rule80A.SHORT_EXEMPT_W);
+        assertEquals( "F", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag47EnuRule80A(Enum47Rule80A.SHORT_EXEMPT_I);
+        assertEquals( "H", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag47EnuRule80A(Enum47Rule80A.INDIVIDUAL_INVESTOR_SINGLE_ORDER);
+        assertEquals( "I", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag47EnuRule80A(Enum47Rule80A.PROGRAM_INDEX_ARB_INDIVIDUAL);
+        assertEquals( "J", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag47EnuRule80A(Enum47Rule80A.PROGRAM_NON_INDEX_ARB_INDIVIDUAL);
+        assertEquals( "K", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        tagData = new Tag47EnuRule80A(Enum47Rule80A.SHORT_EXEMPT_MARKET_MAKER_P_O);
+        assertEquals( "L", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag47EnuRule80A(Enum47Rule80A.PROGRAM_INDEX_ARB_OTHER_MEMBER);
+        assertEquals( "M", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag47EnuRule80A(Enum47Rule80A.PROGRAM_NON_INDEX_ARB_OTHER_MEMBER);
+        assertEquals( "N", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag47EnuRule80A(Enum47Rule80A.PROPRIETARY_MARKET_MAKER_CLEARING);
+        assertEquals( "O", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag47EnuRule80A(Enum47Rule80A.PRINCIPAL);
+        assertEquals( "P", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        tagData = new Tag47EnuRule80A(Enum47Rule80A.NON_MEMBER_MARKET_MAKER);
+        assertEquals( "R", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag47EnuRule80A(Enum47Rule80A.SPECIALIST_TRADES);
+        assertEquals( "S", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag47EnuRule80A(Enum47Rule80A.UNAFFILIATED_MEMBER_MARKET_MAKER);
+        assertEquals( "T", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag47EnuRule80A(Enum47Rule80A.PROGRAM_INDEX_ARB_OTHER_AGENCY);
+        assertEquals( "U", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag47EnuRule80A(Enum47Rule80A.AGENT_FOR_OTHER_MEMBER);
+        assertEquals( "W", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        tagData = new Tag47EnuRule80A(Enum47Rule80A.SHORT_EXEMPT_MARKET_MAKER_W_T);
+        assertEquals( "X", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag47EnuRule80A(Enum47Rule80A.PROGRAM_NON_INDEX_ARB_OTHER_AGENCY);
+        assertEquals( "Y", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag47EnuRule80A(Enum47Rule80A.SHORT_EXEMPT_NON_MEMBER_MARKET_MAKER_A_R);
+        assertEquals( "Z", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void FIXTest() {
+        Tag47EnuRule80A tagData;
+
+        // loop around the ENUM and process
+        for (Enum47Rule80A oneEnum : Enum47Rule80A.values()) {
+            tagData = new Tag47EnuRule80A(oneEnum);
+            assertEquals( "FIX47_ENU_RULE_80_A", tagData.toEnumLabelString());
+            assertEquals( "RULE_80_A", tagData.toEnumNameString());
+            assertEquals( "47", tagData.toEnumIDString());
+            assertEquals( "Rule80A (no longer used)", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void PrintFIXTagTest() {
@@ -110,6 +209,7 @@ class Tag47EnuRule80ATest {
         for (Enum47Rule80A oneEnum : Enum47Rule80A.values()) {
             tagData = new Tag47EnuRule80A(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
@@ -120,7 +220,7 @@ class Tag47EnuRule80ATest {
         // loop around the ENUM and process
         for (Enum47Rule80A oneEnum : Enum47Rule80A.values()) {
             tagData = new Tag47EnuRule80A(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -144,12 +244,12 @@ class Tag47EnuRule80ATest {
         for (Enum47Rule80A oneEnum : Enum47Rule80A.values()) {
             tagData = new Tag47EnuRule80A(oneEnum);
             assertEquals( "Tag47EnuRule80A\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

@@ -43,27 +43,27 @@ class Enum851LastLiquidityIndTest {
         Enum851LastLiquidityInd enumType;
 
         enumType = Enum851LastLiquidityInd.ADDED;
-        assertEquals( "1", enumType.toFIXIDString() );
-        assertEquals( "ADDED", enumType.toFIXNameString() );
-        assertEquals( "1 - Added Liquidity", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "1", enumType.toEnumIDString() );
+        assertEquals( "ADDED", enumType.toEnumNameString() );
+        assertEquals( "1 - Added Liquidity", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum851LastLiquidityInd.REMOVED;
-        assertEquals( "2", enumType.toFIXIDString() );
-        assertEquals( "REMOVED", enumType.toFIXNameString() );
-        assertEquals( "2 - Removed Liquidity", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "2", enumType.toEnumIDString() );
+        assertEquals( "REMOVED", enumType.toEnumNameString() );
+        assertEquals( "2 - Removed Liquidity", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum851LastLiquidityInd.ROUTED_OUT;
-        assertEquals( "3", enumType.toFIXIDString() );
-        assertEquals( "ROUTED_OUT", enumType.toFIXNameString() );
-        assertEquals( "3 - Liquidity Routed Out", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "3", enumType.toEnumIDString() );
+        assertEquals( "ROUTED_OUT", enumType.toEnumNameString() );
+        assertEquals( "3 - Liquidity Routed Out", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

@@ -53,7 +53,7 @@ public class Tag389FloDiscretionOffsetValue extends FIX42Abstract implements Log
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

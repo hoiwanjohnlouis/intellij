@@ -40,12 +40,12 @@ class Tag263EnuSubscriptionRequestTypeTest {
     @Test
     void FIX0263Test() {
         FIX42 fixData = FIX42.FIX263_ENU_SUBSCRIPTION_REQUEST_TYPE;
-        assertEquals( "263", fixData.toFIXIDString());
-        assertEquals( "SUBSCRIPTION_REQUEST_TYPE", fixData.toFIXNameString());
-        assertEquals( "SubscriptionRequestType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "263", fixData.toEnumIDString());
+        assertEquals( "SUBSCRIPTION_REQUEST_TYPE", fixData.toEnumNameString());
+        assertEquals( "SubscriptionRequestType", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0263Test() {
@@ -55,15 +55,15 @@ class Tag263EnuSubscriptionRequestTypeTest {
          * 0-2 msg types
          */
         tagData = new Tag263EnuSubscriptionRequestType(Enum263SubscriptionRequestType.SNAPSHOT);
-        assertEquals( Enum263SubscriptionRequestType.SNAPSHOT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum263SubscriptionRequestType.SNAPSHOT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag263EnuSubscriptionRequestType(Enum263SubscriptionRequestType.SUBSCRIBE_SNAPSHOT);
-        assertEquals( Enum263SubscriptionRequestType.SUBSCRIBE_SNAPSHOT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum263SubscriptionRequestType.SUBSCRIBE_SNAPSHOT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag263EnuSubscriptionRequestType(Enum263SubscriptionRequestType.UNSUBSCRIBE_SNAPSHOT);
-        assertEquals( Enum263SubscriptionRequestType.UNSUBSCRIBE_SNAPSHOT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum263SubscriptionRequestType.UNSUBSCRIBE_SNAPSHOT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -94,7 +94,7 @@ class Tag263EnuSubscriptionRequestTypeTest {
         // loop around the ENUM and process
         for (Enum263SubscriptionRequestType oneEnum : Enum263SubscriptionRequestType.values()) {
             tagData = new Tag263EnuSubscriptionRequestType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -118,12 +118,12 @@ class Tag263EnuSubscriptionRequestTypeTest {
         for (Enum263SubscriptionRequestType oneEnum : Enum263SubscriptionRequestType.values()) {
             tagData = new Tag263EnuSubscriptionRequestType(oneEnum);
             assertEquals( "Tag263EnuSubscriptionRequestType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

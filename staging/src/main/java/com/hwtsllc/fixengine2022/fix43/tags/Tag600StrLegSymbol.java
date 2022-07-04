@@ -50,7 +50,7 @@ public class Tag600StrLegSymbol extends FIX43Abstract implements LogValuePairStr
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

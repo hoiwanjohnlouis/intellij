@@ -50,7 +50,7 @@ public class Tag972PctUnderlyingAllocationPercent extends FIX50Abstract implemen
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

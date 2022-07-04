@@ -41,12 +41,12 @@ class Tag216EnuRoutingTypeTest {
     @Test
     void FIX0216Test() {
         FIX42 fixData = FIX42.FIX216_ENU_ROUTING_TYPE;
-        assertEquals( "216", fixData.toFIXIDString());
-        assertEquals( "ROUTING_TYPE", fixData.toFIXNameString());
-        assertEquals( "RoutingType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "216", fixData.toEnumIDString());
+        assertEquals( "ROUTING_TYPE", fixData.toEnumNameString());
+        assertEquals( "RoutingType", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0216Test() {
@@ -56,22 +56,22 @@ class Tag216EnuRoutingTypeTest {
          * 1-4 msg types
          */
         tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_FIRM);
-        assertEquals( Enum216RoutingType.TARGET_FIRM.toFIXIDString(),
+        assertEquals( Enum216RoutingType.TARGET_FIRM.toEnumIDString(),
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag216EnuRoutingType(Enum216RoutingType.TARGET_LIST);
-        assertEquals( Enum216RoutingType.TARGET_LIST.toFIXIDString(),
+        assertEquals( Enum216RoutingType.TARGET_LIST.toEnumIDString(),
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag216EnuRoutingType(Enum216RoutingType.BLOCK_FIRM);
-        assertEquals( Enum216RoutingType.BLOCK_FIRM.toFIXIDString(),
+        assertEquals( Enum216RoutingType.BLOCK_FIRM.toEnumIDString(),
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag216EnuRoutingType(Enum216RoutingType.BLOCK_LIST);
-        assertEquals( Enum216RoutingType.BLOCK_LIST.toFIXIDString(),
+        assertEquals( Enum216RoutingType.BLOCK_LIST.toEnumIDString(),
                 tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
@@ -103,7 +103,7 @@ class Tag216EnuRoutingTypeTest {
         // loop around the ENUM and process
         for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
             tagData = new Tag216EnuRoutingType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -127,12 +127,12 @@ class Tag216EnuRoutingTypeTest {
         for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
             tagData = new Tag216EnuRoutingType(oneEnum);
             assertEquals( "Tag216EnuRoutingType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

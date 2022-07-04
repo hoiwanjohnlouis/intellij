@@ -135,12 +135,12 @@ class Tag1064EnuUndlyInstrumentPartySubIDTypeTest {
     @Test
     void FIX1064Test() {
         FIX50 fixData = FIX50.FIX1064_ENU_UNDLY_INSTRUMENT_PARTY_SUB_ID_TYPE;
-        assertEquals( "1064", fixData.toFIXIDString());
-        assertEquals( "UNDLY_INSTRUMENT_PARTY_SUB_ID_TYPE", fixData.toFIXNameString());
-        assertEquals( "UndlyInstrumentPartySubIDType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "1064", fixData.toEnumIDString());
+        assertEquals( "UNDLY_INSTRUMENT_PARTY_SUB_ID_TYPE", fixData.toEnumNameString());
+        assertEquals( "UndlyInstrumentPartySubIDType", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag1064Test() {
@@ -150,137 +150,137 @@ class Tag1064EnuUndlyInstrumentPartySubIDTypeTest {
          *  1-32
          */
         tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(MyEnumPartySubIDType.FIRM);
-        assertEquals( MyEnumPartySubIDType.FIRM.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPartySubIDType.FIRM.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(MyEnumPartySubIDType.PERSON);
-        assertEquals( MyEnumPartySubIDType.PERSON.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPartySubIDType.PERSON.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(MyEnumPartySubIDType.SYSTEM);
-        assertEquals( MyEnumPartySubIDType.SYSTEM.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPartySubIDType.SYSTEM.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(MyEnumPartySubIDType.APPLICATION);
-        assertEquals( MyEnumPartySubIDType.APPLICATION.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPartySubIDType.APPLICATION.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(MyEnumPartySubIDType.FULL_LEGAL_NAME_OF_FIRM);
-        assertEquals( MyEnumPartySubIDType.FULL_LEGAL_NAME_OF_FIRM.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPartySubIDType.FULL_LEGAL_NAME_OF_FIRM.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(MyEnumPartySubIDType.POSTAL_ADDRESS);
-        assertEquals( MyEnumPartySubIDType.POSTAL_ADDRESS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPartySubIDType.POSTAL_ADDRESS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(MyEnumPartySubIDType.PHONE_NUMBER);
-        assertEquals( MyEnumPartySubIDType.PHONE_NUMBER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPartySubIDType.PHONE_NUMBER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(MyEnumPartySubIDType.EMAIL_ADDRESS);
-        assertEquals( MyEnumPartySubIDType.EMAIL_ADDRESS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPartySubIDType.EMAIL_ADDRESS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(MyEnumPartySubIDType.CONTACT_NAME);
-        assertEquals( MyEnumPartySubIDType.CONTACT_NAME.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPartySubIDType.CONTACT_NAME.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(MyEnumPartySubIDType.SECURITIES_ACCOUNT_NUMBER);
-        assertEquals( MyEnumPartySubIDType.SECURITIES_ACCOUNT_NUMBER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPartySubIDType.SECURITIES_ACCOUNT_NUMBER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(MyEnumPartySubIDType.REGISTRATION_NUMBER);
-        assertEquals( MyEnumPartySubIDType.REGISTRATION_NUMBER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPartySubIDType.REGISTRATION_NUMBER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(MyEnumPartySubIDType.REGISTERED_ADDRESS_FOR_CONFIRM);
-        assertEquals( MyEnumPartySubIDType.REGISTERED_ADDRESS_FOR_CONFIRM.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPartySubIDType.REGISTERED_ADDRESS_FOR_CONFIRM.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(MyEnumPartySubIDType.REGULATORY_STATUS);
-        assertEquals( MyEnumPartySubIDType.REGULATORY_STATUS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPartySubIDType.REGULATORY_STATUS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(MyEnumPartySubIDType.REGISTRATION_NAME);
-        assertEquals( MyEnumPartySubIDType.REGISTRATION_NAME.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPartySubIDType.REGISTRATION_NAME.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(MyEnumPartySubIDType.CASH_ACCOUNT_NUMBER);
-        assertEquals( MyEnumPartySubIDType.CASH_ACCOUNT_NUMBER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPartySubIDType.CASH_ACCOUNT_NUMBER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(MyEnumPartySubIDType.BIC);
-        assertEquals( MyEnumPartySubIDType.BIC.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPartySubIDType.BIC.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(MyEnumPartySubIDType.CSD);
-        assertEquals( MyEnumPartySubIDType.CSD.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPartySubIDType.CSD.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(MyEnumPartySubIDType.REGISTERED_ADDRESS);
-        assertEquals( MyEnumPartySubIDType.REGISTERED_ADDRESS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPartySubIDType.REGISTERED_ADDRESS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(MyEnumPartySubIDType.FUND_ACCOUNT_NAME);
-        assertEquals( MyEnumPartySubIDType.FUND_ACCOUNT_NAME.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPartySubIDType.FUND_ACCOUNT_NAME.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(MyEnumPartySubIDType.TELEX_NUMBER);
-        assertEquals( MyEnumPartySubIDType.TELEX_NUMBER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPartySubIDType.TELEX_NUMBER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(MyEnumPartySubIDType.FAX_NUMBER);
-        assertEquals( MyEnumPartySubIDType.FAX_NUMBER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPartySubIDType.FAX_NUMBER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(MyEnumPartySubIDType.SECURITIES_ACCOUNT_NAME);
-        assertEquals( MyEnumPartySubIDType.SECURITIES_ACCOUNT_NAME.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPartySubIDType.SECURITIES_ACCOUNT_NAME.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(MyEnumPartySubIDType.CASH_ACCOUNT_NAME);
-        assertEquals( MyEnumPartySubIDType.CASH_ACCOUNT_NAME.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPartySubIDType.CASH_ACCOUNT_NAME.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(MyEnumPartySubIDType.DEPARTMENT);
-        assertEquals( MyEnumPartySubIDType.DEPARTMENT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPartySubIDType.DEPARTMENT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(MyEnumPartySubIDType.LOCATION_DESK);
-        assertEquals( MyEnumPartySubIDType.LOCATION_DESK.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPartySubIDType.LOCATION_DESK.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(MyEnumPartySubIDType.POSITION_ACCOUNT_TYPE);
-        assertEquals( MyEnumPartySubIDType.POSITION_ACCOUNT_TYPE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPartySubIDType.POSITION_ACCOUNT_TYPE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(MyEnumPartySubIDType.SECURITY_LOCATE_ID);
-        assertEquals( MyEnumPartySubIDType.SECURITY_LOCATE_ID.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPartySubIDType.SECURITY_LOCATE_ID.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(MyEnumPartySubIDType.MARKET_MAKER);
-        assertEquals( MyEnumPartySubIDType.MARKET_MAKER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPartySubIDType.MARKET_MAKER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(MyEnumPartySubIDType.ELIGIBLE_COUNTERPARTY);
-        assertEquals( MyEnumPartySubIDType.ELIGIBLE_COUNTERPARTY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPartySubIDType.ELIGIBLE_COUNTERPARTY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(MyEnumPartySubIDType.PROFESSIONAL_CLIENT);
-        assertEquals( MyEnumPartySubIDType.PROFESSIONAL_CLIENT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPartySubIDType.PROFESSIONAL_CLIENT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(MyEnumPartySubIDType.LOCATION);
-        assertEquals( MyEnumPartySubIDType.LOCATION.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPartySubIDType.LOCATION.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(MyEnumPartySubIDType.EXECUTION_VENUE);
-        assertEquals( MyEnumPartySubIDType.EXECUTION_VENUE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPartySubIDType.EXECUTION_VENUE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -311,7 +311,7 @@ class Tag1064EnuUndlyInstrumentPartySubIDTypeTest {
         // loop around the ENUM and process
         for (MyEnumPartySubIDType oneEnum : MyEnumPartySubIDType.values()) {
             tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -335,12 +335,12 @@ class Tag1064EnuUndlyInstrumentPartySubIDTypeTest {
         for (MyEnumPartySubIDType oneEnum : MyEnumPartySubIDType.values()) {
             tagData = new Tag1064EnuUndlyInstrumentPartySubIDType(oneEnum);
             assertEquals( "Tag1064EnuUndlyInstrumentPartySubIDType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

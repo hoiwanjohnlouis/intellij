@@ -56,7 +56,7 @@ public class Tag1017FloLegOptionRatio extends FIX50Abstract implements LogValueP
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

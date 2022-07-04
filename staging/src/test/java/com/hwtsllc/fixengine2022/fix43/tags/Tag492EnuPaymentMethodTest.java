@@ -60,12 +60,12 @@ class Tag492EnuPaymentMethodTest {
     @Test
     void FIX0492Test() {
         FIX43 fixData = FIX43.FIX492_ENU_PAYMENT_METHOD;
-        assertEquals( "492", fixData.toFIXIDString());
-        assertEquals( "PAYMENT_METHOD", fixData.toFIXNameString());
-        assertEquals( "PaymentMethod", fixData.toFIXDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "492", fixData.toEnumIDString());
+        assertEquals( "PAYMENT_METHOD", fixData.toEnumNameString());
+        assertEquals( "PaymentMethod", fixData.toEnumDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0492Test() {
@@ -75,65 +75,65 @@ class Tag492EnuPaymentMethodTest {
          * 1-15 types
          */
         tagData = new Tag492EnuPaymentMethod( Enum492PaymentMethod.CREST );
-        assertEquals( Enum492PaymentMethod.CREST.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum492PaymentMethod.CREST.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag492EnuPaymentMethod( Enum492PaymentMethod.NSCC );
-        assertEquals( Enum492PaymentMethod.NSCC.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum492PaymentMethod.NSCC.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag492EnuPaymentMethod( Enum492PaymentMethod.EUROCLEAR );
-        assertEquals( Enum492PaymentMethod.EUROCLEAR.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum492PaymentMethod.EUROCLEAR.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag492EnuPaymentMethod( Enum492PaymentMethod.CLEARSTREAM );
-        assertEquals( Enum492PaymentMethod.CLEARSTREAM.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum492PaymentMethod.CLEARSTREAM.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag492EnuPaymentMethod( Enum492PaymentMethod.CHEQUE );
-        assertEquals( Enum492PaymentMethod.CHEQUE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum492PaymentMethod.CHEQUE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag492EnuPaymentMethod( Enum492PaymentMethod.TELEGRAPHIC_TRANSFER );
-        assertEquals( Enum492PaymentMethod.TELEGRAPHIC_TRANSFER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum492PaymentMethod.TELEGRAPHIC_TRANSFER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag492EnuPaymentMethod( Enum492PaymentMethod.FED_WIRE );
-        assertEquals( Enum492PaymentMethod.FED_WIRE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum492PaymentMethod.FED_WIRE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag492EnuPaymentMethod( Enum492PaymentMethod.DEBIT_CARD );
-        assertEquals( Enum492PaymentMethod.DEBIT_CARD.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum492PaymentMethod.DEBIT_CARD.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag492EnuPaymentMethod( Enum492PaymentMethod.DIRECT_DEBIT );
-        assertEquals( Enum492PaymentMethod.DIRECT_DEBIT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum492PaymentMethod.DIRECT_DEBIT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag492EnuPaymentMethod( Enum492PaymentMethod.DIRECT_CREDIT );
-        assertEquals( Enum492PaymentMethod.DIRECT_CREDIT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum492PaymentMethod.DIRECT_CREDIT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag492EnuPaymentMethod( Enum492PaymentMethod.CREDIT_CARD );
-        assertEquals( Enum492PaymentMethod.CREDIT_CARD.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum492PaymentMethod.CREDIT_CARD.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag492EnuPaymentMethod( Enum492PaymentMethod.ACH_DEBIT );
-        assertEquals( Enum492PaymentMethod.ACH_DEBIT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum492PaymentMethod.ACH_DEBIT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag492EnuPaymentMethod( Enum492PaymentMethod.ACH_CREDIT );
-        assertEquals( Enum492PaymentMethod.ACH_CREDIT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum492PaymentMethod.ACH_CREDIT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag492EnuPaymentMethod( Enum492PaymentMethod.BPAY );
-        assertEquals( Enum492PaymentMethod.BPAY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum492PaymentMethod.BPAY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag492EnuPaymentMethod( Enum492PaymentMethod.HIGH_VALUE_CLEARING_SYSTEM );
-        assertEquals( Enum492PaymentMethod.HIGH_VALUE_CLEARING_SYSTEM.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum492PaymentMethod.HIGH_VALUE_CLEARING_SYSTEM.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -164,7 +164,7 @@ class Tag492EnuPaymentMethodTest {
         // loop around the ENUM and process
         for (Enum492PaymentMethod oneEnum : Enum492PaymentMethod.values()) {
             tagData = new Tag492EnuPaymentMethod(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -188,12 +188,12 @@ class Tag492EnuPaymentMethodTest {
         for (Enum492PaymentMethod oneEnum : Enum492PaymentMethod.values()) {
             tagData = new Tag492EnuPaymentMethod(oneEnum);
             assertEquals( "Tag492EnuPaymentMethod\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

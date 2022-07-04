@@ -48,7 +48,7 @@ public class Tag558NumNoSecurityTypes extends FIX43Abstract implements LogValueP
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

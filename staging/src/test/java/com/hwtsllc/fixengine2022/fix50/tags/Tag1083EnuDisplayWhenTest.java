@@ -39,23 +39,23 @@ class Tag1083EnuDisplayWhenTest {
     @Test
     void FIX1083Test() {
         FIX50 fixData = FIX50.FIX1083_ENU_DISPLAY_WHEN;
-        assertEquals( "1083", fixData.toFIXIDString());
-        assertEquals( "DISPLAY_WHEN", fixData.toFIXNameString());
-        assertEquals( "DisplayWhen", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "1083", fixData.toEnumIDString());
+        assertEquals( "DISPLAY_WHEN", fixData.toEnumNameString());
+        assertEquals( "DisplayWhen", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag1083Test() {
         Tag1083EnuDisplayWhen tagData;
 
         tagData = new Tag1083EnuDisplayWhen( Enum1083DisplayWhen.IMMEDIATE );
-        assertEquals( Enum1083DisplayWhen.IMMEDIATE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum1083DisplayWhen.IMMEDIATE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1083EnuDisplayWhen( Enum1083DisplayWhen.EXHAUST );
-        assertEquals( Enum1083DisplayWhen.EXHAUST.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum1083DisplayWhen.EXHAUST.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -86,7 +86,7 @@ class Tag1083EnuDisplayWhenTest {
         // loop around the ENUM and process
         for (Enum1083DisplayWhen oneEnum : Enum1083DisplayWhen.values()) {
             tagData = new Tag1083EnuDisplayWhen(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -110,12 +110,12 @@ class Tag1083EnuDisplayWhenTest {
         for (Enum1083DisplayWhen oneEnum : Enum1083DisplayWhen.values()) {
             tagData = new Tag1083EnuDisplayWhen(oneEnum);
             assertEquals( "Tag1083EnuDisplayWhen\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

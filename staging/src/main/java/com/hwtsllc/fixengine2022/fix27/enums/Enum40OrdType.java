@@ -23,44 +23,47 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  40
  *  OrdType
  *  char
+ *  <p></p>
  *  Order type.
- *
+ *  <p></p>
  *  *** SOME VALUES ARE NO LONGER USED ***
+ *  <p>
  *  *** See Deprecated (Phased-out) Features and Supported Approach ***
+ *  <p>
  *      (see Volume : "Glossary" for value definitions)
- *
+ *  <p></p>
  *  Valid values:
- *      1 - Market
- *      2 - Limit
- *      3 - Stop / Stop Loss
- *      4 - Stop Limit
- *      5 - Market On Close (No longer used)
- *
- *      6 - With Or Without
- *      7 - Limit Or Better
- *      8 - Limit With Or Without
- *      9 - On Basis
- *
- *      A - On Close (No longer used)
- *      B - Limit On Close (No longer used)
- *      C - Forex Market (No longer used)
- *      D - Previously Quoted
- *      E - Previously Indicated
- *
- *      F - Forex Limit (No longer used)
- *      G - Forex Swap
- *      H - Forex Previously Quoted (No longer used)
- *      I - Funari
+ *  <p>    1 - Market
+ *  <p>    2 - Limit
+ *  <p>    3 - Stop / Stop Loss
+ *  <p>    4 - Stop Limit
+ *  <p>    5 - Market On Close (No longer used)
+ *  <p></p>
+ *  <p>    6 - With Or Without
+ *  <p>    7 - Limit Or Better
+ *  <p>    8 - Limit With Or Without
+ *  <p>    9 - On Basis
+ *  <p></p>
+ *  <p>    A - On Close (No longer used)
+ *  <p>    B - Limit On Close (No longer used)
+ *  <p>    C - Forex Market (No longer used)
+ *  <p>    D - Previously Quoted
+ *  <p>    E - Previously Indicated
+ *  <p></p>
+ *  <p>    F - Forex Limit (No longer used)
+ *  <p>    G - Forex Swap
+ *  <p>    H - Forex Previously Quoted (No longer used)
+ *  <p>    I - Funari
  *          (Limit day order with unexecuted portion handles as Market On Close.
  *           e.g. Japan)
- *      J - Market If Touched (MIT)
- *
- *      K - Market With Left Over as Limit
+ *  <p>    J - Market If Touched (MIT)
+ *  <p></p>
+ *  <p>    K - Market With Left Over as Limit
  *          (market order with unexecuted quantity becoming limit order at last price)
- *      L - Previous Fund Valuation Point (Historic pricing;  for CIV)
- *      M - Next Fund Valuation Point (Forward pricing;  for CIV)
- *      P - Pegged
- *      Q - Counter-order selection
+ *  <p>    L - Previous Fund Valuation Point (Historic pricing;  for CIV)
+ *  <p>    M - Next Fund Valuation Point (Forward pricing;  for CIV)
+ *  <p>    P - Pegged
+ *  <p>    Q - Counter-order selection
  */
 public enum Enum40OrdType implements LogFIXString, LogVerboseString {
     MARKET("1", "MARKET", "1 - Market" ),
@@ -111,28 +114,28 @@ public enum Enum40OrdType implements LogFIXString, LogVerboseString {
      * standard wrapper to retrieve the specific enum name
      */
     @Override
-    public String toEnumNameString() {
+    public String toEnumLabelString() {
         return this.name();
     }
     /**
      * standard wrapper to retrieve the specific fix action code for this enum. eg: the first field
      */
     @Override
-    public String toFIXIDString() {
+    public String toEnumIDString() {
         return id;
     }
     /**
      * standard wrapper to retrieve the specific fix name for this enum. eg: the second field
      */
     @Override
-    public String toFIXNameString() {
+    public String toEnumNameString() {
         return name;
     }
     /**
      * standard wrapper to retrieve the specific fix description for this enum. eg: the third field
      */
     @Override
-    public String toFIXDescriptionString() {
+    public String toEnumDescriptionString() {
         return description;
     }
     /**
@@ -142,16 +145,16 @@ public enum Enum40OrdType implements LogFIXString, LogVerboseString {
     public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
-                .concat(toEnumNameString())
+                .concat( toEnumLabelString())
                 .concat("]")
                 .concat("\n\tAction[")
-                .concat(toFIXIDString())
+                .concat( toEnumIDString())
                 .concat("]")
                 .concat("\n\tName[")
-                .concat(toFIXNameString())
+                .concat( toEnumNameString())
                 .concat("]")
                 .concat("\n\tDescription[")
-                .concat(toFIXDescriptionString())
+                .concat( toEnumDescriptionString())
                 .concat("]");
     }
     /**
@@ -159,13 +162,13 @@ public enum Enum40OrdType implements LogFIXString, LogVerboseString {
      */
     @Override
     public String toString() {
-        return toEnumNameString()
+        return toEnumLabelString()
                 .concat("=[")
-                .concat(toFIXIDString())
+                .concat( toEnumIDString())
                 .concat(",")
-                .concat(toFIXNameString())
+                .concat( toEnumNameString())
                 .concat(",")
-                .concat(toFIXDescriptionString())
+                .concat( toEnumDescriptionString())
                 .concat("]");
     }
 

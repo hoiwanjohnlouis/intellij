@@ -68,48 +68,48 @@ class Tag1128EnuApplVerIDTest {
     @Test
     void FIX1128Test() {
         FIX50 fixData = FIX50.FIX1128_ENU_APPL_VER_ID;
-        assertEquals( "1128", fixData.toFIXIDString());
-        assertEquals( "APPL_VER_ID", fixData.toFIXNameString());
-        assertEquals( "ApplVerID", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "1128", fixData.toEnumIDString());
+        assertEquals( "APPL_VER_ID", fixData.toEnumNameString());
+        assertEquals( "ApplVerID", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag1128Test() {
         Tag1128EnuApplVerID tagData;
 
         tagData = new Tag1128EnuApplVerID( MyEnumApplVerID.FIX27 );
-        assertEquals( MyEnumApplVerID.FIX27.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumApplVerID.FIX27.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1128EnuApplVerID( MyEnumApplVerID.FIX30 );
-        assertEquals( MyEnumApplVerID.FIX30.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumApplVerID.FIX30.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1128EnuApplVerID( MyEnumApplVerID.FIX40 );
-        assertEquals( MyEnumApplVerID.FIX40.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumApplVerID.FIX40.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1128EnuApplVerID( MyEnumApplVerID.FIX41 );
-        assertEquals( MyEnumApplVerID.FIX41.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumApplVerID.FIX41.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1128EnuApplVerID( MyEnumApplVerID.FIX42 );
-        assertEquals( MyEnumApplVerID.FIX42.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumApplVerID.FIX42.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag1128EnuApplVerID( MyEnumApplVerID.FIX43 );
-        assertEquals( MyEnumApplVerID.FIX43.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumApplVerID.FIX43.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1128EnuApplVerID( MyEnumApplVerID.FIX44 );
-        assertEquals( MyEnumApplVerID.FIX44.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumApplVerID.FIX44.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1128EnuApplVerID( MyEnumApplVerID.FIX50 );
-        assertEquals( MyEnumApplVerID.FIX50.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumApplVerID.FIX50.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -140,7 +140,7 @@ class Tag1128EnuApplVerIDTest {
         // loop around the ENUM and process
         for (MyEnumApplVerID oneEnum : MyEnumApplVerID.values()) {
             tagData = new Tag1128EnuApplVerID(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -164,12 +164,12 @@ class Tag1128EnuApplVerIDTest {
         for (MyEnumApplVerID oneEnum : MyEnumApplVerID.values()) {
             tagData = new Tag1128EnuApplVerID(oneEnum);
             assertEquals( "Tag1128EnuApplVerID\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

@@ -51,7 +51,7 @@ public class Tag319QtyRatioQty extends FIX42Abstract implements LogValuePairStri
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

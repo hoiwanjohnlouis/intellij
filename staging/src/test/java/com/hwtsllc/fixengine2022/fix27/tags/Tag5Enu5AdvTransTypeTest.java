@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum5AdvTransType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,24 +27,15 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  5
  *  AdvTransType
  *  String
+ *  <p></p>
  *  Identifies advertisement message transaction type
+ *  <p></p>
  *  Valid values:
- *      N - New
- *      C - Cancel
- *      R - Replace
+ *  <p>    N - New
+ *  <p>    C - Cancel
+ *  <p>    R - Replace
  */
 class Tag5Enu5AdvTransTypeTest {
-    @Test
-    void FIX0005Test() {
-        FIX27 fixData = FIX27.FIX5_ENU_ADV_TRANS_TYPE;
-        assertEquals( "ADV_TRANS_TYPE", fixData.toFIXNameString());
-        assertEquals( "5", fixData.toFIXIDString());
-        assertEquals( "Enum5AdvTransType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
-    }
     @Test
     void Tag0005Test() {
         Tag5EnuAdvTransType tagData;
@@ -61,6 +51,23 @@ class Tag5Enu5AdvTransTypeTest {
         tagData = new Tag5EnuAdvTransType(Enum5AdvTransType.REPLACE);
         assertEquals( "R", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void FIXTest() {
+        Tag5EnuAdvTransType tagData;
+
+        // loop around the ENUM and process
+        for (Enum5AdvTransType oneEnum : Enum5AdvTransType.values()) {
+            tagData = new Tag5EnuAdvTransType(oneEnum);
+            assertEquals( "FIX5_ENU_ADV_TRANS_TYPE", tagData.toEnumLabelString());
+            assertEquals( "ADV_TRANS_TYPE", tagData.toEnumNameString());
+            assertEquals( "5", tagData.toEnumIDString());
+            assertEquals( "Enum5AdvTransType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void PrintFIXTagTest() {
@@ -80,6 +87,7 @@ class Tag5Enu5AdvTransTypeTest {
         for (Enum5AdvTransType oneEnum : Enum5AdvTransType.values()) {
             tagData = new Tag5EnuAdvTransType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
@@ -90,8 +98,7 @@ class Tag5Enu5AdvTransTypeTest {
         // loop around the ENUM and process
         for (Enum5AdvTransType oneEnum : Enum5AdvTransType.values()) {
             tagData = new Tag5EnuAdvTransType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -114,12 +121,12 @@ class Tag5Enu5AdvTransTypeTest {
         for (Enum5AdvTransType oneEnum : Enum5AdvTransType.values()) {
             tagData = new Tag5EnuAdvTransType(oneEnum);
             assertEquals( "Tag5EnuAdvTransType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

@@ -35,13 +35,13 @@ class Tag32QtyLastQtyTest {
     @Test
     void FIX0032Test() {
         FIX27 fixData = FIX27.FIX32_QTY_LAST_QTY;
-        assertEquals( "LAST_QTY", fixData.toFIXNameString());
-        assertEquals( "32", fixData.toFIXIDString());
-        assertEquals( "LastQty", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "LAST_QTY", fixData.toEnumNameString());
+        assertEquals( "32", fixData.toEnumIDString());
+        assertEquals( "LastQty", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0032Test() {
@@ -71,7 +71,7 @@ class Tag32QtyLastQtyTest {
         Tag32QtyLastQty tagData;
 
         tagData = new Tag32QtyLastQty(new MyQtyType(Tag32QtyLastQty.TESTB_QTY_LAST_QTY));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag32QtyLastQty.TESTB_QTY_LAST_QTY,
+        assertEquals( tagData.toEnumIDString() + "=" + Tag32QtyLastQty.TESTB_QTY_LAST_QTY,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toValuePairString());
@@ -92,12 +92,12 @@ class Tag32QtyLastQtyTest {
 
         tagData = new Tag32QtyLastQty(new MyQtyType(Tag32QtyLastQty.TESTA_QTY_LAST_QTY));
         assertEquals( "Tag32QtyLastQty\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + Tag32QtyLastQty.TESTA_QTY_LAST_QTY + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag32QtyLastQty.TESTA_QTY_LAST_QTY + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag32QtyLastQty.TESTA_QTY_LAST_QTY + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

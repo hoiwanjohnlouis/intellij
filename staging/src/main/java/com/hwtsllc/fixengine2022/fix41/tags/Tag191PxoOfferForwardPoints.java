@@ -48,7 +48,7 @@ public class Tag191PxoOfferForwardPoints extends FIX41Abstract implements LogVal
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

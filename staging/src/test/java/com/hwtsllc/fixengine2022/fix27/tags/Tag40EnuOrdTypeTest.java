@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum40OrdType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,57 +27,49 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  40
  *  OrdType
  *  char
+ *  <p></p>
  *  Order type.
- *
+ *  <p></p>
  *  *** SOME VALUES ARE NO LONGER USED ***
+ *  <p>
  *  *** See Deprecated (Phased-out) Features and Supported Approach ***
+ *  <p>
  *      (see Volume : "Glossary" for value definitions)
- *
+ *  <p></p>
  *  Valid values:
- *      1 - Market
- *      2 - Limit
- *      3 - Stop / Stop Loss
- *      4 - Stop Limit
- *      5 - Market On Close (No longer used)
- *
- *      6 - With Or Without
- *      7 - Limit Or Better
- *      8 - Limit With Or Without
- *      9 - On Basis
- *
- *      A - On Close (No longer used)
- *      B - Limit On Close (No longer used)
- *      C - Forex Market (No longer used)
- *      D - Previously Quoted
- *      E - Previously Indicated
- *
- *      F - Forex Limit (No longer used)
- *      G - Forex Swap
- *      H - Forex Previously Quoted (No longer used)
- *      I - Funari
+ *  <p>    1 - Market
+ *  <p>    2 - Limit
+ *  <p>    3 - Stop / Stop Loss
+ *  <p>    4 - Stop Limit
+ *  <p>    5 - Market On Close (No longer used)
+ *  <p></p>
+ *  <p>    6 - With Or Without
+ *  <p>    7 - Limit Or Better
+ *  <p>    8 - Limit With Or Without
+ *  <p>    9 - On Basis
+ *  <p></p>
+ *  <p>    A - On Close (No longer used)
+ *  <p>    B - Limit On Close (No longer used)
+ *  <p>    C - Forex Market (No longer used)
+ *  <p>    D - Previously Quoted
+ *  <p>    E - Previously Indicated
+ *  <p></p>
+ *  <p>    F - Forex Limit (No longer used)
+ *  <p>    G - Forex Swap
+ *  <p>    H - Forex Previously Quoted (No longer used)
+ *  <p>    I - Funari
  *          (Limit day order with unexecuted portion handles as Market On Close.
  *           e.g. Japan)
- *      J - Market If Touched (MIT)
- *
- *      K - Market With Left Over as Limit
+ *  <p>    J - Market If Touched (MIT)
+ *  <p></p>
+ *  <p>    K - Market With Left Over as Limit
  *          (market order with unexecuted quantity becoming limit order at last price)
- *      L - Previous Fund Valuation Point (Historic pricing;  for CIV)
- *      M - Next Fund Valuation Point (Forward pricing;  for CIV)
- *      P - Pegged
- *      Q - Counter-order selection
+ *  <p>    L - Previous Fund Valuation Point (Historic pricing;  for CIV)
+ *  <p>    M - Next Fund Valuation Point (Forward pricing;  for CIV)
+ *  <p>    P - Pegged
+ *  <p>    Q - Counter-order selection
  */
 class Tag40EnuOrdTypeTest {
-    @Test
-    void FIX0040Test() {
-        FIX27 fixData = FIX27.FIX40_ENU_ORD_TYPE;
-        assertEquals( "ORD_TYPE", fixData.toFIXNameString());
-        assertEquals( "40", fixData.toFIXIDString());
-        assertEquals( "OrdType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
-    }
     @Test
     void Tag0040Test() {
         Tag40EnuOrdType tagData;
@@ -190,6 +181,23 @@ class Tag40EnuOrdTypeTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
+    void FIXTest() {
+        Tag40EnuOrdType tagData;
+
+        // loop around the ENUM and process
+        for (Enum40OrdType oneEnum : Enum40OrdType.values()) {
+            tagData = new Tag40EnuOrdType(oneEnum);
+            assertEquals( "FIX40_ENU_ORD_TYPE", tagData.toEnumLabelString());
+            assertEquals( "ORD_TYPE", tagData.toEnumNameString());
+            assertEquals( "40", tagData.toEnumIDString());
+            assertEquals( "OrdType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void PrintFIXTagTest() {
         Tag40EnuOrdType tagData;
 
@@ -207,6 +215,7 @@ class Tag40EnuOrdTypeTest {
         for (Enum40OrdType oneEnum : Enum40OrdType.values()) {
             tagData = new Tag40EnuOrdType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
@@ -217,7 +226,7 @@ class Tag40EnuOrdTypeTest {
         // loop around the ENUM and process
         for (Enum40OrdType oneEnum : Enum40OrdType.values()) {
             tagData = new Tag40EnuOrdType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -241,12 +250,12 @@ class Tag40EnuOrdTypeTest {
         for (Enum40OrdType oneEnum : Enum40OrdType.values()) {
             tagData = new Tag40EnuOrdType(oneEnum);
             assertEquals( "Tag40EnuOrdType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

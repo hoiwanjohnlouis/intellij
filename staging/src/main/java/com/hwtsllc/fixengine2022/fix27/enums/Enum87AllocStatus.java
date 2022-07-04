@@ -23,16 +23,19 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  87
  *  AllocStatus
  *  int
+ *  <p></p>
  *  Identifies status of allocation.
+ *  <p></p>
  *  Valid values:
- *      0 - accepted (successfully processed)
- *      1 - block level reject
- *      2 - account level reject
- *      3 - received (received, not yet processed)
- *      4 - incomplete
- *      5 - rejected by intermediary
- *      6 - allocation pending
- *      7 - reversed
+ *  <p>    0 - accepted (successfully processed)
+ *  <p>    1 - block level reject
+ *  <p>    2 - account level reject
+ *  <p>    3 - received (received, not yet processed)
+ *  <p>    4 - incomplete
+ *  <p></p>
+ *  <p>    5 - rejected by intermediary
+ *  <p>    6 - allocation pending
+ *  <p>    7 - reversed
  */
 public enum Enum87AllocStatus implements LogFIXString, LogVerboseString {
     ACCEPTED("0", "ACCEPTED", "0 -accepted (successfully processed)" ),
@@ -60,28 +63,28 @@ public enum Enum87AllocStatus implements LogFIXString, LogVerboseString {
      * standard wrapper to retrieve the specific enum name
      */
     @Override
-    public String toEnumNameString() {
+    public String toEnumLabelString() {
         return this.name();
     }
     /**
      * standard wrapper to retrieve the specific fix action code for this enum. eg: the first field
      */
     @Override
-    public String toFIXIDString() {
+    public String toEnumIDString() {
         return id;
     }
     /**
      * standard wrapper to retrieve the specific fix name for this enum. eg: the second field
      */
     @Override
-    public String toFIXNameString() {
+    public String toEnumNameString() {
         return name;
     }
     /**
      * standard wrapper to retrieve the specific fix description for this enum. eg: the third field
      */
     @Override
-    public String toFIXDescriptionString() {
+    public String toEnumDescriptionString() {
         return description;
     }
     /**
@@ -91,16 +94,16 @@ public enum Enum87AllocStatus implements LogFIXString, LogVerboseString {
     public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
-                .concat(toEnumNameString())
+                .concat( toEnumLabelString())
                 .concat("]")
                 .concat("\n\tAction[")
-                .concat(toFIXIDString())
+                .concat( toEnumIDString())
                 .concat("]")
                 .concat("\n\tName[")
-                .concat(toFIXNameString())
+                .concat( toEnumNameString())
                 .concat("]")
                 .concat("\n\tDescription[")
-                .concat(toFIXDescriptionString())
+                .concat( toEnumDescriptionString())
                 .concat("]");
     }
     /**
@@ -108,13 +111,13 @@ public enum Enum87AllocStatus implements LogFIXString, LogVerboseString {
      */
     @Override
     public String toString() {
-        return toEnumNameString()
+        return toEnumLabelString()
                 .concat("=[")
-                .concat(toFIXIDString())
+                .concat( toEnumIDString())
                 .concat(",")
-                .concat(toFIXNameString())
+                .concat( toEnumNameString())
                 .concat(",")
-                .concat(toFIXDescriptionString())
+                .concat( toEnumDescriptionString())
                 .concat("]");
     }
 

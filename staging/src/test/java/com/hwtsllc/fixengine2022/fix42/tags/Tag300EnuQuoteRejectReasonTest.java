@@ -49,12 +49,12 @@ class Tag300EnuQuoteRejectReasonTest {
     @Test
     void FIX0300Test() {
         FIX42 fixData = FIX42.FIX300_ENU_QUOTE_REJECT_REASON;
-        assertEquals( "300", fixData.toFIXIDString());
-        assertEquals( "QUOTE_REJECT_REASON", fixData.toFIXNameString());
-        assertEquals( "QuoteRejectReason", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "300", fixData.toEnumIDString());
+        assertEquals( "QUOTE_REJECT_REASON", fixData.toEnumNameString());
+        assertEquals( "QuoteRejectReason", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0300Test() {
@@ -64,44 +64,44 @@ class Tag300EnuQuoteRejectReasonTest {
          * 1-9, 99 msg types
          */
         tagData = new Tag300EnuQuoteRejectReason(Enum300QuoteRejectReason.UNKNOWN_SYMBOL);
-        assertEquals( Enum300QuoteRejectReason.UNKNOWN_SYMBOL.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum300QuoteRejectReason.UNKNOWN_SYMBOL.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag300EnuQuoteRejectReason(Enum300QuoteRejectReason.EXCHANGE_SECURITY_CLOSED);
-        assertEquals( Enum300QuoteRejectReason.EXCHANGE_SECURITY_CLOSED.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum300QuoteRejectReason.EXCHANGE_SECURITY_CLOSED.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag300EnuQuoteRejectReason(Enum300QuoteRejectReason.QUOTE_REQUEST_EXCEEDS_LIMIT);
-        assertEquals( Enum300QuoteRejectReason.QUOTE_REQUEST_EXCEEDS_LIMIT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum300QuoteRejectReason.QUOTE_REQUEST_EXCEEDS_LIMIT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag300EnuQuoteRejectReason(Enum300QuoteRejectReason.TOO_LATE_TO_ENTER);
-        assertEquals( Enum300QuoteRejectReason.TOO_LATE_TO_ENTER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum300QuoteRejectReason.TOO_LATE_TO_ENTER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag300EnuQuoteRejectReason(Enum300QuoteRejectReason.UNKNOWN_QUOTE);
-        assertEquals( Enum300QuoteRejectReason.UNKNOWN_QUOTE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum300QuoteRejectReason.UNKNOWN_QUOTE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag300EnuQuoteRejectReason(Enum300QuoteRejectReason.DUPLICATE_QUOTE);
-        assertEquals( Enum300QuoteRejectReason.DUPLICATE_QUOTE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum300QuoteRejectReason.DUPLICATE_QUOTE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag300EnuQuoteRejectReason(Enum300QuoteRejectReason.INVALID_BID_ASK_SPREAD);
-        assertEquals( Enum300QuoteRejectReason.INVALID_BID_ASK_SPREAD.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum300QuoteRejectReason.INVALID_BID_ASK_SPREAD.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag300EnuQuoteRejectReason(Enum300QuoteRejectReason.INVALID_PRICE);
-        assertEquals( Enum300QuoteRejectReason.INVALID_PRICE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum300QuoteRejectReason.INVALID_PRICE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag300EnuQuoteRejectReason(Enum300QuoteRejectReason.NOT_AUTHORIZED_TO_QUOTE_SECURITY);
-        assertEquals( Enum300QuoteRejectReason.NOT_AUTHORIZED_TO_QUOTE_SECURITY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum300QuoteRejectReason.NOT_AUTHORIZED_TO_QUOTE_SECURITY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag300EnuQuoteRejectReason(Enum300QuoteRejectReason.OTHER);
-        assertEquals( Enum300QuoteRejectReason.OTHER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum300QuoteRejectReason.OTHER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -132,7 +132,7 @@ class Tag300EnuQuoteRejectReasonTest {
         // loop around the ENUM and process
         for (Enum300QuoteRejectReason oneEnum : Enum300QuoteRejectReason.values()) {
             tagData = new Tag300EnuQuoteRejectReason(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -156,12 +156,12 @@ class Tag300EnuQuoteRejectReasonTest {
         for (Enum300QuoteRejectReason oneEnum : Enum300QuoteRejectReason.values()) {
             tagData = new Tag300EnuQuoteRejectReason(oneEnum);
             assertEquals( "Tag300EnuQuoteRejectReason\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

@@ -48,7 +48,7 @@ public class Tag129StrDeliverToSubID extends FIX40Abstract implements LogValuePa
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

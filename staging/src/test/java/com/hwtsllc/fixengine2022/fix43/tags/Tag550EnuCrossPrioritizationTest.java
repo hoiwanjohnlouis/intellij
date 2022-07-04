@@ -47,12 +47,12 @@ class Tag550EnuCrossPrioritizationTest {
     @Test
     void FIX0550Test() {
         FIX43 fixData = FIX43.FIX550_ENU_CROSS_PRIORITIZATION;
-        assertEquals( "550", fixData.toFIXIDString());
-        assertEquals( "CROSS_PRIORITIZATION", fixData.toFIXNameString());
-        assertEquals( "CrossPrioritization", fixData.toFIXDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "550", fixData.toEnumIDString());
+        assertEquals( "CROSS_PRIORITIZATION", fixData.toEnumNameString());
+        assertEquals( "CrossPrioritization", fixData.toEnumDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0550Test() {
@@ -62,15 +62,15 @@ class Tag550EnuCrossPrioritizationTest {
          *  0-2 types
          */
         tagData = new Tag550EnuCrossPrioritization( Enum550CrossPrioritization.NONE );
-        assertEquals( Enum550CrossPrioritization.NONE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum550CrossPrioritization.NONE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag550EnuCrossPrioritization( Enum550CrossPrioritization.BUY_PRIORITY );
-        assertEquals( Enum550CrossPrioritization.BUY_PRIORITY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum550CrossPrioritization.BUY_PRIORITY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag550EnuCrossPrioritization( Enum550CrossPrioritization.SELL_PRIORITY );
-        assertEquals( Enum550CrossPrioritization.SELL_PRIORITY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum550CrossPrioritization.SELL_PRIORITY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -101,7 +101,7 @@ class Tag550EnuCrossPrioritizationTest {
         // loop around the ENUM and process
         for (Enum550CrossPrioritization oneEnum : Enum550CrossPrioritization.values()) {
             tagData = new Tag550EnuCrossPrioritization(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -125,12 +125,12 @@ class Tag550EnuCrossPrioritizationTest {
         for (Enum550CrossPrioritization oneEnum : Enum550CrossPrioritization.values()) {
             tagData = new Tag550EnuCrossPrioritization(oneEnum);
             assertEquals( "Tag550EnuCrossPrioritization\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

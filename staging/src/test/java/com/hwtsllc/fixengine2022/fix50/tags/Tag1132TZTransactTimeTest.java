@@ -34,12 +34,12 @@ class Tag1132TZTransactTimeTest {
     @Test
     void FIX1132Test() {
         FIX50 fixData = FIX50.FIX1132_TZ_TRANSACT_TIME;
-        assertEquals( "1132", fixData.toFIXIDString());
-        assertEquals( "TZ_TRANSACT_TIME", fixData.toFIXNameString());
-        assertEquals( "TZTransactTime", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "1132", fixData.toEnumIDString());
+        assertEquals( "TZ_TRANSACT_TIME", fixData.toEnumNameString());
+        assertEquals( "TZTransactTime", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag1132Test() {

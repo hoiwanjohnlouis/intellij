@@ -27,11 +27,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  21
  *  HandlInst
  *  char
+ *  <p></p>
  *  Instructions for order handling on Broker trading floor
+ *  <p></p>
  *  Valid values:
- *      1 - Automated execution order, private, no Broker intervention
- *      2 - Automated execution order, public, Broker intervention OK
- *      3 - Manual order, best execution
+ *  <p>    1 - Automated execution order, private, no Broker intervention
+ *  <p>    2 - Automated execution order, public, Broker intervention OK
+ *  <p>    3 - Manual order, best execution
  */
 public class Tag21EnuHandlInst extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum21HandlInst dataValue;
@@ -47,14 +49,14 @@ public class Tag21EnuHandlInst extends FIX27Abstract implements LogValuePairStri
     }
 
     public String getDataValue() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(getDataValue());
     }
@@ -86,21 +88,21 @@ public class Tag21EnuHandlInst extends FIX27Abstract implements LogValuePairStri
      */
     @Override
     public String toDataIDString() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * wrapper to return the Name of the underlying Data
      */
     @Override
     public String toDataNameString() {
-        return this.dataValue.toFIXNameString();
+        return this.dataValue.toEnumNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data
      */
     @Override
     public String toDataDescriptionString() {
-        return this.dataValue.toFIXDescriptionString();
+        return this.dataValue.toEnumDescriptionString();
     }
     /**
      * standard wrapper to return a string describing the data

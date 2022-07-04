@@ -27,19 +27,22 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  102
  *  CxlRejReason
  *  int
+ *  <p></p>
  *  Code to identify reason for cancel rejection.
+ *  <p></p>
  *  Valid values:
- *      0 - Too late to cancel
- *      1 - Unknown order
- *      2 - Broker - Exchange Option
- *      3 - Order already in Pending Cancel or Pending Replace status
- *      4 - Unable to process Order Mass Cancel Request
- *      5 - OrigOrdModTime (586) did not match last TransactTime (60) of order
- *      6 - Duplicate ClOrdID (11) received
- *      18 - Invalid price increment
- *      99 - Other
- *
- *      or any value conforming to the data type Reserved100Plus
+ *  <p>    0 - Too late to cancel
+ *  <p>    1 - Unknown order
+ *  <p>    2 - Broker - Exchange Option
+ *  <p>    3 - Order already in Pending Cancel or Pending Replace status
+ *  <p>    4 - Unable to process Order Mass Cancel Request
+ *  <p></p>
+ *  <p>    5 - OrigOrdModTime (586) did not match last TransactTime (60) of order
+ *  <p>    6 - Duplicate ClOrdID (11) received
+ *  <p>    18 - Invalid price increment
+ *  <p>    99 - Other
+ *  <p></p>
+ *  <p>    Or any value conforming to the data type Reserved100Plus
  */
 public class Tag102EnuCxlRejReason extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum102CxlRejReason dataValue;
@@ -55,14 +58,14 @@ public class Tag102EnuCxlRejReason extends FIX27Abstract implements LogValuePair
     }
 
     public String getDataValue() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(getDataValue());
     }
@@ -94,21 +97,21 @@ public class Tag102EnuCxlRejReason extends FIX27Abstract implements LogValuePair
      */
     @Override
     public String toDataIDString() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * wrapper to return the Name of the underlying Data
      */
     @Override
     public String toDataNameString() {
-        return this.dataValue.toFIXNameString();
+        return this.dataValue.toEnumNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data
      */
     @Override
     public String toDataDescriptionString() {
-        return this.dataValue.toFIXDescriptionString();
+        return this.dataValue.toEnumDescriptionString();
     }
     /**
      * standard wrapper to return a string describing the data

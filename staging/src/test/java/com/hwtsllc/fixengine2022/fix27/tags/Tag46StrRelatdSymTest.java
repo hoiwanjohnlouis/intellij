@@ -28,6 +28,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  46
  *  RelatdSym  (no longer used)
  *  String
+ *  <p></p>
  *  Deprecated in FIX.4.1
  */
 // @Deprecated
@@ -35,69 +36,99 @@ class Tag46StrRelatdSymTest {
     @Test
     void FIX0046Test() {
         FIX27 fixData = FIX27.FIX46_STR_RELATD_SYM;
-        assertEquals( "RELATD_SYM", fixData.toFIXNameString());
-        assertEquals( "46", fixData.toFIXIDString());
-        assertEquals( "RelatdSym (No longer used)", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "RELATD_SYM", fixData.toEnumNameString());
+        assertEquals( "46", fixData.toEnumIDString());
+        assertEquals( "RelatdSym (No longer used)", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0046Test() {
         Tag46StrRelatdSym tagData;
+        String oneElement;
 
-        tagData = new Tag46StrRelatdSym(new MyStringType("IBM") );
-        assertEquals( "IBM", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        oneElement = "IBM";
+        tagData = new Tag46StrRelatdSym(new MyStringType( oneElement ) );
+        verifyTagInformation( oneElement, tagData );
+
+        oneElement = Tag46StrRelatdSym.TESTA_STR_RELATED_SYM;
+        tagData = new Tag46StrRelatdSym(new MyStringType( oneElement ) );
+        verifyTagInformation( oneElement, tagData );
+
+        oneElement = Tag46StrRelatdSym.TESTB_STR_RELATED_SYM;
+        tagData = new Tag46StrRelatdSym(new MyStringType( oneElement ) );
+        verifyTagInformation( oneElement, tagData );
     }
+
+    private void verifyTagInformation( String oneElement, Tag46StrRelatdSym tagData ) {
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "RELATD_SYM", tagData.toEnumNameString());
+        assertEquals( "46", tagData.toEnumIDString());
+        assertEquals( "RelatdSym (No longer used)", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void PrintFIXTagTest() {
         Tag46StrRelatdSym tagData;
+        String oneElement;
 
-        tagData = new Tag46StrRelatdSym(new MyStringType(Tag46StrRelatdSym.TESTB_STR_RELATED_SYM));
+        oneElement = Tag46StrRelatdSym.TESTA_STR_RELATED_SYM;
+        tagData = new Tag46StrRelatdSym(new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag46StrRelatdSym.TESTB_STR_RELATED_SYM;
+        tagData = new Tag46StrRelatdSym(new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
     @Test
     void TagGetDataValueTest() {
         Tag46StrRelatdSym tagData;
+        String oneElement;
 
-        tagData = new Tag46StrRelatdSym(new MyStringType(Tag46StrRelatdSym.TESTB_STR_RELATED_SYM));
+        oneElement = Tag46StrRelatdSym.TESTB_STR_RELATED_SYM;
+        tagData = new Tag46StrRelatdSym(new MyStringType( oneElement ) );
         assertEquals( Tag46StrRelatdSym.TESTB_STR_RELATED_SYM, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {
         Tag46StrRelatdSym tagData;
+        String oneElement;
 
-        tagData = new Tag46StrRelatdSym(new MyStringType(Tag46StrRelatdSym.TESTB_STR_RELATED_SYM));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag46StrRelatdSym.TESTB_STR_RELATED_SYM,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag46StrRelatdSym.TESTB_STR_RELATED_SYM;
+        tagData = new Tag46StrRelatdSym(new MyStringType( oneElement ) );
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
     @Test
     void TagToStringTest() {
         Tag46StrRelatdSym tagData;
+        String oneElement;
 
-        tagData = new Tag46StrRelatdSym(new MyStringType(Tag46StrRelatdSym.TESTB_STR_RELATED_SYM));
-        assertEquals( Tag46StrRelatdSym.TESTB_STR_RELATED_SYM,
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag46StrRelatdSym.TESTB_STR_RELATED_SYM;
+        tagData = new Tag46StrRelatdSym(new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
     @Test
     void TagToVerboseStringTest() {
         Tag46StrRelatdSym tagData;
+        String oneElement;
 
-        tagData = new Tag46StrRelatdSym(new MyStringType(Tag46StrRelatdSym.TESTA_STR_RELATED_SYM));
+        oneElement = Tag46StrRelatdSym.TESTA_STR_RELATED_SYM;
+        tagData = new Tag46StrRelatdSym(new MyStringType( oneElement ) );
         assertEquals( "Tag46StrRelatdSym\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag46StrRelatdSym.TESTA_STR_RELATED_SYM + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag46StrRelatdSym.TESTA_STR_RELATED_SYM + "]",
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

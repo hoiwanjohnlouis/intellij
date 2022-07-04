@@ -49,7 +49,7 @@ public class Tag168UtcEffectiveTime extends FIX41Abstract implements LogValuePai
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

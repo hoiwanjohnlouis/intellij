@@ -43,27 +43,27 @@ class Enum723PosMaintResultTest {
         Enum723PosMaintResult enumType;
 
         enumType = Enum723PosMaintResult.SUCCESSFUL;
-        assertEquals( "0", enumType.toFIXIDString());
-        assertEquals( "SUCCESSFUL", enumType.toFIXNameString());
-        assertEquals( "0 - Successful Completion - no warnings or errors", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "0", enumType.toEnumIDString());
+        assertEquals( "SUCCESSFUL", enumType.toEnumNameString());
+        assertEquals( "0 - Successful Completion - no warnings or errors", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum723PosMaintResult.REJECTED;
-        assertEquals( "1", enumType.toFIXIDString());
-        assertEquals( "REJECTED", enumType.toFIXNameString());
-        assertEquals( "1 - Rejected", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "1", enumType.toEnumIDString());
+        assertEquals( "REJECTED", enumType.toEnumNameString());
+        assertEquals( "1 - Rejected", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum723PosMaintResult.OTHER;
-        assertEquals( "99", enumType.toFIXIDString());
-        assertEquals( "OTHER", enumType.toFIXNameString());
-        assertEquals( "99 - Other", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "99", enumType.toEnumIDString());
+        assertEquals( "OTHER", enumType.toEnumNameString());
+        assertEquals( "99 - Other", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

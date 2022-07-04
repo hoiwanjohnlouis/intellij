@@ -36,14 +36,14 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag110QtyMinQtyTest {
 
     @Test
-    void FIX0110Test() {
+    void FIXTest() {
         FIX30 fixData = FIX30.FIX110_QTY_MIN_QTY;
-        assertEquals( "MIN_QTY", fixData.toFIXNameString());
-        assertEquals( "110", fixData.toFIXIDString());
-        assertEquals( "MinQty", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "MIN_QTY", fixData.toEnumNameString());
+        assertEquals( "110", fixData.toEnumIDString());
+        assertEquals( "MinQty", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0110Test() {
@@ -54,6 +54,12 @@ class Tag110QtyMinQtyTest {
         tagData = new Tag110QtyMinQty( new MyQtyType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "MIN_QTY", tagData.toEnumNameString());
+        assertEquals( "110", tagData.toEnumIDString());
+        assertEquals( "MinQty", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         oneElement = Tag110QtyMinQty.TESTA_QTY_MIN_QTY;
         tagData = new Tag110QtyMinQty( new MyQtyType( oneElement ) );
@@ -95,7 +101,7 @@ class Tag110QtyMinQtyTest {
 
         oneElement = Tag110QtyMinQty.TESTB_QTY_MIN_QTY;
         tagData = new Tag110QtyMinQty( new MyQtyType( oneElement ) );
-        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
     @Test
@@ -116,12 +122,12 @@ class Tag110QtyMinQtyTest {
         oneElement = Tag110QtyMinQty.TESTA_QTY_MIN_QTY;
         tagData = new Tag110QtyMinQty( new MyQtyType( oneElement ) );
         assertEquals( "Tag110QtyMinQty\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]", tagData.toVerboseString());
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]", tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

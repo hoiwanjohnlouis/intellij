@@ -26,20 +26,24 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  64
  *  SettlDate
  *  LocalMktDate
+ *  <p></p>
  *  Specific date of trade settlement (SettlementDate) in YYYYMMDD format.
- *
+ *  <p></p>
  *  If present, this field overrides SettlType (63).
+ *  <p></p>
  *  This field is required if the value of  SettlType (63) is 6 (Future) or 8 (Sellers Option).
+ *  <p></p>
  *  This field must be omitted if the value of SettlType (63) is 7 (When and If Issued)
+ *  <p></p>
  *  (expressed in local time at place of settlement)
  */
 public class Tag64StrSettlDate extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_SETTL_DATE
-            = "BilboBaggins-Tag64StrSettlDate";
+            = "KimHeeAe-Tag64StrSettlDate";
     public final static String TESTB_STR_SETTL_DATE
-            = "Gandalf-Tag64StrSettlDate";
+            = "MargaretZhang-Tag64StrSettlDate";
 
     public Tag64StrSettlDate(MyStringType dataValue) {
         setFixType(FIX27.FIX64_STR_SETTL_DATE);
@@ -54,7 +58,7 @@ public class Tag64StrSettlDate extends FIX27Abstract implements LogValuePairStri
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

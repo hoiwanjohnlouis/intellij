@@ -43,12 +43,12 @@ class Tag414EnuProgRptReqsTest {
     @Test
     void FIX0414Test() {
         FIX42 fixData = FIX42.FIX414_ENU_PROG_RPT_REQS;
-        assertEquals( "414", fixData.toFIXIDString());
-        assertEquals( "PROG_RPT_REQS", fixData.toFIXNameString());
-        assertEquals( "ProgRptReqs", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "414", fixData.toEnumIDString());
+        assertEquals( "PROG_RPT_REQS", fixData.toEnumNameString());
+        assertEquals( "ProgRptReqs", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0414Test() {
@@ -58,15 +58,15 @@ class Tag414EnuProgRptReqsTest {
          * 1-3 msg types
          */
         tagData = new Tag414EnuProgRptReqs(Enum414ProgRptReqs.BUY_SIDE_STATUS);
-        assertEquals( Enum414ProgRptReqs.BUY_SIDE_STATUS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum414ProgRptReqs.BUY_SIDE_STATUS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag414EnuProgRptReqs(Enum414ProgRptReqs.SELL_SIDE_STATUS);
-        assertEquals( Enum414ProgRptReqs.SELL_SIDE_STATUS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum414ProgRptReqs.SELL_SIDE_STATUS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag414EnuProgRptReqs(Enum414ProgRptReqs.REAL_TIME_EXECUTION_REPORTS);
-        assertEquals( Enum414ProgRptReqs.REAL_TIME_EXECUTION_REPORTS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum414ProgRptReqs.REAL_TIME_EXECUTION_REPORTS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -97,7 +97,7 @@ class Tag414EnuProgRptReqsTest {
         // loop around the ENUM and process
         for (Enum414ProgRptReqs oneEnum : Enum414ProgRptReqs.values()) {
             tagData = new Tag414EnuProgRptReqs(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -121,12 +121,12 @@ class Tag414EnuProgRptReqsTest {
         for (Enum414ProgRptReqs oneEnum : Enum414ProgRptReqs.values()) {
             tagData = new Tag414EnuProgRptReqs(oneEnum);
             assertEquals( "Tag414EnuProgRptReqs\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

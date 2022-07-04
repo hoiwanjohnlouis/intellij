@@ -50,7 +50,7 @@ public class Tag1117StrRootPartyID extends FIX50Abstract implements LogValuePair
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

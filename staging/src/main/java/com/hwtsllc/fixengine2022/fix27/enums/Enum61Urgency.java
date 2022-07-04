@@ -23,11 +23,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  61
  *  Urgency
  *  char
+ *  <p></p>
  *  Urgency flag
+ *  <p></p>
  *  Valid values:
- *      0 - Normal
- *      1 - Flash
- *      2 - Background
+ *  <p>    0 - Normal
+ *  <p>    1 - Flash
+ *  <p>    2 - Background
  */
 public enum Enum61Urgency implements LogFIXString, LogVerboseString {
     NORMAL("0", "NORMAL", "0 - Normal" ),
@@ -49,28 +51,28 @@ public enum Enum61Urgency implements LogFIXString, LogVerboseString {
      * standard wrapper to retrieve the specific enum name
      */
     @Override
-    public String toEnumNameString() {
+    public String toEnumLabelString() {
         return this.name();
     }
     /**
      * standard wrapper to retrieve the specific fix action code for this enum. eg: the first field
      */
     @Override
-    public String toFIXIDString() {
+    public String toEnumIDString() {
         return id;
     }
     /**
      * standard wrapper to retrieve the specific fix name for this enum. eg: the second field
      */
     @Override
-    public String toFIXNameString() {
+    public String toEnumNameString() {
         return name;
     }
     /**
      * standard wrapper to retrieve the specific fix description for this enum. eg: the third field
      */
     @Override
-    public String toFIXDescriptionString() {
+    public String toEnumDescriptionString() {
         return description;
     }
     /**
@@ -80,16 +82,16 @@ public enum Enum61Urgency implements LogFIXString, LogVerboseString {
     public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
-                .concat(toEnumNameString())
+                .concat( toEnumLabelString())
                 .concat("]")
                 .concat("\n\tAction[")
-                .concat(toFIXIDString())
+                .concat( toEnumIDString())
                 .concat("]")
                 .concat("\n\tName[")
-                .concat(toFIXNameString())
+                .concat( toEnumNameString())
                 .concat("]")
                 .concat("\n\tDescription[")
-                .concat(toFIXDescriptionString())
+                .concat( toEnumDescriptionString())
                 .concat("]");
     }
     /**
@@ -97,13 +99,13 @@ public enum Enum61Urgency implements LogFIXString, LogVerboseString {
      */
     @Override
     public String toString() {
-        return toEnumNameString()
+        return toEnumLabelString()
                 .concat("=[")
-                .concat(toFIXIDString())
+                .concat( toEnumIDString())
                 .concat(",")
-                .concat(toFIXNameString())
+                .concat( toEnumNameString())
                 .concat(",")
-                .concat(toFIXDescriptionString())
+                .concat( toEnumDescriptionString())
                 .concat("]");
     }
 

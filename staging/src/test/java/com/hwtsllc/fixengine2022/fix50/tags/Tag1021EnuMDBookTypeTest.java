@@ -42,27 +42,27 @@ class Tag1021EnuMDBookTypeTest {
     @Test
     void FIX1021Test() {
         FIX50 fixData = FIX50.FIX1021_ENU_MD_BOOK_TYPE;
-        assertEquals( "1021", fixData.toFIXIDString());
-        assertEquals( "MD_BOOK_TYPE", fixData.toFIXNameString());
-        assertEquals( "MDBookType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "1021", fixData.toEnumIDString());
+        assertEquals( "MD_BOOK_TYPE", fixData.toEnumNameString());
+        assertEquals( "MDBookType", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag1021Test() {
         Tag1021EnuMDBookType tagData;
 
         tagData = new Tag1021EnuMDBookType( Enum1021MDBookType.TOP_OF_BOOK );
-        assertEquals( Enum1021MDBookType.TOP_OF_BOOK.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum1021MDBookType.TOP_OF_BOOK.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1021EnuMDBookType( Enum1021MDBookType.PRICE_DEPTH );
-        assertEquals( Enum1021MDBookType.PRICE_DEPTH.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum1021MDBookType.PRICE_DEPTH.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1021EnuMDBookType( Enum1021MDBookType.ORDER_DEPTH );
-        assertEquals( Enum1021MDBookType.ORDER_DEPTH.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum1021MDBookType.ORDER_DEPTH.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -93,7 +93,7 @@ class Tag1021EnuMDBookTypeTest {
         // loop around the ENUM and process
         for (Enum1021MDBookType oneEnum : Enum1021MDBookType.values()) {
             tagData = new Tag1021EnuMDBookType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -117,12 +117,12 @@ class Tag1021EnuMDBookTypeTest {
         for (Enum1021MDBookType oneEnum : Enum1021MDBookType.values()) {
             tagData = new Tag1021EnuMDBookType(oneEnum);
             assertEquals( "Tag1021EnuMDBookType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

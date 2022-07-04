@@ -50,7 +50,7 @@ public class Tag867PrcEventPx extends FIX44Abstract implements LogValuePairStrin
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

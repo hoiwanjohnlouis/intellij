@@ -39,23 +39,23 @@ class Tag1057EnuAggressorIndicatorTest {
     @Test
     void FIX1057Test() {
         FIX50 fixData = FIX50.FIX1057_ENU_AGGRESSOR_INDICATOR;
-        assertEquals( "1057", fixData.toFIXIDString());
-        assertEquals( "AGGRESSOR_INDICATOR", fixData.toFIXNameString());
-        assertEquals( "AggressorIndicator", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "1057", fixData.toEnumIDString());
+        assertEquals( "AGGRESSOR_INDICATOR", fixData.toEnumNameString());
+        assertEquals( "AggressorIndicator", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag1057Test() {
         Tag1057EnuAggressorIndicator tagData;
 
         tagData = new Tag1057EnuAggressorIndicator( Enum1057AggressorIndicator.AGGRESSOR );
-        assertEquals( Enum1057AggressorIndicator.AGGRESSOR.toFIXIDString(), tagData.getDataValue() );
+        assertEquals( Enum1057AggressorIndicator.AGGRESSOR.toEnumIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1057EnuAggressorIndicator( Enum1057AggressorIndicator.PASSIVE );
-        assertEquals( Enum1057AggressorIndicator.PASSIVE.toFIXIDString(), tagData.getDataValue() );
+        assertEquals( Enum1057AggressorIndicator.PASSIVE.toEnumIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -86,7 +86,7 @@ class Tag1057EnuAggressorIndicatorTest {
         // loop around the ENUM and process
         for (Enum1057AggressorIndicator oneEnum : Enum1057AggressorIndicator.values()) {
             tagData = new Tag1057EnuAggressorIndicator(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -110,12 +110,12 @@ class Tag1057EnuAggressorIndicatorTest {
         for (Enum1057AggressorIndicator oneEnum : Enum1057AggressorIndicator.values()) {
             tagData = new Tag1057EnuAggressorIndicator(oneEnum);
             assertEquals( "Tag1057EnuAggressorIndicator\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

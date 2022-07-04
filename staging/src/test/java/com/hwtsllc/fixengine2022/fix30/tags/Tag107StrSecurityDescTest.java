@@ -34,14 +34,14 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag107StrSecurityDescTest {
 
     @Test
-    void FIX0107Test() {
+    void FIXTest() {
         FIX30 fixData = FIX30.FIX107_STR_SECURITY_DESC;
-        assertEquals( "SECURITY_DESC", fixData.toFIXNameString());
-        assertEquals( "107", fixData.toFIXIDString());
-        assertEquals( "SecurityDesc", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "SECURITY_DESC", fixData.toEnumNameString());
+        assertEquals( "107", fixData.toEnumIDString());
+        assertEquals( "SecurityDesc", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0107Test() {
@@ -52,6 +52,12 @@ class Tag107StrSecurityDescTest {
         tagData = new Tag107StrSecurityDesc(new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "SECURITY_DESC", tagData.toEnumNameString());
+        assertEquals( "107", tagData.toEnumIDString());
+        assertEquals( "SecurityDesc", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         oneElement = Tag107StrSecurityDesc.TESTA_STR_SECURITY_DESC;
         tagData = new Tag107StrSecurityDesc(new MyStringType( oneElement ) );
@@ -93,7 +99,7 @@ class Tag107StrSecurityDescTest {
 
         oneElement = Tag107StrSecurityDesc.TESTB_STR_SECURITY_DESC;
         tagData = new Tag107StrSecurityDesc(new MyStringType( oneElement ) );
-        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
     @Test
@@ -114,12 +120,12 @@ class Tag107StrSecurityDescTest {
         oneElement = Tag107StrSecurityDesc.TESTA_STR_SECURITY_DESC;
         tagData = new Tag107StrSecurityDesc(new MyStringType( oneElement ) );
         assertEquals( "Tag107StrSecurityDesc\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

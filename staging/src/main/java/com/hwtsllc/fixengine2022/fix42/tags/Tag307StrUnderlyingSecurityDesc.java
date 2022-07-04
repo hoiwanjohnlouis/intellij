@@ -52,7 +52,7 @@ public class Tag307StrUnderlyingSecurityDesc extends FIX42Abstract implements Lo
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

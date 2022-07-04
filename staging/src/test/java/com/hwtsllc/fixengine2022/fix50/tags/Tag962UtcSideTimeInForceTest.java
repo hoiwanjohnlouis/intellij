@@ -40,12 +40,12 @@ class Tag962UtcSideTimeInForceTest {
     @Test
     void FIX0962Test() {
         FIX50 fixData = FIX50.FIX962_UTC_SIDE_TIME_IN_FORCE;
-        assertEquals( "962", fixData.toFIXIDString());
-        assertEquals( "SIDE_TIME_IN_FORCE", fixData.toFIXNameString());
-        assertEquals( "SideTimeInForce", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "962", fixData.toEnumIDString());
+        assertEquals( "SIDE_TIME_IN_FORCE", fixData.toEnumNameString());
+        assertEquals( "SideTimeInForce", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0962Test() {
@@ -92,7 +92,7 @@ class Tag962UtcSideTimeInForceTest {
 
         oneElement = Tag962UtcSideTimeInForce.TESTB_UTC_SIDE_TIME_IN_FORCE;
         tagData = new Tag962UtcSideTimeInForce( new MyUTCTimestampType( oneElement ) );
-        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toValuePairString() );
     }
     @Test
@@ -113,12 +113,12 @@ class Tag962UtcSideTimeInForceTest {
         oneElement = Tag962UtcSideTimeInForce.TESTA_UTC_SIDE_TIME_IN_FORCE;
         tagData = new Tag962UtcSideTimeInForce( new MyUTCTimestampType( oneElement ) );
         assertEquals( "Tag962UtcSideTimeInForce\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
                 tagData.toVerboseString() );
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toVerboseString() );
     }

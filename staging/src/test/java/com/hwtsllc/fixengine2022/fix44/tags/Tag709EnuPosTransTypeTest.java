@@ -44,12 +44,12 @@ class Tag709EnuPosTransTypeTest {
     @Test
     void FIXTest() {
         FIX44 fixData = FIX44.FIX709_ENU_POS_TRANS_TYPE;
-        assertEquals( "709", fixData.toFIXIDString());
-        assertEquals( "POS_TRANS_TYPE", fixData.toFIXNameString());
-        assertEquals( "PosTransType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "709", fixData.toEnumIDString());
+        assertEquals( "POS_TRANS_TYPE", fixData.toEnumNameString());
+        assertEquals( "PosTransType", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0709Test() {
@@ -58,33 +58,33 @@ class Tag709EnuPosTransTypeTest {
 
         oneElement = Enum709PosTransType.EXERCISE;
         tagData = new Tag709EnuPosTransType( oneElement );
-        assertEquals( oneElement.toFIXIDString(), tagData.getDataValue());
+        assertEquals( oneElement.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "709", tagData.toFIXIDString());
-        assertEquals( "POS_TRANS_TYPE", tagData.toFIXNameString());
-        assertEquals( "PosTransType", tagData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
+        assertEquals( "709", tagData.toEnumIDString());
+        assertEquals( "POS_TRANS_TYPE", tagData.toEnumNameString());
+        assertEquals( "PosTransType", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         tagData = new Tag709EnuPosTransType(Enum709PosTransType.DO_NOT_EXERCISE);
-        assertEquals( Enum709PosTransType.DO_NOT_EXERCISE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum709PosTransType.DO_NOT_EXERCISE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag709EnuPosTransType(Enum709PosTransType.POSITION_ADJUSTMENT);
-        assertEquals( Enum709PosTransType.POSITION_ADJUSTMENT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum709PosTransType.POSITION_ADJUSTMENT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag709EnuPosTransType(Enum709PosTransType.MARGIN_DISPOSITION);
-        assertEquals( Enum709PosTransType.MARGIN_DISPOSITION.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum709PosTransType.MARGIN_DISPOSITION.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag709EnuPosTransType(Enum709PosTransType.PLEDGE);
-        assertEquals( Enum709PosTransType.PLEDGE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum709PosTransType.PLEDGE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag709EnuPosTransType(Enum709PosTransType.LARGE_TRADER_SUBMISSION);
-        assertEquals( Enum709PosTransType.LARGE_TRADER_SUBMISSION.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum709PosTransType.LARGE_TRADER_SUBMISSION.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -115,7 +115,7 @@ class Tag709EnuPosTransTypeTest {
         // loop around the ENUM and process
         for (Enum709PosTransType oneEnum : Enum709PosTransType.values()) {
             tagData = new Tag709EnuPosTransType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -139,12 +139,12 @@ class Tag709EnuPosTransTypeTest {
         for (Enum709PosTransType oneEnum : Enum709PosTransType.values()) {
             tagData = new Tag709EnuPosTransType(oneEnum);
             assertEquals( "Tag709EnuPosTransType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

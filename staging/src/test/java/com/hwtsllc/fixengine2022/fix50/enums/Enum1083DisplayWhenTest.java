@@ -39,19 +39,19 @@ class Enum1083DisplayWhenTest {
         Enum1083DisplayWhen enumType;
 
         enumType = Enum1083DisplayWhen.IMMEDIATE;
-        assertEquals( "1", enumType.toFIXIDString() );
-        assertEquals( "IMMEDIATE", enumType.toFIXNameString() );
-        assertEquals( "1 - Immediate (after each fill)", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "1", enumType.toEnumIDString() );
+        assertEquals( "IMMEDIATE", enumType.toEnumNameString() );
+        assertEquals( "1 - Immediate (after each fill)", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1083DisplayWhen.EXHAUST;
-        assertEquals( "2", enumType.toFIXIDString() );
-        assertEquals( "EXHAUST", enumType.toFIXNameString() );
-        assertEquals( "2 - Exhaust (when DisplayQty = 0)", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "2", enumType.toEnumIDString() );
+        assertEquals( "EXHAUST", enumType.toEnumNameString() );
+        assertEquals( "2 - Exhaust (when DisplayQty = 0)", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

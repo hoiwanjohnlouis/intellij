@@ -48,7 +48,7 @@ public class Tag89DatSignature extends FIX27Abstract implements LogValuePairStri
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

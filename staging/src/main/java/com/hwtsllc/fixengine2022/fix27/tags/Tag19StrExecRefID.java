@@ -26,7 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  19
  *  ExecRefID
  *  String
+ *  <p></p>
  *  Reference identifier used with Trade Cancel and Trade Correct execution types.
+ *  <p></p>
  *  (Prior to FIX 4.1 this field was of type int)
  */
 public class Tag19StrExecRefID extends FIX27Abstract implements LogValuePairString, LogVerboseString {
@@ -50,7 +52,7 @@ public class Tag19StrExecRefID extends FIX27Abstract implements LogValuePairStri
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

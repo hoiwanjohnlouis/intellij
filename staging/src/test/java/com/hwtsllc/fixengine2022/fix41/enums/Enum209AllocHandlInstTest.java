@@ -43,27 +43,27 @@ class Enum209AllocHandlInstTest {
          * 1-3 msg types
          */
         enumType = Enum209AllocHandlInst.MATCH;
-        assertEquals("1", enumType.toFIXIDString());
-        assertEquals("MATCH", enumType.toFIXNameString());
-        assertEquals("1 - Match", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("1", enumType.toEnumIDString());
+        assertEquals("MATCH", enumType.toEnumNameString());
+        assertEquals("1 - Match", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum209AllocHandlInst.FORWARD;
-        assertEquals("2", enumType.toFIXIDString());
-        assertEquals("FORWARD", enumType.toFIXNameString());
-        assertEquals("2 - Forward", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("2", enumType.toEnumIDString());
+        assertEquals("FORWARD", enumType.toEnumNameString());
+        assertEquals("2 - Forward", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum209AllocHandlInst.FORWARD_AND_MATCH;
-        assertEquals("3", enumType.toFIXIDString());
-        assertEquals("FORWARD_AND_MATCH", enumType.toFIXNameString());
-        assertEquals("3 - Forward and Match", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("3", enumType.toEnumIDString());
+        assertEquals("FORWARD_AND_MATCH", enumType.toEnumNameString());
+        assertEquals("3 - Forward and Match", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

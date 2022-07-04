@@ -40,12 +40,12 @@ class Tag590EnuBookingUnitTest {
     @Test
     void FIX0590Test() {
         FIX43 fixData = FIX43.FIX590_ENU_BOOKING_UNIT;
-        assertEquals( "590", fixData.toFIXIDString());
-        assertEquals( "BOOKING_UNIT", fixData.toFIXNameString());
-        assertEquals( "BookingUnit", fixData.toFIXDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "590", fixData.toEnumIDString());
+        assertEquals( "BOOKING_UNIT", fixData.toEnumNameString());
+        assertEquals( "BookingUnit", fixData.toEnumDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0590Test() {
@@ -55,15 +55,15 @@ class Tag590EnuBookingUnitTest {
          *  0-2 types
          */
         tagData = new Tag590EnuBookingUnit( Enum590BookingUnit.PARTIAL_EXECUTION_BOOKABLE );
-        assertEquals( Enum590BookingUnit.PARTIAL_EXECUTION_BOOKABLE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum590BookingUnit.PARTIAL_EXECUTION_BOOKABLE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag590EnuBookingUnit( Enum590BookingUnit.AGGREGATE_PARTIAL_EXECUTION );
-        assertEquals( Enum590BookingUnit.AGGREGATE_PARTIAL_EXECUTION.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum590BookingUnit.AGGREGATE_PARTIAL_EXECUTION.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag590EnuBookingUnit( Enum590BookingUnit.AGGREGATE_EXECUTIONS );
-        assertEquals( Enum590BookingUnit.AGGREGATE_EXECUTIONS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum590BookingUnit.AGGREGATE_EXECUTIONS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -94,7 +94,7 @@ class Tag590EnuBookingUnitTest {
         // loop around the ENUM and process
         for (Enum590BookingUnit oneEnum : Enum590BookingUnit.values()) {
             tagData = new Tag590EnuBookingUnit(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -118,12 +118,12 @@ class Tag590EnuBookingUnitTest {
         for (Enum590BookingUnit oneEnum : Enum590BookingUnit.values()) {
             tagData = new Tag590EnuBookingUnit(oneEnum);
             assertEquals( "Tag590EnuBookingUnit\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

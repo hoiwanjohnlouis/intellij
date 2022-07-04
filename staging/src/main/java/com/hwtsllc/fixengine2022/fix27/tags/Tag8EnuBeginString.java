@@ -27,20 +27,22 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  8
  *  BeginString
  *  String
+ *  <p></p>
  *  Identifies beginning of new message and protocol version.
- *  ALWAYS FIRST FIELD IN MESSAGE.
- *  ALWAYS UNENCRYPTED.
- *  Valid values:
- *
- *      FIX.2.7
- *      FIX.3.0
- *      FIX.4.0
- *      FIX.4.1
- *      FIX.4.2
- *
- *      FIX.4.3
- *      FIX.4.4
- *      FIXT.1.1
+ *  <p></p>
+ *  <p> ALWAYS FIRST FIELD IN MESSAGE.
+ *  <p> ALWAYS UNENCRYPTED.
+ *  <p> Valid values:
+ *  <p></p>
+ *  <p>    FIX.2.7
+ *  <p>    FIX.3.0
+ *  <p>    FIX.4.0
+ *  <p>    FIX.4.1
+ *  <p>    FIX.4.2
+ *  <p></p>
+ *  <p>    FIX.4.3
+ *  <p>    FIX.4.4
+ *  <p>    FIXT.1.1
  */
 public class Tag8EnuBeginString extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum8BeginString dataValue;
@@ -56,14 +58,14 @@ public class Tag8EnuBeginString extends FIX27Abstract implements LogValuePairStr
     }
 
     public String getDataValue() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(getDataValue());
     }
@@ -95,21 +97,21 @@ public class Tag8EnuBeginString extends FIX27Abstract implements LogValuePairStr
      */
     @Override
     public String toDataIDString() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * wrapper to return the Name of the underlying Data
      */
     @Override
     public String toDataNameString() {
-        return this.dataValue.toFIXNameString();
+        return this.dataValue.toEnumNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data
      */
     @Override
     public String toDataDescriptionString() {
-        return this.dataValue.toFIXDescriptionString();
+        return this.dataValue.toEnumDescriptionString();
     }
     /**
      * standard wrapper to return a string describing the data

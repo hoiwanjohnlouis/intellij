@@ -26,16 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  48
  *  SecurityID
  *  String
+ *  <p></p>
  *  Security identifier value of SecurityIDSource (22) type
+ *  <p></p>
  *  (e.g. CUSIP, SEDOL, ISIN, etc).  Requires SecurityIDSource.
  */
 public class Tag48StrSecurityID extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_SECURITY_ID
-            = "TESTA";
+            = "INTC";
     public final static String TESTB_STR_SECURITY_ID
-            = "TESTB";
+            = "SBUX";
 
     public Tag48StrSecurityID(MyStringType dataValue) {
         setFixType(FIX27.FIX48_STR_SECURITY_ID);
@@ -50,7 +52,7 @@ public class Tag48StrSecurityID extends FIX27Abstract implements LogValuePairStr
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

@@ -49,7 +49,7 @@ public class Tag181StrSecuritySettlAgentContactPhone extends FIX41Abstract imple
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

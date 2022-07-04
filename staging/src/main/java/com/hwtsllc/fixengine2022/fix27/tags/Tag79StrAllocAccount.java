@@ -26,16 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  79
  *  AllocAccount
  *  String
- *  <p>
+ *  <p></p>
  *  Sub-account mnemonic
  */
 public class Tag79StrAllocAccount extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_ALLOC_ACCOUNT
-            = "BilboBaggins-Tag79StrAllocAccount";
+            = "CeciliaParker-Tag79StrAllocAccount";
     public final static String TESTB_STR_ALLOC_ACCOUNT
-            = "Gandalf-Tag79StrAllocAccount";
+            = "AnnSheridan-Tag79StrAllocAccount";
 
     public Tag79StrAllocAccount(MyStringType dataValue) {
         setFixType(FIX27.FIX79_STR_ALLOC_ACCOUNT);
@@ -50,7 +50,7 @@ public class Tag79StrAllocAccount extends FIX27Abstract implements LogValuePairS
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

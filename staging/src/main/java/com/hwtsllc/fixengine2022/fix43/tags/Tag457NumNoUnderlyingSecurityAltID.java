@@ -48,7 +48,7 @@ public class Tag457NumNoUnderlyingSecurityAltID extends FIX43Abstract implements
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

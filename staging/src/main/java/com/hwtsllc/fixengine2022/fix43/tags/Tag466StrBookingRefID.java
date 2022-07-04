@@ -52,7 +52,7 @@ public class Tag466StrBookingRefID extends FIX43Abstract implements LogValuePair
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

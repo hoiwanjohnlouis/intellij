@@ -43,12 +43,12 @@ class Tag418EnuBidTradeTypeTest {
     @Test
     void FIX0418Test() {
         FIX42 fixData = FIX42.FIX418_ENU_BID_TRADE_TYPE;
-        assertEquals( "418", fixData.toFIXIDString());
-        assertEquals( "BID_TRADE_TYPE", fixData.toFIXNameString());
-        assertEquals( "BidTradeType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "418", fixData.toEnumIDString());
+        assertEquals( "BID_TRADE_TYPE", fixData.toEnumNameString());
+        assertEquals( "BidTradeType", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0418Test() {
@@ -58,19 +58,19 @@ class Tag418EnuBidTradeTypeTest {
          * A, G, J, and R msg types
          */
         tagData = new Tag418EnuBidTradeType(Enum418BidTradeType.AGENCY);
-        assertEquals( Enum418BidTradeType.AGENCY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum418BidTradeType.AGENCY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag418EnuBidTradeType(Enum418BidTradeType.VWAP_GUARANTEE);
-        assertEquals( Enum418BidTradeType.VWAP_GUARANTEE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum418BidTradeType.VWAP_GUARANTEE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag418EnuBidTradeType(Enum418BidTradeType.GUARANTEED_CLOSE);
-        assertEquals( Enum418BidTradeType.GUARANTEED_CLOSE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum418BidTradeType.GUARANTEED_CLOSE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag418EnuBidTradeType(Enum418BidTradeType.RISK_TRADE);
-        assertEquals( Enum418BidTradeType.RISK_TRADE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum418BidTradeType.RISK_TRADE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -101,7 +101,7 @@ class Tag418EnuBidTradeTypeTest {
         // loop around the ENUM and process
         for (Enum418BidTradeType oneEnum : Enum418BidTradeType.values()) {
             tagData = new Tag418EnuBidTradeType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -125,12 +125,12 @@ class Tag418EnuBidTradeTypeTest {
         for (Enum418BidTradeType oneEnum : Enum418BidTradeType.values()) {
             tagData = new Tag418EnuBidTradeType(oneEnum);
             assertEquals( "Tag418EnuBidTradeType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

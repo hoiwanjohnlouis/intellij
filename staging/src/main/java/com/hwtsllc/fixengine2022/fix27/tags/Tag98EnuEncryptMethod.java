@@ -27,16 +27,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  98
  *  EncryptMethod
  *  int
+ *  <p></p>
  *  Method of encryption.
+ *  <p></p>
  *  Valid values:
- *      0 - None / Other
- *      1 - PKCS (Proprietary)
- *      2 - DES (ECB Mode)
- *      3 - PKCS / DES (Proprietary)
- *      4 - PGP / DES (Defunct)
- *
- *      5 - PGP / DES-MD5 (See app note on FIX web site)
- *      6 - PEM / DES-MD5 (see app note on FIX web site)
+ *  <p>    0 - None / Other
+ *  <p>    1 - PKCS (Proprietary)
+ *  <p>    2 - DES (ECB Mode)
+ *  <p>    3 - PKCS / DES (Proprietary)
+ *  <p>    4 - PGP / DES (Defunct)
+ *  <p></p>
+ *  <p>    5 - PGP / DES-MD5 (See app note on FIX website)
+ *  <p>    6 - PEM / DES-MD5 (see app note on FIX website)
  */
 public class Tag98EnuEncryptMethod extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum98EncryptMethod dataValue;
@@ -52,14 +54,14 @@ public class Tag98EnuEncryptMethod extends FIX27Abstract implements LogValuePair
     }
 
     public String getDataValue() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(getDataValue());
     }
@@ -91,21 +93,21 @@ public class Tag98EnuEncryptMethod extends FIX27Abstract implements LogValuePair
      */
     @Override
     public String toDataIDString() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * wrapper to return the Name of the underlying Data
      */
     @Override
     public String toDataNameString() {
-        return this.dataValue.toFIXNameString();
+        return this.dataValue.toEnumNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data
      */
     @Override
     public String toDataDescriptionString() {
-        return this.dataValue.toFIXDescriptionString();
+        return this.dataValue.toEnumDescriptionString();
     }
     /**
      * standard wrapper to return a string describing the data

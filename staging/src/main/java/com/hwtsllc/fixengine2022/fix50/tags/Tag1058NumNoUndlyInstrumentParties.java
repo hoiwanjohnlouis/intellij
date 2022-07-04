@@ -50,7 +50,7 @@ public class Tag1058NumNoUndlyInstrumentParties extends FIX50Abstract implements
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

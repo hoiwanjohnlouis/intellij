@@ -50,38 +50,38 @@ class Enum517OwnershipTypeTest {
          *  J, type
          */
         enumType = Enum517OwnershipType.JOINT_INVESTORS;
-        assertEquals("J", enumType.toFIXIDString());
-        assertEquals("JOINT_INVESTORS", enumType.toFIXNameString());
-        assertEquals("J - Joint Investors", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("J", enumType.toEnumIDString());
+        assertEquals("JOINT_INVESTORS", enumType.toEnumNameString());
+        assertEquals("J - Joint Investors", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         /*
          *  T, type
          */
         enumType = Enum517OwnershipType.TENANTS_IN_COMMON;
-        assertEquals("T", enumType.toFIXIDString());
-        assertEquals("TENANTS_IN_COMMON", enumType.toFIXNameString());
-        assertEquals("T - Tenants in Common", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("T", enumType.toEnumIDString());
+        assertEquals("TENANTS_IN_COMMON", enumType.toEnumNameString());
+        assertEquals("T - Tenants in Common", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         /*
          *  2, type
          */
         enumType = Enum517OwnershipType.JOINT_TRUSTEES;
-        assertEquals("2", enumType.toFIXIDString());
-        assertEquals("JOINT_TRUSTEES", enumType.toFIXNameString());
-        assertEquals("2 - Joint Trustees", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("2", enumType.toEnumIDString());
+        assertEquals("JOINT_TRUSTEES", enumType.toEnumNameString());
+        assertEquals("2 - Joint Trustees", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

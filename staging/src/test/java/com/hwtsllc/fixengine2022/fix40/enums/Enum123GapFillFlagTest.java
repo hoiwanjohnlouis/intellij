@@ -39,20 +39,20 @@ class Enum123GapFillFlagTest {
         Enum123GapFillFlag enumType;
 
         enumType = Enum123GapFillFlag.NO;
-        assertEquals("N",enumType.toFIXIDString());
-        assertEquals("NO", enumType.toFIXNameString());
+        assertEquals("N",enumType.toEnumIDString());
+        assertEquals("NO", enumType.toEnumNameString());
         assertEquals("N - Sequence Reset, Ignore Msg Seq Num (N/A For FIXML - Not Used)",
-                enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+                enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum123GapFillFlag.YES;
-        assertEquals("Y", enumType.toFIXIDString());
-        assertEquals("YES", enumType.toFIXNameString());
-        assertEquals("Y - Gap Fill Message, Msg Seq Num Field Valid", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("Y", enumType.toEnumIDString());
+        assertEquals("YES", enumType.toEnumNameString());
+        assertEquals("Y - Gap Fill Message, Msg Seq Num Field Valid", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

@@ -54,7 +54,7 @@ public class Tag583StrClOrdLinkID extends FIX43Abstract implements LogValuePairS
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

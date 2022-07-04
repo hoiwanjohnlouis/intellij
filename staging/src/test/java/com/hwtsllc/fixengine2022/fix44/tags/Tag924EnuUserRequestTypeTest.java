@@ -41,12 +41,12 @@ class Tag924EnuUserRequestTypeTest {
     @Test
     void FIXTest() {
         FIX44 fixData = FIX44.FIX924_ENU_USER_REQUEST_TYPE;
-        assertEquals( "924", fixData.toFIXIDString());
-        assertEquals( "USER_REQUEST_TYPE", fixData.toFIXNameString());
-        assertEquals( "UserRequestType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "924", fixData.toEnumIDString());
+        assertEquals( "USER_REQUEST_TYPE", fixData.toEnumNameString());
+        assertEquals( "UserRequestType", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0924Test() {
@@ -55,25 +55,25 @@ class Tag924EnuUserRequestTypeTest {
 
         oneElement = Enum924UserRequestType.LOG_ON;
         tagData = new Tag924EnuUserRequestType( oneElement );
-        assertEquals( oneElement.toFIXIDString(), tagData.getDataValue());
+        assertEquals( oneElement.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "924", tagData.toFIXIDString());
-        assertEquals( "USER_REQUEST_TYPE", tagData.toFIXNameString());
-        assertEquals( "UserRequestType", tagData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
+        assertEquals( "924", tagData.toEnumIDString());
+        assertEquals( "USER_REQUEST_TYPE", tagData.toEnumNameString());
+        assertEquals( "UserRequestType", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         tagData = new Tag924EnuUserRequestType( Enum924UserRequestType.LOG_OFF );
-        assertEquals( Enum924UserRequestType.LOG_OFF.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum924UserRequestType.LOG_OFF.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag924EnuUserRequestType( Enum924UserRequestType.CHANGE_PASSWORD );
-        assertEquals( Enum924UserRequestType.CHANGE_PASSWORD.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum924UserRequestType.CHANGE_PASSWORD.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag924EnuUserRequestType( Enum924UserRequestType.REQUEST_STATUS );
-        assertEquals( Enum924UserRequestType.REQUEST_STATUS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum924UserRequestType.REQUEST_STATUS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -104,7 +104,7 @@ class Tag924EnuUserRequestTypeTest {
         // loop around the ENUM and process
         for (Enum924UserRequestType oneEnum : Enum924UserRequestType.values()) {
             tagData = new Tag924EnuUserRequestType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -128,12 +128,12 @@ class Tag924EnuUserRequestTypeTest {
         for (Enum924UserRequestType oneEnum : Enum924UserRequestType.values()) {
             tagData = new Tag924EnuUserRequestType(oneEnum);
             assertEquals( "Tag924EnuUserRequestType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

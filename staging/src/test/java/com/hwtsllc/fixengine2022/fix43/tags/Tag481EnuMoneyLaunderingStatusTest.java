@@ -42,12 +42,12 @@ class Tag481EnuMoneyLaunderingStatusTest {
     @Test
     void FIX0481Test() {
         FIX43 fixData = FIX43.FIX481_ENU_MONEY_LAUNDERING_STATUS;
-        assertEquals( "481", fixData.toFIXIDString());
-        assertEquals( "MONEY_LAUNDERING_STATUS", fixData.toFIXNameString());
-        assertEquals( "MoneyLaunderingStatus", fixData.toFIXDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "481", fixData.toEnumIDString());
+        assertEquals( "MONEY_LAUNDERING_STATUS", fixData.toEnumNameString());
+        assertEquals( "MoneyLaunderingStatus", fixData.toEnumDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0481Test() {
@@ -57,7 +57,7 @@ class Tag481EnuMoneyLaunderingStatusTest {
          * Y, types
          */
         tagData = new Tag481EnuMoneyLaunderingStatus( Enum481MoneyLaunderingStatus.PASSED );
-        assertEquals( Enum481MoneyLaunderingStatus.PASSED.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum481MoneyLaunderingStatus.PASSED.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
@@ -66,7 +66,7 @@ class Tag481EnuMoneyLaunderingStatusTest {
          *  N, types
          */
         tagData = new Tag481EnuMoneyLaunderingStatus( Enum481MoneyLaunderingStatus.NOT_CHECKED );
-        assertEquals( Enum481MoneyLaunderingStatus.NOT_CHECKED.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum481MoneyLaunderingStatus.NOT_CHECKED.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
@@ -75,15 +75,15 @@ class Tag481EnuMoneyLaunderingStatusTest {
          * 1-3, types
          */
         tagData = new Tag481EnuMoneyLaunderingStatus( Enum481MoneyLaunderingStatus.EXEMPT_BELOW_LIMIT );
-        assertEquals( Enum481MoneyLaunderingStatus.EXEMPT_BELOW_LIMIT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum481MoneyLaunderingStatus.EXEMPT_BELOW_LIMIT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag481EnuMoneyLaunderingStatus( Enum481MoneyLaunderingStatus.EXEMPT_CLIENT_MONEY );
-        assertEquals( Enum481MoneyLaunderingStatus.EXEMPT_CLIENT_MONEY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum481MoneyLaunderingStatus.EXEMPT_CLIENT_MONEY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag481EnuMoneyLaunderingStatus( Enum481MoneyLaunderingStatus.EXEMPT_AUTHORISED );
-        assertEquals( Enum481MoneyLaunderingStatus.EXEMPT_AUTHORISED.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum481MoneyLaunderingStatus.EXEMPT_AUTHORISED.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -114,7 +114,7 @@ class Tag481EnuMoneyLaunderingStatusTest {
         // loop around the ENUM and process
         for (Enum481MoneyLaunderingStatus oneEnum : Enum481MoneyLaunderingStatus.values()) {
             tagData = new Tag481EnuMoneyLaunderingStatus(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -138,12 +138,12 @@ class Tag481EnuMoneyLaunderingStatusTest {
         for (Enum481MoneyLaunderingStatus oneEnum : Enum481MoneyLaunderingStatus.values()) {
             tagData = new Tag481EnuMoneyLaunderingStatus(oneEnum);
             assertEquals( "Tag481EnuMoneyLaunderingStatus\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

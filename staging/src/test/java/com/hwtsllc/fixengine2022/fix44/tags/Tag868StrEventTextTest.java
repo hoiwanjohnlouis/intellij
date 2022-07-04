@@ -35,12 +35,12 @@ class Tag868StrEventTextTest {
     @Test
     void FIXTest() {
         FIX44 fixData = FIX44.FIX868_STR_EVENT_TEXT;
-        assertEquals( "868", fixData.toFIXIDString());
-        assertEquals( "EVENT_TEXT", fixData.toFIXNameString());
-        assertEquals( "EventText", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "868", fixData.toEnumIDString());
+        assertEquals( "EVENT_TEXT", fixData.toEnumNameString());
+        assertEquals( "EventText", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0868Test() {
@@ -51,12 +51,12 @@ class Tag868StrEventTextTest {
         tagData = new Tag868StrEventText( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "868", tagData.toFIXIDString());
-        assertEquals( "EVENT_TEXT", tagData.toFIXNameString());
-        assertEquals( "EventText", tagData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
+        assertEquals( "868", tagData.toEnumIDString());
+        assertEquals( "EVENT_TEXT", tagData.toEnumNameString());
+        assertEquals( "EventText", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         oneElement = Tag868StrEventText.TESTB_STR_EVENT_TEXT;
         tagData = new Tag868StrEventText( new MyStringType( oneElement ) );
@@ -93,7 +93,7 @@ class Tag868StrEventTextTest {
 
         oneElement = Tag868StrEventText.TESTB_STR_EVENT_TEXT;
         tagData = new Tag868StrEventText( new MyStringType( oneElement ) );
-        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
     }
     @Test
@@ -114,12 +114,12 @@ class Tag868StrEventTextTest {
         oneElement = Tag868StrEventText.TESTA_STR_EVENT_TEXT;
         tagData = new Tag868StrEventText( new MyStringType( oneElement ) );
         assertEquals( "Tag868StrEventText\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

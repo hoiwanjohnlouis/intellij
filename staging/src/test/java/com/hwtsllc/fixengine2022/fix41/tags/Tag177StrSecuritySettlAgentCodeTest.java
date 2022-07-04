@@ -39,12 +39,12 @@ class Tag177StrSecuritySettlAgentCodeTest {
     @Test
     void FIX0177Test() {
         FIX41 fixData = FIX41.FIX177_STR_SECURITY_SETTL_AGENT_CODE;
-        assertEquals( "177", fixData.toFIXIDString());
-        assertEquals( "SECURITY_SETTL_AGENT_CODE", fixData.toFIXNameString());
-        assertEquals( "SecuritySettlAgentCode (replaced)", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "177", fixData.toEnumIDString());
+        assertEquals( "SECURITY_SETTL_AGENT_CODE", fixData.toEnumNameString());
+        assertEquals( "SecuritySettlAgentCode (replaced)", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0177Test() {
@@ -83,7 +83,7 @@ class Tag177StrSecuritySettlAgentCodeTest {
 
         tagData = new Tag177StrSecuritySettlAgentCode(
                 new MyStringType(Tag177StrSecuritySettlAgentCode.TESTB_STR_SECURITY_SETTL_AGENT_CODE));
-        assertEquals( tagData.toFIXIDString() + "=" +
+        assertEquals( tagData.toEnumIDString() + "=" +
                                 Tag177StrSecuritySettlAgentCode.TESTB_STR_SECURITY_SETTL_AGENT_CODE,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
@@ -107,12 +107,12 @@ class Tag177StrSecuritySettlAgentCodeTest {
         tagData = new Tag177StrSecuritySettlAgentCode(
                 new MyStringType(Tag177StrSecuritySettlAgentCode.TESTA_STR_SECURITY_SETTL_AGENT_CODE));
         assertEquals( "Tag177StrSecuritySettlAgentCode\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + Tag177StrSecuritySettlAgentCode.TESTA_STR_SECURITY_SETTL_AGENT_CODE + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" +
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" +
                                             Tag177StrSecuritySettlAgentCode.TESTA_STR_SECURITY_SETTL_AGENT_CODE + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());

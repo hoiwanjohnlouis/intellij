@@ -27,54 +27,55 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  63
  *  SettlType
  *  String
+ *  <p></p>
  *  Indicates order settlement period.
- *
+ *  <p></p>
  *  If present, SettlDate (64) overrides this field.
- *
+ *  <p></p>
  *  If both SettlType (63) and SettDate (64) are omitted,
  *  the default for SettlType (63) is 0 (Regular)
- *
+ *  <p></p>
  *  Regular is defined as the default settlement period
  *  for the particular security on the exchange of execution.
- *
+ *  <p></p>
  *  In Fixed Income the contents of this field may influence
  *  the instrument definition if the SecurityID (48) is ambiguous.
- *
+ *  <p></p>
  *  In the US an active Treasury offering may be re-opened,
  *  and for a time one CUSIP will apply to both the current
  *  and "when-issued" securities.
- *
+ *  <p></p>
  *  Supplying a value of "7" clarifies the instrument description;
  *  any other value or the absence of this field should cause the
  *  respondent to default to the active issue.
- *
- *  Additionally the following patterns may be uses as well as enum values
- *
- *  Dx = FX tenor expression for "days", e.g. "D5", where "x" is any integer > 0
- *  Mx = FX tenor expression for "months", e.g. "M3", where "x" is any integer > 0
- *  Wx = FX tenor expression for "weeks", e.g. "W13", where "x" is any integer > 0
- *  Yx = FX tenor expression for "years", e.g. "Y1", where "x" is any integer > 0
- *
+ *  <p></p>
+ *  Additionally, the following patterns may be uses as well as enum values
+ *  <p></p>
+ *  <p>    Dx = FX tenor expression for "days", e.g. "D5", where "x" is any integer > 0
+ *  <p>    Mx = FX tenor expression for "months", e.g. "M3", where "x" is any integer > 0
+ *  <p>    Wx = FX tenor expression for "weeks", e.g. "W13", where "x" is any integer > 0
+ *  <p>    Yx = FX tenor expression for "years", e.g. "Y1", where "x" is any integer > 0
+ *  <p></p>
  *  Noted that for FX the tenors expressed using Dx, Mx, Wx, and Yx values
  *  do not denote business days, but calendar days.
- *
+ *  <p></p>
  *  Valid values:
- *      0 - Regular / FX Spot settlement (T+1 or T+2 depending on currency)
- *      1 - Cash (TOD / T+0)
- *      2 - Next Day (TOM / T+1)
- *      3 - T+2
- *      4 - T+3
- *
- *      5 - T+4
- *      6 - Future
- *      7 - When And If Issued
- *      8 - Sellers Option
- *      9 - T+5
- *
- *      B - Broken date for FX expressing non-standard tenor, SettlDate (64) must be specified
- *      C - FX Spot Next settlement (Spot+1, aka next day)
- *
- *      or any value conforming to the data type Tenor
+ *  <p>    0 - Regular / FX Spot settlement (T+1 or T+2 depending on currency)
+ *  <p>    1 - Cash (TOD / T+0)
+ *  <p>    2 - Next Day (TOM / T+1)
+ *  <p>    3 - T+2
+ *  <p>    4 - T+3
+ *  <p></p>
+ *  <p>    5 - T+4
+ *  <p>    6 - Future
+ *  <p>    7 - When And If Issued
+ *  <p>    8 - Sellers Option
+ *  <p>    9 - T+5
+ *  <p></p>
+ *  <p>    B - Broken date for FX expressing non-standard tenor, SettlDate (64) must be specified
+ *  <p>    C - FX Spot Next settlement (Spot+1, aka next day)
+ *  <p></p>
+ *  <p>    Or any value conforming to the data type Tenor
  */
 public class Tag63EnuSettlmntTyp extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum63SettlType dataValue;
@@ -90,14 +91,14 @@ public class Tag63EnuSettlmntTyp extends FIX27Abstract implements LogValuePairSt
     }
 
     public String getDataValue() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(getDataValue());
     }
@@ -129,21 +130,21 @@ public class Tag63EnuSettlmntTyp extends FIX27Abstract implements LogValuePairSt
      */
     @Override
     public String toDataIDString() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * wrapper to return the Name of the underlying Data
      */
     @Override
     public String toDataNameString() {
-        return this.dataValue.toFIXNameString();
+        return this.dataValue.toEnumNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data
      */
     @Override
     public String toDataDescriptionString() {
-        return this.dataValue.toFIXDescriptionString();
+        return this.dataValue.toEnumDescriptionString();
     }
     /**
      * standard wrapper to return a string describing the data

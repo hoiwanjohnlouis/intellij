@@ -40,27 +40,27 @@ class Enum940AffirmStatusTest {
         Enum940AffirmStatus enumType;
 
         enumType = Enum940AffirmStatus.RECEIVED;
-        assertEquals( "1", enumType.toFIXIDString() );
-        assertEquals( "RECEIVED", enumType.toFIXNameString() );
-        assertEquals( "1 - Received", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "1", enumType.toEnumIDString() );
+        assertEquals( "RECEIVED", enumType.toEnumNameString() );
+        assertEquals( "1 - Received", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum940AffirmStatus.REJECTED;
-        assertEquals( "2", enumType.toFIXIDString() );
-        assertEquals( "REJECTED", enumType.toFIXNameString() );
-        assertEquals( "2 - Confirm rejected, i.e. not affirmed", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "2", enumType.toEnumIDString() );
+        assertEquals( "REJECTED", enumType.toEnumNameString() );
+        assertEquals( "2 - Confirm rejected, i.e. not affirmed", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum940AffirmStatus.AFFIRMED;
-        assertEquals( "3", enumType.toFIXIDString() );
-        assertEquals( "AFFIRMED", enumType.toFIXNameString() );
-        assertEquals( "3 - Affirmed", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "3", enumType.toEnumIDString() );
+        assertEquals( "AFFIRMED", enumType.toEnumNameString() );
+        assertEquals( "3 - Affirmed", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

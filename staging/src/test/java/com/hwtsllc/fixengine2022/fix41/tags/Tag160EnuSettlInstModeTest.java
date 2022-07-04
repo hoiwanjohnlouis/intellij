@@ -46,39 +46,39 @@ class Tag160EnuSettlInstModeTest {
     @Test
     void FIX0160Test() {
         FIX41 fixData = FIX41.FIX160_ENU_SETTL_INST_MODE;
-        assertEquals( "160", fixData.toFIXIDString());
-        assertEquals( "SETTL_INST_MODE", fixData.toFIXNameString());
-        assertEquals( "SettlInstMode", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "160", fixData.toEnumIDString());
+        assertEquals( "SETTL_INST_MODE", fixData.toEnumNameString());
+        assertEquals( "SettlInstMode", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0160Test() {
         Tag160EnuSettlInstMode tagData;
 
         tagData = new Tag160EnuSettlInstMode(Enum160SettlInstMode.DEFAULT);
-        assertEquals( Enum160SettlInstMode.DEFAULT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum160SettlInstMode.DEFAULT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag160EnuSettlInstMode(Enum160SettlInstMode.STANDING_INSTRUCTIONS_PROVIDED);
-        assertEquals( Enum160SettlInstMode.STANDING_INSTRUCTIONS_PROVIDED.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum160SettlInstMode.STANDING_INSTRUCTIONS_PROVIDED.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag160EnuSettlInstMode(Enum160SettlInstMode.SPECIFIC_ALLOCATION_ACCOUNT_OVERRIDING);
-        assertEquals( Enum160SettlInstMode.SPECIFIC_ALLOCATION_ACCOUNT_OVERRIDING.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum160SettlInstMode.SPECIFIC_ALLOCATION_ACCOUNT_OVERRIDING.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag160EnuSettlInstMode(Enum160SettlInstMode.SPECIFIC_ALLOCATION_ACCOUNT_STANDING);
-        assertEquals( Enum160SettlInstMode.SPECIFIC_ALLOCATION_ACCOUNT_STANDING.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum160SettlInstMode.SPECIFIC_ALLOCATION_ACCOUNT_STANDING.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag160EnuSettlInstMode(Enum160SettlInstMode.SPECIFIC_ORDER_SINGLE_ACCOUNT);
-        assertEquals( Enum160SettlInstMode.SPECIFIC_ORDER_SINGLE_ACCOUNT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum160SettlInstMode.SPECIFIC_ORDER_SINGLE_ACCOUNT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag160EnuSettlInstMode(Enum160SettlInstMode.REQUEST_REJECT);
-        assertEquals( Enum160SettlInstMode.REQUEST_REJECT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum160SettlInstMode.REQUEST_REJECT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -109,7 +109,7 @@ class Tag160EnuSettlInstModeTest {
         // loop around the ENUM and process
         for (Enum160SettlInstMode oneEnum : Enum160SettlInstMode.values()) {
             tagData = new Tag160EnuSettlInstMode(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -133,12 +133,12 @@ class Tag160EnuSettlInstModeTest {
         for (Enum160SettlInstMode oneEnum : Enum160SettlInstMode.values()) {
             tagData = new Tag160EnuSettlInstMode(oneEnum);
             assertEquals( "Tag160EnuSettlInstMode\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

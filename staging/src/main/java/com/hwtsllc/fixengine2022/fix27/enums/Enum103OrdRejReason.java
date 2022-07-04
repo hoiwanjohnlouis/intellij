@@ -23,30 +23,36 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  103
  *  OrdRejReason
  *  int
+ *  <p></p>
  *  Code to identify reason for order rejection.
+ *  <p></p>
  *  Note: Values 3, 4, and 5 will be used when rejecting an
  *        order due to pre-allocation information errors.
+ *  <p></p>
  *  Valid values:
- *      0 - Broker - Exchange option
- *      1 - Unknown symbol
- *      2 - Exchange closed
- *      3 - Order exceeds limit
- *      4 - Too late to enter
- *      5 - Unknown order
- *      6 - Duplicate Order (e.g. dupe ClOrdID)
- *      7 - Duplicate of a verbally communicated order
- *      8 - Stale order
- *      9 - Trade along required
- *      10 - Invalid Investor ID
- *      11 - Unsupported order characteristic
- *      12 - Surveillence Option
- *      13 - Incorrect quantity
- *      14 - Incorrect allocated quantity
- *      15 - Unknown account(s)
- *      18 - Invalid price increment
- *      99 - Other
- *
- *      or any value conforming to the data type Reserved100Plus
+ *  <p>    0 - Broker - Exchange option
+ *  <p>    1 - Unknown symbol
+ *  <p>    2 - Exchange closed
+ *  <p>    3 - Order exceeds limit
+ *  <p>    4 - Too late to enter
+ *  <p></p>
+ *  <p>    5 - Unknown order
+ *  <p>    6 - Duplicate Order (e.g. dupe ClOrdID)
+ *  <p>    7 - Duplicate of a verbally communicated order
+ *  <p>    8 - Stale order
+ *  <p>    9 - Trade along required
+ *  <p></p>
+ *  <p>    10 - Invalid Investor ID
+ *  <p>    11 - Unsupported order characteristic
+ *  <p>    12 - Surveillance Option
+ *  <p>    13 - Incorrect quantity
+ *  <p>    14 - Incorrect allocated quantity
+ *  <p></p>
+ *  <p>    15 - Unknown account(s)
+ *  <p>    18 - Invalid price increment
+ *  <p>    99 - Other
+ *  <p></p>
+ *  <p>    Or any value conforming to the data type Reserved100Plus
  */
 public enum Enum103OrdRejReason implements LogFIXString, LogVerboseString {
     BROKER_OR_EXCHANGE("0", "BROKER_OR_EXCHANGE",
@@ -104,28 +110,28 @@ public enum Enum103OrdRejReason implements LogFIXString, LogVerboseString {
      * standard wrapper to retrieve the specific enum name
      */
     @Override
-    public String toEnumNameString() {
+    public String toEnumLabelString() {
         return this.name();
     }
     /**
      * standard wrapper to retrieve the specific fix action code for this enum. eg: the first field
      */
     @Override
-    public String toFIXIDString() {
+    public String toEnumIDString() {
         return id;
     }
     /**
      * standard wrapper to retrieve the specific fix name for this enum. eg: the second field
      */
     @Override
-    public String toFIXNameString() {
+    public String toEnumNameString() {
         return name;
     }
     /**
      * standard wrapper to retrieve the specific fix description for this enum. eg: the third field
      */
     @Override
-    public String toFIXDescriptionString() {
+    public String toEnumDescriptionString() {
         return description;
     }
     /**
@@ -135,16 +141,16 @@ public enum Enum103OrdRejReason implements LogFIXString, LogVerboseString {
     public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
-                .concat(toEnumNameString())
+                .concat( toEnumLabelString())
                 .concat("]")
                 .concat("\n\tAction[")
-                .concat(toFIXIDString())
+                .concat( toEnumIDString())
                 .concat("]")
                 .concat("\n\tName[")
-                .concat(toFIXNameString())
+                .concat( toEnumNameString())
                 .concat("]")
                 .concat("\n\tDescription[")
-                .concat(toFIXDescriptionString())
+                .concat( toEnumDescriptionString())
                 .concat("]");
     }
     /**
@@ -152,13 +158,13 @@ public enum Enum103OrdRejReason implements LogFIXString, LogVerboseString {
      */
     @Override
     public String toString() {
-        return toEnumNameString()
+        return toEnumLabelString()
                 .concat("=[")
-                .concat(toFIXIDString())
+                .concat( toEnumIDString())
                 .concat(",")
-                .concat(toFIXNameString())
+                .concat( toEnumNameString())
                 .concat(",")
-                .concat(toFIXDescriptionString())
+                .concat( toEnumDescriptionString())
                 .concat("]");
     }
 

@@ -49,7 +49,7 @@ public class Tag193LmdSettlDate2 extends FIX41Abstract implements LogValuePairSt
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

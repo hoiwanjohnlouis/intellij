@@ -50,7 +50,7 @@ public class Tag670NumNoLegAllocs extends FIX44Abstract implements LogValuePairS
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

@@ -36,12 +36,12 @@ class Tag917LmdEndDateTest {
     @Test
     void FIX0917Test() {
         FIX44 fixData = FIX44.FIX917_LMD_END_DATE;
-        assertEquals( "917", fixData.toFIXIDString());
-        assertEquals( "END_DATE", fixData.toFIXNameString());
-        assertEquals( "EndDate", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "917", fixData.toEnumIDString());
+        assertEquals( "END_DATE", fixData.toEnumNameString());
+        assertEquals( "EndDate", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0917Test() {
@@ -52,12 +52,12 @@ class Tag917LmdEndDateTest {
         tagData = new Tag917LmdEndDate( new MyLocalMktDateType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "917", tagData.toFIXIDString());
-        assertEquals( "END_DATE", tagData.toFIXNameString());
-        assertEquals( "EndDate", tagData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
+        assertEquals( "917", tagData.toEnumIDString());
+        assertEquals( "END_DATE", tagData.toEnumNameString());
+        assertEquals( "EndDate", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         oneElement = Tag917LmdEndDate.TESTB_LMD_END_DATE;
         tagData = new Tag917LmdEndDate( new MyLocalMktDateType( oneElement ) );
@@ -94,7 +94,7 @@ class Tag917LmdEndDateTest {
 
         oneElement = Tag917LmdEndDate.TESTB_LMD_END_DATE;
         tagData = new Tag917LmdEndDate( new MyLocalMktDateType( oneElement ) );
-        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
     }
     @Test
@@ -115,12 +115,12 @@ class Tag917LmdEndDateTest {
         oneElement = Tag917LmdEndDate.TESTA_LMD_END_DATE;
         tagData = new Tag917LmdEndDate( new MyLocalMktDateType( oneElement ) );
         assertEquals( "Tag917LmdEndDate\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
                 tagData.toVerboseString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }

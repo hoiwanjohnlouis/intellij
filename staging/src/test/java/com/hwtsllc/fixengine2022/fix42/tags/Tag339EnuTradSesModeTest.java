@@ -42,12 +42,12 @@ class Tag339EnuTradSesModeTest {
     @Test
     void FIX0339Test() {
         FIX42 fixData = FIX42.FIX339_ENU_TRAD_SES_MODE;
-        assertEquals( "339", fixData.toFIXIDString());
-        assertEquals( "TRAD_SES_MODE", fixData.toFIXNameString());
-        assertEquals( "TradSesMode", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "339", fixData.toEnumIDString());
+        assertEquals( "TRAD_SES_MODE", fixData.toEnumNameString());
+        assertEquals( "TradSesMode", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0339Test() {
@@ -57,15 +57,15 @@ class Tag339EnuTradSesModeTest {
          * 1-3 msg types
          */
         tagData = new Tag339EnuTradSesMode(Enum339TrdSesMode.TESTING);
-        assertEquals( Enum339TrdSesMode.TESTING.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum339TrdSesMode.TESTING.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag339EnuTradSesMode(Enum339TrdSesMode.SIMULATED);
-        assertEquals( Enum339TrdSesMode.SIMULATED.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum339TrdSesMode.SIMULATED.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag339EnuTradSesMode(Enum339TrdSesMode.PRODUCTION);
-        assertEquals( Enum339TrdSesMode.PRODUCTION.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum339TrdSesMode.PRODUCTION.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -96,7 +96,7 @@ class Tag339EnuTradSesModeTest {
         // loop around the ENUM and process
         for (Enum339TrdSesMode oneEnum : Enum339TrdSesMode.values()) {
             tagData = new Tag339EnuTradSesMode(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -120,12 +120,12 @@ class Tag339EnuTradSesModeTest {
         for (Enum339TrdSesMode oneEnum : Enum339TrdSesMode.values()) {
             tagData = new Tag339EnuTradSesMode(oneEnum);
             assertEquals( "Tag339EnuTradSesMode\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

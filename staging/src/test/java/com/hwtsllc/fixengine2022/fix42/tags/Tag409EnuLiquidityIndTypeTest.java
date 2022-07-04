@@ -41,12 +41,12 @@ class Tag409EnuLiquidityIndTypeTest {
     @Test
     void FIX0409Test() {
         FIX42 fixData = FIX42.FIX409_ENU_LIQUIDITY_IND_TYPE;
-        assertEquals( "409", fixData.toFIXIDString());
-        assertEquals( "LIQUIDITY_IND_TYPE", fixData.toFIXNameString());
-        assertEquals( "LiquidityIndType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "409", fixData.toEnumIDString());
+        assertEquals( "LIQUIDITY_IND_TYPE", fixData.toEnumNameString());
+        assertEquals( "LiquidityIndType", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0409Test() {
@@ -56,19 +56,19 @@ class Tag409EnuLiquidityIndTypeTest {
          * 1-4 msg types
          */
         tagData = new Tag409EnuLiquidityIndType(Enum409LiquidityIndType.FIVE_DAY_MOVING_AVERAGE);
-        assertEquals( Enum409LiquidityIndType.FIVE_DAY_MOVING_AVERAGE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum409LiquidityIndType.FIVE_DAY_MOVING_AVERAGE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag409EnuLiquidityIndType(Enum409LiquidityIndType.TWENTY_DAY_MOVING_AVERAGE);
-        assertEquals( Enum409LiquidityIndType.TWENTY_DAY_MOVING_AVERAGE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum409LiquidityIndType.TWENTY_DAY_MOVING_AVERAGE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag409EnuLiquidityIndType(Enum409LiquidityIndType.NORMAL_MARKET_SIZE);
-        assertEquals( Enum409LiquidityIndType.NORMAL_MARKET_SIZE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum409LiquidityIndType.NORMAL_MARKET_SIZE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag409EnuLiquidityIndType(Enum409LiquidityIndType.OTHER);
-        assertEquals( Enum409LiquidityIndType.OTHER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum409LiquidityIndType.OTHER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -99,7 +99,7 @@ class Tag409EnuLiquidityIndTypeTest {
         // loop around the ENUM and process
         for (Enum409LiquidityIndType oneEnum : Enum409LiquidityIndType.values()) {
             tagData = new Tag409EnuLiquidityIndType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -123,12 +123,12 @@ class Tag409EnuLiquidityIndTypeTest {
         for (Enum409LiquidityIndType oneEnum : Enum409LiquidityIndType.values()) {
             tagData = new Tag409EnuLiquidityIndType(oneEnum);
             assertEquals( "Tag409EnuLiquidityIndType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

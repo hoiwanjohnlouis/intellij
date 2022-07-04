@@ -52,7 +52,7 @@ public class Tag238AmtConcession extends FIX42Abstract implements LogValuePairSt
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

@@ -53,7 +53,7 @@ public class Tag351DatEncodedSecurityDesc extends FIX42Abstract implements LogVa
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

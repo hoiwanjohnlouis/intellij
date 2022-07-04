@@ -40,12 +40,12 @@ class Tag589EnuDayBookingInstTest {
     @Test
     void FIX0589Test() {
         FIX43 fixData = FIX43.FIX589_ENU_DAY_BOOKING_INST;
-        assertEquals( "589", fixData.toFIXIDString());
-        assertEquals( "DAY_BOOKING_INST", fixData.toFIXNameString());
-        assertEquals( "DayBookingInst", fixData.toFIXDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "589", fixData.toEnumIDString());
+        assertEquals( "DAY_BOOKING_INST", fixData.toEnumNameString());
+        assertEquals( "DayBookingInst", fixData.toEnumDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0589Test() {
@@ -55,15 +55,15 @@ class Tag589EnuDayBookingInstTest {
          *  0-2 types
          */
         tagData = new Tag589EnuDayBookingInst( Enum589DayBookingInst.AUTO_BOOKING );
-        assertEquals( Enum589DayBookingInst.AUTO_BOOKING.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum589DayBookingInst.AUTO_BOOKING.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag589EnuDayBookingInst( Enum589DayBookingInst.VERBAL_BOOKING );
-        assertEquals( Enum589DayBookingInst.VERBAL_BOOKING.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum589DayBookingInst.VERBAL_BOOKING.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag589EnuDayBookingInst( Enum589DayBookingInst.ACCUMULATE );
-        assertEquals( Enum589DayBookingInst.ACCUMULATE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum589DayBookingInst.ACCUMULATE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -94,7 +94,7 @@ class Tag589EnuDayBookingInstTest {
         // loop around the ENUM and process
         for (Enum589DayBookingInst oneEnum : Enum589DayBookingInst.values()) {
             tagData = new Tag589EnuDayBookingInst(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -118,12 +118,12 @@ class Tag589EnuDayBookingInstTest {
         for (Enum589DayBookingInst oneEnum : Enum589DayBookingInst.values()) {
             tagData = new Tag589EnuDayBookingInst(oneEnum);
             assertEquals( "Tag589EnuDayBookingInst\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

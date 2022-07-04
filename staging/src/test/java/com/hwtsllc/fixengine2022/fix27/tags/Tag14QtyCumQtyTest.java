@@ -35,13 +35,13 @@ class Tag14QtyCumQtyTest {
     @Test
     void FIX0014Test() {
         FIX27 fixData = FIX27.FIX14_QTY_CUM_QTY;
-        assertEquals( "CUM_QTY", fixData.toFIXNameString());
-        assertEquals( "14", fixData.toFIXIDString());
-        assertEquals( "CumQty", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "CUM_QTY", fixData.toEnumNameString());
+        assertEquals( "14", fixData.toEnumIDString());
+        assertEquals( "CumQty", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0014Test() {
@@ -71,7 +71,7 @@ class Tag14QtyCumQtyTest {
         Tag14QtyCumQty tagData;
 
         tagData = new Tag14QtyCumQty(new MyQtyType(Tag14QtyCumQty.TESTB_QTY_CUM_QTY));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag14QtyCumQty.TESTB_QTY_CUM_QTY,
+        assertEquals( tagData.toEnumIDString() + "=" + Tag14QtyCumQty.TESTB_QTY_CUM_QTY,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toValuePairString());
@@ -92,12 +92,12 @@ class Tag14QtyCumQtyTest {
 
         tagData = new Tag14QtyCumQty(new MyQtyType(Tag14QtyCumQty.TESTA_QTY_CUM_QTY));
         assertEquals( "Tag14QtyCumQty\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + Tag14QtyCumQty.TESTA_QTY_CUM_QTY + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag14QtyCumQty.TESTA_QTY_CUM_QTY + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag14QtyCumQty.TESTA_QTY_CUM_QTY + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

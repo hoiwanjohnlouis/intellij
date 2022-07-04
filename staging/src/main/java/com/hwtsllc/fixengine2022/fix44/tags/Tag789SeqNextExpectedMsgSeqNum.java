@@ -50,7 +50,7 @@ public class Tag789SeqNextExpectedMsgSeqNum extends FIX44Abstract implements Log
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

@@ -23,54 +23,55 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  63
  *  SettlType
  *  String
+ *  <p></p>
  *  Indicates order settlement period.
- *
+ *  <p></p>
  *  If present, SettlDate (64) overrides this field.
- *
+ *  <p></p>
  *  If both SettlType (63) and SettDate (64) are omitted,
  *  the default for SettlType (63) is 0 (Regular)
- *
+ *  <p></p>
  *  Regular is defined as the default settlement period
  *  for the particular security on the exchange of execution.
- *
+ *  <p></p>
  *  In Fixed Income the contents of this field may influence
  *  the instrument definition if the SecurityID (48) is ambiguous.
- *
+ *  <p></p>
  *  In the US an active Treasury offering may be re-opened,
  *  and for a time one CUSIP will apply to both the current
  *  and "when-issued" securities.
- *
+ *  <p></p>
  *  Supplying a value of "7" clarifies the instrument description;
  *  any other value or the absence of this field should cause the
  *  respondent to default to the active issue.
- *
- *  Additionally the following patterns may be uses as well as enum values
- *
- *  Dx = FX tenor expression for "days", e.g. "D5", where "x" is any integer > 0
- *  Mx = FX tenor expression for "months", e.g. "M3", where "x" is any integer > 0
- *  Wx = FX tenor expression for "weeks", e.g. "W13", where "x" is any integer > 0
- *  Yx = FX tenor expression for "years", e.g. "Y1", where "x" is any integer > 0
- *
+ *  <p></p>
+ *  Additionally, the following patterns may be uses as well as enum values
+ *  <p></p>
+ *  <p>    Dx = FX tenor expression for "days", e.g. "D5", where "x" is any integer > 0
+ *  <p>    Mx = FX tenor expression for "months", e.g. "M3", where "x" is any integer > 0
+ *  <p>    Wx = FX tenor expression for "weeks", e.g. "W13", where "x" is any integer > 0
+ *  <p>    Yx = FX tenor expression for "years", e.g. "Y1", where "x" is any integer > 0
+ *  <p></p>
  *  Noted that for FX the tenors expressed using Dx, Mx, Wx, and Yx values
  *  do not denote business days, but calendar days.
- *
+ *  <p></p>
  *  Valid values:
- *      0 - Regular / FX Spot settlement (T+1 or T+2 depending on currency)
- *      1 - Cash (TOD / T+0)
- *      2 - Next Day (TOM / T+1)
- *      3 - T+2
- *      4 - T+3
- *
- *      5 - T+4
- *      6 - Future
- *      7 - When And If Issued
- *      8 - Sellers Option
- *      9 - T+5
- *
- *      B - Broken date for FX expressing non-standard tenor, SettlDate (64) must be specified
- *      C - FX Spot Next settlement (Spot+1, aka next day)
- *
- *      or any value conforming to the data type Tenor
+ *  <p>    0 - Regular / FX Spot settlement (T+1 or T+2 depending on currency)
+ *  <p>    1 - Cash (TOD / T+0)
+ *  <p>    2 - Next Day (TOM / T+1)
+ *  <p>    3 - T+2
+ *  <p>    4 - T+3
+ *  <p></p>
+ *  <p>    5 - T+4
+ *  <p>    6 - Future
+ *  <p>    7 - When And If Issued
+ *  <p>    8 - Sellers Option
+ *  <p>    9 - T+5
+ *  <p></p>
+ *  <p>    B - Broken date for FX expressing non-standard tenor, SettlDate (64) must be specified
+ *  <p>    C - FX Spot Next settlement (Spot+1, aka next day)
+ *  <p></p>
+ *  <p>    Or any value conforming to the data type Tenor
  */
 public enum Enum63SettlType implements LogFIXString, LogVerboseString {
     REGULAR( "0", "REGULAR", "0 - Regular / FX Spot settlement (T+1 or T+2 depending on currency)" ),
@@ -103,28 +104,28 @@ public enum Enum63SettlType implements LogFIXString, LogVerboseString {
      * standard wrapper to retrieve the specific enum name
      */
     @Override
-    public String toEnumNameString() {
+    public String toEnumLabelString() {
         return this.name();
     }
     /**
      * standard wrapper to retrieve the specific fix action code for this enum. eg: the first field
      */
     @Override
-    public String toFIXIDString() {
+    public String toEnumIDString() {
         return id;
     }
     /**
      * standard wrapper to retrieve the specific fix name for this enum. eg: the second field
      */
     @Override
-    public String toFIXNameString() {
+    public String toEnumNameString() {
         return name;
     }
     /**
      * standard wrapper to retrieve the specific fix description for this enum. eg: the third field
      */
     @Override
-    public String toFIXDescriptionString() {
+    public String toEnumDescriptionString() {
         return description;
     }
     /**
@@ -134,16 +135,16 @@ public enum Enum63SettlType implements LogFIXString, LogVerboseString {
     public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
-                .concat(toEnumNameString())
+                .concat( toEnumLabelString())
                 .concat("]")
                 .concat("\n\tAction[")
-                .concat(toFIXIDString())
+                .concat( toEnumIDString())
                 .concat("]")
                 .concat("\n\tName[")
-                .concat(toFIXNameString())
+                .concat( toEnumNameString())
                 .concat("]")
                 .concat("\n\tDescription[")
-                .concat(toFIXDescriptionString())
+                .concat( toEnumDescriptionString())
                 .concat("]");
     }
     /**
@@ -151,13 +152,13 @@ public enum Enum63SettlType implements LogFIXString, LogVerboseString {
      */
     @Override
     public String toString() {
-        return toEnumNameString()
+        return toEnumLabelString()
                 .concat("=[")
-                .concat(toFIXIDString())
+                .concat( toEnumIDString())
                 .concat(",")
-                .concat(toFIXNameString())
+                .concat( toEnumNameString())
                 .concat(",")
-                .concat(toFIXDescriptionString())
+                .concat( toEnumDescriptionString())
                 .concat("]");
     }
 

@@ -27,22 +27,25 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  59
  *  TimeInForce
  *  char
+ *  <p></p>
  *  Specifies how long the order remains in effect.
- *
+ *  <p></p>
  *  Absence of this field is interpreted as DAY.
- *
+ *  <p></p>
  *  NOTE not applicable to CIV Orders.
+ *  <p>
  *  (see Volume : "Glossary" for value definitions)
- *
+ *  <p></p>
  *  Valid values:
- *      0 - Day (or session)
- *      1 - Good Till Cancel (GTC)
- *      2 - At the Opening (OPG)
- *      3 - Immediate Or Cancel (IOC)
- *      4 - Fill Or Kill (FOK)
- *      5 - Good Till Crossing (GTX)
- *      6 - Good Till Date (GTD)
- *      7 - At the Close
+ *  <p>    0 - Day (or session)
+ *  <p>    1 - Good Till Cancel (GTC)
+ *  <p>    2 - At the Opening (OPG)
+ *  <p>    3 - Immediate Or Cancel (IOC)
+ *  <p>    4 - Fill Or Kill (FOK)
+ *  <p></p>
+ *  <p>    5 - Good Till Crossing (GTX)
+ *  <p>    6 - Good Till Date (GTD)
+ *  <p>    7 - At the Close
  */
 public class Tag59EnuTimeInForce extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum59TimeInForce dataValue;
@@ -58,14 +61,14 @@ public class Tag59EnuTimeInForce extends FIX27Abstract implements LogValuePairSt
     }
 
     public String getDataValue() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(getDataValue());
     }
@@ -97,21 +100,21 @@ public class Tag59EnuTimeInForce extends FIX27Abstract implements LogValuePairSt
      */
     @Override
     public String toDataIDString() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * wrapper to return the Name of the underlying Data
      */
     @Override
     public String toDataNameString() {
-        return this.dataValue.toFIXNameString();
+        return this.dataValue.toEnumNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data
      */
     @Override
     public String toDataDescriptionString() {
-        return this.dataValue.toFIXDescriptionString();
+        return this.dataValue.toEnumDescriptionString();
     }
     /**
      * standard wrapper to return a string describing the data

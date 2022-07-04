@@ -48,12 +48,12 @@ class Tag544EnuCashMarginTest {
     @Test
     void FIX0544Test() {
         FIX43 fixData = FIX43.FIX544_ENU_CASH_MARGIN;
-        assertEquals( "544", fixData.toFIXIDString());
-        assertEquals( "CASH_MARGIN", fixData.toFIXNameString());
-        assertEquals( "CashMargin", fixData.toFIXDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "544", fixData.toEnumIDString());
+        assertEquals( "CASH_MARGIN", fixData.toEnumNameString());
+        assertEquals( "CashMargin", fixData.toEnumDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0544Test() {
@@ -63,15 +63,15 @@ class Tag544EnuCashMarginTest {
          *  1-3 types
          */
         tagData = new Tag544EnuCashMargin( Enum544CashMargin.CASH );
-        assertEquals( Enum544CashMargin.CASH.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum544CashMargin.CASH.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag544EnuCashMargin( Enum544CashMargin.MARGIN_OPEN );
-        assertEquals( Enum544CashMargin.MARGIN_OPEN.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum544CashMargin.MARGIN_OPEN.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag544EnuCashMargin( Enum544CashMargin.MARGIN_CLOSE );
-        assertEquals( Enum544CashMargin.MARGIN_CLOSE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum544CashMargin.MARGIN_CLOSE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -102,7 +102,7 @@ class Tag544EnuCashMarginTest {
         // loop around the ENUM and process
         for (Enum544CashMargin oneEnum : Enum544CashMargin.values()) {
             tagData = new Tag544EnuCashMargin(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -126,12 +126,12 @@ class Tag544EnuCashMarginTest {
         for (Enum544CashMargin oneEnum : Enum544CashMargin.values()) {
             tagData = new Tag544EnuCashMargin(oneEnum);
             assertEquals( "Tag544EnuCashMargin\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

@@ -43,31 +43,31 @@ class Enum263SubscriptionRequestTypeTest {
          * 0-2 msg types
          */
         enumType = Enum263SubscriptionRequestType.SNAPSHOT;
-        assertEquals("0", enumType.toFIXIDString());
-        assertEquals("SNAPSHOT", enumType.toFIXNameString());
-        assertEquals("0 - Snapshot", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("0", enumType.toEnumIDString());
+        assertEquals("SNAPSHOT", enumType.toEnumNameString());
+        assertEquals("0 - Snapshot", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum263SubscriptionRequestType.SUBSCRIBE_SNAPSHOT;
-        assertEquals("1", enumType.toFIXIDString());
-        assertEquals("SUBSCRIBE_SNAPSHOT", enumType.toFIXNameString());
-        assertEquals("1 - Snapshot + Updates (Subscribe)", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("1", enumType.toEnumIDString());
+        assertEquals("SUBSCRIBE_SNAPSHOT", enumType.toEnumNameString());
+        assertEquals("1 - Snapshot + Updates (Subscribe)", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum263SubscriptionRequestType.UNSUBSCRIBE_SNAPSHOT;
-        assertEquals("2", enumType.toFIXIDString());
-        assertEquals("UNSUBSCRIBE_SNAPSHOT", enumType.toFIXNameString());
-        assertEquals("2 - Disable previous Snapshot + Update Request (Unsubscribe)", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("2", enumType.toEnumIDString());
+        assertEquals("UNSUBSCRIBE_SNAPSHOT", enumType.toEnumNameString());
+        assertEquals("2 - Disable previous Snapshot + Update Request (Unsubscribe)", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
     /**
      *

@@ -50,7 +50,7 @@ public class Tag652QtyUnderlyingLastQty extends FIX43Abstract implements LogValu
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

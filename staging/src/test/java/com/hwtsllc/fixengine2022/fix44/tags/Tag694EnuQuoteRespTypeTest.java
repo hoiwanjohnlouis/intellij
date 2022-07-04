@@ -44,12 +44,12 @@ class Tag694EnuQuoteRespTypeTest {
     @Test
     void FIXTest() {
         FIX44 fixData = FIX44.FIX694_ENU_QUOTE_RESP_TYPE;
-        assertEquals( "694", fixData.toFIXIDString());
-        assertEquals( "QUOTE_RESP_TYPE", fixData.toFIXNameString());
-        assertEquals( "QuoteRespType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "694", fixData.toEnumIDString());
+        assertEquals( "QUOTE_RESP_TYPE", fixData.toEnumNameString());
+        assertEquals( "QuoteRespType", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0694Test() {
@@ -58,33 +58,33 @@ class Tag694EnuQuoteRespTypeTest {
 
         oneElement = Enum694QuoteRespType.HIT_OR_LIFT;
         tagData = new Tag694EnuQuoteRespType( oneElement );
-        assertEquals( oneElement.toFIXIDString(), tagData.getDataValue());
+        assertEquals( oneElement.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "694", tagData.toFIXIDString());
-        assertEquals( "QUOTE_RESP_TYPE", tagData.toFIXNameString());
-        assertEquals( "QuoteRespType", tagData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
+        assertEquals( "694", tagData.toEnumIDString());
+        assertEquals( "QUOTE_RESP_TYPE", tagData.toEnumNameString());
+        assertEquals( "QuoteRespType", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         tagData = new Tag694EnuQuoteRespType(Enum694QuoteRespType.COUNTER);
-        assertEquals( Enum694QuoteRespType.COUNTER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum694QuoteRespType.COUNTER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag694EnuQuoteRespType(Enum694QuoteRespType.EXPIRED);
-        assertEquals( Enum694QuoteRespType.EXPIRED.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum694QuoteRespType.EXPIRED.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag694EnuQuoteRespType(Enum694QuoteRespType.COVER);
-        assertEquals( Enum694QuoteRespType.COVER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum694QuoteRespType.COVER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag694EnuQuoteRespType(Enum694QuoteRespType.DONE_AWAY);
-        assertEquals( Enum694QuoteRespType.DONE_AWAY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum694QuoteRespType.DONE_AWAY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag694EnuQuoteRespType(Enum694QuoteRespType.PASS);
-        assertEquals( Enum694QuoteRespType.PASS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum694QuoteRespType.PASS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -115,7 +115,7 @@ class Tag694EnuQuoteRespTypeTest {
         // loop around the ENUM and process
         for (Enum694QuoteRespType oneEnum : Enum694QuoteRespType.values()) {
             tagData = new Tag694EnuQuoteRespType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -139,12 +139,12 @@ class Tag694EnuQuoteRespTypeTest {
         for (Enum694QuoteRespType oneEnum : Enum694QuoteRespType.values()) {
             tagData = new Tag694EnuQuoteRespType(oneEnum);
             assertEquals( "Tag694EnuQuoteRespType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

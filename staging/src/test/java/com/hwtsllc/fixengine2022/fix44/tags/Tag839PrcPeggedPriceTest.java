@@ -35,12 +35,12 @@ class Tag839PrcPeggedPriceTest {
     @Test
     void FIXTest() {
         FIX44 fixData = FIX44.FIX839_PRC_PEGGED_PRICE;
-        assertEquals( "839", fixData.toFIXIDString());
-        assertEquals( "PEGGED_PRICE", fixData.toFIXNameString());
-        assertEquals( "PeggedPrice", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "839", fixData.toEnumIDString());
+        assertEquals( "PEGGED_PRICE", fixData.toEnumNameString());
+        assertEquals( "PeggedPrice", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0839Test() {
@@ -51,12 +51,12 @@ class Tag839PrcPeggedPriceTest {
         tagData = new Tag839PrcPeggedPrice( new MyPriceType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "839", tagData.toFIXIDString());
-        assertEquals( "PEGGED_PRICE", tagData.toFIXNameString());
-        assertEquals( "PeggedPrice", tagData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
+        assertEquals( "839", tagData.toEnumIDString());
+        assertEquals( "PEGGED_PRICE", tagData.toEnumNameString());
+        assertEquals( "PeggedPrice", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         oneElement = Tag839PrcPeggedPrice.TESTB_PRC_PEGGED_PRICE;
         tagData = new Tag839PrcPeggedPrice( new MyPriceType( oneElement ) );
@@ -93,7 +93,7 @@ class Tag839PrcPeggedPriceTest {
 
         oneElement = Tag839PrcPeggedPrice.TESTB_PRC_PEGGED_PRICE;
         tagData = new Tag839PrcPeggedPrice( new MyPriceType( oneElement ) );
-        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
     }
     @Test
@@ -114,12 +114,12 @@ class Tag839PrcPeggedPriceTest {
         oneElement = Tag839PrcPeggedPrice.TESTA_PRC_PEGGED_PRICE;
         tagData = new Tag839PrcPeggedPrice( new MyPriceType( oneElement ) );
         assertEquals( "Tag839PrcPeggedPrice\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
                 tagData.toVerboseString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }

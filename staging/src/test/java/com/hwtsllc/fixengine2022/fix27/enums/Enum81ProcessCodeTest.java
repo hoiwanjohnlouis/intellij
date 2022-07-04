@@ -26,17 +26,22 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  81
  *  ProcessCode
  *  char
+ *  <p></p>
  *  Processing code for sub-account.
+ *  <p></p>
  *  Absence of this field in AllocAccount (79), AllocPrice (366),
+ *  <p></p>
  *  AllocQty (80), ProcessCode instance indicates regular trade.
+ *  <p></p>
  *  Valid values:
- *      0 - Regular
- *      1 - Soft Dollar
- *      2 - Step-In
- *      3 - Step-Out
- *      4 - Soft-dollar Step-In
- *      5 - Soft-dollar Step-Out
- *      6 - Plan Sponsor
+ *  <p>    0 - Regular
+ *  <p>    1 - Soft Dollar
+ *  <p>    2 - Step-In
+ *  <p>    3 - Step-Out
+ *  <p>    4 - Soft-dollar Step-In
+ *  <p></p>
+ *  <p>    5 - Soft-dollar Step-Out
+ *  <p>    6 - Plan Sponsor
  */
 class Enum81ProcessCodeTest {
     @Test
@@ -47,60 +52,60 @@ class Enum81ProcessCodeTest {
          * 0-6 msg types
          */
         enumType = Enum81ProcessCode.REGULAR;
-        assertEquals("0", enumType.toFIXIDString());
-        assertEquals("REGULAR", enumType.toFIXNameString());
-        assertEquals("0 - Regular", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("0", enumType.toEnumIDString());
+        assertEquals("REGULAR", enumType.toEnumNameString());
+        assertEquals("0 - Regular", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum81ProcessCode.SOFT_DOLLAR;
-        assertEquals("1", enumType.toFIXIDString());
-        assertEquals("SOFT_DOLLAR", enumType.toFIXNameString());
-        assertEquals("1 - Soft Dollar", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("1", enumType.toEnumIDString());
+        assertEquals("SOFT_DOLLAR", enumType.toEnumNameString());
+        assertEquals("1 - Soft Dollar", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum81ProcessCode.STEP_IN;
-        assertEquals("2", enumType.toFIXIDString());
-        assertEquals("STEP_IN", enumType.toFIXNameString());
-        assertEquals("2 - Step In", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("2", enumType.toEnumIDString());
+        assertEquals("STEP_IN", enumType.toEnumNameString());
+        assertEquals("2 - Step In", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum81ProcessCode.STEP_OUT;
-        assertEquals("3", enumType.toFIXIDString());
-        assertEquals("STEP_OUT", enumType.toFIXNameString());
-        assertEquals("3 - Step Out", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("3", enumType.toEnumIDString());
+        assertEquals("STEP_OUT", enumType.toEnumNameString());
+        assertEquals("3 - Step Out", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum81ProcessCode.SOFT_DOLLAR_STEP_IN;
-        assertEquals("4", enumType.toFIXIDString());
-        assertEquals("SOFT_DOLLAR_STEP_IN", enumType.toFIXNameString());
-        assertEquals("4 - Soft Dollar, Step In", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("4", enumType.toEnumIDString());
+        assertEquals("SOFT_DOLLAR_STEP_IN", enumType.toEnumNameString());
+        assertEquals("4 - Soft Dollar, Step In", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = Enum81ProcessCode.SOFT_DOLLAR_STEP_OUT;
-        assertEquals("5", enumType.toFIXIDString());
-        assertEquals("SOFT_DOLLAR_STEP_OUT", enumType.toFIXNameString());
-        assertEquals("5 - Soft Dollar, Step Out", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("5", enumType.toEnumIDString());
+        assertEquals("SOFT_DOLLAR_STEP_OUT", enumType.toEnumNameString());
+        assertEquals("5 - Soft Dollar, Step Out", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum81ProcessCode.PLAN_SPONSOR;
-        assertEquals("6", enumType.toFIXIDString());
-        assertEquals("PLAN_SPONSOR", enumType.toFIXNameString());
-        assertEquals("6 - Plan Sponsor", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("6", enumType.toEnumIDString());
+        assertEquals("PLAN_SPONSOR", enumType.toEnumNameString());
+        assertEquals("6 - Plan Sponsor", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

@@ -41,12 +41,12 @@ class Tag480EnuCancellationRightsTest {
     @Test
     void FIX0480Test() {
         FIX43 fixData = FIX43.FIX480_ENU_CANCELLATION_RIGHTS;
-        assertEquals( "480", fixData.toFIXIDString());
-        assertEquals( "CANCELLATION_RIGHTS", fixData.toFIXNameString());
-        assertEquals( "CancellationRights", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "480", fixData.toEnumIDString());
+        assertEquals( "CANCELLATION_RIGHTS", fixData.toEnumNameString());
+        assertEquals( "CancellationRights", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0480Test() {
@@ -56,19 +56,19 @@ class Tag480EnuCancellationRightsTest {
          * Y, N, M, and O types
          */
         tagData = new Tag480EnuCancellationRights( Enum480CancellationRights.YES );
-        assertEquals( Enum480CancellationRights.YES.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum480CancellationRights.YES.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag480EnuCancellationRights( Enum480CancellationRights.EXECUTION_ONLY );
-        assertEquals( Enum480CancellationRights.EXECUTION_ONLY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum480CancellationRights.EXECUTION_ONLY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag480EnuCancellationRights( Enum480CancellationRights.WAIVER_AGREEMENT );
-        assertEquals( Enum480CancellationRights.WAIVER_AGREEMENT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum480CancellationRights.WAIVER_AGREEMENT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag480EnuCancellationRights( Enum480CancellationRights.INSTITUTIONAL );
-        assertEquals( Enum480CancellationRights.INSTITUTIONAL.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum480CancellationRights.INSTITUTIONAL.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -99,7 +99,7 @@ class Tag480EnuCancellationRightsTest {
         // loop around the ENUM and process
         for (Enum480CancellationRights oneEnum : Enum480CancellationRights.values()) {
             tagData = new Tag480EnuCancellationRights(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -123,12 +123,12 @@ class Tag480EnuCancellationRightsTest {
         for (Enum480CancellationRights oneEnum : Enum480CancellationRights.values()) {
             tagData = new Tag480EnuCancellationRights(oneEnum);
             assertEquals( "Tag480EnuCancellationRights\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

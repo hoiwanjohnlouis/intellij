@@ -52,7 +52,7 @@ public class Tag785StrSettlPartySubID extends FIX44Abstract implements LogValueP
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

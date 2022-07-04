@@ -40,19 +40,19 @@ class Enum787DlvyInstTypeTest {
         Enum787DlvyInstType enumType;
 
         enumType = Enum787DlvyInstType.CASH;
-        assertEquals("C", enumType.toFIXIDString());
-        assertEquals("CASH", enumType.toFIXNameString());
-        assertEquals("C - Cash", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("C", enumType.toEnumIDString());
+        assertEquals("CASH", enumType.toEnumNameString());
+        assertEquals("C - Cash", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum787DlvyInstType.SECURITIES;
-        assertEquals("S", enumType.toFIXIDString());
-        assertEquals("SECURITIES", enumType.toFIXNameString());
-        assertEquals("S - Securities", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("S", enumType.toEnumIDString());
+        assertEquals("SECURITIES", enumType.toEnumNameString());
+        assertEquals("S - Securities", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

@@ -52,12 +52,12 @@ class Tag522EnuOwnerTypeTest {
     @Test
     void FIX0522Test() {
         FIX43 fixData = FIX43.FIX522_ENU_OWNER_TYPE;
-        assertEquals( "522", fixData.toFIXIDString());
-        assertEquals( "OWNER_TYPE", fixData.toFIXNameString());
-        assertEquals( "OwnerType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "522", fixData.toEnumIDString());
+        assertEquals( "OWNER_TYPE", fixData.toEnumNameString());
+        assertEquals( "OwnerType", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0522Test() {
@@ -67,57 +67,57 @@ class Tag522EnuOwnerTypeTest {
          * 1-13 types
          */
         tagData = new Tag522EnuOwnerType( Enum522OwnerType.INDIVIDUAL_INVESTOR );
-        assertEquals( Enum522OwnerType.INDIVIDUAL_INVESTOR.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum522OwnerType.INDIVIDUAL_INVESTOR.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag522EnuOwnerType( Enum522OwnerType.PUBLIC_COMPANY );
-        assertEquals( Enum522OwnerType.PUBLIC_COMPANY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum522OwnerType.PUBLIC_COMPANY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag522EnuOwnerType( Enum522OwnerType.PRIVATE_COMPANY );
-        assertEquals( Enum522OwnerType.PRIVATE_COMPANY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum522OwnerType.PRIVATE_COMPANY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag522EnuOwnerType( Enum522OwnerType.INDIVIDUAL_TRUSTEE );
-        assertEquals( Enum522OwnerType.INDIVIDUAL_TRUSTEE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum522OwnerType.INDIVIDUAL_TRUSTEE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag522EnuOwnerType( Enum522OwnerType.COMPANY_TRUSTEE );
-        assertEquals( Enum522OwnerType.COMPANY_TRUSTEE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum522OwnerType.COMPANY_TRUSTEE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag522EnuOwnerType( Enum522OwnerType.PENSION_PLAN );
-        assertEquals( Enum522OwnerType.PENSION_PLAN.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum522OwnerType.PENSION_PLAN.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag522EnuOwnerType( Enum522OwnerType.CUSTODIAN_MINORS_ACT );
-        assertEquals( Enum522OwnerType.CUSTODIAN_MINORS_ACT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum522OwnerType.CUSTODIAN_MINORS_ACT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag522EnuOwnerType( Enum522OwnerType.TRUSTS );
-        assertEquals( Enum522OwnerType.TRUSTS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum522OwnerType.TRUSTS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag522EnuOwnerType( Enum522OwnerType.FIDUCIARIES );
-        assertEquals( Enum522OwnerType.FIDUCIARIES.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum522OwnerType.FIDUCIARIES.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag522EnuOwnerType( Enum522OwnerType.NETWORKING_SUB_ACCOUNT );
-        assertEquals( Enum522OwnerType.NETWORKING_SUB_ACCOUNT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum522OwnerType.NETWORKING_SUB_ACCOUNT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag522EnuOwnerType( Enum522OwnerType.NON_PROFIT_ORGANIZATION );
-        assertEquals( Enum522OwnerType.NON_PROFIT_ORGANIZATION.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum522OwnerType.NON_PROFIT_ORGANIZATION.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag522EnuOwnerType( Enum522OwnerType.CORPORATE_BODY );
-        assertEquals( Enum522OwnerType.CORPORATE_BODY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum522OwnerType.CORPORATE_BODY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag522EnuOwnerType( Enum522OwnerType.NOMINEE );
-        assertEquals( Enum522OwnerType.NOMINEE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum522OwnerType.NOMINEE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -148,7 +148,7 @@ class Tag522EnuOwnerTypeTest {
         // loop around the ENUM and process
         for (Enum522OwnerType oneEnum : Enum522OwnerType.values()) {
             tagData = new Tag522EnuOwnerType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -172,12 +172,12 @@ class Tag522EnuOwnerTypeTest {
         for (Enum522OwnerType oneEnum : Enum522OwnerType.values()) {
             tagData = new Tag522EnuOwnerType(oneEnum);
             assertEquals( "Tag522EnuOwnerType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

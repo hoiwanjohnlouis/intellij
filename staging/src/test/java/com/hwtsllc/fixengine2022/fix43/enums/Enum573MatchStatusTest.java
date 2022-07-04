@@ -46,30 +46,30 @@ class Enum573MatchStatusTest {
          *  0-2 types
          */
         enumType = Enum573MatchStatus.COMPARED_MATCHED_AFFIRMED;
-        assertEquals("0", enumType.toFIXIDString());
-        assertEquals("COMPARED_MATCHED_AFFIRMED", enumType.toFIXNameString());
-        assertEquals("0 - Compared, matched, or affirmed", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("0", enumType.toEnumIDString());
+        assertEquals("COMPARED_MATCHED_AFFIRMED", enumType.toEnumNameString());
+        assertEquals("0 - Compared, matched, or affirmed", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum573MatchStatus.UNCOMPARED_UNMATCHED_UNAFFIRMED;
-        assertEquals("1", enumType.toFIXIDString());
-        assertEquals("UNCOMPARED_UNMATCHED_UNAFFIRMED", enumType.toFIXNameString());
-        assertEquals("1 - Uncompared, unmatched, or unaffirmed", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("1", enumType.toEnumIDString());
+        assertEquals("UNCOMPARED_UNMATCHED_UNAFFIRMED", enumType.toEnumNameString());
+        assertEquals("1 - Uncompared, unmatched, or unaffirmed", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum573MatchStatus.ADVISORY;
-        assertEquals("2", enumType.toFIXIDString());
-        assertEquals("ADVISORY", enumType.toFIXNameString());
-        assertEquals("2 - Advisory or alert", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("2", enumType.toEnumIDString());
+        assertEquals("ADVISORY", enumType.toEnumNameString());
+        assertEquals("2 - Advisory or alert", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

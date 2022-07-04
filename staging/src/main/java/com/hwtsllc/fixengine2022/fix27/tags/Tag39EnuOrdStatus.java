@@ -27,30 +27,33 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  39
  *  OrdStatus
  *  char
+ *  <p></p>
  *  Identifies current status of order.
- *
+ *  <p></p>
  *  *** SOME VALUES HAVE BEEN REPLACED ***
+ *  <p>
  *  *** See Replaced Features and Supported Approach ***
+ *  <p>
  *      (see Volume : "Glossary" for value definitions)
- *
+ *  <p></p>
  *  Valid values:
- *      0 - New
- *      1 - Partially filled
- *      2 - Filled
- *      3 - Done for day
- *      4 - Canceled
- *
- *      5 - Replaced (No longer used)
- *      6 - Pending Cancel (i.e. result of Order Cancel Request)
- *      7 - Stopped
- *      8 - Rejected
- *      9 - Suspended
- *
- *      A - Pending New
- *      B - Calculated
- *      C - Expired
- *      D - Accepted for Bidding
- *      E - Pending Replace (i.e. result of Order Cancel/Replace Request)
+ *  <p>    0 - New
+ *  <p>    1 - Partially filled
+ *  <p>    2 - Filled
+ *  <p>    3 - Done for day
+ *  <p>    4 - Canceled
+ *  <p></p>
+ *  <p>    5 - Replaced (No longer used)
+ *  <p>    6 - Pending Cancel (i.e. result of Order Cancel Request)
+ *  <p>    7 - Stopped
+ *  <p>    8 - Rejected
+ *  <p>    9 - Suspended
+ *  <p></p>
+ *  <p>    A - Pending New
+ *  <p>    B - Calculated
+ *  <p>    C - Expired
+ *  <p>    D - Accepted for Bidding
+ *  <p>    E - Pending Replace (i.e. result of Order Cancel/Replace Request)
  */
 public class Tag39EnuOrdStatus extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum39OrdStatus dataValue;
@@ -66,14 +69,14 @@ public class Tag39EnuOrdStatus extends FIX27Abstract implements LogValuePairStri
     }
 
     public String getDataValue() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(getDataValue());
     }
@@ -105,21 +108,21 @@ public class Tag39EnuOrdStatus extends FIX27Abstract implements LogValuePairStri
      */
     @Override
     public String toDataIDString() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * wrapper to return the Name of the underlying Data
      */
     @Override
     public String toDataNameString() {
-        return this.dataValue.toFIXNameString();
+        return this.dataValue.toEnumNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data
      */
     @Override
     public String toDataDescriptionString() {
-        return this.dataValue.toFIXDescriptionString();
+        return this.dataValue.toEnumDescriptionString();
     }
     /**
      * standard wrapper to return a string describing the data

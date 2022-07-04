@@ -35,12 +35,12 @@ class Tag154AmtAllocNetMoneyTest {
     @Test
     void FIX0154Test() {
         FIX41 fixData = FIX41.FIX154_AMT_ALLOC_NET_MONEY;
-        assertEquals( "154", fixData.toFIXIDString());
-        assertEquals( "ALLOC_NET_MONEY", fixData.toFIXNameString());
-        assertEquals( "AllocNetMoney", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "154", fixData.toEnumIDString());
+        assertEquals( "ALLOC_NET_MONEY", fixData.toEnumNameString());
+        assertEquals( "AllocNetMoney", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0154Test() {
@@ -74,7 +74,7 @@ class Tag154AmtAllocNetMoneyTest {
         Tag154AmtAllocNetMoney tagData;
 
         tagData = new Tag154AmtAllocNetMoney(new MyAmtType(Tag154AmtAllocNetMoney.TESTB_AMT_ALLOC_NET_MONEY));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag154AmtAllocNetMoney.TESTB_AMT_ALLOC_NET_MONEY,
+        assertEquals( tagData.toEnumIDString() + "=" + Tag154AmtAllocNetMoney.TESTB_AMT_ALLOC_NET_MONEY,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toValuePairString());
@@ -95,12 +95,12 @@ class Tag154AmtAllocNetMoneyTest {
 
         tagData = new Tag154AmtAllocNetMoney(new MyAmtType(Tag154AmtAllocNetMoney.TESTA_AMT_ALLOC_NET_MONEY));
         assertEquals( "Tag154AmtAllocNetMoney\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + Tag154AmtAllocNetMoney.TESTA_AMT_ALLOC_NET_MONEY + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag154AmtAllocNetMoney.TESTA_AMT_ALLOC_NET_MONEY + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag154AmtAllocNetMoney.TESTA_AMT_ALLOC_NET_MONEY + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

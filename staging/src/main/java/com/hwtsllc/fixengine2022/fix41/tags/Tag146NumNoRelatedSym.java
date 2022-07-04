@@ -48,7 +48,7 @@ public class Tag146NumNoRelatedSym extends FIX41Abstract implements LogValuePair
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

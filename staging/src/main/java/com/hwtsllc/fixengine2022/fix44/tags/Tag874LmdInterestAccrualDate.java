@@ -53,7 +53,7 @@ public class Tag874LmdInterestAccrualDate extends FIX44Abstract implements LogVa
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

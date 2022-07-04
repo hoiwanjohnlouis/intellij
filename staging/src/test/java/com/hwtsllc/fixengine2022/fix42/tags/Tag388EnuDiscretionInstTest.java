@@ -46,12 +46,12 @@ class Tag388EnuDiscretionInstTest {
     @Test
     void FIX0388Test() {
         FIX42 fixData = FIX42.FIX388_ENU_DISCRETION_INST;
-        assertEquals( "388", fixData.toFIXIDString());
-        assertEquals( "DISCRETION_INST", fixData.toFIXNameString());
-        assertEquals( "DiscretionInst", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "388", fixData.toEnumIDString());
+        assertEquals( "DISCRETION_INST", fixData.toEnumNameString());
+        assertEquals( "DiscretionInst", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0388Test() {
@@ -61,29 +61,29 @@ class Tag388EnuDiscretionInstTest {
          *  0-7 msg types
          */
         tagData = new Tag388EnuDiscretionInst(Enum388DiscretionInst.RELATED_TO_DISPLAYED_PRICE);
-        assertEquals( Enum388DiscretionInst.RELATED_TO_DISPLAYED_PRICE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum388DiscretionInst.RELATED_TO_DISPLAYED_PRICE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag388EnuDiscretionInst(Enum388DiscretionInst.RELATED_TO_MARKET_PRICE);
-        assertEquals( Enum388DiscretionInst.RELATED_TO_MARKET_PRICE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum388DiscretionInst.RELATED_TO_MARKET_PRICE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag388EnuDiscretionInst(Enum388DiscretionInst.RELATED_TO_PRIMARY_PRICE);
-        assertEquals( Enum388DiscretionInst.RELATED_TO_PRIMARY_PRICE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum388DiscretionInst.RELATED_TO_PRIMARY_PRICE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag388EnuDiscretionInst(Enum388DiscretionInst.RELATED_TO_LOCAL_PRIMARY_PRICE);
-        assertEquals( Enum388DiscretionInst.RELATED_TO_LOCAL_PRIMARY_PRICE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum388DiscretionInst.RELATED_TO_LOCAL_PRIMARY_PRICE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag388EnuDiscretionInst(Enum388DiscretionInst.RELATED_TO_MIDPOINT_PRICE);
-        assertEquals( Enum388DiscretionInst.RELATED_TO_MIDPOINT_PRICE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum388DiscretionInst.RELATED_TO_MIDPOINT_PRICE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag388EnuDiscretionInst(Enum388DiscretionInst.RELATED_TO_LAST_TRADE_PRICE);
-        assertEquals( Enum388DiscretionInst.RELATED_TO_LAST_TRADE_PRICE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum388DiscretionInst.RELATED_TO_LAST_TRADE_PRICE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag388EnuDiscretionInst(Enum388DiscretionInst.RELATED_TO_VWAP);
-        assertEquals( Enum388DiscretionInst.RELATED_TO_VWAP.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum388DiscretionInst.RELATED_TO_VWAP.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         tagData = new Tag388EnuDiscretionInst(Enum388DiscretionInst.AVERAGE_PRICE_GUARANTEE);
-        assertEquals( Enum388DiscretionInst.AVERAGE_PRICE_GUARANTEE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum388DiscretionInst.AVERAGE_PRICE_GUARANTEE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -114,7 +114,7 @@ class Tag388EnuDiscretionInstTest {
         // loop around the ENUM and process
         for (Enum388DiscretionInst oneEnum : Enum388DiscretionInst.values()) {
             tagData = new Tag388EnuDiscretionInst(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -138,12 +138,12 @@ class Tag388EnuDiscretionInstTest {
         for (Enum388DiscretionInst oneEnum : Enum388DiscretionInst.values()) {
             tagData = new Tag388EnuDiscretionInst(oneEnum);
             assertEquals( "Tag388EnuDiscretionInst\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

@@ -38,12 +38,12 @@ class Tag158PctAccruedInterestRateTest {
     @Test
     void FIX0158Test() {
         FIX41 fixData = FIX41.FIX158_PCT_ACCRUED_INTEREST_RATE;
-        assertEquals( "158", fixData.toFIXIDString());
-        assertEquals( "ACCRUED_INTEREST_RATE", fixData.toFIXNameString());
-        assertEquals( "AccruedInterestRate", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "158", fixData.toEnumIDString());
+        assertEquals( "ACCRUED_INTEREST_RATE", fixData.toEnumNameString());
+        assertEquals( "AccruedInterestRate", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0158Test() {
@@ -82,7 +82,7 @@ class Tag158PctAccruedInterestRateTest {
 
         tagData = new Tag158PctAccruedInterestRate(
                 new MyPercentageType(Tag158PctAccruedInterestRate.TESTB_PCT_ACCRUED_INTEREST_RATE));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag158PctAccruedInterestRate.TESTB_PCT_ACCRUED_INTEREST_RATE,
+        assertEquals( tagData.toEnumIDString() + "=" + Tag158PctAccruedInterestRate.TESTB_PCT_ACCRUED_INTEREST_RATE,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toValuePairString());
@@ -105,12 +105,12 @@ class Tag158PctAccruedInterestRateTest {
         tagData = new Tag158PctAccruedInterestRate(
                 new MyPercentageType(Tag158PctAccruedInterestRate.TESTA_PCT_ACCRUED_INTEREST_RATE));
         assertEquals( "Tag158PctAccruedInterestRate\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + Tag158PctAccruedInterestRate.TESTA_PCT_ACCRUED_INTEREST_RATE + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" +
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" +
                                             Tag158PctAccruedInterestRate.TESTA_PCT_ACCRUED_INTEREST_RATE + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());

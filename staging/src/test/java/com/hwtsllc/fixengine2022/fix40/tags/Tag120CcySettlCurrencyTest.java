@@ -34,12 +34,12 @@ class Tag120CcySettlCurrencyTest {
     @Test
     void FIX0120Test() {
         FIX40 fixData = FIX40.FIX120_CCY_SETTL_CURRENCY;
-        assertEquals( "SETTL_CURRENCY", fixData.toFIXNameString());
-        assertEquals( "120", fixData.toFIXIDString());
-        assertEquals( "SettlCurrency", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "SETTL_CURRENCY", fixData.toEnumNameString());
+        assertEquals( "120", fixData.toEnumIDString());
+        assertEquals( "SettlCurrency", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0120Test() {
@@ -69,7 +69,7 @@ class Tag120CcySettlCurrencyTest {
         Tag120CcySettlCurrency tagData;
 
         tagData = new Tag120CcySettlCurrency(new MyCurrencyType(Tag120CcySettlCurrency.TESTB_CCY_SETTL_CURRENCY));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag120CcySettlCurrency.TESTB_CCY_SETTL_CURRENCY,
+        assertEquals( tagData.toEnumIDString() + "=" + Tag120CcySettlCurrency.TESTB_CCY_SETTL_CURRENCY,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toValuePairString());
@@ -90,12 +90,12 @@ class Tag120CcySettlCurrencyTest {
 
         tagData = new Tag120CcySettlCurrency(new MyCurrencyType(Tag120CcySettlCurrency.TESTA_CCY_SETTL_CURRENCY));
         assertEquals( "Tag120CcySettlCurrency\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + Tag120CcySettlCurrency.TESTA_CCY_SETTL_CURRENCY + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag120CcySettlCurrency.TESTA_CCY_SETTL_CURRENCY + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag120CcySettlCurrency.TESTA_CCY_SETTL_CURRENCY + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

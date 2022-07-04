@@ -46,19 +46,19 @@ class Tag1032EnuOrderHandlingInstSourceTest {
     @Test
     void FIX1032Test() {
         FIX50 fixData = FIX50.FIX1032_ENU_ORDER_HANDLING_INST_SOURCE;
-        assertEquals( "1032", fixData.toFIXIDString());
-        assertEquals( "ORDER_HANDLING_INST_SOURCE", fixData.toFIXNameString());
-        assertEquals( "OrderHandlingInstSource", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "1032", fixData.toEnumIDString());
+        assertEquals( "ORDER_HANDLING_INST_SOURCE", fixData.toEnumNameString());
+        assertEquals( "OrderHandlingInstSource", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag1032Test() {
         Tag1032EnuOrderHandlingInstSource tagData;
 
         tagData = new Tag1032EnuOrderHandlingInstSource( MyEnumOrderSource.NASD_OATS );
-        assertEquals( MyEnumOrderSource.NASD_OATS.toFIXIDString(), tagData.getDataValue() );
+        assertEquals( MyEnumOrderSource.NASD_OATS.toEnumIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
@@ -89,7 +89,7 @@ class Tag1032EnuOrderHandlingInstSourceTest {
         // loop around the ENUM and process
         for (MyEnumOrderSource oneEnum : MyEnumOrderSource.values()) {
             tagData = new Tag1032EnuOrderHandlingInstSource(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -113,12 +113,12 @@ class Tag1032EnuOrderHandlingInstSourceTest {
         for (MyEnumOrderSource oneEnum : MyEnumOrderSource.values()) {
             tagData = new Tag1032EnuOrderHandlingInstSource(oneEnum);
             assertEquals( "Tag1032EnuOrderHandlingInstSource\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

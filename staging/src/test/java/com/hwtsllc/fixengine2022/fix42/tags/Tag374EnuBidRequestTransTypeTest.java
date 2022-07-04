@@ -41,12 +41,12 @@ class Tag374EnuBidRequestTransTypeTest {
     @Test
     void FIX0374Test() {
         FIX42 fixData = FIX42.FIX374_ENU_BID_REQUEST_TRANS_TYPE;
-        assertEquals( "374", fixData.toFIXIDString());
-        assertEquals( "BID_REQUEST_TRANS_TYPE", fixData.toFIXNameString());
-        assertEquals( "BidRequestTransType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "374", fixData.toEnumIDString());
+        assertEquals( "BID_REQUEST_TRANS_TYPE", fixData.toEnumNameString());
+        assertEquals( "BidRequestTransType", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0374Test() {
@@ -57,11 +57,11 @@ class Tag374EnuBidRequestTransTypeTest {
          * C, and N msg types
          */
         tagData = new Tag374EnuBidRequestTransType(Enum374BidRequestTransType.CANCEL);
-        assertEquals( Enum374BidRequestTransType.CANCEL.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum374BidRequestTransType.CANCEL.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag374EnuBidRequestTransType(Enum374BidRequestTransType.NEW);
-        assertEquals( Enum374BidRequestTransType.NEW.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum374BidRequestTransType.NEW.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -92,7 +92,7 @@ class Tag374EnuBidRequestTransTypeTest {
         // loop around the ENUM and process
         for (Enum374BidRequestTransType oneEnum : Enum374BidRequestTransType.values()) {
             tagData = new Tag374EnuBidRequestTransType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -116,12 +116,12 @@ class Tag374EnuBidRequestTransTypeTest {
         for (Enum374BidRequestTransType oneEnum : Enum374BidRequestTransType.values()) {
             tagData = new Tag374EnuBidRequestTransType(oneEnum);
             assertEquals( "Tag374EnuBidRequestTransType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

@@ -28,75 +28,108 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  56
  *  TargetCompID
  *  String
+ *  <p></p>
  *  Assigned value used to identify receiving firm.
  */
 class Tag56StrTargetCompIDTest {
     @Test
     void FIX0056Test() {
         FIX27 fixData = FIX27.FIX56_STR_TARGET_COMP_ID;
-        assertEquals( "TARGET_COMP_ID", fixData.toFIXNameString());
-        assertEquals( "56", fixData.toFIXIDString());
-        assertEquals( "TargetCompID", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "TARGET_COMP_ID", fixData.toEnumNameString());
+        assertEquals( "56", fixData.toEnumIDString());
+        assertEquals( "TargetCompID", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0056Test() {
         Tag56StrTargetCompID tagData;
+        String oneElement;
 
-        tagData = new Tag56StrTargetCompID(new MyStringType("JPMC") );
-        assertEquals( "JPMC", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        oneElement = "JPMC";
+        tagData = new Tag56StrTargetCompID(new MyStringType( oneElement ) );
+        verifyTagInformation( tagData, oneElement );
+
+        oneElement = Tag56StrTargetCompID.TESTA_STR_TARGET_COMP_ID;
+        tagData = new Tag56StrTargetCompID(new MyStringType( oneElement ) );
+        verifyTagInformation( tagData, oneElement );
+
+        oneElement = Tag56StrTargetCompID.TESTB_STR_TARGET_COMP_ID;
+        tagData = new Tag56StrTargetCompID(new MyStringType( oneElement ));
+        verifyTagInformation( tagData, oneElement );
     }
+
+    private void verifyTagInformation( Tag56StrTargetCompID tagData, String oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "TARGET_COMP_ID", tagData.toEnumNameString());
+        assertEquals( "56", tagData.toEnumIDString());
+        assertEquals( "TargetCompID", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void PrintFIXTagTest() {
         Tag56StrTargetCompID tagData;
+        String oneElement;
 
-        tagData = new Tag56StrTargetCompID(new MyStringType(Tag56StrTargetCompID.TESTB_STR_TARGET_COMP_ID));
+        oneElement = Tag56StrTargetCompID.TESTA_STR_TARGET_COMP_ID;
+        tagData = new Tag56StrTargetCompID(new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag56StrTargetCompID.TESTB_STR_TARGET_COMP_ID;
+        tagData = new Tag56StrTargetCompID(new MyStringType( oneElement ));
         System.out.println( tagData.toVerboseString() );
     }
     @Test
     void TagGetDataValueTest() {
         Tag56StrTargetCompID tagData;
+        String oneElement;
 
-        tagData = new Tag56StrTargetCompID(new MyStringType(Tag56StrTargetCompID.TESTB_STR_TARGET_COMP_ID));
-        assertEquals( Tag56StrTargetCompID.TESTB_STR_TARGET_COMP_ID, tagData.getDataValue());
+        oneElement = Tag56StrTargetCompID.TESTB_STR_TARGET_COMP_ID;
+        tagData = new Tag56StrTargetCompID(new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {
         Tag56StrTargetCompID tagData;
+        String oneElement;
 
-        tagData = new Tag56StrTargetCompID(new MyStringType(Tag56StrTargetCompID.TESTB_STR_TARGET_COMP_ID));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag56StrTargetCompID.TESTB_STR_TARGET_COMP_ID,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag56StrTargetCompID.TESTB_STR_TARGET_COMP_ID;
+        tagData = new Tag56StrTargetCompID(new MyStringType( oneElement ) );
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
     @Test
     void TagToStringTest() {
         Tag56StrTargetCompID tagData;
+        String oneElement;
 
-        tagData = new Tag56StrTargetCompID(new MyStringType(Tag56StrTargetCompID.TESTB_STR_TARGET_COMP_ID));
-        assertEquals( Tag56StrTargetCompID.TESTB_STR_TARGET_COMP_ID,
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag56StrTargetCompID.TESTB_STR_TARGET_COMP_ID;
+        tagData = new Tag56StrTargetCompID(new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
     @Test
     void TagToVerboseStringTest() {
         Tag56StrTargetCompID tagData;
+        String oneElement;
 
-        tagData = new Tag56StrTargetCompID(new MyStringType(Tag56StrTargetCompID.TESTA_STR_TARGET_COMP_ID));
+        oneElement = Tag56StrTargetCompID.TESTA_STR_TARGET_COMP_ID;
+        tagData = new Tag56StrTargetCompID(new MyStringType( oneElement ) );
         assertEquals( "Tag56StrTargetCompID\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag56StrTargetCompID.TESTA_STR_TARGET_COMP_ID + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag56StrTargetCompID.TESTA_STR_TARGET_COMP_ID + "]",
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

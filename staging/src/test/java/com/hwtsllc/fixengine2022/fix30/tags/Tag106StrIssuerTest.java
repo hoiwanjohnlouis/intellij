@@ -36,14 +36,14 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag106StrIssuerTest {
 
     @Test
-    void FIX0106Test() {
+    void FIXTest() {
         FIX30 fixData = FIX30.FIX106_STR_ISSUER;
-        assertEquals( "ISSUER", fixData.toFIXNameString());
-        assertEquals( "106", fixData.toFIXIDString());
-        assertEquals( "Issuer", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "ISSUER", fixData.toEnumNameString());
+        assertEquals( "106", fixData.toEnumIDString());
+        assertEquals( "Issuer", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0106Test() {
@@ -54,6 +54,12 @@ class Tag106StrIssuerTest {
         tagData = new Tag106StrIssuer(new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "ISSUER", tagData.toEnumNameString());
+        assertEquals( "106", tagData.toEnumIDString());
+        assertEquals( "Issuer", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         oneElement = Tag106StrIssuer.TESTA_STR_ISSUER;
         tagData = new Tag106StrIssuer(new MyStringType( oneElement ) );
@@ -95,7 +101,7 @@ class Tag106StrIssuerTest {
 
         oneElement = Tag106StrIssuer.TESTB_STR_ISSUER;
         tagData = new Tag106StrIssuer(new MyStringType( oneElement ));
-        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
     @Test
@@ -116,12 +122,12 @@ class Tag106StrIssuerTest {
         oneElement = Tag106StrIssuer.TESTA_STR_ISSUER;
         tagData = new Tag106StrIssuer(new MyStringType( oneElement ));
         assertEquals( "Tag106StrIssuer\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

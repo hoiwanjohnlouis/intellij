@@ -26,6 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  86
  *  DlvyInst
  *  String
+ *  <p></p>
  *  Deprecated in FIX.4.2 Free format text field to indicate delivery instructions
  */
 // @Deprecated
@@ -33,9 +34,9 @@ public class Tag86StrDlvyInst extends FIX27Abstract implements LogValuePairStrin
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_DLVY_INST
-            = "BilboBaggins-Tag86StrDlvyInst";
+            = "ClaudetteColbert-Tag86StrDlvyInst";
     public final static String TESTB_STR_DLVY_INST
-            = "Gandalf-Tag86StrDlvyInst";
+            = "AnnaMayWong-Tag86StrDlvyInst";
 
     public Tag86StrDlvyInst(MyStringType dataValue) {
         setFixType(FIX27.FIX86_STR_DLVY_INST);
@@ -50,7 +51,7 @@ public class Tag86StrDlvyInst extends FIX27Abstract implements LogValuePairStrin
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

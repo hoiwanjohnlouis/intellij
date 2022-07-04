@@ -26,16 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  57
  *  TargetSubID
  *  String
+ *  <p></p>
  *  Assigned value used to identify specific individual or unit intended to receive message.
+ *  <p></p>
  *  "ADMIN" reserved for administrative messages not intended for a specific user.
  */
 public class Tag57StrTargetSubID extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_TARGET_SUB_ID
-            = "BilboBaggins-Tag57StrTargetSubID";
+            = "FayWray-Tag57StrTargetSubID";
     public final static String TESTB_STR_TARGET_SUB_ID
-            = "Gandalf-Tag57StrTargetSubID";
+            = "DorisDay-Tag57StrTargetSubID";
 
     public Tag57StrTargetSubID(MyStringType dataValue) {
         setFixType(FIX27.FIX57_STR_TARGET_SUB_ID);
@@ -50,7 +52,7 @@ public class Tag57StrTargetSubID extends FIX27Abstract implements LogValuePairSt
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

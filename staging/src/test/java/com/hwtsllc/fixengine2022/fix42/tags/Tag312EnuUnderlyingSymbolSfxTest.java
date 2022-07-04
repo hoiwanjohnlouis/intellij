@@ -62,23 +62,23 @@ class Tag312EnuUnderlyingSymbolSfxTest {
     @Test
     void FIX0312Test() {
         FIX42 fixData = FIX42.FIX312_ENU_UNDERLYING_SYMBOL_SFX;
-        assertEquals( "312", fixData.toFIXIDString());
-        assertEquals( "UNDERLYING_SYMBOL_SFX", fixData.toFIXNameString());
-        assertEquals( "UnderlyingSymbolSfx", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "312", fixData.toEnumIDString());
+        assertEquals( "UNDERLYING_SYMBOL_SFX", fixData.toEnumNameString());
+        assertEquals( "UnderlyingSymbolSfx", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0312Test() {
         Tag312EnuUnderlyingSymbolSfx tagData;
 
         tagData = new Tag312EnuUnderlyingSymbolSfx(MyEnumSymbolSfx.EUCP);
-        assertEquals( MyEnumSymbolSfx.EUCP.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumSymbolSfx.EUCP.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag312EnuUnderlyingSymbolSfx(MyEnumSymbolSfx.WHEN_ISSUED);
-        assertEquals( MyEnumSymbolSfx.WHEN_ISSUED.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumSymbolSfx.WHEN_ISSUED.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -109,7 +109,7 @@ class Tag312EnuUnderlyingSymbolSfxTest {
         // loop around the ENUM and process
         for (MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
             tagData = new Tag312EnuUnderlyingSymbolSfx(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -133,12 +133,12 @@ class Tag312EnuUnderlyingSymbolSfxTest {
         for (MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
             tagData = new Tag312EnuUnderlyingSymbolSfx(oneEnum);
             assertEquals( "Tag312EnuUnderlyingSymbolSfx\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

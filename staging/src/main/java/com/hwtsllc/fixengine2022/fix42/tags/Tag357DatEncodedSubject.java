@@ -53,7 +53,7 @@ public class Tag357DatEncodedSubject extends FIX42Abstract implements LogValuePa
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

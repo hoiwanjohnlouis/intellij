@@ -26,16 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  30
  *  LastMkt
  *  Exchange
+ *  <p></p>
  *  Market of execution for last fill, or an indication of the market where an order was routed
+ *  <p></p>
  *  See "Appendix 6-C"
  */
 public class Tag30StrLastMkt extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_LAST_MKT
-            = "BilboBaggins-Tag30StrLastMkt";
+            = "Neo-Tag30StrLastMkt";
     public final static String TESTB_STR_LAST_MKT
-            = "Gandalf-Tag30StrLastMkt";
+            = "JohnWick-Tag30StrLastMkt";
 
     public Tag30StrLastMkt(MyStringType dataValue) {
         setFixType(FIX27.FIX30_STR_LAST_MKT);
@@ -50,7 +52,7 @@ public class Tag30StrLastMkt extends FIX27Abstract implements LogValuePairString
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

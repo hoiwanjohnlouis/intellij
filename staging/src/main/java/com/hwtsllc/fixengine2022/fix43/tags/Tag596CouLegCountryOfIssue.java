@@ -52,7 +52,7 @@ public class Tag596CouLegCountryOfIssue extends FIX43Abstract implements LogValu
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

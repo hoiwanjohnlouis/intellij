@@ -27,11 +27,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  94
  *  EmailType
  *  char
+ *  <p></p>
  *  Email message type.
+ *  <p></p>
  *  Valid values:
- *      0 - New
- *      1 - Reply
- *      2 - Admin Reply
+ *  <p>    0 - New
+ *  <p>    1 - Reply
+ *  <p>    2 - Admin Reply
  */
 public class Tag94EnuEmailType extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum94EmailType dataValue;
@@ -47,14 +49,14 @@ public class Tag94EnuEmailType extends FIX27Abstract implements LogValuePairStri
     }
 
     public String getDataValue() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(getDataValue());
     }
@@ -86,21 +88,21 @@ public class Tag94EnuEmailType extends FIX27Abstract implements LogValuePairStri
      */
     @Override
     public String toDataIDString() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * wrapper to return the Name of the underlying Data
      */
     @Override
     public String toDataNameString() {
-        return this.dataValue.toFIXNameString();
+        return this.dataValue.toEnumNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data
      */
     @Override
     public String toDataDescriptionString() {
-        return this.dataValue.toFIXDescriptionString();
+        return this.dataValue.toEnumDescriptionString();
     }
     /**
      * standard wrapper to return a string describing the data

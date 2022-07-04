@@ -23,17 +23,22 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  81
  *  ProcessCode
  *  char
+ *  <p></p>
  *  Processing code for sub-account.
+ *  <p></p>
  *  Absence of this field in AllocAccount (79), AllocPrice (366),
+ *  <p></p>
  *  AllocQty (80), ProcessCode instance indicates regular trade.
+ *  <p></p>
  *  Valid values:
- *      0 - Regular
- *      1 - Soft Dollar
- *      2 - Step-In
- *      3 - Step-Out
- *      4 - Soft-dollar Step-In
- *      5 - Soft-dollar Step-Out
- *      6 - Plan Sponsor
+ *  <p>    0 - Regular
+ *  <p>    1 - Soft Dollar
+ *  <p>    2 - Step-In
+ *  <p>    3 - Step-Out
+ *  <p>    4 - Soft-dollar Step-In
+ *  <p></p>
+ *  <p>    5 - Soft-dollar Step-Out
+ *  <p>    6 - Plan Sponsor
  */
 public enum Enum81ProcessCode implements LogFIXString, LogVerboseString {
     REGULAR("0", "REGULAR", "0 - Regular" ),
@@ -60,28 +65,28 @@ public enum Enum81ProcessCode implements LogFIXString, LogVerboseString {
      * standard wrapper to retrieve the specific enum name
      */
     @Override
-    public String toEnumNameString() {
+    public String toEnumLabelString() {
         return this.name();
     }
     /**
      * standard wrapper to retrieve the specific fix action code for this enum. eg: the first field
      */
     @Override
-    public String toFIXIDString() {
+    public String toEnumIDString() {
         return id;
     }
     /**
      * standard wrapper to retrieve the specific fix name for this enum. eg: the second field
      */
     @Override
-    public String toFIXNameString() {
+    public String toEnumNameString() {
         return name;
     }
     /**
      * standard wrapper to retrieve the specific fix description for this enum. eg: the third field
      */
     @Override
-    public String toFIXDescriptionString() {
+    public String toEnumDescriptionString() {
         return description;
     }
     /**
@@ -91,16 +96,16 @@ public enum Enum81ProcessCode implements LogFIXString, LogVerboseString {
     public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
-                .concat(toEnumNameString())
+                .concat( toEnumLabelString())
                 .concat("]")
                 .concat("\n\tAction[")
-                .concat(toFIXIDString())
+                .concat( toEnumIDString())
                 .concat("]")
                 .concat("\n\tName[")
-                .concat(toFIXNameString())
+                .concat( toEnumNameString())
                 .concat("]")
                 .concat("\n\tDescription[")
-                .concat(toFIXDescriptionString())
+                .concat( toEnumDescriptionString())
                 .concat("]");
     }
     /**
@@ -108,13 +113,13 @@ public enum Enum81ProcessCode implements LogFIXString, LogVerboseString {
      */
     @Override
     public String toString() {
-        return toEnumNameString()
+        return toEnumLabelString()
                 .concat("=[")
-                .concat(toFIXIDString())
+                .concat( toEnumIDString())
                 .concat(",")
-                .concat(toFIXNameString())
+                .concat( toEnumNameString())
                 .concat(",")
-                .concat(toFIXDescriptionString())
+                .concat( toEnumDescriptionString())
                 .concat("]");
     }
 

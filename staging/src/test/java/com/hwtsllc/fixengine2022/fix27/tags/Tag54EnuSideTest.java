@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumSide;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -60,93 +59,98 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag54EnuSideTest {
     @Test
-    void FIX0054Test() {
-        FIX27 fixData = FIX27.FIX54_ENU_SIDE;
-        assertEquals( "SIDE", fixData.toFIXNameString());
-        assertEquals( "54", fixData.toFIXIDString());
-        assertEquals( "Side", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
-    }
-    @Test
     void Tag0054Test() {
         Tag54EnuSide tagData;
-
 
         /*
          * 1-9 msg types
          */
         tagData = new Tag54EnuSide(MyEnumSide.BUY);
-        assertEquals(MyEnumSide.BUY.toFIXIDString(), tagData.getDataValue());
+        assertEquals("1", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag54EnuSide(MyEnumSide.SELL);
-        assertEquals(MyEnumSide.SELL.toFIXIDString(), tagData.getDataValue());
+        assertEquals("2", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag54EnuSide(MyEnumSide.BUY_MINUS);
-        assertEquals(MyEnumSide.BUY_MINUS.toFIXIDString(), tagData.getDataValue());
+        assertEquals("3", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag54EnuSide(MyEnumSide.SELL_PLUS);
-        assertEquals(MyEnumSide.SELL_PLUS.toFIXIDString(), tagData.getDataValue());
+        assertEquals("4", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag54EnuSide(MyEnumSide.SELL_SHORT);
-        assertEquals(MyEnumSide.SELL_SHORT.toFIXIDString(), tagData.getDataValue());
+        assertEquals("5", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag54EnuSide(MyEnumSide.SELL_SHORT_EXEMPT);
-        assertEquals(MyEnumSide.SELL_SHORT_EXEMPT.toFIXIDString(), tagData.getDataValue());
+        assertEquals("6", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag54EnuSide(MyEnumSide.UNDISCLOSED);
-        assertEquals(MyEnumSide.UNDISCLOSED.toFIXIDString(), tagData.getDataValue());
+        assertEquals("7", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag54EnuSide(MyEnumSide.CROSS);
-        assertEquals(MyEnumSide.CROSS.toFIXIDString(), tagData.getDataValue());
+        assertEquals("8", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag54EnuSide(MyEnumSide.CROSS_SHORT);
-        assertEquals(MyEnumSide.CROSS_SHORT.toFIXIDString(), tagData.getDataValue());
+        assertEquals("9", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
 
 
         /*
          * A-G msg types
          */
         tagData = new Tag54EnuSide(MyEnumSide.CROSS_SHORT_EXEMPT);
-        assertEquals(MyEnumSide.CROSS_SHORT_EXEMPT.toFIXIDString(), tagData.getDataValue());
+        assertEquals("A", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag54EnuSide(MyEnumSide.AS_DEFINED);
-        assertEquals(MyEnumSide.AS_DEFINED.toFIXIDString(), tagData.getDataValue());
+        assertEquals("B", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag54EnuSide(MyEnumSide.OPPOSITE);
-        assertEquals(MyEnumSide.OPPOSITE.toFIXIDString(), tagData.getDataValue());
+        assertEquals("C", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag54EnuSide(MyEnumSide.SUBSCRIBE);
-        assertEquals(MyEnumSide.SUBSCRIBE.toFIXIDString(), tagData.getDataValue());
+        assertEquals("D", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag54EnuSide(MyEnumSide.REDEEM);
-        assertEquals(MyEnumSide.REDEEM.toFIXIDString(), tagData.getDataValue());
+        assertEquals("E", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag54EnuSide(MyEnumSide.LEND_FINANCING);
-        assertEquals(MyEnumSide.LEND_FINANCING.toFIXIDString(), tagData.getDataValue());
+        assertEquals("F", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag54EnuSide(MyEnumSide.BORROW_FINANCING);
-        assertEquals(MyEnumSide.BORROW_FINANCING.toFIXIDString(), tagData.getDataValue());
+        assertEquals("G", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void FIXTest() {
+        Tag54EnuSide tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumSide oneEnum : MyEnumSide.values()) {
+            tagData = new Tag54EnuSide(oneEnum);
+            assertEquals( "FIX54_ENU_SIDE", tagData.toEnumLabelString());
+            assertEquals( "SIDE", tagData.toEnumNameString());
+            assertEquals( "54", tagData.toEnumIDString());
+            assertEquals( "Side", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void PrintFIXTagTest() {
@@ -166,6 +170,7 @@ class Tag54EnuSideTest {
         for (MyEnumSide oneEnum : MyEnumSide.values()) {
             tagData = new Tag54EnuSide(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
@@ -176,7 +181,7 @@ class Tag54EnuSideTest {
         // loop around the ENUM and process
         for (MyEnumSide oneEnum : MyEnumSide.values()) {
             tagData = new Tag54EnuSide(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -200,12 +205,12 @@ class Tag54EnuSideTest {
         for (MyEnumSide oneEnum : MyEnumSide.values()) {
             tagData = new Tag54EnuSide(oneEnum);
             assertEquals( "Tag54EnuSide\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

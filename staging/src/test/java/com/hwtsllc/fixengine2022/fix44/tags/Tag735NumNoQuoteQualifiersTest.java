@@ -35,12 +35,12 @@ class Tag735NumNoQuoteQualifiersTest {
     @Test
     void FIX0735Test() {
         FIX44 fixData = FIX44.FIX735_NUM_NO_QUOTE_QUALIFIERS;
-        assertEquals( "735", fixData.toFIXIDString());
-        assertEquals( "NO_QUOTE_QUALIFIERS", fixData.toFIXNameString());
-        assertEquals( "NoQuoteQualifiers", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "735", fixData.toEnumIDString());
+        assertEquals( "NO_QUOTE_QUALIFIERS", fixData.toEnumNameString());
+        assertEquals( "NoQuoteQualifiers", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0735Test() {
@@ -51,12 +51,12 @@ class Tag735NumNoQuoteQualifiersTest {
         tagData = new Tag735NumNoQuoteQualifiers( new MyNumInGroupType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "735", tagData.toFIXIDString());
-        assertEquals( "NO_QUOTE_QUALIFIERS", tagData.toFIXNameString());
-        assertEquals( "NoQuoteQualifiers", tagData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
+        assertEquals( "735", tagData.toEnumIDString());
+        assertEquals( "NO_QUOTE_QUALIFIERS", tagData.toEnumNameString());
+        assertEquals( "NoQuoteQualifiers", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         oneElement = Tag735NumNoQuoteQualifiers.TESTB_NUM_NO_QUOTE_QUALIFIERS;
         tagData = new Tag735NumNoQuoteQualifiers( new MyNumInGroupType( oneElement ) );
@@ -93,7 +93,7 @@ class Tag735NumNoQuoteQualifiersTest {
 
         oneElement = Tag735NumNoQuoteQualifiers.TESTB_NUM_NO_QUOTE_QUALIFIERS;
         tagData = new Tag735NumNoQuoteQualifiers( new MyNumInGroupType( oneElement ) );
-        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
     }
     @Test
@@ -114,12 +114,12 @@ class Tag735NumNoQuoteQualifiersTest {
         oneElement = Tag735NumNoQuoteQualifiers.TESTA_NUM_NO_QUOTE_QUALIFIERS;
         tagData = new Tag735NumNoQuoteQualifiers( new MyNumInGroupType( oneElement ) );
         assertEquals( "Tag735NumNoQuoteQualifiers\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

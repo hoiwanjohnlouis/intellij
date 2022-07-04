@@ -50,7 +50,7 @@ public class Tag1131StrRefCstmApplVerID extends FIX50Abstract implements LogValu
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

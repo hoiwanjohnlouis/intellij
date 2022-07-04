@@ -39,23 +39,23 @@ class Tag1109EnuTriggerPriceDirectionTest {
     @Test
     void FIX1109Test() {
         FIX50 fixData = FIX50.FIX1109_ENU_TRIGGER_PRICE_DIRECTION;
-        assertEquals( "1109", fixData.toFIXIDString());
-        assertEquals( "TRIGGER_PRICE_DIRECTION", fixData.toFIXNameString());
-        assertEquals( "TriggerPriceDirection", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "1109", fixData.toEnumIDString());
+        assertEquals( "TRIGGER_PRICE_DIRECTION", fixData.toEnumNameString());
+        assertEquals( "TriggerPriceDirection", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag1109Test() {
         Tag1109EnuTriggerPriceDirection tagData;
 
         tagData = new Tag1109EnuTriggerPriceDirection( Enum1109TriggerPriceDirection.TRIGGER_UP );
-        assertEquals( Enum1109TriggerPriceDirection.TRIGGER_UP.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum1109TriggerPriceDirection.TRIGGER_UP.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1109EnuTriggerPriceDirection( Enum1109TriggerPriceDirection.TRIGGER_DOWN );
-        assertEquals( Enum1109TriggerPriceDirection.TRIGGER_DOWN.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum1109TriggerPriceDirection.TRIGGER_DOWN.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -86,7 +86,7 @@ class Tag1109EnuTriggerPriceDirectionTest {
         // loop around the ENUM and process
         for (Enum1109TriggerPriceDirection oneEnum : Enum1109TriggerPriceDirection.values()) {
             tagData = new Tag1109EnuTriggerPriceDirection(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -110,12 +110,12 @@ class Tag1109EnuTriggerPriceDirectionTest {
         for (Enum1109TriggerPriceDirection oneEnum : Enum1109TriggerPriceDirection.values()) {
             tagData = new Tag1109EnuTriggerPriceDirection(oneEnum);
             assertEquals( "Tag1109EnuTriggerPriceDirection\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

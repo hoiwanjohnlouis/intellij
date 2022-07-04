@@ -53,7 +53,7 @@ public class Tag818StrSecondaryTradeReportID extends FIX44Abstract implements Lo
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

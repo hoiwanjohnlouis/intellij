@@ -26,18 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  72
  *  RefAllocID
  *  String
- *  <p>
+ *  <p></p>
  *  Reference identifier to be used with AllocTransType (71) = Replace or Cancel.
- *  <p>
+ *  <p></p>
  *  (Prior to FIX 4.1 this field was of type int)
  */
 public class Tag72StrRefAllocID extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_REF_ALLOC_ID
-            = "BilboBaggins-Tag72StrRefAllocID";
+            = "OliviaDeHavilland-Tag72StrRefAllocID";
     public final static String TESTB_STR_REF_ALLOC_ID
-            = "Gandalf-Tag72StrRefAllocID";
+            = "VirginiaMayo-Tag72StrRefAllocID";
 
     public Tag72StrRefAllocID(MyStringType dataValue) {
         setFixType(FIX27.FIX72_STR_REF_ALLOC_ID);
@@ -52,7 +52,7 @@ public class Tag72StrRefAllocID extends FIX27Abstract implements LogValuePairStr
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

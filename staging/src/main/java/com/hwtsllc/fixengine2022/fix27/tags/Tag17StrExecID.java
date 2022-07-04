@@ -26,12 +26,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  17
  *  ExecID
  *  String
+ *  <p></p>
  *  Unique identifier of execution message as assigned by sell-side (broker, exchange, ECN)
+ *  <p></p>
  *  (will be 0 (zero) for ExecType (50) =I (Order Status)).
- *
+ *  <p></p>
  *  Uniqueness must be guaranteed within a single trading day or the life of a multi-day order.
  *  Firms which accept multi-day orders should consider embedding a date within
  *  the ExecID field to assure uniqueness across days.
+ *  <p></p>
  *  (Prior to FIX 4.1 this field was of type int)
  */
 public class Tag17StrExecID extends FIX27Abstract implements LogValuePairString, LogVerboseString {
@@ -55,7 +58,7 @@ public class Tag17StrExecID extends FIX27Abstract implements LogValuePairString,
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

@@ -57,7 +57,7 @@ public class Tag243IntUnderlyingRepoCollateralSecurityType extends FIX42Abstract
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

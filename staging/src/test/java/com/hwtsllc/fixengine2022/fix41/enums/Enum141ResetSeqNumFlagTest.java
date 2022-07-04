@@ -39,19 +39,19 @@ class Enum141ResetSeqNumFlagTest {
         Enum141ResetSeqNumFlag enumType;
 
         enumType = Enum141ResetSeqNumFlag.NO;
-        assertEquals("N",enumType.toFIXIDString());
-        assertEquals("NO", enumType.toFIXNameString());
-        assertEquals("N - No", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("N",enumType.toEnumIDString());
+        assertEquals("NO", enumType.toEnumNameString());
+        assertEquals("N - No", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum141ResetSeqNumFlag.YES;
-        assertEquals("Y", enumType.toFIXIDString());
-        assertEquals("YES", enumType.toFIXNameString());
-        assertEquals("Y - Yes, reset sequence numbers", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("Y", enumType.toEnumIDString());
+        assertEquals("YES", enumType.toEnumNameString());
+        assertEquals("Y - Yes, reset sequence numbers", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

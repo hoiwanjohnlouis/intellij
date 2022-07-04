@@ -52,7 +52,7 @@ public class Tag316PrcUnderlyingStrikePrice extends FIX42Abstract implements Log
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

@@ -51,12 +51,12 @@ class Tag528EnuOrderCapacityTest {
     @Test
     void FIX0528Test() {
         FIX43 fixData = FIX43.FIX528_ENU_ORDER_CAPACITY;
-        assertEquals( "528", fixData.toFIXIDString());
-        assertEquals( "ORDER_CAPACITY", fixData.toFIXNameString());
-        assertEquals( "OrderCapacity", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "528", fixData.toEnumIDString());
+        assertEquals( "ORDER_CAPACITY", fixData.toEnumNameString());
+        assertEquals( "OrderCapacity", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0528Test() {
@@ -66,28 +66,28 @@ class Tag528EnuOrderCapacityTest {
          *  A, G, I, P, R, and W types
          */
         tagData = new Tag528EnuOrderCapacity( Enum528OrderCapacity.AGENCY );
-        assertEquals( Enum528OrderCapacity.AGENCY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum528OrderCapacity.AGENCY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag528EnuOrderCapacity( Enum528OrderCapacity.PROPRIETARY );
-        assertEquals( Enum528OrderCapacity.PROPRIETARY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum528OrderCapacity.PROPRIETARY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag528EnuOrderCapacity( Enum528OrderCapacity.INDIVIDUAL );
-        assertEquals( Enum528OrderCapacity.INDIVIDUAL.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum528OrderCapacity.INDIVIDUAL.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag528EnuOrderCapacity( Enum528OrderCapacity.PRINCIPAL );
-        assertEquals( Enum528OrderCapacity.PRINCIPAL.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum528OrderCapacity.PRINCIPAL.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag528EnuOrderCapacity( Enum528OrderCapacity.RISKLESS_PRINCIPAL );
-        assertEquals( Enum528OrderCapacity.RISKLESS_PRINCIPAL.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum528OrderCapacity.RISKLESS_PRINCIPAL.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag528EnuOrderCapacity( Enum528OrderCapacity.AGENT_FOR_OTHER_MEMBER );
-        assertEquals( Enum528OrderCapacity.AGENT_FOR_OTHER_MEMBER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum528OrderCapacity.AGENT_FOR_OTHER_MEMBER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -118,7 +118,7 @@ class Tag528EnuOrderCapacityTest {
         // loop around the ENUM and process
         for (Enum528OrderCapacity oneEnum : Enum528OrderCapacity.values()) {
             tagData = new Tag528EnuOrderCapacity(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -142,12 +142,12 @@ class Tag528EnuOrderCapacityTest {
         for (Enum528OrderCapacity oneEnum : Enum528OrderCapacity.values()) {
             tagData = new Tag528EnuOrderCapacity(oneEnum);
             assertEquals( "Tag528EnuOrderCapacity\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

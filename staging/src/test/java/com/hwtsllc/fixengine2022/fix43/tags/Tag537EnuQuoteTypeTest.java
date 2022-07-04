@@ -59,12 +59,12 @@ class Tag537EnuQuoteTypeTest {
     @Test
     void FIX0537Test() {
         FIX43 fixData = FIX43.FIX537_ENU_QUOTE_TYPE;
-        assertEquals( "537", fixData.toFIXIDString());
-        assertEquals( "QUOTE_TYPE", fixData.toFIXNameString());
-        assertEquals( "QuoteType", fixData.toFIXDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "537", fixData.toEnumIDString());
+        assertEquals( "QUOTE_TYPE", fixData.toEnumNameString());
+        assertEquals( "QuoteType", fixData.toEnumDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0537Test() {
@@ -74,19 +74,19 @@ class Tag537EnuQuoteTypeTest {
          *  0-3 types
          */
         tagData = new Tag537EnuQuoteType( Enum537QuoteType.INDICATIVE );
-        assertEquals( Enum537QuoteType.INDICATIVE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum537QuoteType.INDICATIVE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag537EnuQuoteType( Enum537QuoteType.TRADEABLE );
-        assertEquals( Enum537QuoteType.TRADEABLE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum537QuoteType.TRADEABLE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag537EnuQuoteType( Enum537QuoteType.RESTRICTED_TRADEABLE );
-        assertEquals( Enum537QuoteType.RESTRICTED_TRADEABLE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum537QuoteType.RESTRICTED_TRADEABLE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag537EnuQuoteType( Enum537QuoteType.COUNTER );
-        assertEquals( Enum537QuoteType.COUNTER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum537QuoteType.COUNTER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -117,7 +117,7 @@ class Tag537EnuQuoteTypeTest {
         // loop around the ENUM and process
         for (Enum537QuoteType oneEnum : Enum537QuoteType.values()) {
             tagData = new Tag537EnuQuoteType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -141,12 +141,12 @@ class Tag537EnuQuoteTypeTest {
         for (Enum537QuoteType oneEnum : Enum537QuoteType.values()) {
             tagData = new Tag537EnuQuoteType(oneEnum);
             assertEquals( "Tag537EnuQuoteType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

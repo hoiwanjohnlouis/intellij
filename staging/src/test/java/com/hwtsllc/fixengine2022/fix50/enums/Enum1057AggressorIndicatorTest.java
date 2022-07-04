@@ -38,19 +38,19 @@ class Enum1057AggressorIndicatorTest {
         Enum1057AggressorIndicator enumType;
 
         enumType = Enum1057AggressorIndicator.PASSIVE;
-        assertEquals("N",enumType.toFIXIDString());
-        assertEquals("PASSIVE", enumType.toFIXNameString());
-        assertEquals("N - Order initiator is passive", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("N",enumType.toEnumIDString());
+        assertEquals("PASSIVE", enumType.toEnumNameString());
+        assertEquals("N - Order initiator is passive", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1057AggressorIndicator.AGGRESSOR;
-        assertEquals("Y", enumType.toFIXIDString());
-        assertEquals("AGGRESSOR", enumType.toFIXNameString());
-        assertEquals("Y - Order initiator is aggressor", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("Y", enumType.toEnumIDString());
+        assertEquals("AGGRESSOR", enumType.toEnumNameString());
+        assertEquals("Y - Order initiator is aggressor", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

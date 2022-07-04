@@ -39,14 +39,14 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 class Tag111QtyMaxFloorTest {
 
     @Test
-    void FIX0111Test() {
+    void FIXTest() {
         FIX30 fixData = FIX30.FIX111_QTY_MAX_FLOOR;
-        assertEquals( "MAX_FLOOR", fixData.toFIXNameString());
-        assertEquals( "111", fixData.toFIXIDString());
-        assertEquals( "MaxFloor", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "MAX_FLOOR", fixData.toEnumNameString());
+        assertEquals( "111", fixData.toEnumIDString());
+        assertEquals( "MaxFloor", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0111Test() {
@@ -57,6 +57,12 @@ class Tag111QtyMaxFloorTest {
         tagData = new Tag111QtyMaxFloor( new MyQtyType(oneElement) );
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "MAX_FLOOR", tagData.toEnumNameString());
+        assertEquals( "111", tagData.toEnumIDString());
+        assertEquals( "MaxFloor", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         oneElement = Tag111QtyMaxFloor.TESTA_QTY_MAX_FLOOR;
         tagData = new Tag111QtyMaxFloor( new MyQtyType(oneElement) );
@@ -98,7 +104,7 @@ class Tag111QtyMaxFloorTest {
 
         oneElement = Tag111QtyMaxFloor.TESTB_QTY_MAX_FLOOR;
         tagData = new Tag111QtyMaxFloor( new MyQtyType(oneElement) );
-        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
     @Test
@@ -119,12 +125,12 @@ class Tag111QtyMaxFloorTest {
         oneElement = Tag111QtyMaxFloor.TESTA_QTY_MAX_FLOOR;
         tagData = new Tag111QtyMaxFloor( new MyQtyType(oneElement) );
         assertEquals( "Tag111QtyMaxFloor\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]", tagData.toVerboseString());
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]", tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

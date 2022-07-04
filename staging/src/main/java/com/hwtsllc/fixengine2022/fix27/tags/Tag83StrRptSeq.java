@@ -26,18 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  83
  *  RptSeq
  *  int
- *  <p>
+ *  <p></p>
  *  Sequence number of message within report series.
- *  <p>
+ *  <p></p>
  *  Used to carry reporting sequence number of the fill as represented on the Trade Report Side.
  */
 public class Tag83StrRptSeq extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_RPT_SEQ
-            = "BilboBaggins-Tag83StrRptSeq";
+            = "AnnSouthern-Tag83StrRptSeq";
     public final static String TESTB_STR_RPT_SEQ
-            = "Gandalf-Tag83StrRptSeq";
+            = "ClaireTrevor-Tag83StrRptSeq";
 
     public Tag83StrRptSeq(MyStringType dataValue) {
         setFixType(FIX27.FIX83_STR_RPT_SEQ);
@@ -52,7 +52,7 @@ public class Tag83StrRptSeq extends FIX27Abstract implements LogValuePairString,
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

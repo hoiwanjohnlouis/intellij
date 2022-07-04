@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum98EncryptMethod;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,29 +27,20 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  98
  *  EncryptMethod
  *  int
+ *  <p></p>
  *  Method of encryption.
+ *  <p></p>
  *  Valid values:
- *      0 - None / Other
- *      1 - PKCS (Proprietary)
- *      2 - DES (ECB Mode)
- *      3 - PKCS / DES (Proprietary)
- *      4 - PGP / DES (Defunct)
- *
- *      5 - PGP / DES-MD5 (See app note on FIX web site)
- *      6 - PEM / DES-MD5 (see app note on FIX web site)
+ *  <p>    0 - None / Other
+ *  <p>    1 - PKCS (Proprietary)
+ *  <p>    2 - DES (ECB Mode)
+ *  <p>    3 - PKCS / DES (Proprietary)
+ *  <p>    4 - PGP / DES (Defunct)
+ *  <p></p>
+ *  <p>    5 - PGP / DES-MD5 (See app note on FIX website)
+ *  <p>    6 - PEM / DES-MD5 (see app note on FIX website)
  */
 class Tag98EnuEncryptMethodTest {
-    @Test
-    void FIX0098Test() {
-        FIX27 fixData = FIX27.FIX98_ENU_ENCRYPT_METHOD;
-        assertEquals( "ENCRYPT_METHOD", fixData.toFIXNameString());
-        assertEquals( "98", fixData.toFIXIDString());
-        assertEquals( "EncryptMethod", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
-    }
     @Test
     void Tag0098Test() {
         Tag98EnuEncryptMethod tagData;
@@ -88,6 +78,23 @@ class Tag98EnuEncryptMethodTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
+    void FIXTest() {
+        Tag98EnuEncryptMethod tagData;
+
+        // loop around the ENUM and process
+        for (Enum98EncryptMethod oneEnum : Enum98EncryptMethod.values()) {
+            tagData = new Tag98EnuEncryptMethod(oneEnum);
+            assertEquals( "FIX98_ENU_ENCRYPT_METHOD", tagData.toEnumLabelString());
+            assertEquals( "ENCRYPT_METHOD", tagData.toEnumNameString());
+            assertEquals( "98", tagData.toEnumIDString());
+            assertEquals( "EncryptMethod", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void PrintFIXTagTest() {
         Tag98EnuEncryptMethod tagData;
 
@@ -105,6 +112,7 @@ class Tag98EnuEncryptMethodTest {
         for (Enum98EncryptMethod oneEnum : Enum98EncryptMethod.values()) {
             tagData = new Tag98EnuEncryptMethod(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
@@ -115,7 +123,7 @@ class Tag98EnuEncryptMethodTest {
         // loop around the ENUM and process
         for (Enum98EncryptMethod oneEnum : Enum98EncryptMethod.values()) {
             tagData = new Tag98EnuEncryptMethod(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -139,12 +147,12 @@ class Tag98EnuEncryptMethodTest {
         for (Enum98EncryptMethod oneEnum : Enum98EncryptMethod.values()) {
             tagData = new Tag98EnuEncryptMethod(oneEnum);
             assertEquals( "Tag98EnuEncryptMethod\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

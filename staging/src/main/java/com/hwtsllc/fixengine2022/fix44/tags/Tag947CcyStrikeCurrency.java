@@ -50,7 +50,7 @@ public class Tag947CcyStrikeCurrency extends FIX44Abstract implements LogValuePa
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

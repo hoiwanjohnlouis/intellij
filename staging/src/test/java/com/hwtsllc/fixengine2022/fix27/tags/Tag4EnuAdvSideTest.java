@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum4AdvSide;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,24 +27,52 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  4
  *  AdvSide
  *  char
+ *  <p></p>
  *  Broker's side of advertised trade
+ *  <p></p>
  *  Valid values:
- *      B - Buy
- *      S - Sell
- *      T - Trade
- *      X - Cross
+ *  <p>    B - Buy
+ *  <p>    S - Sell
+ *  <p>    T - Trade
+ *  <p>    X - Cross
  */
 class Tag4EnuAdvSideTest {
     @Test
-    void FIX0004Test() {
-        FIX27 fixData = FIX27.FIX4_ENU_ADV_SIDE;
-        assertEquals( "ADV_SIDE", fixData.toFIXNameString());
-        assertEquals( "4", fixData.toFIXIDString());
-        assertEquals( "AdvSide", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+    void Tag0004Test() {
+        Tag4EnuAdvSide tagData;
+
+        tagData = new Tag4EnuAdvSide( Enum4AdvSide.BUY);
+        assertEquals( "B", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag4EnuAdvSide( Enum4AdvSide.SELL);
+        assertEquals( "S", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag4EnuAdvSide( Enum4AdvSide.CROSS);
+        assertEquals( "X", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag4EnuAdvSide( Enum4AdvSide.TRADE);
+        assertEquals( "T", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    }
+    @Test
+    void FIXTest() {
+        Tag4EnuAdvSide tagData;
+
+        // loop around the ENUM and process
+        for (Enum4AdvSide oneEnum : Enum4AdvSide.values()) {
+            tagData = new Tag4EnuAdvSide(oneEnum);
+            assertEquals( "FIX4_ENU_ADV_SIDE", tagData.toEnumLabelString());
+            assertEquals( "ADV_SIDE", tagData.toEnumNameString());
+            assertEquals( "4", tagData.toEnumIDString());
+            assertEquals( "AdvSide", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void PrintFIXTagTest() {
@@ -65,6 +92,7 @@ class Tag4EnuAdvSideTest {
         for (Enum4AdvSide oneEnum : Enum4AdvSide.values()) {
             tagData = new Tag4EnuAdvSide(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
@@ -75,8 +103,7 @@ class Tag4EnuAdvSideTest {
         // loop around the ENUM and process
         for (Enum4AdvSide oneEnum : Enum4AdvSide.values()) {
             tagData = new Tag4EnuAdvSide(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -99,12 +126,12 @@ class Tag4EnuAdvSideTest {
         for (Enum4AdvSide oneEnum : Enum4AdvSide.values()) {
             tagData = new Tag4EnuAdvSide(oneEnum);
             assertEquals( "Tag4EnuAdvSide\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

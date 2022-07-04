@@ -51,35 +51,35 @@ class Tag1124EnuOrigTradeHandlingInstrTest {
     @Test
     void FIX1124Test() {
         FIX50 fixData = FIX50.FIX1124_ENU_ORIG_TRADE_HANDLING_INSTR;
-        assertEquals( "1124", fixData.toFIXIDString());
-        assertEquals( "ORIG_TRADE_HANDLING_INSTR", fixData.toFIXNameString());
-        assertEquals( "OrigTradeHandlingInstr", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "1124", fixData.toEnumIDString());
+        assertEquals( "ORIG_TRADE_HANDLING_INSTR", fixData.toEnumNameString());
+        assertEquals( "OrigTradeHandlingInstr", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag1124Test() {
         Tag1124EnuOrigTradeHandlingInstr tagData;
 
         tagData = new Tag1124EnuOrigTradeHandlingInstr( MyEnumTradeHandlingInstr.TRADE_CONFIRMATION );
-        assertEquals( MyEnumTradeHandlingInstr.TRADE_CONFIRMATION.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumTradeHandlingInstr.TRADE_CONFIRMATION.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1124EnuOrigTradeHandlingInstr( MyEnumTradeHandlingInstr.TWO_PARTY_REPORT );
-        assertEquals( MyEnumTradeHandlingInstr.TWO_PARTY_REPORT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumTradeHandlingInstr.TWO_PARTY_REPORT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1124EnuOrigTradeHandlingInstr( MyEnumTradeHandlingInstr.ONE_PARTY_MATCHING );
-        assertEquals( MyEnumTradeHandlingInstr.ONE_PARTY_MATCHING.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumTradeHandlingInstr.ONE_PARTY_MATCHING.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1124EnuOrigTradeHandlingInstr( MyEnumTradeHandlingInstr.ONE_PARTY_PASS_THROUGH );
-        assertEquals( MyEnumTradeHandlingInstr.ONE_PARTY_PASS_THROUGH.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumTradeHandlingInstr.ONE_PARTY_PASS_THROUGH.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1124EnuOrigTradeHandlingInstr( MyEnumTradeHandlingInstr.AUTOMATED_ROUTING );
-        assertEquals( MyEnumTradeHandlingInstr.AUTOMATED_ROUTING.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumTradeHandlingInstr.AUTOMATED_ROUTING.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -110,7 +110,7 @@ class Tag1124EnuOrigTradeHandlingInstrTest {
         // loop around the ENUM and process
         for (MyEnumTradeHandlingInstr oneEnum : MyEnumTradeHandlingInstr.values()) {
             tagData = new Tag1124EnuOrigTradeHandlingInstr(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -134,12 +134,12 @@ class Tag1124EnuOrigTradeHandlingInstrTest {
         for (MyEnumTradeHandlingInstr oneEnum : MyEnumTradeHandlingInstr.values()) {
             tagData = new Tag1124EnuOrigTradeHandlingInstr(oneEnum);
             assertEquals( "Tag1124EnuOrigTradeHandlingInstr\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

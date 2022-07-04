@@ -63,100 +63,100 @@ class MyEnumBenchmarkCurveNameTest {
          * OTHER, PFANDBRIEFE, SONIA, SWAP, and TREASURY types
          */
         enumType = MyEnumBenchmarkCurveName.EONIA;
-        assertEquals("EONIA", enumType.toFIXIDString());
-        assertEquals("EONIA", enumType.toFIXNameString());
-        assertEquals("EONIA - EONIA", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("EONIA", enumType.toEnumIDString());
+        assertEquals("EONIA", enumType.toEnumNameString());
+        assertEquals("EONIA - EONIA", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumBenchmarkCurveName.EUREPO;
-        assertEquals("EUREPO", enumType.toFIXIDString());
-        assertEquals("EUREPO", enumType.toFIXNameString());
-        assertEquals("EUREPO - EUREPO", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("EUREPO", enumType.toEnumIDString());
+        assertEquals("EUREPO", enumType.toEnumNameString());
+        assertEquals("EUREPO - EUREPO", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumBenchmarkCurveName.EURIBOR;
-        assertEquals("Euribor", enumType.toFIXIDString());
-        assertEquals("EURIBOR", enumType.toFIXNameString());
-        assertEquals("Euribor - Euribor", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("Euribor", enumType.toEnumIDString());
+        assertEquals("EURIBOR", enumType.toEnumNameString());
+        assertEquals("Euribor - Euribor", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumBenchmarkCurveName.FUTURESWAP;
-        assertEquals("FutureSWAP", enumType.toFIXIDString());
-        assertEquals("FUTURESWAP", enumType.toFIXNameString());
-        assertEquals("FutureSWAP - FutureSWAP", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("FutureSWAP", enumType.toEnumIDString());
+        assertEquals("FUTURESWAP", enumType.toEnumNameString());
+        assertEquals("FutureSWAP - FutureSWAP", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumBenchmarkCurveName.LIBID;
-        assertEquals("LIBID", enumType.toFIXIDString());
-        assertEquals("LIBID", enumType.toFIXNameString());
-        assertEquals("LIBID - LIBID", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("LIBID", enumType.toEnumIDString());
+        assertEquals("LIBID", enumType.toEnumNameString());
+        assertEquals("LIBID - LIBID", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumBenchmarkCurveName.LIBOR;
-        assertEquals("LIBOR", enumType.toFIXIDString());
-        assertEquals("LIBOR", enumType.toFIXNameString());
-        assertEquals("LIBOR - LIBOR (London Inter-Bank Offer)", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("LIBOR", enumType.toEnumIDString());
+        assertEquals("LIBOR", enumType.toEnumNameString());
+        assertEquals("LIBOR - LIBOR (London Inter-Bank Offer)", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumBenchmarkCurveName.MUNIAAA;
-        assertEquals("MuniAAA", enumType.toFIXIDString());
-        assertEquals("MUNIAAA", enumType.toFIXNameString());
-        assertEquals("MuniAAA - MuniAAA", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("MuniAAA", enumType.toEnumIDString());
+        assertEquals("MUNIAAA", enumType.toEnumNameString());
+        assertEquals("MuniAAA - MuniAAA", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumBenchmarkCurveName.OTHER;
-        assertEquals("OTHER", enumType.toFIXIDString());
-        assertEquals("OTHER", enumType.toFIXNameString());
-        assertEquals("OTHER - OTHER", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("OTHER", enumType.toEnumIDString());
+        assertEquals("OTHER", enumType.toEnumNameString());
+        assertEquals("OTHER - OTHER", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumBenchmarkCurveName.PFANDBRIEFE;
-        assertEquals("Pfandbriefe", enumType.toFIXIDString());
-        assertEquals("PFANDBRIEFE", enumType.toFIXNameString());
-        assertEquals("Pfandbriefe - Pfandbriefe", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("Pfandbriefe", enumType.toEnumIDString());
+        assertEquals("PFANDBRIEFE", enumType.toEnumNameString());
+        assertEquals("Pfandbriefe - Pfandbriefe", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumBenchmarkCurveName.SONIA;
-        assertEquals("SONIA", enumType.toFIXIDString());
-        assertEquals("SONIA", enumType.toFIXNameString());
-        assertEquals("SONIA - SONIA", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("SONIA", enumType.toEnumIDString());
+        assertEquals("SONIA", enumType.toEnumNameString());
+        assertEquals("SONIA - SONIA", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumBenchmarkCurveName.SWAP;
-        assertEquals("SWAP", enumType.toFIXIDString());
-        assertEquals("SWAP", enumType.toFIXNameString());
-        assertEquals("SWAP - SWAP", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("SWAP", enumType.toEnumIDString());
+        assertEquals("SWAP", enumType.toEnumNameString());
+        assertEquals("SWAP - SWAP", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumBenchmarkCurveName.TREASURY;
-        assertEquals("Treasury", enumType.toFIXIDString());
-        assertEquals("TREASURY", enumType.toFIXNameString());
-        assertEquals("Treasury - Treasury", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("Treasury", enumType.toEnumIDString());
+        assertEquals("TREASURY", enumType.toEnumNameString());
+        assertEquals("Treasury - Treasury", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
     /**
      *

@@ -52,7 +52,7 @@ public class Tag1110PrcTriggerNewPrice extends FIX50Abstract implements LogValue
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

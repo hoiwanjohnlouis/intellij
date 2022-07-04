@@ -57,7 +57,7 @@ public class Tag370UtcOnBehalfOfSendingTime extends FIX42Abstract implements Log
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

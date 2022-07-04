@@ -28,37 +28,70 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  55
  *  Symbol
  *  String
+ *  <p></p>
  *  Ticker symbol.
+ *  <p></p>
  *  Common, "human understood" representation of the security.
+ *  <p></p>
  *  SecurityID (48) value can be specified if no symbol exists.
+ *  <p></p>
  *  (e.g. non-exchange traded Collective Investment Vehicles)
+ *  <p></p>
  *  Use "[N/A]" for products which do not have a symbol.
  */
 class Tag55StrSymbolTest {
     @Test
     void FIX0055Test() {
         FIX27 fixData = FIX27.FIX55_STR_SYMBOL;
-        assertEquals( "SYMBOL", fixData.toFIXNameString());
-        assertEquals( "55", fixData.toFIXIDString());
-        assertEquals( "Symbol", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "SYMBOL", fixData.toEnumNameString());
+        assertEquals( "55", fixData.toEnumIDString());
+        assertEquals( "Symbol", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0055Test() {
         Tag55StrSymbol tagData;
+        String oneElement;
 
-        tagData = new Tag55StrSymbol(new MyStringType("INTC") );
-        assertEquals( "INTC", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        oneElement = "INTC";
+        tagData = new Tag55StrSymbol(new MyStringType( oneElement ) );
+        verifyTagInformation( tagData, oneElement );
+
+        oneElement = Tag55StrSymbol.TESTA_STR_SYMBOL;
+        tagData = new Tag55StrSymbol(new MyStringType( oneElement ) );
+        verifyTagInformation( tagData, oneElement );
+
+        oneElement = Tag55StrSymbol.TESTB_STR_SYMBOL;
+        tagData = new Tag55StrSymbol(new MyStringType( oneElement ) );
+        verifyTagInformation( tagData, oneElement );
     }
+
+    private void verifyTagInformation( Tag55StrSymbol tagData, String oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "SYMBOL", tagData.toEnumNameString());
+        assertEquals( "55", tagData.toEnumIDString());
+        assertEquals( "Symbol", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void PrintFIXTagTest() {
         Tag55StrSymbol tagData;
+        String oneElement;
 
-        tagData = new Tag55StrSymbol(new MyStringType(Tag55StrSymbol.TESTB_STR_SYMBOL));
+        oneElement = Tag55StrSymbol.TESTA_STR_SYMBOL;
+        tagData = new Tag55StrSymbol(new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag55StrSymbol.TESTB_STR_SYMBOL;
+        tagData = new Tag55StrSymbol(new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
     @Test
@@ -74,7 +107,7 @@ class Tag55StrSymbolTest {
         Tag55StrSymbol tagData;
 
         tagData = new Tag55StrSymbol(new MyStringType(Tag55StrSymbol.TESTB_STR_SYMBOL));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag55StrSymbol.TESTB_STR_SYMBOL,
+        assertEquals( tagData.toEnumIDString() + "=" + Tag55StrSymbol.TESTB_STR_SYMBOL,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toValuePairString());
@@ -95,12 +128,12 @@ class Tag55StrSymbolTest {
 
         tagData = new Tag55StrSymbol(new MyStringType(Tag55StrSymbol.TESTA_STR_SYMBOL));
         assertEquals( "Tag55StrSymbol\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + Tag55StrSymbol.TESTA_STR_SYMBOL + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag55StrSymbol.TESTA_STR_SYMBOL + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag55StrSymbol.TESTA_STR_SYMBOL + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

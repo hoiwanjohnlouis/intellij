@@ -42,35 +42,35 @@ class Tag982EnuExpTypeTest {
     @Test
     void FIX0982Test() {
         FIX50 fixData = FIX50.FIX982_ENU_EXP_TYPE;
-        assertEquals( "982", fixData.toFIXIDString());
-        assertEquals( "EXP_TYPE", fixData.toFIXNameString());
-        assertEquals( "ExpType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "982", fixData.toEnumIDString());
+        assertEquals( "EXP_TYPE", fixData.toEnumNameString());
+        assertEquals( "ExpType", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0982Test() {
         Tag982EnuExpType tagData;
 
         tagData = new Tag982EnuExpType( Enum982ExpType.AUTO_EXERCISE );
-        assertEquals( Enum982ExpType.AUTO_EXERCISE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum982ExpType.AUTO_EXERCISE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag982EnuExpType( Enum982ExpType.NON_AUTO_EXERCISE );
-        assertEquals( Enum982ExpType.NON_AUTO_EXERCISE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum982ExpType.NON_AUTO_EXERCISE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag982EnuExpType( Enum982ExpType.FINAL_EXERCISED );
-        assertEquals( Enum982ExpType.FINAL_EXERCISED.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum982ExpType.FINAL_EXERCISED.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag982EnuExpType( Enum982ExpType.CONTRARY_INTENTION );
-        assertEquals( Enum982ExpType.CONTRARY_INTENTION.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum982ExpType.CONTRARY_INTENTION.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag982EnuExpType( Enum982ExpType.DIFFERENCE );
-        assertEquals( Enum982ExpType.DIFFERENCE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum982ExpType.DIFFERENCE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -101,7 +101,7 @@ class Tag982EnuExpTypeTest {
         // loop around the ENUM and process
         for (Enum982ExpType oneEnum : Enum982ExpType.values()) {
             tagData = new Tag982EnuExpType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -125,12 +125,12 @@ class Tag982EnuExpTypeTest {
         for (Enum982ExpType oneEnum : Enum982ExpType.values()) {
             tagData = new Tag982EnuExpType(oneEnum);
             assertEquals( "Tag982EnuExpType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

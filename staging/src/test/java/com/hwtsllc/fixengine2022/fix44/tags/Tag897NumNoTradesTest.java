@@ -35,12 +35,12 @@ class Tag897NumNoTradesTest {
     @Test
     void FIX0897Test() {
         FIX44 fixData = FIX44.FIX897_NUM_NO_TRADES;
-        assertEquals( "897", fixData.toFIXIDString());
-        assertEquals( "NO_TRADES", fixData.toFIXNameString());
-        assertEquals( "NoTrades", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "897", fixData.toEnumIDString());
+        assertEquals( "NO_TRADES", fixData.toEnumNameString());
+        assertEquals( "NoTrades", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0897Test() {
@@ -51,12 +51,12 @@ class Tag897NumNoTradesTest {
         tagData = new Tag897NumNoTrades( new MyNumInGroupType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "897", tagData.toFIXIDString());
-        assertEquals( "NO_TRADES", tagData.toFIXNameString());
-        assertEquals( "NoTrades", tagData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
+        assertEquals( "897", tagData.toEnumIDString());
+        assertEquals( "NO_TRADES", tagData.toEnumNameString());
+        assertEquals( "NoTrades", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         oneElement = Tag897NumNoTrades.TESTB_NUM_NO_TRADES;
         tagData = new Tag897NumNoTrades( new MyNumInGroupType( oneElement ) );
@@ -93,7 +93,7 @@ class Tag897NumNoTradesTest {
 
         oneElement = Tag897NumNoTrades.TESTB_NUM_NO_TRADES;
         tagData = new Tag897NumNoTrades( new MyNumInGroupType( oneElement ) );
-        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
     }
     @Test
@@ -114,12 +114,12 @@ class Tag897NumNoTradesTest {
         oneElement = Tag897NumNoTrades.TESTA_NUM_NO_TRADES;
         tagData = new Tag897NumNoTrades( new MyNumInGroupType( oneElement ) );
         assertEquals( "Tag897NumNoTrades\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

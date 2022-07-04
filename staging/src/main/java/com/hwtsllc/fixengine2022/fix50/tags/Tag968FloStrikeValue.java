@@ -52,7 +52,7 @@ public class Tag968FloStrikeValue extends FIX50Abstract implements LogValuePairS
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

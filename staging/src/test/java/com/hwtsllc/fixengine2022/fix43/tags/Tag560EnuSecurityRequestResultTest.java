@@ -43,12 +43,12 @@ class Tag560EnuSecurityRequestResultTest {
     @Test
     void FIX0560Test() {
         FIX43 fixData = FIX43.FIX560_ENU_SECURITY_REQUEST_RESULT;
-        assertEquals( "560", fixData.toFIXIDString());
-        assertEquals( "SECURITY_REQUEST_RESULT", fixData.toFIXNameString());
-        assertEquals( "SecurityRequestResult", fixData.toFIXDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "560", fixData.toEnumIDString());
+        assertEquals( "SECURITY_REQUEST_RESULT", fixData.toEnumNameString());
+        assertEquals( "SecurityRequestResult", fixData.toEnumDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0560Test() {
@@ -58,28 +58,28 @@ class Tag560EnuSecurityRequestResultTest {
          *  0-5 types
          */
         tagData = new Tag560EnuSecurityRequestResult( Enum560SecurityRequestResult.VALID_REQUEST );
-        assertEquals( Enum560SecurityRequestResult.VALID_REQUEST.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum560SecurityRequestResult.VALID_REQUEST.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag560EnuSecurityRequestResult( Enum560SecurityRequestResult.UNSUPPORTED_REQUEST );
-        assertEquals( Enum560SecurityRequestResult.UNSUPPORTED_REQUEST.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum560SecurityRequestResult.UNSUPPORTED_REQUEST.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag560EnuSecurityRequestResult( Enum560SecurityRequestResult.NO_INSTRUMENTS_FOUND );
-        assertEquals( Enum560SecurityRequestResult.NO_INSTRUMENTS_FOUND.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum560SecurityRequestResult.NO_INSTRUMENTS_FOUND.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag560EnuSecurityRequestResult( Enum560SecurityRequestResult.NOT_AUTHORIZED );
-        assertEquals( Enum560SecurityRequestResult.NOT_AUTHORIZED.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum560SecurityRequestResult.NOT_AUTHORIZED.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag560EnuSecurityRequestResult( Enum560SecurityRequestResult.INSTRUMENT_DATA_UNAVAILABLE );
-        assertEquals( Enum560SecurityRequestResult.INSTRUMENT_DATA_UNAVAILABLE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum560SecurityRequestResult.INSTRUMENT_DATA_UNAVAILABLE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag560EnuSecurityRequestResult( Enum560SecurityRequestResult.REQUEST_NOT_SUPPORTED );
-        assertEquals( Enum560SecurityRequestResult.REQUEST_NOT_SUPPORTED.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum560SecurityRequestResult.REQUEST_NOT_SUPPORTED.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -110,7 +110,7 @@ class Tag560EnuSecurityRequestResultTest {
         // loop around the ENUM and process
         for (Enum560SecurityRequestResult oneEnum : Enum560SecurityRequestResult.values()) {
             tagData = new Tag560EnuSecurityRequestResult(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -134,12 +134,12 @@ class Tag560EnuSecurityRequestResultTest {
         for (Enum560SecurityRequestResult oneEnum : Enum560SecurityRequestResult.values()) {
             tagData = new Tag560EnuSecurityRequestResult(oneEnum);
             assertEquals( "Tag560EnuSecurityRequestResult\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

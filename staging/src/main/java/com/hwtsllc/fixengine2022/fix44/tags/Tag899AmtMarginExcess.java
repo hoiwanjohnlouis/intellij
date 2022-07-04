@@ -50,7 +50,7 @@ public class Tag899AmtMarginExcess extends FIX44Abstract implements LogValuePair
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

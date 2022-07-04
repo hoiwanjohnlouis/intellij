@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum43PossDupFlag;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -37,15 +36,33 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag43EnuPossDupFlagTest {
     @Test
-    void FIX0043Test() {
-        FIX27 fixData = FIX27.FIX43_ENU_POSS_DUP_FLAG;
-        assertEquals( "POSS_DUP_FLAG", fixData.toFIXNameString());
-        assertEquals( "43", fixData.toFIXIDString());
-        assertEquals( "PossDupFlag", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+    void Tag0043Test() {
+        Tag43EnuPossDupFlag tagData;
+
+        tagData = new Tag43EnuPossDupFlag( Enum43PossDupFlag.NO);
+        assertEquals( "N", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag43EnuPossDupFlag( Enum43PossDupFlag.YES);
+        assertEquals( "Y", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+    @Test
+    void FIXTest() {
+        Tag43EnuPossDupFlag tagData;
+
+        // loop around the ENUM and process
+        for (Enum43PossDupFlag oneEnum : Enum43PossDupFlag.values()) {
+            tagData = new Tag43EnuPossDupFlag(oneEnum);
+            assertEquals( "FIX43_ENU_POSS_DUP_FLAG", tagData.toEnumLabelString());
+            assertEquals( "POSS_DUP_FLAG", tagData.toEnumNameString());
+            assertEquals( "43", tagData.toEnumIDString());
+            assertEquals( "PossDupFlag", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void PrintFIXTagTest() {
@@ -65,6 +82,7 @@ class Tag43EnuPossDupFlagTest {
         for (Enum43PossDupFlag oneEnum : Enum43PossDupFlag.values()) {
             tagData = new Tag43EnuPossDupFlag(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
@@ -75,7 +93,7 @@ class Tag43EnuPossDupFlagTest {
         // loop around the ENUM and process
         for (Enum43PossDupFlag oneEnum : Enum43PossDupFlag.values()) {
             tagData = new Tag43EnuPossDupFlag(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -99,12 +117,12 @@ class Tag43EnuPossDupFlagTest {
         for (Enum43PossDupFlag oneEnum : Enum43PossDupFlag.values()) {
             tagData = new Tag43EnuPossDupFlag(oneEnum);
             assertEquals( "Tag43EnuPossDupFlag\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

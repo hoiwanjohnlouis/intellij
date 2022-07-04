@@ -23,20 +23,22 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  8
  *  BeginString
  *  String
+ *  <p></p>
  *  Identifies beginning of new message and protocol version.
- *  ALWAYS FIRST FIELD IN MESSAGE.
- *  ALWAYS UNENCRYPTED.
- *  Valid values:
- *
- *      FIX.2.7
- *      FIX.3.0
- *      FIX.4.0
- *      FIX.4.1
- *      FIX.4.2
- *
- *      FIX.4.3
- *      FIX.4.4
- *      FIXT.1.1
+ *  <p></p>
+ *  <p> ALWAYS FIRST FIELD IN MESSAGE.
+ *  <p> ALWAYS UNENCRYPTED.
+ *  <p> Valid values:
+ *  <p></p>
+ *  <p>    FIX.2.7
+ *  <p>    FIX.3.0
+ *  <p>    FIX.4.0
+ *  <p>    FIX.4.1
+ *  <p>    FIX.4.2
+ *  <p></p>
+ *  <p>    FIX.4.3
+ *  <p>    FIX.4.4
+ *  <p>    FIXT.1.1
  */
 public enum Enum8BeginString implements LogFIXString, LogVerboseString {
     BEGIN_STRING_2_7( "FIX.2.7","BEGIN_STRING_2_7","Begin String 2.7"),
@@ -64,28 +66,28 @@ public enum Enum8BeginString implements LogFIXString, LogVerboseString {
      * standard wrapper to retrieve the specific enum name
      */
     @Override
-    public String toEnumNameString() {
+    public String toEnumLabelString() {
         return this.name();
     }
     /**
      * standard wrapper to retrieve the specific fix action code for this enum. eg: the first field
      */
     @Override
-    public String toFIXIDString() {
+    public String toEnumIDString() {
         return id;
     }
     /**
      * standard wrapper to retrieve the specific fix name for this enum. eg: the second field
      */
     @Override
-    public String toFIXNameString() {
+    public String toEnumNameString() {
         return name;
     }
     /**
      * standard wrapper to retrieve the specific fix description for this enum. eg: the third field
      */
     @Override
-    public String toFIXDescriptionString() {
+    public String toEnumDescriptionString() {
         return description;
     }
     /**
@@ -95,16 +97,16 @@ public enum Enum8BeginString implements LogFIXString, LogVerboseString {
     public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
-                .concat(toEnumNameString())
+                .concat( toEnumLabelString())
                 .concat("]")
                 .concat("\n\tAction[")
-                .concat(toFIXIDString())
+                .concat( toEnumIDString())
                 .concat("]")
                 .concat("\n\tName[")
-                .concat(toFIXNameString())
+                .concat( toEnumNameString())
                 .concat("]")
                 .concat("\n\tDescription[")
-                .concat(toFIXDescriptionString())
+                .concat( toEnumDescriptionString())
                 .concat("]");
     }
     /**
@@ -112,13 +114,13 @@ public enum Enum8BeginString implements LogFIXString, LogVerboseString {
      */
     @Override
     public String toString() {
-        return toEnumNameString()
+        return toEnumLabelString()
                 .concat("=[")
-                .concat(toFIXIDString())
+                .concat( toEnumIDString())
                 .concat(",")
-                .concat(toFIXNameString())
+                .concat( toEnumNameString())
                 .concat(",")
-                .concat(toFIXDescriptionString())
+                .concat( toEnumDescriptionString())
                 .concat("]");
     }
 

@@ -41,35 +41,35 @@ class Enum919DeliveryTypeTest {
         Enum919DeliveryType enumType;
 
         enumType = Enum919DeliveryType.VERSUS_PAYMENT;
-        assertEquals( "0", enumType.toFIXIDString() );
-        assertEquals( "VERSUS_PAYMENT", enumType.toFIXNameString() );
-        assertEquals( "0 - Versus Payment: Deliver (if sell) or Receive (if buy) vs. (against) Payment", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "0", enumType.toEnumIDString() );
+        assertEquals( "VERSUS_PAYMENT", enumType.toEnumNameString() );
+        assertEquals( "0 - Versus Payment: Deliver (if sell) or Receive (if buy) vs. (against) Payment", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum919DeliveryType.FREE;
-        assertEquals( "1", enumType.toFIXIDString() );
-        assertEquals( "FREE", enumType.toFIXNameString() );
-        assertEquals( "1 - Free: Deliver (if sell) or Receive (if buy) Free", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "1", enumType.toEnumIDString() );
+        assertEquals( "FREE", enumType.toEnumNameString() );
+        assertEquals( "1 - Free: Deliver (if sell) or Receive (if buy) Free", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum919DeliveryType.TRI_PARTY;
-        assertEquals( "2", enumType.toFIXIDString() );
-        assertEquals( "TRI_PARTY", enumType.toFIXNameString() );
-        assertEquals( "2 - Tri-Party", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "2", enumType.toEnumIDString() );
+        assertEquals( "TRI_PARTY", enumType.toEnumNameString() );
+        assertEquals( "2 - Tri-Party", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum919DeliveryType.HOLD_IN_CUSTODY;
-        assertEquals( "3", enumType.toFIXIDString() );
-        assertEquals( "HOLD_IN_CUSTODY", enumType.toFIXNameString() );
-        assertEquals( "3 - Hold In Custody", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "3", enumType.toEnumIDString() );
+        assertEquals( "HOLD_IN_CUSTODY", enumType.toEnumNameString() );
+        assertEquals( "3 - Hold In Custody", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

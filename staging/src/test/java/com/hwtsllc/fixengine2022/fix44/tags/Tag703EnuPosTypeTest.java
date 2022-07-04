@@ -64,12 +64,12 @@ class Tag703EnuPosTypeTest {
     @Test
     void FIXTest() {
         FIX44 fixData = FIX44.FIX703_ENU_POS_TYPE;
-        assertEquals( "703", fixData.toFIXIDString());
-        assertEquals( "POS_TYPE", fixData.toFIXNameString());
-        assertEquals( "PosType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "703", fixData.toEnumIDString());
+        assertEquals( "POS_TYPE", fixData.toEnumNameString());
+        assertEquals( "PosType", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0703Test() {
@@ -78,101 +78,101 @@ class Tag703EnuPosTypeTest {
 
         oneElement = Enum703PosType.ALLOCATION_TRADE_QTY;
         tagData = new Tag703EnuPosType( oneElement );
-        assertEquals( oneElement.toFIXIDString(), tagData.getDataValue());
+        assertEquals( oneElement.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "703", tagData.toFIXIDString());
-        assertEquals( "POS_TYPE", tagData.toFIXNameString());
-        assertEquals( "PosType", tagData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
+        assertEquals( "703", tagData.toEnumIDString());
+        assertEquals( "POS_TYPE", tagData.toEnumNameString());
+        assertEquals( "PosType", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         tagData = new Tag703EnuPosType(Enum703PosType.OPTION_ASSIGNMENT);
-        assertEquals( Enum703PosType.OPTION_ASSIGNMENT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum703PosType.OPTION_ASSIGNMENT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.AS_OF_TRADE_QTY);
-        assertEquals( Enum703PosType.AS_OF_TRADE_QTY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum703PosType.AS_OF_TRADE_QTY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.DELIVERY_QTY);
-        assertEquals( Enum703PosType.DELIVERY_QTY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum703PosType.DELIVERY_QTY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.ELECTRONIC_TRADE_QTY);
-        assertEquals( Enum703PosType.ELECTRONIC_TRADE_QTY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum703PosType.ELECTRONIC_TRADE_QTY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.OPTION_EXERCISE_QTY);
-        assertEquals( Enum703PosType.OPTION_EXERCISE_QTY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum703PosType.OPTION_EXERCISE_QTY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.END_OF_DAY_QTY);
-        assertEquals( Enum703PosType.END_OF_DAY_QTY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum703PosType.END_OF_DAY_QTY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.INTRA_SPREAD_QTY);
-        assertEquals( Enum703PosType.INTRA_SPREAD_QTY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum703PosType.INTRA_SPREAD_QTY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.INTER_SPREAD_QTY);
-        assertEquals( Enum703PosType.INTER_SPREAD_QTY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum703PosType.INTER_SPREAD_QTY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.ADJUSTMENT_QTY);
-        assertEquals( Enum703PosType.ADJUSTMENT_QTY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum703PosType.ADJUSTMENT_QTY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.PIT_TRADE_QTY);
-        assertEquals( Enum703PosType.PIT_TRADE_QTY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum703PosType.PIT_TRADE_QTY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.START_OF_DAY_QTY);
-        assertEquals( Enum703PosType.START_OF_DAY_QTY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum703PosType.START_OF_DAY_QTY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.INTEGRAL_SPLIT);
-        assertEquals( Enum703PosType.INTEGRAL_SPLIT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum703PosType.INTEGRAL_SPLIT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.TRANSACTION_FROM_ASSIGNMENT);
-        assertEquals( Enum703PosType.TRANSACTION_FROM_ASSIGNMENT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum703PosType.TRANSACTION_FROM_ASSIGNMENT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.TOTAL_TRANSACTION_QTY);
-        assertEquals( Enum703PosType.TOTAL_TRANSACTION_QTY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum703PosType.TOTAL_TRANSACTION_QTY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.TRANSACTION_QUANTITY);
-        assertEquals( Enum703PosType.TRANSACTION_QUANTITY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum703PosType.TRANSACTION_QUANTITY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.TRANSFER_TRADE_QTY);
-        assertEquals( Enum703PosType.TRANSFER_TRADE_QTY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum703PosType.TRANSFER_TRADE_QTY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.TRANSACTION_FROM_EXERCISE);
-        assertEquals( Enum703PosType.TRANSACTION_FROM_EXERCISE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum703PosType.TRANSACTION_FROM_EXERCISE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.CROSS_MARGIN_QTY);
-        assertEquals( Enum703PosType.CROSS_MARGIN_QTY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum703PosType.CROSS_MARGIN_QTY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.RECEIVE_QUANTITY);
-        assertEquals( Enum703PosType.RECEIVE_QUANTITY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum703PosType.RECEIVE_QUANTITY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.CORPORATE_ACTION_ADJUSTMENT);
-        assertEquals( Enum703PosType.CORPORATE_ACTION_ADJUSTMENT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum703PosType.CORPORATE_ACTION_ADJUSTMENT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.DELIVERY_NOTICE_QTY);
-        assertEquals( Enum703PosType.DELIVERY_NOTICE_QTY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum703PosType.DELIVERY_NOTICE_QTY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag703EnuPosType(Enum703PosType.EXCHANGE_FOR_PHYSICAL_QTY);
-        assertEquals( Enum703PosType.EXCHANGE_FOR_PHYSICAL_QTY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum703PosType.EXCHANGE_FOR_PHYSICAL_QTY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -203,7 +203,7 @@ class Tag703EnuPosTypeTest {
         // loop around the ENUM and process
         for (Enum703PosType oneEnum : Enum703PosType.values()) {
             tagData = new Tag703EnuPosType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -227,12 +227,12 @@ class Tag703EnuPosTypeTest {
         for (Enum703PosType oneEnum : Enum703PosType.values()) {
             tagData = new Tag703EnuPosType(oneEnum);
             assertEquals( "Tag703EnuPosType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

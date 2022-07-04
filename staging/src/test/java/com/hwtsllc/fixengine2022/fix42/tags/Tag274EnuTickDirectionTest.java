@@ -41,12 +41,12 @@ class Tag274EnuTickDirectionTest {
     @Test
     void FIX0274Test() {
         FIX42 fixData = FIX42.FIX274_ENU_TICK_DIRECTION;
-        assertEquals( "274", fixData.toFIXIDString());
-        assertEquals( "TICK_DIRECTION", fixData.toFIXNameString());
-        assertEquals( "TickDirection", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "274", fixData.toEnumIDString());
+        assertEquals( "TICK_DIRECTION", fixData.toEnumNameString());
+        assertEquals( "TickDirection", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0274Test() {
@@ -56,19 +56,19 @@ class Tag274EnuTickDirectionTest {
          * 0-3 msg types
          */
         tagData = new Tag274EnuTickDirection(Enum274TickDirection.PLUS_TICK);
-        assertEquals( Enum274TickDirection.PLUS_TICK.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum274TickDirection.PLUS_TICK.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag274EnuTickDirection(Enum274TickDirection.ZERO_PLUS_TICK);
-        assertEquals( Enum274TickDirection.ZERO_PLUS_TICK.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum274TickDirection.ZERO_PLUS_TICK.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag274EnuTickDirection(Enum274TickDirection.MINUS_TICK);
-        assertEquals( Enum274TickDirection.MINUS_TICK.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum274TickDirection.MINUS_TICK.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag274EnuTickDirection(Enum274TickDirection.ZERO_MINUS_TICK);
-        assertEquals( Enum274TickDirection.ZERO_MINUS_TICK.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum274TickDirection.ZERO_MINUS_TICK.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -99,7 +99,7 @@ class Tag274EnuTickDirectionTest {
         // loop around the ENUM and process
         for (Enum274TickDirection oneEnum : Enum274TickDirection.values()) {
             tagData = new Tag274EnuTickDirection(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -123,12 +123,12 @@ class Tag274EnuTickDirectionTest {
         for (Enum274TickDirection oneEnum : Enum274TickDirection.values()) {
             tagData = new Tag274EnuTickDirection(oneEnum);
             assertEquals( "Tag274EnuTickDirection\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

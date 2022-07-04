@@ -39,12 +39,12 @@ class Tag416EnuIncTaxIndTest {
     @Test
     void FIX0416Test() {
         FIX42 fixData = FIX42.FIX416_ENU_INC_TAX_IND;
-        assertEquals( "416", fixData.toFIXIDString());
-        assertEquals( "INC_TAX_IND", fixData.toFIXNameString());
-        assertEquals( "IncTaxInd", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "416", fixData.toEnumIDString());
+        assertEquals( "INC_TAX_IND", fixData.toEnumNameString());
+        assertEquals( "IncTaxInd", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0416Test() {
@@ -54,11 +54,11 @@ class Tag416EnuIncTaxIndTest {
          * 1-2 msg types
          */
         tagData = new Tag416EnuIncTaxInd(Enum416IncTaxInd.NET);
-        assertEquals( Enum416IncTaxInd.NET.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum416IncTaxInd.NET.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag416EnuIncTaxInd(Enum416IncTaxInd.GROSS);
-        assertEquals( Enum416IncTaxInd.GROSS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum416IncTaxInd.GROSS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -89,7 +89,7 @@ class Tag416EnuIncTaxIndTest {
         // loop around the ENUM and process
         for (Enum416IncTaxInd oneEnum : Enum416IncTaxInd.values()) {
             tagData = new Tag416EnuIncTaxInd(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -113,12 +113,12 @@ class Tag416EnuIncTaxIndTest {
         for (Enum416IncTaxInd oneEnum : Enum416IncTaxInd.values()) {
             tagData = new Tag416EnuIncTaxInd(oneEnum);
             assertEquals( "Tag416EnuIncTaxInd\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

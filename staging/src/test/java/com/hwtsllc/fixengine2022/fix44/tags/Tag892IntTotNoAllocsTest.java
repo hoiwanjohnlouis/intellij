@@ -40,12 +40,12 @@ class Tag892IntTotNoAllocsTest {
     @Test
     void FIXTest() {
         FIX44 fixData = FIX44.FIX892_INT_TOT_NO_ALLOCS;
-        assertEquals( "892", fixData.toFIXIDString());
-        assertEquals( "TOT_NO_ALLOCS", fixData.toFIXNameString());
-        assertEquals( "TotNoAllocs", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "892", fixData.toEnumIDString());
+        assertEquals( "TOT_NO_ALLOCS", fixData.toEnumNameString());
+        assertEquals( "TotNoAllocs", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0892Test() {
@@ -56,12 +56,12 @@ class Tag892IntTotNoAllocsTest {
         tagData = new Tag892IntTotNoAllocs( new MyIntType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "892", tagData.toFIXIDString());
-        assertEquals( "TOT_NO_ALLOCS", tagData.toFIXNameString());
-        assertEquals( "TotNoAllocs", tagData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
+        assertEquals( "892", tagData.toEnumIDString());
+        assertEquals( "TOT_NO_ALLOCS", tagData.toEnumNameString());
+        assertEquals( "TotNoAllocs", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         oneElement = Tag892IntTotNoAllocs.TESTB_INT_TOT_NO_ALLOCS;
         tagData = new Tag892IntTotNoAllocs( new MyIntType( oneElement ) );
@@ -98,7 +98,7 @@ class Tag892IntTotNoAllocsTest {
 
         oneElement = Tag892IntTotNoAllocs.TESTB_INT_TOT_NO_ALLOCS;
         tagData = new Tag892IntTotNoAllocs( new MyIntType( oneElement ) );
-        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
     }
     @Test
@@ -119,12 +119,12 @@ class Tag892IntTotNoAllocsTest {
         oneElement = Tag892IntTotNoAllocs.TESTA_INT_TOT_NO_ALLOCS;
         tagData = new Tag892IntTotNoAllocs( new MyIntType( oneElement ) );
         assertEquals( "Tag892IntTotNoAllocs\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
                 tagData.toVerboseString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }

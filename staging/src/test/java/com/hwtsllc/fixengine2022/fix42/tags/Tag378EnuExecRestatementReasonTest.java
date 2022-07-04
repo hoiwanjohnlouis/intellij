@@ -54,12 +54,12 @@ class Tag378EnuExecRestatementReasonTest {
     @Test
     void FIX0378Test() {
         FIX42 fixData = FIX42.FIX378_ENU_EXEC_RESTATEMENT_REASON;
-        assertEquals( "378", fixData.toFIXIDString());
-        assertEquals( "EXEC_RESTATEMENT_REASON", fixData.toFIXNameString());
-        assertEquals( "ExecRestatementReason", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "378", fixData.toEnumIDString());
+        assertEquals( "EXEC_RESTATEMENT_REASON", fixData.toEnumNameString());
+        assertEquals( "ExecRestatementReason", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0378Test() {
@@ -69,55 +69,55 @@ class Tag378EnuExecRestatementReasonTest {
          * 0-11, 99 msg types
          */
         tagData = new Tag378EnuExecRestatementReason(Enum378ExecRestatementReason.GT_CORPORATE_ACTION);
-        assertEquals( Enum378ExecRestatementReason.GT_CORPORATE_ACTION.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum378ExecRestatementReason.GT_CORPORATE_ACTION.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag378EnuExecRestatementReason(Enum378ExecRestatementReason.GT_RENEWAL_RESTATEMENT);
-        assertEquals( Enum378ExecRestatementReason.GT_RENEWAL_RESTATEMENT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum378ExecRestatementReason.GT_RENEWAL_RESTATEMENT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag378EnuExecRestatementReason(Enum378ExecRestatementReason.VERBAL_CHANGE);
-        assertEquals( Enum378ExecRestatementReason.VERBAL_CHANGE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum378ExecRestatementReason.VERBAL_CHANGE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag378EnuExecRestatementReason(Enum378ExecRestatementReason.REPRICING_OF_ORDER);
-        assertEquals( Enum378ExecRestatementReason.REPRICING_OF_ORDER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum378ExecRestatementReason.REPRICING_OF_ORDER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag378EnuExecRestatementReason(Enum378ExecRestatementReason.BROKER_OPTION);
-        assertEquals( Enum378ExecRestatementReason.BROKER_OPTION.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum378ExecRestatementReason.BROKER_OPTION.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag378EnuExecRestatementReason(Enum378ExecRestatementReason.PARTIAL_DECLINE_OF_ORDER_QTY);
-        assertEquals( Enum378ExecRestatementReason.PARTIAL_DECLINE_OF_ORDER_QTY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum378ExecRestatementReason.PARTIAL_DECLINE_OF_ORDER_QTY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag378EnuExecRestatementReason(Enum378ExecRestatementReason.CANCEL_ON_TRADING_HALT);
-        assertEquals( Enum378ExecRestatementReason.CANCEL_ON_TRADING_HALT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum378ExecRestatementReason.CANCEL_ON_TRADING_HALT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag378EnuExecRestatementReason(Enum378ExecRestatementReason.CANCEL_ON_SYSTEM_FAILURE);
-        assertEquals( Enum378ExecRestatementReason.CANCEL_ON_SYSTEM_FAILURE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum378ExecRestatementReason.CANCEL_ON_SYSTEM_FAILURE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag378EnuExecRestatementReason(Enum378ExecRestatementReason.MARKET_EXCHANGE_OPTION);
-        assertEquals( Enum378ExecRestatementReason.MARKET_EXCHANGE_OPTION.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum378ExecRestatementReason.MARKET_EXCHANGE_OPTION.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag378EnuExecRestatementReason(Enum378ExecRestatementReason.CANCELED_NOT_BEST);
-        assertEquals( Enum378ExecRestatementReason.CANCELED_NOT_BEST.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum378ExecRestatementReason.CANCELED_NOT_BEST.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag378EnuExecRestatementReason(Enum378ExecRestatementReason.WAREHOUSE_RECAP);
-        assertEquals( Enum378ExecRestatementReason.WAREHOUSE_RECAP.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum378ExecRestatementReason.WAREHOUSE_RECAP.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag378EnuExecRestatementReason(Enum378ExecRestatementReason.PEG_REFRESH);
-        assertEquals( Enum378ExecRestatementReason.PEG_REFRESH.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum378ExecRestatementReason.PEG_REFRESH.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag378EnuExecRestatementReason(Enum378ExecRestatementReason.OTHER);
-        assertEquals( Enum378ExecRestatementReason.OTHER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum378ExecRestatementReason.OTHER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -148,7 +148,7 @@ class Tag378EnuExecRestatementReasonTest {
         // loop around the ENUM and process
         for (Enum378ExecRestatementReason oneEnum : Enum378ExecRestatementReason.values()) {
             tagData = new Tag378EnuExecRestatementReason(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -172,12 +172,12 @@ class Tag378EnuExecRestatementReasonTest {
         for (Enum378ExecRestatementReason oneEnum : Enum378ExecRestatementReason.values()) {
             tagData = new Tag378EnuExecRestatementReason(oneEnum);
             assertEquals( "Tag378EnuExecRestatementReason\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

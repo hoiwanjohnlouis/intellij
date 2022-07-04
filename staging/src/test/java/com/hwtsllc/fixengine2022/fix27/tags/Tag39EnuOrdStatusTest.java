@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum39OrdStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,43 +27,35 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  39
  *  OrdStatus
  *  char
+ *  <p></p>
  *  Identifies current status of order.
- *
+ *  <p></p>
  *  *** SOME VALUES HAVE BEEN REPLACED ***
+ *  <p>
  *  *** See Replaced Features and Supported Approach ***
+ *  <p>
  *      (see Volume : "Glossary" for value definitions)
- *
+ *  <p></p>
  *  Valid values:
- *      0 - New
- *      1 - Partially filled
- *      2 - Filled
- *      3 - Done for day
- *      4 - Canceled
- *
- *      5 - Replaced (No longer used)
- *      6 - Pending Cancel (i.e. result of Order Cancel Request)
- *      7 - Stopped
- *      8 - Rejected
- *      9 - Suspended
- *
- *      A - Pending New
- *      B - Calculated
- *      C - Expired
- *      D - Accepted for Bidding
- *      E - Pending Replace (i.e. result of Order Cancel/Replace Request)
+ *  <p>    0 - New
+ *  <p>    1 - Partially filled
+ *  <p>    2 - Filled
+ *  <p>    3 - Done for day
+ *  <p>    4 - Canceled
+ *  <p></p>
+ *  <p>    5 - Replaced (No longer used)
+ *  <p>    6 - Pending Cancel (i.e. result of Order Cancel Request)
+ *  <p>    7 - Stopped
+ *  <p>    8 - Rejected
+ *  <p>    9 - Suspended
+ *  <p></p>
+ *  <p>    A - Pending New
+ *  <p>    B - Calculated
+ *  <p>    C - Expired
+ *  <p>    D - Accepted for Bidding
+ *  <p>    E - Pending Replace (i.e. result of Order Cancel/Replace Request)
  */
 class Tag39EnuOrdStatusTest {
-    @Test
-    void FIX0039Test() {
-        FIX27 fixData = FIX27.FIX39_ENU_ORD_STATUS;
-        assertEquals( "ORD_STATUS", fixData.toFIXNameString());
-        assertEquals( "39", fixData.toFIXIDString());
-        assertEquals( "OrdStatus", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
-    }
     @Test
     void Tag0039Test() {
         Tag39EnuOrdStatus tagData;
@@ -138,6 +129,23 @@ class Tag39EnuOrdStatusTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
+    void FIXTest() {
+        Tag39EnuOrdStatus tagData;
+
+        // loop around the ENUM and process
+        for (Enum39OrdStatus oneEnum : Enum39OrdStatus.values()) {
+            tagData = new Tag39EnuOrdStatus(oneEnum);
+            assertEquals( "FIX39_ENU_ORD_STATUS", tagData.toEnumLabelString());
+            assertEquals( "ORD_STATUS", tagData.toEnumNameString());
+            assertEquals( "39", tagData.toEnumIDString());
+            assertEquals( "OrdStatus", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void PrintFIXTagTest() {
         Tag39EnuOrdStatus tagData;
 
@@ -155,6 +163,7 @@ class Tag39EnuOrdStatusTest {
         for (Enum39OrdStatus oneEnum : Enum39OrdStatus.values()) {
             tagData = new Tag39EnuOrdStatus(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
@@ -165,7 +174,7 @@ class Tag39EnuOrdStatusTest {
         // loop around the ENUM and process
         for (Enum39OrdStatus oneEnum : Enum39OrdStatus.values()) {
             tagData = new Tag39EnuOrdStatus(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -189,12 +198,12 @@ class Tag39EnuOrdStatusTest {
         for (Enum39OrdStatus oneEnum : Enum39OrdStatus.values()) {
             tagData = new Tag39EnuOrdStatus(oneEnum);
             assertEquals( "Tag39EnuOrdStatus\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

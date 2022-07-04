@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum13CommType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,30 +27,21 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  13
  *  CommType
  *  char
+ *  <p></p>
  *  Commission type
+ *  <p></p>
  *  Valid values:
- *      1 - Per Unit (implying shares, par, currency, etc.)
- *      2 - Percent
- *      3 - Absolute (total monetary amount)
- *      4 - Percentage waived - cash discount (for CIV buy orders)
- *      5 - Percentage waived -= enhanced units (for CIV buy orders)
- *      6 - Points per bond or contract
+ *  <p>    1 - Per Unit (implying shares, par, currency, etc.)
+ *  <p>    2 - Percent
+ *  <p>    3 - Absolute (total monetary amount)
+ *  <p>    4 - Percentage waived - cash discount (for CIV buy orders)
+ *  <p>    5 - Percentage waived -= enhanced units (for CIV buy orders)
+ *  <p>    6 - Points per bond or contract
  *          (supply ContractMultiplier (231) in the <Instrument> component block
  *           if the object security is denominated in a size other than the
  *           industry default - 1000 par for bonds)
  */
 class Tag13EnuCommTypeTest {
-    @Test
-    void FIX0013Test() {
-        FIX27 fixData = FIX27.FIX13_ENU_COMM_TYPE;
-        assertEquals( "COMM_TYPE", fixData.toFIXNameString());
-        assertEquals( "13", fixData.toFIXIDString());
-        assertEquals( "CommType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
-    }
     @Test
     void Tag0013Test() {
         Tag13EnuCommType tagData;
@@ -84,6 +74,23 @@ class Tag13EnuCommTypeTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
+    void FIXTest() {
+        Tag13EnuCommType tagData;
+
+        // loop around the ENUM and process
+        for (Enum13CommType oneEnum : Enum13CommType.values()) {
+            tagData = new Tag13EnuCommType(oneEnum);
+            assertEquals( "FIX13_ENU_COMM_TYPE", tagData.toEnumLabelString());
+            assertEquals( "COMM_TYPE", tagData.toEnumNameString());
+            assertEquals( "13", tagData.toEnumIDString());
+            assertEquals( "CommType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void PrintFIXTagTest() {
         Tag13EnuCommType tagData;
 
@@ -101,6 +108,7 @@ class Tag13EnuCommTypeTest {
         for (Enum13CommType oneEnum : Enum13CommType.values()) {
             tagData = new Tag13EnuCommType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
@@ -111,8 +119,7 @@ class Tag13EnuCommTypeTest {
         // loop around the ENUM and process
         for (Enum13CommType oneEnum : Enum13CommType.values()) {
             tagData = new Tag13EnuCommType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -135,12 +142,12 @@ class Tag13EnuCommTypeTest {
         for (Enum13CommType oneEnum : Enum13CommType.values()) {
             tagData = new Tag13EnuCommType(oneEnum);
             assertEquals( "Tag13EnuCommType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

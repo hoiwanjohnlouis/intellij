@@ -50,7 +50,7 @@ public class Tag734PrcPriorSettlPrice extends FIX44Abstract implements LogValueP
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

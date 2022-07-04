@@ -50,61 +50,61 @@ class Tag1033EnuDeskTypeTest {
     @Test
     void FIX1033Test() {
         FIX50 fixData = FIX50.FIX1033_ENU_DESK_TYPE;
-        assertEquals( "1033", fixData.toFIXIDString());
-        assertEquals( "DESK_TYPE", fixData.toFIXNameString());
-        assertEquals( "DeskType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "1033", fixData.toEnumIDString());
+        assertEquals( "DESK_TYPE", fixData.toEnumNameString());
+        assertEquals( "DeskType", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag1033Test() {
         Tag1033EnuDeskType tagData;
 
         tagData = new Tag1033EnuDeskType( Enum1033DeskType.AGENCY );
-        assertEquals( Enum1033DeskType.AGENCY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum1033DeskType.AGENCY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1033EnuDeskType( Enum1033DeskType.ARBITRAGE );
-        assertEquals( Enum1033DeskType.ARBITRAGE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum1033DeskType.ARBITRAGE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1033EnuDeskType( Enum1033DeskType.DERIVATIVES );
-        assertEquals( Enum1033DeskType.DERIVATIVES.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum1033DeskType.DERIVATIVES.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1033EnuDeskType( Enum1033DeskType.INTERNATIONAL );
-        assertEquals( Enum1033DeskType.INTERNATIONAL.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum1033DeskType.INTERNATIONAL.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1033EnuDeskType( Enum1033DeskType.INSTITUTIONAL );
-        assertEquals( Enum1033DeskType.INSTITUTIONAL.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum1033DeskType.INSTITUTIONAL.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag1033EnuDeskType( Enum1033DeskType.OTHER );
-        assertEquals( Enum1033DeskType.OTHER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum1033DeskType.OTHER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1033EnuDeskType( Enum1033DeskType.PREFERRED );
-        assertEquals( Enum1033DeskType.PREFERRED.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum1033DeskType.PREFERRED.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1033EnuDeskType( Enum1033DeskType.PROPRIETARY );
-        assertEquals( Enum1033DeskType.PROPRIETARY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum1033DeskType.PROPRIETARY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1033EnuDeskType( Enum1033DeskType.PROGRAM_TRADING );
-        assertEquals( Enum1033DeskType.PROGRAM_TRADING.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum1033DeskType.PROGRAM_TRADING.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1033EnuDeskType( Enum1033DeskType.SALES );
-        assertEquals( Enum1033DeskType.SALES.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum1033DeskType.SALES.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag1033EnuDeskType( Enum1033DeskType.TRADING );
-        assertEquals( Enum1033DeskType.TRADING.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum1033DeskType.TRADING.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -135,7 +135,7 @@ class Tag1033EnuDeskTypeTest {
         // loop around the ENUM and process
         for (Enum1033DeskType oneEnum : Enum1033DeskType.values()) {
             tagData = new Tag1033EnuDeskType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -159,12 +159,12 @@ class Tag1033EnuDeskTypeTest {
         for (Enum1033DeskType oneEnum : Enum1033DeskType.values()) {
             tagData = new Tag1033EnuDeskType(oneEnum);
             assertEquals( "Tag1033EnuDeskType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

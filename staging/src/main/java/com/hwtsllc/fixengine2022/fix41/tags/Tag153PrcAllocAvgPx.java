@@ -50,7 +50,7 @@ public class Tag153PrcAllocAvgPx extends FIX41Abstract implements LogValuePairSt
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

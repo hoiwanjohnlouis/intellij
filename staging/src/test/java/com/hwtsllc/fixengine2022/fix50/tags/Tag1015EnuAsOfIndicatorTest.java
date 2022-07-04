@@ -40,23 +40,23 @@ class Tag1015EnuAsOfIndicatorTest {
     @Test
     void FIX1015Test() {
         FIX50 fixData = FIX50.FIX1015_ENU_AS_OF_INDICATOR;
-        assertEquals( "1015", fixData.toFIXIDString());
-        assertEquals( "AS_OF_INDICATOR", fixData.toFIXNameString());
-        assertEquals( "AsOfIndicator", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "1015", fixData.toEnumIDString());
+        assertEquals( "AS_OF_INDICATOR", fixData.toEnumNameString());
+        assertEquals( "AsOfIndicator", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag1015Test() {
         Tag1015EnuAsOfIndicator tagData;
 
         tagData = new Tag1015EnuAsOfIndicator( Enum1015AsOfIndicator.FALSE );
-        assertEquals( Enum1015AsOfIndicator.FALSE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum1015AsOfIndicator.FALSE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1015EnuAsOfIndicator( Enum1015AsOfIndicator.TRUE );
-        assertEquals( Enum1015AsOfIndicator.TRUE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum1015AsOfIndicator.TRUE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -87,7 +87,7 @@ class Tag1015EnuAsOfIndicatorTest {
         // loop around the ENUM and process
         for (Enum1015AsOfIndicator oneEnum : Enum1015AsOfIndicator.values()) {
             tagData = new Tag1015EnuAsOfIndicator(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -111,12 +111,12 @@ class Tag1015EnuAsOfIndicatorTest {
         for (Enum1015AsOfIndicator oneEnum : Enum1015AsOfIndicator.values()) {
             tagData = new Tag1015EnuAsOfIndicator(oneEnum);
             assertEquals( "Tag1015EnuAsOfIndicator\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

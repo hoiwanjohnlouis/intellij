@@ -51,7 +51,7 @@ public class Tag1126StrOrigTradeID extends FIX50Abstract implements LogValuePair
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

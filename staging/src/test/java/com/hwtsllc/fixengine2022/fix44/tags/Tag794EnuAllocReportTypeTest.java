@@ -49,12 +49,12 @@ class Tag794EnuAllocReportTypeTest {
     @Test
     void FIXTest() {
         FIX44 fixData = FIX44.FIX794_ENU_ALLOC_REPORT_TYPE;
-        assertEquals( "794", fixData.toFIXIDString());
-        assertEquals( "ALLOC_REPORT_TYPE", fixData.toFIXNameString());
-        assertEquals( "AllocReportType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "794", fixData.toEnumIDString());
+        assertEquals( "ALLOC_REPORT_TYPE", fixData.toEnumNameString());
+        assertEquals( "AllocReportType", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0794Test() {
@@ -65,12 +65,12 @@ class Tag794EnuAllocReportTypeTest {
         tagData = new Tag794EnuAllocReportType( oneElement );
         assertEquals( "2", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "794", tagData.toFIXIDString());
-        assertEquals( "ALLOC_REPORT_TYPE", tagData.toFIXNameString());
-        assertEquals( "AllocReportType", tagData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
+        assertEquals( "794", tagData.toEnumIDString());
+        assertEquals( "ALLOC_REPORT_TYPE", tagData.toEnumNameString());
+        assertEquals( "AllocReportType", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         tagData = new Tag794EnuAllocReportType(Enum794AllocReportType.SELLSIDE_USING_PRELIMINARY);
         assertEquals( "3", tagData.getDataValue());
@@ -136,7 +136,7 @@ class Tag794EnuAllocReportTypeTest {
         // loop around the ENUM and process
         for (Enum794AllocReportType oneEnum : Enum794AllocReportType.values()) {
             tagData = new Tag794EnuAllocReportType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -160,12 +160,12 @@ class Tag794EnuAllocReportTypeTest {
         for (Enum794AllocReportType oneEnum : Enum794AllocReportType.values()) {
             tagData = new Tag794EnuAllocReportType(oneEnum);
             assertEquals( "Tag794EnuAllocReportType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

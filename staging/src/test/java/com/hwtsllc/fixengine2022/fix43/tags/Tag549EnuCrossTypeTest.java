@@ -55,12 +55,12 @@ class Tag549EnuCrossTypeTest {
     @Test
     void FIX0549Test() {
         FIX43 fixData = FIX43.FIX549_ENU_CROSS_TYPE;
-        assertEquals( "549", fixData.toFIXIDString());
-        assertEquals( "CROSS_TYPE", fixData.toFIXNameString());
-        assertEquals( "CrossType", fixData.toFIXDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "549", fixData.toEnumIDString());
+        assertEquals( "CROSS_TYPE", fixData.toEnumNameString());
+        assertEquals( "CrossType", fixData.toEnumDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0549Test() {
@@ -70,19 +70,19 @@ class Tag549EnuCrossTypeTest {
          *  1-4 types
          */
         tagData = new Tag549EnuCrossType( Enum549CrossType.CROSS_AON );
-        assertEquals( Enum549CrossType.CROSS_AON.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum549CrossType.CROSS_AON.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag549EnuCrossType( Enum549CrossType.CROSS_IOC );
-        assertEquals( Enum549CrossType.CROSS_IOC.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum549CrossType.CROSS_IOC.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag549EnuCrossType( Enum549CrossType.CROSS_ONE_SIDE );
-        assertEquals( Enum549CrossType.CROSS_ONE_SIDE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum549CrossType.CROSS_ONE_SIDE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag549EnuCrossType( Enum549CrossType.CROSS_SAME_PRICE );
-        assertEquals( Enum549CrossType.CROSS_SAME_PRICE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum549CrossType.CROSS_SAME_PRICE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -113,7 +113,7 @@ class Tag549EnuCrossTypeTest {
         // loop around the ENUM and process
         for (Enum549CrossType oneEnum : Enum549CrossType.values()) {
             tagData = new Tag549EnuCrossType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -137,12 +137,12 @@ class Tag549EnuCrossTypeTest {
         for (Enum549CrossType oneEnum : Enum549CrossType.values()) {
             tagData = new Tag549EnuCrossType(oneEnum);
             assertEquals( "Tag549EnuCrossType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

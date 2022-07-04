@@ -50,48 +50,48 @@ class Tag465EnuQuantityTypeTest {
     @Test
     void FIX0465Test() {
         FIX43 fixData = FIX43.FIX465_ENU_QUANTITY_TYPE;
-        assertEquals( "465", fixData.toFIXIDString());
-        assertEquals( "QUANTITY_TYPE", fixData.toFIXNameString());
-        assertEquals( "QuantityType (Deprecated)", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "465", fixData.toEnumIDString());
+        assertEquals( "QUANTITY_TYPE", fixData.toEnumNameString());
+        assertEquals( "QuantityType (Deprecated)", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0465Test() {
         Tag465EnuQuantityType tagData;
 
         tagData = new Tag465EnuQuantityType( Enum465QuantityType.SHARES );
-        assertEquals( Enum465QuantityType.SHARES.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum465QuantityType.SHARES.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag465EnuQuantityType( Enum465QuantityType.BONDS );
-        assertEquals( Enum465QuantityType.BONDS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum465QuantityType.BONDS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag465EnuQuantityType( Enum465QuantityType.CURRENT_FACE );
-        assertEquals( Enum465QuantityType.CURRENT_FACE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum465QuantityType.CURRENT_FACE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag465EnuQuantityType( Enum465QuantityType.ORIGINAL_FACE );
-        assertEquals( Enum465QuantityType.ORIGINAL_FACE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum465QuantityType.ORIGINAL_FACE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag465EnuQuantityType( Enum465QuantityType.CURRENCY );
-        assertEquals( Enum465QuantityType.CURRENCY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum465QuantityType.CURRENCY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag465EnuQuantityType( Enum465QuantityType.CONTRACTS );
-        assertEquals( Enum465QuantityType.CONTRACTS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum465QuantityType.CONTRACTS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag465EnuQuantityType( Enum465QuantityType.OTHER );
-        assertEquals( Enum465QuantityType.OTHER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum465QuantityType.OTHER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag465EnuQuantityType( Enum465QuantityType.PAR );
-        assertEquals( Enum465QuantityType.PAR.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum465QuantityType.PAR.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -122,7 +122,7 @@ class Tag465EnuQuantityTypeTest {
         // loop around the ENUM and process
         for (Enum465QuantityType oneEnum : Enum465QuantityType.values()) {
             tagData = new Tag465EnuQuantityType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -146,12 +146,12 @@ class Tag465EnuQuantityTypeTest {
         for (Enum465QuantityType oneEnum : Enum465QuantityType.values()) {
             tagData = new Tag465EnuQuantityType(oneEnum);
             assertEquals( "Tag465EnuQuantityType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

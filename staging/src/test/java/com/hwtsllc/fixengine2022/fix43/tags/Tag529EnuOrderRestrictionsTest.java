@@ -52,12 +52,12 @@ class Tag529EnuOrderRestrictionsTest {
     @Test
     void FIX0529Test() {
         FIX43 fixData = FIX43.FIX529_ENU_ORDER_RESTRICTIONS;
-        assertEquals( "529", fixData.toFIXIDString());
-        assertEquals( "ORDER_RESTRICTIONS", fixData.toFIXNameString());
-        assertEquals( "OrderRestrictions", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "529", fixData.toEnumIDString());
+        assertEquals( "ORDER_RESTRICTIONS", fixData.toEnumNameString());
+        assertEquals( "OrderRestrictions", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0529Test() {
@@ -71,40 +71,40 @@ class Tag529EnuOrderRestrictionsTest {
          *  1-9, types
          */
         tagData = new Tag529EnuOrderRestrictions( Enum529OrderRestrictions.PROGRAM_TRADE );
-        assertEquals( Enum529OrderRestrictions.PROGRAM_TRADE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum529OrderRestrictions.PROGRAM_TRADE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag529EnuOrderRestrictions( Enum529OrderRestrictions.INDEX_ARBITRAGE );
-        assertEquals( Enum529OrderRestrictions.INDEX_ARBITRAGE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum529OrderRestrictions.INDEX_ARBITRAGE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag529EnuOrderRestrictions( Enum529OrderRestrictions.NON_INDEX_ARBITRAGE );
-        assertEquals( Enum529OrderRestrictions.NON_INDEX_ARBITRAGE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum529OrderRestrictions.NON_INDEX_ARBITRAGE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag529EnuOrderRestrictions( Enum529OrderRestrictions.COMPETING_MARKET_MAKER );
-        assertEquals( Enum529OrderRestrictions.COMPETING_MARKET_MAKER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum529OrderRestrictions.COMPETING_MARKET_MAKER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag529EnuOrderRestrictions( Enum529OrderRestrictions.SPECIALIST_IN_SECURITY );
-        assertEquals( Enum529OrderRestrictions.SPECIALIST_IN_SECURITY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum529OrderRestrictions.SPECIALIST_IN_SECURITY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag529EnuOrderRestrictions( Enum529OrderRestrictions.SPECIALIST_IN_UNDERLYING_SECURITY );
-        assertEquals( Enum529OrderRestrictions.SPECIALIST_IN_UNDERLYING_SECURITY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum529OrderRestrictions.SPECIALIST_IN_UNDERLYING_SECURITY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag529EnuOrderRestrictions( Enum529OrderRestrictions.FOREIGN_ENTITY );
-        assertEquals( Enum529OrderRestrictions.FOREIGN_ENTITY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum529OrderRestrictions.FOREIGN_ENTITY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag529EnuOrderRestrictions( Enum529OrderRestrictions.EXTERNAL_MARKET_PARTICIPANT );
-        assertEquals( Enum529OrderRestrictions.EXTERNAL_MARKET_PARTICIPANT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum529OrderRestrictions.EXTERNAL_MARKET_PARTICIPANT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag529EnuOrderRestrictions( Enum529OrderRestrictions.EXTERNAL_INTER_CONNECTED );
-        assertEquals( Enum529OrderRestrictions.EXTERNAL_INTER_CONNECTED.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum529OrderRestrictions.EXTERNAL_INTER_CONNECTED.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
@@ -112,7 +112,7 @@ class Tag529EnuOrderRestrictionsTest {
          *  A type
          */
         tagData = new Tag529EnuOrderRestrictions( Enum529OrderRestrictions.RISKLESS_ARBITRAGE );
-        assertEquals( Enum529OrderRestrictions.RISKLESS_ARBITRAGE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum529OrderRestrictions.RISKLESS_ARBITRAGE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -143,7 +143,7 @@ class Tag529EnuOrderRestrictionsTest {
         // loop around the ENUM and process
         for (Enum529OrderRestrictions oneEnum : Enum529OrderRestrictions.values()) {
             tagData = new Tag529EnuOrderRestrictions(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -167,12 +167,12 @@ class Tag529EnuOrderRestrictionsTest {
         for (Enum529OrderRestrictions oneEnum : Enum529OrderRestrictions.values()) {
             tagData = new Tag529EnuOrderRestrictions(oneEnum);
             assertEquals( "Tag529EnuOrderRestrictions\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

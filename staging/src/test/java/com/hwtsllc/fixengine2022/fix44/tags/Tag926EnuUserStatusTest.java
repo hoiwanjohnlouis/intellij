@@ -44,12 +44,12 @@ class Tag926EnuUserStatusTest {
     @Test
     void FIXTest() {
         FIX44 fixData = FIX44.FIX926_ENU_USER_STATUS;
-        assertEquals( "926", fixData.toFIXIDString());
-        assertEquals( "USER_STATUS", fixData.toFIXNameString());
-        assertEquals( "UserStatus", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "926", fixData.toEnumIDString());
+        assertEquals( "USER_STATUS", fixData.toEnumNameString());
+        assertEquals( "UserStatus", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0926Test() {
@@ -58,34 +58,34 @@ class Tag926EnuUserStatusTest {
 
         oneElement = Enum926UserStatus.LOGGED_IN;
         tagData = new Tag926EnuUserStatus( oneElement );
-        assertEquals( oneElement.toFIXIDString(), tagData.getDataValue());
+        assertEquals( oneElement.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "926", tagData.toFIXIDString());
-        assertEquals( "USER_STATUS", tagData.toFIXNameString());
-        assertEquals( "UserStatus", tagData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
+        assertEquals( "926", tagData.toEnumIDString());
+        assertEquals( "USER_STATUS", tagData.toEnumNameString());
+        assertEquals( "UserStatus", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         tagData = new Tag926EnuUserStatus( Enum926UserStatus.NOT_LOGGED_IN );
-        assertEquals( Enum926UserStatus.NOT_LOGGED_IN.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum926UserStatus.NOT_LOGGED_IN.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag926EnuUserStatus( Enum926UserStatus.USER_NOT_RECOGNISED );
-        assertEquals( Enum926UserStatus.USER_NOT_RECOGNISED.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum926UserStatus.USER_NOT_RECOGNISED.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag926EnuUserStatus( Enum926UserStatus.PASSWORD_INCORRECT );
-        assertEquals( Enum926UserStatus.PASSWORD_INCORRECT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum926UserStatus.PASSWORD_INCORRECT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag926EnuUserStatus( Enum926UserStatus.PASSWORD_CHANGED );
-        assertEquals( Enum926UserStatus.PASSWORD_CHANGED.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum926UserStatus.PASSWORD_CHANGED.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag926EnuUserStatus( Enum926UserStatus.OTHER );
-        assertEquals( Enum926UserStatus.OTHER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum926UserStatus.OTHER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -116,7 +116,7 @@ class Tag926EnuUserStatusTest {
         // loop around the ENUM and process
         for (Enum926UserStatus oneEnum : Enum926UserStatus.values()) {
             tagData = new Tag926EnuUserStatus(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -140,12 +140,12 @@ class Tag926EnuUserStatusTest {
         for (Enum926UserStatus oneEnum : Enum926UserStatus.values()) {
             tagData = new Tag926EnuUserStatus(oneEnum);
             assertEquals( "Tag926EnuUserStatus\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

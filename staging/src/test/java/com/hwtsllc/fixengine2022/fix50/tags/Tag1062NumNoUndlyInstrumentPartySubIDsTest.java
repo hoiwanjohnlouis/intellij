@@ -35,12 +35,12 @@ class Tag1062NumNoUndlyInstrumentPartySubIDsTest {
     @Test
     void FIX1062Test() {
         FIX50 fixData = FIX50.FIX1062_NUM_NO_UNDLY_INSTRUMENT_PARTY_SUB_IDS;
-        assertEquals( "1062", fixData.toFIXIDString());
-        assertEquals( "NO_UNDLY_INSTRUMENT_PARTY_SUB_IDS", fixData.toFIXNameString());
-        assertEquals( "NoUndlyInstrumentPartySubIDs", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "1062", fixData.toEnumIDString());
+        assertEquals( "NO_UNDLY_INSTRUMENT_PARTY_SUB_IDS", fixData.toEnumNameString());
+        assertEquals( "NoUndlyInstrumentPartySubIDs", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag1062Test() {
@@ -87,7 +87,7 @@ class Tag1062NumNoUndlyInstrumentPartySubIDsTest {
 
         oneElement = Tag1062NumNoUndlyInstrumentPartySubIDs.TESTB_NUM_NO_UNDLY_INSTRUMENT_PARTY_SUB_IDS;
         tagData = new Tag1062NumNoUndlyInstrumentPartySubIDs( new MyNumInGroupType( oneElement ) );
-        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
     }
     @Test
@@ -108,12 +108,12 @@ class Tag1062NumNoUndlyInstrumentPartySubIDsTest {
         oneElement = Tag1062NumNoUndlyInstrumentPartySubIDs.TESTA_NUM_NO_UNDLY_INSTRUMENT_PARTY_SUB_IDS;
         tagData = new Tag1062NumNoUndlyInstrumentPartySubIDs( new MyNumInGroupType( oneElement ) );
         assertEquals( "Tag1062NumNoUndlyInstrumentPartySubIDs\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

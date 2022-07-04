@@ -89,12 +89,12 @@ class Tag423EnuPriceTypeTest {
     @Test
     void FIX0423Test() {
         FIX42 fixData = FIX42.FIX423_ENU_PRICE_TYPE;
-        assertEquals( "423", fixData.toFIXIDString());
-        assertEquals( "PRICE_TYPE", fixData.toFIXNameString());
-        assertEquals( "PriceType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "423", fixData.toEnumIDString());
+        assertEquals( "PRICE_TYPE", fixData.toEnumNameString());
+        assertEquals( "PriceType", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0423Test() {
@@ -108,47 +108,47 @@ class Tag423EnuPriceTypeTest {
          * 1-11 msg types
          */
         tagData = new Tag423EnuPriceType(MyEnumPriceType.PERCENTAGE);
-        assertEquals( MyEnumPriceType.PERCENTAGE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.PERCENTAGE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag423EnuPriceType(MyEnumPriceType.PER_UNIT);
-        assertEquals( MyEnumPriceType.PER_UNIT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.PER_UNIT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag423EnuPriceType(MyEnumPriceType.FIXED_AMOUNT);
-        assertEquals( MyEnumPriceType.FIXED_AMOUNT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.FIXED_AMOUNT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag423EnuPriceType(MyEnumPriceType.DISCOUNT);
-        assertEquals( MyEnumPriceType.DISCOUNT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.DISCOUNT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag423EnuPriceType(MyEnumPriceType.PREMIUM);
-        assertEquals( MyEnumPriceType.PREMIUM.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.PREMIUM.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag423EnuPriceType(MyEnumPriceType.SPREAD);
-        assertEquals( MyEnumPriceType.SPREAD.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.SPREAD.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag423EnuPriceType(MyEnumPriceType.TED_PRICE);
-        assertEquals( MyEnumPriceType.TED_PRICE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.TED_PRICE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag423EnuPriceType(MyEnumPriceType.TED_YIELD);
-        assertEquals( MyEnumPriceType.TED_YIELD.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.TED_YIELD.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag423EnuPriceType(MyEnumPriceType.YIELD);
-        assertEquals( MyEnumPriceType.YIELD.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.YIELD.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag423EnuPriceType(MyEnumPriceType.FIXED_TRADE_PRICE);
-        assertEquals( MyEnumPriceType.FIXED_TRADE_PRICE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.FIXED_TRADE_PRICE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag423EnuPriceType(MyEnumPriceType.VARIABLE_TRADE_PRICE);
-        assertEquals( MyEnumPriceType.VARIABLE_TRADE_PRICE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.VARIABLE_TRADE_PRICE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
@@ -157,31 +157,31 @@ class Tag423EnuPriceTypeTest {
          * 13-19 msg types
          */
         tagData = new Tag423EnuPriceType(MyEnumPriceType.TICKS_IN_HALFS);
-        assertEquals( MyEnumPriceType.TICKS_IN_HALFS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.TICKS_IN_HALFS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag423EnuPriceType(MyEnumPriceType.TICKS_IN_FOURTHS);
-        assertEquals( MyEnumPriceType.TICKS_IN_FOURTHS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.TICKS_IN_FOURTHS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag423EnuPriceType(MyEnumPriceType.TICKS_IN_EIGHTHS);
-        assertEquals( MyEnumPriceType.TICKS_IN_EIGHTHS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.TICKS_IN_EIGHTHS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag423EnuPriceType(MyEnumPriceType.TICKS_IN_SIXTEENTHS);
-        assertEquals( MyEnumPriceType.TICKS_IN_SIXTEENTHS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.TICKS_IN_SIXTEENTHS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag423EnuPriceType(MyEnumPriceType.TICKS_IN_THIRTY_SECONDS);
-        assertEquals( MyEnumPriceType.TICKS_IN_THIRTY_SECONDS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.TICKS_IN_THIRTY_SECONDS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag423EnuPriceType(MyEnumPriceType.TICKS_IN_SIXTY_FOURTHS);
-        assertEquals( MyEnumPriceType.TICKS_IN_SIXTY_FOURTHS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.TICKS_IN_SIXTY_FOURTHS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag423EnuPriceType(MyEnumPriceType.TICKS_IN_ONE_TWENTY_EIGHTS);
-        assertEquals( MyEnumPriceType.TICKS_IN_ONE_TWENTY_EIGHTS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPriceType.TICKS_IN_ONE_TWENTY_EIGHTS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -212,7 +212,7 @@ class Tag423EnuPriceTypeTest {
         // loop around the ENUM and process
         for (MyEnumPriceType oneEnum : MyEnumPriceType.values()) {
             tagData = new Tag423EnuPriceType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -236,12 +236,12 @@ class Tag423EnuPriceTypeTest {
         for (MyEnumPriceType oneEnum : MyEnumPriceType.values()) {
             tagData = new Tag423EnuPriceType(oneEnum);
             assertEquals( "Tag423EnuPriceType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

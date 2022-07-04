@@ -38,12 +38,12 @@ class Tag149StrURLLinkTest {
     @Test
     void FIX0149Test() {
         FIX41 fixData = FIX41.FIX149_STR_URL_LINK;
-        assertEquals( "149", fixData.toFIXIDString());
-        assertEquals( "URL_LINK", fixData.toFIXNameString());
-        assertEquals( "URLLink", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "149", fixData.toEnumIDString());
+        assertEquals( "URL_LINK", fixData.toEnumNameString());
+        assertEquals( "URLLink", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0149Test() {
@@ -77,7 +77,7 @@ class Tag149StrURLLinkTest {
         Tag149StrURLLink tagData;
 
         tagData = new Tag149StrURLLink(new MyStringType(Tag149StrURLLink.TESTB_STR_URL_LINK));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag149StrURLLink.TESTB_STR_URL_LINK,
+        assertEquals( tagData.toEnumIDString() + "=" + Tag149StrURLLink.TESTB_STR_URL_LINK,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toValuePairString());
@@ -98,12 +98,12 @@ class Tag149StrURLLinkTest {
 
         tagData = new Tag149StrURLLink(new MyStringType(Tag149StrURLLink.TESTA_STR_URL_LINK));
         assertEquals( "Tag149StrURLLink\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + Tag149StrURLLink.TESTA_STR_URL_LINK + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag149StrURLLink.TESTA_STR_URL_LINK + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag149StrURLLink.TESTA_STR_URL_LINK + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

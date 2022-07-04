@@ -23,14 +23,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  13
  *  CommType
  *  char
+ *  <p></p>
  *  Commission type
+ *  <p></p>
  *  Valid values:
- *      1 - Per Unit (implying shares, par, currency, etc.)
- *      2 - Percent
- *      3 - Absolute (total monetary amount)
- *      4 - Percentage waived - cash discount (for CIV buy orders)
- *      5 - Percentage waived -= enhanced units (for CIV buy orders)
- *      6 - Points per bond or contract
+ *  <p>    1 - Per Unit (implying shares, par, currency, etc.)
+ *  <p>    2 - Percent
+ *  <p>    3 - Absolute (total monetary amount)
+ *  <p>    4 - Percentage waived - cash discount (for CIV buy orders)
+ *  <p>    5 - Percentage waived -= enhanced units (for CIV buy orders)
+ *  <p>    6 - Points per bond or contract
  *          (supply ContractMultiplier (231) in the <Instrument> component block
  *           if the object security is denominated in a size other than the
  *           industry default - 1000 par for bonds)
@@ -65,28 +67,28 @@ public enum Enum13CommType implements LogFIXString, LogVerboseString {
      * standard wrapper to retrieve the specific enum name
      */
     @Override
-    public String toEnumNameString() {
+    public String toEnumLabelString() {
         return this.name();
     }
     /**
      * standard wrapper to retrieve the specific fix action code for this enum. eg: the first field
      */
     @Override
-    public String toFIXIDString() {
+    public String toEnumIDString() {
         return id;
     }
     /**
      * standard wrapper to retrieve the specific fix name for this enum. eg: the second field
      */
     @Override
-    public String toFIXNameString() {
+    public String toEnumNameString() {
         return name;
     }
     /**
      * standard wrapper to retrieve the specific fix description for this enum. eg: the third field
      */
     @Override
-    public String toFIXDescriptionString() {
+    public String toEnumDescriptionString() {
         return description;
     }
     /**
@@ -96,16 +98,16 @@ public enum Enum13CommType implements LogFIXString, LogVerboseString {
     public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
-                .concat(toEnumNameString())
+                .concat( toEnumLabelString())
                 .concat("]")
                 .concat("\n\tAction[")
-                .concat(toFIXIDString())
+                .concat( toEnumIDString())
                 .concat("]")
                 .concat("\n\tName[")
-                .concat(toFIXNameString())
+                .concat( toEnumNameString())
                 .concat("]")
                 .concat("\n\tDescription[")
-                .concat(toFIXDescriptionString())
+                .concat( toEnumDescriptionString())
                 .concat("]");
     }
     /**
@@ -113,13 +115,13 @@ public enum Enum13CommType implements LogFIXString, LogVerboseString {
      */
     @Override
     public String toString() {
-        return toEnumNameString()
+        return toEnumLabelString()
                 .concat("=[")
-                .concat(toFIXIDString())
+                .concat( toEnumIDString())
                 .concat(",")
-                .concat(toFIXNameString())
+                .concat( toEnumNameString())
                 .concat(",")
-                .concat(toFIXDescriptionString())
+                .concat( toEnumDescriptionString())
                 .concat("]");
     }
 

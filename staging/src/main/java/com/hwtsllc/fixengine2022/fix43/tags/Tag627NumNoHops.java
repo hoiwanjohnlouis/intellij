@@ -48,7 +48,7 @@ public class Tag627NumNoHops extends FIX43Abstract implements LogValuePairString
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

@@ -50,7 +50,7 @@ public class Tag986AmtUnderlyingCollectAmount extends FIX50Abstract implements L
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

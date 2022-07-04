@@ -26,12 +26,14 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  4
  *  AdvSide
  *  char
+ *  <p></p>
  *  Broker's side of advertised trade
+ *  <p></p>
  *  Valid values:
- *      B - Buy
- *      S - Sell
- *      T - Trade
- *      X - Cross
+ *  <p>    B - Buy
+ *  <p>    S - Sell
+ *  <p>    T - Trade
+ *  <p>    X - Cross
  */
 class Enum4AdvSideTest {
     @Test
@@ -39,35 +41,35 @@ class Enum4AdvSideTest {
         Enum4AdvSide enumType;
 
         enumType = Enum4AdvSide.BUY;
-        assertEquals("B", enumType.toFIXIDString());
-        assertEquals("BUY", enumType.toFIXNameString());
-        assertEquals("B - Buy", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("B", enumType.toEnumIDString());
+        assertEquals("BUY", enumType.toEnumNameString());
+        assertEquals("B - Buy", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum4AdvSide.SELL;
-        assertEquals("S", enumType.toFIXIDString());
-        assertEquals("SELL", enumType.toFIXNameString());
-        assertEquals("S - Sell", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("S", enumType.toEnumIDString());
+        assertEquals("SELL", enumType.toEnumNameString());
+        assertEquals("S - Sell", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum4AdvSide.CROSS;
-        assertEquals("X", enumType.toFIXIDString());
-        assertEquals("CROSS", enumType.toFIXNameString());
-        assertEquals("X - Cross", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("X", enumType.toEnumIDString());
+        assertEquals("CROSS", enumType.toEnumNameString());
+        assertEquals("X - Cross", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum4AdvSide.TRADE;
-        assertEquals("T", enumType.toFIXIDString());
-        assertEquals("TRADE", enumType.toFIXNameString());
-        assertEquals("T - Trade", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("T", enumType.toEnumIDString());
+        assertEquals("TRADE", enumType.toEnumNameString());
+        assertEquals("T - Trade", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

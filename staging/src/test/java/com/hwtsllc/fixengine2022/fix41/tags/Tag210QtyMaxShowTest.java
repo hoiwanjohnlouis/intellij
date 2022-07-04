@@ -39,12 +39,12 @@ class Tag210QtyMaxShowTest {
     @Test
     void FIX0210Test() {
         FIX41 fixData = FIX41.FIX210_QTY_MAX_SHOW;
-        assertEquals( "210", fixData.toFIXIDString());
-        assertEquals( "MAX_SHOW", fixData.toFIXNameString());
-        assertEquals( "MaxShow", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "210", fixData.toEnumIDString());
+        assertEquals( "MAX_SHOW", fixData.toEnumNameString());
+        assertEquals( "MaxShow", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0210Test() {
@@ -74,7 +74,7 @@ class Tag210QtyMaxShowTest {
         Tag210QtyMaxShow tagData;
 
         tagData = new Tag210QtyMaxShow(new MyQtyType(Tag210QtyMaxShow.TESTA_QTY_MAX_SHOW));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag210QtyMaxShow.TESTA_QTY_MAX_SHOW,
+        assertEquals( tagData.toEnumIDString() + "=" + Tag210QtyMaxShow.TESTA_QTY_MAX_SHOW,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toValuePairString());
@@ -95,12 +95,12 @@ class Tag210QtyMaxShowTest {
 
         tagData = new Tag210QtyMaxShow(new MyQtyType(Tag210QtyMaxShow.TESTA_QTY_MAX_SHOW));
         assertEquals( "Tag210QtyMaxShow\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + Tag210QtyMaxShow.TESTA_QTY_MAX_SHOW + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag210QtyMaxShow.TESTA_QTY_MAX_SHOW + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag210QtyMaxShow.TESTA_QTY_MAX_SHOW + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

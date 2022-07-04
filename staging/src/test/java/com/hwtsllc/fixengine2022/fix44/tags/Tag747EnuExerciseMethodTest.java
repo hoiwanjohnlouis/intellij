@@ -39,12 +39,12 @@ class Tag747EnuExerciseMethodTest {
     @Test
     void FIXTest() {
         FIX44 fixData = FIX44.FIX747_ENU_EXERCISE_METHOD;
-        assertEquals( "747", fixData.toFIXIDString());
-        assertEquals( "EXERCISE_METHOD", fixData.toFIXNameString());
-        assertEquals( "ExerciseMethod", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "747", fixData.toEnumIDString());
+        assertEquals( "EXERCISE_METHOD", fixData.toEnumNameString());
+        assertEquals( "ExerciseMethod", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0747Test() {
@@ -53,17 +53,17 @@ class Tag747EnuExerciseMethodTest {
 
         oneElement = Enum747ExerciseMethod.AUTOMATIC;
         tagData = new Tag747EnuExerciseMethod( oneElement );
-        assertEquals( Enum747ExerciseMethod.AUTOMATIC.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum747ExerciseMethod.AUTOMATIC.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "747", tagData.toFIXIDString());
-        assertEquals( "EXERCISE_METHOD", tagData.toFIXNameString());
-        assertEquals( "ExerciseMethod", tagData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
+        assertEquals( "747", tagData.toEnumIDString());
+        assertEquals( "EXERCISE_METHOD", tagData.toEnumNameString());
+        assertEquals( "ExerciseMethod", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         tagData = new Tag747EnuExerciseMethod(Enum747ExerciseMethod.MANUAL);
-        assertEquals( Enum747ExerciseMethod.MANUAL.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum747ExerciseMethod.MANUAL.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -94,7 +94,7 @@ class Tag747EnuExerciseMethodTest {
         // loop around the ENUM and process
         for (Enum747ExerciseMethod oneEnum : Enum747ExerciseMethod.values()) {
             tagData = new Tag747EnuExerciseMethod(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -118,12 +118,12 @@ class Tag747EnuExerciseMethodTest {
         for (Enum747ExerciseMethod oneEnum : Enum747ExerciseMethod.values()) {
             tagData = new Tag747EnuExerciseMethod(oneEnum);
             assertEquals( "Tag747EnuExerciseMethod\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

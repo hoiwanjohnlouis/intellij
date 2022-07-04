@@ -41,30 +41,30 @@ class Enum854QtyTypeTest {
         Enum854QtyType enumType;
 
         enumType = Enum854QtyType.UNITS;
-        assertEquals( "0", enumType.toFIXIDString() );
-        assertEquals( "UNITS", enumType.toFIXNameString() );
-        assertEquals( "0 - Units (shares, par, currency)", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "0", enumType.toEnumIDString() );
+        assertEquals( "UNITS", enumType.toEnumNameString() );
+        assertEquals( "0 - Units (shares, par, currency)", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum854QtyType.CONTRACTS;
-        assertEquals( "1", enumType.toFIXIDString() );
-        assertEquals( "CONTRACTS", enumType.toFIXNameString() );
+        assertEquals( "1", enumType.toEnumIDString() );
+        assertEquals( "CONTRACTS", enumType.toEnumNameString() );
         assertEquals( "1 - Contracts (if used - must specify ContractMultiplier (tag 231))",
-                enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+                enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum854QtyType.MEASURE_PER_TIME;
-        assertEquals( "2", enumType.toFIXIDString() );
-        assertEquals( "MEASURE_PER_TIME", enumType.toFIXNameString() );
+        assertEquals( "2", enumType.toEnumIDString() );
+        assertEquals( "MEASURE_PER_TIME", enumType.toEnumNameString() );
         assertEquals( "2 - Units of Measure per Time Unit " +
                             "(if used - must specify UnitofMeasure (tag 996) and TimeUnit (tag 997))",
-                enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+                enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

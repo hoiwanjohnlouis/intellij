@@ -64,12 +64,12 @@ class Tag507EnuRegistRejReasonCodeTest {
     @Test
     void FIX0507Test() {
         FIX43 fixData = FIX43.FIX507_ENU_REGIST_REJ_REASON_CODE;
-        assertEquals( "507", fixData.toFIXIDString());
-        assertEquals( "REGIST_REJ_REASON_CODE", fixData.toFIXNameString());
-        assertEquals( "RegistRejReasonCode", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "507", fixData.toEnumIDString());
+        assertEquals( "REGIST_REJ_REASON_CODE", fixData.toEnumNameString());
+        assertEquals( "RegistRejReasonCode", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0507Test() {
@@ -84,78 +84,78 @@ class Tag507EnuRegistRejReasonCodeTest {
          *  1-18, types
          */
         tagData = new Tag507EnuRegistRejReasonCode( Enum507RegistRejReasonCode.INVALID_ACCOUNT_TYPE );
-        assertEquals( Enum507RegistRejReasonCode.INVALID_ACCOUNT_TYPE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum507RegistRejReasonCode.INVALID_ACCOUNT_TYPE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag507EnuRegistRejReasonCode( Enum507RegistRejReasonCode.INVALID_TAX_EXEMPT_TYPE );
-        assertEquals( Enum507RegistRejReasonCode.INVALID_TAX_EXEMPT_TYPE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum507RegistRejReasonCode.INVALID_TAX_EXEMPT_TYPE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag507EnuRegistRejReasonCode( Enum507RegistRejReasonCode.INVALID_OWNERSHIP_TYPE );
-        assertEquals( Enum507RegistRejReasonCode.INVALID_OWNERSHIP_TYPE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum507RegistRejReasonCode.INVALID_OWNERSHIP_TYPE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag507EnuRegistRejReasonCode( Enum507RegistRejReasonCode.INVALID_NO_REG_DETAILS );
-        assertEquals( Enum507RegistRejReasonCode.INVALID_NO_REG_DETAILS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum507RegistRejReasonCode.INVALID_NO_REG_DETAILS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag507EnuRegistRejReasonCode( Enum507RegistRejReasonCode.INVALID_REG_SEQ_NO );
-        assertEquals( Enum507RegistRejReasonCode.INVALID_REG_SEQ_NO.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum507RegistRejReasonCode.INVALID_REG_SEQ_NO.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag507EnuRegistRejReasonCode( Enum507RegistRejReasonCode.INVALID_REG_DETAILS );
-        assertEquals( Enum507RegistRejReasonCode.INVALID_REG_DETAILS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum507RegistRejReasonCode.INVALID_REG_DETAILS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag507EnuRegistRejReasonCode( Enum507RegistRejReasonCode.INVALID_MAILING_DETAILS );
-        assertEquals( Enum507RegistRejReasonCode.INVALID_MAILING_DETAILS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum507RegistRejReasonCode.INVALID_MAILING_DETAILS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag507EnuRegistRejReasonCode( Enum507RegistRejReasonCode.INVALID_MAILING_INSTRUCTIONS );
-        assertEquals( Enum507RegistRejReasonCode.INVALID_MAILING_INSTRUCTIONS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum507RegistRejReasonCode.INVALID_MAILING_INSTRUCTIONS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag507EnuRegistRejReasonCode( Enum507RegistRejReasonCode.INVALID_INVESTOR_ID );
-        assertEquals( Enum507RegistRejReasonCode.INVALID_INVESTOR_ID.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum507RegistRejReasonCode.INVALID_INVESTOR_ID.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag507EnuRegistRejReasonCode( Enum507RegistRejReasonCode.INVALID_INVESTOR_ID_SOURCE );
-        assertEquals( Enum507RegistRejReasonCode.INVALID_INVESTOR_ID_SOURCE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum507RegistRejReasonCode.INVALID_INVESTOR_ID_SOURCE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag507EnuRegistRejReasonCode( Enum507RegistRejReasonCode.INVALID_DATE_OF_BIRTH );
-        assertEquals( Enum507RegistRejReasonCode.INVALID_DATE_OF_BIRTH.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum507RegistRejReasonCode.INVALID_DATE_OF_BIRTH.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag507EnuRegistRejReasonCode( Enum507RegistRejReasonCode.INVALID_COUNTRY_OF_RESIDENCE );
-        assertEquals( Enum507RegistRejReasonCode.INVALID_COUNTRY_OF_RESIDENCE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum507RegistRejReasonCode.INVALID_COUNTRY_OF_RESIDENCE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag507EnuRegistRejReasonCode( Enum507RegistRejReasonCode.INVALID_NO_DISTRIB_INSTNS );
-        assertEquals( Enum507RegistRejReasonCode.INVALID_NO_DISTRIB_INSTNS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum507RegistRejReasonCode.INVALID_NO_DISTRIB_INSTNS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag507EnuRegistRejReasonCode( Enum507RegistRejReasonCode.INVALID_DISTRIB_PERCENTAGE );
-        assertEquals( Enum507RegistRejReasonCode.INVALID_DISTRIB_PERCENTAGE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum507RegistRejReasonCode.INVALID_DISTRIB_PERCENTAGE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag507EnuRegistRejReasonCode( Enum507RegistRejReasonCode.INVALID_DISTRIB_PAYMENT_METHOD );
-        assertEquals( Enum507RegistRejReasonCode.INVALID_DISTRIB_PAYMENT_METHOD.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum507RegistRejReasonCode.INVALID_DISTRIB_PAYMENT_METHOD.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag507EnuRegistRejReasonCode( Enum507RegistRejReasonCode.INVALID_CDA_ACCT_NAME );
-        assertEquals( Enum507RegistRejReasonCode.INVALID_CDA_ACCT_NAME.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum507RegistRejReasonCode.INVALID_CDA_ACCT_NAME.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag507EnuRegistRejReasonCode( Enum507RegistRejReasonCode.INVALID_CDA_CODE );
-        assertEquals( Enum507RegistRejReasonCode.INVALID_CDA_CODE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum507RegistRejReasonCode.INVALID_CDA_CODE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag507EnuRegistRejReasonCode( Enum507RegistRejReasonCode.INVALID_CDA_ACCT_NUM );
-        assertEquals( Enum507RegistRejReasonCode.INVALID_CDA_ACCT_NUM.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum507RegistRejReasonCode.INVALID_CDA_ACCT_NUM.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
@@ -163,7 +163,7 @@ class Tag507EnuRegistRejReasonCodeTest {
          *  99 type
          */
         tagData = new Tag507EnuRegistRejReasonCode( Enum507RegistRejReasonCode.OTHER );
-        assertEquals( Enum507RegistRejReasonCode.OTHER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum507RegistRejReasonCode.OTHER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -194,7 +194,7 @@ class Tag507EnuRegistRejReasonCodeTest {
         // loop around the ENUM and process
         for (Enum507RegistRejReasonCode oneEnum : Enum507RegistRejReasonCode.values()) {
             tagData = new Tag507EnuRegistRejReasonCode(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -218,12 +218,12 @@ class Tag507EnuRegistRejReasonCodeTest {
         for (Enum507RegistRejReasonCode oneEnum : Enum507RegistRejReasonCode.values()) {
             tagData = new Tag507EnuRegistRejReasonCode(oneEnum);
             assertEquals( "Tag507EnuRegistRejReasonCode\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

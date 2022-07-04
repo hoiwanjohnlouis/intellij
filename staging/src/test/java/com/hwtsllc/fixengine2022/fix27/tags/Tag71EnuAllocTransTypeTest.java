@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum71AllocTransType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,32 +27,25 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  71
  *  AllocTransType
  *  char
+ *  <p></p>
  *  Identifies allocation transaction type
- *  *** SOME VALUES HAVE BEEN REPLACED ***
- *  *** See Replaced Features and Supported Approach ***
+ *  <p></p>
+ *  <p> *** SOME VALUES HAVE BEEN REPLACED ***
+ *  <p> *** See Replaced Features and Supported Approach ***
+ *  <p></p>
  *  Valid values:
- *      0 - New
- *      1 - Replace
- *      2 - Cancel
- *      3 - Preliminary (without MiscFees and NetMoney) (Removed/Replaced)
- *      4 - Calculated (includes MiscFees and NetMoney) (Removed/Replaced)
- *      5 - Calculated without Preliminary
+ *  <p>    0 - New
+ *  <p>    1 - Replace
+ *  <p>    2 - Cancel
+ *  <p>    3 - Preliminary (without MiscFees and NetMoney) (Removed/Replaced)
+ *  <p>    4 - Calculated (includes MiscFees and NetMoney) (Removed/Replaced)
+ *  <p></p>
+ *  <p>    5 - Calculated without Preliminary
  *          (sent unsolicited by broker, includes MiscFees and NetMoney)
  *          (Removed-Replaced)
- *      6 - Reversal
+ *  <p>    6 - Reversal
  */
 class Tag71EnuAllocTransTypeTest {
-    @Test
-    void FIX0071Test() {
-        FIX27 fixData = FIX27.FIX71_ENU_ALLOC_TRANS_TYPE;
-        assertEquals( "ALLOC_TRANS_TYPE", fixData.toFIXNameString());
-        assertEquals( "71", fixData.toFIXIDString());
-        assertEquals( "AllocTransType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
-    }
     @Test
     void Tag0071Test() {
         Tag71EnuAllocTransType tagData;
@@ -90,6 +82,23 @@ class Tag71EnuAllocTransTypeTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
+    void FIXTest() {
+        Tag71EnuAllocTransType tagData;
+
+        // loop around the ENUM and process
+        for (Enum71AllocTransType oneEnum : Enum71AllocTransType.values()) {
+            tagData = new Tag71EnuAllocTransType(oneEnum);
+            assertEquals( "FIX71_ENU_ALLOC_TRANS_TYPE", tagData.toEnumLabelString());
+            assertEquals( "ALLOC_TRANS_TYPE", tagData.toEnumNameString());
+            assertEquals( "71", tagData.toEnumIDString());
+            assertEquals( "AllocTransType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void PrintFIXTagTest() {
         Tag71EnuAllocTransType tagData;
 
@@ -107,6 +116,7 @@ class Tag71EnuAllocTransTypeTest {
         for (Enum71AllocTransType oneEnum : Enum71AllocTransType.values()) {
             tagData = new Tag71EnuAllocTransType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
@@ -117,7 +127,7 @@ class Tag71EnuAllocTransTypeTest {
         // loop around the ENUM and process
         for (Enum71AllocTransType oneEnum : Enum71AllocTransType.values()) {
             tagData = new Tag71EnuAllocTransType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -141,12 +151,12 @@ class Tag71EnuAllocTransTypeTest {
         for (Enum71AllocTransType oneEnum : Enum71AllocTransType.values()) {
             tagData = new Tag71EnuAllocTransType(oneEnum);
             assertEquals( "Tag71EnuAllocTransType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

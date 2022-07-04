@@ -47,12 +47,12 @@ class Tag751EnuTradeReportRejectReasonTest {
     @Test
     void FIXTest() {
         FIX44 fixData = FIX44.FIX751_ENU_TRADE_REPORT_REJECT_REASON;
-        assertEquals( "751", fixData.toFIXIDString());
-        assertEquals( "TRADE_REPORT_REJECT_REASON", fixData.toFIXNameString());
-        assertEquals( "TradeReportRejectReason", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "751", fixData.toEnumIDString());
+        assertEquals( "TRADE_REPORT_REJECT_REASON", fixData.toEnumNameString());
+        assertEquals( "TradeReportRejectReason", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0751Test() {
@@ -61,33 +61,33 @@ class Tag751EnuTradeReportRejectReasonTest {
 
         oneElement = Enum751TradeReportRejectReason.SUCCESSFUL;
         tagData = new Tag751EnuTradeReportRejectReason( oneElement );
-        assertEquals( oneElement.toFIXIDString(), tagData.getDataValue() );
+        assertEquals( oneElement.toEnumIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "751", tagData.toFIXIDString());
-        assertEquals( "TRADE_REPORT_REJECT_REASON", tagData.toFIXNameString());
-        assertEquals( "TradeReportRejectReason", tagData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
+        assertEquals( "751", tagData.toEnumIDString());
+        assertEquals( "TRADE_REPORT_REJECT_REASON", tagData.toEnumNameString());
+        assertEquals( "TradeReportRejectReason", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         tagData = new Tag751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.INVALID_PARTY_INFORMATION);
-        assertEquals( Enum751TradeReportRejectReason.INVALID_PARTY_INFORMATION.toFIXIDString(), tagData.getDataValue() );
+        assertEquals( Enum751TradeReportRejectReason.INVALID_PARTY_INFORMATION.toEnumIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.UNKNOWN_INSTRUMENT);
-        assertEquals( Enum751TradeReportRejectReason.UNKNOWN_INSTRUMENT.toFIXIDString(), tagData.getDataValue() );
+        assertEquals( Enum751TradeReportRejectReason.UNKNOWN_INSTRUMENT.toEnumIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.UNAUTHORIZED_TO_REPORT_TRADES);
-        assertEquals( Enum751TradeReportRejectReason.UNAUTHORIZED_TO_REPORT_TRADES.toFIXIDString(), tagData.getDataValue() );
+        assertEquals( Enum751TradeReportRejectReason.UNAUTHORIZED_TO_REPORT_TRADES.toEnumIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.INVALID_TRADE_TYPE);
-        assertEquals( Enum751TradeReportRejectReason.INVALID_TRADE_TYPE.toFIXIDString(), tagData.getDataValue() );
+        assertEquals( Enum751TradeReportRejectReason.INVALID_TRADE_TYPE.toEnumIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag751EnuTradeReportRejectReason(Enum751TradeReportRejectReason.OTHER);
-        assertEquals( Enum751TradeReportRejectReason.OTHER.toFIXIDString(), tagData.getDataValue() );
+        assertEquals( Enum751TradeReportRejectReason.OTHER.toEnumIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
@@ -118,7 +118,7 @@ class Tag751EnuTradeReportRejectReasonTest {
         // loop around the ENUM and process
         for (Enum751TradeReportRejectReason oneEnum : Enum751TradeReportRejectReason.values()) {
             tagData = new Tag751EnuTradeReportRejectReason(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -142,12 +142,12 @@ class Tag751EnuTradeReportRejectReasonTest {
         for (Enum751TradeReportRejectReason oneEnum : Enum751TradeReportRejectReason.values()) {
             tagData = new Tag751EnuTradeReportRejectReason(oneEnum);
             assertEquals( "Tag751EnuTradeReportRejectReason\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

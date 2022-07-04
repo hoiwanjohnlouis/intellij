@@ -47,12 +47,12 @@ class Tag532EnuMassCancelRejectReasonTest {
     @Test
     void FIX0532Test() {
         FIX43 fixData = FIX43.FIX532_ENU_MASS_CANCEL_REJECT_REASON;
-        assertEquals( "532", fixData.toFIXIDString());
-        assertEquals( "MASS_CANCEL_REJECT_REASON", fixData.toFIXNameString());
-        assertEquals( "MassCancelRejectReason", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "532", fixData.toEnumIDString());
+        assertEquals( "MASS_CANCEL_REJECT_REASON", fixData.toEnumNameString());
+        assertEquals( "MassCancelRejectReason", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0532Test() {
@@ -66,32 +66,32 @@ class Tag532EnuMassCancelRejectReasonTest {
          *  0-6, types
          */
         tagData = new Tag532EnuMassCancelRejectReason( Enum532MassCancelRejectReason.MASS_CANCEL_NOT_SUPPORTED );
-        assertEquals( Enum532MassCancelRejectReason.MASS_CANCEL_NOT_SUPPORTED.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum532MassCancelRejectReason.MASS_CANCEL_NOT_SUPPORTED.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag532EnuMassCancelRejectReason( Enum532MassCancelRejectReason.UNKNOWN_SECURITY );
-        assertEquals( Enum532MassCancelRejectReason.UNKNOWN_SECURITY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum532MassCancelRejectReason.UNKNOWN_SECURITY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag532EnuMassCancelRejectReason( Enum532MassCancelRejectReason.UNKNOWN_UNDERLYING );
-        assertEquals( Enum532MassCancelRejectReason.UNKNOWN_UNDERLYING.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum532MassCancelRejectReason.UNKNOWN_UNDERLYING.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag532EnuMassCancelRejectReason( Enum532MassCancelRejectReason.UNKNOWN_PRODUCT );
-        assertEquals( Enum532MassCancelRejectReason.UNKNOWN_PRODUCT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum532MassCancelRejectReason.UNKNOWN_PRODUCT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag532EnuMassCancelRejectReason( Enum532MassCancelRejectReason.UNKNOWN_CFICODE );
-        assertEquals( Enum532MassCancelRejectReason.UNKNOWN_CFICODE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum532MassCancelRejectReason.UNKNOWN_CFICODE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag532EnuMassCancelRejectReason( Enum532MassCancelRejectReason.UNKNOWN_SECURITYTYPE );
-        assertEquals( Enum532MassCancelRejectReason.UNKNOWN_SECURITYTYPE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum532MassCancelRejectReason.UNKNOWN_SECURITYTYPE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag532EnuMassCancelRejectReason( Enum532MassCancelRejectReason.UNKNOWN_SESSION );
-        assertEquals( Enum532MassCancelRejectReason.UNKNOWN_SESSION.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum532MassCancelRejectReason.UNKNOWN_SESSION.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
@@ -99,7 +99,7 @@ class Tag532EnuMassCancelRejectReasonTest {
          *  99, type
          */
         tagData = new Tag532EnuMassCancelRejectReason( Enum532MassCancelRejectReason.OTHER );
-        assertEquals( Enum532MassCancelRejectReason.OTHER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum532MassCancelRejectReason.OTHER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -130,7 +130,7 @@ class Tag532EnuMassCancelRejectReasonTest {
         // loop around the ENUM and process
         for (Enum532MassCancelRejectReason oneEnum : Enum532MassCancelRejectReason.values()) {
             tagData = new Tag532EnuMassCancelRejectReason(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -154,12 +154,12 @@ class Tag532EnuMassCancelRejectReasonTest {
         for (Enum532MassCancelRejectReason oneEnum : Enum532MassCancelRejectReason.values()) {
             tagData = new Tag532EnuMassCancelRejectReason(oneEnum);
             assertEquals( "Tag532EnuMassCancelRejectReason\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

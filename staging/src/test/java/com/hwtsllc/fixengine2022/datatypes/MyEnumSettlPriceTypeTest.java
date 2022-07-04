@@ -48,19 +48,19 @@ class MyEnumSettlPriceTypeTest {
          * 0-1 msg types
          */
         enumType = MyEnumSettlPriceType.FINAL;
-        assertEquals("1", enumType.toFIXIDString());
-        assertEquals("FINAL", enumType.toFIXNameString());
-        assertEquals("1 - Final", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("1", enumType.toEnumIDString());
+        assertEquals("FINAL", enumType.toEnumNameString());
+        assertEquals("1 - Final", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumSettlPriceType.THEORETICAL;
-        assertEquals("2", enumType.toFIXIDString());
-        assertEquals("THEORETICAL", enumType.toFIXNameString());
-        assertEquals("2 - Theoretical", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("2", enumType.toEnumIDString());
+        assertEquals("THEORETICAL", enumType.toEnumNameString());
+        assertEquals("2 - Theoretical", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

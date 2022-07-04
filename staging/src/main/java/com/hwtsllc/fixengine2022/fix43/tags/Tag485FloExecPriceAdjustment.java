@@ -49,7 +49,7 @@ public class Tag485FloExecPriceAdjustment extends FIX43Abstract implements LogVa
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

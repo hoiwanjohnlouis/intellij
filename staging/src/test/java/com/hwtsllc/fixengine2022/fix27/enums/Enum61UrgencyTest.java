@@ -26,11 +26,13 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  61
  *  Urgency
  *  char
+ *  <p></p>
  *  Urgency flag
+ *  <p></p>
  *  Valid values:
- *      0 - Normal
- *      1 - Flash
- *      2 - Background
+ *  <p>    0 - Normal
+ *  <p>    1 - Flash
+ *  <p>    2 - Background
  */
 class Enum61UrgencyTest {
     @Test
@@ -41,27 +43,27 @@ class Enum61UrgencyTest {
          * 0-2 msg types
          */
         enumType = Enum61Urgency.NORMAL;
-        assertEquals("0", enumType.toFIXIDString());
-        assertEquals("NORMAL", enumType.toFIXNameString());
-        assertEquals("0 - Normal", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("0", enumType.toEnumIDString());
+        assertEquals("NORMAL", enumType.toEnumNameString());
+        assertEquals("0 - Normal", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum61Urgency.FLASH;
-        assertEquals("1", enumType.toFIXIDString());
-        assertEquals("FLASH", enumType.toFIXNameString());
-        assertEquals("1 - Flash", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("1", enumType.toEnumIDString());
+        assertEquals("FLASH", enumType.toEnumNameString());
+        assertEquals("1 - Flash", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum61Urgency.BACKGROUND;
-        assertEquals("2", enumType.toFIXIDString());
-        assertEquals("BACKGROUND", enumType.toFIXNameString());
-        assertEquals("2 - Background", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("2", enumType.toEnumIDString());
+        assertEquals("BACKGROUND", enumType.toEnumNameString());
+        assertEquals("2 - Background", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

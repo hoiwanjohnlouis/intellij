@@ -53,7 +53,7 @@ public class Tag361DatEncodedAllocText extends FIX42Abstract implements LogValue
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

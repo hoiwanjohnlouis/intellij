@@ -50,7 +50,7 @@ public class Tag128StrDeliverToCompID extends FIX40Abstract implements LogValueP
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

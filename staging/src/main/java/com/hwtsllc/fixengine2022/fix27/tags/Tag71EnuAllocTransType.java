@@ -27,19 +27,23 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  71
  *  AllocTransType
  *  char
+ *  <p></p>
  *  Identifies allocation transaction type
- *  *** SOME VALUES HAVE BEEN REPLACED ***
- *  *** See Replaced Features and Supported Approach ***
+ *  <p></p>
+ *  <p> *** SOME VALUES HAVE BEEN REPLACED ***
+ *  <p> *** See Replaced Features and Supported Approach ***
+ *  <p></p>
  *  Valid values:
- *      0 - New
- *      1 - Replace
- *      2 - Cancel
- *      3 - Preliminary (without MiscFees and NetMoney) (Removed/Replaced)
- *      4 - Calculated (includes MiscFees and NetMoney) (Removed/Replaced)
- *      5 - Calculated without Preliminary
+ *  <p>    0 - New
+ *  <p>    1 - Replace
+ *  <p>    2 - Cancel
+ *  <p>    3 - Preliminary (without MiscFees and NetMoney) (Removed/Replaced)
+ *  <p>    4 - Calculated (includes MiscFees and NetMoney) (Removed/Replaced)
+ *  <p></p>
+ *  <p>    5 - Calculated without Preliminary
  *          (sent unsolicited by broker, includes MiscFees and NetMoney)
  *          (Removed-Replaced)
- *      6 - Reversal
+ *  <p>    6 - Reversal
  */
 public class Tag71EnuAllocTransType extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum71AllocTransType dataValue;
@@ -55,14 +59,14 @@ public class Tag71EnuAllocTransType extends FIX27Abstract implements LogValuePai
     }
 
     public String getDataValue() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(getDataValue());
     }
@@ -94,21 +98,21 @@ public class Tag71EnuAllocTransType extends FIX27Abstract implements LogValuePai
      */
     @Override
     public String toDataIDString() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * wrapper to return the Name of the underlying Data
      */
     @Override
     public String toDataNameString() {
-        return this.dataValue.toFIXNameString();
+        return this.dataValue.toEnumNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data
      */
     @Override
     public String toDataDescriptionString() {
-        return this.dataValue.toFIXDescriptionString();
+        return this.dataValue.toEnumDescriptionString();
     }
     /**
      * standard wrapper to return a string describing the data

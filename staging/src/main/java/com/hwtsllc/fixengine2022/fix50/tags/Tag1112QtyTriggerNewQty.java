@@ -50,7 +50,7 @@ public class Tag1112QtyTriggerNewQty extends FIX50Abstract implements LogValuePa
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

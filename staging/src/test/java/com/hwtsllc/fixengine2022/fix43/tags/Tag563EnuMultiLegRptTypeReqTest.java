@@ -41,12 +41,12 @@ class Tag563EnuMultiLegRptTypeReqTest {
     @Test
     void FIX0563Test() {
         FIX43 fixData = FIX43.FIX563_ENU_MULTI_LEG_RPT_TYPE_REQ;
-        assertEquals( "563", fixData.toFIXIDString());
-        assertEquals( "MULTI_LEG_RPT_TYPE_REQ", fixData.toFIXNameString());
-        assertEquals( "MultiLegRptTypeReq", fixData.toFIXDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "563", fixData.toEnumIDString());
+        assertEquals( "MULTI_LEG_RPT_TYPE_REQ", fixData.toEnumNameString());
+        assertEquals( "MultiLegRptTypeReq", fixData.toEnumDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0563Test() {
@@ -56,15 +56,15 @@ class Tag563EnuMultiLegRptTypeReqTest {
          *  0-2 types
          */
         tagData = new Tag563EnuMultiLegRptTypeReq( Enum563MultiLegRptTypeReq.MULITLEG_SECURITY_ONLY );
-        assertEquals( Enum563MultiLegRptTypeReq.MULITLEG_SECURITY_ONLY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum563MultiLegRptTypeReq.MULITLEG_SECURITY_ONLY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag563EnuMultiLegRptTypeReq( Enum563MultiLegRptTypeReq.MULTILEG_SECURITY_LEGS );
-        assertEquals( Enum563MultiLegRptTypeReq.MULTILEG_SECURITY_LEGS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum563MultiLegRptTypeReq.MULTILEG_SECURITY_LEGS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag563EnuMultiLegRptTypeReq( Enum563MultiLegRptTypeReq.INSTRUMENT_LEGS );
-        assertEquals( Enum563MultiLegRptTypeReq.INSTRUMENT_LEGS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum563MultiLegRptTypeReq.INSTRUMENT_LEGS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -95,7 +95,7 @@ class Tag563EnuMultiLegRptTypeReqTest {
         // loop around the ENUM and process
         for (Enum563MultiLegRptTypeReq oneEnum : Enum563MultiLegRptTypeReq.values()) {
             tagData = new Tag563EnuMultiLegRptTypeReq(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -119,12 +119,12 @@ class Tag563EnuMultiLegRptTypeReqTest {
         for (Enum563MultiLegRptTypeReq oneEnum : Enum563MultiLegRptTypeReq.values()) {
             tagData = new Tag563EnuMultiLegRptTypeReq(oneEnum);
             assertEquals( "Tag563EnuMultiLegRptTypeReq\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

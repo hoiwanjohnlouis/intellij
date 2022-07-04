@@ -50,7 +50,7 @@ public class Tag299StrQuoteEntryID extends FIX42Abstract implements LogValuePair
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

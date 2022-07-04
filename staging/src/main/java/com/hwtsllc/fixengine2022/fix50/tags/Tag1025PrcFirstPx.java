@@ -50,7 +50,7 @@ public class Tag1025PrcFirstPx extends FIX50Abstract implements LogValuePairStri
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

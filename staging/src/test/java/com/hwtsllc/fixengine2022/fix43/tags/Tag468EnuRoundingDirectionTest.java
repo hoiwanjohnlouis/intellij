@@ -53,27 +53,27 @@ class Tag468EnuRoundingDirectionTest {
     @Test
     void FIX0468Test() {
         FIX43 fixData = FIX43.FIX468_ENU_ROUNDING_DIRECTION;
-        assertEquals( "468", fixData.toFIXIDString());
-        assertEquals( "ROUNDING_DIRECTION", fixData.toFIXNameString());
-        assertEquals( "RoundingDirection", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "468", fixData.toEnumIDString());
+        assertEquals( "ROUNDING_DIRECTION", fixData.toEnumNameString());
+        assertEquals( "RoundingDirection", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0468Test() {
         Tag468EnuRoundingDirection tagData;
 
         tagData = new Tag468EnuRoundingDirection( Enum468RoundingDirection.ROUND_TO_NEAREST );
-        assertEquals( Enum468RoundingDirection.ROUND_TO_NEAREST.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum468RoundingDirection.ROUND_TO_NEAREST.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag468EnuRoundingDirection( Enum468RoundingDirection.ROUND_DOWN );
-        assertEquals( Enum468RoundingDirection.ROUND_DOWN.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum468RoundingDirection.ROUND_DOWN.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag468EnuRoundingDirection( Enum468RoundingDirection.ROUND_UP );
-        assertEquals( Enum468RoundingDirection.ROUND_UP.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum468RoundingDirection.ROUND_UP.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -104,7 +104,7 @@ class Tag468EnuRoundingDirectionTest {
         // loop around the ENUM and process
         for (Enum468RoundingDirection oneEnum : Enum468RoundingDirection.values()) {
             tagData = new Tag468EnuRoundingDirection(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -128,12 +128,12 @@ class Tag468EnuRoundingDirectionTest {
         for (Enum468RoundingDirection oneEnum : Enum468RoundingDirection.values()) {
             tagData = new Tag468EnuRoundingDirection(oneEnum);
             assertEquals( "Tag468EnuRoundingDirection\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

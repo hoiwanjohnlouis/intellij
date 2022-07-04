@@ -56,7 +56,7 @@ public class Tag1065PxoBidSwapPoints extends FIX50Abstract implements LogValuePa
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

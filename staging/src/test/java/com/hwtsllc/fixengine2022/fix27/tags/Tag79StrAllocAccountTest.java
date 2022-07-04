@@ -28,76 +28,109 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  79
  *  AllocAccount
  *  String
- *  <p>
+ *  <p></p>
  *  Sub-account mnemonic
  */
 class Tag79StrAllocAccountTest {
     @Test
-    void FIX0079Test() {
+    void FIXTest() {
         FIX27 fixData = FIX27.FIX79_STR_ALLOC_ACCOUNT;
-        assertEquals( "ALLOC_ACCOUNT", fixData.toFIXNameString());
-        assertEquals( "79", fixData.toFIXIDString());
-        assertEquals( "AllocAccount", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "ALLOC_ACCOUNT", fixData.toEnumNameString());
+        assertEquals( "79", fixData.toEnumIDString());
+        assertEquals( "AllocAccount", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0079Test() {
         Tag79StrAllocAccount tagData;
+        String oneElement;
 
-        tagData = new Tag79StrAllocAccount(new MyStringType(Tag79StrAllocAccount.TESTA_STR_ALLOC_ACCOUNT) );
-        assertEquals( Tag79StrAllocAccount.TESTA_STR_ALLOC_ACCOUNT, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        oneElement = Tag79StrAllocAccount.TESTA_STR_ALLOC_ACCOUNT;
+        tagData = new Tag79StrAllocAccount(new MyStringType( oneElement ) );
+        verifyTagInformation( tagData, oneElement );
+
+        oneElement = Tag79StrAllocAccount.TESTA_STR_ALLOC_ACCOUNT;
+        tagData = new Tag79StrAllocAccount(new MyStringType( oneElement ) );
+        verifyTagInformation( tagData, oneElement );
+
+        oneElement = Tag79StrAllocAccount.TESTB_STR_ALLOC_ACCOUNT;
+        tagData = new Tag79StrAllocAccount(new MyStringType( oneElement ) );
+        verifyTagInformation( tagData, oneElement );
     }
+
+    private void verifyTagInformation( Tag79StrAllocAccount tagData, String oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "FIX79_STR_ALLOC_ACCOUNT", tagData.toEnumLabelString());
+        assertEquals( "ALLOC_ACCOUNT", tagData.toEnumNameString());
+        assertEquals( "79", tagData.toEnumIDString());
+        assertEquals( "AllocAccount", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void PrintFIXTagTest() {
-        Tag58StrText tagData;
+        Tag79StrAllocAccount tagData;
+        String oneElement;
 
-        tagData = new Tag58StrText(new MyStringType(Tag58StrText.TESTB_STR_TEXT));
+        oneElement = Tag79StrAllocAccount.TESTA_STR_ALLOC_ACCOUNT;
+        tagData = new Tag79StrAllocAccount(new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag79StrAllocAccount.TESTB_STR_ALLOC_ACCOUNT;
+        tagData = new Tag79StrAllocAccount(new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
     @Test
     void TagGetDataValueTest() {
-        Tag58StrText tagData;
+        Tag79StrAllocAccount tagData;
+        String oneElement;
 
-        tagData = new Tag58StrText(new MyStringType(Tag58StrText.TESTB_STR_TEXT));
-        assertEquals( Tag58StrText.TESTB_STR_TEXT, tagData.getDataValue());
+        oneElement = Tag79StrAllocAccount.TESTB_STR_ALLOC_ACCOUNT;
+        tagData = new Tag79StrAllocAccount(new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag58StrText tagData;
+        Tag79StrAllocAccount tagData;
+        String oneElement;
 
-        tagData = new Tag58StrText(new MyStringType(Tag58StrText.TESTB_STR_TEXT));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag58StrText.TESTB_STR_TEXT,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag79StrAllocAccount.TESTB_STR_ALLOC_ACCOUNT;
+        tagData = new Tag79StrAllocAccount(new MyStringType( oneElement ) );
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
     @Test
     void TagToStringTest() {
-        Tag58StrText tagData;
+        Tag79StrAllocAccount tagData;
+        String oneElement;
 
-        tagData = new Tag58StrText(new MyStringType(Tag58StrText.TESTB_STR_TEXT));
-        assertEquals( Tag58StrText.TESTB_STR_TEXT,
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag79StrAllocAccount.TESTB_STR_ALLOC_ACCOUNT;
+        tagData = new Tag79StrAllocAccount(new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag58StrText tagData;
+        Tag79StrAllocAccount tagData;
+        String oneElement;
 
-        tagData = new Tag58StrText(new MyStringType(Tag58StrText.TESTA_STR_TEXT));
-        assertEquals( "Tag58StrText\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag58StrText.TESTA_STR_TEXT + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag58StrText.TESTA_STR_TEXT + "]",
+        oneElement = Tag79StrAllocAccount.TESTA_STR_ALLOC_ACCOUNT;
+        tagData = new Tag79StrAllocAccount(new MyStringType( oneElement ) );
+        assertEquals( "Tag79StrAllocAccount\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

@@ -81,12 +81,12 @@ class Tag495EnuTaxAdvantageTypeTest {
     @Test
     void FIX0495Test() {
         FIX43 fixData = FIX43.FIX495_ENU_TAX_ADVANTAGE_TYPE;
-        assertEquals( "495", fixData.toFIXIDString());
-        assertEquals( "TAX_ADVANTAGE_TYPE", fixData.toFIXNameString());
-        assertEquals( "TaxAdvantageType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "495", fixData.toEnumIDString());
+        assertEquals( "TAX_ADVANTAGE_TYPE", fixData.toEnumNameString());
+        assertEquals( "TaxAdvantageType", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0495Test() {
@@ -100,133 +100,133 @@ class Tag495EnuTaxAdvantageTypeTest {
          *  0-29, types
          */
         tagData = new Tag495EnuTaxAdvantageType( Enum495TaxAdvantageType.NONE );
-        assertEquals( Enum495TaxAdvantageType.NONE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum495TaxAdvantageType.NONE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag495EnuTaxAdvantageType( Enum495TaxAdvantageType.MAXI_ISA );
-        assertEquals( Enum495TaxAdvantageType.MAXI_ISA.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum495TaxAdvantageType.MAXI_ISA.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag495EnuTaxAdvantageType( Enum495TaxAdvantageType.TESSA );
-        assertEquals( Enum495TaxAdvantageType.TESSA.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum495TaxAdvantageType.TESSA.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag495EnuTaxAdvantageType( Enum495TaxAdvantageType.MINI_CASH_ISA );
-        assertEquals( Enum495TaxAdvantageType.MINI_CASH_ISA.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum495TaxAdvantageType.MINI_CASH_ISA.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag495EnuTaxAdvantageType( Enum495TaxAdvantageType.MINI_STOCKS_AND_SHARES_ISA );
-        assertEquals( Enum495TaxAdvantageType.MINI_STOCKS_AND_SHARES_ISA.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum495TaxAdvantageType.MINI_STOCKS_AND_SHARES_ISA.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
 
         tagData = new Tag495EnuTaxAdvantageType( Enum495TaxAdvantageType.MINI_INSURANCE_ISA );
-        assertEquals( Enum495TaxAdvantageType.MINI_INSURANCE_ISA.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum495TaxAdvantageType.MINI_INSURANCE_ISA.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag495EnuTaxAdvantageType( Enum495TaxAdvantageType.CURRENT_YEAR_PAYMENT );
-        assertEquals( Enum495TaxAdvantageType.CURRENT_YEAR_PAYMENT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum495TaxAdvantageType.CURRENT_YEAR_PAYMENT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag495EnuTaxAdvantageType( Enum495TaxAdvantageType.PRIOR_YEAR_PAYMENT );
-        assertEquals( Enum495TaxAdvantageType.PRIOR_YEAR_PAYMENT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum495TaxAdvantageType.PRIOR_YEAR_PAYMENT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag495EnuTaxAdvantageType( Enum495TaxAdvantageType.ASSET_TRANSFER );
-        assertEquals( Enum495TaxAdvantageType.ASSET_TRANSFER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum495TaxAdvantageType.ASSET_TRANSFER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag495EnuTaxAdvantageType( Enum495TaxAdvantageType.EMPLOYEE_PRIOR_YEAR );
-        assertEquals( Enum495TaxAdvantageType.EMPLOYEE_PRIOR_YEAR.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum495TaxAdvantageType.EMPLOYEE_PRIOR_YEAR.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
 
         tagData = new Tag495EnuTaxAdvantageType( Enum495TaxAdvantageType.EMPLOYEE_CURRENT_YEAR );
-        assertEquals( Enum495TaxAdvantageType.EMPLOYEE_CURRENT_YEAR.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum495TaxAdvantageType.EMPLOYEE_CURRENT_YEAR.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag495EnuTaxAdvantageType( Enum495TaxAdvantageType.EMPLOYER_PRIOR_YEAR );
-        assertEquals( Enum495TaxAdvantageType.EMPLOYER_PRIOR_YEAR.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum495TaxAdvantageType.EMPLOYER_PRIOR_YEAR.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag495EnuTaxAdvantageType( Enum495TaxAdvantageType.EMPLOYER_CURRENT_YEAR );
-        assertEquals( Enum495TaxAdvantageType.EMPLOYER_CURRENT_YEAR.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum495TaxAdvantageType.EMPLOYER_CURRENT_YEAR.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag495EnuTaxAdvantageType( Enum495TaxAdvantageType.NON_FUND_PROTOTYPE_IRA );
-        assertEquals( Enum495TaxAdvantageType.NON_FUND_PROTOTYPE_IRA.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum495TaxAdvantageType.NON_FUND_PROTOTYPE_IRA.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag495EnuTaxAdvantageType( Enum495TaxAdvantageType.NON_FUND_QUALIFIED_PLAN );
-        assertEquals( Enum495TaxAdvantageType.NON_FUND_QUALIFIED_PLAN.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum495TaxAdvantageType.NON_FUND_QUALIFIED_PLAN.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
 
         tagData = new Tag495EnuTaxAdvantageType( Enum495TaxAdvantageType.DEFINED_CONTRIBUTION_PLAN );
-        assertEquals( Enum495TaxAdvantageType.DEFINED_CONTRIBUTION_PLAN.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum495TaxAdvantageType.DEFINED_CONTRIBUTION_PLAN.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag495EnuTaxAdvantageType( Enum495TaxAdvantageType.INDIVIDUAL_RETIREMENT_ACCOUNT_REGULAR );
-        assertEquals( Enum495TaxAdvantageType.INDIVIDUAL_RETIREMENT_ACCOUNT_REGULAR.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum495TaxAdvantageType.INDIVIDUAL_RETIREMENT_ACCOUNT_REGULAR.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag495EnuTaxAdvantageType( Enum495TaxAdvantageType.INDIVIDUAL_RETIREMENT_ACCOUNT_ROLLOVER );
-        assertEquals( Enum495TaxAdvantageType.INDIVIDUAL_RETIREMENT_ACCOUNT_ROLLOVER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum495TaxAdvantageType.INDIVIDUAL_RETIREMENT_ACCOUNT_ROLLOVER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag495EnuTaxAdvantageType( Enum495TaxAdvantageType.KEOGH );
-        assertEquals( Enum495TaxAdvantageType.KEOGH.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum495TaxAdvantageType.KEOGH.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag495EnuTaxAdvantageType( Enum495TaxAdvantageType.PROFIT_SHARING_PLAN );
-        assertEquals( Enum495TaxAdvantageType.PROFIT_SHARING_PLAN.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum495TaxAdvantageType.PROFIT_SHARING_PLAN.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
 
         tagData = new Tag495EnuTaxAdvantageType( Enum495TaxAdvantageType.RETIREMENT_401K );
-        assertEquals( Enum495TaxAdvantageType.RETIREMENT_401K.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum495TaxAdvantageType.RETIREMENT_401K.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag495EnuTaxAdvantageType( Enum495TaxAdvantageType.SELF_DIRECTED_IRA );
-        assertEquals( Enum495TaxAdvantageType.SELF_DIRECTED_IRA.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum495TaxAdvantageType.SELF_DIRECTED_IRA.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag495EnuTaxAdvantageType( Enum495TaxAdvantageType.RETIREMENT_403_B );
-        assertEquals( Enum495TaxAdvantageType.RETIREMENT_403_B.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum495TaxAdvantageType.RETIREMENT_403_B.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag495EnuTaxAdvantageType( Enum495TaxAdvantageType.RETIREMENT_457 );
-        assertEquals( Enum495TaxAdvantageType.RETIREMENT_457.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum495TaxAdvantageType.RETIREMENT_457.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag495EnuTaxAdvantageType( Enum495TaxAdvantageType.ROTH_IRA_FUND_PROTOTYPE );
-        assertEquals( Enum495TaxAdvantageType.ROTH_IRA_FUND_PROTOTYPE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum495TaxAdvantageType.ROTH_IRA_FUND_PROTOTYPE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
 
         tagData = new Tag495EnuTaxAdvantageType( Enum495TaxAdvantageType.ROTH_IRA_NON_PROTOTYPE );
-        assertEquals( Enum495TaxAdvantageType.ROTH_IRA_NON_PROTOTYPE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum495TaxAdvantageType.ROTH_IRA_NON_PROTOTYPE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag495EnuTaxAdvantageType( Enum495TaxAdvantageType.ROTH_CONVERSION_IRA_FUND_PROTOTYPE );
-        assertEquals( Enum495TaxAdvantageType.ROTH_CONVERSION_IRA_FUND_PROTOTYPE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum495TaxAdvantageType.ROTH_CONVERSION_IRA_FUND_PROTOTYPE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag495EnuTaxAdvantageType( Enum495TaxAdvantageType.ROTH_CONVERSION_IRA_NON_PROTOTYPE );
-        assertEquals( Enum495TaxAdvantageType.ROTH_CONVERSION_IRA_NON_PROTOTYPE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum495TaxAdvantageType.ROTH_CONVERSION_IRA_NON_PROTOTYPE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag495EnuTaxAdvantageType( Enum495TaxAdvantageType.EDUCATION_IRA_FUND_PROTOTYPE );
-        assertEquals( Enum495TaxAdvantageType.EDUCATION_IRA_FUND_PROTOTYPE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum495TaxAdvantageType.EDUCATION_IRA_FUND_PROTOTYPE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag495EnuTaxAdvantageType( Enum495TaxAdvantageType.EDUCATION_IRA_NON_PROTOTYPE );
-        assertEquals( Enum495TaxAdvantageType.EDUCATION_IRA_NON_PROTOTYPE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum495TaxAdvantageType.EDUCATION_IRA_NON_PROTOTYPE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
@@ -235,7 +235,7 @@ class Tag495EnuTaxAdvantageTypeTest {
          * 999 type
          */
         tagData = new Tag495EnuTaxAdvantageType( Enum495TaxAdvantageType.OTHER );
-        assertEquals( Enum495TaxAdvantageType.OTHER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum495TaxAdvantageType.OTHER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -266,7 +266,7 @@ class Tag495EnuTaxAdvantageTypeTest {
         // loop around the ENUM and process
         for (Enum495TaxAdvantageType oneEnum : Enum495TaxAdvantageType.values()) {
             tagData = new Tag495EnuTaxAdvantageType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -290,12 +290,12 @@ class Tag495EnuTaxAdvantageTypeTest {
         for (Enum495TaxAdvantageType oneEnum : Enum495TaxAdvantageType.values()) {
             tagData = new Tag495EnuTaxAdvantageType(oneEnum);
             assertEquals( "Tag495EnuTaxAdvantageType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

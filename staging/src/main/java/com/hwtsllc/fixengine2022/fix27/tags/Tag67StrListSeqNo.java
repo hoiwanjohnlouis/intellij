@@ -26,7 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  67
  *  ListSeqNo
  *  int
+ *  <p></p>
  *  Sequence of individual order within list
+ *  <p></p>
  *  (i.e. ListSeqNo of TotNoOrders (68), 2 of 25, 3 of 25,   . . . )
  */
 public class Tag67StrListSeqNo extends FIX27Abstract implements LogValuePairString, LogVerboseString {
@@ -50,7 +52,7 @@ public class Tag67StrListSeqNo extends FIX27Abstract implements LogValuePairStri
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

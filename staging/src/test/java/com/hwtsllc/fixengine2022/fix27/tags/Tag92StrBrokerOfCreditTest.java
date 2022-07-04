@@ -28,78 +28,110 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  92
  *  BrokerOfCredit
  *  String
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.2 Broker to receive trade credit.
  */
 // @Deprecated
 class Tag92StrBrokerOfCreditTest {
-
     @Test
-    void FIX0092Test() {
+    void FIXTest() {
         FIX27 fixData = FIX27.FIX92_STR_BROKER_OF_CREDIT;
-        assertEquals( "BROKER_OF_CREDIT", fixData.toFIXNameString());
-        assertEquals( "92", fixData.toFIXIDString());
-        assertEquals( "BrokerOfCredit (replaced)", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "BROKER_OF_CREDIT", fixData.toEnumNameString());
+        assertEquals( "92", fixData.toEnumIDString());
+        assertEquals( "BrokerOfCredit (replaced)", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0092Test() {
         Tag92StrBrokerOfCredit tagData;
+        String oneElement;
 
-        tagData = new Tag92StrBrokerOfCredit(new MyStringType("Saruman-92StBrokerOfCredit") );
-        assertEquals( "Saruman-92StBrokerOfCredit", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        oneElement = "Saruman-Tag92StrBrokerOfCredit";
+        tagData = new Tag92StrBrokerOfCredit(new MyStringType( oneElement ) );
+        verifyTagInformation( tagData, oneElement );
+
+        oneElement = Tag92StrBrokerOfCredit.TESTA_STR_BROKER_OF_CREDIT;
+        tagData = new Tag92StrBrokerOfCredit(new MyStringType( oneElement ) );
+        verifyTagInformation( tagData, oneElement );
+
+        oneElement = Tag92StrBrokerOfCredit.TESTB_STR_BROKER_OF_CREDIT;
+        tagData = new Tag92StrBrokerOfCredit(new MyStringType( oneElement ) );
+        verifyTagInformation( tagData, oneElement );
     }
+
+    private void verifyTagInformation( Tag92StrBrokerOfCredit tagData, String oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "FIX92_STR_BROKER_OF_CREDIT", tagData.toEnumLabelString());
+        assertEquals( "BROKER_OF_CREDIT", tagData.toEnumNameString());
+        assertEquals( "92", tagData.toEnumIDString());
+        assertEquals( "BrokerOfCredit (replaced)", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void PrintFIXTagTest() {
         Tag92StrBrokerOfCredit tagData;
+        String oneElement;
 
-        tagData = new Tag92StrBrokerOfCredit(new MyStringType(Tag92StrBrokerOfCredit.TESTB_STR_BROKER_OF_CREDIT));
+        oneElement = Tag92StrBrokerOfCredit.TESTA_STR_BROKER_OF_CREDIT;
+        tagData = new Tag92StrBrokerOfCredit(new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag92StrBrokerOfCredit.TESTB_STR_BROKER_OF_CREDIT;
+        tagData = new Tag92StrBrokerOfCredit(new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
     @Test
     void TagGetDataValueTest() {
         Tag92StrBrokerOfCredit tagData;
+        String oneElement;
 
-        tagData = new Tag92StrBrokerOfCredit(new MyStringType(Tag92StrBrokerOfCredit.TESTB_STR_BROKER_OF_CREDIT));
-        assertEquals( Tag92StrBrokerOfCredit.TESTB_STR_BROKER_OF_CREDIT, tagData.getDataValue());
+        oneElement = Tag92StrBrokerOfCredit.TESTB_STR_BROKER_OF_CREDIT;
+        tagData = new Tag92StrBrokerOfCredit(new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {
         Tag92StrBrokerOfCredit tagData;
+        String oneElement;
 
-        tagData = new Tag92StrBrokerOfCredit(new MyStringType(Tag92StrBrokerOfCredit.TESTB_STR_BROKER_OF_CREDIT));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag92StrBrokerOfCredit.TESTB_STR_BROKER_OF_CREDIT,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag92StrBrokerOfCredit.TESTB_STR_BROKER_OF_CREDIT;
+        tagData = new Tag92StrBrokerOfCredit(new MyStringType( oneElement ) );
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
     @Test
     void TagToStringTest() {
         Tag92StrBrokerOfCredit tagData;
+        String oneElement;
 
-        tagData = new Tag92StrBrokerOfCredit(new MyStringType(Tag92StrBrokerOfCredit.TESTB_STR_BROKER_OF_CREDIT));
-        assertEquals( Tag92StrBrokerOfCredit.TESTB_STR_BROKER_OF_CREDIT,
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag92StrBrokerOfCredit.TESTB_STR_BROKER_OF_CREDIT;
+        tagData = new Tag92StrBrokerOfCredit(new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
     @Test
     void TagToVerboseStringTest() {
         Tag92StrBrokerOfCredit tagData;
+        String oneElement;
 
-        tagData = new Tag92StrBrokerOfCredit(new MyStringType(Tag92StrBrokerOfCredit.TESTA_STR_BROKER_OF_CREDIT));
+        oneElement = Tag92StrBrokerOfCredit.TESTA_STR_BROKER_OF_CREDIT;
+        tagData = new Tag92StrBrokerOfCredit(new MyStringType( oneElement ) );
         assertEquals( "Tag92StrBrokerOfCredit\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag92StrBrokerOfCredit.TESTA_STR_BROKER_OF_CREDIT + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag92StrBrokerOfCredit.TESTA_STR_BROKER_OF_CREDIT + "]",
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

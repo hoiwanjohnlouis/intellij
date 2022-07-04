@@ -44,42 +44,42 @@ class Enum712PosMaintActionTest {
         Enum712PosMaintAction enumType;
 
         enumType = Enum712PosMaintAction.NEW;
-        assertEquals( "1", enumType.toFIXIDString());
-        assertEquals( "NEW", enumType.toFIXNameString());
+        assertEquals( "1", enumType.toEnumIDString());
+        assertEquals( "NEW", enumType.toEnumNameString());
         assertEquals( "1 - New - used to increment the overall transaction quantity",
-                enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+                enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum712PosMaintAction.REPLACE;
-        assertEquals( "2", enumType.toFIXIDString());
-        assertEquals( "REPLACE", enumType.toFIXNameString());
+        assertEquals( "2", enumType.toEnumIDString());
+        assertEquals( "REPLACE", enumType.toEnumNameString());
         assertEquals( "2 - Replace - used to override the overall transaction quantity " +
                                 "or specifically add messages based on the reference ID",
-                enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+                enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum712PosMaintAction.CANCEL;
-        assertEquals( "3", enumType.toFIXIDString());
-        assertEquals( "CANCEL", enumType.toFIXNameString());
+        assertEquals( "3", enumType.toEnumIDString());
+        assertEquals( "CANCEL", enumType.toEnumNameString());
         assertEquals( "3 - Cancel - used to remove the overall transaction or specific " +
                                 "add messages based on reference ID",
-                enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+                enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum712PosMaintAction.REVERSE;
-        assertEquals( "4", enumType.toFIXIDString());
-        assertEquals( "REVERSE", enumType.toFIXNameString());
+        assertEquals( "4", enumType.toEnumIDString());
+        assertEquals( "REVERSE", enumType.toEnumNameString());
         assertEquals( "4 - Reverse - used to completely back-out the transaction " +
                                 "such that the transaction never existed",
-                enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+                enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

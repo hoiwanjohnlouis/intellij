@@ -50,7 +50,7 @@ public class Tag1079TztMaturityTime extends FIX50Abstract implements LogValuePai
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  74
  *  AvgPxPrecision
  *  int
- *  <p>
+ *  <p></p>
  *  Indicates number of decimal places to be used for average pricing.
- *  <p>
+ *  <p></p>
  *  Absence of this field indicates that default precision arranged
  *  by the broker or institution is to be used.
  */
@@ -36,9 +36,9 @@ public class Tag74StrAvgPxPrecision extends FIX27Abstract implements LogValuePai
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_AVG_PX_PRECISION
-            = "BilboBaggins-Tag74StrAvgPxPrecision";
+            = "AliceFaye-Tag74StrAvgPxPrecision";
     public final static String TESTB_STR_AVG_PX_PRECISION
-            = "Gandalf-Tag74StrAvgPxPrecision";
+            = "CaroleLandis-Tag74StrAvgPxPrecision";
 
     public Tag74StrAvgPxPrecision(MyStringType dataValue) {
         setFixType(FIX27.FIX74_STR_AVG_PX_PRECISION);
@@ -53,7 +53,7 @@ public class Tag74StrAvgPxPrecision extends FIX27Abstract implements LogValuePai
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

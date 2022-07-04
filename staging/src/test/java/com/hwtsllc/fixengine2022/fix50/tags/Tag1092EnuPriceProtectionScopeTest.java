@@ -47,31 +47,31 @@ class Tag1092EnuPriceProtectionScopeTest {
     @Test
     void FIX1092Test() {
         FIX50 fixData = FIX50.FIX1092_ENU_PRICE_PROTECTION_SCOPE;
-        assertEquals( "1092", fixData.toFIXIDString());
-        assertEquals( "PRICE_PROTECTION_SCOPE", fixData.toFIXNameString());
-        assertEquals( "PriceProtectionScope", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "1092", fixData.toEnumIDString());
+        assertEquals( "PRICE_PROTECTION_SCOPE", fixData.toEnumNameString());
+        assertEquals( "PriceProtectionScope", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag1092Test() {
         Tag1092EnuPriceProtectionScope tagData;
 
         tagData = new Tag1092EnuPriceProtectionScope( MyEnumPriceScope.NONE );
-        assertEquals( MyEnumPriceScope.NONE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPriceScope.NONE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1092EnuPriceProtectionScope( MyEnumPriceScope.LOCAL );
-        assertEquals( MyEnumPriceScope.LOCAL.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPriceScope.LOCAL.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1092EnuPriceProtectionScope( MyEnumPriceScope.NATIONAL );
-        assertEquals( MyEnumPriceScope.NATIONAL.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPriceScope.NATIONAL.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1092EnuPriceProtectionScope( MyEnumPriceScope.GLOBAL );
-        assertEquals( MyEnumPriceScope.GLOBAL.toFIXIDString(), tagData.getDataValue());
+        assertEquals( MyEnumPriceScope.GLOBAL.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -102,7 +102,7 @@ class Tag1092EnuPriceProtectionScopeTest {
         // loop around the ENUM and process
         for (MyEnumPriceScope oneEnum : MyEnumPriceScope.values()) {
             tagData = new Tag1092EnuPriceProtectionScope(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -126,12 +126,12 @@ class Tag1092EnuPriceProtectionScopeTest {
         for (MyEnumPriceScope oneEnum : MyEnumPriceScope.values()) {
             tagData = new Tag1092EnuPriceProtectionScope(oneEnum);
             assertEquals( "Tag1092EnuPriceProtectionScope\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

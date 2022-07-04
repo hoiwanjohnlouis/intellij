@@ -42,27 +42,27 @@ class Enum1021MDBookTypeTest {
         Enum1021MDBookType enumType;
 
         enumType = Enum1021MDBookType.TOP_OF_BOOK;
-        assertEquals( "1", enumType.toFIXIDString() );
-        assertEquals( "TOP_OF_BOOK", enumType.toFIXNameString() );
-        assertEquals( "1 - Top of Book", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "1", enumType.toEnumIDString() );
+        assertEquals( "TOP_OF_BOOK", enumType.toEnumNameString() );
+        assertEquals( "1 - Top of Book", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1021MDBookType.PRICE_DEPTH;
-        assertEquals( "2", enumType.toFIXIDString() );
-        assertEquals( "PRICE_DEPTH", enumType.toFIXNameString() );
-        assertEquals( "2 - Price Depth", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "2", enumType.toEnumIDString() );
+        assertEquals( "PRICE_DEPTH", enumType.toEnumNameString() );
+        assertEquals( "2 - Price Depth", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1021MDBookType.ORDER_DEPTH;
-        assertEquals( "3", enumType.toFIXIDString() );
-        assertEquals( "ORDER_DEPTH", enumType.toFIXNameString() );
-        assertEquals( "3 - Order Depth", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "3", enumType.toEnumIDString() );
+        assertEquals( "ORDER_DEPTH", enumType.toEnumNameString() );
+        assertEquals( "3 - Order Depth", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

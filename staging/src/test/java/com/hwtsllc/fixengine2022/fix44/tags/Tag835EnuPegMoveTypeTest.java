@@ -45,12 +45,12 @@ class Tag835EnuPegMoveTypeTest {
     @Test
     void FIXTest() {
         FIX44 fixData = FIX44.FIX835_ENU_PEG_MOVE_TYPE;
-        assertEquals( "835", fixData.toFIXIDString());
-        assertEquals( "PEG_MOVE_TYPE", fixData.toFIXNameString());
-        assertEquals( "PegMoveType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "835", fixData.toEnumIDString());
+        assertEquals( "PEG_MOVE_TYPE", fixData.toEnumNameString());
+        assertEquals( "PegMoveType", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0835Test() {
@@ -61,12 +61,12 @@ class Tag835EnuPegMoveTypeTest {
         tagData = new Tag835EnuPegMoveType( oneElement );
         assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "835", tagData.toFIXIDString());
-        assertEquals( "PEG_MOVE_TYPE", tagData.toFIXNameString());
-        assertEquals( "PegMoveType", tagData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
+        assertEquals( "835", tagData.toEnumIDString());
+        assertEquals( "PEG_MOVE_TYPE", tagData.toEnumNameString());
+        assertEquals( "PegMoveType", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         tagData = new Tag835EnuPegMoveType(MyEnumMoveType.FIXED);
         assertEquals( "1", tagData.getDataValue());
@@ -100,7 +100,7 @@ class Tag835EnuPegMoveTypeTest {
         // loop around the ENUM and process
         for (MyEnumMoveType oneEnum : MyEnumMoveType.values()) {
             tagData = new Tag835EnuPegMoveType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -124,12 +124,12 @@ class Tag835EnuPegMoveTypeTest {
         for (MyEnumMoveType oneEnum : MyEnumMoveType.values()) {
             tagData = new Tag835EnuPegMoveType(oneEnum);
             assertEquals( "Tag835EnuPegMoveType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

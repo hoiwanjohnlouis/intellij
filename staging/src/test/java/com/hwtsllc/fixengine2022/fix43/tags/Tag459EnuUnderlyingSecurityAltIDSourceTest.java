@@ -134,12 +134,12 @@ class Tag459EnuUnderlyingSecurityAltIDSourceTest {
     @Test
     void FIX0459Test() {
         FIX43 fixData = FIX43.FIX459_ENU_UNDERLYING_SECURITY_ALT_ID_SOURCE;
-        assertEquals( "459", fixData.toFIXIDString());
-        assertEquals( "UNDERLYING_SECURITY_ALT_ID_SOURCE", fixData.toFIXNameString());
-        assertEquals( "UnderlyingSecurityAltIDSource", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "459", fixData.toEnumIDString());
+        assertEquals( "UNDERLYING_SECURITY_ALT_ID_SOURCE", fixData.toEnumNameString());
+        assertEquals( "UnderlyingSecurityAltIDSource", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0459Test() {
@@ -267,7 +267,7 @@ class Tag459EnuUnderlyingSecurityAltIDSourceTest {
         // loop around the ENUM and process
         for (MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
             tagData = new Tag459EnuUnderlyingSecurityAltIDSource(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -291,12 +291,12 @@ class Tag459EnuUnderlyingSecurityAltIDSourceTest {
         for (MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
             tagData = new Tag459EnuUnderlyingSecurityAltIDSource(oneEnum);
             assertEquals( "Tag459EnuUnderlyingSecurityAltIDSource\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

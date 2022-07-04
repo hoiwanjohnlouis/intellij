@@ -50,7 +50,7 @@ public class Tag810PrcUnderlyingPx extends FIX44Abstract implements LogValuePair
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

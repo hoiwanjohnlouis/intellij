@@ -51,7 +51,7 @@ public class Tag863QtyOrderCapacityQty extends FIX44Abstract implements LogValue
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

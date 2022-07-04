@@ -26,6 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  41
  *  OrigClOrdID
  *  String
+ *  <p></p>
  *  ClOrdID (11) of the previous order (NOT the initial order of the day)
  *  as assigned by the institution, used to identify the previous order in
  *  cancel and cancel/replace requests.
@@ -34,9 +35,9 @@ public class Tag41StrOrigClOrdID extends FIX27Abstract implements LogValuePairSt
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_ORIG_CL_ORD_ID
-            = "BilboBaggins-Tag41StrOrigClOrdID";
+            = "ClaraBow-Tag41StrOrigClOrdID";
     public final static String TESTB_STR_ORIG_CL_ORD_ID
-            = "Gandalf-Tag41StrOrigClOrdID";
+            = "LouiseBrooks-Tag41StrOrigClOrdID";
 
     public Tag41StrOrigClOrdID(MyStringType dataValue) {
         setFixType(FIX27.FIX41_STR_ORIG_CL_ORD_ID);
@@ -51,7 +52,7 @@ public class Tag41StrOrigClOrdID extends FIX27Abstract implements LogValuePairSt
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

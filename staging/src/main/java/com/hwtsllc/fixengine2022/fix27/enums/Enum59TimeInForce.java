@@ -23,22 +23,25 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  59
  *  TimeInForce
  *  char
+ *  <p></p>
  *  Specifies how long the order remains in effect.
- *
+ *  <p></p>
  *  Absence of this field is interpreted as DAY.
- *
+ *  <p></p>
  *  NOTE not applicable to CIV Orders.
+ *  <p>
  *  (see Volume : "Glossary" for value definitions)
- *
+ *  <p></p>
  *  Valid values:
- *      0 - Day (or session)
- *      1 - Good Till Cancel (GTC)
- *      2 - At the Opening (OPG)
- *      3 - Immediate Or Cancel (IOC)
- *      4 - Fill Or Kill (FOK)
- *      5 - Good Till Crossing (GTX)
- *      6 - Good Till Date (GTD)
- *      7 - At the Close
+ *  <p>    0 - Day (or session)
+ *  <p>    1 - Good Till Cancel (GTC)
+ *  <p>    2 - At the Opening (OPG)
+ *  <p>    3 - Immediate Or Cancel (IOC)
+ *  <p>    4 - Fill Or Kill (FOK)
+ *  <p></p>
+ *  <p>    5 - Good Till Crossing (GTX)
+ *  <p>    6 - Good Till Date (GTD)
+ *  <p>    7 - At the Close
  */
 public enum Enum59TimeInForce implements LogFIXString, LogVerboseString {
     DAY("0", "DAY", "0 - Day (or session)" ),
@@ -66,28 +69,28 @@ public enum Enum59TimeInForce implements LogFIXString, LogVerboseString {
      * standard wrapper to retrieve the specific enum name
      */
     @Override
-    public String toEnumNameString() {
+    public String toEnumLabelString() {
         return this.name();
     }
     /**
      * standard wrapper to retrieve the specific fix action code for this enum. eg: the first field
      */
     @Override
-    public String toFIXIDString() {
+    public String toEnumIDString() {
         return id;
     }
     /**
      * standard wrapper to retrieve the specific fix name for this enum. eg: the second field
      */
     @Override
-    public String toFIXNameString() {
+    public String toEnumNameString() {
         return name;
     }
     /**
      * standard wrapper to retrieve the specific fix description for this enum. eg: the third field
      */
     @Override
-    public String toFIXDescriptionString() {
+    public String toEnumDescriptionString() {
         return description;
     }
     /**
@@ -97,16 +100,16 @@ public enum Enum59TimeInForce implements LogFIXString, LogVerboseString {
     public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
-                .concat(toEnumNameString())
+                .concat( toEnumLabelString())
                 .concat("]")
                 .concat("\n\tAction[")
-                .concat(toFIXIDString())
+                .concat( toEnumIDString())
                 .concat("]")
                 .concat("\n\tName[")
-                .concat(toFIXNameString())
+                .concat( toEnumNameString())
                 .concat("]")
                 .concat("\n\tDescription[")
-                .concat(toFIXDescriptionString())
+                .concat( toEnumDescriptionString())
                 .concat("]");
     }
     /**
@@ -114,13 +117,13 @@ public enum Enum59TimeInForce implements LogFIXString, LogVerboseString {
      */
     @Override
     public String toString() {
-        return toEnumNameString()
+        return toEnumLabelString()
                 .concat("=[")
-                .concat(toFIXIDString())
+                .concat( toEnumIDString())
                 .concat(",")
-                .concat(toFIXNameString())
+                .concat( toEnumNameString())
                 .concat(",")
-                .concat(toFIXDescriptionString())
+                .concat( toEnumDescriptionString())
                 .concat("]");
     }
 

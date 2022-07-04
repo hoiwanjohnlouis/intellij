@@ -43,27 +43,27 @@ class Enum847TargetStrategyTest {
         Enum847TargetStrategy enumType;
 
         enumType = Enum847TargetStrategy.VWAP;
-        assertEquals( "1", enumType.toFIXIDString() );
-        assertEquals( "VWAP", enumType.toFIXNameString() );
-        assertEquals( "1 - VWAP", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "1", enumType.toEnumIDString() );
+        assertEquals( "VWAP", enumType.toEnumNameString() );
+        assertEquals( "1 - VWAP", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum847TargetStrategy.PARTICIPATE;
-        assertEquals( "2", enumType.toFIXIDString() );
-        assertEquals( "PARTICIPATE", enumType.toFIXNameString() );
-        assertEquals( "2 - Participate (i.e. aim to be x percent of the market volume)", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "2", enumType.toEnumIDString() );
+        assertEquals( "PARTICIPATE", enumType.toEnumNameString() );
+        assertEquals( "2 - Participate (i.e. aim to be x percent of the market volume)", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum847TargetStrategy.MINIMIZE_MARKET_IMPACT;
-        assertEquals( "3", enumType.toFIXIDString() );
-        assertEquals( "MINIMIZE_MARKET_IMPACT", enumType.toFIXNameString() );
-        assertEquals( "3 - Minimize market impact", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "3", enumType.toEnumIDString() );
+        assertEquals( "MINIMIZE_MARKET_IMPACT", enumType.toEnumNameString() );
+        assertEquals( "3 - Minimize market impact", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

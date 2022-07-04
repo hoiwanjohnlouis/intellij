@@ -51,7 +51,7 @@ public class Tag1103StrTriggerSymbol extends FIX50Abstract implements LogValuePa
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

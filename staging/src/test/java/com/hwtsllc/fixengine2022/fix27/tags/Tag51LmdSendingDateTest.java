@@ -35,13 +35,13 @@ class Tag51LmdSendingDateTest {
     @Test
     void FIX0051Test() {
         FIX27 fixData = FIX27.FIX51_LMD_SENDING_DATE;
-        assertEquals( "SENDING_DATE", fixData.toFIXNameString());
-        assertEquals( "51", fixData.toFIXIDString());
-        assertEquals( "SendingDate (no longer used)", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "SENDING_DATE", fixData.toEnumNameString());
+        assertEquals( "51", fixData.toEnumIDString());
+        assertEquals( "SendingDate (no longer used)", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0051Test() {
@@ -71,7 +71,7 @@ class Tag51LmdSendingDateTest {
         Tag51LmdSendingDate tagData;
 
         tagData = new Tag51LmdSendingDate(new MyLocalMktDateType(Tag51LmdSendingDate.TESTB_LMD_SENDING_DATE));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag51LmdSendingDate.TESTB_LMD_SENDING_DATE,
+        assertEquals( tagData.toEnumIDString() + "=" + Tag51LmdSendingDate.TESTB_LMD_SENDING_DATE,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toValuePairString());
@@ -92,12 +92,12 @@ class Tag51LmdSendingDateTest {
 
         tagData = new Tag51LmdSendingDate(new MyLocalMktDateType(Tag51LmdSendingDate.TESTA_LMD_SENDING_DATE));
         assertEquals( "Tag51LmdSendingDate\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + Tag51LmdSendingDate.TESTA_LMD_SENDING_DATE + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag51LmdSendingDate.TESTA_LMD_SENDING_DATE + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag51LmdSendingDate.TESTA_LMD_SENDING_DATE + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

@@ -54,7 +54,7 @@ public class Tag1014StrSideTrdRegTimestampSrc extends FIX50Abstract implements L
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

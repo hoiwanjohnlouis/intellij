@@ -39,12 +39,12 @@ class Tag827EnuExpirationCycleTest {
     @Test
     void FIXTest() {
         FIX44 fixData = FIX44.FIX827_ENU_EXPIRATION_CYCLE;
-        assertEquals( "827", fixData.toFIXIDString());
-        assertEquals( "EXPIRATION_CYCLE", fixData.toFIXNameString());
-        assertEquals( "ExpirationCycle", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "827", fixData.toEnumIDString());
+        assertEquals( "EXPIRATION_CYCLE", fixData.toEnumNameString());
+        assertEquals( "ExpirationCycle", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0827Test() {
@@ -55,15 +55,15 @@ class Tag827EnuExpirationCycleTest {
         tagData = new Tag827EnuExpirationCycle( oneElement );
         assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "827", tagData.toFIXIDString());
-        assertEquals( "EXPIRATION_CYCLE", tagData.toFIXNameString());
-        assertEquals( "ExpirationCycle", tagData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
+        assertEquals( "827", tagData.toEnumIDString());
+        assertEquals( "EXPIRATION_CYCLE", tagData.toEnumNameString());
+        assertEquals( "ExpirationCycle", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         tagData = new Tag827EnuExpirationCycle( Enum827ExpirationCycle.EXPIRE_ON_OPEN );
-        assertEquals( Enum827ExpirationCycle.EXPIRE_ON_OPEN.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum827ExpirationCycle.EXPIRE_ON_OPEN.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -94,7 +94,7 @@ class Tag827EnuExpirationCycleTest {
         // loop around the ENUM and process
         for (Enum827ExpirationCycle oneEnum : Enum827ExpirationCycle.values()) {
             tagData = new Tag827EnuExpirationCycle(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -118,12 +118,12 @@ class Tag827EnuExpirationCycleTest {
         for (Enum827ExpirationCycle oneEnum : Enum827ExpirationCycle.values()) {
             tagData = new Tag827EnuExpirationCycle(oneEnum);
             assertEquals( "Tag827EnuExpirationCycle\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

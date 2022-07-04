@@ -41,12 +41,12 @@ class Tag291EnuFinancialStatusTest {
     @Test
     void FIX0291Test() {
         FIX42 fixData = FIX42.FIX291_ENU_FINANCIAL_STATUS;
-        assertEquals( "291", fixData.toFIXIDString());
-        assertEquals( "FINANCIAL_STATUS", fixData.toFIXNameString());
-        assertEquals( "FinancialStatus", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "291", fixData.toEnumIDString());
+        assertEquals( "FINANCIAL_STATUS", fixData.toEnumNameString());
+        assertEquals( "FinancialStatus", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0291Test() {
@@ -56,15 +56,15 @@ class Tag291EnuFinancialStatusTest {
          * 1-3 msg types
          */
         tagData = new Tag291EnuFinancialStatus(Enum291FinancialStatus.BANKRUPT);
-        assertEquals( Enum291FinancialStatus.BANKRUPT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum291FinancialStatus.BANKRUPT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag291EnuFinancialStatus(Enum291FinancialStatus.PENDING_DELISTING);
-        assertEquals( Enum291FinancialStatus.PENDING_DELISTING.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum291FinancialStatus.PENDING_DELISTING.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag291EnuFinancialStatus(Enum291FinancialStatus.RESTRICTED);
-        assertEquals( Enum291FinancialStatus.RESTRICTED.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum291FinancialStatus.RESTRICTED.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -95,7 +95,7 @@ class Tag291EnuFinancialStatusTest {
         // loop around the ENUM and process
         for (Enum291FinancialStatus oneEnum : Enum291FinancialStatus.values()) {
             tagData = new Tag291EnuFinancialStatus(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -119,12 +119,12 @@ class Tag291EnuFinancialStatusTest {
         for (Enum291FinancialStatus oneEnum : Enum291FinancialStatus.values()) {
             tagData = new Tag291EnuFinancialStatus(oneEnum);
             assertEquals( "Tag291EnuFinancialStatus\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

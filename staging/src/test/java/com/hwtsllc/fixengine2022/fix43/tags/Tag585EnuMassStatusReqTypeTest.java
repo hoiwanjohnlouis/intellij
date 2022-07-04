@@ -46,12 +46,12 @@ class Tag585EnuMassStatusReqTypeTest {
     @Test
     void FIX0585Test() {
         FIX43 fixData = FIX43.FIX585_ENU_MASS_STATUS_REQ_TYPE;
-        assertEquals( "585", fixData.toFIXIDString());
-        assertEquals( "MASS_STATUS_REQ_TYPE", fixData.toFIXNameString());
-        assertEquals( "MassStatusReqType", fixData.toFIXDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "585", fixData.toEnumIDString());
+        assertEquals( "MASS_STATUS_REQ_TYPE", fixData.toEnumNameString());
+        assertEquals( "MassStatusReqType", fixData.toEnumDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0585Test() {
@@ -61,36 +61,36 @@ class Tag585EnuMassStatusReqTypeTest {
          *  1-8 types
          */
         tagData = new Tag585EnuMassStatusReqType( Enum585MassStatusReqType.STATUS_ORDERS_FOR_SECURITY );
-        assertEquals( Enum585MassStatusReqType.STATUS_ORDERS_FOR_SECURITY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum585MassStatusReqType.STATUS_ORDERS_FOR_SECURITY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag585EnuMassStatusReqType( Enum585MassStatusReqType.STATUS_ORDERS_FOR_UNDERLYING );
-        assertEquals( Enum585MassStatusReqType.STATUS_ORDERS_FOR_UNDERLYING.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum585MassStatusReqType.STATUS_ORDERS_FOR_UNDERLYING.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag585EnuMassStatusReqType( Enum585MassStatusReqType.STATUS_ORDERS_FOR_PRODUCT );
-        assertEquals( Enum585MassStatusReqType.STATUS_ORDERS_FOR_PRODUCT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum585MassStatusReqType.STATUS_ORDERS_FOR_PRODUCT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag585EnuMassStatusReqType( Enum585MassStatusReqType.STATUS_ORDERS_FOR_CFICODE );
-        assertEquals( Enum585MassStatusReqType.STATUS_ORDERS_FOR_CFICODE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum585MassStatusReqType.STATUS_ORDERS_FOR_CFICODE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag585EnuMassStatusReqType( Enum585MassStatusReqType.STATUS_ORDERS_FOR_SECURITYTYPE );
-        assertEquals( Enum585MassStatusReqType.STATUS_ORDERS_FOR_SECURITYTYPE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum585MassStatusReqType.STATUS_ORDERS_FOR_SECURITYTYPE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag585EnuMassStatusReqType( Enum585MassStatusReqType.STATUS_ORDERS_FOR_SESSION );
-        assertEquals( Enum585MassStatusReqType.STATUS_ORDERS_FOR_SESSION.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum585MassStatusReqType.STATUS_ORDERS_FOR_SESSION.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag585EnuMassStatusReqType( Enum585MassStatusReqType.STATUS_ALL_ORDERS );
-        assertEquals( Enum585MassStatusReqType.STATUS_ALL_ORDERS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum585MassStatusReqType.STATUS_ALL_ORDERS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag585EnuMassStatusReqType( Enum585MassStatusReqType.STATUS_ORDERS_FOR_PARTYID );
-        assertEquals( Enum585MassStatusReqType.STATUS_ORDERS_FOR_PARTYID.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum585MassStatusReqType.STATUS_ORDERS_FOR_PARTYID.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -121,7 +121,7 @@ class Tag585EnuMassStatusReqTypeTest {
         // loop around the ENUM and process
         for (Enum585MassStatusReqType oneEnum : Enum585MassStatusReqType.values()) {
             tagData = new Tag585EnuMassStatusReqType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -145,12 +145,12 @@ class Tag585EnuMassStatusReqTypeTest {
         for (Enum585MassStatusReqType oneEnum : Enum585MassStatusReqType.values()) {
             tagData = new Tag585EnuMassStatusReqType(oneEnum);
             assertEquals( "Tag585EnuMassStatusReqType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

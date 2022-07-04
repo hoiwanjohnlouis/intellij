@@ -44,52 +44,52 @@ class Enum1107TriggerPriceTypeTest {
         Enum1107TriggerPriceType enumType;
 
         enumType = Enum1107TriggerPriceType.BEST_OFFER;
-        assertEquals( "1", enumType.toFIXIDString() );
-        assertEquals( "BEST_OFFER", enumType.toFIXNameString() );
-        assertEquals( "1 - Best Offer", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "1", enumType.toEnumIDString() );
+        assertEquals( "BEST_OFFER", enumType.toEnumNameString() );
+        assertEquals( "1 - Best Offer", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1107TriggerPriceType.LAST_TRADE;
-        assertEquals( "2", enumType.toFIXIDString() );
-        assertEquals( "LAST_TRADE", enumType.toFIXNameString() );
-        assertEquals( "2 - Last Trade", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "2", enumType.toEnumIDString() );
+        assertEquals( "LAST_TRADE", enumType.toEnumNameString() );
+        assertEquals( "2 - Last Trade", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1107TriggerPriceType.BEST_BID;
-        assertEquals( "3", enumType.toFIXIDString() );
-        assertEquals( "BEST_BID", enumType.toFIXNameString() );
-        assertEquals( "3 - Best Bid", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "3", enumType.toEnumIDString() );
+        assertEquals( "BEST_BID", enumType.toEnumNameString() );
+        assertEquals( "3 - Best Bid", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1107TriggerPriceType.BEST_BID_OR_LAST_TRADE;
-        assertEquals( "4", enumType.toFIXIDString() );
-        assertEquals( "BEST_BID_OR_LAST_TRADE", enumType.toFIXNameString() );
-        assertEquals( "4 - Best Bid or Last Trade", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "4", enumType.toEnumIDString() );
+        assertEquals( "BEST_BID_OR_LAST_TRADE", enumType.toEnumNameString() );
+        assertEquals( "4 - Best Bid or Last Trade", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1107TriggerPriceType.BEST_OFFER_OR_LAST_TRADE;
-        assertEquals( "5", enumType.toFIXIDString() );
-        assertEquals( "BEST_OFFER_OR_LAST_TRADE", enumType.toFIXNameString() );
-        assertEquals( "5 - Best Offer or Last Trade", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "5", enumType.toEnumIDString() );
+        assertEquals( "BEST_OFFER_OR_LAST_TRADE", enumType.toEnumNameString() );
+        assertEquals( "5 - Best Offer or Last Trade", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = Enum1107TriggerPriceType.BEST_MID;
-        assertEquals( "6", enumType.toFIXIDString() );
-        assertEquals( "BEST_MID", enumType.toFIXNameString() );
-        assertEquals( "6 - Best Mid", enumType.toFIXDescriptionString() );
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "6", enumType.toEnumIDString() );
+        assertEquals( "BEST_MID", enumType.toEnumNameString() );
+        assertEquals( "6 - Best Mid", enumType.toEnumDescriptionString() );
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

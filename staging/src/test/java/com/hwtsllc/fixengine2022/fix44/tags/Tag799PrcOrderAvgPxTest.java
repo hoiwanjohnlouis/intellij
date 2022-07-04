@@ -35,12 +35,12 @@ class Tag799PrcOrderAvgPxTest {
     @Test
     void FIXTest() {
         FIX44 fixData = FIX44.FIX799_PRC_ORDER_AVG_PX;
-        assertEquals( "799", fixData.toFIXIDString());
-        assertEquals( "ORDER_AVG_PX", fixData.toFIXNameString());
-        assertEquals( "OrderAvgPx", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "799", fixData.toEnumIDString());
+        assertEquals( "ORDER_AVG_PX", fixData.toEnumNameString());
+        assertEquals( "OrderAvgPx", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0799Test() {
@@ -51,12 +51,12 @@ class Tag799PrcOrderAvgPxTest {
         tagData = new Tag799PrcOrderAvgPx( new MyPriceType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "799", tagData.toFIXIDString());
-        assertEquals( "ORDER_AVG_PX", tagData.toFIXNameString());
-        assertEquals( "OrderAvgPx", tagData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
+        assertEquals( "799", tagData.toEnumIDString());
+        assertEquals( "ORDER_AVG_PX", tagData.toEnumNameString());
+        assertEquals( "OrderAvgPx", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         oneElement = Tag799PrcOrderAvgPx.TESTB_PRC_ORDER_AVG_PX;
         tagData = new Tag799PrcOrderAvgPx( new MyPriceType( oneElement ) );
@@ -93,7 +93,7 @@ class Tag799PrcOrderAvgPxTest {
 
         oneElement = Tag799PrcOrderAvgPx.TESTB_PRC_ORDER_AVG_PX;
         tagData = new Tag799PrcOrderAvgPx( new MyPriceType( oneElement ) );
-        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
     }
     @Test
@@ -114,12 +114,12 @@ class Tag799PrcOrderAvgPxTest {
         oneElement = Tag799PrcOrderAvgPx.TESTA_PRC_ORDER_AVG_PX;
         tagData = new Tag799PrcOrderAvgPx( new MyPriceType( oneElement ) );
         assertEquals( "Tag799PrcOrderAvgPx\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
                 tagData.toVerboseString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }

@@ -27,76 +27,77 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  18
  *  ExecInst
  *  MultipleCharValue
+ *  <p></p>
  *  Instructions for order handling on exchange trading floor.
- *
+ *  <p></p>
  *  If more than one instruction is applicable to an order,
  *  this field can contain multiple instructions separated by space.
- *
+ *  <p></p>
  *  *** SOME VALUES HAVE BEEN REPLACED ***
  *  *** See Replaced Features and Supported Approach ***
- *
+ *  <p></p>
  *  (see Volume : "Glossary" for value definitions)
- *
+ *  <p></p>
  *  Valid values:
- *      0 - Stay on offer side
- *      1 - Not held
- *      2 - Work
- *      3 - Go along
- *      4 - Over the day
- *
- *      5 - Held
- *      6 - Participant don't initiate
- *      7 - Strict scale
- *      8 - Try to scale
- *      9 - Stay on bid side
- *
- *      A - No cross (cross is forbidden)
- *      B - OK to cross
- *      C - Call first
- *      D - Percent of volume
- *          (indicates that the sender does not want to be all of
- *           the volume on the floor vs. a specific percentage)
- *      E - Do not increase - DNI
- *
- *      F - Do not reduce - DNR
- *      G - All or none - AON
- *      H - Reinstate on system failue (mutually exclusive with Q)
- *      I - Institutions only
- *      J - Reinstate on Trading Halt (mutually exclusive with K)
- *
- *      K - Cancel on Trading Halt (mutually exclusive with J)
- *      L - Last peg (last sale)
- *      M - Mid-price peg (midprice of inside quote)
- *      N - Non-negotiable
- *      O - Opening peg
- *
- *      P - Market peg
- *      Q - Cancel on system failure (mutually exclusive with H)
- *      R - Primary peg (primary market - buy at bid/sell at offer)
- *      S - Suspend
- *      T - Fixed Peg to Local best bid or offer at time of order
- *
- *      U - Customer Display Instruction (Rule 11Ac1-1/4)
- *      V - Netting (for Forex)
- *      W - Peg to VWAP
- *      X - Trade Along
- *      Y - Try To Stop
- *
- *      Z - Cancel if not best
- *
- *      a - Trailing Stop Peg
- *      b - Strict Limit (No price improvement)
- *      c - Ignore Price Validity Checks
- *      d - Peg to Limit Price
- *      e - Work to Target Strategy
- *
- *      f - Intermarket Sweep
- *      g - External Routing Allowed
- *      h - External Routing Not Allowed
- *      i - Imbalance Only
- *      j - Single execution requested for block trade
- *
- *      k - Best Execution
+ *  <p>    0 - Stay on offer side
+ *  <p>    1 - Not held
+ *  <p>    2 - Work
+ *  <p>    3 - Go along
+ *  <p>    4 - Over the day
+ *  <p></p>
+ *  <p>    5 - Held
+ *  <p>    6 - Participant don't initiate
+ *  <p>    7 - Strict scale
+ *  <p>    8 - Try to scale
+ *  <p>    9 - Stay on bid side
+ *  <p></p>
+ *  <p>    A - No cross (cross is forbidden)
+ *  <p>    B - OK to cross
+ *  <p>    C - Call first
+ *  <p>    D - Percent of volume
+ *          (indicates that the sender does not want
+ *          all the volume on the floor vs. a specific percentage)
+ *  <p>    E - Do not increase - DNI
+ *  <p></p>
+ *  <p>    F - Do not reduce - DNR
+ *  <p>    G - All or none - AON
+ *  <p>    H - Reinstate on system failue (mutually exclusive with Q)
+ *  <p>    I - Institutions only
+ *  <p>    J - Reinstate on Trading Halt (mutually exclusive with K)
+ *  <p></p>
+ *  <p>    K - Cancel on Trading Halt (mutually exclusive with J)
+ *  <p>    L - Last peg (last sale)
+ *  <p>    M - Mid-price peg (midprice of inside quote)
+ *  <p>    N - Non-negotiable
+ *  <p>    O - Opening peg
+ *  <p></p>
+ *  <p>    P - Market peg
+ *  <p>    Q - Cancel on system failure (mutually exclusive with H)
+ *  <p>    R - Primary peg (primary market - buy at bid/sell at offer)
+ *  <p>    S - Suspend
+ *  <p>    T - Fixed Peg to Local best bid or offer at time of order
+ *  <p></p>
+ *  <p>    U - Customer Display Instruction (Rule 11Ac1-1/4)
+ *  <p>    V - Netting (for Forex)
+ *  <p>    W - Peg to VWAP
+ *  <p>    X - Trade Along
+ *  <p>    Y - Try To Stop
+ *  <p></p>
+ *  <p>    Z - Cancel if not best
+ *  <p></p>
+ *  <p>    a - Trailing Stop Peg
+ *  <p>    b - Strict Limit (No price improvement)
+ *  <p>    c - Ignore Price Validity Checks
+ *  <p>    d - Peg to Limit Price
+ *  <p>    e - Work to Target Strategy
+ *  <p></p>
+ *  <p>    f - Intermarket Sweep
+ *  <p>    g - External Routing Allowed
+ *  <p>    h - External Routing Not Allowed
+ *  <p>    i - Imbalance Only
+ *  <p>    j - Single execution requested for block trade
+ *  <p></p>
+ *  <p>    k - Best Execution
  */
 public class Tag18EnuExecInst extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum18ExecInst dataValue;
@@ -112,14 +113,14 @@ public class Tag18EnuExecInst extends FIX27Abstract implements LogValuePairStrin
     }
 
     public String getDataValue() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(getDataValue());
     }
@@ -151,21 +152,21 @@ public class Tag18EnuExecInst extends FIX27Abstract implements LogValuePairStrin
      */
     @Override
     public String toDataIDString() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * wrapper to return the Name of the underlying Data
      */
     @Override
     public String toDataNameString() {
-        return this.dataValue.toFIXNameString();
+        return this.dataValue.toEnumNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data
      */
     @Override
     public String toDataDescriptionString() {
-        return this.dataValue.toFIXDescriptionString();
+        return this.dataValue.toEnumDescriptionString();
     }
     /**
      * standard wrapper to return a string describing the data

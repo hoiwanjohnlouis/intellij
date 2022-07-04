@@ -52,7 +52,7 @@ public class Tag177StrSecuritySettlAgentCode extends FIX41Abstract implements Lo
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

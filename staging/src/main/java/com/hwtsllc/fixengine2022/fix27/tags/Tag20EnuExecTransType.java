@@ -27,12 +27,14 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  20
  *  ExecTransType
  *  char
+ *  <p></p>
  *  Deprecated in FIX.4.2 Identifies transaction type
+ *  <p></p>
  *  Valid values:
- *      0 - New
- *      1 - Cancel
- *      2 - Correct
- *      3 - Status
+ *  <p>    0 - New
+ *  <p>    1 - Cancel
+ *  <p>    2 - Correct
+ *  <p>    3 - Status
  */
 // @Deprecated
 public class Tag20EnuExecTransType extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogDataString {
@@ -49,14 +51,14 @@ public class Tag20EnuExecTransType extends FIX27Abstract implements LogValuePair
     }
 
     public String getDataValue() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(getDataValue());
     }
@@ -88,21 +90,21 @@ public class Tag20EnuExecTransType extends FIX27Abstract implements LogValuePair
      */
     @Override
     public String toDataIDString() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * wrapper to return the Name of the underlying Data
      */
     @Override
     public String toDataNameString() {
-        return this.dataValue.toFIXNameString();
+        return this.dataValue.toEnumNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data
      */
     @Override
     public String toDataDescriptionString() {
-        return this.dataValue.toFIXDescriptionString();
+        return this.dataValue.toEnumDescriptionString();
     }
     /**
      * standard wrapper to return a string describing the data

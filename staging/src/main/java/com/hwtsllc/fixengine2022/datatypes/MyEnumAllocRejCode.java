@@ -23,28 +23,30 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  88 (same as 88, 776)
  *  AllocRejCode
  *  int
- *  <p>
+ *  <p></p>
  *  Identifies reason for rejection.
  *  <p></p>
  *  776 (same as 88, 776)
  *  IndividualAllocRejCode
  *  int
- *  <p>
+ *  <p></p>
  *  Identified reason for rejecting an individual AllocAccount (79) detail.
- *  <p>
- *  Same values as  AllocRejCode (88)
+ *  <p></p>
+ *      Same values as  AllocRejCode (88)
  *  <p></p>
  *  Valid values:
  *  <p>    0 - Unknown account(s)
  *  <p>    1 - Incorrect quantity
- *  <p>    2 - Incorrect averageg price
+ *  <p>    2 - Incorrect average price
  *  <p>    3 - Unknown executing broker mnemonic
  *  <p>    4 - Commission difference
+ *  <p></p>
  *  <p>    5 - Unknown OrderID (37)
  *  <p>    6 - Unknown ListID (66)
  *  <p>    7 - Other (further in Text (58))
  *  <p>    8 - Incorrect allocated quantity
  *  <p>    9 - Calculation difference
+ *  <p></p>
  *  <p>    10 - Unknown or stale ExecID
  *  <p>    11 - Mismatched data
  *  <p>    12 - Unknown ClOrdID
@@ -97,28 +99,28 @@ public enum MyEnumAllocRejCode implements LogFIXString, LogVerboseString {
      * standard wrapper to retrieve the specific enum name
      */
     @Override
-    public String toEnumNameString() {
+    public String toEnumLabelString() {
         return this.name();
     }
     /**
      * standard wrapper to retrieve the specific fix action code for this enum. eg: the first field
      */
     @Override
-    public String toFIXIDString() {
+    public String toEnumIDString() {
         return id;
     }
     /**
      * standard wrapper to retrieve the specific fix name for this enum. eg: the second field
      */
     @Override
-    public String toFIXNameString() {
+    public String toEnumNameString() {
         return name;
     }
     /**
      * standard wrapper to retrieve the specific fix description for this enum. eg: the third field
      */
     @Override
-    public String toFIXDescriptionString() {
+    public String toEnumDescriptionString() {
         return description;
     }
     /**
@@ -128,16 +130,16 @@ public enum MyEnumAllocRejCode implements LogFIXString, LogVerboseString {
     public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
-                .concat(toEnumNameString())
+                .concat( toEnumLabelString())
                 .concat("]")
                 .concat("\n\tAction[")
-                .concat(toFIXIDString())
+                .concat( toEnumIDString())
                 .concat("]")
                 .concat("\n\tName[")
-                .concat(toFIXNameString())
+                .concat( toEnumNameString())
                 .concat("]")
                 .concat("\n\tDescription[")
-                .concat(toFIXDescriptionString())
+                .concat( toEnumDescriptionString())
                 .concat("]");
     }
     /**
@@ -145,13 +147,13 @@ public enum MyEnumAllocRejCode implements LogFIXString, LogVerboseString {
      */
     @Override
     public String toString() {
-        return toEnumNameString()
+        return toEnumLabelString()
                 .concat("=[")
-                .concat(toFIXIDString())
+                .concat( toEnumIDString())
                 .concat(",")
-                .concat(toFIXNameString())
+                .concat( toEnumNameString())
                 .concat(",")
-                .concat(toFIXDescriptionString())
+                .concat( toEnumDescriptionString())
                 .concat("]");
     }
 

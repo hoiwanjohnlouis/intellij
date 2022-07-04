@@ -42,35 +42,35 @@ class Tag169EnuStandInstDBTypeTest {
     @Test
     void FIX0169Test() {
         FIX41 fixData = FIX41.FIX169_ENU_STAND_INST_DB_TYPE;
-        assertEquals( "169", fixData.toFIXIDString());
-        assertEquals( "STAND_INST_DB_TYPE", fixData.toFIXNameString());
-        assertEquals( "StandInstDbType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "169", fixData.toEnumIDString());
+        assertEquals( "STAND_INST_DB_TYPE", fixData.toEnumNameString());
+        assertEquals( "StandInstDbType", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0169Test() {
         Tag169EnuStandInstDBType tagData;
 
         tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.OTHER);
-        assertEquals( Enum169StandInstDbType.OTHER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum169StandInstDbType.OTHER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.DTC_SID);
-        assertEquals( Enum169StandInstDbType.DTC_SID.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum169StandInstDbType.DTC_SID.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.THOMPSON_ALERT);
-        assertEquals( Enum169StandInstDbType.THOMPSON_ALERT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum169StandInstDbType.THOMPSON_ALERT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.GLOBAL_CUSTODIAN);
-        assertEquals( Enum169StandInstDbType.GLOBAL_CUSTODIAN.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum169StandInstDbType.GLOBAL_CUSTODIAN.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.ACCOUNT_NET);
-        assertEquals( Enum169StandInstDbType.ACCOUNT_NET.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum169StandInstDbType.ACCOUNT_NET.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -101,7 +101,7 @@ class Tag169EnuStandInstDBTypeTest {
         // loop around the ENUM and process
         for (Enum169StandInstDbType oneEnum : Enum169StandInstDbType.values()) {
             tagData = new Tag169EnuStandInstDBType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -125,12 +125,12 @@ class Tag169EnuStandInstDBTypeTest {
         for (Enum169StandInstDbType oneEnum : Enum169StandInstDbType.values()) {
             tagData = new Tag169EnuStandInstDBType(oneEnum);
             assertEquals( "Tag169EnuStandInstDBType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

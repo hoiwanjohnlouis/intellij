@@ -26,18 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  75
  *  TradeDate
  *  LocalMktDate
- *  <p>
+ *  <p></p>
  *  Indicates date of trade referenced in this message in YYYYMMDD format.
- *  <p>
+ *  <p></p>
  *  Absence of this field indicates current day (expressed in local time at place of trade).
  */
 public class Tag75StrTradeDate extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_TRADE_DATE
-            = "BilboBaggins-Tag75StrTradeDate";
+            = "AnnBlyth-Tag75StrTradeDate";
     public final static String TESTB_STR_TRADE_DATE
-            = "Gandalf-Tag75StrTradeDate";
+            = "BebeDaniels-Tag75StrTradeDate";
 
     public Tag75StrTradeDate(MyStringType dataValue) {
         setFixType(FIX27.FIX75_STR_TRADE_DATE);
@@ -52,7 +52,7 @@ public class Tag75StrTradeDate extends FIX27Abstract implements LogValuePairStri
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

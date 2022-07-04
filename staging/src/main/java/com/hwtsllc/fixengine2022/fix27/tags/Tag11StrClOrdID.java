@@ -26,11 +26,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  11
  *  ClOrdID
  *  String
+ *  <p></p>
  *  Unique identifier for Order as assigned by the buy-side
+ *  <p></p>
  *  (institution, broker, intermediary  etc.)
+ *  <p></p>
  *  (identified by SenderCompID (49) or OnBehalfOfCompID (5) as appropriate).
- *
+ *  <p></p>
  *  Uniqueness must be guaranteed within a single trading day.
+ *  <p></p>
  *  Firms, particularly those  which electronically submit multi-day orders,
  *  trade globally or throughout market close periods, should ensure uniqueness
  *  across days, for example by embedding a date within the ClOrdID field.
@@ -56,7 +60,7 @@ public class Tag11StrClOrdID extends FIX27Abstract implements LogValuePairString
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

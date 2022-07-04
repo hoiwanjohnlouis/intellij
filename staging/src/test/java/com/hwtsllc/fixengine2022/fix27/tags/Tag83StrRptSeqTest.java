@@ -28,78 +28,111 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  83
  *  RptSeq
  *  int
- *  <p>
+ *  <p></p>
  *  Sequence number of message within report series.
- *  <p>
+ *  <p></p>
  *  Used to carry reporting sequence number of the fill as represented on the Trade Report Side.
  */
 class Tag83StrRptSeqTest {
     @Test
-    void FIX0083Test() {
+    void FIXTest() {
         FIX27 fixData = FIX27.FIX83_STR_RPT_SEQ;
-        assertEquals( "RPT_SEQ", fixData.toFIXNameString());
-        assertEquals( "83", fixData.toFIXIDString());
-        assertEquals( "RptSeq", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "RPT_SEQ", fixData.toEnumNameString());
+        assertEquals( "83", fixData.toEnumIDString());
+        assertEquals( "RptSeq", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0083Test() {
         Tag83StrRptSeq tagData;
+        String oneElement;
 
-        tagData = new Tag83StrRptSeq(new MyStringType("Legolas-83RptSeq") );
-        assertEquals( "Legolas-83RptSeq", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        oneElement = "Legolas-Tag83StrRptSeq";
+        tagData = new Tag83StrRptSeq(new MyStringType( oneElement ) );
+        verifyTagInformation( tagData, oneElement );
+
+        oneElement = Tag83StrRptSeq.TESTA_STR_RPT_SEQ;
+        tagData = new Tag83StrRptSeq(new MyStringType( oneElement ) );
+        verifyTagInformation( tagData, oneElement );
+
+        oneElement = Tag83StrRptSeq.TESTB_STR_RPT_SEQ;
+        tagData = new Tag83StrRptSeq(new MyStringType( oneElement ) );
+        verifyTagInformation( tagData, oneElement );
     }
+
+    private void verifyTagInformation( Tag83StrRptSeq tagData, String oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "FIX83_STR_RPT_SEQ", tagData.toEnumLabelString());
+        assertEquals( "RPT_SEQ", tagData.toEnumNameString());
+        assertEquals( "83", tagData.toEnumIDString());
+        assertEquals( "RptSeq", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void PrintFIXTagTest() {
         Tag83StrRptSeq tagData;
+        String oneElement;
 
-        tagData = new Tag83StrRptSeq(new MyStringType(Tag83StrRptSeq.TESTB_STR_RPT_SEQ));
+        oneElement = Tag83StrRptSeq.TESTA_STR_RPT_SEQ;
+        tagData = new Tag83StrRptSeq(new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag83StrRptSeq.TESTB_STR_RPT_SEQ;
+        tagData = new Tag83StrRptSeq(new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
     @Test
     void TagGetDataValueTest() {
         Tag83StrRptSeq tagData;
+        String oneElement;
 
-        tagData = new Tag83StrRptSeq(new MyStringType(Tag83StrRptSeq.TESTB_STR_RPT_SEQ));
-        assertEquals( Tag83StrRptSeq.TESTB_STR_RPT_SEQ, tagData.getDataValue());
+        oneElement = Tag83StrRptSeq.TESTB_STR_RPT_SEQ;
+        tagData = new Tag83StrRptSeq(new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void TagToValuePairStringTest() {
         Tag83StrRptSeq tagData;
+        String oneElement;
 
-        tagData = new Tag83StrRptSeq(new MyStringType(Tag83StrRptSeq.TESTB_STR_RPT_SEQ));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag83StrRptSeq.TESTB_STR_RPT_SEQ,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag83StrRptSeq.TESTB_STR_RPT_SEQ;
+        tagData = new Tag83StrRptSeq(new MyStringType( oneElement ) );
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
     @Test
     void TagToStringTest() {
         Tag83StrRptSeq tagData;
+        String oneElement;
 
-        tagData = new Tag83StrRptSeq(new MyStringType(Tag83StrRptSeq.TESTB_STR_RPT_SEQ));
-        assertEquals( Tag83StrRptSeq.TESTB_STR_RPT_SEQ,
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag83StrRptSeq.TESTB_STR_RPT_SEQ;
+        tagData = new Tag83StrRptSeq(new MyStringType( oneElement ) );
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
     @Test
     void TagToVerboseStringTest() {
         Tag83StrRptSeq tagData;
+        String oneElement;
 
-        tagData = new Tag83StrRptSeq(new MyStringType(Tag83StrRptSeq.TESTA_STR_RPT_SEQ));
+        oneElement = Tag83StrRptSeq.TESTA_STR_RPT_SEQ;
+        tagData = new Tag83StrRptSeq(new MyStringType( oneElement ) );
         assertEquals( "Tag83StrRptSeq\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag83StrRptSeq.TESTA_STR_RPT_SEQ + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag83StrRptSeq.TESTA_STR_RPT_SEQ + "]",
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                        "\tDataValue[" + oneElement + "]\n" +
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

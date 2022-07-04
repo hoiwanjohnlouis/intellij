@@ -48,12 +48,12 @@ class Tag837EnuPegLimitTypeTest {
     @Test
     void FIXTest() {
         FIX44 fixData = FIX44.FIX837_ENU_PEG_LIMIT_TYPE;
-        assertEquals( "837", fixData.toFIXIDString());
-        assertEquals( "PEG_LIMIT_TYPE", fixData.toFIXNameString());
-        assertEquals( "PegLimitType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "837", fixData.toEnumIDString());
+        assertEquals( "PEG_LIMIT_TYPE", fixData.toEnumNameString());
+        assertEquals( "PegLimitType", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0837Test() {
@@ -64,12 +64,12 @@ class Tag837EnuPegLimitTypeTest {
         tagData = new Tag837EnuPegLimitType( oneElement );
         assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "837", tagData.toFIXIDString());
-        assertEquals( "PEG_LIMIT_TYPE", tagData.toFIXNameString());
-        assertEquals( "PegLimitType", tagData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
+        assertEquals( "837", tagData.toEnumIDString());
+        assertEquals( "PEG_LIMIT_TYPE", tagData.toEnumNameString());
+        assertEquals( "PegLimitType", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         tagData = new Tag837EnuPegLimitType(MyEnumLimitType.STRICT);
         assertEquals( "1", tagData.getDataValue());
@@ -107,7 +107,7 @@ class Tag837EnuPegLimitTypeTest {
         // loop around the ENUM and process
         for (MyEnumLimitType oneEnum : MyEnumLimitType.values()) {
             tagData = new Tag837EnuPegLimitType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -131,12 +131,12 @@ class Tag837EnuPegLimitTypeTest {
         for (MyEnumLimitType oneEnum : MyEnumLimitType.values()) {
             tagData = new Tag837EnuPegLimitType(oneEnum);
             assertEquals( "Tag837EnuPegLimitType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

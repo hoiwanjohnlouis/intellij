@@ -26,7 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  23
  *  IOIID
  *  String
+ *  <p></p>
  *  Unique identifier of IOI message.
+ *  <p></p>
  *  (Prior to FIX 4.1 this field was of type int)
  */
 public class Tag23StrIOIID extends FIX27Abstract implements LogValuePairString, LogVerboseString {
@@ -50,7 +52,7 @@ public class Tag23StrIOIID extends FIX27Abstract implements LogValuePairString, 
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

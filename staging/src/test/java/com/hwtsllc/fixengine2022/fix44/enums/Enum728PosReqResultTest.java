@@ -47,52 +47,52 @@ class Enum728PosReqResultTest {
         Enum728PosReqResult enumType;
 
         enumType = Enum728PosReqResult.VALID_REQUEST;
-        assertEquals( "0", enumType.toFIXIDString());
-        assertEquals( "VALID_REQUEST", enumType.toFIXNameString());
-        assertEquals( "0 - Valid request", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "0", enumType.toEnumIDString());
+        assertEquals( "VALID_REQUEST", enumType.toEnumNameString());
+        assertEquals( "0 - Valid request", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum728PosReqResult.UNSUPPORTED_REQUEST;
-        assertEquals( "1", enumType.toFIXIDString());
-        assertEquals( "UNSUPPORTED_REQUEST", enumType.toFIXNameString());
-        assertEquals( "1 - Invalid or unsupported request", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "1", enumType.toEnumIDString());
+        assertEquals( "UNSUPPORTED_REQUEST", enumType.toEnumNameString());
+        assertEquals( "1 - Invalid or unsupported request", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum728PosReqResult.NO_POSITIONS_FOUND;
-        assertEquals( "2", enumType.toFIXIDString());
-        assertEquals( "NO_POSITIONS_FOUND", enumType.toFIXNameString());
-        assertEquals( "2 - No positions found that match criteria", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "2", enumType.toEnumIDString());
+        assertEquals( "NO_POSITIONS_FOUND", enumType.toEnumNameString());
+        assertEquals( "2 - No positions found that match criteria", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum728PosReqResult.NOT_AUTHORIZED;
-        assertEquals( "3", enumType.toFIXIDString());
-        assertEquals( "NOT_AUTHORIZED", enumType.toFIXNameString());
-        assertEquals( "3 - Not authorized to request positions", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "3", enumType.toEnumIDString());
+        assertEquals( "NOT_AUTHORIZED", enumType.toEnumNameString());
+        assertEquals( "3 - Not authorized to request positions", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum728PosReqResult.REQUEST_NOT_SUPPORTED;
-        assertEquals( "4", enumType.toFIXIDString());
-        assertEquals( "REQUEST_NOT_SUPPORTED", enumType.toFIXNameString());
-        assertEquals( "4 - Request for position not supported", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals( "4", enumType.toEnumIDString());
+        assertEquals( "REQUEST_NOT_SUPPORTED", enumType.toEnumNameString());
+        assertEquals( "4 - Request for position not supported", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum728PosReqResult.OTHER;
-        assertEquals( "99", enumType.toFIXIDString());
-        assertEquals( "OTHER", enumType.toFIXNameString());
+        assertEquals( "99", enumType.toEnumIDString());
+        assertEquals( "OTHER", enumType.toEnumNameString());
         assertEquals( "99 - Other (use Text (58) in conjunction with this code for an explanation)",
-                enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+                enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

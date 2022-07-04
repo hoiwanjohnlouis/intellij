@@ -55,7 +55,7 @@ public class Tag629UtcHopSendingTime extends FIX43Abstract implements LogValuePa
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

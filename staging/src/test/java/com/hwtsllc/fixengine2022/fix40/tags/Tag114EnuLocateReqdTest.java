@@ -39,12 +39,12 @@ class Tag114EnuLocateReqdTest {
     @Test
     void FIX0114Test() {
         FIX40 fixData = FIX40.FIX114_ENU_LOCATE_REQD;
-        assertEquals( "LOCATE_REQD", fixData.toFIXNameString());
-        assertEquals( "114", fixData.toFIXIDString());
-        assertEquals( "LocateReqd", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "LOCATE_REQD", fixData.toEnumNameString());
+        assertEquals( "114", fixData.toEnumIDString());
+        assertEquals( "LocateReqd", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0114Test() {
@@ -86,7 +86,7 @@ class Tag114EnuLocateReqdTest {
         // loop around the ENUM and process
         for (Enum114LocateReqd oneEnum : Enum114LocateReqd.values()) {
             tagData = new Tag114EnuLocateReqd(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -110,12 +110,12 @@ class Tag114EnuLocateReqdTest {
         for (Enum114LocateReqd oneEnum : Enum114LocateReqd.values()) {
             tagData = new Tag114EnuLocateReqd(oneEnum);
             assertEquals( "Tag114EnuLocateReqd\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

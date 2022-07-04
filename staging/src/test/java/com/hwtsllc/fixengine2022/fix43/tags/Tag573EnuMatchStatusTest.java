@@ -40,12 +40,12 @@ class Tag573EnuMatchStatusTest {
     @Test
     void FIX0573Test() {
         FIX43 fixData = FIX43.FIX573_ENU_MATCH_STATUS;
-        assertEquals( "573", fixData.toFIXIDString());
-        assertEquals( "MATCH_STATUS", fixData.toFIXNameString());
-        assertEquals( "MatchStatus", fixData.toFIXDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "573", fixData.toEnumIDString());
+        assertEquals( "MATCH_STATUS", fixData.toEnumNameString());
+        assertEquals( "MatchStatus", fixData.toEnumDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0573Test() {
@@ -55,15 +55,15 @@ class Tag573EnuMatchStatusTest {
          *  0-2 types
          */
         tagData = new Tag573EnuMatchStatus( Enum573MatchStatus.COMPARED_MATCHED_AFFIRMED );
-        assertEquals( Enum573MatchStatus.COMPARED_MATCHED_AFFIRMED.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum573MatchStatus.COMPARED_MATCHED_AFFIRMED.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag573EnuMatchStatus( Enum573MatchStatus.UNCOMPARED_UNMATCHED_UNAFFIRMED );
-        assertEquals( Enum573MatchStatus.UNCOMPARED_UNMATCHED_UNAFFIRMED.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum573MatchStatus.UNCOMPARED_UNMATCHED_UNAFFIRMED.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag573EnuMatchStatus( Enum573MatchStatus.ADVISORY );
-        assertEquals( Enum573MatchStatus.ADVISORY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum573MatchStatus.ADVISORY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -94,7 +94,7 @@ class Tag573EnuMatchStatusTest {
         // loop around the ENUM and process
         for (Enum573MatchStatus oneEnum : Enum573MatchStatus.values()) {
             tagData = new Tag573EnuMatchStatus(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -118,12 +118,12 @@ class Tag573EnuMatchStatusTest {
         for (Enum573MatchStatus oneEnum : Enum573MatchStatus.values()) {
             tagData = new Tag573EnuMatchStatus(oneEnum);
             assertEquals( "Tag573EnuMatchStatus\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

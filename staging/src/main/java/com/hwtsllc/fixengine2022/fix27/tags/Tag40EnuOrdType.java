@@ -27,44 +27,47 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  40
  *  OrdType
  *  char
+ *  <p></p>
  *  Order type.
- *
+ *  <p></p>
  *  *** SOME VALUES ARE NO LONGER USED ***
+ *  <p>
  *  *** See Deprecated (Phased-out) Features and Supported Approach ***
+ *  <p>
  *      (see Volume : "Glossary" for value definitions)
- *
+ *  <p></p>
  *  Valid values:
- *      1 - Market
- *      2 - Limit
- *      3 - Stop / Stop Loss
- *      4 - Stop Limit
- *      5 - Market On Close (No longer used)
- *
- *      6 - With Or Without
- *      7 - Limit Or Better
- *      8 - Limit With Or Without
- *      9 - On Basis
- *
- *      A - On Close (No longer used)
- *      B - Limit On Close (No longer used)
- *      C - Forex Market (No longer used)
- *      D - Previously Quoted
- *      E - Previously Indicated
- *
- *      F - Forex Limit (No longer used)
- *      G - Forex Swap
- *      H - Forex Previously Quoted (No longer used)
- *      I - Funari
+ *  <p>    1 - Market
+ *  <p>    2 - Limit
+ *  <p>    3 - Stop / Stop Loss
+ *  <p>    4 - Stop Limit
+ *  <p>    5 - Market On Close (No longer used)
+ *  <p></p>
+ *  <p>    6 - With Or Without
+ *  <p>    7 - Limit Or Better
+ *  <p>    8 - Limit With Or Without
+ *  <p>    9 - On Basis
+ *  <p></p>
+ *  <p>    A - On Close (No longer used)
+ *  <p>    B - Limit On Close (No longer used)
+ *  <p>    C - Forex Market (No longer used)
+ *  <p>    D - Previously Quoted
+ *  <p>    E - Previously Indicated
+ *  <p></p>
+ *  <p>    F - Forex Limit (No longer used)
+ *  <p>    G - Forex Swap
+ *  <p>    H - Forex Previously Quoted (No longer used)
+ *  <p>    I - Funari
  *          (Limit day order with unexecuted portion handles as Market On Close.
  *           e.g. Japan)
- *      J - Market If Touched (MIT)
- *
- *      K - Market With Left Over as Limit
+ *  <p>    J - Market If Touched (MIT)
+ *  <p></p>
+ *  <p>    K - Market With Left Over as Limit
  *          (market order with unexecuted quantity becoming limit order at last price)
- *      L - Previous Fund Valuation Point (Historic pricing;  for CIV)
- *      M - Next Fund Valuation Point (Forward pricing;  for CIV)
- *      P - Pegged
- *      Q - Counter-order selection
+ *  <p>    L - Previous Fund Valuation Point (Historic pricing;  for CIV)
+ *  <p>    M - Next Fund Valuation Point (Forward pricing;  for CIV)
+ *  <p>    P - Pegged
+ *  <p>    Q - Counter-order selection
  */
 public class Tag40EnuOrdType extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum40OrdType dataValue;
@@ -80,14 +83,14 @@ public class Tag40EnuOrdType extends FIX27Abstract implements LogValuePairString
     }
 
     public String getDataValue() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(getDataValue());
     }
@@ -119,21 +122,21 @@ public class Tag40EnuOrdType extends FIX27Abstract implements LogValuePairString
      */
     @Override
     public String toDataIDString() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * wrapper to return the Name of the underlying Data
      */
     @Override
     public String toDataNameString() {
-        return this.dataValue.toFIXNameString();
+        return this.dataValue.toEnumNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data
      */
     @Override
     public String toDataDescriptionString() {
-        return this.dataValue.toFIXDescriptionString();
+        return this.dataValue.toEnumDescriptionString();
     }
     /**
      * standard wrapper to return a string describing the data

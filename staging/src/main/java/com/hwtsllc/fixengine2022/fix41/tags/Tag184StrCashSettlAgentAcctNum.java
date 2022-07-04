@@ -49,7 +49,7 @@ public class Tag184StrCashSettlAgentAcctNum extends FIX41Abstract implements Log
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

@@ -48,7 +48,7 @@ public class Tag155FloSettlCurrFxRate extends FIX41Abstract implements LogValueP
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

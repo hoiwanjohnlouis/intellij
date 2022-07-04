@@ -52,7 +52,7 @@ public class Tag680IntLegBenchmarkPriceType extends FIX44Abstract implements Log
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

@@ -26,11 +26,13 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  5
  *  AdvTransType
  *  String
+ *  <p></p>
  *  Identifies advertisement message transaction type
+ *  <p></p>
  *  Valid values:
- *      N - New
- *      C - Cancel
- *      R - Replace
+ *  <p>    N - New
+ *  <p>    C - Cancel
+ *  <p>    R - Replace
  */
 class Enum5AdvTransTypeTest {
     @Test
@@ -38,27 +40,27 @@ class Enum5AdvTransTypeTest {
         Enum5AdvTransType enumType;
 
         enumType = Enum5AdvTransType.NEW;
-        assertEquals("N", enumType.toFIXIDString());
-        assertEquals("NEW", enumType.toFIXNameString());
-        assertEquals("N - New", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("N", enumType.toEnumIDString());
+        assertEquals("NEW", enumType.toEnumNameString());
+        assertEquals("N - New", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum5AdvTransType.CANCEL;
-        assertEquals("C", enumType.toFIXIDString());
-        assertEquals("CANCEL", enumType.toFIXNameString());
-        assertEquals("C - Cancel", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("C", enumType.toEnumIDString());
+        assertEquals("CANCEL", enumType.toEnumNameString());
+        assertEquals("C - Cancel", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum5AdvTransType.REPLACE;
-        assertEquals("R", enumType.toFIXIDString());
-        assertEquals("REPLACE", enumType.toFIXNameString());
-        assertEquals("R - Replace", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("R", enumType.toEnumIDString());
+        assertEquals("REPLACE", enumType.toEnumNameString());
+        assertEquals("R - Replace", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

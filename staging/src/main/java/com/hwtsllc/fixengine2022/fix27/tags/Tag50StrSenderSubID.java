@@ -26,15 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  50
  *  SenderSubID
  *  String
+ *  <p></p>
  *  Assigned value used to identify specific message originator (desk, trader, etc.)
  */
 public class Tag50StrSenderSubID extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_SENDER_SUB_ID
-            = "BilboBaggins-Tag50StrSenderSubID";
+            = "KimSeJeong-Tag50StrSenderSubID";
     public final static String TESTB_STR_SENDER_SUB_ID
-            = "Gandalf-Tag50StrSenderSubID";
+            = "ShinSeKyung-Tag50StrSenderSubID";
 
     public Tag50StrSenderSubID(MyStringType dataValue) {
         setFixType(FIX27.FIX50_STR_SENDER_SUB_ID);
@@ -49,7 +50,7 @@ public class Tag50StrSenderSubID extends FIX27Abstract implements LogValuePairSt
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

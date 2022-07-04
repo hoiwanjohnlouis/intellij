@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  10
  *  CheckSum
  *  String
+ *  <p></p>
  *  Three byte, simple checksum
- *
+ *  <p></p>
  *  i.e. serves, with the trailing <SOH>, as the end-of-message delimiter.
- *
+ *  <p></p>
  *  (see Volume 2: "Checksum Calculation" for description).
  *  ALWAYS LAST FIELD IN MESSAGE;
- *
+ *  <p></p>
  *  Always defined as three characters.
+ *  <p></p>
  *  (Always unencrypted)
  */
 public class Tag10StrCheckSum extends FIX27Abstract implements LogValuePairString, LogVerboseString {
@@ -57,7 +59,7 @@ public class Tag10StrCheckSum extends FIX27Abstract implements LogValuePairStrin
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

@@ -42,31 +42,31 @@ class Tag1100EnuTriggerTypeTest {
     @Test
     void FIX1100Test() {
         FIX50 fixData = FIX50.FIX1100_ENU_TRIGGER_TYPE;
-        assertEquals( "1100", fixData.toFIXIDString());
-        assertEquals( "TRIGGER_TYPE", fixData.toFIXNameString());
-        assertEquals( "TriggerType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "1100", fixData.toEnumIDString());
+        assertEquals( "TRIGGER_TYPE", fixData.toEnumNameString());
+        assertEquals( "TriggerType", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag1100Test() {
         Tag1100EnuTriggerType tagData;
 
         tagData = new Tag1100EnuTriggerType( Enum1100TriggerType.PARTIAL_EXECUTION );
-        assertEquals( Enum1100TriggerType.PARTIAL_EXECUTION.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum1100TriggerType.PARTIAL_EXECUTION.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1100EnuTriggerType( Enum1100TriggerType.SPECIFIED_SESSION );
-        assertEquals( Enum1100TriggerType.SPECIFIED_SESSION.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum1100TriggerType.SPECIFIED_SESSION.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1100EnuTriggerType( Enum1100TriggerType.NEXT_AUCTION );
-        assertEquals( Enum1100TriggerType.NEXT_AUCTION.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum1100TriggerType.NEXT_AUCTION.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag1100EnuTriggerType( Enum1100TriggerType.PRICE_MOVEMENT );
-        assertEquals( Enum1100TriggerType.PRICE_MOVEMENT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum1100TriggerType.PRICE_MOVEMENT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -97,7 +97,7 @@ class Tag1100EnuTriggerTypeTest {
         // loop around the ENUM and process
         for (Enum1100TriggerType oneEnum : Enum1100TriggerType.values()) {
             tagData = new Tag1100EnuTriggerType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -121,12 +121,12 @@ class Tag1100EnuTriggerTypeTest {
         for (Enum1100TriggerType oneEnum : Enum1100TriggerType.values()) {
             tagData = new Tag1100EnuTriggerType(oneEnum);
             assertEquals( "Tag1100EnuTriggerType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

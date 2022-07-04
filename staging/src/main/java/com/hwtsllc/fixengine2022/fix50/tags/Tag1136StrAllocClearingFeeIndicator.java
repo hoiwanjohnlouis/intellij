@@ -50,7 +50,7 @@ public class Tag1136StrAllocClearingFeeIndicator extends FIX50Abstract implement
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

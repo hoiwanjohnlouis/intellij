@@ -51,7 +51,7 @@ public class Tag158PctAccruedInterestRate extends FIX41Abstract implements LogVa
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

@@ -27,17 +27,22 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  81
  *  ProcessCode
  *  char
+ *  <p></p>
  *  Processing code for sub-account.
+ *  <p></p>
  *  Absence of this field in AllocAccount (79), AllocPrice (366),
+ *  <p></p>
  *  AllocQty (80), ProcessCode instance indicates regular trade.
+ *  <p></p>
  *  Valid values:
- *      0 - Regular
- *      1 - Soft Dollar
- *      2 - Step-In
- *      3 - Step-Out
- *      4 - Soft-dollar Step-In
- *      5 - Soft-dollar Step-Out
- *      6 - Plan Sponsor
+ *  <p>    0 - Regular
+ *  <p>    1 - Soft Dollar
+ *  <p>    2 - Step-In
+ *  <p>    3 - Step-Out
+ *  <p>    4 - Soft-dollar Step-In
+ *  <p></p>
+ *  <p>    5 - Soft-dollar Step-Out
+ *  <p>    6 - Plan Sponsor
  */
 public class Tag81EnuProcessCode extends FIX27Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum81ProcessCode dataValue;
@@ -53,14 +58,14 @@ public class Tag81EnuProcessCode extends FIX27Abstract implements LogValuePairSt
     }
 
     public String getDataValue() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(getDataValue());
     }
@@ -92,21 +97,21 @@ public class Tag81EnuProcessCode extends FIX27Abstract implements LogValuePairSt
      */
     @Override
     public String toDataIDString() {
-        return this.dataValue.toFIXIDString();
+        return this.dataValue.toEnumIDString();
     }
     /**
      * wrapper to return the Name of the underlying Data
      */
     @Override
     public String toDataNameString() {
-        return this.dataValue.toFIXNameString();
+        return this.dataValue.toEnumNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data
      */
     @Override
     public String toDataDescriptionString() {
-        return this.dataValue.toFIXDescriptionString();
+        return this.dataValue.toEnumDescriptionString();
     }
     /**
      * standard wrapper to return a string describing the data

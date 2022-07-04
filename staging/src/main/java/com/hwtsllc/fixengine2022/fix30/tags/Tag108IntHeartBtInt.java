@@ -50,7 +50,7 @@ public class Tag108IntHeartBtInt extends FIX30Abstract implements LogValuePairSt
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

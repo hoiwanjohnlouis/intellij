@@ -26,10 +26,12 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  66
  *  ListID
  *  String
+ *  <p></p>
  *  Unique identifier for list as assigned by institution,
  *  used to associate multiple individual orders.
- *
+ *  <p></p>
  *  Uniqueness must be guaranteed within a single trading day.
+ *  <p></p>
  *  Firms which generate multi-day orders should consider embedding
  *  a date within the ListID field to assure uniqueness across days.
  */
@@ -37,9 +39,9 @@ public class Tag66StrListID extends FIX27Abstract implements LogValuePairString,
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_LIST_ID
-            = "BilboBaggins-Tag66StrListID";
+            = "KimYooJung-Tag66StrListID";
     public final static String TESTB_STR_LIST_ID
-            = "Gandalf-Tag66StrListID";
+            = "LeeEl-Tag66StrListID";
 
     public Tag66StrListID(MyStringType dataValue) {
         setFixType(FIX27.FIX66_STR_LIST_ID);
@@ -54,7 +56,7 @@ public class Tag66StrListID extends FIX27Abstract implements LogValuePairString,
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

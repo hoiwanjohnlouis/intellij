@@ -52,7 +52,7 @@ public class Tag861PrcReportedPx extends FIX44Abstract implements LogValuePairSt
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

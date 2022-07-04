@@ -50,7 +50,7 @@ public class Tag824StrTradeLegRefID extends FIX44Abstract implements LogValuePai
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

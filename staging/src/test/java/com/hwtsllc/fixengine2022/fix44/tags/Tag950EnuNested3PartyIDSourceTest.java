@@ -132,12 +132,12 @@ class Tag950EnuNested3PartyIDSourceTest {
     @Test
     void FIXTest() {
         FIX44 fixData = FIX44.FIX950_ENU_NESTED_3_PARTY_ID_SOURCE;
-        assertEquals( "950", fixData.toFIXIDString());
-        assertEquals( "NESTED_3_PARTY_ID_SOURCE", fixData.toFIXNameString());
-        assertEquals( "Nested3PartyIDSource", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "950", fixData.toEnumIDString());
+        assertEquals( "NESTED_3_PARTY_ID_SOURCE", fixData.toEnumNameString());
+        assertEquals( "Nested3PartyIDSource", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0950Test() {
@@ -152,35 +152,35 @@ class Tag950EnuNested3PartyIDSourceTest {
         tagData = new Tag950EnuNested3PartyIDSource( oneElement );
         assertEquals( "B", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "950", tagData.toFIXIDString());
-        assertEquals( "NESTED_3_PARTY_ID_SOURCE", tagData.toFIXNameString());
-        assertEquals( "Nested3PartyIDSource", tagData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
+        assertEquals( "950", tagData.toEnumIDString());
+        assertEquals( "NESTED_3_PARTY_ID_SOURCE", tagData.toEnumNameString());
+        assertEquals( "Nested3PartyIDSource", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         tagData = new Tag950EnuNested3PartyIDSource(MyEnumPartyIDSource.GENERAL_IDENTIFIER);
-        assertEquals( MyEnumPartyIDSource.GENERAL_IDENTIFIER.toFIXIDString(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyIDSource.GENERAL_IDENTIFIER.toEnumIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag950EnuNested3PartyIDSource(MyEnumPartyIDSource.PROPRIETARY);
-        assertEquals( MyEnumPartyIDSource.PROPRIETARY.toFIXIDString(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyIDSource.PROPRIETARY.toEnumIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag950EnuNested3PartyIDSource(MyEnumPartyIDSource.ISO_COUNTRY_CODE);
-        assertEquals( MyEnumPartyIDSource.ISO_COUNTRY_CODE.toFIXIDString(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyIDSource.ISO_COUNTRY_CODE.toEnumIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag950EnuNested3PartyIDSource(MyEnumPartyIDSource.SETTLEMENT_ENTITY_LOCATION);
-        assertEquals( MyEnumPartyIDSource.SETTLEMENT_ENTITY_LOCATION.toFIXIDString(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyIDSource.SETTLEMENT_ENTITY_LOCATION.toEnumIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag950EnuNested3PartyIDSource(MyEnumPartyIDSource.MARKET_IDENTIFIER_CODE);
-        assertEquals( MyEnumPartyIDSource.MARKET_IDENTIFIER_CODE.toFIXIDString(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyIDSource.MARKET_IDENTIFIER_CODE.toEnumIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag950EnuNested3PartyIDSource(MyEnumPartyIDSource.CSD_MEMBER_CODE);
-        assertEquals( MyEnumPartyIDSource.CSD_MEMBER_CODE.toFIXIDString(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyIDSource.CSD_MEMBER_CODE.toEnumIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
@@ -189,23 +189,23 @@ class Tag950EnuNested3PartyIDSourceTest {
          * 6-9, A types
          */
         tagData = new Tag950EnuNested3PartyIDSource(MyEnumPartyIDSource.UK_NATIONAL_NUMBER);
-        assertEquals( MyEnumPartyIDSource.UK_NATIONAL_NUMBER.toFIXIDString(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyIDSource.UK_NATIONAL_NUMBER.toEnumIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag950EnuNested3PartyIDSource(MyEnumPartyIDSource.US_SOCIAL_SECURITY_NUMBER);
-        assertEquals( MyEnumPartyIDSource.US_SOCIAL_SECURITY_NUMBER.toFIXIDString(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyIDSource.US_SOCIAL_SECURITY_NUMBER.toEnumIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag950EnuNested3PartyIDSource(MyEnumPartyIDSource.US_TAX_ID_NUMBER);
-        assertEquals( MyEnumPartyIDSource.US_TAX_ID_NUMBER.toFIXIDString(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyIDSource.US_TAX_ID_NUMBER.toEnumIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag950EnuNested3PartyIDSource(MyEnumPartyIDSource.AUSTRALIAN_BUSINESS_NUMBER);
-        assertEquals( MyEnumPartyIDSource.AUSTRALIAN_BUSINESS_NUMBER.toFIXIDString(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyIDSource.AUSTRALIAN_BUSINESS_NUMBER.toEnumIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag950EnuNested3PartyIDSource(MyEnumPartyIDSource.AUSTRALIAN_TAX_FILE_NUMBER);
-        assertEquals( MyEnumPartyIDSource.AUSTRALIAN_TAX_FILE_NUMBER.toFIXIDString(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyIDSource.AUSTRALIAN_TAX_FILE_NUMBER.toEnumIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
@@ -214,23 +214,23 @@ class Tag950EnuNested3PartyIDSourceTest {
          * 1-5 types
          */
         tagData = new Tag950EnuNested3PartyIDSource(MyEnumPartyIDSource.KOREAN_INVESTOR_ID);
-        assertEquals( MyEnumPartyIDSource.KOREAN_INVESTOR_ID.toFIXIDString(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyIDSource.KOREAN_INVESTOR_ID.toEnumIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag950EnuNested3PartyIDSource(MyEnumPartyIDSource.TAIWANESE_QUALIFIED_FOREIGN_INVESTOR_ID);
-        assertEquals( MyEnumPartyIDSource.TAIWANESE_QUALIFIED_FOREIGN_INVESTOR_ID.toFIXIDString(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyIDSource.TAIWANESE_QUALIFIED_FOREIGN_INVESTOR_ID.toEnumIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag950EnuNested3PartyIDSource(MyEnumPartyIDSource.TAIWANESE_TRADING_ACCT);
-        assertEquals( MyEnumPartyIDSource.TAIWANESE_TRADING_ACCT.toFIXIDString(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyIDSource.TAIWANESE_TRADING_ACCT.toEnumIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag950EnuNested3PartyIDSource(MyEnumPartyIDSource.MALAYSIAN_CENTRAL_DEPOSITORY_NUMBER);
-        assertEquals( MyEnumPartyIDSource.MALAYSIAN_CENTRAL_DEPOSITORY_NUMBER.toFIXIDString(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyIDSource.MALAYSIAN_CENTRAL_DEPOSITORY_NUMBER.toEnumIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag950EnuNested3PartyIDSource(MyEnumPartyIDSource.CHINESE_INVESTOR_ID);
-        assertEquals( MyEnumPartyIDSource.CHINESE_INVESTOR_ID.toFIXIDString(), tagData.getDataValue() );
+        assertEquals( MyEnumPartyIDSource.CHINESE_INVESTOR_ID.toEnumIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
 
@@ -239,7 +239,7 @@ class Tag950EnuNested3PartyIDSourceTest {
          * I type
          */
         tagData = new Tag950EnuNested3PartyIDSource(MyEnumPartyIDSource.DIRECTED_BROKER_ACRONYM);
-        assertEquals( MyEnumPartyIDSource.DIRECTED_BROKER_ACRONYM.toFIXIDString(),  tagData.getDataValue() );
+        assertEquals( MyEnumPartyIDSource.DIRECTED_BROKER_ACRONYM.toEnumIDString(),  tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
@@ -270,7 +270,7 @@ class Tag950EnuNested3PartyIDSourceTest {
         // loop around the ENUM and process
         for (MyEnumPartyIDSource oneEnum : MyEnumPartyIDSource.values()) {
             tagData = new Tag950EnuNested3PartyIDSource(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -294,12 +294,12 @@ class Tag950EnuNested3PartyIDSourceTest {
         for (MyEnumPartyIDSource oneEnum : MyEnumPartyIDSource.values()) {
             tagData = new Tag950EnuNested3PartyIDSource(oneEnum);
             assertEquals( "Tag950EnuNested3PartyIDSource\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

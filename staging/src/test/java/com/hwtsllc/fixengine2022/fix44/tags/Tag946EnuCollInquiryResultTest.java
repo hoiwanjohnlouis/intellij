@@ -54,12 +54,12 @@ class Tag946EnuCollInquiryResultTest {
     @Test
     void FIXTest() {
         FIX44 fixData = FIX44.FIX946_ENU_COLL_INQUIRY_RESULT;
-        assertEquals( "946", fixData.toFIXIDString());
-        assertEquals( "COLL_INQUIRY_RESULT", fixData.toFIXNameString());
-        assertEquals( "CollInquiryResult", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "946", fixData.toEnumIDString());
+        assertEquals( "COLL_INQUIRY_RESULT", fixData.toEnumNameString());
+        assertEquals( "CollInquiryResult", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0946Test() {
@@ -68,54 +68,54 @@ class Tag946EnuCollInquiryResultTest {
 
         oneElement = Enum946CollInquiryResult.SUCCESSFUL;
         tagData = new Tag946EnuCollInquiryResult( oneElement );
-        assertEquals( oneElement.toFIXIDString(), tagData.getDataValue());
+        assertEquals( oneElement.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "946", tagData.toFIXIDString());
-        assertEquals( "COLL_INQUIRY_RESULT", tagData.toFIXNameString());
-        assertEquals( "CollInquiryResult", tagData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
+        assertEquals( "946", tagData.toEnumIDString());
+        assertEquals( "COLL_INQUIRY_RESULT", tagData.toEnumNameString());
+        assertEquals( "CollInquiryResult", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.INVALID_INSTRUMENT );
-        assertEquals( Enum946CollInquiryResult.INVALID_INSTRUMENT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum946CollInquiryResult.INVALID_INSTRUMENT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.UNKNOWN_COLLATERAL_TYPE );
-        assertEquals( Enum946CollInquiryResult.UNKNOWN_COLLATERAL_TYPE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum946CollInquiryResult.UNKNOWN_COLLATERAL_TYPE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.INVALID_PARTIES );
-        assertEquals( Enum946CollInquiryResult.INVALID_PARTIES.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum946CollInquiryResult.INVALID_PARTIES.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.INVALID_TRANSPORT_TYPE );
-        assertEquals( Enum946CollInquiryResult.INVALID_TRANSPORT_TYPE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum946CollInquiryResult.INVALID_TRANSPORT_TYPE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.INVALID_DESTINATION );
-        assertEquals( Enum946CollInquiryResult.INVALID_DESTINATION.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum946CollInquiryResult.INVALID_DESTINATION.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.NO_COLLATERAL_FOUND_FOR_TRADE );
-        assertEquals( Enum946CollInquiryResult.NO_COLLATERAL_FOUND_FOR_TRADE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum946CollInquiryResult.NO_COLLATERAL_FOUND_FOR_TRADE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.NO_COLLATERAL_FOUND_FOR_ORDER );
-        assertEquals( Enum946CollInquiryResult.NO_COLLATERAL_FOUND_FOR_ORDER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum946CollInquiryResult.NO_COLLATERAL_FOUND_FOR_ORDER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.COLLATERAL_INQUIRY_NOT_SUPPORTED );
-        assertEquals( Enum946CollInquiryResult.COLLATERAL_INQUIRY_NOT_SUPPORTED.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum946CollInquiryResult.COLLATERAL_INQUIRY_NOT_SUPPORTED.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.UNAUTHORIZED_COLLATERAL_INQUIRY );
-        assertEquals( Enum946CollInquiryResult.UNAUTHORIZED_COLLATERAL_INQUIRY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum946CollInquiryResult.UNAUTHORIZED_COLLATERAL_INQUIRY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag946EnuCollInquiryResult( Enum946CollInquiryResult.OTHER );
-        assertEquals( Enum946CollInquiryResult.OTHER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum946CollInquiryResult.OTHER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -146,7 +146,7 @@ class Tag946EnuCollInquiryResultTest {
         // loop around the ENUM and process
         for (Enum946CollInquiryResult oneEnum : Enum946CollInquiryResult.values()) {
             tagData = new Tag946EnuCollInquiryResult(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -170,12 +170,12 @@ class Tag946EnuCollInquiryResultTest {
         for (Enum946CollInquiryResult oneEnum : Enum946CollInquiryResult.values()) {
             tagData = new Tag946EnuCollInquiryResult(oneEnum);
             assertEquals( "Tag946EnuCollInquiryResult\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

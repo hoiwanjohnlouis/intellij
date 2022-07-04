@@ -50,7 +50,7 @@ public class Tag510NumNoDistribInsts extends FIX43Abstract implements LogValuePa
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

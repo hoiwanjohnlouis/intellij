@@ -66,7 +66,7 @@ public class Tag60UtcTransactTime extends FIX27Abstract implements LogValuePairS
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

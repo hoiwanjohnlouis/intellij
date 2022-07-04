@@ -50,7 +50,7 @@ public class Tag211FloPegOffsetValue extends FIX41Abstract implements LogValuePa
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

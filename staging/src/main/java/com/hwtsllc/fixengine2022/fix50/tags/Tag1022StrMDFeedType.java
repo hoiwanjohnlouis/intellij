@@ -51,7 +51,7 @@ public class Tag1022StrMDFeedType extends FIX50Abstract implements LogValuePairS
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

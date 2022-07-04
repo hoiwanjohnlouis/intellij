@@ -43,12 +43,12 @@ class Tag780EnuAllocSettlInstTypeTest {
     @Test
     void FIXTest() {
         FIX44 fixData = FIX44.FIX780_ENU_ALLOC_SETTL_INST_TYPE;
-        assertEquals( "780", fixData.toFIXIDString());
-        assertEquals( "ALLOC_SETTL_INST_TYPE", fixData.toFIXNameString());
-        assertEquals( "AllocSettlInstType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "780", fixData.toEnumIDString());
+        assertEquals( "ALLOC_SETTL_INST_TYPE", fixData.toEnumNameString());
+        assertEquals( "AllocSettlInstType", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0780Test() {
@@ -57,29 +57,29 @@ class Tag780EnuAllocSettlInstTypeTest {
 
         oneElement = Enum780AllocSettlInstType.USE_DEFAULTS;
         tagData = new Tag780EnuAllocSettlInstType( oneElement );
-        assertEquals( oneElement.toFIXIDString(), tagData.getDataValue());
+        assertEquals( oneElement.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "780", tagData.toFIXIDString());
-        assertEquals( "ALLOC_SETTL_INST_TYPE", tagData.toFIXNameString());
-        assertEquals( "AllocSettlInstType", tagData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
+        assertEquals( "780", tagData.toEnumIDString());
+        assertEquals( "ALLOC_SETTL_INST_TYPE", tagData.toEnumNameString());
+        assertEquals( "AllocSettlInstType", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         tagData = new Tag780EnuAllocSettlInstType( Enum780AllocSettlInstType.DERIVE_FROM_PARAMETERS );
-        assertEquals( Enum780AllocSettlInstType.DERIVE_FROM_PARAMETERS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum780AllocSettlInstType.DERIVE_FROM_PARAMETERS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag780EnuAllocSettlInstType( Enum780AllocSettlInstType.FULL_DETAILS );
-        assertEquals( Enum780AllocSettlInstType.FULL_DETAILS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum780AllocSettlInstType.FULL_DETAILS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag780EnuAllocSettlInstType( Enum780AllocSettlInstType.SSI_DB_ID_PROVIDED );
-        assertEquals( Enum780AllocSettlInstType.SSI_DB_ID_PROVIDED.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum780AllocSettlInstType.SSI_DB_ID_PROVIDED.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag780EnuAllocSettlInstType( Enum780AllocSettlInstType.PHONE_FOR_INSTRUCTIONS );
-        assertEquals( Enum780AllocSettlInstType.PHONE_FOR_INSTRUCTIONS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum780AllocSettlInstType.PHONE_FOR_INSTRUCTIONS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -110,7 +110,7 @@ class Tag780EnuAllocSettlInstTypeTest {
         // loop around the ENUM and process
         for (Enum780AllocSettlInstType oneEnum : Enum780AllocSettlInstType.values()) {
             tagData = new Tag780EnuAllocSettlInstType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -134,12 +134,12 @@ class Tag780EnuAllocSettlInstTypeTest {
         for (Enum780AllocSettlInstType oneEnum : Enum780AllocSettlInstType.values()) {
             tagData = new Tag780EnuAllocSettlInstType(oneEnum);
             assertEquals( "Tag780EnuAllocSettlInstType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

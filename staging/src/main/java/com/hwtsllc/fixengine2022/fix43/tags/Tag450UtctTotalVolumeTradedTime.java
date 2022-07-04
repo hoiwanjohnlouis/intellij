@@ -51,7 +51,7 @@ public class Tag450UtctTotalVolumeTradedTime extends FIX43Abstract implements Lo
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

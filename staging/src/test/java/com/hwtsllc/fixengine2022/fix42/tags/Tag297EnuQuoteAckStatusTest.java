@@ -57,12 +57,12 @@ class Tag297EnuQuoteAckStatusTest {
     @Test
     void FIX0297Test() {
         FIX42 fixData = FIX42.FIX297_ENU_QUOTE_ACK_STATUS;
-        assertEquals( "297", fixData.toFIXIDString());
-        assertEquals( "QUOTE_ACK_STATUS", fixData.toFIXNameString());
-        assertEquals( "QuoteAckStatus", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "297", fixData.toEnumIDString());
+        assertEquals( "QUOTE_ACK_STATUS", fixData.toEnumNameString());
+        assertEquals( "QuoteAckStatus", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0297Test() {
@@ -72,70 +72,70 @@ class Tag297EnuQuoteAckStatusTest {
          * 0-15 msg types
          */
         tagData = new Tag297EnuQuoteAckStatus(Enum297QuoteStatus.ACCEPTED);
-        assertEquals( Enum297QuoteStatus.ACCEPTED.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum297QuoteStatus.ACCEPTED.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag297EnuQuoteAckStatus(Enum297QuoteStatus.CANCEL_FOR_SYMBOL);
-        assertEquals( Enum297QuoteStatus.CANCEL_FOR_SYMBOL.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum297QuoteStatus.CANCEL_FOR_SYMBOL.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag297EnuQuoteAckStatus(Enum297QuoteStatus.CANCELED_FOR_SECURITY_TYPE);
-        assertEquals( Enum297QuoteStatus.CANCELED_FOR_SECURITY_TYPE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum297QuoteStatus.CANCELED_FOR_SECURITY_TYPE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag297EnuQuoteAckStatus(Enum297QuoteStatus.CANCELED_FOR_UNDERLYING);
-        assertEquals( Enum297QuoteStatus.CANCELED_FOR_UNDERLYING.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum297QuoteStatus.CANCELED_FOR_UNDERLYING.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag297EnuQuoteAckStatus(Enum297QuoteStatus.CANCELED_ALL);
-        assertEquals( Enum297QuoteStatus.CANCELED_ALL.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum297QuoteStatus.CANCELED_ALL.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag297EnuQuoteAckStatus(Enum297QuoteStatus.REJECTED);
-        assertEquals( Enum297QuoteStatus.REJECTED.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum297QuoteStatus.REJECTED.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag297EnuQuoteAckStatus(Enum297QuoteStatus.REMOVED_FROM_MARKET);
-        assertEquals( Enum297QuoteStatus.REMOVED_FROM_MARKET.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum297QuoteStatus.REMOVED_FROM_MARKET.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag297EnuQuoteAckStatus(Enum297QuoteStatus.EXPIRED);
-        assertEquals( Enum297QuoteStatus.EXPIRED.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum297QuoteStatus.EXPIRED.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag297EnuQuoteAckStatus(Enum297QuoteStatus.QUERY);
-        assertEquals( Enum297QuoteStatus.QUERY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum297QuoteStatus.QUERY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag297EnuQuoteAckStatus(Enum297QuoteStatus.QUOTE_NOT_FOUND);
-        assertEquals( Enum297QuoteStatus.QUOTE_NOT_FOUND.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum297QuoteStatus.QUOTE_NOT_FOUND.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag297EnuQuoteAckStatus(Enum297QuoteStatus.PENDING);
-        assertEquals( Enum297QuoteStatus.PENDING.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum297QuoteStatus.PENDING.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag297EnuQuoteAckStatus(Enum297QuoteStatus.PASS);
-        assertEquals( Enum297QuoteStatus.PASS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum297QuoteStatus.PASS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag297EnuQuoteAckStatus(Enum297QuoteStatus.LOCKED_MARKET_WARNING);
-        assertEquals( Enum297QuoteStatus.LOCKED_MARKET_WARNING.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum297QuoteStatus.LOCKED_MARKET_WARNING.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag297EnuQuoteAckStatus(Enum297QuoteStatus.CROSS_MARKET_WARNING);
-        assertEquals( Enum297QuoteStatus.CROSS_MARKET_WARNING.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum297QuoteStatus.CROSS_MARKET_WARNING.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag297EnuQuoteAckStatus(Enum297QuoteStatus.CANCELED_DUE_TO_LOCK_MARKET);
-        assertEquals( Enum297QuoteStatus.CANCELED_DUE_TO_LOCK_MARKET.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum297QuoteStatus.CANCELED_DUE_TO_LOCK_MARKET.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag297EnuQuoteAckStatus(Enum297QuoteStatus.CANCELED_DUE_TO_CROSS_MARKET);
-        assertEquals( Enum297QuoteStatus.CANCELED_DUE_TO_CROSS_MARKET.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum297QuoteStatus.CANCELED_DUE_TO_CROSS_MARKET.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -166,7 +166,7 @@ class Tag297EnuQuoteAckStatusTest {
         // loop around the ENUM and process
         for (Enum297QuoteStatus oneEnum : Enum297QuoteStatus.values()) {
             tagData = new Tag297EnuQuoteAckStatus(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -190,12 +190,12 @@ class Tag297EnuQuoteAckStatusTest {
         for (Enum297QuoteStatus oneEnum : Enum297QuoteStatus.values()) {
             tagData = new Tag297EnuQuoteAckStatus(oneEnum);
             assertEquals( "Tag297EnuQuoteAckStatus\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

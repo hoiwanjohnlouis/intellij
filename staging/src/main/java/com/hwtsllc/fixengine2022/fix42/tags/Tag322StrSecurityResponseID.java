@@ -50,7 +50,7 @@ public class Tag322StrSecurityResponseID extends FIX42Abstract implements LogVal
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

@@ -37,14 +37,14 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag113EnuReportToExchTest {
     @Test
-    void FIX0113Test() {
+    void FIXTest() {
         FIX30 fixData = FIX30.FIX113_ENU_REPORT_TO_EXCH;
-        assertEquals( "REPORT_TO_EXCH", fixData.toFIXNameString());
-        assertEquals( "113", fixData.toFIXIDString());
-        assertEquals( "ReportToExch", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "REPORT_TO_EXCH", fixData.toEnumNameString());
+        assertEquals( "113", fixData.toEnumIDString());
+        assertEquals( "ReportToExch", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0113Test() {
@@ -55,6 +55,12 @@ class Tag113EnuReportToExchTest {
         tagData = new Tag113EnuReportToExch( oneElement );
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "REPORT_TO_EXCH", tagData.toEnumNameString());
+        assertEquals( "113", tagData.toEnumIDString());
+        assertEquals( "ReportToExch", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         tagData = new Tag113EnuReportToExch(Enum113ReportToExch.YES);
         assertEquals( "Y", tagData.getDataValue());
@@ -94,7 +100,7 @@ class Tag113EnuReportToExchTest {
         // loop around the ENUM and process
         for (Enum113ReportToExch oneEnum : Enum113ReportToExch.values()) {
             tagData = new Tag113EnuReportToExch(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -118,12 +124,12 @@ class Tag113EnuReportToExchTest {
         for (Enum113ReportToExch oneEnum : Enum113ReportToExch.values()) {
             tagData = new Tag113EnuReportToExch(oneEnum);
             assertEquals( "Tag113EnuReportToExch\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

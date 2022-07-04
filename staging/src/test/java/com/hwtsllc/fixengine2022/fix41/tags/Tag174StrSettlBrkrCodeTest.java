@@ -38,12 +38,12 @@ class Tag174StrSettlBrkrCodeTest {
     @Test
     void FIX0174Test() {
         FIX41 fixData = FIX41.FIX174_STR_SETTL_BRKR_CODE;
-        assertEquals( "174", fixData.toFIXIDString());
-        assertEquals( "SETTL_BRKR_CODE", fixData.toFIXNameString());
-        assertEquals( "SettlBrkrCode (replaced)", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "174", fixData.toEnumIDString());
+        assertEquals( "SETTL_BRKR_CODE", fixData.toEnumNameString());
+        assertEquals( "SettlBrkrCode (replaced)", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0174Test() {
@@ -77,7 +77,7 @@ class Tag174StrSettlBrkrCodeTest {
         Tag174StrSettlBrkrCode tagData;
 
         tagData = new Tag174StrSettlBrkrCode(new MyStringType(Tag174StrSettlBrkrCode.TESTB_STR_SETTL_BRKR_CODE));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag174StrSettlBrkrCode.TESTB_STR_SETTL_BRKR_CODE,
+        assertEquals( tagData.toEnumIDString() + "=" + Tag174StrSettlBrkrCode.TESTB_STR_SETTL_BRKR_CODE,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toValuePairString());
@@ -98,12 +98,12 @@ class Tag174StrSettlBrkrCodeTest {
 
         tagData = new Tag174StrSettlBrkrCode(new MyStringType(Tag174StrSettlBrkrCode.TESTA_STR_SETTL_BRKR_CODE));
         assertEquals( "Tag174StrSettlBrkrCode\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + Tag174StrSettlBrkrCode.TESTA_STR_SETTL_BRKR_CODE + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag174StrSettlBrkrCode.TESTA_STR_SETTL_BRKR_CODE + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag174StrSettlBrkrCode.TESTA_STR_SETTL_BRKR_CODE + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

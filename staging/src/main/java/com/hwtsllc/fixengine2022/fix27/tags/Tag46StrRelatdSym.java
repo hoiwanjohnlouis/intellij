@@ -26,6 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  46
  *  RelatdSym  (no longer used)
  *  String
+ *  <p></p>
  *  Deprecated in FIX.4.1
  */
 // @Deprecated
@@ -50,7 +51,7 @@ public class Tag46StrRelatdSym extends FIX27Abstract implements LogValuePairStri
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

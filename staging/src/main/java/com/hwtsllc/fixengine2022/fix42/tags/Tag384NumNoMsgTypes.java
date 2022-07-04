@@ -50,7 +50,7 @@ public class Tag384NumNoMsgTypes extends FIX42Abstract implements LogValuePairSt
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

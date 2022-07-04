@@ -26,10 +26,15 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  55
  *  Symbol
  *  String
+ *  <p></p>
  *  Ticker symbol.
+ *  <p></p>
  *  Common, "human understood" representation of the security.
+ *  <p></p>
  *  SecurityID (48) value can be specified if no symbol exists.
+ *  <p></p>
  *  (e.g. non-exchange traded Collective Investment Vehicles)
+ *  <p></p>
  *  Use "[N/A]" for products which do not have a symbol.
  */
 public class Tag55StrSymbol extends FIX27Abstract implements LogValuePairString, LogVerboseString {
@@ -53,7 +58,7 @@ public class Tag55StrSymbol extends FIX27Abstract implements LogValuePairString,
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

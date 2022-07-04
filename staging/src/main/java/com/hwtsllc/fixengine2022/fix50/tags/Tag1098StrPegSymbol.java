@@ -51,7 +51,7 @@ public class Tag1098StrPegSymbol extends FIX50Abstract implements LogValuePairSt
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

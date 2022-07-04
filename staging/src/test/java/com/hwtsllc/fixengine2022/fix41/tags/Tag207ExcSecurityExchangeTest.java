@@ -38,12 +38,12 @@ class Tag207ExcSecurityExchangeTest {
     @Test
     void FIX0207Test() {
         FIX41 fixData = FIX41.FIX207_EXC_SECURITY_EXCHANGE;
-        assertEquals( "207", fixData.toFIXIDString());
-        assertEquals( "SECURITY_EXCHANGE", fixData.toFIXNameString());
-        assertEquals( "SecurityExchange", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "207", fixData.toEnumIDString());
+        assertEquals( "SECURITY_EXCHANGE", fixData.toEnumNameString());
+        assertEquals( "SecurityExchange", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0207Test() {
@@ -82,7 +82,7 @@ class Tag207ExcSecurityExchangeTest {
 
         tagData = new Tag207ExcSecurityExchange(
                 new MyExchangeType(Tag207ExcSecurityExchange.TESTB_EXC_SECURITY_EXCHANGE));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag207ExcSecurityExchange.TESTB_EXC_SECURITY_EXCHANGE,
+        assertEquals( tagData.toEnumIDString() + "=" + Tag207ExcSecurityExchange.TESTB_EXC_SECURITY_EXCHANGE,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toValuePairString());
@@ -105,12 +105,12 @@ class Tag207ExcSecurityExchangeTest {
         tagData = new Tag207ExcSecurityExchange(
                 new MyExchangeType(Tag207ExcSecurityExchange.TESTA_EXC_SECURITY_EXCHANGE));
         assertEquals( "Tag207ExcSecurityExchange\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + Tag207ExcSecurityExchange.TESTA_EXC_SECURITY_EXCHANGE + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" +
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" +
                                             Tag207ExcSecurityExchange.TESTA_EXC_SECURITY_EXCHANGE + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());

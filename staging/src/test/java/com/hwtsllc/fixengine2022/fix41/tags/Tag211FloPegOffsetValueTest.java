@@ -37,12 +37,12 @@ class Tag211FloPegOffsetValueTest {
     @Test
     void FIX0211Test() {
         FIX41 fixData = FIX41.FIX211_FLO_PEG_DIFFERENCE;
-        assertEquals( "211", fixData.toFIXIDString());
-        assertEquals( "PEG_DIFFERENCE", fixData.toFIXNameString());
-        assertEquals( "PegDifference", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "211", fixData.toEnumIDString());
+        assertEquals( "PEG_DIFFERENCE", fixData.toEnumNameString());
+        assertEquals( "PegDifference", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0211Test() {
@@ -80,7 +80,7 @@ class Tag211FloPegOffsetValueTest {
         float oneElement;
 
         tagData = new Tag211FloPegOffsetValue(new MyFloatType(Tag211FloPegOffsetValue.TESTB_FLO_PEG_DIFFERENCE));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag211FloPegOffsetValue.TESTB_FLO_PEG_DIFFERENCE,
+        assertEquals( tagData.toEnumIDString() + "=" + Tag211FloPegOffsetValue.TESTB_FLO_PEG_DIFFERENCE,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toValuePairString());
@@ -103,12 +103,12 @@ class Tag211FloPegOffsetValueTest {
 
         tagData = new Tag211FloPegOffsetValue(new MyFloatType(Tag211FloPegOffsetValue.TESTA_FLO_PEG_DIFFERENCE));
         assertEquals( "Tag211FloPegOffsetValue\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + Tag211FloPegOffsetValue.TESTA_FLO_PEG_DIFFERENCE + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag211FloPegOffsetValue.TESTA_FLO_PEG_DIFFERENCE + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag211FloPegOffsetValue.TESTA_FLO_PEG_DIFFERENCE + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

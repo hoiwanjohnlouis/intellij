@@ -46,12 +46,12 @@ class Tag433EnuListExecInstTypeTest {
     @Test
     void FIX0433Test() {
         FIX42 fixData = FIX42.FIX433_ENU_LIST_EXEC_INST_TYPE;
-        assertEquals( "433", fixData.toFIXIDString());
-        assertEquals( "LIST_EXEC_INST_TYPE", fixData.toFIXNameString());
-        assertEquals( "ListExecInstType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "433", fixData.toEnumIDString());
+        assertEquals( "LIST_EXEC_INST_TYPE", fixData.toEnumNameString());
+        assertEquals( "ListExecInstType", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0433Test() {
@@ -61,23 +61,23 @@ class Tag433EnuListExecInstTypeTest {
          * 1-5 msg types
          */
         tagData = new Tag433EnuListExecInstType(Enum433ListExecInstType.IMMEDIATE);
-        assertEquals( Enum433ListExecInstType.IMMEDIATE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum433ListExecInstType.IMMEDIATE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag433EnuListExecInstType(Enum433ListExecInstType.WAIT_FOR_EXECUTION_INSTRUCTION);
-        assertEquals( Enum433ListExecInstType.WAIT_FOR_EXECUTION_INSTRUCTION.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum433ListExecInstType.WAIT_FOR_EXECUTION_INSTRUCTION.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag433EnuListExecInstType(Enum433ListExecInstType.SELL_DRIVEN);
-        assertEquals( Enum433ListExecInstType.SELL_DRIVEN.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum433ListExecInstType.SELL_DRIVEN.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag433EnuListExecInstType(Enum433ListExecInstType.BUY_DRIVEN_CASH_TOP_UP);
-        assertEquals( Enum433ListExecInstType.BUY_DRIVEN_CASH_TOP_UP.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum433ListExecInstType.BUY_DRIVEN_CASH_TOP_UP.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag433EnuListExecInstType(Enum433ListExecInstType.BUY_DRIVEN_CASH_WITHDRAW);
-        assertEquals( Enum433ListExecInstType.BUY_DRIVEN_CASH_WITHDRAW.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum433ListExecInstType.BUY_DRIVEN_CASH_WITHDRAW.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -108,7 +108,7 @@ class Tag433EnuListExecInstTypeTest {
         // loop around the ENUM and process
         for (Enum433ListExecInstType oneEnum : Enum433ListExecInstType.values()) {
             tagData = new Tag433EnuListExecInstType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -132,12 +132,12 @@ class Tag433EnuListExecInstTypeTest {
         for (Enum433ListExecInstType oneEnum : Enum433ListExecInstType.values()) {
             tagData = new Tag433EnuListExecInstType(oneEnum);
             assertEquals( "Tag433EnuListExecInstType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

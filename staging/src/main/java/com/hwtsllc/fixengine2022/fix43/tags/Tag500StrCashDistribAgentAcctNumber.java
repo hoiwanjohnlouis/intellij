@@ -50,7 +50,7 @@ public class Tag500StrCashDistribAgentAcctNumber extends FIX43Abstract implement
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

@@ -55,7 +55,7 @@ public class Tag1027PxoMDEntryForwardPoints extends FIX50Abstract implements Log
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

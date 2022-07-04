@@ -37,19 +37,19 @@ class Enum1028ManualOrderIndicatorTest {
         Enum1028ManualOrderIndicator enumType;
 
         enumType = Enum1028ManualOrderIndicator.NO;
-        assertEquals("N",enumType.toFIXIDString());
-        assertEquals("NO", enumType.toFIXNameString());
-        assertEquals("N - Electronic Order", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("N",enumType.toEnumIDString());
+        assertEquals("NO", enumType.toEnumNameString());
+        assertEquals("N - Electronic Order", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1028ManualOrderIndicator.YES;
-        assertEquals("Y", enumType.toFIXIDString());
-        assertEquals("YES", enumType.toFIXNameString());
-        assertEquals("Y - Manually Order", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("Y", enumType.toEnumIDString());
+        assertEquals("YES", enumType.toEnumNameString());
+        assertEquals("Y - Manually Order", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

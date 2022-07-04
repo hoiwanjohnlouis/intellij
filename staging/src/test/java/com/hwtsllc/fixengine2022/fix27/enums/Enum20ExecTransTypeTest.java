@@ -26,13 +26,16 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  20
  *  ExecTransType
  *  char
+ *  <p></p>
  *  Deprecated in FIX.4.2 Identifies transaction type
+ *  <p></p>
  *  Valid values:
- *      0 - New
- *      1 - Cancel
- *      2 - Correct
- *      3 - Status
+ *  <p>    0 - New
+ *  <p>    1 - Cancel
+ *  <p>    2 - Correct
+ *  <p>    3 - Status
  */
+// @Deprecated
 class Enum20ExecTransTypeTest {
     @Test
     void Enum0020Test() {
@@ -42,35 +45,35 @@ class Enum20ExecTransTypeTest {
          * 0-3
          */
         enumType = Enum20ExecTransType.NEW;
-        assertEquals("0", enumType.toFIXIDString());
-        assertEquals("NEW", enumType.toFIXNameString());
-        assertEquals("0 - New", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("0", enumType.toEnumIDString());
+        assertEquals("NEW", enumType.toEnumNameString());
+        assertEquals("0 - New", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum20ExecTransType.CANCEL;
-        assertEquals("1", enumType.toFIXIDString());
-        assertEquals("CANCEL", enumType.toFIXNameString());
-        assertEquals("1 - Cancel", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("1", enumType.toEnumIDString());
+        assertEquals("CANCEL", enumType.toEnumNameString());
+        assertEquals("1 - Cancel", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum20ExecTransType.CORRECT;
-        assertEquals("2", enumType.toFIXIDString());
-        assertEquals("CORRECT", enumType.toFIXNameString());
-        assertEquals("2 - Correct", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("2", enumType.toEnumIDString());
+        assertEquals("CORRECT", enumType.toEnumNameString());
+        assertEquals("2 - Correct", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum20ExecTransType.STATUS;
-        assertEquals("3", enumType.toFIXIDString());
-        assertEquals("STATUS", enumType.toFIXNameString());
-        assertEquals("3 - Status", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("3", enumType.toEnumIDString());
+        assertEquals("STATUS", enumType.toEnumNameString());
+        assertEquals("3 - Status", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

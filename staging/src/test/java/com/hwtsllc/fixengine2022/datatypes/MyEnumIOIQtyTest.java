@@ -52,43 +52,43 @@ class MyEnumIOIQtyTest {
          * 0, S, M, L, and U types
          */
         enumType = MyEnumIOIQty.ONE_BILLION;
-        assertEquals("0", enumType.toFIXIDString());
-        assertEquals("ONE_BILLION", enumType.toFIXNameString());
-        assertEquals("0 - 1,000,000,000", enumType.toFIXDescriptionString());
-        assertNotEquals( FIX27.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( FIX27.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("0", enumType.toEnumIDString());
+        assertEquals("ONE_BILLION", enumType.toEnumNameString());
+        assertEquals("0 - 1,000,000,000", enumType.toEnumDescriptionString());
+        assertNotEquals( FIX27.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( FIX27.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumIOIQty.SMALL;
-        assertEquals("S", enumType.toFIXIDString());
-        assertEquals("SMALL", enumType.toFIXNameString());
-        assertEquals("S - Small", enumType.toFIXDescriptionString());
-        assertNotEquals( FIX27.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( FIX27.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("S", enumType.toEnumIDString());
+        assertEquals("SMALL", enumType.toEnumNameString());
+        assertEquals("S - Small", enumType.toEnumDescriptionString());
+        assertNotEquals( FIX27.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( FIX27.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumIOIQty.MEDIUM;
-        assertEquals("M", enumType.toFIXIDString());
-        assertEquals("MEDIUM", enumType.toFIXNameString());
-        assertEquals("M - Medium", enumType.toFIXDescriptionString());
-        assertNotEquals( FIX27.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( FIX27.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("M", enumType.toEnumIDString());
+        assertEquals("MEDIUM", enumType.toEnumNameString());
+        assertEquals("M - Medium", enumType.toEnumDescriptionString());
+        assertNotEquals( FIX27.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( FIX27.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumIOIQty.LARGE;
-        assertEquals("L", enumType.toFIXIDString());
-        assertEquals("LARGE", enumType.toFIXNameString());
-        assertEquals("L - Large", enumType.toFIXDescriptionString());
-        assertNotEquals( FIX27.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( FIX27.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("L", enumType.toEnumIDString());
+        assertEquals("LARGE", enumType.toEnumNameString());
+        assertEquals("L - Large", enumType.toEnumDescriptionString());
+        assertNotEquals( FIX27.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( FIX27.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumIOIQty.UNDISCLOSED_QUANTITY;
-        assertEquals("U", enumType.toFIXIDString());
-        assertEquals("UNDISCLOSED_QUANTITY", enumType.toFIXNameString());
-        assertEquals("U - Undisclosed Quantity", enumType.toFIXDescriptionString());
-        assertNotEquals( FIX27.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( FIX27.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("U", enumType.toEnumIDString());
+        assertEquals("UNDISCLOSED_QUANTITY", enumType.toEnumNameString());
+        assertEquals("U - Undisclosed Quantity", enumType.toEnumDescriptionString());
+        assertNotEquals( FIX27.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( FIX27.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( FIX27.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

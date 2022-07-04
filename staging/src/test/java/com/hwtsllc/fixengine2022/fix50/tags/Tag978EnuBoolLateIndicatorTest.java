@@ -38,23 +38,23 @@ class Tag978EnuBoolLateIndicatorTest {
     @Test
     void FIX0978Test() {
         FIX50 fixData = FIX50.FIX978_ENU_LATE_INDICATOR;
-        assertEquals( "978", fixData.toFIXIDString());
-        assertEquals( "LATE_INDICATOR", fixData.toFIXNameString());
-        assertEquals( "LateIndicator", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "978", fixData.toEnumIDString());
+        assertEquals( "LATE_INDICATOR", fixData.toEnumNameString());
+        assertEquals( "LateIndicator", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0978Test() {
         Tag978EnuBoolLateIndicator tagData;
 
         tagData = new Tag978EnuBoolLateIndicator( Enum978LateIndicator.NO );
-        assertEquals( Enum978LateIndicator.NO.toFIXIDString(), tagData.getDataValue() );
+        assertEquals( Enum978LateIndicator.NO.toEnumIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag978EnuBoolLateIndicator( Enum978LateIndicator.YES );
-        assertEquals( Enum978LateIndicator.YES.toFIXIDString(), tagData.getDataValue() );
+        assertEquals( Enum978LateIndicator.YES.toEnumIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
@@ -85,7 +85,7 @@ class Tag978EnuBoolLateIndicatorTest {
         // loop around the ENUM and process
         for (Enum978LateIndicator oneEnum : Enum978LateIndicator.values()) {
             tagData = new Tag978EnuBoolLateIndicator(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -109,12 +109,12 @@ class Tag978EnuBoolLateIndicatorTest {
         for (Enum978LateIndicator oneEnum : Enum978LateIndicator.values()) {
             tagData = new Tag978EnuBoolLateIndicator(oneEnum);
             assertEquals( "Tag978EnuBoolLateIndicator\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

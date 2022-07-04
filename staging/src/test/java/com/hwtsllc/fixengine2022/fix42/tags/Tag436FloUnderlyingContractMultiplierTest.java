@@ -37,12 +37,12 @@ class Tag436FloUnderlyingContractMultiplierTest {
     @Test
     void FIX0436Test() {
         FIX42 fixData = FIX42.FIX436_FLO_UNDERLYING_CONTRACT_MULTIPLIER;
-        assertEquals( "436", fixData.toFIXIDString());
-        assertEquals( "UNDERLYING_CONTRACT_MULTIPLIER", fixData.toFIXNameString());
-        assertEquals( "UnderlyingContractMultiplier", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "436", fixData.toEnumIDString());
+        assertEquals( "UNDERLYING_CONTRACT_MULTIPLIER", fixData.toEnumNameString());
+        assertEquals( "UnderlyingContractMultiplier", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0436Test() {
@@ -85,7 +85,7 @@ class Tag436FloUnderlyingContractMultiplierTest {
 
         oneElement = Tag436FloUnderlyingContractMultiplier.TESTB_FLO_UNDERLYING_CONTRACT_MULTIPLIER;
         tagData = new Tag436FloUnderlyingContractMultiplier( new MyFloatType( oneElement ) );
-        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
     @Test
@@ -106,12 +106,12 @@ class Tag436FloUnderlyingContractMultiplierTest {
         oneElement = Tag436FloUnderlyingContractMultiplier.TESTA_FLO_UNDERLYING_CONTRACT_MULTIPLIER;
         tagData = new Tag436FloUnderlyingContractMultiplier( new MyFloatType( oneElement ) );
         assertEquals( "Tag436FloUnderlyingContractMultiplier\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement +
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement +
                         "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());

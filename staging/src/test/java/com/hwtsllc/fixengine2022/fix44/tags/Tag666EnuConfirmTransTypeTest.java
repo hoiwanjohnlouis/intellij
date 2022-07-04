@@ -40,12 +40,12 @@ class Tag666EnuConfirmTransTypeTest {
     @Test
     void FIXTest() {
         FIX44 fixData = FIX44.FIX666_ENU_CONFIRM_TRANS_TYPE;
-        assertEquals( "666", fixData.toFIXIDString());
-        assertEquals( "CONFIRM_TRANS_TYPE", fixData.toFIXNameString());
-        assertEquals( "ConfirmTransType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "666", fixData.toEnumIDString());
+        assertEquals( "CONFIRM_TRANS_TYPE", fixData.toEnumNameString());
+        assertEquals( "ConfirmTransType", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0666Test() {
@@ -54,21 +54,21 @@ class Tag666EnuConfirmTransTypeTest {
 
         oneElement = Enum666ConfirmTransType.NEW;
         tagData = new Tag666EnuConfirmTransType( oneElement );
-        assertEquals( oneElement.toFIXIDString(), tagData.getDataValue());
+        assertEquals( oneElement.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "666", tagData.toFIXIDString());
-        assertEquals( "CONFIRM_TRANS_TYPE", tagData.toFIXNameString());
-        assertEquals( "ConfirmTransType", tagData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
+        assertEquals( "666", tagData.toEnumIDString());
+        assertEquals( "CONFIRM_TRANS_TYPE", tagData.toEnumNameString());
+        assertEquals( "ConfirmTransType", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         tagData = new Tag666EnuConfirmTransType(Enum666ConfirmTransType.REPLACE);
-        assertEquals( Enum666ConfirmTransType.REPLACE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum666ConfirmTransType.REPLACE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag666EnuConfirmTransType(Enum666ConfirmTransType.CANCEL);
-        assertEquals( Enum666ConfirmTransType.CANCEL.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum666ConfirmTransType.CANCEL.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -99,7 +99,7 @@ class Tag666EnuConfirmTransTypeTest {
         // loop around the ENUM and process
         for (Enum666ConfirmTransType oneEnum : Enum666ConfirmTransType.values()) {
             tagData = new Tag666EnuConfirmTransType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -123,12 +123,12 @@ class Tag666EnuConfirmTransTypeTest {
         for (Enum666ConfirmTransType oneEnum : Enum666ConfirmTransType.values()) {
             tagData = new Tag666EnuConfirmTransType(oneEnum);
             assertEquals( "Tag666EnuConfirmTransType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

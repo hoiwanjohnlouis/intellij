@@ -34,12 +34,12 @@ class Tag132PrcBidPxTest {
     @Test
     void FIX0132Test() {
         FIX40 fixData = FIX40.FIX132_PRC_BID_PX;
-        assertEquals( "BID_PX", fixData.toFIXNameString());
-        assertEquals( "132", fixData.toFIXIDString());
-        assertEquals( "BidPx", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "BID_PX", fixData.toEnumNameString());
+        assertEquals( "132", fixData.toEnumIDString());
+        assertEquals( "BidPx", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0132Test() {
@@ -69,7 +69,7 @@ class Tag132PrcBidPxTest {
         Tag132PrcBidPx tagData;
 
         tagData = new Tag132PrcBidPx(new MyPriceType(Tag132PrcBidPx.TESTB_PRC_BID_PX));
-        assertEquals( tagData.toFIXIDString() + "=" + Tag132PrcBidPx.TESTB_PRC_BID_PX,
+        assertEquals( tagData.toEnumIDString() + "=" + Tag132PrcBidPx.TESTB_PRC_BID_PX,
                 tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
                 tagData.toValuePairString());
@@ -90,12 +90,12 @@ class Tag132PrcBidPxTest {
 
         tagData = new Tag132PrcBidPx(new MyPriceType(Tag132PrcBidPx.TESTA_PRC_BID_PX));
         assertEquals( "Tag132PrcBidPx\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + Tag132PrcBidPx.TESTA_PRC_BID_PX + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + Tag132PrcBidPx.TESTA_PRC_BID_PX + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag132PrcBidPx.TESTA_PRC_BID_PX + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

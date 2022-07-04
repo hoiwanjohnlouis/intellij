@@ -46,12 +46,12 @@ class Tag487EnuTradeReportTransTypeTest {
     @Test
     void FIX0487Test() {
         FIX43 fixData = FIX43.FIX487_ENU_TRADE_REPORT_TRANS_TYPE;
-        assertEquals( "487", fixData.toFIXIDString());
-        assertEquals( "TRADE_REPORT_TRANS_TYPE", fixData.toFIXNameString());
-        assertEquals( "TradeReportTransType", fixData.toFIXDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "487", fixData.toEnumIDString());
+        assertEquals( "TRADE_REPORT_TRANS_TYPE", fixData.toEnumNameString());
+        assertEquals( "TradeReportTransType", fixData.toEnumDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0487Test() {
@@ -61,28 +61,28 @@ class Tag487EnuTradeReportTransTypeTest {
          * 0-5 types
          */
         tagData = new Tag487EnuTradeReportTransType( Enum487TradeReportTransType.NEW );
-        assertEquals( Enum487TradeReportTransType.NEW.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum487TradeReportTransType.NEW.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag487EnuTradeReportTransType( Enum487TradeReportTransType.CANCEL );
-        assertEquals( Enum487TradeReportTransType.CANCEL.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum487TradeReportTransType.CANCEL.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag487EnuTradeReportTransType( Enum487TradeReportTransType.REPLACE );
-        assertEquals( Enum487TradeReportTransType.REPLACE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum487TradeReportTransType.REPLACE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag487EnuTradeReportTransType( Enum487TradeReportTransType.RELEASE );
-        assertEquals( Enum487TradeReportTransType.RELEASE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum487TradeReportTransType.RELEASE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag487EnuTradeReportTransType( Enum487TradeReportTransType.REVERSE );
-        assertEquals( Enum487TradeReportTransType.REVERSE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum487TradeReportTransType.REVERSE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag487EnuTradeReportTransType( Enum487TradeReportTransType.CANCEL_BACK_OUT_TRADE );
-        assertEquals( Enum487TradeReportTransType.CANCEL_BACK_OUT_TRADE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum487TradeReportTransType.CANCEL_BACK_OUT_TRADE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -113,7 +113,7 @@ class Tag487EnuTradeReportTransTypeTest {
         // loop around the ENUM and process
         for (Enum487TradeReportTransType oneEnum : Enum487TradeReportTransType.values()) {
             tagData = new Tag487EnuTradeReportTransType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -137,12 +137,12 @@ class Tag487EnuTradeReportTransTypeTest {
         for (Enum487TradeReportTransType oneEnum : Enum487TradeReportTransType.values()) {
             tagData = new Tag487EnuTradeReportTransType(oneEnum);
             assertEquals( "Tag487EnuTradeReportTransType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

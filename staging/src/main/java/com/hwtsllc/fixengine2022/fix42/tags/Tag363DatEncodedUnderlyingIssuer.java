@@ -53,7 +53,7 @@ public class Tag363DatEncodedUnderlyingIssuer extends FIX42Abstract implements L
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

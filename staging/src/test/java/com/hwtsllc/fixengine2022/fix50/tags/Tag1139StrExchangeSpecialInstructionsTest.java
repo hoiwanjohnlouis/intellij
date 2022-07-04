@@ -35,12 +35,12 @@ class Tag1139StrExchangeSpecialInstructionsTest {
     @Test
     void FIX1139Test() {
         FIX50 fixData = FIX50.FIX1139_STR_EXCHANGE_SPECIAL_INSTRUCTIONS;
-        assertEquals( "1139", fixData.toFIXIDString());
-        assertEquals( "EXCHANGE_SPECIAL_INSTRUCTIONS", fixData.toFIXNameString());
-        assertEquals( "ExchangeSpecialInstructions", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "1139", fixData.toEnumIDString());
+        assertEquals( "EXCHANGE_SPECIAL_INSTRUCTIONS", fixData.toEnumNameString());
+        assertEquals( "ExchangeSpecialInstructions", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag1139Test() {
@@ -92,7 +92,7 @@ class Tag1139StrExchangeSpecialInstructionsTest {
 
         oneElement = Tag1139StrExchangeSpecialInstructions.TESTB_STR_EXCHANGE_SPECIAL_INSTRUCTIONS;
         tagData = new Tag1139StrExchangeSpecialInstructions( new MyStringType( oneElement ) );
-        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
     }
     @Test
@@ -113,12 +113,12 @@ class Tag1139StrExchangeSpecialInstructionsTest {
         oneElement = Tag1139StrExchangeSpecialInstructions.TESTA_STR_EXCHANGE_SPECIAL_INSTRUCTIONS;
         tagData = new Tag1139StrExchangeSpecialInstructions( new MyStringType( oneElement ) );
         assertEquals( "Tag1139StrExchangeSpecialInstructions\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

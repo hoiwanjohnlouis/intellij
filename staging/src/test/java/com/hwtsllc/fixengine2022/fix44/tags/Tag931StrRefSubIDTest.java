@@ -35,12 +35,12 @@ class Tag931StrRefSubIDTest {
     @Test
     void FIXTest() {
         FIX44 fixData = FIX44.FIX931_STR_REF_SUB_ID;
-        assertEquals( "931", fixData.toFIXIDString());
-        assertEquals( "REF_SUB_ID", fixData.toFIXNameString());
-        assertEquals( "RefSubID", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "931", fixData.toEnumIDString());
+        assertEquals( "REF_SUB_ID", fixData.toEnumNameString());
+        assertEquals( "RefSubID", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0931Test() {
@@ -51,12 +51,12 @@ class Tag931StrRefSubIDTest {
         tagData = new Tag931StrRefSubID( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "931", tagData.toFIXIDString());
-        assertEquals( "REF_SUB_ID", tagData.toFIXNameString());
-        assertEquals( "RefSubID", tagData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
+        assertEquals( "931", tagData.toEnumIDString());
+        assertEquals( "REF_SUB_ID", tagData.toEnumNameString());
+        assertEquals( "RefSubID", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         oneElement = Tag931StrRefSubID.TESTB_STR_REF_SUB_ID;
         tagData = new Tag931StrRefSubID( new MyStringType( oneElement ) );
@@ -93,7 +93,7 @@ class Tag931StrRefSubIDTest {
 
         oneElement = Tag931StrRefSubID.TESTB_STR_REF_SUB_ID;
         tagData = new Tag931StrRefSubID( new MyStringType( oneElement ) );
-        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
     }
     @Test
@@ -114,12 +114,12 @@ class Tag931StrRefSubIDTest {
         oneElement = Tag931StrRefSubID.TESTA_STR_REF_SUB_ID;
         tagData = new Tag931StrRefSubID( new MyStringType( oneElement ) );
         assertEquals( "Tag931StrRefSubID\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

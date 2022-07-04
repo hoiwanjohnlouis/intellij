@@ -50,7 +50,7 @@ public class Tag445LenEncodedListStatusTextLen extends FIX42Abstract implements 
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

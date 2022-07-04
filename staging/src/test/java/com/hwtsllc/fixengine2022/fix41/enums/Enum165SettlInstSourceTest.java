@@ -43,27 +43,27 @@ class Enum165SettlInstSourceTest {
          * 1-3 msg types
          */
         enumType = Enum165SettlInstSource.BROKER_INSTRUCTIONS;
-        assertEquals("1", enumType.toFIXIDString());
-        assertEquals("BROKER_INSTRUCTIONS", enumType.toFIXNameString());
-        assertEquals("1 - Broker Instructions", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("1", enumType.toEnumIDString());
+        assertEquals("BROKER_INSTRUCTIONS", enumType.toEnumNameString());
+        assertEquals("1 - Broker Instructions", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum165SettlInstSource.INSTITUTION_INSTRUCTIONS;
-        assertEquals("2", enumType.toFIXIDString());
-        assertEquals("INSTITUTION_INSTRUCTIONS", enumType.toFIXNameString());
-        assertEquals("2 - Institution Instructions", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("2", enumType.toEnumIDString());
+        assertEquals("INSTITUTION_INSTRUCTIONS", enumType.toEnumNameString());
+        assertEquals("2 - Institution Instructions", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum165SettlInstSource.INVESTOR;
-        assertEquals("3", enumType.toFIXIDString());
-        assertEquals("INVESTOR", enumType.toFIXNameString());
-        assertEquals("3 - Investor (e.g. CIV use)", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("3", enumType.toEnumIDString());
+        assertEquals("INVESTOR", enumType.toEnumNameString());
+        assertEquals("3 - Investor (e.g. CIV use)", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

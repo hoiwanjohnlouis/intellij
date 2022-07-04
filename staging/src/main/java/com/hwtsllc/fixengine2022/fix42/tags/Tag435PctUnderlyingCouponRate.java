@@ -52,7 +52,7 @@ public class Tag435PctUnderlyingCouponRate extends FIX42Abstract implements LogV
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

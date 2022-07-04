@@ -23,16 +23,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  98
  *  EncryptMethod
  *  int
+ *  <p></p>
  *  Method of encryption.
+ *  <p></p>
  *  Valid values:
- *      0 - None / Other
- *      1 - PKCS (Proprietary)
- *      2 - DES (ECB Mode)
- *      3 - PKCS / DES (Proprietary)
- *      4 - PGP / DES (Defunct)
- *
- *      5 - PGP / DES-MD5 (See app note on FIX web site)
- *      6 - PEM / DES-MD5 (see app note on FIX web site)
+ *  <p>    0 - None / Other
+ *  <p>    1 - PKCS (Proprietary)
+ *  <p>    2 - DES (ECB Mode)
+ *  <p>    3 - PKCS / DES (Proprietary)
+ *  <p>    4 - PGP / DES (Defunct)
+ *  <p></p>
+ *  <p>    5 - PGP / DES-MD5 (See app note on FIX website)
+ *  <p>    6 - PEM / DES-MD5 (see app note on FIX website)
  */
 public enum Enum98EncryptMethod implements LogFIXString, LogVerboseString {
     NONE_OR_OTHER("0", "NONE_OR_OTHER", "0 - None / Other"),
@@ -59,28 +61,28 @@ public enum Enum98EncryptMethod implements LogFIXString, LogVerboseString {
      * standard wrapper to retrieve the specific enum name
      */
     @Override
-    public String toEnumNameString() {
+    public String toEnumLabelString() {
         return this.name();
     }
     /**
      * standard wrapper to retrieve the specific fix action code for this enum. eg: the first field
      */
     @Override
-    public String toFIXIDString() {
+    public String toEnumIDString() {
         return id;
     }
     /**
      * standard wrapper to retrieve the specific fix name for this enum. eg: the second field
      */
     @Override
-    public String toFIXNameString() {
+    public String toEnumNameString() {
         return name;
     }
     /**
      * standard wrapper to retrieve the specific fix description for this enum. eg: the third field
      */
     @Override
-    public String toFIXDescriptionString() {
+    public String toEnumDescriptionString() {
         return description;
     }
     /**
@@ -90,16 +92,16 @@ public enum Enum98EncryptMethod implements LogFIXString, LogVerboseString {
     public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
-                .concat(toEnumNameString())
+                .concat( toEnumLabelString())
                 .concat("]")
                 .concat("\n\tAction[")
-                .concat(toFIXIDString())
+                .concat( toEnumIDString())
                 .concat("]")
                 .concat("\n\tName[")
-                .concat(toFIXNameString())
+                .concat( toEnumNameString())
                 .concat("]")
                 .concat("\n\tDescription[")
-                .concat(toFIXDescriptionString())
+                .concat( toEnumDescriptionString())
                 .concat("]");
     }
     /**
@@ -107,13 +109,13 @@ public enum Enum98EncryptMethod implements LogFIXString, LogVerboseString {
      */
     @Override
     public String toString() {
-        return toEnumNameString()
+        return toEnumLabelString()
                 .concat("=[")
-                .concat(toFIXIDString())
+                .concat( toEnumIDString())
                 .concat(",")
-                .concat(toFIXNameString())
+                .concat( toEnumNameString())
                 .concat(",")
-                .concat(toFIXDescriptionString())
+                .concat( toEnumDescriptionString())
                 .concat("]");
     }
 

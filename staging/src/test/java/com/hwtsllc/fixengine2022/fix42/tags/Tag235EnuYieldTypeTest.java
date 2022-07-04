@@ -77,151 +77,151 @@ class Tag235EnuYieldTypeTest {
     @Test
     void FIX0235Test() {
         FIX42 fixData = FIX42.FIX235_ENU_YIELD_TYPE;
-        assertEquals( "235", fixData.toFIXIDString());
-        assertEquals( "YIELD_TYPE", fixData.toFIXNameString());
-        assertEquals( "YieldType", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "235", fixData.toEnumIDString());
+        assertEquals( "YIELD_TYPE", fixData.toEnumNameString());
+        assertEquals( "YieldType", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0235Test() {
         Tag235EnuYieldType tagData;
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.AFTERTAX);
-        assertEquals( Enum235YieldType.AFTERTAX.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.AFTERTAX.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.ANNUAL);
-        assertEquals( Enum235YieldType.ANNUAL.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.ANNUAL.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.ATISSUE);
-        assertEquals( Enum235YieldType.ATISSUE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.ATISSUE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.AVGMATURITY);
-        assertEquals( Enum235YieldType.AVGMATURITY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.AVGMATURITY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.BOOK);
-        assertEquals( Enum235YieldType.BOOK.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.BOOK.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.CALL);
-        assertEquals( Enum235YieldType.CALL.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.CALL.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.CHANGE);
-        assertEquals( Enum235YieldType.CHANGE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.CHANGE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.CLOSE);
-        assertEquals( Enum235YieldType.CLOSE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.CLOSE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.COMPOUND);
-        assertEquals( Enum235YieldType.COMPOUND.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.COMPOUND.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.CURRENT);
-        assertEquals( Enum235YieldType.CURRENT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.CURRENT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.GOVTEQUIV);
-        assertEquals( Enum235YieldType.GOVTEQUIV.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.GOVTEQUIV.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.GROSS);
-        assertEquals( Enum235YieldType.GROSS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.GROSS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.INFLATION);
-        assertEquals( Enum235YieldType.INFLATION.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.INFLATION.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.INVERSEFLOATER);
-        assertEquals( Enum235YieldType.INVERSEFLOATER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.INVERSEFLOATER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.LASTCLOSE);
-        assertEquals( Enum235YieldType.LASTCLOSE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.LASTCLOSE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.LASTMONTH);
-        assertEquals( Enum235YieldType.LASTMONTH.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.LASTMONTH.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.LASTQUARTER);
-        assertEquals( Enum235YieldType.LASTQUARTER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.LASTQUARTER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.LASTYEAR);
-        assertEquals( Enum235YieldType.LASTYEAR.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.LASTYEAR.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.LONGAVGLIFE);
-        assertEquals( Enum235YieldType.LONGAVGLIFE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.LONGAVGLIFE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.MARK);
-        assertEquals( Enum235YieldType.MARK.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.MARK.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.MATURITY);
-        assertEquals( Enum235YieldType.MATURITY.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.MATURITY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.NEXTREFUND);
-        assertEquals( Enum235YieldType.NEXTREFUND.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.NEXTREFUND.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.OPENAVG);
-        assertEquals( Enum235YieldType.OPENAVG.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.OPENAVG.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.PREVCLOSE);
-        assertEquals( Enum235YieldType.PREVCLOSE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.PREVCLOSE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.PROCEEDS);
-        assertEquals( Enum235YieldType.PROCEEDS.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.PROCEEDS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.PUT);
-        assertEquals( Enum235YieldType.PUT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.PUT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.SEMIANNUAL);
-        assertEquals( Enum235YieldType.SEMIANNUAL.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.SEMIANNUAL.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.SHORTAVGLIFE);
-        assertEquals( Enum235YieldType.SHORTAVGLIFE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.SHORTAVGLIFE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.SIMPLE);
-        assertEquals( Enum235YieldType.SIMPLE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.SIMPLE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.TAXEQUIV);
-        assertEquals( Enum235YieldType.TAXEQUIV.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.TAXEQUIV.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.TENDER);
-        assertEquals( Enum235YieldType.TENDER.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.TENDER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.TRUE);
-        assertEquals( Enum235YieldType.TRUE.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.TRUE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.VALUE1_32);
-        assertEquals( Enum235YieldType.VALUE1_32.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.VALUE1_32.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag235EnuYieldType(Enum235YieldType.WORST);
-        assertEquals( Enum235YieldType.WORST.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum235YieldType.WORST.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -252,7 +252,7 @@ class Tag235EnuYieldTypeTest {
         // loop around the ENUM and process
         for (Enum235YieldType oneEnum : Enum235YieldType.values()) {
             tagData = new Tag235EnuYieldType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -276,12 +276,12 @@ class Tag235EnuYieldTypeTest {
         for (Enum235YieldType oneEnum : Enum235YieldType.values()) {
             tagData = new Tag235EnuYieldType(oneEnum);
             assertEquals( "Tag235EnuYieldType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

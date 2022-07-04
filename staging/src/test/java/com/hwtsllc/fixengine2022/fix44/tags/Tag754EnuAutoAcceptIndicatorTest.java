@@ -40,12 +40,12 @@ class Tag754EnuAutoAcceptIndicatorTest {
     @Test
     void FIXTest() {
         FIX44 fixData = FIX44.FIX754_ENU_AUTO_ACCEPT_INDICATOR;
-        assertEquals( "754", fixData.toFIXIDString());
-        assertEquals( "AUTO_ACCEPT_INDICATOR", fixData.toFIXNameString());
-        assertEquals( "AutoAcceptIndicator", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "754", fixData.toEnumIDString());
+        assertEquals( "AUTO_ACCEPT_INDICATOR", fixData.toEnumNameString());
+        assertEquals( "AutoAcceptIndicator", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0754Test() {
@@ -56,12 +56,12 @@ class Tag754EnuAutoAcceptIndicatorTest {
         tagData = new Tag754EnuAutoAcceptIndicator( oneElement );
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "754", tagData.toFIXIDString());
-        assertEquals( "AUTO_ACCEPT_INDICATOR", tagData.toFIXNameString());
-        assertEquals( "AutoAcceptIndicator", tagData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
+        assertEquals( "754", tagData.toEnumIDString());
+        assertEquals( "AUTO_ACCEPT_INDICATOR", tagData.toEnumNameString());
+        assertEquals( "AutoAcceptIndicator", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         tagData = new Tag754EnuAutoAcceptIndicator( Enum754AutoAcceptIndicator.YES);
         assertEquals( "Y", tagData.getDataValue());
@@ -95,7 +95,7 @@ class Tag754EnuAutoAcceptIndicatorTest {
         // loop around the ENUM and process
         for (Enum754AutoAcceptIndicator oneEnum : Enum754AutoAcceptIndicator.values()) {
             tagData = new Tag754EnuAutoAcceptIndicator(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -119,12 +119,12 @@ class Tag754EnuAutoAcceptIndicatorTest {
         for (Enum754AutoAcceptIndicator oneEnum : Enum754AutoAcceptIndicator.values()) {
             tagData = new Tag754EnuAutoAcceptIndicator(oneEnum);
             assertEquals( "Tag754EnuAutoAcceptIndicator\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

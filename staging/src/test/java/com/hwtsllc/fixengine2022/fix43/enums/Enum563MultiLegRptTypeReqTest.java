@@ -47,30 +47,30 @@ class Enum563MultiLegRptTypeReqTest {
          *  0-2 types
          */
         enumType = Enum563MultiLegRptTypeReq.MULITLEG_SECURITY_ONLY;
-        assertEquals("0", enumType.toFIXIDString());
-        assertEquals("MULITLEG_SECURITY_ONLY", enumType.toFIXNameString());
-        assertEquals("0 - Report by mulitleg security only (do not report legs)", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("0", enumType.toEnumIDString());
+        assertEquals("MULITLEG_SECURITY_ONLY", enumType.toEnumNameString());
+        assertEquals("0 - Report by mulitleg security only (do not report legs)", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum563MultiLegRptTypeReq.MULTILEG_SECURITY_LEGS;
-        assertEquals("1", enumType.toFIXIDString());
-        assertEquals("MULTILEG_SECURITY_LEGS", enumType.toFIXNameString());
-        assertEquals("1 - Report by multileg security and by instrument legs belonging to the multileg security", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("1", enumType.toEnumIDString());
+        assertEquals("MULTILEG_SECURITY_LEGS", enumType.toEnumNameString());
+        assertEquals("1 - Report by multileg security and by instrument legs belonging to the multileg security", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum563MultiLegRptTypeReq.INSTRUMENT_LEGS;
-        assertEquals("2", enumType.toFIXIDString());
-        assertEquals("INSTRUMENT_LEGS", enumType.toFIXNameString());
-        assertEquals("2 - Report by instrument legs belonging to the multileg security only (do not report status of multileg security)", enumType.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
+        assertEquals("2", enumType.toEnumIDString());
+        assertEquals("INSTRUMENT_LEGS", enumType.toEnumNameString());
+        assertEquals("2 - Report by instrument legs belonging to the multileg security only (do not report status of multileg security)", enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

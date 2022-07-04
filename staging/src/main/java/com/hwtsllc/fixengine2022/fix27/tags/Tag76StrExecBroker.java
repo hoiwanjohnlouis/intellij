@@ -26,10 +26,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  76
  *  ExecBroker
  *  String
- *  <p>
+ *  <p></p>
  *  Identifies executing or give-up broker.
+ *  <p></p>
  *  Standard NASD market-maker mnemonic is preferred.
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.2
  */
 // @Deprecated
@@ -37,9 +38,9 @@ public class Tag76StrExecBroker extends FIX27Abstract implements LogValuePairStr
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_EXEC_BROKER
-            = "BilboBaggins-Tag76StrExecBroker";
+            = "AnnDvorak-Tag76StrExecBroker";
     public final static String TESTB_STR_EXEC_BROKER
-            = "Gandalf-Tag76StrExecBroker";
+            = "CaroleLombard-Tag76StrExecBroker";
 
     public Tag76StrExecBroker(MyStringType dataValue) {
         setFixType(FIX27.FIX76_STR_EXEC_BROKER);
@@ -54,7 +55,7 @@ public class Tag76StrExecBroker extends FIX27Abstract implements LogValuePairStr
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

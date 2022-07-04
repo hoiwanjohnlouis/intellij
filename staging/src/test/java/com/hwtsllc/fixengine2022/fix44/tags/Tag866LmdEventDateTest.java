@@ -35,12 +35,12 @@ class Tag866LmdEventDateTest {
     @Test
     void FIX0866Test() {
         FIX44 fixData = FIX44.FIX866_LMD_EVENT_DATE;
-        assertEquals( "866", fixData.toFIXIDString());
-        assertEquals( "EVENT_DATE", fixData.toFIXNameString());
-        assertEquals( "EventDate", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "866", fixData.toEnumIDString());
+        assertEquals( "EVENT_DATE", fixData.toEnumNameString());
+        assertEquals( "EventDate", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0866Test() {
@@ -51,12 +51,12 @@ class Tag866LmdEventDateTest {
         tagData = new Tag866LmdEventDate( new MyLocalMktDateType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "866", tagData.toFIXIDString());
-        assertEquals( "EVENT_DATE", tagData.toFIXNameString());
-        assertEquals( "EventDate", tagData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
+        assertEquals( "866", tagData.toEnumIDString());
+        assertEquals( "EVENT_DATE", tagData.toEnumNameString());
+        assertEquals( "EventDate", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         oneElement = Tag866LmdEventDate.TESTB_LMD_EVENT_DATE;
         tagData = new Tag866LmdEventDate( new MyLocalMktDateType( oneElement ) );
@@ -93,7 +93,7 @@ class Tag866LmdEventDateTest {
 
         oneElement = Tag866LmdEventDate.TESTB_LMD_EVENT_DATE;
         tagData = new Tag866LmdEventDate( new MyLocalMktDateType( oneElement ) );
-        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
     }
     @Test
@@ -114,12 +114,12 @@ class Tag866LmdEventDateTest {
         oneElement = Tag866LmdEventDate.TESTA_LMD_EVENT_DATE;
         tagData = new Tag866LmdEventDate( new MyLocalMktDateType( oneElement ) );
         assertEquals( "Tag866LmdEventDate\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
                 tagData.toVerboseString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }

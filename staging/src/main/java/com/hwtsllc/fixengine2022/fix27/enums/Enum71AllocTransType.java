@@ -23,19 +23,23 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  71
  *  AllocTransType
  *  char
+ *  <p></p>
  *  Identifies allocation transaction type
- *  *** SOME VALUES HAVE BEEN REPLACED ***
- *  *** See Replaced Features and Supported Approach ***
+ *  <p></p>
+ *  <p> *** SOME VALUES HAVE BEEN REPLACED ***
+ *  <p> *** See Replaced Features and Supported Approach ***
+ *  <p></p>
  *  Valid values:
- *      0 - New
- *      1 - Replace
- *      2 - Cancel
- *      3 - Preliminary (without MiscFees and NetMoney) (Removed/Replaced)
- *      4 - Calculated (includes MiscFees and NetMoney) (Removed/Replaced)
- *      5 - Calculated without Preliminary
+ *  <p>    0 - New
+ *  <p>    1 - Replace
+ *  <p>    2 - Cancel
+ *  <p>    3 - Preliminary (without MiscFees and NetMoney) (Removed/Replaced)
+ *  <p>    4 - Calculated (includes MiscFees and NetMoney) (Removed/Replaced)
+ *  <p></p>
+ *  <p>    5 - Calculated without Preliminary
  *          (sent unsolicited by broker, includes MiscFees and NetMoney)
  *          (Removed-Replaced)
- *      6 - Reversal
+ *  <p>    6 - Reversal
  */
 public enum Enum71AllocTransType implements LogFIXString, LogVerboseString {
     NEW("0", "NEW", "0 - New" ),
@@ -66,28 +70,28 @@ public enum Enum71AllocTransType implements LogFIXString, LogVerboseString {
      * standard wrapper to retrieve the specific enum name
      */
     @Override
-    public String toEnumNameString() {
+    public String toEnumLabelString() {
         return this.name();
     }
     /**
      * standard wrapper to retrieve the specific fix action code for this enum. eg: the first field
      */
     @Override
-    public String toFIXIDString() {
+    public String toEnumIDString() {
         return id;
     }
     /**
      * standard wrapper to retrieve the specific fix name for this enum. eg: the second field
      */
     @Override
-    public String toFIXNameString() {
+    public String toEnumNameString() {
         return name;
     }
     /**
      * standard wrapper to retrieve the specific fix description for this enum. eg: the third field
      */
     @Override
-    public String toFIXDescriptionString() {
+    public String toEnumDescriptionString() {
         return description;
     }
     /**
@@ -97,16 +101,16 @@ public enum Enum71AllocTransType implements LogFIXString, LogVerboseString {
     public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
-                .concat(toEnumNameString())
+                .concat( toEnumLabelString())
                 .concat("]")
                 .concat("\n\tAction[")
-                .concat(toFIXIDString())
+                .concat( toEnumIDString())
                 .concat("]")
                 .concat("\n\tName[")
-                .concat(toFIXNameString())
+                .concat( toEnumNameString())
                 .concat("]")
                 .concat("\n\tDescription[")
-                .concat(toFIXDescriptionString())
+                .concat( toEnumDescriptionString())
                 .concat("]");
     }
     /**
@@ -114,13 +118,13 @@ public enum Enum71AllocTransType implements LogFIXString, LogVerboseString {
      */
     @Override
     public String toString() {
-        return toEnumNameString()
+        return toEnumLabelString()
                 .concat("=[")
-                .concat(toFIXIDString())
+                .concat( toEnumIDString())
                 .concat(",")
-                .concat(toFIXNameString())
+                .concat( toEnumNameString())
                 .concat(",")
-                .concat(toFIXDescriptionString())
+                .concat( toEnumDescriptionString())
                 .concat("]");
     }
 

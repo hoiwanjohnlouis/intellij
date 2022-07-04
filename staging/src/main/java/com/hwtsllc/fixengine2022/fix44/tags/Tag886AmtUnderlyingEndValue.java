@@ -50,7 +50,7 @@ public class Tag886AmtUnderlyingEndValue extends FIX44Abstract implements LogVal
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

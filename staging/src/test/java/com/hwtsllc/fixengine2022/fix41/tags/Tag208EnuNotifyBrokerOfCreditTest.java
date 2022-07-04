@@ -39,23 +39,23 @@ class Tag208EnuNotifyBrokerOfCreditTest {
     @Test
     void FIX0208Test() {
         FIX41 fixData = FIX41.FIX208_ENU_NOTIFY_BROKER_OF_CREDIT;
-        assertEquals( "208", fixData.toFIXIDString());
-        assertEquals( "NOTIFY_BROKER_OF_CREDIT", fixData.toFIXNameString());
-        assertEquals( "NotifyBrokerOfCredit", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "208", fixData.toEnumIDString());
+        assertEquals( "NOTIFY_BROKER_OF_CREDIT", fixData.toEnumNameString());
+        assertEquals( "NotifyBrokerOfCredit", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0208Test() {
         Tag208EnuNotifyBrokerOfCredit tagData;
 
         tagData = new Tag208EnuNotifyBrokerOfCredit( Enum208NotifyBrokerOfCredit.NO);
-        assertEquals( Enum208NotifyBrokerOfCredit.NO.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum208NotifyBrokerOfCredit.NO.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag208EnuNotifyBrokerOfCredit( Enum208NotifyBrokerOfCredit.YES);
-        assertEquals( Enum208NotifyBrokerOfCredit.YES.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum208NotifyBrokerOfCredit.YES.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -86,7 +86,7 @@ class Tag208EnuNotifyBrokerOfCreditTest {
         // loop around the ENUM and process
         for ( Enum208NotifyBrokerOfCredit oneEnum : Enum208NotifyBrokerOfCredit.values()) {
             tagData = new Tag208EnuNotifyBrokerOfCredit(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -110,12 +110,12 @@ class Tag208EnuNotifyBrokerOfCreditTest {
         for ( Enum208NotifyBrokerOfCredit oneEnum : Enum208NotifyBrokerOfCredit.values()) {
             tagData = new Tag208EnuNotifyBrokerOfCredit(oneEnum);
             assertEquals( "Tag208EnuNotifyBrokerOfCredit\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

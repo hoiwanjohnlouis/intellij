@@ -36,12 +36,12 @@ class Tag913StrAgreementDescTest {
     @Test
     void FIXTest() {
         FIX44 fixData = FIX44.FIX913_STR_AGREEMENT_DESC;
-        assertEquals( "913", fixData.toFIXIDString());
-        assertEquals( "AGREEMENT_DESC", fixData.toFIXNameString());
-        assertEquals( "AgreementDesc", fixData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "913", fixData.toEnumIDString());
+        assertEquals( "AGREEMENT_DESC", fixData.toEnumNameString());
+        assertEquals( "AgreementDesc", fixData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0913Test() {
@@ -52,12 +52,12 @@ class Tag913StrAgreementDescTest {
         tagData = new Tag913StrAgreementDesc( new MyStringType( oneElement ) );
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "913", tagData.toFIXIDString());
-        assertEquals( "AGREEMENT_DESC", tagData.toFIXNameString());
-        assertEquals( "AgreementDesc", tagData.toFIXDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
+        assertEquals( "913", tagData.toEnumIDString());
+        assertEquals( "AGREEMENT_DESC", tagData.toEnumNameString());
+        assertEquals( "AgreementDesc", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         oneElement = Tag913StrAgreementDesc.TESTB_STR_AGREEMENT_DESC;
         tagData = new Tag913StrAgreementDesc( new MyStringType( oneElement ) );
@@ -94,7 +94,7 @@ class Tag913StrAgreementDescTest {
 
         oneElement = Tag913StrAgreementDesc.TESTB_STR_AGREEMENT_DESC;
         tagData = new Tag913StrAgreementDesc( new MyStringType( oneElement ) );
-        assertEquals( tagData.toFIXIDString() + "=" + oneElement, tagData.toValuePairString() );
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
     }
     @Test
@@ -115,12 +115,12 @@ class Tag913StrAgreementDescTest {
         oneElement = Tag913StrAgreementDesc.TESTA_STR_AGREEMENT_DESC;
         tagData = new Tag913StrAgreementDesc( new MyStringType( oneElement ) );
         assertEquals( "Tag913StrAgreementDesc\n" +
-                        "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                         "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
+                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

@@ -26,16 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  62
  *  ValidUntilTime
  *  UTCTimestamp
+ *  <p></p>
  *  Indicates expiration time of indication message
+ *  <p></p>
  *  (always expressed in UTC (Universal Time Coordinated), also known as "GMT")
  */
 public class Tag62StrValidUntilTime extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_VALID_UNTIL_TIME
-            = "BilboBaggins-Tag62StrValidUntilTime";
+            = "JoanBlondell-Tag62StrValidUntilTime";
     public final static String TESTB_STR_VALID_UNTIL_TIME
-            = "Gandalf-Tag62StrValidUntilTime";
+            = "KayFrances-Tag62StrValidUntilTime";
 
     public Tag62StrValidUntilTime(MyStringType dataValue) {
         setFixType(FIX27.FIX62_STR_VALID_UNTIL_TIME);
@@ -50,7 +52,7 @@ public class Tag62StrValidUntilTime extends FIX27Abstract implements LogValuePai
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

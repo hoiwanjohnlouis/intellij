@@ -26,18 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  70
  *  AllocID
  *  String
- *  <p>
+ *  <p></p>
  *  Unique identifier for allocation message.
- *  <p>
+ *  <p></p>
  *  (Prior to FIX 4.1 this field was of type int)
  */
 public class Tag70StrAllocID extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_ALLOC_ID
-            = "BilboBaggins-Tag70StrAllocID";
+            = "SecretAgent-Tag70StrAllocID";
     public final static String TESTB_STR_ALLOC_ID
-            = "Gandalf-Tag70StrAllocID";
+            = "ForeignCorrespondent-Tag70StrAllocID";
 
     public Tag70StrAllocID(MyStringType dataValue) {
         setFixType(FIX27.FIX70_STR_ALLOC_ID);
@@ -52,7 +52,7 @@ public class Tag70StrAllocID extends FIX27Abstract implements LogValuePairString
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

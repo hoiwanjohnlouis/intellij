@@ -88,12 +88,12 @@ class Tag574EnuMatchTypeTest {
     @Test
     void FIX0574Test() {
         FIX43 fixData = FIX43.FIX574_ENU_MATCH_TYPE;
-        assertEquals( "574", fixData.toFIXIDString());
-        assertEquals( "MATCH_TYPE", fixData.toFIXNameString());
-        assertEquals( "MatchType", fixData.toFIXDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toFIXIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toFIXNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toFIXDescriptionString());
+        assertEquals( "574", fixData.toEnumIDString());
+        assertEquals( "MATCH_TYPE", fixData.toEnumNameString());
+        assertEquals( "MatchType", fixData.toEnumDescriptionString());
+        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
+        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
+        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0574Test() {
@@ -104,28 +104,28 @@ class Tag574EnuMatchTypeTest {
          *  60-65 types
          */
         tagData = new Tag574EnuMatchType( Enum574MatchType.GP_ONE_PARTY_REPORT );
-        assertEquals( Enum574MatchType.GP_ONE_PARTY_REPORT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum574MatchType.GP_ONE_PARTY_REPORT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag574EnuMatchType( Enum574MatchType.GP_TWO_PARTY_REPORT );
-        assertEquals( Enum574MatchType.GP_TWO_PARTY_REPORT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum574MatchType.GP_TWO_PARTY_REPORT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag574EnuMatchType( Enum574MatchType.GP_AUTO_MATCH );
-        assertEquals( Enum574MatchType.GP_AUTO_MATCH.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum574MatchType.GP_AUTO_MATCH.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag574EnuMatchType( Enum574MatchType.GP_CROSS_AUCTION );
-        assertEquals( Enum574MatchType.GP_CROSS_AUCTION.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum574MatchType.GP_CROSS_AUCTION.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag574EnuMatchType( Enum574MatchType.GP_COUNTER_ORDER_SELECTION );
-        assertEquals( Enum574MatchType.GP_COUNTER_ORDER_SELECTION.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum574MatchType.GP_COUNTER_ORDER_SELECTION.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag574EnuMatchType( Enum574MatchType.GP_CALL_AUCTION );
-        assertEquals( Enum574MatchType.GP_CALL_AUCTION.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum574MatchType.GP_CALL_AUCTION.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
@@ -134,19 +134,19 @@ class Tag574EnuMatchTypeTest {
          *  M3-M6
          */
         tagData = new Tag574EnuMatchType( Enum574MatchType.M3 );
-        assertEquals( Enum574MatchType.M3.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum574MatchType.M3.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag574EnuMatchType( Enum574MatchType.M4 );
-        assertEquals( Enum574MatchType.M4.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum574MatchType.M4.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag574EnuMatchType( Enum574MatchType.M5 );
-        assertEquals( Enum574MatchType.M5.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum574MatchType.M5.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag574EnuMatchType( Enum574MatchType.M6 );
-        assertEquals( Enum574MatchType.M6.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum574MatchType.M6.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         /*
@@ -154,23 +154,23 @@ class Tag574EnuMatchTypeTest {
          *  A1-A5, types
          */
         tagData = new Tag574EnuMatchType( Enum574MatchType.A1 );
-        assertEquals( Enum574MatchType.A1.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum574MatchType.A1.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag574EnuMatchType( Enum574MatchType.A2 );
-        assertEquals( Enum574MatchType.A2.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum574MatchType.A2.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag574EnuMatchType( Enum574MatchType.A3 );
-        assertEquals( Enum574MatchType.A3.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum574MatchType.A3.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag574EnuMatchType( Enum574MatchType.A4 );
-        assertEquals( Enum574MatchType.A4.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum574MatchType.A4.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag574EnuMatchType( Enum574MatchType.A5 );
-        assertEquals( Enum574MatchType.A5.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum574MatchType.A5.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
@@ -179,7 +179,7 @@ class Tag574EnuMatchTypeTest {
          *  AQ, S1-S5 types
          */
         tagData = new Tag574EnuMatchType( Enum574MatchType.AQ );
-        assertEquals( Enum574MatchType.AQ.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum574MatchType.AQ.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
@@ -188,23 +188,23 @@ class Tag574EnuMatchTypeTest {
          *  S1-S5 types
          */
         tagData = new Tag574EnuMatchType( Enum574MatchType.S1 );
-        assertEquals( Enum574MatchType.S1.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum574MatchType.S1.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag574EnuMatchType( Enum574MatchType.S2 );
-        assertEquals( Enum574MatchType.S2.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum574MatchType.S2.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag574EnuMatchType( Enum574MatchType.S3 );
-        assertEquals( Enum574MatchType.S3.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum574MatchType.S3.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag574EnuMatchType( Enum574MatchType.S4 );
-        assertEquals( Enum574MatchType.S4.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum574MatchType.S4.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag574EnuMatchType( Enum574MatchType.S5 );
-        assertEquals( Enum574MatchType.S5.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum574MatchType.S5.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
@@ -213,11 +213,11 @@ class Tag574EnuMatchTypeTest {
          *  M1-M2, types
          */
         tagData = new Tag574EnuMatchType( Enum574MatchType.M1 );
-        assertEquals( Enum574MatchType.M1.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum574MatchType.M1.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag574EnuMatchType( Enum574MatchType.M2 );
-        assertEquals( Enum574MatchType.M2.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum574MatchType.M2.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
@@ -226,7 +226,7 @@ class Tag574EnuMatchTypeTest {
          *  MT type
          */
         tagData = new Tag574EnuMatchType( Enum574MatchType.MT );
-        assertEquals( Enum574MatchType.MT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum574MatchType.MT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
@@ -235,32 +235,32 @@ class Tag574EnuMatchTypeTest {
          *  1-7 types
          */
         tagData = new Tag574EnuMatchType( Enum574MatchType.OMX_ONE_PARTY_REPORT );
-        assertEquals( Enum574MatchType.OMX_ONE_PARTY_REPORT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum574MatchType.OMX_ONE_PARTY_REPORT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag574EnuMatchType( Enum574MatchType.OMX_TWO_PARTY_REPORT );
-        assertEquals( Enum574MatchType.OMX_TWO_PARTY_REPORT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum574MatchType.OMX_TWO_PARTY_REPORT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag574EnuMatchType( Enum574MatchType.OMX_CONFIRMED_REPORT );
-        assertEquals( Enum574MatchType.OMX_CONFIRMED_REPORT.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum574MatchType.OMX_CONFIRMED_REPORT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag574EnuMatchType( Enum574MatchType.OMX_AUTO_MATCH );
-        assertEquals( Enum574MatchType.OMX_AUTO_MATCH.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum574MatchType.OMX_AUTO_MATCH.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag574EnuMatchType( Enum574MatchType.OMX_CROSS_AUCTION );
-        assertEquals( Enum574MatchType.OMX_CROSS_AUCTION.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum574MatchType.OMX_CROSS_AUCTION.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag574EnuMatchType( Enum574MatchType.OMX_COUNTER_ORDER_SELECTION );
-        assertEquals( Enum574MatchType.OMX_COUNTER_ORDER_SELECTION.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum574MatchType.OMX_COUNTER_ORDER_SELECTION.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag574EnuMatchType( Enum574MatchType.OMX_CALL_AUCTION );
-        assertEquals( Enum574MatchType.OMX_CALL_AUCTION.toFIXIDString(), tagData.getDataValue());
+        assertEquals( Enum574MatchType.OMX_CALL_AUCTION.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
@@ -291,7 +291,7 @@ class Tag574EnuMatchTypeTest {
         // loop around the ENUM and process
         for (Enum574MatchType oneEnum : Enum574MatchType.values()) {
             tagData = new Tag574EnuMatchType(oneEnum);
-            assertEquals( tagData.toFIXIDString() + "=" + tagData.toDataIDString(),
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
                     tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -315,12 +315,12 @@ class Tag574EnuMatchTypeTest {
         for (Enum574MatchType oneEnum : Enum574MatchType.values()) {
             tagData = new Tag574EnuMatchType(oneEnum);
             assertEquals( "Tag574EnuMatchType\n" +
-                            "\tEnumName[" + tagData.toEnumNameString() + "]\n" +
-                            "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toFIXIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

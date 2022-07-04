@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  92
  *  BrokerOfCredit
  *  String
- *  <p>
+ *  <o></o>
  *  Deprecated in FIX.4.2 Broker to receive trade credit.
  */
 // @Deprecated
@@ -34,9 +34,9 @@ public class Tag92StrBrokerOfCredit extends FIX27Abstract implements LogValuePai
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_BROKER_OF_CREDIT
-            = "BilboBaggins-Tag92StrBrokerOfCredit";
+            = "ColleenMoore-Tag92StrBrokerOfCredit";
     public final static String TESTB_STR_BROKER_OF_CREDIT
-            = "Gandalf-Tag92StrBrokerOfCredit";
+            = "AnnaWintour-Tag92StrBrokerOfCredit";
 
     public Tag92StrBrokerOfCredit(MyStringType dataValue) {
         setFixType(FIX27.FIX92_STR_BROKER_OF_CREDIT);
@@ -51,7 +51,7 @@ public class Tag92StrBrokerOfCredit extends FIX27Abstract implements LogValuePai
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

@@ -26,15 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  49
  *  SenderCompID
  *  String
+ *  <p></p>
  *  Assigned value used to identify firm sending message.
  */
 public class Tag49StrSenderCompID extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_SENDER_COMP_ID
-            = "BilboBaggins-Tag49StrSenderCompID";
+            = "JeonSoMin-Tag49StrSenderCompID";
     public final static String TESTB_STR_SENDER_COMP_ID
-            = "Gandalf-Tag49StrSenderCompID";
+            = "SongJiHyo-Tag49StrSenderCompID";
 
     public Tag49StrSenderCompID(MyStringType dataValue) {
         setFixType(FIX27.FIX49_STR_SENDER_COMP_ID);
@@ -49,7 +50,7 @@ public class Tag49StrSenderCompID extends FIX27Abstract implements LogValuePairS
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }

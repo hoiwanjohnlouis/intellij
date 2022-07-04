@@ -50,7 +50,7 @@ public class Tag499StrCashDistribAgentCode extends FIX43Abstract implements LogV
      */
     @Override
     public String toValuePairString() {
-        return toFIXIDString()
+        return toEnumIDString()
                 .concat("=")
                 .concat(dataValue.toString());
     }
