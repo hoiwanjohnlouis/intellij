@@ -26,13 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  34
  *  MsgSeqNum
  *  SeqNum
+ *  <p></p>
  *  Integer message sequence number.
  */
 public class Tag34SeqMsgSeqNum extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MySeqNumType dataValue;
 
-    public final static int TESTA_SEQ_MSG_SEQ_NO = 567;
-    public final static int TESTB_SEQ_MSG_SEQ_NO = 1482;
+    public final static int TESTA_SEQ_MSG_SEQ_NO
+            = 567;
+    public final static int TESTB_SEQ_MSG_SEQ_NO
+            = 1482;
 
     public Tag34SeqMsgSeqNum(MySeqNumType dataValue) {
         setFixType(FIX27.FIX34_SEQ_MSG_SEQ_NUM);

@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  96
  *  RawData
  *  data
- *  <p>
+ *  <p></p>
  *  Unformatted raw data, can include bitmaps, word processor documents, etc.
  */
 public class Tag96DatRawData extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyDataType dataValue;
 
-    public final static String TESTA_DAT_RAW_DATA = "BilboBaggins-96StRawData";
-    public final static String TESTB_DAT_RAW_DATA = "Gandalf-96StRawData";
+    public final static String TESTA_DAT_RAW_DATA
+            = "SelenaGomez-Tag96DatRawData";
+    public final static String TESTB_DAT_RAW_DATA
+            = "LauraLinney-Tag96DatRawData";
 
     public Tag96DatRawData(MyDataType dataValue) {
         setFixType(FIX27.FIX96_DAT_RAW_DATA);

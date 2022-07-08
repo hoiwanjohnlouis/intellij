@@ -26,14 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  42
  *  OrigTime
  *  UTCTimestamp
+ *  <p></p>
  *  Time of message origination
+ *  <p></p>
  *  (always expressed in UTC (Universal Time Coordinated), also known as "GMT")
  */
 public class Tag42UtcOrigTime extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyUTCTimestampType dataValue;
 
-    public final static String TESTA_UTC_ORIG_TIME = "18991231-23:59:59.042";
-    public final static String TESTB_UTC_ORIG_TIME = "19001231-23:59:59.042";
+    public final static String TESTA_UTC_ORIG_TIME
+            = "18991231-23:59:59.042";
+    public final static String TESTB_UTC_ORIG_TIME
+            = "19001231-23:59:59.042";
 
     public Tag42UtcOrigTime(MyUTCTimestampType dataValue) {
         setFixType(FIX27.FIX42_UTC_ORIG_TIME);

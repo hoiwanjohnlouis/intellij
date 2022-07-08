@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  93
  *  SignatureLength
  *  Length
- *  <p>
+ *  <p></p>
  *  Number of bytes in signature field.
  */
 public class Tag93LenSignatureLength extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyLengthType dataValue;
 
-    public final static int TESTA_LEN_SIGNATURE_LENGTH = 24;
-    public final static int TESTB_LEN_SIGNATURE_LENGTH = 19;
+    public final static int TESTA_LEN_SIGNATURE_LENGTH
+            = 24;
+    public final static int TESTB_LEN_SIGNATURE_LENGTH
+            = 19;
 
     public Tag93LenSignatureLength(MyLengthType dataValue) {
         setFixType(FIX27.FIX93_LEN_SIGNATURE_LENGTH);

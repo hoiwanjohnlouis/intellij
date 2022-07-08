@@ -26,16 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  80
  *  AllocQty
  *  Qty
- *  <p>
+ *  <p></p>
  *  Quantity  to be allocated to specific sub-account
- *  <p>
+ *  <p></p>
  *  (Prior to FIX 4.2 this field was of type int)
  */
 public class Tag80QtyAllocQty extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyQtyType dataValue;
 
-    public final static int TESTA_QTY_ALLOC_QTY = 180;
-    public final static int TESTB_QTY_ALLOC_QTY = 220;
+    public final static int TESTA_QTY_ALLOC_QTY
+            = 180;
+    public final static int TESTB_QTY_ALLOC_QTY
+            = 220;
 
     public Tag80QtyAllocQty(MyQtyType dataValue) {
         setFixType(FIX27.FIX80_QTY_ALLOC_SHARES);

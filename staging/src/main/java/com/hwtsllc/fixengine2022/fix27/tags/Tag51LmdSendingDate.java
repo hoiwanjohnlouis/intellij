@@ -26,14 +26,17 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  51
  *  SendingDate  (no longer used)
  *  LocalMktDate
+ *  <p></p>
  *  Deprecated in FIX.4.3
  */
 // @Deprecated
 public class Tag51LmdSendingDate extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyLocalMktDateType dataValue;
 
-    public final static String TESTA_LMD_SENDING_DATE = "18991231-23:59:59.051";
-    public final static String TESTB_LMD_SENDING_DATE = "19001231-23:59:59.051";
+    public final static String TESTA_LMD_SENDING_DATE
+            = "18991231-23:59:59.051";
+    public final static String TESTB_LMD_SENDING_DATE
+            = "19001231-23:59:59.051";
 
     public Tag51LmdSendingDate(MyLocalMktDateType dataValue) {
         setFixType(FIX27.FIX51_LMD_SENDING_DATE);

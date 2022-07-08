@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -33,45 +32,6 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag49StrSenderCompIDTest {
     @Test
-    void FIX0049Test() {
-        FIX27 fixData = FIX27.FIX49_STR_SENDER_COMP_ID;
-        assertEquals( "SENDER_COMP_ID", fixData.toEnumNameString());
-        assertEquals( "49", fixData.toEnumIDString());
-        assertEquals( "SenderCompID", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0049Test() {
-        Tag49StrSenderCompID tagData;
-        String oneElement;
-
-        oneElement = "JPMC";
-        tagData = new Tag49StrSenderCompID(new MyStringType( oneElement ) );
-        verifyTagInformation( oneElement, tagData );
-
-        oneElement = Tag49StrSenderCompID.TESTA_STR_SENDER_COMP_ID;
-        tagData = new Tag49StrSenderCompID(new MyStringType( oneElement ));
-        verifyTagInformation( oneElement, tagData );
-
-        oneElement = Tag49StrSenderCompID.TESTB_STR_SENDER_COMP_ID;
-        tagData = new Tag49StrSenderCompID(new MyStringType( oneElement ));
-        verifyTagInformation( oneElement, tagData );
-    }
-
-    private void verifyTagInformation( String oneElement, Tag49StrSenderCompID tagData ) {
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "SENDER_COMP_ID", tagData.toEnumNameString());
-        assertEquals( "49", tagData.toEnumIDString());
-        assertEquals( "SenderCompID", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-    }
-
-    @Test
     void PrintFIXTagTest() {
         Tag49StrSenderCompID tagData;
         String oneElement;
@@ -83,37 +43,110 @@ class Tag49StrSenderCompIDTest {
         oneElement = Tag49StrSenderCompID.TESTB_STR_SENDER_COMP_ID;
         tagData = new Tag49StrSenderCompID(new MyStringType( oneElement ));
         System.out.println( tagData.toVerboseString() );
+
+        oneElement = "JPMC";
+        tagData = new Tag49StrSenderCompID(new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
     }
+
+    @Test
+    void FIXTest() {
+        Tag49StrSenderCompID tagData;
+        String oneElement;
+
+        oneElement = Tag49StrSenderCompID.TESTA_STR_SENDER_COMP_ID;
+        tagData = new Tag49StrSenderCompID(new MyStringType( oneElement ));
+        verifyFIXData( tagData );
+
+        oneElement = Tag49StrSenderCompID.TESTB_STR_SENDER_COMP_ID;
+        tagData = new Tag49StrSenderCompID(new MyStringType( oneElement ));
+        verifyFIXData( tagData );
+
+        oneElement = "JPMC";
+        tagData = new Tag49StrSenderCompID(new MyStringType( oneElement ) );
+        verifyFIXData( tagData );
+    }
+
+    private void verifyFIXData( final Tag49StrSenderCompID tagData ) {
+        assertEquals("FIX49_STR_SENDER_COMP_ID", tagData.toEnumLabelString());
+        assertEquals( "SENDER_COMP_ID", tagData.toEnumNameString());
+        assertEquals( "49", tagData.toEnumIDString());
+        assertEquals( "SenderCompID", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void TagGetDataValueTest() {
         Tag49StrSenderCompID tagData;
         String oneElement;
 
+        oneElement = Tag49StrSenderCompID.TESTA_STR_SENDER_COMP_ID;
+        tagData = new Tag49StrSenderCompID(new MyStringType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
         oneElement = Tag49StrSenderCompID.TESTB_STR_SENDER_COMP_ID;
         tagData = new Tag49StrSenderCompID(new MyStringType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = "JPMC";
+        tagData = new Tag49StrSenderCompID(new MyStringType( oneElement ) );
+        verifyDataValue( tagData, oneElement );
+    }
+
+    private void verifyDataValue( final Tag49StrSenderCompID tagData, final String oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+
     @Test
     void TagToValuePairStringTest() {
         Tag49StrSenderCompID tagData;
         String oneElement;
 
+        oneElement = Tag49StrSenderCompID.TESTA_STR_SENDER_COMP_ID;
+        tagData = new Tag49StrSenderCompID(new MyStringType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
+
         oneElement = Tag49StrSenderCompID.TESTB_STR_SENDER_COMP_ID;
         tagData = new Tag49StrSenderCompID(new MyStringType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
+
+        oneElement = "JPMC";
+        tagData = new Tag49StrSenderCompID(new MyStringType( oneElement ) );
+        verifyValuePairString( tagData, oneElement );
+    }
+
+    private void verifyValuePairString( final Tag49StrSenderCompID tagData, final String oneElement ) {
         assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
+
     @Test
     void TagToStringTest() {
         Tag49StrSenderCompID tagData;
         String oneElement;
 
+        oneElement = Tag49StrSenderCompID.TESTA_STR_SENDER_COMP_ID;
+        tagData = new Tag49StrSenderCompID(new MyStringType( oneElement ));
+        verifyToString( tagData, oneElement );
+
         oneElement = Tag49StrSenderCompID.TESTB_STR_SENDER_COMP_ID;
         tagData = new Tag49StrSenderCompID(new MyStringType( oneElement ));
+        verifyToString( tagData, oneElement );
+
+        oneElement = "JPMC";
+        tagData = new Tag49StrSenderCompID(new MyStringType( oneElement ) );
+        verifyToString( tagData, oneElement );
+    }
+
+    private void verifyToString( final Tag49StrSenderCompID tagData, final String oneElement ) {
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
+
     @Test
     void TagToVerboseStringTest() {
         Tag49StrSenderCompID tagData;
@@ -121,13 +154,25 @@ class Tag49StrSenderCompIDTest {
 
         oneElement = Tag49StrSenderCompID.TESTA_STR_SENDER_COMP_ID;
         tagData = new Tag49StrSenderCompID(new MyStringType( oneElement ));
+        verifyVerboseString( tagData, oneElement );
+
+        oneElement = Tag49StrSenderCompID.TESTB_STR_SENDER_COMP_ID;
+        tagData = new Tag49StrSenderCompID(new MyStringType( oneElement ));
+        verifyVerboseString( tagData, oneElement );
+
+        oneElement = "JPMC";
+        tagData = new Tag49StrSenderCompID(new MyStringType( oneElement ) );
+        verifyVerboseString( tagData, oneElement );
+    }
+
+    private void verifyVerboseString( final Tag49StrSenderCompID tagData, final String oneElement ) {
         assertEquals( "Tag49StrSenderCompID\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

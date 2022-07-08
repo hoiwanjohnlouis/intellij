@@ -24,14 +24,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  73
  *  NoOrders
  *  NumInGroup
- *  <p>
+ *  <p></p>
  *  Indicates number of orders to be combined for average pricing and allocation.
  */
 public class Tag73NumNoOrders extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyNumInGroupType dataValue;
 
-    public final static int TESTA_NUM_NO_ORDERS = 1;
-    public final static int TESTB_NUM_NO_ORDERS = 3;
+    public final static int TESTA_NUM_NO_ORDERS
+            = 1;
+    public final static int TESTB_NUM_NO_ORDERS
+            = 3;
 
     public Tag73NumNoOrders(MyNumInGroupType dataValue) {
         setFixType(FIX27.FIX73_NUM_NO_ORDERS);

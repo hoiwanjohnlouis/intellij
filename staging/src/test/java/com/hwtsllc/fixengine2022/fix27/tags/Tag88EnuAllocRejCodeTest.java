@@ -58,6 +58,16 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag88EnuAllocRejCodeTest {
     @Test
+    void PrintFIXTagTest() {
+        Tag88EnuAllocRejCode tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumAllocRejCode oneEnum : MyEnumAllocRejCode.values()) {
+            tagData = new Tag88EnuAllocRejCode(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
     void Tag0088Test() {
         Tag88EnuAllocRejCode tagData;
 
@@ -138,22 +148,13 @@ class Tag88EnuAllocRejCodeTest {
         }
     }
     @Test
-    void PrintFIXTagTest() {
-        Tag88EnuAllocRejCode tagData;
-
-        // loop around the ENUM and process
-        for (MyEnumAllocRejCode oneEnum : MyEnumAllocRejCode.values()) {
-            tagData = new Tag88EnuAllocRejCode(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
     void TagGetDataValueTest() {
         Tag88EnuAllocRejCode tagData;
 
         // loop around the ENUM and process
         for (MyEnumAllocRejCode oneEnum : MyEnumAllocRejCode.values()) {
             tagData = new Tag88EnuAllocRejCode(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
             assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -166,8 +167,9 @@ class Tag88EnuAllocRejCodeTest {
         // loop around the ENUM and process
         for (MyEnumAllocRejCode oneEnum : MyEnumAllocRejCode.values()) {
             tagData = new Tag88EnuAllocRejCode(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -194,8 +196,8 @@ class Tag88EnuAllocRejCodeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

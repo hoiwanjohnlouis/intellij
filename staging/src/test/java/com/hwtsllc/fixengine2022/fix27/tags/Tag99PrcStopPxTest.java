@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,68 +27,128 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  99
  *  StopPx
  *  Price
- *  <p>
+ *  <p></p>
  *  Price per unit of quantity (e.g. per share)
  */
 class Tag99PrcStopPxTest {
     @Test
-    void FIX0099Test() {
-        FIX27 fixData = FIX27.FIX99_PRC_STOP_PX;
-        assertEquals( "STOP_PX", fixData.toEnumNameString());
-        assertEquals( "99", fixData.toEnumIDString());
-        assertEquals( "StopPx", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
     void PrintFIXTagTest() {
         Tag99PrcStopPx tagData;
+        double oneElement;
 
-        tagData = new Tag99PrcStopPx(new MyPriceType(Tag99PrcStopPx.TESTB_PRC_STOP_PX));
+        oneElement = Tag99PrcStopPx.TESTA_PRC_STOP_PX;
+        tagData = new Tag99PrcStopPx(new MyPriceType( oneElement ));
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag99PrcStopPx.TESTB_PRC_STOP_PX;
+        tagData = new Tag99PrcStopPx(new MyPriceType( oneElement ));
         System.out.println( tagData.toVerboseString() );
     }
+
+    @Test
+    void FIXTest() {
+        Tag99PrcStopPx tagData;
+        double oneElement;
+
+        oneElement = Tag99PrcStopPx.TESTA_PRC_STOP_PX;
+        tagData = new Tag99PrcStopPx(new MyPriceType( oneElement ));
+        verifyFIXData( tagData );
+
+        oneElement = Tag99PrcStopPx.TESTB_PRC_STOP_PX;
+        tagData = new Tag99PrcStopPx(new MyPriceType( oneElement ));
+        verifyFIXData( tagData );
+    }
+
+    private void verifyFIXData( Tag99PrcStopPx tagData ) {
+        assertEquals( "FIX99_PRC_STOP_PX", tagData.toEnumLabelString());
+        assertEquals( "STOP_PX", tagData.toEnumNameString());
+        assertEquals( "99", tagData.toEnumIDString());
+        assertEquals( "StopPx", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void TagGetDataValueTest() {
         Tag99PrcStopPx tagData;
+        double oneElement;
 
-        tagData = new Tag99PrcStopPx(new MyPriceType(Tag99PrcStopPx.TESTB_PRC_STOP_PX));
-        assertEquals( Tag99PrcStopPx.TESTB_PRC_STOP_PX, tagData.getDataValue());
+        oneElement = Tag99PrcStopPx.TESTA_PRC_STOP_PX;
+        tagData = new Tag99PrcStopPx(new MyPriceType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = Tag99PrcStopPx.TESTB_PRC_STOP_PX;
+        tagData = new Tag99PrcStopPx(new MyPriceType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+    }
+
+    private void verifyDataValue( final Tag99PrcStopPx tagData, final double oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }
+
     @Test
     void TagToValuePairStringTest() {
         Tag99PrcStopPx tagData;
+        double oneElement;
 
-        tagData = new Tag99PrcStopPx(new MyPriceType(Tag99PrcStopPx.TESTB_PRC_STOP_PX));
-        assertEquals( tagData.toEnumIDString() + "=" + Tag99PrcStopPx.TESTB_PRC_STOP_PX,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag99PrcStopPx.TESTA_PRC_STOP_PX;
+        tagData = new Tag99PrcStopPx(new MyPriceType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
+
+        oneElement = Tag99PrcStopPx.TESTB_PRC_STOP_PX;
+        tagData = new Tag99PrcStopPx(new MyPriceType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
     }
+
+    private void verifyValuePairString( final Tag99PrcStopPx tagData, final double oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
     @Test
     void TagToStringTest() {
         Tag99PrcStopPx tagData;
+        double oneElement;
 
-        tagData = new Tag99PrcStopPx(new MyPriceType(Tag99PrcStopPx.TESTB_PRC_STOP_PX));
-        assertEquals( String.valueOf(Tag99PrcStopPx.TESTB_PRC_STOP_PX),
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag99PrcStopPx.TESTA_PRC_STOP_PX;
+        tagData = new Tag99PrcStopPx(new MyPriceType( oneElement ));
+        verifyToString( tagData, oneElement );
+
+        oneElement = Tag99PrcStopPx.TESTB_PRC_STOP_PX;
+        tagData = new Tag99PrcStopPx(new MyPriceType( oneElement ));
+        verifyToString( tagData, oneElement );
     }
+
+    private void verifyToString( final Tag99PrcStopPx tagData, final double oneElement ) {
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
     @Test
     void TagToVerboseStringTest() {
         Tag99PrcStopPx tagData;
+        double oneElement;
 
-        tagData = new Tag99PrcStopPx(new MyPriceType(Tag99PrcStopPx.TESTA_PRC_STOP_PX));
+        oneElement = Tag99PrcStopPx.TESTA_PRC_STOP_PX;
+        tagData = new Tag99PrcStopPx(new MyPriceType( oneElement ));
+        verifyVerboseString( tagData, oneElement );
+
+        oneElement = Tag99PrcStopPx.TESTB_PRC_STOP_PX;
+        tagData = new Tag99PrcStopPx(new MyPriceType( oneElement ));
+        verifyVerboseString( tagData, oneElement );
+    }
+
+    private void verifyVerboseString( final Tag99PrcStopPx tagData, final double oneElement ) {
         assertEquals( "Tag99PrcStopPx\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag99PrcStopPx.TESTA_PRC_STOP_PX + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag99PrcStopPx.TESTA_PRC_STOP_PX + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

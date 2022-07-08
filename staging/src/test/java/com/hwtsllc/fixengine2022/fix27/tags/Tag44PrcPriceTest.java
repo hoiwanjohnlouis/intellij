@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,67 +27,128 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  44
  *  Price
  *  Price
+ *  <p></p>
  *  Price per unit of quantity (e.g. per share)
  */
 class Tag44PrcPriceTest {
     @Test
-    void FIX0044Test() {
-        FIX27 fixData = FIX27.FIX44_PRC_PRICE;
-        assertEquals( "PRICE", fixData.toEnumNameString());
-        assertEquals( "44", fixData.toEnumIDString());
-        assertEquals( "Price", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
     void PrintFIXTagTest() {
         Tag44PrcPrice tagData;
+        double oneElement;
 
-        tagData = new Tag44PrcPrice(new MyPriceType(Tag44PrcPrice.TESTB_PRC_PRICE));
+        oneElement = Tag44PrcPrice.TESTA_PRC_PRICE;
+        tagData = new Tag44PrcPrice(new MyPriceType( oneElement ));
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag44PrcPrice.TESTB_PRC_PRICE;
+        tagData = new Tag44PrcPrice(new MyPriceType( oneElement ));
         System.out.println( tagData.toVerboseString() );
     }
+
+    @Test
+    void FIXTest() {
+        Tag44PrcPrice tagData;
+        double oneElement;
+
+        oneElement = Tag44PrcPrice.TESTA_PRC_PRICE;
+        tagData = new Tag44PrcPrice(new MyPriceType( oneElement ));
+        verifyFIXData( tagData );
+
+        oneElement = Tag44PrcPrice.TESTB_PRC_PRICE;
+        tagData = new Tag44PrcPrice(new MyPriceType( oneElement ));
+        verifyFIXData( tagData );
+    }
+
+    private void verifyFIXData( final Tag44PrcPrice tagData ) {
+        assertEquals( "FIX44_PRC_PRICE", tagData.toEnumLabelString());
+        assertEquals( "PRICE", tagData.toEnumNameString());
+        assertEquals( "44", tagData.toEnumIDString());
+        assertEquals( "Price", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void TagGetDataValueTest() {
         Tag44PrcPrice tagData;
+        double oneElement;
 
-        tagData = new Tag44PrcPrice(new MyPriceType(Tag44PrcPrice.TESTB_PRC_PRICE));
-        assertEquals( Tag44PrcPrice.TESTB_PRC_PRICE, tagData.getDataValue());
+        oneElement = Tag44PrcPrice.TESTA_PRC_PRICE;
+        tagData = new Tag44PrcPrice(new MyPriceType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = Tag44PrcPrice.TESTB_PRC_PRICE;
+        tagData = new Tag44PrcPrice(new MyPriceType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+    }
+
+    private void verifyDataValue( final Tag44PrcPrice tagData, final double oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }
+
     @Test
     void TagToValuePairStringTest() {
         Tag44PrcPrice tagData;
+        double oneElement;
 
-        tagData = new Tag44PrcPrice(new MyPriceType(Tag44PrcPrice.TESTB_PRC_PRICE));
-        assertEquals( tagData.toEnumIDString() + "=" + Tag44PrcPrice.TESTB_PRC_PRICE,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag44PrcPrice.TESTA_PRC_PRICE;
+        tagData = new Tag44PrcPrice(new MyPriceType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
+
+        oneElement = Tag44PrcPrice.TESTB_PRC_PRICE;
+        tagData = new Tag44PrcPrice(new MyPriceType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
     }
+
+    private void verifyValuePairString( final Tag44PrcPrice tagData, final double oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
     @Test
     void TagToStringTest() {
         Tag44PrcPrice tagData;
+        double oneElement;
 
-        tagData = new Tag44PrcPrice(new MyPriceType(Tag44PrcPrice.TESTB_PRC_PRICE));
-        assertEquals( String.valueOf(Tag44PrcPrice.TESTB_PRC_PRICE),
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag44PrcPrice.TESTA_PRC_PRICE;
+        tagData = new Tag44PrcPrice(new MyPriceType( oneElement ));
+        verifyToString( tagData, oneElement );
+
+        oneElement = Tag44PrcPrice.TESTB_PRC_PRICE;
+        tagData = new Tag44PrcPrice(new MyPriceType( oneElement ));
+        verifyToString( tagData, oneElement );
     }
+
+    private void verifyToString( final Tag44PrcPrice tagData, final double oneElement ) {
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
     @Test
     void TagToVerboseStringTest() {
         Tag44PrcPrice tagData;
+        double oneElement;
 
-        tagData = new Tag44PrcPrice(new MyPriceType(Tag44PrcPrice.TESTA_PRC_PRICE));
+        oneElement = Tag44PrcPrice.TESTA_PRC_PRICE;
+        tagData = new Tag44PrcPrice(new MyPriceType( oneElement ));
+        verifyVerboseString( tagData, oneElement );
+
+        oneElement = Tag44PrcPrice.TESTB_PRC_PRICE;
+        tagData = new Tag44PrcPrice(new MyPriceType( oneElement ));
+        verifyVerboseString( tagData, oneElement );
+    }
+
+    private void verifyVerboseString( final Tag44PrcPrice tagData, final double oneElement ) {
         assertEquals( "Tag44PrcPrice\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag44PrcPrice.TESTA_PRC_PRICE + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag44PrcPrice.TESTA_PRC_PRICE + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

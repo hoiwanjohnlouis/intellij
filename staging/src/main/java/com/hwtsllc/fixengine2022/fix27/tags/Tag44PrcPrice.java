@@ -26,6 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  44
  *  Price
  *  Price
+ *  <p></p>
  *  Price per unit of quantity (e.g. per share)
  */
 public class Tag44PrcPrice extends FIX27Abstract implements LogValuePairString, LogVerboseString {

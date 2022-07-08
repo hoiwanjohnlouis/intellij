@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,76 +27,135 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  32
  *  LastQty
  *  Qty
+ *  <p></p>
  *  Quantity (e.g. shares) bought/sold on this (last) fill.
+ *  <p></p>
  *  (Prior to FIX 4.2 this field was of type int)
  */
 class Tag32QtyLastQtyTest {
     @Test
-    void FIX0032Test() {
-        FIX27 fixData = FIX27.FIX32_QTY_LAST_QTY;
-        assertEquals( "LAST_QTY", fixData.toEnumNameString());
-        assertEquals( "32", fixData.toEnumIDString());
-        assertEquals( "LastQty", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0032Test() {
-        Tag32QtyLastQty tagData;
-
-        tagData = new Tag32QtyLastQty(new MyQtyType(200) );
-        assertEquals( 200, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
     void PrintFIXTagTest() {
         Tag32QtyLastQty tagData;
+        int oneElement;
 
-        tagData = new Tag32QtyLastQty(new MyQtyType(Tag32QtyLastQty.TESTB_QTY_LAST_QTY));
+        oneElement = Tag32QtyLastQty.TESTA_QTY_LAST_QTY;
+        tagData = new Tag32QtyLastQty(new MyQtyType( oneElement ));
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag32QtyLastQty.TESTB_QTY_LAST_QTY;
+        tagData = new Tag32QtyLastQty(new MyQtyType( oneElement ));
         System.out.println( tagData.toVerboseString() );
     }
+
+    @Test
+    void FIXTest() {
+        Tag32QtyLastQty tagData;
+        int oneElement;
+
+        oneElement = Tag32QtyLastQty.TESTA_QTY_LAST_QTY;
+        tagData = new Tag32QtyLastQty(new MyQtyType( oneElement ));
+        verifyFIXData( tagData );
+
+        oneElement = Tag32QtyLastQty.TESTB_QTY_LAST_QTY;
+        tagData = new Tag32QtyLastQty(new MyQtyType( oneElement ));
+        verifyFIXData( tagData );
+    }
+
+    private void verifyFIXData( final Tag32QtyLastQty tagData ) {
+        assertEquals( "FIX32_QTY_LAST_QTY", tagData.toEnumLabelString());
+        assertEquals( "LAST_QTY", tagData.toEnumNameString());
+        assertEquals( "32", tagData.toEnumIDString());
+        assertEquals( "LastQty", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void TagGetDataValueTest() {
         Tag32QtyLastQty tagData;
+        int oneElement;
 
-        tagData = new Tag32QtyLastQty(new MyQtyType(Tag32QtyLastQty.TESTB_QTY_LAST_QTY));
-        assertEquals( Tag32QtyLastQty.TESTB_QTY_LAST_QTY, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        oneElement = Tag32QtyLastQty.TESTA_QTY_LAST_QTY;
+        tagData = new Tag32QtyLastQty(new MyQtyType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = Tag32QtyLastQty.TESTB_QTY_LAST_QTY;
+        tagData = new Tag32QtyLastQty(new MyQtyType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = 200;
+        tagData = new Tag32QtyLastQty(new MyQtyType( oneElement ) );
+        verifyDataValue( tagData, oneElement );
     }
+
+    private void verifyDataValue( final Tag32QtyLastQty tagData, final int oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+    }
+
     @Test
     void TagToValuePairStringTest() {
         Tag32QtyLastQty tagData;
+        int oneElement;
 
-        tagData = new Tag32QtyLastQty(new MyQtyType(Tag32QtyLastQty.TESTB_QTY_LAST_QTY));
-        assertEquals( tagData.toEnumIDString() + "=" + Tag32QtyLastQty.TESTB_QTY_LAST_QTY,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag32QtyLastQty.TESTA_QTY_LAST_QTY;
+        tagData = new Tag32QtyLastQty(new MyQtyType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
+
+        oneElement = Tag32QtyLastQty.TESTB_QTY_LAST_QTY;
+        tagData = new Tag32QtyLastQty(new MyQtyType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
     }
+
+    private void verifyValuePairString( final Tag32QtyLastQty tagData, final int oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
     @Test
     void TagToStringTest() {
         Tag32QtyLastQty tagData;
+        int oneElement;
 
-        tagData = new Tag32QtyLastQty(new MyQtyType(Tag32QtyLastQty.TESTB_QTY_LAST_QTY));
-        assertEquals( String.valueOf(Tag32QtyLastQty.TESTB_QTY_LAST_QTY),
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag32QtyLastQty.TESTA_QTY_LAST_QTY;
+        tagData = new Tag32QtyLastQty(new MyQtyType( oneElement ));
+        verifyToString( tagData, oneElement );
+
+        oneElement = Tag32QtyLastQty.TESTB_QTY_LAST_QTY;
+        tagData = new Tag32QtyLastQty(new MyQtyType( oneElement ));
+        verifyToString( tagData, oneElement );
     }
+
+    private void verifyToString( final Tag32QtyLastQty tagData, final int oneElement ) {
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
     @Test
     void TagToVerboseStringTest() {
         Tag32QtyLastQty tagData;
+        int oneElement;
 
-        tagData = new Tag32QtyLastQty(new MyQtyType(Tag32QtyLastQty.TESTA_QTY_LAST_QTY));
+        oneElement = Tag32QtyLastQty.TESTA_QTY_LAST_QTY;
+        tagData = new Tag32QtyLastQty(new MyQtyType( oneElement ));
+        verifyVerboseString( tagData, oneElement );
+
+        oneElement = Tag32QtyLastQty.TESTB_QTY_LAST_QTY;
+        tagData = new Tag32QtyLastQty(new MyQtyType( oneElement ));
+        verifyVerboseString( tagData, oneElement );
+    }
+
+    private void verifyVerboseString( final Tag32QtyLastQty tagData, final int oneElement ) {
         assertEquals( "Tag32QtyLastQty\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag32QtyLastQty.TESTA_QTY_LAST_QTY + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag32QtyLastQty.TESTA_QTY_LAST_QTY + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

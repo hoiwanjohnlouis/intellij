@@ -26,6 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  36
  *  NewSeqNo
  *  SeqNum
+ *  <p></p>
  *  New sequence number
  */
 public class Tag36SeqNewSeqNo extends FIX27Abstract implements LogValuePairString, LogVerboseString {

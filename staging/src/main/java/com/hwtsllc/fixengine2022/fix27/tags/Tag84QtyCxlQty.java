@@ -26,16 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  84
  *  CxlQty
  *  Qty
- *  <p>
+ *  <p></p>
  *  Total quantity canceled for this order.
- *  <p>
+ *  <p></p>
  *  (Prior to FIX 4.2 this field was of type int)
  */
 public class Tag84QtyCxlQty extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyQtyType dataValue;
 
-    public final static int TESTA_QTY_CXL_QTY = 84; // fake data
-    public final static int TESTB_QTY_CXL_QTY = 48;
+    public final static int TESTA_QTY_CXL_QTY
+            = 84;
+    public final static int TESTB_QTY_CXL_QTY
+            = 48;
 
     public Tag84QtyCxlQty(MyQtyType dataValue) {
         setFixType(FIX27.FIX84_QTY_CXL_QTY);

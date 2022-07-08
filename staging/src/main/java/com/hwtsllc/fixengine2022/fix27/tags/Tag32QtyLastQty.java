@@ -26,14 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  32
  *  LastQty
  *  Qty
+ *  <p></p>
  *  Quantity (e.g. shares) bought/sold on this (last) fill.
+ *  <p></p>
  *  (Prior to FIX 4.2 this field was of type int)
  */
 public class Tag32QtyLastQty extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyQtyType dataValue;
 
-    public final static int TESTA_QTY_LAST_QTY = 100; // fake data
-    public final static int TESTB_QTY_LAST_QTY = 20;
+    public final static int TESTA_QTY_LAST_QTY
+            = 100;
+    public final static int TESTB_QTY_LAST_QTY
+            = 20;
 
     public Tag32QtyLastQty(MyQtyType dataValue) {
         setFixType(FIX27.FIX32_QTY_LAST_QTY);

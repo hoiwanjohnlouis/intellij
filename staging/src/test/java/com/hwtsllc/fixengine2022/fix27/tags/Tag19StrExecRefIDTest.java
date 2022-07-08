@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -35,37 +34,34 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag19StrExecRefIDTest {
     @Test
-    void FIXTest() {
-        FIX27 fixData = FIX27.FIX19_STR_EXEC_REF_ID;
-        assertEquals( "EXEC_REF_ID", fixData.toEnumNameString());
-        assertEquals( "19", fixData.toEnumIDString());
-        assertEquals( "ExecRefID", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0019Test() {
+    void PrintFIXTagTest() {
         Tag19StrExecRefID tagData;
         String oneElement;
 
-        oneElement = "6789-XYZ";
+        oneElement = Tag19StrExecRefID.TESTA_STR_EXEC_REF_ID;
         tagData = new Tag19StrExecRefID(new MyStringType( oneElement ) );
-        verifyTagInformation( tagData, oneElement );
+        System.out.println( tagData.toVerboseString() );
 
-        oneElement = Tag10StrCheckSum.TESTA_STR_CHECK_SUM;
+        oneElement = Tag19StrExecRefID.TESTB_STR_EXEC_REF_ID;
         tagData = new Tag19StrExecRefID(new MyStringType( oneElement ) );
-        verifyTagInformation( tagData, oneElement );
-
-        oneElement = Tag10StrCheckSum.TESTB_STR_CHECK_SUM;
-        tagData = new Tag19StrExecRefID(new MyStringType( oneElement ) );
-        verifyTagInformation( tagData, oneElement );
+        System.out.println( tagData.toVerboseString() );
     }
 
-    private void verifyTagInformation( Tag19StrExecRefID tagData, String oneElement ) {
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    @Test
+    void FIXTest() {
+        Tag19StrExecRefID tagData;
+        String oneElement;
+
+        oneElement = Tag19StrExecRefID.TESTA_STR_EXEC_REF_ID;
+        tagData = new Tag19StrExecRefID(new MyStringType( oneElement ) );
+        verifyFIXData( tagData );
+
+        oneElement = Tag19StrExecRefID.TESTB_STR_EXEC_REF_ID;
+        tagData = new Tag19StrExecRefID(new MyStringType( oneElement ) );
+        verifyFIXData( tagData );
+    }
+
+    private void verifyFIXData( final Tag19StrExecRefID tagData ) {
         assertEquals( "FIX19_STR_EXEC_REF_ID", tagData.toEnumLabelString());
         assertEquals( "EXEC_REF_ID", tagData.toEnumNameString());
         assertEquals( "19", tagData.toEnumIDString());
@@ -77,62 +73,89 @@ class Tag19StrExecRefIDTest {
     }
 
     @Test
-    void PrintFIXTagTest() {
-        Tag19StrExecRefID tagData;
-        String oneElement;
-
-        oneElement = Tag10StrCheckSum.TESTA_STR_CHECK_SUM;
-        tagData = new Tag19StrExecRefID(new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag10StrCheckSum.TESTB_STR_CHECK_SUM;
-        tagData = new Tag19StrExecRefID(new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-    }
-    @Test
     void TagGetDataValueTest() {
         Tag19StrExecRefID tagData;
         String oneElement;
 
-        oneElement = Tag10StrCheckSum.TESTB_STR_CHECK_SUM;
+        oneElement = Tag19StrExecRefID.TESTA_STR_EXEC_REF_ID;
         tagData = new Tag19StrExecRefID(new MyStringType( oneElement ) );
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = Tag19StrExecRefID.TESTB_STR_EXEC_REF_ID;
+        tagData = new Tag19StrExecRefID(new MyStringType( oneElement ) );
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = "6789-XYZ";
+        tagData = new Tag19StrExecRefID(new MyStringType( oneElement ) );
+        verifyDataValue( tagData, oneElement );
+    }
+
+    private void verifyDataValue( final Tag19StrExecRefID tagData, final String oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+
     @Test
     void TagToValuePairStringTest() {
         Tag19StrExecRefID tagData;
         String oneElement;
 
-        oneElement = Tag10StrCheckSum.TESTB_STR_CHECK_SUM;
+        oneElement = Tag19StrExecRefID.TESTA_STR_EXEC_REF_ID;
         tagData = new Tag19StrExecRefID(new MyStringType( oneElement ) );
+        verifyValuePairString( tagData, oneElement );
+
+        oneElement = Tag19StrExecRefID.TESTB_STR_EXEC_REF_ID;
+        tagData = new Tag19StrExecRefID(new MyStringType( oneElement ) );
+        verifyValuePairString( tagData, oneElement );
+    }
+
+    private void verifyValuePairString( final Tag19StrExecRefID tagData, final String oneElement ) {
         assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
+
     @Test
     void TagToStringTest() {
         Tag19StrExecRefID tagData;
         String oneElement;
 
-        oneElement = Tag10StrCheckSum.TESTB_STR_CHECK_SUM;
+        oneElement = Tag19StrExecRefID.TESTA_STR_EXEC_REF_ID;
         tagData = new Tag19StrExecRefID(new MyStringType( oneElement ) );
+        verifyToString( tagData, oneElement );
+
+        oneElement = Tag19StrExecRefID.TESTB_STR_EXEC_REF_ID;
+        tagData = new Tag19StrExecRefID(new MyStringType( oneElement ) );
+        verifyToString( tagData, oneElement );
+    }
+
+    private void verifyToString( final Tag19StrExecRefID tagData, final String oneElement ) {
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
+
     @Test
     void TagToVerboseStringTest() {
         Tag19StrExecRefID tagData;
         String oneElement;
 
-        oneElement = Tag10StrCheckSum.TESTA_STR_CHECK_SUM;
+        oneElement = Tag19StrExecRefID.TESTA_STR_EXEC_REF_ID;
         tagData = new Tag19StrExecRefID(new MyStringType( oneElement ) );
+        verifyVerboseString( tagData, oneElement );
+
+        oneElement = Tag19StrExecRefID.TESTB_STR_EXEC_REF_ID;
+        tagData = new Tag19StrExecRefID(new MyStringType( oneElement ) );
+        verifyVerboseString( tagData, oneElement );
+    }
+
+    private void verifyVerboseString( final Tag19StrExecRefID tagData, final String oneElement ) {
         assertEquals( "Tag19StrExecRefID\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

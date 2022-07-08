@@ -26,6 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  31
  *  LastPx
  *  Price
+ *  <p></p>
  *  Price of this (last) fill.
  */
 public class Tag31PrcLastPx extends FIX27Abstract implements LogValuePairString, LogVerboseString {

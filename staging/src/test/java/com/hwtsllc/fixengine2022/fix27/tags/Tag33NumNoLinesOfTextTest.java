@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,75 +27,133 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  33
  *  NoLinesOfText
  *  NumInGroup
+ *  <p></p>
  *  Identifies number of lines of text body
  */
 class Tag33NumNoLinesOfTextTest {
     @Test
-    void FIX0033Test() {
-        FIX27 fixData = FIX27.FIX33_NUM_NO_LINES_OF_TEXT;
-        assertEquals( "NO_LINES_OF_TEXT", fixData.toEnumNameString());
-        assertEquals( "33", fixData.toEnumIDString());
-        assertEquals( "NoLinesOfText", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0033Test() {
-        Tag33NumNoLinesOfText tagData;
-
-        tagData = new Tag33NumNoLinesOfText(new MyNumInGroupType(5));
-        assertEquals( 5, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
     void PrintFIXTagTest() {
         Tag33NumNoLinesOfText tagData;
+        int oneElement;
 
-        tagData = new Tag33NumNoLinesOfText(new MyNumInGroupType(Tag33NumNoLinesOfText.TESTB_NUM_NO_LINES_OF_TEXT));
+        oneElement = Tag33NumNoLinesOfText.TESTA_NUM_NO_LINES_OF_TEXT;
+        tagData = new Tag33NumNoLinesOfText(new MyNumInGroupType( oneElement ));
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag33NumNoLinesOfText.TESTB_NUM_NO_LINES_OF_TEXT;
+        tagData = new Tag33NumNoLinesOfText(new MyNumInGroupType( oneElement ));
         System.out.println( tagData.toVerboseString() );
     }
+
+    @Test
+    void FIXTest() {
+        Tag33NumNoLinesOfText tagData;
+        int oneElement;
+
+        oneElement = Tag33NumNoLinesOfText.TESTA_NUM_NO_LINES_OF_TEXT;
+        tagData = new Tag33NumNoLinesOfText(new MyNumInGroupType( oneElement ));
+        verifyFIXData( tagData );
+
+        oneElement = Tag33NumNoLinesOfText.TESTB_NUM_NO_LINES_OF_TEXT;
+        tagData = new Tag33NumNoLinesOfText(new MyNumInGroupType( oneElement ));
+        verifyFIXData( tagData );
+    }
+
+    private void verifyFIXData( final Tag33NumNoLinesOfText tagData ) {
+        assertEquals( "FIX33_NUM_NO_LINES_OF_TEXT", tagData.toEnumLabelString());
+        assertEquals( "NO_LINES_OF_TEXT", tagData.toEnumNameString());
+        assertEquals( "33", tagData.toEnumIDString());
+        assertEquals( "NoLinesOfText", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void TagGetDataValueTest() {
         Tag33NumNoLinesOfText tagData;
+        int oneElement;
 
-        tagData = new Tag33NumNoLinesOfText(new MyNumInGroupType(Tag33NumNoLinesOfText.TESTB_NUM_NO_LINES_OF_TEXT));
-        assertEquals( Tag33NumNoLinesOfText.TESTB_NUM_NO_LINES_OF_TEXT, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        oneElement = Tag33NumNoLinesOfText.TESTA_NUM_NO_LINES_OF_TEXT;
+        tagData = new Tag33NumNoLinesOfText(new MyNumInGroupType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = Tag33NumNoLinesOfText.TESTB_NUM_NO_LINES_OF_TEXT;
+        tagData = new Tag33NumNoLinesOfText(new MyNumInGroupType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = 5;
+        tagData = new Tag33NumNoLinesOfText(new MyNumInGroupType( oneElement ));
+        verifyDataValue( tagData, oneElement );
     }
+
+    private void verifyDataValue( final Tag33NumNoLinesOfText tagData, final int oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
+    }
+
     @Test
     void TagToValuePairStringTest() {
         Tag33NumNoLinesOfText tagData;
+        int oneElement;
 
-        tagData = new Tag33NumNoLinesOfText(new MyNumInGroupType(Tag33NumNoLinesOfText.TESTB_NUM_NO_LINES_OF_TEXT));
-        assertEquals( tagData.toEnumIDString() + "=" + Tag33NumNoLinesOfText.TESTB_NUM_NO_LINES_OF_TEXT,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag33NumNoLinesOfText.TESTA_NUM_NO_LINES_OF_TEXT;
+        tagData = new Tag33NumNoLinesOfText(new MyNumInGroupType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
+
+        oneElement = Tag33NumNoLinesOfText.TESTB_NUM_NO_LINES_OF_TEXT;
+        tagData = new Tag33NumNoLinesOfText(new MyNumInGroupType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
     }
+
+    private void verifyValuePairString( final Tag33NumNoLinesOfText tagData, final int oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
     @Test
     void TagToStringTest() {
         Tag33NumNoLinesOfText tagData;
+        int oneElement;
 
-        tagData = new Tag33NumNoLinesOfText(new MyNumInGroupType(Tag33NumNoLinesOfText.TESTB_NUM_NO_LINES_OF_TEXT));
-        assertEquals( String.valueOf(Tag33NumNoLinesOfText.TESTB_NUM_NO_LINES_OF_TEXT),
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag33NumNoLinesOfText.TESTA_NUM_NO_LINES_OF_TEXT;
+        tagData = new Tag33NumNoLinesOfText(new MyNumInGroupType( oneElement ));
+        verifyToString( tagData, oneElement );
+
+        oneElement = Tag33NumNoLinesOfText.TESTB_NUM_NO_LINES_OF_TEXT;
+        tagData = new Tag33NumNoLinesOfText(new MyNumInGroupType( oneElement ));
+        verifyToString( tagData, oneElement );
     }
+
+    private void verifyToString( final Tag33NumNoLinesOfText tagData, final int oneElement ) {
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
     @Test
     void TagToVerboseStringTest() {
         Tag33NumNoLinesOfText tagData;
+        int oneElement;
 
-        tagData = new Tag33NumNoLinesOfText(new MyNumInGroupType(Tag33NumNoLinesOfText.TESTA_NUM_NO_LINES_OF_TEXT));
+        oneElement = Tag33NumNoLinesOfText.TESTA_NUM_NO_LINES_OF_TEXT;
+        tagData = new Tag33NumNoLinesOfText(new MyNumInGroupType( oneElement ));
+        verifyVerboseString( tagData, oneElement );
+
+        oneElement = Tag33NumNoLinesOfText.TESTB_NUM_NO_LINES_OF_TEXT;
+        tagData = new Tag33NumNoLinesOfText(new MyNumInGroupType( oneElement ));
+        verifyVerboseString( tagData, oneElement );
+    }
+
+    private void verifyVerboseString( final Tag33NumNoLinesOfText tagData, final int oneElement ) {
         assertEquals( "Tag33NumNoLinesOfText\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag33NumNoLinesOfText.TESTA_NUM_NO_LINES_OF_TEXT + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag33NumNoLinesOfText.TESTA_NUM_NO_LINES_OF_TEXT + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

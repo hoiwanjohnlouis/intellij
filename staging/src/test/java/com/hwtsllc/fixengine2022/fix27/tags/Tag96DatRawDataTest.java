@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyDataType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,76 +27,132 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  96
  *  RawData
  *  data
- *  <p>
+ *  <p></p>
  *  Unformatted raw data, can include bitmaps, word processor documents, etc.
  */
 class Tag96DatRawDataTest {
     @Test
-    void FIX0096Test() {
-        FIX27 fixData = FIX27.FIX96_DAT_RAW_DATA;
-        assertEquals( "RAW_DATA", fixData.toEnumNameString());
-        assertEquals( "96", fixData.toEnumIDString());
-        assertEquals( "RawData", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0096Test() {
-        Tag96DatRawData tagData;
-
-        tagData = new Tag96DatRawData(new MyDataType("FrodoBaggins-96StRawData") );
-        assertEquals( "FrodoBaggins-96StRawData", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
     void PrintFIXTagTest() {
         Tag96DatRawData tagData;
+        String oneElement;
 
-        tagData = new Tag96DatRawData(new MyDataType(Tag96DatRawData.TESTB_DAT_RAW_DATA));
+        oneElement = Tag96DatRawData.TESTA_DAT_RAW_DATA;
+        tagData = new Tag96DatRawData(new MyDataType( oneElement ));
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag96DatRawData.TESTB_DAT_RAW_DATA;
+        tagData = new Tag96DatRawData(new MyDataType( oneElement ));
         System.out.println( tagData.toVerboseString() );
     }
+
+    @Test
+    void FIXTest() {
+        Tag96DatRawData tagData;
+        String oneElement;
+
+        oneElement = Tag96DatRawData.TESTA_DAT_RAW_DATA;
+        tagData = new Tag96DatRawData(new MyDataType( oneElement ));
+        verifyFIXData( tagData );
+
+        oneElement = Tag96DatRawData.TESTB_DAT_RAW_DATA;
+        tagData = new Tag96DatRawData(new MyDataType( oneElement ));
+        verifyFIXData( tagData );
+    }
+
+    private void verifyFIXData( final Tag96DatRawData tagData ) {
+        assertEquals( "FIX96_DAT_RAW_DATA", tagData.toEnumLabelString());
+        assertEquals( "RAW_DATA", tagData.toEnumNameString());
+        assertEquals( "96", tagData.toEnumIDString());
+        assertEquals( "RawData", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void TagGetDataValueTest() {
         Tag96DatRawData tagData;
+        String oneElement;
 
-        tagData = new Tag96DatRawData(new MyDataType(Tag96DatRawData.TESTB_DAT_RAW_DATA));
-        assertEquals( Tag96DatRawData.TESTB_DAT_RAW_DATA, tagData.getDataValue());
+        oneElement = Tag96DatRawData.TESTA_DAT_RAW_DATA;
+        tagData = new Tag96DatRawData(new MyDataType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = Tag96DatRawData.TESTB_DAT_RAW_DATA;
+        tagData = new Tag96DatRawData(new MyDataType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = "SonYeJin-Tag96DatRawData";
+        tagData = new Tag96DatRawData(new MyDataType( oneElement ) );
+        verifyDataValue( tagData, oneElement );
+    }
+
+    private void verifyDataValue( final Tag96DatRawData tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+
     @Test
     void TagToValuePairStringTest() {
         Tag96DatRawData tagData;
+        String oneElement;
 
-        tagData = new Tag96DatRawData(new MyDataType(Tag96DatRawData.TESTB_DAT_RAW_DATA));
-        assertEquals( tagData.toEnumIDString() + "=" + Tag96DatRawData.TESTB_DAT_RAW_DATA,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag96DatRawData.TESTA_DAT_RAW_DATA;
+        tagData = new Tag96DatRawData(new MyDataType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
+
+        oneElement = Tag96DatRawData.TESTB_DAT_RAW_DATA;
+        tagData = new Tag96DatRawData(new MyDataType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
     }
+
+    private void verifyValuePairString( final Tag96DatRawData tagData, final String oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
     @Test
     void TagToStringTest() {
         Tag96DatRawData tagData;
+        String oneElement;
 
-        tagData = new Tag96DatRawData(new MyDataType(Tag96DatRawData.TESTB_DAT_RAW_DATA));
-        assertEquals( Tag96DatRawData.TESTB_DAT_RAW_DATA,
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag96DatRawData.TESTA_DAT_RAW_DATA;
+        tagData = new Tag96DatRawData(new MyDataType( oneElement ));
+        verifyToString( tagData, oneElement );
+
+        oneElement = Tag96DatRawData.TESTB_DAT_RAW_DATA;
+        tagData = new Tag96DatRawData(new MyDataType( oneElement ));
+        verifyToString( tagData, oneElement );
     }
+
+    private void verifyToString( final Tag96DatRawData tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
     @Test
     void TagToVerboseStringTest() {
         Tag96DatRawData tagData;
+        String oneElement;
 
-        tagData = new Tag96DatRawData(new MyDataType(Tag96DatRawData.TESTA_DAT_RAW_DATA));
+        oneElement = Tag96DatRawData.TESTA_DAT_RAW_DATA;
+        tagData = new Tag96DatRawData(new MyDataType( oneElement ));
+        verifyVerboseString( tagData, oneElement );
+
+        oneElement = Tag96DatRawData.TESTB_DAT_RAW_DATA;
+        tagData = new Tag96DatRawData(new MyDataType( oneElement ));
+        verifyVerboseString( tagData, oneElement );
+    }
+
+    private void verifyVerboseString( final Tag96DatRawData tagData, final String oneElement ) {
         assertEquals( "Tag96DatRawData\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag96DatRawData.TESTA_DAT_RAW_DATA + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag96DatRawData.TESTA_DAT_RAW_DATA + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

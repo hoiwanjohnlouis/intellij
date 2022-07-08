@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  90
  *  SecureDataLen
  *  Length
- *  <p>
+ *  <p></p>
  *  Length of encrypted message
  */
 public class Tag90LenSecureDataLen extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyLengthType dataValue;
 
-    public final static int TESTA_LEN_SECURE_DATA_LEN = 25;
-    public final static int TESTB_LEN_SECURE_DATA_LEN = 20;
+    public final static int TESTA_LEN_SECURE_DATA_LEN
+            = 25;
+    public final static int TESTB_LEN_SECURE_DATA_LEN
+            = 20;
 
     public Tag90LenSecureDataLen(MyLengthType dataValue) {
         setFixType(FIX27.FIX90_LEN_SECURE_DATA_LEN);

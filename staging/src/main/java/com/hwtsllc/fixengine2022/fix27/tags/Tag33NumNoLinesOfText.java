@@ -26,13 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  33
  *  NoLinesOfText
  *  NumInGroup
+ *  <p></p>
  *  Identifies number of lines of text body
  */
 public class Tag33NumNoLinesOfText extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyNumInGroupType dataValue;
 
-    public final static int TESTA_NUM_NO_LINES_OF_TEXT = 33;
-    public final static int TESTB_NUM_NO_LINES_OF_TEXT = 3;
+    public final static int TESTA_NUM_NO_LINES_OF_TEXT
+            = 33;
+    public final static int TESTB_NUM_NO_LINES_OF_TEXT
+            = 3;
 
     public Tag33NumNoLinesOfText(MyNumInGroupType dataValue) {
         setFixType(FIX27.FIX33_NUM_NO_LINES_OF_TEXT);

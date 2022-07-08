@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -36,48 +35,6 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag74StrAvgPxPrecisionTest {
     @Test
-    void FIXTest() {
-        FIX27 fixData = FIX27.FIX74_STR_AVG_PX_PRECISION;
-        assertEquals( "AVG_PX_PRECISION", fixData.toEnumNameString());
-        assertEquals( "74", fixData.toEnumIDString());
-        assertEquals( "AvgPxPrecision", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0074Test() {
-        Tag74StrAvgPxPrecision tagData;
-        String oneElement;
-
-        oneElement = "Saruman-74AvgPxPrecision";
-        tagData = new Tag74StrAvgPxPrecision(new MyStringType( oneElement ) );
-        verifyTagInformation( tagData, oneElement );
-
-        oneElement = Tag74StrAvgPxPrecision.TESTA_STR_AVG_PX_PRECISION;
-        tagData = new Tag74StrAvgPxPrecision(new MyStringType( oneElement ) );
-        verifyTagInformation( tagData, oneElement );
-
-        oneElement = Tag74StrAvgPxPrecision.TESTB_STR_AVG_PX_PRECISION;
-        tagData = new Tag74StrAvgPxPrecision(new MyStringType( oneElement ) );
-        verifyTagInformation( tagData, oneElement );
-    }
-
-    private void verifyTagInformation( Tag74StrAvgPxPrecision tagData, String oneElement ) {
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "FIX74_STR_AVG_PX_PRECISION", tagData.toEnumLabelString());
-        assertEquals( "AVG_PX_PRECISION", tagData.toEnumNameString());
-        assertEquals( "74", tagData.toEnumIDString());
-        assertEquals( "AvgPxPrecision", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-    }
-
-    @Test
     void PrintFIXTagTest() {
         Tag74StrAvgPxPrecision tagData;
         String oneElement;
@@ -90,36 +47,89 @@ class Tag74StrAvgPxPrecisionTest {
         tagData = new Tag74StrAvgPxPrecision(new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
+
+    @Test
+    void FIXTest() {
+        Tag74StrAvgPxPrecision tagData;
+        String oneElement;
+
+        oneElement = Tag74StrAvgPxPrecision.TESTA_STR_AVG_PX_PRECISION;
+        tagData = new Tag74StrAvgPxPrecision(new MyStringType( oneElement ) );
+        verifyFIXData( tagData );
+
+        oneElement = Tag74StrAvgPxPrecision.TESTB_STR_AVG_PX_PRECISION;
+        tagData = new Tag74StrAvgPxPrecision(new MyStringType( oneElement ) );
+        verifyFIXData( tagData );
+    }
+
+    private void verifyFIXData( final Tag74StrAvgPxPrecision tagData ) {
+        assertEquals( "FIX74_STR_AVG_PX_PRECISION", tagData.toEnumLabelString());
+        assertEquals( "AVG_PX_PRECISION", tagData.toEnumNameString());
+        assertEquals( "74", tagData.toEnumIDString());
+        assertEquals( "AvgPxPrecision", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void TagGetDataValueTest() {
         Tag74StrAvgPxPrecision tagData;
         String oneElement;
 
+        oneElement = Tag74StrAvgPxPrecision.TESTA_STR_AVG_PX_PRECISION;
+        tagData = new Tag74StrAvgPxPrecision(new MyStringType( oneElement ) );
+        verifyDataValue( tagData, oneElement );
+
         oneElement = Tag74StrAvgPxPrecision.TESTB_STR_AVG_PX_PRECISION;
         tagData = new Tag74StrAvgPxPrecision(new MyStringType( oneElement ) );
+        verifyDataValue( tagData, oneElement );
+    }
+
+    private void verifyDataValue( final Tag74StrAvgPxPrecision tagData, final String oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+
     @Test
     void TagToValuePairStringTest() {
         Tag74StrAvgPxPrecision tagData;
         String oneElement;
 
+        oneElement = Tag74StrAvgPxPrecision.TESTA_STR_AVG_PX_PRECISION;
+        tagData = new Tag74StrAvgPxPrecision(new MyStringType( oneElement ) );
+        verifyValuePairString( tagData, oneElement );
+
         oneElement = Tag74StrAvgPxPrecision.TESTB_STR_AVG_PX_PRECISION;
         tagData = new Tag74StrAvgPxPrecision(new MyStringType( oneElement ) );
+        verifyValuePairString( tagData, oneElement );
+    }
+
+    private void verifyValuePairString( final Tag74StrAvgPxPrecision tagData, final String oneElement ) {
         assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
+
     @Test
     void TagToStringTest() {
         Tag74StrAvgPxPrecision tagData;
         String oneElement;
 
+        oneElement = Tag74StrAvgPxPrecision.TESTA_STR_AVG_PX_PRECISION;
+        tagData = new Tag74StrAvgPxPrecision(new MyStringType( oneElement ) );
+        verifyToString( tagData, oneElement );
+
         oneElement = Tag74StrAvgPxPrecision.TESTB_STR_AVG_PX_PRECISION;
         tagData = new Tag74StrAvgPxPrecision(new MyStringType( oneElement ) );
+        verifyToString( tagData, oneElement );
+    }
+
+    private void verifyToString( final Tag74StrAvgPxPrecision tagData, final String oneElement ) {
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
+
     @Test
     void TagToVerboseStringTest() {
         Tag74StrAvgPxPrecision tagData;
@@ -127,13 +137,21 @@ class Tag74StrAvgPxPrecisionTest {
 
         oneElement = Tag74StrAvgPxPrecision.TESTA_STR_AVG_PX_PRECISION;
         tagData = new Tag74StrAvgPxPrecision(new MyStringType( oneElement ) );
+        verifyVerboseString( tagData, oneElement );
+
+        oneElement = Tag74StrAvgPxPrecision.TESTB_STR_AVG_PX_PRECISION;
+        tagData = new Tag74StrAvgPxPrecision(new MyStringType( oneElement ) );
+        verifyVerboseString( tagData, oneElement );
+    }
+
+    private void verifyVerboseString( final Tag74StrAvgPxPrecision tagData, final String oneElement ) {
         assertEquals( "Tag74StrAvgPxPrecision\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

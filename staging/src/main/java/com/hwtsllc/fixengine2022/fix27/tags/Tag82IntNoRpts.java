@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  82
  *  NoRpts
  *  int
- *  <p>
+ *  <p></p>
  *  Total number of reports within series.
  */
 public class Tag82IntNoRpts extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_NO_RPTS = 1;
-    public final static int TESTB_INT_NO_RPTS = 2;
+    public final static int TESTA_INT_NO_RPTS
+            = 1;
+    public final static int TESTB_INT_NO_RPTS
+            = 2;
 
     public Tag82IntNoRpts(MyIntType dataValue) {
         setFixType(FIX27.FIX82_INT_NO_RPTS);

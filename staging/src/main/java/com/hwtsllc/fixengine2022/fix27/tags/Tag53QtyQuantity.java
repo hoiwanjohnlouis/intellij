@@ -26,14 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  53
  *  Quantity
  *  Qty
+ *  <p></p>
  *  Overall/total quantity (e.g. number of shares)
+ *  <p></p>
  *  (Prior to FIX 4.2 this field was of type int)
  */
 public class Tag53QtyQuantity extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyQtyType dataValue;
 
-    public final static int TESTA_QTY_QUANTITY = 1000; // fake data
-    public final static int TESTB_QTY_QUANTITY = 3300;
+    public final static int TESTA_QTY_QUANTITY
+            = 1000;
+    public final static int TESTB_QTY_QUANTITY
+            = 3300;
 
     public Tag53QtyQuantity(MyQtyType dataValue) {
         setFixType(FIX27.FIX53_QTY_QUANTITY);

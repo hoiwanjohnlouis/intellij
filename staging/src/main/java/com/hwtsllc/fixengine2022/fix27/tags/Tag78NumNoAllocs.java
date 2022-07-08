@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  78
  *  NoAllocs
  *  NumInGroup
- *  <p>
+ *  <p></p>
  *  Number of  repeating AllocAccount (79) or AllocPrice (366) entries.
  */
 public class Tag78NumNoAllocs extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyNumInGroupType dataValue;
 
-    public final static int TESTA_NUM_NO_ALLOCS = 78; // fake data
-    public final static int TESTB_NUM_NO_ALLOCS = 7878;
+    public final static int TESTA_NUM_NO_ALLOCS
+            = 78;
+    public final static int TESTB_NUM_NO_ALLOCS
+            = 7878;
 
     public Tag78NumNoAllocs(MyNumInGroupType dataValue) {
         setFixType(FIX27.FIX78_NUM_NO_ALLOCS);

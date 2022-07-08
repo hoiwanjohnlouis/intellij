@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  91
  *  SecureData
  *  data
- *  <p>
+ *  <p></p>
  *  Actual encrypted data stream
  */
 public class Tag91DatSecureData extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyDataType dataValue;
 
-    public final static String TESTA_DAT_SECURE_DATA = "BilboBaggins-91StSecureData";
-    public final static String TESTB_DAT_SECURE_DATA = "Gandalf-91StSecureData";
+    public final static String TESTA_DAT_SECURE_DATA
+            = "BilboBaggins-Tag91DatSecureData";
+    public final static String TESTB_DAT_SECURE_DATA
+            = "Gandalf-Tag91DatSecureData";
 
     public Tag91DatSecureData(MyDataType dataValue) {
         setFixType(FIX27.FIX91_DAT_SECURE_DATA);

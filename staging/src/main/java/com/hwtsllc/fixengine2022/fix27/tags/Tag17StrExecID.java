@@ -32,6 +32,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  (will be 0 (zero) for ExecType (50) =I (Order Status)).
  *  <p></p>
  *  Uniqueness must be guaranteed within a single trading day or the life of a multi-day order.
+ *  <p></p>
  *  Firms which accept multi-day orders should consider embedding a date within
  *  the ExecID field to assure uniqueness across days.
  *  <p></p>
@@ -41,9 +42,9 @@ public class Tag17StrExecID extends FIX27Abstract implements LogValuePairString,
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_EXEC_ID
-            = "BilboBaggins-Tag17StrExecID";
+            = "LouiseBrooks-Tag17StrExecID";
     public final static String TESTB_STR_EXEC_ID
-            = "Gandalf-Tag17StrExecID";
+            = "CaroleLombard-Tag17StrExecID";
 
     public Tag17StrExecID(MyStringType dataValue) {
         setFixType(FIX27.FIX17_STR_EXEC_ID);

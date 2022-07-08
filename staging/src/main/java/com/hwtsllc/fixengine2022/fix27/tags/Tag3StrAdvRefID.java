@@ -26,7 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  3
  *  AdvRefID
  *  String
+ *  <p></p>
  *  Reference identifier used with CANCEL and REPLACE transaction types.
+ *  <p></p>
  *  (Prior to FIX 4.1 this field was of type int)
  */
 public class Tag3StrAdvRefID extends FIX27Abstract implements LogValuePairString, LogVerboseString {

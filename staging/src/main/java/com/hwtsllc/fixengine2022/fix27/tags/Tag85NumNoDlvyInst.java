@@ -26,17 +26,19 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  85
  *  NoDlvyInst
  *  NumInGroup
- *  <p>
+ *  <p></p>
  *  Number of delivery instruction fields in repeating group.
- *  <p>
+ *  <p></p>
  *  Note this field was removed in FIX 4.1 and reinstated in FIX 4.4.
  */
 // @Deprecated
 public class Tag85NumNoDlvyInst extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyNumInGroupType dataValue;
 
-    public final static int TESTA_NUM_NO_DLVY_INST = 85; // fake data
-    public final static int TESTB_NUM_NO_DLVY_INST = 58;
+    public final static int TESTA_NUM_NO_DLVY_INST
+            = 85;
+    public final static int TESTB_NUM_NO_DLVY_INST
+            = 58;
 
     public Tag85NumNoDlvyInst(MyNumInGroupType dataValue) {
         setFixType(FIX27.FIX85_NUM_NO_DLVY_INST);

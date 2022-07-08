@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  95
  *  RawDataLength
  *  Length
- *  <p>
+ *  <p></p>
  *  Number of bytes in raw data field.
  */
 public class Tag95LenRawDataLength extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyLengthType dataValue;
 
-    public final static int TESTA_LEN_RAW_DATA_LENGTH = 22;
-    public final static int TESTB_LEN_RAW_DATA_LENGTH = 17;
+    public final static int TESTA_LEN_RAW_DATA_LENGTH
+            = 22;
+    public final static int TESTB_LEN_RAW_DATA_LENGTH
+            = 17;
 
     public Tag95LenRawDataLength(MyLengthType dataValue) {
         setFixType(FIX27.FIX95_LEN_RAW_DATA_LENGTH);

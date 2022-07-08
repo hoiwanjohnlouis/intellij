@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyLengthType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,69 +27,129 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  9
  *  BodyLength
  *  Length
+ *  <p></p>
  *  Message length, in bytes, forward to the CheckSum field.
+ *  <p></p>
  *  ALWAYS SECOND FIELD IN MESSAGE.
+ *  <p></p>
  *  (Always unencrypted)
  */
 class Tag9LenBodyLengthTest {
     @Test
-    void FIX0009Test() {
-        FIX27 fixData = FIX27.FIX9_LEN_BODY_LENGTH;
-        assertEquals( "BODY_LENGTH", fixData.toEnumNameString());
-        assertEquals( "9", fixData.toEnumIDString());
-        assertEquals( "BodyLength", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
     void PrintFIXTagTest() {
         Tag9LenBodyLength tagData;
+        int oneElement;
 
-        tagData = new Tag9LenBodyLength(new MyLengthType(Tag9LenBodyLength.TESTB_LEN_BODY_LENGTH));
+        oneElement = Tag9LenBodyLength.TESTA_LEN_BODY_LENGTH;
+        tagData = new Tag9LenBodyLength(new MyLengthType( oneElement ));
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag9LenBodyLength.TESTB_LEN_BODY_LENGTH;
+        tagData = new Tag9LenBodyLength(new MyLengthType( oneElement ));
         System.out.println( tagData.toVerboseString() );
     }
+
+    @Test
+    void FIXTest() {
+        Tag9LenBodyLength tagData;
+        int oneElement;
+
+        oneElement = Tag9LenBodyLength.TESTA_LEN_BODY_LENGTH;
+        tagData = new Tag9LenBodyLength(new MyLengthType( oneElement ));
+        verifyFIXData( tagData );
+    }
+
+    private void verifyFIXData( final Tag9LenBodyLength tagData ) {
+        assertEquals( "FIX9_LEN_BODY_LENGTH", tagData.toEnumLabelString());
+        assertEquals( "BODY_LENGTH", tagData.toEnumNameString());
+        assertEquals( "9", tagData.toEnumIDString());
+        assertEquals( "BodyLength", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void TagGetDataValueTest() {
         Tag9LenBodyLength tagData;
+        int oneElement;
 
-        tagData = new Tag9LenBodyLength(new MyLengthType(Tag9LenBodyLength.TESTB_LEN_BODY_LENGTH));
-        assertEquals( Tag9LenBodyLength.TESTB_LEN_BODY_LENGTH, tagData.getDataValue());
+        oneElement = Tag9LenBodyLength.TESTA_LEN_BODY_LENGTH;
+        tagData = new Tag9LenBodyLength(new MyLengthType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = Tag9LenBodyLength.TESTB_LEN_BODY_LENGTH;
+        tagData = new Tag9LenBodyLength(new MyLengthType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+    }
+
+    private void verifyDataValue( final Tag9LenBodyLength tagData, final int oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
     }
+
     @Test
     void TagToValuePairStringTest() {
         Tag9LenBodyLength tagData;
+        int oneElement;
 
-        tagData = new Tag9LenBodyLength(new MyLengthType(Tag9LenBodyLength.TESTB_LEN_BODY_LENGTH));
-        assertEquals( tagData.toEnumIDString() + "=" + Tag9LenBodyLength.TESTB_LEN_BODY_LENGTH,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag9LenBodyLength.TESTA_LEN_BODY_LENGTH;
+        tagData = new Tag9LenBodyLength(new MyLengthType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
+
+        oneElement = Tag9LenBodyLength.TESTB_LEN_BODY_LENGTH;
+        tagData = new Tag9LenBodyLength(new MyLengthType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
     }
+
+    private void verifyValuePairString( final Tag9LenBodyLength tagData, final int oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
     @Test
     void TagToStringTest() {
         Tag9LenBodyLength tagData;
+        int oneElement;
 
-        tagData = new Tag9LenBodyLength(new MyLengthType(Tag9LenBodyLength.TESTB_LEN_BODY_LENGTH));
-        assertEquals( String.valueOf(Tag9LenBodyLength.TESTB_LEN_BODY_LENGTH),
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag9LenBodyLength.TESTA_LEN_BODY_LENGTH;
+        tagData = new Tag9LenBodyLength(new MyLengthType( oneElement ));
+        verifyToString( tagData, oneElement );
+
+        oneElement = Tag9LenBodyLength.TESTB_LEN_BODY_LENGTH;
+        tagData = new Tag9LenBodyLength(new MyLengthType( oneElement ));
+        verifyToString( tagData, oneElement );
     }
+
+    private void verifyToString( final Tag9LenBodyLength tagData, final int oneElement ) {
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
     @Test
     void TagToVerboseStringTest() {
         Tag9LenBodyLength tagData;
+        int oneElement;
 
-        tagData = new Tag9LenBodyLength(new MyLengthType(Tag9LenBodyLength.TESTA_LEN_BODY_LENGTH));
+        oneElement = Tag9LenBodyLength.TESTA_LEN_BODY_LENGTH;
+        tagData = new Tag9LenBodyLength(new MyLengthType( oneElement ));
+        verifyVerboseString( tagData, oneElement );
+
+        oneElement = Tag9LenBodyLength.TESTB_LEN_BODY_LENGTH;
+        tagData = new Tag9LenBodyLength(new MyLengthType( oneElement ));
+        verifyVerboseString( tagData, oneElement );
+    }
+
+    private void verifyVerboseString( final Tag9LenBodyLength tagData, final int oneElement ) {
         assertEquals( "Tag9LenBodyLength\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag9LenBodyLength.TESTA_LEN_BODY_LENGTH + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag9LenBodyLength.TESTA_LEN_BODY_LENGTH + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

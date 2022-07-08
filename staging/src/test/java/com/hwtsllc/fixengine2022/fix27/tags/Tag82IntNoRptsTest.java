@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,76 +27,132 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  82
  *  NoRpts
  *  int
- *  <p>
+ *  <p></p>
  *  Total number of reports within series.
  */
 class Tag82IntNoRptsTest {
     @Test
-    void FIX0082Test() {
-        FIX27 fixData = FIX27.FIX82_INT_NO_RPTS;
-        assertEquals( "NO_RPTS", fixData.toEnumNameString());
-        assertEquals( "82", fixData.toEnumIDString());
-        assertEquals( "NoRpts", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0082Test() {
-        Tag82IntNoRpts tagData;
-
-        tagData = new Tag82IntNoRpts(new MyIntType(23) );
-        assertEquals( 23, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
     void PrintFIXTagTest() {
         Tag82IntNoRpts tagData;
+        int oneElement;
 
-        tagData = new Tag82IntNoRpts(new MyIntType(Tag82IntNoRpts.TESTB_INT_NO_RPTS));
+        oneElement = Tag82IntNoRpts.TESTA_INT_NO_RPTS;
+        tagData = new Tag82IntNoRpts(new MyIntType( oneElement ));
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag82IntNoRpts.TESTB_INT_NO_RPTS;
+        tagData = new Tag82IntNoRpts(new MyIntType( oneElement ));
         System.out.println( tagData.toVerboseString() );
     }
+
+    @Test
+    void FIXTest() {
+        Tag82IntNoRpts tagData;
+        int oneElement;
+
+        oneElement = Tag82IntNoRpts.TESTA_INT_NO_RPTS;
+        tagData = new Tag82IntNoRpts(new MyIntType( oneElement ));
+        verifyFIXData( tagData );
+
+        oneElement = Tag82IntNoRpts.TESTB_INT_NO_RPTS;
+        tagData = new Tag82IntNoRpts(new MyIntType( oneElement ));
+        verifyFIXData( tagData );
+    }
+
+    private void verifyFIXData( final Tag82IntNoRpts tagData ) {
+        assertEquals( "FIX82_INT_NO_RPTS", tagData.toEnumLabelString());
+        assertEquals( "NO_RPTS", tagData.toEnumNameString());
+        assertEquals( "82", tagData.toEnumIDString());
+        assertEquals( "NoRpts", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void TagGetDataValueTest() {
         Tag82IntNoRpts tagData;
+        int oneElement;
 
-        tagData = new Tag82IntNoRpts(new MyIntType(Tag82IntNoRpts.TESTB_INT_NO_RPTS));
-        assertEquals( Tag82IntNoRpts.TESTB_INT_NO_RPTS, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        oneElement = Tag82IntNoRpts.TESTA_INT_NO_RPTS;
+        tagData = new Tag82IntNoRpts(new MyIntType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = Tag82IntNoRpts.TESTB_INT_NO_RPTS;
+        tagData = new Tag82IntNoRpts(new MyIntType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = 23;
+        tagData = new Tag82IntNoRpts(new MyIntType( oneElement ) );
+        verifyDataValue( tagData, oneElement );
     }
+
+    private void verifyDataValue( final Tag82IntNoRpts tagData, final int oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+    }
+
     @Test
     void TagToValuePairStringTest() {
         Tag82IntNoRpts tagData;
+        int oneElement;
 
-        tagData = new Tag82IntNoRpts(new MyIntType(Tag82IntNoRpts.TESTB_INT_NO_RPTS));
-        assertEquals( tagData.toEnumIDString() + "=" + Tag82IntNoRpts.TESTB_INT_NO_RPTS,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag82IntNoRpts.TESTA_INT_NO_RPTS;
+        tagData = new Tag82IntNoRpts(new MyIntType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
+
+        oneElement = Tag82IntNoRpts.TESTB_INT_NO_RPTS;
+        tagData = new Tag82IntNoRpts(new MyIntType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
     }
+
+    private void verifyValuePairString( final Tag82IntNoRpts tagData, final int oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
     @Test
     void TagToStringTest() {
         Tag82IntNoRpts tagData;
+        int oneElement;
 
-        tagData = new Tag82IntNoRpts(new MyIntType(Tag82IntNoRpts.TESTB_INT_NO_RPTS));
-        assertEquals( String.valueOf(Tag82IntNoRpts.TESTB_INT_NO_RPTS),
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag82IntNoRpts.TESTA_INT_NO_RPTS;
+        tagData = new Tag82IntNoRpts(new MyIntType( oneElement ));
+        verifyToString( tagData, oneElement );
+
+        oneElement = Tag82IntNoRpts.TESTB_INT_NO_RPTS;
+        tagData = new Tag82IntNoRpts(new MyIntType( oneElement ));
+        verifyToString( tagData, oneElement );
     }
+
+    private void verifyToString( final Tag82IntNoRpts tagData, final int oneElement ) {
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
     @Test
     void TagToVerboseStringTest() {
         Tag82IntNoRpts tagData;
+        int oneElement;
 
-        tagData = new Tag82IntNoRpts(new MyIntType(Tag82IntNoRpts.TESTA_INT_NO_RPTS));
+        oneElement = Tag82IntNoRpts.TESTA_INT_NO_RPTS;
+        tagData = new Tag82IntNoRpts(new MyIntType( oneElement ));
+        verifyVerboseString( tagData, oneElement );
+
+        oneElement = Tag82IntNoRpts.TESTB_INT_NO_RPTS;
+        tagData = new Tag82IntNoRpts(new MyIntType( oneElement ));
+        verifyVerboseString( tagData, oneElement );
+    }
+
+    private void verifyVerboseString( final Tag82IntNoRpts tagData, final int oneElement ) {
         assertEquals( "Tag82IntNoRpts\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag82IntNoRpts.TESTA_INT_NO_RPTS + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag82IntNoRpts.TESTA_INT_NO_RPTS + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

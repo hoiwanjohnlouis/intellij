@@ -26,15 +26,20 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  38
  *  OrderQty
  *  Qty
+ *  <p></p>
  *  Quantity ordered.
+ *  <p></p>
  *  This represents the number of shares for equities or par, face or nominal value for FI instruments.
+ *  <p></p>
  *  (Prior to FIX 4.2 this field was of type int)
  */
 public class Tag38QtyOrderQty extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyQtyType dataValue;
 
-    public final static int TESTA_QTY_ORDER_QTY = 3838;
-    public final static int TESTB_QTY_ORDER_QTY = 4545;
+    public final static int TESTA_QTY_ORDER_QTY
+            = 3838;
+    public final static int TESTB_QTY_ORDER_QTY
+            = 4545;
 
     public Tag38QtyOrderQty(MyQtyType dataValue) {
         setFixType(FIX27.FIX38_QTY_ORDER_QTY);

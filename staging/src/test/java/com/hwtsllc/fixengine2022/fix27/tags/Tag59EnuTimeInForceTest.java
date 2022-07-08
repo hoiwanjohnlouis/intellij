@@ -49,6 +49,16 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag59EnuTimeInForceTest {
     @Test
+    void PrintFIXTagTest() {
+        Tag59EnuTimeInForce tagData;
+
+        // loop around the ENUM and process
+        for (Enum59TimeInForce oneEnum : Enum59TimeInForce.values()) {
+            tagData = new Tag59EnuTimeInForce(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
     void Tag0059Test() {
         Tag59EnuTimeInForce tagData;
 
@@ -106,22 +116,13 @@ class Tag59EnuTimeInForceTest {
         }
     }
     @Test
-    void PrintFIXTagTest() {
-        Tag59EnuTimeInForce tagData;
-
-        // loop around the ENUM and process
-        for (Enum59TimeInForce oneEnum : Enum59TimeInForce.values()) {
-            tagData = new Tag59EnuTimeInForce(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
     void TagGetDataValueTest() {
         Tag59EnuTimeInForce tagData;
 
         // loop around the ENUM and process
         for (Enum59TimeInForce oneEnum : Enum59TimeInForce.values()) {
             tagData = new Tag59EnuTimeInForce(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
             assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -134,8 +135,9 @@ class Tag59EnuTimeInForceTest {
         // loop around the ENUM and process
         for (Enum59TimeInForce oneEnum : Enum59TimeInForce.values()) {
             tagData = new Tag59EnuTimeInForce(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -162,8 +164,8 @@ class Tag59EnuTimeInForceTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

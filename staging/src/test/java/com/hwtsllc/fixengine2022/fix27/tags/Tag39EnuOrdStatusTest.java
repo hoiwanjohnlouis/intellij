@@ -57,6 +57,16 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag39EnuOrdStatusTest {
     @Test
+    void PrintFIXTagTest() {
+        Tag39EnuOrdStatus tagData;
+
+        // loop around the ENUM and process
+        for (Enum39OrdStatus oneEnum : Enum39OrdStatus.values()) {
+            tagData = new Tag39EnuOrdStatus(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
     void Tag0039Test() {
         Tag39EnuOrdStatus tagData;
 
@@ -146,22 +156,13 @@ class Tag39EnuOrdStatusTest {
         }
     }
     @Test
-    void PrintFIXTagTest() {
-        Tag39EnuOrdStatus tagData;
-
-        // loop around the ENUM and process
-        for (Enum39OrdStatus oneEnum : Enum39OrdStatus.values()) {
-            tagData = new Tag39EnuOrdStatus(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
     void TagGetDataValueTest() {
         Tag39EnuOrdStatus tagData;
 
         // loop around the ENUM and process
         for (Enum39OrdStatus oneEnum : Enum39OrdStatus.values()) {
             tagData = new Tag39EnuOrdStatus(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
             assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -174,8 +175,9 @@ class Tag39EnuOrdStatusTest {
         // loop around the ENUM and process
         for (Enum39OrdStatus oneEnum : Enum39OrdStatus.values()) {
             tagData = new Tag39EnuOrdStatus(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -202,8 +204,8 @@ class Tag39EnuOrdStatusTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

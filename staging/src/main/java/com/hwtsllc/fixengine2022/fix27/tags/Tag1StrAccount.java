@@ -26,7 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  1
  *  Account
  *  String
+ *  <p></p>
  *  Account mnemonic as agreed between buy and sell sides,
+ *  <p></p>
  *  e.g. broker and institution or investor or intermediary and fund manager.
  */
 public class Tag1StrAccount extends FIX27Abstract implements LogValuePairString, LogVerboseString {

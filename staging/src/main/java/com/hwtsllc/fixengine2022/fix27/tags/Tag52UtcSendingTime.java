@@ -26,14 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  52
  *  SendingTime
  *  UTCTimestamp
+ *  <p></p>
  *  Time of message transmission
+ *  <p></p>
  *  (always expressed in UTC (Universal Time Coordinated), also known as "GMT")
  */
 public class Tag52UtcSendingTime extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyUTCTimestampType dataValue;
 
-    public final static String TESTA_UTC_SENDING_TIME = "18991231-23:59:59.052";
-    public final static String TESTB_UTC_SENDING_TIME = "19001231-23:59:59.052";
+    public final static String TESTA_UTC_SENDING_TIME
+            = "18991231-23:59:59.052";
+    public final static String TESTB_UTC_SENDING_TIME
+            = "19001231-23:59:59.052";
 
     public Tag52UtcSendingTime(MyUTCTimestampType dataValue) {
         setFixType(FIX27.FIX52_UTC_SENDING_TIME);

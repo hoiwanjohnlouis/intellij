@@ -26,15 +26,20 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  9
  *  BodyLength
  *  Length
+ *  <p></p>
  *  Message length, in bytes, forward to the CheckSum field.
+ *  <p></p>
  *  ALWAYS SECOND FIELD IN MESSAGE.
+ *  <p></p>
  *  (Always unencrypted)
  */
 public class Tag9LenBodyLength extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyLengthType dataValue;
 
-    public final static int TESTA_LEN_BODY_LENGTH = 123;
-    public final static int TESTB_LEN_BODY_LENGTH = 456;
+    public final static int TESTA_LEN_BODY_LENGTH
+            = 123;
+    public final static int TESTB_LEN_BODY_LENGTH
+            = 456;
 
     public Tag9LenBodyLength(MyLengthType dataValue) {
         setFixType(FIX27.FIX9_LEN_BODY_LENGTH);

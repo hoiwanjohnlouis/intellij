@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,78 +27,134 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  80
  *  AllocQty
  *  Qty
- *  <p>
+ *  <p></p>
  *  Quantity  to be allocated to specific sub-account
- *  <p>
+ *  <p></p>
  *  (Prior to FIX 4.2 this field was of type int)
  */
 class Tag80QtyAllocQtyTest {
     @Test
-    void FIX0080Test() {
-        FIX27 fixData = FIX27.FIX80_QTY_ALLOC_SHARES;
-        assertEquals( "ALLOC_SHARES", fixData.toEnumNameString());
-        assertEquals( "80", fixData.toEnumIDString());
-        assertEquals( "AllocShares", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0080Test() {
-        Tag80QtyAllocQty tagData;
-
-        tagData = new Tag80QtyAllocQty(new MyQtyType(80));
-        assertEquals( 80, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
     void PrintFIXTagTest() {
         Tag80QtyAllocQty tagData;
+        int oneElement;
 
-        tagData = new Tag80QtyAllocQty(new MyQtyType(Tag80QtyAllocQty.TESTB_QTY_ALLOC_QTY));
+        oneElement = Tag80QtyAllocQty.TESTA_QTY_ALLOC_QTY;
+        tagData = new Tag80QtyAllocQty(new MyQtyType( oneElement ));
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag80QtyAllocQty.TESTB_QTY_ALLOC_QTY;
+        tagData = new Tag80QtyAllocQty(new MyQtyType( oneElement ));
         System.out.println( tagData.toVerboseString() );
     }
+
+    @Test
+    void FIXTest() {
+        Tag80QtyAllocQty tagData;
+        int oneElement;
+
+        oneElement = Tag80QtyAllocQty.TESTA_QTY_ALLOC_QTY;
+        tagData = new Tag80QtyAllocQty(new MyQtyType( oneElement ));
+        verifyFIXData( tagData );
+
+        oneElement = Tag80QtyAllocQty.TESTB_QTY_ALLOC_QTY;
+        tagData = new Tag80QtyAllocQty(new MyQtyType( oneElement ));
+        verifyFIXData( tagData );
+    }
+
+    private void verifyFIXData( final Tag80QtyAllocQty tagData ) {
+        assertEquals( "FIX80_QTY_ALLOC_SHARES", tagData.toEnumLabelString());
+        assertEquals( "ALLOC_SHARES", tagData.toEnumNameString());
+        assertEquals( "80", tagData.toEnumIDString());
+        assertEquals( "AllocShares", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void TagGetDataValueTest() {
         Tag80QtyAllocQty tagData;
+        int oneElement;
 
-        tagData = new Tag80QtyAllocQty(new MyQtyType(Tag80QtyAllocQty.TESTB_QTY_ALLOC_QTY));
-        assertEquals( Tag80QtyAllocQty.TESTB_QTY_ALLOC_QTY, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        oneElement = Tag80QtyAllocQty.TESTA_QTY_ALLOC_QTY;
+        tagData = new Tag80QtyAllocQty(new MyQtyType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = Tag80QtyAllocQty.TESTB_QTY_ALLOC_QTY;
+        tagData = new Tag80QtyAllocQty(new MyQtyType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = 80;
+        tagData = new Tag80QtyAllocQty(new MyQtyType( oneElement ));
+        verifyDataValue( tagData, oneElement );
     }
+
+    private void verifyDataValue( final Tag80QtyAllocQty tagData, final int oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+    }
+
     @Test
     void TagToValuePairStringTest() {
         Tag80QtyAllocQty tagData;
+        int oneElement;
 
-        tagData = new Tag80QtyAllocQty(new MyQtyType(Tag80QtyAllocQty.TESTB_QTY_ALLOC_QTY));
-        assertEquals( tagData.toEnumIDString() + "=" + Tag80QtyAllocQty.TESTB_QTY_ALLOC_QTY,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag80QtyAllocQty.TESTA_QTY_ALLOC_QTY;
+        tagData = new Tag80QtyAllocQty(new MyQtyType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
+
+        oneElement = Tag80QtyAllocQty.TESTB_QTY_ALLOC_QTY;
+        tagData = new Tag80QtyAllocQty(new MyQtyType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
     }
+
+    private void verifyValuePairString( final Tag80QtyAllocQty tagData, final int oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
     @Test
     void TagToStringTest() {
         Tag80QtyAllocQty tagData;
+        int oneElement;
 
-        tagData = new Tag80QtyAllocQty(new MyQtyType(Tag80QtyAllocQty.TESTB_QTY_ALLOC_QTY));
-        assertEquals( String.valueOf(Tag80QtyAllocQty.TESTB_QTY_ALLOC_QTY),
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag80QtyAllocQty.TESTA_QTY_ALLOC_QTY;
+        tagData = new Tag80QtyAllocQty(new MyQtyType( oneElement ));
+        verifyToString( tagData, oneElement );
+
+        oneElement = Tag80QtyAllocQty.TESTB_QTY_ALLOC_QTY;
+        tagData = new Tag80QtyAllocQty(new MyQtyType( oneElement ));
+        verifyToString( tagData, oneElement );
     }
+
+    private void verifyToString( final Tag80QtyAllocQty tagData, final int oneElement ) {
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
     @Test
     void TagToVerboseStringTest() {
         Tag80QtyAllocQty tagData;
+        int oneElement;
 
-        tagData = new Tag80QtyAllocQty(new MyQtyType(Tag80QtyAllocQty.TESTA_QTY_ALLOC_QTY));
+        oneElement = Tag80QtyAllocQty.TESTA_QTY_ALLOC_QTY;
+        tagData = new Tag80QtyAllocQty(new MyQtyType( oneElement ));
+        verifyVerboseString( tagData, oneElement );
+
+        oneElement = Tag80QtyAllocQty.TESTB_QTY_ALLOC_QTY;
+        tagData = new Tag80QtyAllocQty(new MyQtyType( oneElement ));
+        verifyVerboseString( tagData, oneElement );
+    }
+
+    private void verifyVerboseString( final Tag80QtyAllocQty tagData, final int oneElement ) {
         assertEquals( "Tag80QtyAllocQty\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag80QtyAllocQty.TESTA_QTY_ALLOC_QTY + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag80QtyAllocQty.TESTA_QTY_ALLOC_QTY + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

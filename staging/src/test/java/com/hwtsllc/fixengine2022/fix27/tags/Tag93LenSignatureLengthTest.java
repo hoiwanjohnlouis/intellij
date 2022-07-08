@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyLengthType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,78 +27,132 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  93
  *  SignatureLength
  *  Length
- *  <p>
+ *  <p></p>
  *  Number of bytes in signature field.
  */
 class Tag93LenSignatureLengthTest {
     @Test
-    void FIX0093Test() {
-        FIX27 fixData = FIX27.FIX93_LEN_SIGNATURE_LENGTH;
-        assertEquals( "SIGNATURE_LENGTH", fixData.toEnumNameString());
-        assertEquals( "93", fixData.toEnumIDString());
-        assertEquals( "SignatureLength", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0093Test() {
-        int dataLength;
-        Tag93LenSignatureLength tagData;
-
-        dataLength = "BarleymanButterBurr-89Signature".length();
-        tagData = new Tag93LenSignatureLength(new MyLengthType(dataLength) );
-        assertEquals( dataLength, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
     void PrintFIXTagTest() {
         Tag93LenSignatureLength tagData;
+        int oneElement;
 
-        tagData = new Tag93LenSignatureLength(new MyLengthType(Tag93LenSignatureLength.TESTB_LEN_SIGNATURE_LENGTH));
+        oneElement = Tag93LenSignatureLength.TESTA_LEN_SIGNATURE_LENGTH;
+        tagData = new Tag93LenSignatureLength(new MyLengthType( oneElement ));
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag93LenSignatureLength.TESTB_LEN_SIGNATURE_LENGTH;
+        tagData = new Tag93LenSignatureLength(new MyLengthType( oneElement ));
         System.out.println( tagData.toVerboseString() );
     }
+
+    @Test
+    void FIXTest() {
+        Tag93LenSignatureLength tagData;
+        int oneElement;
+
+        oneElement = Tag93LenSignatureLength.TESTA_LEN_SIGNATURE_LENGTH;
+        tagData = new Tag93LenSignatureLength(new MyLengthType( oneElement ));
+        verifyFIXData( tagData );
+
+        oneElement = Tag93LenSignatureLength.TESTB_LEN_SIGNATURE_LENGTH;
+        tagData = new Tag93LenSignatureLength(new MyLengthType( oneElement ));
+        verifyFIXData( tagData );
+    }
+
+    private void verifyFIXData( final Tag93LenSignatureLength tagData ) {
+        assertEquals( "FIX93_LEN_SIGNATURE_LENGTH", tagData.toEnumLabelString());
+        assertEquals( "SIGNATURE_LENGTH", tagData.toEnumNameString());
+        assertEquals( "93", tagData.toEnumIDString());
+        assertEquals( "SignatureLength", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void TagGetDataValueTest() {
         Tag93LenSignatureLength tagData;
+        int oneElement;
 
-        tagData = new Tag93LenSignatureLength(new MyLengthType(Tag93LenSignatureLength.TESTB_LEN_SIGNATURE_LENGTH));
-        assertEquals( Tag93LenSignatureLength.TESTB_LEN_SIGNATURE_LENGTH, tagData.getDataValue());
+        oneElement = Tag93LenSignatureLength.TESTA_LEN_SIGNATURE_LENGTH;
+        tagData = new Tag93LenSignatureLength(new MyLengthType( oneElement ));
+        VerifyDataValue( tagData, oneElement );
+
+        oneElement = Tag93LenSignatureLength.TESTB_LEN_SIGNATURE_LENGTH;
+        tagData = new Tag93LenSignatureLength(new MyLengthType( oneElement ));
+        VerifyDataValue( tagData, oneElement );
+
+        oneElement = "BarleymanButterBurr-Tag93LenSignatureLength".length();
+        tagData = new Tag93LenSignatureLength(new MyLengthType(oneElement) );
+        VerifyDataValue( tagData, oneElement );
+    }
+
+    private void VerifyDataValue( final Tag93LenSignatureLength tagData, final int oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
     }
+
     @Test
     void TagToValuePairStringTest() {
         Tag93LenSignatureLength tagData;
+        int oneElement;
 
-        tagData = new Tag93LenSignatureLength(new MyLengthType(Tag93LenSignatureLength.TESTB_LEN_SIGNATURE_LENGTH));
-        assertEquals( tagData.toEnumIDString() + "=" + Tag93LenSignatureLength.TESTB_LEN_SIGNATURE_LENGTH,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag93LenSignatureLength.TESTA_LEN_SIGNATURE_LENGTH;
+        tagData = new Tag93LenSignatureLength(new MyLengthType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
+
+        oneElement = Tag93LenSignatureLength.TESTB_LEN_SIGNATURE_LENGTH;
+        tagData = new Tag93LenSignatureLength(new MyLengthType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
     }
+
+    private void verifyValuePairString( final Tag93LenSignatureLength tagData, final int oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
     @Test
     void TagToStringTest() {
         Tag93LenSignatureLength tagData;
+        int oneElement;
 
-        tagData = new Tag93LenSignatureLength(new MyLengthType(Tag93LenSignatureLength.TESTB_LEN_SIGNATURE_LENGTH));
-        assertEquals( String.valueOf(Tag93LenSignatureLength.TESTB_LEN_SIGNATURE_LENGTH),
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag93LenSignatureLength.TESTA_LEN_SIGNATURE_LENGTH;
+        tagData = new Tag93LenSignatureLength(new MyLengthType( oneElement ));
+        VerifyToString( tagData, oneElement );
+
+        oneElement = Tag93LenSignatureLength.TESTB_LEN_SIGNATURE_LENGTH;
+        tagData = new Tag93LenSignatureLength(new MyLengthType( oneElement ));
+        VerifyToString( tagData, oneElement );
     }
+
+    private void VerifyToString( final Tag93LenSignatureLength tagData, final int oneElement ) {
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
     @Test
     void TagToVerboseStringTest() {
         Tag93LenSignatureLength tagData;
+        int oneElement;
 
-        tagData = new Tag93LenSignatureLength(new MyLengthType(Tag93LenSignatureLength.TESTA_LEN_SIGNATURE_LENGTH));
+        oneElement = Tag93LenSignatureLength.TESTA_LEN_SIGNATURE_LENGTH;
+        tagData = new Tag93LenSignatureLength(new MyLengthType( oneElement ));
+        verifyVerboseString( tagData, oneElement );
+
+        oneElement = Tag93LenSignatureLength.TESTB_LEN_SIGNATURE_LENGTH;
+        tagData = new Tag93LenSignatureLength(new MyLengthType( oneElement ));
+        verifyVerboseString( tagData, oneElement );
+    }
+
+    private void verifyVerboseString( final Tag93LenSignatureLength tagData, final int oneElement ) {
         assertEquals( "Tag93LenSignatureLength\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag93LenSignatureLength.TESTA_LEN_SIGNATURE_LENGTH + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag93LenSignatureLength.TESTA_LEN_SIGNATURE_LENGTH + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

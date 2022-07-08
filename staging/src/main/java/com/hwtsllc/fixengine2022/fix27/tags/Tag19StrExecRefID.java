@@ -35,9 +35,9 @@ public class Tag19StrExecRefID extends FIX27Abstract implements LogValuePairStri
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_EXEC_REF_ID
-            = "BilboBaggins-Tag19StrExecRefID";
+            = "HedyLamarr-Tag19StrExecRefID";
     public final static String TESTB_STR_EXEC_REF_ID
-            = "Gandalf-Tag19StrExecRefID";
+            = "PauletteGoddard-Tag19StrExecRefID";
 
     public Tag19StrExecRefID(MyStringType dataValue) {
         setFixType(FIX27.FIX19_STR_EXEC_REF_ID);

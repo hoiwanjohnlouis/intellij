@@ -26,14 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  12
  *  Commission
  *  Amt
+ *  <p></p>
  *  Commission.
+ *  <p></p>
  *  Note if CommType (13) is percentage, Commission of 5% should be represented as .05.
  */
 public class Tag12AmtCommission extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyAmtType dataValue;
 
-    public final static double TESTA_AMT_COMMISSION = 1.2D;
-    public final static double TESTB_AMT_COMMISSION = 2.1D;
+    public final static double TESTA_AMT_COMMISSION
+            = 1.2D;
+    public final static double TESTB_AMT_COMMISSION
+            = 2.1D;
 
     public Tag12AmtCommission(MyAmtType dataValue) {
         setFixType(FIX27.FIX12_AMT_COMMISSION);

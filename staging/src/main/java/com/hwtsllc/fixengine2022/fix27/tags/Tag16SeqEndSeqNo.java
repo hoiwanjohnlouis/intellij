@@ -26,17 +26,22 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  16
  *  EndSeqNo
  *  SeqNum
+ *  <p></p>
  *  Message sequence number of last message in range to be resent.
- *
+ *  <p></p>
  *  If request is for a single message BeginSeqNo (7) = EndSeqNo.
- *  If request is for all messages subsequent to a particular message,
+ *  <p></p>
+ *  If request is for all messages subsequent from a particular message,
+ *  <p></p>
  *  EndSeqNo = "0" (representing infinity).
  */
 public class Tag16SeqEndSeqNo extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MySeqNumType dataValue;
 
-    public final static int TESTA_SEQ_END_SEQ_NO = 256;
-    public final static int TESTB_SEQ_END_SEQ_NO = 512;
+    public final static int TESTA_SEQ_END_SEQ_NO
+            = 256;
+    public final static int TESTB_SEQ_END_SEQ_NO
+            = 512;
 
     public Tag16SeqEndSeqNo(MySeqNumType dataValue) {
         setFixType(FIX27.FIX16_SEQ_END_SEQ_NO);

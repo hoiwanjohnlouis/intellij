@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,76 +27,132 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  78
  *  NoAllocs
  *  NumInGroup
- *  <p>
+ *  <p></p>
  *  Number of  repeating AllocAccount (79) or AllocPrice (366) entries.
  */
 class Tag78NumNoAllocsTest {
     @Test
-    void FIX0078Test() {
-        FIX27 fixData = FIX27.FIX78_NUM_NO_ALLOCS;
-        assertEquals( "NO_ALLOCS", fixData.toEnumNameString());
-        assertEquals( "78", fixData.toEnumIDString());
-        assertEquals( "NoAllocs", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0078Test() {
-        Tag78NumNoAllocs tagData;
-
-        tagData = new Tag78NumNoAllocs(new MyNumInGroupType(321));
-        assertEquals( 321, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
     void PrintFIXTagTest() {
         Tag78NumNoAllocs tagData;
+        int oneElement;
 
-        tagData = new Tag78NumNoAllocs(new MyNumInGroupType(Tag78NumNoAllocs.TESTB_NUM_NO_ALLOCS));
+        oneElement = Tag78NumNoAllocs.TESTA_NUM_NO_ALLOCS;
+        tagData = new Tag78NumNoAllocs(new MyNumInGroupType( oneElement ));
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag78NumNoAllocs.TESTB_NUM_NO_ALLOCS;
+        tagData = new Tag78NumNoAllocs(new MyNumInGroupType( oneElement ));
         System.out.println( tagData.toVerboseString() );
     }
+
+    @Test
+    void FIXTest() {
+        Tag78NumNoAllocs tagData;
+        int oneElement;
+
+        oneElement = Tag78NumNoAllocs.TESTA_NUM_NO_ALLOCS;
+        tagData = new Tag78NumNoAllocs(new MyNumInGroupType( oneElement ));
+        verifyFIXData( tagData );
+
+        oneElement = Tag78NumNoAllocs.TESTB_NUM_NO_ALLOCS;
+        tagData = new Tag78NumNoAllocs(new MyNumInGroupType( oneElement ));
+        verifyFIXData( tagData );
+    }
+
+    private void verifyFIXData( final Tag78NumNoAllocs tagData ) {
+        assertEquals( "FIX78_NUM_NO_ALLOCS", tagData.toEnumLabelString());
+        assertEquals( "NO_ALLOCS", tagData.toEnumNameString());
+        assertEquals( "78", tagData.toEnumIDString());
+        assertEquals( "NoAllocs", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void TagGetDataValueTest() {
         Tag78NumNoAllocs tagData;
+        int oneElement;
 
-        tagData = new Tag78NumNoAllocs(new MyNumInGroupType(Tag78NumNoAllocs.TESTB_NUM_NO_ALLOCS));
-        assertEquals( Tag78NumNoAllocs.TESTB_NUM_NO_ALLOCS, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        oneElement = Tag78NumNoAllocs.TESTA_NUM_NO_ALLOCS;
+        tagData = new Tag78NumNoAllocs(new MyNumInGroupType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = Tag78NumNoAllocs.TESTB_NUM_NO_ALLOCS;
+        tagData = new Tag78NumNoAllocs(new MyNumInGroupType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = 321;
+        tagData = new Tag78NumNoAllocs(new MyNumInGroupType( oneElement ));
+        verifyDataValue( tagData, oneElement );
     }
+
+    private void verifyDataValue( final Tag78NumNoAllocs tagData, final int oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
+    }
+
     @Test
     void TagToValuePairStringTest() {
         Tag78NumNoAllocs tagData;
+        int oneElement;
 
-        tagData = new Tag78NumNoAllocs(new MyNumInGroupType(Tag78NumNoAllocs.TESTB_NUM_NO_ALLOCS));
-        assertEquals( tagData.toEnumIDString() + "=" + Tag78NumNoAllocs.TESTB_NUM_NO_ALLOCS,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag78NumNoAllocs.TESTA_NUM_NO_ALLOCS;
+        tagData = new Tag78NumNoAllocs(new MyNumInGroupType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
+
+        oneElement = Tag78NumNoAllocs.TESTB_NUM_NO_ALLOCS;
+        tagData = new Tag78NumNoAllocs(new MyNumInGroupType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
     }
+
+    private void verifyValuePairString( final Tag78NumNoAllocs tagData, final int oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
     @Test
     void TagToStringTest() {
         Tag78NumNoAllocs tagData;
+        int oneElement;
 
-        tagData = new Tag78NumNoAllocs(new MyNumInGroupType(Tag78NumNoAllocs.TESTB_NUM_NO_ALLOCS));
-        assertEquals( String.valueOf(Tag78NumNoAllocs.TESTB_NUM_NO_ALLOCS),
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag78NumNoAllocs.TESTA_NUM_NO_ALLOCS;
+        tagData = new Tag78NumNoAllocs(new MyNumInGroupType( oneElement ));
+        verifyToString( tagData, oneElement );
+
+        oneElement = Tag78NumNoAllocs.TESTB_NUM_NO_ALLOCS;
+        tagData = new Tag78NumNoAllocs(new MyNumInGroupType( oneElement ));
+        verifyToString( tagData, oneElement );
     }
+
+    private void verifyToString( final Tag78NumNoAllocs tagData, final int oneElement ) {
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
     @Test
     void TagToVerboseStringTest() {
         Tag78NumNoAllocs tagData;
+        int oneElement;
 
-        tagData = new Tag78NumNoAllocs(new MyNumInGroupType(Tag78NumNoAllocs.TESTA_NUM_NO_ALLOCS));
+        oneElement = Tag78NumNoAllocs.TESTA_NUM_NO_ALLOCS;
+        tagData = new Tag78NumNoAllocs(new MyNumInGroupType( oneElement ));
+        verifyVerboseString( tagData, oneElement );
+
+        oneElement = Tag78NumNoAllocs.TESTB_NUM_NO_ALLOCS;
+        tagData = new Tag78NumNoAllocs(new MyNumInGroupType( oneElement ));
+        verifyVerboseString( tagData, oneElement );
+    }
+
+    private void verifyVerboseString( final Tag78NumNoAllocs tagData, final int oneElement ) {
         assertEquals( "Tag78NumNoAllocs\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag78NumNoAllocs.TESTA_NUM_NO_ALLOCS + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag78NumNoAllocs.TESTA_NUM_NO_ALLOCS + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

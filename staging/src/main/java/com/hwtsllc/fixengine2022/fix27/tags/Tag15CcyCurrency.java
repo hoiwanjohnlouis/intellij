@@ -26,17 +26,22 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  15
  *  Currency
  *  Currency
+ *  <p></p>
  *  Identifies currency used for price.
- *
+ *  <p></p>
  *  Absence of this field is interpreted as the default for the security.
+ *  <p></p>
  *  It is recommended that systems provide the currency value whenever possible.
+ *  <p></p>
  *  See "Appendix 6-A: Valid Currency Codes" for information on obtaining valid values.
  */
 public class Tag15CcyCurrency extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyCurrencyType dataValue;
 
-    public final static String TESTA_CCY_CURRENCY = "USD"; // fake data
-    public final static String TESTB_CCY_CURRENCY = "EUR";
+    public final static String TESTA_CCY_CURRENCY
+            = "USD";
+    public final static String TESTB_CCY_CURRENCY
+            = "EUR";
 
     public Tag15CcyCurrency(MyCurrencyType dataValue) {
         setFixType(FIX27.FIX15_CCY_CURRENCY);

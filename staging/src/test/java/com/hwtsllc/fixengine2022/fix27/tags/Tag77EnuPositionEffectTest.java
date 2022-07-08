@@ -58,6 +58,16 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag77EnuPositionEffectTest {
     @Test
+    void PrintFIXTagTest() {
+        Tag77EnuPositionEffect tagData;
+
+        // loop around the ENUM and process
+        for (MyEnumPositionEffect oneEnum : MyEnumPositionEffect.values()) {
+            tagData = new Tag77EnuPositionEffect(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
     void Tag0077Test() {
         Tag77EnuPositionEffect tagData;
 
@@ -98,22 +108,13 @@ class Tag77EnuPositionEffectTest {
         }
     }
     @Test
-    void PrintFIXTagTest() {
-        Tag77EnuPositionEffect tagData;
-
-        // loop around the ENUM and process
-        for (MyEnumPositionEffect oneEnum : MyEnumPositionEffect.values()) {
-            tagData = new Tag77EnuPositionEffect(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
     void TagGetDataValueTest() {
         Tag77EnuPositionEffect tagData;
 
         // loop around the ENUM and process
         for (MyEnumPositionEffect oneEnum : MyEnumPositionEffect.values()) {
             tagData = new Tag77EnuPositionEffect(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
             assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -126,8 +127,9 @@ class Tag77EnuPositionEffectTest {
         // loop around the ENUM and process
         for (MyEnumPositionEffect oneEnum : MyEnumPositionEffect.values()) {
             tagData = new Tag77EnuPositionEffect(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -154,8 +156,8 @@ class Tag77EnuPositionEffectTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

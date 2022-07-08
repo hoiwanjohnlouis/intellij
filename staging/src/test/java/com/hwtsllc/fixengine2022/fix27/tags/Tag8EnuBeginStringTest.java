@@ -46,6 +46,16 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag8EnuBeginStringTest {
     @Test
+    void PrintFIXTagTest() {
+        Tag8EnuBeginString tagData;
+
+        // loop around the ENUM and process
+        for (Enum8BeginString oneEnum : Enum8BeginString.values()) {
+            tagData = new Tag8EnuBeginString(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
     void Tag0008Test() {
         Tag8EnuBeginString tagData;
 
@@ -99,22 +109,13 @@ class Tag8EnuBeginStringTest {
         }
     }
     @Test
-    void PrintFIXTagTest() {
-        Tag8EnuBeginString tagData;
-
-        // loop around the ENUM and process
-        for (Enum8BeginString oneEnum : Enum8BeginString.values()) {
-            tagData = new Tag8EnuBeginString(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
     void TagGetDataValueTest() {
         Tag8EnuBeginString tagData;
 
         // loop around the ENUM and process
         for (Enum8BeginString oneEnum : Enum8BeginString.values()) {
             tagData = new Tag8EnuBeginString(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
             assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -127,6 +128,8 @@ class Tag8EnuBeginStringTest {
         // loop around the ENUM and process
         for (Enum8BeginString oneEnum : Enum8BeginString.values()) {
             tagData = new Tag8EnuBeginString(oneEnum);
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
@@ -154,8 +157,8 @@ class Tag8EnuBeginStringTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

@@ -26,19 +26,23 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  68
  *  TotNoOrders
  *  int
+ *  <p></p>
  *  Total number of list order entries across all messages.
- *
+ *  <p></p>
  *  Should be the sum of all NoOrders (73) in each message that has
  *  repeating list order entries related to the same ListID (66).
+ *  <p></p>
  *  Used to support fragmentation.
- *
+ *  <p></p>
  *  (Prior to FIX 4.2 this field was named "ListNoOrds")
  */
 public class Tag68IntTotNoOrders extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_TOT_NO_ORDERS = 1;
-    public final static int TESTB_INT_TOT_NO_ORDERS = 3;
+    public final static int TESTA_INT_TOT_NO_ORDERS
+            = 1;
+    public final static int TESTB_INT_TOT_NO_ORDERS
+            = 3;
 
     public Tag68IntTotNoOrders(MyIntType dataValue) {
         setFixType(FIX27.FIX68_INT_TOT_NO_ORDERS);

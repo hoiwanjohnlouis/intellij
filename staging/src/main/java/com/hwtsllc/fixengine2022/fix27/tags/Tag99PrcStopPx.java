@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  99
  *  StopPx
  *  Price
- *  <p>
+ *  <p></p>
  *  Price per unit of quantity (e.g. per share)
  */
 public class Tag99PrcStopPx extends FIX27Abstract implements LogValuePairString, LogVerboseString {

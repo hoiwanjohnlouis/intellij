@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -43,45 +42,6 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag11StrClOrdIDTest {
     @Test
-    void FIXTest() {
-        FIX27 fixData = FIX27.FIX11_STR_CL_ORD_ID;
-        assertEquals( "CL_ORD_ID", fixData.toEnumNameString());
-        assertEquals( "11", fixData.toEnumIDString());
-        assertEquals( "ClOrdID", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0011Test() {
-        Tag11StrClOrdID tagData;
-        String oneElement;
-
-        oneElement = "MLCO-ABCD1234";
-        tagData = new Tag11StrClOrdID(new MyStringType( oneElement ) );
-        verifyTagInformation( tagData, oneElement );
-
-        oneElement = Tag11StrClOrdID.TESTA_STR_CL_ORD_ID;
-        tagData = new Tag11StrClOrdID(new MyStringType( oneElement ) );
-        verifyTagInformation( tagData, oneElement );
-
-        oneElement = Tag11StrClOrdID.TESTB_STR_CL_ORD_ID;
-        tagData = new Tag11StrClOrdID(new MyStringType( oneElement ) );
-        verifyTagInformation( tagData, oneElement );
-    }
-
-    private void verifyTagInformation( Tag11StrClOrdID tagData, String oneElement ) {
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "CL_ORD_ID", tagData.toEnumNameString());
-        assertEquals( "11", tagData.toEnumIDString());
-        assertEquals( "ClOrdID", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-    }
-
-    @Test
     void PrintFIXTagTest() {
         Tag11StrClOrdID tagData;
         String oneElement;
@@ -94,36 +54,94 @@ class Tag11StrClOrdIDTest {
         tagData = new Tag11StrClOrdID(new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
+
+    @Test
+    void FIXTest() {
+        Tag11StrClOrdID tagData;
+        String oneElement;
+
+        oneElement = Tag11StrClOrdID.TESTA_STR_CL_ORD_ID;
+        tagData = new Tag11StrClOrdID(new MyStringType( oneElement ) );
+        verifyFIXData( tagData );
+
+        oneElement = Tag11StrClOrdID.TESTB_STR_CL_ORD_ID;
+        tagData = new Tag11StrClOrdID(new MyStringType( oneElement ) );
+        verifyFIXData( tagData );
+    }
+
+    private void verifyFIXData( final Tag11StrClOrdID tagData ) {
+        assertEquals( "FIX11_STR_CL_ORD_ID", tagData.toEnumLabelString());
+        assertEquals( "CL_ORD_ID", tagData.toEnumNameString());
+        assertEquals( "11", tagData.toEnumIDString());
+        assertEquals( "ClOrdID", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void TagGetDataValueTest() {
         Tag11StrClOrdID tagData;
         String oneElement;
 
+        oneElement = Tag11StrClOrdID.TESTA_STR_CL_ORD_ID;
+        tagData = new Tag11StrClOrdID(new MyStringType( oneElement ) );
+        verifyDataValue( tagData, oneElement );
+
         oneElement = Tag11StrClOrdID.TESTB_STR_CL_ORD_ID;
         tagData = new Tag11StrClOrdID(new MyStringType( oneElement ) );
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = "MLCO-ABCD1234";
+        tagData = new Tag11StrClOrdID(new MyStringType( oneElement ) );
+        verifyDataValue( tagData, oneElement );
+    }
+
+    private void verifyDataValue( final Tag11StrClOrdID tagData, final String oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+
     @Test
     void TagToValuePairStringTest() {
         Tag11StrClOrdID tagData;
         String oneElement;
 
+        oneElement = Tag11StrClOrdID.TESTA_STR_CL_ORD_ID;
+        tagData = new Tag11StrClOrdID(new MyStringType( oneElement ) );
+        verifyValuePairString( tagData, oneElement );
+
         oneElement = Tag11StrClOrdID.TESTB_STR_CL_ORD_ID;
         tagData = new Tag11StrClOrdID(new MyStringType( oneElement ) );
+        verifyValuePairString( tagData, oneElement );
+    }
+
+    private void verifyValuePairString( final Tag11StrClOrdID tagData, final String oneElement ) {
         assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
+
     @Test
     void TagToStringTest() {
         Tag11StrClOrdID tagData;
         String oneElement;
 
+        oneElement = Tag11StrClOrdID.TESTA_STR_CL_ORD_ID;
+        tagData = new Tag11StrClOrdID(new MyStringType( oneElement ) );
+        verifyToString( tagData, oneElement );
+
         oneElement = Tag11StrClOrdID.TESTB_STR_CL_ORD_ID;
         tagData = new Tag11StrClOrdID(new MyStringType( oneElement ) );
+        verifyToString( tagData, oneElement );
+    }
+
+    private void verifyToString( final Tag11StrClOrdID tagData, final String oneElement ) {
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
+
     @Test
     void TagToVerboseStringTest() {
         Tag11StrClOrdID tagData;
@@ -131,13 +149,21 @@ class Tag11StrClOrdIDTest {
 
         oneElement = Tag11StrClOrdID.TESTA_STR_CL_ORD_ID;
         tagData = new Tag11StrClOrdID(new MyStringType( oneElement ) );
+        verifyVerboseString( tagData, oneElement );
+
+        oneElement = Tag11StrClOrdID.TESTB_STR_CL_ORD_ID;
+        tagData = new Tag11StrClOrdID(new MyStringType( oneElement ) );
+        verifyVerboseString( tagData, oneElement );
+    }
+
+    private void verifyVerboseString( final Tag11StrClOrdID tagData, final String oneElement ) {
         assertEquals( "Tag11StrClOrdID\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

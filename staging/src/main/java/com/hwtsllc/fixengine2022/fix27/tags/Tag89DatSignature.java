@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  89
  *  Signature
  *  data
- *  <p>
+ *  <p></p>
  *  Electronic signature
  */
 public class Tag89DatSignature extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MyDataType dataValue;
 
-    public final static String TESTA_DAT_SIGNATURE = "BilboBaggins-89StSignature";
-    public final static String TESTB_DAT_SIGNATURE = "Gandalf-89StSignature";
+    public final static String TESTA_DAT_SIGNATURE
+            = "BilboBaggins-Tag89DatSignature";
+    public final static String TESTB_DAT_SIGNATURE
+            = "Gandalf-Tag89DatSignature";
 
     public Tag89DatSignature(MyDataType dataValue) {
         setFixType(FIX27.FIX89_DAT_SIGNATURE);

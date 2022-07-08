@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -34,53 +33,13 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  (will be 0 (zero) for ExecType (50) =I (Order Status)).
  *  <p></p>
  *  Uniqueness must be guaranteed within a single trading day or the life of a multi-day order.
+ *  <p></p>
  *  Firms which accept multi-day orders should consider embedding a date within
  *  the ExecID field to assure uniqueness across days.
  *  <p></p>
  *  (Prior to FIX 4.1 this field was of type int)
  */
 class Tag17StrExecIDTest {
-    @Test
-    void FIXTest() {
-        FIX27 fixData = FIX27.FIX17_STR_EXEC_ID;
-        assertEquals( "EXEC_ID", fixData.toEnumNameString());
-        assertEquals( "17", fixData.toEnumIDString());
-        assertEquals( "ExecID", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0017Test() {
-        Tag17StrExecID tagData;
-        String oneElement;
-
-        oneElement = "BEST-1234";
-        tagData = new Tag17StrExecID(new MyStringType( oneElement ));
-        verifyTagInformation( oneElement, tagData );
-
-        oneElement = Tag17StrExecID.TESTA_STR_EXEC_ID;
-        tagData = new Tag17StrExecID(new MyStringType( oneElement ));
-        verifyTagInformation( oneElement, tagData );
-
-        oneElement = Tag17StrExecID.TESTB_STR_EXEC_ID;
-        tagData = new Tag17StrExecID(new MyStringType( oneElement ));
-        verifyTagInformation( oneElement, tagData );
-    }
-
-    private void verifyTagInformation( String oneElement, Tag17StrExecID tagData ) {
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "FIX17_STR_EXEC_ID", tagData.toEnumLabelString());
-        assertEquals( "EXEC_ID", tagData.toEnumNameString());
-        assertEquals( "17", tagData.toEnumIDString());
-        assertEquals( "ExecID", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-    }
-
     @Test
     void PrintFIXTagTest() {
         Tag17StrExecID tagData;
@@ -94,36 +53,94 @@ class Tag17StrExecIDTest {
         tagData = new Tag17StrExecID(new MyStringType( oneElement ));
         System.out.println( tagData.toVerboseString() );
     }
+
+    @Test
+    void FIXTest() {
+        Tag17StrExecID tagData;
+        String oneElement;
+
+        oneElement = Tag17StrExecID.TESTA_STR_EXEC_ID;
+        tagData = new Tag17StrExecID(new MyStringType( oneElement ));
+        verifyFIXData( tagData );
+
+        oneElement = Tag17StrExecID.TESTB_STR_EXEC_ID;
+        tagData = new Tag17StrExecID(new MyStringType( oneElement ));
+        verifyFIXData( tagData );
+    }
+
+    private void verifyFIXData( final Tag17StrExecID tagData ) {
+        assertEquals( "FIX17_STR_EXEC_ID", tagData.toEnumLabelString());
+        assertEquals( "EXEC_ID", tagData.toEnumNameString());
+        assertEquals( "17", tagData.toEnumIDString());
+        assertEquals( "ExecID", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void TagGetDataValueTest() {
         Tag17StrExecID tagData;
         String oneElement;
 
+        oneElement = Tag17StrExecID.TESTA_STR_EXEC_ID;
+        tagData = new Tag17StrExecID(new MyStringType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
         oneElement = Tag17StrExecID.TESTB_STR_EXEC_ID;
         tagData = new Tag17StrExecID(new MyStringType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = "BEST-1234";
+        tagData = new Tag17StrExecID(new MyStringType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+    }
+
+    private void verifyDataValue( final Tag17StrExecID tagData, final String oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+
     @Test
     void TagToValuePairStringTest() {
         Tag17StrExecID tagData;
         String oneElement;
 
+        oneElement = Tag17StrExecID.TESTA_STR_EXEC_ID;
+        tagData = new Tag17StrExecID(new MyStringType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
+
         oneElement = Tag17StrExecID.TESTB_STR_EXEC_ID;
         tagData = new Tag17StrExecID(new MyStringType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
+    }
+
+    private void verifyValuePairString( final Tag17StrExecID tagData, final String oneElement ) {
         assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
+
     @Test
     void TagToStringTest() {
         Tag17StrExecID tagData;
         String oneElement;
 
+        oneElement = Tag17StrExecID.TESTA_STR_EXEC_ID;
+        tagData = new Tag17StrExecID(new MyStringType( oneElement ));
+        verifyToString( tagData, oneElement );
+
         oneElement = Tag17StrExecID.TESTB_STR_EXEC_ID;
         tagData = new Tag17StrExecID(new MyStringType( oneElement ));
+        verifyToString( tagData, oneElement );
+    }
+
+    private void verifyToString( final Tag17StrExecID tagData, final String oneElement ) {
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
+
     @Test
     void TagToVerboseStringTest() {
         Tag17StrExecID tagData;
@@ -131,13 +148,21 @@ class Tag17StrExecIDTest {
 
         oneElement = Tag17StrExecID.TESTA_STR_EXEC_ID;
         tagData = new Tag17StrExecID(new MyStringType( oneElement ));
+        verifyVerboseString( tagData, oneElement );
+
+        oneElement = Tag17StrExecID.TESTB_STR_EXEC_ID;
+        tagData = new Tag17StrExecID(new MyStringType( oneElement ));
+        verifyVerboseString( tagData, oneElement );
+    }
+
+    private void verifyVerboseString( final Tag17StrExecID tagData, final String oneElement ) {
         assertEquals( "Tag17StrExecID\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

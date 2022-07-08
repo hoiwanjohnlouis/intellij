@@ -36,6 +36,16 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag43EnuPossDupFlagTest {
     @Test
+    void PrintFIXTagTest() {
+        Tag43EnuPossDupFlag tagData;
+
+        // loop around the ENUM and process
+        for (Enum43PossDupFlag oneEnum : Enum43PossDupFlag.values()) {
+            tagData = new Tag43EnuPossDupFlag(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
+    }
+    @Test
     void Tag0043Test() {
         Tag43EnuPossDupFlag tagData;
 
@@ -65,22 +75,13 @@ class Tag43EnuPossDupFlagTest {
         }
     }
     @Test
-    void PrintFIXTagTest() {
-        Tag43EnuPossDupFlag tagData;
-
-        // loop around the ENUM and process
-        for (Enum43PossDupFlag oneEnum : Enum43PossDupFlag.values()) {
-            tagData = new Tag43EnuPossDupFlag(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
     void TagGetDataValueTest() {
         Tag43EnuPossDupFlag tagData;
 
         // loop around the ENUM and process
         for (Enum43PossDupFlag oneEnum : Enum43PossDupFlag.values()) {
             tagData = new Tag43EnuPossDupFlag(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
             assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -93,8 +94,9 @@ class Tag43EnuPossDupFlagTest {
         // loop around the ENUM and process
         for (Enum43PossDupFlag oneEnum : Enum43PossDupFlag.values()) {
             tagData = new Tag43EnuPossDupFlag(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -121,8 +123,8 @@ class Tag43EnuPossDupFlagTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

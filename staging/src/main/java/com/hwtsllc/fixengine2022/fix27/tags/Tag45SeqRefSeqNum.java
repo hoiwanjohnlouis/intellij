@@ -26,13 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  45
  *  RefSeqNum
  *  SeqNum
+ *  <p></p>
  *  Reference message sequence number
  */
 public class Tag45SeqRefSeqNum extends FIX27Abstract implements LogValuePairString, LogVerboseString {
     private final MySeqNumType dataValue;
 
-    public final static int TESTA_SEQ_REF_SEQ_NO = 567;  // same as tag34 TESTA_MSG_SEQ_NO
-    public final static int TESTB_SEQ_REF_SEQ_NO = 1482;  // same as tag34 TESTB_MSG_SEQ_NO
+    public final static int TESTA_SEQ_REF_SEQ_NO
+            = 567;   // same as tag34 TESTA_MSG_SEQ_NO
+    public final static int TESTB_SEQ_REF_SEQ_NO
+            = 1482;  // same as tag34 TESTB_MSG_SEQ_NO
 
     public Tag45SeqRefSeqNum(MySeqNumType dataValue) {
         setFixType(FIX27.FIX45_SEQ_REF_SEQ_NUM);

@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyDataType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,76 +27,132 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  89
  *  Signature
  *  data
- *  <p>
+ *  <p></p>
  *  Electronic signature
  */
 class Tag89DatSignatureTest {
     @Test
-    void FIX0089Test() {
-        FIX27 fixData = FIX27.FIX89_DAT_SIGNATURE;
-        assertEquals( "SIGNATURE", fixData.toEnumNameString());
-        assertEquals( "89", fixData.toEnumIDString());
-        assertEquals( "Signature", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, fixData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0089Test() {
-        Tag89DatSignature tagData;
-
-        tagData = new Tag89DatSignature(new MyDataType("BarleymanButterBurr-89StSignature") );
-        assertEquals( "BarleymanButterBurr-89StSignature", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
     void PrintFIXTagTest() {
         Tag89DatSignature tagData;
+        String oneElement;
 
-        tagData = new Tag89DatSignature(new MyDataType(Tag89DatSignature.TESTB_DAT_SIGNATURE));
+        oneElement = Tag89DatSignature.TESTA_DAT_SIGNATURE;
+        tagData = new Tag89DatSignature(new MyDataType( oneElement ));
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag89DatSignature.TESTB_DAT_SIGNATURE;
+        tagData = new Tag89DatSignature(new MyDataType( oneElement ));
         System.out.println( tagData.toVerboseString() );
     }
+
+    @Test
+    void FIXTest() {
+        Tag89DatSignature tagData;
+        String oneElement;
+
+        oneElement = Tag89DatSignature.TESTA_DAT_SIGNATURE;
+        tagData = new Tag89DatSignature(new MyDataType( oneElement ));
+        verifyFIXData( tagData );
+
+        oneElement = Tag89DatSignature.TESTB_DAT_SIGNATURE;
+        tagData = new Tag89DatSignature(new MyDataType( oneElement ));
+        verifyFIXData( tagData );
+    }
+
+    private void verifyFIXData( final Tag89DatSignature tagData ) {
+        assertEquals( "FIX89_DAT_SIGNATURE", tagData.toEnumLabelString());
+        assertEquals( "SIGNATURE", tagData.toEnumNameString());
+        assertEquals( "89", tagData.toEnumIDString());
+        assertEquals( "Signature", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void TagGetDataValueTest() {
         Tag89DatSignature tagData;
+        String oneElement;
 
-        tagData = new Tag89DatSignature(new MyDataType(Tag89DatSignature.TESTB_DAT_SIGNATURE));
-        assertEquals( Tag89DatSignature.TESTB_DAT_SIGNATURE, tagData.getDataValue());
+        oneElement = Tag89DatSignature.TESTA_DAT_SIGNATURE;
+        tagData = new Tag89DatSignature(new MyDataType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = Tag89DatSignature.TESTB_DAT_SIGNATURE;
+        tagData = new Tag89DatSignature(new MyDataType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = "BarleymanButterBurr-Tag89DatSignature";
+        tagData = new Tag89DatSignature(new MyDataType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+    }
+
+    private void verifyDataValue( final Tag89DatSignature tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+
     @Test
     void TagToValuePairStringTest() {
         Tag89DatSignature tagData;
+        String oneElement;
 
-        tagData = new Tag89DatSignature(new MyDataType(Tag89DatSignature.TESTB_DAT_SIGNATURE));
-        assertEquals( tagData.toEnumIDString() + "=" + Tag89DatSignature.TESTB_DAT_SIGNATURE,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag89DatSignature.TESTA_DAT_SIGNATURE;
+        tagData = new Tag89DatSignature(new MyDataType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
+
+        oneElement = Tag89DatSignature.TESTB_DAT_SIGNATURE;
+        tagData = new Tag89DatSignature(new MyDataType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
     }
+
+    private void verifyValuePairString( final Tag89DatSignature tagData, final String oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
     @Test
     void TagToStringTest() {
         Tag89DatSignature tagData;
+        String oneElement;
 
-        tagData = new Tag89DatSignature(new MyDataType(Tag89DatSignature.TESTB_DAT_SIGNATURE));
-        assertEquals( Tag89DatSignature.TESTB_DAT_SIGNATURE,
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag89DatSignature.TESTA_DAT_SIGNATURE;
+        tagData = new Tag89DatSignature(new MyDataType( oneElement ));
+        verifyToString( tagData, oneElement );
+
+        oneElement = Tag89DatSignature.TESTB_DAT_SIGNATURE;
+        tagData = new Tag89DatSignature(new MyDataType( oneElement ));
+        verifyToString( tagData, oneElement );
     }
+
+    private void verifyToString( final Tag89DatSignature tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
     @Test
     void TagToVerboseStringTest() {
         Tag89DatSignature tagData;
+        String oneElement;
 
-        tagData = new Tag89DatSignature(new MyDataType(Tag89DatSignature.TESTA_DAT_SIGNATURE));
+        oneElement = Tag89DatSignature.TESTA_DAT_SIGNATURE;
+        tagData = new Tag89DatSignature(new MyDataType( oneElement ));
+        verifyVerboseString( tagData, oneElement );
+
+        oneElement = Tag89DatSignature.TESTB_DAT_SIGNATURE;
+        tagData = new Tag89DatSignature(new MyDataType( oneElement ));
+        verifyVerboseString( tagData, oneElement );
+    }
+
+    private void verifyVerboseString( final Tag89DatSignature tagData, final String oneElement ) {
         assertEquals( "Tag89DatSignature\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag89DatSignature.TESTA_DAT_SIGNATURE + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag89DatSignature.TESTA_DAT_SIGNATURE + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
