@@ -26,14 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  135
  *  OfferSize
  *  Qty
+ *  <p></p>
  *  Quantity of offer
- *      (Prior to FIX 4.2 this field was of type int)
+ *  <p></p>
+ *  (Prior to FIX 4.2 this field was of type int)
  */
 public class Tag135QtyOfferSize extends FIX40Abstract implements LogValuePairString, LogVerboseString {
     private final MyQtyType dataValue;
 
-    public final static int TESTA_QTY_OFFER_SIZE = 135; // fake data
-    public final static int TESTB_QTY_OFFER_SIZE = 531;
+    public final static int TESTA_QTY_OFFER_SIZE
+            = 135;
+    public final static int TESTB_QTY_OFFER_SIZE
+            = 531;
 
     public Tag135QtyOfferSize(MyQtyType dataValue) {
         setFixType(FIX40.FIX135_QTY_OFFER_SIZE);

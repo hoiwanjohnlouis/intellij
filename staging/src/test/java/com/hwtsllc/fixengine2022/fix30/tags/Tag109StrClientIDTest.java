@@ -27,11 +27,11 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  109
  *  ClientID
  *  String
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.2
- *  <p>
+ *  <p></p>
  *  Firm identifier used in third party-transactions
- *  <p>
+ *  <p></p>
  *  (should not be a substitute for OnBehalfOfCompID/DeliverToCompID).
  */
 // @Deprecated

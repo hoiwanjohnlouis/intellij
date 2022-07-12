@@ -27,7 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  108
  *  HeartBtInt
  *  int
- *  <p>
+ *  <p></p>
  *  Heartbeat interval (seconds)
  */
 class Tag108IntHeartBtIntTest {

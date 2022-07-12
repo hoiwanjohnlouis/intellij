@@ -27,7 +27,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  130
  *  IOINaturalFlag
  *  Boolean
- *  <p>
+ *  <p></p>
  *  Indicates that IOI is the result of an existing agency order
  *  or a facilitation position resulting from an agency order,
  *  not from principal trading or order solicitation activity.

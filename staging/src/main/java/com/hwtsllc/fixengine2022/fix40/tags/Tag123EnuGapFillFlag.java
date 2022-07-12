@@ -27,7 +27,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  123
  *  GapFillFlag
  *  Boolean
- *  <p>
+ *  <p></p>
  *  Indicates that the Sequence Reset message is replacing administrative
  *  or application messages which will not be resent.
  *  <p></p>

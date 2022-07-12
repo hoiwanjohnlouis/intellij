@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.fix40.enums.Enum123GapFillFlag;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,7 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  123
  *  GapFillFlag
  *  Boolean
- *  <p>
+ *  <p></p>
  *  Indicates that the Sequence Reset message is replacing administrative
  *  or application messages which will not be resent.
  *  <p></p>
@@ -37,28 +36,6 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    Y - Gap Fill Message, Msg Seq Num Field Valid
  */
 class Tag123EnuGapFillFlagTest {
-    @Test
-    void FIX0123Test() {
-        FIX40 fixData = FIX40.FIX123_ENU_GAP_FILL_FLAG;
-        assertEquals( "GAP_FILL_FLAG", fixData.toEnumNameString());
-        assertEquals( "123", fixData.toEnumIDString());
-        assertEquals( "GapFillFlag", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0123Test() {
-        Tag123EnuGapFillFlag tagData;
-
-        tagData = new Tag123EnuGapFillFlag(Enum123GapFillFlag.NO);
-        assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag123EnuGapFillFlag(Enum123GapFillFlag.YES);
-        assertEquals( "Y", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
     @Test
     void PrintFIXTagTest() {
         Tag123EnuGapFillFlag tagData;
@@ -70,13 +47,40 @@ class Tag123EnuGapFillFlagTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
+    void FIX0123Test() {
         Tag123EnuGapFillFlag tagData;
 
         // loop around the ENUM and process
         for (Enum123GapFillFlag oneEnum : Enum123GapFillFlag.values()) {
             tagData = new Tag123EnuGapFillFlag(oneEnum);
+            assertEquals( "FIX123_ENU_GAP_FILL_FLAG", tagData.toEnumLabelString());
+            assertEquals( "GAP_FILL_FLAG", tagData.toEnumNameString());
+            assertEquals( "123", tagData.toEnumIDString());
+            assertEquals( "GapFillFlag", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag123EnuGapFillFlag tagData;
+
+        tagData = new Tag123EnuGapFillFlag(Enum123GapFillFlag.NO);
+        assertEquals( "N", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag123EnuGapFillFlag(Enum123GapFillFlag.YES);
+        assertEquals( "Y", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        // loop around the ENUM and process
+        for (Enum123GapFillFlag oneEnum : Enum123GapFillFlag.values()) {
+            tagData = new Tag123EnuGapFillFlag(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
@@ -87,8 +91,9 @@ class Tag123EnuGapFillFlagTest {
         // loop around the ENUM and process
         for (Enum123GapFillFlag oneEnum : Enum123GapFillFlag.values()) {
             tagData = new Tag123EnuGapFillFlag(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -115,8 +120,8 @@ class Tag123EnuGapFillFlagTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

@@ -27,28 +27,34 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  139
  *  MiscFeeType
  *  String
+ *  <p></p>
  *  Indicates type of miscellaneous fee.
+ *  <p></p>
  *  Valid values:
- *      1 - Regulatory (e.g. SEC)
- *      2 - Tax
- *      3 - Local Commission
- *      4 - Exchange Fees
- *      5 - Stamp
- *      6 - Levy
- *      7 - Other
- *      8 - Markup
- *      9 - Consumption Tax
- *      10 - Per transaction
- *      11 - Conversion
- *      12 - Agent
- *      13 - Transfer Fee
- *      14 - Security Lending
+ *  <p>    1 - Regulatory (e.g. SEC)
+ *  <p>    2 - Tax
+ *  <p>    3 - Local Commission
+ *  <p>    4 - Exchange Fees
+ *  <p>    5 - Stamp
+ *  <p></p>
+ *  <p>    6 - Levy
+ *  <p>    7 - Other
+ *  <p>    8 - Markup
+ *  <p>    9 - Consumption Tax
+ *  <p>    10 - Per transaction
+ *  <p></p>
+ *  <p>    11 - Conversion
+ *  <p>    12 - Agent
+ *  <p>    13 - Transfer Fee
+ *  <p>    14 - Security Lending
  */
 public class Tag139EnuMiscFeeType extends FIX40Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum139MiscFeeType dataValue;
 
-    public final static Enum139MiscFeeType TESTA_ENU_MISC_FEE_TYPE = Enum139MiscFeeType.REGULATORY; // fake data
-    public final static Enum139MiscFeeType TESTB_ENU_MISC_FEE_TYPE = Enum139MiscFeeType.TRANSFER_FEE;
+    public final static Enum139MiscFeeType TESTA_ENU_MISC_FEE_TYPE
+            = Enum139MiscFeeType.REGULATORY;
+    public final static Enum139MiscFeeType TESTB_ENU_MISC_FEE_TYPE
+            = Enum139MiscFeeType.TRANSFER_FEE;
 
     public Tag139EnuMiscFeeType(Enum139MiscFeeType dataValue) {
         setFixType(FIX40.FIX139_ENU_MISC_FEE_TYPE);

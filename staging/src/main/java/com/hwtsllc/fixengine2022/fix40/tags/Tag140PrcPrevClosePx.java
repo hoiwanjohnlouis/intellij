@@ -26,13 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  140
  *  PrevClosePx
  *  Price
+ *  <p></p>
  *  Previous closing price of security.
  */
 public class Tag140PrcPrevClosePx extends FIX40Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceType dataValue;
 
-    public final static double TESTA_PRC_PREV_CLOSE_PX = 1.40D;
-    public final static double TESTB_PRC_PREV_CLOSE_PX = 4.1D;
+    public final static double TESTA_PRC_PREV_CLOSE_PX
+            = 1.40D;
+    public final static double TESTB_PRC_PREV_CLOSE_PX
+            = 4.1D;
 
     public Tag140PrcPrevClosePx(MyPriceType dataValue) {
         setFixType(FIX40.FIX140_PRC_PREV_CLOSE_PX);

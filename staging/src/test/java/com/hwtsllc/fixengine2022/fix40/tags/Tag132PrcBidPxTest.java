@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,74 +27,129 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  132
  *  BidPx
  *  Price
+ *  <p></p>
  *  Bid price/rate
  */
 class Tag132PrcBidPxTest {
     @Test
-    void FIX0132Test() {
-        FIX40 fixData = FIX40.FIX132_PRC_BID_PX;
-        assertEquals( "BID_PX", fixData.toEnumNameString());
-        assertEquals( "132", fixData.toEnumIDString());
-        assertEquals( "BidPx", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0132Test() {
-        Tag132PrcBidPx tagData;
-
-        tagData = new Tag132PrcBidPx(new MyPriceType(1.32D) );
-        assertEquals( 1.32D, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
     void PrintFIXTagTest() {
         Tag132PrcBidPx tagData;
+        double oneElement;
 
-        tagData = new Tag132PrcBidPx(new MyPriceType(Tag132PrcBidPx.TESTB_PRC_BID_PX));
+        oneElement = Tag132PrcBidPx.TESTA_PRC_BID_PX;
+        tagData = new Tag132PrcBidPx(new MyPriceType( oneElement ));
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag132PrcBidPx.TESTB_PRC_BID_PX;
+        tagData = new Tag132PrcBidPx(new MyPriceType( oneElement ));
         System.out.println( tagData.toVerboseString() );
     }
+
+    @Test
+    void FIXTest() {
+        Tag132PrcBidPx tagData;
+        double oneElement;
+
+        oneElement = Tag132PrcBidPx.TESTA_PRC_BID_PX;
+        tagData = new Tag132PrcBidPx(new MyPriceType( oneElement ));
+        verifyFIXData( tagData );
+
+        oneElement = Tag132PrcBidPx.TESTB_PRC_BID_PX;
+        tagData = new Tag132PrcBidPx(new MyPriceType( oneElement ));
+        verifyFIXData( tagData );
+    }
+
+    private void verifyFIXData( final Tag132PrcBidPx tagData ) {
+        assertEquals( "FIX132_PRC_BID_PX", tagData.toEnumLabelString());
+        assertEquals( "BID_PX", tagData.toEnumNameString());
+        assertEquals( "132", tagData.toEnumIDString());
+        assertEquals( "BidPx", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void TagGetDataValueTest() {
         Tag132PrcBidPx tagData;
+        double oneElement;
 
-        tagData = new Tag132PrcBidPx(new MyPriceType(Tag132PrcBidPx.TESTB_PRC_BID_PX));
-        assertEquals( Tag132PrcBidPx.TESTB_PRC_BID_PX, tagData.getDataValue());
+        oneElement = Tag132PrcBidPx.TESTA_PRC_BID_PX;
+        tagData = new Tag132PrcBidPx(new MyPriceType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = Tag132PrcBidPx.TESTB_PRC_BID_PX;
+        tagData = new Tag132PrcBidPx(new MyPriceType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+    }
+
+    private void verifyDataValue( final Tag132PrcBidPx tagData, final double oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }
+
     @Test
     void TagToValuePairStringTest() {
         Tag132PrcBidPx tagData;
+        double oneElement;
 
-        tagData = new Tag132PrcBidPx(new MyPriceType(Tag132PrcBidPx.TESTB_PRC_BID_PX));
-        assertEquals( tagData.toEnumIDString() + "=" + Tag132PrcBidPx.TESTB_PRC_BID_PX,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag132PrcBidPx.TESTA_PRC_BID_PX;
+        tagData = new Tag132PrcBidPx(new MyPriceType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
+
+        oneElement = Tag132PrcBidPx.TESTB_PRC_BID_PX;
+        tagData = new Tag132PrcBidPx(new MyPriceType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
     }
+
+    private void verifyValuePairString( final Tag132PrcBidPx tagData, final double oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
     @Test
     void TagToStringTest() {
         Tag132PrcBidPx tagData;
+        double oneElement;
 
-        tagData = new Tag132PrcBidPx(new MyPriceType(Tag132PrcBidPx.TESTB_PRC_BID_PX));
-        assertEquals( String.valueOf(Tag132PrcBidPx.TESTB_PRC_BID_PX),
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag132PrcBidPx.TESTA_PRC_BID_PX;
+        tagData = new Tag132PrcBidPx(new MyPriceType( oneElement ));
+        verifyToString( tagData, oneElement );
+
+        oneElement = Tag132PrcBidPx.TESTB_PRC_BID_PX;
+        tagData = new Tag132PrcBidPx(new MyPriceType( oneElement ));
+        verifyToString( tagData, oneElement );
     }
+
+    private void verifyToString( final Tag132PrcBidPx tagData, final double oneElement ) {
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
     @Test
     void TagToVerboseStringTest() {
         Tag132PrcBidPx tagData;
+        double oneElement;
 
-        tagData = new Tag132PrcBidPx(new MyPriceType(Tag132PrcBidPx.TESTA_PRC_BID_PX));
+        oneElement = Tag132PrcBidPx.TESTA_PRC_BID_PX;
+        tagData = new Tag132PrcBidPx(new MyPriceType( oneElement ));
+        verifyVerboseString( tagData );
+
+        oneElement = Tag132PrcBidPx.TESTB_PRC_BID_PX;
+        tagData = new Tag132PrcBidPx(new MyPriceType( oneElement ));
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyVerboseString( final Tag132PrcBidPx tagData ) {
         assertEquals( "Tag132PrcBidPx\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag132PrcBidPx.TESTA_PRC_BID_PX + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag132PrcBidPx.TESTA_PRC_BID_PX + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

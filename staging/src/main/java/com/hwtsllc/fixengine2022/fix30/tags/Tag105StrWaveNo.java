@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  105
  *  WaveNo
  *  String
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.2
  */
 // @Deprecated

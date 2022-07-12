@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  110
  *  MinQty
  *  Qty
- *  <p>
+ *  <p></p>
  *  Minimum quantity of an order to be executed.
- *  <p>
+ *  <p></p>
  *  (Prior to FIX 4.2 this field was of type int)
  */
 public class Tag110QtyMinQty extends FIX30Abstract implements LogValuePairString, LogVerboseString {

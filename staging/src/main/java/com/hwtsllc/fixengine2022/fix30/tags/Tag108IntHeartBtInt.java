@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  108
  *  HeartBtInt
  *  int
- *  <p>
+ *  <p></p>
  *  Heartbeat interval (seconds)
  */
 public class Tag108IntHeartBtInt extends FIX30Abstract implements LogValuePairString, LogVerboseString {

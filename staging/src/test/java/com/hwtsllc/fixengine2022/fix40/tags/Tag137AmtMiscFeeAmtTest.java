@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,74 +27,129 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  137
  *  MiscFeeAmt
  *  Amt
+ *  <p></p>
  *  Miscellaneous fee value
  */
 class Tag137AmtMiscFeeAmtTest {
     @Test
-    void FIX0137Test() {
-        FIX40 fixData = FIX40.FIX137_AMT_MISC_FEE_AMT;
-        assertEquals( "MISC_FEE_AMT", fixData.toEnumNameString());
-        assertEquals( "137", fixData.toEnumIDString());
-        assertEquals( "MiscFeeAmt", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0137Test() {
-        Tag137AmtMiscFeeAmt tagData;
-
-        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType(137D ) );
-        assertEquals( 137D, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
     void PrintFIXTagTest() {
         Tag137AmtMiscFeeAmt tagData;
+        double oneElement;
 
-        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType(Tag137AmtMiscFeeAmt.TESTB_AMT_MISC_FEE_AMT));
+        oneElement = Tag137AmtMiscFeeAmt.TESTA_AMT_MISC_FEE_AMT;
+        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType( oneElement ));
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag137AmtMiscFeeAmt.TESTB_AMT_MISC_FEE_AMT;
+        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType( oneElement ));
         System.out.println( tagData.toVerboseString() );
     }
+
+    @Test
+    void FIX0137Test() {
+        Tag137AmtMiscFeeAmt tagData;
+        double oneElement;
+
+        oneElement = Tag137AmtMiscFeeAmt.TESTA_AMT_MISC_FEE_AMT;
+        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType( oneElement ));
+        verifyFIXData( tagData );
+
+        oneElement = Tag137AmtMiscFeeAmt.TESTB_AMT_MISC_FEE_AMT;
+        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType( oneElement ));
+        verifyFIXData( tagData );
+    }
+
+    private void verifyFIXData( final Tag137AmtMiscFeeAmt tagData ) {
+        assertEquals( "FIX137_AMT_MISC_FEE_AMT", tagData.toEnumLabelString());
+        assertEquals( "MISC_FEE_AMT", tagData.toEnumNameString());
+        assertEquals( "137", tagData.toEnumIDString());
+        assertEquals( "MiscFeeAmt", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void TagGetDataValueTest() {
         Tag137AmtMiscFeeAmt tagData;
+        double oneElement;
 
-        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType(Tag137AmtMiscFeeAmt.TESTB_AMT_MISC_FEE_AMT));
-        assertEquals( Tag137AmtMiscFeeAmt.TESTB_AMT_MISC_FEE_AMT, tagData.getDataValue());
+        oneElement = Tag137AmtMiscFeeAmt.TESTA_AMT_MISC_FEE_AMT;
+        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = Tag137AmtMiscFeeAmt.TESTB_AMT_MISC_FEE_AMT;
+        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+    }
+
+    private void verifyDataValue( final Tag137AmtMiscFeeAmt tagData, final double oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
     }
+
     @Test
     void TagToValuePairStringTest() {
         Tag137AmtMiscFeeAmt tagData;
+        double oneElement;
 
-        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType(Tag137AmtMiscFeeAmt.TESTB_AMT_MISC_FEE_AMT));
-        assertEquals( tagData.toEnumIDString() + "=" + Tag137AmtMiscFeeAmt.TESTB_AMT_MISC_FEE_AMT,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag137AmtMiscFeeAmt.TESTA_AMT_MISC_FEE_AMT;
+        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
+
+        oneElement = Tag137AmtMiscFeeAmt.TESTB_AMT_MISC_FEE_AMT;
+        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
     }
+
+    private void verifyValuePairString( final Tag137AmtMiscFeeAmt tagData, final double oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
     @Test
     void TagToStringTest() {
         Tag137AmtMiscFeeAmt tagData;
+        double oneElement;
 
-        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType(Tag137AmtMiscFeeAmt.TESTB_AMT_MISC_FEE_AMT));
-        assertEquals( String.valueOf(Tag137AmtMiscFeeAmt.TESTB_AMT_MISC_FEE_AMT),
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag137AmtMiscFeeAmt.TESTA_AMT_MISC_FEE_AMT;
+        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType( oneElement ));
+        verifyToString( tagData, oneElement );
+
+        oneElement = Tag137AmtMiscFeeAmt.TESTB_AMT_MISC_FEE_AMT;
+        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType( oneElement ));
+        verifyToString( tagData, oneElement );
     }
+
+    private void verifyToString( final Tag137AmtMiscFeeAmt tagData, final double oneElement ) {
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
     @Test
     void TagToVerboseStringTest() {
         Tag137AmtMiscFeeAmt tagData;
+        double oneElement;
 
-        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType(Tag137AmtMiscFeeAmt.TESTA_AMT_MISC_FEE_AMT));
+        oneElement = Tag137AmtMiscFeeAmt.TESTA_AMT_MISC_FEE_AMT;
+        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType( oneElement ));
+        verifyVerboseString( tagData );
+
+        oneElement = Tag137AmtMiscFeeAmt.TESTB_AMT_MISC_FEE_AMT;
+        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType( oneElement ));
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyVerboseString( final Tag137AmtMiscFeeAmt tagData ) {
         assertEquals( "Tag137AmtMiscFeeAmt\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag137AmtMiscFeeAmt.TESTA_AMT_MISC_FEE_AMT + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag137AmtMiscFeeAmt.TESTA_AMT_MISC_FEE_AMT + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.fix40.enums.Enum139MiscFeeType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,36 +27,57 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  139
  *  MiscFeeType
  *  String
+ *  <p></p>
  *  Indicates type of miscellaneous fee.
+ *  <p></p>
  *  Valid values:
- *      1 - Regulatory (e.g. SEC)
- *      2 - Tax
- *      3 - Local Commission
- *      4 - Exchange Fees
- *      5 - Stamp
- *      6 - Levy
- *      7 - Other
- *      8 - Markup
- *      9 - Consumption Tax
- *      10 - Per transaction
- *      11 - Conversion
- *      12 - Agent
- *      13 - Transfer Fee
- *      14 - Security Lending
+ *  <p>    1 - Regulatory (e.g. SEC)
+ *  <p>    2 - Tax
+ *  <p>    3 - Local Commission
+ *  <p>    4 - Exchange Fees
+ *  <p>    5 - Stamp
+ *  <p></p>
+ *  <p>    6 - Levy
+ *  <p>    7 - Other
+ *  <p>    8 - Markup
+ *  <p>    9 - Consumption Tax
+ *  <p>    10 - Per transaction
+ *  <p></p>
+ *  <p>    11 - Conversion
+ *  <p>    12 - Agent
+ *  <p>    13 - Transfer Fee
+ *  <p>    14 - Security Lending
  */
 class Tag139EnuMiscFeeTypeTest {
     @Test
-    void FIX0139Test() {
-        FIX40 fixData = FIX40.FIX139_ENU_MISC_FEE_TYPE;
-        assertEquals( "MISC_FEE_TYPE", fixData.toEnumNameString());
-        assertEquals( "139", fixData.toEnumIDString());
-        assertEquals( "MiscFeeType", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintFIXTagTest() {
+        Tag139EnuMiscFeeType tagData;
+
+        // loop around the ENUM and process
+        for (Enum139MiscFeeType oneEnum : Enum139MiscFeeType.values()) {
+            tagData = new Tag139EnuMiscFeeType(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0139Test() {
+    void FIXTest() {
+        Tag139EnuMiscFeeType tagData;
+
+        // loop around the ENUM and process
+        for (Enum139MiscFeeType oneEnum : Enum139MiscFeeType.values()) {
+            tagData = new Tag139EnuMiscFeeType(oneEnum);
+            assertEquals( "FIX139_ENU_MISC_FEE_TYPE", tagData.toEnumLabelString());
+            assertEquals( "MISC_FEE_TYPE", tagData.toEnumNameString());
+            assertEquals( "139", tagData.toEnumIDString());
+            assertEquals( "MiscFeeType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         Tag139EnuMiscFeeType tagData;
 
         /*
@@ -120,25 +140,13 @@ class Tag139EnuMiscFeeTypeTest {
         tagData = new Tag139EnuMiscFeeType(Enum139MiscFeeType.SECURITY_LENDING);
         assertEquals( "14", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag139EnuMiscFeeType tagData;
 
-        // loop around the ENUM and process
-        for (Enum139MiscFeeType oneEnum : Enum139MiscFeeType.values()) {
-            tagData = new Tag139EnuMiscFeeType(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag139EnuMiscFeeType tagData;
 
         // loop around the ENUM and process
         for (Enum139MiscFeeType oneEnum : Enum139MiscFeeType.values()) {
             tagData = new Tag139EnuMiscFeeType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
@@ -149,8 +157,9 @@ class Tag139EnuMiscFeeTypeTest {
         // loop around the ENUM and process
         for (Enum139MiscFeeType oneEnum : Enum139MiscFeeType.values()) {
             tagData = new Tag139EnuMiscFeeType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -177,8 +186,8 @@ class Tag139EnuMiscFeeTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

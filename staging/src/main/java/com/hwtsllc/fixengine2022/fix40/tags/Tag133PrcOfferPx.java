@@ -26,13 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  133
  *  OfferPx
  *  Price
+ *  <p></p>
  *  Offer price/rate
  */
 public class Tag133PrcOfferPx extends FIX40Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceType dataValue;
 
-    public final static double TESTA_PRC_OFFER_PX = 1.33D;
-    public final static double TESTB_PRC_OFFER_PX = 3.31D;
+    public final static double TESTA_PRC_OFFER_PX
+            = 1.33D;
+    public final static double TESTB_PRC_OFFER_PX
+            = 3.31D;
 
     public Tag133PrcOfferPx(MyPriceType dataValue) {
         setFixType(FIX40.FIX133_PRC_OFFER_PX);

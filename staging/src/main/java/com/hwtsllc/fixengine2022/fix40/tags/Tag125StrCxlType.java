@@ -26,14 +26,17 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  125
  *  CxlType
  *  char
+ *  <p></p>
  *  Deprecated in FIX.4.2
  */
 // @Deprecated
 public class Tag125StrCxlType extends FIX40Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_CXL_TYPE = "BilboBaggins-125CxlType"; // fake data
-    public final static String TESTB_STR_CXL_TYPE = "Gandalf-125CxlType";
+    public final static String TESTA_STR_CXL_TYPE
+            = "BilboBaggins-Tag125StrCxlType";
+    public final static String TESTB_STR_CXL_TYPE
+            = "Gandalf-Tag125StrCxlType";
 
     public Tag125StrCxlType(MyStringType dataValue) {
         setFixType(FIX40.FIX125_STR_CXL_TYPE);

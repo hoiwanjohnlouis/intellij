@@ -27,21 +27,26 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  127
  *  DKReason
  *  char
+ *  <p></p>
  *  Reason for execution rejection.
+ *  <p></p>
  *  Valid values:
- *      A - Unknown Symbol
- *      B - Wrong Side
- *      C - Quantity Exceeds Order
- *      D - No Matching Order
- *      E - Price Exceeds Limit
- *      F - Calculation Difference
- *      Z - Other
+ *  <p>    A - Unknown Symbol
+ *  <p>    B - Wrong Side
+ *  <p>    C - Quantity Exceeds Order
+ *  <p>    D - No Matching Order
+ *  <p>    E - Price Exceeds Limit
+ *  <p></p>
+ *  <p>    F - Calculation Difference
+ *  <p>    Z - Other
  */
 public class Tag127EnuDKReason extends FIX40Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum127DKReason dataValue;
 
-    public final static Enum127DKReason TESTA_ENU_DK_REASON = Enum127DKReason.UNKNOWN_SYMBOL; // fake data
-    public final static Enum127DKReason TESTB_ENU_DK_REASON = Enum127DKReason.OTHER;
+    public final static Enum127DKReason TESTA_ENU_DK_REASON
+            = Enum127DKReason.UNKNOWN_SYMBOL;
+    public final static Enum127DKReason TESTB_ENU_DK_REASON
+            = Enum127DKReason.OTHER;
 
     public Tag127EnuDKReason(Enum127DKReason dataValue) {
         setFixType(FIX40.FIX127_ENU_DK_REASON);

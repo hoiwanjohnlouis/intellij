@@ -26,6 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  122
  *  OrigSendingTime
  *  UTCTimestamp
+ *  <p></p>
  *  Original time of message transmission
  *  (always expressed in UTC (Universal Time Coordinated), also known as "GMT")
  *  when transmitting orders as the result of a resend request.
@@ -33,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag122UtcOrigSendingTime extends FIX40Abstract implements LogValuePairString, LogVerboseString {
     private final MyUTCTimestampType dataValue;
 
-    public final static String TESTA_UTC_ORIG_SENDING_TIME = "18991231-23:59:59.122";
-    public final static String TESTB_UTC_ORIG_SENDING_TIME = "19001231-23:59:59.122";
+    public final static String TESTA_UTC_ORIG_SENDING_TIME
+            = "18991231-23:59:59.122";
+    public final static String TESTB_UTC_ORIG_SENDING_TIME
+            = "19001231-23:59:59.122";
 
     public Tag122UtcOrigSendingTime(MyUTCTimestampType dataValue) {
         setFixType(FIX40.FIX122_UTC_ORIG_SENDING_TIME);

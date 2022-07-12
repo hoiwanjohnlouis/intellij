@@ -26,13 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  136
  *  NoMiscFees
  *  NumInGroup
+ *  <p></p>
  *  Number of repeating groups of miscellaneous fees
  */
 public class Tag136NumNoMiscFees extends FIX40Abstract implements LogValuePairString, LogVerboseString {
     private final MyNumInGroupType dataValue;
 
-    public final static int TESTA_NUM_NO_MISC_FEES = 1; // fake data
-    public final static int TESTB_NUM_NO_MISC_FEES = 2;
+    public final static int TESTA_NUM_NO_MISC_FEES
+            = 1;
+    public final static int TESTB_NUM_NO_MISC_FEES
+            = 2;
 
     public Tag136NumNoMiscFees(MyNumInGroupType dataValue) {
         setFixType(FIX40.FIX136_NUM_NO_MISC_FEES);

@@ -26,14 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  116
  *  OnBehalfOfSubID
  *  String
+ *  <p></p>
  *  Assigned value used to identify specific message originator
+ *  <p></p>
  *  (i.e. trader) if the message was delivered by a third party
  */
 public class Tag116StrOnBehalfOfSubID extends FIX40Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_ON_BEHALF_OF_SUB_ID = "BilboBaggins-116OnBehalfOfSubID"; // fake data
-    public final static String TESTB_STR_ON_BEHALF_OF_SUB_ID = "Gandalf-116OnBehalfOfSubID";
+    public final static String TESTA_STR_ON_BEHALF_OF_SUB_ID
+            = "BilboBaggins-Tag116StrOnBehalfOfSubID";
+    public final static String TESTB_STR_ON_BEHALF_OF_SUB_ID
+            = "Gandalf-Tag116StrOnBehalfOfSubID";
 
     public Tag116StrOnBehalfOfSubID(MyStringType dataValue) {
         setFixType(FIX40.FIX116_STR_ON_BEHALF_OF_SUB_ID);

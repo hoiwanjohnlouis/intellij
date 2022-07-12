@@ -26,13 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  132
  *  BidPx
  *  Price
+ *  <p></p>
  *  Bid price/rate
  */
 public class Tag132PrcBidPx extends FIX40Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceType dataValue;
 
-    public final static double TESTA_PRC_BID_PX = 1.32D;
-    public final static double TESTB_PRC_BID_PX = 2.31D;
+    public final static double TESTA_PRC_BID_PX
+            = 1.32D;
+    public final static double TESTB_PRC_BID_PX
+            = 2.31D;
 
     public Tag132PrcBidPx(MyPriceType dataValue) {
         setFixType(FIX40.FIX132_PRC_BID_PX);

@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,75 +27,131 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  135
  *  OfferSize
  *  Qty
+ *  <p></p>
  *  Quantity of offer
- *      (Prior to FIX 4.2 this field was of type int)
+ *  <p></p>
+ *  (Prior to FIX 4.2 this field was of type int)
  */
 class Tag135QtyOfferSizeTest {
     @Test
-    void FIX0135Test() {
-        FIX40 fixData = FIX40.FIX135_QTY_OFFER_SIZE;
-        assertEquals( "OFFER_SIZE", fixData.toEnumNameString());
-        assertEquals( "135", fixData.toEnumIDString());
-        assertEquals( "OfferSize", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0135Test() {
-        Tag135QtyOfferSize tagData;
-
-        tagData = new Tag135QtyOfferSize(new MyQtyType(200) );
-        assertEquals( 200, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
     void PrintFIXTagTest() {
         Tag135QtyOfferSize tagData;
+        int oneElement;
 
-        tagData = new Tag135QtyOfferSize(new MyQtyType(Tag135QtyOfferSize.TESTB_QTY_OFFER_SIZE));
+        oneElement = Tag135QtyOfferSize.TESTA_QTY_OFFER_SIZE;
+        tagData = new Tag135QtyOfferSize(new MyQtyType( oneElement ));
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag135QtyOfferSize.TESTB_QTY_OFFER_SIZE;
+        tagData = new Tag135QtyOfferSize(new MyQtyType( oneElement ));
         System.out.println( tagData.toVerboseString() );
     }
+
+    @Test
+    void FIX0135Test() {
+        Tag135QtyOfferSize tagData;
+        int oneElement;
+
+        oneElement = Tag135QtyOfferSize.TESTA_QTY_OFFER_SIZE;
+        tagData = new Tag135QtyOfferSize(new MyQtyType( oneElement ));
+        verifyFIXData( tagData );
+
+        oneElement = Tag135QtyOfferSize.TESTB_QTY_OFFER_SIZE;
+        tagData = new Tag135QtyOfferSize(new MyQtyType( oneElement ));
+        verifyFIXData( tagData );
+    }
+
+    private void verifyFIXData( final Tag135QtyOfferSize tagData ) {
+        assertEquals( "FIX135_QTY_OFFER_SIZE", tagData.toEnumLabelString());
+        assertEquals( "OFFER_SIZE", tagData.toEnumNameString());
+        assertEquals( "135", tagData.toEnumIDString());
+        assertEquals( "OfferSize", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void TagGetDataValueTest() {
         Tag135QtyOfferSize tagData;
+        int oneElement;
 
-        tagData = new Tag135QtyOfferSize(new MyQtyType(Tag135QtyOfferSize.TESTB_QTY_OFFER_SIZE));
-        assertEquals( Tag135QtyOfferSize.TESTB_QTY_OFFER_SIZE, tagData.getDataValue());
+        oneElement = Tag135QtyOfferSize.TESTA_QTY_OFFER_SIZE;
+        tagData = new Tag135QtyOfferSize(new MyQtyType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = Tag135QtyOfferSize.TESTB_QTY_OFFER_SIZE;
+        tagData = new Tag135QtyOfferSize(new MyQtyType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+    }
+
+    private void verifyDataValue( final Tag135QtyOfferSize tagData, final int oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
     }
+
     @Test
     void TagToValuePairStringTest() {
         Tag135QtyOfferSize tagData;
+        int oneElement;
 
-        tagData = new Tag135QtyOfferSize(new MyQtyType(Tag135QtyOfferSize.TESTB_QTY_OFFER_SIZE));
-        assertEquals( tagData.toEnumIDString() + "=" + Tag135QtyOfferSize.TESTB_QTY_OFFER_SIZE,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag135QtyOfferSize.TESTA_QTY_OFFER_SIZE;
+        tagData = new Tag135QtyOfferSize(new MyQtyType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
+
+        oneElement = Tag135QtyOfferSize.TESTB_QTY_OFFER_SIZE;
+        tagData = new Tag135QtyOfferSize(new MyQtyType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
     }
+
+    private void verifyValuePairString( final Tag135QtyOfferSize tagData, final int oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
     @Test
     void TagToStringTest() {
         Tag135QtyOfferSize tagData;
+        int oneElement;
 
-        tagData = new Tag135QtyOfferSize(new MyQtyType(Tag135QtyOfferSize.TESTB_QTY_OFFER_SIZE));
-        assertEquals( String.valueOf(Tag135QtyOfferSize.TESTB_QTY_OFFER_SIZE),
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag135QtyOfferSize.TESTA_QTY_OFFER_SIZE;
+        tagData = new Tag135QtyOfferSize(new MyQtyType( oneElement ));
+        verifyToString( tagData, oneElement );
+
+        oneElement = Tag135QtyOfferSize.TESTB_QTY_OFFER_SIZE;
+        tagData = new Tag135QtyOfferSize(new MyQtyType( oneElement ));
+        verifyToString( tagData, oneElement );
     }
+
+    private void verifyToString( final Tag135QtyOfferSize tagData, final int oneElement ) {
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
     @Test
     void TagToVerboseStringTest() {
         Tag135QtyOfferSize tagData;
+        int oneElement;
 
-        tagData = new Tag135QtyOfferSize(new MyQtyType(Tag135QtyOfferSize.TESTA_QTY_OFFER_SIZE));
+        oneElement = Tag135QtyOfferSize.TESTA_QTY_OFFER_SIZE;
+        tagData = new Tag135QtyOfferSize(new MyQtyType( oneElement ));
+        verifyVerboseString( tagData );
+
+        oneElement = Tag135QtyOfferSize.TESTB_QTY_OFFER_SIZE;
+        tagData = new Tag135QtyOfferSize(new MyQtyType( oneElement ));
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyVerboseString( final Tag135QtyOfferSize tagData ) {
         assertEquals( "Tag135QtyOfferSize\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag135QtyOfferSize.TESTA_QTY_OFFER_SIZE + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag135QtyOfferSize.TESTA_QTY_OFFER_SIZE + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

@@ -27,7 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  105
  *  WaveNo
  *  String
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.2
  */
 // @Deprecated

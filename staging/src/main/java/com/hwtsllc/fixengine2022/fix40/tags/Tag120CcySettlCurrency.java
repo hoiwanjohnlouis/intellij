@@ -26,13 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  120
  *  SettlCurrency
  *  Currency
+ *  <p></p>
  *  Currency code of settlement denomination.
  */
 public class Tag120CcySettlCurrency extends FIX40Abstract implements LogValuePairString, LogVerboseString {
     private final MyCurrencyType dataValue;
 
-    public final static String TESTA_CCY_SETTL_CURRENCY = "BilboBaggins-120SettlCurrency"; // fake data
-    public final static String TESTB_CCY_SETTL_CURRENCY = "Gandalf-120SettlCurrency";
+    public final static String TESTA_CCY_SETTL_CURRENCY
+            = "BilboBaggins-120SettlCurrency";
+    public final static String TESTB_CCY_SETTL_CURRENCY
+            = "Gandalf-120SettlCurrency";
 
     public Tag120CcySettlCurrency(MyCurrencyType dataValue) {
         setFixType(FIX40.FIX120_CCY_SETTL_CURRENCY);

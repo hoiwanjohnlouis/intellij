@@ -26,16 +26,20 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  128
  *  DeliverToCompID
  *  String
+ *  <p></p>
  *  Assigned value used to identify the firm targeted to receive
  *  the message if the message is delivered by a third party
+ *  <p></p>
  *  i.e.  the third party firm identifier would be delivered in the
  *  TargetCompID (56) field and the ultimate receiver firm ID in this field.
  */
 public class Tag128StrDeliverToCompID extends FIX40Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_DELIVER_TO_COMP_ID = "BilboBaggins-128DeliverToCompID"; // fake data
-    public final static String TESTB_STR_DELIVER_TO_COMP_ID = "Gandalf-128DeliverToCompID";
+    public final static String TESTA_STR_DELIVER_TO_COMP_ID
+            = "BilboBaggins-128DeliverToCompID";
+    public final static String TESTB_STR_DELIVER_TO_COMP_ID
+            = "Gandalf-128DeliverToCompID";
 
     public Tag128StrDeliverToCompID(MyStringType dataValue) {
         setFixType(FIX40.FIX128_STR_DELIVER_TO_COMP_ID);

@@ -26,14 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  129
  *  DeliverToSubID
  *  String
+ *  <p></p>
  *  Assigned value used to identify specific message recipient
+ *  <p></p>
  *  (i.e. trader) if the message is delivered by a third party
  */
 public class Tag129StrDeliverToSubID extends FIX40Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_DELIVER_TO_SUB_ID = "BilboBaggins-129DeliverToSubID"; // fake data
-    public final static String TESTB_STR_DELIVER_TO_SUB_ID = "Gandalf-129DeliverToSubID";
+    public final static String TESTA_STR_DELIVER_TO_SUB_ID
+            = "BilboBaggins-Tag129StrDeliverToSubID";
+    public final static String TESTB_STR_DELIVER_TO_SUB_ID
+            = "Gandalf-Tag129StrDeliverToSubID";
 
     public Tag129StrDeliverToSubID(MyStringType dataValue) {
         setFixType(FIX40.FIX129_STR_DELIVER_TO_SUB_ID);

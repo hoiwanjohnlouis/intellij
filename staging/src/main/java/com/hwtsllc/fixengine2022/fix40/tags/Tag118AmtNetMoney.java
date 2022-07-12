@@ -26,6 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  118
  *  NetMoney
  *  Amt
+ *  <p></p>
  *  Total amount due as the result of the transaction
  *  (e.g. for Buy order - principal + commission + fees)
  *  reported in currency of execution.
@@ -33,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag118AmtNetMoney extends FIX40Abstract implements LogValuePairString, LogVerboseString {
     private final MyAmtType dataValue;
 
-    public final static double TESTA_AMT_NET_MONEY = 1.18D;
-    public final static double TESTB_AMT_NET_MONEY = 8.11D;
+    public final static double TESTA_AMT_NET_MONEY
+            = 1.18D;
+    public final static double TESTB_AMT_NET_MONEY
+            = 8.11D;
 
     public Tag118AmtNetMoney(MyAmtType dataValue) {
         setFixType(FIX40.FIX118_AMT_NET_MONEY);

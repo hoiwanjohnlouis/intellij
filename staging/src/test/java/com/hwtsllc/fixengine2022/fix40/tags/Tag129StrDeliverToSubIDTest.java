@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,75 +27,130 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  129
  *  DeliverToSubID
  *  String
+ *  <p></p>
  *  Assigned value used to identify specific message recipient
+ *  <p></p>
  *  (i.e. trader) if the message is delivered by a third party
  */
 class Tag129StrDeliverToSubIDTest {
     @Test
-    void FIX0129Test() {
-        FIX40 fixData = FIX40.FIX129_STR_DELIVER_TO_SUB_ID;
-        assertEquals( "DELIVER_TO_SUB_ID", fixData.toEnumNameString());
-        assertEquals( "129", fixData.toEnumIDString());
-        assertEquals( "DeliverToSubID", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0129Test() {
-        Tag129StrDeliverToSubID tagData;
-
-        tagData = new Tag129StrDeliverToSubID(new MyStringType("HanHyoJoo-129DeliverToSubID") );
-        assertEquals( "HanHyoJoo-129DeliverToSubID", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
     void PrintFIXTagTest() {
         Tag129StrDeliverToSubID tagData;
+        String oneElement;
 
-        tagData = new Tag129StrDeliverToSubID(new MyStringType(Tag129StrDeliverToSubID.TESTB_STR_DELIVER_TO_SUB_ID));
+        oneElement = Tag129StrDeliverToSubID.TESTA_STR_DELIVER_TO_SUB_ID;
+        tagData = new Tag129StrDeliverToSubID(new MyStringType( oneElement ));
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag129StrDeliverToSubID.TESTB_STR_DELIVER_TO_SUB_ID;
+        tagData = new Tag129StrDeliverToSubID(new MyStringType( oneElement ));
         System.out.println( tagData.toVerboseString() );
     }
+
+    @Test
+    void FIXTest() {
+        Tag129StrDeliverToSubID tagData;
+        String oneElement;
+
+        oneElement = Tag129StrDeliverToSubID.TESTA_STR_DELIVER_TO_SUB_ID;
+        tagData = new Tag129StrDeliverToSubID(new MyStringType( oneElement ));
+        verifyFIXData( tagData );
+
+        oneElement = Tag129StrDeliverToSubID.TESTB_STR_DELIVER_TO_SUB_ID;
+        tagData = new Tag129StrDeliverToSubID(new MyStringType( oneElement ));
+        verifyFIXData( tagData );
+    }
+
+    private void verifyFIXData( final Tag129StrDeliverToSubID tagData ) {
+        assertEquals( "FIX129_STR_DELIVER_TO_SUB_ID", tagData.toEnumLabelString());
+        assertEquals( "DELIVER_TO_SUB_ID", tagData.toEnumNameString());
+        assertEquals( "129", tagData.toEnumIDString());
+        assertEquals( "DeliverToSubID", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void TagGetDataValueTest() {
         Tag129StrDeliverToSubID tagData;
+        String oneElement;
 
-        tagData = new Tag129StrDeliverToSubID(new MyStringType(Tag129StrDeliverToSubID.TESTB_STR_DELIVER_TO_SUB_ID));
-        assertEquals( Tag129StrDeliverToSubID.TESTB_STR_DELIVER_TO_SUB_ID, tagData.getDataValue());
+        oneElement = Tag129StrDeliverToSubID.TESTA_STR_DELIVER_TO_SUB_ID;
+        tagData = new Tag129StrDeliverToSubID(new MyStringType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = Tag129StrDeliverToSubID.TESTB_STR_DELIVER_TO_SUB_ID;
+        tagData = new Tag129StrDeliverToSubID(new MyStringType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+    }
+
+    private void verifyDataValue( final Tag129StrDeliverToSubID tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+
     @Test
     void TagToValuePairStringTest() {
         Tag129StrDeliverToSubID tagData;
+        String oneElement;
 
-        tagData = new Tag129StrDeliverToSubID(new MyStringType(Tag129StrDeliverToSubID.TESTB_STR_DELIVER_TO_SUB_ID));
-        assertEquals( tagData.toEnumIDString() + "=" + Tag129StrDeliverToSubID.TESTB_STR_DELIVER_TO_SUB_ID,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag129StrDeliverToSubID.TESTA_STR_DELIVER_TO_SUB_ID;
+        tagData = new Tag129StrDeliverToSubID(new MyStringType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
+
+        oneElement = Tag129StrDeliverToSubID.TESTB_STR_DELIVER_TO_SUB_ID;
+        tagData = new Tag129StrDeliverToSubID(new MyStringType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
     }
+
+    private void verifyValuePairString( final Tag129StrDeliverToSubID tagData, final String oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
     @Test
     void TagToStringTest() {
         Tag129StrDeliverToSubID tagData;
+        String oneElement;
 
-        tagData = new Tag129StrDeliverToSubID(new MyStringType(Tag129StrDeliverToSubID.TESTB_STR_DELIVER_TO_SUB_ID));
-        assertEquals( Tag129StrDeliverToSubID.TESTB_STR_DELIVER_TO_SUB_ID,
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag129StrDeliverToSubID.TESTA_STR_DELIVER_TO_SUB_ID;
+        tagData = new Tag129StrDeliverToSubID(new MyStringType( oneElement ));
+        verifyToString( tagData, oneElement );
+
+        oneElement = Tag129StrDeliverToSubID.TESTB_STR_DELIVER_TO_SUB_ID;
+        tagData = new Tag129StrDeliverToSubID(new MyStringType( oneElement ));
+        verifyToString( tagData, oneElement );
     }
+
+    private void verifyToString( final Tag129StrDeliverToSubID tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
     @Test
     void TagToVerboseStringTest() {
         Tag129StrDeliverToSubID tagData;
+        String oneElement;
 
-        tagData = new Tag129StrDeliverToSubID(new MyStringType(Tag129StrDeliverToSubID.TESTA_STR_DELIVER_TO_SUB_ID));
+        oneElement = Tag129StrDeliverToSubID.TESTA_STR_DELIVER_TO_SUB_ID;
+        tagData = new Tag129StrDeliverToSubID(new MyStringType( oneElement ));
+        verifyVerboseString( tagData );
+
+        oneElement = Tag129StrDeliverToSubID.TESTB_STR_DELIVER_TO_SUB_ID;
+        tagData = new Tag129StrDeliverToSubID(new MyStringType( oneElement ));
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyVerboseString( final Tag129StrDeliverToSubID tagData ) {
         assertEquals( "Tag129StrDeliverToSubID\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag129StrDeliverToSubID.TESTA_STR_DELIVER_TO_SUB_ID + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag129StrDeliverToSubID.TESTA_STR_DELIVER_TO_SUB_ID + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

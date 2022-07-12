@@ -26,13 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  138
  *  MiscFeeCurr
  *  Currency
+ *  <p></p>
  *  Currency of miscellaneous fee
  */
 public class Tag138CcyMiscFeeCurr extends FIX40Abstract implements LogValuePairString, LogVerboseString {
     private final MyCurrencyType dataValue;
 
-    public final static String TESTA_CCY_MISC_FEE_CURR = "BilboBaggins-138MiscFeeCurr"; // fake data
-    public final static String TESTB_CCY_MISC_FEE_CURR = "Gandalf-138MiscFeeCurr";
+    public final static String TESTA_CCY_MISC_FEE_CURR
+            = "BilboBaggins-138MiscFeeCurr";
+    public final static String TESTB_CCY_MISC_FEE_CURR
+            = "Gandalf-138MiscFeeCurr";
 
     public Tag138CcyMiscFeeCurr(MyCurrencyType dataValue) {
         setFixType(FIX40.FIX138_CCY_MISC_FEE_CURR);

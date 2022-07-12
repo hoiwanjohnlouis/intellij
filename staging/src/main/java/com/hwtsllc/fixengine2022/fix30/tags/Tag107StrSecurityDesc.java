@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  107
  *  SecurityDesc
  *  String
- *  <p>
+ *  <p></p>
  *  Security description.
  */
 public class Tag107StrSecurityDesc extends FIX30Abstract implements LogValuePairString, LogVerboseString {

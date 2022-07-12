@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.fix40.enums.Enum127DKReason;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,29 +27,49 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  127
  *  DKReason
  *  char
+ *  <p></p>
  *  Reason for execution rejection.
+ *  <p></p>
  *  Valid values:
- *      A - Unknown Symbol
- *      B - Wrong Side
- *      C - Quantity Exceeds Order
- *      D - No Matching Order
- *      E - Price Exceeds Limit
- *      F - Calculation Difference
- *      Z - Other
+ *  <p>    A - Unknown Symbol
+ *  <p>    B - Wrong Side
+ *  <p>    C - Quantity Exceeds Order
+ *  <p>    D - No Matching Order
+ *  <p>    E - Price Exceeds Limit
+ *  <p></p>
+ *  <p>    F - Calculation Difference
+ *  <p>    Z - Other
  */
 class Tag127EnuDKReasonTest {
     @Test
-    void FIX0127Test() {
-        FIX40 fixData = FIX40.FIX127_ENU_DK_REASON;
-        assertEquals( fixData.toEnumNameString(), "DK_REASON");
-        assertEquals( fixData.toEnumIDString(), "127");
-        assertEquals( fixData.toEnumDescriptionString(), "DKReason");
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintFIXTagTest() {
+        Tag127EnuDKReason tagData;
+
+        // loop around the ENUM and process
+        for (Enum127DKReason oneEnum : Enum127DKReason.values()) {
+            tagData = new Tag127EnuDKReason(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0127Test() {
+    void FIX0127Test() {
+        Tag127EnuDKReason tagData;
+
+        // loop around the ENUM and process
+        for (Enum127DKReason oneEnum : Enum127DKReason.values()) {
+            tagData = new Tag127EnuDKReason(oneEnum);
+            assertEquals( "FIX127_ENU_DK_REASON", tagData.toEnumLabelString());
+            assertEquals( "DK_REASON", tagData.toEnumNameString() );
+            assertEquals( "127", tagData.toEnumIDString());
+            assertEquals( "DKReason", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         Tag127EnuDKReason tagData;
 
         /*
@@ -85,25 +104,13 @@ class Tag127EnuDKReasonTest {
         tagData = new Tag127EnuDKReason(Enum127DKReason.OTHER);
         assertEquals( "Z", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag127EnuDKReason tagData;
 
-        // loop around the ENUM and process
-        for (Enum127DKReason oneEnum : Enum127DKReason.values()) {
-            tagData = new Tag127EnuDKReason(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag127EnuDKReason tagData;
 
         // loop around the ENUM and process
         for (Enum127DKReason oneEnum : Enum127DKReason.values()) {
             tagData = new Tag127EnuDKReason(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
@@ -114,8 +121,9 @@ class Tag127EnuDKReasonTest {
         // loop around the ENUM and process
         for (Enum127DKReason oneEnum : Enum127DKReason.values()) {
             tagData = new Tag127EnuDKReason(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -142,8 +150,8 @@ class Tag127EnuDKReasonTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

@@ -26,11 +26,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  111
  *  MaxFloor
  *  Qty
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.5.0
- *  <p>
+ *  <p></p>
  *  The quantity to be displayed. Required for reserve orders.
- *  <p>
+ *  <p></p>
  *  On orders specifies the qty to be displayed, on execution
  *  reports the currently displayed quantity.
  */

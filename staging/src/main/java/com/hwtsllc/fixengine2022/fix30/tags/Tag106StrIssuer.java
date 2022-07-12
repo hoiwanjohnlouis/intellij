@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  106
  *  Issuer
  *  String
- *  <p>
+ *  <p></p>
  *  Name of security issuer (e.g. International Business Machines, GNMA).
- *  <p>
+ *  <p></p>
  *  see also Volume 7: "PRODUCT: FIXED INCOME - Euro Issuer Values"
  */
 public class Tag106StrIssuer extends FIX30Abstract implements LogValuePairString, LogVerboseString {

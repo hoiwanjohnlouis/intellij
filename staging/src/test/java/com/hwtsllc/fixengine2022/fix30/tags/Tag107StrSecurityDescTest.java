@@ -27,7 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  107
  *  SecurityDesc
  *  String
- *  <p>
+ *  <p></p>
  *  Security description.
  */
 class Tag107StrSecurityDescTest {

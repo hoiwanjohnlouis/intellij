@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.MyCurrencyType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,74 +27,129 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  120
  *  SettlCurrency
  *  Currency
+ *  <p></p>
  *  Currency code of settlement denomination.
  */
 class Tag120CcySettlCurrencyTest {
     @Test
-    void FIX0120Test() {
-        FIX40 fixData = FIX40.FIX120_CCY_SETTL_CURRENCY;
-        assertEquals( "SETTL_CURRENCY", fixData.toEnumNameString());
-        assertEquals( "120", fixData.toEnumIDString());
-        assertEquals( "SettlCurrency", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0120Test() {
-        Tag120CcySettlCurrency tagData;
-
-        tagData = new Tag120CcySettlCurrency(new MyCurrencyType("MoonChaeWon-120SettlCurrency") );
-        assertEquals( "MoonChaeWon-120SettlCurrency", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
     void PrintFIXTagTest() {
         Tag120CcySettlCurrency tagData;
+        String oneElement;
 
-        tagData = new Tag120CcySettlCurrency(new MyCurrencyType(Tag120CcySettlCurrency.TESTB_CCY_SETTL_CURRENCY));
+        oneElement = Tag120CcySettlCurrency.TESTA_CCY_SETTL_CURRENCY;
+        tagData = new Tag120CcySettlCurrency(new MyCurrencyType( oneElement ));
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag120CcySettlCurrency.TESTB_CCY_SETTL_CURRENCY;
+        tagData = new Tag120CcySettlCurrency(new MyCurrencyType( oneElement ));
         System.out.println( tagData.toVerboseString() );
     }
+
+    @Test
+    void FIXTest() {
+        Tag120CcySettlCurrency tagData;
+        String oneElement;
+
+        oneElement = Tag120CcySettlCurrency.TESTA_CCY_SETTL_CURRENCY;
+        tagData = new Tag120CcySettlCurrency(new MyCurrencyType( oneElement ));
+        verifyFIXData( tagData );
+
+        oneElement = Tag120CcySettlCurrency.TESTB_CCY_SETTL_CURRENCY;
+        tagData = new Tag120CcySettlCurrency(new MyCurrencyType( oneElement ));
+        verifyFIXData( tagData );
+    }
+
+    private void verifyFIXData( final Tag120CcySettlCurrency tagData ) {
+        assertEquals( "FIX120_CCY_SETTL_CURRENCY", tagData.toEnumLabelString());
+        assertEquals( "SETTL_CURRENCY", tagData.toEnumNameString());
+        assertEquals( "120", tagData.toEnumIDString());
+        assertEquals( "SettlCurrency", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void TagGetDataValueTest() {
         Tag120CcySettlCurrency tagData;
+        String oneElement;
 
-        tagData = new Tag120CcySettlCurrency(new MyCurrencyType(Tag120CcySettlCurrency.TESTB_CCY_SETTL_CURRENCY));
-        assertEquals( Tag120CcySettlCurrency.TESTB_CCY_SETTL_CURRENCY, tagData.getDataValue());
+        oneElement = Tag120CcySettlCurrency.TESTA_CCY_SETTL_CURRENCY;
+        tagData = new Tag120CcySettlCurrency(new MyCurrencyType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = Tag120CcySettlCurrency.TESTB_CCY_SETTL_CURRENCY;
+        tagData = new Tag120CcySettlCurrency(new MyCurrencyType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+    }
+
+    private void verifyDataValue( final Tag120CcySettlCurrency tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+
     @Test
     void TagToValuePairStringTest() {
         Tag120CcySettlCurrency tagData;
+        String oneElement;
 
-        tagData = new Tag120CcySettlCurrency(new MyCurrencyType(Tag120CcySettlCurrency.TESTB_CCY_SETTL_CURRENCY));
-        assertEquals( tagData.toEnumIDString() + "=" + Tag120CcySettlCurrency.TESTB_CCY_SETTL_CURRENCY,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag120CcySettlCurrency.TESTA_CCY_SETTL_CURRENCY;
+        tagData = new Tag120CcySettlCurrency(new MyCurrencyType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
+
+        oneElement = Tag120CcySettlCurrency.TESTB_CCY_SETTL_CURRENCY;
+        tagData = new Tag120CcySettlCurrency(new MyCurrencyType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
     }
+
+    private void verifyValuePairString( final Tag120CcySettlCurrency tagData, final String oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
     @Test
     void TagToStringTest() {
         Tag120CcySettlCurrency tagData;
+        String oneElement;
 
-        tagData = new Tag120CcySettlCurrency(new MyCurrencyType(Tag120CcySettlCurrency.TESTB_CCY_SETTL_CURRENCY));
-        assertEquals( Tag120CcySettlCurrency.TESTB_CCY_SETTL_CURRENCY,
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag120CcySettlCurrency.TESTA_CCY_SETTL_CURRENCY;
+        tagData = new Tag120CcySettlCurrency(new MyCurrencyType( oneElement ));
+        verifyToString( tagData, oneElement );
+
+        oneElement = Tag120CcySettlCurrency.TESTB_CCY_SETTL_CURRENCY;
+        tagData = new Tag120CcySettlCurrency(new MyCurrencyType( oneElement ));
+        verifyToString( tagData, oneElement );
     }
+
+    private void verifyToString( final Tag120CcySettlCurrency tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    }
+
     @Test
     void TagToVerboseStringTest() {
         Tag120CcySettlCurrency tagData;
+        String oneElement;
 
-        tagData = new Tag120CcySettlCurrency(new MyCurrencyType(Tag120CcySettlCurrency.TESTA_CCY_SETTL_CURRENCY));
+        oneElement = Tag120CcySettlCurrency.TESTA_CCY_SETTL_CURRENCY;
+        tagData = new Tag120CcySettlCurrency(new MyCurrencyType( oneElement ));
+        verifyVerboseString( tagData );
+
+        oneElement = Tag120CcySettlCurrency.TESTB_CCY_SETTL_CURRENCY;
+        tagData = new Tag120CcySettlCurrency(new MyCurrencyType( oneElement ));
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyVerboseString( final Tag120CcySettlCurrency tagData ) {
         assertEquals( "Tag120CcySettlCurrency\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag120CcySettlCurrency.TESTA_CCY_SETTL_CURRENCY + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag120CcySettlCurrency.TESTA_CCY_SETTL_CURRENCY + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

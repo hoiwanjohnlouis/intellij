@@ -26,14 +26,17 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  119
  *  SettlCurrAmt
  *  Amt
+ *  <p></p>
  *  Total amount due expressed in settlement currency
  *  (includes the effect of the forex transaction)
  */
 public class Tag119AmtSettlCurrAmt extends FIX40Abstract implements LogValuePairString, LogVerboseString {
     private final MyAmtType dataValue;
 
-    public final static double TESTA_AMT_SETTL_CURR_AMT = 1.19D;
-    public final static double TESTB_AMT_SETTL_CURR_AMT = 9.11D;
+    public final static double TESTA_AMT_SETTL_CURR_AMT
+            = 1.19D;
+    public final static double TESTB_AMT_SETTL_CURR_AMT
+            = 9.11D;
 
     public Tag119AmtSettlCurrAmt(MyAmtType dataValue) {
         setFixType(FIX40.FIX119_AMT_SETTL_CURR_AMT);

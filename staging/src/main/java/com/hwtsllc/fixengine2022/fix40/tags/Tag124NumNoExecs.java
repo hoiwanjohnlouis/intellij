@@ -26,13 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  124
  *  NoExecs
  *  NumInGroup
+ *  <p></p>
  *  No of execution repeating group entries to follow.
  */
 public class Tag124NumNoExecs extends FIX40Abstract implements LogValuePairString, LogVerboseString {
     private final MyNumInGroupType dataValue;
 
-    public final static int TESTA_NUM_NO_EXECS = 124; // fake data
-    public final static int TESTB_NUM_NO_EXECS = 421;
+    public final static int TESTA_NUM_NO_EXECS
+            = 124;
+    public final static int TESTB_NUM_NO_EXECS
+            = 421;
 
     public Tag124NumNoExecs(MyNumInGroupType dataValue) {
         setFixType(FIX40.FIX124_NUM_NO_EXECS);

@@ -26,13 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  117
  *  QuoteID
  *  String
+ *  <p></p>
  *  Unique identifier for quote
  */
 public class Tag117StrQuoteID extends FIX40Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_QUOTE_ID = "BilboBaggins-117QuoteID"; // fake data
-    public final static String TESTB_STR_QUOTE_ID = "Gandalf-117QuoteID";
+    public final static String TESTA_STR_QUOTE_ID
+            = "BilboBaggins-Tag117StrQuoteID";
+    public final static String TESTB_STR_QUOTE_ID
+            = "Gandalf-Tag117StrQuoteID";
 
     public Tag117StrQuoteID(MyStringType dataValue) {
         setFixType(FIX40.FIX117_STR_QUOTE_ID);

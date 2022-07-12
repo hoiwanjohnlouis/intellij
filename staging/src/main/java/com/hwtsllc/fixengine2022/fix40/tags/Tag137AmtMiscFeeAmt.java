@@ -26,13 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  137
  *  MiscFeeAmt
  *  Amt
+ *  <p></p>
  *  Miscellaneous fee value
  */
 public class Tag137AmtMiscFeeAmt extends FIX40Abstract implements LogValuePairString, LogVerboseString {
     private final MyAmtType dataValue;
 
-    public final static double TESTA_AMT_MISC_FEE_AMT = 1.37D;
-    public final static double TESTB_AMT_MISC_FEE_AMT = 7.31D;
+    public final static double TESTA_AMT_MISC_FEE_AMT
+            = 1.37D;
+    public final static double TESTB_AMT_MISC_FEE_AMT
+            = 7.31D;
 
     public Tag137AmtMiscFeeAmt(MyAmtType dataValue) {
         setFixType(FIX40.FIX137_AMT_MISC_FEE_AMT);

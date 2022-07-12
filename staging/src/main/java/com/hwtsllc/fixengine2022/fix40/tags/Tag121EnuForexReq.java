@@ -27,7 +27,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  121
  *  ForexReq
  *  Boolean
- *  <p>
+ *  <p></p>
  *  Indicates request for forex accommodation trade to be executed along with security transaction.
  *  <p></p>
  *  Valid values:

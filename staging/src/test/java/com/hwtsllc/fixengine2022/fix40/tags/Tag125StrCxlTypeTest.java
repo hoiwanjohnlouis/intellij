@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix40.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX40;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,75 +27,129 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  125
  *  CxlType
  *  char
+ *  <p></p>
  *  Deprecated in FIX.4.2
  */
 // @Deprecated
 class Tag125StrCxlTypeTest {
     @Test
-    void FIX0125Test() {
-        FIX40 fixData = FIX40.FIX125_STR_CXL_TYPE;
-        assertEquals( "CXL_TYPE", fixData.toEnumNameString());
-        assertEquals( "125", fixData.toEnumIDString());
-        assertEquals( "CxlType (no longer used)", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0125Test() {
-        Tag125StrCxlType tagData;
-
-        tagData = new Tag125StrCxlType(new MyStringType("KimHaNeul-125CxlType") );
-        assertEquals( "KimHaNeul-125CxlType", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
     void PrintFIXTagTest() {
         Tag125StrCxlType tagData;
+        String oneElement;
 
-        tagData = new Tag125StrCxlType(new MyStringType(Tag125StrCxlType.TESTB_STR_CXL_TYPE));
+        oneElement = Tag125StrCxlType.TESTA_STR_CXL_TYPE;
+        tagData = new Tag125StrCxlType(new MyStringType( oneElement ));
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag125StrCxlType.TESTB_STR_CXL_TYPE;
+        tagData = new Tag125StrCxlType(new MyStringType( oneElement ));
         System.out.println( tagData.toVerboseString() );
     }
+
+    @Test
+    void FIXTest() {
+        Tag125StrCxlType tagData;
+        String oneElement;
+
+        oneElement = Tag125StrCxlType.TESTA_STR_CXL_TYPE;
+        tagData = new Tag125StrCxlType(new MyStringType( oneElement ));
+        verifyFIXData( tagData );
+
+        oneElement = Tag125StrCxlType.TESTB_STR_CXL_TYPE;
+        tagData = new Tag125StrCxlType(new MyStringType( oneElement ));
+        verifyFIXData( tagData );
+    }
+
+    private void verifyFIXData( final Tag125StrCxlType tagData ) {
+        assertEquals( "FIX125_STR_CXL_TYPE", tagData.toEnumLabelString());
+        assertEquals( "CXL_TYPE", tagData.toEnumNameString());
+        assertEquals( "125", tagData.toEnumIDString());
+        assertEquals( "CxlType (no longer used)", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void TagGetDataValueTest() {
         Tag125StrCxlType tagData;
+        String oneElement;
 
-        tagData = new Tag125StrCxlType(new MyStringType(Tag125StrCxlType.TESTB_STR_CXL_TYPE));
-        assertEquals( Tag125StrCxlType.TESTB_STR_CXL_TYPE, tagData.getDataValue());
+        oneElement = Tag125StrCxlType.TESTA_STR_CXL_TYPE;
+        tagData = new Tag125StrCxlType(new MyStringType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = Tag125StrCxlType.TESTB_STR_CXL_TYPE;
+        tagData = new Tag125StrCxlType(new MyStringType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+    }
+
+    private void verifyDataValue( final Tag125StrCxlType tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+
     @Test
     void TagToValuePairStringTest() {
         Tag125StrCxlType tagData;
+        String oneElement;
 
-        tagData = new Tag125StrCxlType(new MyStringType(Tag125StrCxlType.TESTB_STR_CXL_TYPE));
-        assertEquals( tagData.toEnumIDString() + "=" + Tag125StrCxlType.TESTB_STR_CXL_TYPE,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag125StrCxlType.TESTA_STR_CXL_TYPE;
+        tagData = new Tag125StrCxlType(new MyStringType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
+
+        oneElement = Tag125StrCxlType.TESTB_STR_CXL_TYPE;
+        tagData = new Tag125StrCxlType(new MyStringType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
     }
+
+    private void verifyValuePairString( final Tag125StrCxlType tagData, final String oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
     @Test
     void TagToStringTest() {
         Tag125StrCxlType tagData;
+        String oneElement;
 
-        tagData = new Tag125StrCxlType(new MyStringType(Tag125StrCxlType.TESTB_STR_CXL_TYPE));
-        assertEquals( Tag125StrCxlType.TESTB_STR_CXL_TYPE,
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag125StrCxlType.TESTA_STR_CXL_TYPE;
+        tagData = new Tag125StrCxlType(new MyStringType( oneElement ));
+        verifyToString( tagData, oneElement );
+
+        oneElement = Tag125StrCxlType.TESTB_STR_CXL_TYPE;
+        tagData = new Tag125StrCxlType(new MyStringType( oneElement ));
+        verifyToString( tagData, oneElement );
     }
+
+    private void verifyToString( final Tag125StrCxlType tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
     @Test
     void TagToVerboseStringTest() {
         Tag125StrCxlType tagData;
+        String oneElement;
 
-        tagData = new Tag125StrCxlType(new MyStringType(Tag125StrCxlType.TESTA_STR_CXL_TYPE));
+        oneElement = Tag125StrCxlType.TESTA_STR_CXL_TYPE;
+        tagData = new Tag125StrCxlType(new MyStringType( oneElement ));
+        VerifyVerboseString( tagData );
+
+        oneElement = Tag125StrCxlType.TESTB_STR_CXL_TYPE;
+        tagData = new Tag125StrCxlType(new MyStringType( oneElement ));
+        VerifyVerboseString( tagData );
+    }
+
+    private void VerifyVerboseString( final Tag125StrCxlType tagData ) {
         assertEquals( "Tag125StrCxlType\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag125StrCxlType.TESTA_STR_CXL_TYPE + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag125StrCxlType.TESTA_STR_CXL_TYPE + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
