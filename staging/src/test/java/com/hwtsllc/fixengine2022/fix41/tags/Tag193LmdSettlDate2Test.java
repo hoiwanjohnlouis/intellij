@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix41.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyLocalMktDateType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,80 +27,81 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  193
  *  SettlDate2
  *  LocalMktDate
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.5.0 SettDate (64) of the future part of a F/X swap order.
  */
 // @Deprecated
 class Tag193LmdSettlDate2Test {
     @Test
-    void FIX0193Test() {
-        FIX41 fixData = FIX41.FIX193_LMD_SETTL_DATE_2;
-        assertEquals( "193", fixData.toEnumIDString());
-        assertEquals( "SETTL_DATE_2", fixData.toEnumNameString());
-        assertEquals( "SettlDate2", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0193Test() {
+    void PrintTest() {
         Tag193LmdSettlDate2 tagData;
+        String oneElement;
 
-        tagData = new Tag193LmdSettlDate2(new MyLocalMktDateType(Tag193LmdSettlDate2.TESTA_LMD_SETTL_DATE_2));
-        assertEquals( Tag193LmdSettlDate2.TESTA_LMD_SETTL_DATE_2, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue());
+        oneElement = Tag193LmdSettlDate2.TESTA_LMD_SETTL_DATE_2;
+        tagData = new Tag193LmdSettlDate2(new MyLocalMktDateType( oneElement ));
+        System.out.println( tagData.toVerboseString() );
 
-        tagData = new Tag193LmdSettlDate2(new MyLocalMktDateType(Tag193LmdSettlDate2.TESTB_LMD_SETTL_DATE_2));
-        assertEquals( Tag193LmdSettlDate2.TESTB_LMD_SETTL_DATE_2, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag193LmdSettlDate2 tagData;
-
-        tagData = new Tag193LmdSettlDate2(new MyLocalMktDateType(Tag193LmdSettlDate2.TESTB_LMD_SETTL_DATE_2));
+        oneElement = Tag193LmdSettlDate2.TESTB_LMD_SETTL_DATE_2;
+        tagData = new Tag193LmdSettlDate2(new MyLocalMktDateType( oneElement ));
         System.out.println( tagData.toVerboseString() );
     }
-    @Test
-    void TagGetDataValueTest() {
-        Tag193LmdSettlDate2 tagData;
 
-        tagData = new Tag193LmdSettlDate2(new MyLocalMktDateType(Tag193LmdSettlDate2.TESTB_LMD_SETTL_DATE_2));
-        assertEquals( Tag193LmdSettlDate2.TESTB_LMD_SETTL_DATE_2, tagData.getDataValue());
+    @Test
+    void FIXTagTest() {
+        Tag193LmdSettlDate2 tagData;
+        String oneElement;
+
+        oneElement = Tag193LmdSettlDate2.TESTA_LMD_SETTL_DATE_2;
+        tagData = new Tag193LmdSettlDate2(new MyLocalMktDateType( oneElement ));
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
+
+        oneElement = Tag193LmdSettlDate2.TESTB_LMD_SETTL_DATE_2;
+        tagData = new Tag193LmdSettlDate2(new MyLocalMktDateType( oneElement ));
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyFIXData( final Tag193LmdSettlDate2 tagData ) {
+        assertEquals( "FIX193_LMD_SETTL_DATE_2", tagData.toEnumLabelString());
+        assertEquals( "193", tagData.toEnumIDString());
+        assertEquals( "SETTL_DATE_2", tagData.toEnumNameString());
+        assertEquals( "SettlDate2", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
+    private void verifyDataValue( final Tag193LmdSettlDate2 tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
-    @Test
-    void TagToValuePairStringTest() {
-        Tag193LmdSettlDate2 tagData;
 
-        tagData = new Tag193LmdSettlDate2(new MyLocalMktDateType(Tag193LmdSettlDate2.TESTB_LMD_SETTL_DATE_2));
-        assertEquals( tagData.toEnumIDString() + "=" + Tag193LmdSettlDate2.TESTB_LMD_SETTL_DATE_2,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+    private void verifyValuePairString( final Tag193LmdSettlDate2 tagData, final String oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
-    @Test
-    void TagToStringTest() {
-        Tag193LmdSettlDate2 tagData;
 
-        tagData = new Tag193LmdSettlDate2(new MyLocalMktDateType(Tag193LmdSettlDate2.TESTB_LMD_SETTL_DATE_2));
-        assertEquals( Tag193LmdSettlDate2.TESTB_LMD_SETTL_DATE_2,
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+    private void verifyToString( final Tag193LmdSettlDate2 tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
-    @Test
-    void TagToVerboseStringTest() {
-        Tag193LmdSettlDate2 tagData;
 
-        tagData = new Tag193LmdSettlDate2(new MyLocalMktDateType(Tag193LmdSettlDate2.TESTA_LMD_SETTL_DATE_2));
+    private void verifyVerboseString( final Tag193LmdSettlDate2 tagData ) {
         assertEquals( "Tag193LmdSettlDate2\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag193LmdSettlDate2.TESTA_LMD_SETTL_DATE_2 + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag193LmdSettlDate2.TESTA_LMD_SETTL_DATE_2 + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

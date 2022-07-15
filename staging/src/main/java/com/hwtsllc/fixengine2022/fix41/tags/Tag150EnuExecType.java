@@ -27,11 +27,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  150
  *  ExecType
  *  char
- *  <p>
+ *  <p></p>
  *  Describes the specific ExecutionRpt
- *  <p>
+ *  <p></p>
  *  (i.e. Pending Cancel) while OrdStatus (39) will always identify the current order status (i.e. Partially Filled)
- *  <p>
+ *  <p></p>
  *  *** SOME VALUES HAVE BEEN REPLACED - See "Replaced Features and Supported Approach" ***
  *  <p></p>
  *  Valid values:
@@ -63,8 +63,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag150EnuExecType extends FIX41Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum150ExecType dataValue;
 
-    public final static Enum150ExecType TESTA_ENU_EXEC_TYPE = Enum150ExecType.NEW; // fake data
-    public final static Enum150ExecType TESTB_ENU_EXEC_TYPE = Enum150ExecType.DONE_FOR_DAY;
+    public final static Enum150ExecType TESTA_ENU_EXEC_TYPE
+            = Enum150ExecType.NEW;
+    public final static Enum150ExecType TESTB_ENU_EXEC_TYPE
+            = Enum150ExecType.DONE_FOR_DAY;
 
     public Tag150EnuExecType(Enum150ExecType dataValue) {
         setFixType(FIX41.FIX150_ENU_EXEC_TYPE);

@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix41.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceOffsetType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,90 +27,84 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  195
  *  LastForwardPoints
  *  PriceOffset
- *  <p>
+ *  <p></p>
  *  F/X forward points added to LastSpotRate (94).
  *  May be a negative value. Expressed in decimal form.
- *  <p>
+ *  <p></p>
  *  For example, 61.99 points is expressed and sent as 0.006199
  */
 class Tag195PxoLastForwardPointsTest {
     @Test
-    void FIX0195Test() {
-        FIX41 fixData = FIX41.FIX195_PXO_LAST_FORWARD_POINTS;
-        assertEquals( "195", fixData.toEnumIDString());
-        assertEquals( "LAST_FORWARD_POINTS", fixData.toEnumNameString());
-        assertEquals( "LastForwardPoints", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0195Test() {
+    void PrintTest() {
         Tag195PxoLastForwardPoints tagData;
+        double oneElement;
 
-        tagData = new Tag195PxoLastForwardPoints(
-                new MyPriceOffsetType(Tag195PxoLastForwardPoints.TESTA_PXO_LAST_FORWARD_POINTS));
-        assertEquals( Tag195PxoLastForwardPoints.TESTA_PXO_LAST_FORWARD_POINTS, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue());
+        oneElement = Tag195PxoLastForwardPoints.TESTA_PXO_LAST_FORWARD_POINTS;
+        tagData = new Tag195PxoLastForwardPoints( new MyPriceOffsetType( oneElement ));
+        System.out.println( tagData.toVerboseString() );
 
-        tagData = new Tag195PxoLastForwardPoints(
-                new MyPriceOffsetType(Tag195PxoLastForwardPoints.TESTB_PXO_LAST_FORWARD_POINTS));
-        assertEquals( Tag195PxoLastForwardPoints.TESTB_PXO_LAST_FORWARD_POINTS, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag195PxoLastForwardPoints tagData;
-
-        tagData = new Tag195PxoLastForwardPoints(
-                new MyPriceOffsetType(Tag195PxoLastForwardPoints.TESTB_PXO_LAST_FORWARD_POINTS));
+        oneElement = Tag195PxoLastForwardPoints.TESTB_PXO_LAST_FORWARD_POINTS;
+        tagData = new Tag195PxoLastForwardPoints( new MyPriceOffsetType( oneElement ));
         System.out.println( tagData.toVerboseString() );
     }
-    @Test
-    void TagGetDataValueTest() {
-        Tag195PxoLastForwardPoints tagData;
 
-        tagData = new Tag195PxoLastForwardPoints(
-                new MyPriceOffsetType(Tag195PxoLastForwardPoints.TESTB_PXO_LAST_FORWARD_POINTS));
-        assertEquals( Tag195PxoLastForwardPoints.TESTB_PXO_LAST_FORWARD_POINTS, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+    @Test
+    void FIXTagTest() {
+        Tag195PxoLastForwardPoints tagData;
+        double oneElement;
+
+        oneElement = Tag195PxoLastForwardPoints.TESTA_PXO_LAST_FORWARD_POINTS;
+        tagData = new Tag195PxoLastForwardPoints( new MyPriceOffsetType( oneElement ));
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
+
+        oneElement = Tag195PxoLastForwardPoints.TESTB_PXO_LAST_FORWARD_POINTS;
+        tagData = new Tag195PxoLastForwardPoints( new MyPriceOffsetType( oneElement ));
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
     }
-    @Test
-    void TagToValuePairStringTest() {
-        Tag195PxoLastForwardPoints tagData;
 
-        tagData = new Tag195PxoLastForwardPoints(
-                new MyPriceOffsetType(Tag195PxoLastForwardPoints.TESTB_PXO_LAST_FORWARD_POINTS));
-        assertEquals( tagData.toEnumIDString() + "=" + Tag195PxoLastForwardPoints.TESTB_PXO_LAST_FORWARD_POINTS,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+    private void verifyFIXData( final Tag195PxoLastForwardPoints tagData ) {
+        assertEquals( "FIX195_PXO_LAST_FORWARD_POINTS", tagData.toEnumLabelString());
+        assertEquals( "195", tagData.toEnumIDString());
+        assertEquals( "LAST_FORWARD_POINTS", tagData.toEnumNameString());
+        assertEquals( "LastForwardPoints", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
     }
-    @Test
-    void TagToStringTest() {
-        Tag195PxoLastForwardPoints tagData;
 
-        tagData = new Tag195PxoLastForwardPoints(
-                new MyPriceOffsetType(Tag195PxoLastForwardPoints.TESTB_PXO_LAST_FORWARD_POINTS));
-        assertEquals( String.valueOf(Tag195PxoLastForwardPoints.TESTB_PXO_LAST_FORWARD_POINTS),
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+    private void verifyDataValue( final Tag195PxoLastForwardPoints tagData, final double oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
     }
-    @Test
-    void TagToVerboseStringTest() {
-        Tag195PxoLastForwardPoints tagData;
 
-        tagData = new Tag195PxoLastForwardPoints(
-                new MyPriceOffsetType(Tag195PxoLastForwardPoints.TESTA_PXO_LAST_FORWARD_POINTS));
+    private void verifyValuePairString( final Tag195PxoLastForwardPoints tagData, final double oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
+    private void verifyToString( final Tag195PxoLastForwardPoints tagData, final double oneElement ) {
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
+    private void verifyVerboseString( final Tag195PxoLastForwardPoints tagData ) {
         assertEquals( "Tag195PxoLastForwardPoints\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag195PxoLastForwardPoints.TESTA_PXO_LAST_FORWARD_POINTS + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" +
-                                            Tag195PxoLastForwardPoints.TESTA_PXO_LAST_FORWARD_POINTS + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

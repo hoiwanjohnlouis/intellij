@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix41.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,82 +27,132 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  174
  *  SettlBrkrCode
  *  String
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.3 BIC
- *  <p>
- *  (Bank Identification Code - Swift managed) code of  the broker involved (i.e. for multi-company brokerage firms)
+ *  <p></p>
+ *  (Bank Identification Code - Swift managed) code of  the broker involved
+ *  (i.e. for multi-company brokerage firms)
  */
 // @Deprecated
 class Tag174StrSettlBrkrCodeTest {
     @Test
-    void FIX0174Test() {
-        FIX41 fixData = FIX41.FIX174_STR_SETTL_BRKR_CODE;
-        assertEquals( "174", fixData.toEnumIDString());
-        assertEquals( "SETTL_BRKR_CODE", fixData.toEnumNameString());
-        assertEquals( "SettlBrkrCode (replaced)", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0174Test() {
-        Tag174StrSettlBrkrCode tagData;
-
-        tagData = new Tag174StrSettlBrkrCode(new MyStringType(Tag174StrSettlBrkrCode.TESTA_STR_SETTL_BRKR_CODE));
-        assertEquals( Tag174StrSettlBrkrCode.TESTA_STR_SETTL_BRKR_CODE, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag174StrSettlBrkrCode(new MyStringType(Tag174StrSettlBrkrCode.TESTB_STR_SETTL_BRKR_CODE));
-        assertEquals( Tag174StrSettlBrkrCode.TESTB_STR_SETTL_BRKR_CODE, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
     void PrintFIXTagTest() {
         Tag174StrSettlBrkrCode tagData;
+        String oneElement;
 
-        tagData = new Tag174StrSettlBrkrCode(new MyStringType(Tag174StrSettlBrkrCode.TESTB_STR_SETTL_BRKR_CODE));
+        oneElement = Tag174StrSettlBrkrCode.TESTA_STR_SETTL_BRKR_CODE;
+        tagData = new Tag174StrSettlBrkrCode(new MyStringType( oneElement ));
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag174StrSettlBrkrCode.TESTB_STR_SETTL_BRKR_CODE;
+        tagData = new Tag174StrSettlBrkrCode(new MyStringType( oneElement ));
         System.out.println( tagData.toVerboseString() );
     }
+
+    @Test
+    void FIXTest() {
+        Tag174StrSettlBrkrCode tagData;
+        String oneElement;
+
+        oneElement = Tag174StrSettlBrkrCode.TESTA_STR_SETTL_BRKR_CODE;
+        tagData = new Tag174StrSettlBrkrCode(new MyStringType( oneElement ));
+        verifyFIXData( tagData );
+
+        oneElement = Tag174StrSettlBrkrCode.TESTB_STR_SETTL_BRKR_CODE;
+        tagData = new Tag174StrSettlBrkrCode(new MyStringType( oneElement ));
+        verifyFIXData( tagData );
+    }
+
+    private void verifyFIXData( final Tag174StrSettlBrkrCode tagData ) {
+        assertEquals( "FIX174_STR_SETTL_BRKR_CODE", tagData.toEnumLabelString());
+        assertEquals( "174", tagData.toEnumIDString());
+        assertEquals( "SETTL_BRKR_CODE", tagData.toEnumNameString());
+        assertEquals( "SettlBrkrCode (replaced)", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void TagGetDataValueTest() {
         Tag174StrSettlBrkrCode tagData;
+        String oneElement;
 
-        tagData = new Tag174StrSettlBrkrCode(new MyStringType(Tag174StrSettlBrkrCode.TESTB_STR_SETTL_BRKR_CODE));
-        assertEquals( Tag174StrSettlBrkrCode.TESTB_STR_SETTL_BRKR_CODE, tagData.getDataValue());
+        oneElement = Tag174StrSettlBrkrCode.TESTA_STR_SETTL_BRKR_CODE;
+        tagData = new Tag174StrSettlBrkrCode(new MyStringType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = Tag174StrSettlBrkrCode.TESTB_STR_SETTL_BRKR_CODE;
+        tagData = new Tag174StrSettlBrkrCode(new MyStringType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+    }
+
+    private void verifyDataValue( final Tag174StrSettlBrkrCode tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+
     @Test
     void TagToValuePairStringTest() {
         Tag174StrSettlBrkrCode tagData;
+        String oneElement;
 
-        tagData = new Tag174StrSettlBrkrCode(new MyStringType(Tag174StrSettlBrkrCode.TESTB_STR_SETTL_BRKR_CODE));
-        assertEquals( tagData.toEnumIDString() + "=" + Tag174StrSettlBrkrCode.TESTB_STR_SETTL_BRKR_CODE,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag174StrSettlBrkrCode.TESTA_STR_SETTL_BRKR_CODE;
+        tagData = new Tag174StrSettlBrkrCode(new MyStringType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
+
+        oneElement = Tag174StrSettlBrkrCode.TESTB_STR_SETTL_BRKR_CODE;
+        tagData = new Tag174StrSettlBrkrCode(new MyStringType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
     }
+
+    private void verifyValuePairString( final Tag174StrSettlBrkrCode tagData, final String oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
     @Test
     void TagToStringTest() {
         Tag174StrSettlBrkrCode tagData;
+        String oneElement;
 
-        tagData = new Tag174StrSettlBrkrCode(new MyStringType(Tag174StrSettlBrkrCode.TESTB_STR_SETTL_BRKR_CODE));
-        assertEquals( Tag174StrSettlBrkrCode.TESTB_STR_SETTL_BRKR_CODE,
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag174StrSettlBrkrCode.TESTA_STR_SETTL_BRKR_CODE;
+        tagData = new Tag174StrSettlBrkrCode(new MyStringType( oneElement ));
+        verifyToString( tagData, oneElement );
+
+        oneElement = Tag174StrSettlBrkrCode.TESTB_STR_SETTL_BRKR_CODE;
+        tagData = new Tag174StrSettlBrkrCode(new MyStringType( oneElement ));
+        verifyToString( tagData, oneElement );
     }
+
+    private void verifyToString( final Tag174StrSettlBrkrCode tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
     @Test
     void TagToVerboseStringTest() {
         Tag174StrSettlBrkrCode tagData;
+        String oneElement;
 
-        tagData = new Tag174StrSettlBrkrCode(new MyStringType(Tag174StrSettlBrkrCode.TESTA_STR_SETTL_BRKR_CODE));
+        oneElement = Tag174StrSettlBrkrCode.TESTA_STR_SETTL_BRKR_CODE;
+        tagData = new Tag174StrSettlBrkrCode(new MyStringType( oneElement ));
+        verifyVerboseString( tagData );
+
+        oneElement = Tag174StrSettlBrkrCode.TESTB_STR_SETTL_BRKR_CODE;
+        tagData = new Tag174StrSettlBrkrCode(new MyStringType( oneElement ));
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyVerboseString( final Tag174StrSettlBrkrCode tagData ) {
         assertEquals( "Tag174StrSettlBrkrCode\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag174StrSettlBrkrCode.TESTA_STR_SETTL_BRKR_CODE + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag174StrSettlBrkrCode.TESTA_STR_SETTL_BRKR_CODE + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

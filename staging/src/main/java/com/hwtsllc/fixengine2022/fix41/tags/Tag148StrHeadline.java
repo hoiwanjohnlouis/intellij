@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  148
  *  Headline
  *  String
- *  <p>
+ *  <p></p>
  *  The headline of a News message
  */
 public class Tag148StrHeadline extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_HEADLINE = "BilboBaggins-148StrHeadline";
-    public final static String TESTB_STR_HEADLINE = "Gandalf-148StrHeadline";
+    public final static String TESTA_STR_HEADLINE
+            = "BilboBaggins-Tag148StrHeadline";
+    public final static String TESTB_STR_HEADLINE
+            = "Gandalf-Tag148StrHeadline";
 
     public Tag148StrHeadline(MyStringType dataValue) {
         setFixType(FIX41.FIX148_STR_HEADLINE);

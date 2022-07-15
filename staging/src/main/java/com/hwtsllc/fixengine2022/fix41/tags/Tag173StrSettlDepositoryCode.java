@@ -26,16 +26,19 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  173
  *  SettlDepositoryCode
  *  String
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.3 Brokers account code at the depository
+ *  <p></p>
  *  (i.e. CEDEL ID  for CEDEL, FINS for DTC, or Euroclear ID for Euroclear) if Settlement Location is a depository
  */
 // @Deprecated
 public class Tag173StrSettlDepositoryCode extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_SETTL_DEPOSITORY_CODE = "BilboBaggins-Tag173StrSettlDepositoryCode";
-    public final static String TESTB_STR_SETTL_DEPOSITORY_CODE = "Gandalf-Tag173StrSettlDepositoryCode";
+    public final static String TESTA_STR_SETTL_DEPOSITORY_CODE
+            = "BilboBaggins-Tag173StrSettlDepositoryCode";
+    public final static String TESTB_STR_SETTL_DEPOSITORY_CODE
+            = "Gandalf-Tag173StrSettlDepositoryCode";
 
     public Tag173StrSettlDepositoryCode(MyStringType dataValue) {
         setFixType(FIX41.FIX173_STR_SETTL_DEPOSITORY_CODE);

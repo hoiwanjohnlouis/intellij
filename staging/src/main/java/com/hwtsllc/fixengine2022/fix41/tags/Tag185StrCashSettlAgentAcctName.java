@@ -26,17 +26,19 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  185
  *  CashSettlAgentAcctName
  *  String
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.3
- *  <p>
+ *  <p></p>
  *  Name of SettlInstSource's account at local agent bank if SettlDeliveryType=Free
  */
 // @Deprecated
 public class Tag185StrCashSettlAgentAcctName extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_CASH_SETTL_AGENT_ACCT_NAME = "BilboBaggins-Tag185StrCashSettlAgentAcctName";
-    public final static String TESTB_STR_CASH_SETTL_AGENT_ACCT_NAME = "Gandalf-Tag185StrCashSettlAgentAcctName";
+    public final static String TESTA_STR_CASH_SETTL_AGENT_ACCT_NAME
+            = "BilboBaggins-Tag185StrCashSettlAgentAcctName";
+    public final static String TESTB_STR_CASH_SETTL_AGENT_ACCT_NAME
+            = "Gandalf-Tag185StrCashSettlAgentAcctName";
 
     public Tag185StrCashSettlAgentAcctName(MyStringType dataValue) {
         setFixType(FIX41.FIX185_STR_CASH_SETTL_AGENT_ACCT_NAME);

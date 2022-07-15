@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix41.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.fix41.enums.Enum166SettlLocation;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,7 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  166
  *  SettlLocation
  *  String
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.2 Identifies Settlement Depository or Country Code, ISITC spec
  *  <p></p>
  *  Valid values:
@@ -44,17 +43,34 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 // @Deprecated
 class Tag166EnuSettlLocationTest {
     @Test
-    void FIX0166Test() {
-        FIX41 fixData = FIX41.FIX166_ENU_SETTL_LOCATION;
-        assertEquals( "166", fixData.toEnumIDString());
-        assertEquals( "SETTL_LOCATION", fixData.toEnumNameString());
-        assertEquals( "SettlLocation (replaced)", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintFIXTagTest() {
+        Tag166EnuSettlLocation tagData;
+
+        // loop around the ENUM and process
+        for (Enum166SettlLocation oneEnum : Enum166SettlLocation.values()) {
+            tagData = new Tag166EnuSettlLocation(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0166Test() {
+    void FIX0166Test() {
+        Tag166EnuSettlLocation tagData;
+
+        // loop around the ENUM and process
+        for (Enum166SettlLocation oneEnum : Enum166SettlLocation.values()) {
+            tagData = new Tag166EnuSettlLocation(oneEnum);
+            assertEquals( "FIX166_ENU_SETTL_LOCATION", tagData.toEnumLabelString());
+            assertEquals( "166", tagData.toEnumIDString());
+            assertEquals( "SETTL_LOCATION", tagData.toEnumNameString());
+            assertEquals( "SettlLocation (replaced)", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         Tag166EnuSettlLocation tagData;
 
         tagData = new Tag166EnuSettlLocation(Enum166SettlLocation.CEDEL);
@@ -84,25 +100,12 @@ class Tag166EnuSettlLocationTest {
         tagData = new Tag166EnuSettlLocation(Enum166SettlLocation.PARTICIPANT_TRUST_COMPANY);
         assertEquals( Enum166SettlLocation.PARTICIPANT_TRUST_COMPANY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag166EnuSettlLocation tagData;
-
-        // loop around the ENUM and process
-        for (Enum166SettlLocation oneEnum : Enum166SettlLocation.values()) {
-            tagData = new Tag166EnuSettlLocation(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag166EnuSettlLocation tagData;
 
         // loop around the ENUM and process
         for (Enum166SettlLocation oneEnum : Enum166SettlLocation.values()) {
             tagData = new Tag166EnuSettlLocation(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
@@ -113,8 +116,9 @@ class Tag166EnuSettlLocationTest {
         // loop around the ENUM and process
         for (Enum166SettlLocation oneEnum : Enum166SettlLocation.values()) {
             tagData = new Tag166EnuSettlLocation(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -141,8 +145,8 @@ class Tag166EnuSettlLocationTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

@@ -27,9 +27,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  160
  *  SettlInstMode
  *  char
- *  <p>
+ *  <p></p>
  *  Indicates mode used for Settlement Instructions message.
- *  <p>
+ *  <p></p>
  *  *** SOME VALUES HAVE BEEN REPLACED - See "Replaced Features and Supported Approach" ***
  *  <p></p>
  *  Valid values:
@@ -44,8 +44,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag160EnuSettlInstMode extends FIX41Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum160SettlInstMode dataValue;
 
-    public final static Enum160SettlInstMode TESTA_ENU_SETTL_INST_MODE = Enum160SettlInstMode.DEFAULT;
-    public final static Enum160SettlInstMode TESTB_ENU_SETTL_INST_MODE = Enum160SettlInstMode.REQUEST_REJECT;
+    public final static Enum160SettlInstMode TESTA_ENU_SETTL_INST_MODE
+            = Enum160SettlInstMode.DEFAULT;
+    public final static Enum160SettlInstMode TESTB_ENU_SETTL_INST_MODE
+            = Enum160SettlInstMode.REQUEST_REJECT;
 
     public Tag160EnuSettlInstMode(Enum160SettlInstMode dataValue) {
         setFixType(FIX41.FIX160_ENU_SETTL_INST_MODE);

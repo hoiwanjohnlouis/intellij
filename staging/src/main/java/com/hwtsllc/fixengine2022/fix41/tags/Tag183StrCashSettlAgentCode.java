@@ -26,17 +26,19 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  183
  *  CashSettlAgentCode
  *  String
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.3
- *  <p>
+ *  <p></p>
  *  BIC (Bank Identification Code--Swift managed) code of the SettlInstSource's local agent bank if SettlDeliveryType=Free
  */
 // @Deprecated
 public class Tag183StrCashSettlAgentCode extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_CASH_SETTL_AGENT_CODE = "BilboBaggins-Tag183StrCashSettlAgentCode";
-    public final static String TESTB_STR_CASH_SETTL_AGENT_CODE = "Gandalf-Tag183StrCashSettlAgentCode";
+    public final static String TESTA_STR_CASH_SETTL_AGENT_CODE
+            = "BilboBaggins-Tag183StrCashSettlAgentCode";
+    public final static String TESTB_STR_CASH_SETTL_AGENT_CODE
+            = "Gandalf-Tag183StrCashSettlAgentCode";
 
     public Tag183StrCashSettlAgentCode(MyStringType dataValue) {
         setFixType(FIX41.FIX183_STR_CASH_SETTL_AGENT_CODE);

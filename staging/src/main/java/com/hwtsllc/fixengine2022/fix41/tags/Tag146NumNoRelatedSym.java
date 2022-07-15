@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  146
  *  NoRelatedSym
  *  NumInGroup
- *  <p>
+ *  <p></p>
  *  Specifies the number of repeating symbols specified.
  */
 public class Tag146NumNoRelatedSym extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyNumInGroupType dataValue;
 
-    public final static int TESTA_NUM_NO_RELATED_SYM = 1; // fake data
-    public final static int TESTB_NUM_NO_RELATED_SYM = 2;
+    public final static int TESTA_NUM_NO_RELATED_SYM
+            = 1;
+    public final static int TESTB_NUM_NO_RELATED_SYM
+            = 2;
 
     public Tag146NumNoRelatedSym(MyNumInGroupType dataValue) {
         setFixType(FIX41.FIX146_NUM_NO_RELATED_SYM);

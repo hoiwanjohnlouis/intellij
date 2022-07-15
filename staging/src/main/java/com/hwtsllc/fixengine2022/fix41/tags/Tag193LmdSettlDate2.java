@@ -26,15 +26,17 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  193
  *  SettlDate2
  *  LocalMktDate
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.5.0 SettDate (64) of the future part of a F/X swap order.
  */
 // @Deprecated
 public class Tag193LmdSettlDate2 extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyLocalMktDateType dataValue;
 
-    public final static String TESTA_LMD_SETTL_DATE_2 = "Frodo-Tag193LmdSettlDate2";
-    public final static String TESTB_LMD_SETTL_DATE_2 = "Gandalf-Tag193LmdSettlDate2";
+    public final static String TESTA_LMD_SETTL_DATE_2
+            = "Frodo-Tag193LmdSettlDate2";
+    public final static String TESTB_LMD_SETTL_DATE_2
+            = "Gandalf-Tag193LmdSettlDate2";
 
     public Tag193LmdSettlDate2(MyLocalMktDateType dataValue) {
         setFixType(FIX41.FIX193_LMD_SETTL_DATE_2);

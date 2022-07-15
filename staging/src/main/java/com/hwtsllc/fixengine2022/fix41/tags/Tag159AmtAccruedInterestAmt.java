@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  159
  *  AccruedInterestAmt
  *  Amt
- *  <p>
+ *  <p></p>
  *  Amount of Accrued Interest for convertible bonds and fixed income
  */
 public class Tag159AmtAccruedInterestAmt extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyAmtType dataValue;
 
-    public final static double TESTA_AMT_ACCRUED_INTEREST_AMT = 1.59D;
-    public final static double TESTB_AMT_ACCRUED_INTEREST_AMT = 9.51D;
+    public final static double TESTA_AMT_ACCRUED_INTEREST_AMT
+            = 1.59D;
+    public final static double TESTB_AMT_ACCRUED_INTEREST_AMT
+            = 9.51D;
 
     public Tag159AmtAccruedInterestAmt(MyAmtType dataValue) {
         setFixType(FIX41.FIX159_AMT_ACCRUED_INTEREST_AMT);

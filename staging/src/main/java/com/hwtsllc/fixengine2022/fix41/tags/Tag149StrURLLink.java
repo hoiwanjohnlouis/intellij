@@ -26,17 +26,19 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  149
  *  URLLink
  *  String
- *  <p>
+ *  <p></p>
  *  A URI (Uniform Resource Identifier) or URL (Uniform Resource Locator)
  *  link to additional information (i.e. http://www.XYZ.com/research.html)
- *  <p>
+ *  <p></p>
  *  See "Appendix 6-B FIX Fields Based Upon Other Standards"
  */
 public class Tag149StrURLLink extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_URL_LINK = "BilboBaggins-149StrURLLink";
-    public final static String TESTB_STR_URL_LINK = "Gandalf-149StrURLLink";
+    public final static String TESTA_STR_URL_LINK
+            = "BilboBaggins-Tag149StrURLLink";
+    public final static String TESTB_STR_URL_LINK
+            = "Gandalf-Tag149StrURLLink";
 
     public Tag149StrURLLink(MyStringType dataValue) {
         setFixType(FIX41.FIX149_STR_URL_LINK);

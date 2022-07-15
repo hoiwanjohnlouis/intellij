@@ -26,17 +26,19 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  207
  *  SecurityExchange
  *  Exchange
- *  <p>
+ *  <p></p>
  *  Market used to help identify a security.
- *  <p>
+ *  <p></p>
  *  Valid values:
  *      See "Appendix 6-C"
  */
 public class Tag207ExcSecurityExchange extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyExchangeType dataValue;
 
-    public final static String TESTA_EXC_SECURITY_EXCHANGE = "Frodo-Tag207ExcSecurityExchange";
-    public final static String TESTB_EXC_SECURITY_EXCHANGE = "Gandalf-Tag207ExcSecurityExchange";
+    public final static String TESTA_EXC_SECURITY_EXCHANGE
+            = "Frodo-Tag207ExcSecurityExchange";
+    public final static String TESTB_EXC_SECURITY_EXCHANGE
+            = "Gandalf-Tag207ExcSecurityExchange";
 
     public Tag207ExcSecurityExchange(MyExchangeType dataValue) {
         setFixType(FIX41.FIX207_EXC_SECURITY_EXCHANGE);

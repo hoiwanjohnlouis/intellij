@@ -26,15 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  198
  *  SecondaryOrderID
  *  String
- *  <p>
+ *  <p></p>
  *  Assigned by the party which accepts the order.
+ *  <p></p>
  *  Can be used to provide the OrderID (37) used by an exchange or executing system.
  */
 public class Tag198StrSecondaryOrderID extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_SECONDARY_ORDER_ID = "BilboBaggins-Tag198StrSecondaryOrderID";
-    public final static String TESTB_STR_SECONDARY_ORDER_ID = "Gandalf-Tag198StrSecondaryOrderID";
+    public final static String TESTA_STR_SECONDARY_ORDER_ID
+            = "BilboBaggins-Tag198StrSecondaryOrderID";
+    public final static String TESTB_STR_SECONDARY_ORDER_ID
+            = "Gandalf-Tag198StrSecondaryOrderID";
 
     public Tag198StrSecondaryOrderID(MyStringType dataValue) {
         setFixType(FIX41.FIX198_STR_SECONDARY_ORDER_ID);

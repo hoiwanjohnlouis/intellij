@@ -26,17 +26,20 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  174
  *  SettlBrkrCode
  *  String
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.3 BIC
- *  <p>
- *  (Bank Identification Code - Swift managed) code of  the broker involved (i.e. for multi-company brokerage firms)
+ *  <p></p>
+ *  (Bank Identification Code - Swift managed) code of  the broker involved
+ *  (i.e. for multi-company brokerage firms)
  */
 // @Deprecated
 public class Tag174StrSettlBrkrCode extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_SETTL_BRKR_CODE = "BilboBaggins-Tag174StrSettlBrkrCode";
-    public final static String TESTB_STR_SETTL_BRKR_CODE = "Gandalf-Tag174StrSettlBrkrCode";
+    public final static String TESTA_STR_SETTL_BRKR_CODE
+            = "BilboBaggins-Tag174StrSettlBrkrCode";
+    public final static String TESTB_STR_SETTL_BRKR_CODE
+            = "Gandalf-Tag174StrSettlBrkrCode";
 
     public Tag174StrSettlBrkrCode(MyStringType dataValue) {
         setFixType(FIX41.FIX174_STR_SETTL_BRKR_CODE);

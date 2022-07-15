@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix41.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,87 +27,130 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  198
  *  SecondaryOrderID
  *  String
- *  <p>
+ *  <p></p>
  *  Assigned by the party which accepts the order.
+ *  <p></p>
  *  Can be used to provide the OrderID (37) used by an exchange or executing system.
  */
 class Tag198StrSecondaryOrderIDTest {
     @Test
-    void FIX0198Test() {
-        FIX41 fixData = FIX41.FIX198_STR_SECONDARY_ORDER_ID;
-        assertEquals( "198", fixData.toEnumIDString());
-        assertEquals( "SECONDARY_ORDER_ID", fixData.toEnumNameString());
-        assertEquals( "SecondaryOrderID", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0198Test() {
-        Tag198StrSecondaryOrderID tagData;
-
-        tagData = new Tag198StrSecondaryOrderID(
-                new MyStringType(Tag198StrSecondaryOrderID.TESTA_STR_SECONDARY_ORDER_ID));
-        assertEquals( Tag198StrSecondaryOrderID.TESTA_STR_SECONDARY_ORDER_ID, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag198StrSecondaryOrderID(
-                new MyStringType(Tag198StrSecondaryOrderID.TESTB_STR_SECONDARY_ORDER_ID));
-        assertEquals( Tag198StrSecondaryOrderID.TESTB_STR_SECONDARY_ORDER_ID, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
     void PrintFIXTagTest() {
         Tag198StrSecondaryOrderID tagData;
+        String oneElement;
 
-        tagData = new Tag198StrSecondaryOrderID(
-                new MyStringType(Tag198StrSecondaryOrderID.TESTB_STR_SECONDARY_ORDER_ID));
+        oneElement = Tag198StrSecondaryOrderID.TESTA_STR_SECONDARY_ORDER_ID;
+        tagData = new Tag198StrSecondaryOrderID( new MyStringType( oneElement ));
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag198StrSecondaryOrderID.TESTB_STR_SECONDARY_ORDER_ID;
+        tagData = new Tag198StrSecondaryOrderID( new MyStringType( oneElement ));
         System.out.println( tagData.toVerboseString() );
     }
+
+    @Test
+    void FIXTest() {
+        Tag198StrSecondaryOrderID tagData;
+        String oneElement;
+
+        oneElement = Tag198StrSecondaryOrderID.TESTA_STR_SECONDARY_ORDER_ID;
+        tagData = new Tag198StrSecondaryOrderID( new MyStringType( oneElement ));
+        verifyFIXData( tagData );
+
+        oneElement = Tag198StrSecondaryOrderID.TESTB_STR_SECONDARY_ORDER_ID;
+        tagData = new Tag198StrSecondaryOrderID( new MyStringType( oneElement ));
+        verifyFIXData( tagData );
+    }
+
+    private void verifyFIXData( final Tag198StrSecondaryOrderID tagData ) {
+        assertEquals( "FIX198_STR_SECONDARY_ORDER_ID", tagData.toEnumLabelString());
+        assertEquals( "198", tagData.toEnumIDString());
+        assertEquals( "SECONDARY_ORDER_ID", tagData.toEnumNameString());
+        assertEquals( "SecondaryOrderID", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void TagGetDataValueTest() {
         Tag198StrSecondaryOrderID tagData;
+        String oneElement;
 
-        tagData = new Tag198StrSecondaryOrderID(
-                new MyStringType(Tag198StrSecondaryOrderID.TESTB_STR_SECONDARY_ORDER_ID));
-        assertEquals( Tag198StrSecondaryOrderID.TESTB_STR_SECONDARY_ORDER_ID, tagData.getDataValue());
+        oneElement = Tag198StrSecondaryOrderID.TESTA_STR_SECONDARY_ORDER_ID;
+        tagData = new Tag198StrSecondaryOrderID( new MyStringType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = Tag198StrSecondaryOrderID.TESTB_STR_SECONDARY_ORDER_ID;
+        tagData = new Tag198StrSecondaryOrderID( new MyStringType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+    }
+
+    private void verifyDataValue( final Tag198StrSecondaryOrderID tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+
     @Test
     void TagToValuePairStringTest() {
         Tag198StrSecondaryOrderID tagData;
+        String oneElement;
 
-        tagData = new Tag198StrSecondaryOrderID(
-                new MyStringType(Tag198StrSecondaryOrderID.TESTB_STR_SECONDARY_ORDER_ID));
-        assertEquals( tagData.toEnumIDString() + "=" + Tag198StrSecondaryOrderID.TESTB_STR_SECONDARY_ORDER_ID,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag198StrSecondaryOrderID.TESTA_STR_SECONDARY_ORDER_ID;
+        tagData = new Tag198StrSecondaryOrderID( new MyStringType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
+
+        oneElement = Tag198StrSecondaryOrderID.TESTB_STR_SECONDARY_ORDER_ID;
+        tagData = new Tag198StrSecondaryOrderID( new MyStringType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
     }
+
+    private void verifyValuePairString( final Tag198StrSecondaryOrderID tagData, final String oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
     @Test
     void TagToStringTest() {
         Tag198StrSecondaryOrderID tagData;
+        String oneElement;
 
-        tagData = new Tag198StrSecondaryOrderID(new MyStringType(Tag198StrSecondaryOrderID.TESTB_STR_SECONDARY_ORDER_ID));
-        assertEquals( Tag198StrSecondaryOrderID.TESTB_STR_SECONDARY_ORDER_ID,
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag198StrSecondaryOrderID.TESTA_STR_SECONDARY_ORDER_ID;
+        tagData = new Tag198StrSecondaryOrderID( new MyStringType( oneElement ));
+        verifyToString( tagData, oneElement );
+
+        oneElement = Tag198StrSecondaryOrderID.TESTB_STR_SECONDARY_ORDER_ID;
+        tagData = new Tag198StrSecondaryOrderID( new MyStringType( oneElement ));
+        verifyToString( tagData, oneElement );
     }
+
+    private void verifyToString( final Tag198StrSecondaryOrderID tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
     @Test
     void TagToVerboseStringTest() {
         Tag198StrSecondaryOrderID tagData;
+        String oneElement;
 
-        tagData = new Tag198StrSecondaryOrderID(
-                new MyStringType(Tag198StrSecondaryOrderID.TESTA_STR_SECONDARY_ORDER_ID));
+        oneElement = Tag198StrSecondaryOrderID.TESTA_STR_SECONDARY_ORDER_ID;
+        tagData = new Tag198StrSecondaryOrderID( new MyStringType( oneElement ));
+        verifyVerboseString( tagData );
+
+        oneElement = Tag198StrSecondaryOrderID.TESTB_STR_SECONDARY_ORDER_ID;
+        tagData = new Tag198StrSecondaryOrderID( new MyStringType( oneElement ));
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyVerboseString( final Tag198StrSecondaryOrderID tagData ) {
         assertEquals( "Tag198StrSecondaryOrderID\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag198StrSecondaryOrderID.TESTA_STR_SECONDARY_ORDER_ID + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" +
-                                            Tag198StrSecondaryOrderID.TESTA_STR_SECONDARY_ORDER_ID + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

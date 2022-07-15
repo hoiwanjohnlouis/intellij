@@ -27,7 +27,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  172
  *  SettlDeliveryType
  *  int
- *  <p>
+ *  <p></p>
  *  Identifies type of settlement
  *  <p></p>
  *  Valid values:
@@ -39,8 +39,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag172EnuSettlDeliveryType extends FIX41Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum172SettlDeliveryType dataValue;
 
-    public final static Enum172SettlDeliveryType TESTA_ENU_SETTL_DELIVERY_TYPE = Enum172SettlDeliveryType.FREE;
-    public final static Enum172SettlDeliveryType TESTB_ENU_SETTL_DELIVERY_TYPE = Enum172SettlDeliveryType.HOLD_IN_CUSTODY;
+    public final static Enum172SettlDeliveryType TESTA_ENU_SETTL_DELIVERY_TYPE
+            = Enum172SettlDeliveryType.FREE;
+    public final static Enum172SettlDeliveryType TESTB_ENU_SETTL_DELIVERY_TYPE
+            = Enum172SettlDeliveryType.HOLD_IN_CUSTODY;
 
     public Tag172EnuSettlDeliveryType(Enum172SettlDeliveryType dataValue) {
         setFixType(FIX41.FIX172_ENU_SETTL_DELIVERY_TYPE);

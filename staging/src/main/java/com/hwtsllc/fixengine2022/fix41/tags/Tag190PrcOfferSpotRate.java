@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  190
  *  OfferSpotRate
  *  Price
- *  <p>
+ *  <p></p>
  *  Offer F/X spot rate.
  */
 public class Tag190PrcOfferSpotRate extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceType dataValue;
 
-    public final static double TESTA_PRC_OFFER_SPOT_RATE = 1.90D;
-    public final static double TESTB_PRC_OFFER_SPOT_RATE = 9.10D;
+    public final static double TESTA_PRC_OFFER_SPOT_RATE
+            = 1.90D;
+    public final static double TESTB_PRC_OFFER_SPOT_RATE
+            = 9.10D;
 
     public Tag190PrcOfferSpotRate(MyPriceType dataValue) {
         setFixType(FIX41.FIX190_PRC_OFFER_SPOT_RATE);

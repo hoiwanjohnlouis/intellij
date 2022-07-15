@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  147
  *  Subject
  *  String
- *  <p>
+ *  <p></p>
  *  The subject of an Email message
  */
 public class Tag147StrSubject extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_SUBJECT = "BilboBaggins-147StrSubject";
-    public final static String TESTB_STR_SUBJECT = "Gandalf-147StrSubject";
+    public final static String TESTA_STR_SUBJECT
+            = "BilboBaggins-Tag147StrSubject";
+    public final static String TESTB_STR_SUBJECT
+            = "Gandalf-Tag147StrSubject";
 
     public Tag147StrSubject(MyStringType dataValue) {
         setFixType(FIX41.FIX147_STR_SUBJECT);

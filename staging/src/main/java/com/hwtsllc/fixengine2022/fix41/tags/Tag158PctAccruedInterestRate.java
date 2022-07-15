@@ -26,17 +26,21 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  158
  *  AccruedInterestRate
  *  Percentage
- *  <p>
+ *  <p></p>
  *  The amount the buyer compensates the seller for the portion of the next coupon interest payment
  *  the seller has earned but will not receive from the issuer because the issuer will send the
- *  next coupon payment to the buyer.  Accrued Interest Rate is the annualized Accrued Interest
+ *  next coupon payment to the buyer.
+ *  <p></p>
+ *  Accrued Interest Rate is the annualized Accrued Interest
  *  amount divided by the purchase price of the bond.
  */
 public class Tag158PctAccruedInterestRate extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyPercentageType dataValue;
 
-    public final static double TESTA_PCT_ACCRUED_INTEREST_RATE = 0.0158D;
-    public final static double TESTB_PCT_ACCRUED_INTEREST_RATE = 0.0851D;
+    public final static double TESTA_PCT_ACCRUED_INTEREST_RATE
+            = 0.0158D;
+    public final static double TESTB_PCT_ACCRUED_INTEREST_RATE
+            = 0.0851D;
 
     public Tag158PctAccruedInterestRate(MyPercentageType dataValue) {
         setFixType(FIX41.FIX158_PCT_ACCRUED_INTEREST_RATE);

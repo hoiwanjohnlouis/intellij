@@ -122,7 +122,7 @@ class Tag131StrQuoteReqIDTest {
         verifyToString( tagData, oneElement );
     }
 
-    private void verifyToString( Tag131StrQuoteReqID tagData, String oneElement ) {
+    private void verifyToString( final Tag131StrQuoteReqID tagData, final String oneElement ) {
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }

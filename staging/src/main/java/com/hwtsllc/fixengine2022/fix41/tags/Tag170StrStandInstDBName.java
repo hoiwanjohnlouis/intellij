@@ -26,14 +26,17 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  170
  *  StandInstDbName
  *  String
- *  <p>
- *  Name of the Standing Instruction database represented with StandInstDbType (169) (i.e. the Global Custodian’s name).
+ *  <p></p>
+ *  Name of the Standing Instruction database represented with StandInstDbType (169)
+ *  (i.e. the Global Custodian’s name).
  */
 public class Tag170StrStandInstDBName extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_STAND_INST_DB_NAME = "BilboBaggins-Tag170StrStandInstDBName";
-    public final static String TESTB_STR_STAND_INST_DB_NAME = "Gandalf-Tag170StrStandInstDBName";
+    public final static String TESTA_STR_STAND_INST_DB_NAME
+            = "BilboBaggins-Tag170StrStandInstDBName";
+    public final static String TESTB_STR_STAND_INST_DB_NAME
+            = "Gandalf-Tag170StrStandInstDBName";
 
     public Tag170StrStandInstDBName(MyStringType dataValue) {
         setFixType(FIX41.FIX170_STR_STAND_INST_DB_NAME);

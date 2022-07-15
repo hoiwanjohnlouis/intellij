@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix41.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,79 +27,128 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  164
  *  EmailThreadID
  *  String
- *  <p>
+ *  <p></p>
  *  Unique identifier for an email thread (new and chain of replies)
  */
 class Tag164StrEmailThreadIDTest {
     @Test
-    void FIX0164Test() {
-        FIX41 fixData = FIX41.FIX164_STR_EMAIL_THREAD_ID;
-        assertEquals( "164", fixData.toEnumIDString());
-        assertEquals( "EMAIL_THREAD_ID", fixData.toEnumNameString());
-        assertEquals( "EmailThreadID", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0164Test() {
-        Tag164StrEmailThreadID tagData;
-
-        tagData = new Tag164StrEmailThreadID(new MyStringType(Tag164StrEmailThreadID.TESTA_STR_EMAIL_THREAD_ID));
-        assertEquals( Tag164StrEmailThreadID.TESTA_STR_EMAIL_THREAD_ID, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag164StrEmailThreadID(new MyStringType(Tag164StrEmailThreadID.TESTB_STR_EMAIL_THREAD_ID));
-        assertEquals( Tag164StrEmailThreadID.TESTB_STR_EMAIL_THREAD_ID, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
     void PrintFIXTagTest() {
         Tag164StrEmailThreadID tagData;
+        String oneElement;
 
-        tagData = new Tag164StrEmailThreadID(new MyStringType(Tag164StrEmailThreadID.TESTB_STR_EMAIL_THREAD_ID));
+        oneElement = Tag164StrEmailThreadID.TESTA_STR_EMAIL_THREAD_ID;
+        tagData = new Tag164StrEmailThreadID(new MyStringType( oneElement ));
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag164StrEmailThreadID.TESTB_STR_EMAIL_THREAD_ID;
+        tagData = new Tag164StrEmailThreadID(new MyStringType( oneElement ));
         System.out.println( tagData.toVerboseString() );
     }
+
+    @Test
+    void FIXTest() {
+        Tag164StrEmailThreadID tagData;
+        String oneElement;
+
+        oneElement = Tag164StrEmailThreadID.TESTA_STR_EMAIL_THREAD_ID;
+        tagData = new Tag164StrEmailThreadID(new MyStringType( oneElement ));
+        verifyFIXData( tagData );
+
+        oneElement = Tag164StrEmailThreadID.TESTB_STR_EMAIL_THREAD_ID;
+        tagData = new Tag164StrEmailThreadID(new MyStringType( oneElement ));
+        verifyFIXData( tagData );
+    }
+
+    private void verifyFIXData( final Tag164StrEmailThreadID tagData ) {
+        assertEquals( "FIX164_STR_EMAIL_THREAD_ID", tagData.toEnumLabelString());
+        assertEquals( "164", tagData.toEnumIDString());
+        assertEquals( "EMAIL_THREAD_ID", tagData.toEnumNameString());
+        assertEquals( "EmailThreadID", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void TagGetDataValueTest() {
         Tag164StrEmailThreadID tagData;
+        String oneElement;
 
-        tagData = new Tag164StrEmailThreadID(new MyStringType(Tag164StrEmailThreadID.TESTB_STR_EMAIL_THREAD_ID));
-        assertEquals( Tag164StrEmailThreadID.TESTB_STR_EMAIL_THREAD_ID, tagData.getDataValue());
+        oneElement = Tag164StrEmailThreadID.TESTA_STR_EMAIL_THREAD_ID;
+        tagData = new Tag164StrEmailThreadID(new MyStringType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = Tag164StrEmailThreadID.TESTB_STR_EMAIL_THREAD_ID;
+        tagData = new Tag164StrEmailThreadID(new MyStringType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+    }
+
+    private void verifyDataValue( final Tag164StrEmailThreadID tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+
     @Test
     void TagToValuePairStringTest() {
         Tag164StrEmailThreadID tagData;
+        String oneElement;
 
-        tagData = new Tag164StrEmailThreadID(new MyStringType(Tag164StrEmailThreadID.TESTB_STR_EMAIL_THREAD_ID));
-        assertEquals( tagData.toEnumIDString() + "=" + Tag164StrEmailThreadID.TESTB_STR_EMAIL_THREAD_ID,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag164StrEmailThreadID.TESTA_STR_EMAIL_THREAD_ID;
+        tagData = new Tag164StrEmailThreadID(new MyStringType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
+
+        oneElement = Tag164StrEmailThreadID.TESTB_STR_EMAIL_THREAD_ID;
+        tagData = new Tag164StrEmailThreadID(new MyStringType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
     }
+
+    private void verifyValuePairString( final Tag164StrEmailThreadID tagData, final String oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
     @Test
     void TagToStringTest() {
         Tag164StrEmailThreadID tagData;
+        String oneElement;
 
-        tagData = new Tag164StrEmailThreadID(new MyStringType(Tag164StrEmailThreadID.TESTB_STR_EMAIL_THREAD_ID));
-        assertEquals( Tag164StrEmailThreadID.TESTB_STR_EMAIL_THREAD_ID,
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag164StrEmailThreadID.TESTA_STR_EMAIL_THREAD_ID;
+        tagData = new Tag164StrEmailThreadID(new MyStringType( oneElement ));
+        verifyToString( tagData, oneElement );
+
+        oneElement = Tag164StrEmailThreadID.TESTB_STR_EMAIL_THREAD_ID;
+        tagData = new Tag164StrEmailThreadID(new MyStringType( oneElement ));
+        verifyToString( tagData, oneElement );
     }
+
+    private void verifyToString( final Tag164StrEmailThreadID tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
     @Test
     void TagToVerboseStringTest() {
         Tag164StrEmailThreadID tagData;
+        String oneElement;
 
-        tagData = new Tag164StrEmailThreadID(new MyStringType(Tag164StrEmailThreadID.TESTA_STR_EMAIL_THREAD_ID));
+        oneElement = Tag164StrEmailThreadID.TESTA_STR_EMAIL_THREAD_ID;
+        tagData = new Tag164StrEmailThreadID(new MyStringType( oneElement ));
+        verifyVerboseString( tagData );
+
+        oneElement = Tag164StrEmailThreadID.TESTB_STR_EMAIL_THREAD_ID;
+        tagData = new Tag164StrEmailThreadID(new MyStringType( oneElement ));
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyVerboseString( final Tag164StrEmailThreadID tagData ) {
         assertEquals( "Tag164StrEmailThreadID\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag164StrEmailThreadID.TESTA_STR_EMAIL_THREAD_ID + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag164StrEmailThreadID.TESTA_STR_EMAIL_THREAD_ID + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

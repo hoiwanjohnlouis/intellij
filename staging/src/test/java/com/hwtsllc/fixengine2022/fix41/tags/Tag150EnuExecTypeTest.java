@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix41.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.fix41.enums.Enum150ExecType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,11 +27,11 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  150
  *  ExecType
  *  char
- *  <p>
+ *  <p></p>
  *  Describes the specific ExecutionRpt
- *  <p>
+ *  <p></p>
  *  (i.e. Pending Cancel) while OrdStatus (39) will always identify the current order status (i.e. Partially Filled)
- *  <p>
+ *  <p></p>
  *  *** SOME VALUES HAVE BEEN REPLACED - See "Replaced Features and Supported Approach" ***
  *  <p></p>
  *  Valid values:
@@ -63,17 +62,34 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag150EnuExecTypeTest {
     @Test
-    void FIX0150Test() {
-        FIX41 fixData = FIX41.FIX150_ENU_EXEC_TYPE;
-        assertEquals( "150", fixData.toEnumIDString());
-        assertEquals( "EXEC_TYPE", fixData.toEnumNameString());
-        assertEquals( "ExecType", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintFIXTagTest() {
+        Tag150EnuExecType tagData;
+
+        // loop around the ENUM and process
+        for (Enum150ExecType oneEnum : Enum150ExecType.values()) {
+            tagData = new Tag150EnuExecType(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0150Test() {
+    void FIXTest() {
+        Tag150EnuExecType tagData;
+
+        // loop around the ENUM and process
+        for (Enum150ExecType oneEnum : Enum150ExecType.values()) {
+            tagData = new Tag150EnuExecType(oneEnum);
+            assertEquals( "FIX150_ENU_EXEC_TYPE", tagData.toEnumLabelString());
+            assertEquals( "150", tagData.toEnumIDString());
+            assertEquals( "EXEC_TYPE", tagData.toEnumNameString());
+            assertEquals( "ExecType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         Tag150EnuExecType tagData;
 
         tagData = new Tag150EnuExecType(Enum150ExecType.NEW);
@@ -155,25 +171,12 @@ class Tag150EnuExecTypeTest {
         tagData = new Tag150EnuExecType(Enum150ExecType.TRIGGERED_OR_ACTIVATED);
         assertEquals( Enum150ExecType.TRIGGERED_OR_ACTIVATED.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag150EnuExecType tagData;
-
-        // loop around the ENUM and process
-        for (Enum150ExecType oneEnum : Enum150ExecType.values()) {
-            tagData = new Tag150EnuExecType(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag150EnuExecType tagData;
 
         // loop around the ENUM and process
         for (Enum150ExecType oneEnum : Enum150ExecType.values()) {
             tagData = new Tag150EnuExecType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
@@ -184,8 +187,9 @@ class Tag150EnuExecTypeTest {
         // loop around the ENUM and process
         for (Enum150ExecType oneEnum : Enum150ExecType.values()) {
             tagData = new Tag150EnuExecType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -212,8 +216,8 @@ class Tag150EnuExecTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

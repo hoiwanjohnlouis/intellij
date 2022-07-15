@@ -44,8 +44,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag201EnuPutOrCall extends FIX41Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final MyEnumPutOrCall dataValue;
 
-    public final static MyEnumPutOrCall TESTA_ENU_PUT_OR_CALL = MyEnumPutOrCall.CALL;
-    public final static MyEnumPutOrCall TESTB_ENU_PUT_OR_CALL = MyEnumPutOrCall.PUT;
+    public final static MyEnumPutOrCall TESTA_ENU_PUT_OR_CALL
+            = MyEnumPutOrCall.CALL;
+    public final static MyEnumPutOrCall TESTB_ENU_PUT_OR_CALL
+            = MyEnumPutOrCall.PUT;
 
     public Tag201EnuPutOrCall(MyEnumPutOrCall dataValue) {
         setFixType(FIX41.FIX201_ENU_PUT_OR_CALL);

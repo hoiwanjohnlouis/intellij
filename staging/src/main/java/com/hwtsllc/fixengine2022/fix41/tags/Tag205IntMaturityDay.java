@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  205
  *  MaturityDay
  *  day-of-month
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.2
- *  <p>
+ *  <p></p>
  *  Day of month used in conjunction with MaturityMonthYear
  *  to specify the maturity date for SecurityType=FUT or SecurityType=OPT.
  */
@@ -36,8 +36,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag205IntMaturityDay extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_MATURITY_DAY = 1;
-    public final static int TESTB_INT_MATURITY_DAY = 28;
+    public final static int TESTA_INT_MATURITY_DAY
+            = 1;
+    public final static int TESTB_INT_MATURITY_DAY
+            = 28;
 
     public Tag205IntMaturityDay(MyIntType dataValue) {
         setFixType(FIX41.FIX205_INT_MATURITY_DAY);

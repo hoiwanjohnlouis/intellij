@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix41.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.fix41.enums.Enum204CustomerOrFirm;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,9 +27,9 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  204
  *  CustomerOrFirm
  *  int
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.2
- *  <p>
+ *  <p></p>
  *  Used for options when delivering the order to an execution system
  *  or an exchange to specify if the order is for a  customer or the firm placing the order itself.
  *  <p></p>
@@ -40,28 +39,6 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 // @Deprecated
 class Tag204EnuCustomerOrFirmTest {
-    @Test
-    void FIX0204Test() {
-        FIX41 fixData = FIX41.FIX204_ENU_CUSTOMER_OR_FIRM;
-        assertEquals( "204", fixData.toEnumIDString());
-        assertEquals( "CUSTOMER_OR_FIRM", fixData.toEnumNameString());
-        assertEquals( "CustomerOrFirm (replaced)", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0204Test() {
-        Tag204EnuCustomerOrFirm tagData;
-
-        tagData = new Tag204EnuCustomerOrFirm(Enum204CustomerOrFirm.CUSTOMER);
-        assertEquals( Enum204CustomerOrFirm.CUSTOMER.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag204EnuCustomerOrFirm(Enum204CustomerOrFirm.FIRM);
-        assertEquals( Enum204CustomerOrFirm.FIRM.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
     @Test
     void PrintFIXTagTest() {
         Tag204EnuCustomerOrFirm tagData;
@@ -73,13 +50,39 @@ class Tag204EnuCustomerOrFirmTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
+    void FIXTest() {
         Tag204EnuCustomerOrFirm tagData;
 
         // loop around the ENUM and process
         for (Enum204CustomerOrFirm oneEnum : Enum204CustomerOrFirm.values()) {
             tagData = new Tag204EnuCustomerOrFirm(oneEnum);
+            assertEquals( "FIX204_ENU_CUSTOMER_OR_FIRM", tagData.toEnumLabelString());
+            assertEquals( "204", tagData.toEnumIDString());
+            assertEquals( "CUSTOMER_OR_FIRM", tagData.toEnumNameString());
+            assertEquals( "CustomerOrFirm (replaced)", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag204EnuCustomerOrFirm tagData;
+
+        tagData = new Tag204EnuCustomerOrFirm(Enum204CustomerOrFirm.CUSTOMER);
+        assertEquals( Enum204CustomerOrFirm.CUSTOMER.toEnumIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag204EnuCustomerOrFirm(Enum204CustomerOrFirm.FIRM);
+        assertEquals( Enum204CustomerOrFirm.FIRM.toEnumIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        // loop around the ENUM and process
+        for (Enum204CustomerOrFirm oneEnum : Enum204CustomerOrFirm.values()) {
+            tagData = new Tag204EnuCustomerOrFirm(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
@@ -90,8 +93,9 @@ class Tag204EnuCustomerOrFirmTest {
         // loop around the ENUM and process
         for (Enum204CustomerOrFirm oneEnum : Enum204CustomerOrFirm.values()) {
             tagData = new Tag204EnuCustomerOrFirm(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -118,8 +122,8 @@ class Tag204EnuCustomerOrFirmTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

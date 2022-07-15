@@ -26,16 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  157
  *  NumDaysInterest
  *  int
- *  <p>
+ *  <p></p>
  *  Number of Days of Interest for convertible bonds and fixed income.
- *  <p>
+ *  <p></p>
  *  Note value may be negative.
  */
 public class Tag157IntNumDaysInterest extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_NUM_DAYS_INTEREST = 60;
-    public final static int TESTB_INT_NUM_DAYS_INTEREST = 30;
+    public final static int TESTA_INT_NUM_DAYS_INTEREST
+            = 60;
+    public final static int TESTB_INT_NUM_DAYS_INTEREST
+            = 30;
 
     public Tag157IntNumDaysInterest(MyIntType dataValue) {
         setFixType(FIX41.FIX157_INT_NUM_DAYS_INTEREST);

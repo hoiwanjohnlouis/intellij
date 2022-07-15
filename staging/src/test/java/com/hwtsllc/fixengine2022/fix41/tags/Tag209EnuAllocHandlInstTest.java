@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix41.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.fix41.enums.Enum209AllocHandlInst;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,7 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  209
  *  AllocHandlInst
  *  int
- *  <p>
+ *  <p></p>
  *  Indicates how the receiver (i.e. third party) of Allocation message should handle/process the account details.
  *  <p></p>
  *  Valid values:
@@ -38,17 +37,34 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag209EnuAllocHandlInstTest {
     @Test
-    void FIX0209Test() {
-        FIX41 fixData = FIX41.FIX209_ENU_ALLOC_HANDL_INST;
-        assertEquals( "209", fixData.toEnumIDString());
-        assertEquals( "ALLOC_HANDL_INST", fixData.toEnumNameString());
-        assertEquals( "AllocHandlInst", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintFIXTagTest() {
+        Tag209EnuAllocHandlInst tagData;
+
+        // loop around the ENUM and process
+        for (Enum209AllocHandlInst oneEnum : Enum209AllocHandlInst.values()) {
+            tagData = new Tag209EnuAllocHandlInst(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0209Test() {
+    void FIXTest() {
+        Tag209EnuAllocHandlInst tagData;
+
+        // loop around the ENUM and process
+        for (Enum209AllocHandlInst oneEnum : Enum209AllocHandlInst.values()) {
+            tagData = new Tag209EnuAllocHandlInst(oneEnum);
+            assertEquals( "FIX209_ENU_ALLOC_HANDL_INST", tagData.toEnumLabelString());
+            assertEquals( "209", tagData.toEnumIDString());
+            assertEquals( "ALLOC_HANDL_INST", tagData.toEnumNameString());
+            assertEquals( "AllocHandlInst", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         Tag209EnuAllocHandlInst tagData;
 
         tagData = new Tag209EnuAllocHandlInst(Enum209AllocHandlInst.MATCH);
@@ -62,25 +78,12 @@ class Tag209EnuAllocHandlInstTest {
         tagData = new Tag209EnuAllocHandlInst(Enum209AllocHandlInst.FORWARD_AND_MATCH);
         assertEquals( Enum209AllocHandlInst.FORWARD_AND_MATCH.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag209EnuAllocHandlInst tagData;
-
-        // loop around the ENUM and process
-        for (Enum209AllocHandlInst oneEnum : Enum209AllocHandlInst.values()) {
-            tagData = new Tag209EnuAllocHandlInst(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag209EnuAllocHandlInst tagData;
 
         // loop around the ENUM and process
         for (Enum209AllocHandlInst oneEnum : Enum209AllocHandlInst.values()) {
             tagData = new Tag209EnuAllocHandlInst(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
@@ -91,8 +94,9 @@ class Tag209EnuAllocHandlInstTest {
         // loop around the ENUM and process
         for (Enum209AllocHandlInst oneEnum : Enum209AllocHandlInst.values()) {
             tagData = new Tag209EnuAllocHandlInst(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -119,8 +123,8 @@ class Tag209EnuAllocHandlInstTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

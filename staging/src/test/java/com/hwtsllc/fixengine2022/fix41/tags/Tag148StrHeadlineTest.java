@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix41.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,79 +27,128 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  148
  *  Headline
  *  String
- *  <p>
+ *  <p></p>
  *  The headline of a News message
  */
 class Tag148StrHeadlineTest {
     @Test
-    void FIX0148Test() {
-        FIX41 fixData = FIX41.FIX148_STR_HEADLINE;
-        assertEquals( "148", fixData.toEnumIDString());
-        assertEquals( "HEADLINE", fixData.toEnumNameString());
-        assertEquals( "Headline", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0148Test() {
-        Tag148StrHeadline tagData;
-
-        tagData = new Tag148StrHeadline(new MyStringType(Tag148StrHeadline.TESTA_STR_HEADLINE));
-        assertEquals( Tag148StrHeadline.TESTA_STR_HEADLINE, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag148StrHeadline(new MyStringType(Tag148StrHeadline.TESTB_STR_HEADLINE));
-        assertEquals( Tag148StrHeadline.TESTB_STR_HEADLINE, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
     void PrintFIXTagTest() {
         Tag148StrHeadline tagData;
+        String oneElement;
 
-        tagData = new Tag148StrHeadline(new MyStringType(Tag148StrHeadline.TESTB_STR_HEADLINE));
+        oneElement = Tag148StrHeadline.TESTA_STR_HEADLINE;
+        tagData = new Tag148StrHeadline(new MyStringType( oneElement ));
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag148StrHeadline.TESTB_STR_HEADLINE;
+        tagData = new Tag148StrHeadline(new MyStringType( oneElement ));
         System.out.println( tagData.toVerboseString() );
     }
+
+    @Test
+    void FIXTest() {
+        Tag148StrHeadline tagData;
+        String oneElement;
+
+        oneElement = Tag148StrHeadline.TESTA_STR_HEADLINE;
+        tagData = new Tag148StrHeadline(new MyStringType( oneElement ));
+        verifyFIXData( tagData );
+
+        oneElement = Tag148StrHeadline.TESTB_STR_HEADLINE;
+        tagData = new Tag148StrHeadline(new MyStringType( oneElement ));
+        verifyFIXData( tagData );
+    }
+
+    private void verifyFIXData( final Tag148StrHeadline tagData ) {
+        assertEquals( "FIX148_STR_HEADLINE", tagData.toEnumLabelString());
+        assertEquals( "148", tagData.toEnumIDString());
+        assertEquals( "HEADLINE", tagData.toEnumNameString());
+        assertEquals( "Headline", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void TagGetDataValueTest() {
         Tag148StrHeadline tagData;
+        String oneElement;
 
-        tagData = new Tag148StrHeadline(new MyStringType(Tag148StrHeadline.TESTB_STR_HEADLINE));
-        assertEquals( Tag148StrHeadline.TESTB_STR_HEADLINE, tagData.getDataValue());
+        oneElement = Tag148StrHeadline.TESTA_STR_HEADLINE;
+        tagData = new Tag148StrHeadline(new MyStringType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = Tag148StrHeadline.TESTB_STR_HEADLINE;
+        tagData = new Tag148StrHeadline(new MyStringType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+    }
+
+    private void verifyDataValue( final Tag148StrHeadline tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+
     @Test
     void TagToValuePairStringTest() {
         Tag148StrHeadline tagData;
+        String oneElement;
 
-        tagData = new Tag148StrHeadline(new MyStringType(Tag148StrHeadline.TESTB_STR_HEADLINE));
-        assertEquals( tagData.toEnumIDString() + "=" + Tag148StrHeadline.TESTB_STR_HEADLINE,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag148StrHeadline.TESTA_STR_HEADLINE;
+        tagData = new Tag148StrHeadline(new MyStringType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
+
+        oneElement = Tag148StrHeadline.TESTB_STR_HEADLINE;
+        tagData = new Tag148StrHeadline(new MyStringType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
     }
+
+    private void verifyValuePairString( final Tag148StrHeadline tagData, final String oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
     @Test
     void TagToStringTest() {
         Tag148StrHeadline tagData;
+        String oneElement;
 
-        tagData = new Tag148StrHeadline(new MyStringType(Tag148StrHeadline.TESTB_STR_HEADLINE));
-        assertEquals( Tag148StrHeadline.TESTB_STR_HEADLINE,
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag148StrHeadline.TESTA_STR_HEADLINE;
+        tagData = new Tag148StrHeadline(new MyStringType( oneElement ));
+        verifyToString( tagData, oneElement );
+
+        oneElement = Tag148StrHeadline.TESTB_STR_HEADLINE;
+        tagData = new Tag148StrHeadline(new MyStringType( oneElement ));
+        verifyToString( tagData, oneElement );
     }
+
+    private void verifyToString( final Tag148StrHeadline tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
     @Test
     void TagToVerboseStringTest() {
         Tag148StrHeadline tagData;
+        String oneElement;
 
-        tagData = new Tag148StrHeadline(new MyStringType(Tag148StrHeadline.TESTA_STR_HEADLINE));
+        oneElement = Tag148StrHeadline.TESTA_STR_HEADLINE;
+        tagData = new Tag148StrHeadline(new MyStringType( oneElement ));
+        verifyVerboseString( tagData );
+
+        oneElement = Tag148StrHeadline.TESTB_STR_HEADLINE;
+        tagData = new Tag148StrHeadline(new MyStringType( oneElement ));
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyVerboseString( final Tag148StrHeadline tagData ) {
         assertEquals( "Tag148StrHeadline\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag148StrHeadline.TESTA_STR_HEADLINE + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag148StrHeadline.TESTA_STR_HEADLINE + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

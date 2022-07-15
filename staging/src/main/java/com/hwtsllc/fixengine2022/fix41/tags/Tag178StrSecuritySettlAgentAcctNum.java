@@ -26,15 +26,17 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  178
  *  SecuritySettlAgentAcctNum
  *  String
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.3 SettlInstSource's account number at local agent bank if  SettlLocation is not a depository
  */
 // @Deprecated
 public class Tag178StrSecuritySettlAgentAcctNum extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_SECURITY_SETTL_AGENT_ACCT_NUM = "Frodo-Tag178StrSecuritySettlAgentAcctNum";
-    public final static String TESTB_STR_SECURITY_SETTL_AGENT_ACCT_NUM = "Gandalf-Tag178StrSecuritySettlAgentAcctNum";
+    public final static String TESTA_STR_SECURITY_SETTL_AGENT_ACCT_NUM
+            = "Frodo-Tag178StrSecuritySettlAgentAcctNum";
+    public final static String TESTB_STR_SECURITY_SETTL_AGENT_ACCT_NUM
+            = "Gandalf-Tag178StrSecuritySettlAgentAcctNum";
 
     public Tag178StrSecuritySettlAgentAcctNum(MyStringType dataValue) {
         setFixType(FIX41.FIX178_STR_SECURITY_SETTL_AGENT_ACCT_NUM);

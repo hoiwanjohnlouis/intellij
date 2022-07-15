@@ -27,7 +27,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  166
  *  SettlLocation
  *  String
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.2 Identifies Settlement Depository or Country Code, ISITC spec
  *  <p></p>
  *  Valid values:
@@ -44,8 +44,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag166EnuSettlLocation extends FIX41Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum166SettlLocation dataValue;
 
-    public final static Enum166SettlLocation TESTA_ENU_SETTL_LOCATION = Enum166SettlLocation.DEPOSITORY_TRUST_COMPANY;
-    public final static Enum166SettlLocation TESTB_ENU_SETTL_LOCATION = Enum166SettlLocation.LOCAL_MARKET_SETTLE_LOCATION;
+    public final static Enum166SettlLocation TESTA_ENU_SETTL_LOCATION
+            = Enum166SettlLocation.DEPOSITORY_TRUST_COMPANY;
+    public final static Enum166SettlLocation TESTB_ENU_SETTL_LOCATION
+            = Enum166SettlLocation.LOCAL_MARKET_SETTLE_LOCATION;
 
     public Tag166EnuSettlLocation(Enum166SettlLocation dataValue) {
         setFixType(FIX41.FIX166_ENU_SETTL_LOCATION);

@@ -28,7 +28,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  172
  *  SettlDeliveryType
  *  int
- *  <p>
+ *  <p></p>
  *  Identifies type of settlement
  *  <p></p>
  *  Valid values:

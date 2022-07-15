@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  199
  *  NoIOIQualifiers
  *  NumInGroup
- *  <p>
+ *  <p></p>
  *  Number of repeating groups of IOIQualifiers (04).
  */
 public class Tag199NumNoIOIQualifiers extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyNumInGroupType dataValue;
 
-    public final static int TESTA_NUM_NO_IOI_QUALIFIERS = 3; // fake data
-    public final static int TESTB_NUM_NO_IOI_QUALIFIERS = 4;
+    public final static int TESTA_NUM_NO_IOI_QUALIFIERS
+            = 3;
+    public final static int TESTB_NUM_NO_IOI_QUALIFIERS
+            = 4;
 
     public Tag199NumNoIOIQualifiers(MyNumInGroupType dataValue) {
         setFixType(FIX41.FIX199_NUM_NO_IOI_QUALIFIERS);

@@ -209,8 +209,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag167EnuSecurityType extends FIX41Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final MyEnumSecurityType dataValue;
 
-    public final static MyEnumSecurityType TESTA_ENU_SECURITY_TYPE = MyEnumSecurityType.NO_SECURITY_TYPE;
-    public final static MyEnumSecurityType TESTB_ENU_SECURITY_TYPE = MyEnumSecurityType.CASH;
+    public final static MyEnumSecurityType TESTA_ENU_SECURITY_TYPE
+            = MyEnumSecurityType.NO_SECURITY_TYPE;
+    public final static MyEnumSecurityType TESTB_ENU_SECURITY_TYPE
+            = MyEnumSecurityType.CASH;
 
     public Tag167EnuSecurityType(MyEnumSecurityType dataValue) {
         setFixType(FIX41.FIX167_ENU_SECURITY_TYPE);

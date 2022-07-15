@@ -27,8 +27,8 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  208
  *  NotifyBrokerOfCredit
  *  Boolean
- *  <p>
- *  Indicates whether or not details should be communicated to BrokerOfCredit (i.e. step-in broker).
+ *  <p></p>
+ *  Indicates if details should be communicated to BrokerOfCredit (i.e. step-in broker).
  *  <p></p>
  *  Valid values:
  *  <p>    N - Details should not be communicated

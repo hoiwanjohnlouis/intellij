@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  161
  *  AllocText
  *  String
- *  <p>
+ *  <p></p>
  *  Free format text related to a specific AllocAccount (79).
  */
 public class Tag161StrAllocText extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_ALLOC_TEXT = "BilboBaggins-Tag161StrAllocText";
-    public final static String TESTB_STR_ALLOC_TEXT = "Gandalf-Tag161StrAllocText";
+    public final static String TESTA_STR_ALLOC_TEXT
+            = "BilboBaggins-Tag161StrAllocText";
+    public final static String TESTB_STR_ALLOC_TEXT
+            = "Gandalf-Tag161StrAllocText";
 
     public Tag161StrAllocText(MyStringType dataValue) {
         setFixType(FIX41.FIX161_STR_ALLOC_TEXT);

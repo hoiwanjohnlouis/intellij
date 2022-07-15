@@ -26,14 +26,17 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  144
  *  OnBehalfOfLocationID
  *  String
- *  <p>
- *  Assigned value used to identify specific message originator’s location (i.e. geographic location and/or desk, trader) if the message was delivered by a third party
+ *  <p></p>
+ *  Assigned value used to identify specific message originator’s location
+ *  (i.e. geographic location and/or desk, trader) if the message was delivered by a third party
  */
 public class Tag144StrOnBehalfOfLocationID extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_ON_BEHALF_OF_LOCATION_ID = "BilboBaggins-144StrOnBehalfOfLocationID";
-    public final static String TESTB_STR_ON_BEHALF_OF_LOCATION_ID = "Gandalf-144StrOnBehalfOfLocationID";
+    public final static String TESTA_STR_ON_BEHALF_OF_LOCATION_ID
+            = "BilboBaggins-Tag144StrOnBehalfOfLocationID";
+    public final static String TESTB_STR_ON_BEHALF_OF_LOCATION_ID
+            = "Gandalf-Tag144StrOnBehalfOfLocationID";
 
     public Tag144StrOnBehalfOfLocationID(MyStringType dataValue) {
         setFixType(FIX41.FIX144_STR_ON_BEHALF_OF_LOCATION_ID);

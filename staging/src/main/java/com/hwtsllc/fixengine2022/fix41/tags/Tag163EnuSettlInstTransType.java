@@ -27,7 +27,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  163
  *  SettlInstTransType
  *  char
- *  <p>
+ *  <p></p>
  *  Settlement Instructions message transaction type
  *  <p></p>
  *  Valid values:
@@ -39,8 +39,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag163EnuSettlInstTransType extends FIX41Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum163SettlInstTransType dataValue;
 
-    public final static Enum163SettlInstTransType TESTA_ENU_SETTL_INST_TRANS_TYPE = Enum163SettlInstTransType.NEW;
-    public final static Enum163SettlInstTransType TESTB_ENU_SETTL_INST_TRANS_TYPE = Enum163SettlInstTransType.RESTATE;
+    public final static Enum163SettlInstTransType TESTA_ENU_SETTL_INST_TRANS_TYPE
+            = Enum163SettlInstTransType.NEW;
+    public final static Enum163SettlInstTransType TESTB_ENU_SETTL_INST_TRANS_TYPE
+            = Enum163SettlInstTransType.RESTATE;
 
     public Tag163EnuSettlInstTransType(Enum163SettlInstTransType dataValue) {
         setFixType(FIX41.FIX163_ENU_SETTL_INST_TRANS_TYPE);

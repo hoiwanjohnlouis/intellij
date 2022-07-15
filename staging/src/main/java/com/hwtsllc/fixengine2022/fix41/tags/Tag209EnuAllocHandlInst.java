@@ -27,7 +27,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  209
  *  AllocHandlInst
  *  int
- *  <p>
+ *  <p></p>
  *  Indicates how the receiver (i.e. third party) of Allocation message should handle/process the account details.
  *  <p></p>
  *  Valid values:
@@ -38,8 +38,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag209EnuAllocHandlInst extends FIX41Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum209AllocHandlInst dataValue;
 
-    public final static Enum209AllocHandlInst TESTA_ENU_ALLOC_HANDL_INST = Enum209AllocHandlInst.MATCH;
-    public final static Enum209AllocHandlInst TESTB_ENU_ALLOC_HANDL_INST = Enum209AllocHandlInst.FORWARD_AND_MATCH;
+    public final static Enum209AllocHandlInst TESTA_ENU_ALLOC_HANDL_INST
+            = Enum209AllocHandlInst.MATCH;
+    public final static Enum209AllocHandlInst TESTB_ENU_ALLOC_HANDL_INST
+            = Enum209AllocHandlInst.FORWARD_AND_MATCH;
 
     public Tag209EnuAllocHandlInst(Enum209AllocHandlInst dataValue) {
         setFixType(FIX41.FIX209_ENU_ALLOC_HANDL_INST);

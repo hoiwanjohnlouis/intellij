@@ -27,7 +27,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  165
  *  SettlInstSource
  *  char
- *  <p>
+ *  <p></p>
  *  Indicates source of Settlement Instructions
  *  <p></p>
  *  Valid values:
@@ -38,8 +38,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag165EnuSettlInstSource extends FIX41Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum165SettlInstSource dataValue;
 
-    public final static Enum165SettlInstSource TESTA_ENU_SETTL_INST_SOURCE = Enum165SettlInstSource.BROKER_INSTRUCTIONS;
-    public final static Enum165SettlInstSource TESTB_ENU_SETTL_INST_SOURCE = Enum165SettlInstSource.INVESTOR;
+    public final static Enum165SettlInstSource TESTA_ENU_SETTL_INST_SOURCE
+            = Enum165SettlInstSource.BROKER_INSTRUCTIONS;
+    public final static Enum165SettlInstSource TESTB_ENU_SETTL_INST_SOURCE
+            = Enum165SettlInstSource.INVESTOR;
 
     public Tag165EnuSettlInstSource(Enum165SettlInstSource dataValue) {
         setFixType(FIX41.FIX165_ENU_SETTL_INST_SOURCE);

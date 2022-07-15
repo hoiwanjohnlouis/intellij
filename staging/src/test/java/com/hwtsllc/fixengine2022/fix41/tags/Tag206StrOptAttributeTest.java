@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix41.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -44,74 +43,123 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag206StrOptAttributeTest {
     @Test
-    void FIX0206Test() {
-        FIX41 fixData = FIX41.FIX206_STR_OPT_ATTRIBUTE;
-        assertEquals( "206", fixData.toEnumIDString());
-        assertEquals( "OPT_ATTRIBUTE", fixData.toEnumNameString());
-        assertEquals( "OptAttribute", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0206Test() {
-        Tag206StrOptAttribute tagData;
-
-        tagData = new Tag206StrOptAttribute(new MyStringType(Tag206StrOptAttribute.TESTA_STR_OPT_ATTRIBUTE));
-        assertEquals( Tag206StrOptAttribute.TESTA_STR_OPT_ATTRIBUTE, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag206StrOptAttribute(new MyStringType(Tag206StrOptAttribute.TESTB_STR_OPT_ATTRIBUTE));
-        assertEquals( Tag206StrOptAttribute.TESTB_STR_OPT_ATTRIBUTE, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
     void PrintFIXTagTest() {
         Tag206StrOptAttribute tagData;
+        String oneElement;
 
-        tagData = new Tag206StrOptAttribute(new MyStringType(Tag206StrOptAttribute.TESTB_STR_OPT_ATTRIBUTE));
+        oneElement = Tag206StrOptAttribute.TESTA_STR_OPT_ATTRIBUTE;
+        tagData = new Tag206StrOptAttribute(new MyStringType( oneElement ));
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag206StrOptAttribute.TESTB_STR_OPT_ATTRIBUTE;
+        tagData = new Tag206StrOptAttribute(new MyStringType( oneElement ));
         System.out.println( tagData.toVerboseString() );
     }
+
+    @Test
+    void FIXTest() {
+        Tag206StrOptAttribute tagData;
+        String oneElement;
+
+        oneElement = Tag206StrOptAttribute.TESTA_STR_OPT_ATTRIBUTE;
+        tagData = new Tag206StrOptAttribute(new MyStringType( oneElement ));
+        verifyFIXData( tagData );
+
+        oneElement = Tag206StrOptAttribute.TESTB_STR_OPT_ATTRIBUTE;
+        tagData = new Tag206StrOptAttribute(new MyStringType( oneElement ));
+        verifyFIXData( tagData );
+    }
+
+    private void verifyFIXData( final Tag206StrOptAttribute tagData ) {
+        assertEquals( "FIX206_STR_OPT_ATTRIBUTE", tagData.toEnumLabelString());
+        assertEquals( "206", tagData.toEnumIDString());
+        assertEquals( "OPT_ATTRIBUTE", tagData.toEnumNameString());
+        assertEquals( "OptAttribute", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void TagGetDataValueTest() {
         Tag206StrOptAttribute tagData;
+        String oneElement;
 
-        tagData = new Tag206StrOptAttribute(new MyStringType(Tag206StrOptAttribute.TESTB_STR_OPT_ATTRIBUTE));
-        assertEquals( Tag206StrOptAttribute.TESTB_STR_OPT_ATTRIBUTE, tagData.getDataValue());
+        oneElement = Tag206StrOptAttribute.TESTA_STR_OPT_ATTRIBUTE;
+        tagData = new Tag206StrOptAttribute(new MyStringType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = Tag206StrOptAttribute.TESTB_STR_OPT_ATTRIBUTE;
+        tagData = new Tag206StrOptAttribute(new MyStringType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+    }
+
+    private void verifyDataValue( final Tag206StrOptAttribute tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+
     @Test
     void TagToValuePairStringTest() {
         Tag206StrOptAttribute tagData;
+        String oneElement;
 
-        tagData = new Tag206StrOptAttribute(new MyStringType(Tag206StrOptAttribute.TESTB_STR_OPT_ATTRIBUTE));
-        assertEquals( tagData.toEnumIDString() + "=" + Tag206StrOptAttribute.TESTB_STR_OPT_ATTRIBUTE,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag206StrOptAttribute.TESTA_STR_OPT_ATTRIBUTE;
+        tagData = new Tag206StrOptAttribute(new MyStringType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
+
+        oneElement = Tag206StrOptAttribute.TESTB_STR_OPT_ATTRIBUTE;
+        tagData = new Tag206StrOptAttribute(new MyStringType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
     }
+
+    private void verifyValuePairString( final Tag206StrOptAttribute tagData, final String oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
     @Test
     void TagToStringTest() {
         Tag206StrOptAttribute tagData;
+        String oneElement;
 
-        tagData = new Tag206StrOptAttribute(new MyStringType(Tag206StrOptAttribute.TESTB_STR_OPT_ATTRIBUTE));
-        assertEquals( Tag206StrOptAttribute.TESTB_STR_OPT_ATTRIBUTE,
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag206StrOptAttribute.TESTA_STR_OPT_ATTRIBUTE;
+        tagData = new Tag206StrOptAttribute(new MyStringType( oneElement ));
+        verifyToString( tagData, oneElement );
+
+        oneElement = Tag206StrOptAttribute.TESTB_STR_OPT_ATTRIBUTE;
+        tagData = new Tag206StrOptAttribute(new MyStringType( oneElement ));
+        verifyToString( tagData, oneElement );
     }
+
+    private void verifyToString( final Tag206StrOptAttribute tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
     @Test
     void TagToVerboseStringTest() {
         Tag206StrOptAttribute tagData;
+        String oneElement;
 
-        tagData = new Tag206StrOptAttribute(new MyStringType(Tag206StrOptAttribute.TESTA_STR_OPT_ATTRIBUTE));
+        oneElement = Tag206StrOptAttribute.TESTA_STR_OPT_ATTRIBUTE;
+        tagData = new Tag206StrOptAttribute(new MyStringType( oneElement ));
+        VerifyVerboseString( tagData );
+
+        oneElement = Tag206StrOptAttribute.TESTB_STR_OPT_ATTRIBUTE;
+        tagData = new Tag206StrOptAttribute(new MyStringType( oneElement ));
+        VerifyVerboseString( tagData );
+    }
+
+    private void VerifyVerboseString( final Tag206StrOptAttribute tagData ) {
         assertEquals( "Tag206StrOptAttribute\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag206StrOptAttribute.TESTA_STR_OPT_ATTRIBUTE + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag206StrOptAttribute.TESTA_STR_OPT_ATTRIBUTE + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

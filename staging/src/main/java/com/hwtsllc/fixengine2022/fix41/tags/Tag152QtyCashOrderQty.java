@@ -26,9 +26,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  152
  *  CashOrderQty
  *  Qty
- *  <p>
+ *  <p></p>
  *  Specifies the approximate order quantity desired in
  *  total monetary units vs. as tradeable units (e.g. number of shares).
+ *  <p></p>
  *  The broker or fund manager (for CIV orders) would be responsible for
  *  converting and calculating a tradeable unit (e.g. share) quantity (OrderQty (38))
  *  based upon this amount to be used for the actual order and subsequent messages.

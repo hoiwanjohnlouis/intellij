@@ -27,8 +27,8 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  156 (same as 156, 1046,)
  *  SettlCurrFxRateCalc
  *  char
- *  <p>
- *  Specifies whether or not SettlCurrFxRate (55) should be multiplied or divided.
+ *  <p></p>
+ *  Specifies whether the SettlCurrFxRate (55) should be multiplied or divided.
  *  <p></p>
  *  1046
  *  UnderlyingFXRateCalc

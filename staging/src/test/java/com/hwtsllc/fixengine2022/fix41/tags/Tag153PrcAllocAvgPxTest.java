@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix41.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,81 +27,83 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  153
  *  AllocAvgPx
  *  Price
- *  <p>
+ *  <p></p>
  *  AvgPx (6) for a specific AllocAccount (79)
- *  <p>
+ *  <p></p>
  *  For Fixed Income this is always expressed as "percent of par" price type.
  */
 class Tag153PrcAllocAvgPxTest {
     @Test
-    void FIX0153Test() {
-        FIX41 fixData = FIX41.FIX153_PRC_ALLOC_AVG_PX;
-        assertEquals( "153", fixData.toEnumIDString());
-        assertEquals( "ALLOC_AVG_PX", fixData.toEnumNameString());
-        assertEquals( "AllocAvgPx", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0153Test() {
+    void PrintTest() {
         Tag153PrcAllocAvgPx tagData;
+        double oneElement;
 
-        tagData = new Tag153PrcAllocAvgPx(new MyPriceType(Tag153PrcAllocAvgPx.TESTA_PRC_ALLOC_AVG_PX));
-        assertEquals( Tag153PrcAllocAvgPx.TESTA_PRC_ALLOC_AVG_PX, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+        oneElement = Tag153PrcAllocAvgPx.TESTA_PRC_ALLOC_AVG_PX;
+        tagData = new Tag153PrcAllocAvgPx(new MyPriceType( oneElement ));
+        System.out.println( tagData.toVerboseString() );
 
-        tagData = new Tag153PrcAllocAvgPx(new MyPriceType(Tag153PrcAllocAvgPx.TESTB_PRC_ALLOC_AVG_PX));
-        assertEquals( Tag153PrcAllocAvgPx.TESTB_PRC_ALLOC_AVG_PX, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag153PrcAllocAvgPx tagData;
-
-        tagData = new Tag153PrcAllocAvgPx(new MyPriceType(Tag153PrcAllocAvgPx.TESTB_PRC_ALLOC_AVG_PX));
+        oneElement = Tag153PrcAllocAvgPx.TESTB_PRC_ALLOC_AVG_PX;
+        tagData = new Tag153PrcAllocAvgPx(new MyPriceType( oneElement ));
         System.out.println( tagData.toVerboseString() );
     }
-    @Test
-    void TagGetDataValueTest() {
-        Tag153PrcAllocAvgPx tagData;
 
-        tagData = new Tag153PrcAllocAvgPx(new MyPriceType(Tag153PrcAllocAvgPx.TESTB_PRC_ALLOC_AVG_PX));
-        assertEquals( Tag153PrcAllocAvgPx.TESTB_PRC_ALLOC_AVG_PX, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+    @Test
+    void FIXTagTest() {
+        Tag153PrcAllocAvgPx tagData;
+        double oneElement;
+
+        oneElement = Tag153PrcAllocAvgPx.TESTA_PRC_ALLOC_AVG_PX;
+        tagData = new Tag153PrcAllocAvgPx(new MyPriceType( oneElement ));
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
+
+        oneElement = Tag153PrcAllocAvgPx.TESTB_PRC_ALLOC_AVG_PX;
+        tagData = new Tag153PrcAllocAvgPx(new MyPriceType( oneElement ));
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
     }
-    @Test
-    void TagToValuePairStringTest() {
-        Tag153PrcAllocAvgPx tagData;
 
-        tagData = new Tag153PrcAllocAvgPx(new MyPriceType(Tag153PrcAllocAvgPx.TESTB_PRC_ALLOC_AVG_PX));
-        assertEquals( tagData.toEnumIDString() + "=" + Tag153PrcAllocAvgPx.TESTB_PRC_ALLOC_AVG_PX,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+    private void verifyFIXData( final Tag153PrcAllocAvgPx tagData ) {
+        assertEquals( "FIX153_PRC_ALLOC_AVG_PX", tagData.toEnumLabelString());
+        assertEquals( "153", tagData.toEnumIDString());
+        assertEquals( "ALLOC_AVG_PX", tagData.toEnumNameString());
+        assertEquals( "AllocAvgPx", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
     }
-    @Test
-    void TagToStringTest() {
-        Tag153PrcAllocAvgPx tagData;
 
-        tagData = new Tag153PrcAllocAvgPx(new MyPriceType(Tag153PrcAllocAvgPx.TESTB_PRC_ALLOC_AVG_PX));
-        assertEquals( String.valueOf(Tag153PrcAllocAvgPx.TESTB_PRC_ALLOC_AVG_PX),
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+    private void verifyDataValue( final Tag153PrcAllocAvgPx tagData, final double oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
     }
-    @Test
-    void TagToVerboseStringTest() {
-        Tag153PrcAllocAvgPx tagData;
 
-        tagData = new Tag153PrcAllocAvgPx(new MyPriceType(Tag153PrcAllocAvgPx.TESTA_PRC_ALLOC_AVG_PX));
+    private void verifyValuePairString( final Tag153PrcAllocAvgPx tagData, final double oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
+    private void verifyToString( final Tag153PrcAllocAvgPx tagData, final double oneElement ) {
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
+    private void verifyVerboseString( final Tag153PrcAllocAvgPx tagData ) {
         assertEquals( "Tag153PrcAllocAvgPx\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag153PrcAllocAvgPx.TESTA_PRC_ALLOC_AVG_PX + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag153PrcAllocAvgPx.TESTA_PRC_ALLOC_AVG_PX + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

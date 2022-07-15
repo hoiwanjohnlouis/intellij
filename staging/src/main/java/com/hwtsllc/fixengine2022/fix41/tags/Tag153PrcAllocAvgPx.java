@@ -26,16 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  153
  *  AllocAvgPx
  *  Price
- *  <p>
+ *  <p></p>
  *  AvgPx (6) for a specific AllocAccount (79)
- *  <p>
+ *  <p></p>
  *  For Fixed Income this is always expressed as "percent of par" price type.
  */
 public class Tag153PrcAllocAvgPx extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceType dataValue;
 
-    public final static double TESTA_PRC_ALLOC_AVG_PX = 1.53D;
-    public final static double TESTB_PRC_ALLOC_AVG_PX = 3.51D;
+    public final static double TESTA_PRC_ALLOC_AVG_PX
+            = 1.53D;
+    public final static double TESTB_PRC_ALLOC_AVG_PX
+            = 3.51D;
 
     public Tag153PrcAllocAvgPx(MyPriceType dataValue) {
         setFixType(FIX41.FIX153_PRC_ALLOC_AVG_PX);

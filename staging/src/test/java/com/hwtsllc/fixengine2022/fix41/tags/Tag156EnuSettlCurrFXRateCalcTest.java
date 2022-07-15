@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix41.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumFXRateCalc;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,8 +27,8 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  156 (same as 156, 1046,)
  *  SettlCurrFxRateCalc
  *  char
- *  <p>
- *  Specifies whether or not SettlCurrFxRate (55) should be multiplied or divided.
+ *  <p></p>
+ *  Specifies whether the SettlCurrFxRate (55) should be multiplied or divided.
  *  <p></p>
  *  1046
  *  UnderlyingFXRateCalc
@@ -44,28 +43,6 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag156EnuSettlCurrFXRateCalcTest {
     @Test
-    void FIX0156Test() {
-        FIX41 fixData = FIX41.FIX156_SETTL_CURR_FX_RATE_CALC;
-        assertEquals( "156", fixData.toEnumIDString());
-        assertEquals( "SETTL_CURR_FX_RATE_CALC", fixData.toEnumNameString());
-        assertEquals( "SettlCurrFxRateCalc", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0156Test() {
-        Tag156EnuSettlCurrFXRateCalc tagData;
-
-        tagData = new Tag156EnuSettlCurrFXRateCalc(MyEnumFXRateCalc.MULTIPLY);
-        assertEquals( MyEnumFXRateCalc.MULTIPLY.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag156EnuSettlCurrFXRateCalc(MyEnumFXRateCalc.DIVIDE);
-        assertEquals( MyEnumFXRateCalc.DIVIDE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
     void PrintFIXTagTest() {
         Tag156EnuSettlCurrFXRateCalc tagData;
 
@@ -76,13 +53,39 @@ class Tag156EnuSettlCurrFXRateCalcTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
+    void FIX0156Test() {
         Tag156EnuSettlCurrFXRateCalc tagData;
 
         // loop around the ENUM and process
         for (MyEnumFXRateCalc oneEnum : MyEnumFXRateCalc.values()) {
             tagData = new Tag156EnuSettlCurrFXRateCalc(oneEnum);
+            assertEquals( "FIX156_SETTL_CURR_FX_RATE_CALC", tagData.toEnumLabelString());
+            assertEquals( "156", tagData.toEnumIDString());
+            assertEquals( "SETTL_CURR_FX_RATE_CALC", tagData.toEnumNameString());
+            assertEquals( "SettlCurrFxRateCalc", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        Tag156EnuSettlCurrFXRateCalc tagData;
+
+        tagData = new Tag156EnuSettlCurrFXRateCalc(MyEnumFXRateCalc.MULTIPLY);
+        assertEquals( MyEnumFXRateCalc.MULTIPLY.toEnumIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag156EnuSettlCurrFXRateCalc(MyEnumFXRateCalc.DIVIDE);
+        assertEquals( MyEnumFXRateCalc.DIVIDE.toEnumIDString(), tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        // loop around the ENUM and process
+        for (MyEnumFXRateCalc oneEnum : MyEnumFXRateCalc.values()) {
+            tagData = new Tag156EnuSettlCurrFXRateCalc(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
@@ -93,8 +96,9 @@ class Tag156EnuSettlCurrFXRateCalcTest {
         // loop around the ENUM and process
         for (MyEnumFXRateCalc oneEnum : MyEnumFXRateCalc.values()) {
             tagData = new Tag156EnuSettlCurrFXRateCalc(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
@@ -121,8 +125,8 @@ class Tag156EnuSettlCurrFXRateCalcTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

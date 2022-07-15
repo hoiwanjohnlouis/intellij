@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  164
  *  EmailThreadID
  *  String
- *  <p>
+ *  <p></p>
  *  Unique identifier for an email thread (new and chain of replies)
  */
 public class Tag164StrEmailThreadID extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_EMAIL_THREAD_ID = "BilboBaggins-Tag164StrEmailThreadID";
-    public final static String TESTB_STR_EMAIL_THREAD_ID = "Gandalf-Tag164StrEmailThreadID";
+    public final static String TESTA_STR_EMAIL_THREAD_ID
+            = "BilboBaggins-Tag164StrEmailThreadID";
+    public final static String TESTB_STR_EMAIL_THREAD_ID
+            = "Gandalf-Tag164StrEmailThreadID";
 
     public Tag164StrEmailThreadID(MyStringType dataValue) {
         setFixType(FIX41.FIX164_STR_EMAIL_THREAD_ID);

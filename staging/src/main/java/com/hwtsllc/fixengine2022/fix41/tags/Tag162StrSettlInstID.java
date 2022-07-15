@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  162
  *  SettlInstID
  *  String
- *  <p>
+ *  <p></p>
  *  Unique identifier for Settlement Instruction.
  */
 public class Tag162StrSettlInstID extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_SETTL_INST_ID = "BilboBaggins-Tag162StrSettlInstID";
-    public final static String TESTB_STR_SETTL_INST_ID = "Gandalf-Tag162StrSettlInstID";
+    public final static String TESTA_STR_SETTL_INST_ID
+            = "BilboBaggins-Tag162StrSettlInstID";
+    public final static String TESTB_STR_SETTL_INST_ID
+            = "Gandalf-Tag162StrSettlInstID";
 
     public Tag162StrSettlInstID(MyStringType dataValue) {
         setFixType(FIX41.FIX162_STR_SETTL_INST_ID);

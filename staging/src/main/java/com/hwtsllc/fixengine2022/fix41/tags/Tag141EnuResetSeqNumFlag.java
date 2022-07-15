@@ -27,7 +27,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  141
  *  ResetSeqNumFlag
  *  Boolean
- *  <p>
+ *  <p></p>
  *  Indicates that the both sides of the FIX session should reset sequence numbers.
  *  <p></p>
  *  Valid values:

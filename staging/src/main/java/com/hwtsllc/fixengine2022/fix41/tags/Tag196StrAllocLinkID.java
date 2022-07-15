@@ -26,16 +26,19 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  196
  *  AllocLinkID
  *  String
- *  <p>
+ *  <p></p>
  *  Can be used to link two different Allocation messages
  *  (each with unique AllocID (70)) together, i.e. for F/X "Netting" or "Swaps".
+ *  <p></p>
  *  Should be unique.
  */
 public class Tag196StrAllocLinkID extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_ALLOC_LINK_ID = "BilboBaggins-Tag196StrAllocLinkID";
-    public final static String TESTB_STR_ALLOC_LINK_ID = "Gandalf-Tag196StrAllocLinkID";
+    public final static String TESTA_STR_ALLOC_LINK_ID
+            = "BilboBaggins-Tag196StrAllocLinkID";
+    public final static String TESTB_STR_ALLOC_LINK_ID
+            = "Gandalf-Tag196StrAllocLinkID";
 
     public Tag196StrAllocLinkID(MyStringType dataValue) {
         setFixType(FIX41.FIX196_STR_ALLOC_LINK_ID);

@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  177
  *  SecuritySettlAgentCode
  *  String
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.3 BIC
- *  <p>
+ *  <p></p>
  *  (Bank Identification Code--Swift managed) code of the SettlInstSource's local agent bank
  *  if SettlLocation is not a depository
  */
@@ -36,8 +36,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag177StrSecuritySettlAgentCode extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_SECURITY_SETTL_AGENT_CODE = "BilboBaggins-Tag177StrSecuritySettlAgentCode";
-    public final static String TESTB_STR_SECURITY_SETTL_AGENT_CODE = "Gandalf-Tag177StrSecuritySettlAgentCode";
+    public final static String TESTA_STR_SECURITY_SETTL_AGENT_CODE
+            = "BilboBaggins-Tag177StrSecuritySettlAgentCode";
+    public final static String TESTB_STR_SECURITY_SETTL_AGENT_CODE
+            = "Gandalf-Tag177StrSecuritySettlAgentCode";
 
     public Tag177StrSecuritySettlAgentCode(MyStringType dataValue) {
         setFixType(FIX41.FIX177_STR_SECURITY_SETTL_AGENT_CODE);

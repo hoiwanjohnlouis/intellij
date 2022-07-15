@@ -27,7 +27,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  197
  *  AllocLinkType
  *  int
- *  <p>
+ *  <p></p>
  *  Identifies the type of Allocation linkage when AllocLinkID (96) is used.
  *  <p></p>
  *  Valid values:
@@ -37,8 +37,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag197EnuAllocLinkType extends FIX41Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum197AllocLinkType dataValue;
 
-    public final static Enum197AllocLinkType TESTA_ENU_ALLOC_LINK_TYPE = Enum197AllocLinkType.FX_NETTING;
-    public final static Enum197AllocLinkType TESTB_ENU_ALLOC_LINK_TYPE = Enum197AllocLinkType.FX_SWAP;
+    public final static Enum197AllocLinkType TESTA_ENU_ALLOC_LINK_TYPE
+            = Enum197AllocLinkType.FX_NETTING;
+    public final static Enum197AllocLinkType TESTB_ENU_ALLOC_LINK_TYPE
+            = Enum197AllocLinkType.FX_SWAP;
 
     public Tag197EnuAllocLinkType(Enum197AllocLinkType dataValue) {
         setFixType(FIX41.FIX197_ENU_ALLOC_LINK_TYPE);

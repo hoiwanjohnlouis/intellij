@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  189
  *  BidForwardPoints
  *  PriceOffset
- *  <p>
+ *  <p></p>
  *  Bid F/X forward points added to spot rate. Maybe a negative value.
  */
 public class Tag189PxoBidForwardPoints extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceOffsetType dataValue;
 
-    public final static double TESTA_PXO_BID_FORWARD_POINTS = 0.189D;
-    public final static double TESTB_PXO_BID_FORWARD_POINTS = 0.981D;
+    public final static double TESTA_PXO_BID_FORWARD_POINTS
+            = 0.189D;
+    public final static double TESTB_PXO_BID_FORWARD_POINTS
+            = 0.981D;
 
     public Tag189PxoBidForwardPoints(MyPriceOffsetType dataValue) {
         setFixType(FIX41.FIX189_PXO_BID_FORWARD_POINTS);

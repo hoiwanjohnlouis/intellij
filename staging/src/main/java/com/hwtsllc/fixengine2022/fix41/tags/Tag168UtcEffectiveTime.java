@@ -26,15 +26,17 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  168
  *  EffectiveTime
  *  UTCTimestamp
- *  <p>
+ *  <p></p>
  *  Time the details within the message should take effect (always expressed in UTC (Universal Time Coordinated),
  *  also known as "GMT")
  */
 public class Tag168UtcEffectiveTime extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyUTCTimestampType dataValue;
 
-    public final static String TESTA_UTC_EFFECTIVE_TIME = "18991231-23:59:59.168";
-    public final static String TESTB_UTC_EFFECTIVE_TIME = "19001231-23:59:59.168";
+    public final static String TESTA_UTC_EFFECTIVE_TIME
+            = "18991231-23:59:59.168";
+    public final static String TESTB_UTC_EFFECTIVE_TIME
+            = "19001231-23:59:59.168";
 
     public Tag168UtcEffectiveTime(MyUTCTimestampType dataValue) {
         setFixType(FIX41.FIX168_UTC_EFFECTIVE_TIME);

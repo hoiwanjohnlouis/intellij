@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  175
  *  SettlInstCode
  *  String
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.3 BIC
- *  <p>
+ *  <p></p>
  *  (Bank Identification Code - Swift managed) code of the institution involved
  *  (i.e. for multi-company institution firms)
  */
@@ -36,8 +36,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag175StrSettlInstCode extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_SETTL_INST_CODE = "BilboBaggins-Tag175StrSettlInstCode";
-    public final static String TESTB_STR_SETTL_INST_CODE = "Gandalf-Tag175StrSettlInstCode";
+    public final static String TESTA_STR_SETTL_INST_CODE
+            = "BilboBaggins-Tag175StrSettlInstCode";
+    public final static String TESTB_STR_SETTL_INST_CODE
+            = "Gandalf-Tag175StrSettlInstCode";
 
     public Tag175StrSettlInstCode(MyStringType dataValue) {
         setFixType(FIX41.FIX175_STR_SETTL_INST_CODE);

@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix41.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceOffsetType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,88 +27,81 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  191
  *  OfferForwardPoints
  *  PriceOffset
- *  <p>
+ *  <p></p>
  *  Offer F/X forward points added to spot rate. May be a negative value.
  */
 class Tag191PxoOfferForwardPointsTest {
     @Test
-    void FIX0191Test() {
-        FIX41 fixData = FIX41.FIX191_PXO_OFFER_FORWARD_POINTS;
-        assertEquals( "191", fixData.toEnumIDString());
-        assertEquals( "OFFER_FORWARD_POINTS", fixData.toEnumNameString());
-        assertEquals( "OfferForwardPoints", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0191Test() {
+    void PrintTest() {
         Tag191PxoOfferForwardPoints tagData;
+        double oneElement;
 
-        tagData = new Tag191PxoOfferForwardPoints(
-                new MyPriceOffsetType(Tag191PxoOfferForwardPoints.TESTA_PXO_OFFER_FORWARD_POINTS));
-        assertEquals( Tag191PxoOfferForwardPoints.TESTA_PXO_OFFER_FORWARD_POINTS, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue());
+        oneElement = Tag191PxoOfferForwardPoints.TESTA_PXO_OFFER_FORWARD_POINTS;
+        tagData = new Tag191PxoOfferForwardPoints( new MyPriceOffsetType( oneElement ));
+        System.out.println( tagData.toVerboseString() );
 
-        tagData = new Tag191PxoOfferForwardPoints(
-                new MyPriceOffsetType(Tag191PxoOfferForwardPoints.TESTB_PXO_OFFER_FORWARD_POINTS));
-        assertEquals( Tag191PxoOfferForwardPoints.TESTB_PXO_OFFER_FORWARD_POINTS, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag191PxoOfferForwardPoints tagData;
-
-        tagData = new Tag191PxoOfferForwardPoints(
-                        new MyPriceOffsetType(Tag191PxoOfferForwardPoints.TESTB_PXO_OFFER_FORWARD_POINTS));
+        oneElement = Tag191PxoOfferForwardPoints.TESTB_PXO_OFFER_FORWARD_POINTS;
+        tagData = new Tag191PxoOfferForwardPoints( new MyPriceOffsetType( oneElement ));
         System.out.println( tagData.toVerboseString() );
     }
-    @Test
-    void TagGetDataValueTest() {
-        Tag191PxoOfferForwardPoints tagData;
 
-        tagData = new Tag191PxoOfferForwardPoints(
-                new MyPriceOffsetType(Tag191PxoOfferForwardPoints.TESTB_PXO_OFFER_FORWARD_POINTS));
-        assertEquals( Tag191PxoOfferForwardPoints.TESTB_PXO_OFFER_FORWARD_POINTS, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+    @Test
+    void FIXTagTest() {
+        Tag191PxoOfferForwardPoints tagData;
+        double oneElement;
+
+        oneElement = Tag191PxoOfferForwardPoints.TESTA_PXO_OFFER_FORWARD_POINTS;
+        tagData = new Tag191PxoOfferForwardPoints( new MyPriceOffsetType( oneElement ));
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
+
+        oneElement = Tag191PxoOfferForwardPoints.TESTB_PXO_OFFER_FORWARD_POINTS;
+        tagData = new Tag191PxoOfferForwardPoints( new MyPriceOffsetType( oneElement ));
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
     }
-    @Test
-    void TagToValuePairStringTest() {
-        Tag191PxoOfferForwardPoints tagData;
 
-        tagData = new Tag191PxoOfferForwardPoints(
-                new MyPriceOffsetType(Tag191PxoOfferForwardPoints.TESTB_PXO_OFFER_FORWARD_POINTS));
-        assertEquals( tagData.toEnumIDString() + "=" +
-                        Tag191PxoOfferForwardPoints.TESTB_PXO_OFFER_FORWARD_POINTS,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+    private void verifyFIXData( final Tag191PxoOfferForwardPoints tagData ) {
+        assertEquals( "FIX191_PXO_OFFER_FORWARD_POINTS", tagData.toEnumLabelString());
+        assertEquals( "191", tagData.toEnumIDString());
+        assertEquals( "OFFER_FORWARD_POINTS", tagData.toEnumNameString());
+        assertEquals( "OfferForwardPoints", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
     }
-    @Test
-    void TagToStringTest() {
-        Tag191PxoOfferForwardPoints tagData;
 
-        tagData = new Tag191PxoOfferForwardPoints(
-                new MyPriceOffsetType(Tag191PxoOfferForwardPoints.TESTB_PXO_OFFER_FORWARD_POINTS));
-        assertEquals( String.valueOf(Tag191PxoOfferForwardPoints.TESTB_PXO_OFFER_FORWARD_POINTS),
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+    private void verifyDataValue( final Tag191PxoOfferForwardPoints tagData, final double oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
     }
-    @Test
-    void TagToVerboseStringTest() {
-        Tag191PxoOfferForwardPoints tagData;
 
-        tagData = new Tag191PxoOfferForwardPoints(
-                new MyPriceOffsetType(Tag191PxoOfferForwardPoints.TESTA_PXO_OFFER_FORWARD_POINTS));
+    private void verifyValuePairString( final Tag191PxoOfferForwardPoints tagData, final double oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
+    private void verifyToString( final Tag191PxoOfferForwardPoints tagData, final double oneElement ) {
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
+    private void verifyVerboseString( final Tag191PxoOfferForwardPoints tagData ) {
         assertEquals( "Tag191PxoOfferForwardPoints\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag191PxoOfferForwardPoints.TESTA_PXO_OFFER_FORWARD_POINTS + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" +
-                                            Tag191PxoOfferForwardPoints.TESTA_PXO_OFFER_FORWARD_POINTS + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

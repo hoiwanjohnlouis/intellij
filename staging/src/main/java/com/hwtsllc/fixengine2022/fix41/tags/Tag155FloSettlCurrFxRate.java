@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  155
  *  SettlCurrFxRate
  *  float
- *  <p>
+ *  <p></p>
  *  Foreign exchange rate used to compute SettlCurrAmt (9) from Currency (5) to SettlCurrency (20)
  */
 public class Tag155FloSettlCurrFxRate extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyFloatType dataValue;
 
-    public final static float TESTA_FLO_SETTL_CURR_FX_RATE = 1.55F;
-    public final static float TESTB_FLO_SETTL_CURR_FX_RATE = 5.51F;
+    public final static float TESTA_FLO_SETTL_CURR_FX_RATE
+            = 1.55F;
+    public final static float TESTB_FLO_SETTL_CURR_FX_RATE
+            = 5.51F;
 
     public Tag155FloSettlCurrFxRate(MyFloatType dataValue) {
         setFixType(FIX41.FIX155_FLO_SETTL_CURR_FX_RATE);

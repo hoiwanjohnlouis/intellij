@@ -45,8 +45,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag203EnuCoveredOrUncovered extends FIX41Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final MyEnumCoveredOrUncovered dataValue;
 
-    public final static MyEnumCoveredOrUncovered TESTA_ENU_MISC_FEE_TYPE = MyEnumCoveredOrUncovered.COVERED;
-    public final static MyEnumCoveredOrUncovered TESTB_ENU_MISC_FEE_TYPE = MyEnumCoveredOrUncovered.UNCOVERED;
+    public final static MyEnumCoveredOrUncovered TESTA_ENU_MISC_FEE_TYPE
+            = MyEnumCoveredOrUncovered.COVERED;
+    public final static MyEnumCoveredOrUncovered TESTB_ENU_MISC_FEE_TYPE
+            = MyEnumCoveredOrUncovered.UNCOVERED;
 
     public Tag203EnuCoveredOrUncovered(MyEnumCoveredOrUncovered dataValue) {
         setFixType(FIX41.FIX203_ENU_COVERED_OR_UNCOVERED);

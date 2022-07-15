@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  171
  *  StandInstDbID
  *  String
- *  <p>
+ *  <p></p>
  *  Unique identifier used on the Standing Instructions database for the Standing Instructions to be referenced.
  */
 public class Tag171StrStandInstDBID extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_STAND_INST_DB_ID = "BilboBaggins-Tag171StrStandInstDBID";
-    public final static String TESTB_STR_STAND_INST_DB_ID = "Gandalf-Tag171StrStandInstDBID";
+    public final static String TESTA_STR_STAND_INST_DB_ID
+            = "BilboBaggins-Tag171StrStandInstDBID";
+    public final static String TESTB_STR_STAND_INST_DB_ID
+            = "Gandalf-Tag171StrStandInstDBID";
 
     public Tag171StrStandInstDBID(MyStringType dataValue) {
         setFixType(FIX41.FIX171_STR_STAND_INST_DB_ID);

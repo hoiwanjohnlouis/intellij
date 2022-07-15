@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  194
  *  LastSpotRate
  *  Price
- *  <p>
+ *  <p></p>
  *  F/X spot rate.
  */
 public class Tag194PrcLastSpotRate extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceType dataValue;
 
-    public final static double TESTA_PRC_LAST_SPOT_RATE = 1.94D;
-    public final static double TESTB_PRC_LAST_SPOT_RATE = 4.91D;
+    public final static double TESTA_PRC_LAST_SPOT_RATE
+            = 1.94D;
+    public final static double TESTB_PRC_LAST_SPOT_RATE
+            = 4.91D;
 
     public Tag194PrcLastSpotRate(MyPriceType dataValue) {
         setFixType(FIX41.FIX194_PRC_LAST_SPOT_RATE);

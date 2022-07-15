@@ -26,16 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  211
  *  PegOffsetValue
  *  float
- *  <p>
+ *  <p></p>
  *  Amount (signed) added to the peg for a pegged order in the context of the PegOffsetType (836)
- *  <p>
+ *  <p></p>
  *  (Prior to FIX 4.4 this field was of type PriceOffset)
  */
 public class Tag211FloPegOffsetValue extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyFloatType dataValue;
 
-    public final static float TESTA_FLO_PEG_DIFFERENCE = 2.11F;
-    public final static float TESTB_FLO_PEG_DIFFERENCE = 1.12F;
+    public final static float TESTA_FLO_PEG_DIFFERENCE
+            = 2.11F;
+    public final static float TESTB_FLO_PEG_DIFFERENCE
+            = 1.12F;
 
     public Tag211FloPegOffsetValue(MyFloatType dataValue) {
         setFixType(FIX41.FIX211_FLO_PEG_DIFFERENCE);

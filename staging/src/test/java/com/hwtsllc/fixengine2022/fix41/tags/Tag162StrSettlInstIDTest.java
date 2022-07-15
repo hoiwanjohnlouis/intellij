@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix41.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,79 +27,128 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  162
  *  SettlInstID
  *  String
- *  <p>
+ *  <p></p>
  *  Unique identifier for Settlement Instruction.
  */
 class Tag162StrSettlInstIDTest {
     @Test
-    void FIX0162Test() {
-        FIX41 fixData = FIX41.FIX162_STR_SETTL_INST_ID;
-        assertEquals( "162", fixData.toEnumIDString());
-        assertEquals( "SETTL_INST_ID", fixData.toEnumNameString());
-        assertEquals( "SettlInstID", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0162Test() {
-        Tag162StrSettlInstID tagData;
-
-        tagData = new Tag162StrSettlInstID(new MyStringType(Tag162StrSettlInstID.TESTA_STR_SETTL_INST_ID));
-        assertEquals( Tag162StrSettlInstID.TESTA_STR_SETTL_INST_ID, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag162StrSettlInstID(new MyStringType(Tag162StrSettlInstID.TESTB_STR_SETTL_INST_ID));
-        assertEquals( Tag162StrSettlInstID.TESTB_STR_SETTL_INST_ID, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
     void PrintFIXTagTest() {
         Tag162StrSettlInstID tagData;
+        String oneElement;
 
-        tagData = new Tag162StrSettlInstID(new MyStringType(Tag162StrSettlInstID.TESTB_STR_SETTL_INST_ID));
+        oneElement = Tag162StrSettlInstID.TESTA_STR_SETTL_INST_ID;
+        tagData = new Tag162StrSettlInstID(new MyStringType( oneElement ));
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag162StrSettlInstID.TESTB_STR_SETTL_INST_ID;
+        tagData = new Tag162StrSettlInstID(new MyStringType( oneElement ));
         System.out.println( tagData.toVerboseString() );
     }
+
+    @Test
+    void FIXTest() {
+        Tag162StrSettlInstID tagData;
+        String oneElement;
+
+        oneElement = Tag162StrSettlInstID.TESTA_STR_SETTL_INST_ID;
+        tagData = new Tag162StrSettlInstID(new MyStringType( oneElement ));
+        verifyFIXData( tagData );
+
+        oneElement = Tag162StrSettlInstID.TESTB_STR_SETTL_INST_ID;
+        tagData = new Tag162StrSettlInstID(new MyStringType( oneElement ));
+        verifyFIXData( tagData );
+    }
+
+    private void verifyFIXData( final Tag162StrSettlInstID tagData ) {
+        assertEquals( "FIX162_STR_SETTL_INST_ID", tagData.toEnumLabelString());
+        assertEquals( "162", tagData.toEnumIDString());
+        assertEquals( "SETTL_INST_ID", tagData.toEnumNameString());
+        assertEquals( "SettlInstID", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void TagGetDataValueTest() {
         Tag162StrSettlInstID tagData;
+        String oneElement;
 
-        tagData = new Tag162StrSettlInstID(new MyStringType(Tag162StrSettlInstID.TESTB_STR_SETTL_INST_ID));
-        assertEquals( Tag162StrSettlInstID.TESTB_STR_SETTL_INST_ID, tagData.getDataValue());
+        oneElement = Tag162StrSettlInstID.TESTA_STR_SETTL_INST_ID;
+        tagData = new Tag162StrSettlInstID(new MyStringType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = Tag162StrSettlInstID.TESTB_STR_SETTL_INST_ID;
+        tagData = new Tag162StrSettlInstID(new MyStringType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+    }
+
+    private void verifyDataValue( final Tag162StrSettlInstID tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+
     @Test
     void TagToValuePairStringTest() {
         Tag162StrSettlInstID tagData;
+        String oneElement;
 
-        tagData = new Tag162StrSettlInstID(new MyStringType(Tag162StrSettlInstID.TESTB_STR_SETTL_INST_ID));
-        assertEquals( tagData.toEnumIDString() + "=" + Tag162StrSettlInstID.TESTB_STR_SETTL_INST_ID,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag162StrSettlInstID.TESTA_STR_SETTL_INST_ID;
+        tagData = new Tag162StrSettlInstID(new MyStringType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
+
+        oneElement = Tag162StrSettlInstID.TESTB_STR_SETTL_INST_ID;
+        tagData = new Tag162StrSettlInstID(new MyStringType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
     }
+
+    private void verifyValuePairString( final Tag162StrSettlInstID tagData, final String oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
     @Test
     void TagToStringTest() {
         Tag162StrSettlInstID tagData;
+        String oneElement;
 
-        tagData = new Tag162StrSettlInstID(new MyStringType(Tag162StrSettlInstID.TESTB_STR_SETTL_INST_ID));
-        assertEquals( Tag162StrSettlInstID.TESTB_STR_SETTL_INST_ID,
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag162StrSettlInstID.TESTA_STR_SETTL_INST_ID;
+        tagData = new Tag162StrSettlInstID(new MyStringType( oneElement ));
+        verifyToString( tagData, oneElement );
+
+        oneElement = Tag162StrSettlInstID.TESTB_STR_SETTL_INST_ID;
+        tagData = new Tag162StrSettlInstID(new MyStringType( oneElement ));
+        verifyToString( tagData, oneElement );
     }
+
+    private void verifyToString( final Tag162StrSettlInstID tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
     @Test
     void TagToVerboseStringTest() {
         Tag162StrSettlInstID tagData;
+        String oneElement;
 
-        tagData = new Tag162StrSettlInstID(new MyStringType(Tag162StrSettlInstID.TESTA_STR_SETTL_INST_ID));
+        oneElement = Tag162StrSettlInstID.TESTA_STR_SETTL_INST_ID;
+        tagData = new Tag162StrSettlInstID(new MyStringType( oneElement ));
+        verifyVerboseString( tagData );
+
+        oneElement = Tag162StrSettlInstID.TESTB_STR_SETTL_INST_ID;
+        tagData = new Tag162StrSettlInstID(new MyStringType( oneElement ));
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyVerboseString( final Tag162StrSettlInstID tagData ) {
         assertEquals( "Tag162StrSettlInstID\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag162StrSettlInstID.TESTA_STR_SETTL_INST_ID + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag162StrSettlInstID.TESTA_STR_SETTL_INST_ID + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

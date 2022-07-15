@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  192
  *  OrderQty2
  *  Qty
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.5.0 OrderQty (38) of the future part of a F/X swap order.
  */
 // @Deprecated

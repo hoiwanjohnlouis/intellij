@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix41.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,79 +27,81 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  188
  *  BidSpotRate
  *  Price
- *  <p>
+ *  <p></p>
  *  Bid F/X spot rate.
  */
 class Tag188PrcBidSpotRateTest {
     @Test
-    void FIX0188Test() {
-        FIX41 fixData = FIX41.FIX188_PRC_BID_SPOT_RATE;
-        assertEquals( "188", fixData.toEnumIDString());
-        assertEquals( "BID_SPOT_RATE", fixData.toEnumNameString());
-        assertEquals( "BidSpotRate", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0188Test() {
+    void PrintTest() {
         Tag188PrcBidSpotRate tagData;
+        double oneElement;
 
-        tagData = new Tag188PrcBidSpotRate(new MyPriceType(Tag188PrcBidSpotRate.TESTA_PRC_BID_SPOT_RATE));
-        assertEquals( Tag188PrcBidSpotRate.TESTA_PRC_BID_SPOT_RATE, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+        oneElement = Tag188PrcBidSpotRate.TESTA_PRC_BID_SPOT_RATE;
+        tagData = new Tag188PrcBidSpotRate(new MyPriceType( oneElement ));
+        System.out.println( tagData.toVerboseString() );
 
-        tagData = new Tag188PrcBidSpotRate(new MyPriceType(Tag188PrcBidSpotRate.TESTB_PRC_BID_SPOT_RATE));
-        assertEquals( Tag188PrcBidSpotRate.TESTB_PRC_BID_SPOT_RATE, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag188PrcBidSpotRate tagData;
-
-        tagData = new Tag188PrcBidSpotRate(new MyPriceType(Tag188PrcBidSpotRate.TESTB_PRC_BID_SPOT_RATE));
+        oneElement = Tag188PrcBidSpotRate.TESTB_PRC_BID_SPOT_RATE;
+        tagData = new Tag188PrcBidSpotRate(new MyPriceType( oneElement ));
         System.out.println( tagData.toVerboseString() );
     }
-    @Test
-    void TagGetDataValueTest() {
-        Tag188PrcBidSpotRate tagData;
 
-        tagData = new Tag188PrcBidSpotRate(new MyPriceType(Tag188PrcBidSpotRate.TESTB_PRC_BID_SPOT_RATE));
-        assertEquals( Tag188PrcBidSpotRate.TESTB_PRC_BID_SPOT_RATE, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+    @Test
+    void FIXTagTest() {
+        Tag188PrcBidSpotRate tagData;
+        double oneElement;
+
+        oneElement = Tag188PrcBidSpotRate.TESTA_PRC_BID_SPOT_RATE;
+        tagData = new Tag188PrcBidSpotRate(new MyPriceType( oneElement ));
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
+
+        oneElement = Tag188PrcBidSpotRate.TESTB_PRC_BID_SPOT_RATE;
+        tagData = new Tag188PrcBidSpotRate(new MyPriceType( oneElement ));
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
     }
-    @Test
-    void TagToValuePairStringTest() {
-        Tag188PrcBidSpotRate tagData;
 
-        tagData = new Tag188PrcBidSpotRate(new MyPriceType(Tag188PrcBidSpotRate.TESTB_PRC_BID_SPOT_RATE));
-        assertEquals( tagData.toEnumIDString() + "=" + Tag188PrcBidSpotRate.TESTB_PRC_BID_SPOT_RATE,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+    private void verifyFIXData( final Tag188PrcBidSpotRate tagData ) {
+        assertEquals( "FIX188_PRC_BID_SPOT_RATE", tagData.toEnumLabelString());
+        assertEquals( "188", tagData.toEnumIDString());
+        assertEquals( "BID_SPOT_RATE", tagData.toEnumNameString());
+        assertEquals( "BidSpotRate", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
     }
-    @Test
-    void TagToStringTest() {
-        Tag188PrcBidSpotRate tagData;
 
-        tagData = new Tag188PrcBidSpotRate(new MyPriceType(Tag188PrcBidSpotRate.TESTB_PRC_BID_SPOT_RATE));
-        assertEquals( String.valueOf(Tag188PrcBidSpotRate.TESTB_PRC_BID_SPOT_RATE),
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+    private void verifyDataValue( final Tag188PrcBidSpotRate tagData, final double oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
     }
-    @Test
-    void TagToVerboseStringTest() {
-        Tag188PrcBidSpotRate tagData;
 
-        tagData = new Tag188PrcBidSpotRate(new MyPriceType(Tag188PrcBidSpotRate.TESTA_PRC_BID_SPOT_RATE));
+    private void verifyValuePairString( final Tag188PrcBidSpotRate tagData, final double oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
+    private void verifyToString( final Tag188PrcBidSpotRate tagData, final double oneElement ) {
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
+    private void verifyVerboseString( final Tag188PrcBidSpotRate tagData ) {
         assertEquals( "Tag188PrcBidSpotRate\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag188PrcBidSpotRate.TESTA_PRC_BID_SPOT_RATE + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + Tag188PrcBidSpotRate.TESTA_PRC_BID_SPOT_RATE + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

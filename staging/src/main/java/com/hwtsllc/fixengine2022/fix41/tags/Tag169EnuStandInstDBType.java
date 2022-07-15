@@ -27,7 +27,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  169
  *  StandInstDbType
  *  int
- *  <p>
+ *  <p></p>
  *  Identifies the Standing Instruction database used
  *  <p></p>
  *  Valid values:
@@ -40,8 +40,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag169EnuStandInstDBType extends FIX41Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum169StandInstDbType dataValue;
 
-    public final static Enum169StandInstDbType TESTA_ENU_STAND_INST_DB_TYPE = Enum169StandInstDbType.DTC_SID;
-    public final static Enum169StandInstDbType TESTB_ENU_STAND_INST_DB_TYPE = Enum169StandInstDbType.ACCOUNT_NET;
+    public final static Enum169StandInstDbType TESTA_ENU_STAND_INST_DB_TYPE
+            = Enum169StandInstDbType.DTC_SID;
+    public final static Enum169StandInstDbType TESTB_ENU_STAND_INST_DB_TYPE
+            = Enum169StandInstDbType.ACCOUNT_NET;
 
     public Tag169EnuStandInstDBType(Enum169StandInstDbType dataValue) {
         setFixType(FIX41.FIX169_ENU_STAND_INST_DB_TYPE);

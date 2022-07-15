@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  202
  *  StrikePrice
  *  Price
- *  <p>
+ *  <p></p>
  *  Strike Price for an Option.
  */
 public class Tag202PrcStrikePrice extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceType dataValue;
 
-    public final static double TESTA_PRC_STRIKE_PRICE = 2.02D;
-    public final static double TESTB_PRC_STRIKE_PRICE = 0.202D;
+    public final static double TESTA_PRC_STRIKE_PRICE
+            = 2.02D;
+    public final static double TESTB_PRC_STRIKE_PRICE
+            = 0.202D;
 
     public Tag202PrcStrikePrice(MyPriceType dataValue) {
         setFixType(FIX41.FIX202_PRC_STRIKE_PRICE);

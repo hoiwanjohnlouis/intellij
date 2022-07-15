@@ -26,15 +26,17 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  181
  *  SecuritySettlAgentContactPhone
  *  String
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.3 Phone number for contact at local agent bank if  SettlLocation is not a depository
  */
 // @Deprecated
 public class Tag181StrSecuritySettlAgentContactPhone extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_SECURITY_SETTL_AGENT_CONTACT_PHONE = "Frodo-Tag181StrSecuritySettlAgentContactPhone";
-    public final static String TESTB_STR_SECURITY_SETTL_AGENT_CONTACT_PHONE = "Gandalf-Tag181StrSecuritySettlAgentContactPhone";
+    public final static String TESTA_STR_SECURITY_SETTL_AGENT_CONTACT_PHONE
+            = "Frodo-Tag181StrSecuritySettlAgentContactPhone";
+    public final static String TESTB_STR_SECURITY_SETTL_AGENT_CONTACT_PHONE
+            = "Gandalf-Tag181StrSecuritySettlAgentContactPhone";
 
     public Tag181StrSecuritySettlAgentContactPhone(MyStringType dataValue) {
         setFixType(FIX41.FIX181_STR_SECURITY_SETTL_AGENT_CONTACT_PHONE);

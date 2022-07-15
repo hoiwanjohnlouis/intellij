@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  154
  *  AllocNetMoney
  *  Amt
- *  <p>
+ *  <p></p>
  *  NetMoney (8) for a specific AllocAccount (79)
  */
 public class Tag154AmtAllocNetMoney extends FIX41Abstract implements LogValuePairString, LogVerboseString {
     private final MyAmtType dataValue;
 
-    public final static double TESTA_AMT_ALLOC_NET_MONEY = 1.54D;
-    public final static double TESTB_AMT_ALLOC_NET_MONEY = 4.51D;
+    public final static double TESTA_AMT_ALLOC_NET_MONEY
+            = 1.54D;
+    public final static double TESTB_AMT_ALLOC_NET_MONEY
+            = 4.51D;
 
     public Tag154AmtAllocNetMoney(MyAmtType dataValue) {
         setFixType(FIX41.FIX154_AMT_ALLOC_NET_MONEY);

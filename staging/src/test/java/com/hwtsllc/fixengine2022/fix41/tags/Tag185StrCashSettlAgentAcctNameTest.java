@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix41.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,91 +27,131 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  185
  *  CashSettlAgentAcctName
  *  String
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.3
- *  <p>
+ *  <p></p>
  *  Name of SettlInstSource's account at local agent bank if SettlDeliveryType=Free
  */
 // @Deprecated
 class Tag185StrCashSettlAgentAcctNameTest {
     @Test
-    void FIX0185Test() {
-        FIX41 fixData = FIX41.FIX185_STR_CASH_SETTL_AGENT_ACCT_NAME;
-        assertEquals( "185", fixData.toEnumIDString());
-        assertEquals( "CASH_SETTL_AGENT_ACCT_NAME", fixData.toEnumNameString());
-        assertEquals( "CashSettlAgentAcctName (replaced)", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0185Test() {
-        Tag185StrCashSettlAgentAcctName tagData;
-
-        tagData = new Tag185StrCashSettlAgentAcctName(
-                new MyStringType(Tag185StrCashSettlAgentAcctName.TESTA_STR_CASH_SETTL_AGENT_ACCT_NAME));
-        assertEquals( Tag185StrCashSettlAgentAcctName.TESTA_STR_CASH_SETTL_AGENT_ACCT_NAME, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag185StrCashSettlAgentAcctName(
-                new MyStringType(Tag185StrCashSettlAgentAcctName.TESTB_STR_CASH_SETTL_AGENT_ACCT_NAME));
-        assertEquals( Tag185StrCashSettlAgentAcctName.TESTB_STR_CASH_SETTL_AGENT_ACCT_NAME, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
     void PrintFIXTagTest() {
         Tag185StrCashSettlAgentAcctName tagData;
+        String oneElement;
 
-        tagData = new Tag185StrCashSettlAgentAcctName(
-                new MyStringType(Tag185StrCashSettlAgentAcctName.TESTB_STR_CASH_SETTL_AGENT_ACCT_NAME));
+        oneElement = Tag185StrCashSettlAgentAcctName.TESTA_STR_CASH_SETTL_AGENT_ACCT_NAME;
+        tagData = new Tag185StrCashSettlAgentAcctName( new MyStringType( oneElement ));
+        System.out.println( tagData.toVerboseString() );
+
+        oneElement = Tag185StrCashSettlAgentAcctName.TESTB_STR_CASH_SETTL_AGENT_ACCT_NAME;
+        tagData = new Tag185StrCashSettlAgentAcctName( new MyStringType( oneElement ));
         System.out.println( tagData.toVerboseString() );
     }
+
+    @Test
+    void FIXTest() {
+        Tag185StrCashSettlAgentAcctName tagData;
+        String oneElement;
+
+        oneElement = Tag185StrCashSettlAgentAcctName.TESTA_STR_CASH_SETTL_AGENT_ACCT_NAME;
+        tagData = new Tag185StrCashSettlAgentAcctName( new MyStringType( oneElement ));
+        verifyFIXData( tagData );
+
+        oneElement = Tag185StrCashSettlAgentAcctName.TESTB_STR_CASH_SETTL_AGENT_ACCT_NAME;
+        tagData = new Tag185StrCashSettlAgentAcctName( new MyStringType( oneElement ));
+        verifyFIXData( tagData );
+    }
+
+    private void verifyFIXData( final Tag185StrCashSettlAgentAcctName tagData ) {
+        assertEquals( "FIX185_STR_CASH_SETTL_AGENT_ACCT_NAME", tagData.toEnumLabelString());
+        assertEquals( "185", tagData.toEnumIDString());
+        assertEquals( "CASH_SETTL_AGENT_ACCT_NAME", tagData.toEnumNameString());
+        assertEquals( "CashSettlAgentAcctName (replaced)", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
     @Test
     void TagGetDataValueTest() {
         Tag185StrCashSettlAgentAcctName tagData;
+        String oneElement;
 
-        tagData = new Tag185StrCashSettlAgentAcctName(
-                new MyStringType(Tag185StrCashSettlAgentAcctName.TESTB_STR_CASH_SETTL_AGENT_ACCT_NAME));
-        assertEquals( Tag185StrCashSettlAgentAcctName.TESTB_STR_CASH_SETTL_AGENT_ACCT_NAME, tagData.getDataValue());
+        oneElement = Tag185StrCashSettlAgentAcctName.TESTA_STR_CASH_SETTL_AGENT_ACCT_NAME;
+        tagData = new Tag185StrCashSettlAgentAcctName( new MyStringType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+
+        oneElement = Tag185StrCashSettlAgentAcctName.TESTB_STR_CASH_SETTL_AGENT_ACCT_NAME;
+        tagData = new Tag185StrCashSettlAgentAcctName( new MyStringType( oneElement ));
+        verifyDataValue( tagData, oneElement );
+    }
+
+    private void verifyDataValue( final Tag185StrCashSettlAgentAcctName tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
+
     @Test
     void TagToValuePairStringTest() {
         Tag185StrCashSettlAgentAcctName tagData;
+        String oneElement;
 
-        tagData = new Tag185StrCashSettlAgentAcctName(
-                new MyStringType(Tag185StrCashSettlAgentAcctName.TESTB_STR_CASH_SETTL_AGENT_ACCT_NAME));
-        assertEquals( tagData.toEnumIDString() + "=" +
-                        Tag185StrCashSettlAgentAcctName.TESTB_STR_CASH_SETTL_AGENT_ACCT_NAME,
-                tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toValuePairString());
+        oneElement = Tag185StrCashSettlAgentAcctName.TESTA_STR_CASH_SETTL_AGENT_ACCT_NAME;
+        tagData = new Tag185StrCashSettlAgentAcctName( new MyStringType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
+
+        oneElement = Tag185StrCashSettlAgentAcctName.TESTB_STR_CASH_SETTL_AGENT_ACCT_NAME;
+        tagData = new Tag185StrCashSettlAgentAcctName( new MyStringType( oneElement ));
+        verifyValuePairString( tagData, oneElement );
     }
+
+    private void verifyValuePairString( final Tag185StrCashSettlAgentAcctName tagData, final String oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
     @Test
     void TagToStringTest() {
         Tag185StrCashSettlAgentAcctName tagData;
+        String oneElement;
 
-        tagData = new Tag185StrCashSettlAgentAcctName(
-                new MyStringType(Tag185StrCashSettlAgentAcctName.TESTB_STR_CASH_SETTL_AGENT_ACCT_NAME));
-        assertEquals( Tag185StrCashSettlAgentAcctName.TESTB_STR_CASH_SETTL_AGENT_ACCT_NAME,
-                tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        oneElement = Tag185StrCashSettlAgentAcctName.TESTA_STR_CASH_SETTL_AGENT_ACCT_NAME;
+        tagData = new Tag185StrCashSettlAgentAcctName( new MyStringType( oneElement ));
+        verifyToString( tagData, oneElement );
+
+        oneElement = Tag185StrCashSettlAgentAcctName.TESTB_STR_CASH_SETTL_AGENT_ACCT_NAME;
+        tagData = new Tag185StrCashSettlAgentAcctName( new MyStringType( oneElement ));
+        verifyToString( tagData, oneElement );
     }
+
+    private void verifyToString( final Tag185StrCashSettlAgentAcctName tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
     @Test
     void TagToVerboseStringTest() {
         Tag185StrCashSettlAgentAcctName tagData;
+        String oneElement;
 
-        tagData = new Tag185StrCashSettlAgentAcctName(
-                new MyStringType(Tag185StrCashSettlAgentAcctName.TESTA_STR_CASH_SETTL_AGENT_ACCT_NAME));
+        oneElement = Tag185StrCashSettlAgentAcctName.TESTA_STR_CASH_SETTL_AGENT_ACCT_NAME;
+        tagData = new Tag185StrCashSettlAgentAcctName( new MyStringType( oneElement ));
+        VerifyVerboseString( tagData );
+
+        oneElement = Tag185StrCashSettlAgentAcctName.TESTB_STR_CASH_SETTL_AGENT_ACCT_NAME;
+        tagData = new Tag185StrCashSettlAgentAcctName( new MyStringType( oneElement ));
+        VerifyVerboseString( tagData );
+    }
+
+    private void VerifyVerboseString( final Tag185StrCashSettlAgentAcctName tagData ) {
         assertEquals( "Tag185StrCashSettlAgentAcctName\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + Tag185StrCashSettlAgentAcctName.TESTA_STR_CASH_SETTL_AGENT_ACCT_NAME + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" +
-                                            Tag185StrCashSettlAgentAcctName.TESTA_STR_CASH_SETTL_AGENT_ACCT_NAME + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

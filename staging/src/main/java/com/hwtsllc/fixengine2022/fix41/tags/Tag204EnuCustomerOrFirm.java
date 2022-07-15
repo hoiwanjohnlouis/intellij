@@ -27,9 +27,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  204
  *  CustomerOrFirm
  *  int
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.2
- *  <p>
+ *  <p></p>
  *  Used for options when delivering the order to an execution system
  *  or an exchange to specify if the order is for a  customer or the firm placing the order itself.
  *  <p></p>
@@ -41,8 +41,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag204EnuCustomerOrFirm extends FIX41Abstract implements LogValuePairString, LogVerboseString, LogDataString {
     private final Enum204CustomerOrFirm dataValue;
 
-    public final static Enum204CustomerOrFirm TESTA_ENU_CUSTOMER_OR_FIRM = Enum204CustomerOrFirm.FIRM;
-    public final static Enum204CustomerOrFirm TESTB_ENU_CUSTOMER_OR_FIRM = Enum204CustomerOrFirm.CUSTOMER;
+    public final static Enum204CustomerOrFirm TESTA_ENU_CUSTOMER_OR_FIRM
+            = Enum204CustomerOrFirm.FIRM;
+    public final static Enum204CustomerOrFirm TESTB_ENU_CUSTOMER_OR_FIRM
+            = Enum204CustomerOrFirm.CUSTOMER;
 
     public Tag204EnuCustomerOrFirm(Enum204CustomerOrFirm dataValue) {
         setFixType(FIX41.FIX204_ENU_CUSTOMER_OR_FIRM);
