@@ -84,10 +84,6 @@ class Tag53QtyQuantityTest {
         oneElement = Tag53QtyQuantity.TESTB_QTY_QUANTITY;
         tagData = new Tag53QtyQuantity(new MyQtyType( oneElement ));
         verifyDataValue( tagData, oneElement );
-
-        oneElement = 400;
-        tagData = new Tag53QtyQuantity(new MyQtyType( oneElement ) );
-        verifyDataValue( tagData, oneElement );
     }
 
     private void verifyDataValue( final Tag53QtyQuantity tagData, final int oneElement ) {

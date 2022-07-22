@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  410
  *  WtAverageLiquidity
  *  Percentage
- *  <p>
+ *  <p></p>
  *  Overall weighted average liquidity expressed as a % of average daily volume.
- *  <p>
+ *  <p></p>
  *  Represented as a percentage.
  */
 public class Tag410PctWtAverageLiquidity extends FIX42Abstract implements LogValuePairString, LogVerboseString {

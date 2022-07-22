@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  360
  *  EncodedAllocTextLen
  *  Length
- *  <p>
+ *  <p></p>
  *  Byte length of encoded (non-ASCII characters) EncodedAllocText (361) field.
  */
 public class Tag360LenEncodedAllocTextLen extends FIX42Abstract implements LogValuePairString, LogVerboseString {

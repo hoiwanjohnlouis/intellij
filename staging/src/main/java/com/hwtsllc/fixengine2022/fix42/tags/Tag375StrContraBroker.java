@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  375
  *  ContraBroker
  *  String
- *  <p>
+ *  <p></p>
  *  Identifies contra broker.
- *  <p>
+ *  <p></p>
  *  Standard NASD market-maker mnemonic is preferred.
  */
 public class Tag375StrContraBroker extends FIX42Abstract implements LogValuePairString, LogVerboseString {

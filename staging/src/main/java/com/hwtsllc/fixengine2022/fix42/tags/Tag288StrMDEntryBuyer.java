@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  288
  *  MDEntryBuyer
  *  String
- *  <p>
+ *  <p></p>
  *  Buying party in a trade
  */
 public class Tag288StrMDEntryBuyer extends FIX42Abstract implements LogValuePairString, LogVerboseString {

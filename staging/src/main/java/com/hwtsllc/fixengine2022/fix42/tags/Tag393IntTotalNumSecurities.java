@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  393
  *  TotNoRelatedSym
  *  int
- *  <p>
+ *  <p></p>
  *  Total number of securities.
- *  <p>
+ *  <p></p>
  *  (Prior to FIX 4.4 this field was named TotalNumSecurities)
  */
 public class Tag393IntTotalNumSecurities extends FIX42Abstract implements LogValuePairString, LogVerboseString {

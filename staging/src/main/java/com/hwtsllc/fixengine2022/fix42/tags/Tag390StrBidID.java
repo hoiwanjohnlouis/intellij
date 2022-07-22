@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  390
  *  BidID
  *  String
- *  <p>
+ *  <p></p>
  *  Unique identifier for Bid Response as assigned by sell-side (broker, exchange, ECN).
  *  <p></p>
  *  Uniqueness must be guaranteed within a single trading day.

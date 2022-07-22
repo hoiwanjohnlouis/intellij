@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  220
  *  BenchmarkCurveCurrency
  *  Currency
- *  <p>
+ *  <p></p>
  *  Identifies currency used for  benchmark curve.
  *  <p></p>
  *  See "Appendix 6-A: Valid Currency Codes" for information on obtaining valid values.

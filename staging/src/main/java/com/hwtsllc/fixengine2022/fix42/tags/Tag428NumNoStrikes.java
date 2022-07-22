@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  428
  *  NoStrikes
  *  NumInGroup
- *  <p>
+ *  <p></p>
  *  Number of list strike price entries.
  */
 public class Tag428NumNoStrikes extends FIX42Abstract implements LogValuePairString, LogVerboseString {

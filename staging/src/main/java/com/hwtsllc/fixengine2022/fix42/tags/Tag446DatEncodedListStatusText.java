@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  446
  *  EncodedListStatusText
  *  data
- *  <p>
+ *  <p></p>
  *  Encoded (non-ASCII characters) representation of the ListStatusText (444) field
  *  in the encoded format specified via the MessageEncoding (347) field.
  *  <p></p>

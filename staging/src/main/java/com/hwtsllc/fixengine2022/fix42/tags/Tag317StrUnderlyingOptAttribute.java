@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  317
  *  UnderlyingOptAttribute
  *  char
- *  <p>
+ *  <p></p>
  *  Underlying security’s OptAttribute.
- *  <p>
+ *  <p></p>
  *  See OptAttribute (206) field for description
  */
 public class Tag317StrUnderlyingOptAttribute extends FIX42Abstract implements LogValuePairString, LogVerboseString {

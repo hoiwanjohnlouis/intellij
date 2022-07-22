@@ -26,10 +26,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  231
  *  ContractMultiplier
  *  float
- *  <p>
+ *  <p></p>
  *  Specifies the ratio or multiply factor to convert from "nominal" units
  *  (e.g. contracts) to total units (e.g. shares) (e.g. 1.0, 100, 1000, etc).
- *  <p>
+ *  <p></p>
  *  Applicable For Fixed Income, Convertible Bonds, Derivatives, etc.
  *  <p></p>
  *  In general quantities for all classes should be expressed in the basic
@@ -37,7 +37,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  currency for foreign exchange.
  *  <p></p>
  *  When quantity is expressed in contracts, e.g. financing transactions and bond trade
- *  reporting, the ContractMutliplier should contain the number of units in one contract
+ *  reporting, the ContractMultiplier should contain the number of units in one contract
  *  and can be omitted if the multiplier is the default amount for the instrument,
  *  <p></p>
  *  i.e. 1,000 par of bonds, 1,000,000 par for financing transactions.

@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  426
  *  DayAvgPx
  *  Price
- *  <p>
+ *  <p></p>
  *  The average price for quantity on a GT order that has traded today.
  */
 public class Tag426PrcDayAvgPx extends FIX42Abstract implements LogValuePairString, LogVerboseString {

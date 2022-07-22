@@ -26,12 +26,12 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  230
  *  ExDate
  *  LocalMktDate
- *  <p>
+ *  <p></p>
  *  The date when a distribution of interest is deducted from a securities assets
  *  or set aside for payment to bondholders.
- *  <p>
+ *  <p></p>
  *  On the ex-date, the securities price drops by the amount of the distribution
- *  <p>
+ *  <p></p>
  *  (plus or minus any market activity).
  *  <p></p>
  *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)

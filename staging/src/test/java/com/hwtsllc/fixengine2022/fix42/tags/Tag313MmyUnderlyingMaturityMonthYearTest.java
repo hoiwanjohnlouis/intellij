@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyMonthYearType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -69,32 +68,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag313MmyUnderlyingMaturityMonthYearTest {
     @Test
-    void FIX0313Test() {
-        FIX42 fixData = FIX42.FIX313_MMY_UNDERLYING_MATURITY_MONTH_YEAR;
-        assertEquals( "313", fixData.toEnumIDString());
-        assertEquals( "UNDERLYING_MATURITY_MONTH_YEAR", fixData.toEnumNameString());
-        assertEquals( "UnderlyingMaturityMonthYear", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0313Test() {
-        Tag313MmyUnderlyingMaturityMonthYear tagData;
-        String oneElement;
-
-        oneElement = Tag313MmyUnderlyingMaturityMonthYear.TESTA_MMY_UNDERLYING_MATURITY_MONTH_YEAR;
-        tagData = new Tag313MmyUnderlyingMaturityMonthYear( new MyMonthYearType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag313MmyUnderlyingMaturityMonthYear.TESTB_MMY_UNDERLYING_MATURITY_MONTH_YEAR;
-        tagData = new Tag313MmyUnderlyingMaturityMonthYear( new MyMonthYearType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
+    void PrintTest() {
         Tag313MmyUnderlyingMaturityMonthYear tagData;
         String oneElement;
 
@@ -107,49 +81,61 @@ class Tag313MmyUnderlyingMaturityMonthYearTest {
         System.out.println( tagData.toVerboseString() );
     }
     @Test
-    void TagGetDataValueTest() {
+    void FIXTagTest() {
         Tag313MmyUnderlyingMaturityMonthYear tagData;
         String oneElement;
 
+        oneElement = Tag313MmyUnderlyingMaturityMonthYear.TESTA_MMY_UNDERLYING_MATURITY_MONTH_YEAR;
+        tagData = new Tag313MmyUnderlyingMaturityMonthYear( new MyMonthYearType( oneElement ) );
+        verifyAll( tagData, oneElement );
+
         oneElement = Tag313MmyUnderlyingMaturityMonthYear.TESTB_MMY_UNDERLYING_MATURITY_MONTH_YEAR;
         tagData = new Tag313MmyUnderlyingMaturityMonthYear( new MyMonthYearType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        verifyAll( tagData, oneElement );
     }
-    @Test
-    void TagToValuePairStringTest() {
-        Tag313MmyUnderlyingMaturityMonthYear tagData;
-        String oneElement;
 
-        oneElement = Tag313MmyUnderlyingMaturityMonthYear.TESTB_MMY_UNDERLYING_MATURITY_MONTH_YEAR;
-        tagData = new Tag313MmyUnderlyingMaturityMonthYear( new MyMonthYearType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    private void verifyAll( final Tag313MmyUnderlyingMaturityMonthYear tagData, final String oneElement ) {
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
     }
-    @Test
-    void TagToStringTest() {
-        Tag313MmyUnderlyingMaturityMonthYear tagData;
-        String oneElement;
 
-        oneElement = Tag313MmyUnderlyingMaturityMonthYear.TESTB_MMY_UNDERLYING_MATURITY_MONTH_YEAR;
-        tagData = new Tag313MmyUnderlyingMaturityMonthYear( new MyMonthYearType( oneElement ) );
+    private void verifyFIXData( final Tag313MmyUnderlyingMaturityMonthYear tagData ) {
+        assertEquals( "FIX313_MMY_UNDERLYING_MATURITY_MONTH_YEAR", tagData.toEnumLabelString());
+        assertEquals( "313", tagData.toEnumIDString());
+        assertEquals( "UNDERLYING_MATURITY_MONTH_YEAR", tagData.toEnumNameString());
+        assertEquals( "UnderlyingMaturityMonthYear", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
+    private void verifyDataValue( final Tag313MmyUnderlyingMaturityMonthYear tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+
+    private void verifyValuePairString( final Tag313MmyUnderlyingMaturityMonthYear tagData, final String oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
+    private void verifyToString( final Tag313MmyUnderlyingMaturityMonthYear tagData, final String oneElement ) {
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
-    @Test
-    void TagToVerboseStringTest() {
-        Tag313MmyUnderlyingMaturityMonthYear tagData;
-        String oneElement;
 
-        oneElement = Tag313MmyUnderlyingMaturityMonthYear.TESTA_MMY_UNDERLYING_MATURITY_MONTH_YEAR;
-        tagData = new Tag313MmyUnderlyingMaturityMonthYear( new MyMonthYearType( oneElement ) );
+    private void verifyVerboseString( final Tag313MmyUnderlyingMaturityMonthYear tagData ) {
         assertEquals( "Tag313MmyUnderlyingMaturityMonthYear\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

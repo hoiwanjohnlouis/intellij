@@ -86,10 +86,6 @@ class Tag38QtyOrderQtyTest {
         oneElement = Tag38QtyOrderQty.TESTB_QTY_ORDER_QTY;
         tagData = new Tag38QtyOrderQty(new MyQtyType( oneElement ));
         verifyDataValue( tagData, oneElement );
-
-        oneElement = 100;
-        tagData = new Tag38QtyOrderQty(new MyQtyType( oneElement ) );
-        verifyDataValue( tagData, oneElement );
     }
 
     private void verifyDataValue( final Tag38QtyOrderQty tagData, final int oneElement ) {

@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  287
  *  SellerDays
  *  int
- *  <p>
+ *  <p></p>
  *  Specifies the number of days that may elapse before delivery of the security
  */
 public class Tag287IntSellerDays extends FIX42Abstract implements LogValuePairString, LogVerboseString {

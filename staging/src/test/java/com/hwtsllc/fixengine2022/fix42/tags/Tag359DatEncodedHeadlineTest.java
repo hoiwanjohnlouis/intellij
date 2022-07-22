@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyDataType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,7 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  359
  *  EncodedHeadline
  *  data
- *  <p>
+ *  <p></p>
  *  Encoded (non-ASCII characters) representation of the Headline (148) field
  *  in the encoded format specified via the MessageEncoding (347) field.
  *  <p></p>
@@ -36,32 +35,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag359DatEncodedHeadlineTest {
     @Test
-    void FIX0359Test() {
-        FIX42 fixData = FIX42.FIX359_DAT_ENCODED_HEADLINE;
-        assertEquals( "359", fixData.toEnumIDString());
-        assertEquals( "ENCODED_HEADLINE", fixData.toEnumNameString());
-        assertEquals( "EncodedHeadline", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0359Test() {
-        Tag359DatEncodedHeadline tagData;
-        String oneElement;
-
-        oneElement = Tag359DatEncodedHeadline.TESTA_DAT_ENCODED_HEADLINE;
-        tagData = new Tag359DatEncodedHeadline( new MyDataType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag359DatEncodedHeadline.TESTB_DAT_ENCODED_HEADLINE;
-        tagData = new Tag359DatEncodedHeadline( new MyDataType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
+    void PrintTest() {
         Tag359DatEncodedHeadline tagData;
         String oneElement;
 
@@ -73,50 +47,63 @@ class Tag359DatEncodedHeadlineTest {
         tagData = new Tag359DatEncodedHeadline( new MyDataType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
+
     @Test
-    void TagGetDataValueTest() {
+    void FIXTagTest() {
         Tag359DatEncodedHeadline tagData;
         String oneElement;
 
+        oneElement = Tag359DatEncodedHeadline.TESTA_DAT_ENCODED_HEADLINE;
+        tagData = new Tag359DatEncodedHeadline( new MyDataType( oneElement ) );
+        verifyAll( tagData, oneElement );
+
         oneElement = Tag359DatEncodedHeadline.TESTB_DAT_ENCODED_HEADLINE;
         tagData = new Tag359DatEncodedHeadline( new MyDataType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        verifyAll( tagData, oneElement );
     }
-    @Test
-    void TagToValuePairStringTest() {
-        Tag359DatEncodedHeadline tagData;
-        String oneElement;
 
-        oneElement = Tag359DatEncodedHeadline.TESTB_DAT_ENCODED_HEADLINE;
-        tagData = new Tag359DatEncodedHeadline( new MyDataType( oneElement ) );
+    private void verifyAll( final Tag359DatEncodedHeadline tagData, final String oneElement ) {
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyFIXData( final Tag359DatEncodedHeadline tagData ) {
+        assertEquals( "FIX359_DAT_ENCODED_HEADLINE", tagData.toEnumLabelString());
+        assertEquals( "359", tagData.toEnumIDString());
+        assertEquals( "ENCODED_HEADLINE", tagData.toEnumNameString());
+        assertEquals( "EncodedHeadline", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
+    private void verifyDataValue( final Tag359DatEncodedHeadline tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
+    }
+
+    private void verifyValuePairString( final Tag359DatEncodedHeadline tagData, final String oneElement ) {
         assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
-    @Test
-    void TagToStringTest() {
-        Tag359DatEncodedHeadline tagData;
-        String oneElement;
 
-        oneElement = Tag359DatEncodedHeadline.TESTB_DAT_ENCODED_HEADLINE;
-        tagData = new Tag359DatEncodedHeadline( new MyDataType( oneElement ) );
+    private void verifyToString( final Tag359DatEncodedHeadline tagData, final String oneElement ) {
         assertEquals( oneElement, tagData.toString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
-    @Test
-    void TagToVerboseStringTest() {
-        Tag359DatEncodedHeadline tagData;
-        String oneElement;
 
-        oneElement = Tag359DatEncodedHeadline.TESTA_DAT_ENCODED_HEADLINE;
-        tagData = new Tag359DatEncodedHeadline( new MyDataType( oneElement ) );
+    private void verifyVerboseString( final Tag359DatEncodedHeadline tagData ) {
         assertEquals( "Tag359DatEncodedHeadline\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
     }

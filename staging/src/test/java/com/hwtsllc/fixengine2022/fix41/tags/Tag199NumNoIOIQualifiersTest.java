@@ -52,14 +52,14 @@ class Tag199NumNoIOIQualifiersTest {
 
         oneElement = Tag199NumNoIOIQualifiers.TESTA_NUM_NO_IOI_QUALIFIERS;
         tagData = new Tag199NumNoIOIQualifiers(new MyNumInGroupType( oneElement ));
-        verifyFIXData( tagData );
-        verifyDataValue( tagData, oneElement );
-        verifyValuePairString( tagData, oneElement );
-        verifyToString( tagData, oneElement );
-        verifyVerboseString( tagData );
+        verifyAll( tagData, oneElement );
 
         oneElement = Tag199NumNoIOIQualifiers.TESTB_NUM_NO_IOI_QUALIFIERS;
         tagData = new Tag199NumNoIOIQualifiers(new MyNumInGroupType( oneElement ));
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag199NumNoIOIQualifiers tagData, final int oneElement ) {
         verifyFIXData( tagData );
         verifyDataValue( tagData, oneElement );
         verifyValuePairString( tagData, oneElement );
@@ -80,7 +80,7 @@ class Tag199NumNoIOIQualifiersTest {
 
     private void verifyDataValue( final Tag199NumNoIOIQualifiers tagData, final int oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }
 
     private void verifyValuePairString( final Tag199NumNoIOIQualifiers tagData, final int oneElement ) {

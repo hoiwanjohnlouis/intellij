@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyLocalMktDateType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,9 +27,9 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  241
  *  UnderlyingCouponPaymentDate
  *  LocalMktDate
- *  <p>
+ *  <p></p>
  *  Underlying security’s CouponPaymentDate.
- *  <p>
+ *  <p></p>
  *  See CouponPaymentDate (224) field for description
  *  <p></p>
  *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
@@ -39,32 +38,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag241LmdUnderlyingCouponPaymentDateTest {
     @Test
-    void FIX0241Test() {
-        FIX42 fixData = FIX42.FIX241_LMD_UNDERLYING_COUPON_PAYMENT_DATE;
-        assertEquals( "241", fixData.toEnumIDString());
-        assertEquals( "UNDERLYING_COUPON_PAYMENT_DATE", fixData.toEnumNameString());
-        assertEquals( "UnderlyingCouponPaymentDate", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0241Test() {
-        Tag241LmdUnderlyingCouponPaymentDate tagData;
-        String oneElement;
-
-        oneElement = Tag241LmdUnderlyingCouponPaymentDate.TESTA_LMD_UNDERLYING_COUPON_PAYMENT_DATE;
-        tagData = new Tag241LmdUnderlyingCouponPaymentDate( new MyLocalMktDateType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag241LmdUnderlyingCouponPaymentDate.TESTB_LMD_UNDERLYING_COUPON_PAYMENT_DATE;
-        tagData = new Tag241LmdUnderlyingCouponPaymentDate( new MyLocalMktDateType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
+    void PrintTest() {
         Tag241LmdUnderlyingCouponPaymentDate tagData;
         String oneElement;
 
@@ -76,51 +50,65 @@ class Tag241LmdUnderlyingCouponPaymentDateTest {
         tagData = new Tag241LmdUnderlyingCouponPaymentDate( new MyLocalMktDateType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
+
     @Test
-    void TagGetDataValueTest() {
+    void FIXTagTest() {
         Tag241LmdUnderlyingCouponPaymentDate tagData;
         String oneElement;
 
+        oneElement = Tag241LmdUnderlyingCouponPaymentDate.TESTA_LMD_UNDERLYING_COUPON_PAYMENT_DATE;
+        tagData = new Tag241LmdUnderlyingCouponPaymentDate( new MyLocalMktDateType( oneElement ) );
+        verifyAll( tagData, oneElement );
+
         oneElement = Tag241LmdUnderlyingCouponPaymentDate.TESTB_LMD_UNDERLYING_COUPON_PAYMENT_DATE;
         tagData = new Tag241LmdUnderlyingCouponPaymentDate( new MyLocalMktDateType( oneElement ) );
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag241LmdUnderlyingCouponPaymentDate tagData, final String oneElement ) {
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyFIXData( final Tag241LmdUnderlyingCouponPaymentDate tagData ) {
+        assertEquals( "FIX241_LMD_UNDERLYING_COUPON_PAYMENT_DATE", tagData.toEnumLabelString());
+        assertEquals( "241", tagData.toEnumIDString());
+        assertEquals( "UNDERLYING_COUPON_PAYMENT_DATE", tagData.toEnumNameString());
+        assertEquals( "UnderlyingCouponPaymentDate", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
+    private void verifyDataValue( final Tag241LmdUnderlyingCouponPaymentDate tagData, final String oneElement ) {
         assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
-    @Test
-    void TagToValuePairStringTest() {
-        Tag241LmdUnderlyingCouponPaymentDate tagData;
-        String oneElement;
 
-        oneElement = Tag241LmdUnderlyingCouponPaymentDate.TESTB_LMD_UNDERLYING_COUPON_PAYMENT_DATE;
-        tagData = new Tag241LmdUnderlyingCouponPaymentDate( new MyLocalMktDateType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    private void verifyValuePairString( final Tag241LmdUnderlyingCouponPaymentDate tagData, final String oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
-    @Test
-    void TagToStringTest() {
-        Tag241LmdUnderlyingCouponPaymentDate tagData;
-        String oneElement;
 
-        oneElement = Tag241LmdUnderlyingCouponPaymentDate.TESTB_LMD_UNDERLYING_COUPON_PAYMENT_DATE;
-        tagData = new Tag241LmdUnderlyingCouponPaymentDate( new MyLocalMktDateType( oneElement ) );
+    private void verifyToString( final Tag241LmdUnderlyingCouponPaymentDate tagData, final String oneElement ) {
         assertEquals( oneElement, tagData.toString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
     }
-    @Test
-    void TagToVerboseStringTest() {
-        Tag241LmdUnderlyingCouponPaymentDate tagData;
-        String oneElement;
 
-        oneElement = Tag241LmdUnderlyingCouponPaymentDate.TESTA_LMD_UNDERLYING_COUPON_PAYMENT_DATE;
-        tagData = new Tag241LmdUnderlyingCouponPaymentDate( new MyLocalMktDateType( oneElement ) );
+    private void verifyVerboseString( final Tag241LmdUnderlyingCouponPaymentDate tagData ) {
         assertEquals( "Tag241LmdUnderlyingCouponPaymentDate\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

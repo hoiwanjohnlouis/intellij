@@ -55,14 +55,14 @@ class Tag207ExcSecurityExchangeTest {
 
         oneElement = Tag207ExcSecurityExchange.TESTA_EXC_SECURITY_EXCHANGE;
         tagData = new Tag207ExcSecurityExchange( new MyExchangeType( oneElement ));
-        verifyFIXData( tagData );
-        verifyDataValue( tagData, oneElement );
-        verifyValuePairString( tagData, oneElement );
-        verifyToString( tagData, oneElement );
-        verifyVerboseString( tagData );
+        verifyAll( tagData, oneElement );
 
         oneElement = Tag207ExcSecurityExchange.TESTB_EXC_SECURITY_EXCHANGE;
         tagData = new Tag207ExcSecurityExchange( new MyExchangeType( oneElement ));
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag207ExcSecurityExchange tagData, final String oneElement ) {
         verifyFIXData( tagData );
         verifyDataValue( tagData, oneElement );
         verifyValuePairString( tagData, oneElement );

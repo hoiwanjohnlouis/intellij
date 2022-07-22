@@ -32,7 +32,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag120CcySettlCurrencyTest {
     @Test
-    void PrintFIXTagTest() {
+    void PrintTest() {
         Tag120CcySettlCurrency tagData;
         String oneElement;
 
@@ -46,17 +46,25 @@ class Tag120CcySettlCurrencyTest {
     }
 
     @Test
-    void FIXTest() {
+    void FIXTagTest() {
         Tag120CcySettlCurrency tagData;
         String oneElement;
 
         oneElement = Tag120CcySettlCurrency.TESTA_CCY_SETTL_CURRENCY;
         tagData = new Tag120CcySettlCurrency(new MyCurrencyType( oneElement ));
-        verifyFIXData( tagData );
+        verifyAll( tagData, oneElement );
 
         oneElement = Tag120CcySettlCurrency.TESTB_CCY_SETTL_CURRENCY;
         tagData = new Tag120CcySettlCurrency(new MyCurrencyType( oneElement ));
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag120CcySettlCurrency tagData, final String oneElement ) {
         verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
     }
 
     private void verifyFIXData( final Tag120CcySettlCurrency tagData ) {
@@ -70,37 +78,9 @@ class Tag120CcySettlCurrencyTest {
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
     }
 
-    @Test
-    void TagGetDataValueTest() {
-        Tag120CcySettlCurrency tagData;
-        String oneElement;
-
-        oneElement = Tag120CcySettlCurrency.TESTA_CCY_SETTL_CURRENCY;
-        tagData = new Tag120CcySettlCurrency(new MyCurrencyType( oneElement ));
-        verifyDataValue( tagData, oneElement );
-
-        oneElement = Tag120CcySettlCurrency.TESTB_CCY_SETTL_CURRENCY;
-        tagData = new Tag120CcySettlCurrency(new MyCurrencyType( oneElement ));
-        verifyDataValue( tagData, oneElement );
-    }
-
     private void verifyDataValue( final Tag120CcySettlCurrency tagData, final String oneElement ) {
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-
-    @Test
-    void TagToValuePairStringTest() {
-        Tag120CcySettlCurrency tagData;
-        String oneElement;
-
-        oneElement = Tag120CcySettlCurrency.TESTA_CCY_SETTL_CURRENCY;
-        tagData = new Tag120CcySettlCurrency(new MyCurrencyType( oneElement ));
-        verifyValuePairString( tagData, oneElement );
-
-        oneElement = Tag120CcySettlCurrency.TESTB_CCY_SETTL_CURRENCY;
-        tagData = new Tag120CcySettlCurrency(new MyCurrencyType( oneElement ));
-        verifyValuePairString( tagData, oneElement );
     }
 
     private void verifyValuePairString( final Tag120CcySettlCurrency tagData, final String oneElement ) {
@@ -109,37 +89,9 @@ class Tag120CcySettlCurrencyTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
 
-    @Test
-    void TagToStringTest() {
-        Tag120CcySettlCurrency tagData;
-        String oneElement;
-
-        oneElement = Tag120CcySettlCurrency.TESTA_CCY_SETTL_CURRENCY;
-        tagData = new Tag120CcySettlCurrency(new MyCurrencyType( oneElement ));
-        verifyToString( tagData, oneElement );
-
-        oneElement = Tag120CcySettlCurrency.TESTB_CCY_SETTL_CURRENCY;
-        tagData = new Tag120CcySettlCurrency(new MyCurrencyType( oneElement ));
-        verifyToString( tagData, oneElement );
-    }
-
     private void verifyToString( final Tag120CcySettlCurrency tagData, final String oneElement ) {
         assertEquals( oneElement, tagData.toString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
-    }
-
-    @Test
-    void TagToVerboseStringTest() {
-        Tag120CcySettlCurrency tagData;
-        String oneElement;
-
-        oneElement = Tag120CcySettlCurrency.TESTA_CCY_SETTL_CURRENCY;
-        tagData = new Tag120CcySettlCurrency(new MyCurrencyType( oneElement ));
-        verifyVerboseString( tagData );
-
-        oneElement = Tag120CcySettlCurrency.TESTB_CCY_SETTL_CURRENCY;
-        tagData = new Tag120CcySettlCurrency(new MyCurrencyType( oneElement ));
-        verifyVerboseString( tagData );
     }
 
     private void verifyVerboseString( final Tag120CcySettlCurrency tagData ) {

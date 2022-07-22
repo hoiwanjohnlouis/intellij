@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  407
  *  OutsideIndexPct
  *  Percentage
- *  <p>
+ *  <p></p>
  *  Used in EFP trades.
- *  <p>
+ *  <p></p>
  *  Represented as a percentage.
  */
 public class Tag407PctOutsideIndexPct extends FIX42Abstract implements LogValuePairString, LogVerboseString {

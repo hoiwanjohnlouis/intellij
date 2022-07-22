@@ -26,11 +26,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  244
  *  UnderlyingRepurchaseTerm
  *  int
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.4
- *  <p>
+ *  <p></p>
  *  Underlying security's RepurchaseTerm.
- *  <p>
+ *  <p></p>
  *  See RepurchaseTerm (226) field for description
  *  <p></p>
  *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)

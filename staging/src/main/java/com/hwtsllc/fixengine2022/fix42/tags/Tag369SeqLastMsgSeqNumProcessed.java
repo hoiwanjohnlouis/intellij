@@ -26,10 +26,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  369
  *  LastMsgSeqNumProcessed
  *  SeqNum
- *  <p>
+ *  <p></p>
  *  The last MsgSeqNum (34) value received by the FIX engine and processed by
  *  downstream application, such as trading engine or order routing system.
- *  <p>
+ *  <p></p>
  *  Can be specified on every message sent.
  *  <p></p>
  *  Useful for detecting a backlog with a counterparty.

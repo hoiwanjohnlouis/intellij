@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,88 +27,80 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  324
  *  SecurityStatusReqID
  *  String
- *  <p>
+ *  <p></p>
  *  Unique ID of a Security Status Request message.
  */
 class Tag324StrSecurityStatusReqIDTest {
     @Test
-    void FIX0324Test() {
-        FIX42 fixData = FIX42.FIX324_STR_SECURITY_STATUS_REQ_ID;
-        assertEquals( "324", fixData.toEnumIDString());
-        assertEquals( "SECURITY_STATUS_REQ_ID", fixData.toEnumNameString());
-        assertEquals( "SecurityStatusReqID", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0324Test() {
+    void PrintTest() {
         Tag324StrSecurityStatusReqID tagData;
         String oneElement;
 
         oneElement = Tag324StrSecurityStatusReqID.TESTA_STR_SECURITY_STATUS_REQ_ID;
         tagData = new Tag324StrSecurityStatusReqID( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag324StrSecurityStatusReqID.TESTB_STR_SECURITY_STATUS_REQ_ID;
-        tagData = new Tag324StrSecurityStatusReqID( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag324StrSecurityStatusReqID tagData;
-        String oneElement;
+        System.out.println( tagData.toVerboseString() );
 
         oneElement = Tag324StrSecurityStatusReqID.TESTB_STR_SECURITY_STATUS_REQ_ID;
         tagData = new Tag324StrSecurityStatusReqID( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
-    @Test
-    void TagGetDataValueTest() {
-        Tag324StrSecurityStatusReqID tagData;
-        String oneElement;
 
-        oneElement = Tag324StrSecurityStatusReqID.TESTB_STR_SECURITY_STATUS_REQ_ID;
-        tagData = new Tag324StrSecurityStatusReqID( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-    }
     @Test
-    void TagToValuePairStringTest() {
-        Tag324StrSecurityStatusReqID tagData;
-        String oneElement;
-
-        oneElement = Tag324StrSecurityStatusReqID.TESTB_STR_SECURITY_STATUS_REQ_ID;
-        tagData = new Tag324StrSecurityStatusReqID( new MyStringType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
-    }
-    @Test
-    void TagToStringTest() {
-        Tag324StrSecurityStatusReqID tagData;
-        String oneElement;
-
-        oneElement = Tag324StrSecurityStatusReqID.TESTB_STR_SECURITY_STATUS_REQ_ID;
-        tagData = new Tag324StrSecurityStatusReqID( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
-    }
-    @Test
-    void TagToVerboseStringTest() {
+    void FIXTagTest() {
         Tag324StrSecurityStatusReqID tagData;
         String oneElement;
 
         oneElement = Tag324StrSecurityStatusReqID.TESTA_STR_SECURITY_STATUS_REQ_ID;
         tagData = new Tag324StrSecurityStatusReqID( new MyStringType( oneElement ) );
+        verifyAll( tagData, oneElement );
+
+        oneElement = Tag324StrSecurityStatusReqID.TESTB_STR_SECURITY_STATUS_REQ_ID;
+        tagData = new Tag324StrSecurityStatusReqID( new MyStringType( oneElement ) );
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag324StrSecurityStatusReqID tagData, final String oneElement ) {
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyFIXData( final Tag324StrSecurityStatusReqID tagData ) {
+        assertEquals( "FIX324_STR_SECURITY_STATUS_REQ_ID", tagData.toEnumLabelString());
+        assertEquals( "324", tagData.toEnumIDString());
+        assertEquals( "SECURITY_STATUS_REQ_ID", tagData.toEnumNameString());
+        assertEquals( "SecurityStatusReqID", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
+    private void verifyDataValue( final Tag324StrSecurityStatusReqID tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+
+    private void verifyValuePairString( final Tag324StrSecurityStatusReqID tagData, final String oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
+    private void verifyToString( final Tag324StrSecurityStatusReqID tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
+    private void verifyVerboseString( final Tag324StrSecurityStatusReqID tagData ) {
         assertEquals( "Tag324StrSecurityStatusReqID\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

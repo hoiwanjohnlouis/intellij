@@ -84,10 +84,6 @@ class Tag52UtcSendingTimeTest {
         oneElement = Tag52UtcSendingTime.TESTB_UTC_SENDING_TIME;
         tagData = new Tag52UtcSendingTime( new MyUTCTimestampType( oneElement ) );
         verifyDataValue( tagData, oneElement );
-
-        oneElement = "20220320 141400";
-        tagData = new Tag52UtcSendingTime( new MyUTCTimestampType( oneElement ) );
-        verifyDataValue( tagData, oneElement );
     }
 
     private void verifyDataValue( final Tag52UtcSendingTime tagData, final String oneElement ) {

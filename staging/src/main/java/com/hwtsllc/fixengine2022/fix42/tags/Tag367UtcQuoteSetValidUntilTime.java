@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  367
  *  QuoteSetValidUntilTime
  *  UTCTimestamp
- *  <p>
+ *  <p></p>
  *  Indicates expiration time of this particular QuoteSet
- *  <p>
+ *  <p></p>
  *  (always expressed in UTC (Universal Time Coordinated, also known as "GMT")
  */
 public class Tag367UtcQuoteSetValidUntilTime extends FIX42Abstract implements LogValuePairString, LogVerboseString {

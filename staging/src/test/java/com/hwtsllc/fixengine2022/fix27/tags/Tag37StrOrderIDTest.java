@@ -87,10 +87,6 @@ class Tag37StrOrderIDTest {
         oneElement = Tag37StrOrderID.TESTB_STR_ORDER_ID;
         tagData = new Tag37StrOrderID(new MyStringType( oneElement ) );
         verifyDataValue( tagData, oneElement );
-
-        oneElement = "ORD-24601";
-        tagData = new Tag37StrOrderID(new MyStringType( oneElement ) );
-        verifyDataValue( tagData, oneElement );
     }
 
     private void verifyDataValue( final Tag37StrOrderID tagData, final String oneElement ) {

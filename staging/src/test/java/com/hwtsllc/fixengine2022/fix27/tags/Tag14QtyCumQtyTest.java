@@ -84,10 +84,6 @@ class Tag14QtyCumQtyTest {
         oneElement = Tag14QtyCumQty.TESTB_QTY_CUM_QTY;
         tagData = new Tag14QtyCumQty(new MyQtyType( oneElement ));
         verifyDataValue( tagData, oneElement );
-
-        oneElement = 12345;
-        tagData = new Tag14QtyCumQty(new MyQtyType( oneElement ) );
-        verifyDataValue( tagData, oneElement );
     }
 
     private void verifyDataValue( final Tag14QtyCumQty tagData, final int oneElement ) {

@@ -92,10 +92,6 @@ class Tag11StrClOrdIDTest {
         oneElement = Tag11StrClOrdID.TESTB_STR_CL_ORD_ID;
         tagData = new Tag11StrClOrdID(new MyStringType( oneElement ) );
         verifyDataValue( tagData, oneElement );
-
-        oneElement = "MLCO-ABCD1234";
-        tagData = new Tag11StrClOrdID(new MyStringType( oneElement ) );
-        verifyDataValue( tagData, oneElement );
     }
 
     private void verifyDataValue( final Tag11StrClOrdID tagData, final String oneElement ) {

@@ -52,14 +52,14 @@ class Tag154AmtAllocNetMoneyTest {
 
         oneElement = Tag154AmtAllocNetMoney.TESTA_AMT_ALLOC_NET_MONEY;
         tagData = new Tag154AmtAllocNetMoney(new MyAmtType( oneElement ));
-        verifyFIXData( tagData );
-        verifyDataValue( tagData, oneElement );
-        verifyValuePairString( tagData, oneElement );
-        verifyToString( tagData, oneElement );
-        verifyVerboseString( tagData );
+        verifyAll( tagData, oneElement );
 
         oneElement = Tag154AmtAllocNetMoney.TESTB_AMT_ALLOC_NET_MONEY;
         tagData = new Tag154AmtAllocNetMoney(new MyAmtType( oneElement ));
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag154AmtAllocNetMoney tagData, final double oneElement ) {
         verifyFIXData( tagData );
         verifyDataValue( tagData, oneElement );
         verifyValuePairString( tagData, oneElement );
@@ -80,7 +80,7 @@ class Tag154AmtAllocNetMoneyTest {
 
     private void verifyDataValue( final Tag154AmtAllocNetMoney tagData, final double oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }
 
     private void verifyValuePairString( final Tag154AmtAllocNetMoney tagData, final double oneElement ) {

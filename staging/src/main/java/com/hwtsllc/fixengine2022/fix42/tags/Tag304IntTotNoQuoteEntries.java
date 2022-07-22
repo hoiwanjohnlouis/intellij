@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  304
  *  TotNoQuoteEntries
  *  int
- *  <p>
+ *  <p></p>
  *  Total number of quotes for the quote set across all messages.
- *  <p>
+ *  <p></p>
  *  Should be the sum of all NoQuoteEntries (295) in each message
  *  that has repeating quotes that are part of the same quote set.
  *  <p></p>

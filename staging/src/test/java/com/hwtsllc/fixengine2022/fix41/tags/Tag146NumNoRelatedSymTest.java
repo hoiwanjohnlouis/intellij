@@ -52,14 +52,14 @@ class Tag146NumNoRelatedSymTest {
 
         oneElement = Tag146NumNoRelatedSym.TESTA_NUM_NO_RELATED_SYM;
         tagData = new Tag146NumNoRelatedSym(new MyNumInGroupType( oneElement ));
-        verifyFIXData( tagData );
-        verifyDataValue( tagData, oneElement );
-        verifyValuePairString( tagData, oneElement );
-        verifyToString( tagData, oneElement );
-        verifyVerboseString( tagData );
+        verifyAll( tagData, oneElement );
 
         oneElement = Tag146NumNoRelatedSym.TESTB_NUM_NO_RELATED_SYM;
         tagData = new Tag146NumNoRelatedSym(new MyNumInGroupType( oneElement ));
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag146NumNoRelatedSym tagData, final int oneElement ) {
         verifyFIXData( tagData );
         verifyDataValue( tagData, oneElement );
         verifyValuePairString( tagData, oneElement );
@@ -80,7 +80,7 @@ class Tag146NumNoRelatedSymTest {
 
     private void verifyDataValue( final Tag146NumNoRelatedSym tagData, final int oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }
 
     private void verifyValuePairString( final Tag146NumNoRelatedSym tagData, final int oneElement ) {

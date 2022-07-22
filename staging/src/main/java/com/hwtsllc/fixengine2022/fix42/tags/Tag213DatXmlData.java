@@ -26,18 +26,20 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  213
  *  XmlData
  *  data
- *  <p>
+ *  <p></p>
  *  Actual XML data stream (e.g. FIXML).
- *  <p>
- *  See approriate XML reference (e.g. FIXML).
+ *  <p></p>
+ *  See appropriate XML reference (e.g. FIXML).
  *  <p></p>
  *  Note: may contain embedded SOH characters.
  */
 public class Tag213DatXmlData extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyDataType dataValue;
 
-    public final static String TESTA_DAT_XML_DATA = "BilboBaggins-Tag213DatXmlData";
-    public final static String TESTB_DAT_XML_DATA = "Gandalf-Tag213DatXmlData";
+    public final static String TESTA_DAT_XML_DATA
+            = "BilboBaggins-Tag213DatXmlData";
+    public final static String TESTB_DAT_XML_DATA
+            = "Gandalf-Tag213DatXmlData";
 
     public Tag213DatXmlData(MyDataType dataValue) {
         setFixType(FIX42.FIX213_DAT_XML_DATA);

@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  415
  *  ProgPeriodInterval
  *  int
- *  <p>
+ *  <p></p>
  *  Time in minutes between each ListStatus report sent by SellSide.
- *  <p>
+ *  <p></p>
  *  Zero means don’t send status.
  */
 public class Tag415IntProgPeriodInterval extends FIX42Abstract implements LogValuePairString, LogVerboseString {

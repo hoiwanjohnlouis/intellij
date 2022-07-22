@@ -84,10 +84,6 @@ class Tag32QtyLastQtyTest {
         oneElement = Tag32QtyLastQty.TESTB_QTY_LAST_QTY;
         tagData = new Tag32QtyLastQty(new MyQtyType( oneElement ));
         verifyDataValue( tagData, oneElement );
-
-        oneElement = 200;
-        tagData = new Tag32QtyLastQty(new MyQtyType( oneElement ) );
-        verifyDataValue( tagData, oneElement );
     }
 
     private void verifyDataValue( final Tag32QtyLastQty tagData, final int oneElement ) {

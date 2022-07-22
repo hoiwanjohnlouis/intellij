@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  236
  *  Yield
  *  Percentage
- *  <p>
+ *  <p></p>
  *  Yield percentage.
  *  <p></p>
  *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)

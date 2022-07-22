@@ -84,10 +84,6 @@ class Tag12AmtCommissionTest {
         oneElement = Tag12AmtCommission.TESTB_AMT_COMMISSION;
         tagData = new Tag12AmtCommission(new MyAmtType( oneElement ));
         verifyDataValue( tagData, oneElement );
-
-        oneElement = 10D;
-        tagData = new Tag12AmtCommission(new MyAmtType( oneElement ) );
-        verifyDataValue( tagData, oneElement );
     }
 
     private void verifyDataValue( final Tag12AmtCommission tagData, final double oneElement ) {

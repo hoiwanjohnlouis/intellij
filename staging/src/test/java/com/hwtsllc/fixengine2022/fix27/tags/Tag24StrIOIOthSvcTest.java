@@ -83,10 +83,6 @@ class Tag24StrIOIOthSvcTest {
         oneElement = Tag24StrIOIOthSvc.TESTB_STR_IOI_OTH_SVC;
         tagData = new Tag24StrIOIOthSvc(new MyStringType( oneElement ) );
         verifyDataValue( tagData, oneElement );
-
-        oneElement = "A";
-        tagData = new Tag24StrIOIOthSvc(new MyStringType( oneElement ) );
-        verifyDataValue( tagData, oneElement );
     }
 
     private void verifyDataValue( final Tag24StrIOIOthSvc tagData, final String oneElement ) {

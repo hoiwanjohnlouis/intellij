@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -44,83 +43,75 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag400StrBidDescriptorTest {
     @Test
-    void FIX0400Test() {
-        FIX42 fixData = FIX42.FIX400_STR_BID_DESCRIPTOR;
-        assertEquals( "400", fixData.toEnumIDString());
-        assertEquals( "BID_DESCRIPTOR", fixData.toEnumNameString());
-        assertEquals( "BidDescriptor", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0400Test() {
+    void PrintTest() {
         Tag400StrBidDescriptor tagData;
         String oneElement;
 
         oneElement = Tag400StrBidDescriptor.TESTA_STR_BID_DESCRIPTOR;
         tagData = new Tag400StrBidDescriptor( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag400StrBidDescriptor.TESTB_STR_BID_DESCRIPTOR;
-        tagData = new Tag400StrBidDescriptor( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag400StrBidDescriptor tagData;
-        String oneElement;
+        System.out.println( tagData.toVerboseString() );
 
         oneElement = Tag400StrBidDescriptor.TESTB_STR_BID_DESCRIPTOR;
         tagData = new Tag400StrBidDescriptor( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
-    @Test
-    void TagGetDataValueTest() {
-        Tag400StrBidDescriptor tagData;
-        String oneElement;
 
-        oneElement = Tag400StrBidDescriptor.TESTB_STR_BID_DESCRIPTOR;
-        tagData = new Tag400StrBidDescriptor( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-    }
     @Test
-    void TagToValuePairStringTest() {
-        Tag400StrBidDescriptor tagData;
-        String oneElement;
-
-        oneElement = Tag400StrBidDescriptor.TESTB_STR_BID_DESCRIPTOR;
-        tagData = new Tag400StrBidDescriptor( new MyStringType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
-    }
-    @Test
-    void TagToStringTest() {
-        Tag400StrBidDescriptor tagData;
-        String oneElement;
-
-        oneElement = Tag400StrBidDescriptor.TESTB_STR_BID_DESCRIPTOR;
-        tagData = new Tag400StrBidDescriptor( new MyStringType(oneElement) );
-        assertEquals( oneElement, tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
-    }
-    @Test
-    void TagToVerboseStringTest() {
+    void FIXTagTest() {
         Tag400StrBidDescriptor tagData;
         String oneElement;
 
         oneElement = Tag400StrBidDescriptor.TESTA_STR_BID_DESCRIPTOR;
-        tagData = new Tag400StrBidDescriptor( new MyStringType(oneElement) );
+        tagData = new Tag400StrBidDescriptor( new MyStringType( oneElement ) );
+        verifyAll( tagData, oneElement );
+
+        oneElement = Tag400StrBidDescriptor.TESTB_STR_BID_DESCRIPTOR;
+        tagData = new Tag400StrBidDescriptor( new MyStringType( oneElement ) );
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag400StrBidDescriptor tagData, final String oneElement ) {
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyFIXData( final Tag400StrBidDescriptor tagData ) {
+        assertEquals( "FIX400_STR_BID_DESCRIPTOR", tagData.toEnumLabelString());
+        assertEquals( "400", tagData.toEnumIDString());
+        assertEquals( "BID_DESCRIPTOR", tagData.toEnumNameString());
+        assertEquals( "BidDescriptor", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
+    private void verifyDataValue( final Tag400StrBidDescriptor tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+
+    private void verifyValuePairString( final Tag400StrBidDescriptor tagData, final String oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
+    private void verifyToString( final Tag400StrBidDescriptor tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
+    private void verifyVerboseString( final Tag400StrBidDescriptor tagData ) {
         assertEquals( "Tag400StrBidDescriptor\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

@@ -52,14 +52,14 @@ class Tag159AmtAccruedInterestAmtTest {
 
         oneElement = Tag159AmtAccruedInterestAmt.TESTA_AMT_ACCRUED_INTEREST_AMT;
         tagData = new Tag159AmtAccruedInterestAmt( new MyAmtType( oneElement ));
-        verifyFIXData( tagData );
-        verifyDataValue( tagData, oneElement );
-        verifyValuePairString( tagData, oneElement );
-        verifyToString( tagData, oneElement );
-        verifyVerboseString( tagData );
+        verifyAll( tagData, oneElement );
 
         oneElement = Tag159AmtAccruedInterestAmt.TESTB_AMT_ACCRUED_INTEREST_AMT;
         tagData = new Tag159AmtAccruedInterestAmt( new MyAmtType( oneElement ));
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag159AmtAccruedInterestAmt tagData, final double oneElement ) {
         verifyFIXData( tagData );
         verifyDataValue( tagData, oneElement );
         verifyValuePairString( tagData, oneElement );
@@ -80,7 +80,7 @@ class Tag159AmtAccruedInterestAmtTest {
 
     private void verifyDataValue( final Tag159AmtAccruedInterestAmt tagData, final double oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }
 
     private void verifyValuePairString( final Tag159AmtAccruedInterestAmt tagData, final double oneElement ) {

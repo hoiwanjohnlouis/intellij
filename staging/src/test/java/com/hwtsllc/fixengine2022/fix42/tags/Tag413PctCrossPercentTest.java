@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,37 +27,12 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  413
  *  CrossPercent
  *  Percentage
- *  <p>
+ *  <p></p>
  *  Percentage of program that crosses in Currency.  Represented as a percentage.
  */
 class Tag413PctCrossPercentTest {
     @Test
-    void FIX0413Test() {
-        FIX42 fixData = FIX42.FIX413_PCT_CROSS_PERCENT;
-        assertEquals( "413", fixData.toEnumIDString());
-        assertEquals( "CROSS_PERCENT", fixData.toEnumNameString());
-        assertEquals( "CrossPercent", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0413Test() {
-        Tag413PctCrossPercent tagData;
-        double oneElement;
-
-        oneElement = Tag413PctCrossPercent.TESTA_PCT_CROSS_PERCENT;
-        tagData = new Tag413PctCrossPercent( new MyPercentageType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag413PctCrossPercent.TESTB_PCT_CROSS_PERCENT;
-        tagData = new Tag413PctCrossPercent( new MyPercentageType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
+    void PrintTest() {
         Tag413PctCrossPercent tagData;
         double oneElement;
 
@@ -70,50 +44,64 @@ class Tag413PctCrossPercentTest {
         tagData = new Tag413PctCrossPercent( new MyPercentageType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
+
     @Test
-    void TagGetDataValueTest() {
+    void FIXTagTest() {
         Tag413PctCrossPercent tagData;
         double oneElement;
 
+        oneElement = Tag413PctCrossPercent.TESTA_PCT_CROSS_PERCENT;
+        tagData = new Tag413PctCrossPercent( new MyPercentageType( oneElement ) );
+        verifyAll( tagData, oneElement );
+
         oneElement = Tag413PctCrossPercent.TESTB_PCT_CROSS_PERCENT;
         tagData = new Tag413PctCrossPercent( new MyPercentageType( oneElement ) );
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag413PctCrossPercent tagData, final double oneElement ) {
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyFIXData( final Tag413PctCrossPercent tagData ) {
+        assertEquals( "FIX413_PCT_CROSS_PERCENT", tagData.toEnumLabelString());
+        assertEquals( "413", tagData.toEnumIDString());
+        assertEquals( "CROSS_PERCENT", tagData.toEnumNameString());
+        assertEquals( "CrossPercent", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
+    private void verifyDataValue( final Tag413PctCrossPercent tagData, final double oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue());
     }
-    @Test
-    void TagToValuePairStringTest() {
-        Tag413PctCrossPercent tagData;
-        double oneElement;
 
-        oneElement = Tag413PctCrossPercent.TESTB_PCT_CROSS_PERCENT;
-        tagData = new Tag413PctCrossPercent( new MyPercentageType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    private void verifyValuePairString( final Tag413PctCrossPercent tagData, final double oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
-    @Test
-    void TagToStringTest() {
-        Tag413PctCrossPercent tagData;
-        double oneElement;
 
-        oneElement = Tag413PctCrossPercent.TESTB_PCT_CROSS_PERCENT;
-        tagData = new Tag413PctCrossPercent( new MyPercentageType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    private void verifyToString( final Tag413PctCrossPercent tagData, final double oneElement ) {
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
-    @Test
-    void TagToVerboseStringTest() {
-        Tag413PctCrossPercent tagData;
-        double oneElement;
 
-        oneElement = Tag413PctCrossPercent.TESTA_PCT_CROSS_PERCENT;
-        tagData = new Tag413PctCrossPercent( new MyPercentageType( oneElement ) );
+    private void verifyVerboseString( final Tag413PctCrossPercent tagData ) {
         assertEquals( "Tag413PctCrossPercent\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

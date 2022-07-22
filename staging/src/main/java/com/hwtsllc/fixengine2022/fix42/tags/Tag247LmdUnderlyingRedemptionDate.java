@@ -26,11 +26,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  247
  *  UnderlyingRedemptionDate
  *  LocalMktDate
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.4
- *  <p>
+ *  <p></p>
  *  Underlying security's RedemptionDate.
- *  <p>
+ *  <p></p>
  *  See RedemptionDate (240) field for description
  *  <p></p>
  *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)

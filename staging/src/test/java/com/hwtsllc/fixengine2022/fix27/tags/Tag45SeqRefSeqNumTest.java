@@ -82,10 +82,6 @@ class Tag45SeqRefSeqNumTest {
         oneElement = Tag45SeqRefSeqNum.TESTB_SEQ_REF_SEQ_NO;
         tagData = new Tag45SeqRefSeqNum(new MySeqNumType( oneElement ));
         verifyDataValue( tagData, oneElement );
-
-        oneElement = 32523;
-        tagData = new Tag45SeqRefSeqNum(new MySeqNumType( oneElement ) );
-        verifyDataValue( tagData, oneElement );
     }
 
     private void verifyDataValue( final Tag45SeqRefSeqNum tagData, final int oneElement ) {

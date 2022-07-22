@@ -58,14 +58,22 @@ class Tag15CcyCurrencyTest {
 
         oneElement = Tag15CcyCurrency.TESTA_CCY_CURRENCY;
         tagData = new Tag15CcyCurrency(new MyCurrencyType( oneElement ));
-        VerifyFIXData( tagData );
+        verifyAll( tagData, oneElement );
 
         oneElement = Tag15CcyCurrency.TESTB_CCY_CURRENCY;
         tagData = new Tag15CcyCurrency(new MyCurrencyType( oneElement ));
-        VerifyFIXData( tagData );
+        verifyAll( tagData, oneElement );
     }
 
-    private void VerifyFIXData( final Tag15CcyCurrency tagData ) {
+    private void verifyAll( final Tag15CcyCurrency tagData, final String oneElement ) {
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyFIXData( final Tag15CcyCurrency tagData ) {
         assertEquals( "FIX15_CCY_CURRENCY", tagData.toEnumLabelString());
         assertEquals( "CURRENCY", tagData.toEnumNameString());
         assertEquals( "15", tagData.toEnumIDString());
@@ -76,41 +84,9 @@ class Tag15CcyCurrencyTest {
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
     }
 
-    @Test
-    void TagGetDataValueTest() {
-        Tag15CcyCurrency tagData;
-        String oneElement;
-
-        oneElement = Tag15CcyCurrency.TESTA_CCY_CURRENCY;
-        tagData = new Tag15CcyCurrency(new MyCurrencyType( oneElement ));
-        verifyDataValue( tagData, oneElement );
-
-        oneElement = Tag15CcyCurrency.TESTB_CCY_CURRENCY;
-        tagData = new Tag15CcyCurrency(new MyCurrencyType( oneElement ));
-        verifyDataValue( tagData, oneElement );
-
-        oneElement = "CAD";
-        tagData = new Tag15CcyCurrency(new MyCurrencyType( oneElement ) );
-        verifyDataValue( tagData, oneElement );
-    }
-
     private void verifyDataValue( final Tag15CcyCurrency tagData, final String oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-
-    @Test
-    void TagToValuePairStringTest() {
-        Tag15CcyCurrency tagData;
-        String oneElement;
-
-        oneElement = Tag15CcyCurrency.TESTA_CCY_CURRENCY;
-        tagData = new Tag15CcyCurrency(new MyCurrencyType( oneElement ));
-        verifyValuePairString( tagData, oneElement );
-
-        oneElement = Tag15CcyCurrency.TESTB_CCY_CURRENCY;
-        tagData = new Tag15CcyCurrency(new MyCurrencyType( oneElement ));
-        verifyValuePairString( tagData, oneElement );
     }
 
     private void verifyValuePairString( final Tag15CcyCurrency tagData, final String oneElement ) {
@@ -119,40 +95,12 @@ class Tag15CcyCurrencyTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
 
-    @Test
-    void TagToStringTest() {
-        Tag15CcyCurrency tagData;
-        String oneElement;
-
-        oneElement = Tag15CcyCurrency.TESTA_CCY_CURRENCY;
-        tagData = new Tag15CcyCurrency(new MyCurrencyType( oneElement ));
-        verifyToString( tagData, oneElement );
-
-        oneElement = Tag15CcyCurrency.TESTB_CCY_CURRENCY;
-        tagData = new Tag15CcyCurrency(new MyCurrencyType( oneElement ));
-        verifyToString( tagData, oneElement );
-    }
-
     private void verifyToString( final Tag15CcyCurrency tagData, final String oneElement ) {
         assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
 
-    @Test
-    void TagToVerboseStringTest() {
-        Tag15CcyCurrency tagData;
-        String oneElement;
-
-        oneElement = Tag15CcyCurrency.TESTA_CCY_CURRENCY;
-        tagData = new Tag15CcyCurrency(new MyCurrencyType( oneElement ));
-        verifyVerboseString( tagData, oneElement );
-
-        oneElement = Tag15CcyCurrency.TESTB_CCY_CURRENCY;
-        tagData = new Tag15CcyCurrency(new MyCurrencyType( oneElement ));
-        verifyVerboseString( tagData, oneElement );
-    }
-
-    private void verifyVerboseString( final Tag15CcyCurrency tagData, final String oneElement ) {
+    private void verifyVerboseString( final Tag15CcyCurrency tagData ) {
         assertEquals( "Tag15CcyCurrency\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +

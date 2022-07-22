@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  438
  *  ContraTradeTime
  *  UTCTimestamp
- *  <p>
+ *  <p></p>
  *  Identifies the time of the trade with the ContraBroker (375).
- *  <p>
+ *  <p></p>
  *  (always expressed in UTC (Universal Time Coordinated, also known as "GMT")
  */
 public class Tag438UtcContraTradeTime extends FIX42Abstract implements LogValuePairString, LogVerboseString {

@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  387
  *  TotalVolumeTraded
  *  Qty
- *  <p>
+ *  <p></p>
  *  Total volume (quantity) traded.
  */
 public class Tag387QtyTotalVolumeTraded extends FIX42Abstract implements LogValuePairString, LogVerboseString {

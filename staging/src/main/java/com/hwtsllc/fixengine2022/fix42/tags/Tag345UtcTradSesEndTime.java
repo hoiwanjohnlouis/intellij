@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  345
  *  TradSesEndTime
  *  UTCTimestamp
- *  <p>
+ *  <p></p>
  *  End time of the trading session
  */
 public class Tag345UtcTradSesEndTime extends FIX42Abstract implements LogValuePairString, LogVerboseString {

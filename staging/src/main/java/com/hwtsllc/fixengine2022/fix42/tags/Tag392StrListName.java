@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  392
  *  ListName
  *  String
- *  <p>
+ *  <p></p>
  *  Descriptive name for list order.
  */
 public class Tag392StrListName extends FIX42Abstract implements LogValuePairString, LogVerboseString {

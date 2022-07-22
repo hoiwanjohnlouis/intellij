@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  290
  *  MDEntryPositionNo
  *  int
- *  <p>
+ *  <p></p>
  *  Display position of a bid or offer, numbered from most competitive to least competitive,
  *  per market side, beginning with.
  */

@@ -55,14 +55,14 @@ class Tag205IntMaturityDayTest {
 
         oneElement = Tag205IntMaturityDay.TESTA_INT_MATURITY_DAY;
         tagData = new Tag205IntMaturityDay(new MyIntType( oneElement ));
-        verifyFIXData( tagData );
-        verifyDataValue( tagData, oneElement );
-        verifyValuePairString( tagData, oneElement );
-        verifyToString( tagData, oneElement );
-        verifyVerboseString( tagData );
+        verifyAll( tagData, oneElement );
 
         oneElement = Tag205IntMaturityDay.TESTB_INT_MATURITY_DAY;
         tagData = new Tag205IntMaturityDay(new MyIntType( oneElement ));
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag205IntMaturityDay tagData, final int oneElement ) {
         verifyFIXData( tagData );
         verifyDataValue( tagData, oneElement );
         verifyValuePairString( tagData, oneElement );
@@ -83,7 +83,7 @@ class Tag205IntMaturityDayTest {
 
     private void verifyDataValue( final Tag205IntMaturityDay tagData, final int oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
     }
 
     private void verifyValuePairString( final Tag205IntMaturityDay tagData, final int oneElement ) {

@@ -25,7 +25,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 /**
  *  371
  *  RefTagID
- *  int
+ *  <p></p>
  *  <p>
  *  The tag number of the FIX field being referenced.
  */

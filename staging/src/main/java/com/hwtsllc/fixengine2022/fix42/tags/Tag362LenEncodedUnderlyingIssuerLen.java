@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  362
  *  EncodedUnderlyingIssuerLen
  *  Length
- *  <p>
+ *  <p></p>
  *  Byte length of encoded (non-ASCII characters) EncodedUnderlyingIssuer (363) field.
  */
 public class Tag362LenEncodedUnderlyingIssuerLen extends FIX42Abstract implements LogValuePairString, LogVerboseString {

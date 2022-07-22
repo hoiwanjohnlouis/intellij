@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  358
  *  EncodedHeadlineLen
  *  Length
- *  <p>
+ *  <p></p>
  *  Byte length of encoded (non-ASCII characters) EncodedHeadline (359) field.
  */
 public class Tag358LenEncodedHeadlineLen extends FIX42Abstract implements LogValuePairString, LogVerboseString {

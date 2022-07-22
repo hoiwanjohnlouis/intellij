@@ -26,11 +26,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  370
  *  OnBehalfOfSendingTime
  *  UTCTimestamp
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.3
- *  <p>
+ *  <p></p>
  *  Used when a message is sent via a 'hub' or 'service bureau'.
- *  <p>
+ *  <p></p>
  *  If A sends to Q (the hub), who then sends to B via a separate FIX session, then when Q sends to B,
  *  the value of this field should represent the SendingTime on the message A sent to Q.
  *  <p></p>

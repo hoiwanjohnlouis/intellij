@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  391
  *  ClientBidID
  *  String
- *  <p>
+ *  <p></p>
  *  Unique identifier for a Bid Request as assigned by institution.
  *  <p></p>
  *  Uniqueness must be guaranteed within a single trading day.

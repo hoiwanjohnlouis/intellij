@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,37 +27,12 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  396
  *  SideValue1
  *  Amt
- *  <p>
+ *  <p></p>
  *  Amounts in currency
  */
 class Tag396AmtSideValue1Test {
     @Test
-    void FIX0396Test() {
-        FIX42 fixData = FIX42.FIX396_AMT_SIDE_VALUE1;
-        assertEquals( "396", fixData.toEnumIDString());
-        assertEquals( "SIDE_VALUE1", fixData.toEnumNameString());
-        assertEquals( "SideValue1", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0396Test() {
-        Tag396AmtSideValue1 tagData;
-        double oneElement;
-
-        oneElement = Tag396AmtSideValue1.TESTA_AMT_SIDE_VALUE1;
-        tagData = new Tag396AmtSideValue1( new MyAmtType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
-
-        oneElement = Tag396AmtSideValue1.TESTB_AMT_SIDE_VALUE1;
-        tagData = new Tag396AmtSideValue1( new MyAmtType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
+    void PrintTest() {
         Tag396AmtSideValue1 tagData;
         double oneElement;
 
@@ -70,51 +44,65 @@ class Tag396AmtSideValue1Test {
         tagData = new Tag396AmtSideValue1( new MyAmtType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
-    @Test
-    void TagGetDataValueTest() {
-        Tag396AmtSideValue1 tagData;
-        double oneElement;
 
-        oneElement = Tag396AmtSideValue1.TESTB_AMT_SIDE_VALUE1;
-        tagData = new Tag396AmtSideValue1( new MyAmtType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
-    }
     @Test
-    void TagToValuePairStringTest() {
-        Tag396AmtSideValue1 tagData;
-        double oneElement;
-
-        oneElement = Tag396AmtSideValue1.TESTB_AMT_SIDE_VALUE1;
-        tagData = new Tag396AmtSideValue1( new MyAmtType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
-    }
-    @Test
-    void TagToStringTest() {
-        Tag396AmtSideValue1 tagData;
-        double oneElement;
-
-        oneElement = Tag396AmtSideValue1.TESTB_AMT_SIDE_VALUE1;
-        tagData = new Tag396AmtSideValue1( new MyAmtType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
-    }
-    @Test
-    void TagToVerboseStringTest() {
+    void FIXTagTest() {
         Tag396AmtSideValue1 tagData;
         double oneElement;
 
         oneElement = Tag396AmtSideValue1.TESTA_AMT_SIDE_VALUE1;
         tagData = new Tag396AmtSideValue1( new MyAmtType( oneElement ) );
+        verifyAll( tagData, oneElement );
+
+        oneElement = Tag396AmtSideValue1.TESTB_AMT_SIDE_VALUE1;
+        tagData = new Tag396AmtSideValue1( new MyAmtType( oneElement ) );
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag396AmtSideValue1 tagData, final double oneElement ) {
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyFIXData( final Tag396AmtSideValue1 tagData ) {
+        assertEquals( "FIX396_AMT_SIDE_VALUE1", tagData.toEnumLabelString());
+        assertEquals( "396", tagData.toEnumIDString());
+        assertEquals( "SIDE_VALUE1", tagData.toEnumNameString());
+        assertEquals( "SideValue1", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
+    private void verifyDataValue( final Tag396AmtSideValue1 tagData, final double oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
+    }
+
+    private void verifyValuePairString( final Tag396AmtSideValue1 tagData, final double oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
+    private void verifyToString( final Tag396AmtSideValue1 tagData, final double oneElement ) {
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
+    private void verifyVerboseString( final Tag396AmtSideValue1 tagData ) {
         assertEquals( "Tag396AmtSideValue1\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

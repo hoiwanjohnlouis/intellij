@@ -87,7 +87,7 @@ class Tag119AmtSettlCurrAmtTest {
 
     private void verifyDataValue( final Tag119AmtSettlCurrAmt tagData, final double oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }
 
     @Test

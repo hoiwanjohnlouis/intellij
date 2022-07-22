@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  320
  *  SecurityReqID
  *  String
- *  <p>
+ *  <p></p>
  *  Unique ID of a Security Definition Request.
  */
 public class Tag320StrSecurityReqID extends FIX42Abstract implements LogValuePairString, LogVerboseString {

@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  246
  *  UnderlyingFactor
  *  float
- *  <p>
+ *  <p></p>
  *  Underlying security’s Factor.
- *  <p>
+ *  <p></p>
  *  See Factor (228) field for description
  *  <p></p>
  *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)

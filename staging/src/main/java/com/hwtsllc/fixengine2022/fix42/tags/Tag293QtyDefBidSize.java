@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  293
  *  DefBidSize
  *  Qty
- *  <p>
+ *  <p></p>
  *  Default Bid Size.
  */
 public class Tag293QtyDefBidSize extends FIX42Abstract implements LogValuePairString, LogVerboseString {

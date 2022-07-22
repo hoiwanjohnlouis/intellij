@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyLengthType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,37 +27,12 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  364
  *  EncodedUnderlyingSecurityDescLen
  *  Length
- *  <p>
+ *  <p></p>
  *  Byte length of encoded (non-ASCII characters) EncodedUnderlyingSecurityDesc (365) field.
  */
 class Tag364LenEncodedUnderlyingSecurityDescLenTest {
     @Test
-    void FIX0364Test() {
-        FIX42 fixData = FIX42.FIX364_LEN_ENCODED_UNDERLYING_SECURITY_DESC_LEN;
-        assertEquals( "364", fixData.toEnumIDString());
-        assertEquals( "ENCODED_UNDERLYING_SECURITY_DESC_LEN", fixData.toEnumNameString());
-        assertEquals( "EncodedUnderlyingSecurityDescLen", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0364Test() {
-        Tag364LenEncodedUnderlyingSecurityDescLen tagData;
-        int oneElement;
-
-        oneElement = Tag364LenEncodedUnderlyingSecurityDescLen.TESTA_LEN_ENCODED_UNDERLYING_SECURITY_DESC_LEN;
-        tagData = new Tag364LenEncodedUnderlyingSecurityDescLen( new MyLengthType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag364LenEncodedUnderlyingSecurityDescLen.TESTB_LEN_ENCODED_UNDERLYING_SECURITY_DESC_LEN;
-        tagData = new Tag364LenEncodedUnderlyingSecurityDescLen( new MyLengthType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
+    void PrintTest() {
         Tag364LenEncodedUnderlyingSecurityDescLen tagData;
         int oneElement;
 
@@ -70,51 +44,64 @@ class Tag364LenEncodedUnderlyingSecurityDescLenTest {
         tagData = new Tag364LenEncodedUnderlyingSecurityDescLen( new MyLengthType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
+
     @Test
-    void TagGetDataValueTest() {
+    void FIXTagTest() {
         Tag364LenEncodedUnderlyingSecurityDescLen tagData;
         int oneElement;
 
+        oneElement = Tag364LenEncodedUnderlyingSecurityDescLen.TESTA_LEN_ENCODED_UNDERLYING_SECURITY_DESC_LEN;
+        tagData = new Tag364LenEncodedUnderlyingSecurityDescLen( new MyLengthType( oneElement ) );
+        verifyAll( tagData, oneElement );
+
         oneElement = Tag364LenEncodedUnderlyingSecurityDescLen.TESTB_LEN_ENCODED_UNDERLYING_SECURITY_DESC_LEN;
         tagData = new Tag364LenEncodedUnderlyingSecurityDescLen( new MyLengthType( oneElement ) );
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag364LenEncodedUnderlyingSecurityDescLen tagData, final int oneElement ) {
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyFIXData( final Tag364LenEncodedUnderlyingSecurityDescLen tagData ) {
+        assertEquals( "FIX364_LEN_ENCODED_UNDERLYING_SECURITY_DESC_LEN", tagData.toEnumLabelString());
+        assertEquals( "364", tagData.toEnumIDString());
+        assertEquals( "ENCODED_UNDERLYING_SECURITY_DESC_LEN", tagData.toEnumNameString());
+        assertEquals( "EncodedUnderlyingSecurityDescLen", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
+    private void verifyDataValue( final Tag364LenEncodedUnderlyingSecurityDescLen tagData, final int oneElement ) {
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
     }
-    @Test
-    void TagToValuePairStringTest() {
-        Tag364LenEncodedUnderlyingSecurityDescLen tagData;
-        int oneElement;
 
-        oneElement = Tag364LenEncodedUnderlyingSecurityDescLen.TESTB_LEN_ENCODED_UNDERLYING_SECURITY_DESC_LEN;
-        tagData = new Tag364LenEncodedUnderlyingSecurityDescLen( new MyLengthType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    private void verifyValuePairString( final Tag364LenEncodedUnderlyingSecurityDescLen tagData, final int oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
-    @Test
-    void TagToStringTest() {
-        Tag364LenEncodedUnderlyingSecurityDescLen tagData;
-        int oneElement;
 
-        oneElement = Tag364LenEncodedUnderlyingSecurityDescLen.TESTB_LEN_ENCODED_UNDERLYING_SECURITY_DESC_LEN;
-        tagData = new Tag364LenEncodedUnderlyingSecurityDescLen( new MyLengthType( oneElement ) );
+    private void verifyToString( final Tag364LenEncodedUnderlyingSecurityDescLen tagData, final int oneElement ) {
         assertEquals( String.valueOf( oneElement ), tagData.toString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
     }
-    @Test
-    void TagToVerboseStringTest() {
-        Tag364LenEncodedUnderlyingSecurityDescLen tagData;
-        int oneElement;
 
-        oneElement = Tag364LenEncodedUnderlyingSecurityDescLen.TESTA_LEN_ENCODED_UNDERLYING_SECURITY_DESC_LEN;
-        tagData = new Tag364LenEncodedUnderlyingSecurityDescLen( new MyLengthType( oneElement ) );
+    private void verifyVerboseString( final Tag364LenEncodedUnderlyingSecurityDescLen tagData ) {
         assertEquals( "Tag364LenEncodedUnderlyingSecurityDescLen\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

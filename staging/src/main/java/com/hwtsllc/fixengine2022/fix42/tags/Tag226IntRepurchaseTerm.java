@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  226
  *  RepurchaseTerm
  *  int
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.4
- *  <p>
+ *  <p></p>
  *  Number of business days before repurchase of a repo.
  *  <p></p>
  *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)

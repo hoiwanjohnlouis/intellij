@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  332
  *  HighPx
  *  Price
- *  <p>
+ *  <p></p>
  *  Represents an indication of the high end of the price range for a security prior to the open or reopen
  */
 public class Tag332PrcHighPx extends FIX42Abstract implements LogValuePairString, LogVerboseString {

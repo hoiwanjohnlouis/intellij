@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  445
  *  EncodedListStatusTextLen
  *  Length
- *  <p>
+ *  <p></p>
  *  Byte length of encoded (non-ASCII characters) EncodedListStatusText (446) field.
  */
 public class Tag445LenEncodedListStatusTextLen extends FIX42Abstract implements LogValuePairString, LogVerboseString {

@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  384
  *  NoMsgTypes
  *  NumInGroup
- *  <p>
+ *  <p></p>
  *  Number of MsgTypes (35) in repeating group.
  */
 public class Tag384NumNoMsgTypes extends FIX42Abstract implements LogValuePairString, LogVerboseString {

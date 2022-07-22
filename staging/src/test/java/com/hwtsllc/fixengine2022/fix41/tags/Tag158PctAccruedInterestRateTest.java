@@ -57,14 +57,14 @@ class Tag158PctAccruedInterestRateTest {
 
         oneElement = Tag158PctAccruedInterestRate.TESTA_PCT_ACCRUED_INTEREST_RATE;
         tagData = new Tag158PctAccruedInterestRate( new MyPercentageType( oneElement ));
-        verifyFIXData( tagData );
-        verifyDataValue( tagData, oneElement );
-        verifyValuePairString( tagData, oneElement );
-        verifyToString( tagData, oneElement );
-        verifyVerboseString( tagData );
+        verifyAll( tagData, oneElement );
 
         oneElement = Tag158PctAccruedInterestRate.TESTB_PCT_ACCRUED_INTEREST_RATE;
         tagData = new Tag158PctAccruedInterestRate( new MyPercentageType( oneElement ));
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag158PctAccruedInterestRate tagData, final double oneElement ) {
         verifyFIXData( tagData );
         verifyDataValue( tagData, oneElement );
         verifyValuePairString( tagData, oneElement );
@@ -85,7 +85,7 @@ class Tag158PctAccruedInterestRateTest {
 
     private void verifyDataValue( final Tag158PctAccruedInterestRate tagData, final double oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue());
     }
 
     private void verifyValuePairString( final Tag158PctAccruedInterestRate tagData, final double oneElement ) {

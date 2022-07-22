@@ -90,7 +90,7 @@ class Tag89DatSignatureTest {
 
     private void verifyDataValue( final Tag89DatSignature tagData, final String oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue());
     }
 
     @Test

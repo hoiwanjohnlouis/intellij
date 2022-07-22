@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  268
  *  NoMDEntries
  *  NumInGroup
- *  <p>
+ *  <p></p>
  *  Number of entries in Market Data message.
  */
 public class Tag268NumNoMDEntries extends FIX42Abstract implements LogValuePairString, LogVerboseString {

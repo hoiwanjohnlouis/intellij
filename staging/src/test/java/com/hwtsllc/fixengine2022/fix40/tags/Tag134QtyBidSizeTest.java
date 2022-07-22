@@ -88,7 +88,7 @@ class Tag134QtyBidSizeTest {
 
     private void verifyDataValue( final Tag134QtyBidSize tagData, final int oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
 
     @Test

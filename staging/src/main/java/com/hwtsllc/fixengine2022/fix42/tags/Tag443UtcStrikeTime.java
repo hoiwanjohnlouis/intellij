@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  443
  *  StrikeTime
  *  UTCTimestamp
- *  <p>
+ *  <p></p>
  *  The time at which current market prices are used to determine the value of a basket.
  */
 public class Tag443UtcStrikeTime extends FIX42Abstract implements LogValuePairString, LogVerboseString {

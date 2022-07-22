@@ -16,9 +16,8 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -28,37 +27,12 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  345
  *  TradSesEndTime
  *  UTCTimestamp
- *  <p>
+ *  <p></p>
  *  End time of the trading session
  */
 class Tag345UtcTradSesEndTimeTest {
     @Test
-    void FIX0345Test() {
-        FIX42 fixData = FIX42.FIX345_UTC_TRAD_SES_END_TIME;
-        assertEquals( "345", fixData.toEnumIDString());
-        assertEquals( "TRAD_SES_END_TIME", fixData.toEnumNameString());
-        assertEquals( "TradSesEndTime", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0345Test() {
-        Tag345UtcTradSesEndTime tagData;
-        String oneElement;
-
-        oneElement = Tag345UtcTradSesEndTime.TESTA_UTC_TRAD_SES_END_TIME;
-        tagData = new Tag345UtcTradSesEndTime( new MyUTCTimestampType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag345UtcTradSesEndTime.TESTB_UTC_TRAD_SES_END_TIME;
-        tagData = new Tag345UtcTradSesEndTime( new MyUTCTimestampType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
+    void PrintTest() {
         Tag345UtcTradSesEndTime tagData;
         String oneElement;
 
@@ -70,51 +44,64 @@ class Tag345UtcTradSesEndTimeTest {
         tagData = new Tag345UtcTradSesEndTime( new MyUTCTimestampType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
+
     @Test
-    void TagGetDataValueTest() {
+    void FIXTagTest() {
         Tag345UtcTradSesEndTime tagData;
         String oneElement;
 
+        oneElement = Tag345UtcTradSesEndTime.TESTA_UTC_TRAD_SES_END_TIME;
+        tagData = new Tag345UtcTradSesEndTime( new MyUTCTimestampType( oneElement ) );
+        verifyAll( tagData, oneElement );
+
         oneElement = Tag345UtcTradSesEndTime.TESTB_UTC_TRAD_SES_END_TIME;
         tagData = new Tag345UtcTradSesEndTime( new MyUTCTimestampType( oneElement ) );
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag345UtcTradSesEndTime tagData, final String oneElement ) {
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyFIXData( final Tag345UtcTradSesEndTime tagData ) {
+        assertEquals( "FIX345_UTC_TRAD_SES_END_TIME", tagData.toEnumLabelString());
+        assertEquals( "345", tagData.toEnumIDString());
+        assertEquals( "TRAD_SES_END_TIME", tagData.toEnumNameString());
+        assertEquals( "TradSesEndTime", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
+    private void verifyDataValue( final Tag345UtcTradSesEndTime tagData, final String oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
     }
-    @Test
-    void TagToValuePairStringTest() {
-        Tag345UtcTradSesEndTime tagData;
-        String oneElement;
 
-        oneElement = Tag345UtcTradSesEndTime.TESTB_UTC_TRAD_SES_END_TIME;
-        tagData = new Tag345UtcTradSesEndTime( new MyUTCTimestampType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toValuePairString() );
+    private void verifyValuePairString( final Tag345UtcTradSesEndTime tagData, final String oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
-    @Test
-    void TagToStringTest() {
-        Tag345UtcTradSesEndTime tagData;
-        String oneElement;
 
-        oneElement = Tag345UtcTradSesEndTime.TESTB_UTC_TRAD_SES_END_TIME;
-        tagData = new Tag345UtcTradSesEndTime( new MyUTCTimestampType( oneElement ) );
-        assertEquals( oneElement, tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toString() );
+    private void verifyToString( final Tag345UtcTradSesEndTime tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
-    @Test
-    void TagToVerboseStringTest() {
-        Tag345UtcTradSesEndTime tagData;
-        String oneElement;
 
-        oneElement = Tag345UtcTradSesEndTime.TESTA_UTC_TRAD_SES_END_TIME;
-        tagData = new Tag345UtcTradSesEndTime( new MyUTCTimestampType( oneElement ) );
+    private void verifyVerboseString( final Tag345UtcTradSesEndTime tagData ) {
         assertEquals( "Tag345UtcTradSesEndTime\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toVerboseString() );
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

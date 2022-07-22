@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  398
  *  NoBidDescriptors
  *  NumInGroup
- *  <p>
+ *  <p></p>
  *  Number of BidDescriptor (400) entries.
  */
 public class Tag398NumNoBidDescriptors extends FIX42Abstract implements LogValuePairString, LogVerboseString {

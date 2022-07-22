@@ -85,10 +85,6 @@ class Tag60UtcTransactTimeTest {
         oneElement = Tag60UtcTransactTime.TESTB_UTC_TRANSACT_TIME;
         tagData = new Tag60UtcTransactTime( new MyUTCTimestampType( oneElement ) );
         verifyDataValue( tagData, oneElement );
-
-        oneElement = "20220401 000000";
-        tagData = new Tag60UtcTransactTime( new MyUTCTimestampType( oneElement ) );
-        verifyDataValue( tagData, oneElement );
     }
 
     private void verifyDataValue( final Tag60UtcTransactTime tagData, final String oneElement ) {

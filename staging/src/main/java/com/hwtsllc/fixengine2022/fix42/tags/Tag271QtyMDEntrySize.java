@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  271
  *  MDEntrySize
  *  Qty
- *  <p>
+ *  <p></p>
  *  Quantity or volume represented by the Market Data Entry.
  */
 public class Tag271QtyMDEntrySize extends FIX42Abstract implements LogValuePairString, LogVerboseString {

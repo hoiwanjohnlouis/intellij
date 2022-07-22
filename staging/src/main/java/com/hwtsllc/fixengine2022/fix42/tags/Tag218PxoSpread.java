@@ -26,18 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  218
  *  Spread
  *  PriceOffset
- *  <p>
+ *  <p></p>
  *  For Fixed Income.
- *  <p>
+ *  <p></p>
  *  Either Swap Spread or Spread to Benchmark depending upon the order type.
  *  <p></p>
  *  Spread to Benchmark:  Basis points relative to a benchmark.
+ *  <p></p>
  *  To be expressed as "count of basis points" (vs. an absolute value).
- *  <p>
+ *  <p></p>
  *  E.g. High Grade Corporate Bonds may express price as basis points relative to benchmark
- *  <p>
  *  (the BenchmarkCurveName (22) field).
- *  <p>
+ *  <p></p>
  *  Note: Basis points can be negative.
  *  <p></p>
  *  Swap Spread:  Target spread for a swap.

@@ -26,10 +26,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  424
  *  DayOrderQty
  *  Qty
- *  <p>
+ *  <p></p>
  *  For GT orders, the OrderQty (38) less all quantity (adjusted for stock splits)
  *  that traded on previous days.
- *  <p>
+ *  <p></p>
  *  DayOrderQty (424) = OrderQty – (CumQty (14) – DayCumQty (425))
  */
 public class Tag424QtyDayOrderQty extends FIX42Abstract implements LogValuePairString, LogVerboseString {

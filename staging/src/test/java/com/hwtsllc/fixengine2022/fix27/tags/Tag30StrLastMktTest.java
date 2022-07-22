@@ -84,10 +84,6 @@ class Tag30StrLastMktTest {
         oneElement = Tag30StrLastMkt.TESTB_STR_LAST_MKT;
         tagData = new Tag30StrLastMkt(new MyStringType( oneElement ) );
         verifyDataValue( tagData, oneElement );
-
-        oneElement = "NYSE";
-        tagData = new Tag30StrLastMkt(new MyStringType( oneElement ) );
-        verifyDataValue( tagData, oneElement );
     }
 
     private void verifyDataValue( Tag30StrLastMkt tagData, String oneElement ) {

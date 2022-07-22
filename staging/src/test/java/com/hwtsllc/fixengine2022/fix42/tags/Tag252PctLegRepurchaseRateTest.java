@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,11 +27,11 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  252
  *  LegRepurchaseRate
  *  Percentage
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.4
- *  <p>
+ *  <p></p>
  *  Multileg instrument's individual leg security's RepurchaseRate.
- *  <p>
+ *  <p></p>
  *  See RepurchaseRate (227) field for description
  *  <p></p>
  *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
@@ -40,32 +39,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 // @Deprecated
 class Tag252PctLegRepurchaseRateTest {
     @Test
-    void FIX0252Test() {
-        FIX42 fixData = FIX42.FIX252_PCT_LEG_REPURCHASE_RATE;
-        assertEquals( "252", fixData.toEnumIDString());
-        assertEquals( "LEG_REPURCHASE_RATE", fixData.toEnumNameString());
-        assertEquals( "LegRepurchaseRate (Deprecated)", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0252Test() {
-        Tag252PctLegRepurchaseRate tagData;
-        double oneElement;
-
-        oneElement = Tag252PctLegRepurchaseRate.TESTA_PCT_LEG_REPURCHASE_RATE;
-        tagData = new Tag252PctLegRepurchaseRate( new MyPercentageType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag252PctLegRepurchaseRate.TESTB_PCT_LEG_REPURCHASE_RATE;
-        tagData = new Tag252PctLegRepurchaseRate( new MyPercentageType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
+    void PrintTest() {
         Tag252PctLegRepurchaseRate tagData;
         double oneElement;
 
@@ -77,50 +51,64 @@ class Tag252PctLegRepurchaseRateTest {
         tagData = new Tag252PctLegRepurchaseRate( new MyPercentageType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
+
     @Test
-    void TagGetDataValueTest() {
+    void FIXTagTest() {
         Tag252PctLegRepurchaseRate tagData;
         double oneElement;
 
+        oneElement = Tag252PctLegRepurchaseRate.TESTA_PCT_LEG_REPURCHASE_RATE;
+        tagData = new Tag252PctLegRepurchaseRate( new MyPercentageType( oneElement ) );
+        verifyAll( tagData, oneElement );
+
         oneElement = Tag252PctLegRepurchaseRate.TESTB_PCT_LEG_REPURCHASE_RATE;
         tagData = new Tag252PctLegRepurchaseRate( new MyPercentageType( oneElement ) );
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag252PctLegRepurchaseRate tagData, final double oneElement ) {
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyFIXData( final Tag252PctLegRepurchaseRate tagData ) {
+        assertEquals( "FIX252_PCT_LEG_REPURCHASE_RATE", tagData.toEnumLabelString());
+        assertEquals( "252", tagData.toEnumIDString());
+        assertEquals( "LEG_REPURCHASE_RATE", tagData.toEnumNameString());
+        assertEquals( "LegRepurchaseRate (Deprecated)", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
+    private void verifyDataValue( final Tag252PctLegRepurchaseRate tagData, final double oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue());
     }
-    @Test
-    void TagToValuePairStringTest() {
-        Tag252PctLegRepurchaseRate tagData;
-        double oneElement;
 
-        oneElement = Tag252PctLegRepurchaseRate.TESTB_PCT_LEG_REPURCHASE_RATE;
-        tagData = new Tag252PctLegRepurchaseRate( new MyPercentageType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    private void verifyValuePairString( final Tag252PctLegRepurchaseRate tagData, final double oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
-    @Test
-    void TagToStringTest() {
-        Tag252PctLegRepurchaseRate tagData;
-        double oneElement;
 
-        oneElement = Tag252PctLegRepurchaseRate.TESTB_PCT_LEG_REPURCHASE_RATE;
-        tagData = new Tag252PctLegRepurchaseRate( new MyPercentageType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    private void verifyToString( final Tag252PctLegRepurchaseRate tagData, final double oneElement ) {
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
-    @Test
-    void TagToVerboseStringTest() {
-        Tag252PctLegRepurchaseRate tagData;
-        double oneElement;
 
-        oneElement = Tag252PctLegRepurchaseRate.TESTA_PCT_LEG_REPURCHASE_RATE;
-        tagData = new Tag252PctLegRepurchaseRate( new MyPercentageType( oneElement ) );
+    private void verifyVerboseString( final Tag252PctLegRepurchaseRate tagData ) {
         assertEquals( "Tag252PctLegRepurchaseRate\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

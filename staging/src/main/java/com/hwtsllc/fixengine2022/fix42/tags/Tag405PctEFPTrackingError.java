@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  405
  *  EFPTrackingError
  *  Percentage
- *  <p>
+ *  <p></p>
  *  Eg Used in EFP trades 2% (EFP – Exchange for Physical).
- *  <p>
+ *  <p></p>
  *  Represented as a percentage.
  */
 public class Tag405PctEFPTrackingError extends FIX42Abstract implements LogValuePairString, LogVerboseString {

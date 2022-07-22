@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyExchangeType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,41 +27,16 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  308
  *  UnderlyingSecurityExchange
  *  Exchange
- *  <p>
+ *  <p></p>
  *  Underlying security’s SecurityExchange.  Can be used to identify the underlying security.
- *  <p>
+ *  <p></p>
  *  Valid values:
- *  <p>
+ *  <p></p>
  *  see SecurityExchange (207)
  */
 class Tag308ExcUnderlyingSecurityExchangeTest {
     @Test
-    void FIX0308Test() {
-        FIX42 fixData = FIX42.FIX308_EXC_UNDERLYING_SECURITY_EXCHANGE;
-        assertEquals( "308", fixData.toEnumIDString());
-        assertEquals( "UNDERLYING_SECURITY_EXCHANGE", fixData.toEnumNameString());
-        assertEquals( "UnderlyingSecurityExchange", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0308Test() {
-        Tag308ExcUnderlyingSecurityExchange tagData;
-        String oneElement;
-
-        oneElement = Tag308ExcUnderlyingSecurityExchange.TESTA_EXC_UNDERLYING_SECURITY_EXCHANGE;
-        tagData = new Tag308ExcUnderlyingSecurityExchange( new MyExchangeType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_EXC_DATA_VALUE, tagData.getDataValue());
-
-        oneElement = Tag308ExcUnderlyingSecurityExchange.TESTB_EXC_UNDERLYING_SECURITY_EXCHANGE;
-        tagData = new Tag308ExcUnderlyingSecurityExchange( new MyExchangeType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_EXC_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
+    void PrintTest() {
         Tag308ExcUnderlyingSecurityExchange tagData;
         String oneElement;
 
@@ -74,51 +48,64 @@ class Tag308ExcUnderlyingSecurityExchangeTest {
         tagData = new Tag308ExcUnderlyingSecurityExchange( new MyExchangeType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
-    @Test
-    void TagGetDataValueTest() {
-        Tag308ExcUnderlyingSecurityExchange tagData;
-        String oneElement;
 
-        oneElement = Tag308ExcUnderlyingSecurityExchange.TESTB_EXC_UNDERLYING_SECURITY_EXCHANGE;
-        tagData = new Tag308ExcUnderlyingSecurityExchange( new MyExchangeType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-    }
     @Test
-    void TagToValuePairStringTest() {
-        Tag308ExcUnderlyingSecurityExchange tagData;
-        String oneElement;
-
-        oneElement = Tag308ExcUnderlyingSecurityExchange.TESTB_EXC_UNDERLYING_SECURITY_EXCHANGE;
-        tagData = new Tag308ExcUnderlyingSecurityExchange( new MyExchangeType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
-    }
-    @Test
-    void TagToStringTest() {
-        Tag308ExcUnderlyingSecurityExchange tagData;
-        String oneElement;
-
-        oneElement = Tag308ExcUnderlyingSecurityExchange.TESTB_EXC_UNDERLYING_SECURITY_EXCHANGE;
-        tagData = new Tag308ExcUnderlyingSecurityExchange( new MyExchangeType( oneElement ) );
-        assertEquals( oneElement, tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
-    }
-    @Test
-    void TagToVerboseStringTest() {
+    void FIXTagTest() {
         Tag308ExcUnderlyingSecurityExchange tagData;
         String oneElement;
 
         oneElement = Tag308ExcUnderlyingSecurityExchange.TESTA_EXC_UNDERLYING_SECURITY_EXCHANGE;
         tagData = new Tag308ExcUnderlyingSecurityExchange( new MyExchangeType( oneElement ) );
+        verifyAll( tagData, oneElement );
+
+        oneElement = Tag308ExcUnderlyingSecurityExchange.TESTB_EXC_UNDERLYING_SECURITY_EXCHANGE;
+        tagData = new Tag308ExcUnderlyingSecurityExchange( new MyExchangeType( oneElement ) );
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag308ExcUnderlyingSecurityExchange tagData, final String oneElement ) {
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyFIXData( final Tag308ExcUnderlyingSecurityExchange tagData ) {
+        assertEquals( "FIX308_EXC_UNDERLYING_SECURITY_EXCHANGE", tagData.toEnumLabelString());
+        assertEquals( "308", tagData.toEnumIDString());
+        assertEquals( "UNDERLYING_SECURITY_EXCHANGE", tagData.toEnumNameString());
+        assertEquals( "UnderlyingSecurityExchange", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
+    private void verifyDataValue( final Tag308ExcUnderlyingSecurityExchange tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_EXC_DATA_VALUE, tagData.getDataValue());
+    }
+
+    private void verifyValuePairString( final Tag308ExcUnderlyingSecurityExchange tagData, final String oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
+    private void verifyToString( final Tag308ExcUnderlyingSecurityExchange tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
+    private void verifyVerboseString( final Tag308ExcUnderlyingSecurityExchange tagData ) {
         assertEquals( "Tag308ExcUnderlyingSecurityExchange\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

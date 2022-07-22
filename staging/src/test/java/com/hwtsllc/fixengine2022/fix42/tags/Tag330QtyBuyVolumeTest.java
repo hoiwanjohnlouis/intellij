@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,37 +27,12 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  330
  *  BuyVolume
  *  Qty
- *  <p>
+ *  <p></p>
  *  Quantity bought.
  */
 class Tag330QtyBuyVolumeTest {
     @Test
-    void FIX0330Test() {
-        FIX42 fixData = FIX42.FIX330_QTY_BUY_VOLUME;
-        assertEquals( "330", fixData.toEnumIDString());
-        assertEquals( "BUY_VOLUME", fixData.toEnumNameString());
-        assertEquals( "BuyVolume", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0330Test() {
-        Tag330QtyBuyVolume tagData;
-        int oneElement;
-
-        oneElement = Tag330QtyBuyVolume.TESTA_QTY_BUY_VOLUME;
-        tagData = new Tag330QtyBuyVolume( new MyQtyType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
-
-        oneElement = Tag330QtyBuyVolume.TESTB_QTY_BUY_VOLUME;
-        tagData = new Tag330QtyBuyVolume( new MyQtyType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
+    void PrintTest() {
         Tag330QtyBuyVolume tagData;
         int oneElement;
 
@@ -70,51 +44,65 @@ class Tag330QtyBuyVolumeTest {
         tagData = new Tag330QtyBuyVolume( new MyQtyType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
-    @Test
-    void TagGetDataValueTest() {
-        Tag330QtyBuyVolume tagData;
-        int oneElement;
 
-        oneElement = Tag330QtyBuyVolume.TESTB_QTY_BUY_VOLUME;
-        tagData = new Tag330QtyBuyVolume( new MyQtyType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
-    }
     @Test
-    void TagToValuePairStringTest() {
-        Tag330QtyBuyVolume tagData;
-        int oneElement;
-
-        oneElement = Tag330QtyBuyVolume.TESTB_QTY_BUY_VOLUME;
-        tagData = new Tag330QtyBuyVolume( new MyQtyType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
-    }
-    @Test
-    void TagToStringTest() {
-        Tag330QtyBuyVolume tagData;
-        int oneElement;
-
-        oneElement = Tag330QtyBuyVolume.TESTB_QTY_BUY_VOLUME;
-        tagData = new Tag330QtyBuyVolume( new MyQtyType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
-    }
-    @Test
-    void TagToVerboseStringTest() {
+    void FIXTagTest() {
         Tag330QtyBuyVolume tagData;
         int oneElement;
 
         oneElement = Tag330QtyBuyVolume.TESTA_QTY_BUY_VOLUME;
         tagData = new Tag330QtyBuyVolume( new MyQtyType( oneElement ) );
+        verifyAll( tagData, oneElement );
+
+        oneElement = Tag330QtyBuyVolume.TESTB_QTY_BUY_VOLUME;
+        tagData = new Tag330QtyBuyVolume( new MyQtyType( oneElement ) );
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag330QtyBuyVolume tagData, final int oneElement ) {
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyFIXData( final Tag330QtyBuyVolume tagData ) {
+        assertEquals( "FIX330_QTY_BUY_VOLUME", tagData.toEnumLabelString());
+        assertEquals( "330", tagData.toEnumIDString());
+        assertEquals( "BUY_VOLUME", tagData.toEnumNameString());
+        assertEquals( "BuyVolume", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
+    private void verifyDataValue( final Tag330QtyBuyVolume tagData, final int oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+    }
+
+    private void verifyValuePairString( final Tag330QtyBuyVolume tagData, final int oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
+    private void verifyToString( final Tag330QtyBuyVolume tagData, final int oneElement ) {
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
+    private void verifyVerboseString( final Tag330QtyBuyVolume tagData ) {
         assertEquals( "Tag330QtyBuyVolume\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

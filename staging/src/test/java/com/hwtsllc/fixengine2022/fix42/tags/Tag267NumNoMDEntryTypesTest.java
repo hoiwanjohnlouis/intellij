@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,37 +27,12 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  267
  *  NoMDEntryTypes
  *  NumInGroup
- *  <p>
+ *  <p></p>
  *  Number of MDEntryType (269) fields requested.
  */
 class Tag267NumNoMDEntryTypesTest {
     @Test
-    void FIX0267Test() {
-        FIX42 fixData = FIX42.FIX267_NUM_NO_MD_ENTRY_TYPES;
-        assertEquals( "267", fixData.toEnumIDString());
-        assertEquals( "NO_MD_ENTRY_TYPES", fixData.toEnumNameString());
-        assertEquals( "NoMDEntryTypes", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0267Test() {
-        Tag267NumNoMDEntryTypes tagData;
-        int oneElement;
-
-        oneElement = Tag267NumNoMDEntryTypes.TESTA_NUM_NO_MD_ENTRY_TYPES;
-        tagData = new Tag267NumNoMDEntryTypes( new MyNumInGroupType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
-
-        oneElement = Tag267NumNoMDEntryTypes.TESTB_NUM_NO_MD_ENTRY_TYPES;
-        tagData = new Tag267NumNoMDEntryTypes( new MyNumInGroupType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
+    void PrintTest() {
         Tag267NumNoMDEntryTypes tagData;
         int oneElement;
 
@@ -70,50 +44,64 @@ class Tag267NumNoMDEntryTypesTest {
         tagData = new Tag267NumNoMDEntryTypes( new MyNumInGroupType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
+
     @Test
-    void TagGetDataValueTest() {
+    void FIXTagTest() {
         Tag267NumNoMDEntryTypes tagData;
         int oneElement;
 
+        oneElement = Tag267NumNoMDEntryTypes.TESTA_NUM_NO_MD_ENTRY_TYPES;
+        tagData = new Tag267NumNoMDEntryTypes( new MyNumInGroupType( oneElement ) );
+        verifyAll( tagData, oneElement );
+
         oneElement = Tag267NumNoMDEntryTypes.TESTB_NUM_NO_MD_ENTRY_TYPES;
         tagData = new Tag267NumNoMDEntryTypes( new MyNumInGroupType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue() );
+        verifyAll( tagData, oneElement );
     }
-    @Test
-    void TagToValuePairStringTest() {
-        Tag267NumNoMDEntryTypes tagData;
-        int oneElement;
 
-        oneElement = Tag267NumNoMDEntryTypes.TESTB_NUM_NO_MD_ENTRY_TYPES;
-        tagData = new Tag267NumNoMDEntryTypes( new MyNumInGroupType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    private void verifyAll( final Tag267NumNoMDEntryTypes tagData, final int oneElement ) {
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
     }
-    @Test
-    void TagToStringTest() {
-        Tag267NumNoMDEntryTypes tagData;
-        int oneElement;
 
-        oneElement = Tag267NumNoMDEntryTypes.TESTB_NUM_NO_MD_ENTRY_TYPES;
-        tagData = new Tag267NumNoMDEntryTypes( new MyNumInGroupType( oneElement ) );
+    private void verifyFIXData( final Tag267NumNoMDEntryTypes tagData ) {
+        assertEquals( "FIX267_NUM_NO_MD_ENTRY_TYPES", tagData.toEnumLabelString());
+        assertEquals( "267", tagData.toEnumIDString());
+        assertEquals( "NO_MD_ENTRY_TYPES", tagData.toEnumNameString());
+        assertEquals( "NoMDEntryTypes", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
+    private void verifyDataValue( final Tag267NumNoMDEntryTypes tagData, final int oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+    }
+
+    private void verifyValuePairString( final Tag267NumNoMDEntryTypes tagData, final int oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
+    private void verifyToString( final Tag267NumNoMDEntryTypes tagData, final int oneElement ) {
         assertEquals( String.valueOf( oneElement ), tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
-    @Test
-    void TagToVerboseStringTest() {
-        Tag267NumNoMDEntryTypes tagData;
-        int oneElement;
 
-        oneElement = Tag267NumNoMDEntryTypes.TESTA_NUM_NO_MD_ENTRY_TYPES;
-        tagData = new Tag267NumNoMDEntryTypes( new MyNumInGroupType( oneElement ) );
+    private void verifyVerboseString( final Tag267NumNoMDEntryTypes tagData ) {
         assertEquals( "Tag267NumNoMDEntryTypes\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

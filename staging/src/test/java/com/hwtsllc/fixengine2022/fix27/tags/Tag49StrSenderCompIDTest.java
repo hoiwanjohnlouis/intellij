@@ -43,10 +43,6 @@ class Tag49StrSenderCompIDTest {
         oneElement = Tag49StrSenderCompID.TESTB_STR_SENDER_COMP_ID;
         tagData = new Tag49StrSenderCompID(new MyStringType( oneElement ));
         System.out.println( tagData.toVerboseString() );
-
-        oneElement = "JPMC";
-        tagData = new Tag49StrSenderCompID(new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
     }
 
     @Test
@@ -60,10 +56,6 @@ class Tag49StrSenderCompIDTest {
 
         oneElement = Tag49StrSenderCompID.TESTB_STR_SENDER_COMP_ID;
         tagData = new Tag49StrSenderCompID(new MyStringType( oneElement ));
-        verifyFIXData( tagData );
-
-        oneElement = "JPMC";
-        tagData = new Tag49StrSenderCompID(new MyStringType( oneElement ) );
         verifyFIXData( tagData );
     }
 

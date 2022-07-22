@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  319
  *  RatioQty
  *  Qty
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.2 Quantity of a particular leg in the security.
  */
 // @Deprecated

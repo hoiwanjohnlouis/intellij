@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  397
  *  SideValue2
  *  Amt
- *  <p>
+ *  <p></p>
  *  Amounts in currency
  */
 public class Tag397AmtSideValue2 extends FIX42Abstract implements LogValuePairString, LogVerboseString {

@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  421
  *  Country
  *  Country
- *  <p>
+ *  <p></p>
  *  ISO Country Code in field
  */
 public class Tag421CouCountry extends FIX42Abstract implements LogValuePairString, LogVerboseString {

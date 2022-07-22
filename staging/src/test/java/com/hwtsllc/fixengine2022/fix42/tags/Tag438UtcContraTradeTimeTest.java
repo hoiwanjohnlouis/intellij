@@ -16,9 +16,8 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -28,39 +27,14 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  438
  *  ContraTradeTime
  *  UTCTimestamp
- *  <p>
+ *  <p></p>
  *  Identifies the time of the trade with the ContraBroker (375).
- *  <p>
+ *  <p></p>
  *  (always expressed in UTC (Universal Time Coordinated, also known as "GMT")
  */
 class Tag438UtcContraTradeTimeTest {
     @Test
-    void FIX0438Test() {
-        FIX42 fixData = FIX42.FIX438_UTC_CONTRA_TRADE_TIME;
-        assertEquals( "438", fixData.toEnumIDString());
-        assertEquals( "CONTRA_TRADE_TIME", fixData.toEnumNameString());
-        assertEquals( "ContraTradeTime", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0438Test() {
-        Tag438UtcContraTradeTime tagData;
-        String oneElement;
-
-        oneElement = Tag438UtcContraTradeTime.TESTA_UTC_CONTRA_TRADE_TIME;
-        tagData = new Tag438UtcContraTradeTime( new MyUTCTimestampType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag438UtcContraTradeTime.TESTB_UTC_CONTRA_TRADE_TIME;
-        tagData = new Tag438UtcContraTradeTime( new MyUTCTimestampType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
+    void PrintTest() {
         Tag438UtcContraTradeTime tagData;
         String oneElement;
 
@@ -72,51 +46,64 @@ class Tag438UtcContraTradeTimeTest {
         tagData = new Tag438UtcContraTradeTime( new MyUTCTimestampType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
+
     @Test
-    void TagGetDataValueTest() {
+    void FIXTagTest() {
         Tag438UtcContraTradeTime tagData;
         String oneElement;
 
+        oneElement = Tag438UtcContraTradeTime.TESTA_UTC_CONTRA_TRADE_TIME;
+        tagData = new Tag438UtcContraTradeTime( new MyUTCTimestampType( oneElement ) );
+        verifyAll( tagData, oneElement );
+
         oneElement = Tag438UtcContraTradeTime.TESTB_UTC_CONTRA_TRADE_TIME;
         tagData = new Tag438UtcContraTradeTime( new MyUTCTimestampType( oneElement ) );
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag438UtcContraTradeTime tagData, final String oneElement ) {
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyFIXData( final Tag438UtcContraTradeTime tagData ) {
+        assertEquals( "FIX438_UTC_CONTRA_TRADE_TIME", tagData.toEnumLabelString());
+        assertEquals( "438", tagData.toEnumIDString());
+        assertEquals( "CONTRA_TRADE_TIME", tagData.toEnumNameString());
+        assertEquals( "ContraTradeTime", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
+    private void verifyDataValue( final Tag438UtcContraTradeTime tagData, final String oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
     }
-    @Test
-    void TagToValuePairStringTest() {
-        Tag438UtcContraTradeTime tagData;
-        String oneElement;
 
-        oneElement = Tag438UtcContraTradeTime.TESTB_UTC_CONTRA_TRADE_TIME;
-        tagData = new Tag438UtcContraTradeTime( new MyUTCTimestampType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toValuePairString() );
+    private void verifyValuePairString( final Tag438UtcContraTradeTime tagData, final String oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
-    @Test
-    void TagToStringTest() {
-        Tag438UtcContraTradeTime tagData;
-        String oneElement;
 
-        oneElement = Tag438UtcContraTradeTime.TESTB_UTC_CONTRA_TRADE_TIME;
-        tagData = new Tag438UtcContraTradeTime( new MyUTCTimestampType( oneElement ) );
-        assertEquals( oneElement, tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toString() );
+    private void verifyToString( final Tag438UtcContraTradeTime tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
-    @Test
-    void TagToVerboseStringTest() {
-        Tag438UtcContraTradeTime tagData;
-        String oneElement;
 
-        oneElement = Tag438UtcContraTradeTime.TESTA_UTC_CONTRA_TRADE_TIME;
-        tagData = new Tag438UtcContraTradeTime( new MyUTCTimestampType( oneElement ) );
+    private void verifyVerboseString( final Tag438UtcContraTradeTime tagData ) {
         assertEquals( "Tag438UtcContraTradeTime\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toVerboseString() );
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  322
  *  SecurityResponseID
  *  String
- *  <p>
+ *  <p></p>
  *  Unique ID of a Security Definition message.
  */
 public class Tag322StrSecurityResponseID extends FIX42Abstract implements LogValuePairString, LogVerboseString {

@@ -53,14 +53,14 @@ class Tag168UtcEffectiveTimeTest {
 
         oneElement = Tag168UtcEffectiveTime.TESTA_UTC_EFFECTIVE_TIME;
         tagData = new Tag168UtcEffectiveTime( new MyUTCTimestampType( oneElement ) );
-        verifyFIXData( tagData );
-        verifyDataValue( tagData, oneElement );
-        verifyValuePairString( tagData, oneElement );
-        verifyToString( tagData, oneElement );
-        verifyVerboseString( tagData );
+        verifyAll( tagData, oneElement );
 
         oneElement = Tag168UtcEffectiveTime.TESTB_UTC_EFFECTIVE_TIME;
         tagData = new Tag168UtcEffectiveTime( new MyUTCTimestampType( oneElement ) );
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag168UtcEffectiveTime tagData, final String oneElement ) {
         verifyFIXData( tagData );
         verifyDataValue( tagData, oneElement );
         verifyValuePairString( tagData, oneElement );

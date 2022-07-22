@@ -26,15 +26,17 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  214
  *  SettlInstRefID
  *  String
- *  <p>
+ *  <p></p>
  *  Reference identifier for the SettlInstID (162) with
  *  Cancel and Replace SettlInstTransType (163) transaction types.
  */
 public class Tag214StrSettlInstRefID extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_SETTL_INST_REF_ID = "BilboBaggins-Tag214StrSettlInstRefID";
-    public final static String TESTB_STR_SETTL_INST_REF_ID = "Gandalf-Tag214StrSettlInstRefID";
+    public final static String TESTA_STR_SETTL_INST_REF_ID
+            = "BilboBaggins-Tag214StrSettlInstRefID";
+    public final static String TESTB_STR_SETTL_INST_REF_ID
+            = "Gandalf-Tag214StrSettlInstRefID";
 
     public Tag214StrSettlInstRefID(MyStringType dataValue) {
         setFixType(FIX42.FIX214_STR_SETTL_INST_REF_ID);

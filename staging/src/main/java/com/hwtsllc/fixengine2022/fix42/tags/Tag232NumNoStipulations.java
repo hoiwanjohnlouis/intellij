@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  232
  *  NoStipulations
  *  NumInGroup
- *  <p>
+ *  <p></p>
  *  Number of stipulation entries
  *  <p></p>
  *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3).

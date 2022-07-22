@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  383
  *  MaxMessageSize
  *  Length
- *  <p>
+ *  <p></p>
  *  Maximum number of bytes supported for a single message.
  */
 public class Tag383LenMaxMessageSize extends FIX42Abstract implements LogValuePairString, LogVerboseString {

@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  335
  *  TradSesReqID
  *  String
- *  <p>
+ *  <p></p>
  *  Unique ID of a Trading Session Status message.
  */
 public class Tag335StrTradSesReqID extends FIX42Abstract implements LogValuePairString, LogVerboseString {

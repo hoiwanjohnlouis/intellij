@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyLengthType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,37 +27,12 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  383
  *  MaxMessageSize
  *  Length
- *  <p>
+ *  <p></p>
  *  Maximum number of bytes supported for a single message.
  */
 class Tag383LenMaxMessageSizeTest {
     @Test
-    void FIX0383Test() {
-        FIX42 fixData = FIX42.FIX383_LEN_MAX_MESSAGE_SIZE;
-        assertEquals( "383", fixData.toEnumIDString());
-        assertEquals( "MAX_MESSAGE_SIZE", fixData.toEnumNameString());
-        assertEquals( "MaxMessageSize", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0383Test() {
-        Tag383LenMaxMessageSize tagData;
-        int oneElement;
-
-        oneElement = Tag383LenMaxMessageSize.TESTA_LEN_MAX_MESSAGE_SIZE;
-        tagData = new Tag383LenMaxMessageSize( new MyLengthType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag383LenMaxMessageSize.TESTB_LEN_MAX_MESSAGE_SIZE;
-        tagData = new Tag383LenMaxMessageSize( new MyLengthType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
+    void PrintTest() {
         Tag383LenMaxMessageSize tagData;
         int oneElement;
 
@@ -70,51 +44,64 @@ class Tag383LenMaxMessageSizeTest {
         tagData = new Tag383LenMaxMessageSize( new MyLengthType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
+
     @Test
-    void TagGetDataValueTest() {
+    void FIXTagTest() {
         Tag383LenMaxMessageSize tagData;
         int oneElement;
 
+        oneElement = Tag383LenMaxMessageSize.TESTA_LEN_MAX_MESSAGE_SIZE;
+        tagData = new Tag383LenMaxMessageSize( new MyLengthType( oneElement ) );
+        verifyAll( tagData, oneElement );
+
         oneElement = Tag383LenMaxMessageSize.TESTB_LEN_MAX_MESSAGE_SIZE;
         tagData = new Tag383LenMaxMessageSize( new MyLengthType( oneElement ) );
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag383LenMaxMessageSize tagData, final int oneElement ) {
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyFIXData( final Tag383LenMaxMessageSize tagData ) {
+        assertEquals( "FIX383_LEN_MAX_MESSAGE_SIZE", tagData.toEnumLabelString());
+        assertEquals( "383", tagData.toEnumIDString());
+        assertEquals( "MAX_MESSAGE_SIZE", tagData.toEnumNameString());
+        assertEquals( "MaxMessageSize", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
+    private void verifyDataValue( final Tag383LenMaxMessageSize tagData, final int oneElement ) {
         assertEquals( oneElement, tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
     }
-    @Test
-    void TagToValuePairStringTest() {
-        Tag383LenMaxMessageSize tagData;
-        int oneElement;
 
-        oneElement = Tag383LenMaxMessageSize.TESTB_LEN_MAX_MESSAGE_SIZE;
-        tagData = new Tag383LenMaxMessageSize( new MyLengthType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    private void verifyValuePairString( final Tag383LenMaxMessageSize tagData, final int oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
-    @Test
-    void TagToStringTest() {
-        Tag383LenMaxMessageSize tagData;
-        int oneElement;
 
-        oneElement = Tag383LenMaxMessageSize.TESTB_LEN_MAX_MESSAGE_SIZE;
-        tagData = new Tag383LenMaxMessageSize( new MyLengthType( oneElement ) );
+    private void verifyToString( final Tag383LenMaxMessageSize tagData, final int oneElement ) {
         assertEquals( String.valueOf( oneElement ), tagData.toString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
     }
-    @Test
-    void TagToVerboseStringTest() {
-        Tag383LenMaxMessageSize tagData;
-        int oneElement;
 
-        oneElement = Tag383LenMaxMessageSize.TESTA_LEN_MAX_MESSAGE_SIZE;
-        tagData = new Tag383LenMaxMessageSize( new MyLengthType( oneElement ) );
+    private void verifyVerboseString( final Tag383LenMaxMessageSize tagData ) {
         assertEquals( "Tag383LenMaxMessageSize\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

@@ -84,10 +84,6 @@ class Tag42UtcOrigTimeTest {
         oneElement = Tag42UtcOrigTime.TESTB_UTC_ORIG_TIME;
         tagData = new Tag42UtcOrigTime( new MyUTCTimestampType( oneElement ) );
         verifyDataValue( tagData, oneElement );
-
-        oneElement = "20220131";
-        tagData = new Tag42UtcOrigTime(new MyUTCTimestampType(oneElement) );
-        verifyDataValue( tagData, oneElement );
     }
 
     private void verifyDataValue( final Tag42UtcOrigTime tagData, final String oneElement ) {

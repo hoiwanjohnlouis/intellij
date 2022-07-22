@@ -53,14 +53,14 @@ class Tag193LmdSettlDate2Test {
 
         oneElement = Tag193LmdSettlDate2.TESTA_LMD_SETTL_DATE_2;
         tagData = new Tag193LmdSettlDate2(new MyLocalMktDateType( oneElement ));
-        verifyFIXData( tagData );
-        verifyDataValue( tagData, oneElement );
-        verifyValuePairString( tagData, oneElement );
-        verifyToString( tagData, oneElement );
-        verifyVerboseString( tagData );
+        verifyAll( tagData, oneElement );
 
         oneElement = Tag193LmdSettlDate2.TESTB_LMD_SETTL_DATE_2;
         tagData = new Tag193LmdSettlDate2(new MyLocalMktDateType( oneElement ));
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag193LmdSettlDate2 tagData, final String oneElement ) {
         verifyFIXData( tagData );
         verifyDataValue( tagData, oneElement );
         verifyValuePairString( tagData, oneElement );

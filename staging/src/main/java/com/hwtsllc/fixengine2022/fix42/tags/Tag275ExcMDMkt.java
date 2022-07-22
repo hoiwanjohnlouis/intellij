@@ -26,11 +26,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  275
  *  MDMkt
  *  Exchange
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.5.0 Market posting quote / trade.
- *  <p>
+ *  <p></p>
  *  Valid values:
- *  <p>
+ *  <p></p>
  *  See "Appendix 6-C"
  */
 public class Tag275ExcMDMkt extends FIX42Abstract implements LogValuePairString, LogVerboseString {

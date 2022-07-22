@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceOffsetType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,50 +27,25 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  218
  *  Spread
  *  PriceOffset
- *  <p>
+ *  <p></p>
  *  For Fixed Income.
- *  <p>
+ *  <p></p>
  *  Either Swap Spread or Spread to Benchmark depending upon the order type.
  *  <p></p>
  *  Spread to Benchmark:  Basis points relative to a benchmark.
+ *  <p></p>
  *  To be expressed as "count of basis points" (vs. an absolute value).
- *  <p>
+ *  <p></p>
  *  E.g. High Grade Corporate Bonds may express price as basis points relative to benchmark
- *  <p>
  *  (the BenchmarkCurveName (22) field).
- *  <p>
+ *  <p></p>
  *  Note: Basis points can be negative.
  *  <p></p>
  *  Swap Spread:  Target spread for a swap.
  */
 class Tag218PxoSpreadTest {
     @Test
-    void FIX0218Test() {
-        FIX42 fixData = FIX42.FIX218_PXO_SPREAD;
-        assertEquals( "218", fixData.toEnumIDString());
-        assertEquals( "SPREAD", fixData.toEnumNameString());
-        assertEquals( "For Fixed Income.  Either Swap Spread or Spread to Benchmark depending upon the order type", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0218Test() {
-        Tag218PxoSpread tagData;
-        double oneElement;
-
-        oneElement = Tag218PxoSpread.TESTA_PXO_SPREAD;
-        tagData = new Tag218PxoSpread( new MyPriceOffsetType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue());
-
-        oneElement = Tag218PxoSpread.TESTB_PXO_SPREAD;
-        tagData = new Tag218PxoSpread( new MyPriceOffsetType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
+    void PrintTest() {
         Tag218PxoSpread tagData;
         double oneElement;
 
@@ -83,52 +57,66 @@ class Tag218PxoSpreadTest {
         tagData = new Tag218PxoSpread( new MyPriceOffsetType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
+
     @Test
-    void TagGetDataValueTest() {
+    void FIXTagTest() {
         Tag218PxoSpread tagData;
         double oneElement;
 
+        oneElement = Tag218PxoSpread.TESTA_PXO_SPREAD;
+        tagData = new Tag218PxoSpread( new MyPriceOffsetType( oneElement ) );
+        VerifyAll( tagData, oneElement );
+
         oneElement = Tag218PxoSpread.TESTB_PXO_SPREAD;
         tagData = new Tag218PxoSpread( new MyPriceOffsetType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue() );
+        VerifyAll( tagData, oneElement );
     }
-    @Test
-    void TagToValuePairStringTest() {
-        Tag218PxoSpread tagData;
-        double oneElement;
 
-        oneElement = Tag218PxoSpread.TESTB_PXO_SPREAD;
-        tagData = new Tag218PxoSpread( new MyPriceOffsetType( oneElement ) );
+    private void VerifyAll( Tag218PxoSpread tagData, double oneElement ) {
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyFIXData( final Tag218PxoSpread tagData ) {
+        assertEquals( "FIX218_PXO_SPREAD", tagData.toEnumLabelString());
+        assertEquals( "218", tagData.toEnumIDString());
+        assertEquals( "SPREAD", tagData.toEnumNameString());
+        assertEquals( "For Fixed Income.  Either Swap Spread or Spread to Benchmark depending upon the order type",
+                tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
+    private void verifyDataValue( final Tag218PxoSpread tagData, final double oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue());
+    }
+
+    private void verifyValuePairString( final Tag218PxoSpread tagData, final double oneElement ) {
         assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
-    @Test
-    void TagToStringTest() {
-        Tag218PxoSpread tagData;
-        double oneElement;
 
-        oneElement = Tag218PxoSpread.TESTB_PXO_SPREAD;
-        tagData = new Tag218PxoSpread( new MyPriceOffsetType( oneElement ) );
+    private void verifyToString( final Tag218PxoSpread tagData, final double oneElement ) {
         assertEquals( String.valueOf( oneElement ), tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
-    @Test
-    void TagToVerboseStringTest() {
-        Tag218PxoSpread tagData;
-        double oneElement;
 
-        oneElement = Tag218PxoSpread.TESTA_PXO_SPREAD;
-        tagData = new Tag218PxoSpread( new MyPriceOffsetType( oneElement ) );
+    private void verifyVerboseString( final Tag218PxoSpread tagData ) {
         assertEquals( "Tag218PxoSpread\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
+                tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  361
  *  EncodedAllocText
  *  data
- *  <p>
+ *  <p></p>
  *  Encoded (non-ASCII characters) representation of the AllocText (161) field
  *  in the encoded format specified via the MessageEncoding (347) field.
  *  <p></p>

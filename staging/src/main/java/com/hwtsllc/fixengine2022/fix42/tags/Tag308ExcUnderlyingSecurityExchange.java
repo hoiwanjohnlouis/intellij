@@ -26,11 +26,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  308
  *  UnderlyingSecurityExchange
  *  Exchange
- *  <p>
+ *  <p></p>
  *  Underlying security’s SecurityExchange.  Can be used to identify the underlying security.
- *  <p>
+ *  <p></p>
  *  Valid values:
- *  <p>
+ *  <p></p>
  *  see SecurityExchange (207)
  */
 public class Tag308ExcUnderlyingSecurityExchange extends FIX42Abstract implements LogValuePairString, LogVerboseString {

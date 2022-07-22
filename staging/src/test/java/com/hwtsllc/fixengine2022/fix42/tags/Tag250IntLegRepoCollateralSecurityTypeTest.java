@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,11 +27,11 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  250
  *  LegRepoCollateralSecurityType
  *  int
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.4
- *  <p>
+ *  <p></p>
  *  Multileg instrument's individual leg security's RepoCollateralSecurityType.
- *  <p>
+ *  <p></p>
  *  See RepoCollateralSecurityType (239) field for description
  *  <p></p>
  *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
@@ -40,32 +39,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 // @Deprecated
 class Tag250IntLegRepoCollateralSecurityTypeTest {
     @Test
-    void FIX0250Test() {
-        FIX42 fixData = FIX42.FIX250_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE;
-        assertEquals( "250", fixData.toEnumIDString());
-        assertEquals( "LEG_REPO_COLLATERAL_SECURITY_TYPE", fixData.toEnumNameString());
-        assertEquals( "LegRepoCollateralSecurityType (Deprecated)", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0250Test() {
-        Tag250IntLegRepoCollateralSecurityType tagData;
-        int oneElement;
-
-        oneElement = Tag250IntLegRepoCollateralSecurityType.TESTA_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE;
-        tagData = new Tag250IntLegRepoCollateralSecurityType( new MyIntType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
-
-        oneElement = Tag250IntLegRepoCollateralSecurityType.TESTB_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE;
-        tagData = new Tag250IntLegRepoCollateralSecurityType( new MyIntType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
+    void PrintTest() {
         Tag250IntLegRepoCollateralSecurityType tagData;
         int oneElement;
 
@@ -77,51 +51,64 @@ class Tag250IntLegRepoCollateralSecurityTypeTest {
         tagData = new Tag250IntLegRepoCollateralSecurityType( new MyIntType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
+
     @Test
-    void TagGetDataValueTest() {
+    void FIXTagTest() {
         Tag250IntLegRepoCollateralSecurityType tagData;
         int oneElement;
 
+        oneElement = Tag250IntLegRepoCollateralSecurityType.TESTA_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE;
+        tagData = new Tag250IntLegRepoCollateralSecurityType( new MyIntType( oneElement ) );
+        verifyAll( tagData, oneElement );
+
         oneElement = Tag250IntLegRepoCollateralSecurityType.TESTB_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE;
         tagData = new Tag250IntLegRepoCollateralSecurityType( new MyIntType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+        verifyAll( tagData, oneElement );
     }
-    @Test
-    void TagToValuePairStringTest() {
-        Tag250IntLegRepoCollateralSecurityType tagData;
-        int oneElement;
 
-        oneElement = Tag250IntLegRepoCollateralSecurityType.TESTB_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE;
-        tagData = new Tag250IntLegRepoCollateralSecurityType( new MyIntType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    private void verifyAll( final Tag250IntLegRepoCollateralSecurityType tagData, final int oneElement ) {
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
     }
-    @Test
-    void TagToStringTest() {
-        Tag250IntLegRepoCollateralSecurityType tagData;
-        int oneElement;
 
-        oneElement = Tag250IntLegRepoCollateralSecurityType.TESTB_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE;
-        tagData = new Tag250IntLegRepoCollateralSecurityType( new MyIntType( oneElement ) );
+    private void verifyFIXData( final Tag250IntLegRepoCollateralSecurityType tagData ) {
+        assertEquals( "FIX250_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE", tagData.toEnumLabelString());
+        assertEquals( "250", tagData.toEnumIDString());
+        assertEquals( "LEG_REPO_COLLATERAL_SECURITY_TYPE", tagData.toEnumNameString());
+        assertEquals( "LegRepoCollateralSecurityType (Deprecated)", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
+    private void verifyDataValue( final Tag250IntLegRepoCollateralSecurityType tagData, final int oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue() );
+    }
+
+    private void verifyValuePairString( final Tag250IntLegRepoCollateralSecurityType tagData, final int oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
+    private void verifyToString( final Tag250IntLegRepoCollateralSecurityType tagData, final int oneElement ) {
         assertEquals( String.valueOf( oneElement ), tagData.toString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
     }
-    @Test
-    void TagToVerboseStringTest() {
-        Tag250IntLegRepoCollateralSecurityType tagData;
-        int oneElement;
 
-        oneElement = Tag250IntLegRepoCollateralSecurityType.TESTA_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE;
-        tagData = new Tag250IntLegRepoCollateralSecurityType( new MyIntType( oneElement ) );
+    private void verifyVerboseString( final Tag250IntLegRepoCollateralSecurityType tagData ) {
         assertEquals( "Tag250IntLegRepoCollateralSecurityType\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

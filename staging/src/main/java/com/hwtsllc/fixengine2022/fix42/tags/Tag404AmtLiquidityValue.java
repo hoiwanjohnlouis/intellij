@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  404
  *  LiquidityValue
  *  Amt
- *  <p>
+ *  <p></p>
  *  Value between LiquidityPctLow (402) and LiquidityPctHigh (403) in Currency
  */
 public class Tag404AmtLiquidityValue extends FIX42Abstract implements LogValuePairString, LogVerboseString {

@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  389
  *  DiscretionOffsetValue
  *  float
- *  <p>
+ *  <p></p>
  *  Amount (signed) added to the "related to" price specified via DiscretionInst (388),
  *  in the context of DiscretionOffsetType (842)
  *  <p></p>

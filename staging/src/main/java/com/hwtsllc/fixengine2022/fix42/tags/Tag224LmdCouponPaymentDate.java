@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  224
  *  CouponPaymentDate
  *  LocalMktDate
- *  <p>
+ *  <p></p>
  *  Date interest is to be paid.  Used in identifying Corporate Bond issues.
  *  <p></p>
  *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)

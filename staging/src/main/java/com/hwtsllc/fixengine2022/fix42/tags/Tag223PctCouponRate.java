@@ -26,10 +26,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  223
  *  CouponRate
  *  Percentage
- *  <p>
+ *  <p></p>
  *  The rate of interest that, when multiplied by the principal, par value,
  *  or face value of a bond, provides the currency amount of the periodic interest payment.
- *  <p>
+ *  <p></p>
  *  The coupon is always cited, along with maturity, in any quotation of a bond's price.
  */
 public class Tag223PctCouponRate extends FIX42Abstract implements LogValuePairString, LogVerboseString {

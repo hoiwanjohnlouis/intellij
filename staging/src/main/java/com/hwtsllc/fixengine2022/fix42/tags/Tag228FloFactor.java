@@ -31,12 +31,12 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  ABS or MBS securities, note the fraction may be greater than, equal to or less than .
  *  <p></p>
  *  In TIPS securities this is the Inflation index.
- *  <p>
+ *  <p></p>
  *  Qty * Factor * Price = Gross Trade Amount
  *  <p></p>
  *  For Derivatives: Contract Value Factor by which price must be adjusted
  *  to determine the true nominal value of one futures/options contract.
- *  <p>
+ *  <p></p>
  *  (Qty * Price) * Factor = Nominal Value
  *  <p></p>
  *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)

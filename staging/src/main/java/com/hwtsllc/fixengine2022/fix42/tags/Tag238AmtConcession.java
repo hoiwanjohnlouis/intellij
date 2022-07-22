@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  238
  *  Concession
  *  Amt
- *  <p>
+ *  <p></p>
  *  Provides the reduction in price for the secondary market in Muncipals.
  *  <p></p>
  *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)

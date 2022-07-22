@@ -86,7 +86,7 @@ class Tag136NumNoMiscFeesTest {
 
     private void verifyDataValue( final Tag136NumNoMiscFees tagData, final int oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }
 
     @Test

@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  260
  *  BasisFeaturePrice
  *  Price
- *  <p>
+ *  <p></p>
  *  Price for BasisFeatureDate.
- *  <p>
+ *  <p></p>
  *  See BasisFeatureDate (259)
  *  <p></p>
  *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)

@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,40 +27,15 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  223
  *  CouponRate
  *  Percentage
- *  <p>
+ *  <p></p>
  *  The rate of interest that, when multiplied by the principal, par value,
  *  or face value of a bond, provides the currency amount of the periodic interest payment.
- *  <p>
+ *  <p></p>
  *  The coupon is always cited, along with maturity, in any quotation of a bond's price.
  */
 class Tag223PctCouponRateTest {
     @Test
-    void FIX0223Test() {
-        FIX42 fixData = FIX42.FIX223_PCT_COUPON_RATE;
-        assertEquals( "223", fixData.toEnumIDString());
-        assertEquals( "COUPON_RATE", fixData.toEnumNameString());
-        assertEquals( "CouponRate", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0223Test() {
-        Tag223PctCouponRate tagData;
-        double oneElement;
-
-        oneElement = Tag223PctCouponRate.TESTA_PCT_COUPON_RATE;
-        tagData = new Tag223PctCouponRate( new MyPercentageType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag223PctCouponRate.TESTB_PCT_COUPON_RATE;
-        tagData = new Tag223PctCouponRate( new MyPercentageType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
+    void PrintTest() {
         Tag223PctCouponRate tagData;
         double oneElement;
 
@@ -73,50 +47,64 @@ class Tag223PctCouponRateTest {
         tagData = new Tag223PctCouponRate( new MyPercentageType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
+
     @Test
-    void TagGetDataValueTest() {
+    void FIXTagTest() {
         Tag223PctCouponRate tagData;
         double oneElement;
 
+        oneElement = Tag223PctCouponRate.TESTA_PCT_COUPON_RATE;
+        tagData = new Tag223PctCouponRate( new MyPercentageType( oneElement ) );
+        verifyAll( tagData, oneElement );
+
         oneElement = Tag223PctCouponRate.TESTB_PCT_COUPON_RATE;
         tagData = new Tag223PctCouponRate( new MyPercentageType( oneElement ) );
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag223PctCouponRate tagData, final double oneElement ) {
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyFIXData( final Tag223PctCouponRate tagData ) {
+        assertEquals( "FIX223_PCT_COUPON_RATE", tagData.toEnumLabelString());
+        assertEquals( "223", tagData.toEnumIDString());
+        assertEquals( "COUPON_RATE", tagData.toEnumNameString());
+        assertEquals( "CouponRate", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
+    private void verifyDataValue( final Tag223PctCouponRate tagData, final double oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue());
     }
-    @Test
-    void TagToValuePairStringTest() {
-        Tag223PctCouponRate tagData;
-        double oneElement;
 
-        oneElement = Tag223PctCouponRate.TESTB_PCT_COUPON_RATE;
-        tagData = new Tag223PctCouponRate( new MyPercentageType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    private void verifyValuePairString( final Tag223PctCouponRate tagData, final double oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
-    @Test
-    void TagToStringTest() {
-        Tag223PctCouponRate tagData;
-        double oneElement;
 
-        oneElement = Tag223PctCouponRate.TESTB_PCT_COUPON_RATE;
-        tagData = new Tag223PctCouponRate( new MyPercentageType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    private void verifyToString( final Tag223PctCouponRate tagData, final double oneElement ) {
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
-    @Test
-    void TagToVerboseStringTest() {
-        Tag223PctCouponRate tagData;
-        double oneElement;
 
-        oneElement = Tag223PctCouponRate.TESTA_PCT_COUPON_RATE;
-        tagData = new Tag223PctCouponRate( new MyPercentageType( oneElement ) );
+    private void verifyVerboseString( final Tag223PctCouponRate tagData ) {
         assertEquals( "Tag223PctCouponRate\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

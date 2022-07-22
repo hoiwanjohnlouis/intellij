@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  366
  *  AllocPrice
  *  Price
- *  <p>
+ *  <p></p>
  *  Executed price for an AllocAccount (79) entry.
- *  <p>
+ *  <p></p>
  *  Used when using "executed price" vs. "average price" allocations (e.g. Japan).
  */
 public class Tag366PrcAllocPrice extends FIX42Abstract implements LogValuePairString, LogVerboseString {

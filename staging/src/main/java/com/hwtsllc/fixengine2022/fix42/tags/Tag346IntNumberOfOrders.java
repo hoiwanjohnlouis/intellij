@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  346
  *  NumberOfOrders
  *  int
- *  <p>
+ *  <p></p>
  *  Number of orders in the market.
  */
 public class Tag346IntNumberOfOrders extends FIX42Abstract implements LogValuePairString, LogVerboseString {

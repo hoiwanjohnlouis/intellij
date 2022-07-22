@@ -57,14 +57,14 @@ class Tag152QtyCashOrderQtyTest {
 
         oneElement = Tag152QtyCashOrderQty.TESTA_QTY_CASH_ORDER_QTY;
         tagData = new Tag152QtyCashOrderQty(new MyQtyType( oneElement ));
-        verifyFIXData( tagData );
-        verifyDataValue( tagData, oneElement );
-        verifyValuePairString( tagData, oneElement );
-        verifyToString( tagData, oneElement );
-        verifyVerboseString( tagData );
+        verifyAll( tagData, oneElement );
 
         oneElement = Tag152QtyCashOrderQty.TESTB_QTY_CASH_ORDER_QTY;
         tagData = new Tag152QtyCashOrderQty(new MyQtyType( oneElement ));
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag152QtyCashOrderQty tagData, final int oneElement ) {
         verifyFIXData( tagData );
         verifyDataValue( tagData, oneElement );
         verifyValuePairString( tagData, oneElement );
@@ -85,7 +85,7 @@ class Tag152QtyCashOrderQtyTest {
 
     private void verifyDataValue( final Tag152QtyCashOrderQty tagData, final int oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
 
     private void verifyValuePairString( final Tag152QtyCashOrderQty tagData, final int oneElement ) {

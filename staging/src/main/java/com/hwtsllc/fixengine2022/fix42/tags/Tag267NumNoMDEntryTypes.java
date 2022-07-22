@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  267
  *  NoMDEntryTypes
  *  NumInGroup
- *  <p>
+ *  <p></p>
  *  Number of MDEntryType (269) fields requested.
  */
 public class Tag267NumNoMDEntryTypes extends FIX42Abstract implements LogValuePairString, LogVerboseString {

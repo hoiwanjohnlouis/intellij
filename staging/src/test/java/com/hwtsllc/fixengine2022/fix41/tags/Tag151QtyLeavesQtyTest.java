@@ -58,14 +58,14 @@ class Tag151QtyLeavesQtyTest {
 
         oneElement = Tag151QtyLeavesQty.TESTA_QTY_LEAVES_QTY;
         tagData = new Tag151QtyLeavesQty(new MyQtyType( oneElement ));
-        verifyFIXData( tagData );
-        verifyDataValue( tagData, oneElement );
-        verifyValuePairString( tagData, oneElement );
-        verifyToString( tagData, oneElement );
-        verifyVerboseString( tagData );
+        verifyAll( tagData, oneElement );
 
         oneElement = Tag151QtyLeavesQty.TESTB_QTY_LEAVES_QTY;
         tagData = new Tag151QtyLeavesQty(new MyQtyType( oneElement ));
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag151QtyLeavesQty tagData, final int oneElement ) {
         verifyFIXData( tagData );
         verifyDataValue( tagData, oneElement );
         verifyValuePairString( tagData, oneElement );
@@ -86,7 +86,7 @@ class Tag151QtyLeavesQtyTest {
 
     private void verifyDataValue( final Tag151QtyLeavesQty tagData, final int oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
 
     private void verifyValuePairString( final Tag151QtyLeavesQty tagData, final int oneElement ) {

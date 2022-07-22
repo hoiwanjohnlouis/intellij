@@ -52,14 +52,14 @@ class Tag155FloSettlCurrFxRateTest {
 
         oneElement = Tag155FloSettlCurrFxRate.TESTA_FLO_SETTL_CURR_FX_RATE;
         tagData = new Tag155FloSettlCurrFxRate(new MyFloatType( oneElement ));
-        verifyFIXData( tagData );
-        verifyDataValue( tagData, oneElement );
-        verifyValuePairString( tagData, oneElement );
-        verifyToString( tagData, oneElement );
-        verifyVerboseString( tagData );
+        verifyAll( tagData, oneElement );
 
         oneElement = Tag155FloSettlCurrFxRate.TESTB_FLO_SETTL_CURR_FX_RATE;
         tagData = new Tag155FloSettlCurrFxRate(new MyFloatType( oneElement ));
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag155FloSettlCurrFxRate tagData, final float oneElement ) {
         verifyFIXData( tagData );
         verifyDataValue( tagData, oneElement );
         verifyValuePairString( tagData, oneElement );
@@ -80,7 +80,7 @@ class Tag155FloSettlCurrFxRateTest {
 
     private void verifyDataValue( final Tag155FloSettlCurrFxRate tagData, final float oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
     }
 
     private void verifyValuePairString( final Tag155FloSettlCurrFxRate tagData, final float oneElement ) {

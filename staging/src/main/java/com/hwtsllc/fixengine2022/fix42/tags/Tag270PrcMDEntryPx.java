@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  270
  *  MDEntryPx
  *  Price
- *  <p>
+ *  <p></p>
  *  Price of the Market Data Entry.
  */
 public class Tag270PrcMDEntryPx extends FIX42Abstract implements LogValuePairString, LogVerboseString {

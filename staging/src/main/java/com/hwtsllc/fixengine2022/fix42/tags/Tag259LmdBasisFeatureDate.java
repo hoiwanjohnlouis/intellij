@@ -26,10 +26,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  259
  *  BasisFeatureDate
  *  LocalMktDate
- *  <p>
+ *  <p></p>
  *  BasisFeatureDate allows requesting firms within fixed income the ability to
  *  request an alternative yield-to-worst, -maturity, -extended or other call.
- *  <p>
+ *  <p></p>
  *  This flows through the confirm process.
  *  <p></p>
  *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)

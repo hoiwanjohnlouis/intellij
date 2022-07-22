@@ -84,10 +84,6 @@ class Tag41StrOrigClOrdIDTest {
         oneElement = Tag41StrOrigClOrdID.TESTB_STR_ORIG_CL_ORD_ID;
         tagData = new Tag41StrOrigClOrdID(new MyStringType( oneElement ));
         verifyDataValue( tagData, oneElement );
-
-        oneElement = "ORD-12345";
-        tagData = new Tag41StrOrigClOrdID(new MyStringType( oneElement ) );
-        verifyDataValue( tagData, oneElement );
     }
 
     private void verifyDataValue( final Tag41StrOrigClOrdID tagData, final String oneElement ) {

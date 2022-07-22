@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  311
  *  UnderlyingSymbol
  *  String
- *  <p>
+ *  <p></p>
  *  Underlying security’s Symbol.
- *  <p>
+ *  <p></p>
  *  See Symbol (55) field for description
  */
 public class Tag311StrUnderlyingSymbol extends FIX42Abstract implements LogValuePairString, LogVerboseString {

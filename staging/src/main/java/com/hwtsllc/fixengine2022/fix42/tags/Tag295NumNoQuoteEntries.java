@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  295
  *  NoQuoteEntries
  *  NumInGroup
- *  <p>
+ *  <p></p>
  *  The number of quote entries for a QuoteSet.
  */
 public class Tag295NumNoQuoteEntries extends FIX42Abstract implements LogValuePairString, LogVerboseString {

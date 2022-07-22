@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  278
  *  MDEntryID
  *  String
- *  <p>
+ *  <p></p>
  *  Unique Market Data Entry identifier.
  */
 public class Tag278StrMDEntryID extends FIX42Abstract implements LogValuePairString, LogVerboseString {

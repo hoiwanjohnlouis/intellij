@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  318
  *  UnderlyingCurrency
  *  Currency
- *  <p>
+ *  <p></p>
  *  Underlying security’s Currency.
- *  <p>
+ *  <p></p>
  *  See Currency (5) field for description and valid values
  */
 // @Deprecated

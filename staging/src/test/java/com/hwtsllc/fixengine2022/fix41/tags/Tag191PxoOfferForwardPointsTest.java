@@ -52,14 +52,14 @@ class Tag191PxoOfferForwardPointsTest {
 
         oneElement = Tag191PxoOfferForwardPoints.TESTA_PXO_OFFER_FORWARD_POINTS;
         tagData = new Tag191PxoOfferForwardPoints( new MyPriceOffsetType( oneElement ));
-        verifyFIXData( tagData );
-        verifyDataValue( tagData, oneElement );
-        verifyValuePairString( tagData, oneElement );
-        verifyToString( tagData, oneElement );
-        verifyVerboseString( tagData );
+        verifyAll( tagData, oneElement );
 
         oneElement = Tag191PxoOfferForwardPoints.TESTB_PXO_OFFER_FORWARD_POINTS;
         tagData = new Tag191PxoOfferForwardPoints( new MyPriceOffsetType( oneElement ));
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag191PxoOfferForwardPoints tagData, final double oneElement ) {
         verifyFIXData( tagData );
         verifyDataValue( tagData, oneElement );
         verifyValuePairString( tagData, oneElement );
@@ -80,7 +80,7 @@ class Tag191PxoOfferForwardPointsTest {
 
     private void verifyDataValue( final Tag191PxoOfferForwardPoints tagData, final double oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue());
     }
 
     private void verifyValuePairString( final Tag191PxoOfferForwardPoints tagData, final double oneElement ) {

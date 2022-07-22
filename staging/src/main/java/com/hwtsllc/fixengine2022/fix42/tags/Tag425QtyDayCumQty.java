@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  425
  *  DayCumQty
  *  Qty
- *  <p>
+ *  <p></p>
  *  Quantity on a GT order that has traded today.
  */
 public class Tag425QtyDayCumQty extends FIX42Abstract implements LogValuePairString, LogVerboseString {

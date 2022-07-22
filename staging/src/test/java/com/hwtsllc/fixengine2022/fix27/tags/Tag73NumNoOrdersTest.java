@@ -82,10 +82,6 @@ class Tag73NumNoOrdersTest {
         oneElement = Tag73NumNoOrders.TESTB_NUM_NO_ORDERS;
         tagData = new Tag73NumNoOrders(new MyNumInGroupType( oneElement ));
         verifyDataValue( tagData, oneElement );
-
-        oneElement = 24601;
-        tagData = new Tag73NumNoOrders(new MyNumInGroupType( oneElement ));
-        verifyDataValue( tagData, oneElement );
     }
 
     private void verifyDataValue( final Tag73NumNoOrders tagData, final int oneElement ) {

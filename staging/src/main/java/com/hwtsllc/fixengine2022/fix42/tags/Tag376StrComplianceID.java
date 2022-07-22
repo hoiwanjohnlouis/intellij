@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  376
  *  ComplianceID
  *  String
- *  <p>
+ *  <p></p>
  *  ID used to represent this transaction for compliance purposes (e.g. OATS reporting).
  */
 public class Tag376StrComplianceID extends FIX42Abstract implements LogValuePairString, LogVerboseString {

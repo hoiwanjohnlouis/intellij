@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  284
  *  DeskID
  *  String
- *  <p>
+ *  <p></p>
  *  Identification of a Market Maker’s desk
  */
 public class Tag284StrDeskID extends FIX42Abstract implements LogValuePairString, LogVerboseString {

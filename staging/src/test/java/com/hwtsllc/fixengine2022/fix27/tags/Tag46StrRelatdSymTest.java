@@ -83,10 +83,6 @@ class Tag46StrRelatdSymTest {
         oneElement = Tag46StrRelatdSym.TESTB_STR_RELATED_SYM;
         tagData = new Tag46StrRelatdSym(new MyStringType( oneElement ) );
         verifyDataValue( tagData, oneElement );
-
-        oneElement = "IBM";
-        tagData = new Tag46StrRelatdSym(new MyStringType( oneElement ) );
-        verifyDataValue( tagData, oneElement );
     }
 
     private void verifyDataValue( final Tag46StrRelatdSym tagData, final String oneElement ) {

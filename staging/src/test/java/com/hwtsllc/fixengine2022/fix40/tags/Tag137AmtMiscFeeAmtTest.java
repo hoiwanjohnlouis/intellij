@@ -86,7 +86,7 @@ class Tag137AmtMiscFeeAmtTest {
 
     private void verifyDataValue( final Tag137AmtMiscFeeAmt tagData, final double oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }
 
     @Test

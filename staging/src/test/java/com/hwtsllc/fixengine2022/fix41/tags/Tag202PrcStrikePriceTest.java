@@ -52,14 +52,14 @@ class Tag202PrcStrikePriceTest {
 
         oneElement = Tag202PrcStrikePrice.TESTA_PRC_STRIKE_PRICE;
         tagData = new Tag202PrcStrikePrice(new MyPriceType( oneElement ));
-        verifyFIXData( tagData );
-        verifyDataValue( tagData, oneElement );
-        verifyValuePairString( tagData, oneElement );
-        verifyToString( tagData, oneElement );
-        verifyVerboseString( tagData );
+        verifyAll( tagData, oneElement );
 
         oneElement = Tag202PrcStrikePrice.TESTB_PRC_STRIKE_PRICE;
         tagData = new Tag202PrcStrikePrice(new MyPriceType( oneElement ));
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag202PrcStrikePrice tagData, final double oneElement ) {
         verifyFIXData( tagData );
         verifyDataValue( tagData, oneElement );
         verifyValuePairString( tagData, oneElement );
@@ -80,7 +80,7 @@ class Tag202PrcStrikePriceTest {
 
     private void verifyDataValue( final Tag202PrcStrikePrice tagData, final double oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }
 
     private void verifyValuePairString( final Tag202PrcStrikePrice tagData, final double oneElement ) {

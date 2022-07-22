@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  382
  *  NoContraBrokers
  *  NumInGroup
- *  <p>
+ *  <p></p>
  *  The number of ContraBroker (375) entries.
  */
 public class Tag382NumNoContraBrokers extends FIX42Abstract implements LogValuePairString, LogVerboseString {

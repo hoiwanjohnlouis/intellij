@@ -16,9 +16,8 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
-import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -28,11 +27,11 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  370
  *  OnBehalfOfSendingTime
  *  UTCTimestamp
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.3
- *  <p>
+ *  <p></p>
  *  Used when a message is sent via a 'hub' or 'service bureau'.
- *  <p>
+ *  <p></p>
  *  If A sends to Q (the hub), who then sends to B via a separate FIX session, then when Q sends to B,
  *  the value of this field should represent the SendingTime on the message A sent to Q.
  *  <p></p>
@@ -40,32 +39,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag370UtcOnBehalfOfSendingTimeTest {
     @Test
-    void FIX0370Test() {
-        FIX42 fixData = FIX42.FIX370_UTC_ON_BEHALF_OF_SENDING_TIME;
-        assertEquals( "370", fixData.toEnumIDString());
-        assertEquals( "ON_BEHALF_OF_SENDING_TIME", fixData.toEnumNameString());
-        assertEquals( "OnBehalfOfSendingTime", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0370Test() {
-        Tag370UtcOnBehalfOfSendingTime tagData;
-        String oneElement;
-
-        oneElement = Tag370UtcOnBehalfOfSendingTime.TESTA_UTC_ON_BEHALF_OF_SENDING_TIME;
-        tagData = new Tag370UtcOnBehalfOfSendingTime( new MyUTCTimestampType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag370UtcOnBehalfOfSendingTime.TESTB_UTC_ON_BEHALF_OF_SENDING_TIME;
-        tagData = new Tag370UtcOnBehalfOfSendingTime( new MyUTCTimestampType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
+    void PrintTest() {
         Tag370UtcOnBehalfOfSendingTime tagData;
         String oneElement;
 
@@ -77,51 +51,64 @@ class Tag370UtcOnBehalfOfSendingTimeTest {
         tagData = new Tag370UtcOnBehalfOfSendingTime( new MyUTCTimestampType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
+
     @Test
-    void TagGetDataValueTest() {
+    void FIXTagTest() {
         Tag370UtcOnBehalfOfSendingTime tagData;
         String oneElement;
 
+        oneElement = Tag370UtcOnBehalfOfSendingTime.TESTA_UTC_ON_BEHALF_OF_SENDING_TIME;
+        tagData = new Tag370UtcOnBehalfOfSendingTime( new MyUTCTimestampType( oneElement ) );
+        verifyAll( tagData, oneElement );
+
         oneElement = Tag370UtcOnBehalfOfSendingTime.TESTB_UTC_ON_BEHALF_OF_SENDING_TIME;
         tagData = new Tag370UtcOnBehalfOfSendingTime( new MyUTCTimestampType( oneElement ) );
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag370UtcOnBehalfOfSendingTime tagData, final String oneElement ) {
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyFIXData( final Tag370UtcOnBehalfOfSendingTime tagData ) {
+        assertEquals( "FIX370_UTC_ON_BEHALF_OF_SENDING_TIME", tagData.toEnumLabelString());
+        assertEquals( "370", tagData.toEnumIDString());
+        assertEquals( "ON_BEHALF_OF_SENDING_TIME", tagData.toEnumNameString());
+        assertEquals( "OnBehalfOfSendingTime", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
+    private void verifyDataValue( final Tag370UtcOnBehalfOfSendingTime tagData, final String oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
     }
-    @Test
-    void TagToValuePairStringTest() {
-        Tag370UtcOnBehalfOfSendingTime tagData;
-        String oneElement;
 
-        oneElement = Tag370UtcOnBehalfOfSendingTime.TESTB_UTC_ON_BEHALF_OF_SENDING_TIME;
-        tagData = new Tag370UtcOnBehalfOfSendingTime( new MyUTCTimestampType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toValuePairString() );
+    private void verifyValuePairString( final Tag370UtcOnBehalfOfSendingTime tagData, final String oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
-    @Test
-    void TagToStringTest() {
-        Tag370UtcOnBehalfOfSendingTime tagData;
-        String oneElement;
 
-        oneElement = Tag370UtcOnBehalfOfSendingTime.TESTB_UTC_ON_BEHALF_OF_SENDING_TIME;
-        tagData = new Tag370UtcOnBehalfOfSendingTime( new MyUTCTimestampType( oneElement ) );
-        assertEquals( oneElement, tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toString() );
+    private void verifyToString( final Tag370UtcOnBehalfOfSendingTime tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
-    @Test
-    void TagToVerboseStringTest() {
-        Tag370UtcOnBehalfOfSendingTime tagData;
-        String oneElement;
 
-        oneElement = Tag370UtcOnBehalfOfSendingTime.TESTA_UTC_ON_BEHALF_OF_SENDING_TIME;
-        tagData = new Tag370UtcOnBehalfOfSendingTime( new MyUTCTimestampType( oneElement ) );
+    private void verifyVerboseString( final Tag370UtcOnBehalfOfSendingTime tagData ) {
         assertEquals( "Tag370UtcOnBehalfOfSendingTime\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toVerboseString() );
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

@@ -84,10 +84,6 @@ class Tag23StrIOIIDTest {
         oneElement = Tag23StrIOIID.TESTB_STR_IOI_ID;
         tagData = new Tag23StrIOIID(new MyStringType( oneElement ));
         verifyDataValue( tagData, oneElement );
-
-        oneElement = "A";
-        tagData = new Tag23StrIOIID(new MyStringType( oneElement ) );
-        verifyDataValue( tagData, oneElement );
     }
 
     private void verifyDataValue( final Tag23StrIOIID tagData, final String oneElement ) {

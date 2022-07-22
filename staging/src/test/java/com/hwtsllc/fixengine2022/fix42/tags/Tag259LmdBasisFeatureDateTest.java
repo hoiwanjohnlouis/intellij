@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyLocalMktDateType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,10 +27,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  259
  *  BasisFeatureDate
  *  LocalMktDate
- *  <p>
+ *  <p></p>
  *  BasisFeatureDate allows requesting firms within fixed income the ability to
  *  request an alternative yield-to-worst, -maturity, -extended or other call.
- *  <p>
+ *  <p></p>
  *  This flows through the confirm process.
  *  <p></p>
  *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
@@ -40,32 +39,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag259LmdBasisFeatureDateTest {
     @Test
-    void FIX0259Test() {
-        FIX42 fixData = FIX42.FIX259_LMD_BASIS_FEATURE_DATE;
-        assertEquals( "259", fixData.toEnumIDString());
-        assertEquals( "BASIS_FEATURE_DATE", fixData.toEnumNameString());
-        assertEquals( "BasisFeatureDate", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0259Test() {
-        Tag259LmdBasisFeatureDate tagData;
-        String oneElement;
-
-        oneElement = Tag259LmdBasisFeatureDate.TESTA_LMD_BASIS_FEATURE_DATE;
-        tagData = new Tag259LmdBasisFeatureDate( new MyLocalMktDateType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag259LmdBasisFeatureDate.TESTB_LMD_BASIS_FEATURE_DATE;
-        tagData = new Tag259LmdBasisFeatureDate( new MyLocalMktDateType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
+    void PrintTest() {
         Tag259LmdBasisFeatureDate tagData;
         String oneElement;
 
@@ -77,51 +51,65 @@ class Tag259LmdBasisFeatureDateTest {
         tagData = new Tag259LmdBasisFeatureDate( new MyLocalMktDateType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
+
     @Test
-    void TagGetDataValueTest() {
+    void FIXTagTest() {
         Tag259LmdBasisFeatureDate tagData;
         String oneElement;
 
+        oneElement = Tag259LmdBasisFeatureDate.TESTA_LMD_BASIS_FEATURE_DATE;
+        tagData = new Tag259LmdBasisFeatureDate( new MyLocalMktDateType( oneElement ) );
+        verifyAll( tagData, oneElement );
+
         oneElement = Tag259LmdBasisFeatureDate.TESTB_LMD_BASIS_FEATURE_DATE;
         tagData = new Tag259LmdBasisFeatureDate( new MyLocalMktDateType( oneElement ) );
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag259LmdBasisFeatureDate tagData, final String oneElement ) {
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyFIXData( final Tag259LmdBasisFeatureDate tagData ) {
+        assertEquals( "FIX259_LMD_BASIS_FEATURE_DATE", tagData.toEnumLabelString());
+        assertEquals( "259", tagData.toEnumIDString());
+        assertEquals( "BASIS_FEATURE_DATE", tagData.toEnumNameString());
+        assertEquals( "BasisFeatureDate", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
+    private void verifyDataValue( final Tag259LmdBasisFeatureDate tagData, final String oneElement ) {
         assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
-    @Test
-    void TagToValuePairStringTest() {
-        Tag259LmdBasisFeatureDate tagData;
-        String oneElement;
 
-        oneElement = Tag259LmdBasisFeatureDate.TESTB_LMD_BASIS_FEATURE_DATE;
-        tagData = new Tag259LmdBasisFeatureDate( new MyLocalMktDateType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    private void verifyValuePairString( final Tag259LmdBasisFeatureDate tagData, final String oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
-    @Test
-    void TagToStringTest() {
-        Tag259LmdBasisFeatureDate tagData;
-        String oneElement;
 
-        oneElement = Tag259LmdBasisFeatureDate.TESTB_LMD_BASIS_FEATURE_DATE;
-        tagData = new Tag259LmdBasisFeatureDate( new MyLocalMktDateType( oneElement ) );
+    private void verifyToString( final Tag259LmdBasisFeatureDate tagData, final String oneElement ) {
         assertEquals( oneElement, tagData.toString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
     }
-    @Test
-    void TagToVerboseStringTest() {
-        Tag259LmdBasisFeatureDate tagData;
-        String oneElement;
 
-        oneElement = Tag259LmdBasisFeatureDate.TESTA_LMD_BASIS_FEATURE_DATE;
-        tagData = new Tag259LmdBasisFeatureDate( new MyLocalMktDateType( oneElement ) );
+    private void verifyVerboseString( final Tag259LmdBasisFeatureDate tagData ) {
         assertEquals( "Tag259LmdBasisFeatureDate\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

@@ -91,10 +91,6 @@ class Tag17StrExecIDTest {
         oneElement = Tag17StrExecID.TESTB_STR_EXEC_ID;
         tagData = new Tag17StrExecID(new MyStringType( oneElement ));
         verifyDataValue( tagData, oneElement );
-
-        oneElement = "BEST-1234";
-        tagData = new Tag17StrExecID(new MyStringType( oneElement ));
-        verifyDataValue( tagData, oneElement );
     }
 
     private void verifyDataValue( final Tag17StrExecID tagData, final String oneElement ) {

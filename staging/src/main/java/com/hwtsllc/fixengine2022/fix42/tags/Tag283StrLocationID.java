@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  283
  *  LocationID
  *  String
- *  <p>
+ *  <p></p>
  *  Identification of a Market Maker’s location
  */
 public class Tag283StrLocationID extends FIX42Abstract implements LogValuePairString, LogVerboseString {

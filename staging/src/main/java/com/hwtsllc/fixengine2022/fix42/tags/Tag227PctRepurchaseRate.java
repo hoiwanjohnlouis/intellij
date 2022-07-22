@@ -26,11 +26,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  227
  *  RepurchaseRate
  *  Percentage
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.4
- *  <p>
+ *  <p></p>
  *  Percent of par at which a Repo will be repaid.
- *  <p>
+ *  <p></p>
  *  Represented as a percent, e.g. .9525 represents 95-/4 percent of par.
  *  <p></p>
  *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)

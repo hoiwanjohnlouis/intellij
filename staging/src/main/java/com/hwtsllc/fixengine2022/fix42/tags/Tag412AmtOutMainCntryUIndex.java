@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  412
  *  OutMainCntryUIndex
  *  Amt
- *  <p>
+ *  <p></p>
  *  Value of stocks in Currency
  */
 public class Tag412AmtOutMainCntryUIndex extends FIX42Abstract implements LogValuePairString, LogVerboseString {

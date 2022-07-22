@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  435
  *  UnderlyingCouponRate
  *  Percentage
- *  <p>
+ *  <p></p>
  *  Underlying security’s CouponRate.
- *  <p>
+ *  <p></p>
  *  See CouponRate (223) field for description
  */
 public class Tag435PctUnderlyingCouponRate extends FIX42Abstract implements LogValuePairString, LogVerboseString {

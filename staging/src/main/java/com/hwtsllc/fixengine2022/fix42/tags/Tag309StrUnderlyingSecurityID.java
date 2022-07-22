@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  309
  *  UnderlyingSecurityID
  *  String
- *  <p>
+ *  <p></p>
  *  Underlying security’s SecurityID.
- *  <p>
+ *  <p></p>
  *  See SecurityID (48) field for description
  */
 public class Tag309StrUnderlyingSecurityID extends FIX42Abstract implements LogValuePairString, LogVerboseString {

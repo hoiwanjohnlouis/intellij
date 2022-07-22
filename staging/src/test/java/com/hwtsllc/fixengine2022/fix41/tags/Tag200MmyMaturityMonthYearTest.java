@@ -88,14 +88,14 @@ class Tag200MmyMaturityMonthYearTest {
 
         oneElement = Tag200MmyMaturityMonthYear.TESTA_MMY_MATURITY_MONTH_YEAR;
         tagData = new Tag200MmyMaturityMonthYear( new MyMonthYearType( oneElement ) );
-        verifyFIXData( tagData );
-        verifyDataValue( tagData, oneElement );
-        verifyValuePairString( tagData, oneElement );
-        verifyToString( tagData, oneElement );
-        verifyVerboseString( tagData );
+        verifyAll( tagData, oneElement );
 
         oneElement = Tag200MmyMaturityMonthYear.TESTB_MMY_MATURITY_MONTH_YEAR;
         tagData = new Tag200MmyMaturityMonthYear( new MyMonthYearType( oneElement ) );
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag200MmyMaturityMonthYear tagData, final String oneElement ) {
         verifyFIXData( tagData );
         verifyDataValue( tagData, oneElement );
         verifyValuePairString( tagData, oneElement );

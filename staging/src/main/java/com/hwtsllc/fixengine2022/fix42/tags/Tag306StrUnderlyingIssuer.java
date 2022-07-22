@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  306
  *  UnderlyingIssuer
  *  String
- *  <p>
+ *  <p></p>
  *  Underlying security’s Issuer.
- *  <p>
+ *  <p></p>
  *  See Issuer (06) field for description
  */
 public class Tag306StrUnderlyingIssuer extends FIX42Abstract implements LogValuePairString, LogVerboseString {

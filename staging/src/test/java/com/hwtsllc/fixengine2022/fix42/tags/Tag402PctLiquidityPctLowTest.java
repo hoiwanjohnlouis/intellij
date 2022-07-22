@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,37 +27,12 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  402
  *  LiquidityPctLow
  *  Percentage
- *  <p>
+ *  <p></p>
  *  Liquidity indicator or lower limit if TotalNumSecurities (393) > 1.  Represented as a percentage.
  */
 class Tag402PctLiquidityPctLowTest {
     @Test
-    void FIX0402Test() {
-        FIX42 fixData = FIX42.FIX402_PCT_LIQUIDITY_PCT_LOW;
-        assertEquals( "402", fixData.toEnumIDString());
-        assertEquals( "LIQUIDITY_PCT_LOW", fixData.toEnumNameString());
-        assertEquals( "LiquidityPctLow", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0402Test() {
-        Tag402PctLiquidityPctLow tagData;
-        double oneElement;
-
-        oneElement = Tag402PctLiquidityPctLow.TESTA_PCT_LIQUIDITY_PCT_LOW;
-        tagData = new Tag402PctLiquidityPctLow( new MyPercentageType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag402PctLiquidityPctLow.TESTB_PCT_LIQUIDITY_PCT_LOW;
-        tagData = new Tag402PctLiquidityPctLow( new MyPercentageType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
+    void PrintTest() {
         Tag402PctLiquidityPctLow tagData;
         double oneElement;
 
@@ -70,50 +44,64 @@ class Tag402PctLiquidityPctLowTest {
         tagData = new Tag402PctLiquidityPctLow( new MyPercentageType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
+
     @Test
-    void TagGetDataValueTest() {
+    void FIXTagTest() {
         Tag402PctLiquidityPctLow tagData;
         double oneElement;
 
+        oneElement = Tag402PctLiquidityPctLow.TESTA_PCT_LIQUIDITY_PCT_LOW;
+        tagData = new Tag402PctLiquidityPctLow( new MyPercentageType( oneElement ) );
+        verifyAll( tagData, oneElement );
+
         oneElement = Tag402PctLiquidityPctLow.TESTB_PCT_LIQUIDITY_PCT_LOW;
         tagData = new Tag402PctLiquidityPctLow( new MyPercentageType( oneElement ) );
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag402PctLiquidityPctLow tagData, final double oneElement ) {
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyFIXData( final Tag402PctLiquidityPctLow tagData ) {
+        assertEquals( "FIX402_PCT_LIQUIDITY_PCT_LOW", tagData.toEnumLabelString());
+        assertEquals( "402", tagData.toEnumIDString());
+        assertEquals( "LIQUIDITY_PCT_LOW", tagData.toEnumNameString());
+        assertEquals( "LiquidityPctLow", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
+    private void verifyDataValue( final Tag402PctLiquidityPctLow tagData, final double oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue());
     }
-    @Test
-    void TagToValuePairStringTest() {
-        Tag402PctLiquidityPctLow tagData;
-        double oneElement;
 
-        oneElement = Tag402PctLiquidityPctLow.TESTB_PCT_LIQUIDITY_PCT_LOW;
-        tagData = new Tag402PctLiquidityPctLow( new MyPercentageType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    private void verifyValuePairString( final Tag402PctLiquidityPctLow tagData, final double oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
-    @Test
-    void TagToStringTest() {
-        Tag402PctLiquidityPctLow tagData;
-        double oneElement;
 
-        oneElement = Tag402PctLiquidityPctLow.TESTB_PCT_LIQUIDITY_PCT_LOW;
-        tagData = new Tag402PctLiquidityPctLow( new MyPercentageType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    private void verifyToString( final Tag402PctLiquidityPctLow tagData, final double oneElement ) {
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
-    @Test
-    void TagToVerboseStringTest() {
-        Tag402PctLiquidityPctLow tagData;
-        double oneElement;
 
-        oneElement = Tag402PctLiquidityPctLow.TESTA_PCT_LIQUIDITY_PCT_LOW;
-        tagData = new Tag402PctLiquidityPctLow( new MyPercentageType( oneElement ) );
+    private void verifyVerboseString( final Tag402PctLiquidityPctLow tagData ) {
         assertEquals( "Tag402PctLiquidityPctLow\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  330
  *  BuyVolume
  *  Qty
- *  <p>
+ *  <p></p>
  *  Quantity bought.
  */
 public class Tag330QtyBuyVolume extends FIX42Abstract implements LogValuePairString, LogVerboseString {

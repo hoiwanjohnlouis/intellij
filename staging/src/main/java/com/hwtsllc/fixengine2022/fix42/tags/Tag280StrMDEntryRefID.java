@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  280
  *  MDEntryRefID
  *  String
- *  <p>
+ *  <p></p>
  *  Refers to a previous MDEntryID (278).
  */
 public class Tag280StrMDEntryRefID extends FIX42Abstract implements LogValuePairString, LogVerboseString {

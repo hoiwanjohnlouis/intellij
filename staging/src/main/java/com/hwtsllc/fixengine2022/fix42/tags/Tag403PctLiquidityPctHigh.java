@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  403
  *  LiquidityPctHigh
  *  Percentage
- *  <p>
+ *  <p></p>
  *  Upper liquidity indicator if TotalNumSecurities (393) > 1.  Represented as a percentage.
  */
 public class Tag403PctLiquidityPctHigh extends FIX42Abstract implements LogValuePairString, LogVerboseString {

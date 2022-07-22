@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  437
  *  ContraTradeQty
  *  Qty
- *  <p>
+ *  <p></p>
  *  Quantity traded with the ContraBroker (375).
  */
 public class Tag437QtyContraTradeQty extends FIX42Abstract implements LogValuePairString, LogVerboseString {

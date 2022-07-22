@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,37 +27,12 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  316
  *  UnderlyingStrikePrice
  *  Price
- *  <p>
+ *  <p></p>
  *  Underlying security’s StrikePrice.
- *  <p>
+ *  <p></p>
  *  See StrikePrice (202) field for description
  */
 class Tag316PrcUnderlyingStrikePriceTest {
-    @Test
-    void FIX0316Test() {
-        FIX42 fixData = FIX42.FIX316_PRC_UNDERLYING_STRIKE_PRICE;
-        assertEquals( "316", fixData.toEnumIDString());
-        assertEquals( "UNDERLYING_STRIKE_PRICE", fixData.toEnumNameString());
-        assertEquals( "UnderlyingStrikePrice", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0316Test() {
-        Tag316PrcUnderlyingStrikePrice tagData;
-        double oneElement;
-
-        oneElement = Tag316PrcUnderlyingStrikePrice.TESTA_PRC_UNDERLYING_STRIKE_PRICE;
-        tagData = new Tag316PrcUnderlyingStrikePrice( new MyPriceType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
-
-        oneElement = Tag316PrcUnderlyingStrikePrice.TESTB_PRC_UNDERLYING_STRIKE_PRICE;
-        tagData = new Tag316PrcUnderlyingStrikePrice( new MyPriceType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
-    }
     @Test
     void PrintFIXTagTest() {
         Tag316PrcUnderlyingStrikePrice tagData;
@@ -73,50 +47,63 @@ class Tag316PrcUnderlyingStrikePriceTest {
         System.out.println( tagData.toVerboseString() );
     }
     @Test
-    void TagGetDataValueTest() {
-        Tag316PrcUnderlyingStrikePrice tagData;
-        double oneElement;
-
-        oneElement = Tag316PrcUnderlyingStrikePrice.TESTB_PRC_UNDERLYING_STRIKE_PRICE;
-        tagData = new Tag316PrcUnderlyingStrikePrice( new MyPriceType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void TagToValuePairStringTest() {
-        Tag316PrcUnderlyingStrikePrice tagData;
-        double oneElement;
-
-        oneElement = Tag316PrcUnderlyingStrikePrice.TESTB_PRC_UNDERLYING_STRIKE_PRICE;
-        tagData = new Tag316PrcUnderlyingStrikePrice( new MyPriceType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
-    }
-    @Test
-    void TagToStringTest() {
-        Tag316PrcUnderlyingStrikePrice tagData;
-        double oneElement;
-
-        oneElement = Tag316PrcUnderlyingStrikePrice.TESTB_PRC_UNDERLYING_STRIKE_PRICE;
-        tagData = new Tag316PrcUnderlyingStrikePrice( new MyPriceType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
-    }
-    @Test
-    void TagToVerboseStringTest() {
+    void FIX0316Test() {
         Tag316PrcUnderlyingStrikePrice tagData;
         double oneElement;
 
         oneElement = Tag316PrcUnderlyingStrikePrice.TESTA_PRC_UNDERLYING_STRIKE_PRICE;
         tagData = new Tag316PrcUnderlyingStrikePrice( new MyPriceType( oneElement ) );
+        verifyAll( tagData, oneElement );
+
+        oneElement = Tag316PrcUnderlyingStrikePrice.TESTB_PRC_UNDERLYING_STRIKE_PRICE;
+        tagData = new Tag316PrcUnderlyingStrikePrice( new MyPriceType( oneElement ) );
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( Tag316PrcUnderlyingStrikePrice tagData, double oneElement ) {
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyFIXData( final Tag316PrcUnderlyingStrikePrice tagData ) {
+        assertEquals( "FIX316_PRC_UNDERLYING_STRIKE_PRICE", tagData.toEnumLabelString());
+        assertEquals( "316", tagData.toEnumIDString());
+        assertEquals( "UNDERLYING_STRIKE_PRICE", tagData.toEnumNameString());
+        assertEquals( "UnderlyingStrikePrice", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
+    private void verifyDataValue( final Tag316PrcUnderlyingStrikePrice tagData, final double oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+    }
+
+    private void verifyValuePairString( final Tag316PrcUnderlyingStrikePrice tagData, final double oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
+    private void verifyToString( final Tag316PrcUnderlyingStrikePrice tagData, final double oneElement ) {
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
+    private void verifyVerboseString( final Tag316PrcUnderlyingStrikePrice tagData ) {
         assertEquals( "Tag316PrcUnderlyingStrikePrice\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

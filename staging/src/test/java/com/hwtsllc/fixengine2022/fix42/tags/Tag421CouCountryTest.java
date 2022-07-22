@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyCountryType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -33,32 +32,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag421CouCountryTest {
     @Test
-    void FIX0421Test() {
-        FIX42 fixData = FIX42.FIX421_COU_COUNTRY;
-        assertEquals( "421", fixData.toEnumIDString());
-        assertEquals( "COUNTRY", fixData.toEnumNameString());
-        assertEquals( "Country", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0421Test() {
-        Tag421CouCountry tagData;
-        String oneElement;
-
-        oneElement = Tag421CouCountry.TESTA_COU_COUNTRY;
-        tagData = new Tag421CouCountry( new MyCountryType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag421CouCountry.TESTB_COU_COUNTRY;
-        tagData = new Tag421CouCountry( new MyCountryType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
+    void PrintTest() {
         Tag421CouCountry tagData;
         String oneElement;
 
@@ -70,51 +44,64 @@ class Tag421CouCountryTest {
         tagData = new Tag421CouCountry( new MyCountryType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
-    @Test
-    void TagGetDataValueTest() {
-        Tag421CouCountry tagData;
-        String oneElement;
 
-        oneElement = Tag421CouCountry.TESTB_COU_COUNTRY;
-        tagData = new Tag421CouCountry( new MyCountryType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-    }
     @Test
-    void TagToValuePairStringTest() {
-        Tag421CouCountry tagData;
-        String oneElement;
-
-        oneElement = Tag421CouCountry.TESTB_COU_COUNTRY;
-        tagData = new Tag421CouCountry( new MyCountryType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
-    }
-    @Test
-    void TagToStringTest() {
-        Tag421CouCountry tagData;
-        String oneElement;
-
-        oneElement = Tag421CouCountry.TESTB_COU_COUNTRY;
-        tagData = new Tag421CouCountry( new MyCountryType( oneElement ) );
-        assertEquals( oneElement, tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
-    }
-    @Test
-    void TagToVerboseStringTest() {
+    void FIXTagTest() {
         Tag421CouCountry tagData;
         String oneElement;
 
         oneElement = Tag421CouCountry.TESTA_COU_COUNTRY;
         tagData = new Tag421CouCountry( new MyCountryType( oneElement ) );
+        verifyAll( tagData, oneElement );
+
+        oneElement = Tag421CouCountry.TESTB_COU_COUNTRY;
+        tagData = new Tag421CouCountry( new MyCountryType( oneElement ) );
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag421CouCountry tagData, final String oneElement ) {
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyFIXData( final Tag421CouCountry tagData ) {
+        assertEquals( "FIX421_COU_COUNTRY", tagData.toEnumLabelString());
+        assertEquals( "421", tagData.toEnumIDString());
+        assertEquals( "COUNTRY", tagData.toEnumNameString());
+        assertEquals( "Country", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
+    private void verifyDataValue( final Tag421CouCountry tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_UTCD_DATA_VALUE, tagData.getDataValue());
+    }
+
+    private void verifyValuePairString( final Tag421CouCountry tagData, final String oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
+    private void verifyToString( final Tag421CouCountry tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+    }
+
+    private void verifyVerboseString( final Tag421CouCountry tagData ) {
         assertEquals( "Tag421CouCountry\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
+                tagData.toVerboseString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }
 }

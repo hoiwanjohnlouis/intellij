@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  436
  *  UnderlyingContractMultiplier
  *  float
- *  <p>
+ *  <p></p>
  *  Underlying security’s ContractMultiplier.
- *  <p>
+ *  <p></p>
  *  See ContractMultiplier (231) field for description
  */
 public class Tag436FloUnderlyingContractMultiplier extends FIX42Abstract implements LogValuePairString, LogVerboseString {

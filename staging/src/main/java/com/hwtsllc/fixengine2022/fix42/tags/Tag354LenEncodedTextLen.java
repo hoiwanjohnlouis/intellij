@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  354
  *  EncodedTextLen
  *  Length
- *  <p>
+ *  <p></p>
  *  Byte length of encoded (non-ASCII characters) EncodedText (355) field.
  */
 public class Tag354LenEncodedTextLen extends FIX42Abstract implements LogValuePairString, LogVerboseString {

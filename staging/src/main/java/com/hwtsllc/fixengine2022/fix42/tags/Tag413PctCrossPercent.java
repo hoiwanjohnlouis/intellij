@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  413
  *  CrossPercent
  *  Percentage
- *  <p>
+ *  <p></p>
  *  Percentage of program that crosses in Currency.  Represented as a percentage.
  */
 public class Tag413PctCrossPercent extends FIX42Abstract implements LogValuePairString, LogVerboseString {

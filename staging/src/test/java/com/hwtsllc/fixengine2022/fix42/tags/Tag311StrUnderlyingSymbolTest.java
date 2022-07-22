@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,89 +27,82 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  311
  *  UnderlyingSymbol
  *  String
- *  <p>
+ *  <p></p>
  *  Underlying security’s Symbol.
- *  <p>
+ *  <p></p>
  *  See Symbol (55) field for description
  */
 class Tag311StrUnderlyingSymbolTest {
     @Test
-    void FIX0311Test() {
-        FIX42 fixData = FIX42.FIX311_STR_UNDERLYING_SYMBOL;
-        assertEquals( "311", fixData.toEnumIDString());
-        assertEquals( "UNDERLYING_SYMBOL", fixData.toEnumNameString());
-        assertEquals( "UnderlyingSymbol", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0311Test() {
+    void PrintTest() {
         Tag311StrUnderlyingSymbol tagData;
+        String oneElement;
 
-        tagData = new Tag311StrUnderlyingSymbol(
-                new MyStringType(Tag311StrUnderlyingSymbol.TESTA_STR_UNDERLYING_SYMBOL));
-        assertEquals( Tag311StrUnderlyingSymbol.TESTA_STR_UNDERLYING_SYMBOL, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        oneElement = Tag311StrUnderlyingSymbol.TESTA_STR_UNDERLYING_SYMBOL;
+        tagData = new Tag311StrUnderlyingSymbol( new MyStringType( oneElement ) );
+        System.out.println( tagData.toVerboseString() );
 
-        tagData = new Tag311StrUnderlyingSymbol(
-                new MyStringType(Tag311StrUnderlyingSymbol.TESTB_STR_UNDERLYING_SYMBOL));
-        assertEquals( Tag311StrUnderlyingSymbol.TESTB_STR_UNDERLYING_SYMBOL, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag311StrUnderlyingSymbol tagData;
-        String oneEnum;
-
-        oneEnum = Tag311StrUnderlyingSymbol.TESTB_STR_UNDERLYING_SYMBOL;
-        tagData = new Tag311StrUnderlyingSymbol( new MyStringType( oneEnum ) );
+        oneElement = Tag311StrUnderlyingSymbol.TESTB_STR_UNDERLYING_SYMBOL;
+        tagData = new Tag311StrUnderlyingSymbol( new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
-    @Test
-    void TagGetDataValueTest() {
-        Tag311StrUnderlyingSymbol tagData;
-        String oneEnum;
 
-        oneEnum = Tag311StrUnderlyingSymbol.TESTB_STR_UNDERLYING_SYMBOL;
-        tagData = new Tag311StrUnderlyingSymbol( new MyStringType( oneEnum ) );
-        assertEquals( oneEnum, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+    @Test
+    void FIXTagTest() {
+        Tag311StrUnderlyingSymbol tagData;
+        String oneElement;
+
+        oneElement = Tag311StrUnderlyingSymbol.TESTA_STR_UNDERLYING_SYMBOL;
+        tagData = new Tag311StrUnderlyingSymbol( new MyStringType( oneElement ) );
+        verifyAll( tagData, oneElement );
+
+        oneElement = Tag311StrUnderlyingSymbol.TESTB_STR_UNDERLYING_SYMBOL;
+        tagData = new Tag311StrUnderlyingSymbol( new MyStringType( oneElement ) );
+        verifyAll( tagData, oneElement );
     }
-    @Test
-    void TagToValuePairStringTest() {
-        Tag311StrUnderlyingSymbol tagData;
-        String oneEnum;
 
-        oneEnum = Tag311StrUnderlyingSymbol.TESTB_STR_UNDERLYING_SYMBOL;
-        tagData = new Tag311StrUnderlyingSymbol( new MyStringType( oneEnum ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneEnum, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    private void verifyAll( final Tag311StrUnderlyingSymbol tagData, final String oneElement ) {
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
     }
-    @Test
-    void TagToStringTest() {
-        Tag311StrUnderlyingSymbol tagData;
-        String oneEnum;
 
-        oneEnum = Tag311StrUnderlyingSymbol.TESTB_STR_UNDERLYING_SYMBOL;
-        tagData = new Tag311StrUnderlyingSymbol(new MyStringType(oneEnum));
-        assertEquals( oneEnum, tagData.toString());
+    private void verifyFIXData( final Tag311StrUnderlyingSymbol tagData ) {
+        assertEquals( "FIX311_STR_UNDERLYING_SYMBOL", tagData.toEnumLabelString());
+        assertEquals( "311", tagData.toEnumIDString());
+        assertEquals( "UNDERLYING_SYMBOL", tagData.toEnumNameString());
+        assertEquals( "UnderlyingSymbol", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
+    private void verifyDataValue( final Tag311StrUnderlyingSymbol tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    }
+
+    private void verifyValuePairString( final Tag311StrUnderlyingSymbol tagData, final String oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    }
+
+    private void verifyToString( final Tag311StrUnderlyingSymbol tagData, final String oneElement ) {
+        assertEquals( oneElement, tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
-    @Test
-    void TagToVerboseStringTest() {
-        Tag311StrUnderlyingSymbol tagData;
-        String oneEnum;
 
-        oneEnum = Tag311StrUnderlyingSymbol.TESTA_STR_UNDERLYING_SYMBOL;
-        tagData = new Tag311StrUnderlyingSymbol(new MyStringType(oneEnum));
+    private void verifyVerboseString( final Tag311StrUnderlyingSymbol tagData ) {
         assertEquals( "Tag311StrUnderlyingSymbol\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneEnum + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneEnum + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyCurrencyType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,7 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  220
  *  BenchmarkCurveCurrency
  *  Currency
- *  <p>
+ *  <p></p>
  *  Identifies currency used for  benchmark curve.
  *  <p></p>
  *  See "Appendix 6-A: Valid Currency Codes" for information on obtaining valid values.
@@ -37,32 +36,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag220CcyBenchmarkCurveCurrencyTest {
     @Test
-    void FIX0220Test() {
-        FIX42 fixData = FIX42.FIX220_CCY_BENCHMARK_CURVE_CURRENCY;
-        assertEquals( "220", fixData.toEnumIDString());
-        assertEquals( "BENCHMARK_CURVE_CURRENCY", fixData.toEnumNameString());
-        assertEquals( "BenchmarkCurveCurrency", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0220Test() {
-        Tag220CcyBenchmarkCurveCurrency tagData;
-        String oneElement;
-
-        oneElement = Tag220CcyBenchmarkCurveCurrency.TESTA_CCY_BENCHMARK_CURVE_CURRENCY;
-        tagData = new Tag220CcyBenchmarkCurveCurrency( new MyCurrencyType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag220CcyBenchmarkCurveCurrency.TESTB_CCY_BENCHMARK_CURVE_CURRENCY;
-        tagData = new Tag220CcyBenchmarkCurveCurrency( new MyCurrencyType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
+    void PrintTest() {
         Tag220CcyBenchmarkCurveCurrency tagData;
         String oneElement;
 
@@ -74,50 +48,64 @@ class Tag220CcyBenchmarkCurveCurrencyTest {
         tagData = new Tag220CcyBenchmarkCurveCurrency( new MyCurrencyType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
+
     @Test
-    void TagGetDataValueTest() {
+    void FIXTagTest() {
         Tag220CcyBenchmarkCurveCurrency tagData;
         String oneElement;
 
+        oneElement = Tag220CcyBenchmarkCurveCurrency.TESTA_CCY_BENCHMARK_CURVE_CURRENCY;
+        tagData = new Tag220CcyBenchmarkCurveCurrency( new MyCurrencyType( oneElement ) );
+        verifyAll( tagData, oneElement );
+
         oneElement = Tag220CcyBenchmarkCurveCurrency.TESTB_CCY_BENCHMARK_CURVE_CURRENCY;
         tagData = new Tag220CcyBenchmarkCurveCurrency( new MyCurrencyType( oneElement ) );
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag220CcyBenchmarkCurveCurrency tagData, final String oneElement ) {
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyFIXData( final Tag220CcyBenchmarkCurveCurrency tagData ) {
+        assertEquals( "FIX220_CCY_BENCHMARK_CURVE_CURRENCY", tagData.toEnumLabelString());
+        assertEquals( "220", tagData.toEnumIDString());
+        assertEquals( "BENCHMARK_CURVE_CURRENCY", tagData.toEnumNameString());
+        assertEquals( "BenchmarkCurveCurrency", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
+    private void verifyDataValue( final Tag220CcyBenchmarkCurveCurrency tagData, final String oneElement ) {
         assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
-    @Test
-    void TagToValuePairStringTest() {
-        Tag220CcyBenchmarkCurveCurrency tagData;
-        String oneElement;
 
-        oneElement = Tag220CcyBenchmarkCurveCurrency.TESTB_CCY_BENCHMARK_CURVE_CURRENCY;
-        tagData = new Tag220CcyBenchmarkCurveCurrency( new MyCurrencyType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+    private void verifyValuePairString( final Tag220CcyBenchmarkCurveCurrency tagData, final String oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
-    @Test
-    void TagToStringTest() {
-        Tag220CcyBenchmarkCurveCurrency tagData;
-        String oneElement;
 
-        oneElement = Tag220CcyBenchmarkCurveCurrency.TESTB_CCY_BENCHMARK_CURVE_CURRENCY;
-        tagData = new Tag220CcyBenchmarkCurveCurrency( new MyCurrencyType( oneElement ) );
+    private void verifyToString( final Tag220CcyBenchmarkCurveCurrency tagData, final String oneElement ) {
         assertEquals( oneElement, tagData.toString() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
     }
-    @Test
-    void TagToVerboseStringTest() {
-        Tag220CcyBenchmarkCurveCurrency tagData;
-        String oneElement;
 
-        oneElement = Tag220CcyBenchmarkCurveCurrency.TESTA_CCY_BENCHMARK_CURVE_CURRENCY;
-        tagData = new Tag220CcyBenchmarkCurveCurrency( new MyCurrencyType( oneElement ) );
+    private void verifyVerboseString( final Tag220CcyBenchmarkCurveCurrency tagData ) {
         assertEquals( "Tag220CcyBenchmarkCurveCurrency\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

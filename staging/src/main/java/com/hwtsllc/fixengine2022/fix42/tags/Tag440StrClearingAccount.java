@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  440
  *  ClearingAccount
  *  String
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.2 Supplemental accounting information forwared to clearing house/firm.
  */
 // @Deprecated

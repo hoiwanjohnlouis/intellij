@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  351
  *  EncodedSecurityDesc
  *  data
- *  <p>
+ *  <p></p>
  *  Encoded (non-ASCII characters) representation of the SecurityDesc (107) field
  *  in the encoded format specified via the MessageEncoding (347) field.
  *  <p></p>

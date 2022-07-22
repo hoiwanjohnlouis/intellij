@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  337
  *  ContraTrader
  *  String
- *  <p>
+ *  <p></p>
  *  Identifies the trader (e.g. "badge number") of the ContraBroker.
  */
 public class Tag337StrContraTrader extends FIX42Abstract implements LogValuePairString, LogVerboseString {

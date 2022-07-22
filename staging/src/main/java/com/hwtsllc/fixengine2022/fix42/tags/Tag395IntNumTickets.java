@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  395
  *  NumTickets
  *  int
- *  <p>
+ *  <p></p>
  *  Total number of tickets.
  */
 public class Tag395IntNumTickets extends FIX42Abstract implements LogValuePairString, LogVerboseString {

@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  381
  *  GrossTradeAmt
  *  Amt
- *  <p>
+ *  <p></p>
  *  Total amount traded (e.g. CumQty (14) * AvgPx (6)) expressed in units of currency.
- *  <p>
+ *  <p></p>
  *  For FX Futures this is used to express the notional value of a fill when LastQty
  *  and other quantity fields are express in terms of contract size.
  */

@@ -82,10 +82,6 @@ class Tag36SeqNewSeqNoTest {
         oneElement = Tag36SeqNewSeqNo.TESTB_SEQ_NEW_SEQ_NO;
         tagData = new Tag36SeqNewSeqNo(new MySeqNumType( oneElement ));
         verifyDataValue( tagData, oneElement );
-
-        oneElement = 23456;
-        tagData = new Tag36SeqNewSeqNo(new MySeqNumType( oneElement ) );
-        verifyDataValue( tagData, oneElement );
     }
 
     private void verifyDataValue( final Tag36SeqNewSeqNo tagData, final int oneElement ) {

@@ -50,7 +50,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 class Tag126UtcExpireTimeTest {
     @Test
-    void PrintFIXTagTest() {
+    void PrintTest() {
         Tag126UtcExpireTime tagData;
         String oneElement;
 

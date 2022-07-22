@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  237
  *  TotalTakedown
  *  Amt
- *  <p>
+ *  <p></p>
  *  The price at which the securities are distributed to the different members of an
  *  underwriting group for the primary market in Municipals, total gross underwriter's spread.
  *  <p></p>

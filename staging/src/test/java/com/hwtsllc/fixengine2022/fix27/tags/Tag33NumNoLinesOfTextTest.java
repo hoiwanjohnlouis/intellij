@@ -82,10 +82,6 @@ class Tag33NumNoLinesOfTextTest {
         oneElement = Tag33NumNoLinesOfText.TESTB_NUM_NO_LINES_OF_TEXT;
         tagData = new Tag33NumNoLinesOfText(new MyNumInGroupType( oneElement ));
         verifyDataValue( tagData, oneElement );
-
-        oneElement = 5;
-        tagData = new Tag33NumNoLinesOfText(new MyNumInGroupType( oneElement ));
-        verifyDataValue( tagData, oneElement );
     }
 
     private void verifyDataValue( final Tag33NumNoLinesOfText tagData, final int oneElement ) {

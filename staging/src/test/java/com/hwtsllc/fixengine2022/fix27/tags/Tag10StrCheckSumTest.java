@@ -91,10 +91,6 @@ class Tag10StrCheckSumTest {
         oneElement = Tag10StrCheckSum.TESTB_STR_CHECK_SUM;
         tagData = new Tag10StrCheckSum(new MyStringType( oneElement ));
         verifyDataValue( tagData, oneElement );
-
-        oneElement = "MLCO-ABCD1234";
-        tagData = new Tag10StrCheckSum(new MyStringType( oneElement ) );
-        verifyDataValue( tagData, oneElement );
     }
 
     private void verifyDataValue( final Tag10StrCheckSum tagData, final String oneElement ) {

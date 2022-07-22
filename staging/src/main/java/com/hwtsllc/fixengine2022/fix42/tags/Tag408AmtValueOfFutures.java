@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  408
  *  ValueOfFutures
  *  Amt
- *  <p>
+ *  <p></p>
  *  Used in EFP trades
  */
 public class Tag408AmtValueOfFutures extends FIX42Abstract implements LogValuePairString, LogVerboseString {

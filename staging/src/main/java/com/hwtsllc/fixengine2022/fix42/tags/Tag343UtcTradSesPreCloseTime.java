@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  343
  *  TradSesPreCloseTime
  *  UTCTimestamp
- *  <p>
+ *  <p></p>
  *  Time of the pre-closed of the trading session
  */
 public class Tag343UtcTradSesPreCloseTime extends FIX42Abstract implements LogValuePairString, LogVerboseString {

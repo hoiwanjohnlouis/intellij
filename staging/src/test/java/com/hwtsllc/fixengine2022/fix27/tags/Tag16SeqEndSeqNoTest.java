@@ -88,10 +88,6 @@ class Tag16SeqEndSeqNoTest {
         oneElement = Tag16SeqEndSeqNo.TESTB_SEQ_END_SEQ_NO;
         tagData = new Tag16SeqEndSeqNo(new MySeqNumType( oneElement ));
         verifyDataValue( tagData, oneElement );
-
-        oneElement = 6789;
-        tagData = new Tag16SeqEndSeqNo(new MySeqNumType( oneElement ));
-        verifyDataValue( tagData, oneElement );
     }
 
     private void verifyDataValue( final Tag16SeqEndSeqNo tagData, final int oneElement ) {

@@ -53,14 +53,14 @@ class Tag192QtyOrderQty2Test {
 
         oneElement = Tag192QtyOrderQty2.TESTA_QTY_ORDER_QTY_2;
         tagData = new Tag192QtyOrderQty2(new MyQtyType( oneElement ));
-        verifyFIXData( tagData );
-        verifyDataValue( tagData, oneElement );
-        verifyValuePairString( tagData, oneElement );
-        verifyToString( tagData, oneElement );
-        verifyVerboseString( tagData );
+        verifyAll( tagData, oneElement );
 
         oneElement = Tag192QtyOrderQty2.TESTB_QTY_ORDER_QTY_2;
         tagData = new Tag192QtyOrderQty2(new MyQtyType( oneElement ));
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag192QtyOrderQty2 tagData, final int oneElement ) {
         verifyFIXData( tagData );
         verifyDataValue( tagData, oneElement );
         verifyValuePairString( tagData, oneElement );
@@ -81,7 +81,7 @@ class Tag192QtyOrderQty2Test {
 
     private void verifyDataValue( final Tag192QtyOrderQty2 tagData, final int oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
 
     private void verifyValuePairString( final Tag192QtyOrderQty2 tagData, final int oneElement ) {

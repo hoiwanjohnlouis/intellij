@@ -84,10 +84,6 @@ class Tag19StrExecRefIDTest {
         oneElement = Tag19StrExecRefID.TESTB_STR_EXEC_REF_ID;
         tagData = new Tag19StrExecRefID(new MyStringType( oneElement ) );
         verifyDataValue( tagData, oneElement );
-
-        oneElement = "6789-XYZ";
-        tagData = new Tag19StrExecRefID(new MyStringType( oneElement ) );
-        verifyDataValue( tagData, oneElement );
     }
 
     private void verifyDataValue( final Tag19StrExecRefID tagData, final String oneElement ) {

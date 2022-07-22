@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  316
  *  UnderlyingStrikePrice
  *  Price
- *  <p>
+ *  <p></p>
  *  Underlying security’s StrikePrice.
- *  <p>
+ *  <p></p>
  *  See StrikePrice (202) field for description
  */
 public class Tag316PrcUnderlyingStrikePrice extends FIX42Abstract implements LogValuePairString, LogVerboseString {

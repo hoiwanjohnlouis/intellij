@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  307
  *  UnderlyingSecurityDesc
  *  String
- *  <p>
+ *  <p></p>
  *  Underlying security’s SecurityDesc.
- *  <p>
+ *  <p></p>
  *  See SecurityDesc (07) field for description
  */
 public class Tag307StrUnderlyingSecurityDesc extends FIX42Abstract implements LogValuePairString, LogVerboseString {

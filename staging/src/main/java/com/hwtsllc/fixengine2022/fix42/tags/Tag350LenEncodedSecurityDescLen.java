@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  350
  *  EncodedSecurityDescLen
  *  Length
- *  <p>
+ *  <p></p>
  *  Byte length of encoded (non-ASCII characters) EncodedSecurityDesc (351) field.
  */
 public class Tag350LenEncodedSecurityDescLen extends FIX42Abstract implements LogValuePairString, LogVerboseString {

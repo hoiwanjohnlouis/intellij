@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  406
  *  FairValue
  *  Amt
- *  <p>
+ *  <p></p>
  *  Used in EFP trades
  */
 public class Tag406AmtFairValue extends FIX42Abstract implements LogValuePairString, LogVerboseString {

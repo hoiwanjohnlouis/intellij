@@ -45,10 +45,6 @@ class Tag48StrSecurityIDTest {
         oneElement = Tag48StrSecurityID.TESTB_STR_SECURITY_ID;
         tagData = new Tag48StrSecurityID(new MyStringType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
-
-        oneElement = "TESTA";
-        tagData = new Tag48StrSecurityID(new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
     }
 
     @Test
@@ -61,10 +57,6 @@ class Tag48StrSecurityIDTest {
         verifyFIXData( tagData );
 
         oneElement = Tag48StrSecurityID.TESTB_STR_SECURITY_ID;
-        tagData = new Tag48StrSecurityID(new MyStringType( oneElement ) );
-        verifyFIXData( tagData );
-
-        oneElement = "TESTA";
         tagData = new Tag48StrSecurityID(new MyStringType( oneElement ) );
         verifyFIXData( tagData );
     }
@@ -92,10 +84,6 @@ class Tag48StrSecurityIDTest {
         oneElement = Tag48StrSecurityID.TESTB_STR_SECURITY_ID;
         tagData = new Tag48StrSecurityID(new MyStringType( oneElement ));
         verifyDataValue( tagData, oneElement );
-
-        oneElement = "TESTA";
-        tagData = new Tag48StrSecurityID(new MyStringType( oneElement ) );
-        verifyDataValue( tagData, oneElement );
     }
 
     private void verifyDataValue( final Tag48StrSecurityID tagData, final String oneElement ) {
@@ -114,10 +102,6 @@ class Tag48StrSecurityIDTest {
 
         oneElement = Tag48StrSecurityID.TESTB_STR_SECURITY_ID;
         tagData = new Tag48StrSecurityID(new MyStringType( oneElement ));
-        verifyValuePairString( tagData, oneElement );
-
-        oneElement = "TESTA";
-        tagData = new Tag48StrSecurityID(new MyStringType( oneElement ) );
         verifyValuePairString( tagData, oneElement );
     }
 

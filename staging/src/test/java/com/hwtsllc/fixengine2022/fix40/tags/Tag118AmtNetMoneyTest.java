@@ -48,18 +48,25 @@ class Tag118AmtNetMoneyTest {
     }
 
     @Test
-    void FIXTest() {
+    void FIXTagTest() {
         Tag118AmtNetMoney tagData;
         double oneElement;
 
         oneElement = Tag118AmtNetMoney.TESTA_AMT_NET_MONEY;
         tagData = new Tag118AmtNetMoney(new MyAmtType( oneElement  ));
-        System.out.println( tagData.toVerboseString() );
-        verifyFIXData( tagData );
+        verifyAll( tagData, oneElement );
 
         oneElement = Tag118AmtNetMoney.TESTB_AMT_NET_MONEY;
         tagData = new Tag118AmtNetMoney(new MyAmtType( oneElement  ));
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag118AmtNetMoney tagData, final double oneElement ) {
         verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
     }
 
     private void verifyFIXData( final Tag118AmtNetMoney tagData ) {
@@ -73,37 +80,9 @@ class Tag118AmtNetMoneyTest {
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
     }
 
-    @Test
-    void TagGetDataValueTest() {
-        Tag118AmtNetMoney tagData;
-        double oneElement;
-
-        oneElement = Tag118AmtNetMoney.TESTA_AMT_NET_MONEY;
-        tagData = new Tag118AmtNetMoney(new MyAmtType( oneElement  ));
-        verifyDataValue( tagData, oneElement );
-
-        oneElement = Tag118AmtNetMoney.TESTB_AMT_NET_MONEY;
-        tagData = new Tag118AmtNetMoney(new MyAmtType( oneElement  ));
-        verifyDataValue( tagData, oneElement );
-    }
-
     private void verifyDataValue( final Tag118AmtNetMoney tagData, final double oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
-    }
-
-    @Test
-    void TagToValuePairStringTest() {
-        Tag118AmtNetMoney tagData;
-        double oneElement;
-
-        oneElement = Tag118AmtNetMoney.TESTA_AMT_NET_MONEY;
-        tagData = new Tag118AmtNetMoney(new MyAmtType( oneElement  ));
-        verifyValuePairString( tagData, oneElement );
-
-        oneElement = Tag118AmtNetMoney.TESTB_AMT_NET_MONEY;
-        tagData = new Tag118AmtNetMoney(new MyAmtType( oneElement  ));
-        verifyValuePairString( tagData, oneElement );
+        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
     }
 
     private void verifyValuePairString( final Tag118AmtNetMoney tagData, final double oneElement ) {
@@ -112,37 +91,9 @@ class Tag118AmtNetMoneyTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
 
-    @Test
-    void TagToStringTest() {
-        Tag118AmtNetMoney tagData;
-        double oneElement;
-
-        oneElement = Tag118AmtNetMoney.TESTA_AMT_NET_MONEY;
-        tagData = new Tag118AmtNetMoney(new MyAmtType( oneElement  ));
-        verifyToString( tagData, oneElement );
-
-        oneElement = Tag118AmtNetMoney.TESTB_AMT_NET_MONEY;
-        tagData = new Tag118AmtNetMoney(new MyAmtType( oneElement  ));
-        verifyToString( tagData, oneElement );
-    }
-
     private void verifyToString( final Tag118AmtNetMoney tagData, final double oneElement ) {
         assertEquals( String.valueOf( oneElement ), tagData.toString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
-    }
-
-    @Test
-    void TagToVerboseStringTest() {
-        Tag118AmtNetMoney tagData;
-        double oneElement;
-
-        oneElement = Tag118AmtNetMoney.TESTA_AMT_NET_MONEY;
-        tagData = new Tag118AmtNetMoney(new MyAmtType( oneElement  ));
-        verifyVerboseString( tagData );
-
-        oneElement = Tag118AmtNetMoney.TESTB_AMT_NET_MONEY;
-        tagData = new Tag118AmtNetMoney(new MyAmtType( oneElement  ));
-        verifyVerboseString( tagData );
     }
 
     private void verifyVerboseString( final Tag118AmtNetMoney tagData ) {

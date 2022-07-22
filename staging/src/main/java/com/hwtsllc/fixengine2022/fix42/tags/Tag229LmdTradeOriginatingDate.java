@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  229
  *  TradeOriginationDate
  *  LocalMktDate
- *  <p>
- *  Used with Fixed Income for Muncipal New Issue Market.
- *  <p>
+ *  <p></p>
+ *  Used with Fixed Income for Municipal New Issue Market.
+ *  <p></p>
  *  Agreement in principal between counter-parties prior to actual trade date.
  *  <p></p>
  *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)

@@ -54,14 +54,14 @@ class Tag211FloPegOffsetValueTest {
 
         oneElement = Tag211FloPegOffsetValue.TESTA_FLO_PEG_DIFFERENCE;
         tagData = new Tag211FloPegOffsetValue(new MyFloatType( oneElement ));
-        verifyFIXData( tagData );
-        verifyDataValue( tagData, oneElement );
-        verifyValuePairString( tagData, oneElement );
-        verifyToString( tagData, oneElement );
-        verifyVerboseString( tagData );
+        verifyAll( tagData, oneElement );
 
         oneElement = Tag211FloPegOffsetValue.TESTB_FLO_PEG_DIFFERENCE;
         tagData = new Tag211FloPegOffsetValue(new MyFloatType( oneElement ));
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag211FloPegOffsetValue tagData, final float oneElement ) {
         verifyFIXData( tagData );
         verifyDataValue( tagData, oneElement );
         verifyValuePairString( tagData, oneElement );
@@ -82,7 +82,7 @@ class Tag211FloPegOffsetValueTest {
 
     private void verifyDataValue( final Tag211FloPegOffsetValue tagData, final float oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
     }
 
     private void verifyValuePairString( final Tag211FloPegOffsetValue tagData, final float oneElement ) {

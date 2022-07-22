@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  422
  *  TotNoStrikes
  *  int
- *  <p>
+ *  <p></p>
  *  Total number of strike price entries across all messages.
- *  <p>
+ *  <p></p>
  *  Should be the sum of all NoStrikes (428) in each message that has
  *  repeating strike price entries related to the same ListID (66).
  *  <p></p>

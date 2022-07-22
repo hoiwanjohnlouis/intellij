@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  314
  *  UnderlyingMaturityDay
  *  day-of-month
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.2
- *  <p>
+ *  <p></p>
  *  Underlying security�s MaturityDay.  See MaturityDay field for description
  */
 // @Deprecated

@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  272
  *  MDEntryDate
  *  UTCDateOnly
- *  <p>
+ *  <p></p>
  *  Date of Market Data Entry.
- *  <p>
+ *  <p></p>
  *  (prior to FIX 4.4 field was of type UTCDate)
  */
 public class Tag272UtcdMDEntryDate extends FIX42Abstract implements LogValuePairString, LogVerboseString {

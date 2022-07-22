@@ -26,8 +26,8 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  441
  *  LiquidityNumSecurities
  *  int
- *  <p>
- *  Number of Securites between LiquidityPctLow (402) and LiquidityPctHigh (403) in Currency.
+ *  <p></p>
+ *  Number of Securities between LiquidityPctLow (402) and LiquidityPctHigh (403) in Currency.
  */
 public class Tag441IntLiquidityNumSecurities extends FIX42Abstract implements LogValuePairString, LogVerboseString {
     private final MyIntType dataValue;

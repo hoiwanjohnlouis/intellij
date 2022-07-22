@@ -56,14 +56,14 @@ class Tag210QtyMaxShowTest {
 
         oneElement = Tag210QtyMaxShow.TESTA_QTY_MAX_SHOW;
         tagData = new Tag210QtyMaxShow(new MyQtyType( oneElement ));
-        verifyFIXData( tagData );
-        verifyDataValue( tagData, oneElement );
-        verifyValuePairString( tagData, oneElement );
-        verifyToString( tagData, oneElement );
-        verifyVerboseString( tagData );
+        verifyAll( tagData, oneElement );
 
         oneElement = Tag210QtyMaxShow.TESTB_QTY_MAX_SHOW;
         tagData = new Tag210QtyMaxShow(new MyQtyType( oneElement ));
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag210QtyMaxShow tagData, final int oneElement ) {
         verifyFIXData( tagData );
         verifyDataValue( tagData, oneElement );
         verifyValuePairString( tagData, oneElement );
@@ -84,7 +84,7 @@ class Tag210QtyMaxShowTest {
 
     private void verifyDataValue( final Tag210QtyMaxShow tagData, final int oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
     }
 
     private void verifyValuePairString( final Tag210QtyMaxShow tagData, final int oneElement ) {

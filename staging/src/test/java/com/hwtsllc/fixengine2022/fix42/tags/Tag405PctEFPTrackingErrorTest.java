@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,39 +27,14 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  405
  *  EFPTrackingError
  *  Percentage
- *  <p>
+ *  <p></p>
  *  Eg Used in EFP trades 2% (EFP – Exchange for Physical).
- *  <p>
+ *  <p></p>
  *  Represented as a percentage.
  */
 class Tag405PctEFPTrackingErrorTest {
     @Test
-    void FIX0405Test() {
-        FIX42 fixData = FIX42.FIX405_PCT_EFP_TRACKING_ERROR;
-        assertEquals( "405", fixData.toEnumIDString());
-        assertEquals( "EFP_TRACKING_ERROR", fixData.toEnumNameString());
-        assertEquals( "EFPTrackingError", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0405Test() {
-        Tag405PctEFPTrackingError tagData;
-        double oneElement;
-
-        oneElement = Tag405PctEFPTrackingError.TESTA_PCT_EFP_TRACKING_ERROR;
-        tagData = new Tag405PctEFPTrackingError( new MyPercentageType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag405PctEFPTrackingError.TESTB_PCT_EFP_TRACKING_ERROR;
-        tagData = new Tag405PctEFPTrackingError( new MyPercentageType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
+    void PrintTest() {
         Tag405PctEFPTrackingError tagData;
         double oneElement;
 
@@ -72,50 +46,64 @@ class Tag405PctEFPTrackingErrorTest {
         tagData = new Tag405PctEFPTrackingError( new MyPercentageType( oneElement ) );
         System.out.println( tagData.toVerboseString() );
     }
+
     @Test
-    void TagGetDataValueTest() {
+    void FIXTagTest() {
         Tag405PctEFPTrackingError tagData;
         double oneElement;
 
+        oneElement = Tag405PctEFPTrackingError.TESTA_PCT_EFP_TRACKING_ERROR;
+        tagData = new Tag405PctEFPTrackingError( new MyPercentageType( oneElement ) );
+        verifyAll( tagData, oneElement );
+
         oneElement = Tag405PctEFPTrackingError.TESTB_PCT_EFP_TRACKING_ERROR;
         tagData = new Tag405PctEFPTrackingError( new MyPercentageType( oneElement ) );
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag405PctEFPTrackingError tagData, final double oneElement ) {
+        verifyFIXData( tagData );
+        verifyDataValue( tagData, oneElement );
+        verifyValuePairString( tagData, oneElement );
+        verifyToString( tagData, oneElement );
+        verifyVerboseString( tagData );
+    }
+
+    private void verifyFIXData( final Tag405PctEFPTrackingError tagData ) {
+        assertEquals( "FIX405_PCT_EFP_TRACKING_ERROR", tagData.toEnumLabelString());
+        assertEquals( "405", tagData.toEnumIDString());
+        assertEquals( "EFP_TRACKING_ERROR", tagData.toEnumNameString());
+        assertEquals( "EFPTrackingError", tagData.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    }
+
+    private void verifyDataValue( final Tag405PctEFPTrackingError tagData, final double oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue());
     }
-    @Test
-    void TagToValuePairStringTest() {
-        Tag405PctEFPTrackingError tagData;
-        double oneElement;
 
-        oneElement = Tag405PctEFPTrackingError.TESTB_PCT_EFP_TRACKING_ERROR;
-        tagData = new Tag405PctEFPTrackingError( new MyPercentageType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    private void verifyValuePairString( final Tag405PctEFPTrackingError tagData, final double oneElement ) {
+        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
     }
-    @Test
-    void TagToStringTest() {
-        Tag405PctEFPTrackingError tagData;
-        double oneElement;
 
-        oneElement = Tag405PctEFPTrackingError.TESTB_PCT_EFP_TRACKING_ERROR;
-        tagData = new Tag405PctEFPTrackingError( new MyPercentageType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+    private void verifyToString( final Tag405PctEFPTrackingError tagData, final double oneElement ) {
+        assertEquals( String.valueOf( oneElement ), tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
     }
-    @Test
-    void TagToVerboseStringTest() {
-        Tag405PctEFPTrackingError tagData;
-        double oneElement;
 
-        oneElement = Tag405PctEFPTrackingError.TESTA_PCT_EFP_TRACKING_ERROR;
-        tagData = new Tag405PctEFPTrackingError( new MyPercentageType( oneElement ) );
+    private void verifyVerboseString( final Tag405PctEFPTrackingError tagData ) {
         assertEquals( "Tag405PctEFPTrackingError\n" +
                         "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                         "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                         "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                         "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                        "\tValuePair[" + tagData.toValuePairString() + "]",
                 tagData.toVerboseString());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
     }

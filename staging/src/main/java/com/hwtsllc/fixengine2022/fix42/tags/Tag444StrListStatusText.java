@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  444
  *  ListStatusText
  *  String
- *  <p>
+ *  <p></p>
  *  Free format text string related to List Status.
  */
 public class Tag444StrListStatusText extends FIX42Abstract implements LogValuePairString, LogVerboseString {

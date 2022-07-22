@@ -86,7 +86,7 @@ class Tag124NumNoExecsTest {
 
     private void verifyDataValue( final Tag124NumNoExecs tagData, final int oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
     }
 
     @Test

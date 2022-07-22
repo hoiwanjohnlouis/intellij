@@ -54,14 +54,14 @@ class Tag153PrcAllocAvgPxTest {
 
         oneElement = Tag153PrcAllocAvgPx.TESTA_PRC_ALLOC_AVG_PX;
         tagData = new Tag153PrcAllocAvgPx(new MyPriceType( oneElement ));
-        verifyFIXData( tagData );
-        verifyDataValue( tagData, oneElement );
-        verifyValuePairString( tagData, oneElement );
-        verifyToString( tagData, oneElement );
-        verifyVerboseString( tagData );
+        verifyAll( tagData, oneElement );
 
         oneElement = Tag153PrcAllocAvgPx.TESTB_PRC_ALLOC_AVG_PX;
         tagData = new Tag153PrcAllocAvgPx(new MyPriceType( oneElement ));
+        verifyAll( tagData, oneElement );
+    }
+
+    private void verifyAll( final Tag153PrcAllocAvgPx tagData, final double oneElement ) {
         verifyFIXData( tagData );
         verifyDataValue( tagData, oneElement );
         verifyValuePairString( tagData, oneElement );
@@ -82,7 +82,7 @@ class Tag153PrcAllocAvgPxTest {
 
     private void verifyDataValue( final Tag153PrcAllocAvgPx tagData, final double oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
     }
 
     private void verifyValuePairString( final Tag153PrcAllocAvgPx tagData, final double oneElement ) {

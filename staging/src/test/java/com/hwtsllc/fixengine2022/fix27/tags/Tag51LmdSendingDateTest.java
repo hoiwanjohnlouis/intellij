@@ -91,7 +91,7 @@ class Tag51LmdSendingDateTest {
 
     private void verifyDataValue( final Tag51LmdSendingDate tagData, final String oneElement ) {
         assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue());
     }
 
     @Test

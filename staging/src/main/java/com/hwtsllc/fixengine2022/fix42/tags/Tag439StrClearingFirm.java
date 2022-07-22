@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  439
  *  ClearingFirm
  *  String
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.2 Firm that will clear the trade.
- *  <p>
+ *  <p></p>
  *  Used if different from the executing firm.
  */
 // @Deprecated

@@ -26,11 +26,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  239
  *  RepoCollateralSecurityType
  *  int
- *  <p>
+ *  <p></p>
  *  Identifies the collateral used in the transaction.
  *  <p></p>
  *  Valid values:
- *  <p>
+ *  <p></p>
  *  see SecurityType (167) field (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
  */
 // @Deprecated

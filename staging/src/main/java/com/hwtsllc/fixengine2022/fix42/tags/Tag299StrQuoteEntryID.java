@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  299
  *  QuoteEntryID
  *  String
- *  <p>
+ *  <p></p>
  *  Uniquely identifies the quote as part of a QuoteSet.
  */
 public class Tag299StrQuoteEntryID extends FIX42Abstract implements LogValuePairString, LogVerboseString {
