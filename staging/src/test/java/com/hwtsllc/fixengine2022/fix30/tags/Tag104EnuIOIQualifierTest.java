@@ -64,10 +64,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    Z - Pre-open
  */
 class Tag104EnuIOIQualifierTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag104EnuIOIQualifier tagData;
+    Tag104EnuIOIQualifier tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (MyEnumQualifier oneEnum : MyEnumQualifier.values()) {
             tagData = new Tag104EnuIOIQualifier(oneEnum);
@@ -75,9 +75,7 @@ class Tag104EnuIOIQualifierTest {
         }
     }
     @Test
-    void FIXTest() {
-        Tag104EnuIOIQualifier tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for ( MyEnumQualifier oneEnum : MyEnumQualifier.values()) {
             tagData = new Tag104EnuIOIQualifier( oneEnum );
@@ -93,8 +91,6 @@ class Tag104EnuIOIQualifierTest {
     }
     @Test
     void Tag0104Test() {
-        Tag104EnuIOIQualifier tagData;
-
         /*
          * A-Z IOI Qualifier types
          */
@@ -175,8 +171,6 @@ class Tag104EnuIOIQualifierTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag104EnuIOIQualifier tagData;
-
         // loop around the ENUM and process
         for (MyEnumQualifier oneEnum : MyEnumQualifier.values()) {
             tagData = new Tag104EnuIOIQualifier(oneEnum);
@@ -187,8 +181,6 @@ class Tag104EnuIOIQualifierTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag104EnuIOIQualifier tagData;
-
         // loop around the ENUM and process
         for (MyEnumQualifier oneEnum : MyEnumQualifier.values()) {
             tagData = new Tag104EnuIOIQualifier(oneEnum);
@@ -200,8 +192,6 @@ class Tag104EnuIOIQualifierTest {
     }
     @Test
     void TagToStringTest() {
-        Tag104EnuIOIQualifier tagData;
-
         // loop around the ENUM and process
         for (MyEnumQualifier oneEnum : MyEnumQualifier.values()) {
             tagData = new Tag104EnuIOIQualifier(oneEnum);
@@ -211,8 +201,6 @@ class Tag104EnuIOIQualifierTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag104EnuIOIQualifier tagData;
-
         // loop around the ENUM and process
         for (MyEnumQualifier oneEnum : MyEnumQualifier.values()) {
             tagData = new Tag104EnuIOIQualifier(oneEnum);

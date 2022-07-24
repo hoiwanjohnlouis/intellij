@@ -35,10 +35,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    Y - Indicates the party receiving message must report trade
  */
 class Tag113EnuReportToExchTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag113EnuReportToExch tagData;
+    Tag113EnuReportToExch tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum113ReportToExch oneEnum : Enum113ReportToExch.values()) {
             tagData = new Tag113EnuReportToExch(oneEnum);
@@ -46,9 +46,7 @@ class Tag113EnuReportToExchTest {
         }
     }
     @Test
-    void FIXTest() {
-        Tag113EnuReportToExch tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum113ReportToExch oneEnum : Enum113ReportToExch.values()) {
             tagData = new Tag113EnuReportToExch(oneEnum);
@@ -64,8 +62,6 @@ class Tag113EnuReportToExchTest {
     }
     @Test
     void Tag0113Test() {
-        Tag113EnuReportToExch tagData;
-
         tagData = new Tag113EnuReportToExch( Enum113ReportToExch.NO );
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -76,8 +72,6 @@ class Tag113EnuReportToExchTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag113EnuReportToExch tagData;
-
         // loop around the ENUM and process
         for (Enum113ReportToExch oneEnum : Enum113ReportToExch.values()) {
             tagData = new Tag113EnuReportToExch(oneEnum);
@@ -88,8 +82,6 @@ class Tag113EnuReportToExchTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag113EnuReportToExch tagData;
-
         // loop around the ENUM and process
         for (Enum113ReportToExch oneEnum : Enum113ReportToExch.values()) {
             tagData = new Tag113EnuReportToExch(oneEnum);
@@ -101,8 +93,6 @@ class Tag113EnuReportToExchTest {
     }
     @Test
     void TagToStringTest() {
-        Tag113EnuReportToExch tagData;
-
         // loop around the ENUM and process
         for (Enum113ReportToExch oneEnum : Enum113ReportToExch.values()) {
             tagData = new Tag113EnuReportToExch(oneEnum);
@@ -112,8 +102,6 @@ class Tag113EnuReportToExchTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag113EnuReportToExch tagData;
-
         // loop around the ENUM and process
         for (Enum113ReportToExch oneEnum : Enum113ReportToExch.values()) {
             tagData = new Tag113EnuReportToExch(oneEnum);
