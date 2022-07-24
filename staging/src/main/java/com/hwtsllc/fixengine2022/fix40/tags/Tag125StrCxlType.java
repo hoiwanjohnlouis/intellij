@@ -34,9 +34,9 @@ public class Tag125StrCxlType extends FIX40Abstract implements LogValuePairStrin
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_CXL_TYPE
-            = "BilboBaggins-Tag125StrCxlType";
+            = "JoanBlondell-Tag125StrCxlType";
     public final static String TESTB_STR_CXL_TYPE
-            = "Gandalf-Tag125StrCxlType";
+            = "AvaGardner-Tag125StrCxlType";
 
     public Tag125StrCxlType(MyStringType dataValue) {
         setFixType(FIX40.FIX125_STR_CXL_TYPE);

@@ -33,9 +33,9 @@ public class Tag138CcyMiscFeeCurr extends FIX40Abstract implements LogValuePairS
     private final MyCurrencyType dataValue;
 
     public final static String TESTA_CCY_MISC_FEE_CURR
-            = "BilboBaggins-138MiscFeeCurr";
+            = "USD";
     public final static String TESTB_CCY_MISC_FEE_CURR
-            = "Gandalf-138MiscFeeCurr";
+            = "EUR";
 
     public Tag138CcyMiscFeeCurr(MyCurrencyType dataValue) {
         setFixType(FIX40.FIX138_CCY_MISC_FEE_CURR);

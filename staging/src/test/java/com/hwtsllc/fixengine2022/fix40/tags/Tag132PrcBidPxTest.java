@@ -31,126 +31,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  Bid price/rate
  */
 class Tag132PrcBidPxTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag132PrcBidPx tagData;
-        double oneElement;
-
-        oneElement = Tag132PrcBidPx.TESTA_PRC_BID_PX;
-        tagData = new Tag132PrcBidPx(new MyPriceType( oneElement ));
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag132PrcBidPx.TESTB_PRC_BID_PX;
-        tagData = new Tag132PrcBidPx(new MyPriceType( oneElement ));
-        System.out.println( tagData.toVerboseString() );
-    }
+    Tag132PrcBidPx tagData;
+    double [] TestArray = {
+            Tag132PrcBidPx.TESTA_PRC_BID_PX,
+            Tag132PrcBidPx.TESTB_PRC_BID_PX
+    };
 
     @Test
-    void FIXTest() {
-        Tag132PrcBidPx tagData;
-        double oneElement;
-
-        oneElement = Tag132PrcBidPx.TESTA_PRC_BID_PX;
-        tagData = new Tag132PrcBidPx(new MyPriceType( oneElement ));
-        verifyFIXData( tagData );
-
-        oneElement = Tag132PrcBidPx.TESTB_PRC_BID_PX;
-        tagData = new Tag132PrcBidPx(new MyPriceType( oneElement ));
-        verifyFIXData( tagData );
+    void PrintTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag132PrcBidPx( new MyPriceType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
-
-    private void verifyFIXData( final Tag132PrcBidPx tagData ) {
-        assertEquals( "FIX132_PRC_BID_PX", tagData.toEnumLabelString());
-        assertEquals( "BID_PX", tagData.toEnumNameString());
-        assertEquals( "132", tagData.toEnumIDString());
-        assertEquals( "BidPx", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    @Test
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag132PrcBidPx( new MyPriceType( oneElement ));
+            assertEquals( "FIX132_PRC_BID_PX", tagData.toEnumLabelString());
+            assertEquals( "BID_PX", tagData.toEnumNameString());
+            assertEquals( "132", tagData.toEnumIDString());
+            assertEquals( "BidPx", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
-
     @Test
     void TagGetDataValueTest() {
-        Tag132PrcBidPx tagData;
-        double oneElement;
-
-        oneElement = Tag132PrcBidPx.TESTA_PRC_BID_PX;
-        tagData = new Tag132PrcBidPx(new MyPriceType( oneElement ));
-        verifyDataValue( tagData, oneElement );
-
-        oneElement = Tag132PrcBidPx.TESTB_PRC_BID_PX;
-        tagData = new Tag132PrcBidPx(new MyPriceType( oneElement ));
-        verifyDataValue( tagData, oneElement );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag132PrcBidPx( new MyPriceType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+        }
     }
-
-    private void verifyDataValue( final Tag132PrcBidPx tagData, final double oneElement ) {
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
-    }
-
     @Test
     void TagToValuePairStringTest() {
-        Tag132PrcBidPx tagData;
-        double oneElement;
-
-        oneElement = Tag132PrcBidPx.TESTA_PRC_BID_PX;
-        tagData = new Tag132PrcBidPx(new MyPriceType( oneElement ));
-        verifyValuePairString( tagData, oneElement );
-
-        oneElement = Tag132PrcBidPx.TESTB_PRC_BID_PX;
-        tagData = new Tag132PrcBidPx(new MyPriceType( oneElement ));
-        verifyValuePairString( tagData, oneElement );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag132PrcBidPx( new MyPriceType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
-
-    private void verifyValuePairString( final Tag132PrcBidPx tagData, final double oneElement ) {
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-    }
-
     @Test
     void TagToStringTest() {
-        Tag132PrcBidPx tagData;
-        double oneElement;
-
-        oneElement = Tag132PrcBidPx.TESTA_PRC_BID_PX;
-        tagData = new Tag132PrcBidPx(new MyPriceType( oneElement ));
-        verifyToString( tagData, oneElement );
-
-        oneElement = Tag132PrcBidPx.TESTB_PRC_BID_PX;
-        tagData = new Tag132PrcBidPx(new MyPriceType( oneElement ));
-        verifyToString( tagData, oneElement );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag132PrcBidPx( new MyPriceType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
-
-    private void verifyToString( final Tag132PrcBidPx tagData, final double oneElement ) {
-        assertEquals( String.valueOf( oneElement ), tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
-    }
-
     @Test
     void TagToVerboseStringTest() {
-        Tag132PrcBidPx tagData;
-        double oneElement;
-
-        oneElement = Tag132PrcBidPx.TESTA_PRC_BID_PX;
-        tagData = new Tag132PrcBidPx(new MyPriceType( oneElement ));
-        verifyVerboseString( tagData );
-
-        oneElement = Tag132PrcBidPx.TESTB_PRC_BID_PX;
-        tagData = new Tag132PrcBidPx(new MyPriceType( oneElement ));
-        verifyVerboseString( tagData );
-    }
-
-    private void verifyVerboseString( final Tag132PrcBidPx tagData ) {
-        assertEquals( "Tag132PrcBidPx\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
-                        "\tValuePair[" + tagData.toValuePairString() + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag132PrcBidPx( new MyPriceType( oneElement ));
+            assertEquals( "Tag132PrcBidPx\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

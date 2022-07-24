@@ -35,124 +35,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  TargetCompID (56) field and the ultimate receiver firm ID in this field.
  */
 class Tag128StrDeliverToCompIDTest {
+    Tag128StrDeliverToCompID tagData;
+    String [] TestArray = {
+            Tag128StrDeliverToCompID.TESTA_STR_DELIVER_TO_COMP_ID,
+            Tag128StrDeliverToCompID.TESTB_STR_DELIVER_TO_COMP_ID
+    };
+
     @Test
-    void PrintFIXTagTest() {
-        Tag128StrDeliverToCompID tagData;
-        String oneElement;
-
-        oneElement = Tag128StrDeliverToCompID.TESTA_STR_DELIVER_TO_COMP_ID;
-        tagData = new Tag128StrDeliverToCompID(new MyStringType( oneElement ));
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag128StrDeliverToCompID.TESTB_STR_DELIVER_TO_COMP_ID;
-        tagData = new Tag128StrDeliverToCompID(new MyStringType( oneElement ));
-        System.out.println( tagData.toVerboseString() );
+    void PrintTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag128StrDeliverToCompID( new MyStringType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void FIXTest() {
-        Tag128StrDeliverToCompID tagData;
-        String oneElement;
-
-        oneElement = Tag128StrDeliverToCompID.TESTA_STR_DELIVER_TO_COMP_ID;
-        tagData = new Tag128StrDeliverToCompID(new MyStringType( oneElement ));
-        verifyFIXData( tagData );
-
-        oneElement = Tag128StrDeliverToCompID.TESTB_STR_DELIVER_TO_COMP_ID;
-        tagData = new Tag128StrDeliverToCompID(new MyStringType( oneElement ));
-        verifyFIXData( tagData );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag128StrDeliverToCompID( new MyStringType( oneElement ));
+            assertEquals( "FIX128_STR_DELIVER_TO_COMP_ID", tagData.toEnumLabelString());
+            assertEquals( "DELIVER_TO_COMP_ID", tagData.toEnumNameString());
+            assertEquals( "128", tagData.toEnumIDString());
+            assertEquals( "DeliverToCompID", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
-
-    private void verifyFIXData( final Tag128StrDeliverToCompID tagData ) {
-        assertEquals( "FIX128_STR_DELIVER_TO_COMP_ID", tagData.toEnumLabelString());
-        assertEquals( "DELIVER_TO_COMP_ID", tagData.toEnumNameString());
-        assertEquals( "128", tagData.toEnumIDString());
-        assertEquals( "DeliverToCompID", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-    }
-
     @Test
     void TagGetDataValueTest() {
-        Tag128StrDeliverToCompID tagData;
-        String oneElement;
-
-        oneElement = Tag128StrDeliverToCompID.TESTA_STR_DELIVER_TO_COMP_ID;
-        tagData = new Tag128StrDeliverToCompID(new MyStringType( oneElement ));
-        verifyDataValue( tagData, oneElement );
-
-        oneElement = Tag128StrDeliverToCompID.TESTB_STR_DELIVER_TO_COMP_ID;
-        tagData = new Tag128StrDeliverToCompID(new MyStringType( oneElement ));
-        verifyDataValue( tagData, oneElement );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag128StrDeliverToCompID( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        }
     }
-
-    private void verifyDataValue( final Tag128StrDeliverToCompID tagData, final String oneElement ) {
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-
     @Test
     void TagToValuePairStringTest() {
-        Tag128StrDeliverToCompID tagData;
-        String oneElement;
-
-        oneElement = Tag128StrDeliverToCompID.TESTA_STR_DELIVER_TO_COMP_ID;
-        tagData = new Tag128StrDeliverToCompID(new MyStringType( oneElement ));
-        verifyValuePairString( tagData, oneElement );
-
-        oneElement = Tag128StrDeliverToCompID.TESTB_STR_DELIVER_TO_COMP_ID;
-        tagData = new Tag128StrDeliverToCompID(new MyStringType( oneElement ));
-        verifyValuePairString( tagData, oneElement );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag128StrDeliverToCompID( new MyStringType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
-
-    private void verifyValuePairString( final Tag128StrDeliverToCompID tagData, final String oneElement ) {
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-    }
-
     @Test
     void TagToStringTest() {
-        Tag128StrDeliverToCompID tagData;
-        String oneElement;
-
-        oneElement = Tag128StrDeliverToCompID.TESTA_STR_DELIVER_TO_COMP_ID;
-        tagData = new Tag128StrDeliverToCompID(new MyStringType( oneElement ));
-        verifyToString( tagData, oneElement );
-
-        oneElement = Tag128StrDeliverToCompID.TESTB_STR_DELIVER_TO_COMP_ID;
-        tagData = new Tag128StrDeliverToCompID(new MyStringType( oneElement ));
-        verifyToString( tagData, oneElement );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag128StrDeliverToCompID( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
-
-    private void verifyToString( final Tag128StrDeliverToCompID tagData, final String oneElement ) {
-        assertEquals( oneElement, tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
-    }
-
     @Test
     void TagToVerboseStringTest() {
-        Tag128StrDeliverToCompID tagData;
-        String oneElement;
-
-        oneElement = Tag128StrDeliverToCompID.TESTA_STR_DELIVER_TO_COMP_ID;
-        tagData = new Tag128StrDeliverToCompID(new MyStringType( oneElement ));
-        verifyVerboseString( tagData );
-
-        oneElement = Tag128StrDeliverToCompID.TESTB_STR_DELIVER_TO_COMP_ID;
-        tagData = new Tag128StrDeliverToCompID(new MyStringType( oneElement ));
-        verifyVerboseString( tagData );
-    }
-
-    private void verifyVerboseString( final Tag128StrDeliverToCompID tagData ) {
-        assertEquals( "Tag128StrDeliverToCompID\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
-                        "\tValuePair[" + tagData.toValuePairString() + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag128StrDeliverToCompID( new MyStringType( oneElement ));
+            assertEquals( "Tag128StrDeliverToCompID\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

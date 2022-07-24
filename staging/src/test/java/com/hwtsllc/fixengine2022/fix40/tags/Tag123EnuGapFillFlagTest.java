@@ -36,10 +36,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    Y - Gap Fill Message, Msg Seq Num Field Valid
  */
 class Tag123EnuGapFillFlagTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag123EnuGapFillFlag tagData;
+    Tag123EnuGapFillFlag tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum123GapFillFlag oneEnum : Enum123GapFillFlag.values()) {
             tagData = new Tag123EnuGapFillFlag(oneEnum);
@@ -47,9 +47,7 @@ class Tag123EnuGapFillFlagTest {
         }
     }
     @Test
-    void FIX0123Test() {
-        Tag123EnuGapFillFlag tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum123GapFillFlag oneEnum : Enum123GapFillFlag.values()) {
             tagData = new Tag123EnuGapFillFlag(oneEnum);
@@ -66,8 +64,6 @@ class Tag123EnuGapFillFlagTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag123EnuGapFillFlag tagData;
-
         tagData = new Tag123EnuGapFillFlag(Enum123GapFillFlag.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -86,8 +82,6 @@ class Tag123EnuGapFillFlagTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag123EnuGapFillFlag tagData;
-
         // loop around the ENUM and process
         for (Enum123GapFillFlag oneEnum : Enum123GapFillFlag.values()) {
             tagData = new Tag123EnuGapFillFlag(oneEnum);
@@ -99,8 +93,6 @@ class Tag123EnuGapFillFlagTest {
     }
     @Test
     void TagToStringTest() {
-        Tag123EnuGapFillFlag tagData;
-
         // loop around the ENUM and process
         for (Enum123GapFillFlag oneEnum : Enum123GapFillFlag.values()) {
             tagData = new Tag123EnuGapFillFlag(oneEnum);
@@ -110,8 +102,6 @@ class Tag123EnuGapFillFlagTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag123EnuGapFillFlag tagData;
-
         // loop around the ENUM and process
         for (Enum123GapFillFlag oneEnum : Enum123GapFillFlag.values()) {
             tagData = new Tag123EnuGapFillFlag(oneEnum);

@@ -35,10 +35,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    Y - Indicates the broker is responsible for locating the stock
  */
 class Tag114EnuLocateReqdTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag114EnuLocateReqd tagData;
+    Tag114EnuLocateReqd tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum114LocateReqd oneEnum : Enum114LocateReqd.values()) {
             tagData = new Tag114EnuLocateReqd(oneEnum);
@@ -46,9 +46,7 @@ class Tag114EnuLocateReqdTest {
         }
     }
     @Test
-    void FIX0114Test() {
-        Tag114EnuLocateReqd tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum114LocateReqd oneEnum : Enum114LocateReqd.values()) {
             tagData = new Tag114EnuLocateReqd(oneEnum);
@@ -64,8 +62,6 @@ class Tag114EnuLocateReqdTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag114EnuLocateReqd tagData;
-
         tagData = new Tag114EnuLocateReqd(Enum114LocateReqd.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -84,8 +80,6 @@ class Tag114EnuLocateReqdTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag114EnuLocateReqd tagData;
-
         // loop around the ENUM and process
         for (Enum114LocateReqd oneEnum : Enum114LocateReqd.values()) {
             tagData = new Tag114EnuLocateReqd(oneEnum);
@@ -97,8 +91,6 @@ class Tag114EnuLocateReqdTest {
     }
     @Test
     void TagToStringTest() {
-        Tag114EnuLocateReqd tagData;
-
         // loop around the ENUM and process
         for (Enum114LocateReqd oneEnum : Enum114LocateReqd.values()) {
             tagData = new Tag114EnuLocateReqd(oneEnum);
@@ -108,8 +100,6 @@ class Tag114EnuLocateReqdTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag114EnuLocateReqd tagData;
-
         // loop around the ENUM and process
         for (Enum114LocateReqd oneEnum : Enum114LocateReqd.values()) {
             tagData = new Tag114EnuLocateReqd(oneEnum);

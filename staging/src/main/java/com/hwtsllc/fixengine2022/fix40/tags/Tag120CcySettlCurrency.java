@@ -33,9 +33,9 @@ public class Tag120CcySettlCurrency extends FIX40Abstract implements LogValuePai
     private final MyCurrencyType dataValue;
 
     public final static String TESTA_CCY_SETTL_CURRENCY
-            = "BilboBaggins-120SettlCurrency";
+            = "CAD";
     public final static String TESTB_CCY_SETTL_CURRENCY
-            = "Gandalf-120SettlCurrency";
+            = "YEN";
 
     public Tag120CcySettlCurrency(MyCurrencyType dataValue) {
         setFixType(FIX40.FIX120_CCY_SETTL_CURRENCY);

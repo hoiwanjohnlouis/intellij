@@ -49,126 +49,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *          this is the time by which a response to the assignment is expected.
  */
 class Tag126UtcExpireTimeTest {
+    Tag126UtcExpireTime tagData;
+    String [] TestArray = {
+            Tag126UtcExpireTime.TESTA_UTC_EXPIRE_TIME,
+            Tag126UtcExpireTime.TESTB_UTC_EXPIRE_TIME
+    };
+
     @Test
     void PrintTest() {
-        Tag126UtcExpireTime tagData;
-        String oneElement;
-
-        oneElement = Tag126UtcExpireTime.TESTA_UTC_EXPIRE_TIME;
-        tagData = new Tag126UtcExpireTime( new MyUTCTimestampType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag126UtcExpireTime.TESTB_UTC_EXPIRE_TIME;
-        tagData = new Tag126UtcExpireTime( new MyUTCTimestampType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag126UtcExpireTime( new MyUTCTimestampType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
-
     @Test
-    void FIXTest() {
-        Tag126UtcExpireTime tagData;
-        String oneElement;
-
-        oneElement = Tag126UtcExpireTime.TESTA_UTC_EXPIRE_TIME;
-        tagData = new Tag126UtcExpireTime( new MyUTCTimestampType( oneElement ) );
-        verifyFIXData( tagData );
-
-        oneElement = Tag126UtcExpireTime.TESTB_UTC_EXPIRE_TIME;
-        tagData = new Tag126UtcExpireTime( new MyUTCTimestampType( oneElement ) );
-        verifyFIXData( tagData );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag126UtcExpireTime( new MyUTCTimestampType( oneElement ));
+            assertEquals( "FIX126_UTC_EXPIRE_TIME", tagData.toEnumLabelString());
+            assertEquals( "EXPIRE_TIME", tagData.toEnumNameString());
+            assertEquals( "126", tagData.toEnumIDString());
+            assertEquals( "ExpireTime", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
-
-    private void verifyFIXData( final Tag126UtcExpireTime tagData ) {
-        assertEquals( "FIX126_UTC_EXPIRE_TIME", tagData.toEnumLabelString());
-        assertEquals( "EXPIRE_TIME", tagData.toEnumNameString());
-        assertEquals( "126", tagData.toEnumIDString());
-        assertEquals( "ExpireTime", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-    }
-
     @Test
     void TagGetDataValueTest() {
-        Tag126UtcExpireTime tagData;
-        String oneElement;
-
-        oneElement = Tag126UtcExpireTime.TESTA_UTC_EXPIRE_TIME;
-        tagData = new Tag126UtcExpireTime( new MyUTCTimestampType( oneElement ) );
-        verifyDataValue( tagData, oneElement );
-
-        oneElement = Tag126UtcExpireTime.TESTB_UTC_EXPIRE_TIME;
-        tagData = new Tag126UtcExpireTime( new MyUTCTimestampType( oneElement ) );
-        verifyDataValue( tagData, oneElement );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag126UtcExpireTime( new MyUTCTimestampType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue() );
+        }
     }
-
-    private void verifyDataValue( final Tag126UtcExpireTime tagData, final String oneElement ) {
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue() );
-    }
-
     @Test
     void TagToValuePairStringTest() {
-        Tag126UtcExpireTime tagData;
-        String oneElement;
-
-        oneElement = Tag126UtcExpireTime.TESTA_UTC_EXPIRE_TIME;
-        tagData = new Tag126UtcExpireTime( new MyUTCTimestampType( oneElement ) );
-        verifyValuePairString( tagData, oneElement );
-
-        oneElement = Tag126UtcExpireTime.TESTB_UTC_EXPIRE_TIME;
-        tagData = new Tag126UtcExpireTime( new MyUTCTimestampType( oneElement ) );
-        verifyValuePairString( tagData, oneElement );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag126UtcExpireTime( new MyUTCTimestampType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
-
-    private void verifyValuePairString( final Tag126UtcExpireTime tagData, final String oneElement ) {
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toValuePairString() );
-    }
-
     @Test
     void TagToStringTest() {
-        Tag126UtcExpireTime tagData;
-        String oneElement;
-
-        oneElement = Tag126UtcExpireTime.TESTA_UTC_EXPIRE_TIME;
-        tagData = new Tag126UtcExpireTime( new MyUTCTimestampType( oneElement ) );
-        verifyToString( tagData, oneElement );
-
-        oneElement = Tag126UtcExpireTime.TESTB_UTC_EXPIRE_TIME;
-        tagData = new Tag126UtcExpireTime( new MyUTCTimestampType( oneElement ) );
-        verifyToString( tagData, oneElement );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag126UtcExpireTime( new MyUTCTimestampType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
-
-    private void verifyToString( final Tag126UtcExpireTime tagData, final String oneElement ) {
-        assertEquals( oneElement, tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toString() );
-    }
-
     @Test
     void TagToVerboseStringTest() {
-        Tag126UtcExpireTime tagData;
-        String oneElement;
-
-        oneElement = Tag126UtcExpireTime.TESTA_UTC_EXPIRE_TIME;
-        tagData = new Tag126UtcExpireTime( new MyUTCTimestampType( oneElement ) );
-        verifyVerboseString( tagData );
-
-        oneElement = Tag126UtcExpireTime.TESTB_UTC_EXPIRE_TIME;
-        tagData = new Tag126UtcExpireTime( new MyUTCTimestampType( oneElement ) );
-        verifyVerboseString( tagData );
-    }
-
-    private void verifyVerboseString( final Tag126UtcExpireTime tagData ) {
-        assertEquals( "Tag126UtcExpireTime\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
-                        "\tValuePair[" + tagData.toValuePairString() + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toVerboseString() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag126UtcExpireTime( new MyUTCTimestampType( oneElement ));
+            assertEquals( "Tag126UtcExpireTime\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

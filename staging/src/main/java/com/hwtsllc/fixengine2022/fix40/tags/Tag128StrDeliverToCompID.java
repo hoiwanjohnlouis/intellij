@@ -37,9 +37,9 @@ public class Tag128StrDeliverToCompID extends FIX40Abstract implements LogValueP
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_DELIVER_TO_COMP_ID
-            = "BilboBaggins-128DeliverToCompID";
+            = "VivienLeigh-128DeliverToCompID";
     public final static String TESTB_STR_DELIVER_TO_COMP_ID
-            = "Gandalf-128DeliverToCompID";
+            = "KatharineHepburn-128DeliverToCompID";
 
     public Tag128StrDeliverToCompID(MyStringType dataValue) {
         setFixType(FIX40.FIX128_STR_DELIVER_TO_COMP_ID);

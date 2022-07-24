@@ -33,9 +33,9 @@ public class Tag117StrQuoteID extends FIX40Abstract implements LogValuePairStrin
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_QUOTE_ID
-            = "BilboBaggins-Tag117StrQuoteID";
+            = "CydCharisse-Tag117StrQuoteID";
     public final static String TESTB_STR_QUOTE_ID
-            = "Gandalf-Tag117StrQuoteID";
+            = "RubyKeeler-Tag117StrQuoteID";
 
     public Tag117StrQuoteID(MyStringType dataValue) {
         setFixType(FIX40.FIX117_STR_QUOTE_ID);

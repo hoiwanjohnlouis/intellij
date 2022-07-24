@@ -31,126 +31,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  Miscellaneous fee value
  */
 class Tag137AmtMiscFeeAmtTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag137AmtMiscFeeAmt tagData;
-        double oneElement;
-
-        oneElement = Tag137AmtMiscFeeAmt.TESTA_AMT_MISC_FEE_AMT;
-        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType( oneElement ));
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag137AmtMiscFeeAmt.TESTB_AMT_MISC_FEE_AMT;
-        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType( oneElement ));
-        System.out.println( tagData.toVerboseString() );
-    }
+    Tag137AmtMiscFeeAmt tagData;
+    double [] TestArray = {
+            Tag137AmtMiscFeeAmt.TESTA_AMT_MISC_FEE_AMT,
+            Tag137AmtMiscFeeAmt.TESTB_AMT_MISC_FEE_AMT
+    };
 
     @Test
-    void FIX0137Test() {
-        Tag137AmtMiscFeeAmt tagData;
-        double oneElement;
-
-        oneElement = Tag137AmtMiscFeeAmt.TESTA_AMT_MISC_FEE_AMT;
-        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType( oneElement ));
-        verifyFIXData( tagData );
-
-        oneElement = Tag137AmtMiscFeeAmt.TESTB_AMT_MISC_FEE_AMT;
-        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType( oneElement ));
-        verifyFIXData( tagData );
+    void PrintTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag137AmtMiscFeeAmt( new MyAmtType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
-
-    private void verifyFIXData( final Tag137AmtMiscFeeAmt tagData ) {
-        assertEquals( "FIX137_AMT_MISC_FEE_AMT", tagData.toEnumLabelString());
-        assertEquals( "MISC_FEE_AMT", tagData.toEnumNameString());
-        assertEquals( "137", tagData.toEnumIDString());
-        assertEquals( "MiscFeeAmt", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    @Test
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag137AmtMiscFeeAmt( new MyAmtType( oneElement ));
+            assertEquals( "FIX137_AMT_MISC_FEE_AMT", tagData.toEnumLabelString());
+            assertEquals( "MISC_FEE_AMT", tagData.toEnumNameString());
+            assertEquals( "137", tagData.toEnumIDString());
+            assertEquals( "MiscFeeAmt", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
-
     @Test
     void TagGetDataValueTest() {
-        Tag137AmtMiscFeeAmt tagData;
-        double oneElement;
-
-        oneElement = Tag137AmtMiscFeeAmt.TESTA_AMT_MISC_FEE_AMT;
-        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType( oneElement ));
-        verifyDataValue( tagData, oneElement );
-
-        oneElement = Tag137AmtMiscFeeAmt.TESTB_AMT_MISC_FEE_AMT;
-        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType( oneElement ));
-        verifyDataValue( tagData, oneElement );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag137AmtMiscFeeAmt( new MyAmtType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
+        }
     }
-
-    private void verifyDataValue( final Tag137AmtMiscFeeAmt tagData, final double oneElement ) {
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
-    }
-
     @Test
     void TagToValuePairStringTest() {
-        Tag137AmtMiscFeeAmt tagData;
-        double oneElement;
-
-        oneElement = Tag137AmtMiscFeeAmt.TESTA_AMT_MISC_FEE_AMT;
-        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType( oneElement ));
-        verifyValuePairString( tagData, oneElement );
-
-        oneElement = Tag137AmtMiscFeeAmt.TESTB_AMT_MISC_FEE_AMT;
-        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType( oneElement ));
-        verifyValuePairString( tagData, oneElement );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag137AmtMiscFeeAmt( new MyAmtType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
-
-    private void verifyValuePairString( final Tag137AmtMiscFeeAmt tagData, final double oneElement ) {
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-    }
-
     @Test
     void TagToStringTest() {
-        Tag137AmtMiscFeeAmt tagData;
-        double oneElement;
-
-        oneElement = Tag137AmtMiscFeeAmt.TESTA_AMT_MISC_FEE_AMT;
-        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType( oneElement ));
-        verifyToString( tagData, oneElement );
-
-        oneElement = Tag137AmtMiscFeeAmt.TESTB_AMT_MISC_FEE_AMT;
-        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType( oneElement ));
-        verifyToString( tagData, oneElement );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag137AmtMiscFeeAmt( new MyAmtType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
-
-    private void verifyToString( final Tag137AmtMiscFeeAmt tagData, final double oneElement ) {
-        assertEquals( String.valueOf( oneElement ), tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
-    }
-
     @Test
     void TagToVerboseStringTest() {
-        Tag137AmtMiscFeeAmt tagData;
-        double oneElement;
-
-        oneElement = Tag137AmtMiscFeeAmt.TESTA_AMT_MISC_FEE_AMT;
-        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType( oneElement ));
-        verifyVerboseString( tagData );
-
-        oneElement = Tag137AmtMiscFeeAmt.TESTB_AMT_MISC_FEE_AMT;
-        tagData = new Tag137AmtMiscFeeAmt(new MyAmtType( oneElement ));
-        verifyVerboseString( tagData );
-    }
-
-    private void verifyVerboseString( final Tag137AmtMiscFeeAmt tagData ) {
-        assertEquals( "Tag137AmtMiscFeeAmt\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
-                        "\tValuePair[" + tagData.toValuePairString() + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag137AmtMiscFeeAmt( new MyAmtType( oneElement ));
+            assertEquals( "Tag137AmtMiscFeeAmt\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

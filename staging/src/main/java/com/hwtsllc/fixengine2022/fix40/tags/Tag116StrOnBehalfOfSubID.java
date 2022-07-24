@@ -35,9 +35,9 @@ public class Tag116StrOnBehalfOfSubID extends FIX40Abstract implements LogValueP
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_ON_BEHALF_OF_SUB_ID
-            = "BilboBaggins-Tag116StrOnBehalfOfSubID";
+            = "ElizabethTaylor-Tag116StrOnBehalfOfSubID";
     public final static String TESTB_STR_ON_BEHALF_OF_SUB_ID
-            = "Gandalf-Tag116StrOnBehalfOfSubID";
+            = "LanaTurner-Tag116StrOnBehalfOfSubID";
 
     public Tag116StrOnBehalfOfSubID(MyStringType dataValue) {
         setFixType(FIX40.FIX116_STR_ON_BEHALF_OF_SUB_ID);

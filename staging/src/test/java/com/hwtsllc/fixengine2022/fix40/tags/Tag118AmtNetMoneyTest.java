@@ -33,78 +33,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  reported in currency of execution.
  */
 class Tag118AmtNetMoneyTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag118AmtNetMoney tagData;
-        double oneElement;
-
-        oneElement = Tag118AmtNetMoney.TESTA_AMT_NET_MONEY;
-        tagData = new Tag118AmtNetMoney(new MyAmtType( oneElement  ));
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag118AmtNetMoney.TESTB_AMT_NET_MONEY;
-        tagData = new Tag118AmtNetMoney(new MyAmtType( oneElement  ));
-        System.out.println( tagData.toVerboseString() );
-    }
+    Tag118AmtNetMoney tagData;
+    double [] TestArray = {
+            Tag118AmtNetMoney.TESTA_AMT_NET_MONEY,
+            Tag118AmtNetMoney.TESTB_AMT_NET_MONEY
+    };
 
     @Test
-    void FIXTagTest() {
-        Tag118AmtNetMoney tagData;
-        double oneElement;
-
-        oneElement = Tag118AmtNetMoney.TESTA_AMT_NET_MONEY;
-        tagData = new Tag118AmtNetMoney(new MyAmtType( oneElement  ));
-        verifyAll( tagData, oneElement );
-
-        oneElement = Tag118AmtNetMoney.TESTB_AMT_NET_MONEY;
-        tagData = new Tag118AmtNetMoney(new MyAmtType( oneElement  ));
-        verifyAll( tagData, oneElement );
+    void PrintTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag118AmtNetMoney( new MyAmtType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
-
-    private void verifyAll( final Tag118AmtNetMoney tagData, final double oneElement ) {
-        verifyFIXData( tagData );
-        verifyDataValue( tagData, oneElement );
-        verifyValuePairString( tagData, oneElement );
-        verifyToString( tagData, oneElement );
-        verifyVerboseString( tagData );
+    @Test
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag118AmtNetMoney( new MyAmtType( oneElement ));
+            assertEquals( "FIX118_AMT_NET_MONEY", tagData.toEnumLabelString());
+            assertEquals( "NET_MONEY", tagData.toEnumNameString());
+            assertEquals( "118", tagData.toEnumIDString());
+            assertEquals( "NetMoney", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
-
-    private void verifyFIXData( final Tag118AmtNetMoney tagData ) {
-        assertEquals( "FIX118_AMT_NET_MONEY", tagData.toEnumLabelString());
-        assertEquals( "NET_MONEY", tagData.toEnumNameString());
-        assertEquals( "118", tagData.toEnumIDString());
-        assertEquals( "NetMoney", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    @Test
+    void TagGetDataValueTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag118AmtNetMoney( new MyAmtType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
+        }
     }
-
-    private void verifyDataValue( final Tag118AmtNetMoney tagData, final double oneElement ) {
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
+    @Test
+    void TagToValuePairStringTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag118AmtNetMoney( new MyAmtType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
-
-    private void verifyValuePairString( final Tag118AmtNetMoney tagData, final double oneElement ) {
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    @Test
+    void TagToStringTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag118AmtNetMoney( new MyAmtType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
-
-    private void verifyToString( final Tag118AmtNetMoney tagData, final double oneElement ) {
-        assertEquals( String.valueOf( oneElement ), tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
-    }
-
-    private void verifyVerboseString( final Tag118AmtNetMoney tagData ) {
-        assertEquals( "Tag118AmtNetMoney\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
-                        "\tValuePair[" + tagData.toValuePairString() + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    @Test
+    void TagToVerboseStringTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag118AmtNetMoney( new MyAmtType( oneElement ));
+            assertEquals( "Tag118AmtNetMoney\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

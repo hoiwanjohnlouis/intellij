@@ -33,9 +33,9 @@ public class Tag131StrQuoteReqID extends FIX40Abstract implements LogValuePairSt
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_QUOTE_REQ_ID
-            = "BilboBaggins-Tag131StrQuoteReqID";
+            = "GingerRogers-Tag131StrQuoteReqID";
     public final static String TESTB_STR_QUOTE_REQ_ID
-            = "Gandalf-Tag131StrQuoteReqID";
+            = "RitaHayworth-Tag131StrQuoteReqID";
 
     public Tag131StrQuoteReqID(MyStringType dataValue) {
         setFixType(FIX40.FIX131_STR_QUOTE_REQ_ID);

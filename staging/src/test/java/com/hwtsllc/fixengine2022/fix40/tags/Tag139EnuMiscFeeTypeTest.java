@@ -49,10 +49,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    14 - Security Lending
  */
 class Tag139EnuMiscFeeTypeTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag139EnuMiscFeeType tagData;
+    Tag139EnuMiscFeeType tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum139MiscFeeType oneEnum : Enum139MiscFeeType.values()) {
             tagData = new Tag139EnuMiscFeeType(oneEnum);
@@ -60,9 +60,7 @@ class Tag139EnuMiscFeeTypeTest {
         }
     }
     @Test
-    void FIXTest() {
-        Tag139EnuMiscFeeType tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum139MiscFeeType oneEnum : Enum139MiscFeeType.values()) {
             tagData = new Tag139EnuMiscFeeType(oneEnum);
@@ -78,8 +76,6 @@ class Tag139EnuMiscFeeTypeTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag139EnuMiscFeeType tagData;
-
         /*
          * 1-14 MiscFeeType types
          */
@@ -152,8 +148,6 @@ class Tag139EnuMiscFeeTypeTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag139EnuMiscFeeType tagData;
-
         // loop around the ENUM and process
         for (Enum139MiscFeeType oneEnum : Enum139MiscFeeType.values()) {
             tagData = new Tag139EnuMiscFeeType(oneEnum);
@@ -165,8 +159,6 @@ class Tag139EnuMiscFeeTypeTest {
     }
     @Test
     void TagToStringTest() {
-        Tag139EnuMiscFeeType tagData;
-
         // loop around the ENUM and process
         for (Enum139MiscFeeType oneEnum : Enum139MiscFeeType.values()) {
             tagData = new Tag139EnuMiscFeeType(oneEnum);
@@ -176,8 +168,6 @@ class Tag139EnuMiscFeeTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag139EnuMiscFeeType tagData;
-
         // loop around the ENUM and process
         for (Enum139MiscFeeType oneEnum : Enum139MiscFeeType.values()) {
             tagData = new Tag139EnuMiscFeeType(oneEnum);

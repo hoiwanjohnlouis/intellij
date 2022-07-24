@@ -37,9 +37,9 @@ public class Tag115StrOnBehalfOfCompID extends FIX40Abstract implements LogValue
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_ON_BEHALF_OF_COMP_ID
-            = "BilboBaggins-Tag115StrOnBehalfOfCompID";
+            = "GeneTierney-Tag115StrOnBehalfOfCompID";
     public final static String TESTB_STR_ON_BEHALF_OF_COMP_ID
-            = "Gandalf-Tag115StrOnBehalfOfCompID";
+            = "LaurenBacall-Tag115StrOnBehalfOfCompID";
 
     public Tag115StrOnBehalfOfCompID(MyStringType dataValue) {
         setFixType(FIX40.FIX115_STR_ON_BEHALF_OF_COMP_ID);

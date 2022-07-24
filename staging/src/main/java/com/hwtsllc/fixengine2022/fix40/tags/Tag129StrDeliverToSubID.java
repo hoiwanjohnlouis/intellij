@@ -35,9 +35,9 @@ public class Tag129StrDeliverToSubID extends FIX40Abstract implements LogValuePa
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_DELIVER_TO_SUB_ID
-            = "BilboBaggins-Tag129StrDeliverToSubID";
+            = "VeronicaLake-Tag129StrDeliverToSubID";
     public final static String TESTB_STR_DELIVER_TO_SUB_ID
-            = "Gandalf-Tag129StrDeliverToSubID";
+            = "HedyLamarr-Tag129StrDeliverToSubID";
 
     public Tag129StrDeliverToSubID(MyStringType dataValue) {
         setFixType(FIX40.FIX129_STR_DELIVER_TO_SUB_ID);

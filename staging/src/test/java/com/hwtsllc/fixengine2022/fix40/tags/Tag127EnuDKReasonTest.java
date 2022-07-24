@@ -41,10 +41,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    Z - Other
  */
 class Tag127EnuDKReasonTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag127EnuDKReason tagData;
+    Tag127EnuDKReason tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum127DKReason oneEnum : Enum127DKReason.values()) {
             tagData = new Tag127EnuDKReason(oneEnum);
@@ -52,9 +52,7 @@ class Tag127EnuDKReasonTest {
         }
     }
     @Test
-    void FIX0127Test() {
-        Tag127EnuDKReason tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum127DKReason oneEnum : Enum127DKReason.values()) {
             tagData = new Tag127EnuDKReason(oneEnum);
@@ -70,8 +68,6 @@ class Tag127EnuDKReasonTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag127EnuDKReason tagData;
-
         /*
          * A-F, Z DKReason type
          */
@@ -116,8 +112,6 @@ class Tag127EnuDKReasonTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag127EnuDKReason tagData;
-
         // loop around the ENUM and process
         for (Enum127DKReason oneEnum : Enum127DKReason.values()) {
             tagData = new Tag127EnuDKReason(oneEnum);
@@ -129,8 +123,6 @@ class Tag127EnuDKReasonTest {
     }
     @Test
     void TagToStringTest() {
-        Tag127EnuDKReason tagData;
-
         // loop around the ENUM and process
         for (Enum127DKReason oneEnum : Enum127DKReason.values()) {
             tagData = new Tag127EnuDKReason(oneEnum);
@@ -140,8 +132,6 @@ class Tag127EnuDKReasonTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag127EnuDKReason tagData;
-
         // loop around the ENUM and process
         for (Enum127DKReason oneEnum : Enum127DKReason.values()) {
             tagData = new Tag127EnuDKReason(oneEnum);

@@ -32,126 +32,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  (includes the effect of the forex transaction)
  */
 class Tag119AmtSettlCurrAmtTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag119AmtSettlCurrAmt tagData;
-        double oneElement;
-
-        oneElement = Tag119AmtSettlCurrAmt.TESTA_AMT_SETTL_CURR_AMT;
-        tagData = new Tag119AmtSettlCurrAmt(new MyAmtType( oneElement ));
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag119AmtSettlCurrAmt.TESTB_AMT_SETTL_CURR_AMT;
-        tagData = new Tag119AmtSettlCurrAmt(new MyAmtType( oneElement ));
-        System.out.println( tagData.toVerboseString() );
-    }
+    Tag119AmtSettlCurrAmt tagData;
+    double [] TestArray = {
+            Tag119AmtSettlCurrAmt.TESTA_AMT_SETTL_CURR_AMT,
+            Tag119AmtSettlCurrAmt.TESTB_AMT_SETTL_CURR_AMT
+    };
 
     @Test
-    void FIXTest() {
-        Tag119AmtSettlCurrAmt tagData;
-        double oneElement;
-
-        oneElement = Tag119AmtSettlCurrAmt.TESTA_AMT_SETTL_CURR_AMT;
-        tagData = new Tag119AmtSettlCurrAmt(new MyAmtType( oneElement ));
-        verifyFIXData( tagData );
-
-        oneElement = Tag119AmtSettlCurrAmt.TESTB_AMT_SETTL_CURR_AMT;
-        tagData = new Tag119AmtSettlCurrAmt(new MyAmtType( oneElement ));
-        verifyFIXData( tagData );
+    void PrintTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag119AmtSettlCurrAmt( new MyAmtType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
-
-    private void verifyFIXData( final Tag119AmtSettlCurrAmt tagData ) {
-        assertEquals( "FIX119_AMT_SETTL_CURR_AMT", tagData.toEnumLabelString());
-        assertEquals( "SETTL_CURR_AMT", tagData.toEnumNameString());
-        assertEquals( "119", tagData.toEnumIDString());
-        assertEquals( "SettlCurrAmt", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    @Test
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag119AmtSettlCurrAmt( new MyAmtType( oneElement ));
+            assertEquals( "FIX119_AMT_SETTL_CURR_AMT", tagData.toEnumLabelString());
+            assertEquals( "SETTL_CURR_AMT", tagData.toEnumNameString());
+            assertEquals( "119", tagData.toEnumIDString());
+            assertEquals( "SettlCurrAmt", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
-
     @Test
     void TagGetDataValueTest() {
-        Tag119AmtSettlCurrAmt tagData;
-        double oneElement;
-
-        oneElement = Tag119AmtSettlCurrAmt.TESTA_AMT_SETTL_CURR_AMT;
-        tagData = new Tag119AmtSettlCurrAmt(new MyAmtType( oneElement ));
-        verifyDataValue( tagData, oneElement );
-
-        oneElement = Tag119AmtSettlCurrAmt.TESTB_AMT_SETTL_CURR_AMT;
-        tagData = new Tag119AmtSettlCurrAmt(new MyAmtType( oneElement ));
-        verifyDataValue( tagData, oneElement );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag119AmtSettlCurrAmt( new MyAmtType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
+        }
     }
-
-    private void verifyDataValue( final Tag119AmtSettlCurrAmt tagData, final double oneElement ) {
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
-    }
-
     @Test
     void TagToValuePairStringTest() {
-        Tag119AmtSettlCurrAmt tagData;
-        double oneElement;
-
-        oneElement = Tag119AmtSettlCurrAmt.TESTA_AMT_SETTL_CURR_AMT;
-        tagData = new Tag119AmtSettlCurrAmt(new MyAmtType( oneElement ));
-        verifyValuePairString( tagData, oneElement );
-
-        oneElement = Tag119AmtSettlCurrAmt.TESTB_AMT_SETTL_CURR_AMT;
-        tagData = new Tag119AmtSettlCurrAmt(new MyAmtType( oneElement ));
-        verifyValuePairString( tagData, oneElement );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag119AmtSettlCurrAmt( new MyAmtType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
-
-    private void verifyValuePairString( final Tag119AmtSettlCurrAmt tagData, final double oneElement ) {
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-    }
-
     @Test
     void TagToStringTest() {
-        Tag119AmtSettlCurrAmt tagData;
-        double oneElement;
-
-        oneElement = Tag119AmtSettlCurrAmt.TESTA_AMT_SETTL_CURR_AMT;
-        tagData = new Tag119AmtSettlCurrAmt(new MyAmtType( oneElement ));
-        verifyToString( tagData, oneElement );
-
-        oneElement = Tag119AmtSettlCurrAmt.TESTB_AMT_SETTL_CURR_AMT;
-        tagData = new Tag119AmtSettlCurrAmt(new MyAmtType( oneElement ));
-        verifyToString( tagData, oneElement );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag119AmtSettlCurrAmt( new MyAmtType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
-
-    private void verifyToString( final Tag119AmtSettlCurrAmt tagData, final double oneElement ) {
-        assertEquals( String.valueOf( oneElement ), tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
-    }
-
     @Test
     void TagToVerboseStringTest() {
-        Tag119AmtSettlCurrAmt tagData;
-        double oneElement;
-
-        oneElement = Tag119AmtSettlCurrAmt.TESTA_AMT_SETTL_CURR_AMT;
-        tagData = new Tag119AmtSettlCurrAmt(new MyAmtType( oneElement ));
-        verifyVerboseString( tagData );
-
-        oneElement = Tag119AmtSettlCurrAmt.TESTB_AMT_SETTL_CURR_AMT;
-        tagData = new Tag119AmtSettlCurrAmt(new MyAmtType( oneElement ));
-        verifyVerboseString( tagData );
-    }
-
-    private void verifyVerboseString( final Tag119AmtSettlCurrAmt tagData ) {
-        assertEquals( "Tag119AmtSettlCurrAmt\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
-                        "\tValuePair[" + tagData.toValuePairString() + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag119AmtSettlCurrAmt( new MyAmtType( oneElement ));
+            assertEquals( "Tag119AmtSettlCurrAmt\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

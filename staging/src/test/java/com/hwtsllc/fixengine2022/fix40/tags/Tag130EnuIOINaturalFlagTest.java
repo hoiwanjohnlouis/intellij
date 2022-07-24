@@ -37,10 +37,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    Y - Natural
  */
 class Tag130EnuIOINaturalFlagTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag130EnuIOINaturalFlag tagData;
+    Tag130EnuIOINaturalFlag tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum130IOINaturalFlag oneEnum : Enum130IOINaturalFlag.values()) {
             tagData = new Tag130EnuIOINaturalFlag(oneEnum);
@@ -48,9 +48,7 @@ class Tag130EnuIOINaturalFlagTest {
         }
     }
     @Test
-    void FIXTest() {
-        Tag130EnuIOINaturalFlag tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum130IOINaturalFlag oneEnum : Enum130IOINaturalFlag.values()) {
             tagData = new Tag130EnuIOINaturalFlag(oneEnum);
@@ -66,8 +64,6 @@ class Tag130EnuIOINaturalFlagTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag130EnuIOINaturalFlag tagData;
-
         tagData = new Tag130EnuIOINaturalFlag(Enum130IOINaturalFlag.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -87,8 +83,6 @@ class Tag130EnuIOINaturalFlagTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag130EnuIOINaturalFlag tagData;
-
         // loop around the ENUM and process
         for (Enum130IOINaturalFlag oneEnum : Enum130IOINaturalFlag.values()) {
             tagData = new Tag130EnuIOINaturalFlag(oneEnum);
@@ -100,8 +94,6 @@ class Tag130EnuIOINaturalFlagTest {
     }
     @Test
     void TagToStringTest() {
-        Tag130EnuIOINaturalFlag tagData;
-
         // loop around the ENUM and process
         for (Enum130IOINaturalFlag oneEnum : Enum130IOINaturalFlag.values()) {
             tagData = new Tag130EnuIOINaturalFlag(oneEnum);
@@ -111,8 +103,6 @@ class Tag130EnuIOINaturalFlagTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag130EnuIOINaturalFlag tagData;
-
         // loop around the ENUM and process
         for (Enum130IOINaturalFlag oneEnum : Enum130IOINaturalFlag.values()) {
             tagData = new Tag130EnuIOINaturalFlag(oneEnum);

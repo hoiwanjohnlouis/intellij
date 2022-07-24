@@ -35,10 +35,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    Y - Execute Forex After Security Trade
  */
 class Tag121EnuForexReqTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag121EnuForexReq tagData;
+    Tag121EnuForexReq tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum121ForexReq oneEnum : Enum121ForexReq.values()) {
             tagData = new Tag121EnuForexReq(oneEnum);
@@ -46,9 +46,7 @@ class Tag121EnuForexReqTest {
         }
     }
     @Test
-    void FIXTest() {
-        Tag121EnuForexReq tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum121ForexReq oneEnum : Enum121ForexReq.values()) {
             tagData = new Tag121EnuForexReq(oneEnum);
@@ -64,8 +62,6 @@ class Tag121EnuForexReqTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag121EnuForexReq tagData;
-
         tagData = new Tag121EnuForexReq(Enum121ForexReq.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -84,8 +80,6 @@ class Tag121EnuForexReqTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag121EnuForexReq tagData;
-
         // loop around the ENUM and process
         for (Enum121ForexReq oneEnum : Enum121ForexReq.values()) {
             tagData = new Tag121EnuForexReq(oneEnum);
@@ -97,8 +91,6 @@ class Tag121EnuForexReqTest {
     }
     @Test
     void TagToStringTest() {
-        Tag121EnuForexReq tagData;
-
         // loop around the ENUM and process
         for (Enum121ForexReq oneEnum : Enum121ForexReq.values()) {
             tagData = new Tag121EnuForexReq(oneEnum);
@@ -108,8 +100,6 @@ class Tag121EnuForexReqTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag121EnuForexReq tagData;
-
         // loop around the ENUM and process
         for (Enum121ForexReq oneEnum : Enum121ForexReq.values()) {
             tagData = new Tag121EnuForexReq(oneEnum);
