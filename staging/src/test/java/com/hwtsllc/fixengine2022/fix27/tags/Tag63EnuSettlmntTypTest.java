@@ -78,10 +78,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    Or any value conforming to the data type Tenor
  */
 class Tag63EnuSettlmntTypTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag63EnuSettlmntTyp tagData;
+    Tag63EnuSettlmntTyp tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum63SettlType oneEnum : Enum63SettlType.values()) {
             tagData = new Tag63EnuSettlmntTyp(oneEnum);
@@ -90,8 +90,6 @@ class Tag63EnuSettlmntTypTest {
     }
     @Test
     void Tag0063Test() {
-        Tag63EnuSettlmntTyp tagData;
-
         tagData = new Tag63EnuSettlmntTyp( Enum63SettlType.REGULAR );
         assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -143,9 +141,7 @@ class Tag63EnuSettlmntTypTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
-    void FIXTest() {
-        Tag63EnuSettlmntTyp tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum63SettlType oneEnum : Enum63SettlType.values()) {
             tagData = new Tag63EnuSettlmntTyp(oneEnum);
@@ -161,8 +157,6 @@ class Tag63EnuSettlmntTypTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag63EnuSettlmntTyp tagData;
-
         // loop around the ENUM and process
         for (Enum63SettlType oneEnum : Enum63SettlType.values()) {
             tagData = new Tag63EnuSettlmntTyp(oneEnum);
@@ -174,8 +168,6 @@ class Tag63EnuSettlmntTypTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag63EnuSettlmntTyp tagData;
-
         // loop around the ENUM and process
         for (Enum63SettlType oneEnum : Enum63SettlType.values()) {
             tagData = new Tag63EnuSettlmntTyp(oneEnum);
@@ -187,8 +179,6 @@ class Tag63EnuSettlmntTypTest {
     }
     @Test
     void TagToStringTest() {
-        Tag63EnuSettlmntTyp tagData;
-
         // loop around the ENUM and process
         for (Enum63SettlType oneEnum : Enum63SettlType.values()) {
             tagData = new Tag63EnuSettlmntTyp(oneEnum);
@@ -198,8 +188,6 @@ class Tag63EnuSettlmntTypTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag63EnuSettlmntTyp tagData;
-
         // loop around the ENUM and process
         for (Enum63SettlType oneEnum : Enum63SettlType.values()) {
             tagData = new Tag63EnuSettlmntTyp(oneEnum);

@@ -16,36 +16,33 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.datatypes.*;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  74
- *  AvgPxPrecision
+ *  67
+ *  ListSeqNo
  *  int
  *  <p></p>
- *  Indicates number of decimal places to be used for average pricing.
+ *  Sequence of individual order within list
  *  <p></p>
- *  Absence of this field indicates that default precision arranged
- *  by the broker or institution is to be used.
+ *  (i.e. ListSeqNo of TotNoOrders (68), 2 of 25, 3 of 25,   . . . )
  */
-public class Tag74StrAvgPxPrecision extends FIX27Abstract implements LogValuePairString, LogVerboseString {
-    private final MyStringType dataValue;
+public class Tag67SeqListSeqNo extends FIX27Abstract implements LogValuePairString, LogVerboseString {
+    private final MySeqNumType dataValue;
 
-    public final static String TESTA_STR_AVG_PX_PRECISION
-            = "AliceFaye-Tag74StrAvgPxPrecision";
-    public final static String TESTB_STR_AVG_PX_PRECISION
-            = "CaroleLandis-Tag74StrAvgPxPrecision";
+    public final static int TESTA_SEQ_LIST_SEQ_NO
+            = 567;  // same as tag34 TESTA_MSG_SEQ_NO
+    public final static int TESTB_SEQ_LIST_SEQ_NO
+            = 1482;  // same as tag34 TESTB_MSG_SEQ_NO
 
-    public Tag74StrAvgPxPrecision(MyStringType dataValue) {
-        setFixType(FIX27.FIX74_STR_AVG_PX_PRECISION);
+    public Tag67SeqListSeqNo( MySeqNumType dataValue) {
+        setFixType(FIX27.FIX67_SEQ_LIST_SEQ_NO );
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
+    public int getDataValue() {
         return this.dataValue.getDataValue();
     }
     /**
@@ -84,7 +81,7 @@ public class Tag74StrAvgPxPrecision extends FIX27Abstract implements LogValuePai
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        System.out.println( new Tag74StrAvgPxPrecision(new MyStringType(TESTA_STR_AVG_PX_PRECISION)).toVerboseString() );
-        System.out.println( new Tag74StrAvgPxPrecision(new MyStringType(TESTB_STR_AVG_PX_PRECISION)).toVerboseString() );
+        System.out.println( new Tag67SeqListSeqNo(new MySeqNumType( TESTA_SEQ_LIST_SEQ_NO )).toVerboseString() );
+        System.out.println( new Tag67SeqListSeqNo(new MySeqNumType( TESTB_SEQ_LIST_SEQ_NO )).toVerboseString() );
     }
 }

@@ -48,10 +48,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    7 - At the Close
  */
 class Tag59EnuTimeInForceTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag59EnuTimeInForce tagData;
+    Tag59EnuTimeInForce tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum59TimeInForce oneEnum : Enum59TimeInForce.values()) {
             tagData = new Tag59EnuTimeInForce(oneEnum);
@@ -60,8 +60,6 @@ class Tag59EnuTimeInForceTest {
     }
     @Test
     void Tag0059Test() {
-        Tag59EnuTimeInForce tagData;
-
         /*
          * 0-7 TimeInForce types
          */
@@ -99,9 +97,7 @@ class Tag59EnuTimeInForceTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
-    void FIXTest() {
-        Tag59EnuTimeInForce tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum59TimeInForce oneEnum : Enum59TimeInForce.values()) {
             tagData = new Tag59EnuTimeInForce(oneEnum);
@@ -117,8 +113,6 @@ class Tag59EnuTimeInForceTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag59EnuTimeInForce tagData;
-
         // loop around the ENUM and process
         for (Enum59TimeInForce oneEnum : Enum59TimeInForce.values()) {
             tagData = new Tag59EnuTimeInForce(oneEnum);
@@ -130,8 +124,6 @@ class Tag59EnuTimeInForceTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag59EnuTimeInForce tagData;
-
         // loop around the ENUM and process
         for (Enum59TimeInForce oneEnum : Enum59TimeInForce.values()) {
             tagData = new Tag59EnuTimeInForce(oneEnum);
@@ -143,8 +135,6 @@ class Tag59EnuTimeInForceTest {
     }
     @Test
     void TagToStringTest() {
-        Tag59EnuTimeInForce tagData;
-
         // loop around the ENUM and process
         for (Enum59TimeInForce oneEnum : Enum59TimeInForce.values()) {
             tagData = new Tag59EnuTimeInForce(oneEnum);
@@ -154,8 +144,6 @@ class Tag59EnuTimeInForceTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag59EnuTimeInForce tagData;
-
         // loop around the ENUM and process
         for (Enum59TimeInForce oneEnum : Enum59TimeInForce.values()) {
             tagData = new Tag59EnuTimeInForce(oneEnum);

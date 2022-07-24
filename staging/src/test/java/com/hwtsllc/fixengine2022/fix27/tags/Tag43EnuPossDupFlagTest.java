@@ -35,10 +35,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    Y - Possible duplicate
  */
 class Tag43EnuPossDupFlagTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag43EnuPossDupFlag tagData;
+    Tag43EnuPossDupFlag tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum43PossDupFlag oneEnum : Enum43PossDupFlag.values()) {
             tagData = new Tag43EnuPossDupFlag(oneEnum);
@@ -47,8 +47,6 @@ class Tag43EnuPossDupFlagTest {
     }
     @Test
     void Tag0043Test() {
-        Tag43EnuPossDupFlag tagData;
-
         tagData = new Tag43EnuPossDupFlag( Enum43PossDupFlag.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -58,9 +56,7 @@ class Tag43EnuPossDupFlagTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
-    void FIXTest() {
-        Tag43EnuPossDupFlag tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum43PossDupFlag oneEnum : Enum43PossDupFlag.values()) {
             tagData = new Tag43EnuPossDupFlag(oneEnum);
@@ -76,8 +72,6 @@ class Tag43EnuPossDupFlagTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag43EnuPossDupFlag tagData;
-
         // loop around the ENUM and process
         for (Enum43PossDupFlag oneEnum : Enum43PossDupFlag.values()) {
             tagData = new Tag43EnuPossDupFlag(oneEnum);
@@ -89,8 +83,6 @@ class Tag43EnuPossDupFlagTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag43EnuPossDupFlag tagData;
-
         // loop around the ENUM and process
         for (Enum43PossDupFlag oneEnum : Enum43PossDupFlag.values()) {
             tagData = new Tag43EnuPossDupFlag(oneEnum);
@@ -102,8 +94,6 @@ class Tag43EnuPossDupFlagTest {
     }
     @Test
     void TagToStringTest() {
-        Tag43EnuPossDupFlag tagData;
-
         // loop around the ENUM and process
         for (Enum43PossDupFlag oneEnum : Enum43PossDupFlag.values()) {
             tagData = new Tag43EnuPossDupFlag(oneEnum);
@@ -113,8 +103,6 @@ class Tag43EnuPossDupFlagTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag43EnuPossDupFlag tagData;
-
         // loop around the ENUM and process
         for (Enum43PossDupFlag oneEnum : Enum43PossDupFlag.values()) {
             tagData = new Tag43EnuPossDupFlag(oneEnum);

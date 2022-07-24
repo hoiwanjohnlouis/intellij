@@ -41,10 +41,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    6 - PEM / DES-MD5 (see app note on FIX website)
  */
 class Tag98EnuEncryptMethodTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag98EnuEncryptMethod tagData;
+    Tag98EnuEncryptMethod tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum98EncryptMethod oneEnum : Enum98EncryptMethod.values()) {
             tagData = new Tag98EnuEncryptMethod(oneEnum);
@@ -53,8 +53,6 @@ class Tag98EnuEncryptMethodTest {
     }
     @Test
     void Tag0098Test() {
-        Tag98EnuEncryptMethod tagData;
-
         /*
          * 0-6 EncryptMethod types
          */
@@ -88,9 +86,7 @@ class Tag98EnuEncryptMethodTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
-    void FIXTest() {
-        Tag98EnuEncryptMethod tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum98EncryptMethod oneEnum : Enum98EncryptMethod.values()) {
             tagData = new Tag98EnuEncryptMethod(oneEnum);
@@ -106,8 +102,6 @@ class Tag98EnuEncryptMethodTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag98EnuEncryptMethod tagData;
-
         // loop around the ENUM and process
         for (Enum98EncryptMethod oneEnum : Enum98EncryptMethod.values()) {
             tagData = new Tag98EnuEncryptMethod(oneEnum);
@@ -119,8 +113,6 @@ class Tag98EnuEncryptMethodTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag98EnuEncryptMethod tagData;
-
         // loop around the ENUM and process
         for (Enum98EncryptMethod oneEnum : Enum98EncryptMethod.values()) {
             tagData = new Tag98EnuEncryptMethod(oneEnum);
@@ -132,8 +124,6 @@ class Tag98EnuEncryptMethodTest {
     }
     @Test
     void TagToStringTest() {
-        Tag98EnuEncryptMethod tagData;
-
         // loop around the ENUM and process
         for (Enum98EncryptMethod oneEnum : Enum98EncryptMethod.values()) {
             tagData = new Tag98EnuEncryptMethod(oneEnum);
@@ -143,8 +133,6 @@ class Tag98EnuEncryptMethodTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag98EnuEncryptMethod tagData;
-
         // loop around the ENUM and process
         for (Enum98EncryptMethod oneEnum : Enum98EncryptMethod.values()) {
             tagData = new Tag98EnuEncryptMethod(oneEnum);

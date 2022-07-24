@@ -38,10 +38,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 // @Deprecated
 class Tag20EnuExecTransTypeTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag20EnuExecTransType tagData;
+    Tag20EnuExecTransType tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum20ExecTransType oneEnum : Enum20ExecTransType.values()) {
             tagData = new Tag20EnuExecTransType(oneEnum);
@@ -50,8 +50,6 @@ class Tag20EnuExecTransTypeTest {
     }
     @Test
     void Tag0020Test() {
-        Tag20EnuExecTransType tagData;
-
         tagData = new Tag20EnuExecTransType(Enum20ExecTransType.NEW);
         assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -69,9 +67,7 @@ class Tag20EnuExecTransTypeTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
-    void FIXTest() {
-        Tag20EnuExecTransType tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum20ExecTransType oneEnum : Enum20ExecTransType.values()) {
             tagData = new Tag20EnuExecTransType(oneEnum);
@@ -87,8 +83,6 @@ class Tag20EnuExecTransTypeTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag20EnuExecTransType tagData;
-
         // loop around the ENUM and process
         for (Enum20ExecTransType oneEnum : Enum20ExecTransType.values()) {
             tagData = new Tag20EnuExecTransType(oneEnum);
@@ -100,8 +94,6 @@ class Tag20EnuExecTransTypeTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag20EnuExecTransType tagData;
-
         // loop around the ENUM and process
         for (Enum20ExecTransType oneEnum : Enum20ExecTransType.values()) {
             tagData = new Tag20EnuExecTransType(oneEnum);
@@ -113,8 +105,6 @@ class Tag20EnuExecTransTypeTest {
     }
     @Test
     void TagToStringTest() {
-        Tag20EnuExecTransType tagData;
-
         // loop around the ENUM and process
         for (Enum20ExecTransType oneEnum : Enum20ExecTransType.values()) {
             tagData = new Tag20EnuExecTransType(oneEnum);
@@ -124,8 +114,6 @@ class Tag20EnuExecTransTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag20EnuExecTransType tagData;
-
         // loop around the ENUM and process
         for (Enum20ExecTransType oneEnum : Enum20ExecTransType.values()) {
             tagData = new Tag20EnuExecTransType(oneEnum);

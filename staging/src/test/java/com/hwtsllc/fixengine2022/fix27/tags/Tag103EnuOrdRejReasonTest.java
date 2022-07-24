@@ -59,10 +59,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    Or any value conforming to the data type Reserved100Plus
  */
 class Tag103EnuOrdRejReasonTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag103EnuOrdRejReason tagData;
+    Tag103EnuOrdRejReason tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum103OrdRejReason oneEnum : Enum103OrdRejReason.values()) {
             tagData = new Tag103EnuOrdRejReason(oneEnum);
@@ -71,8 +71,6 @@ class Tag103EnuOrdRejReasonTest {
     }
     @Test
     void Tag0103Test() {
-        Tag103EnuOrdRejReason tagData;
-
         /*
          * 1-15, 18, 99 OrdRejReason types
          */
@@ -162,9 +160,7 @@ class Tag103EnuOrdRejReasonTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
-    void FIXTest() {
-        Tag103EnuOrdRejReason tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum103OrdRejReason oneEnum : Enum103OrdRejReason.values()) {
             tagData = new Tag103EnuOrdRejReason(oneEnum);
@@ -180,8 +176,6 @@ class Tag103EnuOrdRejReasonTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag103EnuOrdRejReason tagData;
-
         // loop around the ENUM and process
         for (Enum103OrdRejReason oneEnum : Enum103OrdRejReason.values()) {
             tagData = new Tag103EnuOrdRejReason(oneEnum);
@@ -193,8 +187,6 @@ class Tag103EnuOrdRejReasonTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag103EnuOrdRejReason tagData;
-
         // loop around the ENUM and process
         for (Enum103OrdRejReason oneEnum : Enum103OrdRejReason.values()) {
             tagData = new Tag103EnuOrdRejReason(oneEnum);
@@ -206,8 +198,6 @@ class Tag103EnuOrdRejReasonTest {
     }
     @Test
     void TagToStringTest() {
-        Tag103EnuOrdRejReason tagData;
-
         // loop around the ENUM and process
         for (Enum103OrdRejReason oneEnum : Enum103OrdRejReason.values()) {
             tagData = new Tag103EnuOrdRejReason(oneEnum);
@@ -217,8 +207,6 @@ class Tag103EnuOrdRejReasonTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag103EnuOrdRejReason tagData;
-
         // loop around the ENUM and process
         for (Enum103OrdRejReason oneEnum : Enum103OrdRejReason.values()) {
             tagData = new Tag103EnuOrdRejReason(oneEnum);

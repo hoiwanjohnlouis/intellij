@@ -42,10 +42,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    7 - reversed
  */
 class Tag87EnuAllocStatusTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag87EnuAllocStatus tagData;
+    Tag87EnuAllocStatus tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum87AllocStatus oneEnum : Enum87AllocStatus.values()) {
             tagData = new Tag87EnuAllocStatus(oneEnum);
@@ -54,8 +54,6 @@ class Tag87EnuAllocStatusTest {
     }
     @Test
     void Tag0087Test() {
-        Tag87EnuAllocStatus tagData;
-
         /*
          * 0-7 AllocStatus types
          */
@@ -93,9 +91,7 @@ class Tag87EnuAllocStatusTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
-    void FIXTest() {
-        Tag87EnuAllocStatus tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum87AllocStatus oneEnum : Enum87AllocStatus.values()) {
             tagData = new Tag87EnuAllocStatus(oneEnum);
@@ -111,8 +107,6 @@ class Tag87EnuAllocStatusTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag87EnuAllocStatus tagData;
-
         // loop around the ENUM and process
         for (Enum87AllocStatus oneEnum : Enum87AllocStatus.values()) {
             tagData = new Tag87EnuAllocStatus(oneEnum);
@@ -124,8 +118,6 @@ class Tag87EnuAllocStatusTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag87EnuAllocStatus tagData;
-
         // loop around the ENUM and process
         for (Enum87AllocStatus oneEnum : Enum87AllocStatus.values()) {
             tagData = new Tag87EnuAllocStatus(oneEnum);
@@ -137,8 +129,6 @@ class Tag87EnuAllocStatusTest {
     }
     @Test
     void TagToStringTest() {
-        Tag87EnuAllocStatus tagData;
-
         // loop around the ENUM and process
         for (Enum87AllocStatus oneEnum : Enum87AllocStatus.values()) {
             tagData = new Tag87EnuAllocStatus(oneEnum);
@@ -148,8 +138,6 @@ class Tag87EnuAllocStatusTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag87EnuAllocStatus tagData;
-
         // loop around the ENUM and process
         for (Enum87AllocStatus oneEnum : Enum87AllocStatus.values()) {
             tagData = new Tag87EnuAllocStatus(oneEnum);

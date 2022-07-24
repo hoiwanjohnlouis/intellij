@@ -18,33 +18,33 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  67
- *  ListSeqNo
+ *  83
+ *  RptSeq
  *  int
  *  <p></p>
- *  Sequence of individual order within list
+ *  Sequence number of message within report series.
  *  <p></p>
- *  (i.e. ListSeqNo of TotNoOrders (68), 2 of 25, 3 of 25,   . . . )
+ *  Used to carry reporting sequence number of the fill as represented on the Trade Report Side.
  */
-public class Tag67StrListSeqNo extends FIX27Abstract implements LogValuePairString, LogVerboseString {
-    private final MyStringType dataValue;
+public class Tag83IntRptSeq extends FIX27Abstract implements LogValuePairString, LogVerboseString {
+    private final MyIntType dataValue;
 
-    public final static String TESTA_STR_LIST_SEQ_NO
-            = "567";  // same as tag34 TESTA_MSG_SEQ_NO
-    public final static String TESTB_STR_LIST_SEQ_NO
-            = "1482";  // same as tag34 TESTB_MSG_SEQ_NO
+    public final static int TESTA_INT_RPT_SEQ
+            = 83;
+    public final static int TESTB_INT_RPT_SEQ
+            = 38;
 
-    public Tag67StrListSeqNo(MyStringType dataValue) {
-        setFixType(FIX27.FIX67_STR_LIST_SEQ_NO);
+    public Tag83IntRptSeq( MyIntType dataValue) {
+        setFixType(FIX27.FIX83_INT_RPT_SEQ );
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
+    public int getDataValue() {
         return this.dataValue.getDataValue();
     }
     /**
@@ -83,7 +83,7 @@ public class Tag67StrListSeqNo extends FIX27Abstract implements LogValuePairStri
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        System.out.println( new Tag67StrListSeqNo(new MyStringType(TESTA_STR_LIST_SEQ_NO)).toVerboseString() );
-        System.out.println( new Tag67StrListSeqNo(new MyStringType(TESTB_STR_LIST_SEQ_NO)).toVerboseString() );
+        System.out.println( new Tag83IntRptSeq(new MyIntType( TESTA_INT_RPT_SEQ )).toVerboseString() );
+        System.out.println( new Tag83IntRptSeq(new MyIntType( TESTB_INT_RPT_SEQ )).toVerboseString() );
     }
 }

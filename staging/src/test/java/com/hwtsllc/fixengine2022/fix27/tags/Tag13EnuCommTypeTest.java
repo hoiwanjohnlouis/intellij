@@ -42,10 +42,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *           industry default - 1000 par for bonds)
  */
 class Tag13EnuCommTypeTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag13EnuCommType tagData;
+    Tag13EnuCommType tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum13CommType oneEnum : Enum13CommType.values()) {
             tagData = new Tag13EnuCommType(oneEnum);
@@ -54,8 +54,6 @@ class Tag13EnuCommTypeTest {
     }
     @Test
     void Tag0013Test() {
-        Tag13EnuCommType tagData;
-
         /*
          * 1-6 CommTypes
          */
@@ -84,9 +82,7 @@ class Tag13EnuCommTypeTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
-    void FIXTest() {
-        Tag13EnuCommType tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum13CommType oneEnum : Enum13CommType.values()) {
             tagData = new Tag13EnuCommType(oneEnum);
@@ -102,8 +98,6 @@ class Tag13EnuCommTypeTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag13EnuCommType tagData;
-
         // loop around the ENUM and process
         for (Enum13CommType oneEnum : Enum13CommType.values()) {
             tagData = new Tag13EnuCommType(oneEnum);
@@ -115,8 +109,6 @@ class Tag13EnuCommTypeTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag13EnuCommType tagData;
-
         // loop around the ENUM and process
         for (Enum13CommType oneEnum : Enum13CommType.values()) {
             tagData = new Tag13EnuCommType(oneEnum);
@@ -128,8 +120,6 @@ class Tag13EnuCommTypeTest {
     }
     @Test
     void TagToStringTest() {
-        Tag13EnuCommType tagData;
-
         // loop around the ENUM and process
         for (Enum13CommType oneEnum : Enum13CommType.values()) {
             tagData = new Tag13EnuCommType(oneEnum);
@@ -139,8 +129,6 @@ class Tag13EnuCommTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag13EnuCommType tagData;
-
         // loop around the ENUM and process
         for (Enum13CommType oneEnum : Enum13CommType.values()) {
             tagData = new Tag13EnuCommType(oneEnum);

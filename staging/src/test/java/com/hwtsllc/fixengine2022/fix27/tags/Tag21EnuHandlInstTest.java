@@ -36,10 +36,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    3 - Manual order, best execution
  */
 class Tag21EnuHandlInstTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag21EnuHandlInst tagData;
+    Tag21EnuHandlInst tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum21HandlInst oneEnum : Enum21HandlInst.values()) {
             tagData = new Tag21EnuHandlInst(oneEnum);
@@ -48,8 +48,6 @@ class Tag21EnuHandlInstTest {
     }
     @Test
     void Tag0021Test() {
-        Tag21EnuHandlInst tagData;
-
         tagData = new Tag21EnuHandlInst(Enum21HandlInst.AUTOMATIC_EXECUTION_NO_BROKER);
         assertEquals( "1", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -63,9 +61,7 @@ class Tag21EnuHandlInstTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
-    void FIXTest() {
-        Tag21EnuHandlInst tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum21HandlInst oneEnum : Enum21HandlInst.values()) {
             tagData = new Tag21EnuHandlInst(oneEnum);
@@ -81,8 +77,6 @@ class Tag21EnuHandlInstTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag21EnuHandlInst tagData;
-
         // loop around the ENUM and process
         for (Enum21HandlInst oneEnum : Enum21HandlInst.values()) {
             tagData = new Tag21EnuHandlInst(oneEnum);
@@ -94,8 +88,6 @@ class Tag21EnuHandlInstTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag21EnuHandlInst tagData;
-
         // loop around the ENUM and process
         for (Enum21HandlInst oneEnum : Enum21HandlInst.values()) {
             tagData = new Tag21EnuHandlInst(oneEnum);
@@ -107,8 +99,6 @@ class Tag21EnuHandlInstTest {
     }
     @Test
     void TagToStringTest() {
-        Tag21EnuHandlInst tagData;
-
         // loop around the ENUM and process
         for (Enum21HandlInst oneEnum : Enum21HandlInst.values()) {
             tagData = new Tag21EnuHandlInst(oneEnum);
@@ -118,8 +108,6 @@ class Tag21EnuHandlInstTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag21EnuHandlInst tagData;
-
         // loop around the ENUM and process
         for (Enum21HandlInst oneEnum : Enum21HandlInst.values()) {
             tagData = new Tag21EnuHandlInst(oneEnum);

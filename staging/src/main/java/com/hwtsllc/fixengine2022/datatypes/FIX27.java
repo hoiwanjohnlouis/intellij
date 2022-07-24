@@ -139,7 +139,7 @@ public enum FIX27 implements LogFIXString, LogVerboseString, MyTestValues {
     FIX64_STR_SETTL_DATE(64, "SETTL_DATE", "SettlDate"),
     FIX65_ENU_SYMBOL_SFX(65, "SYMBOL_SFX", "SymbolSfx"),
     FIX66_STR_LIST_ID(66, "LIST_ID", "ListID"),
-    FIX67_STR_LIST_SEQ_NO(67, "LIST_SEQ_NO", "ListSeqNo"),
+    FIX67_SEQ_LIST_SEQ_NO(67, "LIST_SEQ_NO", "ListSeqNo"),
     FIX68_INT_TOT_NO_ORDERS(68, "TOT_NO_ORDERS", "TotNoOrders (formerly named: ListNoOrds)"),
     FIX69_STR_LIST_EXEC_INST(69, "LIST_EXEC_INST", "ListExecInst"),
     FIX70_STR_ALLOC_ID(70, "ALLOC_ID", "AllocID"),
@@ -147,8 +147,8 @@ public enum FIX27 implements LogFIXString, LogVerboseString, MyTestValues {
     FIX71_ENU_ALLOC_TRANS_TYPE(71, "ALLOC_TRANS_TYPE", "AllocTransType"),
     FIX72_STR_REF_ALLOC_ID(72, "REF_ALLOC_ID", "RefAllocID"),
     FIX73_NUM_NO_ORDERS(73, "NO_ORDERS", "NoOrders"),
-    FIX74_STR_AVG_PX_PRECISION(74, "AVG_PX_PRECISION", "AvgPxPrecision"),
-    FIX75_STR_TRADE_DATE(75, "TRADE_DATE", "TradeDate"),
+    FIX74_INT_AVG_PX_PRECISION(74, "AVG_PX_PRECISION", "AvgPxPrecision"),
+    FIX75_LMD_TRADE_DATE(75, "TRADE_DATE", "TradeDate"),
     FIX76_STR_EXEC_BROKER(76, "EXEC_BROKER", "ExecBroker (replaced)"),
     FIX77_ENU_POSITION_EFFECT(77, "POSITION_EFFECT", "PositionEffect"),
     FIX78_NUM_NO_ALLOCS(78, "NO_ALLOCS", "NoAllocs"),
@@ -157,7 +157,7 @@ public enum FIX27 implements LogFIXString, LogVerboseString, MyTestValues {
 
     FIX81_ENU_PROCESS_CODE(81, "PROCESS_CODE", "ProcessCode"),
     FIX82_INT_NO_RPTS(82, "NO_RPTS", "NoRpts"),
-    FIX83_STR_RPT_SEQ(83, "RPT_SEQ", "RptSeq"),
+    FIX83_INT_RPT_SEQ(83, "RPT_SEQ", "RptSeq"),
     FIX84_QTY_CXL_QTY(84, "CXL_QTY", "CxlQty"),
     FIX85_NUM_NO_DLVY_INST(85, "NO_DLVY_INST", "NoDlvyInst (no longer used)"),
     FIX86_STR_DLVY_INST(86, "DLVY_INST", "DlvyInst (no longer used)"),
@@ -175,7 +175,7 @@ public enum FIX27 implements LogFIXString, LogVerboseString, MyTestValues {
     FIX97_ENU_POSS_RESEND(97, "POSS_RESEND", "PossResend"),
     FIX98_ENU_ENCRYPT_METHOD(98, "ENCRYPT_METHOD", "EncryptMethod"),
     FIX99_PRC_STOP_PX(99, "STOP_PX", "StopPx"),
-    FIX100_STR_EX_DESTINATION(100, "EX_DESTINATION", "ExDestination"),
+    FIX100_EXC_EX_DESTINATION(100, "EX_DESTINATION", "ExDestination"),
 
 
     // 101-200

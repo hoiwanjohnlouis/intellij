@@ -36,10 +36,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    R - Replace
  */
 class Tag5Enu5AdvTransTypeTest {
+    Tag5EnuAdvTransType tagData;
+
     @Test
     void PrintFIXTagTest() {
-        Tag5EnuAdvTransType tagData;
-
         // loop around the ENUM and process
         for (Enum5AdvTransType oneEnum : Enum5AdvTransType.values()) {
             tagData = new Tag5EnuAdvTransType(oneEnum);
@@ -48,8 +48,6 @@ class Tag5Enu5AdvTransTypeTest {
     }
     @Test
     void Tag0005Test() {
-        Tag5EnuAdvTransType tagData;
-
         tagData = new Tag5EnuAdvTransType(Enum5AdvTransType.NEW);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -63,9 +61,7 @@ class Tag5Enu5AdvTransTypeTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
-    void FIXTest() {
-        Tag5EnuAdvTransType tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum5AdvTransType oneEnum : Enum5AdvTransType.values()) {
             tagData = new Tag5EnuAdvTransType(oneEnum);
@@ -81,8 +77,6 @@ class Tag5Enu5AdvTransTypeTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag5EnuAdvTransType tagData;
-
         // loop around the ENUM and process
         for (Enum5AdvTransType oneEnum : Enum5AdvTransType.values()) {
             tagData = new Tag5EnuAdvTransType(oneEnum);
@@ -94,8 +88,6 @@ class Tag5Enu5AdvTransTypeTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag5EnuAdvTransType tagData;
-
         // loop around the ENUM and process
         for (Enum5AdvTransType oneEnum : Enum5AdvTransType.values()) {
             tagData = new Tag5EnuAdvTransType(oneEnum);
@@ -107,8 +99,6 @@ class Tag5Enu5AdvTransTypeTest {
     }
     @Test
     void TagToStringTest() {
-        Tag5EnuAdvTransType tagData;
-
         // loop around the ENUM and process
         for (Enum5AdvTransType oneEnum : Enum5AdvTransType.values()) {
             tagData = new Tag5EnuAdvTransType(oneEnum);
@@ -118,8 +108,6 @@ class Tag5Enu5AdvTransTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag5EnuAdvTransType tagData;
-
         // loop around the ENUM and process
         for (Enum5AdvTransType oneEnum : Enum5AdvTransType.values()) {
             tagData = new Tag5EnuAdvTransType(oneEnum);

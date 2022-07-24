@@ -35,10 +35,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    Y - Possible Resend
  */
 class Tag97EnuPossResendTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag97EnuPossResend tagData;
+    Tag97EnuPossResend tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum97PossResend oneEnum : Enum97PossResend.values()) {
             tagData = new Tag97EnuPossResend(oneEnum);
@@ -46,9 +46,7 @@ class Tag97EnuPossResendTest {
         }
     }
     @Test
-    void FIXTest() {
-        Tag97EnuPossResend tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum97PossResend oneEnum : Enum97PossResend.values()) {
             tagData = new Tag97EnuPossResend(oneEnum);
@@ -64,8 +62,6 @@ class Tag97EnuPossResendTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag97EnuPossResend tagData;
-
         // loop around the ENUM and process
         for (Enum97PossResend oneEnum : Enum97PossResend.values()) {
             tagData = new Tag97EnuPossResend(oneEnum);
@@ -77,8 +73,6 @@ class Tag97EnuPossResendTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag97EnuPossResend tagData;
-
         // loop around the ENUM and process
         for (Enum97PossResend oneEnum : Enum97PossResend.values()) {
             tagData = new Tag97EnuPossResend(oneEnum);
@@ -90,8 +84,6 @@ class Tag97EnuPossResendTest {
     }
     @Test
     void TagToStringTest() {
-        Tag97EnuPossResend tagData;
-
         // loop around the ENUM and process
         for (Enum97PossResend oneEnum : Enum97PossResend.values()) {
             tagData = new Tag97EnuPossResend(oneEnum);
@@ -101,8 +93,6 @@ class Tag97EnuPossResendTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag97EnuPossResend tagData;
-
         // loop around the ENUM and process
         for (Enum97PossResend oneEnum : Enum97PossResend.values()) {
             tagData = new Tag97EnuPossResend(oneEnum);

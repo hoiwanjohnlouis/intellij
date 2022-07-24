@@ -37,10 +37,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    4 - Principal
  */
 class Tag29EnuLastCapacityTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag29EnuLastCapacity tagData;
+    Tag29EnuLastCapacity tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum29LastCapacity oneEnum : Enum29LastCapacity.values()) {
             tagData = new Tag29EnuLastCapacity(oneEnum);
@@ -49,8 +49,6 @@ class Tag29EnuLastCapacityTest {
     }
     @Test
     void Tag0029Test() {
-        Tag29EnuLastCapacity tagData;
-
         tagData = new Tag29EnuLastCapacity(Enum29LastCapacity.AGENT);
         assertEquals( "1", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -68,9 +66,7 @@ class Tag29EnuLastCapacityTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
-    void FIXTest() {
-        Tag29EnuLastCapacity tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum29LastCapacity oneEnum : Enum29LastCapacity.values()) {
             tagData = new Tag29EnuLastCapacity(oneEnum);
@@ -86,8 +82,6 @@ class Tag29EnuLastCapacityTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag29EnuLastCapacity tagData;
-
         // loop around the ENUM and process
         for (Enum29LastCapacity oneEnum : Enum29LastCapacity.values()) {
             tagData = new Tag29EnuLastCapacity(oneEnum);
@@ -99,8 +93,6 @@ class Tag29EnuLastCapacityTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag29EnuLastCapacity tagData;
-
         // loop around the ENUM and process
         for (Enum29LastCapacity oneEnum : Enum29LastCapacity.values()) {
             tagData = new Tag29EnuLastCapacity(oneEnum);
@@ -112,8 +104,6 @@ class Tag29EnuLastCapacityTest {
     }
     @Test
     void TagToStringTest() {
-        Tag29EnuLastCapacity tagData;
-
         // loop around the ENUM and process
         for (Enum29LastCapacity oneEnum : Enum29LastCapacity.values()) {
             tagData = new Tag29EnuLastCapacity(oneEnum);
@@ -123,8 +113,6 @@ class Tag29EnuLastCapacityTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag29EnuLastCapacity tagData;
-
         // loop around the ENUM and process
         for (Enum29LastCapacity oneEnum : Enum29LastCapacity.values()) {
             tagData = new Tag29EnuLastCapacity(oneEnum);

@@ -56,10 +56,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    E - Pending Replace (i.e. result of Order Cancel/Replace Request)
  */
 class Tag39EnuOrdStatusTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag39EnuOrdStatus tagData;
+    Tag39EnuOrdStatus tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum39OrdStatus oneEnum : Enum39OrdStatus.values()) {
             tagData = new Tag39EnuOrdStatus(oneEnum);
@@ -68,8 +68,6 @@ class Tag39EnuOrdStatusTest {
     }
     @Test
     void Tag0039Test() {
-        Tag39EnuOrdStatus tagData;
-
         /*
          * 0-9 Order Status msg
          */
@@ -139,9 +137,7 @@ class Tag39EnuOrdStatusTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
-    void FIXTest() {
-        Tag39EnuOrdStatus tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum39OrdStatus oneEnum : Enum39OrdStatus.values()) {
             tagData = new Tag39EnuOrdStatus(oneEnum);
@@ -157,8 +153,6 @@ class Tag39EnuOrdStatusTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag39EnuOrdStatus tagData;
-
         // loop around the ENUM and process
         for (Enum39OrdStatus oneEnum : Enum39OrdStatus.values()) {
             tagData = new Tag39EnuOrdStatus(oneEnum);
@@ -170,8 +164,6 @@ class Tag39EnuOrdStatusTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag39EnuOrdStatus tagData;
-
         // loop around the ENUM and process
         for (Enum39OrdStatus oneEnum : Enum39OrdStatus.values()) {
             tagData = new Tag39EnuOrdStatus(oneEnum);
@@ -183,8 +175,6 @@ class Tag39EnuOrdStatusTest {
     }
     @Test
     void TagToStringTest() {
-        Tag39EnuOrdStatus tagData;
-
         // loop around the ENUM and process
         for (Enum39OrdStatus oneEnum : Enum39OrdStatus.values()) {
             tagData = new Tag39EnuOrdStatus(oneEnum);
@@ -194,8 +184,6 @@ class Tag39EnuOrdStatusTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag39EnuOrdStatus tagData;
-
         // loop around the ENUM and process
         for (Enum39OrdStatus oneEnum : Enum39OrdStatus.values()) {
             tagData = new Tag39EnuOrdStatus(oneEnum);

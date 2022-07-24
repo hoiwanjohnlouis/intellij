@@ -46,10 +46,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    6 - Reversal
  */
 class Tag71EnuAllocTransTypeTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag71EnuAllocTransType tagData;
+    Tag71EnuAllocTransType tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum71AllocTransType oneEnum : Enum71AllocTransType.values()) {
             tagData = new Tag71EnuAllocTransType(oneEnum);
@@ -58,8 +58,6 @@ class Tag71EnuAllocTransTypeTest {
     }
     @Test
     void Tag0071Test() {
-        Tag71EnuAllocTransType tagData;
-
         /*
          * 0-6 AllocTransType types
          */
@@ -92,9 +90,7 @@ class Tag71EnuAllocTransTypeTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
-    void FIXTest() {
-        Tag71EnuAllocTransType tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum71AllocTransType oneEnum : Enum71AllocTransType.values()) {
             tagData = new Tag71EnuAllocTransType(oneEnum);
@@ -110,8 +106,6 @@ class Tag71EnuAllocTransTypeTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag71EnuAllocTransType tagData;
-
         // loop around the ENUM and process
         for (Enum71AllocTransType oneEnum : Enum71AllocTransType.values()) {
             tagData = new Tag71EnuAllocTransType(oneEnum);
@@ -123,8 +117,6 @@ class Tag71EnuAllocTransTypeTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag71EnuAllocTransType tagData;
-
         // loop around the ENUM and process
         for (Enum71AllocTransType oneEnum : Enum71AllocTransType.values()) {
             tagData = new Tag71EnuAllocTransType(oneEnum);
@@ -136,8 +128,6 @@ class Tag71EnuAllocTransTypeTest {
     }
     @Test
     void TagToStringTest() {
-        Tag71EnuAllocTransType tagData;
-
         // loop around the ENUM and process
         for (Enum71AllocTransType oneEnum : Enum71AllocTransType.values()) {
             tagData = new Tag71EnuAllocTransType(oneEnum);
@@ -147,8 +137,6 @@ class Tag71EnuAllocTransTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag71EnuAllocTransType tagData;
-
         // loop around the ENUM and process
         for (Enum71AllocTransType oneEnum : Enum71AllocTransType.values()) {
             tagData = new Tag71EnuAllocTransType(oneEnum);

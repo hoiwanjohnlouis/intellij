@@ -45,10 +45,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    6 - Plan Sponsor
  */
 class Tag81EnuProcessCodeTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag81EnuProcessCode tagData;
+    Tag81EnuProcessCode tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum81ProcessCode oneEnum : Enum81ProcessCode.values()) {
             tagData = new Tag81EnuProcessCode(oneEnum);
@@ -57,8 +57,6 @@ class Tag81EnuProcessCodeTest {
     }
     @Test
     void Tag0081Test() {
-        Tag81EnuProcessCode tagData;
-
         /*
          * 0-6 AllocRejCode types
          */
@@ -91,9 +89,7 @@ class Tag81EnuProcessCodeTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
-    void FIXTest() {
-        Tag81EnuProcessCode tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum81ProcessCode oneEnum : Enum81ProcessCode.values()) {
             tagData = new Tag81EnuProcessCode(oneEnum);
@@ -109,8 +105,6 @@ class Tag81EnuProcessCodeTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag81EnuProcessCode tagData;
-
         // loop around the ENUM and process
         for (Enum81ProcessCode oneEnum : Enum81ProcessCode.values()) {
             tagData = new Tag81EnuProcessCode(oneEnum);
@@ -122,8 +116,6 @@ class Tag81EnuProcessCodeTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag81EnuProcessCode tagData;
-
         // loop around the ENUM and process
         for (Enum81ProcessCode oneEnum : Enum81ProcessCode.values()) {
             tagData = new Tag81EnuProcessCode(oneEnum);
@@ -135,8 +127,6 @@ class Tag81EnuProcessCodeTest {
     }
     @Test
     void TagToStringTest() {
-        Tag81EnuProcessCode tagData;
-
         // loop around the ENUM and process
         for (Enum81ProcessCode oneEnum : Enum81ProcessCode.values()) {
             tagData = new Tag81EnuProcessCode(oneEnum);
@@ -146,8 +136,6 @@ class Tag81EnuProcessCodeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag81EnuProcessCode tagData;
-
         // loop around the ENUM and process
         for (Enum81ProcessCode oneEnum : Enum81ProcessCode.values()) {
             tagData = new Tag81EnuProcessCode(oneEnum);

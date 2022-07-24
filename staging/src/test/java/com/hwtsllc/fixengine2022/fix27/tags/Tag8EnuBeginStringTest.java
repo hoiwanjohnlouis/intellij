@@ -45,10 +45,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    FIXT.1.1
  */
 class Tag8EnuBeginStringTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag8EnuBeginString tagData;
+    Tag8EnuBeginString tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum8BeginString oneEnum : Enum8BeginString.values()) {
             tagData = new Tag8EnuBeginString(oneEnum);
@@ -57,8 +57,6 @@ class Tag8EnuBeginStringTest {
     }
     @Test
     void Tag0008Test() {
-        Tag8EnuBeginString tagData;
-
         tagData = new Tag8EnuBeginString(Enum8BeginString.BEGIN_STRING_2_7);
         assertEquals( "FIX.2.7", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -92,9 +90,7 @@ class Tag8EnuBeginStringTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
-    void FIXTest() {
-        Tag8EnuBeginString tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum8BeginString oneEnum : Enum8BeginString.values()) {
             tagData = new Tag8EnuBeginString(oneEnum);
@@ -110,8 +106,6 @@ class Tag8EnuBeginStringTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag8EnuBeginString tagData;
-
         // loop around the ENUM and process
         for (Enum8BeginString oneEnum : Enum8BeginString.values()) {
             tagData = new Tag8EnuBeginString(oneEnum);
@@ -123,8 +117,6 @@ class Tag8EnuBeginStringTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag8EnuBeginString tagData;
-
         // loop around the ENUM and process
         for (Enum8BeginString oneEnum : Enum8BeginString.values()) {
             tagData = new Tag8EnuBeginString(oneEnum);
@@ -136,8 +128,6 @@ class Tag8EnuBeginStringTest {
     }
     @Test
     void TagToStringTest() {
-        Tag8EnuBeginString tagData;
-
         // loop around the ENUM and process
         for (Enum8BeginString oneEnum : Enum8BeginString.values()) {
             tagData = new Tag8EnuBeginString(oneEnum);
@@ -147,8 +137,6 @@ class Tag8EnuBeginStringTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag8EnuBeginString tagData;
-
         // loop around the ENUM and process
         for (Enum8BeginString oneEnum : Enum8BeginString.values()) {
             tagData = new Tag8EnuBeginString(oneEnum);

@@ -45,10 +45,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    Or any value conforming to the data type Reserved100Plus
  */
 class Tag102EnuCxlRejReasonTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag102EnuCxlRejReason tagData;
+    Tag102EnuCxlRejReason tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum102CxlRejReason oneEnum : Enum102CxlRejReason.values()) {
             tagData = new Tag102EnuCxlRejReason(oneEnum);
@@ -57,8 +57,6 @@ class Tag102EnuCxlRejReasonTest {
     }
     @Test
     void Tag0102Test() {
-        Tag102EnuCxlRejReason tagData;
-
         /*
          * 0-6, 18, 99 CxlRejReason type
          */
@@ -110,9 +108,7 @@ class Tag102EnuCxlRejReasonTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
-    void FIXTest() {
-        Tag102EnuCxlRejReason tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum102CxlRejReason oneEnum : Enum102CxlRejReason.values()) {
             tagData = new Tag102EnuCxlRejReason(oneEnum);
@@ -128,8 +124,6 @@ class Tag102EnuCxlRejReasonTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag102EnuCxlRejReason tagData;
-
         // loop around the ENUM and process
         for (Enum102CxlRejReason oneEnum : Enum102CxlRejReason.values()) {
             tagData = new Tag102EnuCxlRejReason(oneEnum);
@@ -141,8 +135,6 @@ class Tag102EnuCxlRejReasonTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag102EnuCxlRejReason tagData;
-
         // loop around the ENUM and process
         for (Enum102CxlRejReason oneEnum : Enum102CxlRejReason.values()) {
             tagData = new Tag102EnuCxlRejReason(oneEnum);
@@ -154,8 +146,6 @@ class Tag102EnuCxlRejReasonTest {
     }
     @Test
     void TagToStringTest() {
-        Tag102EnuCxlRejReason tagData;
-
         // loop around the ENUM and process
         for (Enum102CxlRejReason oneEnum : Enum102CxlRejReason.values()) {
             tagData = new Tag102EnuCxlRejReason(oneEnum);
@@ -165,8 +155,6 @@ class Tag102EnuCxlRejReasonTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag102EnuCxlRejReason tagData;
-
         // loop around the ENUM and process
         for (Enum102CxlRejReason oneEnum : Enum102CxlRejReason.values()) {
             tagData = new Tag102EnuCxlRejReason(oneEnum);

@@ -36,125 +36,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 // @Deprecated
 class Tag76StrExecBrokerTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag76StrExecBroker tagData;
-        String oneElement;
-
-        oneElement = Tag76StrExecBroker.TESTA_STR_EXEC_BROKER;
-        tagData = new Tag76StrExecBroker(new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag76StrExecBroker.TESTB_STR_EXEC_BROKER;
-        tagData = new Tag76StrExecBroker(new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-    }
+    Tag76StrExecBroker tagData;
+    String [] TestArray = {
+            Tag76StrExecBroker.TESTA_STR_EXEC_BROKER,
+            Tag76StrExecBroker.TESTB_STR_EXEC_BROKER
+    };
 
     @Test
-    void FIXTest() {
-        Tag76StrExecBroker tagData;
-        String oneElement;
-
-        oneElement = Tag76StrExecBroker.TESTA_STR_EXEC_BROKER;
-        tagData = new Tag76StrExecBroker(new MyStringType( oneElement ) );
-        verifyFIXData( tagData );
-
-        oneElement = Tag76StrExecBroker.TESTB_STR_EXEC_BROKER;
-        tagData = new Tag76StrExecBroker(new MyStringType( oneElement ) );
-        verifyFIXData( tagData );
+    void PrintTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag76StrExecBroker( new MyStringType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
-
-    private void verifyFIXData( final Tag76StrExecBroker tagData ) {
-        assertEquals( "FIX76_STR_EXEC_BROKER", tagData.toEnumLabelString());
-        assertEquals( "EXEC_BROKER", tagData.toEnumNameString());
-        assertEquals( "76", tagData.toEnumIDString());
-        assertEquals( "ExecBroker (replaced)", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    @Test
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag76StrExecBroker( new MyStringType( oneElement ));
+            assertEquals( "FIX76_STR_EXEC_BROKER", tagData.toEnumLabelString());
+            assertEquals( "EXEC_BROKER", tagData.toEnumNameString());
+            assertEquals( "76", tagData.toEnumIDString());
+            assertEquals( "ExecBroker (replaced)", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
-
     @Test
     void TagGetDataValueTest() {
-        Tag76StrExecBroker tagData;
-        String oneElement;
-
-        oneElement = Tag76StrExecBroker.TESTA_STR_EXEC_BROKER;
-        tagData = new Tag76StrExecBroker(new MyStringType( oneElement ) );
-        verifyDataValue( tagData, oneElement );
-
-        oneElement = Tag76StrExecBroker.TESTB_STR_EXEC_BROKER;
-        tagData = new Tag76StrExecBroker(new MyStringType( oneElement ) );
-        verifyDataValue( tagData, oneElement );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag76StrExecBroker( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        }
     }
-
-    private void verifyDataValue( final Tag76StrExecBroker tagData, final String oneElement ) {
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-
     @Test
     void TagToValuePairStringTest() {
-        Tag76StrExecBroker tagData;
-        String oneElement;
-
-        oneElement = Tag76StrExecBroker.TESTA_STR_EXEC_BROKER;
-        tagData = new Tag76StrExecBroker(new MyStringType( oneElement ) );
-        verifyValuePairString( tagData, oneElement );
-
-        oneElement = Tag76StrExecBroker.TESTB_STR_EXEC_BROKER;
-        tagData = new Tag76StrExecBroker(new MyStringType( oneElement ) );
-        verifyValuePairString( tagData, oneElement );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag76StrExecBroker( new MyStringType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
-
-    private void verifyValuePairString( final Tag76StrExecBroker tagData, final String oneElement ) {
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-    }
-
     @Test
     void TagToStringTest() {
-        Tag76StrExecBroker tagData;
-        String oneElement;
-
-        oneElement = Tag76StrExecBroker.TESTA_STR_EXEC_BROKER;
-        tagData = new Tag76StrExecBroker(new MyStringType( oneElement ) );
-        verifyToString( tagData, oneElement );
-
-        oneElement = Tag76StrExecBroker.TESTB_STR_EXEC_BROKER;
-        tagData = new Tag76StrExecBroker(new MyStringType( oneElement ) );
-        verifyToString( tagData, oneElement );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag76StrExecBroker( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
-
-    private void verifyToString( final Tag76StrExecBroker tagData, final String oneElement ) {
-        assertEquals( oneElement, tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
-    }
-
     @Test
     void TagToVerboseStringTest() {
-        Tag76StrExecBroker tagData;
-        String oneElement;
-
-        oneElement = Tag76StrExecBroker.TESTA_STR_EXEC_BROKER;
-        tagData = new Tag76StrExecBroker(new MyStringType( oneElement ) );
-        verifyVerboseString( tagData, oneElement );
-
-        oneElement = Tag76StrExecBroker.TESTB_STR_EXEC_BROKER;
-        tagData = new Tag76StrExecBroker(new MyStringType( oneElement ) );
-        verifyVerboseString( tagData, oneElement );
-    }
-
-    private void verifyVerboseString( final Tag76StrExecBroker tagData, final String oneElement ) {
-        assertEquals( "Tag76StrExecBroker\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
-                        "\tValuePair[" + tagData.toValuePairString() + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag76StrExecBroker( new MyStringType( oneElement ));
+            assertEquals( "Tag76StrExecBroker\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

@@ -58,10 +58,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    WI - When-Issued for a security to be reissued under an old CUSIP or ISIN
  */
 class Tag65EnuSymbolSfxTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag65EnuSymbolSfx tagData;
+    Tag65EnuSymbolSfx tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
             tagData = new Tag65EnuSymbolSfx(oneEnum);
@@ -70,8 +70,6 @@ class Tag65EnuSymbolSfxTest {
     }
     @Test
     void Tag0065Test() {
-        Tag65EnuSymbolSfx tagData;
-
         tagData = new Tag65EnuSymbolSfx(MyEnumSymbolSfx.EUCP);
         assertEquals( "CD", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -81,9 +79,7 @@ class Tag65EnuSymbolSfxTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
-    void FIXTest() {
-        Tag65EnuSymbolSfx tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
             tagData = new Tag65EnuSymbolSfx( oneEnum );
@@ -99,8 +95,6 @@ class Tag65EnuSymbolSfxTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag65EnuSymbolSfx tagData;
-
         // loop around the ENUM and process
         for (MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
             tagData = new Tag65EnuSymbolSfx(oneEnum);
@@ -112,8 +106,6 @@ class Tag65EnuSymbolSfxTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag65EnuSymbolSfx tagData;
-
         // loop around the ENUM and process
         for (MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
             tagData = new Tag65EnuSymbolSfx(oneEnum);
@@ -125,8 +117,6 @@ class Tag65EnuSymbolSfxTest {
     }
     @Test
     void TagToStringTest() {
-        Tag65EnuSymbolSfx tagData;
-
         // loop around the ENUM and process
         for (MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
             tagData = new Tag65EnuSymbolSfx(oneEnum);
@@ -136,8 +126,6 @@ class Tag65EnuSymbolSfxTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag65EnuSymbolSfx tagData;
-
         // loop around the ENUM and process
         for (MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
             tagData = new Tag65EnuSymbolSfx(oneEnum);

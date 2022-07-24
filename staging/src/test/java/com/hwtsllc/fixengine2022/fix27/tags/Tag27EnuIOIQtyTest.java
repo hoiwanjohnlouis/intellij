@@ -46,10 +46,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    U - Undisclosed Quantity
  */
 class Tag27EnuIOIQtyTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag27EnuIOIQty tagData;
+    Tag27EnuIOIQty tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (MyEnumIOIQty oneEnum : MyEnumIOIQty.values()) {
             tagData = new Tag27EnuIOIQty(oneEnum);
@@ -58,8 +58,6 @@ class Tag27EnuIOIQtyTest {
     }
     @Test
     void Tag0027Test() {
-        Tag27EnuIOIQty tagData;
-
         tagData = new Tag27EnuIOIQty(MyEnumIOIQty.ONE_BILLION);
         assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -81,9 +79,7 @@ class Tag27EnuIOIQtyTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
-    void FIXTest() {
-        Tag27EnuIOIQty tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (MyEnumIOIQty oneEnum : MyEnumIOIQty.values()) {
             tagData = new Tag27EnuIOIQty(oneEnum);
@@ -99,8 +95,6 @@ class Tag27EnuIOIQtyTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag27EnuIOIQty tagData;
-
         // loop around the ENUM and process
         for (MyEnumIOIQty oneEnum : MyEnumIOIQty.values()) {
             tagData = new Tag27EnuIOIQty(oneEnum);
@@ -112,8 +106,6 @@ class Tag27EnuIOIQtyTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag27EnuIOIQty tagData;
-
         // loop around the ENUM and process
         for (MyEnumIOIQty oneEnum : MyEnumIOIQty.values()) {
             tagData = new Tag27EnuIOIQty(oneEnum);
@@ -125,8 +117,6 @@ class Tag27EnuIOIQtyTest {
     }
     @Test
     void TagToStringTest() {
-        Tag27EnuIOIQty tagData;
-
         // loop around the ENUM and process
         for (MyEnumIOIQty oneEnum : MyEnumIOIQty.values()) {
             tagData = new Tag27EnuIOIQty(oneEnum);
@@ -136,8 +126,6 @@ class Tag27EnuIOIQtyTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag27EnuIOIQty tagData;
-
         // loop around the ENUM and process
         for (MyEnumIOIQty oneEnum : MyEnumIOIQty.values()) {
             tagData = new Tag27EnuIOIQty(oneEnum);

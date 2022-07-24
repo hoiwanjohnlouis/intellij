@@ -36,10 +36,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    R - Replace
  */
 class Tag28EnuIOITransTypeTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag28EnuIOITransType tagData;
+    Tag28EnuIOITransType tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum28IOITransType oneEnum : Enum28IOITransType.values()) {
             tagData = new Tag28EnuIOITransType(oneEnum);
@@ -48,8 +48,6 @@ class Tag28EnuIOITransTypeTest {
     }
     @Test
     void Tag0028Test() {
-        Tag28EnuIOITransType tagData;
-
         tagData = new Tag28EnuIOITransType(Enum28IOITransType.NEW);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -63,9 +61,7 @@ class Tag28EnuIOITransTypeTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
-    void FIXTest() {
-        Tag28EnuIOITransType tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum28IOITransType oneEnum : Enum28IOITransType.values()) {
             tagData = new Tag28EnuIOITransType(oneEnum);
@@ -81,8 +77,6 @@ class Tag28EnuIOITransTypeTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag28EnuIOITransType tagData;
-
         // loop around the ENUM and process
         for (Enum28IOITransType oneEnum : Enum28IOITransType.values()) {
             tagData = new Tag28EnuIOITransType(oneEnum);
@@ -94,8 +88,6 @@ class Tag28EnuIOITransTypeTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag28EnuIOITransType tagData;
-
         // loop around the ENUM and process
         for (Enum28IOITransType oneEnum : Enum28IOITransType.values()) {
             tagData = new Tag28EnuIOITransType(oneEnum);
@@ -107,8 +99,6 @@ class Tag28EnuIOITransTypeTest {
     }
     @Test
     void TagToStringTest() {
-        Tag28EnuIOITransType tagData;
-
         // loop around the ENUM and process
         for (Enum28IOITransType oneEnum : Enum28IOITransType.values()) {
             tagData = new Tag28EnuIOITransType(oneEnum);
@@ -118,8 +108,6 @@ class Tag28EnuIOITransTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag28EnuIOITransType tagData;
-
         // loop around the ENUM and process
         for (Enum28IOITransType oneEnum : Enum28IOITransType.values()) {
             tagData = new Tag28EnuIOITransType(oneEnum);

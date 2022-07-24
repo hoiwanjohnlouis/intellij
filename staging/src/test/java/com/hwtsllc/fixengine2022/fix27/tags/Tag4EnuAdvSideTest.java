@@ -37,10 +37,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    X - Cross
  */
 class Tag4EnuAdvSideTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag4EnuAdvSide tagData;
+    Tag4EnuAdvSide tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum4AdvSide oneEnum : Enum4AdvSide.values()) {
             tagData = new Tag4EnuAdvSide(oneEnum);
@@ -50,8 +50,6 @@ class Tag4EnuAdvSideTest {
 
     @Test
     void Tag0004Test() {
-        Tag4EnuAdvSide tagData;
-
         tagData = new Tag4EnuAdvSide( Enum4AdvSide.BUY);
         assertEquals( "B", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
@@ -69,9 +67,7 @@ class Tag4EnuAdvSideTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
     @Test
-    void FIXTest() {
-        Tag4EnuAdvSide tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum4AdvSide oneEnum : Enum4AdvSide.values()) {
             tagData = new Tag4EnuAdvSide(oneEnum);
@@ -87,8 +83,6 @@ class Tag4EnuAdvSideTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag4EnuAdvSide tagData;
-
         // loop around the ENUM and process
         for (Enum4AdvSide oneEnum : Enum4AdvSide.values()) {
             tagData = new Tag4EnuAdvSide(oneEnum);
@@ -100,8 +94,6 @@ class Tag4EnuAdvSideTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag4EnuAdvSide tagData;
-
         // loop around the ENUM and process
         for (Enum4AdvSide oneEnum : Enum4AdvSide.values()) {
             tagData = new Tag4EnuAdvSide(oneEnum);
@@ -113,8 +105,6 @@ class Tag4EnuAdvSideTest {
     }
     @Test
     void TagToStringTest() {
-        Tag4EnuAdvSide tagData;
-
         // loop around the ENUM and process
         for (Enum4AdvSide oneEnum : Enum4AdvSide.values()) {
             tagData = new Tag4EnuAdvSide(oneEnum);
@@ -124,8 +114,6 @@ class Tag4EnuAdvSideTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag4EnuAdvSide tagData;
-
         // loop around the ENUM and process
         for (Enum4AdvSide oneEnum : Enum4AdvSide.values()) {
             tagData = new Tag4EnuAdvSide(oneEnum);

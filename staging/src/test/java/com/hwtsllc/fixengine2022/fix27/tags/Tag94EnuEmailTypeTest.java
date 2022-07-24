@@ -36,10 +36,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    2 - Admin Reply
  */
 class Tag94EnuEmailTypeTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag94EnuEmailType tagData;
+    Tag94EnuEmailType tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum94EmailType oneEnum : Enum94EmailType.values()) {
             tagData = new Tag94EnuEmailType(oneEnum);
@@ -48,8 +48,6 @@ class Tag94EnuEmailTypeTest {
     }
     @Test
     void Tag0094Test() {
-        Tag94EnuEmailType tagData;
-
         /*
          * 0-2 email types
          */
@@ -66,9 +64,7 @@ class Tag94EnuEmailTypeTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
-    void FIX0094Test() {
-        Tag94EnuEmailType tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum94EmailType oneEnum : Enum94EmailType.values()) {
             tagData = new Tag94EnuEmailType(oneEnum);
@@ -84,8 +80,6 @@ class Tag94EnuEmailTypeTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag94EnuEmailType tagData;
-
         // loop around the ENUM and process
         for (Enum94EmailType oneEnum : Enum94EmailType.values()) {
             tagData = new Tag94EnuEmailType(oneEnum);
@@ -97,8 +91,6 @@ class Tag94EnuEmailTypeTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag94EnuEmailType tagData;
-
         // loop around the ENUM and process
         for (Enum94EmailType oneEnum : Enum94EmailType.values()) {
             tagData = new Tag94EnuEmailType(oneEnum);
@@ -110,8 +102,6 @@ class Tag94EnuEmailTypeTest {
     }
     @Test
     void TagToStringTest() {
-        Tag94EnuEmailType tagData;
-
         // loop around the ENUM and process
         for (Enum94EmailType oneEnum : Enum94EmailType.values()) {
             tagData = new Tag94EnuEmailType(oneEnum);
@@ -121,8 +111,6 @@ class Tag94EnuEmailTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag94EnuEmailType tagData;
-
         // loop around the ENUM and process
         for (Enum94EmailType oneEnum : Enum94EmailType.values()) {
             tagData = new Tag94EnuEmailType(oneEnum);

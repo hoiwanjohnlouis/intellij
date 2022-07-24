@@ -36,10 +36,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    M - Medium
  */
 class Tag25EnuIOIQltyIndTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag25EnuIOIQltyInd tagData;
+    Tag25EnuIOIQltyInd tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum25IOIQltyInd oneEnum : Enum25IOIQltyInd.values()) {
             tagData = new Tag25EnuIOIQltyInd(oneEnum);
@@ -48,8 +48,6 @@ class Tag25EnuIOIQltyIndTest {
     }
     @Test
     void Tag0025Test() {
-        Tag25EnuIOIQltyInd tagData;
-
         tagData = new Tag25EnuIOIQltyInd(Enum25IOIQltyInd.HIGH);
         assertEquals( "H", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -63,9 +61,7 @@ class Tag25EnuIOIQltyIndTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
-    void FIXTest() {
-        Tag25EnuIOIQltyInd tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum25IOIQltyInd oneEnum : Enum25IOIQltyInd.values()) {
             tagData = new Tag25EnuIOIQltyInd(oneEnum);
@@ -81,8 +77,6 @@ class Tag25EnuIOIQltyIndTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag25EnuIOIQltyInd tagData;
-
         // loop around the ENUM and process
         for (Enum25IOIQltyInd oneEnum : Enum25IOIQltyInd.values()) {
             tagData = new Tag25EnuIOIQltyInd(oneEnum);
@@ -94,8 +88,6 @@ class Tag25EnuIOIQltyIndTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag25EnuIOIQltyInd tagData;
-
         // loop around the ENUM and process
         for (Enum25IOIQltyInd oneEnum : Enum25IOIQltyInd.values()) {
             tagData = new Tag25EnuIOIQltyInd(oneEnum);
@@ -107,8 +99,6 @@ class Tag25EnuIOIQltyIndTest {
     }
     @Test
     void TagToStringTest() {
-        Tag25EnuIOIQltyInd tagData;
-
         // loop around the ENUM and process
         for (Enum25IOIQltyInd oneEnum : Enum25IOIQltyInd.values()) {
             tagData = new Tag25EnuIOIQltyInd(oneEnum);
@@ -118,8 +108,6 @@ class Tag25EnuIOIQltyIndTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag25EnuIOIQltyInd tagData;
-
         // loop around the ENUM and process
         for (Enum25IOIQltyInd oneEnum : Enum25IOIQltyInd.values()) {
             tagData = new Tag25EnuIOIQltyInd(oneEnum);

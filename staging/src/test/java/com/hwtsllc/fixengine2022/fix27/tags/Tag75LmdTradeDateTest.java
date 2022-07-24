@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
+import com.hwtsllc.fixengine2022.datatypes.MyLocalMktDateType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -24,36 +24,38 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  33
- *  NoLinesOfText
- *  NumInGroup
+ *  75
+ *  TradeDate
+ *  LocalMktDate
  *  <p></p>
- *  Identifies number of lines of text body
+ *  Indicates date of trade referenced in this message in YYYYMMDD format.
+ *  <p></p>
+ *  Absence of this field indicates current day (expressed in local time at place of trade).
  */
-class Tag33NumNoLinesOfTextTest {
-    Tag33NumNoLinesOfText tagData;
-    int [] TestArray = {
-            Tag33NumNoLinesOfText.TESTA_NUM_NO_LINES_OF_TEXT,
-            Tag33NumNoLinesOfText.TESTB_NUM_NO_LINES_OF_TEXT
+class Tag75LmdTradeDateTest {
+    Tag75LmdTradeDate tagData;
+    String [] TestArray = {
+            Tag75LmdTradeDate.TESTA_LMD_TRADE_DATE,
+            Tag75LmdTradeDate.TESTB_LMD_TRADE_DATE
     };
 
     @Test
     void PrintTest() {
         // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag33NumNoLinesOfText( new MyNumInGroupType( oneElement ));
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag75LmdTradeDate( new MyLocalMktDateType( oneElement ));
             System.out.println( tagData.toVerboseString() );
         }
     }
     @Test
     void FIXHeaderTest() {
         // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag33NumNoLinesOfText( new MyNumInGroupType( oneElement ));
-            assertEquals( "FIX33_NUM_NO_LINES_OF_TEXT", tagData.toEnumLabelString());
-            assertEquals( "NO_LINES_OF_TEXT", tagData.toEnumNameString());
-            assertEquals( "33", tagData.toEnumIDString());
-            assertEquals( "NoLinesOfText", tagData.toEnumDescriptionString());
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag75LmdTradeDate( new MyLocalMktDateType( oneElement ));
+            assertEquals( "FIX75_LMD_TRADE_DATE", tagData.toEnumLabelString());
+            assertEquals( "TRADE_DATE", tagData.toEnumNameString());
+            assertEquals( "75", tagData.toEnumIDString());
+            assertEquals( "TradeDate", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
@@ -63,17 +65,17 @@ class Tag33NumNoLinesOfTextTest {
     @Test
     void TagGetDataValueTest() {
         // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag33NumNoLinesOfText( new MyNumInGroupType( oneElement ));
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag75LmdTradeDate( new MyLocalMktDateType( oneElement ));
             assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
         }
     }
     @Test
     void TagToValuePairStringTest() {
         // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag33NumNoLinesOfText( new MyNumInGroupType( oneElement ));
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag75LmdTradeDate( new MyLocalMktDateType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -82,18 +84,18 @@ class Tag33NumNoLinesOfTextTest {
     @Test
     void TagToStringTest() {
         // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag33NumNoLinesOfText( new MyNumInGroupType( oneElement ));
-            assertEquals( String.valueOf( oneElement ), tagData.toString());
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag75LmdTradeDate( new MyLocalMktDateType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
         }
     }
     @Test
     void TagToVerboseStringTest() {
         // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag33NumNoLinesOfText( new MyNumInGroupType( oneElement ));
-            assertEquals( "Tag33NumNoLinesOfText\n" +
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag75LmdTradeDate( new MyLocalMktDateType( oneElement ));
+            assertEquals( "Tag75LmdTradeDate\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +

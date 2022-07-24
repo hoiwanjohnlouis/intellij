@@ -36,10 +36,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    2 - Background
  */
 class Tag61EnuUrgencyTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag61EnuUrgency tagData;
+    Tag61EnuUrgency tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum61Urgency oneEnum : Enum61Urgency.values()) {
             tagData = new Tag61EnuUrgency(oneEnum);
@@ -48,8 +48,6 @@ class Tag61EnuUrgencyTest {
     }
     @Test
     void Tag0061Test() {
-        Tag61EnuUrgency tagData;
-
         /*
          * 0-2 Urgency types
          */
@@ -66,9 +64,7 @@ class Tag61EnuUrgencyTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
-    void FIXTest() {
-        Tag61EnuUrgency tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum61Urgency oneEnum : Enum61Urgency.values()) {
             tagData = new Tag61EnuUrgency(oneEnum);
@@ -84,8 +80,6 @@ class Tag61EnuUrgencyTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag61EnuUrgency tagData;
-
         // loop around the ENUM and process
         for (Enum61Urgency oneEnum : Enum61Urgency.values()) {
             tagData = new Tag61EnuUrgency(oneEnum);
@@ -97,8 +91,6 @@ class Tag61EnuUrgencyTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag61EnuUrgency tagData;
-
         // loop around the ENUM and process
         for (Enum61Urgency oneEnum : Enum61Urgency.values()) {
             tagData = new Tag61EnuUrgency(oneEnum);
@@ -110,8 +102,6 @@ class Tag61EnuUrgencyTest {
     }
     @Test
     void TagToStringTest() {
-        Tag61EnuUrgency tagData;
-
         // loop around the ENUM and process
         for (Enum61Urgency oneEnum : Enum61Urgency.values()) {
             tagData = new Tag61EnuUrgency(oneEnum);
@@ -121,8 +111,6 @@ class Tag61EnuUrgencyTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag61EnuUrgency tagData;
-
         // loop around the ENUM and process
         for (Enum61Urgency oneEnum : Enum61Urgency.values()) {
             tagData = new Tag61EnuUrgency(oneEnum);

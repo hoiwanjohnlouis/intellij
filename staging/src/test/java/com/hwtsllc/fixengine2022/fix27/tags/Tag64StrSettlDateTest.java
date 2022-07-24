@@ -39,125 +39,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  (expressed in local time at place of settlement)
  */
 class Tag64StrSettlDateTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag64StrSettlDate tagData;
-        String oneElement;
-
-        oneElement = Tag64StrSettlDate.TESTA_STR_SETTL_DATE;
-        tagData = new Tag64StrSettlDate(new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag64StrSettlDate.TESTB_STR_SETTL_DATE;
-        tagData = new Tag64StrSettlDate(new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-    }
+    Tag64StrSettlDate tagData;
+    String [] TestArray = {
+            Tag64StrSettlDate.TESTA_STR_SETTL_DATE,
+            Tag64StrSettlDate.TESTB_STR_SETTL_DATE
+    };
 
     @Test
-    void FIXTest() {
-        Tag64StrSettlDate tagData;
-        String oneElement;
-
-        oneElement = Tag64StrSettlDate.TESTA_STR_SETTL_DATE;
-        tagData = new Tag64StrSettlDate(new MyStringType( oneElement ) );
-        verifyFIXData( tagData );
-
-        oneElement = Tag64StrSettlDate.TESTB_STR_SETTL_DATE;
-        tagData = new Tag64StrSettlDate(new MyStringType( oneElement ) );
-        verifyFIXData( tagData );
+    void PrintTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag64StrSettlDate( new MyStringType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
-
-    private void verifyFIXData( final Tag64StrSettlDate tagData ) {
-        assertEquals( "FIX64_STR_SETTL_DATE", tagData.toEnumLabelString());
-        assertEquals( "SETTL_DATE", tagData.toEnumNameString());
-        assertEquals( "64", tagData.toEnumIDString());
-        assertEquals( "SettlDate", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    @Test
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag64StrSettlDate( new MyStringType( oneElement ));
+            assertEquals( "FIX64_STR_SETTL_DATE", tagData.toEnumLabelString());
+            assertEquals( "SETTL_DATE", tagData.toEnumNameString());
+            assertEquals( "64", tagData.toEnumIDString());
+            assertEquals( "SettlDate", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
-
     @Test
     void TagGetDataValueTest() {
-        Tag64StrSettlDate tagData;
-        String oneElement;
-
-        oneElement = Tag64StrSettlDate.TESTA_STR_SETTL_DATE;
-        tagData = new Tag64StrSettlDate(new MyStringType( oneElement ) );
-        verifyDataValue( tagData, oneElement );
-
-        oneElement = Tag64StrSettlDate.TESTB_STR_SETTL_DATE;
-        tagData = new Tag64StrSettlDate(new MyStringType( oneElement ) );
-        verifyDataValue( tagData, oneElement );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag64StrSettlDate( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        }
     }
-
-    private void verifyDataValue( final Tag64StrSettlDate tagData, final String oneElement ) {
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-
     @Test
     void TagToValuePairStringTest() {
-        Tag64StrSettlDate tagData;
-        String oneElement;
-
-        oneElement = Tag64StrSettlDate.TESTA_STR_SETTL_DATE;
-        tagData = new Tag64StrSettlDate(new MyStringType( oneElement ) );
-        verifyValuePairString( tagData, oneElement );
-
-        oneElement = Tag64StrSettlDate.TESTB_STR_SETTL_DATE;
-        tagData = new Tag64StrSettlDate(new MyStringType( oneElement ) );
-        verifyValuePairString( tagData, oneElement );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag64StrSettlDate( new MyStringType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
-
-    private void verifyValuePairString( final Tag64StrSettlDate tagData, final String oneElement ) {
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-    }
-
     @Test
     void TagToStringTest() {
-        Tag64StrSettlDate tagData;
-        String oneElement;
-
-        oneElement = Tag64StrSettlDate.TESTA_STR_SETTL_DATE;
-        tagData = new Tag64StrSettlDate(new MyStringType( oneElement ) );
-        verifyToString( tagData, oneElement );
-
-        oneElement = Tag64StrSettlDate.TESTB_STR_SETTL_DATE;
-        tagData = new Tag64StrSettlDate(new MyStringType( oneElement ) );
-        verifyToString( tagData, oneElement );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag64StrSettlDate( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
-
-    private void verifyToString( final Tag64StrSettlDate tagData, final String oneElement ) {
-        assertEquals( oneElement, tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
-    }
-
     @Test
     void TagToVerboseStringTest() {
-        Tag64StrSettlDate tagData;
-        String oneElement;
-
-        oneElement = Tag64StrSettlDate.TESTA_STR_SETTL_DATE;
-        tagData = new Tag64StrSettlDate(new MyStringType( oneElement ) );
-        verifyVerboseString( tagData, oneElement );
-
-        oneElement = Tag64StrSettlDate.TESTB_STR_SETTL_DATE;
-        tagData = new Tag64StrSettlDate(new MyStringType( oneElement ) );
-        verifyVerboseString( tagData, oneElement );
-    }
-
-    private void verifyVerboseString( final Tag64StrSettlDate tagData, final String oneElement ) {
-        assertEquals( "Tag64StrSettlDate\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
-                        "\tValuePair[" + tagData.toValuePairString() + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag64StrSettlDate( new MyStringType( oneElement ));
+            assertEquals( "Tag64StrSettlDate\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

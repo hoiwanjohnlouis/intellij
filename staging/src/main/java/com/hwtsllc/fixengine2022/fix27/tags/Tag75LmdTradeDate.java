@@ -18,30 +18,29 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.datatypes.MyLocalMktDateType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  100
- *  ExDestination
- *  Exchange
+ *  75
+ *  TradeDate
+ *  LocalMktDate
  *  <p></p>
- *  Execution destination as defined by institution when order is entered.
+ *  Indicates date of trade referenced in this message in YYYYMMDD format.
  *  <p></p>
- *  Valid values:
- *  <p>     See "Appendix 6-C"
+ *  Absence of this field indicates current day (expressed in local time at place of trade).
  */
-public class Tag100StrExDestination extends FIX27Abstract implements LogValuePairString, LogVerboseString {
-    private final MyStringType dataValue;
+public class Tag75LmdTradeDate extends FIX27Abstract implements LogValuePairString, LogVerboseString {
+    private final MyLocalMktDateType dataValue;
 
-    public final static String TESTA_STR_EX_DESTINATION
-            = "AvaGardner-Tag100StrExDestination";
-    public final static String TESTB_STR_EX_DESTINATION
-            = "DeloresCostello-Tag100StrExDestination";
+    public final static String TESTA_LMD_TRADE_DATE
+            = "AnnBlyth-Tag75LmdTradeDate";
+    public final static String TESTB_LMD_TRADE_DATE
+            = "BebeDaniels-Tag75LmdTradeDate";
 
-    public Tag100StrExDestination(MyStringType dataValue) {
-        setFixType(FIX27.FIX100_STR_EX_DESTINATION);
+    public Tag75LmdTradeDate( MyLocalMktDateType dataValue) {
+        setFixType(FIX27.FIX75_LMD_TRADE_DATE );
         this.dataValue = dataValue;
     }
 
@@ -84,7 +83,7 @@ public class Tag100StrExDestination extends FIX27Abstract implements LogValuePai
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        System.out.println( new Tag100StrExDestination(new MyStringType(TESTA_STR_EX_DESTINATION)).toVerboseString() );
-        System.out.println( new Tag100StrExDestination(new MyStringType(TESTB_STR_EX_DESTINATION)).toVerboseString() );
+        System.out.println( new Tag75LmdTradeDate(new MyLocalMktDateType( TESTA_LMD_TRADE_DATE )).toVerboseString() );
+        System.out.println( new Tag75LmdTradeDate(new MyLocalMktDateType( TESTB_LMD_TRADE_DATE )).toVerboseString() );
     }
 }

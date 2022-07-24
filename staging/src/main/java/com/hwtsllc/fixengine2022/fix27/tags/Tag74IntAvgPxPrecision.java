@@ -18,33 +18,34 @@ package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.FIX27Abstract;
-import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  83
- *  RptSeq
+ *  74
+ *  AvgPxPrecision
  *  int
  *  <p></p>
- *  Sequence number of message within report series.
+ *  Indicates number of decimal places to be used for average pricing.
  *  <p></p>
- *  Used to carry reporting sequence number of the fill as represented on the Trade Report Side.
+ *  Absence of this field indicates that default precision arranged
+ *  by the broker or institution is to be used.
  */
-public class Tag83StrRptSeq extends FIX27Abstract implements LogValuePairString, LogVerboseString {
-    private final MyStringType dataValue;
+public class Tag74IntAvgPxPrecision extends FIX27Abstract implements LogValuePairString, LogVerboseString {
+    private final MyIntType dataValue;
 
-    public final static String TESTA_STR_RPT_SEQ
-            = "AnnSouthern-Tag83StrRptSeq";
-    public final static String TESTB_STR_RPT_SEQ
-            = "ClaireTrevor-Tag83StrRptSeq";
+    public final static int TESTA_STR_AVG_PX_PRECISION
+            = 4;
+    public final static int TESTB_STR_AVG_PX_PRECISION
+            = 6;
 
-    public Tag83StrRptSeq(MyStringType dataValue) {
-        setFixType(FIX27.FIX83_STR_RPT_SEQ);
+    public Tag74IntAvgPxPrecision( MyIntType dataValue) {
+        setFixType(FIX27.FIX74_INT_AVG_PX_PRECISION );
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
+    public int getDataValue() {
         return this.dataValue.getDataValue();
     }
     /**
@@ -83,7 +84,7 @@ public class Tag83StrRptSeq extends FIX27Abstract implements LogValuePairString,
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        System.out.println( new Tag83StrRptSeq(new MyStringType(TESTA_STR_RPT_SEQ)).toVerboseString() );
-        System.out.println( new Tag83StrRptSeq(new MyStringType(TESTB_STR_RPT_SEQ)).toVerboseString() );
+        System.out.println( new Tag74IntAvgPxPrecision(new MyIntType(TESTA_STR_AVG_PX_PRECISION)).toVerboseString() );
+        System.out.println( new Tag74IntAvgPxPrecision(new MyIntType(TESTB_STR_AVG_PX_PRECISION)).toVerboseString() );
     }
 }

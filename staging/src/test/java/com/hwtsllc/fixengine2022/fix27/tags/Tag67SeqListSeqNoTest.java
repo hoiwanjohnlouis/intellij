@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
+import com.hwtsllc.fixengine2022.datatypes.MySeqNumType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -24,24 +24,26 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  33
- *  NoLinesOfText
- *  NumInGroup
+ *  67
+ *  ListSeqNo
+ *  int
  *  <p></p>
- *  Identifies number of lines of text body
+ *  Sequence of individual order within list
+ *  <p></p>
+ *  (i.e. ListSeqNo of TotNoOrders (68), 2 of 25, 3 of 25,   . . . )
  */
-class Tag33NumNoLinesOfTextTest {
-    Tag33NumNoLinesOfText tagData;
+class Tag67SeqListSeqNoTest {
+    Tag67SeqListSeqNo tagData;
     int [] TestArray = {
-            Tag33NumNoLinesOfText.TESTA_NUM_NO_LINES_OF_TEXT,
-            Tag33NumNoLinesOfText.TESTB_NUM_NO_LINES_OF_TEXT
+            Tag67SeqListSeqNo.TESTA_SEQ_LIST_SEQ_NO,
+            Tag67SeqListSeqNo.TESTB_SEQ_LIST_SEQ_NO
     };
 
     @Test
     void PrintTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
-            tagData = new Tag33NumNoLinesOfText( new MyNumInGroupType( oneElement ));
+            tagData = new Tag67SeqListSeqNo( new MySeqNumType( oneElement ));
             System.out.println( tagData.toVerboseString() );
         }
     }
@@ -49,11 +51,11 @@ class Tag33NumNoLinesOfTextTest {
     void FIXHeaderTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
-            tagData = new Tag33NumNoLinesOfText( new MyNumInGroupType( oneElement ));
-            assertEquals( "FIX33_NUM_NO_LINES_OF_TEXT", tagData.toEnumLabelString());
-            assertEquals( "NO_LINES_OF_TEXT", tagData.toEnumNameString());
-            assertEquals( "33", tagData.toEnumIDString());
-            assertEquals( "NoLinesOfText", tagData.toEnumDescriptionString());
+            tagData = new Tag67SeqListSeqNo( new MySeqNumType( oneElement ));
+            assertEquals( "FIX67_SEQ_LIST_SEQ_NO", tagData.toEnumLabelString());
+            assertEquals( "LIST_SEQ_NO", tagData.toEnumNameString());
+            assertEquals( "67", tagData.toEnumIDString());
+            assertEquals( "ListSeqNo", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
@@ -64,16 +66,16 @@ class Tag33NumNoLinesOfTextTest {
     void TagGetDataValueTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
-            tagData = new Tag33NumNoLinesOfText( new MyNumInGroupType( oneElement ));
+            tagData = new Tag67SeqListSeqNo( new MySeqNumType( oneElement ));
             assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
         }
     }
     @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
-            tagData = new Tag33NumNoLinesOfText( new MyNumInGroupType( oneElement ));
+            tagData = new Tag67SeqListSeqNo( new MySeqNumType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -83,7 +85,7 @@ class Tag33NumNoLinesOfTextTest {
     void TagToStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
-            tagData = new Tag33NumNoLinesOfText( new MyNumInGroupType( oneElement ));
+            tagData = new Tag67SeqListSeqNo( new MySeqNumType( oneElement ));
             assertEquals( String.valueOf( oneElement ), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
         }
@@ -92,8 +94,8 @@ class Tag33NumNoLinesOfTextTest {
     void TagToVerboseStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
-            tagData = new Tag33NumNoLinesOfText( new MyNumInGroupType( oneElement ));
-            assertEquals( "Tag33NumNoLinesOfText\n" +
+            tagData = new Tag67SeqListSeqNo( new MySeqNumType( oneElement ));
+            assertEquals( "Tag67SeqListSeqNo\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +

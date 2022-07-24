@@ -33,133 +33,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  (e.g. CUSIP, SEDOL, ISIN, etc).  Requires SecurityIDSource.
  */
 class Tag48StrSecurityIDTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag48StrSecurityID tagData;
-        String oneElement;
-
-        oneElement = Tag48StrSecurityID.TESTA_STR_SECURITY_ID;
-        tagData = new Tag48StrSecurityID(new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag48StrSecurityID.TESTB_STR_SECURITY_ID;
-        tagData = new Tag48StrSecurityID(new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-    }
+    Tag48StrSecurityID tagData;
+    String [] TestArray = {
+            Tag48StrSecurityID.TESTA_STR_SECURITY_ID,
+            Tag48StrSecurityID.TESTB_STR_SECURITY_ID
+    };
 
     @Test
-    void FIXTest() {
-        Tag48StrSecurityID tagData;
-        String oneElement;
-
-        oneElement = Tag48StrSecurityID.TESTA_STR_SECURITY_ID;
-        tagData = new Tag48StrSecurityID(new MyStringType( oneElement ) );
-        verifyFIXData( tagData );
-
-        oneElement = Tag48StrSecurityID.TESTB_STR_SECURITY_ID;
-        tagData = new Tag48StrSecurityID(new MyStringType( oneElement ) );
-        verifyFIXData( tagData );
+    void PrintTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag48StrSecurityID( new MyStringType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
-
-    private void verifyFIXData( final Tag48StrSecurityID tagData ) {
-        assertEquals( "FIX48_STR_SECURITY_ID", tagData.toEnumLabelString());
-        assertEquals( "SECURITY_ID", tagData.toEnumNameString());
-        assertEquals( "48", tagData.toEnumIDString());
-        assertEquals( "SecurityID", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    @Test
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag48StrSecurityID( new MyStringType( oneElement ));
+            assertEquals( "FIX48_STR_SECURITY_ID", tagData.toEnumLabelString());
+            assertEquals( "SECURITY_ID", tagData.toEnumNameString());
+            assertEquals( "48", tagData.toEnumIDString());
+            assertEquals( "SecurityID", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
-
     @Test
     void TagGetDataValueTest() {
-        Tag48StrSecurityID tagData;
-        String oneElement;
-
-        oneElement = Tag48StrSecurityID.TESTA_STR_SECURITY_ID;
-        tagData = new Tag48StrSecurityID(new MyStringType( oneElement ));
-        verifyDataValue( tagData, oneElement );
-
-        oneElement = Tag48StrSecurityID.TESTB_STR_SECURITY_ID;
-        tagData = new Tag48StrSecurityID(new MyStringType( oneElement ));
-        verifyDataValue( tagData, oneElement );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag48StrSecurityID( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        }
     }
-
-    private void verifyDataValue( final Tag48StrSecurityID tagData, final String oneElement ) {
-        assertEquals( oneElement, tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
-    }
-
     @Test
     void TagToValuePairStringTest() {
-        Tag48StrSecurityID tagData;
-        String oneElement;
-
-        oneElement = Tag48StrSecurityID.TESTA_STR_SECURITY_ID;
-        tagData = new Tag48StrSecurityID(new MyStringType( oneElement ));
-        verifyValuePairString( tagData, oneElement );
-
-        oneElement = Tag48StrSecurityID.TESTB_STR_SECURITY_ID;
-        tagData = new Tag48StrSecurityID(new MyStringType( oneElement ));
-        verifyValuePairString( tagData, oneElement );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag48StrSecurityID( new MyStringType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
-
-    private void verifyValuePairString( final Tag48StrSecurityID tagData, final String oneElement ) {
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-    }
-
     @Test
     void TagToStringTest() {
-        Tag48StrSecurityID tagData;
-        String oneElement;
-
-        oneElement = Tag48StrSecurityID.TESTA_STR_SECURITY_ID;
-        tagData = new Tag48StrSecurityID(new MyStringType( oneElement ));
-        verifyToString( tagData, oneElement );
-
-        oneElement = Tag48StrSecurityID.TESTB_STR_SECURITY_ID;
-        tagData = new Tag48StrSecurityID(new MyStringType( oneElement ));
-        verifyToString( tagData, oneElement );
-
-        oneElement = "TESTA";
-        tagData = new Tag48StrSecurityID(new MyStringType( oneElement ) );
-        verifyToString( tagData, oneElement );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag48StrSecurityID( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
-
-    private void verifyToString( final Tag48StrSecurityID tagData, final String oneElement ) {
-        assertEquals( oneElement, tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
-    }
-
     @Test
     void TagToVerboseStringTest() {
-        Tag48StrSecurityID tagData;
-        String oneElement;
-
-        oneElement = Tag48StrSecurityID.TESTA_STR_SECURITY_ID;
-        tagData = new Tag48StrSecurityID(new MyStringType( oneElement ));
-        verifyVerboseString( tagData, oneElement );
-
-        oneElement = Tag48StrSecurityID.TESTB_STR_SECURITY_ID;
-        tagData = new Tag48StrSecurityID(new MyStringType( oneElement ));
-        verifyVerboseString( tagData, oneElement );
-
-        oneElement = "TESTA";
-        tagData = new Tag48StrSecurityID(new MyStringType( oneElement ) );
-        verifyVerboseString( tagData, oneElement );
-    }
-
-    private void verifyVerboseString( final Tag48StrSecurityID tagData, final String oneElement ) {
-        assertEquals( "Tag48StrSecurityID\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
-                        "\tValuePair[" + tagData.toValuePairString() + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag48StrSecurityID( new MyStringType( oneElement ));
+            assertEquals( "Tag48StrSecurityID\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

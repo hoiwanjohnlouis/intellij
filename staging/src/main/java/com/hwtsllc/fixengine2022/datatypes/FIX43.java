@@ -185,7 +185,7 @@ public enum FIX43 implements LogFIXString, LogVerboseString {
 
     FIX551_STR_ORIG_CROSS_ID(551, "ORIG_CROSS_ID", "OrigCrossID"),
     FIX552_ENU_NO_SIDES(552, "NO_SIDES", "NoSides"),
-    FIX553_STR_PASSWORD(553, "USERNAME", "Username"),
+    FIX553_STR_USERNAME(553, "USERNAME", "Username"),
     FIX554_STR_PASSWORD(554, "PASSWORD", "Password"),
     FIX555_NUM_NO_LEGS(555, "NO_LEGS", "NoLegs"),
     FIX556_CCY_LEG_CURRENCY(556, "LEG_CURRENCY", "LegCurrency"),

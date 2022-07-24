@@ -70,10 +70,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    Q - Counter-order selection
  */
 class Tag40EnuOrdTypeTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag40EnuOrdType tagData;
+    Tag40EnuOrdType tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum40OrdType oneEnum : Enum40OrdType.values()) {
             tagData = new Tag40EnuOrdType(oneEnum);
@@ -82,8 +82,6 @@ class Tag40EnuOrdTypeTest {
     }
     @Test
     void Tag0040Test() {
-        Tag40EnuOrdType tagData;
-
         /*
          * 1-9 Order Type msg
          */
@@ -191,9 +189,7 @@ class Tag40EnuOrdTypeTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
-    void FIXTest() {
-        Tag40EnuOrdType tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum40OrdType oneEnum : Enum40OrdType.values()) {
             tagData = new Tag40EnuOrdType(oneEnum);
@@ -209,8 +205,6 @@ class Tag40EnuOrdTypeTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag40EnuOrdType tagData;
-
         // loop around the ENUM and process
         for (Enum40OrdType oneEnum : Enum40OrdType.values()) {
             tagData = new Tag40EnuOrdType(oneEnum);
@@ -222,8 +216,6 @@ class Tag40EnuOrdTypeTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag40EnuOrdType tagData;
-
         // loop around the ENUM and process
         for (Enum40OrdType oneEnum : Enum40OrdType.values()) {
             tagData = new Tag40EnuOrdType(oneEnum);
@@ -235,8 +227,6 @@ class Tag40EnuOrdTypeTest {
     }
     @Test
     void TagToStringTest() {
-        Tag40EnuOrdType tagData;
-
         // loop around the ENUM and process
         for (Enum40OrdType oneEnum : Enum40OrdType.values()) {
             tagData = new Tag40EnuOrdType(oneEnum);
@@ -246,8 +236,6 @@ class Tag40EnuOrdTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag40EnuOrdType tagData;
-
         // loop around the ENUM and process
         for (Enum40OrdType oneEnum : Enum40OrdType.values()) {
             tagData = new Tag40EnuOrdType(oneEnum);

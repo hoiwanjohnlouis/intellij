@@ -33,9 +33,9 @@ public class Tag89DatSignature extends FIX27Abstract implements LogValuePairStri
     private final MyDataType dataValue;
 
     public final static String TESTA_DAT_SIGNATURE
-            = "BilboBaggins-Tag89DatSignature";
+            = "ClaireTrevor-Tag89DatSignature";
     public final static String TESTB_DAT_SIGNATURE
-            = "Gandalf-Tag89DatSignature";
+            = "AnnSouthern-Tag89DatSignature";
 
     public Tag89DatSignature(MyDataType dataValue) {
         setFixType(FIX27.FIX89_DAT_SIGNATURE);

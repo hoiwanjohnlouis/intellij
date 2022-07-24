@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
+import com.hwtsllc.fixengine2022.datatypes.MyExchangeType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -24,36 +24,39 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  33
- *  NoLinesOfText
- *  NumInGroup
+ *  100
+ *  ExDestination
+ *  Exchange
  *  <p></p>
- *  Identifies number of lines of text body
+ *  Execution destination as defined by institution when order is entered.
+ *  <p></p>
+ *  Valid values:
+ *  <p>     See "Appendix 6-C"
  */
-class Tag33NumNoLinesOfTextTest {
-    Tag33NumNoLinesOfText tagData;
-    int [] TestArray = {
-            Tag33NumNoLinesOfText.TESTA_NUM_NO_LINES_OF_TEXT,
-            Tag33NumNoLinesOfText.TESTB_NUM_NO_LINES_OF_TEXT
+class Tag100ExcExDestinationTest {
+    Tag100ExcExDestination tagData;
+    String [] TestArray = {
+            Tag100ExcExDestination.TESTA_EXC_EX_DESTINATION,
+            Tag100ExcExDestination.TESTB_EXC_EX_DESTINATION
     };
 
     @Test
     void PrintTest() {
         // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag33NumNoLinesOfText( new MyNumInGroupType( oneElement ));
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag100ExcExDestination( new MyExchangeType( oneElement ));
             System.out.println( tagData.toVerboseString() );
         }
     }
     @Test
     void FIXHeaderTest() {
         // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag33NumNoLinesOfText( new MyNumInGroupType( oneElement ));
-            assertEquals( "FIX33_NUM_NO_LINES_OF_TEXT", tagData.toEnumLabelString());
-            assertEquals( "NO_LINES_OF_TEXT", tagData.toEnumNameString());
-            assertEquals( "33", tagData.toEnumIDString());
-            assertEquals( "NoLinesOfText", tagData.toEnumDescriptionString());
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag100ExcExDestination( new MyExchangeType( oneElement ));
+            assertEquals( "FIX100_EXC_EX_DESTINATION", tagData.toEnumLabelString());
+            assertEquals( "EX_DESTINATION", tagData.toEnumNameString());
+            assertEquals( "100", tagData.toEnumIDString());
+            assertEquals( "ExDestination", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
@@ -63,17 +66,17 @@ class Tag33NumNoLinesOfTextTest {
     @Test
     void TagGetDataValueTest() {
         // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag33NumNoLinesOfText( new MyNumInGroupType( oneElement ));
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag100ExcExDestination( new MyExchangeType( oneElement ));
             assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
         }
     }
     @Test
     void TagToValuePairStringTest() {
         // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag33NumNoLinesOfText( new MyNumInGroupType( oneElement ));
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag100ExcExDestination( new MyExchangeType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
@@ -82,18 +85,18 @@ class Tag33NumNoLinesOfTextTest {
     @Test
     void TagToStringTest() {
         // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag33NumNoLinesOfText( new MyNumInGroupType( oneElement ));
-            assertEquals( String.valueOf( oneElement ), tagData.toString());
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag100ExcExDestination( new MyExchangeType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
         }
     }
     @Test
     void TagToVerboseStringTest() {
         // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag33NumNoLinesOfText( new MyNumInGroupType( oneElement ));
-            assertEquals( "Tag33NumNoLinesOfText\n" +
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag100ExcExDestination( new MyExchangeType( oneElement ));
+            assertEquals( "Tag100ExcExDestination\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +

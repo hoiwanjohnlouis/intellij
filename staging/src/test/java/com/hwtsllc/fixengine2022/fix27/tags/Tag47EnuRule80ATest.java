@@ -74,10 +74,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 // @Deprecated
 class Tag47EnuRule80ATest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag47EnuRule80A tagData;
+    Tag47EnuRule80A tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum47Rule80A oneEnum : Enum47Rule80A.values()) {
             tagData = new Tag47EnuRule80A(oneEnum);
@@ -86,8 +86,6 @@ class Tag47EnuRule80ATest {
     }
     @Test
     void Tag0047Test() {
-        Tag47EnuRule80A tagData;
-
         tagData = new Tag47EnuRule80A(Enum47Rule80A.AGENCY_SINGLE_ORDER);
         assertEquals( "A", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -185,9 +183,7 @@ class Tag47EnuRule80ATest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
-    void FIXTest() {
-        Tag47EnuRule80A tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum47Rule80A oneEnum : Enum47Rule80A.values()) {
             tagData = new Tag47EnuRule80A(oneEnum);
@@ -203,8 +199,6 @@ class Tag47EnuRule80ATest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag47EnuRule80A tagData;
-
         // loop around the ENUM and process
         for (Enum47Rule80A oneEnum : Enum47Rule80A.values()) {
             tagData = new Tag47EnuRule80A(oneEnum);
@@ -216,8 +210,6 @@ class Tag47EnuRule80ATest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag47EnuRule80A tagData;
-
         // loop around the ENUM and process
         for (Enum47Rule80A oneEnum : Enum47Rule80A.values()) {
             tagData = new Tag47EnuRule80A(oneEnum);
@@ -229,8 +221,6 @@ class Tag47EnuRule80ATest {
     }
     @Test
     void TagToStringTest() {
-        Tag47EnuRule80A tagData;
-
         // loop around the ENUM and process
         for (Enum47Rule80A oneEnum : Enum47Rule80A.values()) {
             tagData = new Tag47EnuRule80A(oneEnum);
@@ -240,8 +230,6 @@ class Tag47EnuRule80ATest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag47EnuRule80A tagData;
-
         // loop around the ENUM and process
         for (Enum47Rule80A oneEnum : Enum47Rule80A.values()) {
             tagData = new Tag47EnuRule80A(oneEnum);

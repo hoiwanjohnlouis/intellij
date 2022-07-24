@@ -33,125 +33,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  (always expressed in UTC (Universal Time Coordinated), also known as "GMT")
  */
 class Tag62StrValidUntilTimeTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag62StrValidUntilTime tagData;
-        String oneElement;
-
-        oneElement = Tag62StrValidUntilTime.TESTA_STR_VALID_UNTIL_TIME;
-        tagData = new Tag62StrValidUntilTime(new MyStringType( oneElement ));
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag62StrValidUntilTime.TESTB_STR_VALID_UNTIL_TIME;
-        tagData = new Tag62StrValidUntilTime(new MyStringType( oneElement ));
-        System.out.println( tagData.toVerboseString() );
-    }
+    Tag62StrValidUntilTime tagData;
+    String [] TestArray = {
+            Tag62StrValidUntilTime.TESTA_STR_VALID_UNTIL_TIME,
+            Tag62StrValidUntilTime.TESTB_STR_VALID_UNTIL_TIME
+    };
 
     @Test
-    void FIXTest() {
-        Tag62StrValidUntilTime tagData;
-        String oneElement;
-
-        oneElement = Tag62StrValidUntilTime.TESTA_STR_VALID_UNTIL_TIME;
-        tagData = new Tag62StrValidUntilTime(new MyStringType( oneElement ));
-        verifyFIXData( tagData );
-
-        oneElement = Tag62StrValidUntilTime.TESTB_STR_VALID_UNTIL_TIME;
-        tagData = new Tag62StrValidUntilTime(new MyStringType( oneElement ));
-        verifyFIXData( tagData );
+    void PrintTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag62StrValidUntilTime( new MyStringType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
-
-    private void verifyFIXData( final Tag62StrValidUntilTime tagData ) {
-        assertEquals( "FIX62_STR_VALID_UNTIL_TIME", tagData.toEnumLabelString());
-        assertEquals( "VALID_UNTIL_TIME", tagData.toEnumNameString());
-        assertEquals( "62", tagData.toEnumIDString());
-        assertEquals( "ValidUntilTime", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    @Test
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag62StrValidUntilTime( new MyStringType( oneElement ));
+            assertEquals( "FIX62_STR_VALID_UNTIL_TIME", tagData.toEnumLabelString());
+            assertEquals( "VALID_UNTIL_TIME", tagData.toEnumNameString());
+            assertEquals( "62", tagData.toEnumIDString());
+            assertEquals( "ValidUntilTime", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
-
     @Test
     void TagGetDataValueTest() {
-        Tag62StrValidUntilTime tagData;
-        String oneElement;
-
-        oneElement = Tag62StrValidUntilTime.TESTA_STR_VALID_UNTIL_TIME;
-        tagData = new Tag62StrValidUntilTime(new MyStringType( oneElement ));
-        verifyDataValue( tagData, oneElement );
-
-        oneElement = Tag62StrValidUntilTime.TESTB_STR_VALID_UNTIL_TIME;
-        tagData = new Tag62StrValidUntilTime(new MyStringType( oneElement ));
-        verifyDataValue( tagData, oneElement );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag62StrValidUntilTime( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        }
     }
-
-    private void verifyDataValue( final Tag62StrValidUntilTime tagData, final String oneElement ) {
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-
     @Test
     void TagToValuePairStringTest() {
-        Tag62StrValidUntilTime tagData;
-        String oneElement;
-
-        oneElement = Tag62StrValidUntilTime.TESTA_STR_VALID_UNTIL_TIME;
-        tagData = new Tag62StrValidUntilTime(new MyStringType( oneElement ));
-        verifyValuePairString( tagData, oneElement );
-
-        oneElement = Tag62StrValidUntilTime.TESTB_STR_VALID_UNTIL_TIME;
-        tagData = new Tag62StrValidUntilTime(new MyStringType( oneElement ));
-        verifyValuePairString( tagData, oneElement );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag62StrValidUntilTime( new MyStringType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
-
-    private void verifyValuePairString( final Tag62StrValidUntilTime tagData, final String oneElement ) {
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-    }
-
     @Test
     void TagToStringTest() {
-        Tag62StrValidUntilTime tagData;
-        String oneElement;
-
-        oneElement = Tag62StrValidUntilTime.TESTA_STR_VALID_UNTIL_TIME;
-        tagData = new Tag62StrValidUntilTime(new MyStringType( oneElement ));
-        verifyToString( tagData, oneElement );
-
-        oneElement = Tag62StrValidUntilTime.TESTB_STR_VALID_UNTIL_TIME;
-        tagData = new Tag62StrValidUntilTime(new MyStringType( oneElement ));
-        verifyToString( tagData, oneElement );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag62StrValidUntilTime( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
-
-    private void verifyToString( final Tag62StrValidUntilTime tagData, final String oneElement ) {
-        assertEquals( oneElement, tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
-    }
-
     @Test
     void TagToVerboseStringTest() {
-        Tag62StrValidUntilTime tagData;
-        String oneElement;
-
-        oneElement = Tag62StrValidUntilTime.TESTA_STR_VALID_UNTIL_TIME;
-        tagData = new Tag62StrValidUntilTime(new MyStringType( oneElement ));
-        verifyVerboseString( tagData, oneElement );
-
-        oneElement = Tag62StrValidUntilTime.TESTB_STR_VALID_UNTIL_TIME;
-        tagData = new Tag62StrValidUntilTime(new MyStringType( oneElement ));
-        verifyVerboseString( tagData, oneElement );
-    }
-
-    private void verifyVerboseString( final Tag62StrValidUntilTime tagData, final String oneElement ) {
-        assertEquals( "Tag62StrValidUntilTime\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
-                        "\tValuePair[" + tagData.toValuePairString() + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag62StrValidUntilTime( new MyStringType( oneElement ));
+            assertEquals( "Tag62StrValidUntilTime\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

@@ -177,10 +177,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    "BP - Security Definition Update Report"
  */
 class Tag35EnuMsgTypeTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag35EnuMsgType tagData;
+    Tag35EnuMsgType tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (MyEnumMsgType oneEnum : MyEnumMsgType.values()) {
             tagData = new Tag35EnuMsgType(oneEnum);
@@ -189,8 +189,6 @@ class Tag35EnuMsgTypeTest {
     }
     @Test
     void Tag0035Test() {
-        Tag35EnuMsgType tagData;
-
         /*
          *  Information is the same for TAGS 35, 372
          */
@@ -675,9 +673,7 @@ class Tag35EnuMsgTypeTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
-    void FIXTest() {
-        Tag35EnuMsgType tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (MyEnumMsgType oneEnum : MyEnumMsgType.values()) {
             tagData = new Tag35EnuMsgType(oneEnum);
@@ -693,8 +689,6 @@ class Tag35EnuMsgTypeTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag35EnuMsgType tagData;
-
         // loop around the ENUM and process
         for (MyEnumMsgType oneEnum : MyEnumMsgType.values()) {
             tagData = new Tag35EnuMsgType(oneEnum);
@@ -706,8 +700,6 @@ class Tag35EnuMsgTypeTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag35EnuMsgType tagData;
-
         // loop around the ENUM and process
         for (MyEnumMsgType oneEnum : MyEnumMsgType.values()) {
             tagData = new Tag35EnuMsgType(oneEnum);
@@ -719,8 +711,6 @@ class Tag35EnuMsgTypeTest {
     }
     @Test
     void TagToStringTest() {
-        Tag35EnuMsgType tagData;
-
         // loop around the ENUM and process
         for (MyEnumMsgType oneEnum : MyEnumMsgType.values()) {
             tagData = new Tag35EnuMsgType(oneEnum);
@@ -730,8 +720,6 @@ class Tag35EnuMsgTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag35EnuMsgType tagData;
-
         // loop around the ENUM and process
         for (MyEnumMsgType oneEnum : MyEnumMsgType.values()) {
             tagData = new Tag35EnuMsgType(oneEnum);

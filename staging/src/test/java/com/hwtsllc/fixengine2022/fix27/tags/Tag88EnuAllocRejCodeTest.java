@@ -57,10 +57,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    13 - Warehouse request rejected
  */
 class Tag88EnuAllocRejCodeTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag88EnuAllocRejCode tagData;
+    Tag88EnuAllocRejCode tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (MyEnumAllocRejCode oneEnum : MyEnumAllocRejCode.values()) {
             tagData = new Tag88EnuAllocRejCode(oneEnum);
@@ -69,8 +69,6 @@ class Tag88EnuAllocRejCodeTest {
     }
     @Test
     void Tag0088Test() {
-        Tag88EnuAllocRejCode tagData;
-
         /*
          * 0-13 AllocRejCode types
          */
@@ -131,9 +129,7 @@ class Tag88EnuAllocRejCodeTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
-    void FIX0088Test() {
-        Tag88EnuAllocRejCode tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (MyEnumAllocRejCode oneEnum : MyEnumAllocRejCode.values()) {
             tagData = new Tag88EnuAllocRejCode(oneEnum);
@@ -149,8 +145,6 @@ class Tag88EnuAllocRejCodeTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag88EnuAllocRejCode tagData;
-
         // loop around the ENUM and process
         for (MyEnumAllocRejCode oneEnum : MyEnumAllocRejCode.values()) {
             tagData = new Tag88EnuAllocRejCode(oneEnum);
@@ -162,8 +156,6 @@ class Tag88EnuAllocRejCodeTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag88EnuAllocRejCode tagData;
-
         // loop around the ENUM and process
         for (MyEnumAllocRejCode oneEnum : MyEnumAllocRejCode.values()) {
             tagData = new Tag88EnuAllocRejCode(oneEnum);
@@ -175,8 +167,6 @@ class Tag88EnuAllocRejCodeTest {
     }
     @Test
     void TagToStringTest() {
-        Tag88EnuAllocRejCode tagData;
-
         // loop around the ENUM and process
         for (MyEnumAllocRejCode oneEnum : MyEnumAllocRejCode.values()) {
             tagData = new Tag88EnuAllocRejCode(oneEnum);
@@ -186,8 +176,6 @@ class Tag88EnuAllocRejCodeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag88EnuAllocRejCode tagData;
-
         // loop around the ENUM and process
         for (MyEnumAllocRejCode oneEnum : MyEnumAllocRejCode.values()) {
             tagData = new Tag88EnuAllocRejCode(oneEnum);

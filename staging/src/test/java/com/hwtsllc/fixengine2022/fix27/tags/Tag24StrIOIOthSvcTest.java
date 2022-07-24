@@ -32,126 +32,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 // @Deprecated
 class Tag24StrIOIOthSvcTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag24StrIOIOthSvc tagData;
-        String oneElement;
-
-        oneElement = Tag24StrIOIOthSvc.TESTA_STR_IOI_OTH_SVC;
-        tagData = new Tag24StrIOIOthSvc(new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag24StrIOIOthSvc.TESTB_STR_IOI_OTH_SVC;
-        tagData = new Tag24StrIOIOthSvc(new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-    }
+    Tag24StrIOIOthSvc tagData;
+    String [] TestArray = {
+            Tag24StrIOIOthSvc.TESTA_STR_IOI_OTH_SVC,
+            Tag24StrIOIOthSvc.TESTB_STR_IOI_OTH_SVC
+    };
 
     @Test
-    void FIXTest() {
-        Tag24StrIOIOthSvc tagData;
-        String oneElement;
-
-        oneElement = Tag24StrIOIOthSvc.TESTA_STR_IOI_OTH_SVC;
-        tagData = new Tag24StrIOIOthSvc(new MyStringType( oneElement ) );
-        verifyFIXData( tagData );
-
-        oneElement = Tag24StrIOIOthSvc.TESTB_STR_IOI_OTH_SVC;
-        tagData = new Tag24StrIOIOthSvc(new MyStringType( oneElement ) );
-        verifyFIXData( tagData );
+    void PrintTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag24StrIOIOthSvc( new MyStringType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
-
-    private void verifyFIXData( final Tag24StrIOIOthSvc tagData ) {
-        assertEquals( "FIX24_STR_IOI_OTH_SVC", tagData.toEnumLabelString());
-        assertEquals( "IOI_OTH_SVC", tagData.toEnumNameString());
-        assertEquals( "24", tagData.toEnumIDString());
-        assertEquals( "IOIOthSvc (no longer used)", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    @Test
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag24StrIOIOthSvc( new MyStringType( oneElement ));
+            assertEquals( "FIX24_STR_IOI_OTH_SVC", tagData.toEnumLabelString());
+            assertEquals( "IOI_OTH_SVC", tagData.toEnumNameString());
+            assertEquals( "24", tagData.toEnumIDString());
+            assertEquals( "IOIOthSvc (no longer used)", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
-
     @Test
     void TagGetDataValueTest() {
-        Tag24StrIOIOthSvc tagData;
-        String oneElement;
-
-        oneElement = Tag24StrIOIOthSvc.TESTA_STR_IOI_OTH_SVC;
-        tagData = new Tag24StrIOIOthSvc(new MyStringType( oneElement ) );
-        verifyDataValue( tagData, oneElement );
-
-        oneElement = Tag24StrIOIOthSvc.TESTB_STR_IOI_OTH_SVC;
-        tagData = new Tag24StrIOIOthSvc(new MyStringType( oneElement ) );
-        verifyDataValue( tagData, oneElement );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag24StrIOIOthSvc( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        }
     }
-
-    private void verifyDataValue( final Tag24StrIOIOthSvc tagData, final String oneElement ) {
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-
     @Test
     void TagToValuePairStringTest() {
-        Tag24StrIOIOthSvc tagData;
-        String oneElement;
-
-        oneElement = Tag24StrIOIOthSvc.TESTA_STR_IOI_OTH_SVC;
-        tagData = new Tag24StrIOIOthSvc(new MyStringType( oneElement ) );
-        verifyValuePairString( tagData, oneElement );
-
-        oneElement = Tag24StrIOIOthSvc.TESTB_STR_IOI_OTH_SVC;
-        tagData = new Tag24StrIOIOthSvc(new MyStringType( oneElement ) );
-        verifyValuePairString( tagData, oneElement );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag24StrIOIOthSvc( new MyStringType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
-
-    private void verifyValuePairString( final Tag24StrIOIOthSvc tagData, final String oneElement ) {
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-    }
-
     @Test
     void TagToStringTest() {
-        Tag24StrIOIOthSvc tagData;
-        String oneElement;
-
-        oneElement = Tag24StrIOIOthSvc.TESTA_STR_IOI_OTH_SVC;
-        tagData = new Tag24StrIOIOthSvc(new MyStringType( oneElement ) );
-        verifyToString( tagData, oneElement );
-
-        oneElement = Tag24StrIOIOthSvc.TESTB_STR_IOI_OTH_SVC;
-        tagData = new Tag24StrIOIOthSvc(new MyStringType( oneElement ) );
-        verifyToString( tagData, oneElement );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag24StrIOIOthSvc( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
-
-    private void verifyToString( Tag24StrIOIOthSvc tagData, String oneElement ) {
-        assertEquals( oneElement, tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
-    }
-
     @Test
     void TagToVerboseStringTest() {
-        Tag24StrIOIOthSvc tagData;
-        String oneElement;
-
-        oneElement = Tag24StrIOIOthSvc.TESTA_STR_IOI_OTH_SVC;
-        tagData = new Tag24StrIOIOthSvc(new MyStringType( oneElement ) );
-        verifyVerboseString( tagData, oneElement );
-
-        oneElement = Tag24StrIOIOthSvc.TESTB_STR_IOI_OTH_SVC;
-        tagData = new Tag24StrIOIOthSvc(new MyStringType( oneElement ) );
-        verifyVerboseString( tagData, oneElement );
-    }
-
-    private void verifyVerboseString( final Tag24StrIOIOthSvc tagData, final String oneElement ) {
-        assertEquals( "Tag24StrIOIOthSvc\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
-                        "\tValuePair[" + tagData.toValuePairString() + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag24StrIOIOthSvc( new MyStringType( oneElement ));
+            assertEquals( "Tag24StrIOIOthSvc\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

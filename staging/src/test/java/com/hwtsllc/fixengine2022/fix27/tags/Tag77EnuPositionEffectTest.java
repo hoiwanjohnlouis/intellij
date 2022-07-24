@@ -57,10 +57,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    R - Rolled
  */
 class Tag77EnuPositionEffectTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag77EnuPositionEffect tagData;
+    Tag77EnuPositionEffect tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (MyEnumPositionEffect oneEnum : MyEnumPositionEffect.values()) {
             tagData = new Tag77EnuPositionEffect(oneEnum);
@@ -69,8 +69,6 @@ class Tag77EnuPositionEffectTest {
     }
     @Test
     void Tag0077Test() {
-        Tag77EnuPositionEffect tagData;
-
         /*
          * O, F, C, and R PositionEffect types
          */
@@ -91,9 +89,7 @@ class Tag77EnuPositionEffectTest {
         assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
-    void FIXTest() {
-        Tag77EnuPositionEffect tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (MyEnumPositionEffect oneEnum : MyEnumPositionEffect.values()) {
             tagData = new Tag77EnuPositionEffect(oneEnum);
@@ -109,8 +105,6 @@ class Tag77EnuPositionEffectTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag77EnuPositionEffect tagData;
-
         // loop around the ENUM and process
         for (MyEnumPositionEffect oneEnum : MyEnumPositionEffect.values()) {
             tagData = new Tag77EnuPositionEffect(oneEnum);
@@ -122,8 +116,6 @@ class Tag77EnuPositionEffectTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag77EnuPositionEffect tagData;
-
         // loop around the ENUM and process
         for (MyEnumPositionEffect oneEnum : MyEnumPositionEffect.values()) {
             tagData = new Tag77EnuPositionEffect(oneEnum);
@@ -135,8 +127,6 @@ class Tag77EnuPositionEffectTest {
     }
     @Test
     void TagToStringTest() {
-        Tag77EnuPositionEffect tagData;
-
         // loop around the ENUM and process
         for (MyEnumPositionEffect oneEnum : MyEnumPositionEffect.values()) {
             tagData = new Tag77EnuPositionEffect(oneEnum);
@@ -146,8 +136,6 @@ class Tag77EnuPositionEffectTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag77EnuPositionEffect tagData;
-
         // loop around the ENUM and process
         for (MyEnumPositionEffect oneEnum : MyEnumPositionEffect.values()) {
             tagData = new Tag77EnuPositionEffect(oneEnum);

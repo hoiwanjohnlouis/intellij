@@ -130,10 +130,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    L - Letter of Credit
  */
 class Tag22EnuSecurityIDSourceTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag22EnuSecurityIDSource tagData;
+    Tag22EnuSecurityIDSource tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
             tagData = new Tag22EnuSecurityIDSource(oneEnum);
@@ -142,8 +142,6 @@ class Tag22EnuSecurityIDSourceTest {
     }
     @Test
     void Tag0022Test() {
-        Tag22EnuSecurityIDSource tagData;
-
         /*
          * 1-9 Security ID Source
          */
@@ -239,9 +237,7 @@ class Tag22EnuSecurityIDSourceTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
-    void FIXTest() {
-        Tag22EnuSecurityIDSource tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
             tagData = new Tag22EnuSecurityIDSource(oneEnum);
@@ -257,8 +253,6 @@ class Tag22EnuSecurityIDSourceTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag22EnuSecurityIDSource tagData;
-
         // loop around the ENUM and process
         for (MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
             tagData = new Tag22EnuSecurityIDSource(oneEnum);
@@ -270,8 +264,6 @@ class Tag22EnuSecurityIDSourceTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag22EnuSecurityIDSource tagData;
-
         // loop around the ENUM and process
         for (MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
             tagData = new Tag22EnuSecurityIDSource(oneEnum);
@@ -283,8 +275,6 @@ class Tag22EnuSecurityIDSourceTest {
     }
     @Test
     void TagToStringTest() {
-        Tag22EnuSecurityIDSource tagData;
-
         // loop around the ENUM and process
         for (MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
             tagData = new Tag22EnuSecurityIDSource(oneEnum);
@@ -294,8 +284,6 @@ class Tag22EnuSecurityIDSourceTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag22EnuSecurityIDSource tagData;
-
         // loop around the ENUM and process
         for (MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
             tagData = new Tag22EnuSecurityIDSource(oneEnum);

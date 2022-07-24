@@ -31,128 +31,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  Price of this (last) fill.
  */
 class Tag31PrcLastPxTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag31PrcLastPx tagData;
-        double oneElement;
-
-        oneElement = Tag31PrcLastPx.TESTA_PRC_LAST_PX;
-        tagData = new Tag31PrcLastPx(new MyPriceType( oneElement ));
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag31PrcLastPx.TESTB_PRC_LAST_PX;
-        tagData = new Tag31PrcLastPx(new MyPriceType( oneElement ));
-        System.out.println( tagData.toVerboseString() );
-    }
+    Tag31PrcLastPx tagData;
+    double [] TestArray = {
+            Tag31PrcLastPx.TESTA_PRC_LAST_PX,
+            Tag31PrcLastPx.TESTB_PRC_LAST_PX
+    };
 
     @Test
-    void FIXTest() {
-        Tag31PrcLastPx tagData;
-        double oneElement;
-
-        oneElement = Tag31PrcLastPx.TESTA_PRC_LAST_PX;
-        tagData = new Tag31PrcLastPx(new MyPriceType( oneElement ));
-        verifyFIXData( tagData );
-
-        oneElement = Tag31PrcLastPx.TESTB_PRC_LAST_PX;
-        tagData = new Tag31PrcLastPx(new MyPriceType( oneElement ));
-        verifyFIXData( tagData );
+    void PrintTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag31PrcLastPx( new MyPriceType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
-
-    private void verifyFIXData( final Tag31PrcLastPx tagData ) {
-        assertEquals( "FIX31_PRC_LAST_PX", tagData.toEnumLabelString());
-        assertEquals( "LAST_PX", tagData.toEnumNameString());
-        assertEquals( "31", tagData.toEnumIDString());
-        assertEquals( "LastPx", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    @Test
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag31PrcLastPx( new MyPriceType( oneElement ));
+            assertEquals( "FIX31_PRC_LAST_PX", tagData.toEnumLabelString());
+            assertEquals( "LAST_PX", tagData.toEnumNameString());
+            assertEquals( "31", tagData.toEnumIDString());
+            assertEquals( "LastPx", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
-
     @Test
     void TagGetDataValueTest() {
-        Tag31PrcLastPx tagData;
-        double oneElement;
-
-        oneElement = Tag31PrcLastPx.TESTA_PRC_LAST_PX;
-        tagData = new Tag31PrcLastPx(new MyPriceType( oneElement ));
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
-
-        oneElement = Tag31PrcLastPx.TESTB_PRC_LAST_PX;
-        tagData = new Tag31PrcLastPx(new MyPriceType( oneElement ));
-        verifyDataValue( tagData, oneElement );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag31PrcLastPx( new MyPriceType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+        }
     }
-
-    private void verifyDataValue( final Tag31PrcLastPx tagData, final double oneElement ) {
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
-    }
-
     @Test
     void TagToValuePairStringTest() {
-        Tag31PrcLastPx tagData;
-        double oneElement;
-
-        oneElement = Tag31PrcLastPx.TESTA_PRC_LAST_PX;
-        tagData = new Tag31PrcLastPx(new MyPriceType( oneElement ));
-        verifyValuePairString( tagData, oneElement );
-
-        oneElement = Tag31PrcLastPx.TESTB_PRC_LAST_PX;
-        tagData = new Tag31PrcLastPx(new MyPriceType( oneElement ));
-        verifyValuePairString( tagData, oneElement );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag31PrcLastPx( new MyPriceType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
-
-    private void verifyValuePairString( final Tag31PrcLastPx tagData, final double oneElement ) {
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-    }
-
     @Test
     void TagToStringTest() {
-        Tag31PrcLastPx tagData;
-        double oneElement;
-
-        oneElement = Tag31PrcLastPx.TESTA_PRC_LAST_PX;
-        tagData = new Tag31PrcLastPx(new MyPriceType( oneElement ));
-        verifyToString( tagData, oneElement );
-
-        oneElement = Tag31PrcLastPx.TESTB_PRC_LAST_PX;
-        tagData = new Tag31PrcLastPx(new MyPriceType( oneElement ));
-        verifyToString( tagData, oneElement );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag31PrcLastPx( new MyPriceType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
-
-    private void verifyToString( final Tag31PrcLastPx tagData, final double oneElement ) {
-        assertEquals( String.valueOf( oneElement ), tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
-    }
-
     @Test
     void TagToVerboseStringTest() {
-        Tag31PrcLastPx tagData;
-        double oneElement;
-
-        oneElement = Tag31PrcLastPx.TESTA_PRC_LAST_PX;
-        tagData = new Tag31PrcLastPx(new MyPriceType( oneElement ));
-        verifyVerboseString( tagData, oneElement );
-
-        oneElement = Tag31PrcLastPx.TESTB_PRC_LAST_PX;
-        tagData = new Tag31PrcLastPx(new MyPriceType( oneElement ));
-        verifyVerboseString( tagData, oneElement );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag31PrcLastPx( new MyPriceType( oneElement ));
+            assertEquals( "Tag31PrcLastPx\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
-
-    private void verifyVerboseString( final Tag31PrcLastPx tagData, final double oneElement ) {
-        assertEquals( "Tag31PrcLastPx\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
-                        "\tValuePair[" + tagData.toValuePairString() + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
-    }
-
 }

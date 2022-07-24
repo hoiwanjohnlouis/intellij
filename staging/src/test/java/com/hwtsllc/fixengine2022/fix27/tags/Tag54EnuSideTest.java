@@ -58,10 +58,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    G - Borrow (FINANCING - identifies direction of collateral)
  */
 class Tag54EnuSideTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag54EnuSide tagData;
+    Tag54EnuSide tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (MyEnumSide oneEnum : MyEnumSide.values()) {
             tagData = new Tag54EnuSide(oneEnum);
@@ -70,8 +70,6 @@ class Tag54EnuSideTest {
     }
     @Test
     void Tag0054Test() {
-        Tag54EnuSide tagData;
-
         /*
          * 1-9 msg types
          */
@@ -146,9 +144,7 @@ class Tag54EnuSideTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
-    void FIXTest() {
-        Tag54EnuSide tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (MyEnumSide oneEnum : MyEnumSide.values()) {
             tagData = new Tag54EnuSide(oneEnum);
@@ -164,8 +160,6 @@ class Tag54EnuSideTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag54EnuSide tagData;
-
         // loop around the ENUM and process
         for (MyEnumSide oneEnum : MyEnumSide.values()) {
             tagData = new Tag54EnuSide(oneEnum);
@@ -177,8 +171,6 @@ class Tag54EnuSideTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag54EnuSide tagData;
-
         // loop around the ENUM and process
         for (MyEnumSide oneEnum : MyEnumSide.values()) {
             tagData = new Tag54EnuSide(oneEnum);
@@ -190,8 +182,6 @@ class Tag54EnuSideTest {
     }
     @Test
     void TagToStringTest() {
-        Tag54EnuSide tagData;
-
         // loop around the ENUM and process
         for (MyEnumSide oneEnum : MyEnumSide.values()) {
             tagData = new Tag54EnuSide(oneEnum);
@@ -201,8 +191,6 @@ class Tag54EnuSideTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag54EnuSide tagData;
-
         // loop around the ENUM and process
         for (MyEnumSide oneEnum : MyEnumSide.values()) {
             tagData = new Tag54EnuSide(oneEnum);
