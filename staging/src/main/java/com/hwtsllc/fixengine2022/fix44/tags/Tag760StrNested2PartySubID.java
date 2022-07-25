@@ -34,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag760StrNested2PartySubID extends FIX44Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_NESTED_2_PARTY_SUB_ID = "BilboBaggins-Tag760StrNested2PartySubID";
-    public final static String TESTB_STR_NESTED_2_PARTY_SUB_ID = "Gandalf-Tag760StrNested2PartySubID";
+    public final static String TESTA_STR_NESTED_2_PARTY_SUB_ID
+            = "SophiaLoren-Tag760StrNested2PartySubID";
+    public final static String TESTB_STR_NESTED_2_PARTY_SUB_ID
+            = "SofiaScicolone-Tag760StrNested2PartySubID";
 
     public Tag760StrNested2PartySubID(MyStringType dataValue) {
         setFixType(FIX44.FIX760_STR_NESTED_2_PARTY_SUB_ID);

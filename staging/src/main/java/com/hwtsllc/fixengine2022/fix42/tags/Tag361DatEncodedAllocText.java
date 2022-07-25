@@ -36,9 +36,9 @@ public class Tag361DatEncodedAllocText extends FIX42Abstract implements LogValue
     private final MyDataType dataValue;
 
     public final static String TESTA_DAT_ENCODED_ALLOC_TEXT
-            = "BilboBaggins-Tag361DatEncodedAllocText";
+            = "ShelleyWinters-Tag361DatEncodedAllocText";
     public final static String TESTB_DAT_ENCODED_ALLOC_TEXT
-            = "Gandalf-Tag361DatEncodedAllocText";
+            = "ShirleySchrift-Tag361DatEncodedAllocText";
 
     public Tag361DatEncodedAllocText(MyDataType dataValue) {
         setFixType(FIX42.FIX361_DAT_ENCODED_ALLOC_TEXT);

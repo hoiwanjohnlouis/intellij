@@ -33,9 +33,9 @@ public class Tag1007StrSideReasonCD extends FIX50Abstract implements LogValuePai
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_SIDE_REASON_CD
-            = "BilboBaggins-Tag1007StrSideReasonCD";
+            = "MadeleineCarroll-Tag1007StrSideReasonCD";
     public final static String TESTB_STR_SIDE_REASON_CD
-            = "Gandalf-Tag1007StrSideReasonCD";
+            = "EdithMadeleineCarroll-Tag1007StrSideReasonCD";
 
     public Tag1007StrSideReasonCD(MyStringType dataValue) {
         setFixType(FIX50.FIX1007_STR_SIDE_REASON_CD);

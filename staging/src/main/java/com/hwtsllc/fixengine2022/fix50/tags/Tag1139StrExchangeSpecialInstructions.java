@@ -33,9 +33,9 @@ public class Tag1139StrExchangeSpecialInstructions extends FIX50Abstract impleme
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_EXCHANGE_SPECIAL_INSTRUCTIONS
-            = "BilboBaggins-Tag1139StrExchangeSpecialInstructions";
+            = "JulieChristie-Tag1139StrExchangeSpecialInstructions";
     public final static String TESTB_STR_EXCHANGE_SPECIAL_INSTRUCTIONS
-            = "Gandalf-Tag1139StrExchangeSpecialInstructions";
+            = "JulieFrancesChristie-Tag1139StrExchangeSpecialInstructions";
 
     public Tag1139StrExchangeSpecialInstructions(MyStringType dataValue) {
         setFixType(FIX50.FIX1139_STR_EXCHANGE_SPECIAL_INSTRUCTIONS);

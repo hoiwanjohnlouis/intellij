@@ -32,9 +32,9 @@ public class Tag1039StrUnderlyingSettlMethod extends FIX50Abstract implements Lo
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_UNDERLYING_SETTL_METHOD
-            = "BilboBaggins-Tag1039StrUnderlyingSettlMethod";
+            = "CatherineDeneuve-Tag1039StrUnderlyingSettlMethod";
     public final static String TESTB_STR_UNDERLYING_SETTL_METHOD
-            = "Gandalf-Tag1039StrUnderlyingSettlMethod";
+            = "CatherineFabienneDeneuve-Tag1039StrUnderlyingSettlMethod";
 
     public Tag1039StrUnderlyingSettlMethod(MyStringType dataValue) {
         setFixType(FIX50.FIX1039_STR_UNDERLYING_SETTL_METHOD);

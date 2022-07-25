@@ -33,9 +33,9 @@ public class Tag1006StrSideFillStationCD extends FIX50Abstract implements LogVal
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_SIDE_FILL_STATION_CD
-            = "BilboBaggins-Tag1006StrSideFillStationCD";
+            = "EleanorParker-Tag1006StrSideFillStationCD";
     public final static String TESTB_STR_SIDE_FILL_STATION_CD
-            = "Gandalf-Tag1006StrSideFillStationCD";
+            = "EleanorJeanParker-Tag1006StrSideFillStationCD";
 
     public Tag1006StrSideFillStationCD(MyStringType dataValue) {
         setFixType(FIX50.FIX1006_STR_SIDE_FILL_STATION_CD);

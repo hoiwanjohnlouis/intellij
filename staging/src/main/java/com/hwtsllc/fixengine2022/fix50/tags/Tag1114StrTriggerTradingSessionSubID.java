@@ -33,9 +33,9 @@ public class Tag1114StrTriggerTradingSessionSubID extends FIX50Abstract implemen
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_TRIGGER_TRADING_SESSION_SUB_ID
-            = "BilboBaggins-Tag1114StrTriggerTradingSessionSubID";
+            = "NormaBengell-Tag1114StrTriggerTradingSessionSubID";
     public final static String TESTB_STR_TRIGGER_TRADING_SESSION_SUB_ID
-            = "Gandalf-Tag1114StrTriggerTradingSessionSubID";
+            = "NormaAlmeidaPintoGuimaraesDAreaBengell-Tag1114StrTriggerTradingSessionSubID";
 
     public Tag1114StrTriggerTradingSessionSubID(MyStringType dataValue) {
         setFixType(FIX50.FIX1114_STR_TRIGGER_TRADING_SESSION_SUB_ID);

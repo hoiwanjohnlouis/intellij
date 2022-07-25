@@ -36,9 +36,9 @@ public class Tag351DatEncodedSecurityDesc extends FIX42Abstract implements LogVa
     private final MyDataType dataValue;
 
     public final static String TESTA_DAT_ENCODED_SECURITY_DESC
-            = "BilboBaggins-Tag351DatEncodedSecurityDesc";
+            = "LupeVelez-Tag351DatEncodedSecurityDesc";
     public final static String TESTB_DAT_ENCODED_SECURITY_DESC
-            = "Gandalf-Tag351DatEncodedSecurityDesc";
+            = "MariaGuadalupeVillalobosVelez-Tag351DatEncodedSecurityDesc";
 
     public Tag351DatEncodedSecurityDesc(MyDataType dataValue) {
         setFixType(FIX42.FIX351_DAT_ENCODED_SECURITY_DESC);

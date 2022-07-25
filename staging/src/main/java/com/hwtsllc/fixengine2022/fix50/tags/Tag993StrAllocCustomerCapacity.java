@@ -33,9 +33,9 @@ public class Tag993StrAllocCustomerCapacity extends FIX50Abstract implements Log
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_ALLOC_CUSTOMER_CAPACITY
-            = "BilboBaggins-Tag993StrAllocCustomerCapacity";
+            = "KathrynGrayson-Tag993StrAllocCustomerCapacity";
     public final static String TESTB_STR_ALLOC_CUSTOMER_CAPACITY
-            = "Gandalf-Tag993StrAllocCustomerCapacity";
+            = "ZelmaKathrynElisabethHedrick-Tag993StrAllocCustomerCapacity";
 
     public Tag993StrAllocCustomerCapacity(MyStringType dataValue) {
         setFixType(FIX50.FIX993_STR_ALLOC_CUSTOMER_CAPACITY);

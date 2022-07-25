@@ -36,9 +36,9 @@ public class Tag349DatEncodedIssuer extends FIX42Abstract implements LogValuePai
     private final MyDataType dataValue;
 
     public final static String TESTA_DAT_ENCODED_ISSUER
-            = "BilboBaggins-Tag349DatEncodedIssuer";
+            = "RhondaFleming-Tag349DatEncodedIssuer";
     public final static String TESTB_DAT_ENCODED_ISSUER
-            = "Gandalf-Tag349DatEncodedIssuer";
+            = "MarilynChevertonLouis-Tag349DatEncodedIssuer";
 
     public Tag349DatEncodedIssuer(MyDataType dataValue) {
         setFixType(FIX42.FIX349_DAT_ENCODED_ISSUER);

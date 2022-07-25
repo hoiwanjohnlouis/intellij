@@ -33,9 +33,9 @@ public class Tag282StrMDEntryOriginator extends FIX42Abstract implements LogValu
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_MD_ENTRY_ORIGINATOR
-            = "BilboBaggins-Tag282StrMDEntryOriginator";
+            = "VeronicaLake-Tag282StrMDEntryOriginator";
     public final static String TESTB_STR_MD_ENTRY_ORIGINATOR
-            = "Gandalf-Tag282StrMDEntryOriginator";
+            = "ConstanceFrancesMarieOckleman-Tag282StrMDEntryOriginator";
 
     public Tag282StrMDEntryOriginator(MyStringType dataValue) {
         setFixType(FIX42.FIX282_STR_MD_ENTRY_ORIGINATOR);

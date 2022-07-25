@@ -43,9 +43,9 @@ public class Tag11StrClOrdID extends FIX27Abstract implements LogValuePairString
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_CL_ORD_ID
-            = "BilboBaggins-Tag11StrClOrdID";
+            = "DorothyDandridge-Tag11StrClOrdID";
     public final static String TESTB_STR_CL_ORD_ID
-            = "Gandalf-Tag11StrClOrdID";
+            = "DorothyJeanDandridge-Tag11StrClOrdID";
 
     public Tag11StrClOrdID(MyStringType dataValue) {
         setFixType(FIX27.FIX11_STR_CL_ORD_ID);

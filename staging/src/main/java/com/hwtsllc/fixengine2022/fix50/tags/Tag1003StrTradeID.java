@@ -34,9 +34,9 @@ public class Tag1003StrTradeID extends FIX50Abstract implements LogValuePairStri
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_TRADE_ID
-            = "BilboBaggins-Tag1003StrTradeID";
+            = "KayFrancis-Tag1003StrTradeID";
     public final static String TESTB_STR_TRADE_ID
-            = "Gandalf-Tag1003StrTradeID";
+            = "KatherineEdwinaGibbs-Tag1003StrTradeID";
 
     public Tag1003StrTradeID(MyStringType dataValue) {
         setFixType(FIX50.FIX1003_STR_TRADE_ID);

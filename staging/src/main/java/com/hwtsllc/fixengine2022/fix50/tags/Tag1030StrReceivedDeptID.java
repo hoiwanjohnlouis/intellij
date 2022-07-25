@@ -33,9 +33,9 @@ public class Tag1030StrReceivedDeptID extends FIX50Abstract implements LogValueP
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_RECEIVED_DEPT_ID
-            = "BilboBaggins-Tag1030StrReceivedDeptID";
+            = "GunnelLindblom-Tag1030StrReceivedDeptID";
     public final static String TESTB_STR_RECEIVED_DEPT_ID
-            = "Gandalf-Tag1030StrReceivedDeptID";
+            = "Margareta-Tag1030StrReceivedDeptID";
 
     public Tag1030StrReceivedDeptID(MyStringType dataValue) {
         setFixType(FIX50.FIX1030_STR_RECEIVED_DEPT_ID);

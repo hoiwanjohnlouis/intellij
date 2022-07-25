@@ -33,9 +33,9 @@ public class Tag289StrMDEntrySeller extends FIX42Abstract implements LogValuePai
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_MD_ENTRY_SELLER
-            = "BilboBaggins-Tag289StrMDEntrySeller";
+            = "JuneAllyson-Tag289StrMDEntrySeller";
     public final static String TESTB_STR_MD_ENTRY_SELLER
-            = "Gandalf-Tag289StrMDEntrySeller";
+            = "EleanorGeisman-Tag289StrMDEntrySeller";
 
     public Tag289StrMDEntrySeller(MyStringType dataValue) {
         setFixType(FIX42.FIX289_STR_MD_ENTRY_SELLER);

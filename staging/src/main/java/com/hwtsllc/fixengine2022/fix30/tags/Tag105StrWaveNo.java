@@ -34,9 +34,9 @@ public class Tag105StrWaveNo extends FIX30Abstract implements LogValuePairString
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_WAVE_NO
-            = "BilboBaggins-Tag105StrWaveNo";
+            = "AnnaMayWong-Tag105StrWaveNo";
     public final static String TESTB_STR_WAVE_NO
-            = "Gandalf-Tag105StrWaveNo";
+            = "WongLiuTsong-Tag105StrWaveNo";
 
     public Tag105StrWaveNo(MyStringType dataValue) {
         setFixType(FIX30.FIX105_STR_WAVE_NO);

@@ -33,9 +33,9 @@ public class Tag262StrMDReqID extends FIX42Abstract implements LogValuePairStrin
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_MD_REQ_ID
-            = "BilboBaggins-Tag262StrMDReqID";
+            = "LaurenBacall-Tag262StrMDReqID";
     public final static String TESTB_STR_MD_REQ_ID
-            = "Gandalf-Tag262StrMDReqID";
+            = "BettyJoanPerske-Tag262StrMDReqID";
 
     public Tag262StrMDReqID(MyStringType dataValue) {
         setFixType(FIX42.FIX262_STR_MD_REQ_ID);

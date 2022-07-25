@@ -33,9 +33,9 @@ public class Tag280StrMDEntryRefID extends FIX42Abstract implements LogValuePair
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_MD_ENTRY_REF_ID
-            = "BilboBaggins-Tag280StrMDEntryRefID";
+            = "DebbieReynolds-Tag280StrMDEntryRefID";
     public final static String TESTB_STR_MD_ENTRY_REF_ID
-            = "Gandalf-Tag280StrMDEntryRefID";
+            = "MaryFrancesReynolds-Tag280StrMDEntryRefID";
 
     public Tag280StrMDEntryRefID(MyStringType dataValue) {
         setFixType(FIX42.FIX280_STR_MD_ENTRY_REF_ID);

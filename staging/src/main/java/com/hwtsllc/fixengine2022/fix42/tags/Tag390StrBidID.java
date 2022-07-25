@@ -35,9 +35,9 @@ public class Tag390StrBidID extends FIX42Abstract implements LogValuePairString,
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_BID_ID
-            = "BilboBaggins-Tag390StrBidID";
+            = "MargaretOBrien-Tag390StrBidID";
     public final static String TESTB_STR_BID_ID
-            = "Gandalf-Tag390StrBidID";
+            = "AngelaMaxineOBrien-Tag390StrBidID";
 
     public Tag390StrBidID(MyStringType dataValue) {
         setFixType(FIX42.FIX390_STR_BID_ID);

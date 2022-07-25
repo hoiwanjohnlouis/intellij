@@ -34,8 +34,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 public class Tag949StrNested3PartyID extends FIX44Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_NESTED_3_PARTY_ID = "BilboBaggins-Tag949StrNested3PartyID";
-    public final static String TESTB_STR_NESTED_3_PARTY_ID = "Gandalf-Tag949StrNested3PartyID";
+    public final static String TESTA_STR_NESTED_3_PARTY_ID
+            = "AnnMiller-Tag949StrNested3PartyID";
+    public final static String TESTB_STR_NESTED_3_PARTY_ID
+            = "JohnnieLucilleAnnCollier-Tag949StrNested3PartyID";
 
     public Tag949StrNested3PartyID(MyStringType dataValue) {
         setFixType(FIX44.FIX949_STR_NESTED_3_PARTY_ID);

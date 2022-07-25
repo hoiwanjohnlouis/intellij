@@ -35,9 +35,9 @@ public class Tag311StrUnderlyingSymbol extends FIX42Abstract implements LogValue
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_UNDERLYING_SYMBOL
-            = "BilboBaggins-Tag311StrUnderlyingSymbol";
+            = "ConstanceBennett-Tag311StrUnderlyingSymbol";
     public final static String TESTB_STR_UNDERLYING_SYMBOL
-            = "Gandalf-Tag311StrUnderlyingSymbol";
+            = "ConstanceCampbellBennett-Tag311StrUnderlyingSymbol";
 
     public Tag311StrUnderlyingSymbol(MyStringType dataValue) {
         setFixType(FIX42.FIX311_STR_UNDERLYING_SYMBOL);

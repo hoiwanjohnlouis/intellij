@@ -33,9 +33,9 @@ public class Tag1080StrRefOrderID extends FIX50Abstract implements LogValuePairS
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_REF_ORDER_ID
-            = "BilboBaggins-Tag1080StrRefOrderID";
+            = "IngaSwenson-Tag1080StrRefOrderID";
     public final static String TESTB_STR_REF_ORDER_ID
-            = "Gandalf-Tag1080StrRefOrderID";
+            = "MissGretchenWilomenaKraus-Tag1080StrRefOrderID";
 
     public Tag1080StrRefOrderID(MyStringType dataValue) {
         setFixType(FIX50.FIX1080_STR_REF_ORDER_ID);

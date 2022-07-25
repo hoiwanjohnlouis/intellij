@@ -34,9 +34,9 @@ public class Tag214StrSettlInstRefID extends FIX42Abstract implements LogValuePa
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_SETTL_INST_REF_ID
-            = "BilboBaggins-Tag214StrSettlInstRefID";
+            = "MerleOberon-Tag214StrSettlInstRefID";
     public final static String TESTB_STR_SETTL_INST_REF_ID
-            = "Gandalf-Tag214StrSettlInstRefID";
+            = "EstelleMerleThompson-Tag214StrSettlInstRefID";
 
     public Tag214StrSettlInstRefID(MyStringType dataValue) {
         setFixType(FIX42.FIX214_STR_SETTL_INST_REF_ID);

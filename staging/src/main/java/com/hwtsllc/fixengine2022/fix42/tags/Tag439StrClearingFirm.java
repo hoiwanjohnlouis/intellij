@@ -36,9 +36,9 @@ public class Tag439StrClearingFirm extends FIX42Abstract implements LogValuePair
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_CLEARING_FIRM
-            = "BilboBaggins-Tag439StrClearingFirm";
+            = "AnnBlyth-Tag439StrClearingFirm";
     public final static String TESTB_STR_CLEARING_FIRM
-            = "Gandalf-Tag439StrClearingFirm";
+            = "AnneMarieBlythe-Tag439StrClearingFirm";
 
     public Tag439StrClearingFirm(MyStringType dataValue) {
         setFixType(FIX42.FIX439_STR_CLEARING_FIRM);

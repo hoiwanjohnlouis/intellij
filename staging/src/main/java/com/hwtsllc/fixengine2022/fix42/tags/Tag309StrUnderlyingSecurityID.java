@@ -35,9 +35,9 @@ public class Tag309StrUnderlyingSecurityID extends FIX42Abstract implements LogV
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_UNDERLYING_SECURITY_ID
-            = "BilboBaggins-Tag309StrUnderlyingSecurityID";
+            = "AliceFaye-Tag309StrUnderlyingSecurityID";
     public final static String TESTB_STR_UNDERLYING_SECURITY_ID
-            = "Gandalf-Tag309StrUnderlyingSecurityID";
+            = "AliceJeanneLeppert-Tag309StrUnderlyingSecurityID";
 
     public Tag309StrUnderlyingSecurityID(MyStringType dataValue) {
         setFixType(FIX42.FIX309_STR_UNDERLYING_SECURITY_ID);

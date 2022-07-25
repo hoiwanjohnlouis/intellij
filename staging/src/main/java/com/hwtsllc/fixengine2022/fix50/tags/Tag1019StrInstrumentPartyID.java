@@ -35,9 +35,9 @@ public class Tag1019StrInstrumentPartyID extends FIX50Abstract implements LogVal
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_INSTRUMENT_PARTY_ID
-            = "BilboBaggins-Tag1019StrInstrumentPartyID";
+            = "AnoukAimee-Tag1019StrInstrumentPartyID";
     public final static String TESTB_STR_INSTRUMENT_PARTY_ID
-            = "Gandalf-Tag1019StrInstrumentPartyID";
+            = "NicoleFrançoiseFlorenceDreyfus-Tag1019StrInstrumentPartyID";
 
     public Tag1019StrInstrumentPartyID(MyStringType dataValue) {
         setFixType(FIX50.FIX1019_STR_INSTRUMENT_PARTY_ID);

@@ -36,9 +36,9 @@ public class Tag363DatEncodedUnderlyingIssuer extends FIX42Abstract implements L
     private final MyDataType dataValue;
 
     public final static String TESTA_DAT_ENCODED_UNDERLYING_ISSUER
-            = "BilboBaggins-Tag363DatEncodedUnderlyingIssuer";
+            = "JaneWithers-Tag363DatEncodedUnderlyingIssuer";
     public final static String TESTB_DAT_ENCODED_UNDERLYING_ISSUER
-            = "Gandalf-Tag363DatEncodedUnderlyingIssuer";
+            = "JaneRuthWithers-Tag363DatEncodedUnderlyingIssuer";
 
     public Tag363DatEncodedUnderlyingIssuer(MyDataType dataValue) {
         setFixType(FIX42.FIX363_DAT_ENCODED_UNDERLYING_ISSUER);

@@ -36,9 +36,9 @@ public class Tag359DatEncodedHeadline extends FIX42Abstract implements LogValueP
     private final MyDataType dataValue;
 
     public final static String TESTA_DAT_ENCODED_HEADLINE
-            = "BilboBaggins-Tag359DatEncodedHeadline";
+            = "MarieDressler-Tag359DatEncodedHeadline";
     public final static String TESTB_DAT_ENCODED_HEADLINE
-            = "Gandalf-Tag359DatEncodedHeadline";
+            = "LeilaMarieKoerber-Tag359DatEncodedHeadline";
 
     public Tag359DatEncodedHeadline(MyDataType dataValue) {
         setFixType(FIX42.FIX359_DAT_ENCODED_HEADLINE);

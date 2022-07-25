@@ -33,9 +33,9 @@ public class Tag324StrSecurityStatusReqID extends FIX42Abstract implements LogVa
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_SECURITY_STATUS_REQ_ID
-            = "BilboBaggins-Tag324StrSecurityStatusReqID";
+            = "MaureenOSullivan-Tag324StrSecurityStatusReqID";
     public final static String TESTB_STR_SECURITY_STATUS_REQ_ID
-            = "Gandalf-Tag324StrSecurityStatusReqID";
+            = "MaureenPaulaOSullivan-Tag324StrSecurityStatusReqID";
 
     public Tag324StrSecurityStatusReqID(MyStringType dataValue) {
         setFixType(FIX42.FIX324_STR_SECURITY_STATUS_REQ_ID);

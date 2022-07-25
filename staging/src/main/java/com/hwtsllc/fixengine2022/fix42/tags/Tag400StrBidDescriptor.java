@@ -44,9 +44,9 @@ public class Tag400StrBidDescriptor extends FIX42Abstract implements LogValuePai
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_BID_DESCRIPTOR
-            = "BilboBaggins-Tag400StrBidDescriptor";
+            = "FayWray-Tag400StrBidDescriptor";
     public final static String TESTB_STR_BID_DESCRIPTOR
-            = "Gandalf-Tag400StrBidDescriptor";
+            = "VinaFayWray-Tag400StrBidDescriptor";
 
     public Tag400StrBidDescriptor(MyStringType dataValue) {
         setFixType(FIX42.FIX400_STR_BID_DESCRIPTOR);

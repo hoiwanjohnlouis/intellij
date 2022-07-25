@@ -35,9 +35,9 @@ public class Tag317StrUnderlyingOptAttribute extends FIX42Abstract implements Lo
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_UNDERLYING_OPT_ATTRIBUTE
-            = "BilboBaggins-Tag317StrUnderlyingOptAttribute";
+            = "MaureenOHara-Tag317StrUnderlyingOptAttribute";
     public final static String TESTB_STR_UNDERLYING_OPT_ATTRIBUTE
-            = "Gandalf-Tag317StrUnderlyingOptAttribute";
+            = "MaureenFitzSimons-Tag317StrUnderlyingOptAttribute";
 
     public Tag317StrUnderlyingOptAttribute(MyStringType dataValue) {
         setFixType(FIX42.FIX317_STR_UNDERLYING_OPT_ATTRIBUTE);

@@ -82,9 +82,9 @@ public class Tag234StrStipulationValue extends FIX42Abstract implements LogValue
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_STIPULATION_VALUE
-            = "BilboBaggins-Tag234StrStipulationValue";
+            = "JudyGarland-Tag234StrStipulationValue";
     public final static String TESTB_STR_STIPULATION_VALUE
-            = "Gandalf-Tag234StrStipulationValue";
+            = "FrancesEthelGumm-Tag234StrStipulationValue";
 
     public Tag234StrStipulationValue(MyStringType dataValue) {
         setFixType(FIX42.FIX234_STR_STIPULATION_VALUE);

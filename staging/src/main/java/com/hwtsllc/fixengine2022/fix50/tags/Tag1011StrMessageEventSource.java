@@ -40,9 +40,9 @@ public class Tag1011StrMessageEventSource extends FIX50Abstract implements LogVa
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_MESSAGE_EVENT_SOURCE
-            = "BilboBaggins-Tag1011StrMessageEventSource";
+            = "ClaudiaCardinale-Tag1011StrMessageEventSource";
     public final static String TESTB_STR_MESSAGE_EVENT_SOURCE
-            = "Gandalf-Tag1011StrMessageEventSource";
+            = "ClaudeJosephineRoseCardinale-Tag1011StrMessageEventSource";
 
     public Tag1011StrMessageEventSource(MyStringType dataValue) {
         setFixType(FIX50.FIX1011_STR_MESSAGE_EVENT_SOURCE);

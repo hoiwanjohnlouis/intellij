@@ -33,9 +33,9 @@ public class Tag347StrMessageEncoding extends FIX42Abstract implements LogValueP
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_MESSAGE_ENCODING
-            = "BilboBaggins-Tag347StrMessageEncoding";
+            = "SylviaSidney-Tag347StrMessageEncoding";
     public final static String TESTB_STR_MESSAGE_ENCODING
-            = "Gandalf-Tag347StrMessageEncoding";
+            = "SophiaKosow-Tag347StrMessageEncoding";
 
     public Tag347StrMessageEncoding(MyStringType dataValue) {
         setFixType(FIX42.FIX347_STR_MESSAGE_ENCODING);

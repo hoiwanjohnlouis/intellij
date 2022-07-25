@@ -37,9 +37,9 @@ public class Tag1014StrSideTrdRegTimestampSrc extends FIX50Abstract implements L
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_SIDE_TRD_REG_TIMESTAMP_SRC
-            = "BilboBaggins-Tag1014StrSideTrdRegTimestampSrc";
+            = "JeanneMoreau-Tag1014StrSideTrdRegTimestampSrc";
     public final static String TESTB_STR_SIDE_TRD_REG_TIMESTAMP_SRC
-            = "Gandalf-Tag1014StrSideTrdRegTimestampSrc";
+            = "TheFrenchBetteDavis-Tag1014StrSideTrdRegTimestampSrc";
 
     public Tag1014StrSideTrdRegTimestampSrc(MyStringType dataValue) {
         setFixType(FIX50.FIX1014_STR_SIDE_TRD_REG_TIMESTAMP_SRC);

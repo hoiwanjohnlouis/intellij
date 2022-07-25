@@ -49,9 +49,9 @@ public class Tag222StrBenchmarkCurvePoint extends FIX42Abstract implements LogVa
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_BENCHMARK_CURVE_POINT
-            = "BilboBaggins-Tag222StrBenchmarkCurvePoint";
+            = "IngridBergman-Tag222StrBenchmarkCurvePoint";
     public final static String TESTB_STR_BENCHMARK_CURVE_POINT
-            = "Gandalf-Tag222StrBenchmarkCurvePoint";
+            = "IlsaLund-Tag222StrBenchmarkCurvePoint";
 
     public Tag222StrBenchmarkCurvePoint(MyStringType dataValue) {
         setFixType(FIX42.FIX222_STR_BENCHMARK_CURVE_POINT);

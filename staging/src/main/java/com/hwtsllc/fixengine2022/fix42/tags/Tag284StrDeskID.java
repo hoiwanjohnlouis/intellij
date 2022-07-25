@@ -33,9 +33,9 @@ public class Tag284StrDeskID extends FIX42Abstract implements LogValuePairString
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_DESK_ID
-            = "BilboBaggins-Tag284StrDeskID";
+            = "LenaHorne-Tag284StrDeskID";
     public final static String TESTB_STR_DESK_ID
-            = "Gandalf-Tag284StrDeskID";
+            = "LenaCalhounHorne-Tag284StrDeskID";
 
     public Tag284StrDeskID(MyStringType dataValue) {
         setFixType(FIX42.FIX284_STR_DESK_ID);

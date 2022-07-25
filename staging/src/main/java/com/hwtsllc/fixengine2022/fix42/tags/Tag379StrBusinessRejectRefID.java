@@ -33,9 +33,9 @@ public class Tag379StrBusinessRejectRefID extends FIX42Abstract implements LogVa
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_BUSINESS_REJECT_REF_ID
-            = "BilboBaggins-Tag379StrBusinessRejectRefID";
+            = "GeneTierney-Tag379StrBusinessRejectRefID";
     public final static String TESTB_STR_BUSINESS_REJECT_REF_ID
-            = "Gandalf-Tag379StrBusinessRejectRefID";
+            = "GeneElizaTierney-Tag379StrBusinessRejectRefID";
 
     public Tag379StrBusinessRejectRefID(MyStringType dataValue) {
         setFixType(FIX42.FIX379_STR_BUSINESS_REJECT_REF_ID);

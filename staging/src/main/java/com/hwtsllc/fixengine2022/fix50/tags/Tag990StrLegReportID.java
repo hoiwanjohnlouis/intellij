@@ -33,9 +33,9 @@ public class Tag990StrLegReportID extends FIX50Abstract implements LogValuePairS
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_LEG_REPORT_ID
-            = "BilboBaggins-Tag990StrLegReportID";
+            = "KimNovak-Tag990StrLegReportID";
     public final static String TESTB_STR_LEG_REPORT_ID
-            = "Gandalf-Tag990StrLegReportID";
+            = "MarilynPaulineNovak-Tag990StrLegReportID";
 
     public Tag990StrLegReportID(MyStringType dataValue) {
         setFixType(FIX50.FIX990_STR_LEG_REPORT_ID);

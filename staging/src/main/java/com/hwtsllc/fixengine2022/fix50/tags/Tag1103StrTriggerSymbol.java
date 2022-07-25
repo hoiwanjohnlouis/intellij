@@ -34,9 +34,9 @@ public class Tag1103StrTriggerSymbol extends FIX50Abstract implements LogValuePa
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_TRIGGER_SYMBOL
-            = "BilboBaggins-Tag1103StrTriggerSymbol";
+            = "BibiAndersson-Tag1103StrTriggerSymbol";
     public final static String TESTB_STR_TRIGGER_SYMBOL
-            = "Gandalf-Tag1103StrTriggerSymbol";
+            = "BeritElisabethAndersson-Tag1103StrTriggerSymbol";
 
     public Tag1103StrTriggerSymbol(MyStringType dataValue) {
         setFixType(FIX50.FIX1103_STR_TRIGGER_SYMBOL);

@@ -35,9 +35,9 @@ public class Tag23StrIOIID extends FIX27Abstract implements LogValuePairString, 
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_IOI_ID
-            = "BilboBaggins-Tag23StrIOIID";
+            = "GreerGarson-Tag23StrIOIID";
     public final static String TESTB_STR_IOI_ID
-            = "Gandalf-Tag23StrIOIID";
+            = "EileenEvelynGreerGarson-Tag23StrIOIID";
 
     public Tag23StrIOIID(MyStringType dataValue) {
         setFixType(FIX27.FIX23_STR_IOI_ID);

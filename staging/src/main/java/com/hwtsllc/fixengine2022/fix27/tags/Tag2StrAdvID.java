@@ -35,9 +35,9 @@ public class Tag2StrAdvID extends FIX27Abstract implements LogValuePairString, L
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_ADV_ID
-            = "BilboBaggins-Tag2StrAdvID";
+            = "MarleneDietrich-Tag2StrAdvID";
     public final static String TESTB_STR_ADV_ID
-            = "Gandalf-Tag2StrAdvID";
+            = "MarieMagdaleneDietrich-Tag2StrAdvID";
 
     public Tag2StrAdvID(MyStringType dataValue) {
         setFixType(FIX27.FIX2_STR_ADV_ID);

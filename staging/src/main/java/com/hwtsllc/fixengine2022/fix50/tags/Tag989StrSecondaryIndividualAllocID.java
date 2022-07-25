@@ -33,9 +33,9 @@ public class Tag989StrSecondaryIndividualAllocID extends FIX50Abstract implement
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_SECONDARY_INDIVIDUAL_ALLOC_ID
-            = "BilboBaggins-Tag989StrSecondaryIndividualAllocID";
+            = "JudithAnderson-Tag989StrSecondaryIndividualAllocID";
     public final static String TESTB_STR_SECONDARY_INDIVIDUAL_ALLOC_ID
-            = "Gandalf-Tag989StrSecondaryIndividualAllocID";
+            = "FrancesMargaretAnderson-Tag989StrSecondaryIndividualAllocID";
 
     public Tag989StrSecondaryIndividualAllocID(MyStringType dataValue) {
         setFixType(FIX50.FIX989_STR_SECONDARY_INDIVIDUAL_ALLOC_ID);

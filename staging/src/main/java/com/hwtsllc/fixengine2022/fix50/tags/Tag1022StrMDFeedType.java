@@ -34,9 +34,9 @@ public class Tag1022StrMDFeedType extends FIX50Abstract implements LogValuePairS
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_MD_FEED_TYPE
-            = "BilboBaggins-Tag1022StrMDFeedType";
+            = "MichiyoAratama-Tag1022StrMDFeedType";
     public final static String TESTB_STR_MD_FEED_TYPE
-            = "Gandalf-Tag1022StrMDFeedType";
+            = "KyokoToda-Tag1022StrMDFeedType";
 
     public Tag1022StrMDFeedType(MyStringType dataValue) {
         setFixType(FIX50.FIX1022_STR_MD_FEED_TYPE);

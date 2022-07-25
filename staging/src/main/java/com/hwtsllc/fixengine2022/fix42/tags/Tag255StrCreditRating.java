@@ -37,9 +37,9 @@ public class Tag255StrCreditRating extends FIX42Abstract implements LogValuePair
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_CREDIT_RATING
-            = "BilboBaggins-Tag255StrCreditRating";
+            = "JoanCrawford-Tag255StrCreditRating";
     public final static String TESTB_STR_CREDIT_RATING
-            = "Gandalf-Tag255StrCreditRating";
+            = "LucilleFayLeSueur-Tag255StrCreditRating";
 
     public Tag255StrCreditRating(MyStringType dataValue) {
         setFixType(FIX42.FIX255_STR_CREDIT_RATING);

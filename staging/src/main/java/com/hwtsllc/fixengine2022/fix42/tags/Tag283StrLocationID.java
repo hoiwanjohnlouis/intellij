@@ -33,9 +33,9 @@ public class Tag283StrLocationID extends FIX42Abstract implements LogValuePairSt
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_LOCATION_ID
-            = "BilboBaggins-Tag283StrLocationID";
+            = "OliviaDeHavilland-Tag283StrLocationID";
     public final static String TESTB_STR_LOCATION_ID
-            = "Gandalf-Tag283StrLocationID";
+            = "OliviaMaryDeHavilland-Tag283StrLocationID";
 
     public Tag283StrLocationID(MyStringType dataValue) {
         setFixType(FIX42.FIX283_STR_LOCATION_ID);

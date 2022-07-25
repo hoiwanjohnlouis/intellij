@@ -33,9 +33,9 @@ public class Tag107StrSecurityDesc extends FIX30Abstract implements LogValuePair
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_SECURITY_DESC
-            = "BilboBaggins-Tag107StrSecurityDesc";
+            = "DeannaDurbin-Tag107StrSecurityDesc";
     public final static String TESTB_STR_SECURITY_DESC
-            = "Gandalf-Tag107StrSecurityDesc";
+            = "EdnaMaeDurbin-Tag107StrSecurityDesc";
 
     public Tag107StrSecurityDesc(MyStringType dataValue) {
         setFixType(FIX30.FIX107_STR_SECURITY_DESC);

@@ -34,9 +34,9 @@ public class Tag1098StrPegSymbol extends FIX50Abstract implements LogValuePairSt
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_PEG_SYMBOL
-            = "BilboBaggins-Tag1098StrPegSymbol";
+            = "YvonneFurneaux-Tag1098StrPegSymbol";
     public final static String TESTB_STR_PEG_SYMBOL
-            = "Gandalf-Tag1098StrPegSymbol";
+            = "ElisabethYvonneScatcherd-Tag1098StrPegSymbol";
 
     public Tag1098StrPegSymbol(MyStringType dataValue) {
         setFixType(FIX50.FIX1098_STR_PEG_SYMBOL);

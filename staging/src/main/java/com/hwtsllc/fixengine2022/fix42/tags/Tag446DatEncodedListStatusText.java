@@ -36,9 +36,9 @@ public class Tag446DatEncodedListStatusText extends FIX42Abstract implements Log
     private final MyDataType dataValue;
 
     public final static String TESTA_DAT_LIST_STATUS_ENCODED_TEXT
-            = "BilboBaggins-Tag446DatEncodedListStatusText";
+            = "LeslieCaron-Tag446DatEncodedListStatusText";
     public final static String TESTB_DAT_LIST_STATUS_ENCODED_TEXT
-            = "Gandalf-Tag446DatEncodedListStatusText";
+            = "LeslieClaireMargaretCaron-Tag446DatEncodedListStatusText";
 
     public Tag446DatEncodedListStatusText(MyDataType dataValue) {
         setFixType(FIX42.FIX446_DAT_LIST_STATUS_ENCODED_TEXT);

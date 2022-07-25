@@ -33,9 +33,9 @@ public class Tag1040StrSecondaryTradeID extends FIX50Abstract implements LogValu
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_SECONDARY_TRADE_ID
-            = "BilboBaggins-Tag1040StrSecondaryTradeID";
+            = "KyokoKishida-Tag1040StrSecondaryTradeID";
     public final static String TESTB_STR_SECONDARY_TRADE_ID
-            = "Gandalf-Tag1040StrSecondaryTradeID";
+            = "Kaoru-Tag1040StrSecondaryTradeID";
 
     public Tag1040StrSecondaryTradeID(MyStringType dataValue) {
         setFixType(FIX50.FIX1040_STR_SECONDARY_TRADE_ID);

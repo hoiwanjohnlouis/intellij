@@ -33,9 +33,9 @@ public class Tag1117StrRootPartyID extends FIX50Abstract implements LogValuePair
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_ROOT_PARTY_ID
-            = "BilboBaggins-Tag1117StrRootPartyID";
+            = "RomySchneider-Tag1117StrRootPartyID";
     public final static String TESTB_STR_ROOT_PARTY_ID
-            = "Gandalf-Tag1117StrRootPartyID";
+            = "RosemarieMagdelenaAlbachRetty-Tag1117StrRootPartyID";
 
     public Tag1117StrRootPartyID(MyStringType dataValue) {
         setFixType(FIX50.FIX1117_STR_ROOT_PARTY_ID);

@@ -35,9 +35,9 @@ public class Tag1053StrInstrumentPartySubID extends FIX50Abstract implements Log
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_INSTRUMENT_PARTY_SUB_ID
-            = "BilboBaggins-Tag1053StrInstrumentPartySubID";
+            = "ShirleyMacLaine-Tag1053StrInstrumentPartySubID";
     public final static String TESTB_STR_INSTRUMENT_PARTY_SUB_ID
-            = "Gandalf-Tag1053StrInstrumentPartySubID";
+            = "ShirleyMacLeanBeaty-Tag1053StrInstrumentPartySubID";
 
     public Tag1053StrInstrumentPartySubID(MyStringType dataValue) {
         setFixType(FIX50.FIX1053_STR_INSTRUMENT_PARTY_SUB_ID);

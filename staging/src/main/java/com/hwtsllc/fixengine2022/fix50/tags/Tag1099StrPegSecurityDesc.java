@@ -33,9 +33,9 @@ public class Tag1099StrPegSecurityDesc extends FIX50Abstract implements LogValue
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_PEG_SECURITY_DESC
-            = "BilboBaggins-Tag1099StrPegSecurityDesc";
+            = "LivUllmann-Tag1099StrPegSecurityDesc";
     public final static String TESTB_STR_PEG_SECURITY_DESC
-            = "Gandalf-Tag1099StrPegSecurityDesc";
+            = "LivJohanneUllmann-Tag1099StrPegSecurityDesc";
 
     public Tag1099StrPegSecurityDesc(MyStringType dataValue) {
         setFixType(FIX50.FIX1099_STR_PEG_SECURITY_DESC);

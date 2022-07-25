@@ -35,9 +35,9 @@ public class Tag1059StrUndlyInstrumentPartyID extends FIX50Abstract implements L
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_UNDLY_INSTRUMENT_PARTY_ID
-            = "BilboBaggins-Tag1059StrUndlyInstrumentPartyID";
+            = "AnneBancroft-Tag1059StrUndlyInstrumentPartyID";
     public final static String TESTB_STR_UNDLY_INSTRUMENT_PARTY_ID
-            = "Gandalf-Tag1059StrUndlyInstrumentPartyID";
+            = "AnnaMariaLouiseItaliano-Tag1059StrUndlyInstrumentPartyID";
 
     public Tag1059StrUndlyInstrumentPartyID(MyStringType dataValue) {
         setFixType(FIX50.FIX1059_STR_UNDLY_INSTRUMENT_PARTY_ID);

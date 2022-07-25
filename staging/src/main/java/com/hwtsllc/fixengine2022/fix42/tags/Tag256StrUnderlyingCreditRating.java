@@ -37,9 +37,9 @@ public class Tag256StrUnderlyingCreditRating extends FIX42Abstract implements Lo
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_UNDERLYING_CREDIT_RATING
-            = "BilboBaggins-Tag256StrUnderlyingCreditRating";
+            = "SusanHayward-Tag256StrUnderlyingCreditRating";
     public final static String TESTB_STR_UNDERLYING_CREDIT_RATING
-            = "Gandalf-Tag256StrUnderlyingCreditRating";
+            = "EdytheMarrener-Tag256StrUnderlyingCreditRating";
 
     public Tag256StrUnderlyingCreditRating(MyStringType dataValue) {
         setFixType(FIX42.FIX256_STR_UNDERLYING_CREDIT_RATING);

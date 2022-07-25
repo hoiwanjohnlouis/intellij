@@ -36,9 +36,9 @@ public class Tag357DatEncodedSubject extends FIX42Abstract implements LogValuePa
     private final MyDataType dataValue;
 
     public final static String TESTA_DAT_ENCODED_SUBJECT
-            = "BilboBaggins-Tag357DatEncodedSubject";
+            = "LizabethScott-Tag357DatEncodedSubject";
     public final static String TESTB_DAT_ENCODED_SUBJECT
-            = "Gandalf-Tag357DatEncodedSubject";
+            = "EmmaMatzo-Tag357DatEncodedSubject";
 
     public Tag357DatEncodedSubject(MyDataType dataValue) {
         setFixType(FIX42.FIX357_DAT_ENCODED_SUBJECT);

@@ -34,9 +34,9 @@ public class Tag440StrClearingAccount extends FIX42Abstract implements LogValueP
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_CLEARING_ACCOUNT
-            = "BilboBaggins-Tag440StrClearingAccount";
+            = "JudyHolliday-Tag440StrClearingAccount";
     public final static String TESTB_STR_CLEARING_ACCOUNT
-            = "Gandalf-Tag440StrClearingAccount";
+            = "JudithTuvim-Tag440StrClearingAccount";
 
     public Tag440StrClearingAccount(MyStringType dataValue) {
         setFixType(FIX42.FIX440_STR_CLEARING_ACCOUNT);

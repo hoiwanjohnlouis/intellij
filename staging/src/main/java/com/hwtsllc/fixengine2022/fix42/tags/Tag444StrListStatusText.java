@@ -33,9 +33,9 @@ public class Tag444StrListStatusText extends FIX42Abstract implements LogValuePa
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_LIST_STATUS_TEXT
-            = "BilboBaggins-Tag444StrListStatusText";
+            = "Anne Baxter-Tag444StrListStatusText";
     public final static String TESTB_STR_LIST_STATUS_TEXT
-            = "Gandalf-Tag444StrListStatusText";
+            = "Nefretiri-Tag444StrListStatusText";
 
     public Tag444StrListStatusText(MyStringType dataValue) {
         setFixType(FIX42.FIX444_STR_LIST_STATUS_TEXT);

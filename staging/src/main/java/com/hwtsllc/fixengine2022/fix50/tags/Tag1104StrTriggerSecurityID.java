@@ -33,9 +33,9 @@ public class Tag1104StrTriggerSecurityID extends FIX50Abstract implements LogVal
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_TRIGGER_SECURITY_ID
-            = "BilboBaggins-Tag1104StrTriggerSecurityID";
+            = "KatharineRoss-Tag1104StrTriggerSecurityID";
     public final static String TESTB_STR_TRIGGER_SECURITY_ID
-            = "Gandalf-Tag1104StrTriggerSecurityID";
+            = "KatharineJulietRoss-Tag1104StrTriggerSecurityID";
 
     public Tag1104StrTriggerSecurityID(MyStringType dataValue) {
         setFixType(FIX50.FIX1104_STR_TRIGGER_SECURITY_ID);

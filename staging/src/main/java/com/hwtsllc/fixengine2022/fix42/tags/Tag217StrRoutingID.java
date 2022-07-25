@@ -33,9 +33,9 @@ public class Tag217StrRoutingID extends FIX42Abstract implements LogValuePairStr
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_ROUTING_ID
-            = "BilboBaggins-Tag217StrRoutingID";
+            = "CarmenMiranda-Tag217StrRoutingID";
     public final static String TESTB_STR_ROUTING_ID
-            = "Gandalf-Tag217StrRoutingID";
+            = "MariaDoCarmoMirandaDaCunha-Tag217StrRoutingID";
 
     public Tag217StrRoutingID(MyStringType dataValue) {
         setFixType(FIX42.FIX217_STR_ROUTING_ID);

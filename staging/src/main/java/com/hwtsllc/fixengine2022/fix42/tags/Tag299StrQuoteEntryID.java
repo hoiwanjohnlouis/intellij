@@ -33,9 +33,9 @@ public class Tag299StrQuoteEntryID extends FIX42Abstract implements LogValuePair
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_QUOTE_ENTRY_ID
-            = "BilboBaggins-Tag299StrQuoteEntryID";
+            = "PauletteGoddard-Tag299StrQuoteEntryID";
     public final static String TESTB_STR_QUOTE_ENTRY_ID
-            = "Gandalf-Tag299StrQuoteEntryID";
+            = "PaulineMarionGoddardLevy-Tag299StrQuoteEntryID";
 
     public Tag299StrQuoteEntryID(MyStringType dataValue) {
         setFixType(FIX42.FIX299_STR_QUOTE_ENTRY_ID);

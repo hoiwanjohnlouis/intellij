@@ -33,9 +33,9 @@ public class Tag1136StrAllocClearingFeeIndicator extends FIX50Abstract implement
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_ALLOC_CLEARING_FEE_INDICATOR
-            = "BilboBaggins-Tag1136StrAllocClearingFeeIndicator";
+            = "MonicaVitti-Tag1136StrAllocClearingFeeIndicator";
     public final static String TESTB_STR_ALLOC_CLEARING_FEE_INDICATOR
-            = "Gandalf-Tag1136StrAllocClearingFeeIndicator";
+            = "MariaLuisaCeciarelli-Tag1136StrAllocClearingFeeIndicator";
 
     public Tag1136StrAllocClearingFeeIndicator(MyStringType dataValue) {
         setFixType(FIX50.FIX1136_STR_ALLOC_CLEARING_FEE_INDICATOR);

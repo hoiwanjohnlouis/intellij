@@ -33,9 +33,9 @@ public class Tag112StrTestReqID extends FIX30Abstract implements LogValuePairStr
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_TEST_REQ_ID
-            = "BilboBaggins-Tag112StrTestReqID";
+            = "JoanBennett-Tag112StrTestReqID";
     public final static String TESTB_STR_TEST_REQ_ID
-            = "Gandalf-Tag112StrTestReqID";
+            = "JoanGeraldineBennett-Tag112StrTestReqID";
 
     public Tag112StrTestReqID(MyStringType dataValue) {
         setFixType(FIX30.FIX112_STR_TEST_REQ_ID);

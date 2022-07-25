@@ -34,9 +34,9 @@ public class Tag24StrIOIOthSvc extends FIX27Abstract implements LogValuePairStri
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_IOI_OTH_SVC
-            = "BilboBaggins-Tag24StrIOIOthSvc";
+            = "AvaGardner-Tag24StrIOIOthSvc";
     public final static String TESTB_STR_IOI_OTH_SVC
-            = "Gandalf-Tag24StrIOIOthSvc";
+            = "AvaLavinaGardner-Tag24StrIOIOthSvc";
 
     public Tag24StrIOIOthSvc(MyStringType dataValue) {
         setFixType(FIX27.FIX24_STR_IOI_OTH_SVC);

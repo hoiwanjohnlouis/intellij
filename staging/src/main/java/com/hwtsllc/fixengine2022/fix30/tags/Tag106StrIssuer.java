@@ -35,9 +35,9 @@ public class Tag106StrIssuer extends FIX30Abstract implements LogValuePairString
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_ISSUER
-            = "BilboBaggins-Tag106StrIssuer";
+            = "BettyGrable-Tag106StrIssuer";
     public final static String TESTB_STR_ISSUER
-            = "Gandalf-Tag106StrIssuer";
+            = "ElizabethRuthGrable-Tag106StrIssuer";
 
     public Tag106StrIssuer(MyStringType dataValue) {
         setFixType(FIX30.FIX106_STR_ISSUER);

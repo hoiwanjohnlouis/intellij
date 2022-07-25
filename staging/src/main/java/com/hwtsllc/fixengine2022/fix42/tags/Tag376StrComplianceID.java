@@ -33,9 +33,9 @@ public class Tag376StrComplianceID extends FIX42Abstract implements LogValuePair
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_COMPLIANCE_ID
-            = "BilboBaggins-Tag376StrComplianceID";
+            = "EstherWilliams-Tag376StrComplianceID";
     public final static String TESTB_STR_COMPLIANCE_ID
-            = "Gandalf-Tag376StrComplianceID";
+            = "EstherJaneWilliams-Tag376StrComplianceID";
 
     public Tag376StrComplianceID(MyStringType dataValue) {
         setFixType(FIX42.FIX376_STR_COMPLIANCE_ID);

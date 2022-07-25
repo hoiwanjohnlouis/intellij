@@ -33,9 +33,9 @@ public class Tag1005StrSideTradeReportID extends FIX50Abstract implements LogVal
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_SIDE_TRADE_REPORT_ID
-            = "BilboBaggins-Tag1005StrSideTradeReportID";
+            = "RubyKeeler-Tag1005StrSideTradeReportID";
     public final static String TESTB_STR_SIDE_TRADE_REPORT_ID
-            = "Gandalf-Tag1005StrSideTradeReportID";
+            = "EthelHildaKeeler-Tag1005StrSideTradeReportID";
 
     public Tag1005StrSideTradeReportID(MyStringType dataValue) {
         setFixType(FIX50.FIX1005_STR_SIDE_TRADE_REPORT_ID);

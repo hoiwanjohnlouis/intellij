@@ -36,9 +36,9 @@ public class Tag353DatEncodedListExecInst extends FIX42Abstract implements LogVa
     private final MyDataType dataValue;
 
     public final static String TESTA_DAT_ENCODED_LIST_EXEC_INST
-            = "BilboBaggins-Tag353DatEncodedListExecInst";
+            = "AnnSothern-Tag353DatEncodedListExecInst";
     public final static String TESTB_DAT_ENCODED_LIST_EXEC_INST
-            = "Gandalf-Tag353DatEncodedListExecInst";
+            = "HarrietteArleneLake-Tag353DatEncodedListExecInst";
 
     public Tag353DatEncodedListExecInst(MyDataType dataValue) {
         setFixType(FIX42.FIX353_DAT_ENCODED_LIST_EXEC_INST);

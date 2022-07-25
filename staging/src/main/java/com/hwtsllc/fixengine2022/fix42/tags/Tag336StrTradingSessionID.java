@@ -46,9 +46,9 @@ public class Tag336StrTradingSessionID extends FIX42Abstract implements LogValue
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_TRADING_SESSION_ID
-            = "BilboBaggins-Tag336StrTradingSessionID";
+            = "EthelWaters-Tag336StrTradingSessionID";
     public final static String TESTB_STR_TRADING_SESSION_ID
-            = "Gandalf-Tag336StrTradingSessionID";
+            = "SweetMamaStringbean-Tag336StrTradingSessionID";
 
     public Tag336StrTradingSessionID(MyStringType dataValue) {
         setFixType(FIX42.FIX336_STR_TRADING_SESSION_ID);

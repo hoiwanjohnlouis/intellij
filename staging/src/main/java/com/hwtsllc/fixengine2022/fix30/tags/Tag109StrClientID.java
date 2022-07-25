@@ -38,9 +38,9 @@ public class Tag109StrClientID extends FIX30Abstract implements LogValuePairStri
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_CLIENT_ID
-            = "BilboBaggins-Tag109StrClientID";
+            = "AudreyHepburn-Tag109StrClientID";
     public final static String TESTB_STR_CLIENT_ID
-            = "Gandalf-Tag109StrClientID";
+            = "AudreyKathleenRuston-Tag109StrClientID";
 
     public Tag109StrClientID(MyStringType dataValue) {
         setFixType(FIX30.FIX109_STR_CLIENT_ID);

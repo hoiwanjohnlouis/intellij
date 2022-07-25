@@ -33,9 +33,9 @@ public class Tag337StrContraTrader extends FIX42Abstract implements LogValuePair
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_CONTRA_TRADER
-            = "BilboBaggins-Tag337StrContraTrader";
+            = "JeanetteMacDonald-Tag337StrContraTrader";
     public final static String TESTB_STR_CONTRA_TRADER
-            = "Gandalf-Tag337StrContraTrader";
+            = "JeannetteAnnaMcDonald-Tag337StrContraTrader";
 
     public Tag337StrContraTrader(MyStringType dataValue) {
         setFixType(FIX42.FIX337_STR_CONTRA_TRADER);

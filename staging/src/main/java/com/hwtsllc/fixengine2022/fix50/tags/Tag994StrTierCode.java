@@ -33,9 +33,9 @@ public class Tag994StrTierCode extends FIX50Abstract implements LogValuePairStri
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_TIER_CODE
-            = "BilboBaggins-Tag994StrTierCode";
+            = "JanePowell-Tag994StrTierCode";
     public final static String TESTB_STR_TIER_CODE
-            = "Gandalf-Tag994StrTierCode";
+            = "SuzanneLorraineBurce-Tag994StrTierCode";
 
     public Tag994StrTierCode(MyStringType dataValue) {
         setFixType(FIX50.FIX994_STR_TIER_CODE);

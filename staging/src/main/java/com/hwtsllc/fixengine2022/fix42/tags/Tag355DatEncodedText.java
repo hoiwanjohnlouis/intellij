@@ -36,9 +36,9 @@ public class Tag355DatEncodedText extends FIX42Abstract implements LogValuePairS
     private final MyDataType dataValue;
 
     public final static String TESTA_DAT_ENCODED_TEXT
-            = "BilboBaggins-Tag355DatEncodedText";
+            = "DeborahKerr-Tag355DatEncodedText";
     public final static String TESTB_DAT_ENCODED_TEXT
-            = "Gandalf-Tag355DatEncodedText";
+            = "DeborahJaneTrimmer-Tag355DatEncodedText";
 
     public Tag355DatEncodedText(MyDataType dataValue) {
         setFixType(FIX42.FIX355_DAT_ENCODED_TEXT);

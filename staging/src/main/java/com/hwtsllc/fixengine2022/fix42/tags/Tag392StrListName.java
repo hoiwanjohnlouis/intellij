@@ -33,9 +33,9 @@ public class Tag392StrListName extends FIX42Abstract implements LogValuePairStri
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_LIST_NAME
-            = "BilboBaggins-Tag392StrListName";
+            = "JenniferJones-Tag392StrListName";
     public final static String TESTB_STR_LIST_NAME
-            = "Gandalf-Tag392StrListName";
+            = "PhylisLeeIsley-Tag392StrListName";
 
     public Tag392StrListName(MyStringType dataValue) {
         setFixType(FIX42.FIX392_STR_LIST_NAME);

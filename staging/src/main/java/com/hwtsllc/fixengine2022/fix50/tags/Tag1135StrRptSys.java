@@ -33,9 +33,9 @@ public class Tag1135StrRptSys extends FIX50Abstract implements LogValuePairStrin
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_RPT_SYS
-            = "BilboBaggins-Tag1135StrRptSys";
+            = "FrançoiseFabian-Tag1135StrRptSys";
     public final static String TESTB_STR_RPT_SYS
-            = "Gandalf-Tag1135StrRptSys";
+            = "MicheleCortesDeLeonYFabianera-Tag1135StrRptSys";
 
     public Tag1135StrRptSys(MyStringType dataValue) {
         setFixType(FIX50.FIX1135_STR_RPT_SYS);

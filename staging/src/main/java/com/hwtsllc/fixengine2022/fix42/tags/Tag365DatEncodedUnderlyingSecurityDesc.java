@@ -36,9 +36,9 @@ public class Tag365DatEncodedUnderlyingSecurityDesc extends FIX42Abstract implem
     private final MyDataType dataValue;
 
     public final static String TESTA_DAT_ENCODED_UNDERLYING_SECURITY_DESC
-            = "BilboBaggins-Tag365DatEncodedUnderlyingSecurityDesc";
+            = "HelenHayes-Tag365DatEncodedUnderlyingSecurityDesc";
     public final static String TESTB_DAT_ENCODED_UNDERLYING_SECURITY_DESC
-            = "Gandalf-Tag365DatEncodedUnderlyingSecurityDesc";
+            = "HelenHayesBrown-Tag365DatEncodedUnderlyingSecurityDesc";
 
     public Tag365DatEncodedUnderlyingSecurityDesc(MyDataType dataValue) {
         setFixType(FIX42.FIX365_DAT_ENCODED_UNDERLYING_SECURITY_DESC);

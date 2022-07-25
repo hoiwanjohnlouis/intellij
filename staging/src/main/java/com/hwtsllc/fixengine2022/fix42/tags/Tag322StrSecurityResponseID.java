@@ -33,9 +33,9 @@ public class Tag322StrSecurityResponseID extends FIX42Abstract implements LogVal
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_SECURITY_RESPONSE_ID
-            = "BilboBaggins-Tag322StrSecurityResponseID";
+            = "IdaLupino-Tag322StrSecurityResponseID";
     public final static String TESTB_STR_SECURITY_RESPONSE_ID
-            = "Gandalf-Tag322StrSecurityResponseID";
+            = "LittleScout-Tag322StrSecurityResponseID";
 
     public Tag322StrSecurityResponseID(MyStringType dataValue) {
         setFixType(FIX42.FIX322_STR_SECURITY_RESPONSE_ID);

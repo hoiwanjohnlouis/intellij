@@ -33,9 +33,9 @@ public class Tag302StrQuoteSetID extends FIX42Abstract implements LogValuePairSt
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_QUOTE_SET_ID
-            = "BilboBaggins-Tag302StrQuoteSetID";
+            = "MiriamHopkins-Tag302StrQuoteSetID";
     public final static String TESTB_STR_QUOTE_SET_ID
-            = "Gandalf-Tag302StrQuoteSetID";
+            = "EllenMiriamHopkins-Tag302StrQuoteSetID";
 
     public Tag302StrQuoteSetID(MyStringType dataValue) {
         setFixType(FIX42.FIX302_STR_QUOTE_SET_ID);

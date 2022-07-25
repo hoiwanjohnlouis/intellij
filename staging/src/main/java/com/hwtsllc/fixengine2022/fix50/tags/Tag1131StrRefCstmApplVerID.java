@@ -33,9 +33,9 @@ public class Tag1131StrRefCstmApplVerID extends FIX50Abstract implements LogValu
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_REF_CSTM_APPL_VER_ID
-            = "BilboBaggins-Tag1131StrRefCstmApplVerID";
+            = "TippiHedren-Tag1131StrRefCstmApplVerID";
     public final static String TESTB_STR_REF_CSTM_APPL_VER_ID
-            = "Gandalf-Tag1131StrRefCstmApplVerID";
+            = "NathalieKayHedren-Tag1131StrRefCstmApplVerID";
 
     public Tag1131StrRefCstmApplVerID(MyStringType dataValue) {
         setFixType( FIX50.FIX1131_STR_REF_CSTM_APPL_VER_ID );

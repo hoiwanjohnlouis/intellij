@@ -33,9 +33,9 @@ public class Tag320StrSecurityReqID extends FIX42Abstract implements LogValuePai
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_SECURITY_REQ_ID
-            = "BilboBaggins-Tag320StrSecurityReqID";
+            = "JayneMansfield-Tag320StrSecurityReqID";
     public final static String TESTB_STR_SECURITY_REQ_ID
-            = "Gandalf-Tag320StrSecurityReqID";
+            = "VeraJaynePalmer-Tag320StrSecurityReqID";
 
     public Tag320StrSecurityReqID(MyStringType dataValue) {
         setFixType(FIX42.FIX320_STR_SECURITY_REQ_ID);

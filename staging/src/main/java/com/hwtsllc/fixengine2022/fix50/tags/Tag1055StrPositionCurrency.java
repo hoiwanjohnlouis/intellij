@@ -33,9 +33,9 @@ public class Tag1055StrPositionCurrency extends FIX50Abstract implements LogValu
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_POSITION_CURRENCY
-            = "BilboBaggins-Tag1055StrPositionCurrency";
+            = "AnnieGirardot-Tag1055StrPositionCurrency";
     public final static String TESTB_STR_POSITION_CURRENCY
-            = "Gandalf-Tag1055StrPositionCurrency";
+            = "AnnieSuzanneGirardot-Tag1055StrPositionCurrency";
 
     public Tag1055StrPositionCurrency(MyStringType dataValue) {
         setFixType(FIX50.FIX1055_STR_POSITION_CURRENCY);
