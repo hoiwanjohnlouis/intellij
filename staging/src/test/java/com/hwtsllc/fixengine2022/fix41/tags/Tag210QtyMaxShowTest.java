@@ -35,78 +35,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  (Prior to FIX 4.2 this field was of type int)
  */
 class Tag210QtyMaxShowTest {
+    Tag210QtyMaxShow tagData;
+    int [] TestArray = {
+            Tag210QtyMaxShow.TESTA_QTY_MAX_SHOW,
+            Tag210QtyMaxShow.TESTB_QTY_MAX_SHOW
+    };
+
     @Test
     void PrintTest() {
-        Tag210QtyMaxShow tagData;
-        int oneElement;
-
-        oneElement = Tag210QtyMaxShow.TESTA_QTY_MAX_SHOW;
-        tagData = new Tag210QtyMaxShow(new MyQtyType( oneElement ));
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag210QtyMaxShow.TESTB_QTY_MAX_SHOW;
-        tagData = new Tag210QtyMaxShow(new MyQtyType( oneElement ));
-        System.out.println( tagData.toVerboseString() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag210QtyMaxShow( new MyQtyType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
-
     @Test
-    void FIXTagTest() {
-        Tag210QtyMaxShow tagData;
-        int oneElement;
-
-        oneElement = Tag210QtyMaxShow.TESTA_QTY_MAX_SHOW;
-        tagData = new Tag210QtyMaxShow(new MyQtyType( oneElement ));
-        verifyAll( tagData, oneElement );
-
-        oneElement = Tag210QtyMaxShow.TESTB_QTY_MAX_SHOW;
-        tagData = new Tag210QtyMaxShow(new MyQtyType( oneElement ));
-        verifyAll( tagData, oneElement );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag210QtyMaxShow( new MyQtyType( oneElement ));
+            assertEquals( "FIX210_QTY_MAX_SHOW", tagData.toEnumLabelString());
+            assertEquals( "210", tagData.toEnumIDString());
+            assertEquals( "MAX_SHOW", tagData.toEnumNameString());
+            assertEquals( "MaxShow", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
-
-    private void verifyAll( final Tag210QtyMaxShow tagData, final int oneElement ) {
-        verifyFIXData( tagData );
-        verifyDataValue( tagData, oneElement );
-        verifyValuePairString( tagData, oneElement );
-        verifyToString( tagData, oneElement );
-        verifyVerboseString( tagData );
+    @Test
+    void TagGetDataValueTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag210QtyMaxShow( new MyQtyType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+        }
     }
-
-    private void verifyFIXData( final Tag210QtyMaxShow tagData ) {
-        assertEquals( "FIX210_QTY_MAX_SHOW", tagData.toEnumLabelString());
-        assertEquals( "210", tagData.toEnumIDString());
-        assertEquals( "MAX_SHOW", tagData.toEnumNameString());
-        assertEquals( "MaxShow", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    @Test
+    void TagToValuePairStringTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag210QtyMaxShow( new MyQtyType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
-
-    private void verifyDataValue( final Tag210QtyMaxShow tagData, final int oneElement ) {
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+    @Test
+    void TagToStringTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag210QtyMaxShow( new MyQtyType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
-
-    private void verifyValuePairString( final Tag210QtyMaxShow tagData, final int oneElement ) {
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-    }
-
-    private void verifyToString( final Tag210QtyMaxShow tagData, final int oneElement ) {
-        assertEquals( String.valueOf( oneElement ), tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
-    }
-
-    private void verifyVerboseString( final Tag210QtyMaxShow tagData ) {
-        assertEquals( "Tag210QtyMaxShow\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
-                        "\tValuePair[" + tagData.toValuePairString() + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    @Test
+    void TagToVerboseStringTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag210QtyMaxShow( new MyQtyType( oneElement ));
+            assertEquals( "Tag210QtyMaxShow\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

@@ -31,78 +31,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  Bid F/X forward points added to spot rate. Maybe a negative value.
  */
 class Tag189PxoBidForwardPointsTest {
+    Tag189PxoBidForwardPoints tagData;
+    double [] TestArray = {
+            Tag189PxoBidForwardPoints.TESTA_PXO_BID_FORWARD_POINTS,
+            Tag189PxoBidForwardPoints.TESTB_PXO_BID_FORWARD_POINTS
+    };
+
     @Test
     void PrintTest() {
-        Tag189PxoBidForwardPoints tagData;
-        double oneElement;
-
-        oneElement = Tag189PxoBidForwardPoints.TESTA_PXO_BID_FORWARD_POINTS;
-        tagData = new Tag189PxoBidForwardPoints( new MyPriceOffsetType( oneElement ));
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag189PxoBidForwardPoints.TESTB_PXO_BID_FORWARD_POINTS;
-        tagData = new Tag189PxoBidForwardPoints( new MyPriceOffsetType( oneElement ));
-        System.out.println( tagData.toVerboseString() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag189PxoBidForwardPoints( new MyPriceOffsetType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
-
     @Test
-    void FIXTagTest() {
-        Tag189PxoBidForwardPoints tagData;
-        double oneElement;
-
-        oneElement = Tag189PxoBidForwardPoints.TESTA_PXO_BID_FORWARD_POINTS;
-        tagData = new Tag189PxoBidForwardPoints( new MyPriceOffsetType( oneElement ));
-        verifyAll( tagData, oneElement );
-
-        oneElement = Tag189PxoBidForwardPoints.TESTB_PXO_BID_FORWARD_POINTS;
-        tagData = new Tag189PxoBidForwardPoints( new MyPriceOffsetType( oneElement ));
-        verifyAll( tagData, oneElement );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag189PxoBidForwardPoints( new MyPriceOffsetType( oneElement ));
+            assertEquals( "FIX189_PXO_BID_FORWARD_POINTS", tagData.toEnumLabelString());
+            assertEquals( "189", tagData.toEnumIDString());
+            assertEquals( "BID_FORWARD_POINTS", tagData.toEnumNameString());
+            assertEquals( "BidForwardPoints", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
-
-    private void verifyAll( final Tag189PxoBidForwardPoints tagData, final double oneElement ) {
-        verifyFIXData( tagData );
-        verifyDataValue( tagData, oneElement );
-        verifyValuePairString( tagData, oneElement );
-        verifyToString( tagData, oneElement );
-        verifyVerboseString( tagData );
+    @Test
+    void TagGetDataValueTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag189PxoBidForwardPoints( new MyPriceOffsetType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue());
+        }
     }
-
-    private void verifyFIXData( final Tag189PxoBidForwardPoints tagData ) {
-        assertEquals( "FIX189_PXO_BID_FORWARD_POINTS", tagData.toEnumLabelString());
-        assertEquals( "189", tagData.toEnumIDString());
-        assertEquals( "BID_FORWARD_POINTS", tagData.toEnumNameString());
-        assertEquals( "BidForwardPoints", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    @Test
+    void TagToValuePairStringTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag189PxoBidForwardPoints( new MyPriceOffsetType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
-
-    private void verifyDataValue( final Tag189PxoBidForwardPoints tagData, final double oneElement ) {
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue());
+    @Test
+    void TagToStringTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag189PxoBidForwardPoints( new MyPriceOffsetType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
-
-    private void verifyValuePairString( final Tag189PxoBidForwardPoints tagData, final double oneElement ) {
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-    }
-
-    private void verifyToString( final Tag189PxoBidForwardPoints tagData, final double oneElement ) {
-        assertEquals( String.valueOf( oneElement ), tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
-    }
-
-    private void verifyVerboseString( final Tag189PxoBidForwardPoints tagData ) {
-        assertEquals( "Tag189PxoBidForwardPoints\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
-                        "\tValuePair[" + tagData.toValuePairString() + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    @Test
+    void TagToVerboseStringTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag189PxoBidForwardPoints( new MyPriceOffsetType( oneElement ));
+            assertEquals( "Tag189PxoBidForwardPoints\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

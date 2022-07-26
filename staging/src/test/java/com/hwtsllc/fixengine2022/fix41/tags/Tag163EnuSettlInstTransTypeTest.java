@@ -37,10 +37,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    T - Restate
  */
 class Tag163EnuSettlInstTransTypeTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag163EnuSettlInstTransType tagData;
+    Tag163EnuSettlInstTransType tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum163SettlInstTransType oneEnum : Enum163SettlInstTransType.values()) {
             tagData = new Tag163EnuSettlInstTransType(oneEnum);
@@ -48,9 +48,7 @@ class Tag163EnuSettlInstTransTypeTest {
         }
     }
     @Test
-    void FIX0163Test() {
-        Tag163EnuSettlInstTransType tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum163SettlInstTransType oneEnum : Enum163SettlInstTransType.values()) {
             tagData = new Tag163EnuSettlInstTransType(oneEnum);
@@ -66,8 +64,6 @@ class Tag163EnuSettlInstTransTypeTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag163EnuSettlInstTransType tagData;
-
         tagData = new Tag163EnuSettlInstTransType(Enum163SettlInstTransType.NEW);
         assertEquals( Enum163SettlInstTransType.NEW.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -94,8 +90,6 @@ class Tag163EnuSettlInstTransTypeTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag163EnuSettlInstTransType tagData;
-
         // loop around the ENUM and process
         for (Enum163SettlInstTransType oneEnum : Enum163SettlInstTransType.values()) {
             tagData = new Tag163EnuSettlInstTransType(oneEnum);
@@ -107,8 +101,6 @@ class Tag163EnuSettlInstTransTypeTest {
     }
     @Test
     void TagToStringTest() {
-        Tag163EnuSettlInstTransType tagData;
-
         // loop around the ENUM and process
         for (Enum163SettlInstTransType oneEnum : Enum163SettlInstTransType.values()) {
             tagData = new Tag163EnuSettlInstTransType(oneEnum);
@@ -118,8 +110,6 @@ class Tag163EnuSettlInstTransTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag163EnuSettlInstTransType tagData;
-
         // loop around the ENUM and process
         for (Enum163SettlInstTransType oneEnum : Enum163SettlInstTransType.values()) {
             tagData = new Tag163EnuSettlInstTransType(oneEnum);

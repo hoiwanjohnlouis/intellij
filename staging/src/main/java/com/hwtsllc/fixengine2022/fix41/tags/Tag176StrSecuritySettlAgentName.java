@@ -34,9 +34,9 @@ public class Tag176StrSecuritySettlAgentName extends FIX41Abstract implements Lo
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_SECURITY_SETTL_AGENT_NAME
-            = "BilboBaggins-Tag176StrSecuritySettlAgentName";
+            = "MyrnaLoy-Tag176StrSecuritySettlAgentName";
     public final static String TESTB_STR_SECURITY_SETTL_AGENT_NAME
-            = "Gandalf-Tag176StrSecuritySettlAgentName";
+            = "MyrnaWilliams-Tag176StrSecuritySettlAgentName";
 
     public Tag176StrSecuritySettlAgentName(MyStringType dataValue) {
         setFixType(FIX41.FIX176_STR_SECURITY_SETTL_AGENT_NAME);

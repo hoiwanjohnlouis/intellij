@@ -36,9 +36,9 @@ public class Tag173StrSettlDepositoryCode extends FIX41Abstract implements LogVa
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_SETTL_DEPOSITORY_CODE
-            = "BilboBaggins-Tag173StrSettlDepositoryCode";
+            = "GingerRogers-Tag173StrSettlDepositoryCode";
     public final static String TESTB_STR_SETTL_DEPOSITORY_CODE
-            = "Gandalf-Tag173StrSettlDepositoryCode";
+            = "VirginiaKatherineMcMath-Tag173StrSettlDepositoryCode";
 
     public Tag173StrSettlDepositoryCode(MyStringType dataValue) {
         setFixType(FIX41.FIX173_STR_SETTL_DEPOSITORY_CODE);

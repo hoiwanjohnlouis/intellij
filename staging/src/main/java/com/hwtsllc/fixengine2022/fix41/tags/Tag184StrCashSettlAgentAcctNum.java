@@ -34,9 +34,9 @@ public class Tag184StrCashSettlAgentAcctNum extends FIX41Abstract implements Log
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_CASH_SETTL_AGENT_ACCT_NUM
-            = "BilboBaggins-Tag184StrCashSettlAgentAcctNum";
+            = "IreneDunne-Tag184StrCashSettlAgentAcctNum";
     public final static String TESTB_STR_CASH_SETTL_AGENT_ACCT_NUM
-            = "Gandalf-Tag184StrCashSettlAgentAcctNum";
+            = "IreneMarieDunne-Tag184StrCashSettlAgentAcctNum";
 
     public Tag184StrCashSettlAgentAcctNum(MyStringType dataValue) {
         setFixType(FIX41.FIX184_STR_CASH_SETTL_AGENT_ACCT_NUM);

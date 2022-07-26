@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.fix40.tags.Tag131StrQuoteReqID;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -32,125 +33,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 // @Deprecated
 class Tag178StrSecuritySettlAgentAcctNumTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag178StrSecuritySettlAgentAcctNum tagData;
-        String oneElement;
-
-        oneElement = Tag178StrSecuritySettlAgentAcctNum.TESTA_STR_SECURITY_SETTL_AGENT_ACCT_NUM;
-        tagData = new Tag178StrSecuritySettlAgentAcctNum( new MyStringType( oneElement ));
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag178StrSecuritySettlAgentAcctNum.TESTB_STR_SECURITY_SETTL_AGENT_ACCT_NUM;
-        tagData = new Tag178StrSecuritySettlAgentAcctNum( new MyStringType( oneElement ));
-        System.out.println( tagData.toVerboseString() );
-    }
+    Tag178StrSecuritySettlAgentAcctNum tagData;
+    String [] TestArray = {
+            Tag178StrSecuritySettlAgentAcctNum.TESTA_STR_SECURITY_SETTL_AGENT_ACCT_NUM,
+            Tag178StrSecuritySettlAgentAcctNum.TESTB_STR_SECURITY_SETTL_AGENT_ACCT_NUM
+    };
 
     @Test
-    void FIX0178Test() {
-        Tag178StrSecuritySettlAgentAcctNum tagData;
-        String oneElement;
-
-        oneElement = Tag178StrSecuritySettlAgentAcctNum.TESTA_STR_SECURITY_SETTL_AGENT_ACCT_NUM;
-        tagData = new Tag178StrSecuritySettlAgentAcctNum( new MyStringType( oneElement ));
-        verifyFIXData( tagData );
-
-        oneElement = Tag178StrSecuritySettlAgentAcctNum.TESTB_STR_SECURITY_SETTL_AGENT_ACCT_NUM;
-        tagData = new Tag178StrSecuritySettlAgentAcctNum( new MyStringType( oneElement ));
-        verifyFIXData( tagData );
+    void PrintTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag178StrSecuritySettlAgentAcctNum( new MyStringType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
-
-    private void verifyFIXData( final Tag178StrSecuritySettlAgentAcctNum tagData ) {
-        assertEquals( "FIX178_STR_SECURITY_SETTL_AGENT_ACCT_NUM", tagData.toEnumLabelString());
-        assertEquals( "178", tagData.toEnumIDString());
-        assertEquals( "SECURITY_SETTL_AGENT_ACCT_NUM", tagData.toEnumNameString());
-        assertEquals( "SecuritySettlAgentAcctNum (replaced)", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    @Test
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag178StrSecuritySettlAgentAcctNum( new MyStringType( oneElement ));
+            assertEquals( "FIX178_STR_SECURITY_SETTL_AGENT_ACCT_NUM", tagData.toEnumLabelString());
+            assertEquals( "178", tagData.toEnumIDString());
+            assertEquals( "SECURITY_SETTL_AGENT_ACCT_NUM", tagData.toEnumNameString());
+            assertEquals( "SecuritySettlAgentAcctNum (replaced)", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
-
     @Test
     void TagGetDataValueTest() {
-        Tag178StrSecuritySettlAgentAcctNum tagData;
-        String oneElement;
-
-        oneElement = Tag178StrSecuritySettlAgentAcctNum.TESTA_STR_SECURITY_SETTL_AGENT_ACCT_NUM;
-        tagData = new Tag178StrSecuritySettlAgentAcctNum( new MyStringType( oneElement ));
-        verifyDataValue( tagData, oneElement );
-
-        oneElement = Tag178StrSecuritySettlAgentAcctNum.TESTB_STR_SECURITY_SETTL_AGENT_ACCT_NUM;
-        tagData = new Tag178StrSecuritySettlAgentAcctNum( new MyStringType( oneElement ));
-        verifyDataValue( tagData, oneElement );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag178StrSecuritySettlAgentAcctNum( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        }
     }
-
-    private void verifyDataValue( final Tag178StrSecuritySettlAgentAcctNum tagData, final String oneElement ) {
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-
     @Test
     void TagToValuePairStringTest() {
-        Tag178StrSecuritySettlAgentAcctNum tagData;
-        String oneElement;
-
-        oneElement = Tag178StrSecuritySettlAgentAcctNum.TESTA_STR_SECURITY_SETTL_AGENT_ACCT_NUM;
-        tagData = new Tag178StrSecuritySettlAgentAcctNum( new MyStringType( oneElement ));
-        verifyValuePairString( tagData, oneElement );
-
-        oneElement = Tag178StrSecuritySettlAgentAcctNum.TESTB_STR_SECURITY_SETTL_AGENT_ACCT_NUM;
-        tagData = new Tag178StrSecuritySettlAgentAcctNum( new MyStringType( oneElement ));
-        verifyValuePairString( tagData, oneElement );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag178StrSecuritySettlAgentAcctNum( new MyStringType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
-
-    private void verifyValuePairString( final Tag178StrSecuritySettlAgentAcctNum tagData, final String oneElement ) {
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-    }
-
     @Test
     void TagToStringTest() {
-        Tag178StrSecuritySettlAgentAcctNum tagData;
-        String oneElement;
-
-        oneElement = Tag178StrSecuritySettlAgentAcctNum.TESTA_STR_SECURITY_SETTL_AGENT_ACCT_NUM;
-        tagData = new Tag178StrSecuritySettlAgentAcctNum( new MyStringType( oneElement ));
-        verifyToString( tagData, oneElement );
-
-        oneElement = Tag178StrSecuritySettlAgentAcctNum.TESTB_STR_SECURITY_SETTL_AGENT_ACCT_NUM;
-        tagData = new Tag178StrSecuritySettlAgentAcctNum( new MyStringType( oneElement ));
-        verifyToString( tagData, oneElement );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag178StrSecuritySettlAgentAcctNum( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
-
-    private void verifyToString( final Tag178StrSecuritySettlAgentAcctNum tagData, final String oneElement ) {
-        assertEquals( oneElement, tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
-    }
-
     @Test
     void TagToVerboseStringTest() {
-        Tag178StrSecuritySettlAgentAcctNum tagData;
-        String oneElement;
-
-        oneElement = Tag178StrSecuritySettlAgentAcctNum.TESTA_STR_SECURITY_SETTL_AGENT_ACCT_NUM;
-        tagData = new Tag178StrSecuritySettlAgentAcctNum( new MyStringType( oneElement ));
-        verifyVerboseString( tagData );
-
-        oneElement = Tag178StrSecuritySettlAgentAcctNum.TESTB_STR_SECURITY_SETTL_AGENT_ACCT_NUM;
-        tagData = new Tag178StrSecuritySettlAgentAcctNum( new MyStringType( oneElement ));
-        verifyVerboseString( tagData );
-    }
-
-    private void verifyVerboseString( final Tag178StrSecuritySettlAgentAcctNum tagData ) {
-        assertEquals( "Tag178StrSecuritySettlAgentAcctNum\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
-                        "\tValuePair[" + tagData.toValuePairString() + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag178StrSecuritySettlAgentAcctNum( new MyStringType( oneElement ));
+            assertEquals( "Tag178StrSecuritySettlAgentAcctNum\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

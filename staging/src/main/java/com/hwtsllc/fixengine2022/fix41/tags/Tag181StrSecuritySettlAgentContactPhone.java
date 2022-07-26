@@ -34,9 +34,9 @@ public class Tag181StrSecuritySettlAgentContactPhone extends FIX41Abstract imple
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_SECURITY_SETTL_AGENT_CONTACT_PHONE
-            = "Frodo-Tag181StrSecuritySettlAgentContactPhone";
+            = "DoloresDelRio-Tag181StrSecuritySettlAgentContactPhone";
     public final static String TESTB_STR_SECURITY_SETTL_AGENT_CONTACT_PHONE
-            = "Gandalf-Tag181StrSecuritySettlAgentContactPhone";
+            = "DoloresMartínezAsúnsoloYLopezNegrete-Tag181StrSecuritySettlAgentContactPhone";
 
     public Tag181StrSecuritySettlAgentContactPhone(MyStringType dataValue) {
         setFixType(FIX41.FIX181_STR_SECURITY_SETTL_AGENT_CONTACT_PHONE);

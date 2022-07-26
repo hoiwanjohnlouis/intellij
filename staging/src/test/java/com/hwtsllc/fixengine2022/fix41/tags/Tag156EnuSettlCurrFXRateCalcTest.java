@@ -42,10 +42,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    D - Divide
  */
 class Tag156EnuSettlCurrFXRateCalcTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag156EnuSettlCurrFXRateCalc tagData;
+    Tag156EnuSettlCurrFXRateCalc tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (MyEnumFXRateCalc oneEnum : MyEnumFXRateCalc.values()) {
             tagData = new Tag156EnuSettlCurrFXRateCalc(oneEnum);
@@ -53,9 +53,7 @@ class Tag156EnuSettlCurrFXRateCalcTest {
         }
     }
     @Test
-    void FIX0156Test() {
-        Tag156EnuSettlCurrFXRateCalc tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (MyEnumFXRateCalc oneEnum : MyEnumFXRateCalc.values()) {
             tagData = new Tag156EnuSettlCurrFXRateCalc(oneEnum);
@@ -71,8 +69,6 @@ class Tag156EnuSettlCurrFXRateCalcTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag156EnuSettlCurrFXRateCalc tagData;
-
         tagData = new Tag156EnuSettlCurrFXRateCalc(MyEnumFXRateCalc.MULTIPLY);
         assertEquals( MyEnumFXRateCalc.MULTIPLY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -91,8 +87,6 @@ class Tag156EnuSettlCurrFXRateCalcTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag156EnuSettlCurrFXRateCalc tagData;
-
         // loop around the ENUM and process
         for (MyEnumFXRateCalc oneEnum : MyEnumFXRateCalc.values()) {
             tagData = new Tag156EnuSettlCurrFXRateCalc(oneEnum);
@@ -104,8 +98,6 @@ class Tag156EnuSettlCurrFXRateCalcTest {
     }
     @Test
     void TagToStringTest() {
-        Tag156EnuSettlCurrFXRateCalc tagData;
-
         // loop around the ENUM and process
         for (MyEnumFXRateCalc oneEnum : MyEnumFXRateCalc.values()) {
             tagData = new Tag156EnuSettlCurrFXRateCalc(oneEnum);
@@ -115,8 +107,6 @@ class Tag156EnuSettlCurrFXRateCalcTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag156EnuSettlCurrFXRateCalc tagData;
-
         // loop around the ENUM and process
         for (MyEnumFXRateCalc oneEnum : MyEnumFXRateCalc.values()) {
             tagData = new Tag156EnuSettlCurrFXRateCalc(oneEnum);

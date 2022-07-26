@@ -36,9 +36,9 @@ public class Tag187StrCashSettlAgentContactPhone extends FIX41Abstract implement
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_CASH_SETTL_AGENT_CONTACT_PHONE
-            = "Frodo-Tag187StrCashSettlAgentContactPhone";
+            = "ShirleyTemple-Tag187StrCashSettlAgentContactPhone";
     public final static String TESTB_STR_CASH_SETTL_AGENT_CONTACT_PHONE
-            = "Gandalf-Tag187StrCashSettlAgentContactPhone";
+            = "ShirleyJaneTemple-Tag187StrCashSettlAgentContactPhone";
 
     public Tag187StrCashSettlAgentContactPhone(MyStringType dataValue) {
         setFixType(FIX41.FIX187_STR_CASH_SETTL_AGENT_CONTACT_PHONE);

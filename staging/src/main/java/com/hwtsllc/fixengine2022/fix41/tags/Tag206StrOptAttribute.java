@@ -44,9 +44,9 @@ public class Tag206StrOptAttribute extends FIX41Abstract implements LogValuePair
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_OPT_ATTRIBUTE
-            = "Frodo-Tag206StrOptAttribute";
+            = "RosalindRussell-Tag206StrOptAttribute";
     public final static String TESTB_STR_OPT_ATTRIBUTE
-            = "Gandalf-Tag206StrOptAttribute";
+            = "CatherineRosalindRussell-Tag206StrOptAttribute";
 
     public Tag206StrOptAttribute(MyStringType dataValue) {
         setFixType(FIX41.FIX206_STR_OPT_ATTRIBUTE);

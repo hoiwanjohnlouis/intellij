@@ -61,10 +61,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    L - Triggered or Activated by System
  */
 class Tag150EnuExecTypeTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag150EnuExecType tagData;
+    Tag150EnuExecType tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum150ExecType oneEnum : Enum150ExecType.values()) {
             tagData = new Tag150EnuExecType(oneEnum);
@@ -72,9 +72,7 @@ class Tag150EnuExecTypeTest {
         }
     }
     @Test
-    void FIXTest() {
-        Tag150EnuExecType tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum150ExecType oneEnum : Enum150ExecType.values()) {
             tagData = new Tag150EnuExecType(oneEnum);
@@ -90,8 +88,6 @@ class Tag150EnuExecTypeTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag150EnuExecType tagData;
-
         tagData = new Tag150EnuExecType(Enum150ExecType.NEW);
         assertEquals( Enum150ExecType.NEW.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -182,8 +178,6 @@ class Tag150EnuExecTypeTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag150EnuExecType tagData;
-
         // loop around the ENUM and process
         for (Enum150ExecType oneEnum : Enum150ExecType.values()) {
             tagData = new Tag150EnuExecType(oneEnum);
@@ -206,8 +200,6 @@ class Tag150EnuExecTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag150EnuExecType tagData;
-
         // loop around the ENUM and process
         for (Enum150ExecType oneEnum : Enum150ExecType.values()) {
             tagData = new Tag150EnuExecType(oneEnum);

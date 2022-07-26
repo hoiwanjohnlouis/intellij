@@ -35,9 +35,9 @@ public class Tag198StrSecondaryOrderID extends FIX41Abstract implements LogValue
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_SECONDARY_ORDER_ID
-            = "BilboBaggins-Tag198StrSecondaryOrderID";
+            = "BettyHutton-Tag198StrSecondaryOrderID";
     public final static String TESTB_STR_SECONDARY_ORDER_ID
-            = "Gandalf-Tag198StrSecondaryOrderID";
+            = "ElizabethJuneThornburg-Tag198StrSecondaryOrderID";
 
     public Tag198StrSecondaryOrderID(MyStringType dataValue) {
         setFixType(FIX41.FIX198_STR_SECONDARY_ORDER_ID);

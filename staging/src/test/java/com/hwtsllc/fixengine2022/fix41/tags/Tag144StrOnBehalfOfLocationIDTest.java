@@ -32,125 +32,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  (i.e. geographic location and/or desk, trader) if the message was delivered by a third party
  */
 class Tag144StrOnBehalfOfLocationIDTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag144StrOnBehalfOfLocationID tagData;
-        String oneElement;
-
-        oneElement = Tag144StrOnBehalfOfLocationID.TESTA_STR_ON_BEHALF_OF_LOCATION_ID;
-        tagData = new Tag144StrOnBehalfOfLocationID( new MyStringType( oneElement ));
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag144StrOnBehalfOfLocationID.TESTB_STR_ON_BEHALF_OF_LOCATION_ID;
-        tagData = new Tag144StrOnBehalfOfLocationID( new MyStringType( oneElement ));
-        System.out.println( tagData.toVerboseString() );
-    }
+    Tag144StrOnBehalfOfLocationID tagData;
+    String [] TestArray = {
+            Tag144StrOnBehalfOfLocationID.TESTA_STR_ON_BEHALF_OF_LOCATION_ID,
+            Tag144StrOnBehalfOfLocationID.TESTB_STR_ON_BEHALF_OF_LOCATION_ID
+    };
 
     @Test
-    void FIXTest() {
-        Tag144StrOnBehalfOfLocationID tagData;
-        String oneElement;
-
-        oneElement = Tag144StrOnBehalfOfLocationID.TESTA_STR_ON_BEHALF_OF_LOCATION_ID;
-        tagData = new Tag144StrOnBehalfOfLocationID( new MyStringType( oneElement ));
-        verifyFIXData( tagData );
-
-        oneElement = Tag144StrOnBehalfOfLocationID.TESTB_STR_ON_BEHALF_OF_LOCATION_ID;
-        tagData = new Tag144StrOnBehalfOfLocationID( new MyStringType( oneElement ));
-        verifyFIXData( tagData );
+    void PrintTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag144StrOnBehalfOfLocationID( new MyStringType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
-
-    private void verifyFIXData( final Tag144StrOnBehalfOfLocationID tagData ) {
-        assertEquals( "FIX144_STR_ON_BEHALF_OF_LOCATION_ID", tagData.toEnumLabelString());
-        assertEquals( "144", tagData.toEnumIDString());
-        assertEquals( "ON_BEHALF_OF_LOCATION_ID", tagData.toEnumNameString());
-        assertEquals( "OnBehalfOfLocationID", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    @Test
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag144StrOnBehalfOfLocationID( new MyStringType( oneElement ));
+            assertEquals( "FIX144_STR_ON_BEHALF_OF_LOCATION_ID", tagData.toEnumLabelString());
+            assertEquals( "144", tagData.toEnumIDString());
+            assertEquals( "ON_BEHALF_OF_LOCATION_ID", tagData.toEnumNameString());
+            assertEquals( "OnBehalfOfLocationID", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
-
     @Test
     void TagGetDataValueTest() {
-        Tag144StrOnBehalfOfLocationID tagData;
-        String oneElement;
-
-        oneElement = Tag144StrOnBehalfOfLocationID.TESTA_STR_ON_BEHALF_OF_LOCATION_ID;
-        tagData = new Tag144StrOnBehalfOfLocationID( new MyStringType( oneElement ));
-        verifyDataValue( tagData, oneElement );
-
-        oneElement = Tag144StrOnBehalfOfLocationID.TESTB_STR_ON_BEHALF_OF_LOCATION_ID;
-        tagData = new Tag144StrOnBehalfOfLocationID( new MyStringType( oneElement ));
-        verifyDataValue( tagData, oneElement );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag144StrOnBehalfOfLocationID( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        }
     }
-
-    private void verifyDataValue( final Tag144StrOnBehalfOfLocationID tagData, final String oneElement ) {
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-
     @Test
     void TagToValuePairStringTest() {
-        Tag144StrOnBehalfOfLocationID tagData;
-        String oneElement;
-
-        oneElement = Tag144StrOnBehalfOfLocationID.TESTA_STR_ON_BEHALF_OF_LOCATION_ID;
-        tagData = new Tag144StrOnBehalfOfLocationID( new MyStringType( oneElement ));
-        verifyValuePairString( tagData, oneElement );
-
-        oneElement = Tag144StrOnBehalfOfLocationID.TESTB_STR_ON_BEHALF_OF_LOCATION_ID;
-        tagData = new Tag144StrOnBehalfOfLocationID( new MyStringType( oneElement ));
-        verifyValuePairString( tagData, oneElement );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag144StrOnBehalfOfLocationID( new MyStringType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
-
-    private void verifyValuePairString( final Tag144StrOnBehalfOfLocationID tagData, final String oneElement ) {
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-    }
-
     @Test
     void TagToStringTest() {
-        Tag144StrOnBehalfOfLocationID tagData;
-        String oneElement;
-
-        oneElement = Tag144StrOnBehalfOfLocationID.TESTA_STR_ON_BEHALF_OF_LOCATION_ID;
-        tagData = new Tag144StrOnBehalfOfLocationID( new MyStringType( oneElement ));
-        verifyToString( tagData, oneElement );
-
-        oneElement = Tag144StrOnBehalfOfLocationID.TESTB_STR_ON_BEHALF_OF_LOCATION_ID;
-        tagData = new Tag144StrOnBehalfOfLocationID( new MyStringType( oneElement ));
-        verifyToString( tagData, oneElement );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag144StrOnBehalfOfLocationID( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
-
-    private void verifyToString( final Tag144StrOnBehalfOfLocationID tagData, final String oneElement ) {
-        assertEquals( oneElement, tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
-    }
-
     @Test
     void TagToVerboseStringTest() {
-        Tag144StrOnBehalfOfLocationID tagData;
-        String oneElement;
-
-        oneElement = Tag144StrOnBehalfOfLocationID.TESTA_STR_ON_BEHALF_OF_LOCATION_ID;
-        tagData = new Tag144StrOnBehalfOfLocationID( new MyStringType( oneElement ));
-        verifyVerboseString( tagData );
-
-        oneElement = Tag144StrOnBehalfOfLocationID.TESTB_STR_ON_BEHALF_OF_LOCATION_ID;
-        tagData = new Tag144StrOnBehalfOfLocationID( new MyStringType( oneElement ));
-        verifyVerboseString( tagData );
-    }
-
-    private void verifyVerboseString( final Tag144StrOnBehalfOfLocationID tagData ) {
-        assertEquals( "Tag144StrOnBehalfOfLocationID\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
-                        "\tValuePair[" + tagData.toValuePairString() + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag144StrOnBehalfOfLocationID( new MyStringType( oneElement ));
+            assertEquals( "Tag144StrOnBehalfOfLocationID\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

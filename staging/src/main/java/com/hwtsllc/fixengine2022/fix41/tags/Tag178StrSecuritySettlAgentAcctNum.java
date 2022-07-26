@@ -34,9 +34,9 @@ public class Tag178StrSecuritySettlAgentAcctNum extends FIX41Abstract implements
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_SECURITY_SETTL_AGENT_ACCT_NUM
-            = "Frodo-Tag178StrSecuritySettlAgentAcctNum";
+            = "NormaShearer-Tag178StrSecuritySettlAgentAcctNum";
     public final static String TESTB_STR_SECURITY_SETTL_AGENT_ACCT_NUM
-            = "Gandalf-Tag178StrSecuritySettlAgentAcctNum";
+            = "EdithNormaShearer-Tag178StrSecuritySettlAgentAcctNum";
 
     public Tag178StrSecuritySettlAgentAcctNum(MyStringType dataValue) {
         setFixType(FIX41.FIX178_STR_SECURITY_SETTL_AGENT_ACCT_NUM);

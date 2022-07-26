@@ -33,9 +33,9 @@ public class Tag162StrSettlInstID extends FIX41Abstract implements LogValuePairS
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_SETTL_INST_ID
-            = "BilboBaggins-Tag162StrSettlInstID";
+            = "DorothyLamour-Tag162StrSettlInstID";
     public final static String TESTB_STR_SETTL_INST_ID
-            = "Gandalf-Tag162StrSettlInstID";
+            = "MaryLetaDorothySlaton-Tag162StrSettlInstID";
 
     public Tag162StrSettlInstID(MyStringType dataValue) {
         setFixType(FIX41.FIX162_STR_SETTL_INST_ID);

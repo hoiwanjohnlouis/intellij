@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix41.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX41;
 import com.hwtsllc.fixengine2022.fix41.enums.Enum172SettlDeliveryType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -38,20 +37,33 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    3 - Hold In Custody
  */
 class Tag172EnuSettlDeliveryTypeTest {
+    Tag172EnuSettlDeliveryType tagData;
+
     @Test
-    void FIX0172Test() {
-        FIX41 fixData = FIX41.FIX172_ENU_SETTL_DELIVERY_TYPE;
-        assertEquals( "172", fixData.toEnumIDString());
-        assertEquals( "SETTL_DELIVERY_TYPE", fixData.toEnumNameString());
-        assertEquals( "SettlDeliveryType", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // loop around the ENUM and process
+        for ( Enum172SettlDeliveryType oneEnum : Enum172SettlDeliveryType.values()) {
+            tagData = new Tag172EnuSettlDeliveryType(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0172Test() {
-        Tag172EnuSettlDeliveryType tagData;
-
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (Enum172SettlDeliveryType oneEnum : Enum172SettlDeliveryType.values()) {
+            tagData = new Tag172EnuSettlDeliveryType(oneEnum);
+            assertEquals( "FIX172_ENU_SETTL_DELIVERY_TYPE", tagData.toEnumLabelString());
+            assertEquals( "172", tagData.toEnumIDString());
+            assertEquals( "SETTL_DELIVERY_TYPE", tagData.toEnumNameString());
+            assertEquals( "SettlDeliveryType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         tagData = new Tag172EnuSettlDeliveryType(Enum172SettlDeliveryType.VERSUS);
         assertEquals( Enum172SettlDeliveryType.VERSUS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -67,44 +79,28 @@ class Tag172EnuSettlDeliveryTypeTest {
         tagData = new Tag172EnuSettlDeliveryType(Enum172SettlDeliveryType.HOLD_IN_CUSTODY);
         assertEquals( Enum172SettlDeliveryType.HOLD_IN_CUSTODY.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag172EnuSettlDeliveryType tagData;
-
-        // loop around the ENUM and process
-        for (Enum172SettlDeliveryType oneEnum : Enum172SettlDeliveryType.values()) {
-            tagData = new Tag172EnuSettlDeliveryType(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag172EnuSettlDeliveryType tagData;
 
         // loop around the ENUM and process
         for (Enum172SettlDeliveryType oneEnum : Enum172SettlDeliveryType.values()) {
             tagData = new Tag172EnuSettlDeliveryType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag172EnuSettlDeliveryType tagData;
-
         // loop around the ENUM and process
         for (Enum172SettlDeliveryType oneEnum : Enum172SettlDeliveryType.values()) {
             tagData = new Tag172EnuSettlDeliveryType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag172EnuSettlDeliveryType tagData;
-
         // loop around the ENUM and process
         for (Enum172SettlDeliveryType oneEnum : Enum172SettlDeliveryType.values()) {
             tagData = new Tag172EnuSettlDeliveryType(oneEnum);
@@ -114,8 +110,6 @@ class Tag172EnuSettlDeliveryTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag172EnuSettlDeliveryType tagData;
-
         // loop around the ENUM and process
         for (Enum172SettlDeliveryType oneEnum : Enum172SettlDeliveryType.values()) {
             tagData = new Tag172EnuSettlDeliveryType(oneEnum);
@@ -124,8 +118,8 @@ class Tag172EnuSettlDeliveryTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

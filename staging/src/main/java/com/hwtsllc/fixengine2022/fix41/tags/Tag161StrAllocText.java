@@ -33,9 +33,9 @@ public class Tag161StrAllocText extends FIX41Abstract implements LogValuePairStr
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_ALLOC_TEXT
-            = "BilboBaggins-Tag161StrAllocText";
+            = "MarilynMonroe-Tag161StrAllocText";
     public final static String TESTB_STR_ALLOC_TEXT
-            = "Gandalf-Tag161StrAllocText";
+            = "NormaJeaneMortenson-Tag161StrAllocText";
 
     public Tag161StrAllocText(MyStringType dataValue) {
         setFixType(FIX41.FIX161_STR_ALLOC_TEXT);

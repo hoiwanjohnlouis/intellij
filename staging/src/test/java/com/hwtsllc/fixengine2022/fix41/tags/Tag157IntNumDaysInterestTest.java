@@ -33,78 +33,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  Note value may be negative.
  */
 class Tag157IntNumDaysInterestTest {
+    Tag157IntNumDaysInterest tagData;
+    int [] TestArray = {
+            Tag157IntNumDaysInterest.TESTA_INT_NUM_DAYS_INTEREST,
+            Tag157IntNumDaysInterest.TESTB_INT_NUM_DAYS_INTEREST
+    };
+
     @Test
     void PrintTest() {
-        Tag157IntNumDaysInterest tagData;
-        int oneElement;
-
-        oneElement = Tag157IntNumDaysInterest.TESTA_INT_NUM_DAYS_INTEREST;
-        tagData = new Tag157IntNumDaysInterest(new MyIntType( oneElement ));
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag157IntNumDaysInterest.TESTB_INT_NUM_DAYS_INTEREST;
-        tagData = new Tag157IntNumDaysInterest(new MyIntType( oneElement ));
-        System.out.println( tagData.toVerboseString() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag157IntNumDaysInterest( new MyIntType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
-
     @Test
-    void FIXTagTest() {
-        Tag157IntNumDaysInterest tagData;
-        int oneElement;
-
-        oneElement = Tag157IntNumDaysInterest.TESTA_INT_NUM_DAYS_INTEREST;
-        tagData = new Tag157IntNumDaysInterest(new MyIntType( oneElement ));
-        verifyAll( tagData, oneElement );
-
-        oneElement = Tag157IntNumDaysInterest.TESTB_INT_NUM_DAYS_INTEREST;
-        tagData = new Tag157IntNumDaysInterest(new MyIntType( oneElement ));
-        verifyAll( tagData, oneElement );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag157IntNumDaysInterest( new MyIntType( oneElement ));
+            assertEquals( "FIX157_INT_NUM_DAYS_INTEREST", tagData.toEnumLabelString());
+            assertEquals( "157", tagData.toEnumIDString());
+            assertEquals( "NUM_DAYS_INTEREST", tagData.toEnumNameString());
+            assertEquals( "NumDaysInterest", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
-
-    private void verifyAll( final Tag157IntNumDaysInterest tagData, final int oneElement ) {
-        verifyFIXData( tagData );
-        verifyDataValue( tagData, oneElement );
-        verifyValuePairString( tagData, oneElement );
-        verifyToString( tagData, oneElement );
-        verifyVerboseString( tagData );
+    @Test
+    void TagGetDataValueTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag157IntNumDaysInterest( new MyIntType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+        }
     }
-
-    private void verifyFIXData( final Tag157IntNumDaysInterest tagData ) {
-        assertEquals( "FIX157_INT_NUM_DAYS_INTEREST", tagData.toEnumLabelString());
-        assertEquals( "157", tagData.toEnumIDString());
-        assertEquals( "NUM_DAYS_INTEREST", tagData.toEnumNameString());
-        assertEquals( "NumDaysInterest", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    @Test
+    void TagToValuePairStringTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag157IntNumDaysInterest( new MyIntType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
-
-    private void verifyDataValue( final Tag157IntNumDaysInterest tagData, final int oneElement ) {
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+    @Test
+    void TagToStringTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag157IntNumDaysInterest( new MyIntType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
-
-    private void verifyValuePairString( final Tag157IntNumDaysInterest tagData, final int oneElement ) {
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-    }
-
-    private void verifyToString( final Tag157IntNumDaysInterest tagData, final int oneElement ) {
-        assertEquals( String.valueOf( oneElement ), tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
-    }
-
-    private void verifyVerboseString( final Tag157IntNumDaysInterest tagData ) {
-        assertEquals( "Tag157IntNumDaysInterest\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
-                        "\tValuePair[" + tagData.toValuePairString() + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    @Test
+    void TagToVerboseStringTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag157IntNumDaysInterest( new MyIntType( oneElement ));
+            assertEquals( "Tag157IntNumDaysInterest\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

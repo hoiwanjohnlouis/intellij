@@ -35,10 +35,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    1 - FX Swap
  */
 class Tag197EnuAllocLinkTypeTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag197EnuAllocLinkType tagData;
+    Tag197EnuAllocLinkType tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum197AllocLinkType oneEnum : Enum197AllocLinkType.values()) {
             tagData = new Tag197EnuAllocLinkType(oneEnum);
@@ -46,9 +46,7 @@ class Tag197EnuAllocLinkTypeTest {
         }
     }
     @Test
-    void FIXTest() {
-        Tag197EnuAllocLinkType tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum197AllocLinkType oneEnum : Enum197AllocLinkType.values()) {
             tagData = new Tag197EnuAllocLinkType(oneEnum);
@@ -64,8 +62,6 @@ class Tag197EnuAllocLinkTypeTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag197EnuAllocLinkType tagData;
-
         tagData = new Tag197EnuAllocLinkType(Enum197AllocLinkType.FX_NETTING);
         assertEquals( Enum197AllocLinkType.FX_NETTING.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -84,8 +80,6 @@ class Tag197EnuAllocLinkTypeTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag197EnuAllocLinkType tagData;
-
         // loop around the ENUM and process
         for (Enum197AllocLinkType oneEnum : Enum197AllocLinkType.values()) {
             tagData = new Tag197EnuAllocLinkType(oneEnum);
@@ -97,8 +91,6 @@ class Tag197EnuAllocLinkTypeTest {
     }
     @Test
     void TagToStringTest() {
-        Tag197EnuAllocLinkType tagData;
-
         // loop around the ENUM and process
         for (Enum197AllocLinkType oneEnum : Enum197AllocLinkType.values()) {
             tagData = new Tag197EnuAllocLinkType(oneEnum);
@@ -108,8 +100,6 @@ class Tag197EnuAllocLinkTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag197EnuAllocLinkType tagData;
-
         // loop around the ENUM and process
         for (Enum197AllocLinkType oneEnum : Enum197AllocLinkType.values()) {
             tagData = new Tag197EnuAllocLinkType(oneEnum);

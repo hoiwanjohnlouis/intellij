@@ -35,10 +35,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    Y - Details should be communicated
  */
 class Tag208EnuNotifyBrokerOfCreditTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag208EnuNotifyBrokerOfCredit tagData;
+    Tag208EnuNotifyBrokerOfCredit tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for ( Enum208NotifyBrokerOfCredit oneEnum : Enum208NotifyBrokerOfCredit.values()) {
             tagData = new Tag208EnuNotifyBrokerOfCredit(oneEnum);
@@ -46,9 +46,7 @@ class Tag208EnuNotifyBrokerOfCreditTest {
         }
     }
     @Test
-    void FIXTest() {
-        Tag208EnuNotifyBrokerOfCredit tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for ( Enum208NotifyBrokerOfCredit oneEnum : Enum208NotifyBrokerOfCredit.values()) {
             tagData = new Tag208EnuNotifyBrokerOfCredit(oneEnum);
@@ -64,8 +62,6 @@ class Tag208EnuNotifyBrokerOfCreditTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag208EnuNotifyBrokerOfCredit tagData;
-
         tagData = new Tag208EnuNotifyBrokerOfCredit( Enum208NotifyBrokerOfCredit.NO);
         assertEquals( Enum208NotifyBrokerOfCredit.NO.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -84,8 +80,6 @@ class Tag208EnuNotifyBrokerOfCreditTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag208EnuNotifyBrokerOfCredit tagData;
-
         // loop around the ENUM and process
         for ( Enum208NotifyBrokerOfCredit oneEnum : Enum208NotifyBrokerOfCredit.values()) {
             tagData = new Tag208EnuNotifyBrokerOfCredit(oneEnum);
@@ -97,8 +91,6 @@ class Tag208EnuNotifyBrokerOfCreditTest {
     }
     @Test
     void TagToStringTest() {
-        Tag208EnuNotifyBrokerOfCredit tagData;
-
         // loop around the ENUM and process
         for ( Enum208NotifyBrokerOfCredit oneEnum : Enum208NotifyBrokerOfCredit.values()) {
             tagData = new Tag208EnuNotifyBrokerOfCredit(oneEnum);
@@ -108,8 +100,6 @@ class Tag208EnuNotifyBrokerOfCreditTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag208EnuNotifyBrokerOfCredit tagData;
-
         // loop around the ENUM and process
         for ( Enum208NotifyBrokerOfCredit oneEnum : Enum208NotifyBrokerOfCredit.values()) {
             tagData = new Tag208EnuNotifyBrokerOfCredit(oneEnum);

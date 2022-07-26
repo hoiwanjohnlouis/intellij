@@ -36,9 +36,9 @@ public class Tag183StrCashSettlAgentCode extends FIX41Abstract implements LogVal
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_CASH_SETTL_AGENT_CODE
-            = "BilboBaggins-Tag183StrCashSettlAgentCode";
+            = "GloriaSwanson-Tag183StrCashSettlAgentCode";
     public final static String TESTB_STR_CASH_SETTL_AGENT_CODE
-            = "Gandalf-Tag183StrCashSettlAgentCode";
+            = "GloriaMayJosephineSvensson-Tag183StrCashSettlAgentCode";
 
     public Tag183StrCashSettlAgentCode(MyStringType dataValue) {
         setFixType(FIX41.FIX183_STR_CASH_SETTL_AGENT_CODE);

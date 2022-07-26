@@ -36,10 +36,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    3 - Forward and Match
  */
 class Tag209EnuAllocHandlInstTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag209EnuAllocHandlInst tagData;
+    Tag209EnuAllocHandlInst tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum209AllocHandlInst oneEnum : Enum209AllocHandlInst.values()) {
             tagData = new Tag209EnuAllocHandlInst(oneEnum);
@@ -47,9 +47,7 @@ class Tag209EnuAllocHandlInstTest {
         }
     }
     @Test
-    void FIXTest() {
-        Tag209EnuAllocHandlInst tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum209AllocHandlInst oneEnum : Enum209AllocHandlInst.values()) {
             tagData = new Tag209EnuAllocHandlInst(oneEnum);
@@ -65,8 +63,6 @@ class Tag209EnuAllocHandlInstTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag209EnuAllocHandlInst tagData;
-
         tagData = new Tag209EnuAllocHandlInst(Enum209AllocHandlInst.MATCH);
         assertEquals( Enum209AllocHandlInst.MATCH.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -89,8 +85,6 @@ class Tag209EnuAllocHandlInstTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag209EnuAllocHandlInst tagData;
-
         // loop around the ENUM and process
         for (Enum209AllocHandlInst oneEnum : Enum209AllocHandlInst.values()) {
             tagData = new Tag209EnuAllocHandlInst(oneEnum);
@@ -102,8 +96,6 @@ class Tag209EnuAllocHandlInstTest {
     }
     @Test
     void TagToStringTest() {
-        Tag209EnuAllocHandlInst tagData;
-
         // loop around the ENUM and process
         for (Enum209AllocHandlInst oneEnum : Enum209AllocHandlInst.values()) {
             tagData = new Tag209EnuAllocHandlInst(oneEnum);
@@ -113,8 +105,6 @@ class Tag209EnuAllocHandlInstTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag209EnuAllocHandlInst tagData;
-
         // loop around the ENUM and process
         for (Enum209AllocHandlInst oneEnum : Enum209AllocHandlInst.values()) {
             tagData = new Tag209EnuAllocHandlInst(oneEnum);

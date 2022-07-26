@@ -37,9 +37,9 @@ public class Tag174StrSettlBrkrCode extends FIX41Abstract implements LogValuePai
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_SETTL_BRKR_CODE
-            = "BilboBaggins-Tag174StrSettlBrkrCode";
+            = "JanetGaynor-Tag174StrSettlBrkrCode";
     public final static String TESTB_STR_SETTL_BRKR_CODE
-            = "Gandalf-Tag174StrSettlBrkrCode";
+            = "LauraGainor-Tag174StrSettlBrkrCode";
 
     public Tag174StrSettlBrkrCode(MyStringType dataValue) {
         setFixType(FIX41.FIX174_STR_SETTL_BRKR_CODE);

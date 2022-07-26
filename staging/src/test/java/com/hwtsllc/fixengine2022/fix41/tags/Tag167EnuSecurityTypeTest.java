@@ -207,10 +207,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    "CASH - Cash"
  */
 class Tag167EnuSecurityTypeTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag167EnuSecurityType tagData;
+    Tag167EnuSecurityType tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (MyEnumSecurityType oneEnum : MyEnumSecurityType.values()) {
             tagData = new Tag167EnuSecurityType(oneEnum);
@@ -218,9 +218,7 @@ class Tag167EnuSecurityTypeTest {
         }
     }
     @Test
-    void FIXTest() {
-        Tag167EnuSecurityType tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (MyEnumSecurityType oneEnum : MyEnumSecurityType.values()) {
             tagData = new Tag167EnuSecurityType(oneEnum);
@@ -236,8 +234,6 @@ class Tag167EnuSecurityTypeTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag167EnuSecurityType tagData;
-
         /*
          * Deprecated, 4
          */
@@ -693,8 +689,6 @@ class Tag167EnuSecurityTypeTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag167EnuSecurityType tagData;
-
         // loop around the ENUM and process
         for (MyEnumSecurityType oneEnum : MyEnumSecurityType.values()) {
             tagData = new Tag167EnuSecurityType(oneEnum);
@@ -706,8 +700,6 @@ class Tag167EnuSecurityTypeTest {
     }
     @Test
     void TagToStringTest() {
-        Tag167EnuSecurityType tagData;
-
         // loop around the ENUM and process
         for (MyEnumSecurityType oneEnum : MyEnumSecurityType.values()) {
             tagData = new Tag167EnuSecurityType(oneEnum);
@@ -717,8 +709,6 @@ class Tag167EnuSecurityTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag167EnuSecurityType tagData;
-
         // loop around the ENUM and process
         for (MyEnumSecurityType oneEnum : MyEnumSecurityType.values()) {
             tagData = new Tag167EnuSecurityType(oneEnum);

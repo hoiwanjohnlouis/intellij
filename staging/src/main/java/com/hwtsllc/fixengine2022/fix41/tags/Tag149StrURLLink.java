@@ -36,9 +36,9 @@ public class Tag149StrURLLink extends FIX41Abstract implements LogValuePairStrin
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_URL_LINK
-            = "BilboBaggins-Tag149StrURLLink";
+            = "MaeWest-Tag149StrURLLink";
     public final static String TESTB_STR_URL_LINK
-            = "Gandalf-Tag149StrURLLink";
+            = "MaryJaneWest-Tag149StrURLLink";
 
     public Tag149StrURLLink(MyStringType dataValue) {
         setFixType(FIX41.FIX149_STR_URL_LINK);

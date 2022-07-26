@@ -36,78 +36,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  amount divided by the purchase price of the bond.
  */
 class Tag158PctAccruedInterestRateTest {
+    Tag158PctAccruedInterestRate tagData;
+    double [] TestArray = {
+            Tag158PctAccruedInterestRate.TESTA_PCT_ACCRUED_INTEREST_RATE,
+            Tag158PctAccruedInterestRate.TESTB_PCT_ACCRUED_INTEREST_RATE
+    };
+
     @Test
     void PrintTest() {
-        Tag158PctAccruedInterestRate tagData;
-        double oneElement;
-
-        oneElement = Tag158PctAccruedInterestRate.TESTA_PCT_ACCRUED_INTEREST_RATE;
-        tagData = new Tag158PctAccruedInterestRate( new MyPercentageType( oneElement ));
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag158PctAccruedInterestRate.TESTB_PCT_ACCRUED_INTEREST_RATE;
-        tagData = new Tag158PctAccruedInterestRate( new MyPercentageType( oneElement ));
-        System.out.println( tagData.toVerboseString() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag158PctAccruedInterestRate( new MyPercentageType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
-
     @Test
-    void FIXTagTest() {
-        Tag158PctAccruedInterestRate tagData;
-        double oneElement;
-
-        oneElement = Tag158PctAccruedInterestRate.TESTA_PCT_ACCRUED_INTEREST_RATE;
-        tagData = new Tag158PctAccruedInterestRate( new MyPercentageType( oneElement ));
-        verifyAll( tagData, oneElement );
-
-        oneElement = Tag158PctAccruedInterestRate.TESTB_PCT_ACCRUED_INTEREST_RATE;
-        tagData = new Tag158PctAccruedInterestRate( new MyPercentageType( oneElement ));
-        verifyAll( tagData, oneElement );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag158PctAccruedInterestRate( new MyPercentageType( oneElement ));
+            assertEquals( "FIX158_PCT_ACCRUED_INTEREST_RATE", tagData.toEnumLabelString());
+            assertEquals( "158", tagData.toEnumIDString());
+            assertEquals( "ACCRUED_INTEREST_RATE", tagData.toEnumNameString());
+            assertEquals( "AccruedInterestRate", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
-
-    private void verifyAll( final Tag158PctAccruedInterestRate tagData, final double oneElement ) {
-        verifyFIXData( tagData );
-        verifyDataValue( tagData, oneElement );
-        verifyValuePairString( tagData, oneElement );
-        verifyToString( tagData, oneElement );
-        verifyVerboseString( tagData );
+    @Test
+    void TagGetDataValueTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag158PctAccruedInterestRate( new MyPercentageType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue());
+        }
     }
-
-    private void verifyFIXData( final Tag158PctAccruedInterestRate tagData ) {
-        assertEquals( "FIX158_PCT_ACCRUED_INTEREST_RATE", tagData.toEnumLabelString());
-        assertEquals( "158", tagData.toEnumIDString());
-        assertEquals( "ACCRUED_INTEREST_RATE", tagData.toEnumNameString());
-        assertEquals( "AccruedInterestRate", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    @Test
+    void TagToValuePairStringTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag158PctAccruedInterestRate( new MyPercentageType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
-
-    private void verifyDataValue( final Tag158PctAccruedInterestRate tagData, final double oneElement ) {
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue());
+    @Test
+    void TagToStringTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag158PctAccruedInterestRate( new MyPercentageType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
-
-    private void verifyValuePairString( final Tag158PctAccruedInterestRate tagData, final double oneElement ) {
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-    }
-
-    private void verifyToString( final Tag158PctAccruedInterestRate tagData, final double oneElement ) {
-        assertEquals( String.valueOf( oneElement ), tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
-    }
-
-    private void verifyVerboseString( final Tag158PctAccruedInterestRate tagData ) {
-        assertEquals( "Tag158PctAccruedInterestRate\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
-                        "\tValuePair[" + tagData.toValuePairString() + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    @Test
+    void TagToVerboseStringTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag158PctAccruedInterestRate( new MyPercentageType( oneElement ));
+            assertEquals( "Tag158PctAccruedInterestRate\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

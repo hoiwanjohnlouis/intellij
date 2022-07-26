@@ -38,10 +38,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    4 - AccountNet
  */
 class Tag169EnuStandInstDBTypeTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag169EnuStandInstDBType tagData;
+    Tag169EnuStandInstDBType tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum169StandInstDbType oneEnum : Enum169StandInstDbType.values()) {
             tagData = new Tag169EnuStandInstDBType(oneEnum);
@@ -49,9 +49,7 @@ class Tag169EnuStandInstDBTypeTest {
         }
     }
     @Test
-    void FIXTest() {
-        Tag169EnuStandInstDBType tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum169StandInstDbType oneEnum : Enum169StandInstDbType.values()) {
             tagData = new Tag169EnuStandInstDBType(oneEnum);
@@ -67,8 +65,6 @@ class Tag169EnuStandInstDBTypeTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag169EnuStandInstDBType tagData;
-
         tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.OTHER);
         assertEquals( Enum169StandInstDbType.OTHER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -99,8 +95,6 @@ class Tag169EnuStandInstDBTypeTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag169EnuStandInstDBType tagData;
-
         // loop around the ENUM and process
         for (Enum169StandInstDbType oneEnum : Enum169StandInstDbType.values()) {
             tagData = new Tag169EnuStandInstDBType(oneEnum);
@@ -112,8 +106,6 @@ class Tag169EnuStandInstDBTypeTest {
     }
     @Test
     void TagToStringTest() {
-        Tag169EnuStandInstDBType tagData;
-
         // loop around the ENUM and process
         for (Enum169StandInstDbType oneEnum : Enum169StandInstDbType.values()) {
             tagData = new Tag169EnuStandInstDBType(oneEnum);
@@ -123,8 +115,6 @@ class Tag169EnuStandInstDBTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag169EnuStandInstDBType tagData;
-
         // loop around the ENUM and process
         for (Enum169StandInstDbType oneEnum : Enum169StandInstDbType.values()) {
             tagData = new Tag169EnuStandInstDBType(oneEnum);

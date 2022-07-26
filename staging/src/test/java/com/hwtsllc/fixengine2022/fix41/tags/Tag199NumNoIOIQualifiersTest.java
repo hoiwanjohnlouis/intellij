@@ -31,78 +31,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  Number of repeating groups of IOIQualifiers (04).
  */
 class Tag199NumNoIOIQualifiersTest {
+    Tag199NumNoIOIQualifiers tagData;
+    int [] TestArray = {
+            Tag199NumNoIOIQualifiers.TESTA_NUM_NO_IOI_QUALIFIERS,
+            Tag199NumNoIOIQualifiers.TESTB_NUM_NO_IOI_QUALIFIERS
+    };
+
     @Test
     void PrintTest() {
-        Tag199NumNoIOIQualifiers tagData;
-        int oneElement;
-
-        oneElement = Tag199NumNoIOIQualifiers.TESTA_NUM_NO_IOI_QUALIFIERS;
-        tagData = new Tag199NumNoIOIQualifiers(new MyNumInGroupType( oneElement ));
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag199NumNoIOIQualifiers.TESTB_NUM_NO_IOI_QUALIFIERS;
-        tagData = new Tag199NumNoIOIQualifiers(new MyNumInGroupType( oneElement ));
-        System.out.println( tagData.toVerboseString() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag199NumNoIOIQualifiers( new MyNumInGroupType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
-
     @Test
-    void FIXTagTest() {
-        Tag199NumNoIOIQualifiers tagData;
-        int oneElement;
-
-        oneElement = Tag199NumNoIOIQualifiers.TESTA_NUM_NO_IOI_QUALIFIERS;
-        tagData = new Tag199NumNoIOIQualifiers(new MyNumInGroupType( oneElement ));
-        verifyAll( tagData, oneElement );
-
-        oneElement = Tag199NumNoIOIQualifiers.TESTB_NUM_NO_IOI_QUALIFIERS;
-        tagData = new Tag199NumNoIOIQualifiers(new MyNumInGroupType( oneElement ));
-        verifyAll( tagData, oneElement );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag199NumNoIOIQualifiers( new MyNumInGroupType( oneElement ));
+            assertEquals( "FIX199_NUM_NO_IOI_QUALIFIERS", tagData.toEnumLabelString());
+            assertEquals( "199", tagData.toEnumIDString());
+            assertEquals( "NO_IOI_QUALIFIERS", tagData.toEnumNameString());
+            assertEquals( "NoIOIQualifiers", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
-
-    private void verifyAll( final Tag199NumNoIOIQualifiers tagData, final int oneElement ) {
-        verifyFIXData( tagData );
-        verifyDataValue( tagData, oneElement );
-        verifyValuePairString( tagData, oneElement );
-        verifyToString( tagData, oneElement );
-        verifyVerboseString( tagData );
+    @Test
+    void TagGetDataValueTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag199NumNoIOIQualifiers( new MyNumInGroupType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
+        }
     }
-
-    private void verifyFIXData( final Tag199NumNoIOIQualifiers tagData ) {
-        assertEquals( "FIX199_NUM_NO_IOI_QUALIFIERS", tagData.toEnumLabelString());
-        assertEquals( "199", tagData.toEnumIDString());
-        assertEquals( "NO_IOI_QUALIFIERS", tagData.toEnumNameString());
-        assertEquals( "NoIOIQualifiers", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    @Test
+    void TagToValuePairStringTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag199NumNoIOIQualifiers( new MyNumInGroupType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
-
-    private void verifyDataValue( final Tag199NumNoIOIQualifiers tagData, final int oneElement ) {
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
+    @Test
+    void TagToStringTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag199NumNoIOIQualifiers( new MyNumInGroupType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
-
-    private void verifyValuePairString( final Tag199NumNoIOIQualifiers tagData, final int oneElement ) {
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-    }
-
-    private void verifyToString( final Tag199NumNoIOIQualifiers tagData, final int oneElement ) {
-        assertEquals( String.valueOf( oneElement ), tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
-    }
-
-    private void verifyVerboseString( final Tag199NumNoIOIQualifiers tagData ) {
-        assertEquals( "Tag199NumNoIOIQualifiers\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
-                        "\tValuePair[" + tagData.toValuePairString() + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    @Test
+    void TagToVerboseStringTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag199NumNoIOIQualifiers( new MyNumInGroupType( oneElement ));
+            assertEquals( "Tag199NumNoIOIQualifiers\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

@@ -33,9 +33,9 @@ public class Tag164StrEmailThreadID extends FIX41Abstract implements LogValuePai
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_EMAIL_THREAD_ID
-            = "BilboBaggins-Tag164StrEmailThreadID";
+            = "RitaHayworth-Tag164StrEmailThreadID";
     public final static String TESTB_STR_EMAIL_THREAD_ID
-            = "Gandalf-Tag164StrEmailThreadID";
+            = "MargaritaCarmenCansino-Tag164StrEmailThreadID";
 
     public Tag164StrEmailThreadID(MyStringType dataValue) {
         setFixType(FIX41.FIX164_STR_EMAIL_THREAD_ID);

@@ -35,10 +35,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    Y - Yes, reset sequence numbers
  */
 class Tag141EnuResetSeqNumFlagTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag141EnuResetSeqNumFlag tagData;
+    Tag141EnuResetSeqNumFlag tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum141ResetSeqNumFlag oneEnum : Enum141ResetSeqNumFlag.values()) {
             tagData = new Tag141EnuResetSeqNumFlag(oneEnum);
@@ -46,9 +46,7 @@ class Tag141EnuResetSeqNumFlagTest {
         }
     }
     @Test
-    void FIXTest() {
-        Tag141EnuResetSeqNumFlag tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum141ResetSeqNumFlag oneEnum : Enum141ResetSeqNumFlag.values()) {
             tagData = new Tag141EnuResetSeqNumFlag(oneEnum);
@@ -64,8 +62,6 @@ class Tag141EnuResetSeqNumFlagTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag141EnuResetSeqNumFlag tagData;
-
         tagData = new Tag141EnuResetSeqNumFlag(Enum141ResetSeqNumFlag.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -84,8 +80,6 @@ class Tag141EnuResetSeqNumFlagTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag141EnuResetSeqNumFlag tagData;
-
         // loop around the ENUM and process
         for (Enum141ResetSeqNumFlag oneEnum : Enum141ResetSeqNumFlag.values()) {
             tagData = new Tag141EnuResetSeqNumFlag(oneEnum);
@@ -97,8 +91,6 @@ class Tag141EnuResetSeqNumFlagTest {
     }
     @Test
     void TagToStringTest() {
-        Tag141EnuResetSeqNumFlag tagData;
-
         // loop around the ENUM and process
         for (Enum141ResetSeqNumFlag oneEnum : Enum141ResetSeqNumFlag.values()) {
             tagData = new Tag141EnuResetSeqNumFlag(oneEnum);
@@ -108,8 +100,6 @@ class Tag141EnuResetSeqNumFlagTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag141EnuResetSeqNumFlag tagData;
-
         // loop around the ENUM and process
         for (Enum141ResetSeqNumFlag oneEnum : Enum141ResetSeqNumFlag.values()) {
             tagData = new Tag141EnuResetSeqNumFlag(oneEnum);

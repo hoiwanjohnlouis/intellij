@@ -42,10 +42,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 // @Deprecated
 class Tag201EnuPutOrCallTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag201EnuPutOrCall tagData;
+    Tag201EnuPutOrCall tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (MyEnumPutOrCall oneEnum : MyEnumPutOrCall.values()) {
             tagData = new Tag201EnuPutOrCall(oneEnum);
@@ -53,9 +53,7 @@ class Tag201EnuPutOrCallTest {
         }
     }
     @Test
-    void FIXTest() {
-        Tag201EnuPutOrCall tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (MyEnumPutOrCall oneEnum : MyEnumPutOrCall.values()) {
             tagData = new Tag201EnuPutOrCall(oneEnum);
@@ -71,8 +69,6 @@ class Tag201EnuPutOrCallTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag201EnuPutOrCall tagData;
-
         tagData = new Tag201EnuPutOrCall(MyEnumPutOrCall.CALL);
         assertEquals( MyEnumPutOrCall.CALL.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -91,8 +87,6 @@ class Tag201EnuPutOrCallTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag201EnuPutOrCall tagData;
-
         // loop around the ENUM and process
         for (MyEnumPutOrCall oneEnum : MyEnumPutOrCall.values()) {
             tagData = new Tag201EnuPutOrCall(oneEnum);
@@ -104,8 +98,6 @@ class Tag201EnuPutOrCallTest {
     }
     @Test
     void TagToStringTest() {
-        Tag201EnuPutOrCall tagData;
-
         // loop around the ENUM and process
         for (MyEnumPutOrCall oneEnum : MyEnumPutOrCall.values()) {
             tagData = new Tag201EnuPutOrCall(oneEnum);
@@ -115,8 +107,6 @@ class Tag201EnuPutOrCallTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag201EnuPutOrCall tagData;
-
         // loop around the ENUM and process
         for (MyEnumPutOrCall oneEnum : MyEnumPutOrCall.values()) {
             tagData = new Tag201EnuPutOrCall(oneEnum);

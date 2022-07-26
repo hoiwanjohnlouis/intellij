@@ -34,9 +34,9 @@ public class Tag144StrOnBehalfOfLocationID extends FIX41Abstract implements LogV
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_ON_BEHALF_OF_LOCATION_ID
-            = "BilboBaggins-Tag144StrOnBehalfOfLocationID";
+            = "BarbaraStanwyck-Tag144StrOnBehalfOfLocationID";
     public final static String TESTB_STR_ON_BEHALF_OF_LOCATION_ID
-            = "Gandalf-Tag144StrOnBehalfOfLocationID";
+            = "RubyCatherineStevens-Tag144StrOnBehalfOfLocationID";
 
     public Tag144StrOnBehalfOfLocationID(MyStringType dataValue) {
         setFixType(FIX41.FIX144_STR_ON_BEHALF_OF_LOCATION_ID);

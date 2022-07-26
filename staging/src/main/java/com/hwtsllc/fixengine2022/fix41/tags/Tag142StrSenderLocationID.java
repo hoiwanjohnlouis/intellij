@@ -34,9 +34,9 @@ public class Tag142StrSenderLocationID extends FIX41Abstract implements LogValue
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_SENDER_LOCATION_ID
-            = "BilboBaggins-Tag142StrSenderLocationID";
+            = "JeanHarlow-Tag142StrSenderLocationID";
     public final static String TESTB_STR_SENDER_LOCATION_ID
-            = "Gandalf-Tag142StrSenderLocationID";
+            = "HarleanCarpenter-Tag142StrSenderLocationID";
 
     public Tag142StrSenderLocationID(MyStringType dataValue) {
         setFixType(FIX41.FIX142_STR_SENDER_LOCATION_ID);

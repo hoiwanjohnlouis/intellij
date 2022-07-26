@@ -34,125 +34,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 // @Deprecated
 class Tag173StrSettlDepositoryCodeTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag173StrSettlDepositoryCode tagData;
-        String oneElement;
-
-        oneElement = Tag173StrSettlDepositoryCode.TESTA_STR_SETTL_DEPOSITORY_CODE;
-        tagData = new Tag173StrSettlDepositoryCode( new MyStringType( oneElement  ));
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag173StrSettlDepositoryCode.TESTB_STR_SETTL_DEPOSITORY_CODE;
-        tagData = new Tag173StrSettlDepositoryCode( new MyStringType( oneElement  ));
-        System.out.println( tagData.toVerboseString() );
-    }
+    Tag173StrSettlDepositoryCode tagData;
+    String [] TestArray = {
+            Tag173StrSettlDepositoryCode.TESTA_STR_SETTL_DEPOSITORY_CODE,
+            Tag173StrSettlDepositoryCode.TESTB_STR_SETTL_DEPOSITORY_CODE
+    };
 
     @Test
-    void FIXTest() {
-        Tag173StrSettlDepositoryCode tagData;
-        String oneElement;
-
-        oneElement = Tag173StrSettlDepositoryCode.TESTA_STR_SETTL_DEPOSITORY_CODE;
-        tagData = new Tag173StrSettlDepositoryCode( new MyStringType( oneElement  ));
-        verifyFIXData( tagData );
-
-        oneElement = Tag173StrSettlDepositoryCode.TESTB_STR_SETTL_DEPOSITORY_CODE;
-        tagData = new Tag173StrSettlDepositoryCode( new MyStringType( oneElement  ));
-        verifyFIXData( tagData );
+    void PrintTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag173StrSettlDepositoryCode( new MyStringType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
-
-    private void verifyFIXData( final Tag173StrSettlDepositoryCode tagData ) {
-        assertEquals( "FIX173_STR_SETTL_DEPOSITORY_CODE", tagData.toEnumLabelString());
-        assertEquals( "173", tagData.toEnumIDString());
-        assertEquals( "SETTL_DEPOSITORY_CODE", tagData.toEnumNameString());
-        assertEquals( "SettlDepositoryCode (replaced)", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    @Test
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag173StrSettlDepositoryCode( new MyStringType( oneElement ));
+            assertEquals( "FIX173_STR_SETTL_DEPOSITORY_CODE", tagData.toEnumLabelString());
+            assertEquals( "173", tagData.toEnumIDString());
+            assertEquals( "SETTL_DEPOSITORY_CODE", tagData.toEnumNameString());
+            assertEquals( "SettlDepositoryCode (replaced)", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
-
     @Test
     void TagGetDataValueTest() {
-        Tag173StrSettlDepositoryCode tagData;
-        String oneElement;
-
-        oneElement = Tag173StrSettlDepositoryCode.TESTA_STR_SETTL_DEPOSITORY_CODE;
-        tagData = new Tag173StrSettlDepositoryCode( new MyStringType( oneElement  ));
-        verifyDataValue( tagData, oneElement );
-
-        oneElement = Tag173StrSettlDepositoryCode.TESTB_STR_SETTL_DEPOSITORY_CODE;
-        tagData = new Tag173StrSettlDepositoryCode( new MyStringType( oneElement  ));
-        verifyDataValue( tagData, oneElement );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag173StrSettlDepositoryCode( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        }
     }
-
-    private void verifyDataValue( final Tag173StrSettlDepositoryCode tagData, final String oneElement ) {
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-
     @Test
     void TagToValuePairStringTest() {
-        Tag173StrSettlDepositoryCode tagData;
-        String oneElement;
-
-        oneElement = Tag173StrSettlDepositoryCode.TESTA_STR_SETTL_DEPOSITORY_CODE;
-        tagData = new Tag173StrSettlDepositoryCode( new MyStringType( oneElement  ));
-        verifyValuePairString( tagData, oneElement );
-
-        oneElement = Tag173StrSettlDepositoryCode.TESTB_STR_SETTL_DEPOSITORY_CODE;
-        tagData = new Tag173StrSettlDepositoryCode( new MyStringType( oneElement  ));
-        verifyValuePairString( tagData, oneElement );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag173StrSettlDepositoryCode( new MyStringType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
-
-    private void verifyValuePairString( final Tag173StrSettlDepositoryCode tagData, final String oneElement ) {
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-    }
-
     @Test
     void TagToStringTest() {
-        Tag173StrSettlDepositoryCode tagData;
-        String oneElement;
-
-        oneElement = Tag173StrSettlDepositoryCode.TESTA_STR_SETTL_DEPOSITORY_CODE;
-        tagData = new Tag173StrSettlDepositoryCode( new MyStringType( oneElement  ));
-        verifyToString( tagData, oneElement );
-
-        oneElement = Tag173StrSettlDepositoryCode.TESTB_STR_SETTL_DEPOSITORY_CODE;
-        tagData = new Tag173StrSettlDepositoryCode( new MyStringType( oneElement  ));
-        verifyToString( tagData, oneElement );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag173StrSettlDepositoryCode( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
-
-    private void verifyToString( final Tag173StrSettlDepositoryCode tagData, final String oneElement ) {
-        assertEquals( oneElement, tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
-    }
-
     @Test
     void TagToVerboseStringTest() {
-        Tag173StrSettlDepositoryCode tagData;
-        String oneElement;
-
-        oneElement = Tag173StrSettlDepositoryCode.TESTA_STR_SETTL_DEPOSITORY_CODE;
-        tagData = new Tag173StrSettlDepositoryCode( new MyStringType( oneElement  ));
-        verifyVerboseString( tagData );
-
-        oneElement = Tag173StrSettlDepositoryCode.TESTB_STR_SETTL_DEPOSITORY_CODE;
-        tagData = new Tag173StrSettlDepositoryCode( new MyStringType( oneElement  ));
-        verifyVerboseString( tagData );
-    }
-
-    private void verifyVerboseString( final Tag173StrSettlDepositoryCode tagData ) {
-        assertEquals( "Tag173StrSettlDepositoryCode\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
-                        "\tValuePair[" + tagData.toValuePairString() + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag173StrSettlDepositoryCode( new MyStringType( oneElement ));
+            assertEquals( "Tag173StrSettlDepositoryCode\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

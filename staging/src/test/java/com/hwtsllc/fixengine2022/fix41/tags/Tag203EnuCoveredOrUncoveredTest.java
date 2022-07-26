@@ -43,10 +43,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    1 - Uncovered
  */
 class Tag203EnuCoveredOrUncoveredTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag203EnuCoveredOrUncovered tagData;
+    Tag203EnuCoveredOrUncovered tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (MyEnumCoveredOrUncovered oneEnum : MyEnumCoveredOrUncovered.values()) {
             tagData = new Tag203EnuCoveredOrUncovered(oneEnum);
@@ -54,9 +54,7 @@ class Tag203EnuCoveredOrUncoveredTest {
         }
     }
     @Test
-    void FIXTest() {
-        Tag203EnuCoveredOrUncovered tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (MyEnumCoveredOrUncovered oneEnum : MyEnumCoveredOrUncovered.values()) {
             tagData = new Tag203EnuCoveredOrUncovered(oneEnum);
@@ -72,8 +70,6 @@ class Tag203EnuCoveredOrUncoveredTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag203EnuCoveredOrUncovered tagData;
-
         tagData = new Tag203EnuCoveredOrUncovered(MyEnumCoveredOrUncovered.COVERED);
         assertEquals( MyEnumCoveredOrUncovered.COVERED.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -92,8 +88,6 @@ class Tag203EnuCoveredOrUncoveredTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag203EnuCoveredOrUncovered tagData;
-
         // loop around the ENUM and process
         for (MyEnumCoveredOrUncovered oneEnum : MyEnumCoveredOrUncovered.values()) {
             tagData = new Tag203EnuCoveredOrUncovered(oneEnum);
@@ -105,8 +99,6 @@ class Tag203EnuCoveredOrUncoveredTest {
     }
     @Test
     void TagToStringTest() {
-        Tag203EnuCoveredOrUncovered tagData;
-
         // loop around the ENUM and process
         for (MyEnumCoveredOrUncovered oneEnum : MyEnumCoveredOrUncovered.values()) {
             tagData = new Tag203EnuCoveredOrUncovered(oneEnum);
@@ -116,8 +108,6 @@ class Tag203EnuCoveredOrUncoveredTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag203EnuCoveredOrUncovered tagData;
-
         // loop around the ENUM and process
         for (MyEnumCoveredOrUncovered oneEnum : MyEnumCoveredOrUncovered.values()) {
             tagData = new Tag203EnuCoveredOrUncovered(oneEnum);

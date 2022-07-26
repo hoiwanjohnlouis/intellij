@@ -42,10 +42,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 // @Deprecated
 class Tag166EnuSettlLocationTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag166EnuSettlLocation tagData;
+    Tag166EnuSettlLocation tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum166SettlLocation oneEnum : Enum166SettlLocation.values()) {
             tagData = new Tag166EnuSettlLocation(oneEnum);
@@ -53,9 +53,7 @@ class Tag166EnuSettlLocationTest {
         }
     }
     @Test
-    void FIX0166Test() {
-        Tag166EnuSettlLocation tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum166SettlLocation oneEnum : Enum166SettlLocation.values()) {
             tagData = new Tag166EnuSettlLocation(oneEnum);
@@ -71,8 +69,6 @@ class Tag166EnuSettlLocationTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag166EnuSettlLocation tagData;
-
         tagData = new Tag166EnuSettlLocation(Enum166SettlLocation.CEDEL);
         assertEquals( Enum166SettlLocation.CEDEL.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -111,8 +107,6 @@ class Tag166EnuSettlLocationTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag166EnuSettlLocation tagData;
-
         // loop around the ENUM and process
         for (Enum166SettlLocation oneEnum : Enum166SettlLocation.values()) {
             tagData = new Tag166EnuSettlLocation(oneEnum);
@@ -124,8 +118,6 @@ class Tag166EnuSettlLocationTest {
     }
     @Test
     void TagToStringTest() {
-        Tag166EnuSettlLocation tagData;
-
         // loop around the ENUM and process
         for (Enum166SettlLocation oneEnum : Enum166SettlLocation.values()) {
             tagData = new Tag166EnuSettlLocation(oneEnum);
@@ -135,8 +127,6 @@ class Tag166EnuSettlLocationTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag166EnuSettlLocation tagData;
-
         // loop around the ENUM and process
         for (Enum166SettlLocation oneEnum : Enum166SettlLocation.values()) {
             tagData = new Tag166EnuSettlLocation(oneEnum);

@@ -39,10 +39,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 // @Deprecated
 class Tag204EnuCustomerOrFirmTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag204EnuCustomerOrFirm tagData;
+    Tag204EnuCustomerOrFirm tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum204CustomerOrFirm oneEnum : Enum204CustomerOrFirm.values()) {
             tagData = new Tag204EnuCustomerOrFirm(oneEnum);
@@ -50,9 +50,7 @@ class Tag204EnuCustomerOrFirmTest {
         }
     }
     @Test
-    void FIXTest() {
-        Tag204EnuCustomerOrFirm tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum204CustomerOrFirm oneEnum : Enum204CustomerOrFirm.values()) {
             tagData = new Tag204EnuCustomerOrFirm(oneEnum);
@@ -68,8 +66,6 @@ class Tag204EnuCustomerOrFirmTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag204EnuCustomerOrFirm tagData;
-
         tagData = new Tag204EnuCustomerOrFirm(Enum204CustomerOrFirm.CUSTOMER);
         assertEquals( Enum204CustomerOrFirm.CUSTOMER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -88,8 +84,6 @@ class Tag204EnuCustomerOrFirmTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag204EnuCustomerOrFirm tagData;
-
         // loop around the ENUM and process
         for (Enum204CustomerOrFirm oneEnum : Enum204CustomerOrFirm.values()) {
             tagData = new Tag204EnuCustomerOrFirm(oneEnum);
@@ -101,8 +95,6 @@ class Tag204EnuCustomerOrFirmTest {
     }
     @Test
     void TagToStringTest() {
-        Tag204EnuCustomerOrFirm tagData;
-
         // loop around the ENUM and process
         for (Enum204CustomerOrFirm oneEnum : Enum204CustomerOrFirm.values()) {
             tagData = new Tag204EnuCustomerOrFirm(oneEnum);
@@ -112,8 +104,6 @@ class Tag204EnuCustomerOrFirmTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag204EnuCustomerOrFirm tagData;
-
         // loop around the ENUM and process
         for (Enum204CustomerOrFirm oneEnum : Enum204CustomerOrFirm.values()) {
             tagData = new Tag204EnuCustomerOrFirm(oneEnum);

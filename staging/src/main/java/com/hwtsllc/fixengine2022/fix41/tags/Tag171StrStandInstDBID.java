@@ -33,9 +33,9 @@ public class Tag171StrStandInstDBID extends FIX41Abstract implements LogValuePai
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_STAND_INST_DB_ID
-            = "BilboBaggins-Tag171StrStandInstDBID";
+            = "CaroleLombard-Tag171StrStandInstDBID";
     public final static String TESTB_STR_STAND_INST_DB_ID
-            = "Gandalf-Tag171StrStandInstDBID";
+            = "JaneAlicePeters-Tag171StrStandInstDBID";
 
     public Tag171StrStandInstDBID(MyStringType dataValue) {
         setFixType(FIX41.FIX171_STR_STAND_INST_DB_ID);

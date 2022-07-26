@@ -37,9 +37,9 @@ public class Tag175StrSettlInstCode extends FIX41Abstract implements LogValuePai
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_SETTL_INST_CODE
-            = "BilboBaggins-Tag175StrSettlInstCode";
+            = "LorettaYoung-Tag175StrSettlInstCode";
     public final static String TESTB_STR_SETTL_INST_CODE
-            = "Gandalf-Tag175StrSettlInstCode";
+            = "GretchenMichaelaYoung-Tag175StrSettlInstCode";
 
     public Tag175StrSettlInstCode(MyStringType dataValue) {
         setFixType(FIX41.FIX175_STR_SETTL_INST_CODE);

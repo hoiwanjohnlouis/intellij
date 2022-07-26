@@ -42,10 +42,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    5 - Request reject
  */
 class Tag160EnuSettlInstModeTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag160EnuSettlInstMode tagData;
+    Tag160EnuSettlInstMode tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum160SettlInstMode oneEnum : Enum160SettlInstMode.values()) {
             tagData = new Tag160EnuSettlInstMode(oneEnum);
@@ -53,9 +53,7 @@ class Tag160EnuSettlInstModeTest {
         }
     }
     @Test
-    void FIXTest() {
-        Tag160EnuSettlInstMode tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum160SettlInstMode oneEnum : Enum160SettlInstMode.values()) {
             tagData = new Tag160EnuSettlInstMode(oneEnum);
@@ -71,8 +69,6 @@ class Tag160EnuSettlInstModeTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag160EnuSettlInstMode tagData;
-
         tagData = new Tag160EnuSettlInstMode(Enum160SettlInstMode.DEFAULT);
         assertEquals( Enum160SettlInstMode.DEFAULT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -107,8 +103,6 @@ class Tag160EnuSettlInstModeTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag160EnuSettlInstMode tagData;
-
         // loop around the ENUM and process
         for (Enum160SettlInstMode oneEnum : Enum160SettlInstMode.values()) {
             tagData = new Tag160EnuSettlInstMode(oneEnum);
@@ -120,8 +114,6 @@ class Tag160EnuSettlInstModeTest {
     }
     @Test
     void TagToStringTest() {
-        Tag160EnuSettlInstMode tagData;
-
         // loop around the ENUM and process
         for (Enum160SettlInstMode oneEnum : Enum160SettlInstMode.values()) {
             tagData = new Tag160EnuSettlInstMode(oneEnum);
@@ -131,8 +123,6 @@ class Tag160EnuSettlInstModeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag160EnuSettlInstMode tagData;
-
         // loop around the ENUM and process
         for (Enum160SettlInstMode oneEnum : Enum160SettlInstMode.values()) {
             tagData = new Tag160EnuSettlInstMode(oneEnum);

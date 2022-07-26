@@ -36,10 +36,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    3 - Investor (e.g. CIV use)
  */
 class Tag165EnuSettlInstSourceTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag165EnuSettlInstSource tagData;
+    Tag165EnuSettlInstSource tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum165SettlInstSource oneEnum : Enum165SettlInstSource.values()) {
             tagData = new Tag165EnuSettlInstSource(oneEnum);
@@ -47,9 +47,7 @@ class Tag165EnuSettlInstSourceTest {
         }
     }
     @Test
-    void FIXTest() {
-        Tag165EnuSettlInstSource tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum165SettlInstSource oneEnum : Enum165SettlInstSource.values()) {
             tagData = new Tag165EnuSettlInstSource(oneEnum);
@@ -65,8 +63,6 @@ class Tag165EnuSettlInstSourceTest {
     }
     @Test
     void TagGetDataValueTest() {
-        Tag165EnuSettlInstSource tagData;
-
         tagData = new Tag165EnuSettlInstSource(Enum165SettlInstSource.BROKER_INSTRUCTIONS);
         assertEquals( Enum165SettlInstSource.BROKER_INSTRUCTIONS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -89,8 +85,6 @@ class Tag165EnuSettlInstSourceTest {
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag165EnuSettlInstSource tagData;
-
         // loop around the ENUM and process
         for (Enum165SettlInstSource oneEnum : Enum165SettlInstSource.values()) {
             tagData = new Tag165EnuSettlInstSource(oneEnum);
@@ -102,8 +96,6 @@ class Tag165EnuSettlInstSourceTest {
     }
     @Test
     void TagToStringTest() {
-        Tag165EnuSettlInstSource tagData;
-
         // loop around the ENUM and process
         for (Enum165SettlInstSource oneEnum : Enum165SettlInstSource.values()) {
             tagData = new Tag165EnuSettlInstSource(oneEnum);
@@ -113,8 +105,6 @@ class Tag165EnuSettlInstSourceTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag165EnuSettlInstSource tagData;
-
         // loop around the ENUM and process
         for (Enum165SettlInstSource oneEnum : Enum165SettlInstSource.values()) {
             tagData = new Tag165EnuSettlInstSource(oneEnum);

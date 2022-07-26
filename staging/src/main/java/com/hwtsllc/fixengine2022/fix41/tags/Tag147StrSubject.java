@@ -33,9 +33,9 @@ public class Tag147StrSubject extends FIX41Abstract implements LogValuePairStrin
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_SUBJECT
-            = "BilboBaggins-Tag147StrSubject";
+            = "VivienLeigh-Tag147StrSubject";
     public final static String TESTB_STR_SUBJECT
-            = "Gandalf-Tag147StrSubject";
+            = "VivianMaryHartley-Tag147StrSubject";
 
     public Tag147StrSubject(MyStringType dataValue) {
         setFixType(FIX41.FIX147_STR_SUBJECT);

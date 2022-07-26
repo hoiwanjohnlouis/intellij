@@ -34,9 +34,9 @@ public class Tag170StrStandInstDBName extends FIX41Abstract implements LogValueP
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_STAND_INST_DB_NAME
-            = "BilboBaggins-Tag170StrStandInstDBName";
+            = "DorisDay-Tag170StrStandInstDBName";
     public final static String TESTB_STR_STAND_INST_DB_NAME
-            = "Gandalf-Tag170StrStandInstDBName";
+            = "DorisMaryAnnKappelhoff-Tag170StrStandInstDBName";
 
     public Tag170StrStandInstDBName(MyStringType dataValue) {
         setFixType(FIX41.FIX170_STR_STAND_INST_DB_NAME);
