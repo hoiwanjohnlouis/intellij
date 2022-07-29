@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum301QuoteResponseLevel;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -38,20 +37,33 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    "2 - Acknowledge each quote messages"
  */
 class Tag301EnuQuoteResponseLevelTest {
+    Tag301EnuQuoteResponseLevel tagData;
+
     @Test
-    void FIX0301Test() {
-        FIX42 fixData = FIX42.FIX301_ENU_QUOTE_RESPONSE_LEVEL;
-        assertEquals( "301", fixData.toEnumIDString());
-        assertEquals( "QUOTE_RESPONSE_LEVEL", fixData.toEnumNameString());
-        assertEquals( "QuoteResponseLevel", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // loop around the ENUM and process
+        for ( Enum301QuoteResponseLevel oneEnum : Enum301QuoteResponseLevel.values()) {
+            tagData = new Tag301EnuQuoteResponseLevel(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0301Test() {
-        Tag301EnuQuoteResponseLevel tagData;
-
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( Enum301QuoteResponseLevel oneEnum : Enum301QuoteResponseLevel.values()) {
+            tagData = new Tag301EnuQuoteResponseLevel(oneEnum);
+            assertEquals( "FIX301_ENU_QUOTE_RESPONSE_LEVEL", tagData.toEnumLabelString());
+            assertEquals( "301", tagData.toEnumIDString());
+            assertEquals( "QUOTE_RESPONSE_LEVEL", tagData.toEnumNameString());
+            assertEquals( "QuoteResponseLevel", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
          * 0-2 msg types
          */
@@ -66,46 +78,30 @@ class Tag301EnuQuoteResponseLevelTest {
         tagData = new Tag301EnuQuoteResponseLevel(Enum301QuoteResponseLevel.ACKNOWLEDGE_EACH_QUOTE);
         assertEquals( Enum301QuoteResponseLevel.ACKNOWLEDGE_EACH_QUOTE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag301EnuQuoteResponseLevel tagData;
 
         // loop around the ENUM and process
-        for (Enum301QuoteResponseLevel oneEnum : Enum301QuoteResponseLevel.values()) {
-            tagData = new Tag301EnuQuoteResponseLevel(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag301EnuQuoteResponseLevel tagData;
-
-        // loop around the ENUM and process
-        for (Enum301QuoteResponseLevel oneEnum : Enum301QuoteResponseLevel.values()) {
+        for ( Enum301QuoteResponseLevel oneEnum : Enum301QuoteResponseLevel.values()) {
             tagData = new Tag301EnuQuoteResponseLevel(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag301EnuQuoteResponseLevel tagData;
-
         // loop around the ENUM and process
-        for (Enum301QuoteResponseLevel oneEnum : Enum301QuoteResponseLevel.values()) {
+        for ( Enum301QuoteResponseLevel oneEnum : Enum301QuoteResponseLevel.values()) {
             tagData = new Tag301EnuQuoteResponseLevel(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag301EnuQuoteResponseLevel tagData;
-
         // loop around the ENUM and process
-        for (Enum301QuoteResponseLevel oneEnum : Enum301QuoteResponseLevel.values()) {
+        for ( Enum301QuoteResponseLevel oneEnum : Enum301QuoteResponseLevel.values()) {
             tagData = new Tag301EnuQuoteResponseLevel(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -113,18 +109,16 @@ class Tag301EnuQuoteResponseLevelTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag301EnuQuoteResponseLevel tagData;
-
         // loop around the ENUM and process
-        for (Enum301QuoteResponseLevel oneEnum : Enum301QuoteResponseLevel.values()) {
+        for ( Enum301QuoteResponseLevel oneEnum : Enum301QuoteResponseLevel.values()) {
             tagData = new Tag301EnuQuoteResponseLevel(oneEnum);
             assertEquals( "Tag301EnuQuoteResponseLevel\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

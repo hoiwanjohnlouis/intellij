@@ -27,9 +27,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  442
  *  MultiLegReportingType
  *  char
- *  <p>
+ *  <p></p>
  *  Used to indicate what an Execution Report represents
- *  <p>
+ *  <p></p>
  *  (e.g. used with multi-leg securities, such as option strategies, spreads, etc.).
  *  <p></p>
  *  Valid values:

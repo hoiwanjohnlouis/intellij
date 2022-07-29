@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.fix41.tags.Tag206StrOptAttribute;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -35,77 +36,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
  */
 class Tag256StrUnderlyingCreditRatingTest {
-    @Test
-    void PrintFIXTagTest() {
-        Tag256StrUnderlyingCreditRating tagData;
-        String oneElement;
-
-        oneElement = Tag256StrUnderlyingCreditRating.TESTA_STR_UNDERLYING_CREDIT_RATING;
-        tagData = new Tag256StrUnderlyingCreditRating( new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag256StrUnderlyingCreditRating.TESTB_STR_UNDERLYING_CREDIT_RATING;
-        tagData = new Tag256StrUnderlyingCreditRating( new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-    }
+    Tag256StrUnderlyingCreditRating tagData;
+    String [] TestArray = {
+            Tag256StrUnderlyingCreditRating.TESTA_STR_UNDERLYING_CREDIT_RATING,
+            Tag256StrUnderlyingCreditRating.TESTB_STR_UNDERLYING_CREDIT_RATING
+    };
 
     @Test
-    void FIXTagTest() {
-        Tag256StrUnderlyingCreditRating tagData;
-        String oneElement;
-
-        oneElement = Tag256StrUnderlyingCreditRating.TESTA_STR_UNDERLYING_CREDIT_RATING;
-        tagData = new Tag256StrUnderlyingCreditRating( new MyStringType( oneElement ) );
-        verifyAll( tagData, oneElement );
-
-        oneElement = Tag256StrUnderlyingCreditRating.TESTB_STR_UNDERLYING_CREDIT_RATING;
-        tagData = new Tag256StrUnderlyingCreditRating( new MyStringType( oneElement ) );
-        verifyAll( tagData, oneElement );
+    void PrintTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag256StrUnderlyingCreditRating( new MyStringType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
-
-    private void verifyAll( final Tag256StrUnderlyingCreditRating tagData, final String oneElement ) {
-        verifyFIXData( tagData );
-        verifyDataValue( tagData, oneElement );
-        verifyValuePairString( tagData, oneElement );
-        verifyToString( tagData, oneElement );
-        verifyVerboseString( tagData );
+    @Test
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag256StrUnderlyingCreditRating( new MyStringType( oneElement ));
+            assertEquals( "FIX256_STR_UNDERLYING_CREDIT_RATING", tagData.toEnumLabelString());
+            assertEquals( "256", tagData.toEnumIDString());
+            assertEquals( "UNDERLYING_CREDIT_RATING", tagData.toEnumNameString());
+            assertEquals( "UnderlyingCreditRating", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
-
-    private void verifyFIXData( final Tag256StrUnderlyingCreditRating tagData ) {
-        assertEquals( "FIX256_STR_UNDERLYING_CREDIT_RATING", tagData.toEnumLabelString());
-        assertEquals( "256", tagData.toEnumIDString());
-        assertEquals( "UNDERLYING_CREDIT_RATING", tagData.toEnumNameString());
-        assertEquals( "UnderlyingCreditRating", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    @Test
+    void TagGetDataValueTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag256StrUnderlyingCreditRating( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        }
     }
-
-    private void verifyDataValue( final Tag256StrUnderlyingCreditRating tagData, final String oneElement ) {
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    @Test
+    void TagToValuePairStringTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag256StrUnderlyingCreditRating( new MyStringType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
-
-    private void verifyValuePairString( final Tag256StrUnderlyingCreditRating tagData, final String oneElement ) {
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+    @Test
+    void TagToStringTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag256StrUnderlyingCreditRating( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
-
-    private void verifyToString( final Tag256StrUnderlyingCreditRating tagData, final String oneElement ) {
-        assertEquals( oneElement, tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
-    }
-
-    private void verifyVerboseString( final Tag256StrUnderlyingCreditRating tagData ) {
-        assertEquals( "Tag256StrUnderlyingCreditRating\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
-                        "\tValuePair[" + tagData.toValuePairString() + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    @Test
+    void TagToVerboseStringTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag256StrUnderlyingCreditRating( new MyStringType( oneElement ));
+            assertEquals( "Tag256StrUnderlyingCreditRating\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

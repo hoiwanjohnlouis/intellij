@@ -26,19 +26,19 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  222
  *  BenchmarkCurvePoint
  *  String
- *  <p>
+ *  <p></p>
  *  Point on benchmark curve.  Free form values:  e.g. "Y", "7Y", "INTERPOLATED".
- *  <p>
+ *  <p></p>
  *  Sample values:
- *  <p>
+ *  <p></p>
  *  M = combination of a number between 1-12 and a "M" for month
- *  <p>
+ *  <p></p>
  *  Y = combination of number between 1-100 and a "Y" for year}
- *  <p>
+ *  <p></p>
  *  10Y-OLD = see above, then add "-OLD" when appropriate
- *  <p>
+ *  <p></p>
  *  INTERPOLATED = the point is mathematically derived
- *  <p>
+ *  <p></p>
  *  2/2031 5 3/8 = the point is stated via a combination of maturity month / year and coupon
  *  <p></p>
  *  See Fixed Income-specific documentation at http://www.fixprotocol.org for additional values.

@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum298QuoteCancelType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -40,20 +39,33 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    "5 - Cancel quote specified in QuoteID"
  */
 class Tag298EnuQuoteCancelTypeTest {
+    Tag298EnuQuoteCancelType tagData;
+
     @Test
-    void FIX0298Test() {
-        FIX42 fixData = FIX42.FIX298_ENU_QUOTE_CANCEL_TYPE;
-        assertEquals( "298", fixData.toEnumIDString());
-        assertEquals( "QUOTE_CANCEL_TYPE", fixData.toEnumNameString());
-        assertEquals( "QuoteCancelType", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // loop around the ENUM and process
+        for ( Enum298QuoteCancelType oneEnum : Enum298QuoteCancelType.values()) {
+            tagData = new Tag298EnuQuoteCancelType(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0298Test() {
-        Tag298EnuQuoteCancelType tagData;
-
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( Enum298QuoteCancelType oneEnum : Enum298QuoteCancelType.values()) {
+            tagData = new Tag298EnuQuoteCancelType(oneEnum);
+            assertEquals( "FIX298_ENU_QUOTE_CANCEL_TYPE", tagData.toEnumLabelString());
+            assertEquals( "298", tagData.toEnumIDString());
+            assertEquals( "QUOTE_CANCEL_TYPE", tagData.toEnumNameString());
+            assertEquals( "QuoteCancelType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
          * 1-5 msg types
          */
@@ -76,46 +88,30 @@ class Tag298EnuQuoteCancelTypeTest {
         tagData = new Tag298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_QUOTEID_QUOTE);
         assertEquals( Enum298QuoteCancelType.CANCEL_QUOTEID_QUOTE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag298EnuQuoteCancelType tagData;
 
         // loop around the ENUM and process
-        for (Enum298QuoteCancelType oneEnum : Enum298QuoteCancelType.values()) {
-            tagData = new Tag298EnuQuoteCancelType(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag298EnuQuoteCancelType tagData;
-
-        // loop around the ENUM and process
-        for (Enum298QuoteCancelType oneEnum : Enum298QuoteCancelType.values()) {
+        for ( Enum298QuoteCancelType oneEnum : Enum298QuoteCancelType.values()) {
             tagData = new Tag298EnuQuoteCancelType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag298EnuQuoteCancelType tagData;
-
         // loop around the ENUM and process
-        for (Enum298QuoteCancelType oneEnum : Enum298QuoteCancelType.values()) {
+        for ( Enum298QuoteCancelType oneEnum : Enum298QuoteCancelType.values()) {
             tagData = new Tag298EnuQuoteCancelType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag298EnuQuoteCancelType tagData;
-
         // loop around the ENUM and process
-        for (Enum298QuoteCancelType oneEnum : Enum298QuoteCancelType.values()) {
+        for ( Enum298QuoteCancelType oneEnum : Enum298QuoteCancelType.values()) {
             tagData = new Tag298EnuQuoteCancelType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -123,18 +119,16 @@ class Tag298EnuQuoteCancelTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag298EnuQuoteCancelType tagData;
-
         // loop around the ENUM and process
-        for (Enum298QuoteCancelType oneEnum : Enum298QuoteCancelType.values()) {
+        for ( Enum298QuoteCancelType oneEnum : Enum298QuoteCancelType.values()) {
             tagData = new Tag298EnuQuoteCancelType(oneEnum);
             assertEquals( "Tag298EnuQuoteCancelType\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

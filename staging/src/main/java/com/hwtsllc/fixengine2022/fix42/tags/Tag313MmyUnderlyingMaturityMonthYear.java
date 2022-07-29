@@ -26,6 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  200
  *  MaturityMonthYear
  *  month-year
+ *  <p></p>
  *  <p>     Can be used with standardized derivatives vs. the MaturityDate (54) field.
  *  <p></p>
  *  313

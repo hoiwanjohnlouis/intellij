@@ -27,7 +27,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  416
  *  IncTaxInd
  *  int
- *  <p>
+ *  <p></p>
  *  Code to represent whether value is net (inclusive of tax) or gross.
  *  <p></p>
  *  Valid values:

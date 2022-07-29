@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  206
  *  OptAttribute
  *  char
- *  <p>
+ *  <p></p>
  *  Can be used for SecurityType (167) =OPT to identify a particular security.
  *  <p></p>
  *  Valid values vary by SecurityExchange:

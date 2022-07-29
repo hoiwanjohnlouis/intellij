@@ -28,7 +28,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  String
  *  <p></p>
  *  For Fixed Income.  Value of stipulation.
- *  <p>
+ *  <p></p>
  *  The expression can be an absolute single value or a combination of values and logical operators:
  *  <p></p>
  *  <p>     < value
@@ -36,6 +36,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>     <= value
  *  <p>     >= value
  *  <p>     value
+ *  <p></p>
  *  <p>     value – value2
  *  <p>     value OR value2
  *  <p>     value AND value2
@@ -49,11 +50,13 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>     CC = Special cum Coupon
  *  <p>     XC = Special ex Coupon
  *  <p>     CB = Special cum Bonus
+ *  <p></p>
  *  <p>     XB = Special ex Bonus
  *  <p>     CR = Special cum Rights
  *  <p>     XR = Special ex Rights
  *  <p>     CP = Special cum Capital Repayments
  *  <p>     XP = Special ex Capital Repayments
+ *  <p></p>
  *  <p>     CS = Cash Settlement
  *  <p>     SP = Special Price
  *  <p>     TR = Report for European Equity Market Securities in accordance with Chapter 8 of the Rules.
@@ -65,6 +68,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>     BROKERTEC
  *  <p>     ESPEED
  *  <p>     GOVPX
+ *  <p></p>
  *  <p>     HILLIARD FARBER
  *  <p>     ICAP
  *  <p>     TRADEWEB
@@ -72,7 +76,6 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *          If a particular side of the market is wanted append /BID /OFFER or /MID.
  *  <p>     plus appropriate combinations of the above and other expressions
  *          by mutual agreement of the counterparties.
- *  <p></p>
  *  <p></p>
  *  <p>     Examples: ">=60", ".25", "ORANGE OR CONTRACOSTA", etc.
  *  <p></p>

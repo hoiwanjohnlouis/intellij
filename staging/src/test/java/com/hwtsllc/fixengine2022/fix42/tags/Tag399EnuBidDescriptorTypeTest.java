@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum399BidDescriptorType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -37,20 +36,33 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    3 - Index
  */
 class Tag399EnuBidDescriptorTypeTest {
+    Tag399EnuBidDescriptorType tagData;
+
     @Test
-    void FIX0399Test() {
-        FIX42 fixData = FIX42.FIX399_ENU_BID_DESCRIPTOR_TYPE;
-        assertEquals( "399", fixData.toEnumIDString());
-        assertEquals( "BID_DESCRIPTOR_TYPE", fixData.toEnumNameString());
-        assertEquals( "BidDescriptorType", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // loop around the ENUM and process
+        for ( Enum399BidDescriptorType oneEnum : Enum399BidDescriptorType.values()) {
+            tagData = new Tag399EnuBidDescriptorType(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0399Test() {
-        Tag399EnuBidDescriptorType tagData;
-
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( Enum399BidDescriptorType oneEnum : Enum399BidDescriptorType.values()) {
+            tagData = new Tag399EnuBidDescriptorType(oneEnum);
+            assertEquals( "FIX399_ENU_BID_DESCRIPTOR_TYPE", tagData.toEnumLabelString());
+            assertEquals( "399", tagData.toEnumIDString());
+            assertEquals( "BID_DESCRIPTOR_TYPE", tagData.toEnumNameString());
+            assertEquals( "BidDescriptorType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
          * 1-3 msg types
          */
@@ -65,46 +77,30 @@ class Tag399EnuBidDescriptorTypeTest {
         tagData = new Tag399EnuBidDescriptorType(Enum399BidDescriptorType.INDEX);
         assertEquals( Enum399BidDescriptorType.INDEX.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag399EnuBidDescriptorType tagData;
 
         // loop around the ENUM and process
-        for (Enum399BidDescriptorType oneEnum : Enum399BidDescriptorType.values()) {
-            tagData = new Tag399EnuBidDescriptorType(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag399EnuBidDescriptorType tagData;
-
-        // loop around the ENUM and process
-        for (Enum399BidDescriptorType oneEnum : Enum399BidDescriptorType.values()) {
+        for ( Enum399BidDescriptorType oneEnum : Enum399BidDescriptorType.values()) {
             tagData = new Tag399EnuBidDescriptorType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag399EnuBidDescriptorType tagData;
-
         // loop around the ENUM and process
-        for (Enum399BidDescriptorType oneEnum : Enum399BidDescriptorType.values()) {
+        for ( Enum399BidDescriptorType oneEnum : Enum399BidDescriptorType.values()) {
             tagData = new Tag399EnuBidDescriptorType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag399EnuBidDescriptorType tagData;
-
         // loop around the ENUM and process
-        for (Enum399BidDescriptorType oneEnum : Enum399BidDescriptorType.values()) {
+        for ( Enum399BidDescriptorType oneEnum : Enum399BidDescriptorType.values()) {
             tagData = new Tag399EnuBidDescriptorType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -112,18 +108,16 @@ class Tag399EnuBidDescriptorTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag399EnuBidDescriptorType tagData;
-
         // loop around the ENUM and process
-        for (Enum399BidDescriptorType oneEnum : Enum399BidDescriptorType.values()) {
+        for ( Enum399BidDescriptorType oneEnum : Enum399BidDescriptorType.values()) {
             tagData = new Tag399EnuBidDescriptorType(oneEnum);
             assertEquals( "Tag399EnuBidDescriptorType\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

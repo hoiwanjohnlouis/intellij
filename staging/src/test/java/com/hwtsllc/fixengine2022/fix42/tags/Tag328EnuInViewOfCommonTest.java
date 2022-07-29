@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum328InViewOfCommon;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -36,20 +35,33 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    Y - Half was due to common stock being halted
  */
 class Tag328EnuInViewOfCommonTest {
+    Tag328EnuInViewOfCommon tagData;
+
     @Test
-    void FIX0328Test() {
-        FIX42 fixData = FIX42.FIX328_ENU_IN_VIEW_OF_COMMON;
-        assertEquals( "328", fixData.toEnumIDString());
-        assertEquals( "IN_VIEW_OF_COMMON", fixData.toEnumNameString());
-        assertEquals( "InViewOfCommon", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // loop around the ENUM and process
+        for ( Enum328InViewOfCommon oneEnum : Enum328InViewOfCommon.values()) {
+            tagData = new Tag328EnuInViewOfCommon(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0328Test() {
-        Tag328EnuInViewOfCommon tagData;
-
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( Enum328InViewOfCommon oneEnum : Enum328InViewOfCommon.values()) {
+            tagData = new Tag328EnuInViewOfCommon(oneEnum);
+            assertEquals( "FIX328_ENU_IN_VIEW_OF_COMMON", tagData.toEnumLabelString());
+            assertEquals( "328", tagData.toEnumIDString());
+            assertEquals( "IN_VIEW_OF_COMMON", tagData.toEnumNameString());
+            assertEquals( "InViewOfCommon", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         tagData = new Tag328EnuInViewOfCommon(Enum328InViewOfCommon.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -57,46 +69,30 @@ class Tag328EnuInViewOfCommonTest {
         tagData = new Tag328EnuInViewOfCommon(Enum328InViewOfCommon.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag328EnuInViewOfCommon tagData;
 
         // loop around the ENUM and process
-        for (Enum328InViewOfCommon oneEnum : Enum328InViewOfCommon.values()) {
-            tagData = new Tag328EnuInViewOfCommon(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag328EnuInViewOfCommon tagData;
-
-        // loop around the ENUM and process
-        for (Enum328InViewOfCommon oneEnum : Enum328InViewOfCommon.values()) {
+        for ( Enum328InViewOfCommon oneEnum : Enum328InViewOfCommon.values()) {
             tagData = new Tag328EnuInViewOfCommon(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag328EnuInViewOfCommon tagData;
-
         // loop around the ENUM and process
-        for (Enum328InViewOfCommon oneEnum : Enum328InViewOfCommon.values()) {
+        for ( Enum328InViewOfCommon oneEnum : Enum328InViewOfCommon.values()) {
             tagData = new Tag328EnuInViewOfCommon(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag328EnuInViewOfCommon tagData;
-
         // loop around the ENUM and process
-        for (Enum328InViewOfCommon oneEnum : Enum328InViewOfCommon.values()) {
+        for ( Enum328InViewOfCommon oneEnum : Enum328InViewOfCommon.values()) {
             tagData = new Tag328EnuInViewOfCommon(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -104,18 +100,16 @@ class Tag328EnuInViewOfCommonTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag328EnuInViewOfCommon tagData;
-
         // loop around the ENUM and process
-        for (Enum328InViewOfCommon oneEnum : Enum328InViewOfCommon.values()) {
+        for ( Enum328InViewOfCommon oneEnum : Enum328InViewOfCommon.values()) {
             tagData = new Tag328EnuInViewOfCommon(oneEnum);
             assertEquals( "Tag328EnuInViewOfCommon\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum411ExchangeForPhysical;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -36,20 +35,33 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    Y - True
  */
 class Tag411EnuExchangeForPhysicalTest {
+    Tag411EnuExchangeForPhysical tagData;
+
     @Test
-    void FIX0411Test() {
-        FIX42 fixData = FIX42.FIX411_ENU_EXCHANGE_FOR_PHYSICAL;
-        assertEquals( "411", fixData.toEnumIDString());
-        assertEquals( "EXCHANGE_FOR_PHYSICAL", fixData.toEnumNameString());
-        assertEquals( "ExchangeForPhysical", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // loop around the ENUM and process
+        for ( Enum411ExchangeForPhysical oneEnum : Enum411ExchangeForPhysical.values()) {
+            tagData = new Tag411EnuExchangeForPhysical(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0411Test() {
-        Tag411EnuExchangeForPhysical tagData;
-
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( Enum411ExchangeForPhysical oneEnum : Enum411ExchangeForPhysical.values()) {
+            tagData = new Tag411EnuExchangeForPhysical(oneEnum);
+            assertEquals( "FIX411_ENU_EXCHANGE_FOR_PHYSICAL", tagData.toEnumLabelString());
+            assertEquals( "411", tagData.toEnumIDString());
+            assertEquals( "EXCHANGE_FOR_PHYSICAL", tagData.toEnumNameString());
+            assertEquals( "ExchangeForPhysical", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         tagData = new Tag411EnuExchangeForPhysical(Enum411ExchangeForPhysical.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -57,46 +69,30 @@ class Tag411EnuExchangeForPhysicalTest {
         tagData = new Tag411EnuExchangeForPhysical(Enum411ExchangeForPhysical.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag411EnuExchangeForPhysical tagData;
 
         // loop around the ENUM and process
-        for (Enum411ExchangeForPhysical oneEnum : Enum411ExchangeForPhysical.values()) {
-            tagData = new Tag411EnuExchangeForPhysical(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag411EnuExchangeForPhysical tagData;
-
-        // loop around the ENUM and process
-        for (Enum411ExchangeForPhysical oneEnum : Enum411ExchangeForPhysical.values()) {
+        for ( Enum411ExchangeForPhysical oneEnum : Enum411ExchangeForPhysical.values()) {
             tagData = new Tag411EnuExchangeForPhysical(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag411EnuExchangeForPhysical tagData;
-
         // loop around the ENUM and process
-        for (Enum411ExchangeForPhysical oneEnum : Enum411ExchangeForPhysical.values()) {
+        for ( Enum411ExchangeForPhysical oneEnum : Enum411ExchangeForPhysical.values()) {
             tagData = new Tag411EnuExchangeForPhysical(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag411EnuExchangeForPhysical tagData;
-
         // loop around the ENUM and process
-        for (Enum411ExchangeForPhysical oneEnum : Enum411ExchangeForPhysical.values()) {
+        for ( Enum411ExchangeForPhysical oneEnum : Enum411ExchangeForPhysical.values()) {
             tagData = new Tag411EnuExchangeForPhysical(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -104,18 +100,16 @@ class Tag411EnuExchangeForPhysicalTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag411EnuExchangeForPhysical tagData;
-
         // loop around the ENUM and process
-        for (Enum411ExchangeForPhysical oneEnum : Enum411ExchangeForPhysical.values()) {
+        for ( Enum411ExchangeForPhysical oneEnum : Enum411ExchangeForPhysical.values()) {
             tagData = new Tag411EnuExchangeForPhysical(oneEnum);
             assertEquals( "Tag411EnuExchangeForPhysical\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

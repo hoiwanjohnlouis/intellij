@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  400
  *  BidDescriptor
  *  String
- *  <p>
+ *  <p></p>
  *  BidDescriptor value.
  *  <p></p>
  *  Usage depends upon BidDescriptorTyp (399).

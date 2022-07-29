@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
+import com.hwtsllc.fixengine2022.fix41.tags.Tag198StrSecondaryOrderID;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -34,77 +35,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 // @Deprecated
 class Tag439StrClearingFirmTest {
+    Tag439StrClearingFirm tagData;
+    String [] TestArray = {
+            Tag439StrClearingFirm.TESTA_STR_CLEARING_FIRM,
+            Tag439StrClearingFirm.TESTB_STR_CLEARING_FIRM
+    };
+
     @Test
     void PrintTest() {
-        Tag439StrClearingFirm tagData;
-        String oneElement;
-
-        oneElement = Tag439StrClearingFirm.TESTA_STR_CLEARING_FIRM;
-        tagData = new Tag439StrClearingFirm( new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag439StrClearingFirm.TESTB_STR_CLEARING_FIRM;
-        tagData = new Tag439StrClearingFirm( new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag439StrClearingFirm( new MyStringType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
-
     @Test
-    void FIXTagTest() {
-        Tag439StrClearingFirm tagData;
-        String oneElement;
-
-        oneElement = Tag439StrClearingFirm.TESTA_STR_CLEARING_FIRM;
-        tagData = new Tag439StrClearingFirm( new MyStringType( oneElement ) );
-        verifyAll( tagData, oneElement );
-
-        oneElement = Tag439StrClearingFirm.TESTB_STR_CLEARING_FIRM;
-        tagData = new Tag439StrClearingFirm( new MyStringType( oneElement ) );
-        verifyAll( tagData, oneElement );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag439StrClearingFirm( new MyStringType( oneElement ));
+            assertEquals( "FIX439_STR_CLEARING_FIRM", tagData.toEnumLabelString());
+            assertEquals( "439", tagData.toEnumIDString());
+            assertEquals( "CLEARING_FIRM", tagData.toEnumNameString());
+            assertEquals( "ClearingFirm", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
-
-    private void verifyAll( final Tag439StrClearingFirm tagData, final String oneElement ) {
-        verifyFIXData( tagData );
-        verifyDataValue( tagData, oneElement );
-        verifyValuePairString( tagData, oneElement );
-        verifyToString( tagData, oneElement );
-        verifyVerboseString( tagData );
+    @Test
+    void TagGetDataValueTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag439StrClearingFirm( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        }
     }
-
-    private void verifyFIXData( final Tag439StrClearingFirm tagData ) {
-        assertEquals( "FIX439_STR_CLEARING_FIRM", tagData.toEnumLabelString());
-        assertEquals( "439", tagData.toEnumIDString());
-        assertEquals( "CLEARING_FIRM", tagData.toEnumNameString());
-        assertEquals( "ClearingFirm", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    @Test
+    void TagToValuePairStringTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag439StrClearingFirm( new MyStringType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
-
-    private void verifyDataValue( final Tag439StrClearingFirm tagData, final String oneElement ) {
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+    @Test
+    void TagToStringTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag439StrClearingFirm( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
-
-    private void verifyValuePairString( final Tag439StrClearingFirm tagData, final String oneElement ) {
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-    }
-
-    private void verifyToString( final Tag439StrClearingFirm tagData, final String oneElement ) {
-        assertEquals( oneElement, tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
-    }
-
-    private void verifyVerboseString( final Tag439StrClearingFirm tagData ) {
-        assertEquals( "Tag439StrClearingFirm\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
-                        "\tValuePair[" + tagData.toValuePairString() + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    @Test
+    void TagToVerboseStringTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag439StrClearingFirm( new MyStringType( oneElement ));
+            assertEquals( "Tag439StrClearingFirm\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

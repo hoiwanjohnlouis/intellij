@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
+import com.hwtsllc.fixengine2022.fix41.tags.Tag158PctAccruedInterestRate;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -33,78 +34,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  Represented as a percentage.
  */
 class Tag410PctWtAverageLiquidityTest {
+    Tag410PctWtAverageLiquidity tagData;
+    double [] TestArray = {
+            Tag410PctWtAverageLiquidity.TESTA_PCT_WT_AVERAGE_LIQUIDITY,
+            Tag410PctWtAverageLiquidity.TESTB_PCT_WT_AVERAGE_LIQUIDITY
+    };
+
     @Test
     void PrintTest() {
-        Tag410PctWtAverageLiquidity tagData;
-        double oneElement;
-
-        oneElement = Tag410PctWtAverageLiquidity.TESTA_PCT_WT_AVERAGE_LIQUIDITY;
-        tagData = new Tag410PctWtAverageLiquidity( new MyPercentageType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag410PctWtAverageLiquidity.TESTB_PCT_WT_AVERAGE_LIQUIDITY;
-        tagData = new Tag410PctWtAverageLiquidity( new MyPercentageType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag410PctWtAverageLiquidity( new MyPercentageType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
-
     @Test
-    void FIXTagTest() {
-        Tag410PctWtAverageLiquidity tagData;
-        double oneElement;
-
-        oneElement = Tag410PctWtAverageLiquidity.TESTA_PCT_WT_AVERAGE_LIQUIDITY;
-        tagData = new Tag410PctWtAverageLiquidity( new MyPercentageType( oneElement ) );
-        verifyAll( tagData, oneElement );
-
-        oneElement = Tag410PctWtAverageLiquidity.TESTB_PCT_WT_AVERAGE_LIQUIDITY;
-        tagData = new Tag410PctWtAverageLiquidity( new MyPercentageType( oneElement ) );
-        verifyAll( tagData, oneElement );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag410PctWtAverageLiquidity( new MyPercentageType( oneElement ));
+            assertEquals( "FIX410_PCT_WT_AVERAGE_LIQUIDITY", tagData.toEnumLabelString());
+            assertEquals( "410", tagData.toEnumIDString());
+            assertEquals( "WT_AVERAGE_LIQUIDITY", tagData.toEnumNameString());
+            assertEquals( "WtAverageLiquidity", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
-
-    private void verifyAll( final Tag410PctWtAverageLiquidity tagData, final double oneElement ) {
-        verifyFIXData( tagData );
-        verifyDataValue( tagData, oneElement );
-        verifyValuePairString( tagData, oneElement );
-        verifyToString( tagData, oneElement );
-        verifyVerboseString( tagData );
+    @Test
+    void TagGetDataValueTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag410PctWtAverageLiquidity( new MyPercentageType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue());
+        }
     }
-
-    private void verifyFIXData( final Tag410PctWtAverageLiquidity tagData ) {
-        assertEquals( "FIX410_PCT_WT_AVERAGE_LIQUIDITY", tagData.toEnumLabelString());
-        assertEquals( "410", tagData.toEnumIDString());
-        assertEquals( "WT_AVERAGE_LIQUIDITY", tagData.toEnumNameString());
-        assertEquals( "WtAverageLiquidity", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    @Test
+    void TagToValuePairStringTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag410PctWtAverageLiquidity( new MyPercentageType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
-
-    private void verifyDataValue( final Tag410PctWtAverageLiquidity tagData, final double oneElement ) {
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue());
+    @Test
+    void TagToStringTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag410PctWtAverageLiquidity( new MyPercentageType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
-
-    private void verifyValuePairString( final Tag410PctWtAverageLiquidity tagData, final double oneElement ) {
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-    }
-
-    private void verifyToString( final Tag410PctWtAverageLiquidity tagData, final double oneElement ) {
-        assertEquals( String.valueOf( oneElement ), tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
-    }
-
-    private void verifyVerboseString( final Tag410PctWtAverageLiquidity tagData ) {
-        assertEquals( "Tag410PctWtAverageLiquidity\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
-                        "\tValuePair[" + tagData.toValuePairString() + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    @Test
+    void TagToVerboseStringTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag410PctWtAverageLiquidity( new MyPercentageType( oneElement ));
+            assertEquals( "Tag410PctWtAverageLiquidity\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

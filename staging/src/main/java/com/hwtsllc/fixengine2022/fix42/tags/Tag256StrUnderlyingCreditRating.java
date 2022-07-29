@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  256
  *  UnderlyingCreditRating
  *  String
- *  <p>
+ *  <p></p>
  *  Underlying security’s CreditRating.
- *  <p>
+ *  <p></p>
  *  See CreditRating (255) field for description
  *  <p></p>
  *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)

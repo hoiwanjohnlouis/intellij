@@ -26,7 +26,6 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  371
  *  RefTagID
  *  <p></p>
- *  <p>
  *  The tag number of the FIX field being referenced.
  */
 public class Tag371IntRefLogID extends FIX42Abstract implements LogValuePairString, LogVerboseString {

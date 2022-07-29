@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum378ExecRestatementReason;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -51,20 +50,33 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>     or any value conforming to the data type Reserved100Plus
  */
 class Tag378EnuExecRestatementReasonTest {
+    Tag378EnuExecRestatementReason tagData;
+
     @Test
-    void FIX0378Test() {
-        FIX42 fixData = FIX42.FIX378_ENU_EXEC_RESTATEMENT_REASON;
-        assertEquals( "378", fixData.toEnumIDString());
-        assertEquals( "EXEC_RESTATEMENT_REASON", fixData.toEnumNameString());
-        assertEquals( "ExecRestatementReason", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // loop around the ENUM and process
+        for ( Enum378ExecRestatementReason oneEnum : Enum378ExecRestatementReason.values()) {
+            tagData = new Tag378EnuExecRestatementReason(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0378Test() {
-        Tag378EnuExecRestatementReason tagData;
-
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( Enum378ExecRestatementReason oneEnum : Enum378ExecRestatementReason.values()) {
+            tagData = new Tag378EnuExecRestatementReason(oneEnum);
+            assertEquals( "FIX378_ENU_EXEC_RESTATEMENT_REASON", tagData.toEnumLabelString());
+            assertEquals( "378", tagData.toEnumIDString());
+            assertEquals( "EXEC_RESTATEMENT_REASON", tagData.toEnumNameString());
+            assertEquals( "ExecRestatementReason", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
          * 0-11, 99 msg types
          */
@@ -119,46 +131,30 @@ class Tag378EnuExecRestatementReasonTest {
         tagData = new Tag378EnuExecRestatementReason(Enum378ExecRestatementReason.OTHER);
         assertEquals( Enum378ExecRestatementReason.OTHER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag378EnuExecRestatementReason tagData;
 
         // loop around the ENUM and process
-        for (Enum378ExecRestatementReason oneEnum : Enum378ExecRestatementReason.values()) {
-            tagData = new Tag378EnuExecRestatementReason(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag378EnuExecRestatementReason tagData;
-
-        // loop around the ENUM and process
-        for (Enum378ExecRestatementReason oneEnum : Enum378ExecRestatementReason.values()) {
+        for ( Enum378ExecRestatementReason oneEnum : Enum378ExecRestatementReason.values()) {
             tagData = new Tag378EnuExecRestatementReason(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag378EnuExecRestatementReason tagData;
-
         // loop around the ENUM and process
-        for (Enum378ExecRestatementReason oneEnum : Enum378ExecRestatementReason.values()) {
+        for ( Enum378ExecRestatementReason oneEnum : Enum378ExecRestatementReason.values()) {
             tagData = new Tag378EnuExecRestatementReason(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag378EnuExecRestatementReason tagData;
-
         // loop around the ENUM and process
-        for (Enum378ExecRestatementReason oneEnum : Enum378ExecRestatementReason.values()) {
+        for ( Enum378ExecRestatementReason oneEnum : Enum378ExecRestatementReason.values()) {
             tagData = new Tag378EnuExecRestatementReason(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -166,18 +162,16 @@ class Tag378EnuExecRestatementReasonTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag378EnuExecRestatementReason tagData;
-
         // loop around the ENUM and process
-        for (Enum378ExecRestatementReason oneEnum : Enum378ExecRestatementReason.values()) {
+        for ( Enum378ExecRestatementReason oneEnum : Enum378ExecRestatementReason.values()) {
             tagData = new Tag378EnuExecRestatementReason(oneEnum);
             assertEquals( "Tag378EnuExecRestatementReason\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

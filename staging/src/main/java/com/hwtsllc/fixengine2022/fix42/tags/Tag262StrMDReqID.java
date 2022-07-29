@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  262
  *  MDReqID
  *  String
- *  <p>
+ *  <p></p>
  *  Unique identifier for Market Data Request
  */
 public class Tag262StrMDReqID extends FIX42Abstract implements LogValuePairString, LogVerboseString {

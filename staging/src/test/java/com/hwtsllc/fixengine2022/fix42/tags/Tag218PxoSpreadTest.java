@@ -44,79 +44,78 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  Swap Spread:  Target spread for a swap.
  */
 class Tag218PxoSpreadTest {
+    Tag218PxoSpread tagData;
+    double [] TestArray = {
+            Tag218PxoSpread.TESTA_PXO_SPREAD,
+            Tag218PxoSpread.TESTB_PXO_SPREAD
+    };
+
     @Test
     void PrintTest() {
-        Tag218PxoSpread tagData;
-        double oneElement;
-
-        oneElement = Tag218PxoSpread.TESTA_PXO_SPREAD;
-        tagData = new Tag218PxoSpread( new MyPriceOffsetType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag218PxoSpread.TESTB_PXO_SPREAD;
-        tagData = new Tag218PxoSpread( new MyPriceOffsetType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag218PxoSpread( new MyPriceOffsetType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
-
     @Test
-    void FIXTagTest() {
-        Tag218PxoSpread tagData;
-        double oneElement;
-
-        oneElement = Tag218PxoSpread.TESTA_PXO_SPREAD;
-        tagData = new Tag218PxoSpread( new MyPriceOffsetType( oneElement ) );
-        VerifyAll( tagData, oneElement );
-
-        oneElement = Tag218PxoSpread.TESTB_PXO_SPREAD;
-        tagData = new Tag218PxoSpread( new MyPriceOffsetType( oneElement ) );
-        VerifyAll( tagData, oneElement );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag218PxoSpread( new MyPriceOffsetType( oneElement ));
+            assertEquals( "FIX218_PXO_SPREAD", tagData.toEnumLabelString());
+            assertEquals( "218", tagData.toEnumIDString());
+            assertEquals( "SPREAD", tagData.toEnumNameString());
+            assertEquals( "For Fixed Income.  Either Swap Spread or Spread to Benchmark depending upon the order type",
+                    tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
-
-    private void VerifyAll( Tag218PxoSpread tagData, double oneElement ) {
-        verifyFIXData( tagData );
-        verifyDataValue( tagData, oneElement );
-        verifyValuePairString( tagData, oneElement );
-        verifyToString( tagData, oneElement );
-        verifyVerboseString( tagData );
+    @Test
+    void TagGetDataValueTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag218PxoSpread( new MyPriceOffsetType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue());
+        }
     }
-
-    private void verifyFIXData( final Tag218PxoSpread tagData ) {
-        assertEquals( "FIX218_PXO_SPREAD", tagData.toEnumLabelString());
-        assertEquals( "218", tagData.toEnumIDString());
-        assertEquals( "SPREAD", tagData.toEnumNameString());
-        assertEquals( "For Fixed Income.  Either Swap Spread or Spread to Benchmark depending upon the order type",
-                tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    @Test
+    void TagToValuePairStringTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag218PxoSpread( new MyPriceOffsetType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
-
-    private void verifyDataValue( final Tag218PxoSpread tagData, final double oneElement ) {
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue());
+    @Test
+    void TagToStringTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag218PxoSpread( new MyPriceOffsetType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
-
-    private void verifyValuePairString( final Tag218PxoSpread tagData, final double oneElement ) {
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-    }
-
-    private void verifyToString( final Tag218PxoSpread tagData, final double oneElement ) {
-        assertEquals( String.valueOf( oneElement ), tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
-    }
-
-    private void verifyVerboseString( final Tag218PxoSpread tagData ) {
-        assertEquals( "Tag218PxoSpread\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
-                        "\tValuePair[" + tagData.toValuePairString() + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    @Test
+    void TagToVerboseStringTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag218PxoSpread( new MyPriceOffsetType( oneElement ));
+            assertEquals( "Tag218PxoSpread\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

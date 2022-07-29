@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
+import com.hwtsllc.fixengine2022.fix41.tags.Tag210QtyMaxShow;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -31,78 +32,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  Quantity or volume represented by the Market Data Entry.
  */
 class Tag271QtyMDEntrySizeTest {
+    Tag271QtyMDEntrySize tagData;
+    int [] TestArray = {
+            Tag271QtyMDEntrySize.TESTA_QTY_MD_ENTRY_SIZE,
+            Tag271QtyMDEntrySize.TESTB_QTY_MD_ENTRY_SIZE
+    };
+
     @Test
     void PrintTest() {
-        Tag271QtyMDEntrySize tagData;
-        int oneElement;
-
-        oneElement = Tag271QtyMDEntrySize.TESTA_QTY_MD_ENTRY_SIZE;
-        tagData = new Tag271QtyMDEntrySize( new MyQtyType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag271QtyMDEntrySize.TESTB_QTY_MD_ENTRY_SIZE;
-        tagData = new Tag271QtyMDEntrySize( new MyQtyType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag271QtyMDEntrySize( new MyQtyType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
-
     @Test
-    void FIXTagTest() {
-        Tag271QtyMDEntrySize tagData;
-        int oneElement;
-
-        oneElement = Tag271QtyMDEntrySize.TESTA_QTY_MD_ENTRY_SIZE;
-        tagData = new Tag271QtyMDEntrySize( new MyQtyType( oneElement ) );
-        verifyAll( tagData, oneElement );
-
-        oneElement = Tag271QtyMDEntrySize.TESTB_QTY_MD_ENTRY_SIZE;
-        tagData = new Tag271QtyMDEntrySize( new MyQtyType( oneElement ) );
-        verifyAll( tagData, oneElement );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag271QtyMDEntrySize( new MyQtyType( oneElement ));
+            assertEquals( "FIX271_QTY_MD_ENTRY_SIZE", tagData.toEnumLabelString());
+            assertEquals( "271", tagData.toEnumIDString());
+            assertEquals( "MD_ENTRY_SIZE", tagData.toEnumNameString());
+            assertEquals( "MDEntrySize", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
-
-    private void verifyAll( Tag271QtyMDEntrySize tagData, int oneElement ) {
-        verifyFIXData( tagData );
-        verifyDataValue( tagData, oneElement );
-        verifyValuePairString( tagData, oneElement );
-        verifyToString( tagData, oneElement );
-        verifyVerboseString( tagData );
+    @Test
+    void TagGetDataValueTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag271QtyMDEntrySize( new MyQtyType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+        }
     }
-
-    private void verifyFIXData( final Tag271QtyMDEntrySize tagData ) {
-        assertEquals( "FIX271_QTY_MD_ENTRY_SIZE", tagData.toEnumLabelString());
-        assertEquals( "271", tagData.toEnumIDString());
-        assertEquals( "MD_ENTRY_SIZE", tagData.toEnumNameString());
-        assertEquals( "MDEntrySize", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    @Test
+    void TagToValuePairStringTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag271QtyMDEntrySize( new MyQtyType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
-
-    private void verifyDataValue( final Tag271QtyMDEntrySize tagData, final int oneElement ) {
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+    @Test
+    void TagToStringTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag271QtyMDEntrySize( new MyQtyType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
-
-    private void verifyValuePairString( final Tag271QtyMDEntrySize tagData, final int oneElement ) {
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-        assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-    }
-
-    private void verifyToString( final Tag271QtyMDEntrySize tagData, final int oneElement ) {
-        assertEquals( String.valueOf( oneElement ), tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
-    }
-
-    private void verifyVerboseString( final Tag271QtyMDEntrySize tagData ) {
-        assertEquals( "Tag271QtyMDEntrySize\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
-                        "\tValuePair[" + tagData.toValuePairString() + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+    @Test
+    void TagToVerboseStringTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag271QtyMDEntrySize( new MyQtyType( oneElement ));
+            assertEquals( "Tag271QtyMDEntrySize\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

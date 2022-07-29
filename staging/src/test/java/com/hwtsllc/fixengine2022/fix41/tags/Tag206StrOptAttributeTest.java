@@ -27,7 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  206
  *  OptAttribute
  *  char
- *  <p>
+ *  <p></p>
  *  Can be used for SecurityType (167) =OPT to identify a particular security.
  *  <p></p>
  *  Valid values vary by SecurityExchange:

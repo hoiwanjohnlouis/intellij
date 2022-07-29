@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyDataType;
+import com.hwtsllc.fixengine2022.fix27.tags.Tag96DatRawData;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -34,77 +35,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  If used, the ASCII (English) representation should also be specified in the Headline field.
  */
 class Tag359DatEncodedHeadlineTest {
+    Tag359DatEncodedHeadline tagData;
+    String [] TestArray = {
+            Tag359DatEncodedHeadline.TESTA_DAT_ENCODED_HEADLINE,
+            Tag359DatEncodedHeadline.TESTB_DAT_ENCODED_HEADLINE
+    };
+
     @Test
     void PrintTest() {
-        Tag359DatEncodedHeadline tagData;
-        String oneElement;
-
-        oneElement = Tag359DatEncodedHeadline.TESTA_DAT_ENCODED_HEADLINE;
-        tagData = new Tag359DatEncodedHeadline( new MyDataType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag359DatEncodedHeadline.TESTB_DAT_ENCODED_HEADLINE;
-        tagData = new Tag359DatEncodedHeadline( new MyDataType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag359DatEncodedHeadline( new MyDataType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
-
     @Test
-    void FIXTagTest() {
-        Tag359DatEncodedHeadline tagData;
-        String oneElement;
-
-        oneElement = Tag359DatEncodedHeadline.TESTA_DAT_ENCODED_HEADLINE;
-        tagData = new Tag359DatEncodedHeadline( new MyDataType( oneElement ) );
-        verifyAll( tagData, oneElement );
-
-        oneElement = Tag359DatEncodedHeadline.TESTB_DAT_ENCODED_HEADLINE;
-        tagData = new Tag359DatEncodedHeadline( new MyDataType( oneElement ) );
-        verifyAll( tagData, oneElement );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag359DatEncodedHeadline( new MyDataType( oneElement ));
+            assertEquals( "FIX359_DAT_ENCODED_HEADLINE", tagData.toEnumLabelString());
+            assertEquals( "359", tagData.toEnumIDString());
+            assertEquals( "ENCODED_HEADLINE", tagData.toEnumNameString());
+            assertEquals( "EncodedHeadline", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
-
-    private void verifyAll( final Tag359DatEncodedHeadline tagData, final String oneElement ) {
-        verifyFIXData( tagData );
-        verifyDataValue( tagData, oneElement );
-        verifyValuePairString( tagData, oneElement );
-        verifyToString( tagData, oneElement );
-        verifyVerboseString( tagData );
+    @Test
+    void TagGetDataValueTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag359DatEncodedHeadline( new MyDataType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
+        }
     }
-
-    private void verifyFIXData( final Tag359DatEncodedHeadline tagData ) {
-        assertEquals( "FIX359_DAT_ENCODED_HEADLINE", tagData.toEnumLabelString());
-        assertEquals( "359", tagData.toEnumIDString());
-        assertEquals( "ENCODED_HEADLINE", tagData.toEnumNameString());
-        assertEquals( "EncodedHeadline", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    @Test
+    void TagToValuePairStringTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag359DatEncodedHeadline( new MyDataType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
-
-    private void verifyDataValue( final Tag359DatEncodedHeadline tagData, final String oneElement ) {
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
+    @Test
+    void TagToStringTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag359DatEncodedHeadline( new MyDataType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
-
-    private void verifyValuePairString( final Tag359DatEncodedHeadline tagData, final String oneElement ) {
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-    }
-
-    private void verifyToString( final Tag359DatEncodedHeadline tagData, final String oneElement ) {
-        assertEquals( oneElement, tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
-    }
-
-    private void verifyVerboseString( final Tag359DatEncodedHeadline tagData ) {
-        assertEquals( "Tag359DatEncodedHeadline\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
-                        "\tValuePair[" + tagData.toValuePairString() + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
+    @Test
+    void TagToVerboseStringTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag359DatEncodedHeadline( new MyDataType( oneElement ));
+            assertEquals( "Tag359DatEncodedHeadline\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

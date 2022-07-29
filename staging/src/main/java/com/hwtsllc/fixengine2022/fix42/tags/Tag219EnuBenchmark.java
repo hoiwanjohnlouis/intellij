@@ -27,9 +27,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  219
  *  EnuBenchmarkTest
  *  char
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.2 For Fixed Income.
- *  <p>
+ *  <p></p>
  *  Identifies the benchmark (e.g. used in conjunction with the Spread field).
  *  <p></p>
  *  Valid values:

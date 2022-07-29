@@ -34,77 +34,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  If used, the ASCII (English) representation should also be specified in the Subject field.
  */
 class Tag357DatEncodedSubjectTest {
+    Tag357DatEncodedSubject tagData;
+    String [] TestArray = {
+            Tag357DatEncodedSubject.TESTA_DAT_ENCODED_SUBJECT,
+            Tag357DatEncodedSubject.TESTB_DAT_ENCODED_SUBJECT
+    };
+
     @Test
     void PrintTest() {
-        Tag357DatEncodedSubject tagData;
-        String oneElement;
-
-        oneElement = Tag357DatEncodedSubject.TESTA_DAT_ENCODED_SUBJECT;
-        tagData = new Tag357DatEncodedSubject( new MyDataType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag357DatEncodedSubject.TESTB_DAT_ENCODED_SUBJECT;
-        tagData = new Tag357DatEncodedSubject( new MyDataType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag357DatEncodedSubject( new MyDataType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
-
     @Test
-    void FIXTagTest() {
-        Tag357DatEncodedSubject tagData;
-        String oneElement;
-
-        oneElement = Tag357DatEncodedSubject.TESTA_DAT_ENCODED_SUBJECT;
-        tagData = new Tag357DatEncodedSubject( new MyDataType( oneElement ) );
-        verifyAll( tagData, oneElement );
-
-        oneElement = Tag357DatEncodedSubject.TESTB_DAT_ENCODED_SUBJECT;
-        tagData = new Tag357DatEncodedSubject( new MyDataType( oneElement ) );
-        verifyAll( tagData, oneElement );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag357DatEncodedSubject( new MyDataType( oneElement ));
+            assertEquals( "FIX357_DAT_ENCODED_SUBJECT", tagData.toEnumLabelString());
+            assertEquals( "357", tagData.toEnumIDString());
+            assertEquals( "ENCODED_SUBJECT", tagData.toEnumNameString());
+            assertEquals( "EncodedSubject", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
-
-    private void verifyAll( final Tag357DatEncodedSubject tagData, final String oneElement ) {
-        verifyFIXData( tagData );
-        verifyDataValue( tagData, oneElement );
-        verifyValuePairString( tagData, oneElement );
-        verifyToString( tagData, oneElement );
-        verifyVerboseString( tagData );
+    @Test
+    void TagGetDataValueTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag357DatEncodedSubject( new MyDataType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
+        }
     }
-
-    private void verifyFIXData( final Tag357DatEncodedSubject tagData ) {
-        assertEquals( "FIX357_DAT_ENCODED_SUBJECT", tagData.toEnumLabelString());
-        assertEquals( "357", tagData.toEnumIDString());
-        assertEquals( "ENCODED_SUBJECT", tagData.toEnumNameString());
-        assertEquals( "EncodedSubject", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+    @Test
+    void TagToValuePairStringTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag357DatEncodedSubject( new MyDataType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
-
-    private void verifyDataValue( final Tag357DatEncodedSubject tagData, final String oneElement ) {
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
+    @Test
+    void TagToStringTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag357DatEncodedSubject( new MyDataType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
-
-    private void verifyValuePairString( final Tag357DatEncodedSubject tagData, final String oneElement ) {
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-    }
-
-    private void verifyToString( final Tag357DatEncodedSubject tagData, final String oneElement ) {
-        assertEquals( oneElement, tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
-    }
-
-    private void verifyVerboseString( final Tag357DatEncodedSubject tagData ) {
-        assertEquals( "Tag357DatEncodedSubject\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + tagData.getDataValue() + "]\n" +
-                        "\tValuePair[" + tagData.toValuePairString() + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
+    @Test
+    void TagToVerboseStringTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag357DatEncodedSubject( new MyDataType( oneElement ));
+            assertEquals( "Tag357DatEncodedSubject\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

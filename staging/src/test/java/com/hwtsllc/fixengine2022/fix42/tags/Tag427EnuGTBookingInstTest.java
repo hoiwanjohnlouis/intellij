@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum427GTBookingInst;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -37,20 +36,33 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    2 - Accumulate until verbally notified otherwise
  */
 class Tag427EnuGTBookingInstTest {
+    Tag427EnuGTBookingInst tagData;
+
     @Test
-    void FIX0427Test() {
-        FIX42 fixData = FIX42.FIX427_ENU_GT_BOOKING_INST;
-        assertEquals( "427", fixData.toEnumIDString());
-        assertEquals( "GT_BOOKING_INST", fixData.toEnumNameString());
-        assertEquals( "GTBookingInst", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // loop around the ENUM and process
+        for ( Enum427GTBookingInst oneEnum : Enum427GTBookingInst.values()) {
+            tagData = new Tag427EnuGTBookingInst(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0427Test() {
-        Tag427EnuGTBookingInst tagData;
-
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( Enum427GTBookingInst oneEnum : Enum427GTBookingInst.values()) {
+            tagData = new Tag427EnuGTBookingInst(oneEnum);
+            assertEquals( "FIX427_ENU_GT_BOOKING_INST", tagData.toEnumLabelString());
+            assertEquals( "427", tagData.toEnumIDString());
+            assertEquals( "GT_BOOKING_INST", tagData.toEnumNameString());
+            assertEquals( "GTBookingInst", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
          * 0-2 msg types
          */
@@ -65,46 +77,30 @@ class Tag427EnuGTBookingInstTest {
         tagData = new Tag427EnuGTBookingInst(Enum427GTBookingInst.ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE);
         assertEquals( Enum427GTBookingInst.ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag427EnuGTBookingInst tagData;
 
         // loop around the ENUM and process
-        for (Enum427GTBookingInst oneEnum : Enum427GTBookingInst.values()) {
-            tagData = new Tag427EnuGTBookingInst(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag427EnuGTBookingInst tagData;
-
-        // loop around the ENUM and process
-        for (Enum427GTBookingInst oneEnum : Enum427GTBookingInst.values()) {
+        for ( Enum427GTBookingInst oneEnum : Enum427GTBookingInst.values()) {
             tagData = new Tag427EnuGTBookingInst(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag427EnuGTBookingInst tagData;
-
         // loop around the ENUM and process
-        for (Enum427GTBookingInst oneEnum : Enum427GTBookingInst.values()) {
+        for ( Enum427GTBookingInst oneEnum : Enum427GTBookingInst.values()) {
             tagData = new Tag427EnuGTBookingInst(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag427EnuGTBookingInst tagData;
-
         // loop around the ENUM and process
-        for (Enum427GTBookingInst oneEnum : Enum427GTBookingInst.values()) {
+        for ( Enum427GTBookingInst oneEnum : Enum427GTBookingInst.values()) {
             tagData = new Tag427EnuGTBookingInst(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -112,18 +108,16 @@ class Tag427EnuGTBookingInstTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag427EnuGTBookingInst tagData;
-
         // loop around the ENUM and process
-        for (Enum427GTBookingInst oneEnum : Enum427GTBookingInst.values()) {
+        for ( Enum427GTBookingInst oneEnum : Enum427GTBookingInst.values()) {
             tagData = new Tag427EnuGTBookingInst(oneEnum);
             assertEquals( "Tag427EnuGTBookingInst\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

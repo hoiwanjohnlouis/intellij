@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumSecurityType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -208,21 +207,33 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    "CASH - Cash"
  */
 class Tag310EnuUnderlyingSecurityTypeTest {
+    Tag310EnuUnderlyingSecurityType tagData;
+
     @Test
-    void FIX0310Test() {
-        FIX42 fixData = FIX42.FIX310_ENU_UNDERLYING_SECURITY_TYPE;
-        assertEquals( "310", fixData.toEnumIDString());
-        assertEquals( "UNDERLYING_SECURITY_TYPE", fixData.toEnumNameString());
-        assertEquals( "UnderlyingSecurityType", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // loop around the ENUM and process
+        for ( MyEnumSecurityType oneEnum : MyEnumSecurityType.values()) {
+            tagData = new Tag310EnuUnderlyingSecurityType(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0310Test() {
-        Tag310EnuUnderlyingSecurityType tagData;
-
-
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( MyEnumSecurityType oneEnum : MyEnumSecurityType.values()) {
+            tagData = new Tag310EnuUnderlyingSecurityType(oneEnum);
+            assertEquals( "FIX310_ENU_UNDERLYING_SECURITY_TYPE", tagData.toEnumLabelString());
+            assertEquals( "310", tagData.toEnumIDString());
+            assertEquals( "UNDERLYING_SECURITY_TYPE", tagData.toEnumNameString());
+            assertEquals( "UnderlyingSecurityType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
          * Deprecated, 4
          */
@@ -241,7 +252,6 @@ class Tag310EnuUnderlyingSecurityTypeTest {
         tagData = new Tag310EnuUnderlyingSecurityType(MyEnumSecurityType.DEPRECATED_US_TREASURY_BILL);
         assertEquals( MyEnumSecurityType.DEPRECATED_US_TREASURY_BILL.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
 
         /*
          * Agency, 5
@@ -265,7 +275,6 @@ class Tag310EnuUnderlyingSecurityTypeTest {
         tagData = new Tag310EnuUnderlyingSecurityType(MyEnumSecurityType.USD_SUPRANATIONAL_COUPON);
         assertEquals( MyEnumSecurityType.USD_SUPRANATIONAL_COUPON.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
 
         /*
          * Corporate, 8
@@ -303,14 +312,12 @@ class Tag310EnuUnderlyingSecurityTypeTest {
         assertEquals( MyEnumSecurityType.YANKEE_CORPORATE_BOND.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-
         /*
          * Currency, 1
          */
         tagData = new Tag310EnuUnderlyingSecurityType(MyEnumSecurityType.FOREIGN_EXCHANGE_CONTRACT);
         assertEquals( MyEnumSecurityType.FOREIGN_EXCHANGE_CONTRACT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
 
         /*
          * Equity, 2
@@ -322,7 +329,6 @@ class Tag310EnuUnderlyingSecurityTypeTest {
         tagData = new Tag310EnuUnderlyingSecurityType(MyEnumSecurityType.PREFERRED_STOCK);
         assertEquals( MyEnumSecurityType.PREFERRED_STOCK.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
 
         /*
          * Finance, 5
@@ -346,7 +352,6 @@ class Tag310EnuUnderlyingSecurityTypeTest {
         tagData = new Tag310EnuUnderlyingSecurityType(MyEnumSecurityType.SECURITIES_PLEDGE);
         assertEquals( MyEnumSecurityType.SECURITIES_PLEDGE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
 
         /*
          * Government, 9
@@ -387,7 +392,6 @@ class Tag310EnuUnderlyingSecurityTypeTest {
         tagData = new Tag310EnuUnderlyingSecurityType(MyEnumSecurityType.US_TREASURY_BILL);
         assertEquals( MyEnumSecurityType.US_TREASURY_BILL.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
 
         /*
          * Loan, 13
@@ -445,7 +449,6 @@ class Tag310EnuUnderlyingSecurityTypeTest {
         tagData = new Tag310EnuUnderlyingSecurityType(MyEnumSecurityType.RETIRED_LOAN);
         assertEquals( MyEnumSecurityType.RETIRED_LOAN.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
 
         /*
          * Money Market, 18
@@ -525,7 +528,6 @@ class Tag310EnuUnderlyingSecurityTypeTest {
         assertEquals( MyEnumSecurityType.YANKEE_CERTIFICATE_OF_DEPOSIT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-
         /*
          * Mortgage, 11
          */
@@ -574,7 +576,6 @@ class Tag310EnuUnderlyingSecurityTypeTest {
         tagData = new Tag310EnuUnderlyingSecurityType(MyEnumSecurityType.TO_BE_ANNOUNCED);
         assertEquals( MyEnumSecurityType.TO_BE_ANNOUNCED.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
 
         /*
          * Municipal, 16
@@ -646,7 +647,6 @@ class Tag310EnuUnderlyingSecurityTypeTest {
         assertEquals( MyEnumSecurityType.WARRANT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-
         /*
          * Other, 7
          */
@@ -678,46 +678,30 @@ class Tag310EnuUnderlyingSecurityTypeTest {
         tagData = new Tag310EnuUnderlyingSecurityType(MyEnumSecurityType.CASH);
         assertEquals( MyEnumSecurityType.CASH.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag310EnuUnderlyingSecurityType tagData;
 
         // loop around the ENUM and process
-        for (MyEnumSecurityType oneEnum : MyEnumSecurityType.values()) {
-            tagData = new Tag310EnuUnderlyingSecurityType(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag310EnuUnderlyingSecurityType tagData;
-
-        // loop around the ENUM and process
-        for (MyEnumSecurityType oneEnum : MyEnumSecurityType.values()) {
+        for ( MyEnumSecurityType oneEnum : MyEnumSecurityType.values()) {
             tagData = new Tag310EnuUnderlyingSecurityType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag310EnuUnderlyingSecurityType tagData;
-
         // loop around the ENUM and process
-        for (MyEnumSecurityType oneEnum : MyEnumSecurityType.values()) {
+        for ( MyEnumSecurityType oneEnum : MyEnumSecurityType.values()) {
             tagData = new Tag310EnuUnderlyingSecurityType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag310EnuUnderlyingSecurityType tagData;
-
         // loop around the ENUM and process
-        for (MyEnumSecurityType oneEnum : MyEnumSecurityType.values()) {
+        for ( MyEnumSecurityType oneEnum : MyEnumSecurityType.values()) {
             tagData = new Tag310EnuUnderlyingSecurityType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -725,18 +709,16 @@ class Tag310EnuUnderlyingSecurityTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag310EnuUnderlyingSecurityType tagData;
-
         // loop around the ENUM and process
-        for (MyEnumSecurityType oneEnum : MyEnumSecurityType.values()) {
+        for ( MyEnumSecurityType oneEnum : MyEnumSecurityType.values()) {
             tagData = new Tag310EnuUnderlyingSecurityType(oneEnum);
             assertEquals( "Tag310EnuUnderlyingSecurityType\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

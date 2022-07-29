@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumMsgType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -178,21 +177,33 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    "BP - Security Definition Update Report"
  */
 class Tag372EnuRefMsgTypeTest {
+    Tag372EnuRefMsgType tagData;
+
     @Test
-    void FIX0372Test() {
-        FIX42 fixData = FIX42.FIX372_ENU_REF_MSG_TYPE;
-        assertEquals( "372", fixData.toEnumIDString());
-        assertEquals( "REF_MSG_TYPE", fixData.toEnumNameString());
-        assertEquals( "RefMsgType", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // loop around the ENUM and process
+        for ( MyEnumMsgType oneEnum : MyEnumMsgType.values()) {
+            tagData = new Tag372EnuRefMsgType(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0372Test() {
-        Tag372EnuRefMsgType tagData;
-
-
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( MyEnumMsgType oneEnum : MyEnumMsgType.values()) {
+            tagData = new Tag372EnuRefMsgType(oneEnum);
+            assertEquals( "FIX372_ENU_REF_MSG_TYPE", tagData.toEnumLabelString());
+            assertEquals( "372", tagData.toEnumIDString());
+            assertEquals( "REF_MSG_TYPE", tagData.toEnumNameString());
+            assertEquals( "RefMsgType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
          *  Information is the same for TAGS 35, 372
          */
@@ -204,7 +215,6 @@ class Tag372EnuRefMsgTypeTest {
          *  AA-AZ, msg types
          *  BA-BP, msg types
          */
-
 
         /*
          * 0-9 msg types
@@ -249,7 +259,6 @@ class Tag372EnuRefMsgTypeTest {
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.ORDER_CANCEL_REJECT);
         assertEquals( MyEnumMsgType.ORDER_CANCEL_REJECT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
 
 
         /*
@@ -350,7 +359,6 @@ class Tag372EnuRefMsgTypeTest {
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.QUOTE_CANCEL);
         assertEquals( MyEnumMsgType.QUOTE_CANCEL.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
 
 
         /*
@@ -463,7 +471,6 @@ class Tag372EnuRefMsgTypeTest {
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.DERIVATIVE_SECURITY_LIST_REQUEST);
         assertEquals( MyEnumMsgType.DERIVATIVE_SECURITY_LIST_REQUEST.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
 
 
         /*
@@ -579,7 +586,6 @@ class Tag372EnuRefMsgTypeTest {
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
-
         /*
          * BA-BP msg types
          */
@@ -649,46 +655,30 @@ class Tag372EnuRefMsgTypeTest {
         tagData = new Tag372EnuRefMsgType(MyEnumMsgType.SECURITY_DEFINITION_UPDATE_REPORT);
         assertEquals( MyEnumMsgType.SECURITY_DEFINITION_UPDATE_REPORT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag372EnuRefMsgType tagData;
 
         // loop around the ENUM and process
-        for (MyEnumMsgType oneEnum : MyEnumMsgType.values()) {
-            tagData = new Tag372EnuRefMsgType(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag372EnuRefMsgType tagData;
-
-        // loop around the ENUM and process
-        for (MyEnumMsgType oneEnum : MyEnumMsgType.values()) {
+        for ( MyEnumMsgType oneEnum : MyEnumMsgType.values()) {
             tagData = new Tag372EnuRefMsgType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag372EnuRefMsgType tagData;
-
         // loop around the ENUM and process
-        for (MyEnumMsgType oneEnum : MyEnumMsgType.values()) {
+        for ( MyEnumMsgType oneEnum : MyEnumMsgType.values()) {
             tagData = new Tag372EnuRefMsgType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag372EnuRefMsgType tagData;
-
         // loop around the ENUM and process
-        for (MyEnumMsgType oneEnum : MyEnumMsgType.values()) {
+        for ( MyEnumMsgType oneEnum : MyEnumMsgType.values()) {
             tagData = new Tag372EnuRefMsgType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -696,18 +686,16 @@ class Tag372EnuRefMsgTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag372EnuRefMsgType tagData;
-
         // loop around the ENUM and process
-        for (MyEnumMsgType oneEnum : MyEnumMsgType.values()) {
+        for ( MyEnumMsgType oneEnum : MyEnumMsgType.values()) {
             tagData = new Tag372EnuRefMsgType(oneEnum);
             assertEquals( "Tag372EnuRefMsgType\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

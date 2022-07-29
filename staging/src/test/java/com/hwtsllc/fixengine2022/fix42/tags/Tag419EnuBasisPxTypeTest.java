@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum419BasisPxType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -50,20 +49,33 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    Z - Others
  */
 class Tag419EnuBasisPxTypeTest {
+    Tag419EnuBasisPxType tagData;
+
     @Test
-    void FIX0419Test() {
-        FIX42 fixData = FIX42.FIX419_ENU_BASIS_PX_TYPE;
-        assertEquals( "419", fixData.toEnumIDString());
-        assertEquals( "BASIS_PX_TYPE", fixData.toEnumNameString());
-        assertEquals( "BasisPxType", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // loop around the ENUM and process
+        for ( Enum419BasisPxType oneEnum : Enum419BasisPxType.values()) {
+            tagData = new Tag419EnuBasisPxType(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0419Test() {
-        Tag419EnuBasisPxType tagData;
-
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( Enum419BasisPxType oneEnum : Enum419BasisPxType.values()) {
+            tagData = new Tag419EnuBasisPxType(oneEnum);
+            assertEquals( "FIX419_ENU_BASIS_PX_TYPE", tagData.toEnumLabelString());
+            assertEquals( "419", tagData.toEnumIDString());
+            assertEquals( "BASIS_PX_TYPE", tagData.toEnumNameString());
+            assertEquals( "BasisPxType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
          *  2-9, A-D, Z msg types
          */
@@ -118,46 +130,30 @@ class Tag419EnuBasisPxTypeTest {
         tagData = new Tag419EnuBasisPxType(Enum419BasisPxType.OTHER);
         assertEquals( Enum419BasisPxType.OTHER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag419EnuBasisPxType tagData;
 
         // loop around the ENUM and process
-        for (Enum419BasisPxType oneEnum : Enum419BasisPxType.values()) {
-            tagData = new Tag419EnuBasisPxType(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag419EnuBasisPxType tagData;
-
-        // loop around the ENUM and process
-        for (Enum419BasisPxType oneEnum : Enum419BasisPxType.values()) {
+        for ( Enum419BasisPxType oneEnum : Enum419BasisPxType.values()) {
             tagData = new Tag419EnuBasisPxType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag419EnuBasisPxType tagData;
-
         // loop around the ENUM and process
-        for (Enum419BasisPxType oneEnum : Enum419BasisPxType.values()) {
+        for ( Enum419BasisPxType oneEnum : Enum419BasisPxType.values()) {
             tagData = new Tag419EnuBasisPxType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag419EnuBasisPxType tagData;
-
         // loop around the ENUM and process
-        for (Enum419BasisPxType oneEnum : Enum419BasisPxType.values()) {
+        for ( Enum419BasisPxType oneEnum : Enum419BasisPxType.values()) {
             tagData = new Tag419EnuBasisPxType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -165,18 +161,16 @@ class Tag419EnuBasisPxTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag419EnuBasisPxType tagData;
-
         // loop around the ENUM and process
-        for (Enum419BasisPxType oneEnum : Enum419BasisPxType.values()) {
+        for ( Enum419BasisPxType oneEnum : Enum419BasisPxType.values()) {
             tagData = new Tag419EnuBasisPxType(oneEnum);
             assertEquals( "Tag419EnuBasisPxType\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

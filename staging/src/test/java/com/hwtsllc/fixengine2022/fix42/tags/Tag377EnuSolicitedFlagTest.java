@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum377SolicitedFlag;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -36,20 +35,33 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    Y - Was solicited
  */
 class Tag377EnuSolicitedFlagTest {
+    Tag377EnuSolicitedFlag tagData;
+
     @Test
-    void FIX0377Test() {
-        FIX42 fixData = FIX42.FIX377_ENU_SOLICITED_FLAG;
-        assertEquals( "377", fixData.toEnumIDString());
-        assertEquals( "SOLICITED_FLAG", fixData.toEnumNameString());
-        assertEquals( "SolicitedFlag", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // loop around the ENUM and process
+        for ( Enum377SolicitedFlag oneEnum : Enum377SolicitedFlag.values()) {
+            tagData = new Tag377EnuSolicitedFlag(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0377Test() {
-        Tag377EnuSolicitedFlag tagData;
-
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( Enum377SolicitedFlag oneEnum : Enum377SolicitedFlag.values()) {
+            tagData = new Tag377EnuSolicitedFlag(oneEnum);
+            assertEquals( "FIX377_ENU_SOLICITED_FLAG", tagData.toEnumLabelString());
+            assertEquals( "377", tagData.toEnumIDString());
+            assertEquals( "SOLICITED_FLAG", tagData.toEnumNameString());
+            assertEquals( "SolicitedFlag", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         tagData = new Tag377EnuSolicitedFlag(Enum377SolicitedFlag.NO);
         assertEquals( "N", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -57,46 +69,30 @@ class Tag377EnuSolicitedFlagTest {
         tagData = new Tag377EnuSolicitedFlag(Enum377SolicitedFlag.YES);
         assertEquals( "Y", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag377EnuSolicitedFlag tagData;
 
         // loop around the ENUM and process
-        for (Enum377SolicitedFlag oneEnum : Enum377SolicitedFlag.values()) {
-            tagData = new Tag377EnuSolicitedFlag(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag377EnuSolicitedFlag tagData;
-
-        // loop around the ENUM and process
-        for (Enum377SolicitedFlag oneEnum : Enum377SolicitedFlag.values()) {
+        for ( Enum377SolicitedFlag oneEnum : Enum377SolicitedFlag.values()) {
             tagData = new Tag377EnuSolicitedFlag(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag377EnuSolicitedFlag tagData;
-
         // loop around the ENUM and process
-        for (Enum377SolicitedFlag oneEnum : Enum377SolicitedFlag.values()) {
+        for ( Enum377SolicitedFlag oneEnum : Enum377SolicitedFlag.values()) {
             tagData = new Tag377EnuSolicitedFlag(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag377EnuSolicitedFlag tagData;
-
         // loop around the ENUM and process
-        for (Enum377SolicitedFlag oneEnum : Enum377SolicitedFlag.values()) {
+        for ( Enum377SolicitedFlag oneEnum : Enum377SolicitedFlag.values()) {
             tagData = new Tag377EnuSolicitedFlag(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -104,18 +100,16 @@ class Tag377EnuSolicitedFlagTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag377EnuSolicitedFlag tagData;
-
         // loop around the ENUM and process
-        for (Enum377SolicitedFlag oneEnum : Enum377SolicitedFlag.values()) {
+        for ( Enum377SolicitedFlag oneEnum : Enum377SolicitedFlag.values()) {
             tagData = new Tag377EnuSolicitedFlag(oneEnum);
             assertEquals( "Tag377EnuSolicitedFlag\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

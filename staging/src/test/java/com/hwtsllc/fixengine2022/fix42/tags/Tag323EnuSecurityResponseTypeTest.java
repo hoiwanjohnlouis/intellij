@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum323SecurityResponseType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -42,20 +41,33 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    "6 - Cannot match selection criteria"
  */
 class Tag323EnuSecurityResponseTypeTest {
+    Tag323EnuSecurityResponseType tagData;
+
     @Test
-    void FIX0323Test() {
-        FIX42 fixData = FIX42.FIX323_ENU_SECURITY_RESPONSE_TYPE;
-        assertEquals( "323", fixData.toEnumIDString());
-        assertEquals( "SECURITY_RESPONSE_TYPE", fixData.toEnumNameString());
-        assertEquals( "SecurityResponseType", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // loop around the ENUM and process
+        for ( Enum323SecurityResponseType oneEnum : Enum323SecurityResponseType.values()) {
+            tagData = new Tag323EnuSecurityResponseType(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0323Test() {
-        Tag323EnuSecurityResponseType tagData;
-
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( Enum323SecurityResponseType oneEnum : Enum323SecurityResponseType.values()) {
+            tagData = new Tag323EnuSecurityResponseType(oneEnum);
+            assertEquals( "FIX323_ENU_SECURITY_RESPONSE_TYPE", tagData.toEnumLabelString());
+            assertEquals( "323", tagData.toEnumIDString());
+            assertEquals( "SECURITY_RESPONSE_TYPE", tagData.toEnumNameString());
+            assertEquals( "SecurityResponseType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
          * 1-6 msg types
          */
@@ -83,46 +95,30 @@ class Tag323EnuSecurityResponseTypeTest {
         tagData = new Tag323EnuSecurityResponseType(Enum323SecurityResponseType.CANNOT_MATCH_SELECTION);
         assertEquals( Enum323SecurityResponseType.CANNOT_MATCH_SELECTION.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag323EnuSecurityResponseType tagData;
 
         // loop around the ENUM and process
-        for (Enum323SecurityResponseType oneEnum : Enum323SecurityResponseType.values()) {
-            tagData = new Tag323EnuSecurityResponseType(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag323EnuSecurityResponseType tagData;
-
-        // loop around the ENUM and process
-        for (Enum323SecurityResponseType oneEnum : Enum323SecurityResponseType.values()) {
+        for ( Enum323SecurityResponseType oneEnum : Enum323SecurityResponseType.values()) {
             tagData = new Tag323EnuSecurityResponseType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag323EnuSecurityResponseType tagData;
-
         // loop around the ENUM and process
-        for (Enum323SecurityResponseType oneEnum : Enum323SecurityResponseType.values()) {
+        for ( Enum323SecurityResponseType oneEnum : Enum323SecurityResponseType.values()) {
             tagData = new Tag323EnuSecurityResponseType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag323EnuSecurityResponseType tagData;
-
         // loop around the ENUM and process
-        for (Enum323SecurityResponseType oneEnum : Enum323SecurityResponseType.values()) {
+        for ( Enum323SecurityResponseType oneEnum : Enum323SecurityResponseType.values()) {
             tagData = new Tag323EnuSecurityResponseType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -130,18 +126,16 @@ class Tag323EnuSecurityResponseTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag323EnuSecurityResponseType tagData;
-
         // loop around the ENUM and process
-        for (Enum323SecurityResponseType oneEnum : Enum323SecurityResponseType.values()) {
+        for ( Enum323SecurityResponseType oneEnum : Enum323SecurityResponseType.values()) {
             tagData = new Tag323EnuSecurityResponseType(oneEnum);
             assertEquals( "Tag323EnuSecurityResponseType\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

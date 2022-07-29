@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyLocalMktDateType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag75LmdTradeDate;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -68,7 +67,7 @@ class Tag193LmdSettlDate2Test {
         for ( String oneElement : TestArray ) {
             tagData = new Tag193LmdSettlDate2( new MyLocalMktDateType( oneElement ));
             assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
         }
     }
     @Test

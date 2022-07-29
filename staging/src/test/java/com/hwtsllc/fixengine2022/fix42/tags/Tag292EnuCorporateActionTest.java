@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix42.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX42;
 import com.hwtsllc.fixengine2022.fix42.enums.Enum292CorporateAction;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -61,20 +60,33 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    LEAP_ROLLOVER( "V", "LEAP_ROLLOVER", "V - Leap Rollover" ),
  */
 class Tag292EnuCorporateActionTest {
+    Tag292EnuCorporateAction tagData;
+
     @Test
-    void FIX0292Test() {
-        FIX42 fixData = FIX42.FIX292_ENU_CORPORATE_ACTION;
-        assertEquals( "292", fixData.toEnumIDString());
-        assertEquals( "CORPORATE_ACTION", fixData.toEnumNameString());
-        assertEquals( "CorporateAction", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // loop around the ENUM and process
+        for ( Enum292CorporateAction oneEnum : Enum292CorporateAction.values()) {
+            tagData = new Tag292EnuCorporateAction(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0292Test() {
-        Tag292EnuCorporateAction tagData;
-
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( Enum292CorporateAction oneEnum : Enum292CorporateAction.values()) {
+            tagData = new Tag292EnuCorporateAction(oneEnum);
+            assertEquals( "FIX292_ENU_CORPORATE_ACTION", tagData.toEnumLabelString());
+            assertEquals( "292", tagData.toEnumIDString());
+            assertEquals( "CORPORATE_ACTION", tagData.toEnumNameString());
+            assertEquals( "CorporateAction", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
          * A-V msg types
          */
@@ -148,46 +160,30 @@ class Tag292EnuCorporateActionTest {
         tagData = new Tag292EnuCorporateAction(Enum292CorporateAction.LEAP_ROLLOVER);
         assertEquals( Enum292CorporateAction.LEAP_ROLLOVER.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag292EnuCorporateAction tagData;
 
         // loop around the ENUM and process
-        for (Enum292CorporateAction oneEnum : Enum292CorporateAction.values()) {
-            tagData = new Tag292EnuCorporateAction(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag292EnuCorporateAction tagData;
-
-        // loop around the ENUM and process
-        for (Enum292CorporateAction oneEnum : Enum292CorporateAction.values()) {
+        for ( Enum292CorporateAction oneEnum : Enum292CorporateAction.values()) {
             tagData = new Tag292EnuCorporateAction(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag292EnuCorporateAction tagData;
-
         // loop around the ENUM and process
-        for (Enum292CorporateAction oneEnum : Enum292CorporateAction.values()) {
+        for ( Enum292CorporateAction oneEnum : Enum292CorporateAction.values()) {
             tagData = new Tag292EnuCorporateAction(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag292EnuCorporateAction tagData;
-
         // loop around the ENUM and process
-        for (Enum292CorporateAction oneEnum : Enum292CorporateAction.values()) {
+        for ( Enum292CorporateAction oneEnum : Enum292CorporateAction.values()) {
             tagData = new Tag292EnuCorporateAction(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -195,18 +191,16 @@ class Tag292EnuCorporateActionTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag292EnuCorporateAction tagData;
-
         // loop around the ENUM and process
-        for (Enum292CorporateAction oneEnum : Enum292CorporateAction.values()) {
+        for ( Enum292CorporateAction oneEnum : Enum292CorporateAction.values()) {
             tagData = new Tag292EnuCorporateAction(oneEnum);
             assertEquals( "Tag292EnuCorporateAction\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

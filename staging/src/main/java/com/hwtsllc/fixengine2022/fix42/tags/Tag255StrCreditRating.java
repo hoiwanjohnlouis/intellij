@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  255
  *  CreditRating
  *  String
- *  <p>
+ *  <p></p>
  *  An evaluation of a company's ability to repay obligations or its likelihood of not defaulting.
- *  <p>
+ *  <p></p>
  *  These evaluations are provided by Credit Rating Agencies, i.e. S&P, Moody's.
  *  <p></p>
  *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)

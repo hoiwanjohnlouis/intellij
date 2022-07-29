@@ -26,18 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  336
  *  TradingSessionID
  *  String
- *  <p>
+ *  <p></p>
  *  Identifier for Trading Session
- *  <p>
+ *  <p></p>
  *  Can be used to represent a specific market trading session
- *  <p>
+ *  <p></p>
  *  (e.g. "PRE-OPEN", "CROSS_2", "AFTER-HOURS", "TOSTNET", "TOSTNET2", etc).
- *  <p>
+ *  <p></p>
  *  To specify good for session where session spans more than one calendar day,
  *  use TimeInForce = Day in conjunction with TradingSessionID.
- *  <p>
+ *  <p></p>
  *  Values should be bi-laterally agreed to between counterparties.
- *  <p>
+ *  <p></p>
  *  Firms may register Trading Session values on the FIX website
  *  <p></p>
  *  (presently a document maintained within "ECN and Exchanges" working group section).

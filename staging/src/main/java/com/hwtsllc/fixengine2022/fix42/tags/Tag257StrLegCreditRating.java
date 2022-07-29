@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  257
  *  LegCreditRating
  *  String
- *  <p>
+ *  <p></p>
  *  Multileg instrument's individual leg security’s CreditRating.
- *  <p>
+ *  <p></p>
  *  See CreditRating (255) field for description
  *  <p></p>
  *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
