@@ -26,16 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  482
  *  MailingInst
  *  String
- *  <p>
+ *  <p></p>
  *  Free format text to specify mailing instruction requirements, e.g. "no third party mailings".
  */
 public class Tag482StrMailingInst extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_MAILING_INST
-            = "BilboBaggins-Tag482StrMailingInst";
+            = "DianaKrall-Tag482StrMailingInst";
     public final static String TESTB_STR_MAILING_INST
-            = "Gandalf-Tag482StrMailingInst";
+            = "ElianeElias-Tag482StrMailingInst";
 
     public Tag482StrMailingInst(MyStringType dataValue) {
         setFixType(FIX43.FIX482_STR_MAILING_INST);

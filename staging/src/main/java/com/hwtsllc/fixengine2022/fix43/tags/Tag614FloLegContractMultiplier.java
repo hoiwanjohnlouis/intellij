@@ -26,16 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  614
  *  LegContractMultiplier
  *  float
- *  <p>
+ *  <p></p>
  *  Multileg instrument's individual  security’s ContractMultiplier.
- *  <p>
+ *  <p></p>
  *  See ContractMultiplier (23) field for description
  */
 public class Tag614FloLegContractMultiplier extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyFloatType dataValue;
 
-    public final static float TESTA_FLO_LEG_CONTRACT_MULTIPLIER = 0.614F;
-    public final static float TESTB_FLO_LEG_CONTRACT_MULTIPLIER = 0.416F;
+    public final static float TESTA_FLO_LEG_CONTRACT_MULTIPLIER
+            = 0.614F;
+    public final static float TESTB_FLO_LEG_CONTRACT_MULTIPLIER
+            = 0.416F;
 
     public Tag614FloLegContractMultiplier(MyFloatType dataValue) {
         setFixType(FIX43.FIX614_FLO_LEG_CONTRACT_MULTIPLIER);

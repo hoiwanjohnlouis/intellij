@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum550CrossPrioritization;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -44,72 +43,69 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    2 - Sell side is prioritized
  */
 class Tag550EnuCrossPrioritizationTest {
+    Tag550EnuCrossPrioritization tagData;
+
     @Test
-    void FIX0550Test() {
-        FIX43 fixData = FIX43.FIX550_ENU_CROSS_PRIORITIZATION;
-        assertEquals( "550", fixData.toEnumIDString());
-        assertEquals( "CROSS_PRIORITIZATION", fixData.toEnumNameString());
-        assertEquals( "CrossPrioritization", fixData.toEnumDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0550Test() {
-        Tag550EnuCrossPrioritization tagData;
-
-        /*
-         *  0-2 types
-         */
-        tagData = new Tag550EnuCrossPrioritization( Enum550CrossPrioritization.NONE );
-        assertEquals( Enum550CrossPrioritization.NONE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag550EnuCrossPrioritization( Enum550CrossPrioritization.BUY_PRIORITY );
-        assertEquals( Enum550CrossPrioritization.BUY_PRIORITY.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag550EnuCrossPrioritization( Enum550CrossPrioritization.SELL_PRIORITY );
-        assertEquals( Enum550CrossPrioritization.SELL_PRIORITY.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag550EnuCrossPrioritization tagData;
-
+    void PrintTest() {
         // loop around the ENUM and process
-        for ( Enum550CrossPrioritization oneEnum : Enum550CrossPrioritization.values()) {
+        for (Enum550CrossPrioritization oneEnum : Enum550CrossPrioritization.values()) {
             tagData = new Tag550EnuCrossPrioritization(oneEnum);
             System.out.println( tagData.toVerboseString() );
         }
     }
     @Test
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (Enum550CrossPrioritization oneEnum : Enum550CrossPrioritization.values()) {
+            tagData = new Tag550EnuCrossPrioritization(oneEnum);
+            assertEquals( "FIX550_ENU_CROSS_PRIORITIZATION", tagData.toEnumLabelString());
+            assertEquals( "550", tagData.toEnumIDString());
+            assertEquals( "CROSS_PRIORITIZATION", tagData.toEnumNameString());
+            assertEquals( "CrossPrioritization", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void TagGetDataValueTest() {
-        Tag550EnuCrossPrioritization tagData;
+        /*
+         *  0-2 types
+         */
+        tagData = new Tag550EnuCrossPrioritization( Enum550CrossPrioritization.NONE );
+        assertEquals( "0", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag550EnuCrossPrioritization( Enum550CrossPrioritization.BUY_PRIORITY );
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag550EnuCrossPrioritization( Enum550CrossPrioritization.SELL_PRIORITY );
+        assertEquals( "2", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         // loop around the ENUM and process
         for (Enum550CrossPrioritization oneEnum : Enum550CrossPrioritization.values()) {
             tagData = new Tag550EnuCrossPrioritization(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag550EnuCrossPrioritization tagData;
-
         // loop around the ENUM and process
         for (Enum550CrossPrioritization oneEnum : Enum550CrossPrioritization.values()) {
             tagData = new Tag550EnuCrossPrioritization(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag550EnuCrossPrioritization tagData;
-
         // loop around the ENUM and process
         for (Enum550CrossPrioritization oneEnum : Enum550CrossPrioritization.values()) {
             tagData = new Tag550EnuCrossPrioritization(oneEnum);
@@ -119,8 +115,6 @@ class Tag550EnuCrossPrioritizationTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag550EnuCrossPrioritization tagData;
-
         // loop around the ENUM and process
         for (Enum550CrossPrioritization oneEnum : Enum550CrossPrioritization.values()) {
             tagData = new Tag550EnuCrossPrioritization(oneEnum);
@@ -129,8 +123,8 @@ class Tag550EnuCrossPrioritizationTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

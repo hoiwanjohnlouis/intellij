@@ -26,18 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  527
  *  SecondaryExecID
  *  String
- *  <p>
+ *  <p></p>
  *  Assigned by the party which accepts the order.
- *  <p>
+ *  <p></p>
  *  Can be used to provide the ExecID (17) used by an exchange or executing system.
  */
 public class Tag527StrSecondaryExecID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_SECONDARY_EXEC_ID
-            = "BilboBaggins-Tag527StrSecondaryExecID";
+            = "GottfriedWilhelmLeibniz-Tag527StrSecondaryExecID";
     public final static String TESTB_STR_SECONDARY_EXEC_ID
-            = "Gandalf-Tag527StrSecondaryExecID";
+            = "BlaisePascal-Tag527StrSecondaryExecID";
 
     public Tag527StrSecondaryExecID(MyStringType dataValue) {
         setFixType(FIX43.FIX527_STR_SECONDARY_EXEC_ID);

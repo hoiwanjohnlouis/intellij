@@ -26,16 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  605
  *  LegSecurityAltID
  *  String
- *  <p>
+ *  <p></p>
  *  Multileg instrument's individual  security’s SecurityAltID.
- *  <p>
+ *  <p></p>
  *  See SecurityAltID (455) field for description
  */
 public class Tag605StrLegSecurityAltID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_LEG_SECURITY_ALT_ID = "BilboBaggins-Tag605StrLegSecurityAltID";
-    public final static String TESTB_STR_LEG_SECURITY_ALT_ID = "Gandalf-Tag605StrLegSecurityAltID";
+    public final static String TESTA_STR_LEG_SECURITY_ALT_ID
+            = "BilboBaggins-Tag605StrLegSecurityAltID";
+    public final static String TESTB_STR_LEG_SECURITY_ALT_ID
+            = "Wagner-Tag605StrLegSecurityAltID";
 
     public Tag605StrLegSecurityAltID(MyStringType dataValue) {
         setFixType(FIX43.FIX605_STR_LEG_SECURITY_ALT_ID);

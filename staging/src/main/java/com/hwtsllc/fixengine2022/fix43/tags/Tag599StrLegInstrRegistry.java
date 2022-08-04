@@ -26,18 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  599
  *  LegInstrRegistry
  *  String
- *  <p>
+ *  <p></p>
  *  Multileg instrument's individual leg security’s InstrRegistry.
- *  <p>
+ *  <p></p>
  *  See InstrRegistry (543) field for description
  */
 public class Tag599StrLegInstrRegistry extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_LEG_INSTR_REGISTRY
-            = "BilboBaggins-Tag599StrLegInstrRegistry";
+            = "Leoncavallo-Tag599StrLegInstrRegistry";
     public final static String TESTB_STR_LEG_INSTR_REGISTRY
-            = "Gandalf-Tag599StrLegInstrRegistry";
+            = "Mascagni-Tag599StrLegInstrRegistry";
 
     public Tag599StrLegInstrRegistry(MyStringType dataValue) {
         setFixType(FIX43.FIX599_STR_LEG_INSTR_REGISTRY);

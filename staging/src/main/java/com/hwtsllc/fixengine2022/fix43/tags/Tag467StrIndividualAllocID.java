@@ -26,18 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  467
  *  IndividualAllocID
  *  String
- *  <p>
+ *  <p></p>
  *  Unique identifier for a specific NoAllocs (78) repeating group instance
- *  <p>
+ *  <p></p>
  *  (e.g. for an AllocAccount).
  */
 public class Tag467StrIndividualAllocID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_INDIVIDUAL_ALLOC_ID
-            = "BilboBaggins-Tag467StrIndividualAllocID";
+            = "NadjaSalernoSonnenberg-Tag467StrIndividualAllocID";
     public final static String TESTB_STR_INDIVIDUAL_ALLOC_ID
-            = "Gandalf-Tag467StrIndividualAllocID";
+            = "SarahChang-Tag467StrIndividualAllocID";
 
     public Tag467StrIndividualAllocID(MyStringType dataValue) {
         setFixType(FIX43.FIX467_STR_INDIVIDUAL_ALLOC_ID);

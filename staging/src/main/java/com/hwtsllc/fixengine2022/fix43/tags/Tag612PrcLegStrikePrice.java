@@ -26,16 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  612
  *  LegStrikePrice
  *  Price
- *  <p>
+ *  <p></p>
  *  Multileg instrument's individual  security’s StrikePrice.
- *  <p>
+ *  <p></p>
  *  See StrikePrice (202) field for description
  */
 public class Tag612PrcLegStrikePrice extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceType dataValue;
 
-    public final static double TESTA_PRC_LEG_STRIKE_PRICE = 6.12D;
-    public final static double TESTB_PRC_LEG_STRIKE_PRICE = 2.16D;
+    public final static double TESTA_PRC_LEG_STRIKE_PRICE
+            = 6.12D;
+    public final static double TESTB_PRC_LEG_STRIKE_PRICE
+            = 2.16D;
 
     public Tag612PrcLegStrikePrice(MyPriceType dataValue) {
         setFixType(FIX43.FIX612_PRC_LEG_STRIKE_PRICE);

@@ -26,16 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  620
  *  LegSecurityDesc
  *  String
- *  <p>
+ *  <p></p>
  *  Multileg instrument's individual  security’s SecurityDesc.
- *  <p>
+ *  <p></p>
  *  See SecurityDesc (07) field for description
  */
 public class Tag620StrLegSecurityDesc extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_LEG_SECURITY_DESC = "BilboBaggins-Tag620StrLegSecurityDesc";
-    public final static String TESTB_STR_LEG_SECURITY_DESC = "Gandalf-Tag620StrLegSecurityDesc";
+    public final static String TESTA_STR_LEG_SECURITY_DESC
+            = "TheMikado-Tag620StrLegSecurityDesc";
+    public final static String TESTB_STR_LEG_SECURITY_DESC
+            = "Patience-Tag620StrLegSecurityDesc";
 
     public Tag620StrLegSecurityDesc(MyStringType dataValue) {
         setFixType(FIX43.FIX620_STR_LEG_SECURITY_DESC);

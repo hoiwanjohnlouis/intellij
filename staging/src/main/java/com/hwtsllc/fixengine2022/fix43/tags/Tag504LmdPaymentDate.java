@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  504
  *  PaymentDate
  *  LocalMktDate
- *  <p>
+ *  <p></p>
  *  The date written on a cheque or date payment should be submitted to the relevant clearing system.
  */
 public class Tag504LmdPaymentDate extends FIX43Abstract implements LogValuePairString, LogVerboseString {

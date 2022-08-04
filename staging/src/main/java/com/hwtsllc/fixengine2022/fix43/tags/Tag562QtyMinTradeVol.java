@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  562
  *  MinTradeVol
  *  Qty
- *  <p>
+ *  <p></p>
  *  The minimum trading volume for a security
  */
 public class Tag562QtyMinTradeVol extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyQtyType dataValue;
 
-    public final static int TESTA_QTY_MIN_TRADE_VOL = 562;
-    public final static int TESTB_QTY_MIN_TRADE_VOL = 265;
+    public final static int TESTA_QTY_MIN_TRADE_VOL
+            = 562;
+    public final static int TESTB_QTY_MIN_TRADE_VOL
+            = 265;
 
     public Tag562QtyMinTradeVol(MyQtyType dataValue) {
         setFixType(FIX43.FIX562_QTY_MIN_TRADE_VOL);

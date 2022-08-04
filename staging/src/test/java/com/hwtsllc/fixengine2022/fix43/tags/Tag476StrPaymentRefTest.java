@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,95 +27,82 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  476
  *  PaymentRef
  *  String
- *  <p>
+ *  <p></p>
  *  "Settlement Payment Reference" – A free format Payment reference to assist with reconciliation,
- *  <p>
+ *  <p></p>
  *  e.g. a Client and/or Order ID number.
  */
 class Tag476StrPaymentRefTest {
+    Tag476StrPaymentRef tagData;
+    String [] TestArray = {
+            Tag476StrPaymentRef.TESTA_STR_PAYMENT_REF,
+            Tag476StrPaymentRef.TESTB_STR_PAYMENT_REF
+    };
+
     @Test
-    void FIX0476Test() {
-        FIX43 fixData = FIX43.FIX476_STR_PAYMENT_REF;
-        assertEquals( "476", fixData.toEnumIDString());
-        assertEquals( "PAYMENT_REF", fixData.toEnumNameString());
-        assertEquals( "PaymentRef", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag476StrPaymentRef( new MyStringType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0476Test() {
-        Tag476StrPaymentRef tagData;
-        String oneElement;
-
-        oneElement = Tag476StrPaymentRef.TESTA_STR_PAYMENT_REF;
-        tagData = new Tag476StrPaymentRef( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag476StrPaymentRef.TESTB_STR_PAYMENT_REF;
-        tagData = new Tag476StrPaymentRef( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag476StrPaymentRef tagData;
-        String oneElement;
-
-        oneElement = Tag476StrPaymentRef.TESTA_STR_PAYMENT_REF;
-        tagData = new Tag476StrPaymentRef( new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag476StrPaymentRef.TESTB_STR_PAYMENT_REF;
-        tagData = new Tag476StrPaymentRef( new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag476StrPaymentRef( new MyStringType( oneElement ));
+            assertEquals( "FIX476_STR_PAYMENT_REF", tagData.toEnumLabelString());
+            assertEquals( "476", tagData.toEnumIDString());
+            assertEquals( "PAYMENT_REF", tagData.toEnumNameString());
+            assertEquals( "PaymentRef", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag476StrPaymentRef tagData;
-        String oneElement;
-
-        oneElement = Tag476StrPaymentRef.TESTB_STR_PAYMENT_REF;
-        tagData = new Tag476StrPaymentRef( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag476StrPaymentRef( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag476StrPaymentRef tagData;
-        String oneElement;
-
-        oneElement = Tag476StrPaymentRef.TESTB_STR_PAYMENT_REF;
-        tagData = new Tag476StrPaymentRef( new MyStringType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag476StrPaymentRef( new MyStringType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag476StrPaymentRef tagData;
-        String oneElement;
-
-        oneElement = Tag476StrPaymentRef.TESTB_STR_PAYMENT_REF;
-        tagData = new Tag476StrPaymentRef(new MyStringType(oneElement));
-        assertEquals( oneElement, tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag476StrPaymentRef( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag476StrPaymentRef tagData;
-        String oneElement;
-
-        oneElement = Tag476StrPaymentRef.TESTA_STR_PAYMENT_REF;
-        tagData = new Tag476StrPaymentRef( new MyStringType( oneElement ) );
-        assertEquals( "Tag476StrPaymentRef\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag476StrPaymentRef( new MyStringType( oneElement ));
+            assertEquals( "Tag476StrPaymentRef\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

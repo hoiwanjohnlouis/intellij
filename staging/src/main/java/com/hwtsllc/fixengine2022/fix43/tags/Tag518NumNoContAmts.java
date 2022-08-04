@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  518
  *  NoContAmts
  *  NumInGroup
- *  <p>
+ *  <p></p>
  *  The number of Contract Amount details on an Execution Report message
  */
 public class Tag518NumNoContAmts extends FIX43Abstract implements LogValuePairString, LogVerboseString {

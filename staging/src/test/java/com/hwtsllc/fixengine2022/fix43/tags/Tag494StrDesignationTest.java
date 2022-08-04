@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,97 +27,84 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  494
  *  Designation
  *  String
- *  <p>
+ *  <p></p>
  *  Free format text defining the designation to be associated with a holding on the register.
- *  <p>
+ *  <p></p>
  *  Used to identify assets of a specific underlying investor using a common registration,
- *  <p>
+ *  <p></p>
  *  e.g. a broker’s nominee or street name.
  */
 class Tag494StrDesignationTest {
+    Tag494StrDesignation tagData;
+    String [] TestArray = {
+            Tag494StrDesignation.TESTA_STR_DESIGNATION,
+            Tag494StrDesignation.TESTB_STR_DESIGNATION
+    };
+
     @Test
-    void FIX0494Test() {
-        FIX43 fixData = FIX43.FIX494_STR_DESIGNATION;
-        assertEquals( "494", fixData.toEnumIDString());
-        assertEquals( "DESIGNATION", fixData.toEnumNameString());
-        assertEquals( "Designation", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag494StrDesignation( new MyStringType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0494Test() {
-        Tag494StrDesignation tagData;
-        String oneElement;
-
-        oneElement = Tag494StrDesignation.TESTA_STR_DESIGNATION;
-        tagData = new Tag494StrDesignation( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag494StrDesignation.TESTB_STR_DESIGNATION;
-        tagData = new Tag494StrDesignation( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag494StrDesignation tagData;
-        String oneElement;
-
-        oneElement = Tag494StrDesignation.TESTA_STR_DESIGNATION;
-        tagData = new Tag494StrDesignation( new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag494StrDesignation.TESTB_STR_DESIGNATION;
-        tagData = new Tag494StrDesignation( new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag494StrDesignation( new MyStringType( oneElement ));
+            assertEquals( "FIX494_STR_DESIGNATION", tagData.toEnumLabelString());
+            assertEquals( "494", tagData.toEnumIDString());
+            assertEquals( "DESIGNATION", tagData.toEnumNameString());
+            assertEquals( "Designation", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag494StrDesignation tagData;
-        String oneElement;
-
-        oneElement = Tag494StrDesignation.TESTB_STR_DESIGNATION;
-        tagData = new Tag494StrDesignation( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag494StrDesignation( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag494StrDesignation tagData;
-        String oneElement;
-
-        oneElement = Tag494StrDesignation.TESTB_STR_DESIGNATION;
-        tagData = new Tag494StrDesignation( new MyStringType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag494StrDesignation( new MyStringType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag494StrDesignation tagData;
-        String oneElement;
-
-        oneElement = Tag494StrDesignation.TESTB_STR_DESIGNATION;
-        tagData = new Tag494StrDesignation(new MyStringType(oneElement));
-        assertEquals( oneElement, tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag494StrDesignation( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag494StrDesignation tagData;
-        String oneElement;
-
-        oneElement = Tag494StrDesignation.TESTA_STR_DESIGNATION;
-        tagData = new Tag494StrDesignation( new MyStringType( oneElement ) );
-        assertEquals( "Tag494StrDesignation\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag494StrDesignation( new MyStringType( oneElement ));
+            assertEquals( "Tag494StrDesignation\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

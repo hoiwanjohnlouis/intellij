@@ -26,18 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  595
  *  UnderlyingInstrRegistry
  *  String
- *  <p>
+ *  <p></p>
  *  Underlying security’s InstrRegistry.
- *  <p>
+ *  <p></p>
  *  See InstrRegistry (543) field for description
  */
 public class Tag595StrUnderlyingInstrRegistry extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_UNDERLYING_INSTR_REGISTRY
-            = "BilboBaggins-Tag595StrUnderlyingInstrRegistry";
+            = "Bizet-Tag595StrUnderlyingInstrRegistry";
     public final static String TESTB_STR_UNDERLYING_INSTR_REGISTRY
-            = "Gandalf-Tag595StrUnderlyingInstrRegistry";
+            = "Catalani-Tag595StrUnderlyingInstrRegistry";
 
     public Tag595StrUnderlyingInstrRegistry(MyStringType dataValue) {
         setFixType(FIX43.FIX595_STR_UNDERLYING_INSTR_REGISTRY);

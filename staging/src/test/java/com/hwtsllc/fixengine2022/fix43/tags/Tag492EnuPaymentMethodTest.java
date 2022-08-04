@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum492PaymentMethod;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -57,20 +56,33 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    or any value conforming to the data type Reserved1000Plus
  */
 class Tag492EnuPaymentMethodTest {
+    Tag492EnuPaymentMethod tagData;
+
     @Test
-    void FIX0492Test() {
-        FIX43 fixData = FIX43.FIX492_ENU_PAYMENT_METHOD;
-        assertEquals( "492", fixData.toEnumIDString());
-        assertEquals( "PAYMENT_METHOD", fixData.toEnumNameString());
-        assertEquals( "PaymentMethod", fixData.toEnumDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // loop around the ENUM and process
+        for (Enum492PaymentMethod oneEnum : Enum492PaymentMethod.values()) {
+            tagData = new Tag492EnuPaymentMethod(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0492Test() {
-        Tag492EnuPaymentMethod tagData;
-
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (Enum492PaymentMethod oneEnum : Enum492PaymentMethod.values()) {
+            tagData = new Tag492EnuPaymentMethod(oneEnum);
+            assertEquals( "FIX492_ENU_PAYMENT_METHOD", tagData.toEnumLabelString());
+            assertEquals( "492", tagData.toEnumIDString());
+            assertEquals( "PAYMENT_METHOD", tagData.toEnumNameString());
+            assertEquals( "PaymentMethod", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
          * 1-15 types
          */
@@ -135,44 +147,28 @@ class Tag492EnuPaymentMethodTest {
         tagData = new Tag492EnuPaymentMethod( Enum492PaymentMethod.HIGH_VALUE_CLEARING_SYSTEM );
         assertEquals( Enum492PaymentMethod.HIGH_VALUE_CLEARING_SYSTEM.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag492EnuPaymentMethod tagData;
-
-        // loop around the ENUM and process
-        for ( Enum492PaymentMethod oneEnum : Enum492PaymentMethod.values()) {
-            tagData = new Tag492EnuPaymentMethod(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag492EnuPaymentMethod tagData;
 
         // loop around the ENUM and process
         for (Enum492PaymentMethod oneEnum : Enum492PaymentMethod.values()) {
             tagData = new Tag492EnuPaymentMethod(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag492EnuPaymentMethod tagData;
-
         // loop around the ENUM and process
         for (Enum492PaymentMethod oneEnum : Enum492PaymentMethod.values()) {
             tagData = new Tag492EnuPaymentMethod(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag492EnuPaymentMethod tagData;
-
         // loop around the ENUM and process
         for (Enum492PaymentMethod oneEnum : Enum492PaymentMethod.values()) {
             tagData = new Tag492EnuPaymentMethod(oneEnum);
@@ -182,8 +178,6 @@ class Tag492EnuPaymentMethodTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag492EnuPaymentMethod tagData;
-
         // loop around the ENUM and process
         for (Enum492PaymentMethod oneEnum : Enum492PaymentMethod.values()) {
             tagData = new Tag492EnuPaymentMethod(oneEnum);
@@ -192,8 +186,8 @@ class Tag492EnuPaymentMethodTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

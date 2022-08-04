@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  501
  *  CashDistribPayRef
  *  String
- *  <p>
+ *  <p></p>
  *  Free format Payment reference to assist with reconciliation of distributions.
  */
 public class Tag501StrCashDistribPayRef extends FIX43Abstract implements LogValuePairString, LogVerboseString {

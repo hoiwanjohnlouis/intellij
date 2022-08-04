@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  555
  *  NoLegs
  *  NumInGroup
- *  <p>
+ *  <p></p>
  *  Number of InstrumentLeg repeating group instances.
  */
 public class Tag555NumNoLegs extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyNumInGroupType dataValue;
 
-    public final static int TESTA_NUM_NO_LEGS = 555;
-    public final static int TESTB_NUM_NO_LEGS = 55;
+    public final static int TESTA_NUM_NO_LEGS
+            = 555;
+    public final static int TESTB_NUM_NO_LEGS
+            = 55;
 
     public Tag555NumNoLegs(MyNumInGroupType dataValue) {
         setFixType(FIX43.FIX555_NUM_NO_LEGS);

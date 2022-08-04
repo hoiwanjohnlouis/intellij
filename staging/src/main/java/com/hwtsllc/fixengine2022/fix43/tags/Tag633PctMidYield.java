@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  633
  *  MidYield
  *  Percentage
- *  <p>
- *  Mid yield
+ *  <p></p>
+ *  Mid-yield
  */
 public class Tag633PctMidYield extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyPercentageType dataValue;
 
-    public final static double TESTA_PCT_MID_YIELD = 0.0633D;
-    public final static double TESTB_PCT_MID_YIELD = 0.0336D;
+    public final static double TESTA_PCT_MID_YIELD
+            = 0.0633D;
+    public final static double TESTB_PCT_MID_YIELD
+            = 0.0336D;
 
     public Tag633PctMidYield(MyPercentageType dataValue) {
         setFixType(FIX43.FIX633_PCT_MID_YIELD);

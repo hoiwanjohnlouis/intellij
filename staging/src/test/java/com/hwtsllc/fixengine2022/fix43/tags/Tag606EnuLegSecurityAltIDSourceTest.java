@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumSecurityIDSource;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -131,20 +130,33 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    L - Letter of Credit
  */
 class Tag606EnuLegSecurityAltIDSourceTest {
+    Tag606EnuLegSecurityAltIDSource tagData;
+
     @Test
-    void FIX0606Test() {
-        FIX43 fixData = FIX43.FIX606_ENU_LEG_SECURITY_ALT_ID_SOURCE;
-        assertEquals( "606", fixData.toEnumIDString());
-        assertEquals( "LEG_SECURITY_ALT_ID_SOURCE", fixData.toEnumNameString());
-        assertEquals( "LegSecurityAltIDSource", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // loop around the ENUM and process
+        for (MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
+            tagData = new Tag606EnuLegSecurityAltIDSource(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0606Test() {
-        Tag606EnuLegSecurityAltIDSource tagData;
-
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
+            tagData = new Tag606EnuLegSecurityAltIDSource(oneEnum);
+            assertEquals( "FIX606_ENU_LEG_SECURITY_ALT_ID_SOURCE", tagData.toEnumLabelString());
+            assertEquals( "606", tagData.toEnumIDString());
+            assertEquals( "LEG_SECURITY_ALT_ID_SOURCE", tagData.toEnumNameString());
+            assertEquals( "LegSecurityAltIDSource", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
          * 1-9 Security ID Source
          */
@@ -184,7 +196,6 @@ class Tag606EnuLegSecurityAltIDSourceTest {
         tagData = new Tag606EnuLegSecurityAltIDSource(MyEnumSecurityIDSource.CTA);
         assertEquals( "9", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
 
         /*
          * A-L Security ID Source
@@ -238,44 +249,28 @@ class Tag606EnuLegSecurityAltIDSourceTest {
         tagData = new Tag606EnuLegSecurityAltIDSource(MyEnumSecurityIDSource.LETTER_OF_CREDIT);
         assertEquals( "L", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag606EnuLegSecurityAltIDSource tagData;
-
-        // loop around the ENUM and process
-        for ( MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
-            tagData = new Tag606EnuLegSecurityAltIDSource(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag606EnuLegSecurityAltIDSource tagData;
 
         // loop around the ENUM and process
         for (MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
             tagData = new Tag606EnuLegSecurityAltIDSource(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag606EnuLegSecurityAltIDSource tagData;
-
         // loop around the ENUM and process
         for (MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
             tagData = new Tag606EnuLegSecurityAltIDSource(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag606EnuLegSecurityAltIDSource tagData;
-
         // loop around the ENUM and process
         for (MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
             tagData = new Tag606EnuLegSecurityAltIDSource(oneEnum);
@@ -285,8 +280,6 @@ class Tag606EnuLegSecurityAltIDSourceTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag606EnuLegSecurityAltIDSource tagData;
-
         // loop around the ENUM and process
         for (MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
             tagData = new Tag606EnuLegSecurityAltIDSource(oneEnum);
@@ -295,8 +288,8 @@ class Tag606EnuLegSecurityAltIDSourceTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

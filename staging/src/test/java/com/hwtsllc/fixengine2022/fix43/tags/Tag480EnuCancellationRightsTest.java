@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum480CancellationRights;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -38,20 +37,33 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    O - No - Institutional
  */
 class Tag480EnuCancellationRightsTest {
+    Tag480EnuCancellationRights tagData;
+
     @Test
-    void FIX0480Test() {
-        FIX43 fixData = FIX43.FIX480_ENU_CANCELLATION_RIGHTS;
-        assertEquals( "480", fixData.toEnumIDString());
-        assertEquals( "CANCELLATION_RIGHTS", fixData.toEnumNameString());
-        assertEquals( "CancellationRights", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // loop around the ENUM and process
+        for (Enum480CancellationRights oneEnum : Enum480CancellationRights.values()) {
+            tagData = new Tag480EnuCancellationRights(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0480Test() {
-        Tag480EnuCancellationRights tagData;
-
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (Enum480CancellationRights oneEnum : Enum480CancellationRights.values()) {
+            tagData = new Tag480EnuCancellationRights(oneEnum);
+            assertEquals( "FIX480_ENU_CANCELLATION_RIGHTS", tagData.toEnumLabelString());
+            assertEquals( "480", tagData.toEnumIDString());
+            assertEquals( "CANCELLATION_RIGHTS", tagData.toEnumNameString());
+            assertEquals( "CancellationRights", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
          * Y, N, M, and O types
          */
@@ -70,44 +82,28 @@ class Tag480EnuCancellationRightsTest {
         tagData = new Tag480EnuCancellationRights( Enum480CancellationRights.INSTITUTIONAL );
         assertEquals( Enum480CancellationRights.INSTITUTIONAL.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag480EnuCancellationRights tagData;
-
-        // loop around the ENUM and process
-        for ( Enum480CancellationRights oneEnum : Enum480CancellationRights.values()) {
-            tagData = new Tag480EnuCancellationRights(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag480EnuCancellationRights tagData;
 
         // loop around the ENUM and process
         for (Enum480CancellationRights oneEnum : Enum480CancellationRights.values()) {
             tagData = new Tag480EnuCancellationRights(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag480EnuCancellationRights tagData;
-
         // loop around the ENUM and process
         for (Enum480CancellationRights oneEnum : Enum480CancellationRights.values()) {
             tagData = new Tag480EnuCancellationRights(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag480EnuCancellationRights tagData;
-
         // loop around the ENUM and process
         for (Enum480CancellationRights oneEnum : Enum480CancellationRights.values()) {
             tagData = new Tag480EnuCancellationRights(oneEnum);
@@ -117,8 +113,6 @@ class Tag480EnuCancellationRightsTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag480EnuCancellationRights tagData;
-
         // loop around the ENUM and process
         for (Enum480CancellationRights oneEnum : Enum480CancellationRights.values()) {
             tagData = new Tag480EnuCancellationRights(oneEnum);
@@ -127,8 +121,8 @@ class Tag480EnuCancellationRightsTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

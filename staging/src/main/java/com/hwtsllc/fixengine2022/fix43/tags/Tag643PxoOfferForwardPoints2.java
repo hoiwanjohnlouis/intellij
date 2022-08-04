@@ -26,16 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  643
  *  OfferForwardPoints2
  *  PriceOffset
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.5.0 Offer F/X forward points of the future portion of a F/X swap quote added to spot rate.
- *  <p>
- *  May be a negative value.
+ *  <p></p>
+ *  May be negative.
  */
 public class Tag643PxoOfferForwardPoints2 extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceOffsetType dataValue;
 
-    public final static double TESTA_PXO_OFFER_FORWARD_POINTS_2 = 0.643D;
-    public final static double TESTB_PXO_OFFER_FORWARD_POINTS_2 = 0.346D;
+    public final static double TESTA_PXO_OFFER_FORWARD_POINTS_2
+            = 0.643D;
+    public final static double TESTB_PXO_OFFER_FORWARD_POINTS_2
+            = 0.346D;
 
     public Tag643PxoOfferForwardPoints2(MyPriceOffsetType dataValue) {
         setFixType(FIX43.FIX643_PXO_OFFER_FORWARD_POINTS_2);

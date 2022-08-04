@@ -26,18 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  524
  *  NestedPartyID
  *  String
- *  <p>
+ *  <p></p>
  *  PartyID value within a nested repeating group.
- *  <p>
+ *  <p></p>
  *  Same values as  PartyID (448)
  */
 public class Tag524StrNestedPartyID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_NESTED_PARTY_ID
-            = "BilboBaggins-Tag524StrNestedPartyID";
+            = "ThomasBayes-Tag524StrNestedPartyID";
     public final static String TESTB_STR_NESTED_PARTY_ID
-            = "Gandalf-Tag524StrNestedPartyID";
+            = "ThomasSimpson-Tag524StrNestedPartyID";
 
     public Tag524StrNestedPartyID(MyStringType dataValue) {
         setFixType(FIX43.FIX524_STR_NESTED_PARTY_ID);

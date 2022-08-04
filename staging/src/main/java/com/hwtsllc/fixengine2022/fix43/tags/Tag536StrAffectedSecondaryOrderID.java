@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  536
  *  AffectedSecondaryOrderID
  *  String
- *  <p>
+ *  <p></p>
  *  SecondaryOrderID (198) of an order affected by a mass cancel request.
  */
 public class Tag536StrAffectedSecondaryOrderID extends FIX43Abstract implements LogValuePairString, LogVerboseString {

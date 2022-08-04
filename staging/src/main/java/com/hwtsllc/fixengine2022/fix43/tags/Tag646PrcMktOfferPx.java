@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  646
  *  MktOfferPx
  *  Price
- *  <p>
+ *  <p></p>
  *  Used to indicate the best offer in a market
  */
 public class Tag646PrcMktOfferPx extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceType dataValue;
 
-    public final static double TESTA_PRC_MKT_OFFER_PX = 0.646D;
-    public final static double TESTB_PRC_MKT_OFFER_PX = 0.0646D;
+    public final static double TESTA_PRC_MKT_OFFER_PX
+            = 0.646D;
+    public final static double TESTB_PRC_MKT_OFFER_PX
+            = 0.0646D;
 
     public Tag646PrcMktOfferPx(MyPriceType dataValue) {
         setFixType(FIX43.FIX646_PRC_MKT_OFFER_PX);

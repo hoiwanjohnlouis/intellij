@@ -26,12 +26,12 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  523
  *  PartySubID
  *  String
- *  <p>
+ *  <p></p>
  *  Sub-identifier
- *  <p>
+ *  <p></p>
  *  (e.g. Clearing Account for PartyRole (452)=Clearing Firm,
  *        Locate ID # for PartyRole=Locate/Lending Firm, etc).
- *  <p>
+ *  <p></p>
  *  Not required when using PartyID (448), PartyIDSource (447), and PartyRole.
  */
 public class Tag523StrPartySubID extends FIX43Abstract implements LogValuePairString, LogVerboseString {

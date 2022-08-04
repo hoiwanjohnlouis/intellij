@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  485
  *  ExecPriceAdjustment
  *  float
- *  <p>
+ *  <p></p>
  *  For CIV the amount or percentage by which the fund unit/share price was adjusted,
  *  as indicated by ExecPriceType (484)
  */

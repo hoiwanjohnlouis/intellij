@@ -26,16 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  611
  *  LegMaturityDate
  *  LocalMktDate
- *  <p>
+ *  <p></p>
  *  Multileg instrument's individual  security’s MaturityDate.
- *  <p>
+ *  <p></p>
  *  See MaturityDate (54) field for description
  */
 public class Tag611LmdLegMaturityDate extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyLocalMktDateType dataValue;
 
-    public final static String TESTA_LMD_LEG_MATURITY_DATE = "Frodo-Tag611LmdLegMaturityDate";
-    public final static String TESTB_LMD_LEG_MATURITY_DATE = "Gandalf-Tag611LmdLegMaturityDate";
+    public final static String TESTA_LMD_LEG_MATURITY_DATE
+            = "Frodo-Tag611LmdLegMaturityDate";
+    public final static String TESTB_LMD_LEG_MATURITY_DATE
+            = "Gandalf-Tag611LmdLegMaturityDate";
 
     public Tag611LmdLegMaturityDate(MyLocalMktDateType dataValue) {
         setFixType(FIX43.FIX611_LMD_LEG_MATURITY_DATE);

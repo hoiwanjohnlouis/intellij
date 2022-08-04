@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,93 +27,81 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  518
  *  NoContAmts
  *  NumInGroup
- *  <p>
+ *  <p></p>
  *  The number of Contract Amount details on an Execution Report message
  */
 class Tag518NumNoContAmtsTest {
+    Tag518NumNoContAmts tagData;
+    int [] TestArray = {
+            Tag518NumNoContAmts.TESTA_NUM_NO_CONT_AMTS,
+            Tag518NumNoContAmts.TESTB_NUM_NO_CONT_AMTS
+    };
+
     @Test
-    void FIX0518Test() {
-        FIX43 fixData = FIX43.FIX518_NUM_NO_CONT_AMTS;
-        assertEquals( "518", fixData.toEnumIDString());
-        assertEquals( "NO_CONT_AMTS", fixData.toEnumNameString());
-        assertEquals( "NoContAmts", fixData.toEnumDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag518NumNoContAmts( new MyNumInGroupType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0518Test() {
-        Tag518NumNoContAmts tagData;
-        int oneElement;
-
-        oneElement = Tag518NumNoContAmts.TESTA_NUM_NO_CONT_AMTS;
-        tagData = new Tag518NumNoContAmts( new MyNumInGroupType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag518NumNoContAmts.TESTB_NUM_NO_CONT_AMTS;
-        tagData = new Tag518NumNoContAmts( new MyNumInGroupType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag518NumNoContAmts tagData;
-        int oneElement;
-
-        oneElement = Tag518NumNoContAmts.TESTA_NUM_NO_CONT_AMTS;
-        tagData = new Tag518NumNoContAmts( new MyNumInGroupType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag518NumNoContAmts.TESTB_NUM_NO_CONT_AMTS;
-        tagData = new Tag518NumNoContAmts( new MyNumInGroupType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag518NumNoContAmts( new MyNumInGroupType( oneElement ));
+            assertEquals( "FIX518_NUM_NO_CONT_AMTS", tagData.toEnumLabelString());
+            assertEquals( "518", tagData.toEnumIDString());
+            assertEquals( "NO_CONT_AMTS", tagData.toEnumNameString());
+            assertEquals( "NoContAmts", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag518NumNoContAmts tagData;
-        int oneElement;
-
-        oneElement = Tag518NumNoContAmts.TESTB_NUM_NO_CONT_AMTS;
-        tagData = new Tag518NumNoContAmts( new MyNumInGroupType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag518NumNoContAmts( new MyNumInGroupType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag518NumNoContAmts tagData;
-        int oneElement;
-
-        oneElement = Tag518NumNoContAmts.TESTB_NUM_NO_CONT_AMTS;
-        tagData = new Tag518NumNoContAmts( new MyNumInGroupType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag518NumNoContAmts( new MyNumInGroupType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag518NumNoContAmts tagData;
-        int oneElement;
-
-        oneElement = Tag518NumNoContAmts.TESTB_NUM_NO_CONT_AMTS;
-        tagData = new Tag518NumNoContAmts( new MyNumInGroupType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag518NumNoContAmts( new MyNumInGroupType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag518NumNoContAmts tagData;
-        int oneElement;
-
-        oneElement = Tag518NumNoContAmts.TESTA_NUM_NO_CONT_AMTS;
-        tagData = new Tag518NumNoContAmts( new MyNumInGroupType( oneElement ) );
-        assertEquals( "Tag518NumNoContAmts\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag518NumNoContAmts( new MyNumInGroupType( oneElement ));
+            assertEquals( "Tag518NumNoContAmts\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

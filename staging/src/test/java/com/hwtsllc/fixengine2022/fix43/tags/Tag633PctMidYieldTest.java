@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,93 +27,81 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  633
  *  MidYield
  *  Percentage
- *  <p>
- *  Mid yield
+ *  <p></p>
+ *  Mid-yield
  */
 class Tag633PctMidYieldTest {
+    Tag633PctMidYield tagData;
+    double [] TestArray = {
+            Tag633PctMidYield.TESTA_PCT_MID_YIELD,
+            Tag633PctMidYield.TESTB_PCT_MID_YIELD
+    };
+
     @Test
-    void FIX0633Test() {
-        FIX43 fixData = FIX43.FIX633_PCT_MID_YIELD;
-        assertEquals( "633", fixData.toEnumIDString());
-        assertEquals( "MID_YIELD", fixData.toEnumNameString());
-        assertEquals( "MidYield", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag633PctMidYield( new MyPercentageType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0633Test() {
-        Tag633PctMidYield tagData;
-        double oneElement;
-
-        oneElement = Tag633PctMidYield.TESTA_PCT_MID_YIELD;
-        tagData = new Tag633PctMidYield( new MyPercentageType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag633PctMidYield.TESTB_PCT_MID_YIELD;
-        tagData = new Tag633PctMidYield( new MyPercentageType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag633PctMidYield tagData;
-        double oneElement;
-
-        oneElement = Tag633PctMidYield.TESTA_PCT_MID_YIELD;
-        tagData = new Tag633PctMidYield( new MyPercentageType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag633PctMidYield.TESTB_PCT_MID_YIELD;
-        tagData = new Tag633PctMidYield( new MyPercentageType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag633PctMidYield( new MyPercentageType( oneElement ));
+            assertEquals( "FIX633_PCT_MID_YIELD", tagData.toEnumLabelString());
+            assertEquals( "633", tagData.toEnumIDString());
+            assertEquals( "MID_YIELD", tagData.toEnumNameString());
+            assertEquals( "MidYield", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag633PctMidYield tagData;
-        double oneElement;
-
-        oneElement = Tag633PctMidYield.TESTB_PCT_MID_YIELD;
-        tagData = new Tag633PctMidYield( new MyPercentageType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag633PctMidYield( new MyPercentageType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue());
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag633PctMidYield tagData;
-        double oneElement;
-
-        oneElement = Tag633PctMidYield.TESTB_PCT_MID_YIELD;
-        tagData = new Tag633PctMidYield( new MyPercentageType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag633PctMidYield( new MyPercentageType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag633PctMidYield tagData;
-        double oneElement;
-
-        oneElement = Tag633PctMidYield.TESTB_PCT_MID_YIELD;
-        tagData = new Tag633PctMidYield( new MyPercentageType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag633PctMidYield( new MyPercentageType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag633PctMidYield tagData;
-        double oneElement;
-
-        oneElement = Tag633PctMidYield.TESTA_PCT_MID_YIELD;
-        tagData = new Tag633PctMidYield( new MyPercentageType( oneElement ) );
-        assertEquals( "Tag633PctMidYield\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag633PctMidYield( new MyPercentageType( oneElement ));
+            assertEquals( "Tag633PctMidYield\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

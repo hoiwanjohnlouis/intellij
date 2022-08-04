@@ -26,20 +26,23 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  516
  *  OrderPercent
  *  Percentage
- *  <p>
+ *  <p></p>
  *  For CIV specifies the approximate order quantity desired.
- *  <p>
+ *  <p></p>
  *  For a CIV Sale it specifies percentage of investor’s total holding to be sold.
- *  <p>
+ *  <p></p>
  *  For a CIV switch/exchange it specifies percentage of investor’s cash realised from sales to be re-invested.
- *  <p>
- *  The executing broker, intermediary or fund manager is responsible for converting and calculating OrderQty (38) in shares/units for subsequent messages.
+ *  <p></p>
+ *  The executing broker, intermediary or fund manager is responsible for converting
+ *  and calculating OrderQty (38) in shares/units for subsequent messages.
  */
 public class Tag516PctOrderPercent extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyPercentageType dataValue;
 
-    public final static double TESTA_PCT_ORDER_PERCENT = 0.0516D;
-    public final static double TESTB_PCT_ORDER_PERCENT = 0.0615D;
+    public final static double TESTA_PCT_ORDER_PERCENT
+            = 0.0516D;
+    public final static double TESTB_PCT_ORDER_PERCENT
+            = 0.0615D;
 
     public Tag516PctOrderPercent(MyPercentageType dataValue) {
         setFixType(FIX43.FIX516_PCT_ORDER_PERCENT);

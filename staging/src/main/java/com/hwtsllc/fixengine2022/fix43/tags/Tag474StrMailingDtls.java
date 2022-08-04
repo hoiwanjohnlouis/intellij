@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  474
  *  MailingDtls
  *  String
- *  <p>
+ *  <p></p>
  *  Set of Correspondence address details, possibly including phone, fax, etc.
  */
 public class Tag474StrMailingDtls extends FIX43Abstract implements LogValuePairString, LogVerboseString {

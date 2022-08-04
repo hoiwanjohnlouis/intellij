@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyFloatType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,94 +27,85 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  469
  *  RoundingModulus
  *  float
- *  <p>
+ *  <p></p>
  *  For CIV - a float value indicating the value to which rounding is required.
- *  <p>
+ *  <p></p>
  *  i.e. 0 means round to a multiple of 0 units/shares; 0.5 means round to a multiple of 0.5 units/shares.
- *  <p>
+ *  <p></p>
  *  The default, if RoundingDirection (468) is specified without RoundingModulus, is to round to a whole unit/share.
  */
 class Tag469FloRoundingModulusTest {
+    Tag469FloRoundingModulus tagData;
+    float [] TestArray = {
+            Tag469FloRoundingModulus.TESTA_FLO_ROUNDING_MODULUS,
+            Tag469FloRoundingModulus.TESTB_FLO_ROUNDING_MODULUS
+    };
+
     @Test
-    void FIX0469Test() {
-        FIX43 fixData = FIX43.FIX469_FLO_ROUNDING_MODULUS;
-        assertEquals( "469", fixData.toEnumIDString());
-        assertEquals( "ROUNDING_MODULUS", fixData.toEnumNameString());
-        assertEquals( "RoundingModulus", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( float oneElement : TestArray ) {
+            tagData = new Tag469FloRoundingModulus( new MyFloatType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0469Test() {
-        Tag469FloRoundingModulus tagData;
-        float oneElement;
-
-        oneElement = Tag469FloRoundingModulus.TESTA_FLO_ROUNDING_MODULUS;
-        tagData = new Tag469FloRoundingModulus( new MyFloatType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
-
-        oneElement = Tag469FloRoundingModulus.TESTB_FLO_ROUNDING_MODULUS;
-        tagData = new Tag469FloRoundingModulus( new MyFloatType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag469FloRoundingModulus tagData;
-        float oneElement;
-
-        oneElement = Tag469FloRoundingModulus.TESTB_FLO_ROUNDING_MODULUS;
-        tagData = new Tag469FloRoundingModulus( new MyFloatType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( float oneElement : TestArray ) {
+            tagData = new Tag469FloRoundingModulus( new MyFloatType( oneElement ));
+            assertEquals( "FIX469_FLO_ROUNDING_MODULUS", tagData.toEnumLabelString());
+            assertEquals( "469", tagData.toEnumIDString());
+            assertEquals( "ROUNDING_MODULUS", tagData.toEnumNameString());
+            assertEquals( "RoundingModulus", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag469FloRoundingModulus tagData;
-        float oneElement;
-
-        oneElement = Tag469FloRoundingModulus.TESTB_FLO_ROUNDING_MODULUS;
-        tagData = new Tag469FloRoundingModulus( new MyFloatType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
+        // process array of tags
+        for ( float oneElement : TestArray ) {
+            tagData = new Tag469FloRoundingModulus( new MyFloatType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag469FloRoundingModulus tagData;
-        float oneElement;
-
-        oneElement = Tag469FloRoundingModulus.TESTB_FLO_ROUNDING_MODULUS;
-        tagData = new Tag469FloRoundingModulus( new MyFloatType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        // process array of tags
+        for ( float oneElement : TestArray ) {
+            tagData = new Tag469FloRoundingModulus( new MyFloatType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag469FloRoundingModulus tagData;
-        float oneElement;
-
-        oneElement = Tag469FloRoundingModulus.TESTB_FLO_ROUNDING_MODULUS;
-        tagData = new Tag469FloRoundingModulus( new MyFloatType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        // process array of tags
+        for ( float oneElement : TestArray ) {
+            tagData = new Tag469FloRoundingModulus( new MyFloatType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag469FloRoundingModulus tagData;
-        float oneElement;
-
-        oneElement = Tag469FloRoundingModulus.TESTA_FLO_ROUNDING_MODULUS;
-        tagData = new Tag469FloRoundingModulus( new MyFloatType( oneElement ) );
-        assertEquals( "Tag469FloRoundingModulus\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement +
-                        "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( float oneElement : TestArray ) {
+            tagData = new Tag469FloRoundingModulus( new MyFloatType( oneElement ));
+            assertEquals( "Tag469FloRoundingModulus\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

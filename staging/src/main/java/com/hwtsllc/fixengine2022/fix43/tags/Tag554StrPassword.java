@@ -26,19 +26,19 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  554
  *  Password
  *  String
- *  <p>
+ *  <p></p>
  *  Password or passphrase.
  */
 public class Tag554StrPassword extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_PASSWORD
-            = "BilboBaggins-Tag554StrPassword";
+            = "AlbertAbrahamMichelson-Tag554StrPassword";
     public final static String TESTB_STR_PASSWORD
-            = "Gandalf-Tag554StrPassword";
+            = "EdwardWilliamsMorley-Tag554StrPassword";
 
     public Tag554StrPassword(MyStringType dataValue) {
-        setFixType(FIX43.FIX553_STR_PASSWORD);
+        setFixType(FIX43.FIX554_STR_PASSWORD);
         this.dataValue = dataValue;
     }
 

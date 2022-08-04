@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,95 +27,83 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  652
  *  UnderlyingLastQty
  *  Qty
- *  <p>
+ *  <p></p>
  *  The calculated or traded quantity for the underlying instrument that corresponds to a derivative.
- *  <p>
+ *  <p></p>
  *  Used for transactions that include the cash instrument and the derivative.
  */
 class Tag652QtyUnderlyingLastQtyTest {
+    Tag652QtyUnderlyingLastQty tagData;
+    int [] TestArray = {
+            Tag652QtyUnderlyingLastQty.TESTA_QTY_UNDERLYING_LAST_QTY,
+            Tag652QtyUnderlyingLastQty.TESTB_QTY_UNDERLYING_LAST_QTY
+    };
+
     @Test
-    void FIX0652Test() {
-        FIX43 fixData = FIX43.FIX652_QTY_UNDERLYING_LAST_QTY;
-        assertEquals( "652", fixData.toEnumIDString());
-        assertEquals( "UNDERLYING_LAST_QTY", fixData.toEnumNameString());
-        assertEquals( "UnderlyingLastQty", fixData.toEnumDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag652QtyUnderlyingLastQty( new MyQtyType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0652Test() {
-        Tag652QtyUnderlyingLastQty tagData;
-        int oneElement;
-
-        oneElement = Tag652QtyUnderlyingLastQty.TESTA_QTY_UNDERLYING_LAST_QTY;
-        tagData = new Tag652QtyUnderlyingLastQty( new MyQtyType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
-
-        oneElement = Tag652QtyUnderlyingLastQty.TESTB_QTY_UNDERLYING_LAST_QTY;
-        tagData = new Tag652QtyUnderlyingLastQty( new MyQtyType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag652QtyUnderlyingLastQty tagData;
-        int oneElement;
-
-        oneElement = Tag652QtyUnderlyingLastQty.TESTA_QTY_UNDERLYING_LAST_QTY;
-        tagData = new Tag652QtyUnderlyingLastQty( new MyQtyType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag652QtyUnderlyingLastQty.TESTB_QTY_UNDERLYING_LAST_QTY;
-        tagData = new Tag652QtyUnderlyingLastQty( new MyQtyType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag652QtyUnderlyingLastQty( new MyQtyType( oneElement ));
+            assertEquals( "FIX652_QTY_UNDERLYING_LAST_QTY", tagData.toEnumLabelString());
+            assertEquals( "652", tagData.toEnumIDString());
+            assertEquals( "UNDERLYING_LAST_QTY", tagData.toEnumNameString());
+            assertEquals( "UnderlyingLastQty", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag652QtyUnderlyingLastQty tagData;
-        int oneElement;
-
-        oneElement = Tag652QtyUnderlyingLastQty.TESTB_QTY_UNDERLYING_LAST_QTY;
-        tagData = new Tag652QtyUnderlyingLastQty( new MyQtyType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag652QtyUnderlyingLastQty( new MyQtyType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag652QtyUnderlyingLastQty tagData;
-        int oneElement;
-
-        oneElement = Tag652QtyUnderlyingLastQty.TESTB_QTY_UNDERLYING_LAST_QTY;
-        tagData = new Tag652QtyUnderlyingLastQty( new MyQtyType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag652QtyUnderlyingLastQty( new MyQtyType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag652QtyUnderlyingLastQty tagData;
-        int oneElement;
-
-        oneElement = Tag652QtyUnderlyingLastQty.TESTB_QTY_UNDERLYING_LAST_QTY;
-        tagData = new Tag652QtyUnderlyingLastQty( new MyQtyType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag652QtyUnderlyingLastQty( new MyQtyType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag652QtyUnderlyingLastQty tagData;
-        int oneElement;
-
-        oneElement = Tag652QtyUnderlyingLastQty.TESTA_QTY_UNDERLYING_LAST_QTY;
-        tagData = new Tag652QtyUnderlyingLastQty( new MyQtyType( oneElement ) );
-        assertEquals( "Tag652QtyUnderlyingLastQty\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag652QtyUnderlyingLastQty( new MyQtyType( oneElement ));
+            assertEquals( "Tag652QtyUnderlyingLastQty\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

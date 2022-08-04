@@ -26,18 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  466
  *  BookingRefID
  *  String
- *  <p>
+ *  <p></p>
  *  Common reference passed to a post-trade booking process
- *  <p>
+ *  <p></p>
  *  (e.g. industry matching utility).
  */
 public class Tag466StrBookingRefID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_BOOKING_REF_ID
-            = "BilboBaggins-Tag466StrBookingRefID";
+            = "HilaryHahn-Tag466StrBookingRefID";
     public final static String TESTB_STR_BOOKING_REF_ID
-            = "Gandalf-Tag466StrBookingRefID";
+            = "NicolaBenedetti-Tag466StrBookingRefID";
 
     public Tag466StrBookingRefID(MyStringType dataValue) {
         setFixType(FIX43.FIX466_STR_BOOKING_REF_ID);

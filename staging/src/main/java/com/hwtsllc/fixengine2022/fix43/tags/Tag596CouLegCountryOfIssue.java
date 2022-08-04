@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  596
  *  LegCountryOfIssue
  *  Country
- *  <p>
+ *  <p></p>
  *  Multileg instrument's individual leg security’s CountryOfIssue.
- *  <p>
+ *  <p></p>
  *  See CountryOfIssue (470) field for description
  */
 public class Tag596CouLegCountryOfIssue extends FIX43Abstract implements LogValuePairString, LogVerboseString {

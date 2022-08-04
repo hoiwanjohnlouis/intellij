@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  540
  *  TotalAccruedInterestAmt
  *  Amt
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.4 Total Amount of Accrued Interest for convertible bonds and fixed income
  */
 // @Deprecated

@@ -26,16 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  566
  *  LegPrice
  *  Price
- *  <p>
+ *  <p></p>
  *  Price for leg of a multileg
- *  <p>
+ *  <p></p>
  *  See Price (44) field for description
  */
 public class Tag566PrcLegPrice extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceType dataValue;
 
-    public final static double TESTA_PRC_LEG_PRICE = 5.66D;
-    public final static double TESTB_PRC_LEG_PRICE = 6.65D;
+    public final static double TESTA_PRC_LEG_PRICE
+            = 5.66D;
+    public final static double TESTB_PRC_LEG_PRICE
+            = 6.65D;
 
     public Tag566PrcLegPrice(MyPriceType dataValue) {
         setFixType(FIX43.FIX566_PRC_LEG_PRICE);

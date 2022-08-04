@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyDataType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag96DatRawData;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -28,7 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  446
  *  EncodedListStatusText
  *  data
- *  <p>
+ *  <p></p>
  *  Encoded (non-ASCII characters) representation of the ListStatusText (444) field
  *  in the encoded format specified via the MessageEncoding (347) field.
  *  <p></p>

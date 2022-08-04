@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumProduct;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -68,114 +67,111 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>     13 - FINANCING
  */
 class Tag607EnuLegProductTest {
+    Tag607EnuLegProduct tagData;
+
     @Test
-    void FIX0607Test() {
-        FIX43 fixData = FIX43.FIX607_ENU_LEG_PRODUCT;
-        assertEquals( "607", fixData.toEnumIDString());
-        assertEquals( "LEG_PRODUCT", fixData.toEnumNameString());
-        assertEquals( "LegProduct", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0607Test() {
-        Tag607EnuLegProduct tagData;
-
-        /*
-         * 0-13 msg types
-         */
-        tagData = new Tag607EnuLegProduct(MyEnumProduct.AGENCY);
-        assertEquals( MyEnumProduct.AGENCY.toEnumIDString(), tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        tagData = new Tag607EnuLegProduct(MyEnumProduct.COMMODITY);
-        assertEquals( MyEnumProduct.COMMODITY.toEnumIDString(), tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        tagData = new Tag607EnuLegProduct(MyEnumProduct.CORPORATE);
-        assertEquals( MyEnumProduct.CORPORATE.toEnumIDString(), tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        tagData = new Tag607EnuLegProduct(MyEnumProduct.CURRENCY);
-        assertEquals( MyEnumProduct.CURRENCY.toEnumIDString(), tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        tagData = new Tag607EnuLegProduct(MyEnumProduct.EQUITY);
-        assertEquals( MyEnumProduct.EQUITY.toEnumIDString(), tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-
-        tagData = new Tag607EnuLegProduct(MyEnumProduct.GOVERNMENT);
-        assertEquals( MyEnumProduct.GOVERNMENT.toEnumIDString(), tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        tagData = new Tag607EnuLegProduct(MyEnumProduct.INDEX);
-        assertEquals( MyEnumProduct.INDEX.toEnumIDString(), tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        tagData = new Tag607EnuLegProduct(MyEnumProduct.LOAN);
-        assertEquals( MyEnumProduct.LOAN.toEnumIDString(), tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        tagData = new Tag607EnuLegProduct(MyEnumProduct.MONEY_MARKET);
-        assertEquals( MyEnumProduct.MONEY_MARKET.toEnumIDString(), tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        tagData = new Tag607EnuLegProduct(MyEnumProduct.MORTGAGE);
-        assertEquals( MyEnumProduct.MORTGAGE.toEnumIDString(), tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-
-        tagData = new Tag607EnuLegProduct(MyEnumProduct.MUNICIPAL);
-        assertEquals( MyEnumProduct.MUNICIPAL.toEnumIDString(), tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        tagData = new Tag607EnuLegProduct(MyEnumProduct.OTHER);
-        assertEquals( MyEnumProduct.OTHER.toEnumIDString(), tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        tagData = new Tag607EnuLegProduct(MyEnumProduct.FINANCING);
-        assertEquals( MyEnumProduct.FINANCING.toEnumIDString(), tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag607EnuLegProduct tagData;
-
+    void PrintTest() {
         // loop around the ENUM and process
-        for ( MyEnumProduct oneEnum : MyEnumProduct.values()) {
+        for (MyEnumProduct oneEnum : MyEnumProduct.values()) {
             tagData = new Tag607EnuLegProduct(oneEnum);
             System.out.println( tagData.toVerboseString() );
         }
     }
     @Test
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (MyEnumProduct oneEnum : MyEnumProduct.values()) {
+            tagData = new Tag607EnuLegProduct(oneEnum);
+            assertEquals( "FIX607_ENU_LEG_PRODUCT", tagData.toEnumLabelString());
+            assertEquals( "607", tagData.toEnumIDString());
+            assertEquals( "LEG_PRODUCT", tagData.toEnumNameString());
+            assertEquals( "LegProduct", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void TagGetDataValueTest() {
-        Tag607EnuLegProduct tagData;
+        /*
+         * 1-13 msg types
+         */
+        tagData = new Tag607EnuLegProduct(MyEnumProduct.AGENCY);
+        assertEquals( "1", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag607EnuLegProduct(MyEnumProduct.COMMODITY);
+        assertEquals( "2", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag607EnuLegProduct(MyEnumProduct.CORPORATE);
+        assertEquals( "3", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag607EnuLegProduct(MyEnumProduct.CURRENCY);
+        assertEquals( "4", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag607EnuLegProduct(MyEnumProduct.EQUITY);
+        assertEquals( "5", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+
+        tagData = new Tag607EnuLegProduct(MyEnumProduct.GOVERNMENT);
+        assertEquals( "6", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag607EnuLegProduct(MyEnumProduct.INDEX);
+        assertEquals( "7", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag607EnuLegProduct(MyEnumProduct.LOAN);
+        assertEquals( "8", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag607EnuLegProduct(MyEnumProduct.MONEY_MARKET);
+        assertEquals( "9", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag607EnuLegProduct(MyEnumProduct.MORTGAGE);
+        assertEquals( "10", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+
+        tagData = new Tag607EnuLegProduct(MyEnumProduct.MUNICIPAL);
+        assertEquals( "11", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag607EnuLegProduct(MyEnumProduct.OTHER);
+        assertEquals( "12", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag607EnuLegProduct(MyEnumProduct.FINANCING);
+        assertEquals( "13", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         // loop around the ENUM and process
         for (MyEnumProduct oneEnum : MyEnumProduct.values()) {
             tagData = new Tag607EnuLegProduct(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag607EnuLegProduct tagData;
-
         // loop around the ENUM and process
         for (MyEnumProduct oneEnum : MyEnumProduct.values()) {
             tagData = new Tag607EnuLegProduct(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag607EnuLegProduct tagData;
-
         // loop around the ENUM and process
         for (MyEnumProduct oneEnum : MyEnumProduct.values()) {
             tagData = new Tag607EnuLegProduct(oneEnum);
@@ -185,8 +181,6 @@ class Tag607EnuLegProductTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag607EnuLegProduct tagData;
-
         // loop around the ENUM and process
         for (MyEnumProduct oneEnum : MyEnumProduct.values()) {
             tagData = new Tag607EnuLegProduct(oneEnum);
@@ -195,8 +189,8 @@ class Tag607EnuLegProductTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

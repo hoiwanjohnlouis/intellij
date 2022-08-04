@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  451
  *  NetChgPrevDay
  *  PriceOffset
- *  <p>
+ *  <p></p>
  *  Net change from previous day’s closing price vs. last traded price.
  */
 public class Tag451PxoNetChgPrevDay extends FIX43Abstract implements LogValuePairString, LogVerboseString {

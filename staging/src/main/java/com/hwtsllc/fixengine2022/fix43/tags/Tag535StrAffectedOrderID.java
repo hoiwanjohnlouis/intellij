@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  535
  *  AffectedOrderID
  *  String
- *  <p>
+ *  <p></p>
  *  OrderID (37) of an order affected by a mass cancel request.
  */
 public class Tag535StrAffectedOrderID extends FIX43Abstract implements LogValuePairString, LogVerboseString {

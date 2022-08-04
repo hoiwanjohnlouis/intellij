@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  542
  *  UnderlyingMaturityDate
  *  LocalMktDate
- *  <p>
+ *  <p></p>
  *  Underlying security’s maturity date.
- *  <p>
+ *  <p></p>
  *  See MaturityDate (541) field for description
  */
 public class Tag542LmdUnderlyingMaturityDate extends FIX43Abstract implements LogValuePairString, LogVerboseString {

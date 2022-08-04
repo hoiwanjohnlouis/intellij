@@ -26,16 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  500
  *  CashDistribAgentAcctNumber
  *  String
- *  <p>
+ *  <p></p>
  *  Account number at agent bank for distributions.
  */
 public class Tag500StrCashDistribAgentAcctNumber extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_CASH_DISTRIB_AGENT_ACCT_NUMBER
-            = "BilboBaggins-Tag500StrCashDistribAgentAcctNumber";
+            = "Rachmaninov-Tag500StrCashDistribAgentAcctNumber";
     public final static String TESTB_STR_CASH_DISTRIB_AGENT_ACCT_NUMBER
-            = "Gandalf-Tag500StrCashDistribAgentAcctNumber";
+            = "Prokofiev-Tag500StrCashDistribAgentAcctNumber";
 
     public Tag500StrCashDistribAgentAcctNumber(MyStringType dataValue) {
         setFixType(FIX43.FIX500_STR_CASH_DISTRIB_AGENT_ACCT_NUMBER);

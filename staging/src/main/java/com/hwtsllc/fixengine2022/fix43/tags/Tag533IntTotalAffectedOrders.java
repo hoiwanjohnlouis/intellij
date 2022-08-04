@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  533
  *  TotalAffectedOrders
  *  int
- *  <p>
+ *  <p></p>
  *  Total number of orders affected by mass cancel request.
  */
 public class Tag533IntTotalAffectedOrders extends FIX43Abstract implements LogValuePairString, LogVerboseString {

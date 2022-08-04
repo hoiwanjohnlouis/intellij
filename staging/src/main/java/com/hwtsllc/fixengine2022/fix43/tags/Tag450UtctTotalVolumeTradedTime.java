@@ -26,17 +26,19 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  450
  *  TotalVolumeTraded Time
  *  UTCTimeOnly
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.3
- *  <p>
+ *  <p></p>
  *  Time of TotalVolumeTraded (387).
  */
 // @Deprecated
 public class Tag450UtctTotalVolumeTradedTime extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyUTCTimeType dataValue;
 
-    public final static String TESTA_UTCT_TOTAL_VOLUME_TRADED_TIME = "23:59:59.999";
-    public final static String TESTB_UTCT_TOTAL_VOLUME_TRADED_TIME = "23:59:59.999";
+    public final static String TESTA_UTCT_TOTAL_VOLUME_TRADED_TIME
+            = "23:59:59.999";
+    public final static String TESTB_UTCT_TOTAL_VOLUME_TRADED_TIME
+            = "23:59:59.111";
 
     public Tag450UtctTotalVolumeTradedTime(MyUTCTimeType dataValue) {
         setFixType(FIX43.FIX450_UTCT_TOTAL_VOLUME_TRADED_TIME);

@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  592
  *  UnderlyingCountryOfIssue
  *  Country
- *  <p>
+ *  <p></p>
  *  Underlying security’s CountryOfIssue.
- *  <p>
+ *  <p></p>
  *  See CountryOfIssue (470) field for description
  */
 public class Tag592CouUnderlyingCountryOfIssue extends FIX43Abstract implements LogValuePairString, LogVerboseString {

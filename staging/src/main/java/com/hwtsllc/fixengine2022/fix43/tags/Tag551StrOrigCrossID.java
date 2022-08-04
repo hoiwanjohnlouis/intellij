@@ -26,18 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  551
  *  OrigCrossID
  *  String
- *  <p>
+ *  <p></p>
  *  CrossID of the previous cross order (NOT the initial cross order of the day) as assigned by the institution.
- *  <p>
+ *  <p></p>
  *  Used to identify the previous cross order in Cross Cancel and Cross Cancel/Replace Requests.
  */
 public class Tag551StrOrigCrossID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_ORIG_CROSS_ID
-            = "BilboBaggins-Tag551StrOrigCrossID";
+            = "Euclid-Tag551StrOrigCrossID";
     public final static String TESTB_STR_ORIG_CROSS_ID
-            = "Gandalf-Tag551StrOrigCrossID";
+            = "Elements-Tag551StrOrigCrossID";
 
     public Tag551StrOrigCrossID(MyStringType dataValue) {
         setFixType(FIX43.FIX551_STR_ORIG_CROSS_ID);

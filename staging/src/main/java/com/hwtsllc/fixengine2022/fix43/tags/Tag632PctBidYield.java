@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  632
  *  BidYield
  *  Percentage
- *  <p>
+ *  <p></p>
  *  Bid yield
  */
 public class Tag632PctBidYield extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyPercentageType dataValue;
 
-    public final static double TESTA_PCT_BID_YIELD = 0.0632D;
-    public final static double TESTB_PCT_BID_YIELD = 0.0236D;
+    public final static double TESTA_PCT_BID_YIELD
+            = 0.0632D;
+    public final static double TESTB_PCT_BID_YIELD
+            = 0.0236D;
 
     public Tag632PctBidYield(MyPercentageType dataValue) {
         setFixType(FIX43.FIX632_PCT_BID_YIELD);

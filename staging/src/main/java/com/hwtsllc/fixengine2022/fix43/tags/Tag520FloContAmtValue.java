@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  520
  *  ContAmtValue
  *  float
- *  <p>
+ *  <p></p>
  *  Value of Contract Amount,
- *  <p>
+ *  <p></p>
  *  e.g. a financial amount or percentage as indicated by ContAmtType (519).
  */
 public class Tag520FloContAmtValue extends FIX43Abstract implements LogValuePairString, LogVerboseString {

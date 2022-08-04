@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  454
  *  NoSecurityAltID
  *  NumInGroup
- *  <p>
+ *  <p></p>
  *  Number of SecurityAltID (455) entries.
  */
 public class Tag454NumNoSecurityAltID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyNumInGroupType dataValue;
 
-    public final static int TESTA_NUM_NO_SECURITY_ALT_ID = 454;
-    public final static int TESTB_NUM_NO_SECURITY_ALT_ID = 45;
+    public final static int TESTA_NUM_NO_SECURITY_ALT_ID
+            = 454;
+    public final static int TESTB_NUM_NO_SECURITY_ALT_ID
+            = 45;
 
     public Tag454NumNoSecurityAltID(MyNumInGroupType dataValue) {
         setFixType(FIX43.FIX454_NUM_NO_SECURITY_ALT_ID);

@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum506RegistStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -38,43 +37,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    N - Reminder - i.e. Registration Instructions are still outstanding
  */
 class Tag506EnuRegistStatusTest {
+    Tag506EnuRegistStatus tagData;
+
     @Test
-    void FIX0506Test() {
-        FIX43 fixData = FIX43.FIX506_ENU_REGIST_STATUS;
-        assertEquals( "506", fixData.toEnumIDString());
-        assertEquals( "REGIST_STATUS", fixData.toEnumNameString());
-        assertEquals( "RegistStatus", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0506Test() {
-        Tag506EnuRegistStatus tagData;
-
-        /*
-         * A, R, H, and N types
-         */
-        tagData = new Tag506EnuRegistStatus( Enum506RegistStatus.ACCEPTED );
-        assertEquals( Enum506RegistStatus.ACCEPTED.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag506EnuRegistStatus( Enum506RegistStatus.REJECTED );
-        assertEquals( Enum506RegistStatus.REJECTED.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag506EnuRegistStatus( Enum506RegistStatus.HELD );
-        assertEquals( Enum506RegistStatus.HELD.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag506EnuRegistStatus( Enum506RegistStatus.REMINDER );
-        assertEquals( Enum506RegistStatus.REMINDER.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag506EnuRegistStatus tagData;
-
+    void PrintTest() {
         // loop around the ENUM and process
         for ( Enum506RegistStatus oneEnum : Enum506RegistStatus.values()) {
             tagData = new Tag506EnuRegistStatus(oneEnum);
@@ -82,32 +48,62 @@ class Tag506EnuRegistStatusTest {
         }
     }
     @Test
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (Enum506RegistStatus oneEnum : Enum506RegistStatus.values()) {
+            tagData = new Tag506EnuRegistStatus(oneEnum);
+            assertEquals( "FIX506_ENU_REGIST_STATUS", tagData.toEnumLabelString());
+            assertEquals( "506", tagData.toEnumIDString());
+            assertEquals( "REGIST_STATUS", tagData.toEnumNameString());
+            assertEquals( "RegistStatus", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void TagGetDataValueTest() {
-        Tag506EnuRegistStatus tagData;
+        /*
+         * A, R, H, and N types
+         */
+        tagData = new Tag506EnuRegistStatus( Enum506RegistStatus.ACCEPTED );
+        assertEquals( "A", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag506EnuRegistStatus( Enum506RegistStatus.REJECTED );
+        assertEquals( "R", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag506EnuRegistStatus( Enum506RegistStatus.HELD );
+        assertEquals( "H", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag506EnuRegistStatus( Enum506RegistStatus.REMINDER );
+        assertEquals( "N", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         // loop around the ENUM and process
         for (Enum506RegistStatus oneEnum : Enum506RegistStatus.values()) {
             tagData = new Tag506EnuRegistStatus(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag506EnuRegistStatus tagData;
-
         // loop around the ENUM and process
         for (Enum506RegistStatus oneEnum : Enum506RegistStatus.values()) {
             tagData = new Tag506EnuRegistStatus(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag506EnuRegistStatus tagData;
-
         // loop around the ENUM and process
         for (Enum506RegistStatus oneEnum : Enum506RegistStatus.values()) {
             tagData = new Tag506EnuRegistStatus(oneEnum);
@@ -117,8 +113,6 @@ class Tag506EnuRegistStatusTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag506EnuRegistStatus tagData;
-
         // loop around the ENUM and process
         for (Enum506RegistStatus oneEnum : Enum506RegistStatus.values()) {
             tagData = new Tag506EnuRegistStatus(oneEnum);
@@ -127,8 +121,8 @@ class Tag506EnuRegistStatusTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

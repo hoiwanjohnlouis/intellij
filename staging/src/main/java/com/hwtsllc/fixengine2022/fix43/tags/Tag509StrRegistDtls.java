@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  509
  *  RegistDtls
  *  String
- *  <p>
+ *  <p></p>
  *  Set of Registration name and address details, possibly including phone, fax etc.
  */
 public class Tag509StrRegistDtls extends FIX43Abstract implements LogValuePairString, LogVerboseString {

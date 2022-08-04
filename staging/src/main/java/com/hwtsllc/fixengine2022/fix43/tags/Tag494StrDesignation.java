@@ -26,11 +26,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  494
  *  Designation
  *  String
- *  <p>
+ *  <p></p>
  *  Free format text defining the designation to be associated with a holding on the register.
- *  <p>
+ *  <p></p>
  *  Used to identify assets of a specific underlying investor using a common registration,
- *  <p>
+ *  <p></p>
  *  e.g. a broker’s nominee or street name.
  */
 public class Tag494StrDesignation extends FIX43Abstract implements LogValuePairString, LogVerboseString {
@@ -39,7 +39,7 @@ public class Tag494StrDesignation extends FIX43Abstract implements LogValuePairS
     public final static String TESTA_STR_DESIGNATION
             = "BilboBaggins-Tag494StrDesignation";
     public final static String TESTB_STR_DESIGNATION
-            = "Gandalf-Tag494StrDesignation";
+            = "AlisaWeilerstein-Tag494StrDesignation";
 
     public Tag494StrDesignation(MyStringType dataValue) {
         setFixType(FIX43.FIX494_STR_DESIGNATION);

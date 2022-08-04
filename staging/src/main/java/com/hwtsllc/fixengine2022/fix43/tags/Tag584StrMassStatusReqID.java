@@ -26,16 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  584
  *  MassStatusReqID
  *  String
- *  <p>
+ *  <p></p>
  *  Value assigned by issuer of Mass Status Request to uniquely identify the request
  */
 public class Tag584StrMassStatusReqID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_MASS_STATUS_REQ_ID
-            = "BilboBaggins-Tag584StrMassStatusReqID";
+            = "RobertBoyle-Tag584StrMassStatusReqID";
     public final static String TESTB_STR_MASS_STATUS_REQ_ID
-            = "Gandalf-Tag584StrMassStatusReqID";
+            = "ErnestRutherford-Tag584StrMassStatusReqID";
 
     public Tag584StrMassStatusReqID(MyStringType dataValue) {
         setFixType(FIX43.FIX584_STR_MASS_STATUS_REQ_ID);

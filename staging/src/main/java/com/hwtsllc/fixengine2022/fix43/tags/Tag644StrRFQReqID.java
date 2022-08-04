@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  644
  *  RFQReqID
  *  String
- *  <p>
+ *  <p></p>
  *  RFQ Request ID – used to identify an RFQ Request.
  */
 public class Tag644StrRFQReqID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_RFQ_REQ_ID = "BilboBaggins-Tag644StrRFQReqID";
-    public final static String TESTB_STR_RFQ_REQ_ID = "Gandalf-Tag644StrRFQReqID";
+    public final static String TESTA_STR_RFQ_REQ_ID
+            = "Manon-Tag644StrRFQReqID";
+    public final static String TESTB_STR_RFQ_REQ_ID
+            = "ThePearlFishersGandalf-Tag644StrRFQReqID";
 
     public Tag644StrRFQReqID(MyStringType dataValue) {
         setFixType(FIX43.FIX644_STR_RFQ_REQ_ID);

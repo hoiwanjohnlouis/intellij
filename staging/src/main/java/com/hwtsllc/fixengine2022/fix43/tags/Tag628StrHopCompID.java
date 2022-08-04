@@ -26,23 +26,25 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  628
  *  HopCompID
  *  String
- *  <p>
+ *  <p></p>
  *  Assigned value used to identify the third party firm which delivered a specific message
  *  either from the firm which originated the message or from another third party
  *  (if multiple "hops" are performed).
- *  <p>
+ *  <p></p>
  *  It is recommended that this value be the SenderCompID (49) of the third party.
- *  <p>
+ *  <p></p>
  *  Applicable when messages are communicated/re-distributed via third parties
  *  which function as service bureaus or "hubs".
- *  <p>
+ *  <p></p>
  *  Only applicable if OnBehalfOfCompID (115) is being used.
  */
 public class Tag628StrHopCompID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_HOP_COMP_ID = "BilboBaggins-Tag628StrHopCompID";
-    public final static String TESTB_STR_HOP_COMP_ID = "Gandalf-Tag628StrHopCompID";
+    public final static String TESTA_STR_HOP_COMP_ID
+            = "TheGondoliers-Tag628StrHopCompID";
+    public final static String TESTB_STR_HOP_COMP_ID
+            = "Carmen-Tag628StrHopCompID";
 
     public Tag628StrHopCompID(MyStringType dataValue) {
         setFixType(FIX43.FIX628_STR_HOP_COMP_ID);

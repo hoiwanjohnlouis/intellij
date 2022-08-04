@@ -26,16 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  616
  *  LegSecurityExchange
  *  Exchange
- *  <p>
+ *  <p></p>
  *  Multileg instrument's individual  security’s SecurityExchange.
- *  <p>
+ *  <p></p>
  *  See SecurityExchange (207) field for description
  */
 public class Tag616ExcLegSecurityExchange extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyExchangeType dataValue;
 
-    public final static String TESTA_EXC_LEG_SECURITY_EXCHANGE = "BilboBaggins-Tag616ExcLegSecurityExchange";
-    public final static String TESTB_EXC_LEG_SECURITY_EXCHANGE = "Gandalf-Tag616ExcLegSecurityExchange";
+    public final static String TESTA_EXC_LEG_SECURITY_EXCHANGE
+            = "BilboBaggins-Tag616ExcLegSecurityExchange";
+    public final static String TESTB_EXC_LEG_SECURITY_EXCHANGE
+            = "Gandalf-Tag616ExcLegSecurityExchange";
 
     public Tag616ExcLegSecurityExchange(MyExchangeType dataValue) {
         setFixType(FIX43.FIX616_EXC_LEG_SECURITY_EXCHANGE);

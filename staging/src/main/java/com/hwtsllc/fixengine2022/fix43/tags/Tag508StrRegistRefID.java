@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  508
  *  RegistRefID
  *  String
- *  <p>
+ *  <p></p>
  *  Reference identifier for the RegistID (53) with Cancel and Replace RegistTransType (54) transaction types.
  */
 public class Tag508StrRegistRefID extends FIX43Abstract implements LogValuePairString, LogVerboseString {

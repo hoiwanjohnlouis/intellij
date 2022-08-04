@@ -26,16 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  471
  *  StateOrProvinceOfIssue
  *  String
- *  <p>
+ *  <p></p>
  *  A two-character state or province abbreviation.
  */
 public class Tag471StrStateOrProvinceOfIssue extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_STATE_OR_PROVINCE_OF_ISSUE
-            = "BilboBaggins-Tag471StrStateOrProvinceOfIssue";
+            = "JoyceDiDonato-Tag471StrStateOrProvinceOfIssue";
     public final static String TESTB_STR_STATE_OR_PROVINCE_OF_ISSUE
-            = "Gandalf-Tag471StrStateOrProvinceOfIssue";
+            = "AmandaBrecker-Tag471StrStateOrProvinceOfIssue";
 
     public Tag471StrStateOrProvinceOfIssue(MyStringType dataValue) {
         setFixType(FIX43.FIX471_STR_STATE_OR_PROVINCE_OF_ISSUE);

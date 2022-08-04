@@ -26,18 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  491
  *  CardIssNum
  *  String
- *  <p>
+ *  <p></p>
  *  The issue number of the payment card as specified on the card being used for payment.
- *  <p>
+ *  <p></p>
  *  This is only applicable to certain types of card.
  */
 public class Tag491StrCardIssNum extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_CARD_ISS_NUM
-            = "BilboBaggins-Tag491StrCardIssNum";
+            = "LeAnnRimes-Tag491StrCardIssNum";
     public final static String TESTB_STR_CARD_ISS_NUM
-            = "Gandalf-Tag491StrCardIssNum";
+            = "MartinaMcBride-Tag491StrCardIssNum";
 
     public Tag491StrCardIssNum(MyStringType dataValue) {
         setFixType(FIX43.FIX491_STR_CARD_ISS_NUM);

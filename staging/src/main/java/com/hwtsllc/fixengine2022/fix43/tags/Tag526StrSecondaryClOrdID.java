@@ -26,18 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  526
  *  SecondaryClOrdID
  *  String
- *  <p>
+ *  <p></p>
  *  Assigned by the party which originates the order.
- *  <p>
+ *  <p></p>
  *  Can be used to provide the ClOrdID (11) used by an exchange or executing system.
  */
 public class Tag526StrSecondaryClOrdID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_SECONDARY_CL_ORD_ID
-            = "BilboBaggins-Tag526StrSecondaryClOrdID";
+            = "JohannesKepler-Tag526StrSecondaryClOrdID";
     public final static String TESTB_STR_SECONDARY_CL_ORD_ID
-            = "Gandalf-Tag526StrSecondaryClOrdID";
+            = "IsaacNewton-Tag526StrSecondaryClOrdID";
 
     public Tag526StrSecondaryClOrdID(MyStringType dataValue) {
         setFixType(FIX43.FIX526_STR_SECONDARY_CL_ORD_ID);

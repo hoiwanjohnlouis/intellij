@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,95 +27,83 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  647
  *  MinBidSize
  *  Qty
- *  <p>
+ *  <p></p>
  *  Used to indicate a minimum quantity for a bid.
- *  <p>
+ *  <p></p>
  *  If this field is used the BidSize (134) field is interpreted as the maximum bid size
  */
 class Tag647QtyMinBidSizeTest {
+    Tag647QtyMinBidSize tagData;
+    int [] TestArray = {
+            Tag647QtyMinBidSize.TESTA_QTY_MIN_BID_SIZE,
+            Tag647QtyMinBidSize.TESTB_QTY_MIN_BID_SIZE
+    };
+
     @Test
-    void FIX0647Test() {
-        FIX43 fixData = FIX43.FIX647_QTY_MIN_BID_SIZE;
-        assertEquals( "647", fixData.toEnumIDString());
-        assertEquals( "MIN_BID_SIZE", fixData.toEnumNameString());
-        assertEquals( "MinBidSize", fixData.toEnumDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag647QtyMinBidSize( new MyQtyType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0647Test() {
-        Tag647QtyMinBidSize tagData;
-        int oneElement;
-
-        oneElement = Tag647QtyMinBidSize.TESTA_QTY_MIN_BID_SIZE;
-        tagData = new Tag647QtyMinBidSize( new MyQtyType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
-
-        oneElement = Tag647QtyMinBidSize.TESTB_QTY_MIN_BID_SIZE;
-        tagData = new Tag647QtyMinBidSize( new MyQtyType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag647QtyMinBidSize tagData;
-        int oneElement;
-
-        oneElement = Tag647QtyMinBidSize.TESTA_QTY_MIN_BID_SIZE;
-        tagData = new Tag647QtyMinBidSize( new MyQtyType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag647QtyMinBidSize.TESTB_QTY_MIN_BID_SIZE;
-        tagData = new Tag647QtyMinBidSize( new MyQtyType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag647QtyMinBidSize( new MyQtyType( oneElement ));
+            assertEquals( "FIX647_QTY_MIN_BID_SIZE", tagData.toEnumLabelString());
+            assertEquals( "647", tagData.toEnumIDString());
+            assertEquals( "MIN_BID_SIZE", tagData.toEnumNameString());
+            assertEquals( "MinBidSize", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag647QtyMinBidSize tagData;
-        int oneElement;
-
-        oneElement = Tag647QtyMinBidSize.TESTB_QTY_MIN_BID_SIZE;
-        tagData = new Tag647QtyMinBidSize( new MyQtyType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag647QtyMinBidSize( new MyQtyType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag647QtyMinBidSize tagData;
-        int oneElement;
-
-        oneElement = Tag647QtyMinBidSize.TESTB_QTY_MIN_BID_SIZE;
-        tagData = new Tag647QtyMinBidSize( new MyQtyType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag647QtyMinBidSize( new MyQtyType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag647QtyMinBidSize tagData;
-        int oneElement;
-
-        oneElement = Tag647QtyMinBidSize.TESTB_QTY_MIN_BID_SIZE;
-        tagData = new Tag647QtyMinBidSize( new MyQtyType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag647QtyMinBidSize( new MyQtyType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag647QtyMinBidSize tagData;
-        int oneElement;
-
-        oneElement = Tag647QtyMinBidSize.TESTA_QTY_MIN_BID_SIZE;
-        tagData = new Tag647QtyMinBidSize( new MyQtyType( oneElement ) );
-        assertEquals( "Tag647QtyMinBidSize\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag647QtyMinBidSize( new MyQtyType( oneElement ));
+            assertEquals( "Tag647QtyMinBidSize\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

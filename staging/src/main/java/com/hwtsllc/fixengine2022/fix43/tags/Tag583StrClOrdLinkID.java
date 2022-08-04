@@ -26,10 +26,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  583
  *  ClOrdLinkID
  *  String
- *  <p>
+ *  <p></p>
  *  Permits order originators to tie together groups of orders in which trades resulting
  *  from orders are associated for a specific purpose.
- *  <p>
+ *  <p></p>
  *  For example the calculation of average execution price for a customer or to
  *  associate lists submitted to a broker as waves of a larger program trade.
  */
@@ -37,9 +37,9 @@ public class Tag583StrClOrdLinkID extends FIX43Abstract implements LogValuePairS
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_CL_ORD_LINK_ID
-            = "BilboBaggins-Tag583StrClOrdLinkID";
+            = "HumphryDavy-Tag583StrClOrdLinkID";
     public final static String TESTB_STR_CL_ORD_LINK_ID
-            = "Gandalf-Tag583StrClOrdLinkID";
+            = "HenryCavendish-Tag583StrClOrdLinkID";
 
     public Tag583StrClOrdLinkID(MyStringType dataValue) {
         setFixType(FIX43.FIX583_STR_CL_ORD_LINK_ID);

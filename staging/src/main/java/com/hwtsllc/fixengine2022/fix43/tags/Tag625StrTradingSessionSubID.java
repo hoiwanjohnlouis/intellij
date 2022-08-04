@@ -26,19 +26,21 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  625
  *  TradingSessionSubID
  *  String
- *  <p>
+ *  <p></p>
  *  Optional market assigned sub identifier for a trading session.
- *  <p>
+ *  <p></p>
  *  Usage is determined by market or counterparties.
- *  <p>
+ *  <p></p>
  *  Used by US based futures markets to identify exchange specific execution
  *  time bracket codes as required by US market regulations.
  */
 public class Tag625StrTradingSessionSubID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_TRADING_SESSION_SUB_ID = "BilboBaggins-Tag625StrTradingSessionSubID";
-    public final static String TESTB_STR_TRADING_SESSION_SUB_ID = "Gandalf-Tag625StrTradingSessionSubID";
+    public final static String TESTA_STR_TRADING_SESSION_SUB_ID
+            = "TheYeomenOfTheGuard-Tag625StrTradingSessionSubID";
+    public final static String TESTB_STR_TRADING_SESSION_SUB_ID
+            = "Iolanthe-Tag625StrTradingSessionSubID";
 
     public Tag625StrTradingSessionSubID(MyStringType dataValue) {
         setFixType(FIX43.FIX625_STR_TRADING_SESSION_SUB_ID);

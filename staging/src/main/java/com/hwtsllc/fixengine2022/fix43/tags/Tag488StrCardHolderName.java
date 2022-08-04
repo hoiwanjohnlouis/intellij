@@ -26,16 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  488
  *  CardHolderName
  *  String
- *  <p>
+ *  <p></p>
  *  The name of the payment card holder as specified on the card being used for payment.
  */
 public class Tag488StrCardHolderName extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_CARD_HOLDER_NAME
-            = "BilboBaggins-Tag488StrCardHolderName";
+            = "HaroldMelvin-Tag488StrCardHolderName";
     public final static String TESTB_STR_CARD_HOLDER_NAME
-            = "Gandalf-Tag488StrCardHolderName";
+            = "HarryChapin-Tag488StrCardHolderName";
 
     public Tag488StrCardHolderName(MyStringType dataValue) {
         setFixType(FIX43.FIX488_STR_CARD_HOLDER_NAME);

@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  510
  *  NoDistribInsts
  *  NumInGroup
- *  <p>
+ *  <p></p>
  *  The number of Distribution Instructions on a Registration Instructions message
  */
 public class Tag510NumNoDistribInsts extends FIX43Abstract implements LogValuePairString, LogVerboseString {

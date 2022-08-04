@@ -26,16 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  647
  *  MinBidSize
  *  Qty
- *  <p>
+ *  <p></p>
  *  Used to indicate a minimum quantity for a bid.
- *  <p>
+ *  <p></p>
  *  If this field is used the BidSize (134) field is interpreted as the maximum bid size
  */
 public class Tag647QtyMinBidSize extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyQtyType dataValue;
 
-    public final static int TESTA_QTY_MIN_BID_SIZE = 647;
-    public final static int TESTB_QTY_MIN_BID_SIZE = 746;
+    public final static int TESTA_QTY_MIN_BID_SIZE
+            = 647;
+    public final static int TESTB_QTY_MIN_BID_SIZE
+            = 746;
 
     public Tag647QtyMinBidSize(MyQtyType dataValue) {
         setFixType(FIX43.FIX647_QTY_MIN_BID_SIZE);

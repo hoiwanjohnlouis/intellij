@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,100 +27,88 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  586
  *  OrigOrdModTime
  *  UTCTimestamp
- *  <p>
+ *  <p></p>
  *  The most recent (or current) modification TransactTime (tag 60) reported
  *  on an Execution Report for the order.
- *  <p>
+ *  <p></p>
  *  The OrigOrdModTime is provided as an optional field on Order Cancel Request
  *  and Order Cancel Replace Requests to identify that the state of the order has
  *  not changed since the request was issued.
- *  <p>
+ *  <p></p>
  *  This is provided to support markets similar to Eurex and A/C/E.
  */
 class Tag586UtcOrigOrdModTimeTest {
+    Tag586UtcOrigOrdModTime tagData;
+    String [] TestArray = {
+            Tag586UtcOrigOrdModTime.TESTA_UTC_ORIG_ORD_MOD_TIME,
+            Tag586UtcOrigOrdModTime.TESTB_UTC_ORIG_ORD_MOD_TIME
+    };
+
     @Test
-    void FIX0586Test() {
-        FIX43 fixData = FIX43.FIX586_UTC_ORIG_ORD_MOD_TIME;
-        assertEquals( "586", fixData.toEnumIDString());
-        assertEquals( "ORIG_ORD_MOD_TIME", fixData.toEnumNameString());
-        assertEquals( "OrigOrdModTime", fixData.toEnumDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag586UtcOrigOrdModTime( new MyUTCTimestampType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0586Test() {
-        Tag586UtcOrigOrdModTime tagData;
-        String oneElement;
-
-        oneElement = Tag586UtcOrigOrdModTime.TESTA_UTC_ORIG_ORD_MOD_TIME;
-        tagData = new Tag586UtcOrigOrdModTime( new MyUTCTimestampType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
-
-        oneElement = Tag586UtcOrigOrdModTime.TESTB_UTC_ORIG_ORD_MOD_TIME;
-        tagData = new Tag586UtcOrigOrdModTime( new MyUTCTimestampType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag586UtcOrigOrdModTime tagData;
-        String oneElement;
-
-        oneElement = Tag586UtcOrigOrdModTime.TESTA_UTC_ORIG_ORD_MOD_TIME;
-        tagData = new Tag586UtcOrigOrdModTime( new MyUTCTimestampType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag586UtcOrigOrdModTime.TESTB_UTC_ORIG_ORD_MOD_TIME;
-        tagData = new Tag586UtcOrigOrdModTime( new MyUTCTimestampType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag586UtcOrigOrdModTime( new MyUTCTimestampType( oneElement ));
+            assertEquals( "FIX586_UTC_ORIG_ORD_MOD_TIME", tagData.toEnumLabelString());
+            assertEquals( "586", tagData.toEnumIDString());
+            assertEquals( "ORIG_ORD_MOD_TIME", tagData.toEnumNameString());
+            assertEquals( "OrigOrdModTime", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag586UtcOrigOrdModTime tagData;
-        String oneElement;
-
-        oneElement = Tag586UtcOrigOrdModTime.TESTB_UTC_ORIG_ORD_MOD_TIME;
-        tagData = new Tag586UtcOrigOrdModTime( new MyUTCTimestampType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag586UtcOrigOrdModTime( new MyUTCTimestampType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue() );
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag586UtcOrigOrdModTime tagData;
-        String oneElement;
-
-        oneElement = Tag586UtcOrigOrdModTime.TESTB_UTC_ORIG_ORD_MOD_TIME;
-        tagData = new Tag586UtcOrigOrdModTime( new MyUTCTimestampType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag586UtcOrigOrdModTime( new MyUTCTimestampType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag586UtcOrigOrdModTime tagData;
-        String oneElement;
-
-        oneElement = Tag586UtcOrigOrdModTime.TESTB_UTC_ORIG_ORD_MOD_TIME;
-        tagData = new Tag586UtcOrigOrdModTime( new MyUTCTimestampType( oneElement ) );
-        assertEquals( oneElement, tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toString() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag586UtcOrigOrdModTime( new MyUTCTimestampType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag586UtcOrigOrdModTime tagData;
-        String oneElement;
-
-        oneElement = Tag586UtcOrigOrdModTime.TESTA_UTC_ORIG_ORD_MOD_TIME;
-        tagData = new Tag586UtcOrigOrdModTime( new MyUTCTimestampType( oneElement ) );
-        assertEquals( "Tag586UtcOrigOrdModTime\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.toVerboseString() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag586UtcOrigOrdModTime( new MyUTCTimestampType( oneElement ));
+            assertEquals( "Tag586UtcOrigOrdModTime\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

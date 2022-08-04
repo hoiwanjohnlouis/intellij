@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  448
  *  PartyID
  *  String
- *  <p>
+ *  <p></p>
  *  Party identifier/code.  See PartyIDSource (447) and PartyRole (452).
- *  <p>
+ *  <p></p>
  *  See "Appendix 6-G – Use of <Parties> Component Block"
  */
 public class Tag448StrPartyID extends FIX43Abstract implements LogValuePairString, LogVerboseString {

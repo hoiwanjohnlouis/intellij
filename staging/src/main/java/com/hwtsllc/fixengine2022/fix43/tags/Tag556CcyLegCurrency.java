@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  556
  *  LegCurrency
  *  Currency
- *  <p>
+ *  <p></p>
  *  Currency associated with a particular Leg's quantity
  */
 public class Tag556CcyLegCurrency extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyCurrencyType dataValue;
 
-    public final static String TESTA_CCY_LEG_CURRENCY = "USD";
-    public final static String TESTB_CCY_LEG_CURRENCY = "EUR";
+    public final static String TESTA_CCY_LEG_CURRENCY
+            = "USD";
+    public final static String TESTB_CCY_LEG_CURRENCY
+            = "EUR";
 
     public Tag556CcyLegCurrency(MyCurrencyType dataValue) {
         setFixType(FIX43.FIX556_CCY_LEG_CURRENCY);

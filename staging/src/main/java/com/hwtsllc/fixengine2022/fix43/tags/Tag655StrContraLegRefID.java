@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  655
  *  ContraLegRefID
  *  String
- *  <p>
+ *  <p></p>
  *  Unique indicator for a specific leg for the ContraBroker (375).
  */
 public class Tag655StrContraLegRefID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_CONTRA_LEG_REF_ID = "BilboBaggins-Tag655StrContraLegRefID";
-    public final static String TESTB_STR_CONTRA_LEG_REF_ID = "Gandalf-Tag655StrContraLegRefID";
+    public final static String TESTA_STR_CONTRA_LEG_REF_ID
+            = "LaBoheme-Tag655StrContraLegRefID";
+    public final static String TESTB_STR_CONTRA_LEG_REF_ID
+            = "Turandot-Tag655StrContraLegRefID";
 
     public Tag655StrContraLegRefID(MyStringType dataValue) {
         setFixType(FIX43.FIX655_STR_CONTRA_LEG_REF_ID);

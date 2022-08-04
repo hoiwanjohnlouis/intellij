@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum582CustOrderCapacity;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -41,76 +40,73 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    4 - All other
  */
 class Tag582EnuCustOrderCapacityTest {
+    Tag582EnuCustOrderCapacity tagData;
+
     @Test
-    void FIX0582Test() {
-        FIX43 fixData = FIX43.FIX582_ENU_CUST_ORDER_CAPACITY;
-        assertEquals( "582", fixData.toEnumIDString());
-        assertEquals( "CUST_ORDER_CAPACITY", fixData.toEnumNameString());
-        assertEquals( "CustOrderCapacity", fixData.toEnumDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0582Test() {
-        Tag582EnuCustOrderCapacity tagData;
-
-        /*
-         *  1-4 types
-         */
-        tagData = new Tag582EnuCustOrderCapacity( Enum582CustOrderCapacity.MEMBER_TRADING_ACCOUNT );
-        assertEquals( Enum582CustOrderCapacity.MEMBER_TRADING_ACCOUNT.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag582EnuCustOrderCapacity( Enum582CustOrderCapacity.CLEARING_FIRM_PROPRIETARY );
-        assertEquals( Enum582CustOrderCapacity.CLEARING_FIRM_PROPRIETARY.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag582EnuCustOrderCapacity( Enum582CustOrderCapacity.MEMBER_TRADING_FOR_ANOTHER );
-        assertEquals( Enum582CustOrderCapacity.MEMBER_TRADING_FOR_ANOTHER.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag582EnuCustOrderCapacity( Enum582CustOrderCapacity.ALL_OTHER );
-        assertEquals( Enum582CustOrderCapacity.ALL_OTHER.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag582EnuCustOrderCapacity tagData;
-
+    void PrintTest() {
         // loop around the ENUM and process
-        for ( Enum582CustOrderCapacity oneEnum : Enum582CustOrderCapacity.values()) {
+        for (Enum582CustOrderCapacity oneEnum : Enum582CustOrderCapacity.values()) {
             tagData = new Tag582EnuCustOrderCapacity(oneEnum);
             System.out.println( tagData.toVerboseString() );
         }
     }
     @Test
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (Enum582CustOrderCapacity oneEnum : Enum582CustOrderCapacity.values()) {
+            tagData = new Tag582EnuCustOrderCapacity(oneEnum);
+            assertEquals( "FIX582_ENU_CUST_ORDER_CAPACITY", tagData.toEnumLabelString());
+            assertEquals( "582", tagData.toEnumIDString());
+            assertEquals( "CUST_ORDER_CAPACITY", tagData.toEnumNameString());
+            assertEquals( "CustOrderCapacity", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void TagGetDataValueTest() {
-        Tag582EnuCustOrderCapacity tagData;
+        /*
+         *  1-4 types
+         */
+        tagData = new Tag582EnuCustOrderCapacity( Enum582CustOrderCapacity.MEMBER_TRADING_ACCOUNT );
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag582EnuCustOrderCapacity( Enum582CustOrderCapacity.CLEARING_FIRM_PROPRIETARY );
+        assertEquals( "2", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag582EnuCustOrderCapacity( Enum582CustOrderCapacity.MEMBER_TRADING_FOR_ANOTHER );
+        assertEquals( "3", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag582EnuCustOrderCapacity( Enum582CustOrderCapacity.ALL_OTHER );
+        assertEquals( "4", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         // loop around the ENUM and process
         for (Enum582CustOrderCapacity oneEnum : Enum582CustOrderCapacity.values()) {
             tagData = new Tag582EnuCustOrderCapacity(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag582EnuCustOrderCapacity tagData;
-
         // loop around the ENUM and process
         for (Enum582CustOrderCapacity oneEnum : Enum582CustOrderCapacity.values()) {
             tagData = new Tag582EnuCustOrderCapacity(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag582EnuCustOrderCapacity tagData;
-
         // loop around the ENUM and process
         for (Enum582CustOrderCapacity oneEnum : Enum582CustOrderCapacity.values()) {
             tagData = new Tag582EnuCustOrderCapacity(oneEnum);
@@ -120,8 +116,6 @@ class Tag582EnuCustOrderCapacityTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag582EnuCustOrderCapacity tagData;
-
         // loop around the ENUM and process
         for (Enum582CustOrderCapacity oneEnum : Enum582CustOrderCapacity.values()) {
             tagData = new Tag582EnuCustOrderCapacity(oneEnum);
@@ -130,8 +124,8 @@ class Tag582EnuCustOrderCapacityTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

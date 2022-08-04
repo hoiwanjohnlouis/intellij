@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  478
  *  CashDistribCurr
  *  Currency
- *  <p>
+ *  <p></p>
  *  Specifies currency to be  use for Cash Distributions
- *  <p>
+ *  <p></p>
  *  see "Appendix 6-A; Valid Currency Codes".
  */
 public class Tag478CcyCashDistribCurr extends FIX43Abstract implements LogValuePairString, LogVerboseString {

@@ -26,16 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  557
  *  TotNoSecurityTypes
  *  int
- *  <p>
+ *  <p></p>
  *  Indicates total number of security types in the event that multiple Security Type messages are used to return results
- *  <p>
+ *  <p></p>
  *  (Prior to FIX 4.4 this field was named TotalNumSecurityTypes)
  */
 public class Tag557IntTotNoSecurityTypes extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyIntType dataValue;
 
-    public final static int TESTA_INT_TOT_NO_SECURITY_TYPES = 557;
-    public final static int TESTB_INT_TOT_NO_SECURITY_TYPES = 755;
+    public final static int TESTA_INT_TOT_NO_SECURITY_TYPES
+            = 557;
+    public final static int TESTB_INT_TOT_NO_SECURITY_TYPES
+            = 755;
 
     public Tag557IntTotNoSecurityTypes(MyIntType dataValue) {
         setFixType(FIX43.FIX557_INT_TOT_NO_SECURITY_TYPES);

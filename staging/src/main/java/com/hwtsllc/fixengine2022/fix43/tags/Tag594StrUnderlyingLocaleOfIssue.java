@@ -26,18 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  594
  *  UnderlyingLocaleOfIssue
  *  String
- *  <p>
+ *  <p></p>
  *  Underlying security’s LocaleOfIssue.
- *  <p>
+ *  <p></p>
  *  See LocaleOfIssue (472) field for description
  */
 public class Tag594StrUnderlyingLocaleOfIssue extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_UNDERLYING_LOCALE_OF_ISSUE
-            = "BilboBaggins-Tag594StrUnderlyingLocaleOfIssue";
+            = "NielsBohr-Tag594StrUnderlyingLocaleOfIssue";
     public final static String TESTB_STR_UNDERLYING_LOCALE_OF_ISSUE
-            = "Gandalf-Tag594StrUnderlyingLocaleOfIssue";
+            = "WernerHeisenberg-Tag594StrUnderlyingLocaleOfIssue";
 
     public Tag594StrUnderlyingLocaleOfIssue(MyStringType dataValue) {
         setFixType(FIX43.FIX594_STR_UNDERLYING_LOCALE_OF_ISSUE);

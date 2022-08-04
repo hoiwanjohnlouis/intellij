@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  623
  *  LegRatioQty
  *  float
- *  <p>
+ *  <p></p>
  *  The ratio of quantity for this individual leg relative to the entire multileg security.
  */
 public class Tag623FloLegRatioQty extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyFloatType dataValue;
 
-    public final static float TESTA_FLO_LEG_RATIO_QTY = 0.623F;
-    public final static float TESTB_FLO_LEG_RATIO_QTY = 0.326F;
+    public final static float TESTA_FLO_LEG_RATIO_QTY
+            = 0.623F;
+    public final static float TESTB_FLO_LEG_RATIO_QTY
+            = 0.326F;
 
     public Tag623FloLegRatioQty(MyFloatType dataValue) {
         setFixType(FIX43.FIX623_FLO_LEG_RATIO_QTY);

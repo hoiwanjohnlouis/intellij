@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,93 +27,80 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  508
  *  RegistRefID
  *  String
- *  <p>
+ *  <p></p>
  *  Reference identifier for the RegistID (53) with Cancel and Replace RegistTransType (54) transaction types.
  */
 class Tag508StrRegistRefIDTest {
+    Tag508StrRegistRefID tagData;
+    String [] TestArray = {
+            Tag508StrRegistRefID.TESTA_STR_REGIST_REF_ID,
+            Tag508StrRegistRefID.TESTB_STR_REGIST_REF_ID
+    };
+
     @Test
-    void FIX0508Test() {
-        FIX43 fixData = FIX43.FIX508_STR_REGIST_REF_ID;
-        assertEquals( "508", fixData.toEnumIDString());
-        assertEquals( "REGIST_REF_ID", fixData.toEnumNameString());
-        assertEquals( "RegistRefID", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag508StrRegistRefID( new MyStringType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0508Test() {
-        Tag508StrRegistRefID tagData;
-        String oneElement;
-
-        oneElement = Tag508StrRegistRefID.TESTA_STR_REGIST_REF_ID;
-        tagData = new Tag508StrRegistRefID( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag508StrRegistRefID.TESTB_STR_REGIST_REF_ID;
-        tagData = new Tag508StrRegistRefID( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag508StrRegistRefID tagData;
-        String oneElement;
-
-        oneElement = Tag508StrRegistRefID.TESTA_STR_REGIST_REF_ID;
-        tagData = new Tag508StrRegistRefID( new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag508StrRegistRefID.TESTB_STR_REGIST_REF_ID;
-        tagData = new Tag508StrRegistRefID( new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag508StrRegistRefID( new MyStringType( oneElement ));
+            assertEquals( "FIX508_STR_REGIST_REF_ID", tagData.toEnumLabelString());
+            assertEquals( "508", tagData.toEnumIDString());
+            assertEquals( "REGIST_REF_ID", tagData.toEnumNameString());
+            assertEquals( "RegistRefID", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag508StrRegistRefID tagData;
-        String oneElement;
-
-        oneElement = Tag508StrRegistRefID.TESTB_STR_REGIST_REF_ID;
-        tagData = new Tag508StrRegistRefID( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag508StrRegistRefID( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag508StrRegistRefID tagData;
-        String oneElement;
-
-        oneElement = Tag508StrRegistRefID.TESTB_STR_REGIST_REF_ID;
-        tagData = new Tag508StrRegistRefID( new MyStringType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag508StrRegistRefID( new MyStringType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag508StrRegistRefID tagData;
-        String oneElement;
-
-        oneElement = Tag508StrRegistRefID.TESTB_STR_REGIST_REF_ID;
-        tagData = new Tag508StrRegistRefID(new MyStringType(oneElement));
-        assertEquals( oneElement, tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag508StrRegistRefID( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag508StrRegistRefID tagData;
-        String oneElement;
-
-        oneElement = Tag508StrRegistRefID.TESTA_STR_REGIST_REF_ID;
-        tagData = new Tag508StrRegistRefID( new MyStringType( oneElement ) );
-        assertEquals( "Tag508StrRegistRefID\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag508StrRegistRefID( new MyStringType( oneElement ));
+            assertEquals( "Tag508StrRegistRefID\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

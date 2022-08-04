@@ -31,7 +31,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>
  *  Deprecated in FIX.5.0 Offer F/X forward points of the future portion of a F/X swap quote added to spot rate.
  *  <p>
- *  May be a negative value.
+ *  May be negative.
  */
 class Tag643PxoOfferForwardPoints2Test {
     @Test

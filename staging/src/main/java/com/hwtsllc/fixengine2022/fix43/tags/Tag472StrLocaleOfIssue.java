@@ -26,22 +26,22 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  472
  *  LocaleOfIssue
  *  String
- *  <p>
+ *  <p></p>
  *  Identifies the locale. For Municipal Security Issuers other than state or province. Refer to
- *  <p>
+ *  <p></p>
  *  http://www.atmos.albany.edu/cgi/stagrep-cgi
- *  <p>
+ *  <p></p>
  *  Reference the IATA city codes for values.
- *  <p>
+ *  <p></p>
  *  Note IATA (International Air Transport Association) maintains the codes at www.iata.org.
  */
 public class Tag472StrLocaleOfIssue extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_LOCALE_OF_ISSUE
-            = "BilboBaggins-Tag472StrLocaleOfIssue";
+            = "DanielleDeNiese-Tag472StrLocaleOfIssue";
     public final static String TESTB_STR_LOCALE_OF_ISSUE
-            = "Gandalf-Tag472StrLocaleOfIssue";
+            = "ElisabethSchwarzkopf-Tag472StrLocaleOfIssue";
 
     public Tag472StrLocaleOfIssue(MyStringType dataValue) {
         setFixType(FIX43.FIX472_STR_LOCALE_OF_ISSUE);

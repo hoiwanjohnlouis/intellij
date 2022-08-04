@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  513
  *  RegistID
  *  String
- *  <p>
+ *  <p></p>
  *  Unique identifier of the registration details as assigned by institution or intermediary.
  */
 public class Tag513StrRegistID extends FIX43Abstract implements LogValuePairString, LogVerboseString {

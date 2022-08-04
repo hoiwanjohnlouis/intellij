@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  473
  *  NoRegistDtls
  *  NumInGroup
- *  <p>
+ *  <p></p>
  *  The number of registration details on a Registration Instructions message
  */
 public class Tag473NumNoRegistDtls extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyNumInGroupType dataValue;
 
-    public final static int TESTA_NUM_NO_REGIST_DTLS = 473;
-    public final static int TESTB_NUM_NO_REGIST_DTLS = 374;
+    public final static int TESTA_NUM_NO_REGIST_DTLS
+            = 473;
+    public final static int TESTB_NUM_NO_REGIST_DTLS
+            = 374;
 
     public Tag473NumNoRegistDtls(MyNumInGroupType dataValue) {
         setFixType(FIX43.FIX473_NUM_NO_REGIST_DTLS);

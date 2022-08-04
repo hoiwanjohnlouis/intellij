@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyFloatType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,94 +27,81 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  623
  *  LegRatioQty
  *  float
- *  <p>
+ *  <p></p>
  *  The ratio of quantity for this individual leg relative to the entire multileg security.
  */
 class Tag623FloLegRatioQtyTest {
+    Tag623FloLegRatioQty tagData;
+    float [] TestArray = {
+            Tag623FloLegRatioQty.TESTA_FLO_LEG_RATIO_QTY,
+            Tag623FloLegRatioQty.TESTB_FLO_LEG_RATIO_QTY
+    };
+
     @Test
-    void FIX0623Test() {
-        FIX43 fixData = FIX43.FIX623_FLO_LEG_RATIO_QTY;
-        assertEquals( "623", fixData.toEnumIDString());
-        assertEquals( "LEG_RATIO_QTY", fixData.toEnumNameString());
-        assertEquals( "LegRatioQty", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( float oneElement : TestArray ) {
+            tagData = new Tag623FloLegRatioQty( new MyFloatType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0623Test() {
-        Tag623FloLegRatioQty tagData;
-        float oneElement;
-
-        oneElement = Tag623FloLegRatioQty.TESTA_FLO_LEG_RATIO_QTY;
-        tagData = new Tag623FloLegRatioQty( new MyFloatType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
-
-        oneElement = Tag623FloLegRatioQty.TESTB_FLO_LEG_RATIO_QTY;
-        tagData = new Tag623FloLegRatioQty( new MyFloatType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag623FloLegRatioQty tagData;
-        float oneElement;
-
-        oneElement = Tag623FloLegRatioQty.TESTA_FLO_LEG_RATIO_QTY;
-        tagData = new Tag623FloLegRatioQty( new MyFloatType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag623FloLegRatioQty.TESTB_FLO_LEG_RATIO_QTY;
-        tagData = new Tag623FloLegRatioQty( new MyFloatType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( float oneElement : TestArray ) {
+            tagData = new Tag623FloLegRatioQty( new MyFloatType( oneElement ));
+            assertEquals( "FIX623_FLO_LEG_RATIO_QTY", tagData.toEnumLabelString());
+            assertEquals( "623", tagData.toEnumIDString());
+            assertEquals( "LEG_RATIO_QTY", tagData.toEnumNameString());
+            assertEquals( "LegRatioQty", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag623FloLegRatioQty tagData;
-        float oneElement;
-
-        oneElement = Tag623FloLegRatioQty.TESTB_FLO_LEG_RATIO_QTY;
-        tagData = new Tag623FloLegRatioQty( new MyFloatType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
+        // process array of tags
+        for ( float oneElement : TestArray ) {
+            tagData = new Tag623FloLegRatioQty( new MyFloatType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag623FloLegRatioQty tagData;
-        float oneElement;
-
-        oneElement = Tag623FloLegRatioQty.TESTB_FLO_LEG_RATIO_QTY;
-        tagData = new Tag623FloLegRatioQty( new MyFloatType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        // process array of tags
+        for ( float oneElement : TestArray ) {
+            tagData = new Tag623FloLegRatioQty( new MyFloatType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag623FloLegRatioQty tagData;
-        float oneElement;
-
-        oneElement = Tag623FloLegRatioQty.TESTB_FLO_LEG_RATIO_QTY;
-        tagData = new Tag623FloLegRatioQty( new MyFloatType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        // process array of tags
+        for ( float oneElement : TestArray ) {
+            tagData = new Tag623FloLegRatioQty( new MyFloatType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag623FloLegRatioQty tagData;
-        float oneElement;
-
-        oneElement = Tag623FloLegRatioQty.TESTA_FLO_LEG_RATIO_QTY;
-        tagData = new Tag623FloLegRatioQty( new MyFloatType( oneElement ) );
-        assertEquals( "Tag623FloLegRatioQty\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement +
-                        "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( float oneElement : TestArray ) {
+            tagData = new Tag623FloLegRatioQty( new MyFloatType( oneElement ));
+            assertEquals( "Tag623FloLegRatioQty\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

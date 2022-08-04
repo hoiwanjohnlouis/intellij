@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum635ClearingFeeIndicator;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -54,20 +53,33 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    M - All other ownership types
  */
 class Tag635EnuClearingFeeIndicatorTest {
+    Tag635EnuClearingFeeIndicator tagData;
+
     @Test
-    void FIX0635Test() {
-        FIX43 fixData = FIX43.FIX635_ENU_CLEARING_FEE_INDICATOR;
-        assertEquals( "635", fixData.toEnumIDString());
-        assertEquals( "CLEARING_FEE_INDICATOR", fixData.toEnumNameString());
-        assertEquals( "ClearingFeeIndicator", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // loop around the ENUM and process
+        for (Enum635ClearingFeeIndicator oneEnum : Enum635ClearingFeeIndicator.values()) {
+            tagData = new Tag635EnuClearingFeeIndicator(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0635Test() {
-        Tag635EnuClearingFeeIndicator tagData;
-
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (Enum635ClearingFeeIndicator oneEnum : Enum635ClearingFeeIndicator.values()) {
+            tagData = new Tag635EnuClearingFeeIndicator(oneEnum);
+            assertEquals( "FIX635_ENU_CLEARING_FEE_INDICATOR", tagData.toEnumLabelString());
+            assertEquals( "635", tagData.toEnumIDString());
+            assertEquals( "CLEARING_FEE_INDICATOR", tagData.toEnumNameString());
+            assertEquals( "ClearingFeeIndicator", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
          *  1-5, 9, B, C, E, F, H, I, L, M, types
          */
@@ -76,118 +88,97 @@ class Tag635EnuClearingFeeIndicatorTest {
          *  1-5, types
          */
         tagData = new Tag635EnuClearingFeeIndicator( Enum635ClearingFeeIndicator.FIRST_YEAR_DELEGATE );
-        assertEquals( Enum635ClearingFeeIndicator.FIRST_YEAR_DELEGATE.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "1", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag635EnuClearingFeeIndicator( Enum635ClearingFeeIndicator.SECOND_YEAR_DELEGATE );
-        assertEquals( Enum635ClearingFeeIndicator.SECOND_YEAR_DELEGATE.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "2", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag635EnuClearingFeeIndicator( Enum635ClearingFeeIndicator.THIRD_YEAR_DELEGATE );
-        assertEquals( Enum635ClearingFeeIndicator.THIRD_YEAR_DELEGATE.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "3", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag635EnuClearingFeeIndicator( Enum635ClearingFeeIndicator.FOURTH_YEAR_DELEGATE );
-        assertEquals( Enum635ClearingFeeIndicator.FOURTH_YEAR_DELEGATE.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "4", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag635EnuClearingFeeIndicator( Enum635ClearingFeeIndicator.FIFTH_YEAR_DELEGATE );
-        assertEquals( Enum635ClearingFeeIndicator.FIFTH_YEAR_DELEGATE.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "5", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
 
         /*
          *  9 type
          */
         tagData = new Tag635EnuClearingFeeIndicator( Enum635ClearingFeeIndicator.SIXTH_YEAR_DELEGATE );
-        assertEquals( Enum635ClearingFeeIndicator.SIXTH_YEAR_DELEGATE.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "9", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
 
         /*
          *  B-C, types
          */
         tagData = new Tag635EnuClearingFeeIndicator( Enum635ClearingFeeIndicator.CBOE_MEMBER );
-        assertEquals( Enum635ClearingFeeIndicator.CBOE_MEMBER.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "B", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag635EnuClearingFeeIndicator( Enum635ClearingFeeIndicator.NON_MEMBER_AND_CUSTOMER );
-        assertEquals( Enum635ClearingFeeIndicator.NON_MEMBER_AND_CUSTOMER.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "C", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
 
         /*
          *  E-F, types
          */
         tagData = new Tag635EnuClearingFeeIndicator( Enum635ClearingFeeIndicator.EQUITY_AND_CLEARING_MEMBER );
-        assertEquals( Enum635ClearingFeeIndicator.EQUITY_AND_CLEARING_MEMBER.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "E", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag635EnuClearingFeeIndicator( Enum635ClearingFeeIndicator.FULL_AND_ASSOCIATE_AS_FLOOR );
-        assertEquals( Enum635ClearingFeeIndicator.FULL_AND_ASSOCIATE_AS_FLOOR.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "F", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
 
         /*
          *  H-I types
          */
         tagData = new Tag635EnuClearingFeeIndicator( Enum635ClearingFeeIndicator.H_AND_J_FIRMS );
-        assertEquals( Enum635ClearingFeeIndicator.H_AND_J_FIRMS.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "H", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag635EnuClearingFeeIndicator( Enum635ClearingFeeIndicator.GIM_IDEM_AND_COM );
-        assertEquals( Enum635ClearingFeeIndicator.GIM_IDEM_AND_COM.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "I", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
 
         /*
          *  L-M, types
          */
         tagData = new Tag635EnuClearingFeeIndicator( Enum635ClearingFeeIndicator.F_EMPLOYEES );
-        assertEquals( Enum635ClearingFeeIndicator.F_EMPLOYEES.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "L", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag635EnuClearingFeeIndicator( Enum635ClearingFeeIndicator.ALL_OTHER );
-        assertEquals( Enum635ClearingFeeIndicator.ALL_OTHER.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "M", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag635EnuClearingFeeIndicator tagData;
-
-        // loop around the ENUM and process
-        for ( Enum635ClearingFeeIndicator oneEnum : Enum635ClearingFeeIndicator.values()) {
-            tagData = new Tag635EnuClearingFeeIndicator(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag635EnuClearingFeeIndicator tagData;
 
         // loop around the ENUM and process
         for (Enum635ClearingFeeIndicator oneEnum : Enum635ClearingFeeIndicator.values()) {
             tagData = new Tag635EnuClearingFeeIndicator(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag635EnuClearingFeeIndicator tagData;
-
         // loop around the ENUM and process
         for (Enum635ClearingFeeIndicator oneEnum : Enum635ClearingFeeIndicator.values()) {
             tagData = new Tag635EnuClearingFeeIndicator(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag635EnuClearingFeeIndicator tagData;
-
         // loop around the ENUM and process
         for (Enum635ClearingFeeIndicator oneEnum : Enum635ClearingFeeIndicator.values()) {
             tagData = new Tag635EnuClearingFeeIndicator(oneEnum);
@@ -197,8 +188,6 @@ class Tag635EnuClearingFeeIndicatorTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag635EnuClearingFeeIndicator tagData;
-
         // loop around the ENUM and process
         for (Enum635ClearingFeeIndicator oneEnum : Enum635ClearingFeeIndicator.values()) {
             tagData = new Tag635EnuClearingFeeIndicator(oneEnum);
@@ -207,8 +196,8 @@ class Tag635EnuClearingFeeIndicatorTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

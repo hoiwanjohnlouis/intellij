@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum484PriceType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -45,24 +44,36 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    S - Single price
  */
 class Tag484EnuExecPriceTypeTest {
+    Tag484EnuExecPriceType tagData;
+
     @Test
-    void FIX0484Test() {
-        FIX43 fixData = FIX43.FIX484_ENU_EXEC_PRICE_TYPE;
-        assertEquals( "484", fixData.toEnumIDString());
-        assertEquals( "EXEC_PRICE_TYPE", fixData.toEnumNameString());
-        assertEquals( "ExecPriceType", fixData.toEnumDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // loop around the ENUM and process
+        for (Enum484PriceType oneEnum : Enum484PriceType.values()) {
+            tagData = new Tag484EnuExecPriceType(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0484Test() {
-        Tag484EnuExecPriceType tagData;
-
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (Enum484PriceType oneEnum : Enum484PriceType.values()) {
+            tagData = new Tag484EnuExecPriceType(oneEnum);
+            assertEquals( "FIX484_ENU_EXEC_PRICE_TYPE", tagData.toEnumLabelString());
+            assertEquals( "484", tagData.toEnumIDString());
+            assertEquals( "EXEC_PRICE_TYPE", tagData.toEnumNameString());
+            assertEquals( "ExecPriceType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
          *  B, C, D, E, O, P, Q, and S types
          */
-
 
         /*
          *  B, C, D, E, types
@@ -83,7 +94,6 @@ class Tag484EnuExecPriceTypeTest {
         assertEquals( Enum484PriceType.CREATION_PRICE_PLUS_AMOUNT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-
         /*
          * O, P, Q, and S types
          */
@@ -99,51 +109,34 @@ class Tag484EnuExecPriceTypeTest {
         assertEquals( Enum484PriceType.OFFER_PRICE_MINUS_AMOUNT.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-
         /*
          *  S type
          */
         tagData = new Tag484EnuExecPriceType( Enum484PriceType.SINGLE_PRICE );
         assertEquals( Enum484PriceType.SINGLE_PRICE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag484EnuExecPriceType tagData;
-
-        // loop around the ENUM and process
-        for ( Enum484PriceType oneEnum : Enum484PriceType.values()) {
-            tagData = new Tag484EnuExecPriceType(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag484EnuExecPriceType tagData;
 
         // loop around the ENUM and process
         for (Enum484PriceType oneEnum : Enum484PriceType.values()) {
             tagData = new Tag484EnuExecPriceType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag484EnuExecPriceType tagData;
-
         // loop around the ENUM and process
         for (Enum484PriceType oneEnum : Enum484PriceType.values()) {
             tagData = new Tag484EnuExecPriceType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag484EnuExecPriceType tagData;
-
         // loop around the ENUM and process
         for (Enum484PriceType oneEnum : Enum484PriceType.values()) {
             tagData = new Tag484EnuExecPriceType(oneEnum);
@@ -153,8 +146,6 @@ class Tag484EnuExecPriceTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag484EnuExecPriceType tagData;
-
         // loop around the ENUM and process
         for (Enum484PriceType oneEnum : Enum484PriceType.values()) {
             tagData = new Tag484EnuExecPriceType(oneEnum);
@@ -163,8 +154,8 @@ class Tag484EnuExecPriceTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

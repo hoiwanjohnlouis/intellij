@@ -26,16 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  619
  *  EncodedLegIssuer
  *  data
- *  <p>
+ *  <p></p>
  *  Multileg instrument's individual  security’s EncodedIssuer.
- *  <p>
+ *  <p></p>
  *  See EncodedIssuer (349) field for description
  */
 public class Tag619DatEncodedLegIssuer extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyDataType dataValue;
 
-    public final static String TESTA_DAT_ENCODED_LEG_ISSUER = "BilboBaggins-Tag619DatEncodedLegIssuer";
-    public final static String TESTB_DAT_ENCODED_LEG_ISSUER = "Gandalf-Tag619DatEncodedLegIssuer";
+    public final static String TESTA_DAT_ENCODED_LEG_ISSUER
+            = "BilboBaggins-Tag619DatEncodedLegIssuer";
+    public final static String TESTB_DAT_ENCODED_LEG_ISSUER
+            = "Gandalf-Tag619DatEncodedLegIssuer";
 
     public Tag619DatEncodedLegIssuer(MyDataType dataValue) {
         setFixType(FIX43.FIX619_DAT_ENCODED_LEG_ISSUER);

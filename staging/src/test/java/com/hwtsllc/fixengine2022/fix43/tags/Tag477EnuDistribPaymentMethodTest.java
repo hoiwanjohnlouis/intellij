@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum477DistribPaymentMethod;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -52,20 +51,33 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    or any value conforming to the data type Reserved1000Plus
  */
 class Tag477EnuDistribPaymentMethodTest {
+    Tag477EnuDistribPaymentMethod tagData;
+
     @Test
-    void FIX0477Test() {
-        FIX43 fixData = FIX43.FIX477_ENU_DISTRIB_PAYMENT_METHOD;
-        assertEquals( "477", fixData.toEnumIDString());
-        assertEquals( "DISTRIB_PAYMENT_METHOD", fixData.toEnumNameString());
-        assertEquals( "DistribPaymentMethod", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // loop around the ENUM and process
+        for (Enum477DistribPaymentMethod oneEnum : Enum477DistribPaymentMethod.values()) {
+            tagData = new Tag477EnuDistribPaymentMethod(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0477Test() {
-        Tag477EnuDistribPaymentMethod tagData;
-
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (Enum477DistribPaymentMethod oneEnum : Enum477DistribPaymentMethod.values()) {
+            tagData = new Tag477EnuDistribPaymentMethod(oneEnum);
+            assertEquals( "FIX477_ENU_DISTRIB_PAYMENT_METHOD", tagData.toEnumLabelString());
+            assertEquals( "477", tagData.toEnumIDString());
+            assertEquals( "DISTRIB_PAYMENT_METHOD", tagData.toEnumNameString());
+            assertEquals( "DistribPaymentMethod", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         tagData = new Tag477EnuDistribPaymentMethod( Enum477DistribPaymentMethod.CREST );
         assertEquals( Enum477DistribPaymentMethod.CREST.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -115,44 +127,28 @@ class Tag477EnuDistribPaymentMethodTest {
         tagData = new Tag477EnuDistribPaymentMethod( Enum477DistribPaymentMethod.REINVEST_IN_FUND );
         assertEquals( Enum477DistribPaymentMethod.REINVEST_IN_FUND.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag477EnuDistribPaymentMethod tagData;
-
-        // loop around the ENUM and process
-        for ( Enum477DistribPaymentMethod oneEnum : Enum477DistribPaymentMethod.values()) {
-            tagData = new Tag477EnuDistribPaymentMethod(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag477EnuDistribPaymentMethod tagData;
 
         // loop around the ENUM and process
         for (Enum477DistribPaymentMethod oneEnum : Enum477DistribPaymentMethod.values()) {
             tagData = new Tag477EnuDistribPaymentMethod(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag477EnuDistribPaymentMethod tagData;
-
         // loop around the ENUM and process
         for (Enum477DistribPaymentMethod oneEnum : Enum477DistribPaymentMethod.values()) {
             tagData = new Tag477EnuDistribPaymentMethod(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag477EnuDistribPaymentMethod tagData;
-
         // loop around the ENUM and process
         for (Enum477DistribPaymentMethod oneEnum : Enum477DistribPaymentMethod.values()) {
             tagData = new Tag477EnuDistribPaymentMethod(oneEnum);
@@ -162,8 +158,6 @@ class Tag477EnuDistribPaymentMethodTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag477EnuDistribPaymentMethod tagData;
-
         // loop around the ENUM and process
         for (Enum477DistribPaymentMethod oneEnum : Enum477DistribPaymentMethod.values()) {
             tagData = new Tag477EnuDistribPaymentMethod(oneEnum);
@@ -172,8 +166,8 @@ class Tag477EnuDistribPaymentMethodTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

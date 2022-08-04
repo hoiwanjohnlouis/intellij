@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  475
  *  InvestorCountryOfResidence
  *  Country
- *  <p>
+ *  <p></p>
  *  The ISO 366 Country code (2 character) identifying which country the beneficial investor is resident for tax purposes.
  */
 public class Tag475CouInvestorCountryOfResidence extends FIX43Abstract implements LogValuePairString, LogVerboseString {

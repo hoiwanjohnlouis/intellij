@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  578
  *  TradeInputSource
  *  String
- *  <p>
+ *  <p></p>
  *  Type of input device or system from which the trade was entered.
  */
 public class Tag578StrTradeInputSource extends FIX43Abstract implements LogValuePairString, LogVerboseString {

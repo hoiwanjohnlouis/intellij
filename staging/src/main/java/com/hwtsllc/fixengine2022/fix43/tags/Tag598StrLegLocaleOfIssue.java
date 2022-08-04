@@ -26,18 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  598
  *  LegLocaleOfIssue
  *  String
- *  <p>
+ *  <p></p>
  *  Multileg instrument's individual leg security’s LocaleOfIssue.
- *  <p>
+ *  <p></p>
  *  See LocaleOfIssue (472) field for description
  */
 public class Tag598StrLegLocaleOfIssue extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_LEG_LOCALE_OF_ISSUE
-            = "BilboBaggins-Tag598StrLegLocaleOfIssue";
+            = "Gershwin-Tag598StrLegLocaleOfIssue";
     public final static String TESTB_STR_LEG_LOCALE_OF_ISSUE
-            = "Gandalf-Tag598StrLegLocaleOfIssue";
+            = "Massenet-Tag598StrLegLocaleOfIssue";
 
     public Tag598StrLegLocaleOfIssue(MyStringType dataValue) {
         setFixType(FIX43.FIX598_STR_LEG_LOCALE_OF_ISSUE);

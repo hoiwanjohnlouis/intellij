@@ -26,16 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  637
  *  LegLastPx
  *  Price
- *  <p>
+ *  <p></p>
  *  Execution price assigned to a leg of a multileg instrument.
- *  <p>
+ *  <p></p>
  *  See LastPx (31) field for description and values
  */
 public class Tag637PrcLegLastPx extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceType dataValue;
 
-    public final static double TESTA_PRC_LEG_LAST_PX = 6.37D;
-    public final static double TESTB_PRC_LEG_LAST_PX = 7.36D;
+    public final static double TESTA_PRC_LEG_LAST_PX
+            = 6.37D;
+    public final static double TESTB_PRC_LEG_LAST_PX
+            = 7.36D;
 
     public Tag637PrcLegLastPx(MyPriceType dataValue) {
         setFixType(FIX43.FIX637_PRC_LEG_LAST_PX);

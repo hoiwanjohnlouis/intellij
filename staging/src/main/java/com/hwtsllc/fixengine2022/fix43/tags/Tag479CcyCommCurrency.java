@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  479
  *  CommCurrency
  *  Currency
- *  <p>
+ *  <p></p>
  *  Specifies currency to be  use for Commission (12) if the Commission currency is different from the Deal Currency
- *  <p>
+ *  <p></p>
  *  see "Appendix 6-A; Valid Currency Codes".
  */
 public class Tag479CcyCommCurrency extends FIX43Abstract implements LogValuePairString, LogVerboseString {

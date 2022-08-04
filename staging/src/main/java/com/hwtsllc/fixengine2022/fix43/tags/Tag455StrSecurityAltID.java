@@ -26,11 +26,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  455
  *  SecurityAltID
  *  String
- *  <p>
+ *  <p></p>
  *  Alternate Security identifier value for this security of SecurityAltIDSource (456) type
- *  <p>
+ *  <p></p>
  *  (e.g. CUSIP, SEDOL, ISIN, etc).
- *  <p>
+ *  <p></p>
  *  Requires SecurityAltIDSource.
  */
 public class Tag455StrSecurityAltID extends FIX43Abstract implements LogValuePairString, LogVerboseString {

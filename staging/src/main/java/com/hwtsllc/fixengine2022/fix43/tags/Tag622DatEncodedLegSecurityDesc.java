@@ -26,16 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  622
  *  EncodedLegSecurityDesc
  *  data
- *  <p>
+ *  <p></p>
  *  Multileg instrument's individual  security’s EncodedSecurityDesc.
- *  <p>
+ *  <p></p>
  *  See EncodedSecurityDesc (35) field for description
  */
 public class Tag622DatEncodedLegSecurityDesc extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyDataType dataValue;
 
-    public final static String TESTA_DAT_ENCODED_LEG_SECURITY_DESC = "BilboBaggins-Tag622DatEncodedLegSecurityDesc";
-    public final static String TESTB_DAT_ENCODED_LEG_SECURITY_DESC = "Gandalf-Tag622DatEncodedLegSecurityDesc";
+    public final static String TESTA_DAT_ENCODED_LEG_SECURITY_DESC
+            = "BilboBaggins-Tag622DatEncodedLegSecurityDesc";
+    public final static String TESTB_DAT_ENCODED_LEG_SECURITY_DESC
+            = "Gandalf-Tag622DatEncodedLegSecurityDesc";
 
     public Tag622DatEncodedLegSecurityDesc(MyDataType dataValue) {
         setFixType(FIX43.FIX622_DAT_ENCODED_LEG_SECURITY_DESC);

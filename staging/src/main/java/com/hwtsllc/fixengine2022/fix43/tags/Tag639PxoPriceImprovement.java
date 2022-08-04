@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  639
  *  PriceImprovement
  *  PriceOffset
- *  <p>
+ *  <p></p>
  *  Amount of price improvement.
  */
 public class Tag639PxoPriceImprovement extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyPriceOffsetType dataValue;
 
-    public final static double TESTA_PXO_PRICE_IMPROVEMENT = 0.639D;
-    public final static double TESTB_PXO_PRICE_IMPROVEMENT = 0.936D;
+    public final static double TESTA_PXO_PRICE_IMPROVEMENT
+            = 0.639D;
+    public final static double TESTB_PXO_PRICE_IMPROVEMENT
+            = 0.936D;
 
     public Tag639PxoPriceImprovement(MyPriceOffsetType dataValue) {
         setFixType(FIX43.FIX639_PXO_PRICE_IMPROVEMENT);

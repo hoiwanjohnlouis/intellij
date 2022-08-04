@@ -26,16 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  600
  *  LegSymbol
  *  String
- *  <p>
+ *  <p></p>
  *  Multileg instrument's individual  security’s Symbol.
- *  <p>
+ *  <p></p>
  *  See Symbol (55) field for description
  */
 public class Tag600StrLegSymbol extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_LEG_SYMBOL = "BilboBaggins-Tag600StrLegSymbol";
-    public final static String TESTB_STR_LEG_SYMBOL = "Gandalf-Tag600StrLegSymbol";
+    public final static String TESTA_STR_LEG_SYMBOL
+            = "Millocker-Tag600StrLegSymbol";
+    public final static String TESTB_STR_LEG_SYMBOL
+            = "Mozart-Tag600StrLegSymbol";
 
     public Tag600StrLegSymbol(MyStringType dataValue) {
         setFixType(FIX43.FIX600_STR_LEG_SYMBOL);

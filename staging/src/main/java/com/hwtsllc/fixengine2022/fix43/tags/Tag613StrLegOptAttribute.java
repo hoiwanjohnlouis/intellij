@@ -26,9 +26,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  613
  *  LegOptAttribute
  *  char
- *  <p>
+ *  <p></p>
  *  Multileg instrument's individual  security’s OptAttribute.
- *  <p>
+ *  <p></p>
  *  See OptAttribute (206) field for description
  */
 public class Tag613StrLegOptAttribute extends FIX43Abstract implements LogValuePairString, LogVerboseString {

@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  654
  *  LegRefID
  *  String
- *  <p>
+ *  <p></p>
  *  Unique indicator for a specific leg.
  */
 public class Tag654StrLegRefID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_LEG_REF_ID = "BilboBaggins-Tag654StrLegRefID";
-    public final static String TESTB_STR_LEG_REF_ID = "Gandalf-Tag654StrLegRefID";
+    public final static String TESTA_STR_LEG_REF_ID
+            = "MadamaButterfly-Tag654StrLegRefID";
+    public final static String TESTB_STR_LEG_REF_ID
+            = "GirlOfTheGoldenWest-Tag654StrLegRefID";
 
     public Tag654StrLegRefID(MyStringType dataValue) {
         setFixType(FIX43.FIX654_STR_LEG_REF_ID);

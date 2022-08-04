@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumSymbolSfx;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -59,65 +58,62 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    WI - When-Issued for a security to be reissued under an old CUSIP or ISIN
  */
 class Tag601EnuLegSymbolSfxTest {
-    @Test
-    void FIX0601Test() {
-        FIX43 fixData = FIX43.FIX601_ENU_LEG_SYMBOL_SFX;
-        assertEquals( "601", fixData.toEnumIDString());
-        assertEquals( "LEG_SYMBOL_SFX", fixData.toEnumNameString());
-        assertEquals( "LegSymbolSfx", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0601Test() {
-        Tag601EnuLegSymbolSfx tagData;
+    Tag601EnuLegSymbolSfx tagData;
 
-        tagData = new Tag601EnuLegSymbolSfx(MyEnumSymbolSfx.EUCP);
-        assertEquals( MyEnumSymbolSfx.EUCP.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag601EnuLegSymbolSfx(MyEnumSymbolSfx.WHEN_ISSUED);
-        assertEquals( MyEnumSymbolSfx.WHEN_ISSUED.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
     @Test
-    void PrintFIXTagTest() {
-        Tag601EnuLegSymbolSfx tagData;
-
+    void PrintTest() {
         // loop around the ENUM and process
-        for ( MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
+        for (MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
             tagData = new Tag601EnuLegSymbolSfx(oneEnum);
             System.out.println( tagData.toVerboseString() );
         }
     }
     @Test
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
+            tagData = new Tag601EnuLegSymbolSfx(oneEnum);
+            assertEquals( "FIX601_ENU_LEG_SYMBOL_SFX", tagData.toEnumLabelString());
+            assertEquals( "601", tagData.toEnumIDString());
+            assertEquals( "LEG_SYMBOL_SFX", tagData.toEnumNameString());
+            assertEquals( "LegSymbolSfx", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void TagGetDataValueTest() {
-        Tag601EnuLegSymbolSfx tagData;
+        tagData = new Tag601EnuLegSymbolSfx(MyEnumSymbolSfx.EUCP);
+        assertEquals( "CD", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag601EnuLegSymbolSfx(MyEnumSymbolSfx.WHEN_ISSUED);
+        assertEquals( "WI", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         // loop around the ENUM and process
         for (MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
             tagData = new Tag601EnuLegSymbolSfx(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag601EnuLegSymbolSfx tagData;
-
         // loop around the ENUM and process
         for (MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
             tagData = new Tag601EnuLegSymbolSfx(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag601EnuLegSymbolSfx tagData;
-
         // loop around the ENUM and process
         for (MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
             tagData = new Tag601EnuLegSymbolSfx(oneEnum);
@@ -127,8 +123,6 @@ class Tag601EnuLegSymbolSfxTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag601EnuLegSymbolSfx tagData;
-
         // loop around the ENUM and process
         for (MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
             tagData = new Tag601EnuLegSymbolSfx(oneEnum);
@@ -137,8 +131,8 @@ class Tag601EnuLegSymbolSfxTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

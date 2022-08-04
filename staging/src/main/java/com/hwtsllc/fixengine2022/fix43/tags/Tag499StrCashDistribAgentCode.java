@@ -26,16 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  499
  *  CashDistribAgentCode
  *  String
- *  <p>
+ *  <p></p>
  *  BIC (Bank Identification Code--Swift managed) code of agent bank for cash distributions
  */
 public class Tag499StrCashDistribAgentCode extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_CASH_DISTRIB_AGENT_CODE
-            = "BilboBaggins-Tag499StrCashDistribAgentCode";
+            = "HeleneGrimaud-Tag499StrCashDistribAgentCode";
     public final static String TESTB_STR_CASH_DISTRIB_AGENT_CODE
-            = "Gandalf-Tag499StrCashDistribAgentCode";
+            = "AnneSophieMutter-Tag499StrCashDistribAgentCode";
 
     public Tag499StrCashDistribAgentCode(MyStringType dataValue) {
         setFixType(FIX43.FIX499_STR_CASH_DISTRIB_AGENT_CODE);

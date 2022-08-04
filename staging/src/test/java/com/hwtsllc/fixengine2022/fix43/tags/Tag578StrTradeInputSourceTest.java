@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -32,89 +31,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  Type of input device or system from which the trade was entered.
  */
 class Tag578StrTradeInputSourceTest {
+    Tag578StrTradeInputSource tagData;
+    String [] TestArray = {
+            Tag578StrTradeInputSource.TESTA_STR_TRADE_INPUT_SOURCE,
+            Tag578StrTradeInputSource.TESTB_STR_TRADE_INPUT_SOURCE
+    };
+
     @Test
-    void FIX0578Test() {
-        FIX43 fixData = FIX43.FIX578_STR_TRADE_INPUT_SOURCE;
-        assertEquals( "578", fixData.toEnumIDString());
-        assertEquals( "TRADE_INPUT_SOURCE", fixData.toEnumNameString());
-        assertEquals( "TradeInputSource", fixData.toEnumDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag578StrTradeInputSource( new MyStringType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0578Test() {
-        Tag578StrTradeInputSource tagData;
-        String oneElement;
-
-        oneElement = Tag578StrTradeInputSource.TESTA_STR_TRADE_INPUT_SOURCE;
-        tagData = new Tag578StrTradeInputSource( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag578StrTradeInputSource.TESTB_STR_TRADE_INPUT_SOURCE;
-        tagData = new Tag578StrTradeInputSource( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag578StrTradeInputSource tagData;
-        String oneElement;
-
-        oneElement = Tag578StrTradeInputSource.TESTA_STR_TRADE_INPUT_SOURCE;
-        tagData = new Tag578StrTradeInputSource( new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag578StrTradeInputSource.TESTB_STR_TRADE_INPUT_SOURCE;
-        tagData = new Tag578StrTradeInputSource( new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag578StrTradeInputSource( new MyStringType( oneElement ));
+            assertEquals( "FIX578_STR_TRADE_INPUT_SOURCE", tagData.toEnumLabelString());
+            assertEquals( "578", tagData.toEnumIDString());
+            assertEquals( "TRADE_INPUT_SOURCE", tagData.toEnumNameString());
+            assertEquals( "TradeInputSource", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag578StrTradeInputSource tagData;
-        String oneElement;
-
-        oneElement = Tag578StrTradeInputSource.TESTB_STR_TRADE_INPUT_SOURCE;
-        tagData = new Tag578StrTradeInputSource( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag578StrTradeInputSource( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag578StrTradeInputSource tagData;
-        String oneElement;
-
-        oneElement = Tag578StrTradeInputSource.TESTB_STR_TRADE_INPUT_SOURCE;
-        tagData = new Tag578StrTradeInputSource( new MyStringType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag578StrTradeInputSource( new MyStringType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag578StrTradeInputSource tagData;
-        String oneElement;
-
-        oneElement = Tag578StrTradeInputSource.TESTB_STR_TRADE_INPUT_SOURCE;
-        tagData = new Tag578StrTradeInputSource(new MyStringType(oneElement));
-        assertEquals( oneElement, tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag578StrTradeInputSource( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag578StrTradeInputSource tagData;
-        String oneElement;
-
-        oneElement = Tag578StrTradeInputSource.TESTA_STR_TRADE_INPUT_SOURCE;
-        tagData = new Tag578StrTradeInputSource( new MyStringType( oneElement ) );
-        assertEquals( "Tag578StrTradeInputSource\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag578StrTradeInputSource( new MyStringType( oneElement ));
+            assertEquals( "Tag578StrTradeInputSource\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

@@ -26,11 +26,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  469
  *  RoundingModulus
  *  float
- *  <p>
+ *  <p></p>
  *  For CIV - a float value indicating the value to which rounding is required.
- *  <p>
+ *  <p></p>
  *  i.e. 0 means round to a multiple of 0 units/shares; 0.5 means round to a multiple of 0.5 units/shares.
- *  <p>
+ *  <p></p>
  *  The default, if RoundingDirection (468) is specified without RoundingModulus, is to round to a whole unit/share.
  */
 public class Tag469FloRoundingModulus extends FIX43Abstract implements LogValuePairString, LogVerboseString {

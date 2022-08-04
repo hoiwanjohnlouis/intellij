@@ -38,32 +38,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *          or offers falling outside the MarketDepth of the request
  */
 class Tag547EnuMDImplicitDeleteTest {
-    @Test
-    void FIX0547Test() {
-        FIX43 fixData = FIX43.FIX547_ENU_MD_IMPLICIT_DELETE;
-        assertEquals( "547", fixData.toEnumIDString());
-        assertEquals( "MD_IMPLICIT_DELETE", fixData.toEnumNameString());
-        assertEquals( "MDImplicitDelete", fixData.toEnumDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0547Test() {
-        Tag547EnuMDImplicitDelete tagData;
+    Tag547EnuMDImplicitDelete tagData;
 
-        tagData = new Tag547EnuMDImplicitDelete( Enum547MDImplicitDelete.NO);
-        assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag547EnuMDImplicitDelete(Enum547MDImplicitDelete.YES);
-        assertEquals( "Y", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
     @Test
-    void PrintFIXTagTest() {
-        Tag547EnuMDImplicitDelete tagData;
-
+    void PrintTest() {
         // loop around the ENUM and process
         for ( Enum547MDImplicitDelete oneEnum : Enum547MDImplicitDelete.values()) {
             tagData = new Tag547EnuMDImplicitDelete(oneEnum);
@@ -71,34 +49,53 @@ class Tag547EnuMDImplicitDeleteTest {
         }
     }
     @Test
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( Enum547MDImplicitDelete oneEnum : Enum547MDImplicitDelete.values()) {
+            tagData = new Tag547EnuMDImplicitDelete(oneEnum);
+            assertEquals( "FIX547_ENU_MD_IMPLICIT_DELETE", tagData.toEnumLabelString());
+            assertEquals( "547", tagData.toEnumIDString());
+            assertEquals( "MD_IMPLICIT_DELETE", tagData.toEnumNameString());
+            assertEquals( "MDImplicitDelete", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void TagGetDataValueTest() {
-        Tag547EnuMDImplicitDelete tagData;
+        tagData = new Tag547EnuMDImplicitDelete( Enum547MDImplicitDelete.NO);
+        assertEquals( "N", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag547EnuMDImplicitDelete(Enum547MDImplicitDelete.YES);
+        assertEquals( "Y", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         // loop around the ENUM and process
-        for (Enum547MDImplicitDelete oneEnum : Enum547MDImplicitDelete.values()) {
+        for ( Enum547MDImplicitDelete oneEnum : Enum547MDImplicitDelete.values()) {
             tagData = new Tag547EnuMDImplicitDelete(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag547EnuMDImplicitDelete tagData;
-
         // loop around the ENUM and process
-        for (Enum547MDImplicitDelete oneEnum : Enum547MDImplicitDelete.values()) {
+        for ( Enum547MDImplicitDelete oneEnum : Enum547MDImplicitDelete.values()) {
             tagData = new Tag547EnuMDImplicitDelete(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag547EnuMDImplicitDelete tagData;
-
         // loop around the ENUM and process
-        for (Enum547MDImplicitDelete oneEnum : Enum547MDImplicitDelete.values()) {
+        for ( Enum547MDImplicitDelete oneEnum : Enum547MDImplicitDelete.values()) {
             tagData = new Tag547EnuMDImplicitDelete(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -106,18 +103,16 @@ class Tag547EnuMDImplicitDeleteTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag547EnuMDImplicitDelete tagData;
-
         // loop around the ENUM and process
-        for (Enum547MDImplicitDelete oneEnum : Enum547MDImplicitDelete.values()) {
+        for ( Enum547MDImplicitDelete oneEnum : Enum547MDImplicitDelete.values()) {
             tagData = new Tag547EnuMDImplicitDelete(oneEnum);
             assertEquals( "Tag547EnuMDImplicitDelete\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

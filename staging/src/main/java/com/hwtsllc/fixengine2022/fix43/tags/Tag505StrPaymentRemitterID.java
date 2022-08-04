@@ -26,16 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  505
  *  PaymentRemitterID
  *  String
- *  <p>
+ *  <p></p>
  *  Identifies sender of a payment, e.g. the payment remitter or a customer reference number.
  */
 public class Tag505StrPaymentRemitterID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_PAYMENT_REMITTER_ID
-            = "BilboBaggins-Tag505StrPaymentRemitterID";
+            = "JosephFourier-Tag505StrPaymentRemitterID";
     public final static String TESTB_STR_PAYMENT_REMITTER_ID
-            = "Gandalf-Tag505StrPaymentRemitterID";
+            = "PafnutyLvovichChebyshev-Tag505StrPaymentRemitterID";
 
     public Tag505StrPaymentRemitterID(MyStringType dataValue) {
         setFixType(FIX43.FIX505_STR_PAYMENT_REMITTER_ID);

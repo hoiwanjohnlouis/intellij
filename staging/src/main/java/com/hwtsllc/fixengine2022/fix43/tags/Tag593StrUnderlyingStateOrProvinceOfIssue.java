@@ -26,18 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  593
  *  UnderlyingStateOrProvinceOfIssue
  *  String
- *  <p>
+ *  <p></p>
  *  Underlying security’s StateOrProvinceOfIssue.
- *  <p>
+ *  <p></p>
  *  See StateOrProvinceOfIssue (471) field for description
  */
 public class Tag593StrUnderlyingStateOrProvinceOfIssue extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_UNDERLYING_STATE_OR_PROVINCE_OF_ISSUE
-            = "BilboBaggins-Tag593StrUnderlyingStateOrProvinceOfIssue";
+            = "MaxPlanck-Tag593StrUnderlyingStateOrProvinceOfIssue";
     public final static String TESTB_STR_UNDERLYING_STATE_OR_PROVINCE_OF_ISSUE
-            = "Gandalf-Tag593StrUnderlyingStateOrProvinceOfIssue";
+            = "AlbertEinstein-Tag593StrUnderlyingStateOrProvinceOfIssue";
 
     public Tag593StrUnderlyingStateOrProvinceOfIssue(MyStringType dataValue) {
         setFixType(FIX43.FIX593_STR_UNDERLYING_STATE_OR_PROVINCE_OF_ISSUE);

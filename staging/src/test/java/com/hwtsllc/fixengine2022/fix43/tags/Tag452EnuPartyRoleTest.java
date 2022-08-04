@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumPartyRole;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -192,25 +191,36 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    78 - Allocation Entity
  */
 class Tag452EnuPartyRoleTest {
+    Tag452EnuPartyRole tagData;
+
     @Test
-    void FIX0452Test() {
-        FIX43 fixData = FIX43.FIX452_ENU_PARTY_ROLE;
-        assertEquals( "452", fixData.toEnumIDString());
-        assertEquals( "PARTY_ROLE", fixData.toEnumNameString());
-        assertEquals( "PartyRole", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // loop around the ENUM and process
+        for (MyEnumPartyRole oneEnum : MyEnumPartyRole.values()) {
+            tagData = new Tag452EnuPartyRole(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0452Test() {
-        Tag452EnuPartyRole tagData;
-
-
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (MyEnumPartyRole oneEnum : MyEnumPartyRole.values()) {
+            tagData = new Tag452EnuPartyRole(oneEnum);
+            assertEquals( "FIX452_ENU_PARTY_ROLE", tagData.toEnumLabelString());
+            assertEquals( "452", tagData.toEnumIDString());
+            assertEquals( "PARTY_ROLE", tagData.toEnumNameString());
+            assertEquals( "PartyRole", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
          * 1-22, 24-78 msg types
          */
-
 
         /*
          *  1-22, msg types
@@ -542,44 +552,28 @@ class Tag452EnuPartyRoleTest {
         tagData = new Tag452EnuPartyRole(MyEnumPartyRole.ALLOCATION_ENTITY);
         assertEquals( MyEnumPartyRole.ALLOCATION_ENTITY.toEnumIDString(), tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag452EnuPartyRole tagData;
-
-        // loop around the ENUM and process
-        for ( MyEnumPartyRole oneEnum : MyEnumPartyRole.values()) {
-            tagData = new Tag452EnuPartyRole(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag452EnuPartyRole tagData;
 
         // loop around the ENUM and process
         for (MyEnumPartyRole oneEnum : MyEnumPartyRole.values()) {
             tagData = new Tag452EnuPartyRole(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag452EnuPartyRole tagData;
-
         // loop around the ENUM and process
         for (MyEnumPartyRole oneEnum : MyEnumPartyRole.values()) {
             tagData = new Tag452EnuPartyRole(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag452EnuPartyRole tagData;
-
         // loop around the ENUM and process
         for (MyEnumPartyRole oneEnum : MyEnumPartyRole.values()) {
             tagData = new Tag452EnuPartyRole(oneEnum);
@@ -589,8 +583,6 @@ class Tag452EnuPartyRoleTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag452EnuPartyRole tagData;
-
         // loop around the ENUM and process
         for (MyEnumPartyRole oneEnum : MyEnumPartyRole.values()) {
             tagData = new Tag452EnuPartyRole(oneEnum);
@@ -599,8 +591,8 @@ class Tag452EnuPartyRoleTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

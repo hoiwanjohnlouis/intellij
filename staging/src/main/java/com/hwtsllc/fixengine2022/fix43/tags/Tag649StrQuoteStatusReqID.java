@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  649
  *  QuoteStatusReqID
  *  String
- *  <p>
+ *  <p></p>
  *  Unique identifier for Quote Status Request.
  */
 public class Tag649StrQuoteStatusReqID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_QUOTE_STATUS_REQ_ID = "BilboBaggins-Tag649StrQuoteStatusReqID";
-    public final static String TESTB_STR_QUOTE_STATUS_REQ_ID = "Gandalf-Tag649StrQuoteStatusReqID";
+    public final static String TESTA_STR_QUOTE_STATUS_REQ_ID
+            = "LaTraviata-Tag649StrQuoteStatusReqID";
+    public final static String TESTB_STR_QUOTE_STATUS_REQ_ID
+            = "Rigoletto-Tag649StrQuoteStatusReqID";
 
     public Tag649StrQuoteStatusReqID(MyStringType dataValue) {
         setFixType(FIX43.FIX649_STR_QUOTE_STATUS_REQ_ID);

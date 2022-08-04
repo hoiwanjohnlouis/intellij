@@ -26,16 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  493
  *  RegistAcctType
  *  String
- *  <p>
+ *  <p></p>
  *  For CIV – a  fund manager-defined code identifying which of the fund manager’s account types is required.
  */
 public class Tag493StrRegistAcctType extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_REGIST_ACCT_TYPE
-            = "BilboBaggins-Tag493StrRegistAcctType";
+            = "YujaWang-Tag493StrRegistAcctType";
     public final static String TESTB_STR_REGIST_ACCT_TYPE
-            = "Gandalf-Tag493StrRegistAcctType";
+            = "AkikoSuwanai-Tag493StrRegistAcctType";
 
     public Tag493StrRegistAcctType(MyStringType dataValue) {
         setFixType(FIX43.FIX493_STR_REGIST_ACCT_TYPE);

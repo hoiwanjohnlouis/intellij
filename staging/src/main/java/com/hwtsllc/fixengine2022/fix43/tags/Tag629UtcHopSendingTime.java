@@ -26,21 +26,23 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  629
  *  HopSendingTime
  *  UTCTimestamp
- *  <p>
+ *  <p></p>
  *  Time that HopCompID (628) sent the message.
- *  <p>
+ *  <p></p>
  *  It is recommended that this value be the SendingTime (52) of the message sent by the third party.
- *  <p>
+ *  <p></p>
  *  Applicable when messages are communicated/re-distributed via third parties
  *  which function as service bureaus or "hubs".
- *  <p>
+ *  <p></p>
  *  Only applicable if OnBehalfOfCompID (115) is being used.
  */
 public class Tag629UtcHopSendingTime extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyUTCTimestampType dataValue;
 
-    public final static String TESTA_UTC_HOP_SENDING_TIME = "18991231-23:59:59.999";
-    public final static String TESTB_UTC_HOP_SENDING_TIME = "19001231-23:59:59.999";
+    public final static String TESTA_UTC_HOP_SENDING_TIME
+            = "18991231-23:59:59.999";
+    public final static String TESTB_UTC_HOP_SENDING_TIME
+            = "19001231-23:59:59.111";
 
     public Tag629UtcHopSendingTime(MyUTCTimestampType dataValue) {
         setFixType(FIX43.FIX629_UTC_HOP_SENDING_TIME);

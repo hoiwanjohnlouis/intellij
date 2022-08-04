@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  571
  *  TradeReportID
  *  String
- *  <p>
+ *  <p></p>
  *  Unique identifier of trade capture report
  */
 public class Tag571StrTradeReportID extends FIX43Abstract implements LogValuePairString, LogVerboseString {

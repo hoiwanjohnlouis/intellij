@@ -26,16 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  511
  *  RegistEmail
  *  String
- *  <p>
+ *  <p></p>
  *  Email address relating to Registration name and address details
  */
 public class Tag511StrRegistEmail extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_REGIST_EMAIL
-            = "BilboBaggins-Tag511StrRegistEmail";
+            = "LeonhardEuler-Tag511StrRegistEmail";
     public final static String TESTB_STR_REGIST_EMAIL
-            = "Gandalf-Tag511StrRegistEmail";
+            = "PierreSimonLaplace-Tag511StrRegistEmail";
 
     public Tag511StrRegistEmail(MyStringType dataValue) {
         setFixType(FIX43.FIX511_STR_REGIST_EMAIL);

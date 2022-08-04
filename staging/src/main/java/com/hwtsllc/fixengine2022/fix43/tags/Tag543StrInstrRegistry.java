@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  543
  *  InstrRegistry
  *  String
- *  <p>
+ *  <p></p>
  *  Values may include BIC for the depository or custodian who maintain ownership records,
  *  the ISO country code for the location of the record, or the value "ZZ" to specify
  *  physical ownership of the security (e.g. stock certificate).
@@ -35,9 +35,9 @@ public class Tag543StrInstrRegistry extends FIX43Abstract implements LogValuePai
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_INSTR_REGISTRY
-            = "BilboBaggins-Tag543StrInstrRegistry";
+            = "ReneDescartes-Tag543StrInstrRegistry";
     public final static String TESTB_STR_INSTR_REGISTRY
-            = "Gandalf-Tag543StrInstrRegistry";
+            = "Aristotle-Tag543StrInstrRegistry";
 
     public Tag543StrInstrRegistry(MyStringType dataValue) {
         setFixType(FIX43.FIX543_STR_INSTR_REGISTRY);

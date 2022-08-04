@@ -26,12 +26,12 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  458
  *  UnderlyingSecurityAltID
  *  String
- *  <p>
+ *  <p></p>
  *  Alternate Security identifier value for this underlying security of
  *  UnderlyingSecurityAltIDSource (459) type
- *  <p>
+ *  <p></p>
  *  (e.g. CUSIP, SEDOL, ISIN, etc).
- *  <p>
+ *  <p></p>
  *  Requires UnderlyingSecurityAltIDSource.
  */
 public class Tag458StrUnderlyingSecurityAltID extends FIX43Abstract implements LogValuePairString, LogVerboseString {

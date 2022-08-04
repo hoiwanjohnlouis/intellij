@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum563MultiLegRptTypeReq;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -38,72 +37,69 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *              (do not report status of multileg security)
  */
 class Tag563EnuMultiLegRptTypeReqTest {
+    Tag563EnuMultiLegRptTypeReq tagData;
+
     @Test
-    void FIX0563Test() {
-        FIX43 fixData = FIX43.FIX563_ENU_MULTI_LEG_RPT_TYPE_REQ;
-        assertEquals( "563", fixData.toEnumIDString());
-        assertEquals( "MULTI_LEG_RPT_TYPE_REQ", fixData.toEnumNameString());
-        assertEquals( "MultiLegRptTypeReq", fixData.toEnumDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0563Test() {
-        Tag563EnuMultiLegRptTypeReq tagData;
-
-        /*
-         *  0-2 types
-         */
-        tagData = new Tag563EnuMultiLegRptTypeReq( Enum563MultiLegRptTypeReq.MULITLEG_SECURITY_ONLY );
-        assertEquals( Enum563MultiLegRptTypeReq.MULITLEG_SECURITY_ONLY.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag563EnuMultiLegRptTypeReq( Enum563MultiLegRptTypeReq.MULTILEG_SECURITY_LEGS );
-        assertEquals( Enum563MultiLegRptTypeReq.MULTILEG_SECURITY_LEGS.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag563EnuMultiLegRptTypeReq( Enum563MultiLegRptTypeReq.INSTRUMENT_LEGS );
-        assertEquals( Enum563MultiLegRptTypeReq.INSTRUMENT_LEGS.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag563EnuMultiLegRptTypeReq tagData;
-
+    void PrintTest() {
         // loop around the ENUM and process
-        for ( Enum563MultiLegRptTypeReq oneEnum : Enum563MultiLegRptTypeReq.values()) {
+        for (Enum563MultiLegRptTypeReq oneEnum : Enum563MultiLegRptTypeReq.values()) {
             tagData = new Tag563EnuMultiLegRptTypeReq(oneEnum);
             System.out.println( tagData.toVerboseString() );
         }
     }
     @Test
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (Enum563MultiLegRptTypeReq oneEnum : Enum563MultiLegRptTypeReq.values()) {
+            tagData = new Tag563EnuMultiLegRptTypeReq(oneEnum);
+            assertEquals( "FIX563_ENU_MULTI_LEG_RPT_TYPE_REQ", tagData.toEnumLabelString());
+            assertEquals( "563", tagData.toEnumIDString());
+            assertEquals( "MULTI_LEG_RPT_TYPE_REQ", tagData.toEnumNameString());
+            assertEquals( "MultiLegRptTypeReq", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void TagGetDataValueTest() {
-        Tag563EnuMultiLegRptTypeReq tagData;
+        /*
+         *  0-2 types
+         */
+        tagData = new Tag563EnuMultiLegRptTypeReq( Enum563MultiLegRptTypeReq.MULITLEG_SECURITY_ONLY );
+        assertEquals( "0", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag563EnuMultiLegRptTypeReq( Enum563MultiLegRptTypeReq.MULTILEG_SECURITY_LEGS );
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag563EnuMultiLegRptTypeReq( Enum563MultiLegRptTypeReq.INSTRUMENT_LEGS );
+        assertEquals( "2", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         // loop around the ENUM and process
         for (Enum563MultiLegRptTypeReq oneEnum : Enum563MultiLegRptTypeReq.values()) {
             tagData = new Tag563EnuMultiLegRptTypeReq(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag563EnuMultiLegRptTypeReq tagData;
-
         // loop around the ENUM and process
         for (Enum563MultiLegRptTypeReq oneEnum : Enum563MultiLegRptTypeReq.values()) {
             tagData = new Tag563EnuMultiLegRptTypeReq(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag563EnuMultiLegRptTypeReq tagData;
-
         // loop around the ENUM and process
         for (Enum563MultiLegRptTypeReq oneEnum : Enum563MultiLegRptTypeReq.values()) {
             tagData = new Tag563EnuMultiLegRptTypeReq(oneEnum);
@@ -113,8 +109,6 @@ class Tag563EnuMultiLegRptTypeReqTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag563EnuMultiLegRptTypeReq tagData;
-
         // loop around the ENUM and process
         for (Enum563MultiLegRptTypeReq oneEnum : Enum563MultiLegRptTypeReq.values()) {
             tagData = new Tag563EnuMultiLegRptTypeReq(oneEnum);
@@ -123,8 +117,8 @@ class Tag563EnuMultiLegRptTypeReqTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

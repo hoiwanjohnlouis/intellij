@@ -26,16 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  617
  *  LegIssuer
  *  String
- *  <p>
+ *  <p></p>
  *  Multileg instrument's individual  security’s Issuer.
- *  <p>
+ *  <p></p>
  *  See Issuer (106) field for description
  */
 public class Tag617StrLegIssuer extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_LEG_ISSUER = "BilboBaggins-Tag617StrLegIssuer";
-    public final static String TESTB_STR_LEG_ISSUER = "Gandalf-Tag617StrLegIssuer";
+    public final static String TESTA_STR_LEG_ISSUER
+            = "ThePiratesOfPenzance-Tag617StrLegIssuer";
+    public final static String TESTB_STR_LEG_ISSUER
+            = "HMSPinafore-Tag617StrLegIssuer";
 
     public Tag617StrLegIssuer(MyStringType dataValue) {
         setFixType(FIX43.FIX617_STR_LEG_ISSUER);

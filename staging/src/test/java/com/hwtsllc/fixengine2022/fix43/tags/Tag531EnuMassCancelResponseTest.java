@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum531MassCancelResponse;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -44,60 +43,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    7 - Cancel All Orders
  */
 class Tag531EnuMassCancelResponseTest {
+    Tag531EnuMassCancelResponse tagData;
+
     @Test
-    void FIX0531Test() {
-        FIX43 fixData = FIX43.FIX531_ENU_MASS_CANCEL_RESPONSE;
-        assertEquals( "531", fixData.toEnumIDString());
-        assertEquals( "MASS_CANCEL_RESPONSE", fixData.toEnumNameString());
-        assertEquals( "MassCancelResponse", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0531Test() {
-        Tag531EnuMassCancelResponse tagData;
-
-        /*
-         *  0-7 types
-         */
-        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_REQUEST_REJECTED );
-        assertEquals( Enum531MassCancelResponse.CANCEL_REQUEST_REJECTED.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_SECURITY );
-        assertEquals( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_SECURITY.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_UNDERLYING );
-        assertEquals( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_UNDERLYING.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_PRODUCT );
-        assertEquals( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_PRODUCT.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_CFICODE );
-        assertEquals( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_CFICODE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_SECURITYTYPE );
-        assertEquals( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_SECURITYTYPE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_SESSION );
-        assertEquals( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_SESSION.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ALL_ORDERS );
-        assertEquals( Enum531MassCancelResponse.CANCEL_ALL_ORDERS.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag531EnuMassCancelResponse tagData;
-
+    void PrintTest() {
         // loop around the ENUM and process
         for ( Enum531MassCancelResponse oneEnum : Enum531MassCancelResponse.values()) {
             tagData = new Tag531EnuMassCancelResponse(oneEnum);
@@ -105,32 +54,79 @@ class Tag531EnuMassCancelResponseTest {
         }
     }
     @Test
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (Enum531MassCancelResponse oneEnum : Enum531MassCancelResponse.values()) {
+            tagData = new Tag531EnuMassCancelResponse(oneEnum);
+            assertEquals( "FIX531_ENU_MASS_CANCEL_RESPONSE", tagData.toEnumLabelString());
+            assertEquals( "531", tagData.toEnumIDString());
+            assertEquals( "MASS_CANCEL_RESPONSE", tagData.toEnumNameString());
+            assertEquals( "MassCancelResponse", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void TagGetDataValueTest() {
-        Tag531EnuMassCancelResponse tagData;
+        /*
+         *  0-7 types
+         */
+        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_REQUEST_REJECTED );
+        assertEquals( "0", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_SECURITY );
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_UNDERLYING );
+        assertEquals( "2", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_PRODUCT );
+        assertEquals( "3", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_CFICODE );
+        assertEquals( "4", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
+        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_SECURITYTYPE );
+        assertEquals( "5", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_SESSION );
+        assertEquals( "6", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ALL_ORDERS );
+        assertEquals( "7", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         // loop around the ENUM and process
         for (Enum531MassCancelResponse oneEnum : Enum531MassCancelResponse.values()) {
             tagData = new Tag531EnuMassCancelResponse(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag531EnuMassCancelResponse tagData;
-
         // loop around the ENUM and process
         for (Enum531MassCancelResponse oneEnum : Enum531MassCancelResponse.values()) {
             tagData = new Tag531EnuMassCancelResponse(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag531EnuMassCancelResponse tagData;
-
         // loop around the ENUM and process
         for (Enum531MassCancelResponse oneEnum : Enum531MassCancelResponse.values()) {
             tagData = new Tag531EnuMassCancelResponse(oneEnum);
@@ -140,8 +136,6 @@ class Tag531EnuMassCancelResponseTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag531EnuMassCancelResponse tagData;
-
         // loop around the ENUM and process
         for (Enum531MassCancelResponse oneEnum : Enum531MassCancelResponse.values()) {
             tagData = new Tag531EnuMassCancelResponse(oneEnum);
@@ -150,8 +144,8 @@ class Tag531EnuMassCancelResponseTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

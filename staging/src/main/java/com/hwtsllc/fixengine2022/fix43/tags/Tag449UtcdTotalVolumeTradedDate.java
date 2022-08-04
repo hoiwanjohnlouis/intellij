@@ -26,17 +26,19 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  449
  *  TotalVolumeTradedDate
  *  UTCDateOnly
- *  <p>
+ *  <p></p>
  *  Deprecated in FIX.4.3 Date of TotalVolumeTraded (387).
- *  <p>
+ *  <p></p>
  *  (prior to FIX 4.4 field was of type UTCDate)
  */
 // @Deprecated
 public class Tag449UtcdTotalVolumeTradedDate extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyUTCDateType dataValue;
 
-    public final static String TESTA_UTCD_TOTAL_VOLUME_TRADED_DATE = "18991231";
-    public final static String TESTB_UTCD_TOTAL_VOLUME_TRADED_DATE = "19001231";
+    public final static String TESTA_UTCD_TOTAL_VOLUME_TRADED_DATE
+            = "18991231";
+    public final static String TESTB_UTCD_TOTAL_VOLUME_TRADED_DATE
+            = "19001231";
 
     public Tag449UtcdTotalVolumeTradedDate(MyUTCDateType dataValue) {
         setFixType(FIX43.FIX449_UTCD_TOTAL_VOLUME_TRADED_DATE);

@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum497FundRenewWaiv;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -37,35 +36,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    Y - Yes
  */
 class Tag497EnuFundRenewWaivTest {
-    @Test
-    void FIX0497Test() {
-        FIX43 fixData = FIX43.FIX497_ENU_FUND_RENEW_WAIV;
-        assertEquals( "497", fixData.toEnumIDString());
-        assertEquals( "FUND_RENEW_WAIV", fixData.toEnumNameString());
-        assertEquals( "FundRenewWaiv", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0497Test() {
-        Tag497EnuFundRenewWaiv tagData;
+    Tag497EnuFundRenewWaiv tagData;
 
-        /*
-         * N, Y types
-         */
-        tagData = new Tag497EnuFundRenewWaiv( Enum497FundRenewWaiv.NO );
-        assertEquals( Enum497FundRenewWaiv.NO.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag497EnuFundRenewWaiv( Enum497FundRenewWaiv.YES );
-        assertEquals( Enum497FundRenewWaiv.YES.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
     @Test
-    void PrintFIXTagTest() {
-        Tag497EnuFundRenewWaiv tagData;
-
+    void PrintTest() {
         // loop around the ENUM and process
         for ( Enum497FundRenewWaiv oneEnum : Enum497FundRenewWaiv.values()) {
             tagData = new Tag497EnuFundRenewWaiv(oneEnum);
@@ -73,32 +47,54 @@ class Tag497EnuFundRenewWaivTest {
         }
     }
     @Test
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (Enum497FundRenewWaiv oneEnum : Enum497FundRenewWaiv.values()) {
+            tagData = new Tag497EnuFundRenewWaiv(oneEnum);
+            assertEquals( "FIX497_ENU_FUND_RENEW_WAIV", tagData.toEnumLabelString());
+            assertEquals( "497", tagData.toEnumIDString());
+            assertEquals( "FUND_RENEW_WAIV", tagData.toEnumNameString());
+            assertEquals( "FundRenewWaiv", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void TagGetDataValueTest() {
-        Tag497EnuFundRenewWaiv tagData;
+        /*
+         * N, Y types
+         */
+        tagData = new Tag497EnuFundRenewWaiv( Enum497FundRenewWaiv.NO );
+        assertEquals( "N", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag497EnuFundRenewWaiv( Enum497FundRenewWaiv.YES );
+        assertEquals( "Y", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         // loop around the ENUM and process
         for (Enum497FundRenewWaiv oneEnum : Enum497FundRenewWaiv.values()) {
             tagData = new Tag497EnuFundRenewWaiv(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag497EnuFundRenewWaiv tagData;
-
         // loop around the ENUM and process
         for (Enum497FundRenewWaiv oneEnum : Enum497FundRenewWaiv.values()) {
             tagData = new Tag497EnuFundRenewWaiv(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag497EnuFundRenewWaiv tagData;
-
         // loop around the ENUM and process
         for (Enum497FundRenewWaiv oneEnum : Enum497FundRenewWaiv.values()) {
             tagData = new Tag497EnuFundRenewWaiv(oneEnum);
@@ -108,8 +104,6 @@ class Tag497EnuFundRenewWaivTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag497EnuFundRenewWaiv tagData;
-
         // loop around the ENUM and process
         for (Enum497FundRenewWaiv oneEnum : Enum497FundRenewWaiv.values()) {
             tagData = new Tag497EnuFundRenewWaiv(oneEnum);
@@ -118,8 +112,8 @@ class Tag497EnuFundRenewWaivTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

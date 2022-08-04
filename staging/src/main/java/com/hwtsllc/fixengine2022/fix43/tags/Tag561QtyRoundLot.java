@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  561
  *  RoundLot
  *  Qty
- *  <p>
+ *  <p></p>
  *  The trading lot size of a security
  */
 public class Tag561QtyRoundLot extends FIX43Abstract implements LogValuePairString, LogVerboseString {

@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum587LegSettlType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -48,20 +47,33 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    C - FX Spot Next settlement (Spot+1, aka next day)
  */
 class Tag587EnuLegSettlTypeTest {
+    Tag587EnuLegSettlType tagData;
+
     @Test
-    void FIX0587Test() {
-        FIX43 fixData = FIX43.FIX587_ENU_LEG_SETTL_TYPE;
-        assertEquals( "587", fixData.toEnumIDString());
-        assertEquals( "LEG_SETTL_TYPE", fixData.toEnumNameString());
-        assertEquals( "LegSettlType (formerly named LegSettlmntTyp prior to FIX 4.4)", fixData.toEnumDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // loop around the ENUM and process
+        for (Enum587LegSettlType oneEnum : Enum587LegSettlType.values()) {
+            tagData = new Tag587EnuLegSettlType(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0587Test() {
-        Tag587EnuLegSettlType tagData;
-
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (Enum587LegSettlType oneEnum : Enum587LegSettlType.values()) {
+            tagData = new Tag587EnuLegSettlType(oneEnum);
+            assertEquals( "FIX587_ENU_LEG_SETTL_TYPE", tagData.toEnumLabelString());
+            assertEquals( "587", tagData.toEnumIDString());
+            assertEquals( "LEG_SETTL_TYPE", tagData.toEnumNameString());
+            assertEquals( "LegSettlType (formerly named LegSettlmntTyp prior to FIX 4.4)", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
          *  0-9, B-C, types
          */
@@ -70,95 +82,78 @@ class Tag587EnuLegSettlTypeTest {
          *  0-9, types
          */
         tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.REGULAR );
-        assertEquals( Enum587LegSettlType.REGULAR.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.CASH );
-        assertEquals( Enum587LegSettlType.CASH.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "1", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.NEXT_DAY );
-        assertEquals( Enum587LegSettlType.NEXT_DAY.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "2", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.T_PLUS_2 );
-        assertEquals( Enum587LegSettlType.T_PLUS_2.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "3", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.T_PLUS_3 );
-        assertEquals( Enum587LegSettlType.T_PLUS_3.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "4", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
 
         tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.T_PLUS_4 );
-        assertEquals( Enum587LegSettlType.T_PLUS_4.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "5", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.FUTURE );
-        assertEquals( Enum587LegSettlType.FUTURE.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "6", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.WHEN_ISSUED );
-        assertEquals( Enum587LegSettlType.WHEN_ISSUED.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "7", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.SELLERS_OPTION );
-        assertEquals( Enum587LegSettlType.SELLERS_OPTION.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "8", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.T_PLUS_5 );
-        assertEquals( Enum587LegSettlType.T_PLUS_5.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "9", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
 
         /*
          *  B-C, types
          */
         tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.BROKEN_DATE );
-        assertEquals( Enum587LegSettlType.BROKEN_DATE.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "B", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.FX_SPOT );
-        assertEquals( Enum587LegSettlType.FX_SPOT.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "C", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag587EnuLegSettlType tagData;
-
-        // loop around the ENUM and process
-        for ( Enum587LegSettlType oneEnum : Enum587LegSettlType.values()) {
-            tagData = new Tag587EnuLegSettlType(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag587EnuLegSettlType tagData;
 
         // loop around the ENUM and process
         for (Enum587LegSettlType oneEnum : Enum587LegSettlType.values()) {
             tagData = new Tag587EnuLegSettlType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag587EnuLegSettlType tagData;
-
         // loop around the ENUM and process
         for (Enum587LegSettlType oneEnum : Enum587LegSettlType.values()) {
             tagData = new Tag587EnuLegSettlType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag587EnuLegSettlType tagData;
-
         // loop around the ENUM and process
         for (Enum587LegSettlType oneEnum : Enum587LegSettlType.values()) {
             tagData = new Tag587EnuLegSettlType(oneEnum);
@@ -168,8 +163,6 @@ class Tag587EnuLegSettlTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag587EnuLegSettlType tagData;
-
         // loop around the ENUM and process
         for (Enum587LegSettlType oneEnum : Enum587LegSettlType.values()) {
             tagData = new Tag587EnuLegSettlType(oneEnum);
@@ -178,8 +171,8 @@ class Tag587EnuLegSettlTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

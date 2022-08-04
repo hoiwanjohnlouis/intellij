@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  539
  *  NoNestedPartyIDs
  *  NumInGroup
- *  <p>
+ *  <p></p>
  *  Number of NestedPartyID (524), NestedPartyIDSource (525), and NestedPartyRole (538) entries
  */
 public class Tag539NumNoNestedPartyIDs extends FIX43Abstract implements LogValuePairString, LogVerboseString {

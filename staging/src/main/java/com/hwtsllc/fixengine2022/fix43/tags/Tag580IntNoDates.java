@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  580
  *  NoDates
  *  int
- *  <p>
+ *  <p></p>
  *  Number of Date fields provided in date range
  */
 public class Tag580IntNoDates extends FIX43Abstract implements LogValuePairString, LogVerboseString {

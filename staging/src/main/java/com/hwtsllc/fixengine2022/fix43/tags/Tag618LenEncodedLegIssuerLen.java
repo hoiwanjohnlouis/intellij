@@ -26,16 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  618
  *  EncodedLegIssuerLen
  *  Length
- *  <p>
+ *  <p></p>
  *  Multileg instrument's individual  security’s EncodedIssuerLen.
- *  <p>
+ *  <p></p>
  *  See EncodedIssuerLen (348) field for description
  */
 public class Tag618LenEncodedLegIssuerLen extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyLengthType dataValue;
 
-    public final static int TESTA_LEN_ENCODED_LEG_ISSUER_LEN = 618;
-    public final static int TESTB_LEN_ENCODED_LEG_ISSUER_LEN = 816;
+    public final static int TESTA_LEN_ENCODED_LEG_ISSUER_LEN
+            = 618;
+    public final static int TESTB_LEN_ENCODED_LEG_ISSUER_LEN
+            = 816;
 
     public Tag618LenEncodedLegIssuerLen(MyLengthType dataValue) {
         setFixType(FIX43.FIX618_LEN_ENCODED_LEG_ISSUER_LEN);

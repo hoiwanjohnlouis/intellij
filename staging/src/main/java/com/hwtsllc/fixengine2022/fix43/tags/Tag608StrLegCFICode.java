@@ -26,16 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  608
  *  LegCFICode
  *  String
- *  <p>
+ *  <p></p>
  *  Multileg instrument's individual security’s CFICode.
- *  <p>
+ *  <p></p>
  *  See CFICode (461) field for description
  */
 public class Tag608StrLegCFICode extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_LEG_CFI_CODE = "BilboBaggins-Tag608StrLegCFICode";
-    public final static String TESTB_STR_LEG_CFI_CODE = "Gandalf-Tag608StrLegCFICode";
+    public final static String TESTA_STR_LEG_CFI_CODE
+            = "WilliamSchwenckGilbert-Tag608StrLegCFICode";
+    public final static String TESTB_STR_LEG_CFI_CODE
+            = "ArthurSullivan-Tag608StrLegCFICode";
 
     public Tag608StrLegCFICode(MyStringType dataValue) {
         setFixType(FIX43.FIX608_STR_LEG_CFI_CODE);

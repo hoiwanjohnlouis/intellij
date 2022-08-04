@@ -26,16 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  652
  *  UnderlyingLastQty
  *  Qty
- *  <p>
+ *  <p></p>
  *  The calculated or traded quantity for the underlying instrument that corresponds to a derivative.
- *  <p>
+ *  <p></p>
  *  Used for transactions that include the cash instrument and the derivative.
  */
 public class Tag652QtyUnderlyingLastQty extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyQtyType dataValue;
 
-    public final static int TESTA_QTY_UNDERLYING_LAST_QTY = 652;
-    public final static int TESTB_QTY_UNDERLYING_LAST_QTY = 256;
+    public final static int TESTA_QTY_UNDERLYING_LAST_QTY
+            = 652;
+    public final static int TESTB_QTY_UNDERLYING_LAST_QTY
+            = 256;
 
     public Tag652QtyUnderlyingLastQty(MyQtyType dataValue) {
         setFixType(FIX43.FIX652_QTY_UNDERLYING_LAST_QTY);

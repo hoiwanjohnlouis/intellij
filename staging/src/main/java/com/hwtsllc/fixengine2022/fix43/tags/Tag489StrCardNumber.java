@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  489
  *  CardNumber
  *  String
- *  <p>
+ *  <p></p>
  *  The number of the payment card as specified on the card being used for payment.
  */
 public class Tag489StrCardNumber extends FIX43Abstract implements LogValuePairString, LogVerboseString {

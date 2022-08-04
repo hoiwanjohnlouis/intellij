@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  634
  *  OfferYield
  *  Percentage
- *  <p>
+ *  <p></p>
  *  Offer yield
  */
 public class Tag634PctOfferYield extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyPercentageType dataValue;
 
-    public final static double TESTA_PCT_OFFER_YIELD = 0.0634D;
-    public final static double TESTB_PCT_OFFER_YIELD = 0.0436D;
+    public final static double TESTA_PCT_OFFER_YIELD
+            = 0.0634D;
+    public final static double TESTB_PCT_OFFER_YIELD
+            = 0.0436D;
 
     public Tag634PctOfferYield(MyPercentageType dataValue) {
         setFixType(FIX43.FIX634_PCT_OFFER_YIELD);

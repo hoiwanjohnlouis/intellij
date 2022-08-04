@@ -26,16 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  659
  *  SideComplianceID
  *  String
- *  <p>
+ *  <p></p>
  *  ID within repeating group of sides which is used to represent this transaction for compliance purposes
- *  <p>
+ *  <p></p>
  *  (e.g. OATS reporting).
  */
 public class Tag659StrSideComplianceID extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_SIDE_COMPLIANCE_ID = "BilboBaggins-Tag659StrSideComplianceID";
-    public final static String TESTB_STR_SIDE_COMPLIANCE_ID = "Gandalf-Tag659StrSideComplianceID";
+    public final static String TESTA_STR_SIDE_COMPLIANCE_ID
+            = "Tosca-Tag659StrSideComplianceID";
+    public final static String TESTB_STR_SIDE_COMPLIANCE_ID
+            = "LucioSilla-Tag659StrSideComplianceID";
 
     public Tag659StrSideComplianceID(MyStringType dataValue) {
         setFixType(FIX43.FIX659_STR_SIDE_COMPLIANCE_ID);

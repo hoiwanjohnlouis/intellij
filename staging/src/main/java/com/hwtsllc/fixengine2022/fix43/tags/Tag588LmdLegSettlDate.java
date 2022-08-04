@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  588
  *  LegSettlDate
  *  LocalMktDate
- *  <p>
+ *  <p></p>
  *  Refer to description for SettlDate[64]
  */
 public class Tag588LmdLegSettlDate extends FIX43Abstract implements LogValuePairString, LogVerboseString {

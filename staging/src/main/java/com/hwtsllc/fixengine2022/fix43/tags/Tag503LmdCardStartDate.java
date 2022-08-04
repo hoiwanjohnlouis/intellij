@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  503
  *  CardStartDate
  *  LocalMktDate
- *  <p>
+ *  <p></p>
  *  The start date of the card as specified on the card being used for payment.
  */
 public class Tag503LmdCardStartDate extends FIX43Abstract implements LogValuePairString, LogVerboseString {

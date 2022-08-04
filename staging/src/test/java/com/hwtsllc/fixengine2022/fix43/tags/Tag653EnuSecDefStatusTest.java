@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum653SecDefStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -45,80 +44,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  */
 // @Deprecated
 class Tag653EnuSecDefStatusTest {
+    Tag653EnuSecDefStatus tagData;
+
     @Test
-    void FIX0653Test() {
-        FIX43 fixData = FIX43.FIX653_ENU_SEC_DEF_STATUS;
-        assertEquals( "653", fixData.toEnumIDString());
-        assertEquals( "SEC_DEF_STATUS", fixData.toEnumNameString());
-        assertEquals( "SecDefStatus (replaced)", fixData.toEnumDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0653Test() {
-        Tag653EnuSecDefStatus tagData;
-
-        /*
-         *  0-4 types
-         */
-        tagData = new Tag653EnuSecDefStatus( Enum653SecDefStatus.PENDING );
-        assertEquals( Enum653SecDefStatus.PENDING.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag653EnuSecDefStatus( Enum653SecDefStatus.APPROVED );
-        assertEquals( Enum653SecDefStatus.APPROVED.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag653EnuSecDefStatus( Enum653SecDefStatus.REJECTED );
-        assertEquals( Enum653SecDefStatus.REJECTED.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag653EnuSecDefStatus( Enum653SecDefStatus.UNAUTHORIZED );
-        assertEquals( Enum653SecDefStatus.UNAUTHORIZED.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag653EnuSecDefStatus( Enum653SecDefStatus.INVALID );
-        assertEquals( Enum653SecDefStatus.INVALID.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag653EnuSecDefStatus tagData;
-
+    void PrintTest() {
         // loop around the ENUM and process
-        for ( Enum653SecDefStatus oneEnum : Enum653SecDefStatus.values()) {
+        for (Enum653SecDefStatus oneEnum : Enum653SecDefStatus.values()) {
             tagData = new Tag653EnuSecDefStatus(oneEnum);
             System.out.println( tagData.toVerboseString() );
         }
     }
     @Test
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (Enum653SecDefStatus oneEnum : Enum653SecDefStatus.values()) {
+            tagData = new Tag653EnuSecDefStatus(oneEnum);
+            assertEquals( "FIX653_ENU_SEC_DEF_STATUS", tagData.toEnumLabelString());
+            assertEquals( "653", tagData.toEnumIDString());
+            assertEquals( "SEC_DEF_STATUS", tagData.toEnumNameString());
+            assertEquals( "SecDefStatus (replaced)", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void TagGetDataValueTest() {
-        Tag653EnuSecDefStatus tagData;
+        /*
+         *  0-4 types
+         */
+        tagData = new Tag653EnuSecDefStatus( Enum653SecDefStatus.PENDING );
+        assertEquals( "0", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag653EnuSecDefStatus( Enum653SecDefStatus.APPROVED );
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag653EnuSecDefStatus( Enum653SecDefStatus.REJECTED );
+        assertEquals( "2", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag653EnuSecDefStatus( Enum653SecDefStatus.UNAUTHORIZED );
+        assertEquals( "3", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag653EnuSecDefStatus( Enum653SecDefStatus.INVALID );
+        assertEquals( "4", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         // loop around the ENUM and process
         for (Enum653SecDefStatus oneEnum : Enum653SecDefStatus.values()) {
             tagData = new Tag653EnuSecDefStatus(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag653EnuSecDefStatus tagData;
-
         // loop around the ENUM and process
         for (Enum653SecDefStatus oneEnum : Enum653SecDefStatus.values()) {
             tagData = new Tag653EnuSecDefStatus(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag653EnuSecDefStatus tagData;
-
         // loop around the ENUM and process
         for (Enum653SecDefStatus oneEnum : Enum653SecDefStatus.values()) {
             tagData = new Tag653EnuSecDefStatus(oneEnum);
@@ -128,8 +124,6 @@ class Tag653EnuSecDefStatusTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag653EnuSecDefStatus tagData;
-
         // loop around the ENUM and process
         for (Enum653SecDefStatus oneEnum : Enum653SecDefStatus.values()) {
             tagData = new Tag653EnuSecDefStatus(oneEnum);
@@ -138,8 +132,8 @@ class Tag653EnuSecDefStatusTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

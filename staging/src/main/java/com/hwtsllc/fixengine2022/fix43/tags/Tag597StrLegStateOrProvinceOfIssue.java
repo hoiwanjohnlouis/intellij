@@ -26,18 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  597
  *  LegStateOrProvinceOfIssue
  *  String
- *  <p>
+ *  <p></p>
  *  Multileg instrument's individual leg security’s StateOrProvinceOfIssue.
- *  <p>
+ *  <p></p>
  *  See StateOrProvinceOfIssue (471) field for description
  */
 public class Tag597StrLegStateOrProvinceOfIssue extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_LEG_STATE_OR_PROVINCE_OF_ISSUE
-            = "BilboBaggins-Tag597StrLegStateOrProvinceOfIssue";
+            = "Donizetti-Tag597StrLegStateOrProvinceOfIssue";
     public final static String TESTB_STR_LEG_STATE_OR_PROVINCE_OF_ISSUE
-            = "Gandalf-Tag597StrLegStateOrProvinceOfIssue";
+            = "Dvorak-Tag597StrLegStateOrProvinceOfIssue";
 
     public Tag597StrLegStateOrProvinceOfIssue(MyStringType dataValue) {
         setFixType(FIX43.FIX597_STR_LEG_STATE_OR_PROVINCE_OF_ISSUE);

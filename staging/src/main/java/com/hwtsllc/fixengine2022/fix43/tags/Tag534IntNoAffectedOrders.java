@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  534
  *  NoAffectedOrders
  *  int
- *  <p>
+ *  <p></p>
  *  Number of affected orders in the repeating group of order ids.
  */
 public class Tag534IntNoAffectedOrders extends FIX43Abstract implements LogValuePairString, LogVerboseString {

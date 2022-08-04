@@ -26,16 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  502
  *  CashDistribAgentAcctName
  *  String
- *  <p>
+ *  <p></p>
  *  Name of account at agent bank for distributions.
  */
 public class Tag502StrCashDistribAgentAcctName extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
     public final static String TESTA_STR_CASH_DISTRIB_AGENT_ACCT_NAME
-            = "BilboBaggins-Tag502StrCashDistribAgentAcctName";
+            = "Beethoven-Tag502StrCashDistribAgentAcctName";
     public final static String TESTB_STR_CASH_DISTRIB_AGENT_ACCT_NAME
-            = "Gandalf-Tag502StrCashDistribAgentAcctName";
+            = "Mahler-Tag502StrCashDistribAgentAcctName";
 
     public Tag502StrCashDistribAgentAcctName(MyStringType dataValue) {
         setFixType(FIX43.FIX502_STR_CASH_DISTRIB_AGENT_ACCT_NAME);

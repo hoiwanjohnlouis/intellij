@@ -26,14 +26,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  558
  *  NoSecurityTypes
  *  NumInGroup
- *  <p>
+ *  <p></p>
  *  Number of Security Type repeating group instances.
  */
 public class Tag558NumNoSecurityTypes extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyNumInGroupType dataValue;
 
-    public final static int TESTA_NUM_NO_SECURITY_TYPES = 558;
-    public final static int TESTB_NUM_NO_SECURITY_TYPES = 855;
+    public final static int TESTA_NUM_NO_SECURITY_TYPES
+            = 558;
+    public final static int TESTB_NUM_NO_SECURITY_TYPES
+            = 855;
 
     public Tag558NumNoSecurityTypes(MyNumInGroupType dataValue) {
         setFixType(FIX43.FIX558_NUM_NO_SECURITY_TYPES);

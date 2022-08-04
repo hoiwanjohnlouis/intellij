@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,95 +27,82 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  526
  *  SecondaryClOrdID
  *  String
- *  <p>
+ *  <p></p>
  *  Assigned by the party which originates the order.
- *  <p>
+ *  <p></p>
  *  Can be used to provide the ClOrdID (11) used by an exchange or executing system.
  */
 class Tag526StrSecondaryClOrdIDTest {
+    Tag526StrSecondaryClOrdID tagData;
+    String [] TestArray = {
+            Tag526StrSecondaryClOrdID.TESTA_STR_SECONDARY_CL_ORD_ID,
+            Tag526StrSecondaryClOrdID.TESTB_STR_SECONDARY_CL_ORD_ID
+    };
+
     @Test
-    void FIX0526Test() {
-        FIX43 fixData = FIX43.FIX526_STR_SECONDARY_CL_ORD_ID;
-        assertEquals( "526", fixData.toEnumIDString());
-        assertEquals( "SECONDARY_CL_ORD_ID", fixData.toEnumNameString());
-        assertEquals( "SecondaryClOrdID", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag526StrSecondaryClOrdID( new MyStringType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0526Test() {
-        Tag526StrSecondaryClOrdID tagData;
-        String oneElement;
-
-        oneElement = Tag526StrSecondaryClOrdID.TESTA_STR_SECONDARY_CL_ORD_ID;
-        tagData = new Tag526StrSecondaryClOrdID( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag526StrSecondaryClOrdID.TESTB_STR_SECONDARY_CL_ORD_ID;
-        tagData = new Tag526StrSecondaryClOrdID( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag526StrSecondaryClOrdID tagData;
-        String oneElement;
-
-        oneElement = Tag526StrSecondaryClOrdID.TESTA_STR_SECONDARY_CL_ORD_ID;
-        tagData = new Tag526StrSecondaryClOrdID( new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag526StrSecondaryClOrdID.TESTB_STR_SECONDARY_CL_ORD_ID;
-        tagData = new Tag526StrSecondaryClOrdID( new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag526StrSecondaryClOrdID( new MyStringType( oneElement ));
+            assertEquals( "FIX526_STR_SECONDARY_CL_ORD_ID", tagData.toEnumLabelString());
+            assertEquals( "526", tagData.toEnumIDString());
+            assertEquals( "SECONDARY_CL_ORD_ID", tagData.toEnumNameString());
+            assertEquals( "SecondaryClOrdID", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag526StrSecondaryClOrdID tagData;
-        String oneElement;
-
-        oneElement = Tag526StrSecondaryClOrdID.TESTB_STR_SECONDARY_CL_ORD_ID;
-        tagData = new Tag526StrSecondaryClOrdID( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag526StrSecondaryClOrdID( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag526StrSecondaryClOrdID tagData;
-        String oneElement;
-
-        oneElement = Tag526StrSecondaryClOrdID.TESTB_STR_SECONDARY_CL_ORD_ID;
-        tagData = new Tag526StrSecondaryClOrdID( new MyStringType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag526StrSecondaryClOrdID( new MyStringType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag526StrSecondaryClOrdID tagData;
-        String oneElement;
-
-        oneElement = Tag526StrSecondaryClOrdID.TESTB_STR_SECONDARY_CL_ORD_ID;
-        tagData = new Tag526StrSecondaryClOrdID(new MyStringType(oneElement));
-        assertEquals( oneElement, tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag526StrSecondaryClOrdID( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag526StrSecondaryClOrdID tagData;
-        String oneElement;
-
-        oneElement = Tag526StrSecondaryClOrdID.TESTA_STR_SECONDARY_CL_ORD_ID;
-        tagData = new Tag526StrSecondaryClOrdID( new MyStringType( oneElement ) );
-        assertEquals( "Tag526StrSecondaryClOrdID\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag526StrSecondaryClOrdID( new MyStringType( oneElement ));
+            assertEquals( "Tag526StrSecondaryClOrdID\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

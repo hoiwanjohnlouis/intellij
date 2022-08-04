@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,95 +27,82 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  466
  *  BookingRefID
  *  String
- *  <p>
+ *  <p></p>
  *  Common reference passed to a post-trade booking process
- *  <p>
+ *  <p></p>
  *  (e.g. industry matching utility).
  */
 class Tag466StrBookingRefIDTest {
+    Tag466StrBookingRefID tagData;
+    String [] TestArray = {
+            Tag466StrBookingRefID.TESTA_STR_BOOKING_REF_ID,
+            Tag466StrBookingRefID.TESTB_STR_BOOKING_REF_ID
+    };
+
     @Test
-    void FIX0466Test() {
-        FIX43 fixData = FIX43.FIX466_STR_BOOKING_REF_ID;
-        assertEquals( "466", fixData.toEnumIDString());
-        assertEquals( "BOOKING_REF_ID", fixData.toEnumNameString());
-        assertEquals( "BookingRefID", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag466StrBookingRefID( new MyStringType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0466Test() {
-        Tag466StrBookingRefID tagData;
-        String oneElement;
-
-        oneElement = Tag466StrBookingRefID.TESTA_STR_BOOKING_REF_ID;
-        tagData = new Tag466StrBookingRefID( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag466StrBookingRefID.TESTB_STR_BOOKING_REF_ID;
-        tagData = new Tag466StrBookingRefID( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag466StrBookingRefID tagData;
-        String oneElement;
-
-        oneElement = Tag466StrBookingRefID.TESTA_STR_BOOKING_REF_ID;
-        tagData = new Tag466StrBookingRefID( new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag466StrBookingRefID.TESTB_STR_BOOKING_REF_ID;
-        tagData = new Tag466StrBookingRefID( new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag466StrBookingRefID( new MyStringType( oneElement ));
+            assertEquals( "FIX466_STR_BOOKING_REF_ID", tagData.toEnumLabelString());
+            assertEquals( "466", tagData.toEnumIDString());
+            assertEquals( "BOOKING_REF_ID", tagData.toEnumNameString());
+            assertEquals( "BookingRefID", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag466StrBookingRefID tagData;
-        String oneElement;
-
-        oneElement = Tag466StrBookingRefID.TESTB_STR_BOOKING_REF_ID;
-        tagData = new Tag466StrBookingRefID( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag466StrBookingRefID( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag466StrBookingRefID tagData;
-        String oneElement;
-
-        oneElement = Tag466StrBookingRefID.TESTB_STR_BOOKING_REF_ID;
-        tagData = new Tag466StrBookingRefID( new MyStringType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag466StrBookingRefID( new MyStringType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag466StrBookingRefID tagData;
-        String oneElement;
-
-        oneElement = Tag466StrBookingRefID.TESTB_STR_BOOKING_REF_ID;
-        tagData = new Tag466StrBookingRefID(new MyStringType(oneElement));
-        assertEquals( oneElement, tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag466StrBookingRefID( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag466StrBookingRefID tagData;
-        String oneElement;
-
-        oneElement = Tag466StrBookingRefID.TESTA_STR_BOOKING_REF_ID;
-        tagData = new Tag466StrBookingRefID( new MyStringType( oneElement ) );
-        assertEquals( "Tag466StrBookingRefID\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag466StrBookingRefID( new MyStringType( oneElement ));
+            assertEquals( "Tag466StrBookingRefID\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

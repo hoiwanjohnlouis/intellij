@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum549CrossType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -52,76 +51,73 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>         The two sides potentially have different quantities.
  */
 class Tag549EnuCrossTypeTest {
+    Tag549EnuCrossType tagData;
+
     @Test
-    void FIX0549Test() {
-        FIX43 fixData = FIX43.FIX549_ENU_CROSS_TYPE;
-        assertEquals( "549", fixData.toEnumIDString());
-        assertEquals( "CROSS_TYPE", fixData.toEnumNameString());
-        assertEquals( "CrossType", fixData.toEnumDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0549Test() {
-        Tag549EnuCrossType tagData;
-
-        /*
-         *  1-4 types
-         */
-        tagData = new Tag549EnuCrossType( Enum549CrossType.CROSS_AON );
-        assertEquals( Enum549CrossType.CROSS_AON.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag549EnuCrossType( Enum549CrossType.CROSS_IOC );
-        assertEquals( Enum549CrossType.CROSS_IOC.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag549EnuCrossType( Enum549CrossType.CROSS_ONE_SIDE );
-        assertEquals( Enum549CrossType.CROSS_ONE_SIDE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag549EnuCrossType( Enum549CrossType.CROSS_SAME_PRICE );
-        assertEquals( Enum549CrossType.CROSS_SAME_PRICE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag549EnuCrossType tagData;
-
+    void PrintTest() {
         // loop around the ENUM and process
-        for ( Enum549CrossType oneEnum : Enum549CrossType.values()) {
+        for (Enum549CrossType oneEnum : Enum549CrossType.values()) {
             tagData = new Tag549EnuCrossType(oneEnum);
             System.out.println( tagData.toVerboseString() );
         }
     }
     @Test
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (Enum549CrossType oneEnum : Enum549CrossType.values()) {
+            tagData = new Tag549EnuCrossType(oneEnum);
+            assertEquals( "FIX549_ENU_CROSS_TYPE", tagData.toEnumLabelString());
+            assertEquals( "549", tagData.toEnumIDString());
+            assertEquals( "CROSS_TYPE", tagData.toEnumNameString());
+            assertEquals( "CrossType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void TagGetDataValueTest() {
-        Tag549EnuCrossType tagData;
+        /*
+         *  1-4 types
+         */
+        tagData = new Tag549EnuCrossType( Enum549CrossType.CROSS_AON );
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag549EnuCrossType( Enum549CrossType.CROSS_IOC );
+        assertEquals( "2", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag549EnuCrossType( Enum549CrossType.CROSS_ONE_SIDE );
+        assertEquals( "3", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag549EnuCrossType( Enum549CrossType.CROSS_SAME_PRICE );
+        assertEquals( "4", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         // loop around the ENUM and process
         for (Enum549CrossType oneEnum : Enum549CrossType.values()) {
             tagData = new Tag549EnuCrossType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag549EnuCrossType tagData;
-
         // loop around the ENUM and process
         for (Enum549CrossType oneEnum : Enum549CrossType.values()) {
             tagData = new Tag549EnuCrossType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag549EnuCrossType tagData;
-
         // loop around the ENUM and process
         for (Enum549CrossType oneEnum : Enum549CrossType.values()) {
             tagData = new Tag549EnuCrossType(oneEnum);
@@ -131,8 +127,6 @@ class Tag549EnuCrossTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag549EnuCrossType tagData;
-
         // loop around the ENUM and process
         for (Enum549CrossType oneEnum : Enum549CrossType.values()) {
             tagData = new Tag549EnuCrossType(oneEnum);
@@ -141,8 +135,8 @@ class Tag549EnuCrossTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  631
  *  MidPx
  *  Price
- *  <p>
+ *  <p></p>
  *  Mid price/rate
  */
 public class Tag631PrcMidPx extends FIX43Abstract implements LogValuePairString, LogVerboseString {

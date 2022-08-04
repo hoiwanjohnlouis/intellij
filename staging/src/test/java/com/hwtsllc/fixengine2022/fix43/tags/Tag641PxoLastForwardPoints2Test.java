@@ -29,8 +29,8 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  LastForwardPoints2
  *  PriceOffset
  *  <p>
- *  Deprecated in FIX.5.0 F/X forward points of the future part of a F/X swap order added to LastSpotRate (94).   *  <p>
- *  May be a negative value.
+ *  Deprecated in FIX.5.0 F/X forward points of the future part of a F/X swap order added to LastSpotRate (94).
+ *  May be negative.
  */
 class Tag641PxoLastForwardPoints2Test {
     @Test

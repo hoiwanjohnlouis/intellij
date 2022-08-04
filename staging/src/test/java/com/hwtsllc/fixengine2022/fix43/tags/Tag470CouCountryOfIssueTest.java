@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyCountryType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,97 +27,85 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  470
  *  CountryOfIssue
  *  Country
- *  <p>
+ *  <p></p>
  *  ISO Country code of instrument issue (e.g. the country portion typically used in ISIN).
- *  <p>
+ *  <p></p>
  *  Can be used in conjunction with non-ISIN SecurityID (48)
- *  <p>
+ *  <p></p>
  *  (e.g. CUSIP for Municipal Bonds without ISIN) to provide uniqueness.
  */
 class Tag470CouCountryOfIssueTest {
+    Tag470CouCountryOfIssue tagData;
+    String [] TestArray = {
+            Tag470CouCountryOfIssue.TESTA_COU_COUNTRY_OF_ISSUE,
+            Tag470CouCountryOfIssue.TESTB_COU_COUNTRY_OF_ISSUE
+    };
+
     @Test
-    void FIX0470Test() {
-        FIX43 fixData = FIX43.FIX470_COU_COUNTRY_OF_ISSUE;
-        assertEquals( "470", fixData.toEnumIDString());
-        assertEquals( "COUNTRY_OF_ISSUE", fixData.toEnumNameString());
-        assertEquals( "CountryOfIssue", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag470CouCountryOfIssue( new MyCountryType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0470Test() {
-        Tag470CouCountryOfIssue tagData;
-        String oneElement;
-
-        oneElement = Tag470CouCountryOfIssue.TESTA_COU_COUNTRY_OF_ISSUE;
-        tagData = new Tag470CouCountryOfIssue( new MyCountryType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag470CouCountryOfIssue.TESTB_COU_COUNTRY_OF_ISSUE;
-        tagData = new Tag470CouCountryOfIssue( new MyCountryType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag470CouCountryOfIssue tagData;
-        String oneElement;
-
-        oneElement = Tag470CouCountryOfIssue.TESTA_COU_COUNTRY_OF_ISSUE;
-        tagData = new Tag470CouCountryOfIssue( new MyCountryType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag470CouCountryOfIssue.TESTB_COU_COUNTRY_OF_ISSUE;
-        tagData = new Tag470CouCountryOfIssue( new MyCountryType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag470CouCountryOfIssue( new MyCountryType( oneElement ));
+            assertEquals( "FIX470_COU_COUNTRY_OF_ISSUE", tagData.toEnumLabelString());
+            assertEquals( "470", tagData.toEnumIDString());
+            assertEquals( "COUNTRY_OF_ISSUE", tagData.toEnumNameString());
+            assertEquals( "CountryOfIssue", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag470CouCountryOfIssue tagData;
-        String oneElement;
-
-        oneElement = Tag470CouCountryOfIssue.TESTB_COU_COUNTRY_OF_ISSUE;
-        tagData = new Tag470CouCountryOfIssue( new MyCountryType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag470CouCountryOfIssue( new MyCountryType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag470CouCountryOfIssue tagData;
-        String oneElement;
-
-        oneElement = Tag470CouCountryOfIssue.TESTB_COU_COUNTRY_OF_ISSUE;
-        tagData = new Tag470CouCountryOfIssue( new MyCountryType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag470CouCountryOfIssue( new MyCountryType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag470CouCountryOfIssue tagData;
-        String oneElement;
-
-        oneElement = Tag470CouCountryOfIssue.TESTB_COU_COUNTRY_OF_ISSUE;
-        tagData = new Tag470CouCountryOfIssue( new MyCountryType( oneElement ) );
-        assertEquals( oneElement, tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag470CouCountryOfIssue( new MyCountryType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag470CouCountryOfIssue tagData;
-        String oneElement;
-
-        oneElement = Tag470CouCountryOfIssue.TESTA_COU_COUNTRY_OF_ISSUE;
-        tagData = new Tag470CouCountryOfIssue( new MyCountryType( oneElement ) );
-        assertEquals( "Tag470CouCountryOfIssue\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag470CouCountryOfIssue( new MyCountryType( oneElement ));
+            assertEquals( "Tag470CouCountryOfIssue\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

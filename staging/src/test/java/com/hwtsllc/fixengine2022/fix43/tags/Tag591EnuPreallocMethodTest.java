@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum591PreallocMethod;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -36,68 +35,65 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    1 - Do not pro-rata - discuss first
  */
 class Tag591EnuPreallocMethodTest {
-    @Test
-    void FIX0591Test() {
-        FIX43 fixData = FIX43.FIX591_ENU_PREALLOC_METHOD;
-        assertEquals( "591", fixData.toEnumIDString());
-        assertEquals( "PREALLOC_METHOD", fixData.toEnumNameString());
-        assertEquals( "PreallocMethod", fixData.toEnumDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0591Test() {
-        Tag591EnuPreallocMethod tagData;
+    Tag591EnuPreallocMethod tagData;
 
-        /*
-         *  0-1 types
-         */
-        tagData = new Tag591EnuPreallocMethod( Enum591PreallocMethod.PRO_RATA );
-        assertEquals( Enum591PreallocMethod.PRO_RATA.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag591EnuPreallocMethod( Enum591PreallocMethod.DO_NOT_PRO_RATA );
-        assertEquals( Enum591PreallocMethod.DO_NOT_PRO_RATA.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
     @Test
-    void PrintFIXTagTest() {
-        Tag591EnuPreallocMethod tagData;
-
+    void PrintTest() {
         // loop around the ENUM and process
-        for ( Enum591PreallocMethod oneEnum : Enum591PreallocMethod.values()) {
+        for (Enum591PreallocMethod oneEnum : Enum591PreallocMethod.values()) {
             tagData = new Tag591EnuPreallocMethod(oneEnum);
             System.out.println( tagData.toVerboseString() );
         }
     }
     @Test
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (Enum591PreallocMethod oneEnum : Enum591PreallocMethod.values()) {
+            tagData = new Tag591EnuPreallocMethod(oneEnum);
+            assertEquals( "FIX591_ENU_PREALLOC_METHOD", tagData.toEnumLabelString());
+            assertEquals( "591", tagData.toEnumIDString());
+            assertEquals( "PREALLOC_METHOD", tagData.toEnumNameString());
+            assertEquals( "PreallocMethod", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void TagGetDataValueTest() {
-        Tag591EnuPreallocMethod tagData;
+        /*
+         *  0-1 types
+         */
+        tagData = new Tag591EnuPreallocMethod( Enum591PreallocMethod.PRO_RATA );
+        assertEquals( "0", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag591EnuPreallocMethod( Enum591PreallocMethod.DO_NOT_PRO_RATA );
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         // loop around the ENUM and process
         for (Enum591PreallocMethod oneEnum : Enum591PreallocMethod.values()) {
             tagData = new Tag591EnuPreallocMethod(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag591EnuPreallocMethod tagData;
-
         // loop around the ENUM and process
         for (Enum591PreallocMethod oneEnum : Enum591PreallocMethod.values()) {
             tagData = new Tag591EnuPreallocMethod(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag591EnuPreallocMethod tagData;
-
         // loop around the ENUM and process
         for (Enum591PreallocMethod oneEnum : Enum591PreallocMethod.values()) {
             tagData = new Tag591EnuPreallocMethod(oneEnum);
@@ -107,8 +103,6 @@ class Tag591EnuPreallocMethodTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag591EnuPreallocMethod tagData;
-
         // loop around the ENUM and process
         for (Enum591PreallocMethod oneEnum : Enum591PreallocMethod.values()) {
             tagData = new Tag591EnuPreallocMethod(oneEnum);
@@ -117,8 +111,8 @@ class Tag591EnuPreallocMethodTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

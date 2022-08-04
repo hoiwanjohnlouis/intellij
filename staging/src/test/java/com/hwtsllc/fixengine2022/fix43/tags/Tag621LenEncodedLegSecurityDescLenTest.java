@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyLengthType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,95 +27,83 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  621
  *  EncodedLegSecurityDescLen
  *  Length
- *  <p>
+ *  <p></p>
  *  Multileg instrument's individual  security’s EncodedSecurityDescLen.
- *  <p>
+ *  <p></p>
  *  See EncodedSecurityDescLen (350) field for description
  */
 class Tag621LenEncodedLegSecurityDescLenTest {
+    Tag621LenEncodedLegSecurityDescLen tagData;
+    int [] TestArray = {
+            Tag621LenEncodedLegSecurityDescLen.TESTA_LEN_ENCODED_LEG_SECURITY_DESC_LEN,
+            Tag621LenEncodedLegSecurityDescLen.TESTB_LEN_ENCODED_LEG_SECURITY_DESC_LEN
+    };
+
     @Test
-    void FIX0621Test() {
-        FIX43 fixData = FIX43.FIX621_LEN_ENCODED_LEG_SECURITY_DESC_LEN;
-        assertEquals( "621", fixData.toEnumIDString());
-        assertEquals( "ENCODED_LEG_SECURITY_DESC_LEN", fixData.toEnumNameString());
-        assertEquals( "EncodedLegSecurityDescLen", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag621LenEncodedLegSecurityDescLen( new MyLengthType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0621Test() {
-        Tag621LenEncodedLegSecurityDescLen tagData;
-        int oneElement;
-
-        oneElement = Tag621LenEncodedLegSecurityDescLen.TESTA_LEN_ENCODED_LEG_SECURITY_DESC_LEN;
-        tagData = new Tag621LenEncodedLegSecurityDescLen( new MyLengthType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag621LenEncodedLegSecurityDescLen.TESTB_LEN_ENCODED_LEG_SECURITY_DESC_LEN;
-        tagData = new Tag621LenEncodedLegSecurityDescLen( new MyLengthType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag621LenEncodedLegSecurityDescLen tagData;
-        int oneElement;
-
-        oneElement = Tag621LenEncodedLegSecurityDescLen.TESTA_LEN_ENCODED_LEG_SECURITY_DESC_LEN;
-        tagData = new Tag621LenEncodedLegSecurityDescLen( new MyLengthType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag621LenEncodedLegSecurityDescLen.TESTB_LEN_ENCODED_LEG_SECURITY_DESC_LEN;
-        tagData = new Tag621LenEncodedLegSecurityDescLen( new MyLengthType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag621LenEncodedLegSecurityDescLen( new MyLengthType( oneElement ));
+            assertEquals( "FIX621_LEN_ENCODED_LEG_SECURITY_DESC_LEN", tagData.toEnumLabelString());
+            assertEquals( "621", tagData.toEnumIDString());
+            assertEquals( "ENCODED_LEG_SECURITY_DESC_LEN", tagData.toEnumNameString());
+            assertEquals( "EncodedLegSecurityDescLen", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag621LenEncodedLegSecurityDescLen tagData;
-        int oneElement;
-
-        oneElement = Tag621LenEncodedLegSecurityDescLen.TESTB_LEN_ENCODED_LEG_SECURITY_DESC_LEN;
-        tagData = new Tag621LenEncodedLegSecurityDescLen( new MyLengthType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag621LenEncodedLegSecurityDescLen( new MyLengthType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag621LenEncodedLegSecurityDescLen tagData;
-        int oneElement;
-
-        oneElement = Tag621LenEncodedLegSecurityDescLen.TESTB_LEN_ENCODED_LEG_SECURITY_DESC_LEN;
-        tagData = new Tag621LenEncodedLegSecurityDescLen( new MyLengthType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag621LenEncodedLegSecurityDescLen( new MyLengthType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag621LenEncodedLegSecurityDescLen tagData;
-        int oneElement;
-
-        oneElement = Tag621LenEncodedLegSecurityDescLen.TESTB_LEN_ENCODED_LEG_SECURITY_DESC_LEN;
-        tagData = new Tag621LenEncodedLegSecurityDescLen( new MyLengthType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag621LenEncodedLegSecurityDescLen( new MyLengthType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag621LenEncodedLegSecurityDescLen tagData;
-        int oneElement;
-
-        oneElement = Tag621LenEncodedLegSecurityDescLen.TESTA_LEN_ENCODED_LEG_SECURITY_DESC_LEN;
-        tagData = new Tag621LenEncodedLegSecurityDescLen( new MyLengthType( oneElement ) );
-        assertEquals( "Tag621LenEncodedLegSecurityDescLen\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag621LenEncodedLegSecurityDescLen( new MyLengthType( oneElement ));
+            assertEquals( "Tag621LenEncodedLegSecurityDescLen\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

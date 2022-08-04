@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  553
  *  Username
  *  String
- *  <p>
+ *  <p></p>
  *  Userid or username.
  */
 public class Tag553StrUsername extends FIX43Abstract implements LogValuePairString, LogVerboseString {
@@ -38,7 +38,7 @@ public class Tag553StrUsername extends FIX43Abstract implements LogValuePairStri
             = "NormaShearer-Tag553StrUsername";
 
     public Tag553StrUsername(MyStringType dataValue) {
-        setFixType(FIX43.FIX553_STR_PASSWORD);
+        setFixType(FIX43.FIX553_STR_USERNAME);
         this.dataValue = dataValue;
     }
 

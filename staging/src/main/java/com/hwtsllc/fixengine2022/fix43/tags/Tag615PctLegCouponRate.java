@@ -26,16 +26,18 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  615
  *  LegCouponRate
  *  Percentage
- *  <p>
+ *  <p></p>
  *  Multileg instrument's individual  security’s CouponRate.
- *  <p>
+ *  <p></p>
  *  See CouponRate (223) field for description
  */
 public class Tag615PctLegCouponRate extends FIX43Abstract implements LogValuePairString, LogVerboseString {
     private final MyPercentageType dataValue;
 
-    public final static double TESTA_PCT_LEG_COUPON_RATE = 0.0615D;
-    public final static double TESTB_PCT_LEG_COUPON_RATE = 0.0516D;
+    public final static double TESTA_PCT_LEG_COUPON_RATE
+            = 0.0615D;
+    public final static double TESTB_PCT_LEG_COUPON_RATE
+            = 0.0516D;
 
     public Tag615PctLegCouponRate(MyPercentageType dataValue) {
         setFixType(FIX43.FIX615_PCT_LEG_COUPON_RATE);

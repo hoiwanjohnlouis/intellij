@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -28,93 +27,80 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  499
  *  CashDistribAgentCode
  *  String
- *  <p>
+ *  <p></p>
  *  BIC (Bank Identification Code--Swift managed) code of agent bank for cash distributions
  */
 class Tag499StrCashDistribAgentCodeTest {
+    Tag499StrCashDistribAgentCode tagData;
+    String [] TestArray = {
+            Tag499StrCashDistribAgentCode.TESTA_STR_CASH_DISTRIB_AGENT_CODE,
+            Tag499StrCashDistribAgentCode.TESTB_STR_CASH_DISTRIB_AGENT_CODE
+    };
+
     @Test
-    void FIX0499Test() {
-        FIX43 fixData = FIX43.FIX499_STR_CASH_DISTRIB_AGENT_CODE;
-        assertEquals( "499", fixData.toEnumIDString());
-        assertEquals( "CASH_DISTRIB_AGENT_CODE", fixData.toEnumNameString());
-        assertEquals( "CashDistribAgentCode", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag499StrCashDistribAgentCode( new MyStringType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0499Test() {
-        Tag499StrCashDistribAgentCode tagData;
-        String oneElement;
-
-        oneElement = Tag499StrCashDistribAgentCode.TESTA_STR_CASH_DISTRIB_AGENT_CODE;
-        tagData = new Tag499StrCashDistribAgentCode( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag499StrCashDistribAgentCode.TESTB_STR_CASH_DISTRIB_AGENT_CODE;
-        tagData = new Tag499StrCashDistribAgentCode( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag499StrCashDistribAgentCode tagData;
-        String oneElement;
-
-        oneElement = Tag499StrCashDistribAgentCode.TESTA_STR_CASH_DISTRIB_AGENT_CODE;
-        tagData = new Tag499StrCashDistribAgentCode( new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag499StrCashDistribAgentCode.TESTB_STR_CASH_DISTRIB_AGENT_CODE;
-        tagData = new Tag499StrCashDistribAgentCode( new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag499StrCashDistribAgentCode( new MyStringType( oneElement ));
+            assertEquals( "FIX499_STR_CASH_DISTRIB_AGENT_CODE", tagData.toEnumLabelString());
+            assertEquals( "499", tagData.toEnumIDString());
+            assertEquals( "CASH_DISTRIB_AGENT_CODE", tagData.toEnumNameString());
+            assertEquals( "CashDistribAgentCode", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag499StrCashDistribAgentCode tagData;
-        String oneElement;
-
-        oneElement = Tag499StrCashDistribAgentCode.TESTB_STR_CASH_DISTRIB_AGENT_CODE;
-        tagData = new Tag499StrCashDistribAgentCode( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag499StrCashDistribAgentCode( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag499StrCashDistribAgentCode tagData;
-        String oneElement;
-
-        oneElement = Tag499StrCashDistribAgentCode.TESTB_STR_CASH_DISTRIB_AGENT_CODE;
-        tagData = new Tag499StrCashDistribAgentCode( new MyStringType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag499StrCashDistribAgentCode( new MyStringType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag499StrCashDistribAgentCode tagData;
-        String oneElement;
-
-        oneElement = Tag499StrCashDistribAgentCode.TESTB_STR_CASH_DISTRIB_AGENT_CODE;
-        tagData = new Tag499StrCashDistribAgentCode(new MyStringType(oneElement));
-        assertEquals( oneElement, tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag499StrCashDistribAgentCode( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag499StrCashDistribAgentCode tagData;
-        String oneElement;
-
-        oneElement = Tag499StrCashDistribAgentCode.TESTA_STR_CASH_DISTRIB_AGENT_CODE;
-        tagData = new Tag499StrCashDistribAgentCode( new MyStringType( oneElement ) );
-        assertEquals( "Tag499StrCashDistribAgentCode\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag499StrCashDistribAgentCode( new MyStringType( oneElement ));
+            assertEquals( "Tag499StrCashDistribAgentCode\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }
