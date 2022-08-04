@@ -100,7 +100,7 @@ class Tag630SeqHopRefIDTest {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag630SeqHopRefID( new MySeqNumType( oneElement ));
-            assertEquals( "Tag630SeqHopRefIDs\n" +
+            assertEquals( "Tag630SeqHopRefID\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +

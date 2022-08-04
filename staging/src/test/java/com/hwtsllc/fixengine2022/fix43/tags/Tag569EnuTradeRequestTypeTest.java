@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum569TradeRequestType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -55,11 +54,10 @@ class Tag569EnuTradeRequestTypeTest {
         // loop around the ENUM and process
         for (Enum569TradeRequestType oneEnum : Enum569TradeRequestType.values()) {
             tagData = new Tag569EnuTradeRequestType(oneEnum);
-            assertEquals( "FIX141_ENU_RESET_SEQ_NUM_FLAG", tagData.toEnumLabelString());
-            FIX43 fixData = FIX43.FIX569_ENU_TRADE_REQUEST_TYPE;
-            assertEquals( "569", fixData.toEnumIDString());
-            assertEquals( "TRADE_REQUEST_TYPE", fixData.toEnumNameString());
-            assertEquals( "TradeRequestType", fixData.toEnumDescriptionString());
+            assertEquals( "FIX569_ENU_TRADE_REQUEST_TYPE", tagData.toEnumLabelString());
+            assertEquals( "569", tagData.toEnumIDString());
+            assertEquals( "TRADE_REQUEST_TYPE", tagData.toEnumNameString());
+            assertEquals( "TradeRequestType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());

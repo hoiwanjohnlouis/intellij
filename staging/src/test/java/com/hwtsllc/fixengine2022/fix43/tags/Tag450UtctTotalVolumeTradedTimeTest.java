@@ -16,9 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyUTCTimeType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag273UtctMDEntryTime;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -52,17 +50,13 @@ class Tag450UtctTotalVolumeTradedTimeTest {
     }
     @Test
     void FIXHeaderTest() {
-        FIX43 fixData = FIX43.FIX450_UTCT_TOTAL_VOLUME_TRADED_TIME;
-        assertEquals( "450", fixData.toEnumIDString());
-        assertEquals( "TOTAL_VOLUME_TRADED_TIME", fixData.toEnumNameString());
-        assertEquals( "TotalVolumeTradedTime (replaced)", fixData.toEnumDescriptionString());
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag450UtctTotalVolumeTradedTime( new MyUTCTimeType( oneElement ));
-            assertEquals( "FIX273_UTCT_MD_ENTRY_TIME", tagData.toEnumLabelString());
-            assertEquals( "273", tagData.toEnumIDString());
-            assertEquals( "MD_ENTRY_TIME", tagData.toEnumNameString());
-            assertEquals( "MDEntryTime", tagData.toEnumDescriptionString());
+            assertEquals( "FIX450_UTCT_TOTAL_VOLUME_TRADED_TIME", tagData.toEnumLabelString());
+            assertEquals( "450", tagData.toEnumIDString());
+            assertEquals( "TOTAL_VOLUME_TRADED_TIME", tagData.toEnumNameString());
+            assertEquals( "TotalVolumeTradedTime (replaced)", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());

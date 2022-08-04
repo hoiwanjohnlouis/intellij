@@ -93,7 +93,7 @@ class Tag475CouInvestorCountryOfResidenceTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag475CouInvestorCountryOfResidence( new MyCountryType( oneElement ));
-            assertEquals( "Tag421CouCountry\n" +
+            assertEquals( "Tag475CouInvestorCountryOfResidence\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
