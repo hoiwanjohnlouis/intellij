@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumPriceType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -86,38 +85,43 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    19 - Product ticks in one-twenty-eights
  */
 class Tag663EnuBenchmarkPriceTypeTest {
+    Tag663EnuBenchmarkPriceType tagData;
+
     @Test
-    void FIXTest() {
-        FIX44 fixData = FIX44.FIX663_ENU_BENCHMARK_PRICE_TYPE;
-        assertEquals( "663", fixData.toEnumIDString());
-        assertEquals( "BENCHMARK_PRICE_TYPE", fixData.toEnumNameString());
-        assertEquals( "BenchmarkPriceType", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // loop around the ENUM and process
+        for ( MyEnumPriceType oneEnum : MyEnumPriceType.values()) {
+            tagData = new Tag663EnuBenchmarkPriceType(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0663Test() {
-        Tag663EnuBenchmarkPriceType tagData;
-        MyEnumPriceType oneElement;
-
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( MyEnumPriceType oneEnum : MyEnumPriceType.values()) {
+            tagData = new Tag663EnuBenchmarkPriceType(oneEnum);
+            assertEquals( "FIX663_ENU_BENCHMARK_PRICE_TYPE", tagData.toEnumLabelString());
+            assertEquals( "663", tagData.toEnumIDString());
+            assertEquals( "BENCHMARK_PRICE_TYPE", tagData.toEnumNameString());
+            assertEquals( "BenchmarkPriceType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
-         * 1-11, 13-19 msg types
+         *  <p>    1 - Percentage (i.e. percent of par) (often called "dollar price" for fixed income)
+         *  <p>    2 - Per unit (i.e. per share or contract)
+         *  <p>    3 - Fixed amount (absolute value)
+         *  <p>    4 - Discount - percentage points below par
+         *  <p>    5 - Premium - percentage points over par
          */
-
-        /*
-         * 1-11 msg types
-         */
-        oneElement = MyEnumPriceType.PERCENTAGE;
-        tagData = new Tag663EnuBenchmarkPriceType( oneElement );
-        assertEquals( oneElement.toEnumIDString(), tagData.getDataValue());
+        tagData = new Tag663EnuBenchmarkPriceType( MyEnumPriceType.PERCENTAGE );
+        assertEquals( MyEnumPriceType.PERCENTAGE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "663", tagData.toEnumIDString());
-        assertEquals( "BENCHMARK_PRICE_TYPE", tagData.toEnumNameString());
-        assertEquals( "BenchmarkPriceType", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         tagData = new Tag663EnuBenchmarkPriceType(MyEnumPriceType.PER_UNIT);
         assertEquals( MyEnumPriceType.PER_UNIT.toEnumIDString(), tagData.getDataValue());
@@ -135,7 +139,13 @@ class Tag663EnuBenchmarkPriceTypeTest {
         assertEquals( MyEnumPriceType.PREMIUM.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-
+        /*
+         *  <p>    6 - Spread (basis points spread)
+         *  <p>    7 - TED Price
+         *  <p>    8 - TED Yield
+         *  <p>    9 - Yield
+         *  <p>    10 - Fixed cabinet trade price (primarily for listed futures and options)
+         */
         tagData = new Tag663EnuBenchmarkPriceType(MyEnumPriceType.SPREAD);
         assertEquals( MyEnumPriceType.SPREAD.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -156,15 +166,19 @@ class Tag663EnuBenchmarkPriceTypeTest {
         assertEquals( MyEnumPriceType.FIXED_TRADE_PRICE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-
+        /*
+         *  <p>    11 - Variable cabinet trade price (primarily for listed futures and options)
+         */
         tagData = new Tag663EnuBenchmarkPriceType(MyEnumPriceType.VARIABLE_TRADE_PRICE);
         assertEquals( MyEnumPriceType.VARIABLE_TRADE_PRICE.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-
-
         /*
-         * 13-19 msg types
+         *  <p>    13 - Product ticks in halfs
+         *  <p>    14 - Product ticks in fourths
+         *  <p>    15 - Product ticks in eights
+         *  <p>    16 - Product ticks in sixteenths
+         *  <p>    17 - Product ticks in thirty-seconds
          */
         tagData = new Tag663EnuBenchmarkPriceType(MyEnumPriceType.TICKS_IN_HALFS);
         assertEquals( MyEnumPriceType.TICKS_IN_HALFS.toEnumIDString(), tagData.getDataValue());
@@ -186,7 +200,10 @@ class Tag663EnuBenchmarkPriceTypeTest {
         assertEquals( MyEnumPriceType.TICKS_IN_THIRTY_SECONDS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-
+        /*
+         *  <p>    18 - Product ticks in sixty-fourths
+         *  <p>    19 - Product ticks in one-twenty-eights
+         */
         tagData = new Tag663EnuBenchmarkPriceType(MyEnumPriceType.TICKS_IN_SIXTY_FOURTHS);
         assertEquals( MyEnumPriceType.TICKS_IN_SIXTY_FOURTHS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -194,46 +211,31 @@ class Tag663EnuBenchmarkPriceTypeTest {
         tagData = new Tag663EnuBenchmarkPriceType(MyEnumPriceType.TICKS_IN_ONE_TWENTY_EIGHTS);
         assertEquals( MyEnumPriceType.TICKS_IN_ONE_TWENTY_EIGHTS.toEnumIDString(), tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag663EnuBenchmarkPriceType tagData;
 
         // loop around the ENUM and process
         for ( MyEnumPriceType oneEnum : MyEnumPriceType.values()) {
             tagData = new Tag663EnuBenchmarkPriceType(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag663EnuBenchmarkPriceType tagData;
-
-        // loop around the ENUM and process
-        for (MyEnumPriceType oneEnum : MyEnumPriceType.values()) {
-            tagData = new Tag663EnuBenchmarkPriceType(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag663EnuBenchmarkPriceType tagData;
-
         // loop around the ENUM and process
-        for (MyEnumPriceType oneEnum : MyEnumPriceType.values()) {
+        for ( MyEnumPriceType oneEnum : MyEnumPriceType.values()) {
             tagData = new Tag663EnuBenchmarkPriceType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag663EnuBenchmarkPriceType tagData;
-
         // loop around the ENUM and process
-        for (MyEnumPriceType oneEnum : MyEnumPriceType.values()) {
+        for ( MyEnumPriceType oneEnum : MyEnumPriceType.values()) {
             tagData = new Tag663EnuBenchmarkPriceType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -241,18 +243,16 @@ class Tag663EnuBenchmarkPriceTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag663EnuBenchmarkPriceType tagData;
-
         // loop around the ENUM and process
-        for (MyEnumPriceType oneEnum : MyEnumPriceType.values()) {
+        for ( MyEnumPriceType oneEnum : MyEnumPriceType.values()) {
             tagData = new Tag663EnuBenchmarkPriceType(oneEnum);
             assertEquals( "Tag663EnuBenchmarkPriceType\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

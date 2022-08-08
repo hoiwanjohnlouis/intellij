@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyLocalMktDateType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -32,95 +31,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  Date of event
  */
 class Tag866LmdEventDateTest {
+    Tag866LmdEventDate tagData;
+    String [] TestArray = {
+            Tag866LmdEventDate.TESTA_LMD_EVENT_DATE,
+            Tag866LmdEventDate.TESTB_LMD_EVENT_DATE
+    };
+
     @Test
-    void FIX0866Test() {
-        FIX44 fixData = FIX44.FIX866_LMD_EVENT_DATE;
-        assertEquals( "866", fixData.toEnumIDString());
-        assertEquals( "EVENT_DATE", fixData.toEnumNameString());
-        assertEquals( "EventDate", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag866LmdEventDate( new MyLocalMktDateType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0866Test() {
-        Tag866LmdEventDate tagData;
-        String oneElement;
-
-        oneElement = Tag866LmdEventDate.TESTA_LMD_EVENT_DATE;
-        tagData = new Tag866LmdEventDate( new MyLocalMktDateType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "866", tagData.toEnumIDString());
-        assertEquals( "EVENT_DATE", tagData.toEnumNameString());
-        assertEquals( "EventDate", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-
-        oneElement = Tag866LmdEventDate.TESTB_LMD_EVENT_DATE;
-        tagData = new Tag866LmdEventDate( new MyLocalMktDateType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag866LmdEventDate tagData;
-        String oneElement;
-
-        oneElement = Tag866LmdEventDate.TESTA_LMD_EVENT_DATE;
-        tagData = new Tag866LmdEventDate( new MyLocalMktDateType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag866LmdEventDate.TESTB_LMD_EVENT_DATE;
-        tagData = new Tag866LmdEventDate( new MyLocalMktDateType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag866LmdEventDate( new MyLocalMktDateType( oneElement ));
+            assertEquals( "FIX866_LMD_EVENT_DATE", tagData.toEnumLabelString());
+            assertEquals( "866", tagData.toEnumIDString());
+            assertEquals( "EVENT_DATE", tagData.toEnumNameString());
+            assertEquals( "EventDate", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag866LmdEventDate tagData;
-        String oneElement;
-
-        oneElement = Tag866LmdEventDate.TESTB_LMD_EVENT_DATE;
-        tagData = new Tag866LmdEventDate( new MyLocalMktDateType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag866LmdEventDate( new MyLocalMktDateType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag866LmdEventDate tagData;
-        String oneElement;
-
-        oneElement = Tag866LmdEventDate.TESTB_LMD_EVENT_DATE;
-        tagData = new Tag866LmdEventDate( new MyLocalMktDateType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag866LmdEventDate( new MyLocalMktDateType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag866LmdEventDate tagData;
-        String oneElement;
-
-        oneElement = Tag866LmdEventDate.TESTB_LMD_EVENT_DATE;
-        tagData = new Tag866LmdEventDate( new MyLocalMktDateType( oneElement ) );
-        assertEquals( oneElement, tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag866LmdEventDate( new MyLocalMktDateType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag866LmdEventDate tagData;
-        String oneElement;
-
-        oneElement = Tag866LmdEventDate.TESTA_LMD_EVENT_DATE;
-        tagData = new Tag866LmdEventDate( new MyLocalMktDateType( oneElement ) );
-        assertEquals( "Tag866LmdEventDate\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag866LmdEventDate( new MyLocalMktDateType( oneElement ));
+            assertEquals( "Tag866LmdEventDate\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

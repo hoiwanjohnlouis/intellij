@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -32,95 +31,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  Long Quantity
  */
 class Tag704QtyLongQtyTest {
+    Tag704QtyLongQty tagData;
+    int [] TestArray = {
+            Tag704QtyLongQty.TESTA_QTY_LONG_QTY,
+            Tag704QtyLongQty.TESTB_QTY_LONG_QTY
+    };
+
     @Test
-    void FIX0704Test() {
-        FIX44 fixData = FIX44.FIX704_QTY_LONG_QTY;
-        assertEquals( "704", fixData.toEnumIDString());
-        assertEquals( "LONG_QTY", fixData.toEnumNameString());
-        assertEquals( "LongQty", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag704QtyLongQty( new MyQtyType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0704Test() {
-        Tag704QtyLongQty tagData;
-        int oneElement;
-
-        oneElement = Tag704QtyLongQty.TESTA_QTY_LONG_QTY;
-        tagData = new Tag704QtyLongQty( new MyQtyType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "704", tagData.toEnumIDString());
-        assertEquals( "LONG_QTY", tagData.toEnumNameString());
-        assertEquals( "LongQty", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-
-        oneElement = Tag704QtyLongQty.TESTB_QTY_LONG_QTY;
-        tagData = new Tag704QtyLongQty( new MyQtyType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag704QtyLongQty tagData;
-        int oneElement;
-
-        oneElement = Tag704QtyLongQty.TESTA_QTY_LONG_QTY;
-        tagData = new Tag704QtyLongQty( new MyQtyType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag704QtyLongQty.TESTB_QTY_LONG_QTY;
-        tagData = new Tag704QtyLongQty( new MyQtyType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag704QtyLongQty( new MyQtyType( oneElement ));
+            assertEquals( "FIX704_QTY_LONG_QTY", tagData.toEnumLabelString());
+            assertEquals( "704", tagData.toEnumIDString());
+            assertEquals( "LONG_QTY", tagData.toEnumNameString());
+            assertEquals( "LongQty", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag704QtyLongQty tagData;
-        int oneElement;
-
-        oneElement = Tag704QtyLongQty.TESTB_QTY_LONG_QTY;
-        tagData = new Tag704QtyLongQty( new MyQtyType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag704QtyLongQty( new MyQtyType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag704QtyLongQty tagData;
-        int oneElement;
-
-        oneElement = Tag704QtyLongQty.TESTB_QTY_LONG_QTY;
-        tagData = new Tag704QtyLongQty( new MyQtyType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag704QtyLongQty( new MyQtyType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag704QtyLongQty tagData;
-        int oneElement;
-
-        oneElement = Tag704QtyLongQty.TESTB_QTY_LONG_QTY;
-        tagData = new Tag704QtyLongQty( new MyQtyType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag704QtyLongQty( new MyQtyType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag704QtyLongQty tagData;
-        int oneElement;
-
-        oneElement = Tag704QtyLongQty.TESTA_QTY_LONG_QTY;
-        tagData = new Tag704QtyLongQty( new MyQtyType( oneElement ) );
-        assertEquals( "Tag704QtyLongQty\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag704QtyLongQty( new MyQtyType( oneElement ));
+            assertEquals( "Tag704QtyLongQty\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

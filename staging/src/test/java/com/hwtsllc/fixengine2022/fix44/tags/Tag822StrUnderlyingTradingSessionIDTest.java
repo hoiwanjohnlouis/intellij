@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -32,95 +31,76 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  Trading Session in which the underlying instrument trades
  */
 class Tag822StrUnderlyingTradingSessionIDTest {
+    Tag822StrUnderlyingTradingSessionID tagData;
+    String [] TestArray = {
+            Tag822StrUnderlyingTradingSessionID.TESTA_STR_UNDERLYING_TRADING_SESSION_ID,
+            Tag822StrUnderlyingTradingSessionID.TESTB_STR_UNDERLYING_TRADING_SESSION_ID
+    };
+
     @Test
-    void FIXTest() {
-        FIX44 fixData = FIX44.FIX822_STR_UNDERLYING_TRADING_SESSION_ID;
-        assertEquals( "822", fixData.toEnumIDString());
-        assertEquals( "UNDERLYING_TRADING_SESSION_ID", fixData.toEnumNameString());
-        assertEquals( "UnderlyingTradingSessionID", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag822StrUnderlyingTradingSessionID( new MyStringType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0822Test() {
-        Tag822StrUnderlyingTradingSessionID tagData;
-        String oneElement;
-
-        oneElement = Tag822StrUnderlyingTradingSessionID.TESTA_STR_UNDERLYING_TRADING_SESSION_ID;
-        tagData = new Tag822StrUnderlyingTradingSessionID( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "822", tagData.toEnumIDString());
-        assertEquals( "UNDERLYING_TRADING_SESSION_ID", tagData.toEnumNameString());
-        assertEquals( "UnderlyingTradingSessionID", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-
-        oneElement = Tag822StrUnderlyingTradingSessionID.TESTB_STR_UNDERLYING_TRADING_SESSION_ID;
-        tagData = new Tag822StrUnderlyingTradingSessionID( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag822StrUnderlyingTradingSessionID tagData;
-        String oneElement;
-
-        oneElement = Tag822StrUnderlyingTradingSessionID.TESTA_STR_UNDERLYING_TRADING_SESSION_ID;
-        tagData = new Tag822StrUnderlyingTradingSessionID( new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag822StrUnderlyingTradingSessionID.TESTB_STR_UNDERLYING_TRADING_SESSION_ID;
-        tagData = new Tag822StrUnderlyingTradingSessionID( new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag822StrUnderlyingTradingSessionID( new MyStringType( oneElement ));
+            assertEquals( "FIX822_STR_UNDERLYING_TRADING_SESSION_ID", tagData.toEnumLabelString());
+            assertEquals( "822", tagData.toEnumIDString());
+            assertEquals( "UNDERLYING_TRADING_SESSION_ID", tagData.toEnumNameString());
+            assertEquals( "UnderlyingTradingSessionID", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag822StrUnderlyingTradingSessionID tagData;
-        String oneElement;
-
-        oneElement = Tag822StrUnderlyingTradingSessionID.TESTB_STR_UNDERLYING_TRADING_SESSION_ID;
-        tagData = new Tag822StrUnderlyingTradingSessionID( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag822StrUnderlyingTradingSessionID( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag822StrUnderlyingTradingSessionID tagData;
-        String oneElement;
-
-        oneElement = Tag822StrUnderlyingTradingSessionID.TESTB_STR_UNDERLYING_TRADING_SESSION_ID;
-        tagData = new Tag822StrUnderlyingTradingSessionID( new MyStringType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag822StrUnderlyingTradingSessionID( new MyStringType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag822StrUnderlyingTradingSessionID tagData;
-        String oneElement;
-
-        oneElement = Tag822StrUnderlyingTradingSessionID.TESTB_STR_UNDERLYING_TRADING_SESSION_ID;
-        tagData = new Tag822StrUnderlyingTradingSessionID(new MyStringType(oneElement));
-        assertEquals( oneElement, tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag822StrUnderlyingTradingSessionID( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag822StrUnderlyingTradingSessionID tagData;
-        String oneElement;
-
-        oneElement = Tag822StrUnderlyingTradingSessionID.TESTA_STR_UNDERLYING_TRADING_SESSION_ID;
-        tagData = new Tag822StrUnderlyingTradingSessionID( new MyStringType( oneElement ) );
-        assertEquals( "Tag822StrUnderlyingTradingSessionID\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag822StrUnderlyingTradingSessionID( new MyStringType( oneElement ));
+            assertEquals( "Tag822StrUnderlyingTradingSessionID\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

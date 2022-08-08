@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -32,95 +31,76 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  The registration type of the underlying commercial paper issuance
  */
 class Tag878StrUnderlyingCPRegTypeTest {
+    Tag878StrUnderlyingCPRegType tagData;
+    String [] TestArray = {
+            Tag878StrUnderlyingCPRegType.TESTA_STR_UNDERLYING_CP_REGTYPE,
+            Tag878StrUnderlyingCPRegType.TESTB_STR_UNDERLYING_CP_REGTYPE
+    };
+
     @Test
-    void FIXTest() {
-        FIX44 fixData = FIX44.FIX878_STR_UNDERLYING_CP_REGTYPE;
-        assertEquals( "878", fixData.toEnumIDString());
-        assertEquals( "UNDERLYING_CP_REGTYPE", fixData.toEnumNameString());
-        assertEquals( "UnderlyingCPRegType", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag878StrUnderlyingCPRegType( new MyStringType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0878Test() {
-        Tag878StrUnderlyingCPRegType tagData;
-        String oneElement;
-
-        oneElement = Tag878StrUnderlyingCPRegType.TESTA_STR_UNDERLYING_CP_REGTYPE;
-        tagData = new Tag878StrUnderlyingCPRegType( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "878", tagData.toEnumIDString());
-        assertEquals( "UNDERLYING_CP_REGTYPE", tagData.toEnumNameString());
-        assertEquals( "UnderlyingCPRegType", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-
-        oneElement = Tag878StrUnderlyingCPRegType.TESTB_STR_UNDERLYING_CP_REGTYPE;
-        tagData = new Tag878StrUnderlyingCPRegType( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag878StrUnderlyingCPRegType tagData;
-        String oneElement;
-
-        oneElement = Tag878StrUnderlyingCPRegType.TESTA_STR_UNDERLYING_CP_REGTYPE;
-        tagData = new Tag878StrUnderlyingCPRegType( new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag878StrUnderlyingCPRegType.TESTB_STR_UNDERLYING_CP_REGTYPE;
-        tagData = new Tag878StrUnderlyingCPRegType( new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag878StrUnderlyingCPRegType( new MyStringType( oneElement ));
+            assertEquals( "FIX878_STR_UNDERLYING_CP_REGTYPE", tagData.toEnumLabelString());
+            assertEquals( "878", tagData.toEnumIDString());
+            assertEquals( "UNDERLYING_CP_REGTYPE", tagData.toEnumNameString());
+            assertEquals( "UnderlyingCPRegType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag878StrUnderlyingCPRegType tagData;
-        String oneElement;
-
-        oneElement = Tag878StrUnderlyingCPRegType.TESTB_STR_UNDERLYING_CP_REGTYPE;
-        tagData = new Tag878StrUnderlyingCPRegType( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag878StrUnderlyingCPRegType( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag878StrUnderlyingCPRegType tagData;
-        String oneElement;
-
-        oneElement = Tag878StrUnderlyingCPRegType.TESTB_STR_UNDERLYING_CP_REGTYPE;
-        tagData = new Tag878StrUnderlyingCPRegType( new MyStringType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag878StrUnderlyingCPRegType( new MyStringType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag878StrUnderlyingCPRegType tagData;
-        String oneElement;
-
-        oneElement = Tag878StrUnderlyingCPRegType.TESTB_STR_UNDERLYING_CP_REGTYPE;
-        tagData = new Tag878StrUnderlyingCPRegType(new MyStringType(oneElement));
-        assertEquals( oneElement, tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag878StrUnderlyingCPRegType( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag878StrUnderlyingCPRegType tagData;
-        String oneElement;
-
-        oneElement = Tag878StrUnderlyingCPRegType.TESTA_STR_UNDERLYING_CP_REGTYPE;
-        tagData = new Tag878StrUnderlyingCPRegType( new MyStringType( oneElement ) );
-        assertEquals( "Tag878StrUnderlyingCPRegType\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag878StrUnderlyingCPRegType( new MyStringType( oneElement ));
+            assertEquals( "Tag878StrUnderlyingCPRegType\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

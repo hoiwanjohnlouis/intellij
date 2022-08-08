@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumPartySubIDType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -132,169 +131,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    or any value conforming to the data type Reserved4000Plus
  */
 class Tag807EnuNested2PartySubIDTypeTest {
+    Tag807EnuNested2PartySubIDType tagData;
+
     @Test
-    void FIXTest() {
-        FIX44 fixData = FIX44.FIX807_ENU_NESTED_2_PARTY_SUB_ID_TYPE;
-        assertEquals( "807", fixData.toEnumIDString());
-        assertEquals( "NESTED_2_PARTY_SUB_ID_TYPE", fixData.toEnumNameString());
-        assertEquals( "Nested2PartySubIDType", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0807Test() {
-        Tag807EnuNested2PartySubIDType tagData;
-        MyEnumPartySubIDType oneElement;
-
-        /*
-         *  1-32
-         */
-        oneElement = MyEnumPartySubIDType.FIRM;
-        tagData = new Tag807EnuNested2PartySubIDType( oneElement );
-        assertEquals( oneElement.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "807", tagData.toEnumIDString());
-        assertEquals( "NESTED_2_PARTY_SUB_ID_TYPE", tagData.toEnumNameString());
-        assertEquals( "Nested2PartySubIDType", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-
-        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.PERSON);
-        assertEquals( MyEnumPartySubIDType.PERSON.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.SYSTEM);
-        assertEquals( MyEnumPartySubIDType.SYSTEM.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.APPLICATION);
-        assertEquals( MyEnumPartySubIDType.APPLICATION.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.FULL_LEGAL_NAME_OF_FIRM);
-        assertEquals( MyEnumPartySubIDType.FULL_LEGAL_NAME_OF_FIRM.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.POSTAL_ADDRESS);
-        assertEquals( MyEnumPartySubIDType.POSTAL_ADDRESS.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.PHONE_NUMBER);
-        assertEquals( MyEnumPartySubIDType.PHONE_NUMBER.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.EMAIL_ADDRESS);
-        assertEquals( MyEnumPartySubIDType.EMAIL_ADDRESS.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.CONTACT_NAME);
-        assertEquals( MyEnumPartySubIDType.CONTACT_NAME.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.SECURITIES_ACCOUNT_NUMBER);
-        assertEquals( MyEnumPartySubIDType.SECURITIES_ACCOUNT_NUMBER.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.REGISTRATION_NUMBER);
-        assertEquals( MyEnumPartySubIDType.REGISTRATION_NUMBER.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.REGISTERED_ADDRESS_FOR_CONFIRM);
-        assertEquals( MyEnumPartySubIDType.REGISTERED_ADDRESS_FOR_CONFIRM.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.REGULATORY_STATUS);
-        assertEquals( MyEnumPartySubIDType.REGULATORY_STATUS.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.REGISTRATION_NAME);
-        assertEquals( MyEnumPartySubIDType.REGISTRATION_NAME.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.CASH_ACCOUNT_NUMBER);
-        assertEquals( MyEnumPartySubIDType.CASH_ACCOUNT_NUMBER.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.BIC);
-        assertEquals( MyEnumPartySubIDType.BIC.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.CSD);
-        assertEquals( MyEnumPartySubIDType.CSD.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.REGISTERED_ADDRESS);
-        assertEquals( MyEnumPartySubIDType.REGISTERED_ADDRESS.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.FUND_ACCOUNT_NAME);
-        assertEquals( MyEnumPartySubIDType.FUND_ACCOUNT_NAME.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.TELEX_NUMBER);
-        assertEquals( MyEnumPartySubIDType.TELEX_NUMBER.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.FAX_NUMBER);
-        assertEquals( MyEnumPartySubIDType.FAX_NUMBER.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.SECURITIES_ACCOUNT_NAME);
-        assertEquals( MyEnumPartySubIDType.SECURITIES_ACCOUNT_NAME.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.CASH_ACCOUNT_NAME);
-        assertEquals( MyEnumPartySubIDType.CASH_ACCOUNT_NAME.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.DEPARTMENT);
-        assertEquals( MyEnumPartySubIDType.DEPARTMENT.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.LOCATION_DESK);
-        assertEquals( MyEnumPartySubIDType.LOCATION_DESK.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.POSITION_ACCOUNT_TYPE);
-        assertEquals( MyEnumPartySubIDType.POSITION_ACCOUNT_TYPE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.SECURITY_LOCATE_ID);
-        assertEquals( MyEnumPartySubIDType.SECURITY_LOCATE_ID.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.MARKET_MAKER);
-        assertEquals( MyEnumPartySubIDType.MARKET_MAKER.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.ELIGIBLE_COUNTERPARTY);
-        assertEquals( MyEnumPartySubIDType.ELIGIBLE_COUNTERPARTY.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.PROFESSIONAL_CLIENT);
-        assertEquals( MyEnumPartySubIDType.PROFESSIONAL_CLIENT.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.LOCATION);
-        assertEquals( MyEnumPartySubIDType.LOCATION.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.EXECUTION_VENUE);
-        assertEquals( MyEnumPartySubIDType.EXECUTION_VENUE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag807EnuNested2PartySubIDType tagData;
-
+    void PrintTest() {
         // loop around the ENUM and process
         for ( MyEnumPartySubIDType oneEnum : MyEnumPartySubIDType.values()) {
             tagData = new Tag807EnuNested2PartySubIDType(oneEnum);
@@ -302,34 +142,222 @@ class Tag807EnuNested2PartySubIDTypeTest {
         }
     }
     @Test
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( MyEnumPartySubIDType oneEnum : MyEnumPartySubIDType.values()) {
+            tagData = new Tag807EnuNested2PartySubIDType(oneEnum);
+            assertEquals( "FIX807_ENU_NESTED_2_PARTY_SUB_ID_TYPE", tagData.toEnumLabelString());
+            assertEquals( "807", tagData.toEnumIDString());
+            assertEquals( "NESTED_2_PARTY_SUB_ID_TYPE", tagData.toEnumNameString());
+            assertEquals( "Nested2PartySubIDType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void TagGetDataValueTest() {
-        Tag807EnuNested2PartySubIDType tagData;
+        /*
+         *  <p>    1 - Firm
+         *  <p>    2 - Person
+         *  <p>    3 - System
+         *  <p>    4 - Application
+         *  <p>    5 - Full legal name of firm
+         */
+        tagData = new Tag807EnuNested2PartySubIDType( MyEnumPartySubIDType.FIRM );
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.PERSON);
+        assertEquals( "2", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.SYSTEM);
+        assertEquals( "3", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.APPLICATION);
+        assertEquals( "4", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.FULL_LEGAL_NAME_OF_FIRM);
+        assertEquals( "5", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        /*
+         *  <p>    6 - Postal address
+         *  <p>    7 - Phone number
+         *  <p>    8 - Email address
+         *  <p>    9 - Contact name
+         *  <p>    10 - Securities account number (for settlement instructions)
+         */
+        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.POSTAL_ADDRESS);
+        assertEquals( "6", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.PHONE_NUMBER);
+        assertEquals( "7", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.EMAIL_ADDRESS);
+        assertEquals( "8", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.CONTACT_NAME);
+        assertEquals( "9", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.SECURITIES_ACCOUNT_NUMBER);
+        assertEquals( "10", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        /*
+         *  <p>    11 - Registration number (for settlement instructions and confirmations)
+         *  <p>    12 - Registered address (for confirmation purposes)
+         *  <p>    13 - Regulatory status (for confirmation purposes)
+         *  <p>    14 - Registration name (for settlement instructions)
+         *  <p>    15 - Cash account number (for settlement instructions)
+         */
+        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.REGISTRATION_NUMBER);
+        assertEquals( "11", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.REGISTERED_ADDRESS_FOR_CONFIRM);
+        assertEquals( "12", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.REGULATORY_STATUS);
+        assertEquals( "13", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.REGISTRATION_NAME);
+        assertEquals( "14", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.CASH_ACCOUNT_NUMBER);
+        assertEquals( "15", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        /*
+         *  <p>    16 - BIC
+         *  <p>    17 - CSD participant member code
+         *  <p>    18 - Registered address
+         *  <p>    19 - Fund account name
+         *  <p>    20 - Telex number
+         */
+        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.BIC);
+        assertEquals( "16", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.CSD);
+        assertEquals( "17", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.REGISTERED_ADDRESS);
+        assertEquals( "18", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.FUND_ACCOUNT_NAME);
+        assertEquals( "19", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.TELEX_NUMBER);
+        assertEquals( "20", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        /*
+         *  <p>    21 - Fax number
+         *  <p>    22 - Securities account name
+         *  <p>    23 - Cash account name
+         *  <p>    24 - Department
+         *  <p>    25 - Location desk
+         */
+        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.FAX_NUMBER);
+        assertEquals( "21", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.SECURITIES_ACCOUNT_NAME);
+        assertEquals( "22", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.CASH_ACCOUNT_NAME);
+        assertEquals( "23", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.DEPARTMENT);
+        assertEquals( "24", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.LOCATION_DESK);
+        assertEquals( "25", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        /*
+         *  <p>    26 - Position account type
+         *  <p>    27 - Security locate ID
+         *  <p>    28 - Market maker
+         *  <p>    29 - Eligible counterparty
+         *  <p>    30 - Professional client
+         */
+        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.POSITION_ACCOUNT_TYPE);
+        assertEquals( "26", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.SECURITY_LOCATE_ID);
+        assertEquals( "27", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.MARKET_MAKER);
+        assertEquals( "28", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.ELIGIBLE_COUNTERPARTY);
+        assertEquals( "29", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.PROFESSIONAL_CLIENT);
+        assertEquals( "30", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        /*
+         *  <p>    31 - Location
+         *  <p>    32 - Execution venue
+         *  <p>    or any value conforming to the data type Reserved4000Plus
+         */
+        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.LOCATION);
+        assertEquals( "31", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag807EnuNested2PartySubIDType(MyEnumPartySubIDType.EXECUTION_VENUE);
+        assertEquals( "32", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
 
         // loop around the ENUM and process
-        for (MyEnumPartySubIDType oneEnum : MyEnumPartySubIDType.values()) {
+        for ( MyEnumPartySubIDType oneEnum : MyEnumPartySubIDType.values()) {
             tagData = new Tag807EnuNested2PartySubIDType(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag807EnuNested2PartySubIDType tagData;
-
         // loop around the ENUM and process
-        for (MyEnumPartySubIDType oneEnum : MyEnumPartySubIDType.values()) {
+        for ( MyEnumPartySubIDType oneEnum : MyEnumPartySubIDType.values()) {
             tagData = new Tag807EnuNested2PartySubIDType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag807EnuNested2PartySubIDType tagData;
-
         // loop around the ENUM and process
-        for (MyEnumPartySubIDType oneEnum : MyEnumPartySubIDType.values()) {
+        for ( MyEnumPartySubIDType oneEnum : MyEnumPartySubIDType.values()) {
             tagData = new Tag807EnuNested2PartySubIDType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -337,18 +365,16 @@ class Tag807EnuNested2PartySubIDTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag807EnuNested2PartySubIDType tagData;
-
         // loop around the ENUM and process
-        for (MyEnumPartySubIDType oneEnum : MyEnumPartySubIDType.values()) {
+        for ( MyEnumPartySubIDType oneEnum : MyEnumPartySubIDType.values()) {
             tagData = new Tag807EnuNested2PartySubIDType(oneEnum);
             assertEquals( "Tag807EnuNested2PartySubIDType\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

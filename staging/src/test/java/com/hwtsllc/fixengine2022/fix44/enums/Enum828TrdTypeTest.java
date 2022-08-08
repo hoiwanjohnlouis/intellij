@@ -60,32 +60,33 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p></p>
  *  <p>    MiFID Values
  *  <p>    24 - Error trade
+ *  <p></p>
  *  <p>    25 - Special cum dividend (CD)
  *  <p>    26 - Special ex dividend (XD)
  *  <p>    27 - Special cum coupon (CC)
  *  <p>    28 - Special ex coupon (XC)
- *  <p></p>
  *  <p>    29 - Cash settlement (CS)
+ *  <p></p>
  *  <p>    30 - Special price (usually net- or all-in price) (SP)
  *  <p>    31 - Guaranteed delivery (GD)
  *  <p>    32 - Special cum rights (CR)
  *  <p>    33 - Special ex rights (XR)
- *  <p></p>
  *  <p>    34 - Special cum capital repayments (CP)
+ *  <p></p>
  *  <p>    35 - Special ex capital repayments (XP)
  *  <p>    36 - Special cum bonus (CB)
  *  <p>    37 - Special ex bonus (XB)
  *  <p>    38 - Block trade (same as large trade)
- *  <p></p>
  *  <p>    39 - Worked principal trade (UK-specific)
+ *  <p></p>
  *  <p>    40 - Block Trades - after market
  *  <p>    41 - Name change
  *  <p>    42 - Portfolio transfer
  *  <p>    43 - Prorogation buy - Euronext Paris only.
  *  <p>         Is used to defer settlement under French SRD (deferred settlement system).
  *  <p>         Trades must be reported as crosses at zero price.
- *  <p></p>
  *  <p>    44 - Prorogation sell - see prorogation buy
+ *  <p></p>
  *  <p>    45 - Option exercise
  *  <p>    46 - Delta neutral transaction
  *  <p>    47 - Financing transaction (includes repo and stock lending)

@@ -57,32 +57,33 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p></p>
  *  <p>    MiFID Values
  *  <p>    24 - Error trade
+ *  <p></p>
  *  <p>    25 - Special cum dividend (CD)
  *  <p>    26 - Special ex dividend (XD)
  *  <p>    27 - Special cum coupon (CC)
  *  <p>    28 - Special ex coupon (XC)
- *  <p></p>
  *  <p>    29 - Cash settlement (CS)
+ *  <p></p>
  *  <p>    30 - Special price (usually net- or all-in price) (SP)
  *  <p>    31 - Guaranteed delivery (GD)
  *  <p>    32 - Special cum rights (CR)
  *  <p>    33 - Special ex rights (XR)
- *  <p></p>
  *  <p>    34 - Special cum capital repayments (CP)
+ *  <p></p>
  *  <p>    35 - Special ex capital repayments (XP)
  *  <p>    36 - Special cum bonus (CB)
  *  <p>    37 - Special ex bonus (XB)
  *  <p>    38 - Block trade (same as large trade)
- *  <p></p>
  *  <p>    39 - Worked principal trade (UK-specific)
+ *  <p></p>
  *  <p>    40 - Block Trades - after market
  *  <p>    41 - Name change
  *  <p>    42 - Portfolio transfer
  *  <p>    43 - Prorogation buy - Euronext Paris only.
  *  <p>         Is used to defer settlement under French SRD (deferred settlement system).
  *  <p>         Trades must be reported as crosses at zero price.
- *  <p></p>
  *  <p>    44 - Prorogation sell - see prorogation buy
+ *  <p></p>
  *  <p>    45 - Option exercise
  *  <p>    46 - Delta neutral transaction
  *  <p>    47 - Financing transaction (includes repo and stock lending)
@@ -124,25 +125,26 @@ public enum Enum828TrdType implements LogFIXString, LogVerboseString {
      *  MiFID Values
      */
     ERROR_TRADE( "24", "ERROR_TRADE", "24 - Error trade" ),
+
     CD( "25", "CD", "25 - Special cum dividend (CD)" ),
     XD( "26", "XD", "26 - Special ex dividend (XD)" ),
     CC( "27", "CC", "27 - Special cum coupon (CC)" ),
     XC( "28", "XC", "28 - Special ex coupon (XC)" ),
-
     CS( "29", "CS", "29 - Cash settlement (CS)" ),
+
     SP( "30", "SP", "30 - Special price (usually net- or all-in price) (SP)" ),
     GD( "31", "GD", "31 - Guaranteed delivery (GD)" ),
     CR( "32", "CR", "32 - Special cum rights (CR)" ),
     XR( "33", "XR", "33 - Special ex rights (XR)" ),
-
     CP( "34", "CP", "34 - Special cum capital repayments (CP)" ),
+
     XP( "35", "XP", "35 - Special ex capital repayments (XP)" ),
     CB( "36", "CB", "36 - Special cum bonus (CB)" ),
     XB( "37", "XB", "37 - Special ex bonus (XB)" ),
     LARGE_TRADE( "38", "LARGE_TRADE", "38 - Block trade (same as large trade)" ),
-
     WORKED_PRINCIPAL_TRADE( "39", "WORKED_PRINCIPAL_TRADE",
             "39 - Worked principal trade (UK-specific)" ),
+
     BLOCK_TRADE_AFTER_MARKET( "40", "BLOCK_TRADE_AFTER_MARKET",
             "40 - Block Trades - after market" ),
     NAME_CHANGE( "41", "NAME_CHANGE", "41 - Name change" ),
@@ -151,8 +153,8 @@ public enum Enum828TrdType implements LogFIXString, LogVerboseString {
             "43 - Prorogation buy - Euronext Paris only. " +
                     "Is used to defer settlement under French SRD (deferred settlement system). " +
                     "Trades must be reported_as_crosses_zero_price" ),
-
     PROROGATION_SELL( "44", "PROROGATION_SELL", "44 - Prorogation sell - see prorogation buy" ),
+
     OPTION_EXERCISE( "45", "OPTION_EXERCISE", "45 - Option exercise" ),
     DELTA_NEUTRAL_TRANSACTION( "46", "DELTA_NEUTRAL_TRANSACTION", "46 - Delta neutral transaction" ),
     FINANCING_TRANSACTION( "47", "FINANCING_TRANSACTION",

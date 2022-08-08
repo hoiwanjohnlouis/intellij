@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -42,95 +41,76 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    NOTE: Additional values may be used by mutual agreement of the counterparties
  */
 class Tag762StrSecuritySubTypeTest {
+    Tag762StrSecuritySubType tagData;
+    String [] TestArray = {
+            Tag762StrSecuritySubType.TESTA_STR_SECURITY_SUB_TYPE,
+            Tag762StrSecuritySubType.TESTB_STR_SECURITY_SUB_TYPE
+    };
+
     @Test
-    void FIXTest() {
-        FIX44 fixData = FIX44.FIX762_STR_SECURITY_SUB_TYPE;
-        assertEquals( "762", fixData.toEnumIDString());
-        assertEquals( "SECURITY_SUB_TYPE", fixData.toEnumNameString());
-        assertEquals( "SecuritySubType", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag762StrSecuritySubType( new MyStringType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0762Test() {
-        Tag762StrSecuritySubType tagData;
-        String oneElement;
-
-        oneElement = Tag762StrSecuritySubType.TESTA_STR_SECURITY_SUB_TYPE;
-        tagData = new Tag762StrSecuritySubType( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "762", tagData.toEnumIDString());
-        assertEquals( "SECURITY_SUB_TYPE", tagData.toEnumNameString());
-        assertEquals( "SecuritySubType", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-
-        oneElement = Tag762StrSecuritySubType.TESTB_STR_SECURITY_SUB_TYPE;
-        tagData = new Tag762StrSecuritySubType( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag762StrSecuritySubType tagData;
-        String oneElement;
-
-        oneElement = Tag762StrSecuritySubType.TESTA_STR_SECURITY_SUB_TYPE;
-        tagData = new Tag762StrSecuritySubType( new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag762StrSecuritySubType.TESTB_STR_SECURITY_SUB_TYPE;
-        tagData = new Tag762StrSecuritySubType( new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag762StrSecuritySubType( new MyStringType( oneElement ));
+            assertEquals( "FIX762_STR_SECURITY_SUB_TYPE", tagData.toEnumLabelString());
+            assertEquals( "762", tagData.toEnumIDString());
+            assertEquals( "SECURITY_SUB_TYPE", tagData.toEnumNameString());
+            assertEquals( "SecuritySubType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag762StrSecuritySubType tagData;
-        String oneElement;
-
-        oneElement = Tag762StrSecuritySubType.TESTB_STR_SECURITY_SUB_TYPE;
-        tagData = new Tag762StrSecuritySubType( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag762StrSecuritySubType( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag762StrSecuritySubType tagData;
-        String oneElement;
-
-        oneElement = Tag762StrSecuritySubType.TESTB_STR_SECURITY_SUB_TYPE;
-        tagData = new Tag762StrSecuritySubType( new MyStringType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag762StrSecuritySubType( new MyStringType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag762StrSecuritySubType tagData;
-        String oneElement;
-
-        oneElement = Tag762StrSecuritySubType.TESTB_STR_SECURITY_SUB_TYPE;
-        tagData = new Tag762StrSecuritySubType(new MyStringType(oneElement));
-        assertEquals( oneElement, tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag762StrSecuritySubType( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag762StrSecuritySubType tagData;
-        String oneElement;
-
-        oneElement = Tag762StrSecuritySubType.TESTA_STR_SECURITY_SUB_TYPE;
-        tagData = new Tag762StrSecuritySubType( new MyStringType( oneElement ) );
-        assertEquals( "Tag762StrSecuritySubType\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag762StrSecuritySubType( new MyStringType( oneElement ));
+            assertEquals( "Tag762StrSecuritySubType\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

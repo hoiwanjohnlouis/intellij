@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum857AllocNoOrdersType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -38,41 +37,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    1 - Explicit List Provided
  */
 class Tag857EnuAllocNoOrdersTypeTest {
-    @Test
-    void FIXTest() {
-        FIX44 fixData = FIX44.FIX857_ENU_ALLOC_NO_ORDERS_TYPE;
-        assertEquals( "857", fixData.toEnumIDString());
-        assertEquals( "ALLOC_NO_ORDERS_TYPE", fixData.toEnumNameString());
-        assertEquals( "AllocNoOrdersType", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0857Test() {
-        Tag857EnuAllocNoOrdersType tagData;
-        Enum857AllocNoOrdersType oneElement;
+    Tag857EnuAllocNoOrdersType tagData;
 
-        oneElement = Enum857AllocNoOrdersType.NOT_SPECIFIED;
-        tagData = new Tag857EnuAllocNoOrdersType( oneElement );
-        assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "857", tagData.toEnumIDString());
-        assertEquals( "ALLOC_NO_ORDERS_TYPE", tagData.toEnumNameString());
-        assertEquals( "AllocNoOrdersType", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-
-        oneElement = Enum857AllocNoOrdersType.LIST_PROVIDED;
-        tagData = new Tag857EnuAllocNoOrdersType( oneElement );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
     @Test
-    void PrintFIXTagTest() {
-        Tag857EnuAllocNoOrdersType tagData;
-
+    void PrintTest() {
         // loop around the ENUM and process
         for ( Enum857AllocNoOrdersType oneEnum : Enum857AllocNoOrdersType.values()) {
             tagData = new Tag857EnuAllocNoOrdersType(oneEnum);
@@ -80,34 +48,58 @@ class Tag857EnuAllocNoOrdersTypeTest {
         }
     }
     @Test
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( Enum857AllocNoOrdersType oneEnum : Enum857AllocNoOrdersType.values()) {
+            tagData = new Tag857EnuAllocNoOrdersType(oneEnum);
+            assertEquals( "FIX857_ENU_ALLOC_NO_ORDERS_TYPE", tagData.toEnumLabelString());
+            assertEquals( "857", tagData.toEnumIDString());
+            assertEquals( "ALLOC_NO_ORDERS_TYPE", tagData.toEnumNameString());
+            assertEquals( "AllocNoOrdersType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void TagGetDataValueTest() {
-        Tag857EnuAllocNoOrdersType tagData;
+        /*
+         *  <p>    0 - Not Specified
+         *  <p>    1 - Explicit List Provided
+         */
+        tagData = new Tag857EnuAllocNoOrdersType( Enum857AllocNoOrdersType.NOT_SPECIFIED );
+        assertEquals( "0", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag857EnuAllocNoOrdersType( Enum857AllocNoOrdersType.LIST_PROVIDED );
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         // loop around the ENUM and process
-        for (Enum857AllocNoOrdersType oneEnum : Enum857AllocNoOrdersType.values()) {
+        for ( Enum857AllocNoOrdersType oneEnum : Enum857AllocNoOrdersType.values()) {
             tagData = new Tag857EnuAllocNoOrdersType(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag857EnuAllocNoOrdersType tagData;
-
         // loop around the ENUM and process
-        for (Enum857AllocNoOrdersType oneEnum : Enum857AllocNoOrdersType.values()) {
+        for ( Enum857AllocNoOrdersType oneEnum : Enum857AllocNoOrdersType.values()) {
             tagData = new Tag857EnuAllocNoOrdersType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag857EnuAllocNoOrdersType tagData;
-
         // loop around the ENUM and process
-        for (Enum857AllocNoOrdersType oneEnum : Enum857AllocNoOrdersType.values()) {
+        for ( Enum857AllocNoOrdersType oneEnum : Enum857AllocNoOrdersType.values()) {
             tagData = new Tag857EnuAllocNoOrdersType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -115,18 +107,16 @@ class Tag857EnuAllocNoOrdersTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag857EnuAllocNoOrdersType tagData;
-
         // loop around the ENUM and process
-        for (Enum857AllocNoOrdersType oneEnum : Enum857AllocNoOrdersType.values()) {
+        for ( Enum857AllocNoOrdersType oneEnum : Enum857AllocNoOrdersType.values()) {
             tagData = new Tag857EnuAllocNoOrdersType(oneEnum);
             assertEquals( "Tag857EnuAllocNoOrdersType\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

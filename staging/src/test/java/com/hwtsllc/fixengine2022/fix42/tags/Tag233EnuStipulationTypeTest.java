@@ -17,6 +17,7 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyEnumStipulationType;
+import com.hwtsllc.fixengine2022.fix44.tags.Tag888EnuUnderlyingStipType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -100,11 +101,11 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    SECTYPE - Security Type included or excluded
  *  <p>    STRUCT - Structure
  *  <p></p>
- *      SUBSFREQ - Substitutions frequency (Repo)
- *      SUBSLEFT - Substitutions left (Repo)
- *      TEXT - Freeform Text
- *      TRDVAR - Trade Variance (value in percent maximum over- or under-allocation allowed)
- *      WAC - Weighted Average Coupon - value in percent (exact or range)
+ *  <p>    SUBSFREQ - Substitutions frequency (Repo)
+ *  <p>    SUBSLEFT - Substitutions left (Repo)
+ *  <p>    TEXT - Freeform Text
+ *  <p>    TRDVAR - Trade Variance (value in percent maximum over- or under-allocation allowed)
+ *  <p>    WAC - Weighted Average Coupon - value in percent (exact or range)
  *              plus "Gross" or "Net" of servicing spread (the default)
  *              (ex. 234=6.5-Net [minimum of 6.5% net of servicing fee])
  *  <p></p>
@@ -156,251 +157,334 @@ class Tag233EnuStipulationTypeTest {
     @Test
     void TagGetDataValueTest() {
         /*
-         *  233 StipulationType
+         *  <p>    AMT - Alternative Minimum Tax (Y/N)
+         *  <p>    AUTOREINV - Auto Reinvestment at <rate> or better
+         *  <p>    BANKQUAL - Bank qualified (Y/N)
+         *  <p>    BGNCON - Bargain conditions (see StipulationValue (234) for values)
+         *  <p>    COUPON - Coupon range
          */
-        tagData = new Tag233EnuStipulationType(MyEnumStipulationType.ALTERNATIVE_MINIMUM_TAX);
-        assertEquals( MyEnumStipulationType.ALTERNATIVE_MINIMUM_TAX.toEnumIDString(), tagData.getDataValue());
+        tagData = new Tag233EnuStipulationType( MyEnumStipulationType.ALTERNATIVE_MINIMUM_TAX );
+        assertEquals( "AMT", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.AUTO_REINVESTMENT);
-        assertEquals( MyEnumStipulationType.AUTO_REINVESTMENT.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "AUTOREINV", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.BANK_QUALIFIED);
-        assertEquals( MyEnumStipulationType.BANK_QUALIFIED.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "BANKQUAL", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.BARGAIN_CONDITIONS);
-        assertEquals( MyEnumStipulationType.BARGAIN_CONDITIONS.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "BGNCON", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.COUPON_RANGE);
-        assertEquals( MyEnumStipulationType.COUPON_RANGE.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "COUPON", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
+        /*
+         *  <p>    CURRENCY - ISO Currency Code
+         *  <p>    CUSTOMDATE - Custom start/end date
+         *  <p>    GEOG - Geographics and % range (ex. 234=CA 0-80 [minimum of 80% California assets])
+         *  <p>    HAIRCUT - Valuation Discount
+         *  <p>    INSURED - Insured (Y/N)
+         */
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.ISO_CURRENCY_CODE);
-        assertEquals( MyEnumStipulationType.ISO_CURRENCY_CODE.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "CURRENCY", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.CUSTOM_START_END_DATE);
-        assertEquals( MyEnumStipulationType.CUSTOM_START_END_DATE.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "CUSTOMDATE", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.GEOGRAPHIC_AND_PERCENT_RANGE);
-        assertEquals( MyEnumStipulationType.GEOGRAPHIC_AND_PERCENT_RANGE.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "GEOG", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.VALUATION_DISCOUNT);
-        assertEquals( MyEnumStipulationType.VALUATION_DISCOUNT.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "HAIRCUT", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.INSURED);
-        assertEquals( MyEnumStipulationType.INSURED.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "INSURED", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
+        /*
+         *  <p>    ISSUE - Year Or Year/Month of Issue (ex. 234=2002/09)
+         *  <p>    ISSUER - Issuer's ticker
+         *  <p>    ISSUESIZE - issue size range
+         *  <p>    LOOKBACK - Lookback Days
+         *  <p>    LOT - Explicit lot identifier
+         */
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.YEAR_OR_YEAR_MONTH_OF_ISSUE);
-        assertEquals( MyEnumStipulationType.YEAR_OR_YEAR_MONTH_OF_ISSUE.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "ISSUE", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.ISSUERS_TICKER);
-        assertEquals( MyEnumStipulationType.ISSUERS_TICKER.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "ISSUER", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.ISSUE_SIZE_RANGE);
-        assertEquals( MyEnumStipulationType.ISSUE_SIZE_RANGE.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "ISSUESIZE", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.LOOKBACK_DAYS);
-        assertEquals( MyEnumStipulationType.LOOKBACK_DAYS.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "LOOKBACK", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.EXPLICIT_LOT_IDENTIFIER);
-        assertEquals( MyEnumStipulationType.EXPLICIT_LOT_IDENTIFIER.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "LOT", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
+        /*
+         *  <p>    LOTVAR - Lot Variance (value in percent maximum over- or under-allocation allowed)
+         *  <p>    MAT - Maturity Year And Month
+         *  <p>    MATURITY - Maturity range
+         *  <p>    MAXSUBS - Maximum substitutions (Repo)
+         *  <p>    MINDNOM - Minimum denomination
+         */
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.LOT_VARIANCE);
-        assertEquals( MyEnumStipulationType.LOT_VARIANCE.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "LOTVAR", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.MATURITY_YEAR_AND_MONTH);
-        assertEquals( MyEnumStipulationType.MATURITY_YEAR_AND_MONTH.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "MAT", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.MATURITY_RANGE);
-        assertEquals( MyEnumStipulationType.MATURITY_RANGE.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "MATURITY", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.MAXIMUM_SUBSTITUTIONS_REPO);
-        assertEquals( MyEnumStipulationType.MAXIMUM_SUBSTITUTIONS_REPO.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "MAXSUBS", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.MINIMUM_DENOMINATION);
-        assertEquals( MyEnumStipulationType.MINIMUM_DENOMINATION.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "MINDNOM", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
+        /*
+         *  <p>    MININCR - Minimum increment
+         *  <p>    MINQTY - Minimum quantity
+         *  <p>    PAYFREQ - Payment frequency, calendar
+         *  <p>    PIECES - Number Of Pieces
+         *  <p>    PMAX - Pools Maximum
+         */
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.MINIMUM_INCREMENT);
-        assertEquals( MyEnumStipulationType.MINIMUM_INCREMENT.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "MININCR", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.MINIMUM_QUANTITY);
-        assertEquals( MyEnumStipulationType.MINIMUM_QUANTITY.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "MINQTY", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.PAYMENT_FREQUENCY);
-        assertEquals( MyEnumStipulationType.PAYMENT_FREQUENCY.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "PAYFREQ", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.NUMBER_OF_PIECES);
-        assertEquals( MyEnumStipulationType.NUMBER_OF_PIECES.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "PIECES", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.POOLS_MAXIMUM);
-        assertEquals( MyEnumStipulationType.POOLS_MAXIMUM.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "PMAX", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
+        /*
+         *  <p>    PPL - Pools per Lot
+         *  <p>    PPM - Pools per Million
+         *  <p>    PPT - Pools per Trade
+         *  <p>    PRICE - Price Range
+         *  <p>    PRICEFREQ - Pricing frequency
+         */
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.POOLS_PER_LOT);
-        assertEquals( MyEnumStipulationType.POOLS_PER_LOT.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "PPL", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.POOLS_PER_MILLION);
-        assertEquals( MyEnumStipulationType.POOLS_PER_MILLION.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "PPM", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.POOLS_PER_TRADE);
-        assertEquals( MyEnumStipulationType.POOLS_PER_TRADE.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "PPT", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.PRICE_RANGE);
-        assertEquals( MyEnumStipulationType.PRICE_RANGE.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "PRICE", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.PRICING_FREQUENCY);
-        assertEquals( MyEnumStipulationType.PRICING_FREQUENCY.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "PRICEFREQ", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
+        /*
+         *  <p>    PROD - Production Year
+         *  <p>    PROTECT - Call protection
+         *  <p>    PURPOSE - Purpose
+         *  <p>    PXSOURCE - Benchmark price source
+         *  <p>    RATING - Rating source and range
+         */
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.PRODUCTION_YEAR);
-        assertEquals( MyEnumStipulationType.PRODUCTION_YEAR.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "PROD", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.CALL_PROTECTION);
-        assertEquals( MyEnumStipulationType.CALL_PROTECTION.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "PROTECT", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.PURPOSE);
-        assertEquals( MyEnumStipulationType.PURPOSE.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "PURPOSE", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.BENCHMARK_PRICE_SOURCE);
-        assertEquals( MyEnumStipulationType.BENCHMARK_PRICE_SOURCE.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "PXSOURCE", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.RATING_SOURCE_AND_RANGE);
-        assertEquals( MyEnumStipulationType.RATING_SOURCE_AND_RANGE.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "RATING", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
+        /*
+         *  <p>    REDEMPTION - Type Of Redemption - values are:
+         *              NonCallable, Prefunded, EscrowedToMaturity, Putable, Convertible
+         *  <p>    RESTRICTED - Restricted (Y/N)
+         *  <p>    SECTOR - Market Sector
+         *  <p>    SECTYPE - Security Type included or excluded
+         *  <p>    STRUCT - Structure
+         */
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.TYPE_OF_REDEMPTION);
-        assertEquals( MyEnumStipulationType.TYPE_OF_REDEMPTION.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "REDEMPTION", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.RESTRICTED);
-        assertEquals( MyEnumStipulationType.RESTRICTED.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "RESTRICTED", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.MARKET_SECTOR);
-        assertEquals( MyEnumStipulationType.MARKET_SECTOR.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "SECTOR", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.SECURITY_TYPE);
-        assertEquals( MyEnumStipulationType.SECURITY_TYPE.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "SECTYPE", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.STRUCTURE);
-        assertEquals( MyEnumStipulationType.STRUCTURE.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "STRUCT", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
+        /*
+         *  <p>    SUBSFREQ - Substitutions frequency (Repo)
+         *  <p>    SUBSLEFT - Substitutions left (Repo)
+         *  <p>    TEXT - Freeform Text
+         *  <p>    TRDVAR - Trade Variance (value in percent maximum over- or under-allocation allowed)
+         *  <p>    WAC - Weighted Average Coupon - value in percent (exact or range)
+         *              plus "Gross" or "Net" of servicing spread (the default)
+         *              (ex. 234=6.5-Net [minimum of 6.5% net of servicing fee])
+         */
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.SUBSTITUTIONS_FREQUENCY_REPO);
-        assertEquals( MyEnumStipulationType.SUBSTITUTIONS_FREQUENCY_REPO.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "SUBSFREQ", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.SUBSTITUTIONS_LEFT_REPO);
-        assertEquals( MyEnumStipulationType.SUBSTITUTIONS_LEFT_REPO.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "SUBSLEFT", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.FREEFORM_TEXT);
-        assertEquals( MyEnumStipulationType.FREEFORM_TEXT.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "TEXT", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.TRADE_VARIANCE);
-        assertEquals( MyEnumStipulationType.TRADE_VARIANCE.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "TRDVAR", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.WEIGHTED_AVERAGE_COUPON);
-        assertEquals( MyEnumStipulationType.WEIGHTED_AVERAGE_COUPON.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "WAC", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
+        /*
+         *  <p>    WAL - Weighted Average Life Coupon - value in percent (exact or range)
+         *  <p>    WALA - Weighted Average Loan Age - value in months (exact or range)
+         *  <p>    WAM - Weighted Average Maturity - value in months (exact or range)
+         *  <p>    WHOLE - Whole Pool (Y/N)
+         *  <p>    YIELD - Yield Range
+         */
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.WEIGHTED_AVERAGE_LIFE_COUPON);
-        assertEquals( MyEnumStipulationType.WEIGHTED_AVERAGE_LIFE_COUPON.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "WAL", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.WEIGHTED_AVERAGE_LOAN_AGE);
-        assertEquals( MyEnumStipulationType.WEIGHTED_AVERAGE_LOAN_AGE.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "WALA", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.WEIGHTED_AVERAGE_MATURITY);
-        assertEquals( MyEnumStipulationType.WEIGHTED_AVERAGE_MATURITY.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "WAM", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.WHOLE_POOL);
-        assertEquals( MyEnumStipulationType.WHOLE_POOL.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "WHOLE", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.YIELD_RANGE);
-        assertEquals( MyEnumStipulationType.YIELD_RANGE.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "YIELD", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-
         /*
-         *  Prepayment Speeds
+         *      Prepayment Speeds
+         *  <p>    ABS - Absolute Prepayment Speed
+         *  <p>    CPP - Constant Prepayment Penalty
+         *  <p>    CPR - Constant Prepayment Rate
+         *  <p>    CPY - Constant Prepayment Yield
+         *  <p>    HEP - final CPR of Home Equity Prepayment Curve
          */
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.ABSOLUTE_PREPAYMENT_SPEED);
-        assertEquals( MyEnumStipulationType.ABSOLUTE_PREPAYMENT_SPEED.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "ABS", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.CONSTANT_PREPAYMENT_PENALTY);
-        assertEquals( MyEnumStipulationType.CONSTANT_PREPAYMENT_PENALTY.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "CPP", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.CONSTANT_PREPAYMENT_RATE);
-        assertEquals( MyEnumStipulationType.CONSTANT_PREPAYMENT_RATE.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "CPR", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.CONSTANT_PREPAYMENT_YIELD);
-        assertEquals( MyEnumStipulationType.CONSTANT_PREPAYMENT_YIELD.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "CPY", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.FINAL_CPR_HOME_EQUITY);
-        assertEquals( MyEnumStipulationType.FINAL_CPR_HOME_EQUITY.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "HEP", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
+        /*
+         *      Prepayment Speeds
+         *  <p>    MHP - Percent of Manufactured Housing Prepayment Curve
+         *  <p>    MPR - Monthly Prepayment Rate
+         *  <p>    PPC - Percent of Prospectus Prepayment Curve
+         *  <p>    PSA - Percent of BMA Prepayment Curve
+         *  <p>    SMM - Single Monthly Mortality
+         */
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.MANUFACTURED_HOUSING_PREPAYMENT);
-        assertEquals( MyEnumStipulationType.MANUFACTURED_HOUSING_PREPAYMENT.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "MHP", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.MONTHLY_PREPAYMENT_RATE);
-        assertEquals( MyEnumStipulationType.MONTHLY_PREPAYMENT_RATE.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "MPR", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.PERCENT_PROSPECTUS_PREPAYMENT);
-        assertEquals( MyEnumStipulationType.PERCENT_PROSPECTUS_PREPAYMENT.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "PPC", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.PERCENT_BMA_PREPAYMENT);
-        assertEquals( MyEnumStipulationType.PERCENT_BMA_PREPAYMENT.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "PSA", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         tagData = new Tag233EnuStipulationType(MyEnumStipulationType.SINGLE_MONTHLY_MORTALITY);
-        assertEquals( MyEnumStipulationType.SINGLE_MONTHLY_MORTALITY.toEnumIDString(), tagData.getDataValue());
+        assertEquals( "SMM", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
 
         // loop around the ENUM and process
         for ( MyEnumStipulationType oneEnum : MyEnumStipulationType.values()) {

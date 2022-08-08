@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -32,95 +31,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  Net Money at maturity if Zero Coupon and maturity value is different from par value
  */
 class Tag890AmtMaturityNetMoneyTest {
+    Tag890AmtMaturityNetMoney tagData;
+    double [] TestArray = {
+            Tag890AmtMaturityNetMoney.TESTA_AMT_MATURITY_NET_MONEY,
+            Tag890AmtMaturityNetMoney.TESTB_AMT_MATURITY_NET_MONEY
+    };
+
     @Test
-    void FIX0890Test() {
-        FIX44 fixData = FIX44.FIX890_AMT_MATURITY_NET_MONEY;
-        assertEquals( "890", fixData.toEnumIDString());
-        assertEquals( "MATURITY_NET_MONEY", fixData.toEnumNameString());
-        assertEquals( "MaturityNetMoney", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag890AmtMaturityNetMoney( new MyAmtType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0890Test() {
-        Tag890AmtMaturityNetMoney tagData;
-        double oneElement;
-
-        oneElement = Tag890AmtMaturityNetMoney.TESTA_AMT_MATURITY_NET_MONEY;
-        tagData = new Tag890AmtMaturityNetMoney( new MyAmtType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "890", tagData.toEnumIDString());
-        assertEquals( "MATURITY_NET_MONEY", tagData.toEnumNameString());
-        assertEquals( "MaturityNetMoney", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-
-        oneElement = Tag890AmtMaturityNetMoney.TESTB_AMT_MATURITY_NET_MONEY;
-        tagData = new Tag890AmtMaturityNetMoney( new MyAmtType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag890AmtMaturityNetMoney tagData;
-        double oneElement;
-
-        oneElement = Tag890AmtMaturityNetMoney.TESTA_AMT_MATURITY_NET_MONEY;
-        tagData = new Tag890AmtMaturityNetMoney( new MyAmtType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag890AmtMaturityNetMoney.TESTB_AMT_MATURITY_NET_MONEY;
-        tagData = new Tag890AmtMaturityNetMoney( new MyAmtType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag890AmtMaturityNetMoney( new MyAmtType( oneElement ));
+            assertEquals( "FIX890_AMT_MATURITY_NET_MONEY", tagData.toEnumLabelString());
+            assertEquals( "890", tagData.toEnumIDString());
+            assertEquals( "MATURITY_NET_MONEY", tagData.toEnumNameString());
+            assertEquals( "MaturityNetMoney", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag890AmtMaturityNetMoney tagData;
-        double oneElement;
-
-        oneElement = Tag890AmtMaturityNetMoney.TESTB_AMT_MATURITY_NET_MONEY;
-        tagData = new Tag890AmtMaturityNetMoney( new MyAmtType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag890AmtMaturityNetMoney( new MyAmtType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag890AmtMaturityNetMoney tagData;
-        double oneElement;
-
-        oneElement = Tag890AmtMaturityNetMoney.TESTB_AMT_MATURITY_NET_MONEY;
-        tagData = new Tag890AmtMaturityNetMoney( new MyAmtType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag890AmtMaturityNetMoney( new MyAmtType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag890AmtMaturityNetMoney tagData;
-        double oneElement;
-
-        oneElement = Tag890AmtMaturityNetMoney.TESTB_AMT_MATURITY_NET_MONEY;
-        tagData = new Tag890AmtMaturityNetMoney( new MyAmtType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag890AmtMaturityNetMoney( new MyAmtType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag890AmtMaturityNetMoney tagData;
-        double oneElement;
-
-        oneElement = Tag890AmtMaturityNetMoney.TESTA_AMT_MATURITY_NET_MONEY;
-        tagData = new Tag890AmtMaturityNetMoney( new MyAmtType( oneElement ) );
-        assertEquals( "Tag890AmtMaturityNetMoney\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag890AmtMaturityNetMoney( new MyAmtType( oneElement ));
+            assertEquals( "Tag890AmtMaturityNetMoney\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

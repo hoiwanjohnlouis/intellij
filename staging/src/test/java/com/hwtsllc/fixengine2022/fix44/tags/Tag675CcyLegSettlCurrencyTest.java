@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyCurrencyType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -34,95 +33,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  See SettlCurrency (20) for description and valid values
  */
 class Tag675CcyLegSettlCurrencyTest {
+    Tag675CcyLegSettlCurrency tagData;
+    String [] TestArray = {
+            Tag675CcyLegSettlCurrency.TESTA_CCY_LEG_SETTL_CURRENCY,
+            Tag675CcyLegSettlCurrency.TESTB_CCY_LEG_SETTL_CURRENCY
+    };
+
     @Test
-    void FIXTest() {
-        FIX44 fixData = FIX44.FIX675_CCY_LEG_SETTL_CURRENCY;
-        assertEquals( "675", fixData.toEnumIDString());
-        assertEquals( "LEG_SETTL_CURRENCY", fixData.toEnumNameString());
-        assertEquals( "LegSettlCurrency", fixData.toEnumDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag675CcyLegSettlCurrency( new MyCurrencyType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0675Test() {
-        Tag675CcyLegSettlCurrency tagData;
-        String oneElement;
-
-        oneElement = Tag675CcyLegSettlCurrency.TESTA_CCY_LEG_SETTL_CURRENCY;
-        tagData = new Tag675CcyLegSettlCurrency( new MyCurrencyType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "675", tagData.toEnumIDString());
-        assertEquals( "LEG_SETTL_CURRENCY", tagData.toEnumNameString());
-        assertEquals( "LegSettlCurrency", tagData.toEnumDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-
-        oneElement = Tag675CcyLegSettlCurrency.TESTB_CCY_LEG_SETTL_CURRENCY;
-        tagData = new Tag675CcyLegSettlCurrency( new MyCurrencyType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag675CcyLegSettlCurrency tagData;
-        String oneElement;
-
-        oneElement = Tag675CcyLegSettlCurrency.TESTA_CCY_LEG_SETTL_CURRENCY;
-        tagData = new Tag675CcyLegSettlCurrency( new MyCurrencyType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag675CcyLegSettlCurrency.TESTB_CCY_LEG_SETTL_CURRENCY;
-        tagData = new Tag675CcyLegSettlCurrency( new MyCurrencyType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag675CcyLegSettlCurrency( new MyCurrencyType( oneElement ));
+            assertEquals( "FIX675_CCY_LEG_SETTL_CURRENCY", tagData.toEnumLabelString());
+            assertEquals( "675", tagData.toEnumIDString());
+            assertEquals( "LEG_SETTL_CURRENCY", tagData.toEnumNameString());
+            assertEquals( "LegSettlCurrency", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag675CcyLegSettlCurrency tagData;
-        String oneElement;
-
-        oneElement = Tag675CcyLegSettlCurrency.TESTB_CCY_LEG_SETTL_CURRENCY;
-        tagData = new Tag675CcyLegSettlCurrency( new MyCurrencyType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag675CcyLegSettlCurrency( new MyCurrencyType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag675CcyLegSettlCurrency tagData;
-        String oneElement;
-
-        oneElement = Tag675CcyLegSettlCurrency.TESTB_CCY_LEG_SETTL_CURRENCY;
-        tagData = new Tag675CcyLegSettlCurrency( new MyCurrencyType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag675CcyLegSettlCurrency( new MyCurrencyType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag675CcyLegSettlCurrency tagData;
-        String oneElement;
-
-        oneElement = Tag675CcyLegSettlCurrency.TESTB_CCY_LEG_SETTL_CURRENCY;
-        tagData = new Tag675CcyLegSettlCurrency( new MyCurrencyType( oneElement ) );
-        assertEquals( oneElement, tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag675CcyLegSettlCurrency( new MyCurrencyType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag675CcyLegSettlCurrency tagData;
-        String oneElement;
-
-        oneElement = Tag675CcyLegSettlCurrency.TESTA_CCY_LEG_SETTL_CURRENCY;
-        tagData = new Tag675CcyLegSettlCurrency( new MyCurrencyType( oneElement ) );
-        assertEquals( "Tag675CcyLegSettlCurrency\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag675CcyLegSettlCurrency( new MyCurrencyType( oneElement ));
+            assertEquals( "Tag675CcyLegSettlCurrency\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

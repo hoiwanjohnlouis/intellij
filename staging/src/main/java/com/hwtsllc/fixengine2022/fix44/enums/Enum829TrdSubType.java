@@ -44,6 +44,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p></p>
  *  <p>    MiFID Values
  *  <p>    14 - AI (Automated input facility disabled in response to an exchange request.)
+ *  <p></p>
  *  <p>    15 - B (Transaction between two member firms where neither member firm is
  *  <p>                registered as a market maker in the security in
  *  <p>                question and neither is a designated fund manager.
@@ -58,8 +59,8 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>                two market makers registered in that security
  *  <p>                including IDB or a public display system trades.
  *  <p>                Non-order book securities only.)
- *  <p></p>
  *  <p>    19 - N (Non-protected portfolio transaction or a fully disclosed portfolio transaction)
+ *  <p></p>
  *  <p>    20 - NM (
  *  <p>                  i) transaction where Exchange has granted permission for non-publication.
  *  <p>                 ii) IDB is reporting as seller.
@@ -70,9 +71,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    22 - P (Protected portfolio transaction or a worked principal agreement to
  *  <p>                effect a portfolio transaction which includes order book securities)
  *  <p>    23 - PA (Protected transaction notification)
- *  <p></p>
  *  <p>    24 - PC (Contra trade for transaction which took place on a previous day
  *  <p>                and which was automatically executed on the Exchange trading system)
+ *  <p></p>
  *  <p>    25 - PN (Worked principal notification for a portfolio transaction
  *  <p>                which includes order book securities)
  *  <p>    26 - R (
@@ -95,9 +96,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>                or a stock-settled covered warrant)
  *  <p>    28 - RT (Risk transaction in a SEATS security, (excluding AIM security)
  *  <p>                reported by a market maker registered in that security)
- *  <p></p>
  *  <p>    29 - SW (Transactions resulting from stock swap or a stock switch
  *  <p>                (one report is required for each line of stock) )
+ *  <p></p>
  *  <p>    30 - T (If reporting a single protected transaction)
  *  <p>    31 - WN (Worked principal notification for a single order book security)
  *  <p>    32 - WT (Worked principal transaction (other than a portfolio transaction))
@@ -122,6 +123,7 @@ public enum Enum829TrdSubType implements LogFIXString, LogVerboseString {
      *  MiFID Values
      */
     AI( "14", "AI", "14 - AI (Automated input facility disabled in response to an exchange request.)" ),
+
     B( "15", "B","15 - B (Transaction between two member firms where neither member firm is " +
                     "registered as a market maker in the security in question and neither is a designated fund " +
                     "manager. Also used by broker dealers when dealing with another broker which is not a " +
@@ -132,9 +134,9 @@ public enum Enum829TrdSubType implements LogFIXString, LogVerboseString {
     M( "18", "M", "18 - M (Transaction, other than a transaction resulting from a " +
                     "stock swap or stock switch, between two market makers registered in that security " +
                     "including IDB or a public display system trades. Non-order book securities only.)" ),
-
     N( "19", "N", "19 - N " +
                     "(Non-protected portfolio transaction or a fully disclosed portfolio transaction)" ),
+
     NM( "20", "NM", "20 - NM (  i) transaction where Exchange has granted permission for " +
                     "non-publication.  ii) IDB is reporting as seller.  iii) submitting a transaction report " +
                     "to the Exchange, where the transaction report is not also a trade report.)" ),
@@ -143,9 +145,9 @@ public enum Enum829TrdSubType implements LogFIXString, LogVerboseString {
                     "or a worked principal agreement to effect a portfolio transaction " +
                     "which includes order book securities)" ),
     PA( "23", "PA", "23 - PA (Protected transaction notification)" ),
-
     PC( "24", "PC", "24 - PC (Contra trade for transaction which took place " +
                     "on a previous day and which was automatically executed on the Exchange trading system)" ),
+
     PN( "25", "PN", "25 - PN (Worked principal notification for a portfolio transaction " +
                     "which includes order book securities)" ),
     R( "26", "R", "26 - R (  i) riskless principal transaction between non-members where " +
@@ -162,9 +164,9 @@ public enum Enum829TrdSubType implements LogFIXString, LogVerboseString {
                     "traditional option or a stock-settled covered warrant)" ),
     RT( "28", "RT", "28 - RT (Risk transaction in a SEATS security, " +
                     "(excluding AIM security) reported by a market maker registered in that security)" ),
-
     SW( "29", "SW", "29 - SW (Transactions resulting from stock swap or a stock switch " +
                     "(one report is required for each line of stock)" ),
+
     T( "30", "T", "30 - T (If reporting a single protected transaction)" ),
     WN( "31", "WN", "31 - WN (Worked principal notification for a single order book security)" ),
     WT( "32", "WT", "32 - WT (Worked principal transaction (other than a portfolio transaction))" ),

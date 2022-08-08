@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -32,95 +31,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  Underlying price associate with a derivative instrument.
  */
 class Tag810PrcUnderlyingPxTest {
+    Tag810PrcUnderlyingPx tagData;
+    double [] TestArray = {
+            Tag810PrcUnderlyingPx.TESTA_PRC_UNDERLYING_PX,
+            Tag810PrcUnderlyingPx.TESTB_PRC_UNDERLYING_PX
+    };
+
     @Test
-    void FIXTest() {
-        FIX44 fixData = FIX44.FIX810_PRC_UNDERLYING_PX;
-        assertEquals( "810", fixData.toEnumIDString());
-        assertEquals( "UNDERLYING_PX", fixData.toEnumNameString());
-        assertEquals( "UnderlyingPx", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag810PrcUnderlyingPx( new MyPriceType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0810Test() {
-        Tag810PrcUnderlyingPx tagData;
-        double oneElement;
-
-        oneElement = Tag810PrcUnderlyingPx.TESTA_PRC_UNDERLYING_PX;
-        tagData = new Tag810PrcUnderlyingPx( new MyPriceType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "810", tagData.toEnumIDString());
-        assertEquals( "UNDERLYING_PX", tagData.toEnumNameString());
-        assertEquals( "UnderlyingPx", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-
-        oneElement = Tag810PrcUnderlyingPx.TESTB_PRC_UNDERLYING_PX;
-        tagData = new Tag810PrcUnderlyingPx( new MyPriceType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag810PrcUnderlyingPx tagData;
-        double oneElement;
-
-        oneElement = Tag810PrcUnderlyingPx.TESTA_PRC_UNDERLYING_PX;
-        tagData = new Tag810PrcUnderlyingPx( new MyPriceType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag810PrcUnderlyingPx.TESTB_PRC_UNDERLYING_PX;
-        tagData = new Tag810PrcUnderlyingPx( new MyPriceType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag810PrcUnderlyingPx( new MyPriceType( oneElement ));
+            assertEquals( "FIX810_PRC_UNDERLYING_PX", tagData.toEnumLabelString());
+            assertEquals( "810", tagData.toEnumIDString());
+            assertEquals( "UNDERLYING_PX", tagData.toEnumNameString());
+            assertEquals( "UnderlyingPx", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag810PrcUnderlyingPx tagData;
-        double oneElement;
-
-        oneElement = Tag810PrcUnderlyingPx.TESTB_PRC_UNDERLYING_PX;
-        tagData = new Tag810PrcUnderlyingPx( new MyPriceType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag810PrcUnderlyingPx( new MyPriceType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag810PrcUnderlyingPx tagData;
-        double oneElement;
-
-        oneElement = Tag810PrcUnderlyingPx.TESTB_PRC_UNDERLYING_PX;
-        tagData = new Tag810PrcUnderlyingPx( new MyPriceType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag810PrcUnderlyingPx( new MyPriceType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag810PrcUnderlyingPx tagData;
-        double oneElement;
-
-        oneElement = Tag810PrcUnderlyingPx.TESTB_PRC_UNDERLYING_PX;
-        tagData = new Tag810PrcUnderlyingPx( new MyPriceType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag810PrcUnderlyingPx( new MyPriceType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag810PrcUnderlyingPx tagData;
-        double oneElement;
-
-        oneElement = Tag810PrcUnderlyingPx.TESTA_PRC_UNDERLYING_PX;
-        tagData = new Tag810PrcUnderlyingPx( new MyPriceType( oneElement ) );
-        assertEquals( "Tag810PrcUnderlyingPx\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag810PrcUnderlyingPx( new MyPriceType( oneElement ));
+            assertEquals( "Tag810PrcUnderlyingPx\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

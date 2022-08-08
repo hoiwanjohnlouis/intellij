@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -32,95 +31,80 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  Unique identifier for Settlement Instruction message.
  */
 class Tag777StrSettlInstMsgIDTest {
+    Tag777StrSettlInstMsgID tagData;
+    String [] TestArray = {
+            Tag777StrSettlInstMsgID.TESTA_STR_SETTL_INST_MSG_ID,
+            Tag777StrSettlInstMsgID.TESTB_STR_SETTL_INST_MSG_ID
+    };
+
     @Test
     void FIXTest() {
-        FIX44 fixData = FIX44.FIX777_STR_SETTL_INST_MSG_ID;
-        assertEquals( "777", fixData.toEnumIDString());
-        assertEquals( "SETTL_INST_MSG_ID", fixData.toEnumNameString());
-        assertEquals( "SettlInstMsgID", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    }
+
+    @Test
+    void PrintTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag777StrSettlInstMsgID( new MyStringType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0777Test() {
-        Tag777StrSettlInstMsgID tagData;
-        String oneElement;
-
-        oneElement = Tag777StrSettlInstMsgID.TESTA_STR_SETTL_INST_MSG_ID;
-        tagData = new Tag777StrSettlInstMsgID( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "777", tagData.toEnumIDString());
-        assertEquals( "SETTL_INST_MSG_ID", tagData.toEnumNameString());
-        assertEquals( "SettlInstMsgID", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-
-        oneElement = Tag777StrSettlInstMsgID.TESTB_STR_SETTL_INST_MSG_ID;
-        tagData = new Tag777StrSettlInstMsgID( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag777StrSettlInstMsgID tagData;
-        String oneElement;
-
-        oneElement = Tag777StrSettlInstMsgID.TESTA_STR_SETTL_INST_MSG_ID;
-        tagData = new Tag777StrSettlInstMsgID( new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag777StrSettlInstMsgID.TESTB_STR_SETTL_INST_MSG_ID;
-        tagData = new Tag777StrSettlInstMsgID( new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag777StrSettlInstMsgID( new MyStringType( oneElement ));
+            assertEquals( "FIX777_STR_SETTL_INST_MSG_ID", tagData.toEnumLabelString());
+            assertEquals( "777", tagData.toEnumIDString());
+            assertEquals( "SETTL_INST_MSG_ID", tagData.toEnumNameString());
+            assertEquals( "SettlInstMsgID", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag777StrSettlInstMsgID tagData;
-        String oneElement;
-
-        oneElement = Tag777StrSettlInstMsgID.TESTB_STR_SETTL_INST_MSG_ID;
-        tagData = new Tag777StrSettlInstMsgID( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag777StrSettlInstMsgID( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag777StrSettlInstMsgID tagData;
-        String oneElement;
-
-        oneElement = Tag777StrSettlInstMsgID.TESTB_STR_SETTL_INST_MSG_ID;
-        tagData = new Tag777StrSettlInstMsgID( new MyStringType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag777StrSettlInstMsgID( new MyStringType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag777StrSettlInstMsgID tagData;
-        String oneElement;
-
-        oneElement = Tag777StrSettlInstMsgID.TESTB_STR_SETTL_INST_MSG_ID;
-        tagData = new Tag777StrSettlInstMsgID(new MyStringType(oneElement));
-        assertEquals( oneElement, tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag777StrSettlInstMsgID( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag777StrSettlInstMsgID tagData;
-        String oneElement;
-
-        oneElement = Tag777StrSettlInstMsgID.TESTA_STR_SETTL_INST_MSG_ID;
-        tagData = new Tag777StrSettlInstMsgID( new MyStringType( oneElement ) );
-        assertEquals( "Tag777StrSettlInstMsgID\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag777StrSettlInstMsgID( new MyStringType( oneElement ));
+            assertEquals( "Tag777StrSettlInstMsgID\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

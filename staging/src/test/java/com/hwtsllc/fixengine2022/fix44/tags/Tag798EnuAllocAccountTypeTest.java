@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumAccountType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -47,67 +46,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    8 - Joint back office account (JBO)
  */
 class Tag798EnuAllocAccountTypeTest {
+    Tag798EnuAllocAccountType tagData;
+
     @Test
-    void FIXTest() {
-        FIX44 fixData = FIX44.FIX798_ENU_ALLOC_ACCOUNT_TYPE;
-        assertEquals( "798", fixData.toEnumIDString());
-        assertEquals( "ALLOC_ACCOUNT_TYPE", fixData.toEnumNameString());
-        assertEquals( "AllocAccountType", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0798Test() {
-        Tag798EnuAllocAccountType tagData;
-        MyEnumAccountType oneElement;
-
-        /*
-         *  1-4, types
-         */
-        oneElement = MyEnumAccountType.CUSTOMER_BOOK;
-        tagData = new Tag798EnuAllocAccountType( oneElement );
-        assertEquals( oneElement.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "798", tagData.toEnumIDString());
-        assertEquals( "ALLOC_ACCOUNT_TYPE", tagData.toEnumNameString());
-        assertEquals( "AllocAccountType", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-
-        tagData = new Tag798EnuAllocAccountType(MyEnumAccountType.NON_CUSTOMER_BOOK);
-        assertEquals( MyEnumAccountType.NON_CUSTOMER_BOOK.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag798EnuAllocAccountType(MyEnumAccountType.HOUSE_TRADER);
-        assertEquals( MyEnumAccountType.HOUSE_TRADER.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag798EnuAllocAccountType(MyEnumAccountType.FLOOR_TRADER);
-        assertEquals( MyEnumAccountType.FLOOR_TRADER.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        /*
-         *  6-8, types
-         */
-        tagData = new Tag798EnuAllocAccountType(MyEnumAccountType.NON_CUSTOMER_CROSSED_MARGIN_BOOK);
-        assertEquals( MyEnumAccountType.NON_CUSTOMER_CROSSED_MARGIN_BOOK.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag798EnuAllocAccountType(MyEnumAccountType.HOUSE_TRADER_CROSSED_MARGIN_BOOK);
-        assertEquals( MyEnumAccountType.HOUSE_TRADER_CROSSED_MARGIN_BOOK.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag798EnuAllocAccountType(MyEnumAccountType.JOINT_BACK_OFFICE);
-        assertEquals( MyEnumAccountType.JOINT_BACK_OFFICE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag798EnuAllocAccountType tagData;
-
+    void PrintTest() {
         // loop around the ENUM and process
         for ( MyEnumAccountType oneEnum : MyEnumAccountType.values()) {
             tagData = new Tag798EnuAllocAccountType(oneEnum);
@@ -115,34 +57,85 @@ class Tag798EnuAllocAccountTypeTest {
         }
     }
     @Test
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( MyEnumAccountType oneEnum : MyEnumAccountType.values()) {
+            tagData = new Tag798EnuAllocAccountType(oneEnum);
+            assertEquals( "FIX798_ENU_ALLOC_ACCOUNT_TYPE", tagData.toEnumLabelString());
+            assertEquals( "798", tagData.toEnumIDString());
+            assertEquals( "ALLOC_ACCOUNT_TYPE", tagData.toEnumNameString());
+            assertEquals( "AllocAccountType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void TagGetDataValueTest() {
-        Tag798EnuAllocAccountType tagData;
+        /*
+         *  <p>    1 - Account is carried on customer side of books
+         *  <p>    2 - Account is carried on non-customer side of books
+         *  <p>    3 - House trader
+         *  <p>    4 - Floor trader
+         */
+        tagData = new Tag798EnuAllocAccountType( MyEnumAccountType.CUSTOMER_BOOK );
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag798EnuAllocAccountType(MyEnumAccountType.NON_CUSTOMER_BOOK);
+        assertEquals( "2", tagData.getDataValue());
+        assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag798EnuAllocAccountType(MyEnumAccountType.HOUSE_TRADER);
+        assertEquals( "3", tagData.getDataValue());
+        assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag798EnuAllocAccountType(MyEnumAccountType.FLOOR_TRADER);
+        assertEquals( "4", tagData.getDataValue());
+        assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        /*
+         *  <p>    6 - Account is carried on non-customer side of books and is cross margined
+         *  <p>    7 - Account is house trader and is cross margined
+         *  <p>    8 - Joint back office account (JBO)
+         */
+        tagData = new Tag798EnuAllocAccountType(MyEnumAccountType.NON_CUSTOMER_CROSSED_MARGIN_BOOK);
+        assertEquals( "6", tagData.getDataValue());
+        assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag798EnuAllocAccountType(MyEnumAccountType.HOUSE_TRADER_CROSSED_MARGIN_BOOK);
+        assertEquals( "7", tagData.getDataValue());
+        assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag798EnuAllocAccountType(MyEnumAccountType.JOINT_BACK_OFFICE);
+        assertEquals( "8", tagData.getDataValue());
+        assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         // loop around the ENUM and process
-        for (MyEnumAccountType oneEnum : MyEnumAccountType.values()) {
+        for ( MyEnumAccountType oneEnum : MyEnumAccountType.values()) {
             tagData = new Tag798EnuAllocAccountType(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag798EnuAllocAccountType tagData;
-
         // loop around the ENUM and process
-        for (MyEnumAccountType oneEnum : MyEnumAccountType.values()) {
+        for ( MyEnumAccountType oneEnum : MyEnumAccountType.values()) {
             tagData = new Tag798EnuAllocAccountType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag798EnuAllocAccountType tagData;
-
         // loop around the ENUM and process
-        for (MyEnumAccountType oneEnum : MyEnumAccountType.values()) {
+        for ( MyEnumAccountType oneEnum : MyEnumAccountType.values()) {
             tagData = new Tag798EnuAllocAccountType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -150,18 +143,16 @@ class Tag798EnuAllocAccountTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag798EnuAllocAccountType tagData;
-
         // loop around the ENUM and process
-        for (MyEnumAccountType oneEnum : MyEnumAccountType.values()) {
+        for ( MyEnumAccountType oneEnum : MyEnumAccountType.values()) {
             tagData = new Tag798EnuAllocAccountType(oneEnum);
             assertEquals( "Tag798EnuAllocAccountType\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

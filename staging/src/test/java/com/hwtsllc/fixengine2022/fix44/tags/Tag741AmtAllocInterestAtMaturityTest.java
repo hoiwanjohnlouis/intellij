@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -32,95 +31,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  Amount of interest (i.e. lump-sum) at maturity at the account-level.
  */
 class Tag741AmtAllocInterestAtMaturityTest {
+    Tag741AmtAllocInterestAtMaturity tagData;
+    double [] TestArray = {
+            Tag741AmtAllocInterestAtMaturity.TESTA_AMT_ALLOC_INTEREST_AT_MATURITY,
+            Tag741AmtAllocInterestAtMaturity.TESTB_AMT_ALLOC_INTEREST_AT_MATURITY
+    };
+
     @Test
-    void FIX0741Test() {
-        FIX44 fixData = FIX44.FIX741_AMT_ALLOC_INTEREST_AT_MATURITY;
-        assertEquals( "741", fixData.toEnumIDString());
-        assertEquals( "ALLOC_INTEREST_AT_MATURITY", fixData.toEnumNameString());
-        assertEquals( "AllocInterestAtMaturity", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag741AmtAllocInterestAtMaturity( new MyAmtType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0741Test() {
-        Tag741AmtAllocInterestAtMaturity tagData;
-        double oneElement;
-
-        oneElement = Tag741AmtAllocInterestAtMaturity.TESTA_AMT_ALLOC_INTEREST_AT_MATURITY;
-        tagData = new Tag741AmtAllocInterestAtMaturity( new MyAmtType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "741", tagData.toEnumIDString());
-        assertEquals( "ALLOC_INTEREST_AT_MATURITY", tagData.toEnumNameString());
-        assertEquals( "AllocInterestAtMaturity", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-
-        oneElement = Tag741AmtAllocInterestAtMaturity.TESTB_AMT_ALLOC_INTEREST_AT_MATURITY;
-        tagData = new Tag741AmtAllocInterestAtMaturity( new MyAmtType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag741AmtAllocInterestAtMaturity tagData;
-        double oneElement;
-
-        oneElement = Tag741AmtAllocInterestAtMaturity.TESTA_AMT_ALLOC_INTEREST_AT_MATURITY;
-        tagData = new Tag741AmtAllocInterestAtMaturity( new MyAmtType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag741AmtAllocInterestAtMaturity.TESTB_AMT_ALLOC_INTEREST_AT_MATURITY;
-        tagData = new Tag741AmtAllocInterestAtMaturity( new MyAmtType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag741AmtAllocInterestAtMaturity( new MyAmtType( oneElement ));
+            assertEquals( "FIX741_AMT_ALLOC_INTEREST_AT_MATURITY", tagData.toEnumLabelString());
+            assertEquals( "741", tagData.toEnumIDString());
+            assertEquals( "ALLOC_INTEREST_AT_MATURITY", tagData.toEnumNameString());
+            assertEquals( "AllocInterestAtMaturity", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag741AmtAllocInterestAtMaturity tagData;
-        double oneElement;
-
-        oneElement = Tag741AmtAllocInterestAtMaturity.TESTB_AMT_ALLOC_INTEREST_AT_MATURITY;
-        tagData = new Tag741AmtAllocInterestAtMaturity( new MyAmtType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag741AmtAllocInterestAtMaturity( new MyAmtType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag741AmtAllocInterestAtMaturity tagData;
-        double oneElement;
-
-        oneElement = Tag741AmtAllocInterestAtMaturity.TESTB_AMT_ALLOC_INTEREST_AT_MATURITY;
-        tagData = new Tag741AmtAllocInterestAtMaturity( new MyAmtType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag741AmtAllocInterestAtMaturity( new MyAmtType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag741AmtAllocInterestAtMaturity tagData;
-        double oneElement;
-
-        oneElement = Tag741AmtAllocInterestAtMaturity.TESTB_AMT_ALLOC_INTEREST_AT_MATURITY;
-        tagData = new Tag741AmtAllocInterestAtMaturity( new MyAmtType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag741AmtAllocInterestAtMaturity( new MyAmtType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag741AmtAllocInterestAtMaturity tagData;
-        double oneElement;
-
-        oneElement = Tag741AmtAllocInterestAtMaturity.TESTA_AMT_ALLOC_INTEREST_AT_MATURITY;
-        tagData = new Tag741AmtAllocInterestAtMaturity( new MyAmtType( oneElement ) );
-        assertEquals( "Tag741AmtAllocInterestAtMaturity\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag741AmtAllocInterestAtMaturity( new MyAmtType( oneElement ));
+            assertEquals( "Tag741AmtAllocInterestAtMaturity\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

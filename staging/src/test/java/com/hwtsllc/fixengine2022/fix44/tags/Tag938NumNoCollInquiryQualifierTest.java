@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -32,95 +31,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  Number of CollInquiryQualifier entries in a repeating group.
  */
 class Tag938NumNoCollInquiryQualifierTest {
+    Tag938NumNoCollInquiryQualifier tagData;
+    int [] TestArray = {
+            Tag938NumNoCollInquiryQualifier.TESTA_NUM_NO_COLL_INQUIRY_QUALIFIER,
+            Tag938NumNoCollInquiryQualifier.TESTB_NUM_NO_COLL_INQUIRY_QUALIFIER
+    };
+
     @Test
-    void FIX0938Test() {
-        FIX44 fixData = FIX44.FIX938_NUM_NO_COLL_INQUIRY_QUALIFIER;
-        assertEquals( "938", fixData.toEnumIDString());
-        assertEquals( "NO_COLL_INQUIRY_QUALIFIER", fixData.toEnumNameString());
-        assertEquals( "NoCollInquiryQualifier", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag938NumNoCollInquiryQualifier( new MyNumInGroupType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0938Test() {
-        Tag938NumNoCollInquiryQualifier tagData;
-        int oneElement;
-
-        oneElement = Tag938NumNoCollInquiryQualifier.TESTA_NUM_NO_COLL_INQUIRY_QUALIFIER;
-        tagData = new Tag938NumNoCollInquiryQualifier( new MyNumInGroupType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "938", tagData.toEnumIDString());
-        assertEquals( "NO_COLL_INQUIRY_QUALIFIER", tagData.toEnumNameString());
-        assertEquals( "NoCollInquiryQualifier", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-
-        oneElement = Tag938NumNoCollInquiryQualifier.TESTB_NUM_NO_COLL_INQUIRY_QUALIFIER;
-        tagData = new Tag938NumNoCollInquiryQualifier( new MyNumInGroupType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag938NumNoCollInquiryQualifier tagData;
-        int oneElement;
-
-        oneElement = Tag938NumNoCollInquiryQualifier.TESTA_NUM_NO_COLL_INQUIRY_QUALIFIER;
-        tagData = new Tag938NumNoCollInquiryQualifier( new MyNumInGroupType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag938NumNoCollInquiryQualifier.TESTB_NUM_NO_COLL_INQUIRY_QUALIFIER;
-        tagData = new Tag938NumNoCollInquiryQualifier( new MyNumInGroupType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag938NumNoCollInquiryQualifier( new MyNumInGroupType( oneElement ));
+            assertEquals( "FIX938_NUM_NO_COLL_INQUIRY_QUALIFIER", tagData.toEnumLabelString());
+            assertEquals( "938", tagData.toEnumIDString());
+            assertEquals( "NO_COLL_INQUIRY_QUALIFIER", tagData.toEnumNameString());
+            assertEquals( "NoCollInquiryQualifier", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag938NumNoCollInquiryQualifier tagData;
-        int oneElement;
-
-        oneElement = Tag938NumNoCollInquiryQualifier.TESTB_NUM_NO_COLL_INQUIRY_QUALIFIER;
-        tagData = new Tag938NumNoCollInquiryQualifier( new MyNumInGroupType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag938NumNoCollInquiryQualifier( new MyNumInGroupType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag938NumNoCollInquiryQualifier tagData;
-        int oneElement;
-
-        oneElement = Tag938NumNoCollInquiryQualifier.TESTB_NUM_NO_COLL_INQUIRY_QUALIFIER;
-        tagData = new Tag938NumNoCollInquiryQualifier( new MyNumInGroupType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag938NumNoCollInquiryQualifier( new MyNumInGroupType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag938NumNoCollInquiryQualifier tagData;
-        int oneElement;
-
-        oneElement = Tag938NumNoCollInquiryQualifier.TESTB_NUM_NO_COLL_INQUIRY_QUALIFIER;
-        tagData = new Tag938NumNoCollInquiryQualifier( new MyNumInGroupType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag938NumNoCollInquiryQualifier( new MyNumInGroupType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag938NumNoCollInquiryQualifier tagData;
-        int oneElement;
-
-        oneElement = Tag938NumNoCollInquiryQualifier.TESTA_NUM_NO_COLL_INQUIRY_QUALIFIER;
-        tagData = new Tag938NumNoCollInquiryQualifier( new MyNumInGroupType( oneElement ) );
-        assertEquals( "Tag938NumNoCollInquiryQualifier\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag938NumNoCollInquiryQualifier( new MyNumInGroupType( oneElement ));
+            assertEquals( "Tag938NumNoCollInquiryQualifier\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

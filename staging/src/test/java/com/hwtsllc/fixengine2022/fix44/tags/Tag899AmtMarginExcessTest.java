@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -32,95 +31,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  Excess margin amount (deficit if value is negative)
  */
 class Tag899AmtMarginExcessTest {
+    Tag899AmtMarginExcess tagData;
+    double [] TestArray = {
+            Tag899AmtMarginExcess.TESTA_AMT_MARGIN_EXCESS,
+            Tag899AmtMarginExcess.TESTB_AMT_MARGIN_EXCESS
+    };
+
     @Test
-    void FIX0899Test() {
-        FIX44 fixData = FIX44.FIX899_AMT_MARGIN_EXCESS;
-        assertEquals( "899", fixData.toEnumIDString());
-        assertEquals( "MARGIN_EXCESS", fixData.toEnumNameString());
-        assertEquals( "MarginExcess", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag899AmtMarginExcess( new MyAmtType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0899Test() {
-        Tag899AmtMarginExcess tagData;
-        double oneElement;
-
-        oneElement = Tag899AmtMarginExcess.TESTA_AMT_MARGIN_EXCESS;
-        tagData = new Tag899AmtMarginExcess( new MyAmtType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "899", tagData.toEnumIDString());
-        assertEquals( "MARGIN_EXCESS", tagData.toEnumNameString());
-        assertEquals( "MarginExcess", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-
-        oneElement = Tag899AmtMarginExcess.TESTB_AMT_MARGIN_EXCESS;
-        tagData = new Tag899AmtMarginExcess( new MyAmtType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag899AmtMarginExcess tagData;
-        double oneElement;
-
-        oneElement = Tag899AmtMarginExcess.TESTA_AMT_MARGIN_EXCESS;
-        tagData = new Tag899AmtMarginExcess( new MyAmtType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag899AmtMarginExcess.TESTB_AMT_MARGIN_EXCESS;
-        tagData = new Tag899AmtMarginExcess( new MyAmtType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag899AmtMarginExcess( new MyAmtType( oneElement ));
+            assertEquals( "FIX899_AMT_MARGIN_EXCESS", tagData.toEnumLabelString());
+            assertEquals( "899", tagData.toEnumIDString());
+            assertEquals( "MARGIN_EXCESS", tagData.toEnumNameString());
+            assertEquals( "MarginExcess", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag899AmtMarginExcess tagData;
-        double oneElement;
-
-        oneElement = Tag899AmtMarginExcess.TESTB_AMT_MARGIN_EXCESS;
-        tagData = new Tag899AmtMarginExcess( new MyAmtType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag899AmtMarginExcess( new MyAmtType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag899AmtMarginExcess tagData;
-        double oneElement;
-
-        oneElement = Tag899AmtMarginExcess.TESTB_AMT_MARGIN_EXCESS;
-        tagData = new Tag899AmtMarginExcess( new MyAmtType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag899AmtMarginExcess( new MyAmtType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag899AmtMarginExcess tagData;
-        double oneElement;
-
-        oneElement = Tag899AmtMarginExcess.TESTB_AMT_MARGIN_EXCESS;
-        tagData = new Tag899AmtMarginExcess( new MyAmtType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag899AmtMarginExcess( new MyAmtType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag899AmtMarginExcess tagData;
-        double oneElement;
-
-        oneElement = Tag899AmtMarginExcess.TESTA_AMT_MARGIN_EXCESS;
-        tagData = new Tag899AmtMarginExcess( new MyAmtType( oneElement ) );
-        assertEquals( "Tag899AmtMarginExcess\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag899AmtMarginExcess( new MyAmtType( oneElement ));
+            assertEquals( "Tag899AmtMarginExcess\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

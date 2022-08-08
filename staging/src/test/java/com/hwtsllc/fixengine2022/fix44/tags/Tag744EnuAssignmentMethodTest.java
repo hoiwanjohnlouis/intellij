@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumAssignmentMethod;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -43,40 +42,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    R - Random
  */
 class Tag744EnuAssignmentMethodTest {
-    @Test
-    void FIXTest() {
-        FIX44 fixData = FIX44.FIX744_ENU_ASSIGNMENT_METHOD;
-        assertEquals( "744", fixData.toEnumIDString());
-        assertEquals( "ASSIGNMENT_METHOD", fixData.toEnumNameString());
-        assertEquals( "AssignmentMethod", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0744Test() {
-        Tag744EnuAssignmentMethod tagData;
-        MyEnumAssignmentMethod oneElement;
+    Tag744EnuAssignmentMethod tagData;
 
-        oneElement = MyEnumAssignmentMethod.PRO_RATA;
-        tagData = new Tag744EnuAssignmentMethod( oneElement );
-        assertEquals( oneElement.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "744", tagData.toEnumIDString());
-        assertEquals( "ASSIGNMENT_METHOD", tagData.toEnumNameString());
-        assertEquals( "AssignmentMethod", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-
-        tagData = new Tag744EnuAssignmentMethod( MyEnumAssignmentMethod.RANDOM );
-        assertEquals( MyEnumAssignmentMethod.RANDOM.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
     @Test
-    void PrintFIXTagTest() {
-        Tag744EnuAssignmentMethod tagData;
-
+    void PrintTest() {
         // loop around the ENUM and process
         for ( MyEnumAssignmentMethod oneEnum : MyEnumAssignmentMethod.values()) {
             tagData = new Tag744EnuAssignmentMethod(oneEnum);
@@ -84,34 +53,58 @@ class Tag744EnuAssignmentMethodTest {
         }
     }
     @Test
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( MyEnumAssignmentMethod oneEnum : MyEnumAssignmentMethod.values()) {
+            tagData = new Tag744EnuAssignmentMethod(oneEnum);
+            assertEquals( "FIX744_ENU_ASSIGNMENT_METHOD", tagData.toEnumLabelString());
+            assertEquals( "744", tagData.toEnumIDString());
+            assertEquals( "ASSIGNMENT_METHOD", tagData.toEnumNameString());
+            assertEquals( "AssignmentMethod", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void TagGetDataValueTest() {
-        Tag744EnuAssignmentMethod tagData;
+        /*
+         *  <p>    P - Pro-rata
+         *  <p>    R - Random
+         */
+        tagData = new Tag744EnuAssignmentMethod( MyEnumAssignmentMethod.PRO_RATA );
+        assertEquals( "P", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag744EnuAssignmentMethod( MyEnumAssignmentMethod.RANDOM );
+        assertEquals( "R", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         // loop around the ENUM and process
-        for (MyEnumAssignmentMethod oneEnum : MyEnumAssignmentMethod.values()) {
+        for ( MyEnumAssignmentMethod oneEnum : MyEnumAssignmentMethod.values()) {
             tagData = new Tag744EnuAssignmentMethod(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag744EnuAssignmentMethod tagData;
-
         // loop around the ENUM and process
-        for (MyEnumAssignmentMethod oneEnum : MyEnumAssignmentMethod.values()) {
+        for ( MyEnumAssignmentMethod oneEnum : MyEnumAssignmentMethod.values()) {
             tagData = new Tag744EnuAssignmentMethod(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag744EnuAssignmentMethod tagData;
-
         // loop around the ENUM and process
-        for (MyEnumAssignmentMethod oneEnum : MyEnumAssignmentMethod.values()) {
+        for ( MyEnumAssignmentMethod oneEnum : MyEnumAssignmentMethod.values()) {
             tagData = new Tag744EnuAssignmentMethod(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -119,18 +112,16 @@ class Tag744EnuAssignmentMethodTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag744EnuAssignmentMethod tagData;
-
         // loop around the ENUM and process
-        for (MyEnumAssignmentMethod oneEnum : MyEnumAssignmentMethod.values()) {
+        for ( MyEnumAssignmentMethod oneEnum : MyEnumAssignmentMethod.values()) {
             tagData = new Tag744EnuAssignmentMethod(oneEnum);
             assertEquals( "Tag744EnuAssignmentMethod\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

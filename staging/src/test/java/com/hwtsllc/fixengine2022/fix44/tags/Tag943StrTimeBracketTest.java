@@ -16,7 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.MyCurrencyType;
+import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -24,25 +24,26 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
- *  942
- *  LegStrikeCurrency
- *  Currency
+ *  943
+ *  TimeBracket
+ *  String
  *  <p></p>
- *  Currency in which the strike price of a instrument leg of
- *  a multileg instrument is denominated
+ *  A code that represents a time interval in which a fill or trade occurred.
+ *  <p></p>
+ *  Required for US futures markets.
  */
-class Tag942CcyLegStrikeCurrencyTest {
-    Tag942CcyLegStrikeCurrency tagData;
+class Tag943StrTimeBracketTest {
+    Tag943StrTimeBracket tagData;
     String [] TestArray = {
-            Tag942CcyLegStrikeCurrency.TESTA_CCY_LEG_STRIKE_CURRENCY,
-            Tag942CcyLegStrikeCurrency.TESTB_CCY_LEG_STRIKE_CURRENCY
+            Tag943StrTimeBracket.TESTA_STR_TIME_BRACKET,
+            Tag943StrTimeBracket.TESTB_STR_TIME_BRACKET
     };
 
     @Test
     void PrintTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
-            tagData = new Tag942CcyLegStrikeCurrency( new MyCurrencyType( oneElement ));
+            tagData = new Tag943StrTimeBracket( new MyStringType( oneElement ));
             System.out.println( tagData.toVerboseString() );
         }
     }
@@ -50,11 +51,11 @@ class Tag942CcyLegStrikeCurrencyTest {
     void FIXHeaderTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
-            tagData = new Tag942CcyLegStrikeCurrency( new MyCurrencyType( oneElement ));
-            assertEquals( "FIX942_CCY_LEG_STRIKE_CURRENCY", tagData.toEnumLabelString());
-            assertEquals( "942", tagData.toEnumIDString());
-            assertEquals( "LEG_STRIKE_CURRENCY", tagData.toEnumNameString());
-            assertEquals( "LegStrikeCurrency", tagData.toEnumDescriptionString());
+            tagData = new Tag943StrTimeBracket( new MyStringType( oneElement ));
+            assertEquals( "FIX943_STR_TIME_BRACKET", tagData.toEnumLabelString());
+            assertEquals( "943", tagData.toEnumIDString());
+            assertEquals( "TIME_BRACKET", tagData.toEnumNameString());
+            assertEquals( "TimeBracket", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
@@ -65,7 +66,7 @@ class Tag942CcyLegStrikeCurrencyTest {
     void TagGetDataValueTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
-            tagData = new Tag942CcyLegStrikeCurrency( new MyCurrencyType( oneElement ));
+            tagData = new Tag943StrTimeBracket( new MyStringType( oneElement ));
             assertEquals( oneElement, tagData.getDataValue() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
         }
@@ -74,9 +75,8 @@ class Tag942CcyLegStrikeCurrencyTest {
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
-            tagData = new Tag942CcyLegStrikeCurrency( new MyCurrencyType( oneElement ));
-            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            tagData = new Tag943StrTimeBracket( new MyStringType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
@@ -84,7 +84,7 @@ class Tag942CcyLegStrikeCurrencyTest {
     void TagToStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
-            tagData = new Tag942CcyLegStrikeCurrency( new MyCurrencyType( oneElement ));
+            tagData = new Tag943StrTimeBracket( new MyStringType( oneElement ));
             assertEquals( oneElement, tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
         }
@@ -93,8 +93,8 @@ class Tag942CcyLegStrikeCurrencyTest {
     void TagToVerboseStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
-            tagData = new Tag942CcyLegStrikeCurrency( new MyCurrencyType( oneElement ));
-            assertEquals( "Tag942CcyLegStrikeCurrency\n" +
+            tagData = new Tag943StrTimeBracket( new MyStringType( oneElement ));
+            assertEquals( "Tag943StrTimeBracket\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +

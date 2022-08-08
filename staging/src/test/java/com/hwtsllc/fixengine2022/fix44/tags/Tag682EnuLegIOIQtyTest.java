@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumIOIQty;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -47,52 +46,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    U - Undisclosed Quantity
  */
 class Tag682EnuLegIOIQtyTest {
+    Tag682EnuLegIOIQty tagData;
+
     @Test
-    void FIXTest() {
-        FIX44 fixData = FIX44.FIX682_ENU_LEG_IOI_QTY;
-        assertEquals( "682", fixData.toEnumIDString());
-        assertEquals( "LEG_IOI_QTY", fixData.toEnumNameString());
-        assertEquals( "LegIOIQty", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0682Test() {
-        Tag682EnuLegIOIQty tagData;
-        MyEnumIOIQty oneElement;
-
-        oneElement = MyEnumIOIQty.ONE_BILLION;
-        tagData = new Tag682EnuLegIOIQty( oneElement );
-        assertEquals( MyEnumIOIQty.ONE_BILLION.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "682", tagData.toEnumIDString());
-        assertEquals( "LEG_IOI_QTY", tagData.toEnumNameString());
-        assertEquals( "LegIOIQty", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-
-        tagData = new Tag682EnuLegIOIQty(MyEnumIOIQty.SMALL);
-        assertEquals( MyEnumIOIQty.SMALL.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag682EnuLegIOIQty(MyEnumIOIQty.MEDIUM);
-        assertEquals( MyEnumIOIQty.MEDIUM.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag682EnuLegIOIQty(MyEnumIOIQty.LARGE);
-        assertEquals( MyEnumIOIQty.LARGE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag682EnuLegIOIQty(MyEnumIOIQty.UNDISCLOSED_QUANTITY);
-        assertEquals( MyEnumIOIQty.UNDISCLOSED_QUANTITY.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag682EnuLegIOIQty tagData;
-
+    void PrintTest() {
         // loop around the ENUM and process
         for ( MyEnumIOIQty oneEnum : MyEnumIOIQty.values()) {
             tagData = new Tag682EnuLegIOIQty(oneEnum);
@@ -100,34 +57,73 @@ class Tag682EnuLegIOIQtyTest {
         }
     }
     @Test
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( MyEnumIOIQty oneEnum : MyEnumIOIQty.values()) {
+            tagData = new Tag682EnuLegIOIQty(oneEnum);
+            assertEquals( "FIX682_ENU_LEG_IOI_QTY", tagData.toEnumLabelString());
+            assertEquals( "682", tagData.toEnumIDString());
+            assertEquals( "LEG_IOI_QTY", tagData.toEnumNameString());
+            assertEquals( "LegIOIQty", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void TagGetDataValueTest() {
-        Tag682EnuLegIOIQty tagData;
+        /*
+         *  <p>    0 - 1000000000
+         *  <p>    S - Small
+         *  <p>    M - Medium
+         *  <p>    L - Large
+         *  <p>    U - Undisclosed Quantity
+         */
+        tagData = new Tag682EnuLegIOIQty( MyEnumIOIQty.ONE_BILLION );
+        assertEquals( "0", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag682EnuLegIOIQty(MyEnumIOIQty.SMALL);
+        assertEquals( "S", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag682EnuLegIOIQty(MyEnumIOIQty.MEDIUM);
+        assertEquals( "M", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag682EnuLegIOIQty(MyEnumIOIQty.LARGE);
+        assertEquals( "L", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag682EnuLegIOIQty(MyEnumIOIQty.UNDISCLOSED_QUANTITY);
+        assertEquals( "U", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         // loop around the ENUM and process
-        for (MyEnumIOIQty oneEnum : MyEnumIOIQty.values()) {
+        for ( MyEnumIOIQty oneEnum : MyEnumIOIQty.values()) {
             tagData = new Tag682EnuLegIOIQty(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag682EnuLegIOIQty tagData;
-
         // loop around the ENUM and process
-        for (MyEnumIOIQty oneEnum : MyEnumIOIQty.values()) {
+        for ( MyEnumIOIQty oneEnum : MyEnumIOIQty.values()) {
             tagData = new Tag682EnuLegIOIQty(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag682EnuLegIOIQty tagData;
-
         // loop around the ENUM and process
-        for (MyEnumIOIQty oneEnum : MyEnumIOIQty.values()) {
+        for ( MyEnumIOIQty oneEnum : MyEnumIOIQty.values()) {
             tagData = new Tag682EnuLegIOIQty(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -135,18 +131,16 @@ class Tag682EnuLegIOIQtyTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag682EnuLegIOIQty tagData;
-
         // loop around the ENUM and process
-        for (MyEnumIOIQty oneEnum : MyEnumIOIQty.values()) {
+        for ( MyEnumIOIQty oneEnum : MyEnumIOIQty.values()) {
             tagData = new Tag682EnuLegIOIQty(oneEnum);
             assertEquals( "Tag682EnuLegIOIQty\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

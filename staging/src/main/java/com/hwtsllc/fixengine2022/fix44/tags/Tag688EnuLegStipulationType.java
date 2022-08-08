@@ -100,11 +100,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    SECTYPE - Security Type included or excluded
  *  <p>    STRUCT - Structure
  *  <p></p>
- *      SUBSFREQ - Substitutions frequency (Repo)
- *      SUBSLEFT - Substitutions left (Repo)
- *      TEXT - Freeform Text
- *      TRDVAR - Trade Variance (value in percent maximum over- or under-allocation allowed)
- *      WAC - Weighted Average Coupon - value in percent (exact or range)
+ *  <p>    SUBSFREQ - Substitutions frequency (Repo)
+ *  <p>    SUBSLEFT - Substitutions left (Repo)
+ *  <p>    TEXT - Freeform Text
+ *  <p>    TRDVAR - Trade Variance (value in percent maximum over- or under-allocation allowed)
+ *  <p>    WAC - Weighted Average Coupon - value in percent (exact or range)
  *              plus "Gross" or "Net" of servicing spread (the default)
  *              (ex. 234=6.5-Net [minimum of 6.5% net of servicing fee])
  *  <p></p>

@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum937NetworkStatusResponseType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -36,40 +35,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    2 - Incremental Update
  */
 class Tag937EnuNetworkStatusResponseTypeTest {
-    @Test
-    void FIXTest() {
-        FIX44 fixData = FIX44.FIX937_ENU_NETWORK_STATUS_RESPONSE_TYPE;
-        assertEquals( "937", fixData.toEnumIDString());
-        assertEquals( "NETWORK_STATUS_RESPONSE_TYPE", fixData.toEnumNameString());
-        assertEquals( "NetworkStatusResponseType", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0937Test() {
-        Tag937EnuNetworkStatusResponseType tagData;
-        Enum937NetworkStatusResponseType oneElement;
+    Tag937EnuNetworkStatusResponseType tagData;
 
-        oneElement = Enum937NetworkStatusResponseType.FULL;
-        tagData = new Tag937EnuNetworkStatusResponseType( oneElement );
-        assertEquals( oneElement.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "937", tagData.toEnumIDString());
-        assertEquals( "NETWORK_STATUS_RESPONSE_TYPE", tagData.toEnumNameString());
-        assertEquals( "NetworkStatusResponseType", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-
-        tagData = new Tag937EnuNetworkStatusResponseType( Enum937NetworkStatusResponseType.INCREMENTAL );
-        assertEquals( Enum937NetworkStatusResponseType.INCREMENTAL.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
     @Test
-    void PrintFIXTagTest() {
-        Tag937EnuNetworkStatusResponseType tagData;
-
+    void PrintTest() {
         // loop around the ENUM and process
         for ( Enum937NetworkStatusResponseType oneEnum : Enum937NetworkStatusResponseType.values()) {
             tagData = new Tag937EnuNetworkStatusResponseType(oneEnum);
@@ -77,34 +46,58 @@ class Tag937EnuNetworkStatusResponseTypeTest {
         }
     }
     @Test
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( Enum937NetworkStatusResponseType oneEnum : Enum937NetworkStatusResponseType.values()) {
+            tagData = new Tag937EnuNetworkStatusResponseType(oneEnum);
+            assertEquals( "FIX937_ENU_NETWORK_STATUS_RESPONSE_TYPE", tagData.toEnumLabelString());
+            assertEquals( "937", tagData.toEnumIDString());
+            assertEquals( "NETWORK_STATUS_RESPONSE_TYPE", tagData.toEnumNameString());
+            assertEquals( "NetworkStatusResponseType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void TagGetDataValueTest() {
-        Tag937EnuNetworkStatusResponseType tagData;
+        /*
+         *  <p>    1 - Full
+         *  <p>    2 - Incremental Update
+         */
+        tagData = new Tag937EnuNetworkStatusResponseType( Enum937NetworkStatusResponseType.FULL );
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag937EnuNetworkStatusResponseType( Enum937NetworkStatusResponseType.INCREMENTAL );
+        assertEquals( "2", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         // loop around the ENUM and process
-        for (Enum937NetworkStatusResponseType oneEnum : Enum937NetworkStatusResponseType.values()) {
+        for ( Enum937NetworkStatusResponseType oneEnum : Enum937NetworkStatusResponseType.values()) {
             tagData = new Tag937EnuNetworkStatusResponseType(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag937EnuNetworkStatusResponseType tagData;
-
         // loop around the ENUM and process
-        for (Enum937NetworkStatusResponseType oneEnum : Enum937NetworkStatusResponseType.values()) {
+        for ( Enum937NetworkStatusResponseType oneEnum : Enum937NetworkStatusResponseType.values()) {
             tagData = new Tag937EnuNetworkStatusResponseType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag937EnuNetworkStatusResponseType tagData;
-
         // loop around the ENUM and process
-        for (Enum937NetworkStatusResponseType oneEnum : Enum937NetworkStatusResponseType.values()) {
+        for ( Enum937NetworkStatusResponseType oneEnum : Enum937NetworkStatusResponseType.values()) {
             tagData = new Tag937EnuNetworkStatusResponseType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -112,18 +105,16 @@ class Tag937EnuNetworkStatusResponseTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag937EnuNetworkStatusResponseType tagData;
-
         // loop around the ENUM and process
-        for (Enum937NetworkStatusResponseType oneEnum : Enum937NetworkStatusResponseType.values()) {
+        for ( Enum937NetworkStatusResponseType oneEnum : Enum937NetworkStatusResponseType.values()) {
             tagData = new Tag937EnuNetworkStatusResponseType(oneEnum);
             assertEquals( "Tag937EnuNetworkStatusResponseType\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

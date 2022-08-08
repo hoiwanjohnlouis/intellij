@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum788TerminationType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -38,48 +37,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    4 - Open
  */
 class Tag788EnuTerminationTypeTest {
+    Tag788EnuTerminationType tagData;
+
     @Test
-    void FIXTest() {
-        FIX44 fixData = FIX44.FIX788_ENU_TERMINATION_TYPE;
-        assertEquals( "788", fixData.toEnumIDString());
-        assertEquals( "TERMINATION_TYPE", fixData.toEnumNameString());
-        assertEquals( "TerminationType", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0788Test() {
-        Tag788EnuTerminationType tagData;
-        Enum788TerminationType oneElement;
-
-        oneElement = Enum788TerminationType.OVERNIGHT;
-        tagData = new Tag788EnuTerminationType( oneElement );
-        assertEquals( oneElement.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "788", tagData.toEnumIDString());
-        assertEquals( "TERMINATION_TYPE", tagData.toEnumNameString());
-        assertEquals( "TerminationType", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-
-        tagData = new Tag788EnuTerminationType( Enum788TerminationType.TERM );
-        assertEquals( Enum788TerminationType.TERM.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag788EnuTerminationType( Enum788TerminationType.FLEXIBLE );
-        assertEquals( Enum788TerminationType.FLEXIBLE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag788EnuTerminationType( Enum788TerminationType.OPEN );
-        assertEquals( Enum788TerminationType.OPEN.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag788EnuTerminationType tagData;
-
+    void PrintTest() {
         // loop around the ENUM and process
         for ( Enum788TerminationType oneEnum : Enum788TerminationType.values()) {
             tagData = new Tag788EnuTerminationType(oneEnum);
@@ -87,34 +48,68 @@ class Tag788EnuTerminationTypeTest {
         }
     }
     @Test
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( Enum788TerminationType oneEnum : Enum788TerminationType.values()) {
+            tagData = new Tag788EnuTerminationType(oneEnum);
+            assertEquals( "FIX788_ENU_TERMINATION_TYPE", tagData.toEnumLabelString());
+            assertEquals( "788", tagData.toEnumIDString());
+            assertEquals( "TERMINATION_TYPE", tagData.toEnumNameString());
+            assertEquals( "TerminationType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void TagGetDataValueTest() {
-        Tag788EnuTerminationType tagData;
+        /*
+         *  <p>    1 - Overnight
+         *  <p>    2 - Term
+         *  <p>    3 - Flexible
+         *  <p>    4 - Open
+         */
+        tagData = new Tag788EnuTerminationType( Enum788TerminationType.OVERNIGHT );
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag788EnuTerminationType( Enum788TerminationType.TERM );
+        assertEquals( "2", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag788EnuTerminationType( Enum788TerminationType.FLEXIBLE );
+        assertEquals( "3", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag788EnuTerminationType( Enum788TerminationType.OPEN );
+        assertEquals( "4", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         // loop around the ENUM and process
-        for (Enum788TerminationType oneEnum : Enum788TerminationType.values()) {
+        for ( Enum788TerminationType oneEnum : Enum788TerminationType.values()) {
             tagData = new Tag788EnuTerminationType(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag788EnuTerminationType tagData;
-
         // loop around the ENUM and process
-        for (Enum788TerminationType oneEnum : Enum788TerminationType.values()) {
+        for ( Enum788TerminationType oneEnum : Enum788TerminationType.values()) {
             tagData = new Tag788EnuTerminationType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag788EnuTerminationType tagData;
-
         // loop around the ENUM and process
-        for (Enum788TerminationType oneEnum : Enum788TerminationType.values()) {
+        for ( Enum788TerminationType oneEnum : Enum788TerminationType.values()) {
             tagData = new Tag788EnuTerminationType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -122,18 +117,16 @@ class Tag788EnuTerminationTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag788EnuTerminationType tagData;
-
         // loop around the ENUM and process
-        for (Enum788TerminationType oneEnum : Enum788TerminationType.values()) {
+        for ( Enum788TerminationType oneEnum : Enum788TerminationType.values()) {
             tagData = new Tag788EnuTerminationType(oneEnum);
             assertEquals( "Tag788EnuTerminationType\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

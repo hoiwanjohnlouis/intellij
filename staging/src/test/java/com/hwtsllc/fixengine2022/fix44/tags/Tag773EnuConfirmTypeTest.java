@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum773ConfirmType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -37,44 +36,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    3 - Confirmation Request Rejected (reason can be stated in Text (58) field)
  */
 class Tag773EnuConfirmTypeTest {
+    Tag773EnuConfirmType tagData;
+
     @Test
-    void FIXTest() {
-        FIX44 fixData = FIX44.FIX773_ENU_CONFIRM_TYPE;
-        assertEquals( "773", fixData.toEnumIDString());
-        assertEquals( "CONFIRM_TYPE", fixData.toEnumNameString());
-        assertEquals( "ConfirmType", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0773Test() {
-        Tag773EnuConfirmType tagData;
-        Enum773ConfirmType oneElement;
-
-        oneElement = Enum773ConfirmType.STATUS;
-        tagData = new Tag773EnuConfirmType( oneElement );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "773", tagData.toEnumIDString());
-        assertEquals( "CONFIRM_TYPE", tagData.toEnumNameString());
-        assertEquals( "ConfirmType", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-
-        tagData = new Tag773EnuConfirmType(Enum773ConfirmType.CONFIRMATION);
-        assertEquals( Enum773ConfirmType.CONFIRMATION.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag773EnuConfirmType(Enum773ConfirmType.CONFIRMATION_REJECTED);
-        assertEquals( Enum773ConfirmType.CONFIRMATION_REJECTED.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag773EnuConfirmType tagData;
-
+    void PrintTest() {
         // loop around the ENUM and process
         for ( Enum773ConfirmType oneEnum : Enum773ConfirmType.values()) {
             tagData = new Tag773EnuConfirmType(oneEnum);
@@ -82,34 +47,63 @@ class Tag773EnuConfirmTypeTest {
         }
     }
     @Test
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( Enum773ConfirmType oneEnum : Enum773ConfirmType.values()) {
+            tagData = new Tag773EnuConfirmType(oneEnum);
+            assertEquals( "FIX773_ENU_CONFIRM_TYPE", tagData.toEnumLabelString());
+            assertEquals( "773", tagData.toEnumIDString());
+            assertEquals( "CONFIRM_TYPE", tagData.toEnumNameString());
+            assertEquals( "ConfirmType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void TagGetDataValueTest() {
-        Tag773EnuConfirmType tagData;
+        /*
+         *  <p>    1 - Status
+         *  <p>    2 - Confirmation
+         *  <p>    3 - Confirmation Request Rejected (reason can be stated in Text (58) field)
+         */
+        tagData = new Tag773EnuConfirmType( Enum773ConfirmType.STATUS );
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag773EnuConfirmType(Enum773ConfirmType.CONFIRMATION);
+        assertEquals( "2", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag773EnuConfirmType(Enum773ConfirmType.CONFIRMATION_REJECTED);
+        assertEquals( "3", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         // loop around the ENUM and process
-        for (Enum773ConfirmType oneEnum : Enum773ConfirmType.values()) {
+        for ( Enum773ConfirmType oneEnum : Enum773ConfirmType.values()) {
             tagData = new Tag773EnuConfirmType(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag773EnuConfirmType tagData;
-
         // loop around the ENUM and process
-        for (Enum773ConfirmType oneEnum : Enum773ConfirmType.values()) {
+        for ( Enum773ConfirmType oneEnum : Enum773ConfirmType.values()) {
             tagData = new Tag773EnuConfirmType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag773EnuConfirmType tagData;
-
         // loop around the ENUM and process
-        for (Enum773ConfirmType oneEnum : Enum773ConfirmType.values()) {
+        for ( Enum773ConfirmType oneEnum : Enum773ConfirmType.values()) {
             tagData = new Tag773EnuConfirmType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -117,18 +111,16 @@ class Tag773EnuConfirmTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag773EnuConfirmType tagData;
-
         // loop around the ENUM and process
-        for (Enum773ConfirmType oneEnum : Enum773ConfirmType.values()) {
+        for ( Enum773ConfirmType oneEnum : Enum773ConfirmType.values()) {
             tagData = new Tag773EnuConfirmType(oneEnum);
             assertEquals( "Tag773EnuConfirmType\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

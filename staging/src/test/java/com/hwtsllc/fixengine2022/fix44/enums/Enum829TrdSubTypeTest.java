@@ -47,6 +47,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p></p>
  *  <p>    MiFID Values
  *  <p>    14 - AI (Automated input facility disabled in response to an exchange request.)
+ *  <p></p>
  *  <p>    15 - B (Transaction between two member firms where neither member firm is
  *  <p>                registered as a market maker in the security in
  *  <p>                question and neither is a designated fund manager.
@@ -61,8 +62,8 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>                two market makers registered in that security
  *  <p>                including IDB or a public display system trades.
  *  <p>                Non-order book securities only.)
- *  <p></p>
  *  <p>    19 - N (Non-protected portfolio transaction or a fully disclosed portfolio transaction)
+ *  <p></p>
  *  <p>    20 - NM (
  *  <p>                  i) transaction where Exchange has granted permission for non-publication.
  *  <p>                 ii) IDB is reporting as seller.
@@ -73,9 +74,9 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    22 - P (Protected portfolio transaction or a worked principal agreement to
  *  <p>                effect a portfolio transaction which includes order book securities)
  *  <p>    23 - PA (Protected transaction notification)
- *  <p></p>
  *  <p>    24 - PC (Contra trade for transaction which took place on a previous day
  *  <p>                and which was automatically executed on the Exchange trading system)
+ *  <p></p>
  *  <p>    25 - PN (Worked principal notification for a portfolio transaction
  *  <p>                which includes order book securities)
  *  <p>    26 - R (
@@ -98,9 +99,9 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>                or a stock-settled covered warrant)
  *  <p>    28 - RT (Risk transaction in a SEATS security, (excluding AIM security)
  *  <p>                reported by a market maker registered in that security)
- *  <p></p>
  *  <p>    29 - SW (Transactions resulting from stock swap or a stock switch
  *  <p>                (one report is required for each line of stock) )
+ *  <p></p>
  *  <p>    30 - T (If reporting a single protected transaction)
  *  <p>    31 - WN (Worked principal notification for a single order book security)
  *  <p>    32 - WT (Worked principal transaction (other than a portfolio transaction))
@@ -222,6 +223,7 @@ class Enum829TrdSubTypeTest {
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
+
         enumType = Enum829TrdSubType.B;
         assertEquals("15", enumType.toEnumIDString());
         assertEquals("B", enumType.toEnumNameString());
@@ -265,7 +267,6 @@ class Enum829TrdSubTypeTest {
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
-
         enumType = Enum829TrdSubType.N;
         assertEquals("19", enumType.toEnumIDString());
         assertEquals("N", enumType.toEnumNameString());
@@ -274,6 +275,7 @@ class Enum829TrdSubTypeTest {
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+
 
         enumType = Enum829TrdSubType.NM;
         assertEquals("20", enumType.toEnumIDString());
@@ -316,7 +318,6 @@ class Enum829TrdSubTypeTest {
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
-
         enumType = Enum829TrdSubType.PC;
         assertEquals("24", enumType.toEnumIDString());
         assertEquals("PC", enumType.toEnumNameString());
@@ -326,6 +327,7 @@ class Enum829TrdSubTypeTest {
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+
 
         enumType = Enum829TrdSubType.PN;
         assertEquals("25", enumType.toEnumIDString());
@@ -377,7 +379,6 @@ class Enum829TrdSubTypeTest {
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
-
         enumType = Enum829TrdSubType.SW;
         assertEquals("29", enumType.toEnumIDString());
         assertEquals("SW", enumType.toEnumNameString());
@@ -387,6 +388,7 @@ class Enum829TrdSubTypeTest {
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+
 
         enumType = Enum829TrdSubType.T;
         assertEquals("30", enumType.toEnumIDString());

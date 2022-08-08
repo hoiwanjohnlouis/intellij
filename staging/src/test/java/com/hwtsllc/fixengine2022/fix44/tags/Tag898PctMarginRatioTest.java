@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -36,95 +35,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  (after deducting for "haircut") must exceed the cash consideration by 2%.
  */
 class Tag898PctMarginRatioTest {
+    Tag898PctMarginRatio tagData;
+    double [] TestArray = {
+            Tag898PctMarginRatio.TESTA_PCT_MARGIN_RATIO,
+            Tag898PctMarginRatio.TESTB_PCT_MARGIN_RATIO
+    };
+
     @Test
-    void FIXTest() {
-        FIX44 fixData = FIX44.FIX898_PCT_MARGIN_RATIO;
-        assertEquals( "898", fixData.toEnumIDString());
-        assertEquals( "MARGIN_RATIO", fixData.toEnumNameString());
-        assertEquals( "MarginRatio", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag898PctMarginRatio( new MyPercentageType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0898Test() {
-        Tag898PctMarginRatio tagData;
-        double oneElement;
-
-        oneElement = Tag898PctMarginRatio.TESTA_PCT_MARGIN_RATIO;
-        tagData = new Tag898PctMarginRatio( new MyPercentageType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "898", tagData.toEnumIDString());
-        assertEquals( "MARGIN_RATIO", tagData.toEnumNameString());
-        assertEquals( "MarginRatio", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-
-        oneElement = Tag898PctMarginRatio.TESTB_PCT_MARGIN_RATIO;
-        tagData = new Tag898PctMarginRatio( new MyPercentageType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag898PctMarginRatio tagData;
-        double oneElement;
-
-        oneElement = Tag898PctMarginRatio.TESTA_PCT_MARGIN_RATIO;
-        tagData = new Tag898PctMarginRatio( new MyPercentageType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag898PctMarginRatio.TESTB_PCT_MARGIN_RATIO;
-        tagData = new Tag898PctMarginRatio( new MyPercentageType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag898PctMarginRatio( new MyPercentageType( oneElement ));
+            assertEquals( "FIX898_PCT_MARGIN_RATIO", tagData.toEnumLabelString());
+            assertEquals( "898", tagData.toEnumIDString());
+            assertEquals( "MARGIN_RATIO", tagData.toEnumNameString());
+            assertEquals( "MarginRatio", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag898PctMarginRatio tagData;
-        double oneElement;
-
-        oneElement = Tag898PctMarginRatio.TESTB_PCT_MARGIN_RATIO;
-        tagData = new Tag898PctMarginRatio( new MyPercentageType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag898PctMarginRatio( new MyPercentageType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue());
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag898PctMarginRatio tagData;
-        double oneElement;
-
-        oneElement = Tag898PctMarginRatio.TESTB_PCT_MARGIN_RATIO;
-        tagData = new Tag898PctMarginRatio( new MyPercentageType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag898PctMarginRatio( new MyPercentageType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag898PctMarginRatio tagData;
-        double oneElement;
-
-        oneElement = Tag898PctMarginRatio.TESTB_PCT_MARGIN_RATIO;
-        tagData = new Tag898PctMarginRatio( new MyPercentageType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag898PctMarginRatio( new MyPercentageType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag898PctMarginRatio tagData;
-        double oneElement;
-
-        oneElement = Tag898PctMarginRatio.TESTA_PCT_MARGIN_RATIO;
-        tagData = new Tag898PctMarginRatio( new MyPercentageType( oneElement ) );
-        assertEquals( "Tag898PctMarginRatio\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag898PctMarginRatio( new MyPercentageType( oneElement ));
+            assertEquals( "Tag898PctMarginRatio\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

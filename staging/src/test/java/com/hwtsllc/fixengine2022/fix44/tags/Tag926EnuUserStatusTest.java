@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum926UserStatus;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -41,57 +40,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    6 - Other
  */
 class Tag926EnuUserStatusTest {
+    Tag926EnuUserStatus tagData;
+
     @Test
-    void FIXTest() {
-        FIX44 fixData = FIX44.FIX926_ENU_USER_STATUS;
-        assertEquals( "926", fixData.toEnumIDString());
-        assertEquals( "USER_STATUS", fixData.toEnumNameString());
-        assertEquals( "UserStatus", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0926Test() {
-        Tag926EnuUserStatus tagData;
-        Enum926UserStatus oneElement;
-
-        oneElement = Enum926UserStatus.LOGGED_IN;
-        tagData = new Tag926EnuUserStatus( oneElement );
-        assertEquals( oneElement.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "926", tagData.toEnumIDString());
-        assertEquals( "USER_STATUS", tagData.toEnumNameString());
-        assertEquals( "UserStatus", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-
-        tagData = new Tag926EnuUserStatus( Enum926UserStatus.NOT_LOGGED_IN );
-        assertEquals( Enum926UserStatus.NOT_LOGGED_IN.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag926EnuUserStatus( Enum926UserStatus.USER_NOT_RECOGNISED );
-        assertEquals( Enum926UserStatus.USER_NOT_RECOGNISED.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag926EnuUserStatus( Enum926UserStatus.PASSWORD_INCORRECT );
-        assertEquals( Enum926UserStatus.PASSWORD_INCORRECT.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag926EnuUserStatus( Enum926UserStatus.PASSWORD_CHANGED );
-        assertEquals( Enum926UserStatus.PASSWORD_CHANGED.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        tagData = new Tag926EnuUserStatus( Enum926UserStatus.OTHER );
-        assertEquals( Enum926UserStatus.OTHER.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag926EnuUserStatus tagData;
-
+    void PrintTest() {
         // loop around the ENUM and process
         for ( Enum926UserStatus oneEnum : Enum926UserStatus.values()) {
             tagData = new Tag926EnuUserStatus(oneEnum);
@@ -99,34 +51,80 @@ class Tag926EnuUserStatusTest {
         }
     }
     @Test
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( Enum926UserStatus oneEnum : Enum926UserStatus.values()) {
+            tagData = new Tag926EnuUserStatus(oneEnum);
+            assertEquals( "FIX926_ENU_USER_STATUS", tagData.toEnumLabelString());
+            assertEquals( "926", tagData.toEnumIDString());
+            assertEquals( "USER_STATUS", tagData.toEnumNameString());
+            assertEquals( "UserStatus", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void TagGetDataValueTest() {
-        Tag926EnuUserStatus tagData;
+        /*
+         *  <p>    1 - Logged In
+         *  <p>    2 - Not Logged In
+         *  <p>    3 - User Not Recognised
+         *  <p>    4 - Password Incorrect
+         *  <p>    5 - Password Changed
+         */
+        tagData = new Tag926EnuUserStatus( Enum926UserStatus.LOGGED_IN );
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag926EnuUserStatus( Enum926UserStatus.NOT_LOGGED_IN );
+        assertEquals( "2", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag926EnuUserStatus( Enum926UserStatus.USER_NOT_RECOGNISED );
+        assertEquals( "3", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag926EnuUserStatus( Enum926UserStatus.PASSWORD_INCORRECT );
+        assertEquals( "4", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag926EnuUserStatus( Enum926UserStatus.PASSWORD_CHANGED );
+        assertEquals( "5", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        /*
+         *  <p>    6 - Other
+         */
+        tagData = new Tag926EnuUserStatus( Enum926UserStatus.OTHER );
+        assertEquals( "6", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         // loop around the ENUM and process
-        for (Enum926UserStatus oneEnum : Enum926UserStatus.values()) {
+        for ( Enum926UserStatus oneEnum : Enum926UserStatus.values()) {
             tagData = new Tag926EnuUserStatus(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag926EnuUserStatus tagData;
-
         // loop around the ENUM and process
-        for (Enum926UserStatus oneEnum : Enum926UserStatus.values()) {
+        for ( Enum926UserStatus oneEnum : Enum926UserStatus.values()) {
             tagData = new Tag926EnuUserStatus(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag926EnuUserStatus tagData;
-
         // loop around the ENUM and process
-        for (Enum926UserStatus oneEnum : Enum926UserStatus.values()) {
+        for ( Enum926UserStatus oneEnum : Enum926UserStatus.values()) {
             tagData = new Tag926EnuUserStatus(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -134,18 +132,16 @@ class Tag926EnuUserStatusTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag926EnuUserStatus tagData;
-
         // loop around the ENUM and process
-        for (Enum926UserStatus oneEnum : Enum926UserStatus.values()) {
+        for ( Enum926UserStatus oneEnum : Enum926UserStatus.values()) {
             tagData = new Tag926EnuUserStatus(oneEnum);
             assertEquals( "Tag926EnuUserStatus\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

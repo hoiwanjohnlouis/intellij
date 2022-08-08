@@ -23,22 +23,24 @@ import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  932
- *  NetworkResponseID
+ *  943
+ *  TimeBracket
  *  String
  *  <p></p>
- *  Unique identifier for a network response.
+ *  A code that represents a time interval in which a fill or trade occurred.
+ *  <p></p>
+ *  Required for US futures markets.
  */
-public class Tag932StrNetworkResponseID extends FIX44Abstract implements LogValuePairString, LogVerboseString {
+public class Tag943StrTimeBracket extends FIX44Abstract implements LogValuePairString, LogVerboseString {
     private final MyStringType dataValue;
 
-    public final static String TESTA_STR_NETWORK_RESPONSE_ID
-            = "AshleyTuttle-Tag932StrNetworkResponseID";
-    public final static String TESTB_STR_NETWORK_RESPONSE_ID
-            = "SusanJaffe-Tag932StrNetworkResponseID";
+    public final static String TESTA_STR_TIME_BRACKET
+            = "SonYeJin-Tag943StrTimeBracket";
+    public final static String TESTB_STR_TIME_BRACKET
+            = "KimSoYeon-Tag943StrTimeBracket";
 
-    public Tag932StrNetworkResponseID(MyStringType dataValue) {
-        setFixType( FIX44.FIX932_STR_NETWORK_RESPONSE_ID );
+    public Tag943StrTimeBracket(MyStringType dataValue) {
+        setFixType( FIX44.FIX943_STR_TIME_BRACKET );
         this.dataValue = dataValue;
     }
 
@@ -81,12 +83,12 @@ public class Tag932StrNetworkResponseID extends FIX44Abstract implements LogValu
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag932StrNetworkResponseID tagData;
+        Tag943StrTimeBracket tagData;
 
-        tagData = new Tag932StrNetworkResponseID(new MyStringType( TESTA_STR_NETWORK_RESPONSE_ID ) );
+        tagData = new Tag943StrTimeBracket(new MyStringType( TESTA_STR_TIME_BRACKET ) );
         System.out.println(tagData.toVerboseString());
 
-        tagData = new Tag932StrNetworkResponseID(new MyStringType( TESTB_STR_NETWORK_RESPONSE_ID ) );
+        tagData = new Tag943StrTimeBracket(new MyStringType( TESTB_STR_TIME_BRACKET ) );
         System.out.println(tagData.toVerboseString());
     }
 }

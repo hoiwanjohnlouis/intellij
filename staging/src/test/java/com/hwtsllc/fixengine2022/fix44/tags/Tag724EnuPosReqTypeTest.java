@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum724PosReqType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -41,31 +40,43 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    5 - Backout Message
  */
 class Tag724EnuPosReqTypeTest {
+    Tag724EnuPosReqType tagData;
+
     @Test
-    void FIXTest() {
-        FIX44 fixData = FIX44.FIX724_ENU_POS_REQ_TYPE;
-        assertEquals( "724", fixData.toEnumIDString());
-        assertEquals( "POS_REQ_TYPE", fixData.toEnumNameString());
-        assertEquals( "PosReqType", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // loop around the ENUM and process
+        for ( Enum724PosReqType oneEnum : Enum724PosReqType.values()) {
+            tagData = new Tag724EnuPosReqType(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0724Test() {
-        Tag724EnuPosReqType tagData;
-        Enum724PosReqType oneElement;
-
-        oneElement = Enum724PosReqType.POSITIONS;
-        tagData = new Tag724EnuPosReqType( oneElement );
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( Enum724PosReqType oneEnum : Enum724PosReqType.values()) {
+            tagData = new Tag724EnuPosReqType(oneEnum);
+            assertEquals( "FIX724_ENU_POS_REQ_TYPE", tagData.toEnumLabelString());
+            assertEquals( "724", tagData.toEnumIDString());
+            assertEquals( "POS_REQ_TYPE", tagData.toEnumNameString());
+            assertEquals( "PosReqType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        /*
+         *  <p>    0 - Positions
+         *  <p>    1 - Trades
+         *  <p>    2 - Exercises
+         *  <p>    3 - Assignments
+         *  <p>    4 - Settlement Activity
+         */
+        tagData = new Tag724EnuPosReqType( Enum724PosReqType.POSITIONS );
         assertEquals( "0", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "724", tagData.toEnumIDString());
-        assertEquals( "POS_REQ_TYPE", tagData.toEnumNameString());
-        assertEquals( "PosReqType", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         tagData = new Tag724EnuPosReqType(Enum724PosReqType.TRADES);
         assertEquals( "1", tagData.getDataValue() );
@@ -83,49 +94,37 @@ class Tag724EnuPosReqTypeTest {
         assertEquals( "4", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
+        /*
+         *  <p>    5 - Backout Message
+         */
         tagData = new Tag724EnuPosReqType(Enum724PosReqType.BACKOUT_MESSAGE);
         assertEquals( "5", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag724EnuPosReqType tagData;
 
         // loop around the ENUM and process
         for ( Enum724PosReqType oneEnum : Enum724PosReqType.values()) {
             tagData = new Tag724EnuPosReqType(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag724EnuPosReqType tagData;
-
-        // loop around the ENUM and process
-        for (Enum724PosReqType oneEnum : Enum724PosReqType.values()) {
-            tagData = new Tag724EnuPosReqType(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag724EnuPosReqType tagData;
-
         // loop around the ENUM and process
-        for (Enum724PosReqType oneEnum : Enum724PosReqType.values()) {
+        for ( Enum724PosReqType oneEnum : Enum724PosReqType.values()) {
             tagData = new Tag724EnuPosReqType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag724EnuPosReqType tagData;
-
         // loop around the ENUM and process
-        for (Enum724PosReqType oneEnum : Enum724PosReqType.values()) {
+        for ( Enum724PosReqType oneEnum : Enum724PosReqType.values()) {
             tagData = new Tag724EnuPosReqType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -133,18 +132,16 @@ class Tag724EnuPosReqTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag724EnuPosReqType tagData;
-
         // loop around the ENUM and process
-        for (Enum724PosReqType oneEnum : Enum724PosReqType.values()) {
+        for ( Enum724PosReqType oneEnum : Enum724PosReqType.values()) {
             tagData = new Tag724EnuPosReqType(oneEnum);
             assertEquals( "Tag724EnuPosReqType\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

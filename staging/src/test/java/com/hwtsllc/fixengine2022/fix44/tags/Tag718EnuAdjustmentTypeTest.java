@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum718AdjustmentType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -38,31 +37,42 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    3 - Final
  */
 class Tag718EnuAdjustmentTypeTest {
+    Tag718EnuAdjustmentType tagData;
+
     @Test
-    void FIXTest() {
-        FIX44 fixData = FIX44.FIX718_ENU_ADJUSTMENT_TYPE;
-        assertEquals( "718", fixData.toEnumIDString());
-        assertEquals( "ADJUSTMENT_TYPE", fixData.toEnumNameString());
-        assertEquals( "AdjustmentType", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // loop around the ENUM and process
+        for ( Enum718AdjustmentType oneEnum : Enum718AdjustmentType.values()) {
+            tagData = new Tag718EnuAdjustmentType(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0718Test() {
-        Tag718EnuAdjustmentType tagData;
-        Enum718AdjustmentType oneElement;
-
-        oneElement = Enum718AdjustmentType.MARGIN_DISPOSITION;
-        tagData = new Tag718EnuAdjustmentType( oneElement );
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( Enum718AdjustmentType oneEnum : Enum718AdjustmentType.values()) {
+            tagData = new Tag718EnuAdjustmentType(oneEnum);
+            assertEquals( "FIX718_ENU_ADJUSTMENT_TYPE", tagData.toEnumLabelString());
+            assertEquals( "718", tagData.toEnumIDString());
+            assertEquals( "ADJUSTMENT_TYPE", tagData.toEnumNameString());
+            assertEquals( "AdjustmentType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        /*
+         *  <p>    0 - Process Request As Margin Disposition
+         *  <p>    1 - Delta Plus
+         *  <p>    2 - Delta Minus
+         *  <p>    3 - Final
+         */
+        tagData = new Tag718EnuAdjustmentType( Enum718AdjustmentType.MARGIN_DISPOSITION );
         assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "718", tagData.toEnumIDString());
-        assertEquals( "ADJUSTMENT_TYPE", tagData.toEnumNameString());
-        assertEquals( "AdjustmentType", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         tagData = new Tag718EnuAdjustmentType(Enum718AdjustmentType.DELTA_PLUS);
         assertEquals( "1", tagData.getDataValue());
@@ -75,46 +85,31 @@ class Tag718EnuAdjustmentTypeTest {
         tagData = new Tag718EnuAdjustmentType(Enum718AdjustmentType.FINAL);
         assertEquals( "3", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag718EnuAdjustmentType tagData;
 
         // loop around the ENUM and process
         for ( Enum718AdjustmentType oneEnum : Enum718AdjustmentType.values()) {
             tagData = new Tag718EnuAdjustmentType(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag718EnuAdjustmentType tagData;
-
-        // loop around the ENUM and process
-        for (Enum718AdjustmentType oneEnum : Enum718AdjustmentType.values()) {
-            tagData = new Tag718EnuAdjustmentType(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag718EnuAdjustmentType tagData;
-
         // loop around the ENUM and process
-        for (Enum718AdjustmentType oneEnum : Enum718AdjustmentType.values()) {
+        for ( Enum718AdjustmentType oneEnum : Enum718AdjustmentType.values()) {
             tagData = new Tag718EnuAdjustmentType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag718EnuAdjustmentType tagData;
-
         // loop around the ENUM and process
-        for (Enum718AdjustmentType oneEnum : Enum718AdjustmentType.values()) {
+        for ( Enum718AdjustmentType oneEnum : Enum718AdjustmentType.values()) {
             tagData = new Tag718EnuAdjustmentType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -122,18 +117,16 @@ class Tag718EnuAdjustmentTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag718EnuAdjustmentType tagData;
-
         // loop around the ENUM and process
-        for (Enum718AdjustmentType oneEnum : Enum718AdjustmentType.values()) {
+        for ( Enum718AdjustmentType oneEnum : Enum718AdjustmentType.values()) {
             tagData = new Tag718EnuAdjustmentType(oneEnum);
             assertEquals( "Tag718EnuAdjustmentType\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

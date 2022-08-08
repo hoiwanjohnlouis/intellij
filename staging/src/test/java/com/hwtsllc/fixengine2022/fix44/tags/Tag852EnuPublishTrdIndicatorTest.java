@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum852PublishTrdIndicator;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -36,41 +35,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    Y - Report Trade
  */
 class Tag852EnuPublishTrdIndicatorTest {
-    @Test
-    void FIXTest() {
-        FIX44 fixData = FIX44.FIX852_ENU_PUBLISH_TRD_INDICATOR;
-        assertEquals( "852", fixData.toEnumIDString());
-        assertEquals( "PUBLISH_TRD_INDICATOR", fixData.toEnumNameString());
-        assertEquals( "PublishTrdIndicator", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0852Test() {
-        Tag852EnuPublishTrdIndicator tagData;
-        Enum852PublishTrdIndicator oneElement;
+    Tag852EnuPublishTrdIndicator tagData;
 
-        oneElement = Enum852PublishTrdIndicator.NO;
-        tagData = new Tag852EnuPublishTrdIndicator( oneElement );
-        assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "852", tagData.toEnumIDString());
-        assertEquals( "PUBLISH_TRD_INDICATOR", tagData.toEnumNameString());
-        assertEquals( "PublishTrdIndicator", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-
-        oneElement = Enum852PublishTrdIndicator.YES;
-        tagData = new Tag852EnuPublishTrdIndicator( oneElement );
-        assertEquals( "Y", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
     @Test
-    void PrintFIXTagTest() {
-        Tag852EnuPublishTrdIndicator tagData;
-
+    void PrintTest() {
         // loop around the ENUM and process
         for ( Enum852PublishTrdIndicator oneEnum : Enum852PublishTrdIndicator.values()) {
             tagData = new Tag852EnuPublishTrdIndicator(oneEnum);
@@ -78,34 +46,58 @@ class Tag852EnuPublishTrdIndicatorTest {
         }
     }
     @Test
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( Enum852PublishTrdIndicator oneEnum : Enum852PublishTrdIndicator.values()) {
+            tagData = new Tag852EnuPublishTrdIndicator(oneEnum);
+            assertEquals( "FIX852_ENU_PUBLISH_TRD_INDICATOR", tagData.toEnumLabelString());
+            assertEquals( "852", tagData.toEnumIDString());
+            assertEquals( "PUBLISH_TRD_INDICATOR", tagData.toEnumNameString());
+            assertEquals( "PublishTrdIndicator", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void TagGetDataValueTest() {
-        Tag852EnuPublishTrdIndicator tagData;
+        /*
+         *  <p>    N - Do Not Report Trade
+         *  <p>    Y - Report Trade
+         */
+        tagData = new Tag852EnuPublishTrdIndicator( Enum852PublishTrdIndicator.NO );
+        assertEquals( "N", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag852EnuPublishTrdIndicator( Enum852PublishTrdIndicator.YES );
+        assertEquals( "Y", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         // loop around the ENUM and process
-        for (Enum852PublishTrdIndicator oneEnum : Enum852PublishTrdIndicator.values()) {
+        for ( Enum852PublishTrdIndicator oneEnum : Enum852PublishTrdIndicator.values()) {
             tagData = new Tag852EnuPublishTrdIndicator(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag852EnuPublishTrdIndicator tagData;
-
         // loop around the ENUM and process
-        for (Enum852PublishTrdIndicator oneEnum : Enum852PublishTrdIndicator.values()) {
+        for ( Enum852PublishTrdIndicator oneEnum : Enum852PublishTrdIndicator.values()) {
             tagData = new Tag852EnuPublishTrdIndicator(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag852EnuPublishTrdIndicator tagData;
-
         // loop around the ENUM and process
-        for (Enum852PublishTrdIndicator oneEnum : Enum852PublishTrdIndicator.values()) {
+        for ( Enum852PublishTrdIndicator oneEnum : Enum852PublishTrdIndicator.values()) {
             tagData = new Tag852EnuPublishTrdIndicator(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -113,18 +105,16 @@ class Tag852EnuPublishTrdIndicatorTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag852EnuPublishTrdIndicator tagData;
-
         // loop around the ENUM and process
-        for (Enum852PublishTrdIndicator oneEnum : Enum852PublishTrdIndicator.values()) {
+        for ( Enum852PublishTrdIndicator oneEnum : Enum852PublishTrdIndicator.values()) {
             tagData = new Tag852EnuPublishTrdIndicator(oneEnum);
             assertEquals( "Tag852EnuPublishTrdIndicator\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

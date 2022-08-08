@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum694QuoteRespType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -41,56 +40,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    6 - Pass
  */
 class Tag694EnuQuoteRespTypeTest {
+    Tag694EnuQuoteRespType tagData;
+
     @Test
-    void FIXTest() {
-        FIX44 fixData = FIX44.FIX694_ENU_QUOTE_RESP_TYPE;
-        assertEquals( "694", fixData.toEnumIDString());
-        assertEquals( "QUOTE_RESP_TYPE", fixData.toEnumNameString());
-        assertEquals( "QuoteRespType", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0694Test() {
-        Tag694EnuQuoteRespType tagData;
-        Enum694QuoteRespType oneElement;
-
-        oneElement = Enum694QuoteRespType.HIT_OR_LIFT;
-        tagData = new Tag694EnuQuoteRespType( oneElement );
-        assertEquals( oneElement.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "694", tagData.toEnumIDString());
-        assertEquals( "QUOTE_RESP_TYPE", tagData.toEnumNameString());
-        assertEquals( "QuoteRespType", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-
-        tagData = new Tag694EnuQuoteRespType(Enum694QuoteRespType.COUNTER);
-        assertEquals( Enum694QuoteRespType.COUNTER.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag694EnuQuoteRespType(Enum694QuoteRespType.EXPIRED);
-        assertEquals( Enum694QuoteRespType.EXPIRED.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag694EnuQuoteRespType(Enum694QuoteRespType.COVER);
-        assertEquals( Enum694QuoteRespType.COVER.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag694EnuQuoteRespType(Enum694QuoteRespType.DONE_AWAY);
-        assertEquals( Enum694QuoteRespType.DONE_AWAY.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag694EnuQuoteRespType(Enum694QuoteRespType.PASS);
-        assertEquals( Enum694QuoteRespType.PASS.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag694EnuQuoteRespType tagData;
-
+    void PrintTest() {
         // loop around the ENUM and process
         for ( Enum694QuoteRespType oneEnum : Enum694QuoteRespType.values()) {
             tagData = new Tag694EnuQuoteRespType(oneEnum);
@@ -98,34 +51,80 @@ class Tag694EnuQuoteRespTypeTest {
         }
     }
     @Test
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( Enum694QuoteRespType oneEnum : Enum694QuoteRespType.values()) {
+            tagData = new Tag694EnuQuoteRespType(oneEnum);
+            assertEquals( "FIX694_ENU_QUOTE_RESP_TYPE", tagData.toEnumLabelString());
+            assertEquals( "694", tagData.toEnumIDString());
+            assertEquals( "QUOTE_RESP_TYPE", tagData.toEnumNameString());
+            assertEquals( "QuoteRespType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void TagGetDataValueTest() {
-        Tag694EnuQuoteRespType tagData;
+        /*
+         *  <p>    1 - Hit/Lift
+         *  <p>    2 - Counter
+         *  <p>    3 - Expired
+         *  <p>    4 - Cover
+         *  <p>    5 - Done Away
+         */
+        tagData = new Tag694EnuQuoteRespType( Enum694QuoteRespType.HIT_OR_LIFT );
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag694EnuQuoteRespType(Enum694QuoteRespType.COUNTER);
+        assertEquals( "2", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag694EnuQuoteRespType(Enum694QuoteRespType.EXPIRED);
+        assertEquals( "3", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag694EnuQuoteRespType(Enum694QuoteRespType.COVER);
+        assertEquals( "4", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag694EnuQuoteRespType(Enum694QuoteRespType.DONE_AWAY);
+        assertEquals( "5", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        /*
+         *  <p>    6 - Pass
+         */
+        tagData = new Tag694EnuQuoteRespType(Enum694QuoteRespType.PASS);
+        assertEquals( "6", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         // loop around the ENUM and process
-        for (Enum694QuoteRespType oneEnum : Enum694QuoteRespType.values()) {
+        for ( Enum694QuoteRespType oneEnum : Enum694QuoteRespType.values()) {
             tagData = new Tag694EnuQuoteRespType(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag694EnuQuoteRespType tagData;
-
         // loop around the ENUM and process
-        for (Enum694QuoteRespType oneEnum : Enum694QuoteRespType.values()) {
+        for ( Enum694QuoteRespType oneEnum : Enum694QuoteRespType.values()) {
             tagData = new Tag694EnuQuoteRespType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag694EnuQuoteRespType tagData;
-
         // loop around the ENUM and process
-        for (Enum694QuoteRespType oneEnum : Enum694QuoteRespType.values()) {
+        for ( Enum694QuoteRespType oneEnum : Enum694QuoteRespType.values()) {
             tagData = new Tag694EnuQuoteRespType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -133,18 +132,16 @@ class Tag694EnuQuoteRespTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag694EnuQuoteRespType tagData;
-
         // loop around the ENUM and process
-        for (Enum694QuoteRespType oneEnum : Enum694QuoteRespType.values()) {
+        for ( Enum694QuoteRespType oneEnum : Enum694QuoteRespType.values()) {
             tagData = new Tag694EnuQuoteRespType(oneEnum);
             assertEquals( "Tag694EnuQuoteRespType\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

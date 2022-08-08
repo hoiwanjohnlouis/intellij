@@ -38,10 +38,6 @@ class Tag632PctBidYieldTest {
     };
 
     @Test
-    void FIX0632Test() {
-    }
-
-    @Test
     void PrintTest() {
         // process array of tags
         for ( double oneElement : TestArray ) {

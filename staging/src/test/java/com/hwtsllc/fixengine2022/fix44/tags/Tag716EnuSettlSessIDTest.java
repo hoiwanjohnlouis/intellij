@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum716SettlSessID;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -38,31 +37,42 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    EOD - End Of Day
  */
 class Tag716EnuSettlSessIDTest {
+    Tag716EnuSettlSessID tagData;
+
     @Test
-    void FIXTest() {
-        FIX44 fixData = FIX44.FIX716_ENU_SETTL_SESS_ID;
-        assertEquals( "716", fixData.toEnumIDString());
-        assertEquals( "SETTL_SESS_ID", fixData.toEnumNameString());
-        assertEquals( "SettlSessID", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // loop around the ENUM and process
+        for ( Enum716SettlSessID oneEnum : Enum716SettlSessID.values()) {
+            tagData = new Tag716EnuSettlSessID(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0716Test() {
-        Tag716EnuSettlSessID tagData;
-        Enum716SettlSessID oneElement;
-
-        oneElement = Enum716SettlSessID.INTRADAY;
-        tagData = new Tag716EnuSettlSessID( oneElement );
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( Enum716SettlSessID oneEnum : Enum716SettlSessID.values()) {
+            tagData = new Tag716EnuSettlSessID(oneEnum);
+            assertEquals( "FIX716_ENU_SETTL_SESS_ID", tagData.toEnumLabelString());
+            assertEquals( "716", tagData.toEnumIDString());
+            assertEquals( "SETTL_SESS_ID", tagData.toEnumNameString());
+            assertEquals( "SettlSessID", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        /*
+         *  <p>    ITD - Intraday
+         *  <p>    RTH - Regular Trading Hours
+         *  <p>    ETH - Electronic Trading Hours
+         *  <p>    EOD - End Of Day
+         */
+        tagData = new Tag716EnuSettlSessID( Enum716SettlSessID.INTRADAY );
         assertEquals( "ITD", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "716", tagData.toEnumIDString());
-        assertEquals( "SETTL_SESS_ID", tagData.toEnumNameString());
-        assertEquals( "SettlSessID", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
 
         tagData = new Tag716EnuSettlSessID(Enum716SettlSessID.REGULAR_TRADING_HOURS);
         assertEquals( "RTH", tagData.getDataValue());
@@ -75,46 +85,31 @@ class Tag716EnuSettlSessIDTest {
         tagData = new Tag716EnuSettlSessID(Enum716SettlSessID.END_OF_DAY);
         assertEquals( "EOD", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag716EnuSettlSessID tagData;
 
         // loop around the ENUM and process
         for ( Enum716SettlSessID oneEnum : Enum716SettlSessID.values()) {
             tagData = new Tag716EnuSettlSessID(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag716EnuSettlSessID tagData;
-
-        // loop around the ENUM and process
-        for (Enum716SettlSessID oneEnum : Enum716SettlSessID.values()) {
-            tagData = new Tag716EnuSettlSessID(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag716EnuSettlSessID tagData;
-
         // loop around the ENUM and process
-        for (Enum716SettlSessID oneEnum : Enum716SettlSessID.values()) {
+        for ( Enum716SettlSessID oneEnum : Enum716SettlSessID.values()) {
             tagData = new Tag716EnuSettlSessID(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag716EnuSettlSessID tagData;
-
         // loop around the ENUM and process
-        for (Enum716SettlSessID oneEnum : Enum716SettlSessID.values()) {
+        for ( Enum716SettlSessID oneEnum : Enum716SettlSessID.values()) {
             tagData = new Tag716EnuSettlSessID(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -122,18 +117,16 @@ class Tag716EnuSettlSessIDTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag716EnuSettlSessID tagData;
-
         // loop around the ENUM and process
-        for (Enum716SettlSessID oneEnum : Enum716SettlSessID.values()) {
+        for ( Enum716SettlSessID oneEnum : Enum716SettlSessID.values()) {
             tagData = new Tag716EnuSettlSessID(oneEnum);
             assertEquals( "Tag716EnuSettlSessID\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyLocalMktDateType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -34,95 +33,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  (i.e. maturity, par call or current call, pre-refunded date).
  */
 class Tag696LmdYieldRedemptionDateTest {
+    Tag696LmdYieldRedemptionDate tagData;
+    String [] TestArray = {
+            Tag696LmdYieldRedemptionDate.TESTA_LMD_YIELD_REDEMPTION_DATE,
+            Tag696LmdYieldRedemptionDate.TESTB_LMD_YIELD_REDEMPTION_DATE
+    };
+
     @Test
-    void FIX0696Test() {
-        FIX44 fixData = FIX44.FIX696_LMD_YIELD_REDEMPTION_DATE;
-        assertEquals( "696", fixData.toEnumIDString());
-        assertEquals( "YIELD_REDEMPTION_DATE", fixData.toEnumNameString());
-        assertEquals( "YieldRedemptionDate", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag696LmdYieldRedemptionDate( new MyLocalMktDateType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0696Test() {
-        Tag696LmdYieldRedemptionDate tagData;
-        String oneElement;
-
-        oneElement = Tag696LmdYieldRedemptionDate.TESTA_LMD_YIELD_REDEMPTION_DATE;
-        tagData = new Tag696LmdYieldRedemptionDate( new MyLocalMktDateType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
-        assertEquals( "696", tagData.toEnumIDString());
-        assertEquals( "YIELD_REDEMPTION_DATE", tagData.toEnumNameString());
-        assertEquals( "YieldRedemptionDate", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-
-        oneElement = Tag696LmdYieldRedemptionDate.TESTB_LMD_YIELD_REDEMPTION_DATE;
-        tagData = new Tag696LmdYieldRedemptionDate( new MyLocalMktDateType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag696LmdYieldRedemptionDate tagData;
-        String oneElement;
-
-        oneElement = Tag696LmdYieldRedemptionDate.TESTA_LMD_YIELD_REDEMPTION_DATE;
-        tagData = new Tag696LmdYieldRedemptionDate( new MyLocalMktDateType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag696LmdYieldRedemptionDate.TESTB_LMD_YIELD_REDEMPTION_DATE;
-        tagData = new Tag696LmdYieldRedemptionDate( new MyLocalMktDateType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag696LmdYieldRedemptionDate( new MyLocalMktDateType( oneElement ));
+            assertEquals( "FIX696_LMD_YIELD_REDEMPTION_DATE", tagData.toEnumLabelString());
+            assertEquals( "696", tagData.toEnumIDString());
+            assertEquals( "YIELD_REDEMPTION_DATE", tagData.toEnumNameString());
+            assertEquals( "YieldRedemptionDate", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag696LmdYieldRedemptionDate tagData;
-        String oneElement;
-
-        oneElement = Tag696LmdYieldRedemptionDate.TESTB_LMD_YIELD_REDEMPTION_DATE;
-        tagData = new Tag696LmdYieldRedemptionDate( new MyLocalMktDateType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag696LmdYieldRedemptionDate( new MyLocalMktDateType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag696LmdYieldRedemptionDate tagData;
-        String oneElement;
-
-        oneElement = Tag696LmdYieldRedemptionDate.TESTB_LMD_YIELD_REDEMPTION_DATE;
-        tagData = new Tag696LmdYieldRedemptionDate( new MyLocalMktDateType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag696LmdYieldRedemptionDate( new MyLocalMktDateType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag696LmdYieldRedemptionDate tagData;
-        String oneElement;
-
-        oneElement = Tag696LmdYieldRedemptionDate.TESTB_LMD_YIELD_REDEMPTION_DATE;
-        tagData = new Tag696LmdYieldRedemptionDate( new MyLocalMktDateType( oneElement ) );
-        assertEquals( oneElement, tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag696LmdYieldRedemptionDate( new MyLocalMktDateType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag696LmdYieldRedemptionDate tagData;
-        String oneElement;
-
-        oneElement = Tag696LmdYieldRedemptionDate.TESTA_LMD_YIELD_REDEMPTION_DATE;
-        tagData = new Tag696LmdYieldRedemptionDate( new MyLocalMktDateType( oneElement ) );
-        assertEquals( "Tag696LmdYieldRedemptionDate\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag696LmdYieldRedemptionDate( new MyLocalMktDateType( oneElement ));
+            assertEquals( "Tag696LmdYieldRedemptionDate\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

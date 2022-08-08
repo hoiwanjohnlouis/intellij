@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.fix44.enums.Enum827ExpirationCycle;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -36,40 +35,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    1 - Expire on trading session open
  */
 class Tag827EnuExpirationCycleTest {
-    @Test
-    void FIXTest() {
-        FIX44 fixData = FIX44.FIX827_ENU_EXPIRATION_CYCLE;
-        assertEquals( "827", fixData.toEnumIDString());
-        assertEquals( "EXPIRATION_CYCLE", fixData.toEnumNameString());
-        assertEquals( "ExpirationCycle", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0827Test() {
-        Tag827EnuExpirationCycle tagData;
-        Enum827ExpirationCycle oneElement;
+    Tag827EnuExpirationCycle tagData;
 
-        oneElement = Enum827ExpirationCycle.EXPIRE_ON_CLOSE;
-        tagData = new Tag827EnuExpirationCycle( oneElement );
-        assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "827", tagData.toEnumIDString());
-        assertEquals( "EXPIRATION_CYCLE", tagData.toEnumNameString());
-        assertEquals( "ExpirationCycle", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-
-        tagData = new Tag827EnuExpirationCycle( Enum827ExpirationCycle.EXPIRE_ON_OPEN );
-        assertEquals( Enum827ExpirationCycle.EXPIRE_ON_OPEN.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
     @Test
-    void PrintFIXTagTest() {
-        Tag827EnuExpirationCycle tagData;
-
+    void PrintTest() {
         // loop around the ENUM and process
         for ( Enum827ExpirationCycle oneEnum : Enum827ExpirationCycle.values()) {
             tagData = new Tag827EnuExpirationCycle(oneEnum);
@@ -77,34 +46,58 @@ class Tag827EnuExpirationCycleTest {
         }
     }
     @Test
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( Enum827ExpirationCycle oneEnum : Enum827ExpirationCycle.values()) {
+            tagData = new Tag827EnuExpirationCycle(oneEnum);
+            assertEquals( "FIX827_ENU_EXPIRATION_CYCLE", tagData.toEnumLabelString());
+            assertEquals( "827", tagData.toEnumIDString());
+            assertEquals( "EXPIRATION_CYCLE", tagData.toEnumNameString());
+            assertEquals( "ExpirationCycle", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void TagGetDataValueTest() {
-        Tag827EnuExpirationCycle tagData;
+        /*
+         *  <p>    0 - Expire on trading session close (default)
+         *  <p>    1 - Expire on trading session open
+         */
+        tagData = new Tag827EnuExpirationCycle( Enum827ExpirationCycle.EXPIRE_ON_CLOSE );
+        assertEquals( "0", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag827EnuExpirationCycle( Enum827ExpirationCycle.EXPIRE_ON_OPEN );
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
         // loop around the ENUM and process
-        for (Enum827ExpirationCycle oneEnum : Enum827ExpirationCycle.values()) {
+        for ( Enum827ExpirationCycle oneEnum : Enum827ExpirationCycle.values()) {
             tagData = new Tag827EnuExpirationCycle(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag827EnuExpirationCycle tagData;
-
         // loop around the ENUM and process
-        for (Enum827ExpirationCycle oneEnum : Enum827ExpirationCycle.values()) {
+        for ( Enum827ExpirationCycle oneEnum : Enum827ExpirationCycle.values()) {
             tagData = new Tag827EnuExpirationCycle(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag827EnuExpirationCycle tagData;
-
         // loop around the ENUM and process
-        for (Enum827ExpirationCycle oneEnum : Enum827ExpirationCycle.values()) {
+        for ( Enum827ExpirationCycle oneEnum : Enum827ExpirationCycle.values()) {
             tagData = new Tag827EnuExpirationCycle(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -112,18 +105,16 @@ class Tag827EnuExpirationCycleTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag827EnuExpirationCycle tagData;
-
         // loop around the ENUM and process
-        for (Enum827ExpirationCycle oneEnum : Enum827ExpirationCycle.values()) {
+        for ( Enum827ExpirationCycle oneEnum : Enum827ExpirationCycle.values()) {
             tagData = new Tag827EnuExpirationCycle(oneEnum);
             assertEquals( "Tag827EnuExpirationCycle\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

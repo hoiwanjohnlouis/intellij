@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix44.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX44;
 import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -32,95 +31,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  Additional TrdType (see tag 828) assigned to a trade by trade match system.
  */
 class Tag855IntSecondaryTrdTypeTest {
+    Tag855IntSecondaryTrdType tagData;
+    int [] TestArray = {
+            Tag855IntSecondaryTrdType.TESTA_INT_SECONDARY_TRD_TYPE,
+            Tag855IntSecondaryTrdType.TESTB_INT_SECONDARY_TRD_TYPE
+    };
+
     @Test
-    void FIXTest() {
-        FIX44 fixData = FIX44.FIX855_INT_SECONDARY_TRD_TYPE;
-        assertEquals( "855", fixData.toEnumIDString());
-        assertEquals( "SECONDARY_TRD_TYPE", fixData.toEnumNameString());
-        assertEquals( "SecondaryTrdType", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag855IntSecondaryTrdType( new MyIntType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0855Test() {
-        Tag855IntSecondaryTrdType tagData;
-        int oneElement;
-
-        oneElement = Tag855IntSecondaryTrdType.TESTA_INT_SECONDARY_TRD_TYPE;
-        tagData = new Tag855IntSecondaryTrdType( new MyIntType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
-        assertEquals( "855", tagData.toEnumIDString());
-        assertEquals( "SECONDARY_TRD_TYPE", tagData.toEnumNameString());
-        assertEquals( "SecondaryTrdType", tagData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-
-        oneElement = Tag855IntSecondaryTrdType.TESTB_INT_SECONDARY_TRD_TYPE;
-        tagData = new Tag855IntSecondaryTrdType( new MyIntType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag855IntSecondaryTrdType tagData;
-        int oneElement;
-
-        oneElement = Tag855IntSecondaryTrdType.TESTA_INT_SECONDARY_TRD_TYPE;
-        tagData = new Tag855IntSecondaryTrdType( new MyIntType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag855IntSecondaryTrdType.TESTB_INT_SECONDARY_TRD_TYPE;
-        tagData = new Tag855IntSecondaryTrdType( new MyIntType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag855IntSecondaryTrdType( new MyIntType( oneElement ));
+            assertEquals( "FIX855_INT_SECONDARY_TRD_TYPE", tagData.toEnumLabelString());
+            assertEquals( "855", tagData.toEnumIDString());
+            assertEquals( "SECONDARY_TRD_TYPE", tagData.toEnumNameString());
+            assertEquals( "SecondaryTrdType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag855IntSecondaryTrdType tagData;
-        int oneElement;
-
-        oneElement = Tag855IntSecondaryTrdType.TESTB_INT_SECONDARY_TRD_TYPE;
-        tagData = new Tag855IntSecondaryTrdType( new MyIntType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag855IntSecondaryTrdType( new MyIntType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag855IntSecondaryTrdType tagData;
-        int oneElement;
-
-        oneElement = Tag855IntSecondaryTrdType.TESTB_INT_SECONDARY_TRD_TYPE;
-        tagData = new Tag855IntSecondaryTrdType( new MyIntType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag855IntSecondaryTrdType( new MyIntType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag855IntSecondaryTrdType tagData;
-        int oneElement;
-
-        oneElement = Tag855IntSecondaryTrdType.TESTB_INT_SECONDARY_TRD_TYPE;
-        tagData = new Tag855IntSecondaryTrdType( new MyIntType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag855IntSecondaryTrdType( new MyIntType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag855IntSecondaryTrdType tagData;
-        int oneElement;
-
-        oneElement = Tag855IntSecondaryTrdType.TESTA_INT_SECONDARY_TRD_TYPE;
-        tagData = new Tag855IntSecondaryTrdType( new MyIntType( oneElement ) );
-        assertEquals( "Tag855IntSecondaryTrdType\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag855IntSecondaryTrdType( new MyIntType( oneElement ));
+            assertEquals( "Tag855IntSecondaryTrdType\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }
