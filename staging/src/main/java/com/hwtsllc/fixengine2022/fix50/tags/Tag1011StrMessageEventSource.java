@@ -28,9 +28,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  String
  *  <p>
  *  Used to identify the event or source  which gave rise to a message.
- *  <p>
+ *  <p></p>
  *  Valid values will be based on an exchange's implementation.
- *  <p>
+ *  <p></p>
  *  Example values are:
  *  <p>     "MQM" (originated at Firm Back Office)
  *  <p>     "Clear" (originated in Clearing System)

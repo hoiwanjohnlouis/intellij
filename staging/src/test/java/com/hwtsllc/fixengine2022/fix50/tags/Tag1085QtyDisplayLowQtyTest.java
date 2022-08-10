@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -32,89 +31,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  Defines the lower quantity limit to a randomized refresh of DisplayQty.
  */
 class Tag1085QtyDisplayLowQtyTest {
+    Tag1085QtyDisplayLowQty tagData;
+    int [] TestArray = {
+            Tag1085QtyDisplayLowQty.TESTA_QTY_DISPLAY_LOW_QTY,
+            Tag1085QtyDisplayLowQty.TESTB_QTY_DISPLAY_LOW_QTY
+    };
+
     @Test
-    void FIX1085Test() {
-        FIX50 fixData = FIX50.FIX1085_QTY_DISPLAY_LOW_QTY;
-        assertEquals( "1085", fixData.toEnumIDString());
-        assertEquals( "DISPLAY_LOW_QTY", fixData.toEnumNameString());
-        assertEquals( "DisplayLowQty", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag1085QtyDisplayLowQty( new MyQtyType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag1085Test() {
-        Tag1085QtyDisplayLowQty tagData;
-        int oneElement;
-
-        oneElement = Tag1085QtyDisplayLowQty.TESTA_QTY_DISPLAY_LOW_QTY;
-        tagData = new Tag1085QtyDisplayLowQty( new MyQtyType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
-
-        oneElement = Tag1085QtyDisplayLowQty.TESTB_QTY_DISPLAY_LOW_QTY;
-        tagData = new Tag1085QtyDisplayLowQty( new MyQtyType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag1085QtyDisplayLowQty tagData;
-        int oneElement;
-
-        oneElement = Tag1085QtyDisplayLowQty.TESTA_QTY_DISPLAY_LOW_QTY;
-        tagData = new Tag1085QtyDisplayLowQty( new MyQtyType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag1085QtyDisplayLowQty.TESTB_QTY_DISPLAY_LOW_QTY;
-        tagData = new Tag1085QtyDisplayLowQty( new MyQtyType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag1085QtyDisplayLowQty( new MyQtyType( oneElement ));
+            assertEquals( "FIX1085_QTY_DISPLAY_LOW_QTY", tagData.toEnumLabelString());
+            assertEquals( "1085", tagData.toEnumIDString());
+            assertEquals( "DISPLAY_LOW_QTY", tagData.toEnumNameString());
+            assertEquals( "DisplayLowQty", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag1085QtyDisplayLowQty tagData;
-        int oneElement;
-
-        oneElement = Tag1085QtyDisplayLowQty.TESTB_QTY_DISPLAY_LOW_QTY;
-        tagData = new Tag1085QtyDisplayLowQty( new MyQtyType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag1085QtyDisplayLowQty( new MyQtyType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag1085QtyDisplayLowQty tagData;
-        int oneElement;
-
-        oneElement = Tag1085QtyDisplayLowQty.TESTB_QTY_DISPLAY_LOW_QTY;
-        tagData = new Tag1085QtyDisplayLowQty( new MyQtyType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag1085QtyDisplayLowQty( new MyQtyType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag1085QtyDisplayLowQty tagData;
-        int oneElement;
-
-        oneElement = Tag1085QtyDisplayLowQty.TESTB_QTY_DISPLAY_LOW_QTY;
-        tagData = new Tag1085QtyDisplayLowQty( new MyQtyType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag1085QtyDisplayLowQty( new MyQtyType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag1085QtyDisplayLowQty tagData;
-        int oneElement;
-
-        oneElement = Tag1085QtyDisplayLowQty.TESTA_QTY_DISPLAY_LOW_QTY;
-        tagData = new Tag1085QtyDisplayLowQty( new MyQtyType( oneElement ) );
-        assertEquals( "Tag1085QtyDisplayLowQty\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag1085QtyDisplayLowQty( new MyQtyType( oneElement ));
+            assertEquals( "Tag1085QtyDisplayLowQty\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

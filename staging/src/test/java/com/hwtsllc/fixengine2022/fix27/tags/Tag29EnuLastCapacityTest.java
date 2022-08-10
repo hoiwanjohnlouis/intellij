@@ -48,24 +48,6 @@ class Tag29EnuLastCapacityTest {
         }
     }
     @Test
-    void Tag0029Test() {
-        tagData = new Tag29EnuLastCapacity(Enum29LastCapacity.AGENT);
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag29EnuLastCapacity(Enum29LastCapacity.CROSS_AS_AGENT);
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag29EnuLastCapacity(Enum29LastCapacity.CROSS_AS_PRINCIPAL);
-        assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag29EnuLastCapacity(Enum29LastCapacity.PRINCIPAL);
-        assertEquals( "4", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
     void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum29LastCapacity oneEnum : Enum29LastCapacity.values()) {
@@ -82,6 +64,23 @@ class Tag29EnuLastCapacityTest {
     }
     @Test
     void TagGetDataValueTest() {
+        tagData = new Tag29EnuLastCapacity(Enum29LastCapacity.AGENT);
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag29EnuLastCapacity(Enum29LastCapacity.CROSS_AS_AGENT);
+        assertEquals( "2", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag29EnuLastCapacity(Enum29LastCapacity.CROSS_AS_PRINCIPAL);
+        assertEquals( "3", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag29EnuLastCapacity(Enum29LastCapacity.PRINCIPAL);
+        assertEquals( "4", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
         // loop around the ENUM and process
         for (Enum29LastCapacity oneEnum : Enum29LastCapacity.values()) {
             tagData = new Tag29EnuLastCapacity(oneEnum);

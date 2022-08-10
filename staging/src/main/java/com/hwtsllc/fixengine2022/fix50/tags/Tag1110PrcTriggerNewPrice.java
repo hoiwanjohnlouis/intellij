@@ -28,7 +28,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  Price
  *  <p>
  *  The Price that the order should have after the trigger has hit.
- *  <p>
+ *  <p></p>
  *  Could be applicable for any trigger type, but must be specified for Trigger Type 1.
  */
 public class Tag1110PrcTriggerNewPrice extends FIX50Abstract implements LogValuePairString, LogVerboseString {

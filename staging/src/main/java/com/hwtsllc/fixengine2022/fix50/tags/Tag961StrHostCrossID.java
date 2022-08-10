@@ -29,11 +29,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>
  *  Host assigned entity ID that can be used to reference all components of a cross;
  *  sides + strategy + legs.
- *  <p>
+ *  <p></p>
  *  Used as the primary key with which to refer to the Cross Order for cancellation and replace.
- *  <p>
+ *  <p></p>
  *  The HostCrossID will also be used to link together components of the Cross Order.
- *  <p>
+ *  <p></p>
  *  i.e. each individual Execution Report associated with the order will carry
  *  HostCrossID in order to tie back to the original cross order.
  */

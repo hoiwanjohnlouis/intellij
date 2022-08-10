@@ -28,10 +28,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  UTCTimestamp
  *  <p>
  *  Indicates how long the order as specified in the side stays in effect.
- *  <p>
+ *  <p></p>
  *  SideTimeInForce allows a two-sided cross order to specify order behavior separately for each side.
  *  Absence of this field indicates that TimeInForce should be referenced.
- *  <p>
+ *  <p></p>
  *  SideTimeInForce will override TimeInForce if both are provided.
  */
 public class Tag962UtcSideTimeInForce extends FIX50Abstract implements LogValuePairString, LogVerboseString {

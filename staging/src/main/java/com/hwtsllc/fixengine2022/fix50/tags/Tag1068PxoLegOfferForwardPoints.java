@@ -28,9 +28,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  PriceOffset
  *  <p>
  *  The offer FX forward points for the leg of an FX Swap.
- *  <p>
+ *  <p></p>
  *  Value can be negative. Expressed in decimal form.
- *  <p>
+ *  <p></p>
  *  For example, 61.99 points is expressed and sent as 0.006199
  */
 public class Tag1068PxoLegOfferForwardPoints extends FIX50Abstract implements LogValuePairString, LogVerboseString {

@@ -47,23 +47,6 @@ class Tag94EnuEmailTypeTest {
         }
     }
     @Test
-    void Tag0094Test() {
-        /*
-         * 0-2 email types
-         */
-        tagData = new Tag94EnuEmailType(Enum94EmailType.NEW);
-        assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag94EnuEmailType(Enum94EmailType.REPLY);
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag94EnuEmailType(Enum94EmailType.ADMIN_REPLY);
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
     void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum94EmailType oneEnum : Enum94EmailType.values()) {
@@ -80,6 +63,22 @@ class Tag94EnuEmailTypeTest {
     }
     @Test
     void TagGetDataValueTest() {
+        /*
+         * 0-2 email types
+         */
+        tagData = new Tag94EnuEmailType(Enum94EmailType.NEW);
+        assertEquals( "0", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag94EnuEmailType(Enum94EmailType.REPLY);
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag94EnuEmailType(Enum94EmailType.ADMIN_REPLY);
+        assertEquals( "2", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
         // loop around the ENUM and process
         for (Enum94EmailType oneEnum : Enum94EmailType.values()) {
             tagData = new Tag94EnuEmailType(oneEnum);

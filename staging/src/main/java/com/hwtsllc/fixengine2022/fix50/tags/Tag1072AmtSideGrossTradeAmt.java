@@ -28,7 +28,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  Amt
  *  <p>
  *  The gross trade amount for this side of the trade.
- *  <p>
+ *  <p></p>
  *  See also GrossTradeAmt (381) for additional definition.
  */
 public class Tag1072AmtSideGrossTradeAmt extends FIX50Abstract implements LogValuePairString, LogVerboseString {

@@ -27,7 +27,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  980
  *  SecurityUpdateAction
  *  char
- *
+ *  <p>
  *  <p></p>
  *  Valid values:
  *  <p>    A - Add

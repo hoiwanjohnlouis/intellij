@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceOffsetType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -32,90 +31,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  Identifies role of dealer; Agent, Principal, RisklessPrincipal
  */
 class Tag1048PxoDealingCapacityTest {
+    Tag1048PxoDealingCapacity tagData;
+    double [] TestArray = {
+            Tag1048PxoDealingCapacity.TESTA_PXO_DEALING_CAPACITY,
+            Tag1048PxoDealingCapacity.TESTB_PXO_DEALING_CAPACITY
+    };
+
     @Test
-    void FIX1048Test() {
-        FIX50 fixData = FIX50.FIX1048_PXO_DEALING_CAPACITY;
-        assertEquals( "1048", fixData.toEnumIDString());
-        assertEquals( "DEALING_CAPACITY", fixData.toEnumNameString());
-        assertEquals( "DealingCapacity", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag1048PxoDealingCapacity( new MyPriceOffsetType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag1048Test() {
-        Tag1048PxoDealingCapacity tagData;
-        double oneElement;
-
-        oneElement = Tag1048PxoDealingCapacity.TESTA_PXO_DEALING_CAPACITY;
-        tagData = new Tag1048PxoDealingCapacity( new MyPriceOffsetType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue());
-
-        oneElement = Tag1048PxoDealingCapacity.TESTB_PXO_DEALING_CAPACITY;
-        tagData = new Tag1048PxoDealingCapacity( new MyPriceOffsetType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag1048PxoDealingCapacity tagData;
-        double oneElement;
-
-        oneElement = Tag1048PxoDealingCapacity.TESTA_PXO_DEALING_CAPACITY;
-        tagData = new Tag1048PxoDealingCapacity( new MyPriceOffsetType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag1048PxoDealingCapacity.TESTB_PXO_DEALING_CAPACITY;
-        tagData = new Tag1048PxoDealingCapacity( new MyPriceOffsetType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag1048PxoDealingCapacity( new MyPriceOffsetType( oneElement ));
+            assertEquals( "FIX1048_PXO_DEALING_CAPACITY", tagData.toEnumLabelString());
+            assertEquals( "1048", tagData.toEnumIDString());
+            assertEquals( "DEALING_CAPACITY", tagData.toEnumNameString());
+            assertEquals( "DealingCapacity", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag1048PxoDealingCapacity tagData;
-        double oneElement;
-
-        oneElement = Tag1048PxoDealingCapacity.TESTB_PXO_DEALING_CAPACITY;
-        tagData = new Tag1048PxoDealingCapacity( new MyPriceOffsetType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag1048PxoDealingCapacity( new MyPriceOffsetType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue());
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag1048PxoDealingCapacity tagData;
-        double oneElement;
-
-        oneElement = Tag1048PxoDealingCapacity.TESTB_PXO_DEALING_CAPACITY;
-        tagData = new Tag1048PxoDealingCapacity( new MyPriceOffsetType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag1048PxoDealingCapacity( new MyPriceOffsetType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag1048PxoDealingCapacity tagData;
-        double oneElement;
-
-        oneElement = Tag1048PxoDealingCapacity.TESTB_PXO_DEALING_CAPACITY;
-        tagData = new Tag1048PxoDealingCapacity( new MyPriceOffsetType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag1048PxoDealingCapacity( new MyPriceOffsetType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag1048PxoDealingCapacity tagData;
-        double oneElement;
-
-        oneElement = Tag1048PxoDealingCapacity.TESTA_PXO_DEALING_CAPACITY;
-        tagData = new Tag1048PxoDealingCapacity( new MyPriceOffsetType( oneElement ) );
-        assertEquals( "Tag1048PxoDealingCapacity\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag1048PxoDealingCapacity( new MyPriceOffsetType( oneElement ));
+            assertEquals( "Tag1048PxoDealingCapacity\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

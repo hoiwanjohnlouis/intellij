@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -33,94 +32,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  security off whose prices the order will Peg.
  */
 class Tag1098StrPegSymbolTest {
+    Tag1098StrPegSymbol tagData;
+    String [] TestArray = {
+            Tag1098StrPegSymbol.TESTA_STR_PEG_SYMBOL,
+            Tag1098StrPegSymbol.TESTB_STR_PEG_SYMBOL
+    };
+
     @Test
-    void FIX1098Test() {
-        FIX50 fixData = FIX50.FIX1098_STR_PEG_SYMBOL;
-        assertEquals( "1098", fixData.toEnumIDString());
-        assertEquals( "PEG_SYMBOL", fixData.toEnumNameString());
-        assertEquals( "PegSymbol", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag1098StrPegSymbol( new MyStringType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag1098Test() {
-        Tag1098StrPegSymbol tagData;
-        String oneElement;
-
-        oneElement = "Chloe Kim";
-        tagData = new Tag1098StrPegSymbol( new MyStringType(oneElement) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag1098StrPegSymbol.TESTA_STR_PEG_SYMBOL;
-        tagData = new Tag1098StrPegSymbol( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag1098StrPegSymbol.TESTB_STR_PEG_SYMBOL;
-        tagData = new Tag1098StrPegSymbol( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag1098StrPegSymbol tagData;
-        String oneElement;
-
-        oneElement = Tag1098StrPegSymbol.TESTA_STR_PEG_SYMBOL;
-        tagData = new Tag1098StrPegSymbol( new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag1098StrPegSymbol.TESTB_STR_PEG_SYMBOL;
-        tagData = new Tag1098StrPegSymbol( new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag1098StrPegSymbol( new MyStringType( oneElement ));
+            assertEquals( "FIX1098_STR_PEG_SYMBOL", tagData.toEnumLabelString());
+            assertEquals( "1098", tagData.toEnumIDString());
+            assertEquals( "PEG_SYMBOL", tagData.toEnumNameString());
+            assertEquals( "PegSymbol", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag1098StrPegSymbol tagData;
-        String oneElement;
-
-        oneElement = Tag1098StrPegSymbol.TESTB_STR_PEG_SYMBOL;
-        tagData = new Tag1098StrPegSymbol( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag1098StrPegSymbol( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag1098StrPegSymbol tagData;
-        String oneElement;
-
-        oneElement = Tag1098StrPegSymbol.TESTB_STR_PEG_SYMBOL;
-        tagData = new Tag1098StrPegSymbol( new MyStringType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag1098StrPegSymbol( new MyStringType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag1098StrPegSymbol tagData;
-        String oneElement;
-
-        oneElement = Tag1098StrPegSymbol.TESTB_STR_PEG_SYMBOL;
-        tagData = new Tag1098StrPegSymbol( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag1098StrPegSymbol( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag1098StrPegSymbol tagData;
-        String oneElement;
-
-        oneElement = Tag1098StrPegSymbol.TESTA_STR_PEG_SYMBOL;
-        tagData = new Tag1098StrPegSymbol( new MyStringType( oneElement ) );
-        assertEquals( "Tag1098StrPegSymbol\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag1098StrPegSymbol( new MyStringType( oneElement ));
+            assertEquals( "Tag1098StrPegSymbol\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

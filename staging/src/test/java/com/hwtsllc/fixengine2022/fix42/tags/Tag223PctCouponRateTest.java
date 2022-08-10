@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
-import com.hwtsllc.fixengine2022.fix41.tags.Tag158PctAccruedInterestRate;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -28,7 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  223
  *  CouponRate
  *  Percentage
- *  <p></p>
+ *  <p>
  *  The rate of interest that, when multiplied by the principal, par value,
  *  or face value of a bond, provides the currency amount of the periodic interest payment.
  *  <p></p>

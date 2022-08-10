@@ -27,6 +27,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  SettleOnOpenFlag
  *  String
  *  <p>
+ *  Unique identifier for the Market Data Report.
  *  Indicator to determine if instrument is settle on open
  */
 public class Tag966StrSettleOnOpenFlag extends FIX50Abstract implements LogValuePairString, LogVerboseString {

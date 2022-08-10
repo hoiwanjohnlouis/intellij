@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -30,97 +29,85 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  int
  *  <p>
  *  Allows an order to specify a maximum number of price levels to trade through.
- *  <p>
+ *  <p></p>
  *  Only valid for aggressive orders and during continuous (autoexecution) trading sessions.
- *  <p>
+ *  <p></p>
  *  Property lost when order is put on book.
  *  A partially filled order is assigned last trade price as limit price.
  *  Non-filled order behaves as ordinary Market or Limit.
  */
 class Tag1090IntMaxPriceLevelsTest {
+    Tag1090IntMaxPriceLevels tagData;
+    int [] TestArray = {
+            Tag1090IntMaxPriceLevels.TESTA_INT_MAX_PRICE_LEVELS,
+            Tag1090IntMaxPriceLevels.TESTB_INT_MAX_PRICE_LEVELS
+    };
+
     @Test
-    void FIX1090Test() {
-        FIX50 fixData = FIX50.FIX1090_INT_MAX_PRICE_LEVELS;
-        assertEquals( "1090", fixData.toEnumIDString());
-        assertEquals( "MAX_PRICE_LEVELS", fixData.toEnumNameString());
-        assertEquals( "MaxPriceLevels", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag1090IntMaxPriceLevels( new MyIntType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag1090Test() {
-        Tag1090IntMaxPriceLevels tagData;
-        int oneElement;
-
-        oneElement = Tag1090IntMaxPriceLevels.TESTA_INT_MAX_PRICE_LEVELS;
-        tagData = new Tag1090IntMaxPriceLevels( new MyIntType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
-
-        oneElement = Tag1090IntMaxPriceLevels.TESTB_INT_MAX_PRICE_LEVELS;
-        tagData = new Tag1090IntMaxPriceLevels( new MyIntType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag1090IntMaxPriceLevels tagData;
-        int oneElement;
-
-        oneElement = Tag1090IntMaxPriceLevels.TESTA_INT_MAX_PRICE_LEVELS;
-        tagData = new Tag1090IntMaxPriceLevels( new MyIntType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag1090IntMaxPriceLevels.TESTB_INT_MAX_PRICE_LEVELS;
-        tagData = new Tag1090IntMaxPriceLevels( new MyIntType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag1090IntMaxPriceLevels( new MyIntType( oneElement ));
+            assertEquals( "FIX1090_INT_MAX_PRICE_LEVELS", tagData.toEnumLabelString());
+            assertEquals( "1090", tagData.toEnumIDString());
+            assertEquals( "MAX_PRICE_LEVELS", tagData.toEnumNameString());
+            assertEquals( "MaxPriceLevels", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag1090IntMaxPriceLevels tagData;
-        int oneElement;
-
-        oneElement = Tag1090IntMaxPriceLevels.TESTB_INT_MAX_PRICE_LEVELS;
-        tagData = new Tag1090IntMaxPriceLevels( new MyIntType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag1090IntMaxPriceLevels( new MyIntType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue() );
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag1090IntMaxPriceLevels tagData;
-        int oneElement;
-
-        oneElement = Tag1090IntMaxPriceLevels.TESTB_INT_MAX_PRICE_LEVELS;
-        tagData = new Tag1090IntMaxPriceLevels( new MyIntType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag1090IntMaxPriceLevels( new MyIntType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag1090IntMaxPriceLevels tagData;
-        int oneElement;
-
-        oneElement = Tag1090IntMaxPriceLevels.TESTB_INT_MAX_PRICE_LEVELS;
-        tagData = new Tag1090IntMaxPriceLevels( new MyIntType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag1090IntMaxPriceLevels( new MyIntType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag1090IntMaxPriceLevels tagData;
-        int oneElement;
-
-        oneElement = Tag1090IntMaxPriceLevels.TESTA_INT_MAX_PRICE_LEVELS;
-        tagData = new Tag1090IntMaxPriceLevels( new MyIntType( oneElement ) );
-        assertEquals( "Tag1090IntMaxPriceLevels\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag1090IntMaxPriceLevels( new MyIntType( oneElement ));
+            assertEquals( "Tag1090IntMaxPriceLevels\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

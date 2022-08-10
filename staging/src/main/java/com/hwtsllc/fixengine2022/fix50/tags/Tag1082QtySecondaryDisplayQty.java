@@ -29,7 +29,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>
  *  Used for reserve orders when DisplayQty applies to the primary execution market (e.g.an ECN)
  *  and another quantity is to be shown at other markets (e.g. the exchange).
- *  <p>
+ *  <p></p>
  *  On orders specifies the qty to be displayed, on execution reports the currently displayed quantity.
  */
 public class Tag1082QtySecondaryDisplayQty extends FIX50Abstract implements LogValuePairString, LogVerboseString {

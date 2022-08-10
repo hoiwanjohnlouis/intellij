@@ -28,9 +28,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  UTCTimestamp
  *  <p>
  *  Will be used in a multi-sided message.
- *  <p>
+ *  <p></p>
  *  Traded Regulatory timestamp value.
- *  <p>
+ *  <p></p>
  *  Use to store time information required by government regulators
  *  or self regulatory organizations such as an exchange or clearing house
  */

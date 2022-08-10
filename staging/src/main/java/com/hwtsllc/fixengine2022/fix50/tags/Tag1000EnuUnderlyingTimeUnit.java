@@ -29,7 +29,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  String
  *  <p>
  *  Unit of time associated with the contract.
- *  <p>
+ *  <p></p>
  *  NOTE: Additional values may be used by mutual agreement of the counterparties
  *  <p></p>
  *  1000

@@ -69,16 +69,6 @@ class Tag65EnuSymbolSfxTest {
         }
     }
     @Test
-    void Tag0065Test() {
-        tagData = new Tag65EnuSymbolSfx(MyEnumSymbolSfx.EUCP);
-        assertEquals( "CD", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag65EnuSymbolSfx(MyEnumSymbolSfx.WHEN_ISSUED);
-        assertEquals( "WI", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
     void FIXHeaderTest() {
         // loop around the ENUM and process
         for (MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
@@ -95,6 +85,15 @@ class Tag65EnuSymbolSfxTest {
     }
     @Test
     void TagGetDataValueTest() {
+        tagData = new Tag65EnuSymbolSfx(MyEnumSymbolSfx.EUCP);
+        assertEquals( "CD", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag65EnuSymbolSfx(MyEnumSymbolSfx.WHEN_ISSUED);
+        assertEquals( "WI", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
         // loop around the ENUM and process
         for (MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
             tagData = new Tag65EnuSymbolSfx(oneEnum);

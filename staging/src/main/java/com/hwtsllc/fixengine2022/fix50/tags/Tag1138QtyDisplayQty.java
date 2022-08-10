@@ -28,9 +28,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  Qty
  *  <p>
  *  The quantity to be displayed.
- *  <p>
+ *  <p></p>
  *  Required for reserve orders.
- *  <p>
+ *  <p></p>
  *  On orders specifies the qty to be displayed, on execution reports the currently displayed quantity.
  */
 public class Tag1138QtyDisplayQty extends FIX50Abstract implements LogValuePairString, LogVerboseString {

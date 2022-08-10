@@ -52,7 +52,22 @@ class Tag98EnuEncryptMethodTest {
         }
     }
     @Test
-    void Tag0098Test() {
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (Enum98EncryptMethod oneEnum : Enum98EncryptMethod.values()) {
+            tagData = new Tag98EnuEncryptMethod(oneEnum);
+            assertEquals( "FIX98_ENU_ENCRYPT_METHOD", tagData.toEnumLabelString());
+            assertEquals( "ENCRYPT_METHOD", tagData.toEnumNameString());
+            assertEquals( "98", tagData.toEnumIDString());
+            assertEquals( "EncryptMethod", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
          * 0-6 EncryptMethod types
          */
@@ -84,24 +99,8 @@ class Tag98EnuEncryptMethodTest {
         tagData = new Tag98EnuEncryptMethod(Enum98EncryptMethod.PEM_DES_MD5);
         assertEquals( "6", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void FIXHeaderTest() {
-        // loop around the ENUM and process
-        for (Enum98EncryptMethod oneEnum : Enum98EncryptMethod.values()) {
-            tagData = new Tag98EnuEncryptMethod(oneEnum);
-            assertEquals( "FIX98_ENU_ENCRYPT_METHOD", tagData.toEnumLabelString());
-            assertEquals( "ENCRYPT_METHOD", tagData.toEnumNameString());
-            assertEquals( "98", tagData.toEnumIDString());
-            assertEquals( "EncryptMethod", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
+
+
         // loop around the ENUM and process
         for (Enum98EncryptMethod oneEnum : Enum98EncryptMethod.values()) {
             tagData = new Tag98EnuEncryptMethod(oneEnum);

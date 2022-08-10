@@ -29,7 +29,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  int
  *  <p>
  *  Describes the type of book for which the feed is intended.
- *  <p>
+ *  <p></p>
  *  Used when multiple feeds are provided over the same connection
  *  <p></p>
  *  Valid values:

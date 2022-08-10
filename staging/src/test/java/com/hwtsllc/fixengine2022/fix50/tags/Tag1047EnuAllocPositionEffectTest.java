@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumPositionEffect;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -58,20 +57,33 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    R - Rolled
  */
 class Tag1047EnuAllocPositionEffectTest {
+    Tag1047EnuAllocPositionEffect tagData;
+
     @Test
-    void FIX1047Test() {
-        FIX50 fixData = FIX50.FIX1047_ENU_ALLOC_POSITION_EFFECT;
-        assertEquals( "1047", fixData.toEnumIDString());
-        assertEquals( "ALLOC_POSITION_EFFECT", fixData.toEnumNameString());
-        assertEquals( "AllocPositionEffect", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // loop around the ENUM and process
+        for ( MyEnumPositionEffect oneEnum : MyEnumPositionEffect.values()) {
+            tagData = new Tag1047EnuAllocPositionEffect(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag1047Test() {
-        Tag1047EnuAllocPositionEffect tagData;
-
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( MyEnumPositionEffect oneEnum : MyEnumPositionEffect.values()) {
+            tagData = new Tag1047EnuAllocPositionEffect(oneEnum);
+            assertEquals( "FIX1047_ENU_ALLOC_POSITION_EFFECT", tagData.toEnumLabelString());
+            assertEquals( "1047", tagData.toEnumIDString());
+            assertEquals( "ALLOC_POSITION_EFFECT", tagData.toEnumNameString());
+            assertEquals( "AllocPositionEffect", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
          * O, F, C, and R PositionEffect types
          */
@@ -90,46 +102,32 @@ class Tag1047EnuAllocPositionEffectTest {
         tagData = new Tag1047EnuAllocPositionEffect(MyEnumPositionEffect.ROLLED);
         assertEquals( "R", tagData.getDataValue());
         assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag1047EnuAllocPositionEffect tagData;
+
 
         // loop around the ENUM and process
         for ( MyEnumPositionEffect oneEnum : MyEnumPositionEffect.values()) {
             tagData = new Tag1047EnuAllocPositionEffect(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag1047EnuAllocPositionEffect tagData;
-
-        // loop around the ENUM and process
-        for (MyEnumPositionEffect oneEnum : MyEnumPositionEffect.values()) {
-            tagData = new Tag1047EnuAllocPositionEffect(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag1047EnuAllocPositionEffect tagData;
-
         // loop around the ENUM and process
-        for (MyEnumPositionEffect oneEnum : MyEnumPositionEffect.values()) {
+        for ( MyEnumPositionEffect oneEnum : MyEnumPositionEffect.values()) {
             tagData = new Tag1047EnuAllocPositionEffect(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag1047EnuAllocPositionEffect tagData;
-
         // loop around the ENUM and process
-        for (MyEnumPositionEffect oneEnum : MyEnumPositionEffect.values()) {
+        for ( MyEnumPositionEffect oneEnum : MyEnumPositionEffect.values()) {
             tagData = new Tag1047EnuAllocPositionEffect(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -137,18 +135,16 @@ class Tag1047EnuAllocPositionEffectTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag1047EnuAllocPositionEffect tagData;
-
         // loop around the ENUM and process
-        for (MyEnumPositionEffect oneEnum : MyEnumPositionEffect.values()) {
+        for ( MyEnumPositionEffect oneEnum : MyEnumPositionEffect.values()) {
             tagData = new Tag1047EnuAllocPositionEffect(oneEnum);
             assertEquals( "Tag1047EnuAllocPositionEffect\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

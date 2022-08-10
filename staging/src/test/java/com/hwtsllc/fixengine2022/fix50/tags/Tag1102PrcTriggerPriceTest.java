@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -32,89 +31,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  The price at which the trigger should hit.
  */
 class Tag1102PrcTriggerPriceTest {
+    Tag1102PrcTriggerPrice tagData;
+    double [] TestArray = {
+            Tag1102PrcTriggerPrice.TESTA_PRC_TRIGGER_PRICE,
+            Tag1102PrcTriggerPrice.TESTB_PRC_TRIGGER_PRICE
+    };
+
     @Test
-    void FIX1102Test() {
-        FIX50 fixData = FIX50.FIX1102_PRC_TRIGGER_PRICE;
-        assertEquals( "1102", fixData.toEnumIDString());
-        assertEquals( "TRIGGER_PRICE", fixData.toEnumNameString());
-        assertEquals( "TriggerPrice", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag1102PrcTriggerPrice( new MyPriceType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag1102Test() {
-        Tag1102PrcTriggerPrice tagData;
-        double oneElement;
-
-        oneElement = Tag1102PrcTriggerPrice.TESTA_PRC_TRIGGER_PRICE;
-        tagData = new Tag1102PrcTriggerPrice( new MyPriceType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
-
-        oneElement = Tag1102PrcTriggerPrice.TESTB_PRC_TRIGGER_PRICE;
-        tagData = new Tag1102PrcTriggerPrice( new MyPriceType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag1102PrcTriggerPrice tagData;
-        double oneElement;
-
-        oneElement = Tag1102PrcTriggerPrice.TESTA_PRC_TRIGGER_PRICE;
-        tagData = new Tag1102PrcTriggerPrice( new MyPriceType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag1102PrcTriggerPrice.TESTB_PRC_TRIGGER_PRICE;
-        tagData = new Tag1102PrcTriggerPrice( new MyPriceType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag1102PrcTriggerPrice( new MyPriceType( oneElement ));
+            assertEquals( "FIX1102_PRC_TRIGGER_PRICE", tagData.toEnumLabelString());
+            assertEquals( "1102", tagData.toEnumIDString());
+            assertEquals( "TRIGGER_PRICE", tagData.toEnumNameString());
+            assertEquals( "TriggerPrice", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag1102PrcTriggerPrice tagData;
-        double oneElement;
-
-        oneElement = Tag1102PrcTriggerPrice.TESTB_PRC_TRIGGER_PRICE;
-        tagData = new Tag1102PrcTriggerPrice( new MyPriceType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag1102PrcTriggerPrice( new MyPriceType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag1102PrcTriggerPrice tagData;
-        double oneElement;
-
-        oneElement = Tag1102PrcTriggerPrice.TESTB_PRC_TRIGGER_PRICE;
-        tagData = new Tag1102PrcTriggerPrice( new MyPriceType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag1102PrcTriggerPrice( new MyPriceType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag1102PrcTriggerPrice tagData;
-        double oneElement;
-
-        oneElement = Tag1102PrcTriggerPrice.TESTB_PRC_TRIGGER_PRICE;
-        tagData = new Tag1102PrcTriggerPrice( new MyPriceType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag1102PrcTriggerPrice( new MyPriceType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag1102PrcTriggerPrice tagData;
-        double oneElement;
-
-        oneElement = Tag1102PrcTriggerPrice.TESTA_PRC_TRIGGER_PRICE;
-        tagData = new Tag1102PrcTriggerPrice( new MyPriceType( oneElement ) );
-        assertEquals( "Tag1102PrcTriggerPrice\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag1102PrcTriggerPrice( new MyPriceType( oneElement ));
+            assertEquals( "Tag1102PrcTriggerPrice\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

@@ -27,7 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  6
  *  AvgPx
  *  Price
- *  <p></p>
+ *  <p>
  *  Calculated average price of all fills on this order.
  *  <p></p>
  *  For Fixed Income trades AvgPx is always expressed as percent-of-par,

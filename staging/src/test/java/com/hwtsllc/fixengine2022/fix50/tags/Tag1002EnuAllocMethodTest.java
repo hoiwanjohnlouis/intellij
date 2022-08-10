@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.fix50.enums.Enum1002AllocMethod;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -37,36 +36,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    3 - Manual
  */
 class Tag1002EnuAllocMethodTest {
+    Tag1002EnuAllocMethod tagData;
+
     @Test
-    void FIX1002Test() {
-        FIX50 fixData = FIX50.FIX1002_ENU_ALLOC_METHOD;
-        assertEquals( "1002", fixData.toEnumIDString());
-        assertEquals( "ALLOC_METHOD", fixData.toEnumNameString());
-        assertEquals( "AllocMethod", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag1002Test() {
-        Tag1002EnuAllocMethod tagData;
-
-        tagData = new Tag1002EnuAllocMethod( Enum1002AllocMethod.AUTOMATIC );
-        assertEquals( Enum1002AllocMethod.AUTOMATIC.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag1002EnuAllocMethod( Enum1002AllocMethod.GUARANTOR );
-        assertEquals( Enum1002AllocMethod.GUARANTOR.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag1002EnuAllocMethod( Enum1002AllocMethod.MANUAL );
-        assertEquals( Enum1002AllocMethod.MANUAL.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag1002EnuAllocMethod tagData;
-
+    void PrintTest() {
         // loop around the ENUM and process
         for ( Enum1002AllocMethod oneEnum : Enum1002AllocMethod.values()) {
             tagData = new Tag1002EnuAllocMethod(oneEnum);
@@ -74,34 +47,64 @@ class Tag1002EnuAllocMethodTest {
         }
     }
     @Test
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( Enum1002AllocMethod oneEnum : Enum1002AllocMethod.values()) {
+            tagData = new Tag1002EnuAllocMethod(oneEnum);
+            assertEquals( "FIX1002_ENU_ALLOC_METHOD", tagData.toEnumLabelString());
+            assertEquals( "1002", tagData.toEnumIDString());
+            assertEquals( "ALLOC_METHOD", tagData.toEnumNameString());
+            assertEquals( "AllocMethod", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void TagGetDataValueTest() {
-        Tag1002EnuAllocMethod tagData;
+        /*
+         *  <p>    1 - Automatic
+         *  <p>    2 - Guarantor
+         *  <p>    3 - Manual
+         */
+        tagData = new Tag1002EnuAllocMethod( Enum1002AllocMethod.AUTOMATIC );
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag1002EnuAllocMethod( Enum1002AllocMethod.GUARANTOR );
+        assertEquals( "2", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag1002EnuAllocMethod( Enum1002AllocMethod.MANUAL );
+        assertEquals( "3", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
 
         // loop around the ENUM and process
-        for (Enum1002AllocMethod oneEnum : Enum1002AllocMethod.values()) {
+        for ( Enum1002AllocMethod oneEnum : Enum1002AllocMethod.values()) {
             tagData = new Tag1002EnuAllocMethod(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag1002EnuAllocMethod tagData;
-
         // loop around the ENUM and process
-        for (Enum1002AllocMethod oneEnum : Enum1002AllocMethod.values()) {
+        for ( Enum1002AllocMethod oneEnum : Enum1002AllocMethod.values()) {
             tagData = new Tag1002EnuAllocMethod(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag1002EnuAllocMethod tagData;
-
         // loop around the ENUM and process
-        for (Enum1002AllocMethod oneEnum : Enum1002AllocMethod.values()) {
+        for ( Enum1002AllocMethod oneEnum : Enum1002AllocMethod.values()) {
             tagData = new Tag1002EnuAllocMethod(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -109,18 +112,16 @@ class Tag1002EnuAllocMethodTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag1002EnuAllocMethod tagData;
-
         // loop around the ENUM and process
-        for (Enum1002AllocMethod oneEnum : Enum1002AllocMethod.values()) {
+        for ( Enum1002AllocMethod oneEnum : Enum1002AllocMethod.values()) {
             tagData = new Tag1002EnuAllocMethod(oneEnum);
             assertEquals( "Tag1002EnuAllocMethod\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

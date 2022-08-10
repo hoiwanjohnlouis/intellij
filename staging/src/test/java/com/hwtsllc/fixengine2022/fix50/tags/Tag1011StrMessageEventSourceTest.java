@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -39,94 +38,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>     "Reg" (static data generated via Register request)
  */
 class Tag1011StrMessageEventSourceTest {
+    Tag1011StrMessageEventSource tagData;
+    String [] TestArray = {
+            Tag1011StrMessageEventSource.TESTA_STR_MESSAGE_EVENT_SOURCE,
+            Tag1011StrMessageEventSource.TESTB_STR_MESSAGE_EVENT_SOURCE
+    };
+
     @Test
-    void FIX1011Test() {
-        FIX50 fixData = FIX50.FIX1011_STR_MESSAGE_EVENT_SOURCE;
-        assertEquals( "1011", fixData.toEnumIDString());
-        assertEquals( "MESSAGE_EVENT_SOURCE", fixData.toEnumNameString());
-        assertEquals( "MessageEventSource", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag1011StrMessageEventSource( new MyStringType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag1011Test() {
-        Tag1011StrMessageEventSource tagData;
-        String oneElement;
-
-        oneElement = "Chloe Kim";
-        tagData = new Tag1011StrMessageEventSource( new MyStringType(oneElement) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag1011StrMessageEventSource.TESTA_STR_MESSAGE_EVENT_SOURCE;
-        tagData = new Tag1011StrMessageEventSource( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag1011StrMessageEventSource.TESTB_STR_MESSAGE_EVENT_SOURCE;
-        tagData = new Tag1011StrMessageEventSource( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag1011StrMessageEventSource tagData;
-        String oneElement;
-
-        oneElement = Tag1011StrMessageEventSource.TESTA_STR_MESSAGE_EVENT_SOURCE;
-        tagData = new Tag1011StrMessageEventSource( new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag1011StrMessageEventSource.TESTB_STR_MESSAGE_EVENT_SOURCE;
-        tagData = new Tag1011StrMessageEventSource( new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag1011StrMessageEventSource( new MyStringType( oneElement ));
+            assertEquals( "FIX1011_STR_MESSAGE_EVENT_SOURCE", tagData.toEnumLabelString());
+            assertEquals( "1011", tagData.toEnumIDString());
+            assertEquals( "MESSAGE_EVENT_SOURCE", tagData.toEnumNameString());
+            assertEquals( "MessageEventSource", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag1011StrMessageEventSource tagData;
-        String oneElement;
-
-        oneElement = Tag1011StrMessageEventSource.TESTB_STR_MESSAGE_EVENT_SOURCE;
-        tagData = new Tag1011StrMessageEventSource( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag1011StrMessageEventSource( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag1011StrMessageEventSource tagData;
-        String oneElement;
-
-        oneElement = Tag1011StrMessageEventSource.TESTB_STR_MESSAGE_EVENT_SOURCE;
-        tagData = new Tag1011StrMessageEventSource( new MyStringType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag1011StrMessageEventSource( new MyStringType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag1011StrMessageEventSource tagData;
-        String oneElement;
-
-        oneElement = Tag1011StrMessageEventSource.TESTB_STR_MESSAGE_EVENT_SOURCE;
-        tagData = new Tag1011StrMessageEventSource( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag1011StrMessageEventSource( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag1011StrMessageEventSource tagData;
-        String oneElement;
-
-        oneElement = Tag1011StrMessageEventSource.TESTA_STR_MESSAGE_EVENT_SOURCE;
-        tagData = new Tag1011StrMessageEventSource( new MyStringType( oneElement ) );
-        assertEquals( "Tag1011StrMessageEventSource\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag1011StrMessageEventSource( new MyStringType( oneElement ));
+            assertEquals( "Tag1011StrMessageEventSource\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

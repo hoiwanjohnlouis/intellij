@@ -53,7 +53,22 @@ class Tag13EnuCommTypeTest {
         }
     }
     @Test
-    void Tag0013Test() {
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (Enum13CommType oneEnum : Enum13CommType.values()) {
+            tagData = new Tag13EnuCommType(oneEnum);
+            assertEquals( "FIX13_ENU_COMM_TYPE", tagData.toEnumLabelString());
+            assertEquals( "COMM_TYPE", tagData.toEnumNameString());
+            assertEquals( "13", tagData.toEnumIDString());
+            assertEquals( "CommType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
          * 1-6 CommTypes
          */
@@ -80,24 +95,8 @@ class Tag13EnuCommTypeTest {
         tagData = new Tag13EnuCommType(Enum13CommType.POINTS_PER_BOND);
         assertEquals( "6", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void FIXHeaderTest() {
-        // loop around the ENUM and process
-        for (Enum13CommType oneEnum : Enum13CommType.values()) {
-            tagData = new Tag13EnuCommType(oneEnum);
-            assertEquals( "FIX13_ENU_COMM_TYPE", tagData.toEnumLabelString());
-            assertEquals( "COMM_TYPE", tagData.toEnumNameString());
-            assertEquals( "13", tagData.toEnumIDString());
-            assertEquals( "CommType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
+
+
         // loop around the ENUM and process
         for (Enum13CommType oneEnum : Enum13CommType.values()) {
             tagData = new Tag13EnuCommType(oneEnum);

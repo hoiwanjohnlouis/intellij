@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.fix50.enums.Enum1043CollApplType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -36,32 +35,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    1 - General
  */
 class Tag1043EnuCollApplTypeTest {
-    @Test
-    void FIX1043Test() {
-        FIX50 fixData = FIX50.FIX1043_ENU_COLL_APPL_TYPE;
-        assertEquals( "1043", fixData.toEnumIDString());
-        assertEquals( "COLL_APPL_TYPE", fixData.toEnumNameString());
-        assertEquals( "CollApplType", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag1043Test() {
-        Tag1043EnuCollApplType tagData;
+    Tag1043EnuCollApplType tagData;
 
-        tagData = new Tag1043EnuCollApplType( Enum1043CollApplType.SPECIFIC_DEPOSIT );
-        assertEquals( Enum1043CollApplType.SPECIFIC_DEPOSIT.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag1043EnuCollApplType( Enum1043CollApplType.GENERAL );
-        assertEquals( Enum1043CollApplType.GENERAL.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
     @Test
-    void PrintFIXTagTest() {
-        Tag1043EnuCollApplType tagData;
-
+    void PrintTest() {
         // loop around the ENUM and process
         for ( Enum1043CollApplType oneEnum : Enum1043CollApplType.values()) {
             tagData = new Tag1043EnuCollApplType(oneEnum);
@@ -69,34 +46,59 @@ class Tag1043EnuCollApplTypeTest {
         }
     }
     @Test
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( Enum1043CollApplType oneEnum : Enum1043CollApplType.values()) {
+            tagData = new Tag1043EnuCollApplType(oneEnum);
+            assertEquals( "FIX1043_ENU_COLL_APPL_TYPE", tagData.toEnumLabelString());
+            assertEquals( "1043", tagData.toEnumIDString());
+            assertEquals( "COLL_APPL_TYPE", tagData.toEnumNameString());
+            assertEquals( "CollApplType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void TagGetDataValueTest() {
-        Tag1043EnuCollApplType tagData;
+        /*
+         *  <p>    0 - Specific Deposit
+         *  <p>    1 - General
+         */
+        tagData = new Tag1043EnuCollApplType( Enum1043CollApplType.SPECIFIC_DEPOSIT );
+        assertEquals( "0", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag1043EnuCollApplType( Enum1043CollApplType.GENERAL );
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
 
         // loop around the ENUM and process
-        for (Enum1043CollApplType oneEnum : Enum1043CollApplType.values()) {
+        for ( Enum1043CollApplType oneEnum : Enum1043CollApplType.values()) {
             tagData = new Tag1043EnuCollApplType(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag1043EnuCollApplType tagData;
-
         // loop around the ENUM and process
-        for (Enum1043CollApplType oneEnum : Enum1043CollApplType.values()) {
+        for ( Enum1043CollApplType oneEnum : Enum1043CollApplType.values()) {
             tagData = new Tag1043EnuCollApplType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag1043EnuCollApplType tagData;
-
         // loop around the ENUM and process
-        for (Enum1043CollApplType oneEnum : Enum1043CollApplType.values()) {
+        for ( Enum1043CollApplType oneEnum : Enum1043CollApplType.values()) {
             tagData = new Tag1043EnuCollApplType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -104,18 +106,16 @@ class Tag1043EnuCollApplTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag1043EnuCollApplType tagData;
-
         // loop around the ENUM and process
-        for (Enum1043CollApplType oneEnum : Enum1043CollApplType.values()) {
+        for ( Enum1043CollApplType oneEnum : Enum1043CollApplType.values()) {
             tagData = new Tag1043EnuCollApplType(oneEnum);
             assertEquals( "Tag1043EnuCollApplType\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

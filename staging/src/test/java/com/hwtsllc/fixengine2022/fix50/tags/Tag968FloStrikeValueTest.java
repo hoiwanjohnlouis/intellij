@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.MyFloatType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -30,94 +29,81 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  float
  *  <p>
  *  Used for derivatives.
- *  <p>
+ *  <p></p>
  *  The number of shares/units for the financial instrument involved in the option trade.
  */
 class Tag968FloStrikeValueTest {
+    Tag968FloStrikeValue tagData;
+    float [] TestArray = {
+            Tag968FloStrikeValue.TESTA_FLO_STRIKE_VALUE,
+            Tag968FloStrikeValue.TESTB_FLO_STRIKE_VALUE
+    };
+
     @Test
-    void FIX0968Test() {
-        FIX50 fixData = FIX50.FIX968_FLO_STRIKE_VALUE;
-        assertEquals( "968", fixData.toEnumIDString());
-        assertEquals( "STRIKE_VALUE", fixData.toEnumNameString());
-        assertEquals( "StrikeValue", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( float oneElement : TestArray ) {
+            tagData = new Tag968FloStrikeValue( new MyFloatType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0968Test() {
-        Tag968FloStrikeValue tagData;
-        float oneElement;
-
-        oneElement = Tag968FloStrikeValue.TESTA_FLO_STRIKE_VALUE;
-        tagData = new Tag968FloStrikeValue( new MyFloatType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag968FloStrikeValue.TESTB_FLO_STRIKE_VALUE;
-        tagData = new Tag968FloStrikeValue( new MyFloatType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag968FloStrikeValue tagData;
-        float oneElement;
-
-        oneElement = Tag968FloStrikeValue.TESTA_FLO_STRIKE_VALUE;
-        tagData = new Tag968FloStrikeValue( new MyFloatType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag968FloStrikeValue.TESTB_FLO_STRIKE_VALUE;
-        tagData = new Tag968FloStrikeValue( new MyFloatType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( float oneElement : TestArray ) {
+            tagData = new Tag968FloStrikeValue( new MyFloatType( oneElement ));
+            assertEquals( "FIX968_FLO_STRIKE_VALUE", tagData.toEnumLabelString());
+            assertEquals( "968", tagData.toEnumIDString());
+            assertEquals( "STRIKE_VALUE", tagData.toEnumNameString());
+            assertEquals( "StrikeValue", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag968FloStrikeValue tagData;
-        float oneElement;
-
-        oneElement = Tag968FloStrikeValue.TESTB_FLO_STRIKE_VALUE;
-        tagData = new Tag968FloStrikeValue( new MyFloatType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
+        // process array of tags
+        for ( float oneElement : TestArray ) {
+            tagData = new Tag968FloStrikeValue( new MyFloatType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag968FloStrikeValue tagData;
-        float oneElement;
-
-        oneElement = Tag968FloStrikeValue.TESTB_FLO_STRIKE_VALUE;
-        tagData = new Tag968FloStrikeValue( new MyFloatType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        // process array of tags
+        for ( float oneElement : TestArray ) {
+            tagData = new Tag968FloStrikeValue( new MyFloatType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag968FloStrikeValue tagData;
-        float oneElement;
-
-        oneElement = Tag968FloStrikeValue.TESTB_FLO_STRIKE_VALUE;
-        tagData = new Tag968FloStrikeValue( new MyFloatType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        // process array of tags
+        for ( float oneElement : TestArray ) {
+            tagData = new Tag968FloStrikeValue( new MyFloatType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag968FloStrikeValue tagData;
-        float oneElement;
-
-        oneElement = Tag968FloStrikeValue.TESTA_FLO_STRIKE_VALUE;
-        tagData = new Tag968FloStrikeValue( new MyFloatType( oneElement ) );
-        assertEquals( "Tag968FloStrikeValue\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement +
-                        "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( float oneElement : TestArray ) {
+            tagData = new Tag968FloStrikeValue( new MyFloatType( oneElement ));
+            assertEquals( "Tag968FloStrikeValue\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

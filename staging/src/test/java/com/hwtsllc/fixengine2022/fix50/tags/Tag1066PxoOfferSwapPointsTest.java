@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceOffsetType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -30,98 +29,85 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  PriceOffset
  *  <p>
  *  The offer FX Swap points for an FX Swap.
- *  <p>
+ *  <p></p>
  *  It is the "far offer forward points - near bid forward points".
- *  <p>
+ *  <p></p>
  *  Value can be negative. Expressed in decimal form.
- *  <p>
+ *  <p></p>
  *  For example, 61.99 points is expressed and sent as 0.006199
  */
 class Tag1066PxoOfferSwapPointsTest {
+    Tag1066PxoOfferSwapPoints tagData;
+    double [] TestArray = {
+            Tag1066PxoOfferSwapPoints.TESTA_PXO_OFFER_SWAP_POINTS,
+            Tag1066PxoOfferSwapPoints.TESTB_PXO_OFFER_SWAP_POINTS
+    };
+
     @Test
-    void FIX1066Test() {
-        FIX50 fixData = FIX50.FIX1066_PXO_OFFER_SWAP_POINTS;
-        assertEquals( "1066", fixData.toEnumIDString());
-        assertEquals( "OFFER_SWAP_POINTS", fixData.toEnumNameString());
-        assertEquals( "OfferSwapPoints", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag1066PxoOfferSwapPoints( new MyPriceOffsetType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag1066Test() {
-        Tag1065PxoBidSwapPoints tagData;
-        double oneElement;
-
-        oneElement = Tag1065PxoBidSwapPoints.TESTA_PXO_BID_SWAP_POINTS;
-        tagData = new Tag1065PxoBidSwapPoints( new MyPriceOffsetType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue());
-
-        oneElement = Tag1065PxoBidSwapPoints.TESTB_PXO_BID_SWAP_POINTS;
-        tagData = new Tag1065PxoBidSwapPoints( new MyPriceOffsetType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag1065PxoBidSwapPoints tagData;
-        double oneElement;
-
-        oneElement = Tag1065PxoBidSwapPoints.TESTA_PXO_BID_SWAP_POINTS;
-        tagData = new Tag1065PxoBidSwapPoints( new MyPriceOffsetType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag1065PxoBidSwapPoints.TESTB_PXO_BID_SWAP_POINTS;
-        tagData = new Tag1065PxoBidSwapPoints( new MyPriceOffsetType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag1066PxoOfferSwapPoints( new MyPriceOffsetType( oneElement ));
+            assertEquals( "FIX1066_PXO_OFFER_SWAP_POINTS", tagData.toEnumLabelString());
+            assertEquals( "1066", tagData.toEnumIDString());
+            assertEquals( "OFFER_SWAP_POINTS", tagData.toEnumNameString());
+            assertEquals( "OfferSwapPoints", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag1065PxoBidSwapPoints tagData;
-        double oneElement;
-
-        oneElement = Tag1065PxoBidSwapPoints.TESTB_PXO_BID_SWAP_POINTS;
-        tagData = new Tag1065PxoBidSwapPoints( new MyPriceOffsetType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag1066PxoOfferSwapPoints( new MyPriceOffsetType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue());
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag1065PxoBidSwapPoints tagData;
-        double oneElement;
-
-        oneElement = Tag1065PxoBidSwapPoints.TESTB_PXO_BID_SWAP_POINTS;
-        tagData = new Tag1065PxoBidSwapPoints( new MyPriceOffsetType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag1066PxoOfferSwapPoints( new MyPriceOffsetType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag1065PxoBidSwapPoints tagData;
-        double oneElement;
-
-        oneElement = Tag1065PxoBidSwapPoints.TESTB_PXO_BID_SWAP_POINTS;
-        tagData = new Tag1065PxoBidSwapPoints( new MyPriceOffsetType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag1066PxoOfferSwapPoints( new MyPriceOffsetType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag1065PxoBidSwapPoints tagData;
-        double oneElement;
-
-        oneElement = Tag1065PxoBidSwapPoints.TESTA_PXO_BID_SWAP_POINTS;
-        tagData = new Tag1065PxoBidSwapPoints( new MyPriceOffsetType( oneElement ) );
-        assertEquals( "Tag1065PxoBidSwapPoints\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag1066PxoOfferSwapPoints( new MyPriceOffsetType( oneElement ));
+            assertEquals( "Tag1066PxoOfferSwapPoints\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

@@ -47,25 +47,6 @@ class Tag4EnuAdvSideTest {
             System.out.println( tagData.toVerboseString() );
         }
     }
-
-    @Test
-    void Tag0004Test() {
-        tagData = new Tag4EnuAdvSide( Enum4AdvSide.BUY);
-        assertEquals( "B", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        tagData = new Tag4EnuAdvSide( Enum4AdvSide.SELL);
-        assertEquals( "S", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        tagData = new Tag4EnuAdvSide( Enum4AdvSide.CROSS);
-        assertEquals( "X", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        tagData = new Tag4EnuAdvSide( Enum4AdvSide.TRADE);
-        assertEquals( "T", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-    }
     @Test
     void FIXHeaderTest() {
         // loop around the ENUM and process
@@ -83,6 +64,23 @@ class Tag4EnuAdvSideTest {
     }
     @Test
     void TagGetDataValueTest() {
+        tagData = new Tag4EnuAdvSide( Enum4AdvSide.BUY);
+        assertEquals( "B", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag4EnuAdvSide( Enum4AdvSide.SELL);
+        assertEquals( "S", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag4EnuAdvSide( Enum4AdvSide.CROSS);
+        assertEquals( "X", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag4EnuAdvSide( Enum4AdvSide.TRADE);
+        assertEquals( "T", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+
         // loop around the ENUM and process
         for (Enum4AdvSide oneEnum : Enum4AdvSide.values()) {
             tagData = new Tag4EnuAdvSide(oneEnum);

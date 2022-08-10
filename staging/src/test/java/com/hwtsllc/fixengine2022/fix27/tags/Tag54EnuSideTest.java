@@ -69,7 +69,22 @@ class Tag54EnuSideTest {
         }
     }
     @Test
-    void Tag0054Test() {
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (MyEnumSide oneEnum : MyEnumSide.values()) {
+            tagData = new Tag54EnuSide(oneEnum);
+            assertEquals( "FIX54_ENU_SIDE", tagData.toEnumLabelString());
+            assertEquals( "SIDE", tagData.toEnumNameString());
+            assertEquals( "54", tagData.toEnumIDString());
+            assertEquals( "Side", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
          * 1-9 msg types
          */
@@ -142,24 +157,8 @@ class Tag54EnuSideTest {
         tagData = new Tag54EnuSide(MyEnumSide.BORROW_FINANCING);
         assertEquals("G", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void FIXHeaderTest() {
-        // loop around the ENUM and process
-        for (MyEnumSide oneEnum : MyEnumSide.values()) {
-            tagData = new Tag54EnuSide(oneEnum);
-            assertEquals( "FIX54_ENU_SIDE", tagData.toEnumLabelString());
-            assertEquals( "SIDE", tagData.toEnumNameString());
-            assertEquals( "54", tagData.toEnumIDString());
-            assertEquals( "Side", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
+
+
         // loop around the ENUM and process
         for (MyEnumSide oneEnum : MyEnumSide.values()) {
             tagData = new Tag54EnuSide(oneEnum);

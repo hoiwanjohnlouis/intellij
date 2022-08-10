@@ -85,7 +85,22 @@ class Tag47EnuRule80ATest {
         }
     }
     @Test
-    void Tag0047Test() {
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (Enum47Rule80A oneEnum : Enum47Rule80A.values()) {
+            tagData = new Tag47EnuRule80A(oneEnum);
+            assertEquals( "FIX47_ENU_RULE_80_A", tagData.toEnumLabelString());
+            assertEquals( "RULE_80_A", tagData.toEnumNameString());
+            assertEquals( "47", tagData.toEnumIDString());
+            assertEquals( "Rule80A (no longer used)", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         tagData = new Tag47EnuRule80A(Enum47Rule80A.AGENCY_SINGLE_ORDER);
         assertEquals( "A", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -181,24 +196,8 @@ class Tag47EnuRule80ATest {
         tagData = new Tag47EnuRule80A(Enum47Rule80A.SHORT_EXEMPT_NON_MEMBER_MARKET_MAKER_A_R);
         assertEquals( "Z", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void FIXHeaderTest() {
-        // loop around the ENUM and process
-        for (Enum47Rule80A oneEnum : Enum47Rule80A.values()) {
-            tagData = new Tag47EnuRule80A(oneEnum);
-            assertEquals( "FIX47_ENU_RULE_80_A", tagData.toEnumLabelString());
-            assertEquals( "RULE_80_A", tagData.toEnumNameString());
-            assertEquals( "47", tagData.toEnumIDString());
-            assertEquals( "Rule80A (no longer used)", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
+
+
         // loop around the ENUM and process
         for (Enum47Rule80A oneEnum : Enum47Rule80A.values()) {
             tagData = new Tag47EnuRule80A(oneEnum);

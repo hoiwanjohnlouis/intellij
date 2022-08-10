@@ -27,8 +27,12 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  StrikeMultiplier
  *  float
  *  <p>
+ *  Unique identifier for the Market Data Report.
+ *  <p></p>
  *  Used for derivatives.
- *  <p>
+ *  <p></p>
+ *  Unique identifier for the Market Data Report.
+ *  <p></p>
  *  Multiplier applied to the strike price for the purpose of calculating the settlement value.
  */
 public class Tag967FloStrikeMultiplier extends FIX50Abstract implements LogValuePairString, LogVerboseString {

@@ -27,7 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  155
  *  SettlCurrFxRate
  *  float
- *  <p></p>
+ *  <p>
  *  Foreign exchange rate used to compute SettlCurrAmt (9) from Currency (5) to SettlCurrency (20)
  */
 class Tag155FloSettlCurrFxRateTest {

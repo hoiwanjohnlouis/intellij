@@ -14,14 +14,15 @@
  *   limitations under the License.
  */
 
-package com.hwtsllc.fixengine2022.fix50.tags;
+package com.hwtsllc.fixengine2022.datatypes;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
- *  1132
- *  TZTransactTime
- *  TZTimestamp
- *  <p>
+ *  TZTimestampType
+ *  <p></p>
  *  Transact time in the local date-time stamp with a TZ offset to UTC identified
  */
-public class Tag1132TZTransactTime {
+class MyTZTimestampTypeTest {
+
 }

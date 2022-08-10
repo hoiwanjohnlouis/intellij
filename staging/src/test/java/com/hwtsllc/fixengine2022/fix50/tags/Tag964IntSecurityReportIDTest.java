@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.MyIntType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -30,93 +29,81 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  int
  *  <p>
  *  Security Report ID.
- *  <p>
+ *  <p></p>
  *  Unique identifier for the Security Report.
  */
 class Tag964IntSecurityReportIDTest {
+    Tag964IntSecurityReportID tagData;
+    int [] TestArray = {
+            Tag964IntSecurityReportID.TESTA_INT_SECURITY_REPORT_ID,
+            Tag964IntSecurityReportID.TESTB_INT_SECURITY_REPORT_ID
+    };
+
     @Test
-    void FIX0964Test() {
-        FIX50 fixData = FIX50.FIX964_INT_SECURITY_REPORT_ID;
-        assertEquals( "964", fixData.toEnumIDString());
-        assertEquals( "SECURITY_REPORT_ID", fixData.toEnumNameString());
-        assertEquals( "SecurityReportID", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag964IntSecurityReportID( new MyIntType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0964Test() {
-        Tag964IntSecurityReportID tagData;
-        int oneElement;
-
-        oneElement = Tag964IntSecurityReportID.TESTA_INT_SECURITY_REPORT_ID;
-        tagData = new Tag964IntSecurityReportID( new MyIntType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
-
-        oneElement = Tag964IntSecurityReportID.TESTB_INT_SECURITY_REPORT_ID;
-        tagData = new Tag964IntSecurityReportID( new MyIntType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag964IntSecurityReportID tagData;
-        int oneElement;
-
-        oneElement = Tag964IntSecurityReportID.TESTA_INT_SECURITY_REPORT_ID;
-        tagData = new Tag964IntSecurityReportID( new MyIntType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag964IntSecurityReportID.TESTB_INT_SECURITY_REPORT_ID;
-        tagData = new Tag964IntSecurityReportID( new MyIntType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag964IntSecurityReportID( new MyIntType( oneElement ));
+            assertEquals( "FIX964_INT_SECURITY_REPORT_ID", tagData.toEnumLabelString());
+            assertEquals( "964", tagData.toEnumIDString());
+            assertEquals( "SECURITY_REPORT_ID", tagData.toEnumNameString());
+            assertEquals( "SecurityReportID", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag964IntSecurityReportID tagData;
-        int oneElement;
-
-        oneElement = Tag964IntSecurityReportID.TESTB_INT_SECURITY_REPORT_ID;
-        tagData = new Tag964IntSecurityReportID( new MyIntType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag964IntSecurityReportID( new MyIntType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue() );
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag964IntSecurityReportID tagData;
-        int oneElement;
-
-        oneElement = Tag964IntSecurityReportID.TESTB_INT_SECURITY_REPORT_ID;
-        tagData = new Tag964IntSecurityReportID( new MyIntType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag964IntSecurityReportID( new MyIntType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag964IntSecurityReportID tagData;
-        int oneElement;
-
-        oneElement = Tag964IntSecurityReportID.TESTB_INT_SECURITY_REPORT_ID;
-        tagData = new Tag964IntSecurityReportID( new MyIntType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag964IntSecurityReportID( new MyIntType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag964IntSecurityReportID tagData;
-        int oneElement;
-
-        oneElement = Tag964IntSecurityReportID.TESTA_INT_SECURITY_REPORT_ID;
-        tagData = new Tag964IntSecurityReportID( new MyIntType( oneElement ) );
-        assertEquals( "Tag964IntSecurityReportID\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag964IntSecurityReportID( new MyIntType( oneElement ));
+            assertEquals( "Tag964IntSecurityReportID\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

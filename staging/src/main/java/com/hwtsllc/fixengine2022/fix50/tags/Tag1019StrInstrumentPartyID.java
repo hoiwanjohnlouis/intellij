@@ -28,7 +28,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  String
  *  <p>
  *  PartyID value within an instrument party repeating group.
- *  <p>
+ *  <p></p>
  *  Same values as PartyID (448)
  */
 public class Tag1019StrInstrumentPartyID extends FIX50Abstract implements LogValuePairString, LogVerboseString {

@@ -39,26 +39,12 @@ class Tag5Enu5AdvTransTypeTest {
     Tag5EnuAdvTransType tagData;
 
     @Test
-    void PrintFIXTagTest() {
+    void PrintTest() {
         // loop around the ENUM and process
         for (Enum5AdvTransType oneEnum : Enum5AdvTransType.values()) {
             tagData = new Tag5EnuAdvTransType(oneEnum);
             System.out.println( tagData.toVerboseString() );
         }
-    }
-    @Test
-    void Tag0005Test() {
-        tagData = new Tag5EnuAdvTransType(Enum5AdvTransType.NEW);
-        assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag5EnuAdvTransType(Enum5AdvTransType.CANCEL);
-        assertEquals( "C", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag5EnuAdvTransType(Enum5AdvTransType.REPLACE);
-        assertEquals( "R", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
     }
     @Test
     void FIXHeaderTest() {
@@ -77,6 +63,19 @@ class Tag5Enu5AdvTransTypeTest {
     }
     @Test
     void TagGetDataValueTest() {
+        tagData = new Tag5EnuAdvTransType(Enum5AdvTransType.NEW);
+        assertEquals( "N", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag5EnuAdvTransType(Enum5AdvTransType.CANCEL);
+        assertEquals( "C", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag5EnuAdvTransType(Enum5AdvTransType.REPLACE);
+        assertEquals( "R", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
         // loop around the ENUM and process
         for (Enum5AdvTransType oneEnum : Enum5AdvTransType.values()) {
             tagData = new Tag5EnuAdvTransType(oneEnum);

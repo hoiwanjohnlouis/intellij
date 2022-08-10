@@ -56,7 +56,22 @@ class Tag81EnuProcessCodeTest {
         }
     }
     @Test
-    void Tag0081Test() {
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (Enum81ProcessCode oneEnum : Enum81ProcessCode.values()) {
+            tagData = new Tag81EnuProcessCode(oneEnum);
+            assertEquals( "FIX81_ENU_PROCESS_CODE", tagData.toEnumLabelString());
+            assertEquals( "PROCESS_CODE", tagData.toEnumNameString());
+            assertEquals( "81", tagData.toEnumIDString());
+            assertEquals( "ProcessCode", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
          * 0-6 AllocRejCode types
          */
@@ -87,24 +102,8 @@ class Tag81EnuProcessCodeTest {
         tagData = new Tag81EnuProcessCode(Enum81ProcessCode.PLAN_SPONSOR);
         assertEquals( "6", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void FIXHeaderTest() {
-        // loop around the ENUM and process
-        for (Enum81ProcessCode oneEnum : Enum81ProcessCode.values()) {
-            tagData = new Tag81EnuProcessCode(oneEnum);
-            assertEquals( "FIX81_ENU_PROCESS_CODE", tagData.toEnumLabelString());
-            assertEquals( "PROCESS_CODE", tagData.toEnumNameString());
-            assertEquals( "81", tagData.toEnumIDString());
-            assertEquals( "ProcessCode", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
+
+
         // loop around the ENUM and process
         for (Enum81ProcessCode oneEnum : Enum81ProcessCode.values()) {
             tagData = new Tag81EnuProcessCode(oneEnum);

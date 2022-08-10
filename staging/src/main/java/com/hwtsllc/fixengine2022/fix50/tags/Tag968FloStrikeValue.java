@@ -28,7 +28,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  float
  *  <p>
  *  Used for derivatives.
- *  <p>
+ *  <p></p>
  *  The number of shares/units for the financial instrument involved in the option trade.
  */
 public class Tag968FloStrikeValue extends FIX50Abstract implements LogValuePairString, LogVerboseString {

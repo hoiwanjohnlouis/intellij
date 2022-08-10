@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.fix50.enums.Enum1101TriggerAction;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -37,36 +36,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    3 - Cancel
  */
 class Tag1101EnuTriggerActionTest {
+    Tag1101EnuTriggerAction tagData;
+
     @Test
-    void FIX1101Test() {
-        FIX50 fixData = FIX50.FIX1101_ENU_TRIGGER_ACTION;
-        assertEquals( "1101", fixData.toEnumIDString());
-        assertEquals( "TRIGGER_ACTION", fixData.toEnumNameString());
-        assertEquals( "TriggerAction", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag1101Test() {
-        Tag1101EnuTriggerAction tagData;
-
-        tagData = new Tag1101EnuTriggerAction( Enum1101TriggerAction.ACTIVATE );
-        assertEquals( Enum1101TriggerAction.ACTIVATE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag1101EnuTriggerAction( Enum1101TriggerAction.MODIFY );
-        assertEquals( Enum1101TriggerAction.MODIFY.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag1101EnuTriggerAction( Enum1101TriggerAction.CANCEL );
-        assertEquals( Enum1101TriggerAction.CANCEL.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag1101EnuTriggerAction tagData;
-
+    void PrintTest() {
         // loop around the ENUM and process
         for ( Enum1101TriggerAction oneEnum : Enum1101TriggerAction.values()) {
             tagData = new Tag1101EnuTriggerAction(oneEnum);
@@ -74,34 +47,64 @@ class Tag1101EnuTriggerActionTest {
         }
     }
     @Test
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( Enum1101TriggerAction oneEnum : Enum1101TriggerAction.values()) {
+            tagData = new Tag1101EnuTriggerAction(oneEnum);
+            assertEquals( "FIX1101_ENU_TRIGGER_ACTION", tagData.toEnumLabelString());
+            assertEquals( "1101", tagData.toEnumIDString());
+            assertEquals( "TRIGGER_ACTION", tagData.toEnumNameString());
+            assertEquals( "TriggerAction", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void TagGetDataValueTest() {
-        Tag1101EnuTriggerAction tagData;
+        /*
+         *  <p>    1 - Activate
+         *  <p>    2 - Modify
+         *  <p>    3 - Cancel
+         */
+        tagData = new Tag1101EnuTriggerAction( Enum1101TriggerAction.ACTIVATE );
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag1101EnuTriggerAction( Enum1101TriggerAction.MODIFY );
+        assertEquals( "2", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag1101EnuTriggerAction( Enum1101TriggerAction.CANCEL );
+        assertEquals( "3", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
 
         // loop around the ENUM and process
-        for (Enum1101TriggerAction oneEnum : Enum1101TriggerAction.values()) {
+        for ( Enum1101TriggerAction oneEnum : Enum1101TriggerAction.values()) {
             tagData = new Tag1101EnuTriggerAction(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag1101EnuTriggerAction tagData;
-
         // loop around the ENUM and process
-        for (Enum1101TriggerAction oneEnum : Enum1101TriggerAction.values()) {
+        for ( Enum1101TriggerAction oneEnum : Enum1101TriggerAction.values()) {
             tagData = new Tag1101EnuTriggerAction(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag1101EnuTriggerAction tagData;
-
         // loop around the ENUM and process
-        for (Enum1101TriggerAction oneEnum : Enum1101TriggerAction.values()) {
+        for ( Enum1101TriggerAction oneEnum : Enum1101TriggerAction.values()) {
             tagData = new Tag1101EnuTriggerAction(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -109,18 +112,16 @@ class Tag1101EnuTriggerActionTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag1101EnuTriggerAction tagData;
-
         // loop around the ENUM and process
-        for (Enum1101TriggerAction oneEnum : Enum1101TriggerAction.values()) {
+        for ( Enum1101TriggerAction oneEnum : Enum1101TriggerAction.values()) {
             tagData = new Tag1101EnuTriggerAction(oneEnum);
             assertEquals( "Tag1101EnuTriggerAction\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

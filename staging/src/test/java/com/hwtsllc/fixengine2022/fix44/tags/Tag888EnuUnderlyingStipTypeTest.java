@@ -131,13 +131,6 @@ class Tag888EnuUnderlyingStipTypeTest {
     Tag888EnuUnderlyingStipType tagData;
 
     @Test
-    void Tag0888Test() {
-        tagData = new Tag888EnuUnderlyingStipType(MyEnumStipulationType.SINGLE_MONTHLY_MORTALITY);
-        assertEquals( MyEnumStipulationType.SINGLE_MONTHLY_MORTALITY.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-
-    @Test
     void PrintTest() {
         // loop around the ENUM and process
         for ( MyEnumStipulationType oneEnum : MyEnumStipulationType.values()) {

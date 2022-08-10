@@ -70,7 +70,22 @@ class Tag103EnuOrdRejReasonTest {
         }
     }
     @Test
-    void Tag0103Test() {
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (Enum103OrdRejReason oneEnum : Enum103OrdRejReason.values()) {
+            tagData = new Tag103EnuOrdRejReason(oneEnum);
+            assertEquals( "FIX103_ENU_ORD_REJ_REASON", tagData.toEnumLabelString());
+            assertEquals( "ORD_REJ_REASON", tagData.toEnumNameString());
+            assertEquals( "103", tagData.toEnumIDString());
+            assertEquals( "OrdRejReason",  tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
          * 1-15, 18, 99 OrdRejReason types
          */
@@ -158,24 +173,8 @@ class Tag103EnuOrdRejReasonTest {
         tagData = new Tag103EnuOrdRejReason(Enum103OrdRejReason.OTHER);
         assertEquals( "99", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void FIXHeaderTest() {
-        // loop around the ENUM and process
-        for (Enum103OrdRejReason oneEnum : Enum103OrdRejReason.values()) {
-            tagData = new Tag103EnuOrdRejReason(oneEnum);
-            assertEquals( "FIX103_ENU_ORD_REJ_REASON", tagData.toEnumLabelString());
-            assertEquals( "ORD_REJ_REASON", tagData.toEnumNameString());
-            assertEquals( "103", tagData.toEnumIDString());
-            assertEquals( "OrdRejReason",  tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
+
+
         // loop around the ENUM and process
         for (Enum103OrdRejReason oneEnum : Enum103OrdRejReason.values()) {
             tagData = new Tag103EnuOrdRejReason(oneEnum);

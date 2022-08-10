@@ -81,7 +81,22 @@ class Tag40EnuOrdTypeTest {
         }
     }
     @Test
-    void Tag0040Test() {
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (Enum40OrdType oneEnum : Enum40OrdType.values()) {
+            tagData = new Tag40EnuOrdType(oneEnum);
+            assertEquals( "FIX40_ENU_ORD_TYPE", tagData.toEnumLabelString());
+            assertEquals( "ORD_TYPE", tagData.toEnumNameString());
+            assertEquals( "40", tagData.toEnumIDString());
+            assertEquals( "OrdType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
          * 1-9 Order Type msg
          */
@@ -187,24 +202,8 @@ class Tag40EnuOrdTypeTest {
         tagData = new Tag40EnuOrdType(Enum40OrdType.COUNTER_ORDER_SELECTION);
         assertEquals( "Q", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void FIXHeaderTest() {
-        // loop around the ENUM and process
-        for (Enum40OrdType oneEnum : Enum40OrdType.values()) {
-            tagData = new Tag40EnuOrdType(oneEnum);
-            assertEquals( "FIX40_ENU_ORD_TYPE", tagData.toEnumLabelString());
-            assertEquals( "ORD_TYPE", tagData.toEnumNameString());
-            assertEquals( "40", tagData.toEnumIDString());
-            assertEquals( "OrdType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
+
+
         // loop around the ENUM and process
         for (Enum40OrdType oneEnum : Enum40OrdType.values()) {
             tagData = new Tag40EnuOrdType(oneEnum);

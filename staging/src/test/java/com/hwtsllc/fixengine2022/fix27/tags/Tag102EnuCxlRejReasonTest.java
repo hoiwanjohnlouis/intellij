@@ -56,7 +56,22 @@ class Tag102EnuCxlRejReasonTest {
         }
     }
     @Test
-    void Tag0102Test() {
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (Enum102CxlRejReason oneEnum : Enum102CxlRejReason.values()) {
+            tagData = new Tag102EnuCxlRejReason(oneEnum);
+            assertEquals( "FIX102_ENU_CXL_REJ_REASON", tagData.toEnumLabelString());
+            assertEquals( "CXL_REJ_REASON", tagData.toEnumNameString() );
+            assertEquals( "102", tagData.toEnumIDString() );
+            assertEquals( "CxlRejReason", tagData.toEnumDescriptionString() );
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
          * 0-6, 18, 99 CxlRejReason type
          */
@@ -106,24 +121,8 @@ class Tag102EnuCxlRejReasonTest {
         tagData = new Tag102EnuCxlRejReason(Enum102CxlRejReason.OTHER);
         assertEquals( "99", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void FIXHeaderTest() {
-        // loop around the ENUM and process
-        for (Enum102CxlRejReason oneEnum : Enum102CxlRejReason.values()) {
-            tagData = new Tag102EnuCxlRejReason(oneEnum);
-            assertEquals( "FIX102_ENU_CXL_REJ_REASON", tagData.toEnumLabelString());
-            assertEquals( "CXL_REJ_REASON", tagData.toEnumNameString() );
-            assertEquals( "102", tagData.toEnumIDString() );
-            assertEquals( "CxlRejReason", tagData.toEnumDescriptionString() );
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
+
+
         // loop around the ENUM and process
         for (Enum102CxlRejReason oneEnum : Enum102CxlRejReason.values()) {
             tagData = new Tag102EnuCxlRejReason(oneEnum);

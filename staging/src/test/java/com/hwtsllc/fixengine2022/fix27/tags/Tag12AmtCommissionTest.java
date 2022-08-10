@@ -27,7 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  12
  *  Commission
  *  Amt
- *  <p></p>
+ *  <p>
  *  Commission.
  *  <p></p>
  *  Note if CommType (13) is percentage, Commission of 5% should be represented as .05.

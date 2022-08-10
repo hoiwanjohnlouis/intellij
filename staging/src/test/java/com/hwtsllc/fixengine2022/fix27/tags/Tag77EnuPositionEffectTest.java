@@ -68,7 +68,22 @@ class Tag77EnuPositionEffectTest {
         }
     }
     @Test
-    void Tag0077Test() {
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (MyEnumPositionEffect oneEnum : MyEnumPositionEffect.values()) {
+            tagData = new Tag77EnuPositionEffect(oneEnum);
+            assertEquals( "FIX77_ENU_POSITION_EFFECT", tagData.toEnumLabelString());
+            assertEquals( "POSITION_EFFECT", tagData.toEnumNameString());
+            assertEquals( "77", tagData.toEnumIDString());
+            assertEquals( "PositionEffect", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
          * O, F, C, and R PositionEffect types
          */
@@ -87,24 +102,8 @@ class Tag77EnuPositionEffectTest {
         tagData = new Tag77EnuPositionEffect(MyEnumPositionEffect.ROLLED);
         assertEquals( "R", tagData.getDataValue());
         assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void FIXHeaderTest() {
-        // loop around the ENUM and process
-        for (MyEnumPositionEffect oneEnum : MyEnumPositionEffect.values()) {
-            tagData = new Tag77EnuPositionEffect(oneEnum);
-            assertEquals( "FIX77_ENU_POSITION_EFFECT", tagData.toEnumLabelString());
-            assertEquals( "POSITION_EFFECT", tagData.toEnumNameString());
-            assertEquals( "77", tagData.toEnumIDString());
-            assertEquals( "PositionEffect", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
+
+
         // loop around the ENUM and process
         for (MyEnumPositionEffect oneEnum : MyEnumPositionEffect.values()) {
             tagData = new Tag77EnuPositionEffect(oneEnum);

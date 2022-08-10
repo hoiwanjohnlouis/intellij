@@ -28,7 +28,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  int
  *  <p>
  *  Integer to convey the level of a bid or offer at a given price level.
- *  <p>
+ *  <p></p>
  *  This is in contrast to MDEntryPositionNo which is used to
  *  convey the position of an order within a Price level
  */

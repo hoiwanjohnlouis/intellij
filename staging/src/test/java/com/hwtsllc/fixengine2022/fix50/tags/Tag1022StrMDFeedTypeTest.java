@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -33,94 +32,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  i.e. Regular and Market Maker, Bandwidth Intensive or Bandwidth Conservative
  */
 class Tag1022StrMDFeedTypeTest {
+    Tag1022StrMDFeedType tagData;
+    String [] TestArray = {
+            Tag1022StrMDFeedType.TESTA_STR_MD_FEED_TYPE,
+            Tag1022StrMDFeedType.TESTB_STR_MD_FEED_TYPE
+    };
+
     @Test
-    void FIX1022Test() {
-        FIX50 fixData = FIX50.FIX1022_STR_MD_FEED_TYPE;
-        assertEquals( "1022", fixData.toEnumIDString());
-        assertEquals( "MD_FEED_TYPE", fixData.toEnumNameString());
-        assertEquals( "MDFeedType", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag1022StrMDFeedType( new MyStringType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag1022Test() {
-        Tag1022StrMDFeedType tagData;
-        String oneElement;
-
-        oneElement = "Chloe Kim";
-        tagData = new Tag1022StrMDFeedType( new MyStringType(oneElement) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag1022StrMDFeedType.TESTA_STR_MD_FEED_TYPE;
-        tagData = new Tag1022StrMDFeedType( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag1022StrMDFeedType.TESTB_STR_MD_FEED_TYPE;
-        tagData = new Tag1022StrMDFeedType( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag1022StrMDFeedType tagData;
-        String oneElement;
-
-        oneElement = Tag1022StrMDFeedType.TESTA_STR_MD_FEED_TYPE;
-        tagData = new Tag1022StrMDFeedType( new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag1022StrMDFeedType.TESTB_STR_MD_FEED_TYPE;
-        tagData = new Tag1022StrMDFeedType( new MyStringType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag1022StrMDFeedType( new MyStringType( oneElement ));
+            assertEquals( "FIX1022_STR_MD_FEED_TYPE", tagData.toEnumLabelString());
+            assertEquals( "1022", tagData.toEnumIDString());
+            assertEquals( "MD_FEED_TYPE", tagData.toEnumNameString());
+            assertEquals( "MDFeedType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag1022StrMDFeedType tagData;
-        String oneElement;
-
-        oneElement = Tag1022StrMDFeedType.TESTB_STR_MD_FEED_TYPE;
-        tagData = new Tag1022StrMDFeedType( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag1022StrMDFeedType( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag1022StrMDFeedType tagData;
-        String oneElement;
-
-        oneElement = Tag1022StrMDFeedType.TESTB_STR_MD_FEED_TYPE;
-        tagData = new Tag1022StrMDFeedType( new MyStringType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag1022StrMDFeedType( new MyStringType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag1022StrMDFeedType tagData;
-        String oneElement;
-
-        oneElement = Tag1022StrMDFeedType.TESTB_STR_MD_FEED_TYPE;
-        tagData = new Tag1022StrMDFeedType( new MyStringType( oneElement ) );
-        assertEquals( oneElement, tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag1022StrMDFeedType( new MyStringType( oneElement ));
+            assertEquals( oneElement, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag1022StrMDFeedType tagData;
-        String oneElement;
-
-        oneElement = Tag1022StrMDFeedType.TESTA_STR_MD_FEED_TYPE;
-        tagData = new Tag1022StrMDFeedType( new MyStringType( oneElement ) );
-        assertEquals( "Tag1022StrMDFeedType\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            tagData = new Tag1022StrMDFeedType( new MyStringType( oneElement ));
+            assertEquals( "Tag1022StrMDFeedType\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

@@ -28,11 +28,11 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  float
  *  <p>
  *  Expresses the risk of an option leg
- *  <p>
+ *  <p></p>
  *  Value must be between -1 and 1.
- *  <p>
+ *  <p></p>
  *  A Call Option will require a ratio value between 0 and 1
- *  <p>
+ *  <p></p>
  *  A Put Option will require a ratio value between -1 and 0
  */
 public class Tag1017FloLegOptionRatio extends FIX50Abstract implements LogValuePairString, LogVerboseString {

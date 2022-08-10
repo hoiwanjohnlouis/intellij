@@ -29,9 +29,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>
  *  For FX Swap, this is used to express the last market event for the differential
  *  between the far leg's bid/offer and the near leg's bid/offer in a fill or partial fill.
- *  <p>
+ *  <p></p>
  *  Value can be negative. Expressed in decimal form.
- *  <p>
+ *  <p></p>
  *  For example, 61.99 points is expressed and sent as 0.006199
  */
 public class Tag1071PxoLastSwapPoints extends FIX50Abstract implements LogValuePairString, LogVerboseString {

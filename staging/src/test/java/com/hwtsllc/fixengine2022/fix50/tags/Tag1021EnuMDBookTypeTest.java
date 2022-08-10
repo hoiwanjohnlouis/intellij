@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.fix50.enums.Enum1021MDBookType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -39,36 +38,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    3 - Order Depth
  */
 class Tag1021EnuMDBookTypeTest {
+    Tag1021EnuMDBookType tagData;
+
     @Test
-    void FIX1021Test() {
-        FIX50 fixData = FIX50.FIX1021_ENU_MD_BOOK_TYPE;
-        assertEquals( "1021", fixData.toEnumIDString());
-        assertEquals( "MD_BOOK_TYPE", fixData.toEnumNameString());
-        assertEquals( "MDBookType", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag1021Test() {
-        Tag1021EnuMDBookType tagData;
-
-        tagData = new Tag1021EnuMDBookType( Enum1021MDBookType.TOP_OF_BOOK );
-        assertEquals( Enum1021MDBookType.TOP_OF_BOOK.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag1021EnuMDBookType( Enum1021MDBookType.PRICE_DEPTH );
-        assertEquals( Enum1021MDBookType.PRICE_DEPTH.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag1021EnuMDBookType( Enum1021MDBookType.ORDER_DEPTH );
-        assertEquals( Enum1021MDBookType.ORDER_DEPTH.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag1021EnuMDBookType tagData;
-
+    void PrintTest() {
         // loop around the ENUM and process
         for ( Enum1021MDBookType oneEnum : Enum1021MDBookType.values()) {
             tagData = new Tag1021EnuMDBookType(oneEnum);
@@ -76,34 +49,64 @@ class Tag1021EnuMDBookTypeTest {
         }
     }
     @Test
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( Enum1021MDBookType oneEnum : Enum1021MDBookType.values()) {
+            tagData = new Tag1021EnuMDBookType(oneEnum);
+            assertEquals( "FIX1021_ENU_MD_BOOK_TYPE", tagData.toEnumLabelString());
+            assertEquals( "1021", tagData.toEnumIDString());
+            assertEquals( "MD_BOOK_TYPE", tagData.toEnumNameString());
+            assertEquals( "MDBookType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void TagGetDataValueTest() {
-        Tag1021EnuMDBookType tagData;
+        /*
+         *  <p>    1 - Top of Book
+         *  <p>    2 - Price Depth
+         *  <p>    3 - Order Depth
+         */
+        tagData = new Tag1021EnuMDBookType( Enum1021MDBookType.TOP_OF_BOOK );
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag1021EnuMDBookType( Enum1021MDBookType.PRICE_DEPTH );
+        assertEquals( "2", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag1021EnuMDBookType( Enum1021MDBookType.ORDER_DEPTH );
+        assertEquals( "3", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
 
         // loop around the ENUM and process
-        for (Enum1021MDBookType oneEnum : Enum1021MDBookType.values()) {
+        for ( Enum1021MDBookType oneEnum : Enum1021MDBookType.values()) {
             tagData = new Tag1021EnuMDBookType(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag1021EnuMDBookType tagData;
-
         // loop around the ENUM and process
-        for (Enum1021MDBookType oneEnum : Enum1021MDBookType.values()) {
+        for ( Enum1021MDBookType oneEnum : Enum1021MDBookType.values()) {
             tagData = new Tag1021EnuMDBookType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag1021EnuMDBookType tagData;
-
         // loop around the ENUM and process
-        for (Enum1021MDBookType oneEnum : Enum1021MDBookType.values()) {
+        for ( Enum1021MDBookType oneEnum : Enum1021MDBookType.values()) {
             tagData = new Tag1021EnuMDBookType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -111,18 +114,16 @@ class Tag1021EnuMDBookTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag1021EnuMDBookType tagData;
-
         // loop around the ENUM and process
-        for (Enum1021MDBookType oneEnum : Enum1021MDBookType.values()) {
+        for ( Enum1021MDBookType oneEnum : Enum1021MDBookType.values()) {
             tagData = new Tag1021EnuMDBookType(oneEnum);
             assertEquals( "Tag1021EnuMDBookType\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

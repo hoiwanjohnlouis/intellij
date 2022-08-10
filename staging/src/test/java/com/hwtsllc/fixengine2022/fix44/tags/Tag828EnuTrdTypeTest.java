@@ -96,10 +96,30 @@ class Tag828EnuTrdTypeTest {
     Tag828EnuTrdType tagData;
 
     @Test
-    void FIXTest() {
+    void PrintTest() {
+        // loop around the ENUM and process
+        for ( Enum828TrdType oneEnum : Enum828TrdType.values()) {
+            tagData = new Tag828EnuTrdType(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0828Test() {
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( Enum828TrdType oneEnum : Enum828TrdType.values()) {
+            tagData = new Tag828EnuTrdType(oneEnum);
+            assertEquals( "FIX828_ENU_TRD_TYPE", tagData.toEnumLabelString());
+            assertEquals( "828", tagData.toEnumIDString());
+            assertEquals( "TRD_TYPE", tagData.toEnumNameString());
+            assertEquals( "TrdType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
          *  <p>    0 - Regular Trade
          *  <p>    1 - Block Trade
@@ -365,33 +385,8 @@ class Tag828EnuTrdTypeTest {
         tagData = new Tag828EnuTrdType(Enum828TrdType.FINANCING_TRANSACTION);
         assertEquals( "47", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
 
-    @Test
-    void PrintTest() {
-        // loop around the ENUM and process
-        for ( Enum828TrdType oneEnum : Enum828TrdType.values()) {
-            tagData = new Tag828EnuTrdType(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void FIXHeaderTest() {
-        // loop around the ENUM and process
-        for ( Enum828TrdType oneEnum : Enum828TrdType.values()) {
-            tagData = new Tag828EnuTrdType(oneEnum);
-            assertEquals( "FIX828_ENU_TRD_TYPE", tagData.toEnumLabelString());
-            assertEquals( "828", tagData.toEnumIDString());
-            assertEquals( "TRD_TYPE", tagData.toEnumNameString());
-            assertEquals( "TrdType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
+
         // loop around the ENUM and process
         for ( Enum828TrdType oneEnum : Enum828TrdType.values()) {
             tagData = new Tag828EnuTrdType(oneEnum);

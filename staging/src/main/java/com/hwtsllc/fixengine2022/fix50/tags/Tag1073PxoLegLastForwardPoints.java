@@ -28,9 +28,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  PriceOffset
  *  <p>
  *  The forward points for this leg's fill event.
- *  <p>
+ *  <p></p>
  *  Value can be negative. Expressed in decimal form.
- *  <p>
+ *  <p></p>
  *  For example, 61.99 points is expressed and sent as 0.006199
  */
 public class Tag1073PxoLegLastForwardPoints extends FIX50Abstract implements LogValuePairString, LogVerboseString {

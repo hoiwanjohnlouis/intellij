@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumSecurityIDSource;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -130,22 +129,39 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    L - Letter of Credit
  */
 class Tag1105EnuTriggerSecurityIDSourceTest {
+    Tag1105EnuTriggerSecurityIDSource tagData;
+
     @Test
-    void FIX1105Test() {
-        FIX50 fixData = FIX50.FIX1105_ENU_TRIGGER_SECURITY_ID_SOURCE;
-        assertEquals( "1105", fixData.toEnumIDString());
-        assertEquals( "TRIGGER_SECURITY_ID_SOURCE", fixData.toEnumNameString());
-        assertEquals( "TriggerSecurityIDSource", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // loop around the ENUM and process
+        for ( MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
+            tagData = new Tag1105EnuTriggerSecurityIDSource(oneEnum);
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag1105Test() {
-        Tag1105EnuTriggerSecurityIDSource tagData;
-
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
+            tagData = new Tag1105EnuTriggerSecurityIDSource(oneEnum);
+            assertEquals( "FIX1105_ENU_TRIGGER_SECURITY_ID_SOURCE", tagData.toEnumLabelString());
+            assertEquals( "1105", tagData.toEnumIDString());
+            assertEquals( "TRIGGER_SECURITY_ID_SOURCE", tagData.toEnumNameString());
+            assertEquals( "TriggerSecurityIDSource", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
-         * 1-9 Security ID Source
+         *  <p>    1 - CUSIP
+         *  <p>    2 - SEDOL
+         *  <p>    3 - QUIK
+         *  <p>    4 - ISIN number
+         *  <p>    5 - RIC code
          */
         tagData = new Tag1105EnuTriggerSecurityIDSource(MyEnumSecurityIDSource.CUSIP);
         assertEquals( "1", tagData.getDataValue());
@@ -167,7 +183,13 @@ class Tag1105EnuTriggerSecurityIDSourceTest {
         assertEquals( "5", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-
+        /*
+         *  <p>    6 - ISO Currency Code
+         *  <p>    7 - ISO Country Code
+         *  <p>    8 - Exchange Symbol
+         *  <p>    9 - Consolidated Tape Association (CTA) Symbol
+         *              (SIAC CTS/CQS line format)
+         */
         tagData = new Tag1105EnuTriggerSecurityIDSource(MyEnumSecurityIDSource.ISO_CURRENCY_CODE);
         assertEquals( "6", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -184,9 +206,12 @@ class Tag1105EnuTriggerSecurityIDSourceTest {
         assertEquals( "9", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-
         /*
-         * A-L Security ID Source
+         *  <p>    A - Bloomberg Symbol
+         *  <p>    B - Wertpapier
+         *  <p>    C - Dutch
+         *  <p>    D - Valoren
+         *  <p>    E - Sicovam
          */
         tagData = new Tag1105EnuTriggerSecurityIDSource(MyEnumSecurityIDSource.BLOOMBERG);
         assertEquals( "A", tagData.getDataValue());
@@ -208,7 +233,14 @@ class Tag1105EnuTriggerSecurityIDSourceTest {
         assertEquals( "E", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-
+        /*
+         *  <p>    F - Belgian
+         *  <p>    G - "Common" (Clearstream and Euroclear)
+         *  <p>    H - Clearing House / Clearing Organization
+         *  <p>    I - ISDA/FpML Product Specification
+         *              (XML in EncodedSecurityDesc)
+         *  <p>    J - Option Price Reporting Authority
+         */
         tagData = new Tag1105EnuTriggerSecurityIDSource(MyEnumSecurityIDSource.BELGIAN);
         assertEquals( "F", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -229,7 +261,10 @@ class Tag1105EnuTriggerSecurityIDSourceTest {
         assertEquals( "J", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
 
-
+        /*
+         *  <p>    K - ISDA/FpML Product URL (URL in SecurityID)
+         *  <p>    L - Letter of Credit
+         */
         tagData = new Tag1105EnuTriggerSecurityIDSource(MyEnumSecurityIDSource.ISDA_PRODUCT_URL);
         assertEquals( "K", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -237,46 +272,32 @@ class Tag1105EnuTriggerSecurityIDSourceTest {
         tagData = new Tag1105EnuTriggerSecurityIDSource(MyEnumSecurityIDSource.LETTER_OF_CREDIT);
         assertEquals( "L", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag1105EnuTriggerSecurityIDSource tagData;
+
 
         // loop around the ENUM and process
         for ( MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
             tagData = new Tag1105EnuTriggerSecurityIDSource(oneEnum);
-            System.out.println( tagData.toVerboseString() );
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag1105EnuTriggerSecurityIDSource tagData;
-
-        // loop around the ENUM and process
-        for (MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
-            tagData = new Tag1105EnuTriggerSecurityIDSource(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag1105EnuTriggerSecurityIDSource tagData;
-
         // loop around the ENUM and process
-        for (MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
+        for ( MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
             tagData = new Tag1105EnuTriggerSecurityIDSource(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag1105EnuTriggerSecurityIDSource tagData;
-
         // loop around the ENUM and process
-        for (MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
+        for ( MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
             tagData = new Tag1105EnuTriggerSecurityIDSource(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -284,18 +305,16 @@ class Tag1105EnuTriggerSecurityIDSourceTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag1105EnuTriggerSecurityIDSource tagData;
-
         // loop around the ENUM and process
-        for (MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
+        for ( MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
             tagData = new Tag1105EnuTriggerSecurityIDSource(oneEnum);
             assertEquals( "Tag1105EnuTriggerSecurityIDSource\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

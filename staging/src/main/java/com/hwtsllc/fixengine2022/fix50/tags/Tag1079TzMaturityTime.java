@@ -29,16 +29,16 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>
  *  Time of security's maturity expressed in local time with offset to UTC specified
  */
-public class Tag1079TztMaturityTime extends FIX50Abstract implements LogValuePairString, LogVerboseString {
+public class Tag1079TzMaturityTime extends FIX50Abstract implements LogValuePairString, LogVerboseString {
     private final MyTZTimeOnlyType dataValue;
 
-    public final static String TESTA_TZT_MATURITY_TIME
+    public final static String TESTA_TZ_MATURITY_TIME
             = "23:59:59.273";
-    public final static String TESTB_TZT_MATURITY_TIME
+    public final static String TESTB_TZ_MATURITY_TIME
             = "13:59:59.273";
 
-    public Tag1079TztMaturityTime(MyTZTimeOnlyType dataValue) {
-        setFixType( FIX50.FIX1079_TZT_MATURITY_TIME );
+    public Tag1079TzMaturityTime( MyTZTimeOnlyType dataValue) {
+        setFixType( FIX50.FIX1079_TZ_MATURITY_TIME );
         this.dataValue = dataValue;
     }
 
@@ -81,12 +81,12 @@ public class Tag1079TztMaturityTime extends FIX50Abstract implements LogValuePai
      * @param args   no args used at this time
      */
     public static void main(String[] args) {
-        Tag1079TztMaturityTime tagData;
+        Tag1079TzMaturityTime tagData;
 
-        tagData = new Tag1079TztMaturityTime(new MyTZTimeOnlyType( TESTA_TZT_MATURITY_TIME ) );
+        tagData = new Tag1079TzMaturityTime(new MyTZTimeOnlyType( TESTA_TZ_MATURITY_TIME ) );
         System.out.println(tagData.toVerboseString());
 
-        tagData = new Tag1079TztMaturityTime(new MyTZTimeOnlyType( TESTB_TZT_MATURITY_TIME ) );
+        tagData = new Tag1079TzMaturityTime(new MyTZTimeOnlyType( TESTB_TZ_MATURITY_TIME ) );
         System.out.println(tagData.toVerboseString());
     }
 }

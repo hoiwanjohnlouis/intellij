@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.MyFloatType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -32,90 +31,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  Minimum price increase for a given exchange-traded Instrument
  */
 class Tag969FloMinPriceIncrementTest {
+    Tag969FloMinPriceIncrement tagData;
+    float [] TestArray = {
+            Tag969FloMinPriceIncrement.TESTA_FLO_MIN_PRICE_INCREMENT,
+            Tag969FloMinPriceIncrement.TESTB_FLO_MIN_PRICE_INCREMENT
+    };
+
     @Test
-    void FIX0969Test() {
-        FIX50 fixData = FIX50.FIX969_FLO_MIN_PRICE_INCREMENT;
-        assertEquals( "969", fixData.toEnumIDString());
-        assertEquals( "MIN_PRICE_INCREMENT", fixData.toEnumNameString());
-        assertEquals( "MinPriceIncrement", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( float oneElement : TestArray ) {
+            tagData = new Tag969FloMinPriceIncrement( new MyFloatType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0969Test() {
-        Tag969FloMinPriceIncrement tagData;
-        float oneElement;
-
-        oneElement = Tag969FloMinPriceIncrement.TESTA_FLO_MIN_PRICE_INCREMENT;
-        tagData = new Tag969FloMinPriceIncrement( new MyFloatType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag969FloMinPriceIncrement.TESTB_FLO_MIN_PRICE_INCREMENT;
-        tagData = new Tag969FloMinPriceIncrement( new MyFloatType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag969FloMinPriceIncrement tagData;
-        float oneElement;
-
-        oneElement = Tag969FloMinPriceIncrement.TESTA_FLO_MIN_PRICE_INCREMENT;
-        tagData = new Tag969FloMinPriceIncrement( new MyFloatType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag969FloMinPriceIncrement.TESTB_FLO_MIN_PRICE_INCREMENT;
-        tagData = new Tag969FloMinPriceIncrement( new MyFloatType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( float oneElement : TestArray ) {
+            tagData = new Tag969FloMinPriceIncrement( new MyFloatType( oneElement ));
+            assertEquals( "FIX969_FLO_MIN_PRICE_INCREMENT", tagData.toEnumLabelString());
+            assertEquals( "969", tagData.toEnumIDString());
+            assertEquals( "MIN_PRICE_INCREMENT", tagData.toEnumNameString());
+            assertEquals( "MinPriceIncrement", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag969FloMinPriceIncrement tagData;
-        float oneElement;
-
-        oneElement = Tag969FloMinPriceIncrement.TESTB_FLO_MIN_PRICE_INCREMENT;
-        tagData = new Tag969FloMinPriceIncrement( new MyFloatType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
+        // process array of tags
+        for ( float oneElement : TestArray ) {
+            tagData = new Tag969FloMinPriceIncrement( new MyFloatType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag969FloMinPriceIncrement tagData;
-        float oneElement;
-
-        oneElement = Tag969FloMinPriceIncrement.TESTB_FLO_MIN_PRICE_INCREMENT;
-        tagData = new Tag969FloMinPriceIncrement( new MyFloatType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        // process array of tags
+        for ( float oneElement : TestArray ) {
+            tagData = new Tag969FloMinPriceIncrement( new MyFloatType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag969FloMinPriceIncrement tagData;
-        float oneElement;
-
-        oneElement = Tag969FloMinPriceIncrement.TESTB_FLO_MIN_PRICE_INCREMENT;
-        tagData = new Tag969FloMinPriceIncrement( new MyFloatType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        // process array of tags
+        for ( float oneElement : TestArray ) {
+            tagData = new Tag969FloMinPriceIncrement( new MyFloatType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag969FloMinPriceIncrement tagData;
-        float oneElement;
-
-        oneElement = Tag969FloMinPriceIncrement.TESTA_FLO_MIN_PRICE_INCREMENT;
-        tagData = new Tag969FloMinPriceIncrement( new MyFloatType( oneElement ) );
-        assertEquals( "Tag969FloMinPriceIncrement\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement +
-                        "]",
-                tagData.toVerboseString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( float oneElement : TestArray ) {
+            tagData = new Tag969FloMinPriceIncrement( new MyFloatType( oneElement ));
+            assertEquals( "Tag969FloMinPriceIncrement\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

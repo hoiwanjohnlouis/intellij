@@ -57,7 +57,22 @@ class Tag71EnuAllocTransTypeTest {
         }
     }
     @Test
-    void Tag0071Test() {
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (Enum71AllocTransType oneEnum : Enum71AllocTransType.values()) {
+            tagData = new Tag71EnuAllocTransType(oneEnum);
+            assertEquals( "FIX71_ENU_ALLOC_TRANS_TYPE", tagData.toEnumLabelString());
+            assertEquals( "ALLOC_TRANS_TYPE", tagData.toEnumNameString());
+            assertEquals( "71", tagData.toEnumIDString());
+            assertEquals( "AllocTransType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
          * 0-6 AllocTransType types
          */
@@ -88,24 +103,8 @@ class Tag71EnuAllocTransTypeTest {
         tagData = new Tag71EnuAllocTransType(Enum71AllocTransType.REVERSAL);
         assertEquals( "6", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void FIXHeaderTest() {
-        // loop around the ENUM and process
-        for (Enum71AllocTransType oneEnum : Enum71AllocTransType.values()) {
-            tagData = new Tag71EnuAllocTransType(oneEnum);
-            assertEquals( "FIX71_ENU_ALLOC_TRANS_TYPE", tagData.toEnumLabelString());
-            assertEquals( "ALLOC_TRANS_TYPE", tagData.toEnumNameString());
-            assertEquals( "71", tagData.toEnumIDString());
-            assertEquals( "AllocTransType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
+
+
         // loop around the ENUM and process
         for (Enum71AllocTransType oneEnum : Enum71AllocTransType.values()) {
             tagData = new Tag71EnuAllocTransType(oneEnum);

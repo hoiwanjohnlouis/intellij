@@ -59,7 +59,22 @@ class Tag59EnuTimeInForceTest {
         }
     }
     @Test
-    void Tag0059Test() {
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (Enum59TimeInForce oneEnum : Enum59TimeInForce.values()) {
+            tagData = new Tag59EnuTimeInForce(oneEnum);
+            assertEquals( "FIX59_ENU_TIME_IN_FORCE", tagData.toEnumLabelString());
+            assertEquals( "TIME_IN_FORCE", tagData.toEnumNameString());
+            assertEquals( "59", tagData.toEnumIDString());
+            assertEquals( "TimeInForce", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
          * 0-7 TimeInForce types
          */
@@ -95,24 +110,8 @@ class Tag59EnuTimeInForceTest {
         tagData = new Tag59EnuTimeInForce(Enum59TimeInForce.AT_THE_CLOSE);
         assertEquals( "7", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void FIXHeaderTest() {
-        // loop around the ENUM and process
-        for (Enum59TimeInForce oneEnum : Enum59TimeInForce.values()) {
-            tagData = new Tag59EnuTimeInForce(oneEnum);
-            assertEquals( "FIX59_ENU_TIME_IN_FORCE", tagData.toEnumLabelString());
-            assertEquals( "TIME_IN_FORCE", tagData.toEnumNameString());
-            assertEquals( "59", tagData.toEnumIDString());
-            assertEquals( "TimeInForce", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
+
+
         // loop around the ENUM and process
         for (Enum59TimeInForce oneEnum : Enum59TimeInForce.values()) {
             tagData = new Tag59EnuTimeInForce(oneEnum);

@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.fix50.enums.Enum1083DisplayWhen;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -36,32 +35,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    2 - Exhaust (when DisplayQty = 0)
  */
 class Tag1083EnuDisplayWhenTest {
-    @Test
-    void FIX1083Test() {
-        FIX50 fixData = FIX50.FIX1083_ENU_DISPLAY_WHEN;
-        assertEquals( "1083", fixData.toEnumIDString());
-        assertEquals( "DISPLAY_WHEN", fixData.toEnumNameString());
-        assertEquals( "DisplayWhen", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag1083Test() {
-        Tag1083EnuDisplayWhen tagData;
+    Tag1083EnuDisplayWhen tagData;
 
-        tagData = new Tag1083EnuDisplayWhen( Enum1083DisplayWhen.IMMEDIATE );
-        assertEquals( Enum1083DisplayWhen.IMMEDIATE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag1083EnuDisplayWhen( Enum1083DisplayWhen.EXHAUST );
-        assertEquals( Enum1083DisplayWhen.EXHAUST.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
     @Test
-    void PrintFIXTagTest() {
-        Tag1083EnuDisplayWhen tagData;
-
+    void PrintTest() {
         // loop around the ENUM and process
         for ( Enum1083DisplayWhen oneEnum : Enum1083DisplayWhen.values()) {
             tagData = new Tag1083EnuDisplayWhen(oneEnum);
@@ -69,34 +46,59 @@ class Tag1083EnuDisplayWhenTest {
         }
     }
     @Test
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( Enum1083DisplayWhen oneEnum : Enum1083DisplayWhen.values()) {
+            tagData = new Tag1083EnuDisplayWhen(oneEnum);
+            assertEquals( "FIX1083_ENU_DISPLAY_WHEN", tagData.toEnumLabelString());
+            assertEquals( "1083", tagData.toEnumIDString());
+            assertEquals( "DISPLAY_WHEN", tagData.toEnumNameString());
+            assertEquals( "DisplayWhen", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void TagGetDataValueTest() {
-        Tag1083EnuDisplayWhen tagData;
+        /*
+         *  <p>    1 - Immediate (after each fill)
+         *  <p>    2 - Exhaust (when DisplayQty = 0)
+         */
+        tagData = new Tag1083EnuDisplayWhen( Enum1083DisplayWhen.IMMEDIATE );
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag1083EnuDisplayWhen( Enum1083DisplayWhen.EXHAUST );
+        assertEquals( "2", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
 
         // loop around the ENUM and process
-        for (Enum1083DisplayWhen oneEnum : Enum1083DisplayWhen.values()) {
+        for ( Enum1083DisplayWhen oneEnum : Enum1083DisplayWhen.values()) {
             tagData = new Tag1083EnuDisplayWhen(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag1083EnuDisplayWhen tagData;
-
         // loop around the ENUM and process
-        for (Enum1083DisplayWhen oneEnum : Enum1083DisplayWhen.values()) {
+        for ( Enum1083DisplayWhen oneEnum : Enum1083DisplayWhen.values()) {
             tagData = new Tag1083EnuDisplayWhen(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag1083EnuDisplayWhen tagData;
-
         // loop around the ENUM and process
-        for (Enum1083DisplayWhen oneEnum : Enum1083DisplayWhen.values()) {
+        for ( Enum1083DisplayWhen oneEnum : Enum1083DisplayWhen.values()) {
             tagData = new Tag1083EnuDisplayWhen(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -104,18 +106,16 @@ class Tag1083EnuDisplayWhenTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag1083EnuDisplayWhen tagData;
-
         // loop around the ENUM and process
-        for (Enum1083DisplayWhen oneEnum : Enum1083DisplayWhen.values()) {
+        for ( Enum1083DisplayWhen oneEnum : Enum1083DisplayWhen.values()) {
             tagData = new Tag1083EnuDisplayWhen(oneEnum);
             assertEquals( "Tag1083EnuDisplayWhen\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

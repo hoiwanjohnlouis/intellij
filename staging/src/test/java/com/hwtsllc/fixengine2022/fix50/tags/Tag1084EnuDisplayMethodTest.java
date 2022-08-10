@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.fix50.enums.Enum1084DisplayMethod;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -39,36 +38,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    3 - Random (randomize value)
  */
 class Tag1084EnuDisplayMethodTest {
+    Tag1084EnuDisplayMethod tagData;
+
     @Test
-    void FIX1084Test() {
-        FIX50 fixData = FIX50.FIX1084_ENU_DISPLAY_METHOD;
-        assertEquals( "1084", fixData.toEnumIDString());
-        assertEquals( "DISPLAY_METHOD", fixData.toEnumNameString());
-        assertEquals( "DisplayMethod", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag1084Test() {
-        Tag1084EnuDisplayMethod tagData;
-
-        tagData = new Tag1084EnuDisplayMethod( Enum1084DisplayMethod.INITIAL );
-        assertEquals( Enum1084DisplayMethod.INITIAL.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag1084EnuDisplayMethod( Enum1084DisplayMethod.NEW );
-        assertEquals( Enum1084DisplayMethod.NEW.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag1084EnuDisplayMethod( Enum1084DisplayMethod.RANDOM );
-        assertEquals( Enum1084DisplayMethod.RANDOM.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag1084EnuDisplayMethod tagData;
-
+    void PrintTest() {
         // loop around the ENUM and process
         for ( Enum1084DisplayMethod oneEnum : Enum1084DisplayMethod.values()) {
             tagData = new Tag1084EnuDisplayMethod(oneEnum);
@@ -76,34 +49,64 @@ class Tag1084EnuDisplayMethodTest {
         }
     }
     @Test
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( Enum1084DisplayMethod oneEnum : Enum1084DisplayMethod.values()) {
+            tagData = new Tag1084EnuDisplayMethod(oneEnum);
+            assertEquals( "FIX1084_ENU_DISPLAY_METHOD", tagData.toEnumLabelString());
+            assertEquals( "1084", tagData.toEnumIDString());
+            assertEquals( "DISPLAY_METHOD", tagData.toEnumNameString());
+            assertEquals( "DisplayMethod", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void TagGetDataValueTest() {
-        Tag1084EnuDisplayMethod tagData;
+        /*
+         *  <p>    1 - Initial (use original DisplayQty)
+         *  <p>    2 - New (use RefreshQty)
+         *  <p>    3 - Random (randomize value)
+         */
+        tagData = new Tag1084EnuDisplayMethod( Enum1084DisplayMethod.INITIAL );
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag1084EnuDisplayMethod( Enum1084DisplayMethod.NEW );
+        assertEquals( "2", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag1084EnuDisplayMethod( Enum1084DisplayMethod.RANDOM );
+        assertEquals( "3", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
 
         // loop around the ENUM and process
-        for (Enum1084DisplayMethod oneEnum : Enum1084DisplayMethod.values()) {
+        for ( Enum1084DisplayMethod oneEnum : Enum1084DisplayMethod.values()) {
             tagData = new Tag1084EnuDisplayMethod(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag1084EnuDisplayMethod tagData;
-
         // loop around the ENUM and process
-        for (Enum1084DisplayMethod oneEnum : Enum1084DisplayMethod.values()) {
+        for ( Enum1084DisplayMethod oneEnum : Enum1084DisplayMethod.values()) {
             tagData = new Tag1084EnuDisplayMethod(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag1084EnuDisplayMethod tagData;
-
         // loop around the ENUM and process
-        for (Enum1084DisplayMethod oneEnum : Enum1084DisplayMethod.values()) {
+        for ( Enum1084DisplayMethod oneEnum : Enum1084DisplayMethod.values()) {
             tagData = new Tag1084EnuDisplayMethod(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -111,18 +114,16 @@ class Tag1084EnuDisplayMethodTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag1084EnuDisplayMethod tagData;
-
         // loop around the ENUM and process
-        for (Enum1084DisplayMethod oneEnum : Enum1084DisplayMethod.values()) {
+        for ( Enum1084DisplayMethod oneEnum : Enum1084DisplayMethod.values()) {
             tagData = new Tag1084EnuDisplayMethod(oneEnum);
             assertEquals( "Tag1084EnuDisplayMethod\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

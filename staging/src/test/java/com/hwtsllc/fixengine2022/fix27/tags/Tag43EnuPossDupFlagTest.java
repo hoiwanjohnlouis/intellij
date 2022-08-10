@@ -46,16 +46,6 @@ class Tag43EnuPossDupFlagTest {
         }
     }
     @Test
-    void Tag0043Test() {
-        tagData = new Tag43EnuPossDupFlag( Enum43PossDupFlag.NO);
-        assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag43EnuPossDupFlag( Enum43PossDupFlag.YES);
-        assertEquals( "Y", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
     void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum43PossDupFlag oneEnum : Enum43PossDupFlag.values()) {
@@ -72,6 +62,15 @@ class Tag43EnuPossDupFlagTest {
     }
     @Test
     void TagGetDataValueTest() {
+        tagData = new Tag43EnuPossDupFlag( Enum43PossDupFlag.NO);
+        assertEquals( "N", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag43EnuPossDupFlag( Enum43PossDupFlag.YES);
+        assertEquals( "Y", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
         // loop around the ENUM and process
         for (Enum43PossDupFlag oneEnum : Enum43PossDupFlag.values()) {
             tagData = new Tag43EnuPossDupFlag(oneEnum);

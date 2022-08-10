@@ -56,7 +56,22 @@ class Tag8EnuBeginStringTest {
         }
     }
     @Test
-    void Tag0008Test() {
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (Enum8BeginString oneEnum : Enum8BeginString.values()) {
+            tagData = new Tag8EnuBeginString(oneEnum);
+            assertEquals( "FIX8_ENU_BEGIN_STRING", tagData.toEnumLabelString());
+            assertEquals( "BEGIN_STRING", tagData.toEnumNameString());
+            assertEquals( "8", tagData.toEnumIDString());
+            assertEquals( "BeginString", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         tagData = new Tag8EnuBeginString(Enum8BeginString.BEGIN_STRING_2_7);
         assertEquals( "FIX.2.7", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -88,24 +103,8 @@ class Tag8EnuBeginStringTest {
         tagData = new Tag8EnuBeginString(Enum8BeginString.BEGIN_STRING_5_0);
         assertEquals( "FIXT.1.1", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void FIXHeaderTest() {
-        // loop around the ENUM and process
-        for (Enum8BeginString oneEnum : Enum8BeginString.values()) {
-            tagData = new Tag8EnuBeginString(oneEnum);
-            assertEquals( "FIX8_ENU_BEGIN_STRING", tagData.toEnumLabelString());
-            assertEquals( "BEGIN_STRING", tagData.toEnumNameString());
-            assertEquals( "8", tagData.toEnumIDString());
-            assertEquals( "BeginString", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
+
+
         // loop around the ENUM and process
         for (Enum8BeginString oneEnum : Enum8BeginString.values()) {
             tagData = new Tag8EnuBeginString(oneEnum);

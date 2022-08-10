@@ -89,7 +89,22 @@ class Tag63EnuSettlmntTypTest {
         }
     }
     @Test
-    void Tag0063Test() {
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (Enum63SettlType oneEnum : Enum63SettlType.values()) {
+            tagData = new Tag63EnuSettlmntTyp(oneEnum);
+            assertEquals( "FIX63_ENU_SETTLMNT_TYP", tagData.toEnumLabelString());
+            assertEquals( "SETTLMNT_TYP", tagData.toEnumNameString());
+            assertEquals( "63", tagData.toEnumIDString());
+            assertEquals( "SettlmntTyp", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         tagData = new Tag63EnuSettlmntTyp( Enum63SettlType.REGULAR );
         assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -139,24 +154,8 @@ class Tag63EnuSettlmntTypTest {
         tagData = new Tag63EnuSettlmntTyp( Enum63SettlType.FX_SPOT );
         assertEquals( "C", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void FIXHeaderTest() {
-        // loop around the ENUM and process
-        for (Enum63SettlType oneEnum : Enum63SettlType.values()) {
-            tagData = new Tag63EnuSettlmntTyp(oneEnum);
-            assertEquals( "FIX63_ENU_SETTLMNT_TYP", tagData.toEnumLabelString());
-            assertEquals( "SETTLMNT_TYP", tagData.toEnumNameString());
-            assertEquals( "63", tagData.toEnumIDString());
-            assertEquals( "SettlmntTyp", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
+
+
         // loop around the ENUM and process
         for (Enum63SettlType oneEnum : Enum63SettlType.values()) {
             tagData = new Tag63EnuSettlmntTyp(oneEnum);

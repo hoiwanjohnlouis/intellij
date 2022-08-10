@@ -28,9 +28,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  String
  *  <p>
  *  Settlement status of the underlying instrument.
- *  <p>
+ *  <p></p>
  *  Used for derivatives that deliver into more than one underlying instrument.
- *  <p>
+ *  <p></p>
  *  Settlement can be delayed for an underlying instrument.
  */
 public class Tag988StrUnderlyingSettlementStatus extends FIX50Abstract implements LogValuePairString, LogVerboseString {

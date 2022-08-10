@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -32,89 +31,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  Expiration Quantity associated with the Expiration Type
  */
 class Tag983QtyExpQtyTest {
+    Tag983QtyExpQty tagData;
+    int [] TestArray = {
+            Tag983QtyExpQty.TESTA_QTY_EXP_QTY,
+            Tag983QtyExpQty.TESTB_QTY_EXP_QTY
+    };
+
     @Test
-    void FIX0983Test() {
-        FIX50 fixData = FIX50.FIX983_QTY_EXP_QTY;
-        assertEquals( "983", fixData.toEnumIDString());
-        assertEquals( "EXP_QTY", fixData.toEnumNameString());
-        assertEquals( "ExpQty", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag983QtyExpQty( new MyQtyType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0983Test() {
-        Tag983QtyExpQty tagData;
-        int oneElement;
-
-        oneElement = Tag983QtyExpQty.TESTA_QTY_EXP_QTY;
-        tagData = new Tag983QtyExpQty( new MyQtyType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
-
-        oneElement = Tag983QtyExpQty.TESTB_QTY_EXP_QTY;
-        tagData = new Tag983QtyExpQty( new MyQtyType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag983QtyExpQty tagData;
-        int oneElement;
-
-        oneElement = Tag983QtyExpQty.TESTA_QTY_EXP_QTY;
-        tagData = new Tag983QtyExpQty( new MyQtyType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag983QtyExpQty.TESTB_QTY_EXP_QTY;
-        tagData = new Tag983QtyExpQty( new MyQtyType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag983QtyExpQty( new MyQtyType( oneElement ));
+            assertEquals( "FIX983_QTY_EXP_QTY", tagData.toEnumLabelString());
+            assertEquals( "983", tagData.toEnumIDString());
+            assertEquals( "EXP_QTY", tagData.toEnumNameString());
+            assertEquals( "ExpQty", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag983QtyExpQty tagData;
-        int oneElement;
-
-        oneElement = Tag983QtyExpQty.TESTB_QTY_EXP_QTY;
-        tagData = new Tag983QtyExpQty( new MyQtyType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag983QtyExpQty( new MyQtyType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag983QtyExpQty tagData;
-        int oneElement;
-
-        oneElement = Tag983QtyExpQty.TESTB_QTY_EXP_QTY;
-        tagData = new Tag983QtyExpQty( new MyQtyType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag983QtyExpQty( new MyQtyType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag983QtyExpQty tagData;
-        int oneElement;
-
-        oneElement = Tag983QtyExpQty.TESTB_QTY_EXP_QTY;
-        tagData = new Tag983QtyExpQty( new MyQtyType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag983QtyExpQty( new MyQtyType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag983QtyExpQty tagData;
-        int oneElement;
-
-        oneElement = Tag983QtyExpQty.TESTA_QTY_EXP_QTY;
-        tagData = new Tag983QtyExpQty( new MyQtyType( oneElement ) );
-        assertEquals( "Tag983QtyExpQty\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
+        // process array of tags
+        for ( int oneElement : TestArray ) {
+            tagData = new Tag983QtyExpQty( new MyQtyType( oneElement ));
+            assertEquals( "Tag983QtyExpQty\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

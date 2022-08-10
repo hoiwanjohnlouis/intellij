@@ -111,7 +111,22 @@ class Tag18EnuExecInstTest {
         }
     }
     @Test
-    void Tag0018Test() {
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (Enum18ExecInst oneEnum : Enum18ExecInst.values()) {
+            tagData = new Tag18EnuExecInst(oneEnum);
+            assertEquals( "FIX18_ENU_EXEC_INST", tagData.toEnumLabelString());
+            assertEquals( "EXEC_INST", tagData.toEnumNameString());
+            assertEquals( "18", tagData.toEnumIDString());
+            assertEquals( "ExecInst", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
          * 0-9 exec inst types
          */
@@ -315,24 +330,8 @@ class Tag18EnuExecInstTest {
 
         tagData = new Tag18EnuExecInst(Enum18ExecInst.BEST_EXECUTION);
         assertEquals( "k", tagData.getDataValue());
-    }
-    @Test
-    void FIXHeaderTest() {
-        // loop around the ENUM and process
-        for (Enum18ExecInst oneEnum : Enum18ExecInst.values()) {
-            tagData = new Tag18EnuExecInst(oneEnum);
-            assertEquals( "FIX18_ENU_EXEC_INST", tagData.toEnumLabelString());
-            assertEquals( "EXEC_INST", tagData.toEnumNameString());
-            assertEquals( "18", tagData.toEnumIDString());
-            assertEquals( "ExecInst", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
+
+
         // loop around the ENUM and process
         for (Enum18ExecInst oneEnum : Enum18ExecInst.values()) {
             tagData = new Tag18EnuExecInst(oneEnum);

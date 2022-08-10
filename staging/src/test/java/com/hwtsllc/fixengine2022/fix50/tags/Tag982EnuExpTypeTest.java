@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.fix50.enums.Enum982ExpType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -39,44 +38,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    5 - Difference
  */
 class Tag982EnuExpTypeTest {
+    Tag982EnuExpType tagData;
+
     @Test
-    void FIX0982Test() {
-        FIX50 fixData = FIX50.FIX982_ENU_EXP_TYPE;
-        assertEquals( "982", fixData.toEnumIDString());
-        assertEquals( "EXP_TYPE", fixData.toEnumNameString());
-        assertEquals( "ExpType", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0982Test() {
-        Tag982EnuExpType tagData;
-
-        tagData = new Tag982EnuExpType( Enum982ExpType.AUTO_EXERCISE );
-        assertEquals( Enum982ExpType.AUTO_EXERCISE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag982EnuExpType( Enum982ExpType.NON_AUTO_EXERCISE );
-        assertEquals( Enum982ExpType.NON_AUTO_EXERCISE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag982EnuExpType( Enum982ExpType.FINAL_EXERCISED );
-        assertEquals( Enum982ExpType.FINAL_EXERCISED.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag982EnuExpType( Enum982ExpType.CONTRARY_INTENTION );
-        assertEquals( Enum982ExpType.CONTRARY_INTENTION.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag982EnuExpType( Enum982ExpType.DIFFERENCE );
-        assertEquals( Enum982ExpType.DIFFERENCE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag982EnuExpType tagData;
-
+    void PrintTest() {
         // loop around the ENUM and process
         for ( Enum982ExpType oneEnum : Enum982ExpType.values()) {
             tagData = new Tag982EnuExpType(oneEnum);
@@ -84,34 +49,74 @@ class Tag982EnuExpTypeTest {
         }
     }
     @Test
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( Enum982ExpType oneEnum : Enum982ExpType.values()) {
+            tagData = new Tag982EnuExpType(oneEnum);
+            assertEquals( "FIX982_ENU_EXP_TYPE", tagData.toEnumLabelString());
+            assertEquals( "982", tagData.toEnumIDString());
+            assertEquals( "EXP_TYPE", tagData.toEnumNameString());
+            assertEquals( "ExpType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void TagGetDataValueTest() {
-        Tag982EnuExpType tagData;
+        /*
+         *  <p>    1 - Auto Exercise
+         *  <p>    2 - Non Auto Exercise
+         *  <p>    3 - Final Will Be Exercised
+         *  <p>    4 - Contrary Intention
+         *  <p>    5 - Difference
+         */
+        tagData = new Tag982EnuExpType( Enum982ExpType.AUTO_EXERCISE );
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag982EnuExpType( Enum982ExpType.NON_AUTO_EXERCISE );
+        assertEquals( "2", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag982EnuExpType( Enum982ExpType.FINAL_EXERCISED );
+        assertEquals( "3", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag982EnuExpType( Enum982ExpType.CONTRARY_INTENTION );
+        assertEquals( "4", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag982EnuExpType( Enum982ExpType.DIFFERENCE );
+        assertEquals( "5", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
 
         // loop around the ENUM and process
-        for (Enum982ExpType oneEnum : Enum982ExpType.values()) {
+        for ( Enum982ExpType oneEnum : Enum982ExpType.values()) {
             tagData = new Tag982EnuExpType(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag982EnuExpType tagData;
-
         // loop around the ENUM and process
-        for (Enum982ExpType oneEnum : Enum982ExpType.values()) {
+        for ( Enum982ExpType oneEnum : Enum982ExpType.values()) {
             tagData = new Tag982EnuExpType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag982EnuExpType tagData;
-
         // loop around the ENUM and process
-        for (Enum982ExpType oneEnum : Enum982ExpType.values()) {
+        for ( Enum982ExpType oneEnum : Enum982ExpType.values()) {
             tagData = new Tag982EnuExpType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -119,18 +124,16 @@ class Tag982EnuExpTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag982EnuExpType tagData;
-
         // loop around the ENUM and process
-        for (Enum982ExpType oneEnum : Enum982ExpType.values()) {
+        for ( Enum982ExpType oneEnum : Enum982ExpType.values()) {
             tagData = new Tag982EnuExpType(oneEnum);
             assertEquals( "Tag982EnuExpType\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

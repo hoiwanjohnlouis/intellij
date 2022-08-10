@@ -28,7 +28,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  Qty
  *  <p>
  *  Used for the calculated quantity of the other side of the currency trade.
- *  <p>
+ *  <p></p>
  *  Can be derived from LastQty and LastPx.
  */
 public class Tag1056QtyCalculatedCcyLastQty extends FIX50Abstract implements LogValuePairString, LogVerboseString {

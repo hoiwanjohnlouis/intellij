@@ -28,7 +28,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  Amt
  *  <p>
  *  The gross trade amount of the leg.
- *  <p>
+ *  <p></p>
  *  For FX Futures this is used to express the notional value of a fill
  *  when LegLastQty and other quantity fields are express in terms of contract size.
  */

@@ -47,20 +47,6 @@ class Tag25EnuIOIQltyIndTest {
         }
     }
     @Test
-    void Tag0025Test() {
-        tagData = new Tag25EnuIOIQltyInd(Enum25IOIQltyInd.HIGH);
-        assertEquals( "H", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag25EnuIOIQltyInd(Enum25IOIQltyInd.MEDIUM);
-        assertEquals( "M", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag25EnuIOIQltyInd(Enum25IOIQltyInd.LOW);
-        assertEquals( "L", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
     void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum25IOIQltyInd oneEnum : Enum25IOIQltyInd.values()) {
@@ -77,6 +63,19 @@ class Tag25EnuIOIQltyIndTest {
     }
     @Test
     void TagGetDataValueTest() {
+        tagData = new Tag25EnuIOIQltyInd(Enum25IOIQltyInd.HIGH);
+        assertEquals( "H", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag25EnuIOIQltyInd(Enum25IOIQltyInd.MEDIUM);
+        assertEquals( "M", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag25EnuIOIQltyInd(Enum25IOIQltyInd.LOW);
+        assertEquals( "L", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
         // loop around the ENUM and process
         for (Enum25IOIQltyInd oneEnum : Enum25IOIQltyInd.values()) {
             tagData = new Tag25EnuIOIQltyInd(oneEnum);

@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumTimeUnit;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -56,53 +55,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    Yr - Year
  */
 class Tag997EnuTimeUnitTest {
+    Tag997EnuTimeUnit tagData;
+
     @Test
-    void FIX0997Test() {
-        FIX50 fixData = FIX50.FIX997_ENU_TIME_UNIT;
-        assertEquals( "997", fixData.toEnumIDString());
-        assertEquals( "TIME_UNIT", fixData.toEnumNameString());
-        assertEquals( "TimeUnit", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0997Test() {
-        Tag997EnuTimeUnit tagData;
-
-        tagData = new Tag997EnuTimeUnit( MyEnumTimeUnit.HH );
-        assertEquals( MyEnumTimeUnit.HH.toEnumIDString(), tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        tagData = new Tag997EnuTimeUnit( MyEnumTimeUnit.MM );
-        assertEquals( MyEnumTimeUnit.MM.toEnumIDString(), tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        tagData = new Tag997EnuTimeUnit( MyEnumTimeUnit.SS );
-        assertEquals( MyEnumTimeUnit.SS.toEnumIDString(), tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-
-        tagData = new Tag997EnuTimeUnit( MyEnumTimeUnit.DD );
-        assertEquals( MyEnumTimeUnit.DD.toEnumIDString(), tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        tagData = new Tag997EnuTimeUnit( MyEnumTimeUnit.WK );
-        assertEquals( MyEnumTimeUnit.WK.toEnumIDString(), tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        tagData = new Tag997EnuTimeUnit( MyEnumTimeUnit.MO );
-        assertEquals( MyEnumTimeUnit.MO.toEnumIDString(), tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        tagData = new Tag997EnuTimeUnit( MyEnumTimeUnit.YR );
-        assertEquals( MyEnumTimeUnit.YR.toEnumIDString(), tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag997EnuTimeUnit tagData;
-
+    void PrintTest() {
         // loop around the ENUM and process
         for ( MyEnumTimeUnit oneEnum : MyEnumTimeUnit.values()) {
             tagData = new Tag997EnuTimeUnit(oneEnum);
@@ -110,34 +66,86 @@ class Tag997EnuTimeUnitTest {
         }
     }
     @Test
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( MyEnumTimeUnit oneEnum : MyEnumTimeUnit.values()) {
+            tagData = new Tag997EnuTimeUnit(oneEnum);
+            assertEquals( "FIX997_ENU_TIME_UNIT", tagData.toEnumLabelString());
+            assertEquals( "997", tagData.toEnumIDString());
+            assertEquals( "TIME_UNIT", tagData.toEnumNameString());
+            assertEquals( "TimeUnit", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void TagGetDataValueTest() {
-        Tag997EnuTimeUnit tagData;
+        /*
+         *  <p>    H - Hour
+         *  <p>    Min - Minute
+         *  <p>    S - Second
+         */
+        tagData = new Tag997EnuTimeUnit( MyEnumTimeUnit.HH );
+        assertEquals( "H", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag997EnuTimeUnit( MyEnumTimeUnit.MM );
+        assertEquals( "Min", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag997EnuTimeUnit( MyEnumTimeUnit.SS );
+        assertEquals( "S", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        /*
+         *  <p>    D - Day
+         *  <p>    Wk - Week
+         *  <p>    Mo - Month
+         *  <p>    Yr - Year
+         */
+        tagData = new Tag997EnuTimeUnit( MyEnumTimeUnit.DD );
+        assertEquals( "D", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag997EnuTimeUnit( MyEnumTimeUnit.WK );
+        assertEquals( "Wk", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag997EnuTimeUnit( MyEnumTimeUnit.MO );
+        assertEquals( "Mo", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
+        tagData = new Tag997EnuTimeUnit( MyEnumTimeUnit.YR );
+        assertEquals( "Yr", tagData.getDataValue() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+
 
         // loop around the ENUM and process
-        for (MyEnumTimeUnit oneEnum : MyEnumTimeUnit.values()) {
+        for ( MyEnumTimeUnit oneEnum : MyEnumTimeUnit.values()) {
             tagData = new Tag997EnuTimeUnit(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag997EnuTimeUnit tagData;
-
         // loop around the ENUM and process
-        for (MyEnumTimeUnit oneEnum : MyEnumTimeUnit.values()) {
+        for ( MyEnumTimeUnit oneEnum : MyEnumTimeUnit.values()) {
             tagData = new Tag997EnuTimeUnit(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag997EnuTimeUnit tagData;
-
         // loop around the ENUM and process
-        for (MyEnumTimeUnit oneEnum : MyEnumTimeUnit.values()) {
+        for ( MyEnumTimeUnit oneEnum : MyEnumTimeUnit.values()) {
             tagData = new Tag997EnuTimeUnit(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -145,18 +153,16 @@ class Tag997EnuTimeUnitTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag997EnuTimeUnit tagData;
-
         // loop around the ENUM and process
-        for (MyEnumTimeUnit oneEnum : MyEnumTimeUnit.values()) {
+        for ( MyEnumTimeUnit oneEnum : MyEnumTimeUnit.values()) {
             tagData = new Tag997EnuTimeUnit(oneEnum);
             assertEquals( "Tag997EnuTimeUnit\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

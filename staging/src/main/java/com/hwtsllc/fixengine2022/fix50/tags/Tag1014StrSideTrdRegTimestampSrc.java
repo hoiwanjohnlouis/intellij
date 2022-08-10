@@ -28,9 +28,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  String
  *  <p>
  *  Same as TrdRegTimestampOrigin
- *  <p>
+ *  <p></p>
  *  Text which identifies the origin.
- *  <p>
+ *  <p></p>
  *  i.e. system which was used to generate the time stamp for the Traded Regulatory timestamp value
  */
 public class Tag1014StrSideTrdRegTimestampSrc extends FIX50Abstract implements LogValuePairString, LogVerboseString {

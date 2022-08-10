@@ -27,7 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  218
  *  Spread
  *  PriceOffset
- *  <p></p>
+ *  <p>
  *  For Fixed Income.
  *  <p></p>
  *  Either Swap Spread or Spread to Benchmark depending upon the order type.

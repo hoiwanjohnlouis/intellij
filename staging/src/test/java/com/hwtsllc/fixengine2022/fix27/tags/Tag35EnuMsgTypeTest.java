@@ -188,7 +188,22 @@ class Tag35EnuMsgTypeTest {
         }
     }
     @Test
-    void Tag0035Test() {
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (MyEnumMsgType oneEnum : MyEnumMsgType.values()) {
+            tagData = new Tag35EnuMsgType(oneEnum);
+            assertEquals( "FIX35_ENU_MSG_TYPE", tagData.toEnumLabelString());
+            assertEquals( "MSG_TYPE", tagData.toEnumNameString());
+            assertEquals( "35", tagData.toEnumIDString());
+            assertEquals( "MsgType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
          *  Information is the same for TAGS 35, 372
          */
@@ -671,24 +686,8 @@ class Tag35EnuMsgTypeTest {
         tagData = new Tag35EnuMsgType(MyEnumMsgType.SECURITY_DEFINITION_UPDATE_REPORT);
         assertEquals( "BP", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void FIXHeaderTest() {
-        // loop around the ENUM and process
-        for (MyEnumMsgType oneEnum : MyEnumMsgType.values()) {
-            tagData = new Tag35EnuMsgType(oneEnum);
-            assertEquals( "FIX35_ENU_MSG_TYPE", tagData.toEnumLabelString());
-            assertEquals( "MSG_TYPE", tagData.toEnumNameString());
-            assertEquals( "35", tagData.toEnumIDString());
-            assertEquals( "MsgType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
+
+
         // loop around the ENUM and process
         for (MyEnumMsgType oneEnum : MyEnumMsgType.values()) {
             tagData = new Tag35EnuMsgType(oneEnum);

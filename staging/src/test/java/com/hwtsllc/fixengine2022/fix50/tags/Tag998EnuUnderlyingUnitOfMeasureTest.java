@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumUnitOfMeasure;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -64,74 +63,82 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    USD - US Dollars
  */
 class Tag998EnuUnderlyingUnitOfMeasureTest {
+    Tag998EnuUnderlyingUnitOfMeasure tagData;
+
     @Test
     void FIX0998Test() {
-        FIX50 fixData = FIX50.FIX998_ENU_UNDERLYING_UNIT_OF_MEASURE;
-        assertEquals( "998", fixData.toEnumIDString());
-        assertEquals( "UNDERLYING_UNIT_OF_MEASURE", fixData.toEnumNameString());
-        assertEquals( "UnderlyingUnitOfMeasure", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
     }
     @Test
     void Tag0998Test() {
-        Tag998EnuUnderlyingUnitOfMeasure tagData;
-
+        /*
+         *  <p>    Bbl - Barrels
+         *  <p>    Bcf - Billion cubic feet
+         *  <p>    Bu - Bushels
+         *  <p>    lbs - pounds
+         *  <p>    Gal - Gallons
+         */
         tagData = new Tag998EnuUnderlyingUnitOfMeasure( MyEnumUnitOfMeasure.BARRELS );
-        assertEquals( MyEnumUnitOfMeasure.BARRELS.toEnumIDString(), tagData.getDataValue() );
+        assertEquals( "Bbl", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag998EnuUnderlyingUnitOfMeasure( MyEnumUnitOfMeasure.BILLION_CUBIC_FEET );
-        assertEquals( MyEnumUnitOfMeasure.BILLION_CUBIC_FEET.toEnumIDString(), tagData.getDataValue() );
+        assertEquals( "Bcf", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag998EnuUnderlyingUnitOfMeasure( MyEnumUnitOfMeasure.BUSHELS );
-        assertEquals( MyEnumUnitOfMeasure.BUSHELS.toEnumIDString(), tagData.getDataValue() );
+        assertEquals( "Bu", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag998EnuUnderlyingUnitOfMeasure( MyEnumUnitOfMeasure.POUNDS );
-        assertEquals( MyEnumUnitOfMeasure.POUNDS.toEnumIDString(), tagData.getDataValue() );
+        assertEquals( "lbs", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag998EnuUnderlyingUnitOfMeasure( MyEnumUnitOfMeasure.GALLONS );
-        assertEquals( MyEnumUnitOfMeasure.GALLONS.toEnumIDString(), tagData.getDataValue() );
+        assertEquals( "Gal", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-
+        /*
+         *  <p>    MMbbl - Million Barrels
+         *  <p>    MMBtu - One Million BTU
+         *  <p>    MWh - Megawatt hours
+         *  <p>    oz_tr - Troy Ounces
+         *  <p>    t - Metric Tons (aka Tonne)
+         */
         tagData = new Tag998EnuUnderlyingUnitOfMeasure( MyEnumUnitOfMeasure.MILLION_BARRELS );
-        assertEquals( MyEnumUnitOfMeasure.MILLION_BARRELS.toEnumIDString(), tagData.getDataValue() );
+        assertEquals( "MMbbl", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag998EnuUnderlyingUnitOfMeasure( MyEnumUnitOfMeasure.MILLION_BTU );
-        assertEquals( MyEnumUnitOfMeasure.MILLION_BTU.toEnumIDString(), tagData.getDataValue() );
+        assertEquals( "MMBtu", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag998EnuUnderlyingUnitOfMeasure( MyEnumUnitOfMeasure.MEGAWATT_HOURS );
-        assertEquals( MyEnumUnitOfMeasure.MEGAWATT_HOURS.toEnumIDString(), tagData.getDataValue() );
+        assertEquals( "MWh", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag998EnuUnderlyingUnitOfMeasure( MyEnumUnitOfMeasure.TROY_OUNCES );
-        assertEquals( MyEnumUnitOfMeasure.TROY_OUNCES.toEnumIDString(), tagData.getDataValue() );
+        assertEquals( "oz_tr", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag998EnuUnderlyingUnitOfMeasure( MyEnumUnitOfMeasure.METRIC_TONS );
-        assertEquals( MyEnumUnitOfMeasure.METRIC_TONS.toEnumIDString(), tagData.getDataValue() );
+        assertEquals( "t", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
-
+        /*
+         *  <p>    tn - Tons (US)
+         *  <p>    USD - US Dollars
+         */
         tagData = new Tag998EnuUnderlyingUnitOfMeasure( MyEnumUnitOfMeasure.US_TONS );
-        assertEquals( MyEnumUnitOfMeasure.US_TONS.toEnumIDString(), tagData.getDataValue() );
+        assertEquals( "tn", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
 
         tagData = new Tag998EnuUnderlyingUnitOfMeasure( MyEnumUnitOfMeasure.US_DOLLARS );
-        assertEquals( MyEnumUnitOfMeasure.US_DOLLARS.toEnumIDString(), tagData.getDataValue() );
+        assertEquals( "USD", tagData.getDataValue() );
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
     }
-    @Test
-    void PrintFIXTagTest() {
-        Tag998EnuUnderlyingUnitOfMeasure tagData;
 
+    @Test
+    void PrintTest() {
         // loop around the ENUM and process
         for ( MyEnumUnitOfMeasure oneEnum : MyEnumUnitOfMeasure.values()) {
             tagData = new Tag998EnuUnderlyingUnitOfMeasure(oneEnum);
@@ -139,34 +146,46 @@ class Tag998EnuUnderlyingUnitOfMeasureTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        Tag998EnuUnderlyingUnitOfMeasure tagData;
-
+    void FIXHeaderTest() {
         // loop around the ENUM and process
-        for (MyEnumUnitOfMeasure oneEnum : MyEnumUnitOfMeasure.values()) {
+        for ( MyEnumUnitOfMeasure oneEnum : MyEnumUnitOfMeasure.values()) {
             tagData = new Tag998EnuUnderlyingUnitOfMeasure(oneEnum);
+            assertEquals( "FIX998_ENU_UNDERLYING_UNIT_OF_MEASURE", tagData.toEnumLabelString());
+            assertEquals( "998", tagData.toEnumIDString());
+            assertEquals( "UNDERLYING_UNIT_OF_MEASURE", tagData.toEnumNameString());
+            assertEquals( "UnderlyingUnitOfMeasure", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
+        // loop around the ENUM and process
+        for ( MyEnumUnitOfMeasure oneEnum : MyEnumUnitOfMeasure.values()) {
+            tagData = new Tag998EnuUnderlyingUnitOfMeasure(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag998EnuUnderlyingUnitOfMeasure tagData;
-
         // loop around the ENUM and process
-        for (MyEnumUnitOfMeasure oneEnum : MyEnumUnitOfMeasure.values()) {
+        for ( MyEnumUnitOfMeasure oneEnum : MyEnumUnitOfMeasure.values()) {
             tagData = new Tag998EnuUnderlyingUnitOfMeasure(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag998EnuUnderlyingUnitOfMeasure tagData;
-
         // loop around the ENUM and process
-        for (MyEnumUnitOfMeasure oneEnum : MyEnumUnitOfMeasure.values()) {
+        for ( MyEnumUnitOfMeasure oneEnum : MyEnumUnitOfMeasure.values()) {
             tagData = new Tag998EnuUnderlyingUnitOfMeasure(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -174,18 +193,16 @@ class Tag998EnuUnderlyingUnitOfMeasureTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag998EnuUnderlyingUnitOfMeasure tagData;
-
         // loop around the ENUM and process
-        for (MyEnumUnitOfMeasure oneEnum : MyEnumUnitOfMeasure.values()) {
+        for ( MyEnumUnitOfMeasure oneEnum : MyEnumUnitOfMeasure.values()) {
             tagData = new Tag998EnuUnderlyingUnitOfMeasure(oneEnum);
             assertEquals( "Tag998EnuUnderlyingUnitOfMeasure\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",

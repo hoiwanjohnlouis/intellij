@@ -47,20 +47,6 @@ class Tag28EnuIOITransTypeTest {
         }
     }
     @Test
-    void Tag0028Test() {
-        tagData = new Tag28EnuIOITransType(Enum28IOITransType.NEW);
-        assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag28EnuIOITransType(Enum28IOITransType.REPLACE);
-        assertEquals( "R", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag28EnuIOITransType(Enum28IOITransType.CANCEL);
-        assertEquals( "C", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
     void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum28IOITransType oneEnum : Enum28IOITransType.values()) {
@@ -77,6 +63,19 @@ class Tag28EnuIOITransTypeTest {
     }
     @Test
     void TagGetDataValueTest() {
+        tagData = new Tag28EnuIOITransType(Enum28IOITransType.NEW);
+        assertEquals( "N", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag28EnuIOITransType(Enum28IOITransType.REPLACE);
+        assertEquals( "R", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag28EnuIOITransType(Enum28IOITransType.CANCEL);
+        assertEquals( "C", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
         // loop around the ENUM and process
         for (Enum28IOITransType oneEnum : Enum28IOITransType.values()) {
             tagData = new Tag28EnuIOITransType(oneEnum);

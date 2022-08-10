@@ -49,24 +49,6 @@ class Tag20EnuExecTransTypeTest {
         }
     }
     @Test
-    void Tag0020Test() {
-        tagData = new Tag20EnuExecTransType(Enum20ExecTransType.NEW);
-        assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag20EnuExecTransType(Enum20ExecTransType.CANCEL);
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag20EnuExecTransType(Enum20ExecTransType.CORRECT);
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag20EnuExecTransType(Enum20ExecTransType.STATUS);
-        assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
     void FIXHeaderTest() {
         // loop around the ENUM and process
         for (Enum20ExecTransType oneEnum : Enum20ExecTransType.values()) {
@@ -83,6 +65,23 @@ class Tag20EnuExecTransTypeTest {
     }
     @Test
     void TagGetDataValueTest() {
+        tagData = new Tag20EnuExecTransType(Enum20ExecTransType.NEW);
+        assertEquals( "0", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag20EnuExecTransType(Enum20ExecTransType.CANCEL);
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag20EnuExecTransType(Enum20ExecTransType.CORRECT);
+        assertEquals( "2", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag20EnuExecTransType(Enum20ExecTransType.STATUS);
+        assertEquals( "3", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+
         // loop around the ENUM and process
         for (Enum20ExecTransType oneEnum : Enum20ExecTransType.values()) {
             tagData = new Tag20EnuExecTransType(oneEnum);

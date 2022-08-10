@@ -26,7 +26,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  1058
  *  NoUndlyInstrumentParties
  *  NumInGroup
- *  <p>
+ *  <p></p>
  *  Identifies the number of parties identified with an underlying instrument
  */
 public class Tag1058NumNoUndlyInstrumentParties extends FIX50Abstract implements LogValuePairString, LogVerboseString {

@@ -27,7 +27,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  String
  *  <p>
  *  Specifies the service pack release being applied at message level.
- *  <p>
+ *  <p></p>
  *  Enumerated field with values assigned at time of service pack release
  *  <p></p>
  *  1130
@@ -35,9 +35,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  String
  *  <p>
  *  Specifies the service pack release being applied to a message at the session level.
- *  <p>
+ *  <p></p>
  *  Enumerated field with values assigned at time of service pack release.
- *  <p>
+ *  <p></p>
  *  Uses same values as ApplVerID (1128)
  *  <p></p>
  *  1137
@@ -45,9 +45,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  String
  *  <p>
  *  Specifies the service pack release being applied, by default, to message at the session level.
- *  <p>
+ *  <p></p>
  *  Enumerated field with values assigned at time of service pack release.
- *  <p>
+ *  <p></p>
  *  Uses same values as ApplVerID (1128)
  *  <p></p>
  *  Valid values:
@@ -56,7 +56,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>    2 - FIX40
  *  <p>    3 - FIX41
  *  <p>    4 - FIX42
- *
+ *  <p></p>
  *  <p>    5 - FIX43
  *  <p>    6 - FIX44
  *  <p>    7 - FIX50

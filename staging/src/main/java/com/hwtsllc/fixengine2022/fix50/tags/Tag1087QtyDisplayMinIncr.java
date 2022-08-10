@@ -28,7 +28,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  Qty
  *  <p>
  *  Defines the minimum increment to be used when calculating a random refresh of DisplayQty.
- *  <p>
+ *  <p></p>
  *  A user specifies this when he wants a larger increment than
  *  the standard provided by the market (e.g. the round lot size).
  */

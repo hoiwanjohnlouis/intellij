@@ -27,8 +27,12 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  SecurityReportID
  *  int
  *  <p>
+ *  Unique identifier for the Market Data Report.
+ *  <p></p>
  *  Security Report ID.
- *  <p>
+ *  <p></p>
+ *  Unique identifier for the Market Data Report.
+ *  <p></p>
  *  Unique identifier for the Security Report.
  */
 public class Tag964IntSecurityReportID extends FIX50Abstract implements LogValuePairString, LogVerboseString {

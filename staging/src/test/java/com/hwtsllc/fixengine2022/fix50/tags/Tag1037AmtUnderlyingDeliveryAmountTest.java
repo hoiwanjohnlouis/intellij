@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -32,89 +31,77 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  Indicates the underlying position amount to be delivered
  */
 class Tag1037AmtUnderlyingDeliveryAmountTest {
+    Tag1037AmtUnderlyingDeliveryAmount tagData;
+    double [] TestArray = {
+            Tag1037AmtUnderlyingDeliveryAmount.TESTA_AMT_UNDERLYING_DELIVERY_AMOUNT,
+            Tag1037AmtUnderlyingDeliveryAmount.TESTB_AMT_UNDERLYING_DELIVERY_AMOUNT
+    };
+
     @Test
-    void FIX1037Test() {
-        FIX50 fixData = FIX50.FIX1037_AMT_UNDERLYING_DELIVERY_AMOUNT;
-        assertEquals( "1037", fixData.toEnumIDString());
-        assertEquals( "UNDERLYING_DELIVERY_AMOUNT", fixData.toEnumNameString());
-        assertEquals( "UnderlyingDeliveryAmount", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag1037AmtUnderlyingDeliveryAmount( new MyAmtType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag1037Test() {
-        Tag1037AmtUnderlyingDeliveryAmount tagData;
-        double oneElement;
-
-        oneElement = Tag1037AmtUnderlyingDeliveryAmount.TESTA_AMT_UNDERLYING_DELIVERY_AMOUNT;
-        tagData = new Tag1037AmtUnderlyingDeliveryAmount( new MyAmtType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
-
-        oneElement = Tag1037AmtUnderlyingDeliveryAmount.TESTB_AMT_UNDERLYING_DELIVERY_AMOUNT;
-        tagData = new Tag1037AmtUnderlyingDeliveryAmount( new MyAmtType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag1037AmtUnderlyingDeliveryAmount tagData;
-        double oneElement;
-
-        oneElement = Tag1037AmtUnderlyingDeliveryAmount.TESTA_AMT_UNDERLYING_DELIVERY_AMOUNT;
-        tagData = new Tag1037AmtUnderlyingDeliveryAmount( new MyAmtType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag1037AmtUnderlyingDeliveryAmount.TESTB_AMT_UNDERLYING_DELIVERY_AMOUNT;
-        tagData = new Tag1037AmtUnderlyingDeliveryAmount( new MyAmtType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag1037AmtUnderlyingDeliveryAmount( new MyAmtType( oneElement ));
+            assertEquals( "FIX1037_AMT_UNDERLYING_DELIVERY_AMOUNT", tagData.toEnumLabelString());
+            assertEquals( "1037", tagData.toEnumIDString());
+            assertEquals( "UNDERLYING_DELIVERY_AMOUNT", tagData.toEnumNameString());
+            assertEquals( "UnderlyingDeliveryAmount", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagGetDataValueTest() {
-        Tag1037AmtUnderlyingDeliveryAmount tagData;
-        double oneElement;
-
-        oneElement = Tag1037AmtUnderlyingDeliveryAmount.TESTB_AMT_UNDERLYING_DELIVERY_AMOUNT;
-        tagData = new Tag1037AmtUnderlyingDeliveryAmount( new MyAmtType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag1037AmtUnderlyingDeliveryAmount( new MyAmtType( oneElement ));
+            assertEquals( oneElement, tagData.getDataValue() );
+            assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag1037AmtUnderlyingDeliveryAmount tagData;
-        double oneElement;
-
-        oneElement = Tag1037AmtUnderlyingDeliveryAmount.TESTB_AMT_UNDERLYING_DELIVERY_AMOUNT;
-        tagData = new Tag1037AmtUnderlyingDeliveryAmount( new MyAmtType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag1037AmtUnderlyingDeliveryAmount( new MyAmtType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag1037AmtUnderlyingDeliveryAmount tagData;
-        double oneElement;
-
-        oneElement = Tag1037AmtUnderlyingDeliveryAmount.TESTB_AMT_UNDERLYING_DELIVERY_AMOUNT;
-        tagData = new Tag1037AmtUnderlyingDeliveryAmount( new MyAmtType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag1037AmtUnderlyingDeliveryAmount( new MyAmtType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag1037AmtUnderlyingDeliveryAmount tagData;
-        double oneElement;
-
-        oneElement = Tag1037AmtUnderlyingDeliveryAmount.TESTA_AMT_UNDERLYING_DELIVERY_AMOUNT;
-        tagData = new Tag1037AmtUnderlyingDeliveryAmount( new MyAmtType( oneElement ) );
-        assertEquals( "Tag1037AmtUnderlyingDeliveryAmount\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag1037AmtUnderlyingDeliveryAmount( new MyAmtType( oneElement ));
+            assertEquals( "Tag1037AmtUnderlyingDeliveryAmount\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

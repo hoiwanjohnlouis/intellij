@@ -29,9 +29,9 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  char
  *  <p>
  *  The OrdType the order should have after the trigger has hit.
- *  <p>
+ *  <p></p>
  *  Required to express orders that change from Limit to Market.
- *  <p>
+ *  <p></p>
  *  Other values from OrdType (40) may be used if appropriate and bilaterally agreed upon.
  *  <p></p>
  *  Valid values:

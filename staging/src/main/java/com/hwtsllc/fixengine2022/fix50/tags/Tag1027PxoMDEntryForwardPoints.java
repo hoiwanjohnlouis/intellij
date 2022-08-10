@@ -28,10 +28,10 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  PriceOffset
  *  <p>
  *  Used for an F/X entry.
- *  <p>
+ *  <p></p>
  *  The forward points to be added to or subtracted from the spot rate
  *  to get the "all-in" rate in MDEntryPx.  Expressed in decimal form.
- *  <p>
+ *  <p></p>
  *  For example, 61.99 points is expressed and sent as 0.006199
  */
 public class Tag1027PxoMDEntryForwardPoints extends FIX50Abstract implements LogValuePairString, LogVerboseString {

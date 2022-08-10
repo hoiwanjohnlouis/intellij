@@ -28,6 +28,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  String
  *  <p>
  *  The ID assigned to a trade by the Firm to track a trade within the Firm's system.
+ *  <p></p>
  *  This ID can be assigned either before or after submission to the exchange or central counterpary
  */
 public class Tag1041StrFirmTradeID extends FIX50Abstract implements LogValuePairString, LogVerboseString {

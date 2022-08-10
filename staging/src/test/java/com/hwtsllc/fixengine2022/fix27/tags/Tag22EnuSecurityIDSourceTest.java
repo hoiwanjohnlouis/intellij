@@ -141,7 +141,22 @@ class Tag22EnuSecurityIDSourceTest {
         }
     }
     @Test
-    void Tag0022Test() {
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
+            tagData = new Tag22EnuSecurityIDSource(oneEnum);
+            assertEquals( "FIX22_ENU_SECURITY_ID_SOURCE", tagData.toEnumLabelString());
+            assertEquals( "SECURITY_ID_SOURCE", tagData.toEnumNameString());
+            assertEquals( "22", tagData.toEnumIDString());
+            assertEquals( "SecurityIDSource", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         /*
          * 1-9 Security ID Source
          */
@@ -235,24 +250,8 @@ class Tag22EnuSecurityIDSourceTest {
         tagData = new Tag22EnuSecurityIDSource(MyEnumSecurityIDSource.LETTER_OF_CREDIT);
         assertEquals( "L", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void FIXHeaderTest() {
-        // loop around the ENUM and process
-        for (MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
-            tagData = new Tag22EnuSecurityIDSource(oneEnum);
-            assertEquals( "FIX22_ENU_SECURITY_ID_SOURCE", tagData.toEnumLabelString());
-            assertEquals( "SECURITY_ID_SOURCE", tagData.toEnumNameString());
-            assertEquals( "22", tagData.toEnumIDString());
-            assertEquals( "SecurityIDSource", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
+
+
         // loop around the ENUM and process
         for (MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
             tagData = new Tag22EnuSecurityIDSource(oneEnum);

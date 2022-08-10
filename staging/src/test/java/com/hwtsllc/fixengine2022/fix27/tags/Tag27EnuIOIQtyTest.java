@@ -57,7 +57,22 @@ class Tag27EnuIOIQtyTest {
         }
     }
     @Test
-    void Tag0027Test() {
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for (MyEnumIOIQty oneEnum : MyEnumIOIQty.values()) {
+            tagData = new Tag27EnuIOIQty(oneEnum);
+            assertEquals( "FIX27_ENU_IOI_SHARES", tagData.toEnumLabelString());
+            assertEquals( "IOI_SHARES", tagData.toEnumNameString());
+            assertEquals( "27", tagData.toEnumIDString());
+            assertEquals( "IOIShares", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
+    void TagGetDataValueTest() {
         tagData = new Tag27EnuIOIQty(MyEnumIOIQty.ONE_BILLION);
         assertEquals( "0", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
@@ -77,24 +92,8 @@ class Tag27EnuIOIQtyTest {
         tagData = new Tag27EnuIOIQty(MyEnumIOIQty.UNDISCLOSED_QUANTITY);
         assertEquals( "U", tagData.getDataValue());
         assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void FIXHeaderTest() {
-        // loop around the ENUM and process
-        for (MyEnumIOIQty oneEnum : MyEnumIOIQty.values()) {
-            tagData = new Tag27EnuIOIQty(oneEnum);
-            assertEquals( "FIX27_ENU_IOI_SHARES", tagData.toEnumLabelString());
-            assertEquals( "IOI_SHARES", tagData.toEnumNameString());
-            assertEquals( "27", tagData.toEnumIDString());
-            assertEquals( "IOIShares", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
-            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
-        }
-    }
-    @Test
-    void TagGetDataValueTest() {
+
+
         // loop around the ENUM and process
         for (MyEnumIOIQty oneEnum : MyEnumIOIQty.values()) {
             tagData = new Tag27EnuIOIQty(oneEnum);

@@ -29,7 +29,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  String
  *  <p>
  *  Physical unit of measure for Derivative products.
- *  <p>
+ *  <p></p>
  *  NOTE: Additional values may be used by mutual agreement of the counterparties
  *  <p>
  *  (http://www.unc.edu/~rowlett/units/index.html is a good source for units)

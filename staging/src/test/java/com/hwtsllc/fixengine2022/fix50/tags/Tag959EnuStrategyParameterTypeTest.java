@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix50.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX50;
 import com.hwtsllc.fixengine2022.fix50.enums.Enum959StrategyParameterType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -62,124 +61,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *  <p>    24 - MultipleStringValue
  */
 class Tag959EnuStrategyParameterTypeTest {
+    Tag959EnuStrategyParameterType tagData;
+
     @Test
-    void FIX0959Test() {
-        FIX50 fixData = FIX50.FIX959_ENU_STRATEGY_PARAMETER_TYPE;
-        assertEquals( "959", fixData.toEnumIDString());
-        assertEquals( "STRATEGY_PARAMETER_TYPE", fixData.toEnumNameString());
-        assertEquals( "StrategyParameterType", fixData.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
-    }
-    @Test
-    void Tag0959Test() {
-        Tag959EnuStrategyParameterType tagData;
-
-        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.INT );
-        assertEquals( Enum959StrategyParameterType.INT.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.LENGTH );
-        assertEquals( Enum959StrategyParameterType.LENGTH.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.NUM_IN_GROUP );
-        assertEquals( Enum959StrategyParameterType.NUM_IN_GROUP.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.SEQ_NUM );
-        assertEquals( Enum959StrategyParameterType.SEQ_NUM.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.TAG_NUM );
-        assertEquals( Enum959StrategyParameterType.TAG_NUM.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.FLOAT );
-        assertEquals( Enum959StrategyParameterType.FLOAT.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.QTY );
-        assertEquals( Enum959StrategyParameterType.QTY.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.PRICE );
-        assertEquals( Enum959StrategyParameterType.PRICE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.PRICE_OFFSET );
-        assertEquals( Enum959StrategyParameterType.PRICE_OFFSET.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.AMT );
-        assertEquals( Enum959StrategyParameterType.AMT.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.PERCENTAGE );
-        assertEquals( Enum959StrategyParameterType.PERCENTAGE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.CHAR );
-        assertEquals( Enum959StrategyParameterType.CHAR.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.BOOLEAN );
-        assertEquals( Enum959StrategyParameterType.BOOLEAN.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.STRING );
-        assertEquals( Enum959StrategyParameterType.STRING.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.MULTIPLE_CHAR_VALUE );
-        assertEquals( Enum959StrategyParameterType.MULTIPLE_CHAR_VALUE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.CURRENCY );
-        assertEquals( Enum959StrategyParameterType.CURRENCY.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.EXCHANGE );
-        assertEquals( Enum959StrategyParameterType.EXCHANGE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.MONTH_YEAR );
-        assertEquals( Enum959StrategyParameterType.MONTH_YEAR.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.UTC_TIMESTAMP);
-        assertEquals( Enum959StrategyParameterType.UTC_TIMESTAMP.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.UTC_TIME_ONLY );
-        assertEquals( Enum959StrategyParameterType.UTC_TIME_ONLY.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.LOCAL_MKT_TIME );
-        assertEquals( Enum959StrategyParameterType.LOCAL_MKT_TIME.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.UTC_DATE );
-        assertEquals( Enum959StrategyParameterType.UTC_DATE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.DATA );
-        assertEquals( Enum959StrategyParameterType.DATA.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.MULTIPLE_STRING_VALUE );
-        assertEquals( Enum959StrategyParameterType.MULTIPLE_STRING_VALUE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag959EnuStrategyParameterType tagData;
-
+    void PrintTest() {
         // loop around the ENUM and process
         for ( Enum959StrategyParameterType oneEnum : Enum959StrategyParameterType.values()) {
             tagData = new Tag959EnuStrategyParameterType(oneEnum);
@@ -187,34 +72,177 @@ class Tag959EnuStrategyParameterTypeTest {
         }
     }
     @Test
+    void FIXHeaderTest() {
+        // loop around the ENUM and process
+        for ( Enum959StrategyParameterType oneEnum : Enum959StrategyParameterType.values()) {
+            tagData = new Tag959EnuStrategyParameterType(oneEnum);
+            assertEquals( "FIX959_ENU_STRATEGY_PARAMETER_TYPE", tagData.toEnumLabelString());
+            assertEquals( "959", tagData.toEnumIDString());
+            assertEquals( "STRATEGY_PARAMETER_TYPE", tagData.toEnumNameString());
+            assertEquals( "StrategyParameterType", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
+    }
+    @Test
     void TagGetDataValueTest() {
-        Tag959EnuStrategyParameterType tagData;
+        /*
+         *  <p>    1 - Int
+         *  <p>    2 - Length
+         *  <p>    3 - NumInGroup
+         *  <p>    4 - SeqNum
+         *  <p>    5 - TagNum
+         */
+        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.INT );
+        assertEquals( "1", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.LENGTH );
+        assertEquals( "2", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.NUM_IN_GROUP );
+        assertEquals( "3", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.SEQ_NUM );
+        assertEquals( "4", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.TAG_NUM );
+        assertEquals( "5", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        /*
+         *  <p>    6 - Float
+         *  <p>    7 - Qty
+         *  <p>    8 - Price
+         *  <p>    9 - PriceOffset
+         *  <p>    10 - Amt
+         */
+        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.FLOAT );
+        assertEquals( "6", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.QTY );
+        assertEquals( "7", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.PRICE );
+        assertEquals( "8", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.PRICE_OFFSET );
+        assertEquals( "9", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.AMT );
+        assertEquals( "10", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        /*
+         *  <p>    11 - Percentage
+         *  <p>    12 - Char
+         *  <p>    13 - Boolean
+         *  <p>    14 - String
+         *  <p>    15 - MultipleCharValue
+         */
+        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.PERCENTAGE );
+        assertEquals( "11", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.CHAR );
+        assertEquals( "12", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.BOOLEAN );
+        assertEquals( "13", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.STRING );
+        assertEquals( "14", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.MULTIPLE_CHAR_VALUE );
+        assertEquals( "15", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        /*
+         *  <p>    16 - Currency
+         *  <p>    17 - Exchange
+         *  <p>    18 - Month-Year
+         *  <p>    19 - UTCTimeStamp
+         *  <p>    20 - UTCTimeOnly
+         */
+        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.CURRENCY );
+        assertEquals( "16", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.EXCHANGE );
+        assertEquals( "17", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.MONTH_YEAR );
+        assertEquals( "18", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.UTC_TIMESTAMP);
+        assertEquals( "19", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.UTC_TIME_ONLY );
+        assertEquals( "20", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        /*
+         *  <p>    21 - LocalMktTime
+         *  <p>    22 - UTCDate
+         *  <p>    23 - Data
+         *  <p>    24 - MultipleStringValue
+         */
+        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.LOCAL_MKT_TIME );
+        assertEquals( "21", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.UTC_DATE );
+        assertEquals( "22", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.DATA );
+        assertEquals( "23", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
+        tagData = new Tag959EnuStrategyParameterType( Enum959StrategyParameterType.MULTIPLE_STRING_VALUE );
+        assertEquals( "24", tagData.getDataValue());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+
 
         // loop around the ENUM and process
-        for (Enum959StrategyParameterType oneEnum : Enum959StrategyParameterType.values()) {
+        for ( Enum959StrategyParameterType oneEnum : Enum959StrategyParameterType.values()) {
             tagData = new Tag959EnuStrategyParameterType(oneEnum);
+            assertEquals( tagData.toString(), tagData.getDataValue());
             assertEquals( tagData.toDataIDString(), tagData.getDataValue());
+            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
         }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag959EnuStrategyParameterType tagData;
-
         // loop around the ENUM and process
-        for (Enum959StrategyParameterType oneEnum : Enum959StrategyParameterType.values()) {
+        for ( Enum959StrategyParameterType oneEnum : Enum959StrategyParameterType.values()) {
             tagData = new Tag959EnuStrategyParameterType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(),
-                    tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
         }
     }
     @Test
     void TagToStringTest() {
-        Tag959EnuStrategyParameterType tagData;
-
         // loop around the ENUM and process
-        for (Enum959StrategyParameterType oneEnum : Enum959StrategyParameterType.values()) {
+        for ( Enum959StrategyParameterType oneEnum : Enum959StrategyParameterType.values()) {
             tagData = new Tag959EnuStrategyParameterType(oneEnum);
             assertEquals( tagData.toDataIDString(), tagData.toString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
@@ -222,18 +250,16 @@ class Tag959EnuStrategyParameterTypeTest {
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag959EnuStrategyParameterType tagData;
-
         // loop around the ENUM and process
-        for (Enum959StrategyParameterType oneEnum : Enum959StrategyParameterType.values()) {
+        for ( Enum959StrategyParameterType oneEnum : Enum959StrategyParameterType.values()) {
             tagData = new Tag959EnuStrategyParameterType(oneEnum);
             assertEquals( "Tag959EnuStrategyParameterType\n" +
                             "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.toDataIDString() + "]\n" +
-                            "\tValuePair[" + tagData.toEnumIDString() + "=" + tagData.toDataIDString() + "]\n" +
+                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +
                             "\tDataDescription[" + tagData.toDataDescriptionString() + "]",
