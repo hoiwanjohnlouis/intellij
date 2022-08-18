@@ -18,8 +18,7 @@ package com.hwtsllc.fixengine2022.views;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 class ViewBuilderTest {
     @Test
