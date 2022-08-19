@@ -105,7 +105,7 @@ public class StandardMessageTrailer implements LogValuePairString, LogVerboseStr
         Tag89DatSignature tag89Dat;
         Tag93LenSignatureLength tag93Len;
         Tag10StrCheckSum tag10Str;
-//        String delimiter = "\u001";
+//        String delimiter = "\\u001";
         // initialize trailer tags
         tag89Dat = new Tag89DatSignature( new MyDataType( Tag89DatSignature.TESTB_DAT_SIGNATURE ) );
         tag93Len = new Tag93LenSignatureLength( new MyLengthType( Tag93LenSignatureLength.TESTB_LEN_SIGNATURE_LENGTH ) );
