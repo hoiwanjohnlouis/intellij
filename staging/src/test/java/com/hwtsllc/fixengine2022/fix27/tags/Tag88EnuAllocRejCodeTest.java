@@ -17,45 +17,13 @@
 package com.hwtsllc.fixengine2022.fix27.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyEnumAllocRejCode;
+import com.hwtsllc.fixengine2022.fix44.tags.Tag776EnuIndividualAllocRejCode;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  88 (same as 88, 776)
- *  AllocRejCode
- *  int
- *  <p></p>
- *  Identifies reason for rejection.
- *  <p></p>
- *  776 (same as 88, 776)
- *  IndividualAllocRejCode
- *  int
- *  <p></p>
- *  Identified reason for rejecting an individual AllocAccount (79) detail.
- *  <p></p>
- *      Same values as  AllocRejCode (88)
- *  <p></p>
- *  Valid values:
- *  <p>    0 - Unknown account(s)
- *  <p>    1 - Incorrect quantity
- *  <p>    2 - Incorrect average price
- *  <p>    3 - Unknown executing broker mnemonic
- *  <p>    4 - Commission difference
- *  <p></p>
- *  <p>    5 - Unknown OrderID (37)
- *  <p>    6 - Unknown ListID (66)
- *  <p>    7 - Other (further in Text (58))
- *  <p>    8 - Incorrect allocated quantity
- *  <p>    9 - Calculation difference
- *  <p></p>
- *  <p>    10 - Unknown or stale ExecID
- *  <p>    11 - Mismatched data
- *  <p>    12 - Unknown ClOrdID
- *  <p>    13 - Warehouse request rejected
- */
 class Tag88EnuAllocRejCodeTest {
     Tag88EnuAllocRejCode tagData;
 
@@ -83,82 +51,11 @@ class Tag88EnuAllocRejCodeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         * 0-13 AllocRejCode types
-         */
-        tagData = new Tag88EnuAllocRejCode(MyEnumAllocRejCode.UNKNOWN_ACCOUNT);
-        assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag88EnuAllocRejCode(MyEnumAllocRejCode.INCORRECT_QUANTITY);
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag88EnuAllocRejCode(MyEnumAllocRejCode.INCORRECT_AVERAGE_PRICE);
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag88EnuAllocRejCode(MyEnumAllocRejCode.UNKNOWN_EXECUTING_BROKER_MNEMONIC);
-        assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag88EnuAllocRejCode(MyEnumAllocRejCode.COMMISSION_DIFFERENCE);
-        assertEquals( "4", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag88EnuAllocRejCode(MyEnumAllocRejCode.UNKNOWN_ORDERID);
-        assertEquals( "5", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag88EnuAllocRejCode(MyEnumAllocRejCode.UNKNOWN_LISTID);
-        assertEquals( "6", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag88EnuAllocRejCode(MyEnumAllocRejCode.OTHER);
-        assertEquals( "7", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag88EnuAllocRejCode(MyEnumAllocRejCode.INCORRECT_ALLOCATED_QUANTITY);
-        assertEquals( "8", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag88EnuAllocRejCode(MyEnumAllocRejCode.CALCULATION_DIFFERENCE);
-        assertEquals( "9", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag88EnuAllocRejCode(MyEnumAllocRejCode.UNKNOWN_OR_STALE_EXECID);
-        assertEquals( "10", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag88EnuAllocRejCode(MyEnumAllocRejCode.MISMATCHED_DATA);
-        assertEquals( "11", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag88EnuAllocRejCode(MyEnumAllocRejCode.UNKNOWN_CLORDID);
-        assertEquals( "12", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag88EnuAllocRejCode(MyEnumAllocRejCode.WAREHOUSE_REQUEST_REJECTED);
-        assertEquals( "13", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        // loop around the ENUM and process
-        for (MyEnumAllocRejCode oneEnum : MyEnumAllocRejCode.values()) {
-            tagData = new Tag88EnuAllocRejCode(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (MyEnumAllocRejCode oneEnum : MyEnumAllocRejCode.values()) {
             tagData = new Tag88EnuAllocRejCode(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -166,6 +63,84 @@ class Tag88EnuAllocRejCodeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  88 (same as 88, 776)
+         *  <p>    0 - Unknown account(s)
+         *  <p>    1 - Incorrect quantity
+         *  <p>    2 - Incorrect average price
+         *  <p>    3 - Unknown executing broker mnemonic
+         *  <p>    4 - Commission difference
+         */
+        tagData = new Tag88EnuAllocRejCode( MyEnumAllocRejCode.UNKNOWN_ACCOUNT );
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag88EnuAllocRejCode(MyEnumAllocRejCode.INCORRECT_QUANTITY);
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag88EnuAllocRejCode(MyEnumAllocRejCode.INCORRECT_AVERAGE_PRICE);
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag88EnuAllocRejCode(MyEnumAllocRejCode.UNKNOWN_EXECUTING_BROKER_MNEMONIC);
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag88EnuAllocRejCode(MyEnumAllocRejCode.COMMISSION_DIFFERENCE);
+        assertEquals( "4", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    5 - Unknown OrderID (37)
+         *  <p>    6 - Unknown ListID (66)
+         *  <p>    7 - Other (further in Text (58))
+         *  <p>    8 - Incorrect allocated quantity
+         *  <p>    9 - Calculation difference
+         */
+        tagData = new Tag88EnuAllocRejCode(MyEnumAllocRejCode.UNKNOWN_ORDERID);
+        assertEquals( "5", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag88EnuAllocRejCode(MyEnumAllocRejCode.UNKNOWN_LISTID);
+        assertEquals( "6", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag88EnuAllocRejCode(MyEnumAllocRejCode.OTHER);
+        assertEquals( "7", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag88EnuAllocRejCode(MyEnumAllocRejCode.INCORRECT_ALLOCATED_QUANTITY);
+        assertEquals( "8", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag88EnuAllocRejCode(MyEnumAllocRejCode.CALCULATION_DIFFERENCE);
+        assertEquals( "9", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    10 - Unknown or stale ExecID
+         *  <p>    11 - Mismatched data
+         *  <p>    12 - Unknown ClOrdID
+         *  <p>    13 - Warehouse request rejected
+         */
+        tagData = new Tag88EnuAllocRejCode(MyEnumAllocRejCode.UNKNOWN_OR_STALE_EXECID);
+        assertEquals( "10", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag88EnuAllocRejCode(MyEnumAllocRejCode.MISMATCHED_DATA);
+        assertEquals( "11", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag88EnuAllocRejCode(MyEnumAllocRejCode.UNKNOWN_CLORDID);
+        assertEquals( "12", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag88EnuAllocRejCode(MyEnumAllocRejCode.WAREHOUSE_REQUEST_REJECTED);
+        assertEquals( "13", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (MyEnumAllocRejCode oneEnum : MyEnumAllocRejCode.values()) {
             tagData = new Tag88EnuAllocRejCode(oneEnum);
@@ -183,7 +158,7 @@ class Tag88EnuAllocRejCodeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

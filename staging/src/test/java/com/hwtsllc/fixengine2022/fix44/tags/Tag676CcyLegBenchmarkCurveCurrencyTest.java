@@ -23,15 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  676
- *  LegBenchmarkCurveCurrency
- *  Currency
- *  <p></p>
- *  LegBenchmarkPrice (679) currency
- *  <p></p>
- *  See BenchmarkCurveCurrency (220) for description and valid values.
- */
 class Tag676CcyLegBenchmarkCurveCurrencyTest {
     Tag676CcyLegBenchmarkCurveCurrency tagData;
     String [] TestArray = {
@@ -63,26 +54,23 @@ class Tag676CcyLegBenchmarkCurveCurrencyTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag676CcyLegBenchmarkCurveCurrency( new MyCurrencyType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag676CcyLegBenchmarkCurveCurrency( new MyCurrencyType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  676
+         *  LegBenchmarkCurveCurrency
+         *  Currency
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag676CcyLegBenchmarkCurveCurrency( new MyCurrencyType( oneElement ));

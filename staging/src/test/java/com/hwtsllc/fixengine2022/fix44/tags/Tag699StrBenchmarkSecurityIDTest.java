@@ -23,15 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  699
- *  BenchmarkSecurityID
- *  String
- *  <p></p>
- *  The identifier of the benchmark security, e.g. Treasury against Corporate bond.
- *  <p></p>
- *  See SecurityID (tag 48) for description and valid values.
- */
 class Tag699StrBenchmarkSecurityIDTest {
     Tag699StrBenchmarkSecurityID tagData;
     String [] TestArray = {
@@ -63,25 +54,23 @@ class Tag699StrBenchmarkSecurityIDTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag699StrBenchmarkSecurityID( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag699StrBenchmarkSecurityID( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  699
+         *  BenchmarkSecurityID
+         *  String
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag699StrBenchmarkSecurityID( new MyStringType( oneElement ));

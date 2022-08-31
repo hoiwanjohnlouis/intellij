@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  43
- *  PossDupFlag
- *  Boolean
- *  <p>
- *  Indicates possible retransmission of message with this sequence number
- *  <p></p>
- *  Valid values:
- *  <p>    N - Original transmission
- *  <p>    Y - Possible duplicate
- */
 class Tag43EnuPossDupFlagTest {
     Tag43EnuPossDupFlag tagData;
 
@@ -61,31 +50,11 @@ class Tag43EnuPossDupFlagTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        tagData = new Tag43EnuPossDupFlag( Enum43PossDupFlag.NO);
-        assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag43EnuPossDupFlag( Enum43PossDupFlag.YES);
-        assertEquals( "Y", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        // loop around the ENUM and process
-        for (Enum43PossDupFlag oneEnum : Enum43PossDupFlag.values()) {
-            tagData = new Tag43EnuPossDupFlag(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum43PossDupFlag oneEnum : Enum43PossDupFlag.values()) {
             tagData = new Tag43EnuPossDupFlag(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -93,6 +62,20 @@ class Tag43EnuPossDupFlagTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  43
+         *  <p>    N - Original transmission
+         *  <p>    Y - Possible duplicate
+         */
+        tagData = new Tag43EnuPossDupFlag( Enum43PossDupFlag.NO);
+        assertEquals( "N", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag43EnuPossDupFlag( Enum43PossDupFlag.YES);
+        assertEquals( "Y", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum43PossDupFlag oneEnum : Enum43PossDupFlag.values()) {
             tagData = new Tag43EnuPossDupFlag(oneEnum);
@@ -110,7 +93,7 @@ class Tag43EnuPossDupFlagTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

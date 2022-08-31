@@ -23,19 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  16
- *  EndSeqNo
- *  SeqNum
- *  <p></p>
- *  Message sequence number of last message in range to be resent.
- *  <p></p>
- *  If request is for a single message BeginSeqNo (7) = EndSeqNo.
- *  <p></p>
- *  If request is for all messages subsequent from a particular message,
- *  <p></p>
- *  EndSeqNo = "0" (representing infinity).
- */
 class Tag16SeqEndSeqNoTest {
     Tag16SeqEndSeqNo tagData;
     int [] TestArray = {
@@ -67,21 +54,12 @@ class Tag16SeqEndSeqNoTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag16SeqEndSeqNo( new MySeqNumType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_SEQ_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag16SeqEndSeqNo( new MySeqNumType( oneElement ));
-            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }

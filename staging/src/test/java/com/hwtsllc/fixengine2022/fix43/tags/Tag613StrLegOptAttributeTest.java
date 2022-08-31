@@ -23,15 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  613
- *  LegOptAttribute
- *  char
- *  <p></p>
- *  Multileg instrument's individual  security’s OptAttribute.
- *  <p></p>
- *  See OptAttribute (206) field for description
- */
 class Tag613StrLegOptAttributeTest {
     Tag613StrLegOptAttribute tagData;
     String [] TestArray = {
@@ -63,26 +54,23 @@ class Tag613StrLegOptAttributeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag613StrLegOptAttribute( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag613StrLegOptAttribute( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  613
+         *  LegOptAttribute
+         *  char
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag613StrLegOptAttribute( new MyStringType( oneElement ));

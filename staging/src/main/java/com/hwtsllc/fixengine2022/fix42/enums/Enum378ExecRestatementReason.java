@@ -141,14 +141,7 @@ public enum Enum378ExecRestatementReason implements LogFIXString, LogVerboseStri
      */
     @Override
     public String toString() {
-        return toEnumLabelString()
-                .concat("=[")
-                .concat( toEnumIDString())
-                .concat(",")
-                .concat( toEnumNameString())
-                .concat(",")
-                .concat( toEnumDescriptionString())
-                .concat("]");
+        return id;
     }
 
     /**

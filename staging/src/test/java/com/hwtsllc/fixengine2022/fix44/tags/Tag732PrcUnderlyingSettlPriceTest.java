@@ -23,15 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  732
- *  UnderlyingSettlPrice
- *  Price
- *  <p></p>
- *  Underlying security’s SettlPrice.
- *  <p></p>
- *  See SettlPrice (730) field for description
- */
 class Tag732PrcUnderlyingSettlPriceTest {
     Tag732PrcUnderlyingSettlPrice tagData;
     double [] TestArray = {
@@ -63,26 +54,23 @@ class Tag732PrcUnderlyingSettlPriceTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( double oneElement : TestArray ) {
-            tagData = new Tag732PrcUnderlyingSettlPrice( new MyPriceType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag732PrcUnderlyingSettlPrice( new MyPriceType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  732
+         *  UnderlyingSettlPrice
+         *  Price
+         */
+
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag732PrcUnderlyingSettlPrice( new MyPriceType( oneElement ));

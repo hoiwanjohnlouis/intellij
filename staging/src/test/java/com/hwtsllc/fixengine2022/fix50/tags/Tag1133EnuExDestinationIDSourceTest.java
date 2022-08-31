@@ -23,20 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  1133
- *  ExDestinationIDSource
- *  char
- *  <p>
- *  The ID source of ExDestination
- *  <p></p>
- *  Valid values:
- *  <p>    B - BIC (Bank Identification Code) (ISO 9362)
- *  <p>    C - Generally accepted market participant identifier (e.g. NASD mnemonic)
- *  <p>    D - Proprietary / Custom code
- *  <p>    E - ISO Country Code
- *  <p>    G - MIC (ISO 10383 - Market Identifier Code)
- */
 class Tag1133EnuExDestinationIDSourceTest {
     Tag1133EnuExDestinationIDSource tagData;
 
@@ -64,50 +50,11 @@ class Tag1133EnuExDestinationIDSourceTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    B - BIC (Bank Identification Code) (ISO 9362)
-         *  <p>    C - Generally accepted market participant identifier (e.g. NASD mnemonic)
-         *  <p>    D - Proprietary / Custom code
-         *  <p>    E - ISO Country Code
-         *  <p>    G - MIC (ISO 10383 - Market Identifier Code)
-         */
-        tagData = new Tag1133EnuExDestinationIDSource( Enum1133DestinationSource.BIC );
-        assertEquals( "B", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag1133EnuExDestinationIDSource( Enum1133DestinationSource.MARKET_PARTICIPANT_IDENTIFIER );
-        assertEquals( "C", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag1133EnuExDestinationIDSource( Enum1133DestinationSource.PROPRIETARY );
-        assertEquals( "D", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag1133EnuExDestinationIDSource( Enum1133DestinationSource.ISO_COUNTRY_CODE );
-        assertEquals( "E", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag1133EnuExDestinationIDSource( Enum1133DestinationSource.MIC );
-        assertEquals( "G", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        // loop around the ENUM and process
-        for ( Enum1133DestinationSource oneEnum : Enum1133DestinationSource.values()) {
-            tagData = new Tag1133EnuExDestinationIDSource(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum1133DestinationSource oneEnum : Enum1133DestinationSource.values()) {
             tagData = new Tag1133EnuExDestinationIDSource(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -115,6 +62,37 @@ class Tag1133EnuExDestinationIDSourceTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  1133
+         *  ExDestinationIDSource
+         *  char
+         *  <p>    B - BIC (Bank Identification Code) (ISO 9362)
+         *  <p>    C - Generally accepted market participant identifier (e.g. NASD mnemonic)
+         *  <p>    D - Proprietary / Custom code
+         *  <p>    E - ISO Country Code
+         *  <p>    G - MIC (ISO 10383 - Market Identifier Code)
+         */
+        tagData = new Tag1133EnuExDestinationIDSource( Enum1133DestinationSource.BIC );
+        assertEquals( "B", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag1133EnuExDestinationIDSource( Enum1133DestinationSource.MARKET_PARTICIPANT_IDENTIFIER );
+        assertEquals( "C", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag1133EnuExDestinationIDSource( Enum1133DestinationSource.PROPRIETARY );
+        assertEquals( "D", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag1133EnuExDestinationIDSource( Enum1133DestinationSource.ISO_COUNTRY_CODE );
+        assertEquals( "E", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag1133EnuExDestinationIDSource( Enum1133DestinationSource.MIC );
+        assertEquals( "G", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum1133DestinationSource oneEnum : Enum1133DestinationSource.values()) {
             tagData = new Tag1133EnuExDestinationIDSource(oneEnum);
@@ -132,7 +110,7 @@ class Tag1133EnuExDestinationIDSourceTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

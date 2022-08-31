@@ -24,13 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  262
- *  MDReqID
- *  String
- *  <p></p>
- *  Unique identifier for Market Data Request
- */
 class Tag262StrMDReqIDTest {
     Tag262StrMDReqID tagData;
     String [] TestArray = {
@@ -62,26 +55,23 @@ class Tag262StrMDReqIDTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag262StrMDReqID( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag262StrMDReqID( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  262
+         *  MDReqID
+         *  String
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag262StrMDReqID( new MyStringType( oneElement ));

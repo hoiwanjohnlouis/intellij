@@ -24,15 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  439
- *  ClearingFirm
- *  String
- *  <p></p>
- *  Deprecated in FIX.4.2 Firm that will clear the trade.
- *  <p></p>
- *  Used if different from the executing firm.
- */
 // @Deprecated
 class Tag439StrClearingFirmTest {
     Tag439StrClearingFirm tagData;
@@ -65,26 +56,23 @@ class Tag439StrClearingFirmTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag439StrClearingFirm( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag439StrClearingFirm( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  439
+         *  ClearingFirm
+         *  String
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag439StrClearingFirm( new MyStringType( oneElement ));

@@ -23,13 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  501
- *  CashDistribPayRef
- *  String
- *  <p></p>
- *  Free format Payment reference to assist with reconciliation of distributions.
- */
 class Tag501StrCashDistribPayRefTest {
     Tag501StrCashDistribPayRef tagData;
     String [] TestArray = {
@@ -61,25 +54,23 @@ class Tag501StrCashDistribPayRefTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag501StrCashDistribPayRef( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag501StrCashDistribPayRef( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  501
+         *  CashDistribPayRef
+         *  String
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag501StrCashDistribPayRef( new MyStringType( oneElement ));

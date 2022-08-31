@@ -23,13 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  745
- *  AssignmentUnit
- *  Qty
- *  <p></p>
- *  Quantity Increment used in performing assignment.
- */
 class Tag745QtyAssignmentUnitTest {
     Tag745QtyAssignmentUnit tagData;
     int [] TestArray = {
@@ -61,26 +54,23 @@ class Tag745QtyAssignmentUnitTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag745QtyAssignmentUnit( new MyQtyType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag745QtyAssignmentUnit( new MyQtyType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  745
+         *  AssignmentUnit
+         *  Qty
+         */
+
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag745QtyAssignmentUnit( new MyQtyType( oneElement ));

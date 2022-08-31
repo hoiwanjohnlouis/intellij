@@ -100,14 +100,7 @@ public enum Enum752SideMultiLegReportingType implements LogFIXString, LogVerbose
      */
     @Override
     public String toString() {
-        return toEnumLabelString()
-                .concat("=[")
-                .concat( toEnumIDString())
-                .concat(",")
-                .concat( toEnumNameString())
-                .concat(",")
-                .concat( toEnumDescriptionString())
-                .concat("]");
+        return id;
     }
 
     /**

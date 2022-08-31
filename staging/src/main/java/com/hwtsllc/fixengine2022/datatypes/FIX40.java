@@ -30,7 +30,6 @@ import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
  *  <p>                 ENU = EnumType field
  *  <p>                 AMT = MyAmtType field, saved as double
  *  <p>                 CCY = MyCurrencyType field, saved as String
- *  <p>                 CHA = MyCharType field, saved as char
  *  <p>                 COU = MyCountryType field, saved as String
  *  <p>                 DAT = MyDataType field, saved as String
  *  <p>                 EXC = MyExchangeType field, saved as String

@@ -52,9 +52,6 @@ public class Tag900AmtTotalNetValue extends FIX44Abstract implements LogValuePai
         this.dataValue = dataValue;
     }
 
-    public double getDataValue() {
-        return this.dataValue.getDataValue();
-    }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
@@ -83,7 +80,7 @@ public class Tag900AmtTotalNetValue extends FIX44Abstract implements LogValuePai
      */
     @Override
     public String toString() {
-        return String.valueOf(getDataValue());
+        return dataValue.toString();
     }
 
     /**

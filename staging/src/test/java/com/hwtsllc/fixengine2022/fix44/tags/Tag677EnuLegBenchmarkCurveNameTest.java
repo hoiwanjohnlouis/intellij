@@ -23,37 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  221 (same as 221, 677)
- *  BenchmarkCurveName
- *  String
- *  <p>
- *  Name of the Benchmark Curve.
- *  <p>
- *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
- *  <p></p>
- *  677 (same as 221, 677)
- *  LegBenchmarkCurveName
- *  String
- *  <p>
- *  Name of the Leg Benchmark Curve.
- *  <p>
- *  See BenchmarkCurveName (221) for description and valid values.
- *  <p></p>
- *  Valid values:
- *  <p>    EONIA - EONIA
- *  <p>    EUREPO - EUREPO
- *  <p>    Euribor - Euribor
- *  <p>    FutureSWAP - FutureSWAP
- *  <p>    LIBID - LIBID
- *  <p>    LIBOR - LIBOR (London Inter-Bank Offer)
- *  <p>    MuniAAA - MuniAAA
- *  <p>    OTHER - OTHER
- *  <p>    Pfandbriefe - Pfandbriefe
- *  <p>    SONIA - SONIA
- *  <p>    SWAP - SWAP
- *  <p>    Treasury - Treasury
- */
 class Tag677EnuLegBenchmarkCurveNameTest {
     Tag677EnuLegBenchmarkCurveName tagData;
 
@@ -81,8 +50,22 @@ class Tag677EnuLegBenchmarkCurveNameTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
+    void TagToValuePairStringTest() {
+        // loop around the ENUM and process
+        for ( MyEnumBenchmarkCurveName oneEnum : MyEnumBenchmarkCurveName.values()) {
+            tagData = new Tag677EnuLegBenchmarkCurveName(oneEnum);
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
         /*
+         *  677 (same as 221, 677)
+         *  LegBenchmarkCurveName
+         *  String
          *  <p>    EONIA - EONIA
          *  <p>    EUREPO - EUREPO
          *  <p>    Euribor - Euribor
@@ -90,24 +73,24 @@ class Tag677EnuLegBenchmarkCurveNameTest {
          *  <p>    LIBID - LIBID
          */
         tagData = new Tag677EnuLegBenchmarkCurveName( MyEnumBenchmarkCurveName.EONIA );
-        assertEquals( "EONIA", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "EONIA", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
         tagData = new Tag677EnuLegBenchmarkCurveName(MyEnumBenchmarkCurveName.EUREPO);
-        assertEquals( "EUREPO", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "EUREPO", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
         tagData = new Tag677EnuLegBenchmarkCurveName(MyEnumBenchmarkCurveName.EURIBOR);
-        assertEquals( "Euribor", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "Euribor", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
         tagData = new Tag677EnuLegBenchmarkCurveName(MyEnumBenchmarkCurveName.FUTURESWAP);
-        assertEquals( "FutureSWAP", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "FutureSWAP", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
         tagData = new Tag677EnuLegBenchmarkCurveName(MyEnumBenchmarkCurveName.LIBID);
-        assertEquals( "LIBID", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "LIBID", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
         /*
          *  <p>    LIBOR - LIBOR (London Inter-Bank Offer)
@@ -117,59 +100,38 @@ class Tag677EnuLegBenchmarkCurveNameTest {
          *  <p>    SONIA - SONIA
          */
         tagData = new Tag677EnuLegBenchmarkCurveName(MyEnumBenchmarkCurveName.LIBOR);
-        assertEquals( "LIBOR", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "LIBOR", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
         tagData = new Tag677EnuLegBenchmarkCurveName(MyEnumBenchmarkCurveName.MUNIAAA);
-        assertEquals( "MuniAAA", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "MuniAAA", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
         tagData = new Tag677EnuLegBenchmarkCurveName(MyEnumBenchmarkCurveName.OTHER);
-        assertEquals( "OTHER", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "OTHER", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
         tagData = new Tag677EnuLegBenchmarkCurveName(MyEnumBenchmarkCurveName.PFANDBRIEFE);
-        assertEquals( "Pfandbriefe", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "Pfandbriefe", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
         tagData = new Tag677EnuLegBenchmarkCurveName(MyEnumBenchmarkCurveName.SONIA);
-        assertEquals( "SONIA", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "SONIA", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
         /*
          *  <p>    SWAP - SWAP
          *  <p>    Treasury - Treasury
          */
         tagData = new Tag677EnuLegBenchmarkCurveName(MyEnumBenchmarkCurveName.SWAP);
-        assertEquals( "SWAP", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "SWAP", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
         tagData = new Tag677EnuLegBenchmarkCurveName(MyEnumBenchmarkCurveName.TREASURY);
-        assertEquals( "Treasury", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "Treasury", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
-        // loop around the ENUM and process
-        for ( MyEnumBenchmarkCurveName oneEnum : MyEnumBenchmarkCurveName.values()) {
-            tagData = new Tag677EnuLegBenchmarkCurveName(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
-    void TagToValuePairStringTest() {
-        // loop around the ENUM and process
-        for ( MyEnumBenchmarkCurveName oneEnum : MyEnumBenchmarkCurveName.values()) {
-            tagData = new Tag677EnuLegBenchmarkCurveName(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-        }
-    }
-    @Test
-    void TagToStringTest() {
+
         // loop around the ENUM and process
         for ( MyEnumBenchmarkCurveName oneEnum : MyEnumBenchmarkCurveName.values()) {
             tagData = new Tag677EnuLegBenchmarkCurveName(oneEnum);
@@ -187,7 +149,7 @@ class Tag677EnuLegBenchmarkCurveNameTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

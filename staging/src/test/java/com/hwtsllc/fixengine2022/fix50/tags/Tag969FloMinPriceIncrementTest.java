@@ -23,13 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  969
- *  MinPriceIncrement
- *  float
- *  <p>
- *  Minimum price increase for a given exchange-traded Instrument
- */
 class Tag969FloMinPriceIncrementTest {
     Tag969FloMinPriceIncrement tagData;
     float [] TestArray = {
@@ -61,26 +54,23 @@ class Tag969FloMinPriceIncrementTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( float oneElement : TestArray ) {
-            tagData = new Tag969FloMinPriceIncrement( new MyFloatType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( float oneElement : TestArray ) {
             tagData = new Tag969FloMinPriceIncrement( new MyFloatType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  969
+         *  MinPriceIncrement
+         *  float
+         */
+
         // process array of tags
         for ( float oneElement : TestArray ) {
             tagData = new Tag969FloMinPriceIncrement( new MyFloatType( oneElement ));

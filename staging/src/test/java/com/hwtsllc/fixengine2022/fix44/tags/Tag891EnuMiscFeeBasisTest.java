@@ -23,18 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  891
- *  MiscFeeBasis
- *  int
- *  <p></p>
- *  Defines the unit for a miscellaneous fee.
- *  <p></p>
- *  Valid values:
- *  <p>    0 - Absolute
- *  <p>    1 - Per Unit
- *  <p>    2 - Percentage
- */
 class Tag891EnuMiscFeeBasisTest {
     Tag891EnuMiscFeeBasis tagData;
 
@@ -62,39 +50,11 @@ class Tag891EnuMiscFeeBasisTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    0 - Absolute
-         *  <p>    1 - Per Unit
-         *  <p>    2 - Percentage
-         */
-        tagData = new Tag891EnuMiscFeeBasis( Enum891MiscFeeBasis.ABSOLUTE );
-        assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag891EnuMiscFeeBasis( Enum891MiscFeeBasis.PER_UNIT );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag891EnuMiscFeeBasis( Enum891MiscFeeBasis.PERCENTAGE );
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum891MiscFeeBasis oneEnum : Enum891MiscFeeBasis.values()) {
-            tagData = new Tag891EnuMiscFeeBasis(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum891MiscFeeBasis oneEnum : Enum891MiscFeeBasis.values()) {
             tagData = new Tag891EnuMiscFeeBasis(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -102,6 +62,27 @@ class Tag891EnuMiscFeeBasisTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  891
+         *  MiscFeeBasis
+         *  int
+         *  <p>    0 - Absolute
+         *  <p>    1 - Per Unit
+         *  <p>    2 - Percentage
+         */
+        tagData = new Tag891EnuMiscFeeBasis( Enum891MiscFeeBasis.ABSOLUTE );
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag891EnuMiscFeeBasis( Enum891MiscFeeBasis.PER_UNIT );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag891EnuMiscFeeBasis( Enum891MiscFeeBasis.PERCENTAGE );
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum891MiscFeeBasis oneEnum : Enum891MiscFeeBasis.values()) {
             tagData = new Tag891EnuMiscFeeBasis(oneEnum);
@@ -119,7 +100,7 @@ class Tag891EnuMiscFeeBasisTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

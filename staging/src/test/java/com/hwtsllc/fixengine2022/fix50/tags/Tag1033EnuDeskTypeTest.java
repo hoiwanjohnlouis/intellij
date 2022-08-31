@@ -23,28 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  1033
- *  DeskType
- *  String
- *  <p>
- *  Type of trading desk
- *  <p></p>
- *  Valid values:
- *  <p>    A - Agency
- *  <p>    AR - Arbitrage
- *  <p>    D - Derivatives
- *  <p>    IN - International
- *  <p>    IS - Institutional
- *  <p></p>
- *  <p>    O - Other
- *  <p>    PF - Preferred Trading
- *  <p>    PR - Proprietary
- *  <p>    PT - Program Trading
- *  <p>    S - Sales
- *  <p></p>
- *  <p>    T - Trading
- */
 class Tag1033EnuDeskTypeTest {
     Tag1033EnuDeskType tagData;
 
@@ -72,8 +50,22 @@ class Tag1033EnuDeskTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
+    void TagToValuePairStringTest() {
+        // loop around the ENUM and process
+        for ( Enum1033DeskType oneEnum : Enum1033DeskType.values()) {
+            tagData = new Tag1033EnuDeskType(oneEnum);
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
         /*
+         *  1033
+         *  DeskType
+         *  String
          *  <p>    A - Agency
          *  <p>    AR - Arbitrage
          *  <p>    D - Derivatives
@@ -81,24 +73,24 @@ class Tag1033EnuDeskTypeTest {
          *  <p>    IS - Institutional
          */
         tagData = new Tag1033EnuDeskType( Enum1033DeskType.AGENCY );
-        assertEquals( "A", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "A", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
         tagData = new Tag1033EnuDeskType( Enum1033DeskType.ARBITRAGE );
-        assertEquals( "AR", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "AR", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
         tagData = new Tag1033EnuDeskType( Enum1033DeskType.DERIVATIVES );
-        assertEquals( "D", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "D", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
         tagData = new Tag1033EnuDeskType( Enum1033DeskType.INTERNATIONAL );
-        assertEquals( "IN", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "IN", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
         tagData = new Tag1033EnuDeskType( Enum1033DeskType.INSTITUTIONAL );
-        assertEquals( "IS", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "IS", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
         /*
          *  <p>    O - Other
@@ -108,55 +100,33 @@ class Tag1033EnuDeskTypeTest {
          *  <p>    S - Sales
          */
         tagData = new Tag1033EnuDeskType( Enum1033DeskType.OTHER );
-        assertEquals( "O", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "O", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
         tagData = new Tag1033EnuDeskType( Enum1033DeskType.PREFERRED );
-        assertEquals( "PF", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "PF", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
         tagData = new Tag1033EnuDeskType( Enum1033DeskType.PROPRIETARY );
-        assertEquals( "PR", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "PR", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
         tagData = new Tag1033EnuDeskType( Enum1033DeskType.PROGRAM_TRADING );
-        assertEquals( "PT", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "PT", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
         tagData = new Tag1033EnuDeskType( Enum1033DeskType.SALES );
-        assertEquals( "S", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "S", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
         /*
          *  <p>    T - Trading
          */
         tagData = new Tag1033EnuDeskType( Enum1033DeskType.TRADING );
-        assertEquals( "T", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "T", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
 
-        // loop around the ENUM and process
-        for ( Enum1033DeskType oneEnum : Enum1033DeskType.values()) {
-            tagData = new Tag1033EnuDeskType(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
-    void TagToValuePairStringTest() {
-        // loop around the ENUM and process
-        for ( Enum1033DeskType oneEnum : Enum1033DeskType.values()) {
-            tagData = new Tag1033EnuDeskType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-        }
-    }
-    @Test
-    void TagToStringTest() {
         // loop around the ENUM and process
         for ( Enum1033DeskType oneEnum : Enum1033DeskType.values()) {
             tagData = new Tag1033EnuDeskType(oneEnum);
@@ -174,7 +144,7 @@ class Tag1033EnuDeskTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

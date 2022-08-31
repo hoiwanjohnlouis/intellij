@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  937
- *  NetworkStatusResponseType
- *  int
- *  <p></p>
- *  Indicates the type of Network Response Message.
- *  <p></p>
- *  Valid values:
- *  <p>    1 - Full
- *  <p>    2 - Incremental Update
- */
 class Tag937EnuNetworkStatusResponseTypeTest {
     Tag937EnuNetworkStatusResponseType tagData;
 
@@ -61,34 +50,11 @@ class Tag937EnuNetworkStatusResponseTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    1 - Full
-         *  <p>    2 - Incremental Update
-         */
-        tagData = new Tag937EnuNetworkStatusResponseType( Enum937NetworkStatusResponseType.FULL );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag937EnuNetworkStatusResponseType( Enum937NetworkStatusResponseType.INCREMENTAL );
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum937NetworkStatusResponseType oneEnum : Enum937NetworkStatusResponseType.values()) {
-            tagData = new Tag937EnuNetworkStatusResponseType(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum937NetworkStatusResponseType oneEnum : Enum937NetworkStatusResponseType.values()) {
             tagData = new Tag937EnuNetworkStatusResponseType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -96,6 +62,22 @@ class Tag937EnuNetworkStatusResponseTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  937
+         *  NetworkStatusResponseType
+         *  int
+         *  <p>    1 - Full
+         *  <p>    2 - Incremental Update
+         */
+        tagData = new Tag937EnuNetworkStatusResponseType( Enum937NetworkStatusResponseType.FULL );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag937EnuNetworkStatusResponseType( Enum937NetworkStatusResponseType.INCREMENTAL );
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum937NetworkStatusResponseType oneEnum : Enum937NetworkStatusResponseType.values()) {
             tagData = new Tag937EnuNetworkStatusResponseType(oneEnum);
@@ -113,7 +95,7 @@ class Tag937EnuNetworkStatusResponseTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

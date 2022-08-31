@@ -23,15 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  820
- *  TradeLinkID
- *  String
- *  <p></p>
- *  Used to link a group of trades together.
- *  <p></p>
- *  Useful for linking a group of trades together for average price calculations.
- */
 class Tag820StrTradeLinkIDTest {
     Tag820StrTradeLinkID tagData;
     String [] TestArray = {
@@ -63,25 +54,23 @@ class Tag820StrTradeLinkIDTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag820StrTradeLinkID( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag820StrTradeLinkID( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  820
+         *  TradeLinkID
+         *  String
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag820StrTradeLinkID( new MyStringType( oneElement ));

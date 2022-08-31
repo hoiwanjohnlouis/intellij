@@ -23,29 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  528
- *  OrderCapacity
- *  char
- *  <p></p>
- *  Designates the capacity of the firm placing the order.
- *  <p>
- *  (as of FIX 4.3, this field replaced Rule80A (tag 47)
- *  <p>
- *  used in conjunction with OrderRestrictions (529) field)
- *  <p>
- *  (see Volume : "Glossary" for value definitions)
- *  <p></p>
- *  Valid values:
- *  <p>    A - Agency
- *  <p>    G - Proprietary
- *  <p>    I - Individual
- *  <p>    P - Principal
- *              (Note for CMS purposes, "Principal" includes "Proprietary")
- *  <p>    R - Riskless Principal
- *  <p></p>
- *  <p>    W - Agent for Other Member
- */
 class Tag528EnuOrderCapacityTest {
     Tag528EnuOrderCapacity tagData;
 
@@ -73,49 +50,11 @@ class Tag528EnuOrderCapacityTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  A, G, I, P, R, and W types
-         */
-        tagData = new Tag528EnuOrderCapacity( Enum528OrderCapacity.AGENCY );
-        assertEquals( "A", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag528EnuOrderCapacity( Enum528OrderCapacity.PROPRIETARY );
-        assertEquals( "G", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag528EnuOrderCapacity( Enum528OrderCapacity.INDIVIDUAL );
-        assertEquals( "I", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag528EnuOrderCapacity( Enum528OrderCapacity.PRINCIPAL );
-        assertEquals( "P", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag528EnuOrderCapacity( Enum528OrderCapacity.RISKLESS_PRINCIPAL );
-        assertEquals( "R", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        tagData = new Tag528EnuOrderCapacity( Enum528OrderCapacity.AGENT_FOR_OTHER_MEMBER );
-        assertEquals( "W", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum528OrderCapacity oneEnum : Enum528OrderCapacity.values()) {
-            tagData = new Tag528EnuOrderCapacity(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum528OrderCapacity oneEnum : Enum528OrderCapacity.values()) {
             tagData = new Tag528EnuOrderCapacity(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -123,6 +62,45 @@ class Tag528EnuOrderCapacityTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  528
+         *  OrderCapacity
+         *  char
+         *  <p>    A - Agency
+         *  <p>    G - Proprietary
+         *  <p>    I - Individual
+         *  <p>    P - Principal
+         *              (Note for CMS purposes, "Principal" includes "Proprietary")
+         *  <p>    R - Riskless Principal
+         */
+        tagData = new Tag528EnuOrderCapacity( Enum528OrderCapacity.AGENCY );
+        assertEquals( "A", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag528EnuOrderCapacity( Enum528OrderCapacity.PROPRIETARY );
+        assertEquals( "G", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag528EnuOrderCapacity( Enum528OrderCapacity.INDIVIDUAL );
+        assertEquals( "I", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag528EnuOrderCapacity( Enum528OrderCapacity.PRINCIPAL );
+        assertEquals( "P", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag528EnuOrderCapacity( Enum528OrderCapacity.RISKLESS_PRINCIPAL );
+        assertEquals( "R", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    W - Agent for Other Member
+         */
+        tagData = new Tag528EnuOrderCapacity( Enum528OrderCapacity.AGENT_FOR_OTHER_MEMBER );
+        assertEquals( "W", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum528OrderCapacity oneEnum : Enum528OrderCapacity.values()) {
             tagData = new Tag528EnuOrderCapacity(oneEnum);
@@ -140,7 +118,7 @@ class Tag528EnuOrderCapacityTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

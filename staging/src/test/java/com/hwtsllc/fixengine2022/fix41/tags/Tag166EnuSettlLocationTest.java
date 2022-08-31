@@ -23,23 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  166
- *  SettlLocation
- *  String
- *  <p></p>
- *  Deprecated in FIX.4.2 Identifies Settlement Depository or Country Code, ISITC spec
- *  <p></p>
- *  Valid values:
- *  <p>    CED - CEDEL
- *  <p>    DTC - Depository Trust Company
- *  <p>    EUR - Euro clear
- *  <p>    FED - Federal Book Entry
- *  <p>    ISO_Country_Code - Local Market Settle Location
- *  <p></p>
- *  <p>    PNY - Physical
- *  <p>    PTC - Participant Trust Company
- */
 // @Deprecated
 class Tag166EnuSettlLocationTest {
     Tag166EnuSettlLocation tagData;
@@ -68,49 +51,11 @@ class Tag166EnuSettlLocationTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        tagData = new Tag166EnuSettlLocation(Enum166SettlLocation.CEDEL);
-        assertEquals( Enum166SettlLocation.CEDEL.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag166EnuSettlLocation(Enum166SettlLocation.DEPOSITORY_TRUST_COMPANY);
-        assertEquals( Enum166SettlLocation.DEPOSITORY_TRUST_COMPANY.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag166EnuSettlLocation(Enum166SettlLocation.EURO_CLEAR);
-        assertEquals( Enum166SettlLocation.EURO_CLEAR.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag166EnuSettlLocation(Enum166SettlLocation.FEDERAL_BOOK_ENTRY);
-        assertEquals( Enum166SettlLocation.FEDERAL_BOOK_ENTRY.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag166EnuSettlLocation(Enum166SettlLocation.LOCAL_MARKET_SETTLE_LOCATION);
-        assertEquals( Enum166SettlLocation.LOCAL_MARKET_SETTLE_LOCATION.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag166EnuSettlLocation(Enum166SettlLocation.PHYSICAL);
-        assertEquals( Enum166SettlLocation.PHYSICAL.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag166EnuSettlLocation(Enum166SettlLocation.PARTICIPANT_TRUST_COMPANY);
-        assertEquals( Enum166SettlLocation.PARTICIPANT_TRUST_COMPANY.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum166SettlLocation oneEnum : Enum166SettlLocation.values()) {
-            tagData = new Tag166EnuSettlLocation(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum166SettlLocation oneEnum : Enum166SettlLocation.values()) {
             tagData = new Tag166EnuSettlLocation(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -118,6 +63,49 @@ class Tag166EnuSettlLocationTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  166
+         *  SettlLocation
+         *  String
+         *  <p>    CED - CEDEL
+         *  <p>    DTC - Depository Trust Company
+         *  <p>    EUR - Euro clear
+         *  <p>    FED - Federal Book Entry
+         *  <p>    ISO_Country_Code - Local Market Settle Location
+         */
+        tagData = new Tag166EnuSettlLocation(Enum166SettlLocation.CEDEL);
+        assertEquals( "CED", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag166EnuSettlLocation(Enum166SettlLocation.DEPOSITORY_TRUST_COMPANY);
+        assertEquals( "DTC", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag166EnuSettlLocation(Enum166SettlLocation.EURO_CLEAR);
+        assertEquals( "EUR", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag166EnuSettlLocation(Enum166SettlLocation.FEDERAL_BOOK_ENTRY);
+        assertEquals( "FED", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag166EnuSettlLocation(Enum166SettlLocation.LOCAL_MARKET_SETTLE_LOCATION);
+        assertEquals( "ISO_Country_Code", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    PNY - Physical
+         *  <p>    PTC - Participant Trust Company
+         */
+        tagData = new Tag166EnuSettlLocation(Enum166SettlLocation.PHYSICAL);
+        assertEquals( "PNY", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag166EnuSettlLocation(Enum166SettlLocation.PARTICIPANT_TRUST_COMPANY);
+        assertEquals( "PTC", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum166SettlLocation oneEnum : Enum166SettlLocation.values()) {
             tagData = new Tag166EnuSettlLocation(oneEnum);
@@ -135,7 +123,7 @@ class Tag166EnuSettlLocationTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

@@ -23,13 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  193
- *  SettlDate2
- *  LocalMktDate
- *  <p></p>
- *  Deprecated in FIX.5.0 SettDate (64) of the future part of a F/X swap order.
- */
 // @Deprecated
 class Tag193LmdSettlDate2Test {
     Tag193LmdSettlDate2 tagData;
@@ -62,26 +55,23 @@ class Tag193LmdSettlDate2Test {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag193LmdSettlDate2( new MyLocalMktDateType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag193LmdSettlDate2( new MyLocalMktDateType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  193
+         *  SettlDate2
+         *  LocalMktDate
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag193LmdSettlDate2( new MyLocalMktDateType( oneElement ));

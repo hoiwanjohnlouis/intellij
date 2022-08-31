@@ -23,20 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  630
- *  HopRefID
- *  SeqNum
- *  <p></p>
- *  Reference identifier assigned by HopCompID (628) associated with the message sent.
- *  <p></p>
- *  It is recommended that this value be the MsgSeqNum (34) of the message sent by the third party.
- *  <p></p>
- *  Applicable when messages are communicated/re-distributed via third parties
- *  which function as service bureaus or "hubs".
- *  <p></p>
- *  Only applicable if OnBehalfOfCompID (115) is being used.
- */
 class Tag630SeqHopRefIDTest {
     Tag630SeqHopRefID tagData;
     int [] TestArray = {
@@ -68,26 +54,23 @@ class Tag630SeqHopRefIDTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag630SeqHopRefID( new MySeqNumType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_SEQ_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag630SeqHopRefID( new MySeqNumType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  630
+         *  HopRefID
+         *  SeqNum
+         */
+
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag630SeqHopRefID( new MySeqNumType( oneElement ));

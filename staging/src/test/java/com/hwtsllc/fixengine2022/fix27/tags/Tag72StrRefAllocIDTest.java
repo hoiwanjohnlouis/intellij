@@ -23,15 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  72
- *  RefAllocID
- *  String
- *  <p></p>
- *  Reference identifier to be used with AllocTransType (71) = Replace or Cancel.
- *  <p></p>
- *  (Prior to FIX 4.1 this field was of type int)
- */
 class Tag72StrRefAllocIDTest {
     Tag72StrRefAllocID tagData;
     String [] TestArray = {
@@ -63,26 +54,21 @@ class Tag72StrRefAllocIDTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag72StrRefAllocID( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag72StrRefAllocID( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  72
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag72StrRefAllocID( new MyStringType( oneElement ));

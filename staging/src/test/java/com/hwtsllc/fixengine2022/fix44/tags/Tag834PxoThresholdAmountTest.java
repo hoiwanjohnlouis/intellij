@@ -23,13 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  834
- *  ThresholdAmount
- *  PriceOffset
- *  <p></p>
- *  Amount that a position has to be in the money before it is exercised.
- */
 class Tag834PxoThresholdAmountTest {
     Tag834PxoThresholdAmount tagData;
     double [] TestArray = {
@@ -61,26 +54,23 @@ class Tag834PxoThresholdAmountTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( double oneElement : TestArray ) {
-            tagData = new Tag834PxoThresholdAmount( new MyPriceOffsetType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag834PxoThresholdAmount( new MyPriceOffsetType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  834
+         *  ThresholdAmount
+         *  PriceOffset
+         */
+
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag834PxoThresholdAmount( new MyPriceOffsetType( oneElement ));

@@ -23,15 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  968
- *  StrikeValue
- *  float
- *  <p>
- *  Used for derivatives.
- *  <p></p>
- *  The number of shares/units for the financial instrument involved in the option trade.
- */
 class Tag968FloStrikeValueTest {
     Tag968FloStrikeValue tagData;
     float [] TestArray = {
@@ -63,26 +54,23 @@ class Tag968FloStrikeValueTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( float oneElement : TestArray ) {
-            tagData = new Tag968FloStrikeValue( new MyFloatType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( float oneElement : TestArray ) {
             tagData = new Tag968FloStrikeValue( new MyFloatType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  968
+         *  StrikeValue
+         *  float
+         */
+
         // process array of tags
         for ( float oneElement : TestArray ) {
             tagData = new Tag968FloStrikeValue( new MyFloatType( oneElement ));

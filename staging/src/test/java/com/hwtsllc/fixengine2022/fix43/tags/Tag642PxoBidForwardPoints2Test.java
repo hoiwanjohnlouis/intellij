@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceOffsetType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -24,100 +23,75 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  642
- *  BidForwardPoints2
- *  PriceOffset
- *  <p>
- *  Deprecated in FIX.5.0 Bid F/X forward points of the future portion of a F/X swap quote added to spot rate.
- *  <p>
- *  May be negative.
- */
 class Tag642PxoBidForwardPoints2Test {
+    Tag642PxoBidForwardPoints2 tagData;
+    double [] TestArray = {
+            Tag642PxoBidForwardPoints2.TESTA_PXO_BID_FORWARD_POINTS_2,
+            Tag642PxoBidForwardPoints2.TESTB_PXO_BID_FORWARD_POINTS_2
+    };
+
     @Test
-    void FIX0642Test() {
-        FIX43 fixData = FIX43.FIX642_PXO_BID_FORWARD_POINTS_2;
-        assertEquals( "642", fixData.toEnumIDString());
-        assertEquals( "BID_FORWARD_POINTS_2", fixData.toEnumNameString());
-        assertEquals( "BidForwardPoints2", fixData.toEnumDescriptionString());
-        assertNotEquals(MyTestValues.JUNK_ID, fixData.toEnumIDString());
-        assertNotEquals(MyTestValues.JUNK_NAME, fixData.toEnumNameString());
-        assertNotEquals(MyTestValues.JUNK_DESCRIPTION, fixData.toEnumDescriptionString());
+    void PrintTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag642PxoBidForwardPoints2( new MyPriceOffsetType( oneElement ));
+            System.out.println( tagData.toVerboseString() );
+        }
     }
     @Test
-    void Tag0642Test() {
-        Tag642PxoBidForwardPoints2 tagData;
-        double oneElement;
-
-        oneElement = Tag642PxoBidForwardPoints2.TESTA_PXO_BID_FORWARD_POINTS_2;
-        tagData = new Tag642PxoBidForwardPoints2( new MyPriceOffsetType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue() );
-
-        oneElement = Tag642PxoBidForwardPoints2.TESTB_PXO_BID_FORWARD_POINTS_2;
-        tagData = new Tag642PxoBidForwardPoints2( new MyPriceOffsetType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue() );
-    }
-    @Test
-    void PrintFIXTagTest() {
-        Tag642PxoBidForwardPoints2 tagData;
-        double oneElement;
-
-        oneElement = Tag642PxoBidForwardPoints2.TESTA_PXO_BID_FORWARD_POINTS_2;
-        tagData = new Tag642PxoBidForwardPoints2( new MyPriceOffsetType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-
-        oneElement = Tag642PxoBidForwardPoints2.TESTB_PXO_BID_FORWARD_POINTS_2;
-        tagData = new Tag642PxoBidForwardPoints2( new MyPriceOffsetType( oneElement ) );
-        System.out.println( tagData.toVerboseString() );
-    }
-    @Test
-    void TagGetDataValueTest() {
-        Tag642PxoBidForwardPoints2 tagData;
-        double oneElement;
-
-        oneElement = Tag642PxoBidForwardPoints2.TESTB_PXO_BID_FORWARD_POINTS_2;
-        tagData = new Tag642PxoBidForwardPoints2( new MyPriceOffsetType( oneElement ) );
-        assertEquals( oneElement, tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue() );
+    void FIXHeaderTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag642PxoBidForwardPoints2( new MyPriceOffsetType( oneElement ));
+            assertEquals( "FIX642_PXO_BID_FORWARD_POINTS_2", tagData.toEnumLabelString());
+            assertEquals( "642", tagData.toEnumIDString());
+            assertEquals( "BID_FORWARD_POINTS_2", tagData.toEnumNameString());
+            assertEquals( "BidForwardPoints2", tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+        }
     }
     @Test
     void TagToValuePairStringTest() {
-        Tag642PxoBidForwardPoints2 tagData;
-        double oneElement;
-
-        oneElement = Tag642PxoBidForwardPoints2.TESTB_PXO_BID_FORWARD_POINTS_2;
-        tagData = new Tag642PxoBidForwardPoints2( new MyPriceOffsetType( oneElement ) );
-        assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag642PxoBidForwardPoints2( new MyPriceOffsetType( oneElement ));
+            assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+        }
     }
     @Test
     void TagToStringTest() {
-        Tag642PxoBidForwardPoints2 tagData;
-        double oneElement;
+        /*
+         *  642
+         *  BidForwardPoints2
+         *  PriceOffset
+         */
 
-        oneElement = Tag642PxoBidForwardPoints2.TESTB_PXO_BID_FORWARD_POINTS_2;
-        tagData = new Tag642PxoBidForwardPoints2( new MyPriceOffsetType( oneElement ) );
-        assertEquals( String.valueOf( oneElement ), tagData.toString());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE,
-                tagData.toString());
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag642PxoBidForwardPoints2( new MyPriceOffsetType( oneElement ));
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
     void TagToVerboseStringTest() {
-        Tag642PxoBidForwardPoints2 tagData;
-        double oneElement;
-
-        oneElement = Tag642PxoBidForwardPoints2.TESTA_PXO_BID_FORWARD_POINTS_2;
-        tagData = new Tag642PxoBidForwardPoints2( new MyPriceOffsetType( oneElement ) );
-        assertEquals( "Tag642PxoBidForwardPoints2\n" +
-                        "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
-                        "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
-                        "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
-                        "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                        "\tDataValue[" + oneElement + "]\n" +
-                        "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
-                tagData.toVerboseString() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new Tag642PxoBidForwardPoints2( new MyPriceOffsetType( oneElement ));
+            assertEquals( "Tag642PxoBidForwardPoints2\n" +
+                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
+                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tDataValue[" + oneElement + "]\n" +
+                            "\tValuePair[" + tagData.toEnumIDString() + "=" + oneElement + "]",
+                    tagData.toVerboseString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toVerboseString());
+        }
     }
 }

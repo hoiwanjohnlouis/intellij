@@ -23,19 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  1090
- *  MaxPriceLevels
- *  int
- *  <p>
- *  Allows an order to specify a maximum number of price levels to trade through.
- *  <p></p>
- *  Only valid for aggressive orders and during continuous (autoexecution) trading sessions.
- *  <p></p>
- *  Property lost when order is put on book.
- *  A partially filled order is assigned last trade price as limit price.
- *  Non-filled order behaves as ordinary Market or Limit.
- */
 class Tag1090IntMaxPriceLevelsTest {
     Tag1090IntMaxPriceLevels tagData;
     int [] TestArray = {
@@ -67,26 +54,23 @@ class Tag1090IntMaxPriceLevelsTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag1090IntMaxPriceLevels( new MyIntType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag1090IntMaxPriceLevels( new MyIntType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  1090
+         *  MaxPriceLevels
+         *  int
+         */
+
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag1090IntMaxPriceLevels( new MyIntType( oneElement ));

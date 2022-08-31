@@ -23,16 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  223
- *  CouponRate
- *  Percentage
- *  <p>
- *  The rate of interest that, when multiplied by the principal, par value,
- *  or face value of a bond, provides the currency amount of the periodic interest payment.
- *  <p></p>
- *  The coupon is always cited, along with maturity, in any quotation of a bond's price.
- */
 class Tag223PctCouponRateTest {
     Tag223PctCouponRate tagData;
     double [] TestArray = {
@@ -64,26 +54,23 @@ class Tag223PctCouponRateTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( double oneElement : TestArray ) {
-            tagData = new Tag223PctCouponRate( new MyPercentageType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag223PctCouponRate( new MyPercentageType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  223
+         *  CouponRate
+         *  Percentage
+         */
+
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag223PctCouponRate( new MyPercentageType( oneElement ));

@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  747
- *  ExerciseMethod
- *  int
- *  <p></p>
- *  Exercise Method used to in performing assignment.
- *  <p></p>
- *  Valid values:
- *  <p>    A - Automatic
- *  <p>    M - Manual
- */
 class Tag747EnuExerciseMethodTest {
     Tag747EnuExerciseMethod tagData;
 
@@ -61,34 +50,11 @@ class Tag747EnuExerciseMethodTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    A - Automatic
-         *  <p>    M - Manual
-         */
-        tagData = new Tag747EnuExerciseMethod( Enum747ExerciseMethod.AUTOMATIC );
-        assertEquals( "A", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag747EnuExerciseMethod(Enum747ExerciseMethod.MANUAL);
-        assertEquals( "M", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum747ExerciseMethod oneEnum : Enum747ExerciseMethod.values()) {
-            tagData = new Tag747EnuExerciseMethod(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum747ExerciseMethod oneEnum : Enum747ExerciseMethod.values()) {
             tagData = new Tag747EnuExerciseMethod(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -96,6 +62,22 @@ class Tag747EnuExerciseMethodTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  747
+         *  ExerciseMethod
+         *  int
+         *  <p>    A - Automatic
+         *  <p>    M - Manual
+         */
+        tagData = new Tag747EnuExerciseMethod( Enum747ExerciseMethod.AUTOMATIC );
+        assertEquals( "A", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag747EnuExerciseMethod(Enum747ExerciseMethod.MANUAL);
+        assertEquals( "M", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum747ExerciseMethod oneEnum : Enum747ExerciseMethod.values()) {
             tagData = new Tag747EnuExerciseMethod(oneEnum);
@@ -113,7 +95,7 @@ class Tag747EnuExerciseMethodTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

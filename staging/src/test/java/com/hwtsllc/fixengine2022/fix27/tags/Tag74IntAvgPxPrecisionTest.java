@@ -23,16 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  74
- *  AvgPxPrecision
- *  int
- *  <p></p>
- *  Indicates number of decimal places to be used for average pricing.
- *  <p></p>
- *  Absence of this field indicates that default precision arranged
- *  by the broker or institution is to be used.
- */
 class Tag74IntAvgPxPrecisionTest {
     Tag74IntAvgPxPrecision tagData;
     int [] TestArray = {
@@ -64,26 +54,21 @@ class Tag74IntAvgPxPrecisionTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag74IntAvgPxPrecision( new MyIntType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag74IntAvgPxPrecision( new MyIntType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  74
+         */
+
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag74IntAvgPxPrecision( new MyIntType( oneElement ));

@@ -23,18 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  1027
- *  MDEntryForwardPoints
- *  PriceOffset
- *  <p>
- *  Used for an F/X entry.
- *  <p></p>
- *  The forward points to be added to or subtracted from the spot rate
- *  to get the "all-in" rate in MDEntryPx.  Expressed in decimal form.
- *  <p></p>
- *  For example, 61.99 points is expressed and sent as 0.006199
- */
 class Tag1027PxoMDEntryForwardPointsTest {
     Tag1027PxoMDEntryForwardPoints tagData;
     double [] TestArray = {
@@ -66,26 +54,23 @@ class Tag1027PxoMDEntryForwardPointsTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( double oneElement : TestArray ) {
-            tagData = new Tag1027PxoMDEntryForwardPoints( new MyPriceOffsetType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag1027PxoMDEntryForwardPoints( new MyPriceOffsetType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  1027
+         *  MDEntryForwardPoints
+         *  PriceOffset
+         */
+
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag1027PxoMDEntryForwardPoints( new MyPriceOffsetType( oneElement ));

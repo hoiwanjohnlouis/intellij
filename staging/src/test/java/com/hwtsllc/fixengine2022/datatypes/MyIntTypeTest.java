@@ -30,22 +30,18 @@ class MyIntTypeTest {
 
         oneElement = MyIntType.TESTA_MY_INT_TYPE;
         dataType = new MyIntType( oneElement );
-        assertEquals( oneElement, dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, dataType.getDataValue());
+        assertEquals( oneElement, Integer.valueOf( dataType.toString() ) );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.toString());
 
         oneElement = MyIntType.TESTB_MY_INT_TYPE;
         dataType = new MyIntType( oneElement );
-        assertEquals( oneElement, dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, dataType.getDataValue());
+        assertEquals( oneElement, Integer.valueOf( dataType.toString() ) );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.toString());
     }
     @Test
     void PrintFIXTagTest() {
         MyIntType dataType;
         int oneElement;
-
-        oneElement = 318;
-        dataType = new MyIntType( oneElement );
-        System.out.println( dataType.toVerboseString() );
 
         oneElement = MyIntType.TESTA_MY_INT_TYPE;
         dataType = new MyIntType( oneElement );

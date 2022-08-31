@@ -17,29 +17,13 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyEnumPutOrCall;
+import com.hwtsllc.fixengine2022.fix41.tags.Tag201EnuPutOrCall;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  201 (same as 201, 315)
- *  PutOrCall
- *  int
- *  <p>
- *  Deprecated in FIX.4.2 Indicates whether an Option is for a put or call
- *  <p></p>
- *  315
- *  UnderlyingPutOrCall
- *  int
- *  <p>
- *  Deprecated in FIX.4.2 Underlying security's PutOrCall. See PutOrCall field for description
- *  <p></p>
- *  Valid values:
- *  <p>    0 - Put
- *  <p>    1 - Call
- */
 // @Deprecated
 class Tag315EnuUnderlyingPutOrCallTest {
     Tag315EnuUnderlyingPutOrCall tagData;
@@ -68,29 +52,11 @@ class Tag315EnuUnderlyingPutOrCallTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        tagData = new Tag315EnuUnderlyingPutOrCall(MyEnumPutOrCall.CALL);
-        assertEquals( MyEnumPutOrCall.CALL.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag315EnuUnderlyingPutOrCall(MyEnumPutOrCall.PUT);
-        assertEquals( MyEnumPutOrCall.PUT.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( MyEnumPutOrCall oneEnum : MyEnumPutOrCall.values()) {
-            tagData = new Tag315EnuUnderlyingPutOrCall(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( MyEnumPutOrCall oneEnum : MyEnumPutOrCall.values()) {
             tagData = new Tag315EnuUnderlyingPutOrCall(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -98,6 +64,22 @@ class Tag315EnuUnderlyingPutOrCallTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  315 (same as 201, 315)
+         *  UnderlyingPutOrCall
+         *  int
+         *  <p>    0 - Put
+         *  <p>    1 - Call
+         */
+        tagData = new Tag315EnuUnderlyingPutOrCall(MyEnumPutOrCall.PUT);
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag315EnuUnderlyingPutOrCall(MyEnumPutOrCall.CALL);
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( MyEnumPutOrCall oneEnum : MyEnumPutOrCall.values()) {
             tagData = new Tag315EnuUnderlyingPutOrCall(oneEnum);
@@ -115,7 +97,7 @@ class Tag315EnuUnderlyingPutOrCallTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

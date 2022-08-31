@@ -23,18 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  939
- *  TrdRptStatus
- *  int
- *  <p></p>
- *  Trade Report Status
- *  <p></p>
- *  Valid values:
- *  <p>    0 - Accepted
- *  <p>    1 - Rejected
- *  <p>    3 - Accepted with errors
- */
 class Tag939EnuTrdRptStatusTest {
     Tag939EnuTrdRptStatus tagData;
 
@@ -62,39 +50,11 @@ class Tag939EnuTrdRptStatusTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    0 - Accepted
-         *  <p>    1 - Rejected
-         *  <p>    3 - Accepted with errors
-         */
-        tagData = new Tag939EnuTrdRptStatus( Enum939TrdRptStatus.ACCEPTED );
-        assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag939EnuTrdRptStatus( Enum939TrdRptStatus.REJECTED );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag939EnuTrdRptStatus( Enum939TrdRptStatus.ACCEPTED_WITH_ERRORS );
-        assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum939TrdRptStatus oneEnum : Enum939TrdRptStatus.values()) {
-            tagData = new Tag939EnuTrdRptStatus(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum939TrdRptStatus oneEnum : Enum939TrdRptStatus.values()) {
             tagData = new Tag939EnuTrdRptStatus(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -102,6 +62,27 @@ class Tag939EnuTrdRptStatusTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  939
+         *  TrdRptStatus
+         *  int
+         *  <p>    0 - Accepted
+         *  <p>    1 - Rejected
+         *  <p>    3 - Accepted with errors
+         */
+        tagData = new Tag939EnuTrdRptStatus( Enum939TrdRptStatus.ACCEPTED );
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag939EnuTrdRptStatus( Enum939TrdRptStatus.REJECTED );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag939EnuTrdRptStatus( Enum939TrdRptStatus.ACCEPTED_WITH_ERRORS );
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum939TrdRptStatus oneEnum : Enum939TrdRptStatus.values()) {
             tagData = new Tag939EnuTrdRptStatus(oneEnum);
@@ -119,7 +100,7 @@ class Tag939EnuTrdRptStatusTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

@@ -23,23 +23,12 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  662
- *  BenchmarkPrice
- *  Price
- *  <p></p>
- *  Specifies the price of the benchmark.
- */
 class Tag662PrcBenchmarkPriceTest {
     Tag662PrcBenchmarkPrice tagData;
     double [] TestArray = {
             Tag662PrcBenchmarkPrice.TESTA_PRC_BENCHMARK_PRICE,
             Tag662PrcBenchmarkPrice.TESTB_PRC_BENCHMARK_PRICE
     };
-
-    @Test
-    void FIXTest() {
-    }
 
     @Test
     void PrintTest() {
@@ -65,26 +54,23 @@ class Tag662PrcBenchmarkPriceTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( double oneElement : TestArray ) {
-            tagData = new Tag662PrcBenchmarkPrice( new MyPriceType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag662PrcBenchmarkPrice( new MyPriceType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  662
+         *  BenchmarkPrice
+         *  Price
+         */
+
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag662PrcBenchmarkPrice( new MyPriceType( oneElement ));

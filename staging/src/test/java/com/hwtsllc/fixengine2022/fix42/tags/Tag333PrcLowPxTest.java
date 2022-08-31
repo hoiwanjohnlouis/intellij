@@ -24,13 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  333
- *  LowPx
- *  Price
- *  <p></p>
- *  Represents an indication of the low end of the price range for a security prior to the open or reopen
- */
 class Tag333PrcLowPxTest {
     Tag333PrcLowPx tagData;
     double [] TestArray = {
@@ -62,26 +55,23 @@ class Tag333PrcLowPxTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( double oneElement : TestArray ) {
-            tagData = new Tag333PrcLowPx( new MyPriceType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag333PrcLowPx( new MyPriceType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  333
+         *  LowPx
+         *  Price
+         */
+
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag333PrcLowPx( new MyPriceType( oneElement ));

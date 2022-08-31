@@ -23,21 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  442
- *  MultiLegReportingType
- *  char
- *  <p>
- *  Used to indicate what an Execution Report represents
- *  <p>
- *  (e.g. used with multi-leg securities, such as option strategies, spreads, etc.).
- *  <p></p>
- *  Valid values:
- *  <p>    1-3 msg types
- *  <p>    1 - Single security (default if not specified)
- *  <p>    2 - Individual leg of a multi=leg security
- *  <p>    3 - Multi-leg security
- */
 class Tag442EnuMultiLegReportingTypeTest {
     Tag442EnuMultiLegReportingType tagData;
 
@@ -65,36 +50,11 @@ class Tag442EnuMultiLegReportingTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         * 1-3 msg types
-         */
-        tagData = new Tag442EnuMultiLegReportingType(Enum442MultiLegReportingType.SINGLE_SECURITY);
-        assertEquals( Enum442MultiLegReportingType.SINGLE_SECURITY.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag442EnuMultiLegReportingType(Enum442MultiLegReportingType.INDIVIDUAL_LEG_SECURITY);
-        assertEquals( Enum442MultiLegReportingType.INDIVIDUAL_LEG_SECURITY.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag442EnuMultiLegReportingType(Enum442MultiLegReportingType.MULTI_LEG_SECURITY);
-        assertEquals( Enum442MultiLegReportingType.MULTI_LEG_SECURITY.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum442MultiLegReportingType oneEnum : Enum442MultiLegReportingType.values()) {
-            tagData = new Tag442EnuMultiLegReportingType(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum442MultiLegReportingType oneEnum : Enum442MultiLegReportingType.values()) {
             tagData = new Tag442EnuMultiLegReportingType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -102,6 +62,28 @@ class Tag442EnuMultiLegReportingTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  442
+         *  MultiLegReportingType
+         *  char
+         *  <p>    1-3 msg types
+         *  <p>    1 - Single security (default if not specified)
+         *  <p>    2 - Individual leg of a multi=leg security
+         *  <p>    3 - Multi-leg security
+         */
+        tagData = new Tag442EnuMultiLegReportingType(Enum442MultiLegReportingType.SINGLE_SECURITY);
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag442EnuMultiLegReportingType(Enum442MultiLegReportingType.INDIVIDUAL_LEG_SECURITY);
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag442EnuMultiLegReportingType(Enum442MultiLegReportingType.MULTI_LEG_SECURITY);
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum442MultiLegReportingType oneEnum : Enum442MultiLegReportingType.values()) {
             tagData = new Tag442EnuMultiLegReportingType(oneEnum);
@@ -119,7 +101,7 @@ class Tag442EnuMultiLegReportingTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

@@ -23,13 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  804
- *  NoNestedPartySubIDs
- *  NumInGroup
- *  <p></p>
- *  Number of NestedPartySubID (545) and NestedPartySubIDType (805) entries
- */
 class Tag804NumNoNestedPartySubIDsTest {
     Tag804NumNoNestedPartySubIDs tagData;
     int [] TestArray = {
@@ -61,26 +54,23 @@ class Tag804NumNoNestedPartySubIDsTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag804NumNoNestedPartySubIDs( new MyNumInGroupType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag804NumNoNestedPartySubIDs( new MyNumInGroupType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  804
+         *  NoNestedPartySubIDs
+         *  NumInGroup
+         */
+
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag804NumNoNestedPartySubIDs( new MyNumInGroupType( oneElement ));

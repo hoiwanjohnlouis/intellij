@@ -23,13 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  154
- *  AllocNetMoney
- *  Amt
- *  <p></p>
- *  NetMoney (8) for a specific AllocAccount (79)
- */
 class Tag154AmtAllocNetMoneyTest {
     Tag154AmtAllocNetMoney tagData;
     double [] TestArray = {
@@ -61,26 +54,23 @@ class Tag154AmtAllocNetMoneyTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( double oneElement : TestArray ) {
-            tagData = new Tag154AmtAllocNetMoney( new MyAmtType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag154AmtAllocNetMoney( new MyAmtType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  154
+         *  AllocNetMoney
+         *  Amt
+         */
+
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag154AmtAllocNetMoney( new MyAmtType( oneElement ));

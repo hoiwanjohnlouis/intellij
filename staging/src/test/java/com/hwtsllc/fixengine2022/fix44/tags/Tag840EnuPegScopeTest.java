@@ -23,25 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  840 (same as 840, 846,)
- *  PegScope
- *  int
- *  <p>
- *  The scope of the peg
- *  <p></p>
- *  846
- *  DiscretionScope
- *  int
- *  <p>
- *  The scope of the discretion
- *  <p></p>
- *  Valid values:
- *  <p>    1 - Local (Exchange, ECN, ATS)
- *  <p>    2 - National
- *  <p>    3 - Global
- *  <p>    4 - National excluding local
- */
 class Tag840EnuPegScopeTest {
     Tag840EnuPegScope tagData;
 
@@ -69,45 +50,11 @@ class Tag840EnuPegScopeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    1 - Local (Exchange, ECN, ATS)
-         *  <p>    2 - National
-         *  <p>    3 - Global
-         *  <p>    4 - National excluding local
-         */
-        tagData = new Tag840EnuPegScope( MyEnumDiscretionOrPegScope.LOCAL );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag840EnuPegScope( MyEnumDiscretionOrPegScope.NATIONAL);
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag840EnuPegScope( MyEnumDiscretionOrPegScope.GLOBAL);
-        assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag840EnuPegScope( MyEnumDiscretionOrPegScope.NATIONAL_EXCLUDING_LOCAL);
-        assertEquals( "4", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        // loop around the ENUM and process
-        for ( MyEnumDiscretionOrPegScope oneEnum : MyEnumDiscretionOrPegScope.values()) {
-            tagData = new Tag840EnuPegScope(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( MyEnumDiscretionOrPegScope oneEnum : MyEnumDiscretionOrPegScope.values()) {
             tagData = new Tag840EnuPegScope(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -115,6 +62,32 @@ class Tag840EnuPegScopeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  840 (same as 840, 846,)
+         *  PegScope
+         *  int
+         *  <p>    1 - Local (Exchange, ECN, ATS)
+         *  <p>    2 - National
+         *  <p>    3 - Global
+         *  <p>    4 - National excluding local
+         */
+        tagData = new Tag840EnuPegScope( MyEnumDiscretionOrPegScope.LOCAL );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag840EnuPegScope( MyEnumDiscretionOrPegScope.NATIONAL);
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag840EnuPegScope( MyEnumDiscretionOrPegScope.GLOBAL);
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag840EnuPegScope( MyEnumDiscretionOrPegScope.NATIONAL_EXCLUDING_LOCAL);
+        assertEquals( "4", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( MyEnumDiscretionOrPegScope oneEnum : MyEnumDiscretionOrPegScope.values()) {
             tagData = new Tag840EnuPegScope(oneEnum);
@@ -132,7 +105,7 @@ class Tag840EnuPegScopeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

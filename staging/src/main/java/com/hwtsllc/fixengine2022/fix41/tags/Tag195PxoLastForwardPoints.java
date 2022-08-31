@@ -45,9 +45,6 @@ public class Tag195PxoLastForwardPoints extends FIX41Abstract implements LogValu
         this.dataValue = dataValue;
     }
 
-    public double getDataValue() {
-        return this.dataValue.getDataValue();
-    }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
@@ -76,7 +73,7 @@ public class Tag195PxoLastForwardPoints extends FIX41Abstract implements LogValu
      */
     @Override
     public String toString() {
-        return String.valueOf(getDataValue());
+        return dataValue.toString();
     }
 
     /**

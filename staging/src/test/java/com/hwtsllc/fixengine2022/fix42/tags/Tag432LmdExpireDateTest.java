@@ -24,16 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  432
- *  ExpireDate
- *  LocalMktDate
- *  <p></p>
- *  Date of order expiration (last day the order can trade),
- *  always expressed in terms of the local market date.
- *  <p></p>
- *  The time at which the order expires is determined by the local market’s business practices
- */
 class Tag432LmdExpireDateTest {
     Tag432LmdExpireDate tagData;
     String [] TestArray = {
@@ -65,26 +55,23 @@ class Tag432LmdExpireDateTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag432LmdExpireDate( new MyLocalMktDateType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag432LmdExpireDate( new MyLocalMktDateType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  432
+         *  ExpireDate
+         *  LocalMktDate
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag432LmdExpireDate( new MyLocalMktDateType( oneElement ));

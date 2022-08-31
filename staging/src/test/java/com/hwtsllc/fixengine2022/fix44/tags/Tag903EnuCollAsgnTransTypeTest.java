@@ -23,20 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  903
- *  CollAsgnTransType
- *  int
- *  <p></p>
- *  Collateral Assignment Transaction Type
- *  <p></p>
- *  Valid values:
- *  <p>    0 - New
- *  <p>    1 - Replace
- *  <p>    2 - Cancel
- *  <p>    3 - Release
- *  <p>    4 - Reverse
- */
 class Tag903EnuCollAsgnTransTypeTest {
     Tag903EnuCollAsgnTransType tagData;
 
@@ -64,49 +50,11 @@ class Tag903EnuCollAsgnTransTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    0 - New
-         *  <p>    1 - Replace
-         *  <p>    2 - Cancel
-         *  <p>    3 - Release
-         *  <p>    4 - Reverse
-         */
-        tagData = new Tag903EnuCollAsgnTransType( Enum903CollAsgnTransType.NEW );
-        assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag903EnuCollAsgnTransType( Enum903CollAsgnTransType.REPLACE );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag903EnuCollAsgnTransType( Enum903CollAsgnTransType.CANCEL );
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag903EnuCollAsgnTransType( Enum903CollAsgnTransType.RELEASE );
-        assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag903EnuCollAsgnTransType( Enum903CollAsgnTransType.REVERSE );
-        assertEquals( "4", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum903CollAsgnTransType oneEnum : Enum903CollAsgnTransType.values()) {
-            tagData = new Tag903EnuCollAsgnTransType(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum903CollAsgnTransType oneEnum : Enum903CollAsgnTransType.values()) {
             tagData = new Tag903EnuCollAsgnTransType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -114,6 +62,37 @@ class Tag903EnuCollAsgnTransTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  903
+         *  CollAsgnTransType
+         *  int
+         *  <p>    0 - New
+         *  <p>    1 - Replace
+         *  <p>    2 - Cancel
+         *  <p>    3 - Release
+         *  <p>    4 - Reverse
+         */
+        tagData = new Tag903EnuCollAsgnTransType( Enum903CollAsgnTransType.NEW );
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag903EnuCollAsgnTransType( Enum903CollAsgnTransType.REPLACE );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag903EnuCollAsgnTransType( Enum903CollAsgnTransType.CANCEL );
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag903EnuCollAsgnTransType( Enum903CollAsgnTransType.RELEASE );
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag903EnuCollAsgnTransType( Enum903CollAsgnTransType.REVERSE );
+        assertEquals( "4", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum903CollAsgnTransType oneEnum : Enum903CollAsgnTransType.values()) {
             tagData = new Tag903EnuCollAsgnTransType(oneEnum);
@@ -131,7 +110,7 @@ class Tag903EnuCollAsgnTransTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

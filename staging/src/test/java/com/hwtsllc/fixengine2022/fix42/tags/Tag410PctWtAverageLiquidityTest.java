@@ -24,15 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  410
- *  WtAverageLiquidity
- *  Percentage
- *  <p></p>
- *  Overall weighted average liquidity expressed as a % of average daily volume.
- *  <p></p>
- *  Represented as a percentage.
- */
 class Tag410PctWtAverageLiquidityTest {
     Tag410PctWtAverageLiquidity tagData;
     double [] TestArray = {
@@ -64,26 +55,23 @@ class Tag410PctWtAverageLiquidityTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( double oneElement : TestArray ) {
-            tagData = new Tag410PctWtAverageLiquidity( new MyPercentageType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag410PctWtAverageLiquidity( new MyPercentageType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  410
+         *  WtAverageLiquidity
+         *  Percentage
+         */
+
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag410PctWtAverageLiquidity( new MyPercentageType( oneElement ));

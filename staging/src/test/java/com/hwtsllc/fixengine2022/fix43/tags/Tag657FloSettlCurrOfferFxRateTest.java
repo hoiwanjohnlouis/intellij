@@ -23,13 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  657
- *  SettlCurrOfferFxRate
- *  float
- *  <p></p>
- *  Foreign exchange rate used to compute the offer "SettlCurrAmt" (119) from Currency (15) to SettlCurrency (120)
- */
 class Tag657FloSettlCurrOfferFxRateTest {
     Tag657FloSettlCurrOfferFxRate tagData;
     float [] TestArray = {
@@ -61,26 +54,23 @@ class Tag657FloSettlCurrOfferFxRateTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( float oneElement : TestArray ) {
-            tagData = new Tag657FloSettlCurrOfferFxRate( new MyFloatType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( float oneElement : TestArray ) {
             tagData = new Tag657FloSettlCurrOfferFxRate( new MyFloatType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  657
+         *  SettlCurrOfferFxRate
+         *  float
+         */
+
         // process array of tags
         for ( float oneElement : TestArray ) {
             tagData = new Tag657FloSettlCurrOfferFxRate( new MyFloatType( oneElement ));

@@ -23,24 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  13
- *  CommType
- *  char
- *  <p></p>
- *  Commission type
- *  <p></p>
- *  Valid values:
- *  <p>    1 - Per Unit (implying shares, par, currency, etc.)
- *  <p>    2 - Percent
- *  <p>    3 - Absolute (total monetary amount)
- *  <p>    4 - Percentage waived - cash discount (for CIV buy orders)
- *  <p>    5 - Percentage waived -= enhanced units (for CIV buy orders)
- *  <p>    6 - Points per bond or contract
- *          (supply ContractMultiplier (231) in the <Instrument> component block
- *           if the object security is denominated in a size other than the
- *           industry default - 1000 par for bonds)
- */
 class Tag13EnuCommTypeTest {
     Tag13EnuCommType tagData;
 
@@ -68,50 +50,11 @@ class Tag13EnuCommTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         * 1-6 CommTypes
-         */
-        tagData = new Tag13EnuCommType(Enum13CommType.PER_UNIT);
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag13EnuCommType(Enum13CommType.PERCENT);
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag13EnuCommType(Enum13CommType.ABSOLUTE);
-        assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag13EnuCommType(Enum13CommType.PERCENTAGE_WAIVED_CASH_DISCOUNT);
-        assertEquals( "4", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag13EnuCommType(Enum13CommType.PERCENTAGE_WAIVED_ENHANCED_UNITS);
-        assertEquals( "5", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag13EnuCommType(Enum13CommType.POINTS_PER_BOND);
-        assertEquals( "6", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        // loop around the ENUM and process
-        for (Enum13CommType oneEnum : Enum13CommType.values()) {
-            tagData = new Tag13EnuCommType(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum13CommType oneEnum : Enum13CommType.values()) {
             tagData = new Tag13EnuCommType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -119,6 +62,45 @@ class Tag13EnuCommTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  13
+         *  <p>    1 - Per Unit (implying shares, par, currency, etc.)
+         *  <p>    2 - Percent
+         *  <p>    3 - Absolute (total monetary amount)
+         *  <p>    4 - Percentage waived - cash discount (for CIV buy orders)
+         *  <p>    5 - Percentage waived -= enhanced units (for CIV buy orders)
+         */
+        tagData = new Tag13EnuCommType(Enum13CommType.PER_UNIT);
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag13EnuCommType(Enum13CommType.PERCENT);
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag13EnuCommType(Enum13CommType.ABSOLUTE);
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag13EnuCommType(Enum13CommType.PERCENTAGE_WAIVED_CASH_DISCOUNT);
+        assertEquals( "4", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag13EnuCommType(Enum13CommType.PERCENTAGE_WAIVED_ENHANCED_UNITS);
+        assertEquals( "5", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    6 - Points per bond or contract
+         *          (supply ContractMultiplier (231) in the <Instrument> component block
+         *           if the object security is denominated in a size other than the
+         *           industry default - 1000 par for bonds)
+         */
+        tagData = new Tag13EnuCommType(Enum13CommType.POINTS_PER_BOND);
+        assertEquals( "6", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum13CommType oneEnum : Enum13CommType.values()) {
             tagData = new Tag13EnuCommType(oneEnum);
@@ -136,7 +118,7 @@ class Tag13EnuCommTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

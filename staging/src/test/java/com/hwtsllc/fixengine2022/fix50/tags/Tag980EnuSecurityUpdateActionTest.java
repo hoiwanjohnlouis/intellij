@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  980
- *  SecurityUpdateAction
- *  char
- *
- *  <p></p>
- *  Valid values:
- *  <p>    A - Add
- *  <p>    D - Delete
- *  <p>    M - Modify
- */
 class Tag980EnuSecurityUpdateActionTest {
     Tag980EnuSecurityUpdateAction tagData;
 
@@ -61,40 +50,11 @@ class Tag980EnuSecurityUpdateActionTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    A - Add
-         *  <p>    D - Delete
-         *  <p>    M - Modify
-         */
-        tagData = new Tag980EnuSecurityUpdateAction( ENum980SecurityUpdateAction.ADD );
-        assertEquals( "A", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag980EnuSecurityUpdateAction( ENum980SecurityUpdateAction.DELETE );
-        assertEquals( "D", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag980EnuSecurityUpdateAction( ENum980SecurityUpdateAction.MODIFY );
-        assertEquals( "M", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        // loop around the ENUM and process
-        for ( ENum980SecurityUpdateAction oneEnum : ENum980SecurityUpdateAction.values() ) {
-            tagData = new Tag980EnuSecurityUpdateAction(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( ENum980SecurityUpdateAction oneEnum : ENum980SecurityUpdateAction.values() ) {
             tagData = new Tag980EnuSecurityUpdateAction(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -102,6 +62,27 @@ class Tag980EnuSecurityUpdateActionTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  980
+         *  SecurityUpdateAction
+         *  char
+         *  <p>    A - Add
+         *  <p>    D - Delete
+         *  <p>    M - Modify
+         */
+        tagData = new Tag980EnuSecurityUpdateAction( ENum980SecurityUpdateAction.ADD );
+        assertEquals( "A", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag980EnuSecurityUpdateAction( ENum980SecurityUpdateAction.DELETE );
+        assertEquals( "D", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag980EnuSecurityUpdateAction( ENum980SecurityUpdateAction.MODIFY );
+        assertEquals( "M", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( ENum980SecurityUpdateAction oneEnum : ENum980SecurityUpdateAction.values() ) {
             tagData = new Tag980EnuSecurityUpdateAction(oneEnum);
@@ -119,7 +100,7 @@ class Tag980EnuSecurityUpdateActionTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

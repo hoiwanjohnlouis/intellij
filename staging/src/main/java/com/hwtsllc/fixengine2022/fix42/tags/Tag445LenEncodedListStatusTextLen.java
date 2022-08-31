@@ -42,9 +42,6 @@ public class Tag445LenEncodedListStatusTextLen extends FIX42Abstract implements 
         this.dataValue = dataValue;
     }
 
-    public int getDataValue() {
-        return this.dataValue.getDataValue();
-    }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
@@ -73,7 +70,7 @@ public class Tag445LenEncodedListStatusTextLen extends FIX42Abstract implements 
      */
     @Override
     public String toString() {
-        return String.valueOf(getDataValue());
+        return dataValue.toString();
     }
 
     /**

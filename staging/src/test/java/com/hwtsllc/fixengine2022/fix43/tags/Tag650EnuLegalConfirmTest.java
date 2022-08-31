@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  650
- *  LegalConfirm
- *  Boolean
- *  <p>
- *  Indicates that this message is to serve as the final and legal confirmation.
- *  <p>
- *  Valid values:
- *  <p>    N - Does not constitute a Legal Confirm
- *  <p>    Y - Legal Confirm
- */
 class Tag650EnuLegalConfirmTest {
     Tag650EnuLegalConfirm tagData;
 
@@ -61,29 +50,11 @@ class Tag650EnuLegalConfirmTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        tagData = new Tag650EnuLegalConfirm(Enum650LegalConfirm.NO);
-        assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag650EnuLegalConfirm(Enum650LegalConfirm.YES);
-        assertEquals( "Y", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum650LegalConfirm oneEnum : Enum650LegalConfirm.values()) {
-            tagData = new Tag650EnuLegalConfirm(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum650LegalConfirm oneEnum : Enum650LegalConfirm.values()) {
             tagData = new Tag650EnuLegalConfirm(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -91,6 +62,22 @@ class Tag650EnuLegalConfirmTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  650
+         *  LegalConfirm
+         *  Boolean
+         *  <p>    N - Does not constitute a Legal Confirm
+         *  <p>    Y - Legal Confirm
+         */
+        tagData = new Tag650EnuLegalConfirm(Enum650LegalConfirm.NO);
+        assertEquals( "N", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag650EnuLegalConfirm(Enum650LegalConfirm.YES);
+        assertEquals( "Y", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum650LegalConfirm oneEnum : Enum650LegalConfirm.values()) {
             tagData = new Tag650EnuLegalConfirm(oneEnum);
@@ -108,7 +95,7 @@ class Tag650EnuLegalConfirmTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

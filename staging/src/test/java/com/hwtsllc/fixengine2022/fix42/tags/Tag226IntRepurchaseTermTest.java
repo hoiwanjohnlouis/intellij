@@ -24,17 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  226
- *  RepurchaseTerm
- *  int
- *  <p></p>
- *  Deprecated in FIX.4.4
- *  <p></p>
- *  Number of business days before repurchase of a repo.
- *  <p></p>
- *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
- */
 // @Deprecated
 class Tag226IntRepurchaseTermTest {
     Tag226IntRepurchaseTerm tagData;
@@ -67,26 +56,23 @@ class Tag226IntRepurchaseTermTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag226IntRepurchaseTerm( new MyIntType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag226IntRepurchaseTerm( new MyIntType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  226
+         *  RepurchaseTerm
+         *  int
+         */
+
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag226IntRepurchaseTerm( new MyIntType( oneElement ));

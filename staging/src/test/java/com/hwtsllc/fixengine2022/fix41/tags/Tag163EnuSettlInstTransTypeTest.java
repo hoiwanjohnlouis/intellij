@@ -23,19 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  163
- *  SettlInstTransType
- *  char
- *  <p></p>
- *  Settlement Instructions message transaction type
- *  <p></p>
- *  Valid values:
- *  <p>    N - New
- *  <p>    C - Cancel
- *  <p>    R - Replace
- *  <p>    T - Restate
- */
 class Tag163EnuSettlInstTransTypeTest {
     Tag163EnuSettlInstTransType tagData;
 
@@ -63,37 +50,11 @@ class Tag163EnuSettlInstTransTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        tagData = new Tag163EnuSettlInstTransType(Enum163SettlInstTransType.NEW);
-        assertEquals( Enum163SettlInstTransType.NEW.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag163EnuSettlInstTransType(Enum163SettlInstTransType.CANCEL);
-        assertEquals( Enum163SettlInstTransType.CANCEL.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag163EnuSettlInstTransType(Enum163SettlInstTransType.REPLACE);
-        assertEquals( Enum163SettlInstTransType.REPLACE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag163EnuSettlInstTransType(Enum163SettlInstTransType.RESTATE);
-        assertEquals( Enum163SettlInstTransType.RESTATE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum163SettlInstTransType oneEnum : Enum163SettlInstTransType.values()) {
-            tagData = new Tag163EnuSettlInstTransType(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum163SettlInstTransType oneEnum : Enum163SettlInstTransType.values()) {
             tagData = new Tag163EnuSettlInstTransType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -101,6 +62,32 @@ class Tag163EnuSettlInstTransTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  163
+         *  SettlInstTransType
+         *  char
+         *  <p>    N - New
+         *  <p>    C - Cancel
+         *  <p>    R - Replace
+         *  <p>    T - Restate
+         */
+        tagData = new Tag163EnuSettlInstTransType(Enum163SettlInstTransType.NEW);
+        assertEquals( "N", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag163EnuSettlInstTransType(Enum163SettlInstTransType.CANCEL);
+        assertEquals( "C", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag163EnuSettlInstTransType(Enum163SettlInstTransType.REPLACE);
+        assertEquals( "R", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag163EnuSettlInstTransType(Enum163SettlInstTransType.RESTATE);
+        assertEquals( "T", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum163SettlInstTransType oneEnum : Enum163SettlInstTransType.values()) {
             tagData = new Tag163EnuSettlInstTransType(oneEnum);
@@ -118,7 +105,7 @@ class Tag163EnuSettlInstTransTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

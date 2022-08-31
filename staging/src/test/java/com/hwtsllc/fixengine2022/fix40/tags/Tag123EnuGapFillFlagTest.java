@@ -23,18 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  123
- *  GapFillFlag
- *  Boolean
- *  <p></p>
- *  Indicates that the Sequence Reset message is replacing administrative
- *  or application messages which will not be resent.
- *  <p></p>
- *  Valid values:
- *  <p>    N - Sequence Reset, Ignore Msg Seq Num (N/A For FIXML - Not Used)
- *  <p>    Y - Gap Fill Message, Msg Seq Num Field Valid
- */
 class Tag123EnuGapFillFlagTest {
     Tag123EnuGapFillFlag tagData;
 
@@ -63,29 +51,11 @@ class Tag123EnuGapFillFlagTest {
 
     }
     @Test
-    void TagGetDataValueTest() {
-        tagData = new Tag123EnuGapFillFlag(Enum123GapFillFlag.NO);
-        assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag123EnuGapFillFlag(Enum123GapFillFlag.YES);
-        assertEquals( "Y", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum123GapFillFlag oneEnum : Enum123GapFillFlag.values()) {
-            tagData = new Tag123EnuGapFillFlag(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum123GapFillFlag oneEnum : Enum123GapFillFlag.values()) {
             tagData = new Tag123EnuGapFillFlag(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -93,6 +63,22 @@ class Tag123EnuGapFillFlagTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  123
+         *  GapFillFlag
+         *  Boolean
+         *  <p>    N - Sequence Reset, Ignore Msg Seq Num (N/A For FIXML - Not Used)
+         *  <p>    Y - Gap Fill Message, Msg Seq Num Field Valid
+         */
+        tagData = new Tag123EnuGapFillFlag(Enum123GapFillFlag.NO);
+        assertEquals( "N", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag123EnuGapFillFlag(Enum123GapFillFlag.YES);
+        assertEquals( "Y", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum123GapFillFlag oneEnum : Enum123GapFillFlag.values()) {
             tagData = new Tag123EnuGapFillFlag(oneEnum);
@@ -110,7 +96,7 @@ class Tag123EnuGapFillFlagTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

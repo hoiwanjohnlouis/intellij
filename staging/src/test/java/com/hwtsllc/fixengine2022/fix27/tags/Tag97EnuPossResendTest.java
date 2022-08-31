@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.fix27.tags;
 
+import com.hwtsllc.fixengine2022.fix27.enums.Enum94EmailType;
 import com.hwtsllc.fixengine2022.fix27.enums.Enum97PossResend;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -23,17 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  97
- *  PossResend
- *  Boolean
- *  <p>
- *  Indicates that message may contain information that has been sent under another sequence number.
- *  <p></p>
- *  Valid values:
- *  <p>    N - Original Transmission
- *  <p>    Y - Possible Resend
- */
 class Tag97EnuPossResendTest {
     Tag97EnuPossResend tagData;
 
@@ -61,22 +51,11 @@ class Tag97EnuPossResendTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // loop around the ENUM and process
-        for (Enum97PossResend oneEnum : Enum97PossResend.values()) {
-            tagData = new Tag97EnuPossResend(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum97PossResend oneEnum : Enum97PossResend.values()) {
             tagData = new Tag97EnuPossResend(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -84,6 +63,20 @@ class Tag97EnuPossResendTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  97
+         *  <p>    N - Original Transmission
+         *  <p>    Y - Possible Resend
+         */
+        tagData = new Tag97EnuPossResend( Enum97PossResend.NO);
+        assertEquals( "N", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag97EnuPossResend( Enum97PossResend.YES);
+        assertEquals( "Y", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum97PossResend oneEnum : Enum97PossResend.values()) {
             tagData = new Tag97EnuPossResend(oneEnum);
@@ -101,7 +94,7 @@ class Tag97EnuPossResendTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

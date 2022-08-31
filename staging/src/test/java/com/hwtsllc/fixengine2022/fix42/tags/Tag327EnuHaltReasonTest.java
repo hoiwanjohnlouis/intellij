@@ -23,24 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  327
- *  Enu
- *  HaltReason
- *  char
- *  <p>
- *  Denotes the reason for the Opening Delay or Trading Halt.
- *  <p></p>
- *  Valid values:
- *  <p>    D, E, I, M, P, and X msg types
- *  <p>    "D - News Dissemination"
- *  <p>    "E - Order Influx"
- *  <p>    "I - Order Imbalance"
- *  <p>    "M - Additional Information"
- *  <p>    "P - New Pending"
- *  <p></p>
- *  <p>    "X - Equipment Changeover"
- */
 class Tag327EnuHaltReasonTest {
     Tag327EnuHaltReason tagData;
 
@@ -68,49 +50,11 @@ class Tag327EnuHaltReasonTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         * D, E, I, M, P, and X msg types
-         */
-        tagData = new Tag327EnuHaltReason(Enum327HaltReason.NEWS_DISSEMINATION);
-        assertEquals( Enum327HaltReason.NEWS_DISSEMINATION.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag327EnuHaltReason(Enum327HaltReason.ORDER_INFLUX);
-        assertEquals( Enum327HaltReason.ORDER_INFLUX.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag327EnuHaltReason(Enum327HaltReason.ORDER_IMBALANCE);
-        assertEquals( Enum327HaltReason.ORDER_IMBALANCE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag327EnuHaltReason(Enum327HaltReason.ADDITIONAL_INFORMATION);
-        assertEquals( Enum327HaltReason.ADDITIONAL_INFORMATION.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag327EnuHaltReason(Enum327HaltReason.NEW_PENDING);
-        assertEquals( Enum327HaltReason.NEW_PENDING.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        tagData = new Tag327EnuHaltReason(Enum327HaltReason.EQUIPMENT_CHANGE_OVER);
-        assertEquals( Enum327HaltReason.EQUIPMENT_CHANGE_OVER.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum327HaltReason oneEnum : Enum327HaltReason.values()) {
-            tagData = new Tag327EnuHaltReason(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum327HaltReason oneEnum : Enum327HaltReason.values()) {
             tagData = new Tag327EnuHaltReason(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -118,6 +62,46 @@ class Tag327EnuHaltReasonTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  327
+         *  Enu
+         *  HaltReason
+         *  char
+         *  <p>    D, E, I, M, P, and X msg types
+         *  <p>    "D - News Dissemination"
+         *  <p>    "E - Order Influx"
+         *  <p>    "I - Order Imbalance"
+         *  <p>    "M - Additional Information"
+         *  <p>    "P - New Pending"
+         */
+        tagData = new Tag327EnuHaltReason(Enum327HaltReason.NEWS_DISSEMINATION);
+        assertEquals( "D", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag327EnuHaltReason(Enum327HaltReason.ORDER_INFLUX);
+        assertEquals( "E", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag327EnuHaltReason(Enum327HaltReason.ORDER_IMBALANCE);
+        assertEquals( "I", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag327EnuHaltReason(Enum327HaltReason.ADDITIONAL_INFORMATION);
+        assertEquals( "M", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag327EnuHaltReason(Enum327HaltReason.NEW_PENDING);
+        assertEquals( "P", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    "X - Equipment Changeover"
+         */
+        tagData = new Tag327EnuHaltReason(Enum327HaltReason.EQUIPMENT_CHANGE_OVER);
+        assertEquals( "X", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum327HaltReason oneEnum : Enum327HaltReason.values()) {
             tagData = new Tag327EnuHaltReason(oneEnum);
@@ -135,7 +119,7 @@ class Tag327EnuHaltReasonTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

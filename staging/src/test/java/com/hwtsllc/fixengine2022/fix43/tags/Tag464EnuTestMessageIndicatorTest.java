@@ -23,19 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  464
- *  TestMessageIndicator
- *  Boolean
- *  <p>
- *  Indicates whether or not this FIX Session is a "test" vs. "production" connection.
- *  <p>
- *  Useful for preventing "accidents".
- *  <p>
- *  Valid values:
- *  <p>    N - False (Production)
- *  <p>    Y - True (Test)
- */
 class Tag464EnuTestMessageIndicatorTest {
     Tag464EnuTestMessageIndicator tagData;
 
@@ -63,29 +50,11 @@ class Tag464EnuTestMessageIndicatorTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        tagData = new Tag464EnuTestMessageIndicator( Enum464TestMessageIndicator.NO);
-        assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag464EnuTestMessageIndicator(Enum464TestMessageIndicator.YES);
-        assertEquals( "Y", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum464TestMessageIndicator oneEnum : Enum464TestMessageIndicator.values()) {
-            tagData = new Tag464EnuTestMessageIndicator(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum464TestMessageIndicator oneEnum : Enum464TestMessageIndicator.values()) {
             tagData = new Tag464EnuTestMessageIndicator(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -93,6 +62,22 @@ class Tag464EnuTestMessageIndicatorTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  464
+         *  TestMessageIndicator
+         *  Boolean
+         *  <p>    N - False (Production)
+         *  <p>    Y - True (Test)
+         */
+        tagData = new Tag464EnuTestMessageIndicator( Enum464TestMessageIndicator.NO);
+        assertEquals( "N", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag464EnuTestMessageIndicator(Enum464TestMessageIndicator.YES);
+        assertEquals( "Y", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum464TestMessageIndicator oneEnum : Enum464TestMessageIndicator.values()) {
             tagData = new Tag464EnuTestMessageIndicator(oneEnum);
@@ -110,7 +95,7 @@ class Tag464EnuTestMessageIndicatorTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

@@ -24,13 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  293
- *  DefBidSize
- *  Qty
- *  <p></p>
- *  Default Bid Size.
- */
 class Tag293QtyDefBidSizeTest {
     Tag293QtyDefBidSize tagData;
     int [] TestArray = {
@@ -62,26 +55,23 @@ class Tag293QtyDefBidSizeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag293QtyDefBidSize( new MyQtyType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag293QtyDefBidSize( new MyQtyType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  293
+         *  DefBidSize
+         *  Qty
+         */
+
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag293QtyDefBidSize( new MyQtyType( oneElement ));

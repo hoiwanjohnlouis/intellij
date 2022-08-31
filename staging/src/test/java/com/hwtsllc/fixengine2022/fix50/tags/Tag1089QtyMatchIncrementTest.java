@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  1089
- *  MatchIncrement
- *  Qty
- *  <p>
- *  Allows orders to specify a minimum quantity that applies to every execution
- *  (one execution could be for multiple counter-orders).
- *  <p></p>
- *  The order may still fill against smaller orders, but the cumulative quantity
- *  of the execution must be in multiples of the MatchIncrement.
- */
 class Tag1089QtyMatchIncrementTest {
     Tag1089QtyMatchIncrement tagData;
     int [] TestArray = {
@@ -65,26 +54,23 @@ class Tag1089QtyMatchIncrementTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag1089QtyMatchIncrement( new MyQtyType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag1089QtyMatchIncrement( new MyQtyType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  1089
+         *  MatchIncrement
+         *  Qty
+         */
+
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag1089QtyMatchIncrement( new MyQtyType( oneElement ));

@@ -23,13 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  727
- *  TotalNumPosReports
- *  int
- *  <p></p>
- *  Total number of Position Reports being returned.
- */
 class Tag727IntTotalNumPosReportsTest {
     Tag727IntTotalNumPosReports tagData;
     int [] TestArray = {
@@ -61,26 +54,23 @@ class Tag727IntTotalNumPosReportsTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag727IntTotalNumPosReports( new MyIntType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag727IntTotalNumPosReports( new MyIntType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  727
+         *  TotalNumPosReports
+         *  int
+         */
+
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag727IntTotalNumPosReports( new MyIntType( oneElement ));

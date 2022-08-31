@@ -23,20 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  516
- *  OrderPercent
- *  Percentage
- *  <p></p>
- *  For CIV specifies the approximate order quantity desired.
- *  <p></p>
- *  For a CIV Sale it specifies percentage of investor’s total holding to be sold.
- *  <p></p>
- *  For a CIV switch/exchange it specifies percentage of investor’s cash realised from sales to be re-invested.
- *  <p></p>
- *  The executing broker, intermediary or fund manager is responsible for converting
- *  and calculating OrderQty (38) in shares/units for subsequent messages.
- */
 class Tag516PctOrderPercentTest {
     Tag516PctOrderPercent tagData;
     double [] TestArray = {
@@ -68,26 +54,23 @@ class Tag516PctOrderPercentTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( double oneElement : TestArray ) {
-            tagData = new Tag516PctOrderPercent( new MyPercentageType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag516PctOrderPercent( new MyPercentageType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  516
+         *  OrderPercent
+         *  Percentage
+         */
+
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag516PctOrderPercent( new MyPercentageType( oneElement ));

@@ -24,19 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  227
- *  RepurchaseRate
- *  Percentage
- *  <p></p>
- *  Deprecated in FIX.4.4
- *  <p></p>
- *  Percent of par at which a Repo will be repaid.
- *  <p></p>
- *  Represented as a percent, e.g. .9525 represents 95-/4 percent of par.
- *  <p></p>
- *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
- */
 // @Deprecated
 class Tag227PctRepurchaseRateTest {
     Tag227PctRepurchaseRate tagData;
@@ -69,26 +56,23 @@ class Tag227PctRepurchaseRateTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( double oneElement : TestArray ) {
-            tagData = new Tag227PctRepurchaseRate( new MyPercentageType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag227PctRepurchaseRate( new MyPercentageType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  227
+         *  RepurchaseRate
+         *  Percentage
+         */
+
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag227PctRepurchaseRate( new MyPercentageType( oneElement ));

@@ -23,21 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  723
- *  PosMaintResult
- *  int
- *  <p></p>
- *  Result of Position Maintenance Request.
- *  <p></p>
- *  4000+ Reserved and available for bi-laterally agreed upon user-defined values
- *  <p></p>
- *  Valid values:
- *  <p>    0 - Successful Completion - no warnings or errors
- *  <p>    1 - Rejected
- *  <p>    99 - Other
- *  <p>    or any value conforming to the data type Reserved100Plus
- */
 class Tag723EnuPosMaintResultTest {
     Tag723EnuPosMaintResult tagData;
 
@@ -65,40 +50,11 @@ class Tag723EnuPosMaintResultTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    0 - Successful Completion - no warnings or errors
-         *  <p>    1 - Rejected
-         *  <p>    99 - Other
-         *  <p>    or any value conforming to the data type Reserved100Plus
-         */
-        tagData = new Tag723EnuPosMaintResult( Enum723PosMaintResult.SUCCESSFUL );
-        assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag723EnuPosMaintResult(Enum723PosMaintResult.REJECTED);
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag723EnuPosMaintResult(Enum723PosMaintResult.OTHER);
-        assertEquals( "99", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum723PosMaintResult oneEnum : Enum723PosMaintResult.values()) {
-            tagData = new Tag723EnuPosMaintResult(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum723PosMaintResult oneEnum : Enum723PosMaintResult.values()) {
             tagData = new Tag723EnuPosMaintResult(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -106,6 +62,30 @@ class Tag723EnuPosMaintResultTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  723
+         *  PosMaintResult
+         *  int
+         *  <p>    0 - Successful Completion - no warnings or errors
+         *  <p>    1 - Rejected
+         */
+        tagData = new Tag723EnuPosMaintResult( Enum723PosMaintResult.SUCCESSFUL );
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag723EnuPosMaintResult(Enum723PosMaintResult.REJECTED);
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    99 - Other
+         *  <p>    or any value conforming to the data type Reserved100Plus
+         */
+        tagData = new Tag723EnuPosMaintResult(Enum723PosMaintResult.OTHER);
+        assertEquals( "99", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum723PosMaintResult oneEnum : Enum723PosMaintResult.values()) {
             tagData = new Tag723EnuPosMaintResult(oneEnum);
@@ -123,7 +103,7 @@ class Tag723EnuPosMaintResultTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

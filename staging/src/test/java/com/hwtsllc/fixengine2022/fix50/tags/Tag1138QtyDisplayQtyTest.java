@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  1138
- *  DisplayQty
- *  Qty
- *  <p>
- *  The quantity to be displayed.
- *  <p></p>
- *  Required for reserve orders.
- *  <p></p>
- *  On orders specifies the qty to be displayed, on execution reports the currently displayed quantity.
- */
 class Tag1138QtyDisplayQtyTest {
     Tag1138QtyDisplayQty tagData;
     int [] TestArray = {
@@ -65,26 +54,23 @@ class Tag1138QtyDisplayQtyTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag1138QtyDisplayQty( new MyQtyType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag1138QtyDisplayQty( new MyQtyType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  1138
+         *  DisplayQty
+         *  Qty
+         */
+
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag1138QtyDisplayQty( new MyQtyType( oneElement ));

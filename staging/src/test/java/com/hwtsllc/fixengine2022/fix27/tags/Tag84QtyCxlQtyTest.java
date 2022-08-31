@@ -23,15 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  84
- *  CxlQty
- *  Qty
- *  <p></p>
- *  Total quantity canceled for this order.
- *  <p></p>
- *  (Prior to FIX 4.2 this field was of type int)
- */
 class Tag84QtyCxlQtyTest {
     Tag84QtyCxlQty tagData;
     int [] TestArray = {
@@ -63,26 +54,21 @@ class Tag84QtyCxlQtyTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag84QtyCxlQty( new MyQtyType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag84QtyCxlQty( new MyQtyType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  84
+         */
+
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag84QtyCxlQty( new MyQtyType( oneElement ));

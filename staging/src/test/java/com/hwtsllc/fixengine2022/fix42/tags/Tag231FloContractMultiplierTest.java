@@ -24,26 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  231
- *  ContractMultiplier
- *  float
- *  <p></p>
- *  Specifies the ratio or multiply factor to convert from "nominal" units
- *  (e.g. contracts) to total units (e.g. shares) (e.g. 1.0, 100, 1000, etc).
- *  <p></p>
- *  Applicable For Fixed Income, Convertible Bonds, Derivatives, etc.
- *  <p></p>
- *  In general quantities for all classes should be expressed in the basic
- *  unit of the instrument, e.g. shares for equities, norminal or par amount for bonds,
- *  currency for foreign exchange.
- *  <p></p>
- *  When quantity is expressed in contracts, e.g. financing transactions and bond trade
- *  reporting, the ContractMultiplier should contain the number of units in one contract
- *  and can be omitted if the multiplier is the default amount for the instrument,
- *  <p></p>
- *  i.e. 1,000 par of bonds, 1,000,000 par for financing transactions.
- */
 class Tag231FloContractMultiplierTest {
     Tag231FloContractMultiplier tagData;
     float [] TestArray = {
@@ -75,26 +55,23 @@ class Tag231FloContractMultiplierTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( float oneElement : TestArray ) {
-            tagData = new Tag231FloContractMultiplier( new MyFloatType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( float oneElement : TestArray ) {
             tagData = new Tag231FloContractMultiplier( new MyFloatType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  231
+         *  ContractMultiplier
+         *  float
+         */
+
         // process array of tags
         for ( float oneElement : TestArray ) {
             tagData = new Tag231FloContractMultiplier( new MyFloatType( oneElement ));

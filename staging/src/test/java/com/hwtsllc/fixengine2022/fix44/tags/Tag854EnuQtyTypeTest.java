@@ -23,19 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  854
- *  QtyType
- *  int
- *  <p></p>
- *  Type of quantity specified in a quantity field:
- *  <p></p>
- *  Valid values:
- *  <p>    0 - Units (shares, par, currency)
- *  <p>    1 - Contracts (if used - must specify ContractMultiplier (tag 231))
- *  <p>    2 - Units of Measure per Time Unit
- *          (if used - must specify UnitofMeasure (tag 996) and TimeUnit (tag 997))
- */
 class Tag854EnuQtyTypeTest {
     Tag854EnuQtyType tagData;
 
@@ -63,40 +50,11 @@ class Tag854EnuQtyTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    0 - Units (shares, par, currency)
-         *  <p>    1 - Contracts (if used - must specify ContractMultiplier (tag 231))
-         *  <p>    2 - Units of Measure per Time Unit
-         *          (if used - must specify UnitofMeasure (tag 996) and TimeUnit (tag 997))
-         */
-        tagData = new Tag854EnuQtyType( Enum854QtyType.UNITS );
-        assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag854EnuQtyType( Enum854QtyType.CONTRACTS );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag854EnuQtyType( Enum854QtyType.MEASURE_PER_TIME );
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum854QtyType oneEnum : Enum854QtyType.values()) {
-            tagData = new Tag854EnuQtyType(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum854QtyType oneEnum : Enum854QtyType.values()) {
             tagData = new Tag854EnuQtyType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -104,6 +62,28 @@ class Tag854EnuQtyTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  854
+         *  QtyType
+         *  int
+         *  <p>    0 - Units (shares, par, currency)
+         *  <p>    1 - Contracts (if used - must specify ContractMultiplier (tag 231))
+         *  <p>    2 - Units of Measure per Time Unit
+         *          (if used - must specify UnitofMeasure (tag 996) and TimeUnit (tag 997))
+         */
+        tagData = new Tag854EnuQtyType( Enum854QtyType.UNITS );
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag854EnuQtyType( Enum854QtyType.CONTRACTS );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag854EnuQtyType( Enum854QtyType.MEASURE_PER_TIME );
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum854QtyType oneEnum : Enum854QtyType.values()) {
             tagData = new Tag854EnuQtyType(oneEnum);
@@ -121,7 +101,7 @@ class Tag854EnuQtyTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

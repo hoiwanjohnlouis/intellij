@@ -23,27 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  838 (same as 838, 844,)
- *  PegRoundDirection
- *  int
- *  <p>
- *  If the calculated peg price is not a valid tick price, specifies
- *  whether to round the price to be more or less aggressive
- *  <p></p>
- *  844
- *  DiscretionRoundDirection
- *  int
- *  <p>
- *  If the calculated discretionary price is not a valid tick price,
- *  specifies whether to round the price to be more or less aggressive
- *  <p></p>
- *  Valid values:
- *  <p>    1 - More aggressive - on a buy order round the price up to the nearest tick;
- *                  on a sell order round down to the nearest tick
- *  <p>    2 - More passive - on a buy order round down to the nearest tick;
- *                  on a sell order round up to the nearest tick
- */
 class Tag838EnuPegRoundDirectionTest {
     Tag838EnuPegRoundDirection tagData;
 
@@ -71,36 +50,11 @@ class Tag838EnuPegRoundDirectionTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    1 - More aggressive - on a buy order round the price up to the nearest tick;
-         *                  on a sell order round down to the nearest tick
-         *  <p>    2 - More passive - on a buy order round down to the nearest tick;
-         *                  on a sell order round up to the nearest tick
-         */
-        tagData = new Tag838EnuPegRoundDirection( MyEnumRoundDirection.AGGRESSIVE );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag838EnuPegRoundDirection(MyEnumRoundDirection.PASSIVE);
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( MyEnumRoundDirection oneEnum : MyEnumRoundDirection.values()) {
-            tagData = new Tag838EnuPegRoundDirection(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( MyEnumRoundDirection oneEnum : MyEnumRoundDirection.values()) {
             tagData = new Tag838EnuPegRoundDirection(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -108,6 +62,24 @@ class Tag838EnuPegRoundDirectionTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  838 (same as 838, 844,)
+         *  PegRoundDirection
+         *  int
+         *  <p>    1 - More aggressive - on a buy order round the price up to the nearest tick;
+         *                  on a sell order round down to the nearest tick
+         *  <p>    2 - More passive - on a buy order round down to the nearest tick;
+         *                  on a sell order round up to the nearest tick
+         */
+        tagData = new Tag838EnuPegRoundDirection( MyEnumRoundDirection.AGGRESSIVE );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag838EnuPegRoundDirection(MyEnumRoundDirection.PASSIVE);
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( MyEnumRoundDirection oneEnum : MyEnumRoundDirection.values()) {
             tagData = new Tag838EnuPegRoundDirection(oneEnum);
@@ -125,7 +97,7 @@ class Tag838EnuPegRoundDirectionTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

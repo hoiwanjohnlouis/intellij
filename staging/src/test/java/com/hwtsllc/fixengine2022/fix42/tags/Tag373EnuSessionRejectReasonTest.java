@@ -23,38 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  373
- *  SessionRejectReason
- *  int
- *  <p>
- *  Code to identify reason for a session-level Reject message.
- *  <p></p>
- *  Valid values:
- *  <p>     0 - Invalid Tag Number
- *  <p>     1 - Required Tag Missing
- *  <p>     2 - Tag not defined for this message type
- *  <p>     3 - Undefined tag
- *  <p>     4 - Tag specified without a value
- *  <p></p>
- *  <p>     5 - Value is incorrect (out of range) for this tag
- *  <p>     6 - Incorrect data format for value
- *  <p>     7 - Decryption problem
- *  <p>     8 - Signature problem
- *  <p>     9 -  CompID problem
- *  <p></p>
- *  <p>     10 - SendingTime Accuracy Problem
- *  <p>     11 - Invalid MsgType
- *  <p>     12 - XML Validation Error
- *  <p>     13 - Tag appears more than once
- *  <p>     14 - Tag specified out of required order
- *  <p></p>
- *  <p>     15 - Repeating group fields out of order
- *  <p>     16 - Incorrect NumInGroup count for repeating group
- *  <p>     17 - Non "Data" value includes field delimiter (<SOH> character)
- *  <p>     99 - Other
- *  <p>     or any value conforming to the data type Reserved100Plus
- */
 class Tag373EnuSessionRejectReasonTest {
     Tag373EnuSessionRejectReason tagData;
 
@@ -82,85 +50,11 @@ class Tag373EnuSessionRejectReasonTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         * 0-17, 99 msg types
-         */
-        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.INVALID_TAG_NUMBER);
-        assertEquals( Enum373SessionRejectReason.INVALID_TAG_NUMBER.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.REQUIRED_TAG_MISSING);
-        assertEquals( Enum373SessionRejectReason.REQUIRED_TAG_MISSING.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.TAG_NOT_DEFINED_FOR_MESSAGE_TYPE);
-        assertEquals( Enum373SessionRejectReason.TAG_NOT_DEFINED_FOR_MESSAGE_TYPE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.UNDEFINED_TAG);
-        assertEquals( Enum373SessionRejectReason.UNDEFINED_TAG.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.TAG_SPECIFIED_WITHOUT_A_VALUE);
-        assertEquals( Enum373SessionRejectReason.TAG_SPECIFIED_WITHOUT_A_VALUE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.INCORRECT_VALUE_FOR_TAG);
-        assertEquals( Enum373SessionRejectReason.INCORRECT_VALUE_FOR_TAG.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.INCORRECT_DATA_FORMAT);
-        assertEquals( Enum373SessionRejectReason.INCORRECT_DATA_FORMAT.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.DECRYPTION_PROBLEM);
-        assertEquals( Enum373SessionRejectReason.DECRYPTION_PROBLEM.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.SIGNATURE_PROBLEM);
-        assertEquals( Enum373SessionRejectReason.SIGNATURE_PROBLEM.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.COMPID_PROBLEM);
-        assertEquals( Enum373SessionRejectReason.COMPID_PROBLEM.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.SENDINGTIME_ACCURACY_PROBLEM);
-        assertEquals( Enum373SessionRejectReason.SENDINGTIME_ACCURACY_PROBLEM.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.INVALID_MSGTYPE);
-        assertEquals( Enum373SessionRejectReason.INVALID_MSGTYPE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.XML_VALIDATION_ERROR);
-        assertEquals( Enum373SessionRejectReason.XML_VALIDATION_ERROR.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.DUPLICATE_TAG);
-        assertEquals( Enum373SessionRejectReason.DUPLICATE_TAG.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.TAG_SPECIFIED_OUT_OF_ORDER);
-        assertEquals( Enum373SessionRejectReason.TAG_SPECIFIED_OUT_OF_ORDER.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.REPEATING_GROUP_FIELDS_OUT_OF_ORDER);
-        assertEquals( Enum373SessionRejectReason.REPEATING_GROUP_FIELDS_OUT_OF_ORDER.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.INCORRECT_NUMINGROUP_COUNT);
-        assertEquals( Enum373SessionRejectReason.INCORRECT_NUMINGROUP_COUNT.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.VALUE_INCLUDES_FIELD_DELIMITER);
-        assertEquals( Enum373SessionRejectReason.VALUE_INCLUDES_FIELD_DELIMITER.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.OTHER);
-        assertEquals( Enum373SessionRejectReason.OTHER.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum373SessionRejectReason oneEnum : Enum373SessionRejectReason.values()) {
-            tagData = new Tag373EnuSessionRejectReason(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum373SessionRejectReason oneEnum : Enum373SessionRejectReason.values()) {
             tagData = new Tag373EnuSessionRejectReason(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -168,6 +62,116 @@ class Tag373EnuSessionRejectReasonTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  373
+         *  SessionRejectReason
+         *  int
+         *  <p>     0 - Invalid Tag Number
+         *  <p>     1 - Required Tag Missing
+         *  <p>     2 - Tag not defined for this message type
+         *  <p>     3 - Undefined tag
+         *  <p>     4 - Tag specified without a value
+         */
+        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.INVALID_TAG_NUMBER);
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.REQUIRED_TAG_MISSING);
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.TAG_NOT_DEFINED_FOR_MESSAGE_TYPE);
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.UNDEFINED_TAG);
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.TAG_SPECIFIED_WITHOUT_A_VALUE);
+        assertEquals( "4", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>     5 - Value is incorrect (out of range) for this tag
+         *  <p>     6 - Incorrect data format for value
+         *  <p>     7 - Decryption problem
+         *  <p>     8 - Signature problem
+         *  <p>     9 -  CompID problem
+         */
+        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.INCORRECT_VALUE_FOR_TAG);
+        assertEquals( "5", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.INCORRECT_DATA_FORMAT);
+        assertEquals( "6", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.DECRYPTION_PROBLEM);
+        assertEquals( "7", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.SIGNATURE_PROBLEM);
+        assertEquals( "8", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.COMPID_PROBLEM);
+        assertEquals( "9", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>     10 - SendingTime Accuracy Problem
+         *  <p>     11 - Invalid MsgType
+         *  <p>     12 - XML Validation Error
+         *  <p>     13 - Tag appears more than once
+         *  <p>     14 - Tag specified out of required order
+         */
+        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.SENDINGTIME_ACCURACY_PROBLEM);
+        assertEquals( "10", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.INVALID_MSGTYPE);
+        assertEquals( "11", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.XML_VALIDATION_ERROR);
+        assertEquals( "12", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.DUPLICATE_TAG);
+        assertEquals( "13", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.TAG_SPECIFIED_OUT_OF_ORDER);
+        assertEquals( "14", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>     15 - Repeating group fields out of order
+         *  <p>     16 - Incorrect NumInGroup count for repeating group
+         *  <p>     17 - Non "Data" value includes field delimiter (<SOH> character)
+         */
+        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.REPEATING_GROUP_FIELDS_OUT_OF_ORDER);
+        assertEquals( "15", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.INCORRECT_NUMINGROUP_COUNT);
+        assertEquals( "16", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.VALUE_INCLUDES_FIELD_DELIMITER);
+        assertEquals( "17", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>     99 - Other
+         *  <p>     or any value conforming to the data type Reserved100Plus
+         */
+        tagData = new Tag373EnuSessionRejectReason(Enum373SessionRejectReason.OTHER);
+        assertEquals( "99", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum373SessionRejectReason oneEnum : Enum373SessionRejectReason.values()) {
             tagData = new Tag373EnuSessionRejectReason(oneEnum);
@@ -185,7 +189,7 @@ class Tag373EnuSessionRejectReasonTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

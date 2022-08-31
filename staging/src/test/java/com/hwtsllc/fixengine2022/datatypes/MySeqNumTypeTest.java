@@ -28,20 +28,15 @@ class MySeqNumTypeTest {
         MySeqNumType dataType;
         int oneElement;
 
-        oneElement = 777777;
-        dataType = new MySeqNumType( oneElement );
-        assertEquals(  oneElement , dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_SEQ_DATA_VALUE, dataType.getDataValue());
-
         oneElement = MySeqNumType.TESTA_MY_SEQ_NUM_TYPE;
         dataType = new MySeqNumType( oneElement );
-        assertEquals(  oneElement , dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_SEQ_DATA_VALUE, dataType.getDataValue());
+        assertEquals( oneElement, Integer.valueOf( dataType.toString() ) );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.toString());
 
         oneElement = MySeqNumType.TESTB_MY_SEQ_NUM_TYPE;
         dataType = new MySeqNumType( oneElement );
-        assertEquals(  oneElement , dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_SEQ_DATA_VALUE, dataType.getDataValue());
+        assertEquals( oneElement, Integer.valueOf( dataType.toString() ) );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.toString());
     }
     @Test
     void PrintFIXTagTest() {

@@ -24,20 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  370
- *  OnBehalfOfSendingTime
- *  UTCTimestamp
- *  <p></p>
- *  Deprecated in FIX.4.3
- *  <p></p>
- *  Used when a message is sent via a 'hub' or 'service bureau'.
- *  <p></p>
- *  If A sends to Q (the hub), who then sends to B via a separate FIX session, then when Q sends to B,
- *  the value of this field should represent the SendingTime on the message A sent to Q.
- *  <p></p>
- *  (always expressed in UTC (Universal Time Coordinated, also known as 'GMT')
- */
 class Tag370UtcOnBehalfOfSendingTimeTest {
     Tag370UtcOnBehalfOfSendingTime tagData;
     String [] TestArray = {
@@ -69,26 +55,23 @@ class Tag370UtcOnBehalfOfSendingTimeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag370UtcOnBehalfOfSendingTime( new MyUTCTimestampType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag370UtcOnBehalfOfSendingTime( new MyUTCTimestampType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  370
+         *  OnBehalfOfSendingTime
+         *  UTCTimestamp
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag370UtcOnBehalfOfSendingTime( new MyUTCTimestampType( oneElement ));

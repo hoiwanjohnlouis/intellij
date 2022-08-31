@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  128
- *  DeliverToCompID
- *  String
- *  <p></p>
- *  Assigned value used to identify the firm targeted to receive
- *  the message if the message is delivered by a third party
- *  <p></p>
- *  i.e.  the third party firm identifier would be delivered in the
- *  TargetCompID (56) field and the ultimate receiver firm ID in this field.
- */
 class Tag128StrDeliverToCompIDTest {
     Tag128StrDeliverToCompID tagData;
     String [] TestArray = {
@@ -65,26 +54,23 @@ class Tag128StrDeliverToCompIDTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag128StrDeliverToCompID( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag128StrDeliverToCompID( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  128
+         *  DeliverToCompID
+         *  String
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag128StrDeliverToCompID( new MyStringType( oneElement ));

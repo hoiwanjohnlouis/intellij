@@ -24,13 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  413
- *  CrossPercent
- *  Percentage
- *  <p></p>
- *  Percentage of program that crosses in Currency.  Represented as a percentage.
- */
 class Tag413PctCrossPercentTest {
     Tag413PctCrossPercent tagData;
     double [] TestArray = {
@@ -62,26 +55,23 @@ class Tag413PctCrossPercentTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( double oneElement : TestArray ) {
-            tagData = new Tag413PctCrossPercent( new MyPercentageType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag413PctCrossPercent( new MyPercentageType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  413
+         *  CrossPercent
+         *  Percentage
+         */
+
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag413PctCrossPercent( new MyPercentageType( oneElement ));

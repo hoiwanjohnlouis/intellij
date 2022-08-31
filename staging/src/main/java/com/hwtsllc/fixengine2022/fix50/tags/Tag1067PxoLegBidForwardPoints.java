@@ -46,9 +46,6 @@ public class Tag1067PxoLegBidForwardPoints extends FIX50Abstract implements LogV
         this.dataValue = dataValue;
     }
 
-    public double getDataValue() {
-        return this.dataValue.getDataValue();
-    }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
@@ -77,7 +74,7 @@ public class Tag1067PxoLegBidForwardPoints extends FIX50Abstract implements LogV
      */
     @Override
     public String toString() {
-        return String.valueOf(getDataValue());
+        return dataValue.toString();
     }
 
     /**

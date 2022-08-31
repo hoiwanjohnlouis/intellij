@@ -23,15 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  679
- *  LegBenchmarkPrice
- *  Price
- *  <p></p>
- *  Used to identify the price of the benchmark security.
- *  <p></p>
- *  See BenchmarkPrice (662) for description and valid values.
- */
 class Tag679PrcLegBenchmarkPriceTest {
     Tag679PrcLegBenchmarkPrice tagData;
     double [] TestArray = {
@@ -63,26 +54,23 @@ class Tag679PrcLegBenchmarkPriceTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( double oneElement : TestArray ) {
-            tagData = new Tag679PrcLegBenchmarkPrice( new MyPriceType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag679PrcLegBenchmarkPrice( new MyPriceType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  679
+         *  LegBenchmarkPrice
+         *  Price
+         */
+
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag679PrcLegBenchmarkPrice( new MyPriceType( oneElement ));

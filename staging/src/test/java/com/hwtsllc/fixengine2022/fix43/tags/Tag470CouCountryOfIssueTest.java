@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  470
- *  CountryOfIssue
- *  Country
- *  <p></p>
- *  ISO Country code of instrument issue (e.g. the country portion typically used in ISIN).
- *  <p></p>
- *  Can be used in conjunction with non-ISIN SecurityID (48)
- *  <p></p>
- *  (e.g. CUSIP for Municipal Bonds without ISIN) to provide uniqueness.
- */
 class Tag470CouCountryOfIssueTest {
     Tag470CouCountryOfIssue tagData;
     String [] TestArray = {
@@ -65,26 +54,23 @@ class Tag470CouCountryOfIssueTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag470CouCountryOfIssue( new MyCountryType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag470CouCountryOfIssue( new MyCountryType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  470
+         *  CountryOfIssue
+         *  Country
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag470CouCountryOfIssue( new MyCountryType( oneElement ));

@@ -98,14 +98,7 @@ public enum ENum980SecurityUpdateAction implements LogFIXString, LogVerboseStrin
      */
     @Override
     public String toString() {
-        return toEnumLabelString()
-                .concat("=[")
-                .concat( toEnumIDString())
-                .concat(",")
-                .concat( toEnumNameString())
-                .concat(",")
-                .concat( toEnumDescriptionString())
-                .concat("]");
+        return id;
     }
 
     /**

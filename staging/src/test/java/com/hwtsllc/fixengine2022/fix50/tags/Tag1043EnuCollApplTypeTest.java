@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  1043
- *  CollApplType
- *  int
- *  <p>
- *  conveys how the collateral should be/has been applied
- *  <p></p>
- *  Valid values:
- *  <p>    0 - Specific Deposit
- *  <p>    1 - General
- */
 class Tag1043EnuCollApplTypeTest {
     Tag1043EnuCollApplType tagData;
 
@@ -61,35 +50,11 @@ class Tag1043EnuCollApplTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    0 - Specific Deposit
-         *  <p>    1 - General
-         */
-        tagData = new Tag1043EnuCollApplType( Enum1043CollApplType.SPECIFIC_DEPOSIT );
-        assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag1043EnuCollApplType( Enum1043CollApplType.GENERAL );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        // loop around the ENUM and process
-        for ( Enum1043CollApplType oneEnum : Enum1043CollApplType.values()) {
-            tagData = new Tag1043EnuCollApplType(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum1043CollApplType oneEnum : Enum1043CollApplType.values()) {
             tagData = new Tag1043EnuCollApplType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -97,6 +62,22 @@ class Tag1043EnuCollApplTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  1043
+         *  CollApplType
+         *  int
+         *  <p>    0 - Specific Deposit
+         *  <p>    1 - General
+         */
+        tagData = new Tag1043EnuCollApplType( Enum1043CollApplType.SPECIFIC_DEPOSIT );
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag1043EnuCollApplType( Enum1043CollApplType.GENERAL );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum1043CollApplType oneEnum : Enum1043CollApplType.values()) {
             tagData = new Tag1043EnuCollApplType(oneEnum);
@@ -114,7 +95,7 @@ class Tag1043EnuCollApplTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

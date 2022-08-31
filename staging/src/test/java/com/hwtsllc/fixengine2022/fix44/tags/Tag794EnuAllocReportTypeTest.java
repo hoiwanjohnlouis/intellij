@@ -23,27 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  794
- *  AllocReportType
- *  int
- *  <p></p>
- *  Describes the specific type or purpose of an Allocation Report message
- *  <p></p>
- *  Valid values:
- *  <p>    2 - Preliminary Request to Intermediary
- *  <p>    3 - Sellside Calculated Using Preliminary (includes MiscFees and NetMoney)
- *  <p>    4 - Sellside Calculated Without Preliminary
- *          (sent unsolicited by sellside, includes MiscFees and NetMoney)
- *  <p>    5 - Warehouse Recap
- *  <p>    8 - Request to Intermediary
- *  <p></p>
- *  <p>    9 - Accept
- *  <p>    10 - Reject
- *  <p>    11 - Accept Pending
- *  <p>    12 - Complete
- *  <p>    14 - Reverse Pending
- */
 class Tag794EnuAllocReportTypeTest {
     Tag794EnuAllocReportType tagData;
 
@@ -71,77 +50,11 @@ class Tag794EnuAllocReportTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    2 - Preliminary Request to Intermediary
-         *  <p>    3 - Sellside Calculated Using Preliminary (includes MiscFees and NetMoney)
-         *  <p>    4 - Sellside Calculated Without Preliminary
-         *          (sent unsolicited by sellside, includes MiscFees and NetMoney)
-         *  <p>    5 - Warehouse Recap
-         *  <p>    8 - Request to Intermediary
-         */
-        tagData = new Tag794EnuAllocReportType( Enum794AllocReportType.PRELIMINARY_REQUEST );
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag794EnuAllocReportType(Enum794AllocReportType.SELLSIDE_USING_PRELIMINARY);
-        assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag794EnuAllocReportType(Enum794AllocReportType.SELLSIDE_WITHOUT_PRELIMINARY);
-        assertEquals( "4", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag794EnuAllocReportType(Enum794AllocReportType.WAREHOUSE_RECAP);
-        assertEquals( "5", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag794EnuAllocReportType(Enum794AllocReportType.REQUEST_TO_INTERMEDIARY);
-        assertEquals( "8", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        /*
-         *  <p>    9 - Accept
-         *  <p>    10 - Reject
-         *  <p>    11 - Accept Pending
-         *  <p>    12 - Complete
-         *  <p>    14 - Reverse Pending
-         */
-        tagData = new Tag794EnuAllocReportType(Enum794AllocReportType.ACCEPT);
-        assertEquals( "9", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag794EnuAllocReportType(Enum794AllocReportType.REJECT);
-        assertEquals( "10", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag794EnuAllocReportType(Enum794AllocReportType.ACCEPT_PENDING);
-        assertEquals( "11", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag794EnuAllocReportType(Enum794AllocReportType.COMPLETE);
-        assertEquals( "12", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag794EnuAllocReportType(Enum794AllocReportType.REVERSE_PENDING);
-        assertEquals( "14", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum794AllocReportType oneEnum : Enum794AllocReportType.values()) {
-            tagData = new Tag794EnuAllocReportType(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum794AllocReportType oneEnum : Enum794AllocReportType.values()) {
             tagData = new Tag794EnuAllocReportType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -149,6 +62,67 @@ class Tag794EnuAllocReportTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  794
+         *  AllocReportType
+         *  int
+         *  <p>    2 - Preliminary Request to Intermediary
+         *  <p>    3 - Sellside Calculated Using Preliminary (includes MiscFees and NetMoney)
+         *  <p>    4 - Sellside Calculated Without Preliminary
+         *          (sent unsolicited by sellside, includes MiscFees and NetMoney)
+         *  <p>    5 - Warehouse Recap
+         */
+        tagData = new Tag794EnuAllocReportType( Enum794AllocReportType.PRELIMINARY_REQUEST );
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag794EnuAllocReportType(Enum794AllocReportType.SELLSIDE_USING_PRELIMINARY);
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag794EnuAllocReportType(Enum794AllocReportType.SELLSIDE_WITHOUT_PRELIMINARY);
+        assertEquals( "4", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag794EnuAllocReportType(Enum794AllocReportType.WAREHOUSE_RECAP);
+        assertEquals( "5", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    8 - Request to Intermediary
+         *  <p>    9 - Accept
+         *  <p>    10 - Reject
+         */
+        tagData = new Tag794EnuAllocReportType(Enum794AllocReportType.REQUEST_TO_INTERMEDIARY);
+        assertEquals( "8", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag794EnuAllocReportType(Enum794AllocReportType.ACCEPT);
+        assertEquals( "9", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag794EnuAllocReportType(Enum794AllocReportType.REJECT);
+        assertEquals( "10", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    11 - Accept Pending
+         *  <p>    12 - Complete
+         *  <p>    14 - Reverse Pending
+         */
+        tagData = new Tag794EnuAllocReportType(Enum794AllocReportType.ACCEPT_PENDING);
+        assertEquals( "11", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag794EnuAllocReportType(Enum794AllocReportType.COMPLETE);
+        assertEquals( "12", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag794EnuAllocReportType(Enum794AllocReportType.REVERSE_PENDING);
+        assertEquals( "14", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum794AllocReportType oneEnum : Enum794AllocReportType.values()) {
             tagData = new Tag794EnuAllocReportType(oneEnum);
@@ -166,7 +140,7 @@ class Tag794EnuAllocReportTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

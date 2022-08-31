@@ -24,17 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  246
- *  UnderlyingFactor
- *  float
- *  <p></p>
- *  Underlying security’s Factor.
- *  <p></p>
- *  See Factor (228) field for description
- *  <p></p>
- *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
- */
 class Tag246FloUnderlyingFactorTest {
     Tag246FloUnderlyingFactor tagData;
     float [] TestArray = {
@@ -66,26 +55,23 @@ class Tag246FloUnderlyingFactorTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( float oneElement : TestArray ) {
-            tagData = new Tag246FloUnderlyingFactor( new MyFloatType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( float oneElement : TestArray ) {
             tagData = new Tag246FloUnderlyingFactor( new MyFloatType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  246
+         *  UnderlyingFactor
+         *  float
+         */
+
         // process array of tags
         for ( float oneElement : TestArray ) {
             tagData = new Tag246FloUnderlyingFactor( new MyFloatType( oneElement ));

@@ -23,18 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  567
- *  TradSesStatusRejReason
- *  int
- *  <p></p>
- *  Indicates the reason a Trading Session Status Request was rejected.
- *  <p></p>
- *  Valid values:
- *  <p>    1 - Unknown or invalid TradingSessionID
- *  <p>    99 - Other
- *  <p>    or any value conforming to the data type Reserved100Plus
- */
 class Tag567EnuTradSesStatusRejReasonTest {
     Tag567EnuTradSesStatusRejReason tagData;
 
@@ -62,39 +50,11 @@ class Tag567EnuTradSesStatusRejReasonTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  1, 99, type(s)
-         */
-
-        /*
-         *  1, type(s)
-         */
-        tagData = new Tag567EnuTradSesStatusRejReason( Enum567TradSesStatusRejReason.UNKNOWN_TRADING_SESSION_ID );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        /*
-         *  99, type(s)
-         */
-        tagData = new Tag567EnuTradSesStatusRejReason( Enum567TradSesStatusRejReason.OTHER );
-        assertEquals( "99", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum567TradSesStatusRejReason oneEnum : Enum567TradSesStatusRejReason.values()) {
-            tagData = new Tag567EnuTradSesStatusRejReason(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum567TradSesStatusRejReason oneEnum : Enum567TradSesStatusRejReason.values()) {
             tagData = new Tag567EnuTradSesStatusRejReason(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -102,6 +62,27 @@ class Tag567EnuTradSesStatusRejReasonTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  567
+         *  TradSesStatusRejReason
+         *  int
+         *  <p>    1 - Unknown or invalid TradingSessionID
+         *  <p>    99 - Other
+         *  <p>    or any value conforming to the data type Reserved100Plus
+         */
+        tagData = new Tag567EnuTradSesStatusRejReason( Enum567TradSesStatusRejReason.UNKNOWN_TRADING_SESSION_ID );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    99 - Other
+         *  <p>    or any value conforming to the data type Reserved100Plus
+         */
+        tagData = new Tag567EnuTradSesStatusRejReason( Enum567TradSesStatusRejReason.OTHER );
+        assertEquals( "99", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum567TradSesStatusRejReason oneEnum : Enum567TradSesStatusRejReason.values()) {
             tagData = new Tag567EnuTradSesStatusRejReason(oneEnum);
@@ -119,7 +100,7 @@ class Tag567EnuTradSesStatusRejReasonTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

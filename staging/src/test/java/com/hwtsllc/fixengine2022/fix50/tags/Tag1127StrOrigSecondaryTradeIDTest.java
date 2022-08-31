@@ -23,14 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  1127
- *  OrigSecondaryTradeID
- *  String
- *  <p>
- *  Used to preserve original secondary trade id when original trade
- *  is being referenced in a subsequent trade transaction such as a transfer
- */
 class Tag1127StrOrigSecondaryTradeIDTest {
     Tag1127StrOrigSecondaryTradeID tagData;
     String [] TestArray = {
@@ -62,26 +54,23 @@ class Tag1127StrOrigSecondaryTradeIDTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag1127StrOrigSecondaryTradeID( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag1127StrOrigSecondaryTradeID( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  1127
+         *  OrigSecondaryTradeID
+         *  String
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag1127StrOrigSecondaryTradeID( new MyStringType( oneElement ));

@@ -23,13 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  471
- *  StateOrProvinceOfIssue
- *  String
- *  <p></p>
- *  A two-character state or province abbreviation.
- */
 class Tag471StrStateOrProvinceOfIssueTest {
     Tag471StrStateOrProvinceOfIssue tagData;
     String [] TestArray = {
@@ -61,25 +54,23 @@ class Tag471StrStateOrProvinceOfIssueTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag471StrStateOrProvinceOfIssue( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag471StrStateOrProvinceOfIssue( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  471
+         *  StateOrProvinceOfIssue
+         *  String
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag471StrStateOrProvinceOfIssue( new MyStringType( oneElement ));

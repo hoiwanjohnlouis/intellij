@@ -24,17 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  255
- *  CreditRating
- *  String
- *  <p></p>
- *  An evaluation of a company's ability to repay obligations or its likelihood of not defaulting.
- *  <p></p>
- *  These evaluations are provided by Credit Rating Agencies, i.e. S&P, Moody's.
- *  <p></p>
- *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
- */
 class Tag255StrCreditRatingTest {
     Tag255StrCreditRating tagData;
     String [] TestArray = {
@@ -66,26 +55,23 @@ class Tag255StrCreditRatingTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag255StrCreditRating( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag255StrCreditRating( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  255
+         *  CreditRating
+         *  String
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag255StrCreditRating( new MyStringType( oneElement ));

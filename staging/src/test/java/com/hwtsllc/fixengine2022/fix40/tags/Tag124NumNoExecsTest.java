@@ -23,13 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  124
- *  NoExecs
- *  NumInGroup
- *  <p></p>
- *  No of execution repeating group entries to follow.
- */
 class Tag124NumNoExecsTest {
     Tag124NumNoExecs tagData;
     int [] TestArray = {
@@ -61,26 +54,23 @@ class Tag124NumNoExecsTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag124NumNoExecs( new MyNumInGroupType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag124NumNoExecs( new MyNumInGroupType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  124
+         *  NoExecs
+         *  NumInGroup
+         */
+
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag124NumNoExecs( new MyNumInGroupType( oneElement ));

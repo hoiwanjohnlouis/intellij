@@ -16,6 +16,7 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
+import com.hwtsllc.fixengine2022.fix27.tags.Tag12AmtCommission;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -23,41 +24,27 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class MyAmtTypeTest {
+    MyAmtType tagData;
+    double [] TestArray = {
+            MyAmtType.TESTA_MY_AMT_TYPE,
+            MyAmtType.TESTB_MY_AMT_TYPE
+    };
+
     @Test
     void AmtTypeTest() {
-        MyAmtType dataType;
-        double oneElement;
-
-        oneElement = 0.23D;
-        dataType = new MyAmtType( oneElement );
-        assertEquals(  oneElement , dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, dataType.getDataValue());
-
-        oneElement = MyAmtType.TESTA_MY_AMT_TYPE;
-        dataType = new MyAmtType( oneElement );
-        assertEquals(  oneElement , dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, dataType.getDataValue());
-
-        oneElement = MyAmtType.TESTB_MY_AMT_TYPE;
-        dataType = new MyAmtType( oneElement );
-        assertEquals(  oneElement , dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, dataType.getDataValue());
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new MyAmtType( oneElement );
+            assertEquals( String.valueOf( oneElement ), tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+        }
     }
     @Test
-    void PrintFIXTagTest() {
-        MyAmtType dataType;
-        double oneElement;
-
-        oneElement = 0.23D;
-        dataType = new MyAmtType( oneElement );
-        System.out.println( dataType.toVerboseString() );
-
-        oneElement = MyAmtType.TESTA_MY_AMT_TYPE;
-        dataType = new MyAmtType( oneElement );
-        System.out.println( dataType.toVerboseString() );
-
-        oneElement = MyAmtType.TESTB_MY_AMT_TYPE;
-        dataType = new MyAmtType( oneElement );
-        System.out.println( dataType.toVerboseString() );
+    void PrintTest() {
+        // process array of tags
+        for ( double oneElement : TestArray ) {
+            tagData = new MyAmtType( oneElement );
+            System.out.println( tagData.toVerboseString() );
+        }
     }
 }

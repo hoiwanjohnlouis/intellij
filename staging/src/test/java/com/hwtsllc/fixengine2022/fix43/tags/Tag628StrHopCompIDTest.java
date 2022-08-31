@@ -23,22 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  628
- *  HopCompID
- *  String
- *  <p></p>
- *  Assigned value used to identify the third party firm which delivered a specific message
- *  either from the firm which originated the message or from another third party
- *  (if multiple "hops" are performed).
- *  <p></p>
- *  It is recommended that this value be the SenderCompID (49) of the third party.
- *  <p></p>
- *  Applicable when messages are communicated/re-distributed via third parties
- *  which function as service bureaus or "hubs".
- *  <p></p>
- *  Only applicable if OnBehalfOfCompID (115) is being used.
- */
 class Tag628StrHopCompIDTest {
     Tag628StrHopCompID tagData;
     String [] TestArray = {
@@ -70,26 +54,23 @@ class Tag628StrHopCompIDTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag628StrHopCompID( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag628StrHopCompID( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  628
+         *  HopCompID
+         *  String
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag628StrHopCompID( new MyStringType( oneElement ));

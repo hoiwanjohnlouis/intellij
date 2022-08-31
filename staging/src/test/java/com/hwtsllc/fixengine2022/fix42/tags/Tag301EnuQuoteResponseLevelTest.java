@@ -23,19 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  301
- *  QuoteResponseLevel
- *  int
- *  <p>
- *  Level of Response requested from receiver of quote messages.
- *  <p></p>
- *  Valid values:
- *  <p>    0-2 msg types
- *  <p>    "0 - No Acknowledgement (default)"
- *  <p>    "1 - Acknowledge only negative or erroneous quotes"
- *  <p>    "2 - Acknowledge each quote messages"
- */
 class Tag301EnuQuoteResponseLevelTest {
     Tag301EnuQuoteResponseLevel tagData;
 
@@ -63,36 +50,11 @@ class Tag301EnuQuoteResponseLevelTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         * 0-2 msg types
-         */
-        tagData = new Tag301EnuQuoteResponseLevel(Enum301QuoteResponseLevel.NO_ACKNOWLEDGEMENT);
-        assertEquals( Enum301QuoteResponseLevel.NO_ACKNOWLEDGEMENT.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag301EnuQuoteResponseLevel(Enum301QuoteResponseLevel.ACKNOWLEDGE_NEGATIVE_OR_ERRORS);
-        assertEquals( Enum301QuoteResponseLevel.ACKNOWLEDGE_NEGATIVE_OR_ERRORS.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag301EnuQuoteResponseLevel(Enum301QuoteResponseLevel.ACKNOWLEDGE_EACH_QUOTE);
-        assertEquals( Enum301QuoteResponseLevel.ACKNOWLEDGE_EACH_QUOTE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum301QuoteResponseLevel oneEnum : Enum301QuoteResponseLevel.values()) {
-            tagData = new Tag301EnuQuoteResponseLevel(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum301QuoteResponseLevel oneEnum : Enum301QuoteResponseLevel.values()) {
             tagData = new Tag301EnuQuoteResponseLevel(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -100,6 +62,28 @@ class Tag301EnuQuoteResponseLevelTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  301
+         *  QuoteResponseLevel
+         *  int
+         *  <p>    0-2 msg types
+         *  <p>    "0 - No Acknowledgement (default)"
+         *  <p>    "1 - Acknowledge only negative or erroneous quotes"
+         *  <p>    "2 - Acknowledge each quote messages"
+         */
+        tagData = new Tag301EnuQuoteResponseLevel(Enum301QuoteResponseLevel.NO_ACKNOWLEDGEMENT);
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag301EnuQuoteResponseLevel(Enum301QuoteResponseLevel.ACKNOWLEDGE_NEGATIVE_OR_ERRORS);
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag301EnuQuoteResponseLevel(Enum301QuoteResponseLevel.ACKNOWLEDGE_EACH_QUOTE);
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum301QuoteResponseLevel oneEnum : Enum301QuoteResponseLevel.values()) {
             tagData = new Tag301EnuQuoteResponseLevel(oneEnum);
@@ -117,7 +101,7 @@ class Tag301EnuQuoteResponseLevelTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

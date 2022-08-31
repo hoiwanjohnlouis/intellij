@@ -23,14 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  144
- *  OnBehalfOfLocationID
- *  String
- *  <p></p>
- *  Assigned value used to identify specific message originator’s location
- *  (i.e. geographic location and/or desk, trader) if the message was delivered by a third party
- */
 class Tag144StrOnBehalfOfLocationIDTest {
     Tag144StrOnBehalfOfLocationID tagData;
     String [] TestArray = {
@@ -62,26 +54,23 @@ class Tag144StrOnBehalfOfLocationIDTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag144StrOnBehalfOfLocationID( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag144StrOnBehalfOfLocationID( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  144
+         *  OnBehalfOfLocationID
+         *  String
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag144StrOnBehalfOfLocationID( new MyStringType( oneElement ));

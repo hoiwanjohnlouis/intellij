@@ -23,26 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  544
- *  CashMargin
- *  char
- *  <p></p>
- *  Identifies whether an order is a margin order or a non-margin order.
- *  <p></p>
- *  This is primarily used when sending orders to Japanese exchanges to
- *  indicate sell margin or buy to cover.
- *  <p></p>
- *  The same tag could be assigned also by buy-side to indicate the intent
- *  to sell or buy margin and the sell-side to accept or reject
- *  <p></p>
- *  (base on some validation criteria) the margin request.
- *  <p></p>
- *  Valid values:
- *  <p>    1 - Cash
- *  <p>    2 - Margin Open
- *  <p>    3 - Margin Close
- */
 class Tag544EnuCashMarginTest {
     Tag544EnuCashMargin tagData;
 
@@ -70,36 +50,11 @@ class Tag544EnuCashMarginTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  1-3 types
-         */
-        tagData = new Tag544EnuCashMargin( Enum544CashMargin.CASH );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag544EnuCashMargin( Enum544CashMargin.MARGIN_OPEN );
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag544EnuCashMargin( Enum544CashMargin.MARGIN_CLOSE );
-        assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum544CashMargin oneEnum : Enum544CashMargin.values()) {
-            tagData = new Tag544EnuCashMargin(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum544CashMargin oneEnum : Enum544CashMargin.values()) {
             tagData = new Tag544EnuCashMargin(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -107,6 +62,27 @@ class Tag544EnuCashMarginTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  544
+         *  CashMargin
+         *  char
+         *  <p>    1 - Cash
+         *  <p>    2 - Margin Open
+         *  <p>    3 - Margin Close
+         */
+        tagData = new Tag544EnuCashMargin( Enum544CashMargin.CASH );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag544EnuCashMargin( Enum544CashMargin.MARGIN_OPEN );
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag544EnuCashMargin( Enum544CashMargin.MARGIN_CLOSE );
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum544CashMargin oneEnum : Enum544CashMargin.values()) {
             tagData = new Tag544EnuCashMargin(oneEnum);
@@ -124,7 +100,7 @@ class Tag544EnuCashMarginTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

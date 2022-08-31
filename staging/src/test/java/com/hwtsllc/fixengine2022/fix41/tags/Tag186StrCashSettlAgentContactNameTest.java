@@ -24,15 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  186
- *  CashSettlAgentContactName
- *  String
- *  <p></p>
- *  Deprecated in FIX.4.3
- *  <p></p>
- *  Name of contact at local agent bank for SettlInstSource's account  if SettlDeliveryType=Free
- */
 // @Deprecated
 class Tag186StrCashSettlAgentContactNameTest {
     Tag186StrCashSettlAgentContactName tagData;
@@ -65,26 +56,23 @@ class Tag186StrCashSettlAgentContactNameTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag186StrCashSettlAgentContactName( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag186StrCashSettlAgentContactName( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  186
+         *  CashSettlAgentContactName
+         *  String
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag186StrCashSettlAgentContactName( new MyStringType( oneElement ));

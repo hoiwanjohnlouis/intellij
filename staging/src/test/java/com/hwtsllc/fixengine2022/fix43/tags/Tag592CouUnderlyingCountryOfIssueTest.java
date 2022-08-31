@@ -23,25 +23,12 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  592
- *  UnderlyingCountryOfIssue
- *  Country
- *  <p></p>
- *  Underlying security’s CountryOfIssue.
- *  <p></p>
- *  See CountryOfIssue (470) field for description
- */
 class Tag592CouUnderlyingCountryOfIssueTest {
     Tag592CouUnderlyingCountryOfIssue tagData;
     String [] TestArray = {
             Tag592CouUnderlyingCountryOfIssue.TESTA_COU_UNDERLYING_COUNTRY_OF_ISSUE,
             Tag592CouUnderlyingCountryOfIssue.TESTB_COU_UNDERLYING_COUNTRY_OF_ISSUE
     };
-
-    @Test
-    void FIX0592Test() {
-    }
 
     @Test
     void PrintTest() {
@@ -67,26 +54,23 @@ class Tag592CouUnderlyingCountryOfIssueTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag592CouUnderlyingCountryOfIssue( new MyCountryType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag592CouUnderlyingCountryOfIssue( new MyCountryType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  592
+         *  UnderlyingCountryOfIssue
+         *  Country
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag592CouUnderlyingCountryOfIssue( new MyCountryType( oneElement ));

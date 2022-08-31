@@ -23,27 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  219
- *  EnuBenchmarkTest
- *  char
- *  <p>
- *  Deprecated in FIX.4.2 For Fixed Income.
- *  <p>
- *  Identifies the benchmark (e.g. used in conjunction with the Spread field).
- *  <p></p>
- *  Valid values:
- *  <p>    "1 - CURVE"
- *  <p>    "2 - 5YR"
- *  <p>    "3 - OLD5"
- *  <p>    "4 - 10YR"
- *  <p>    "5 - OLD10"
- *  <p></p>
- *  <p>    "6 - 30YR"
- *  <p>    "7 - OLD30"
- *  <p>    "8 - 3MOLIBOR"
- *  <p>    "9 - 6MOLIBOR"
- */
 // @Deprecated
 class Tag219EnuBenchmarkTest {
     Tag219EnuBenchmark tagData;
@@ -72,60 +51,11 @@ class Tag219EnuBenchmarkTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         * 1-9 msg types
-         */
-        tagData = new Tag219EnuBenchmark(Enum219Benchmark.CURVE);
-        assertEquals( Enum219Benchmark.CURVE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag219EnuBenchmark(Enum219Benchmark.FIVE_YEAR);
-        assertEquals( Enum219Benchmark.FIVE_YEAR.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag219EnuBenchmark(Enum219Benchmark.OLD_FIVE_YEAR);
-        assertEquals( Enum219Benchmark.OLD_FIVE_YEAR.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag219EnuBenchmark(Enum219Benchmark.TEN_YEAR);
-        assertEquals( Enum219Benchmark.TEN_YEAR.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag219EnuBenchmark(Enum219Benchmark.OLD_TEN_YEAR);
-        assertEquals( Enum219Benchmark.OLD_TEN_YEAR.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag219EnuBenchmark(Enum219Benchmark.THIRTY_YEAR);
-        assertEquals( Enum219Benchmark.THIRTY_YEAR.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag219EnuBenchmark(Enum219Benchmark.OLD_THIRTY_YEAR);
-        assertEquals( Enum219Benchmark.OLD_THIRTY_YEAR.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag219EnuBenchmark(Enum219Benchmark.THREE_MONTH);
-        assertEquals( Enum219Benchmark.THREE_MONTH.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag219EnuBenchmark(Enum219Benchmark.SIX_MONTH);
-        assertEquals( Enum219Benchmark.SIX_MONTH.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum219Benchmark oneEnum : Enum219Benchmark.values()) {
-            tagData = new Tag219EnuBenchmark(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum219Benchmark oneEnum : Enum219Benchmark.values()) {
             tagData = new Tag219EnuBenchmark(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -133,6 +63,59 @@ class Tag219EnuBenchmarkTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  219
+         *  EnuBenchmarkTest
+         *  char
+         *  <p>    "1 - CURVE"
+         *  <p>    "2 - 5YR"
+         *  <p>    "3 - OLD5"
+         *  <p>    "4 - 10YR"
+         *  <p>    "5 - OLD10"
+         */
+        tagData = new Tag219EnuBenchmark(Enum219Benchmark.CURVE);
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag219EnuBenchmark(Enum219Benchmark.FIVE_YEAR);
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag219EnuBenchmark(Enum219Benchmark.OLD_FIVE_YEAR);
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag219EnuBenchmark(Enum219Benchmark.TEN_YEAR);
+        assertEquals( "4", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag219EnuBenchmark(Enum219Benchmark.OLD_TEN_YEAR);
+        assertEquals( "5", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    "6 - 30YR"
+         *  <p>    "7 - OLD30"
+         *  <p>    "8 - 3MOLIBOR"
+         *  <p>    "9 - 6MOLIBOR"
+         */
+        tagData = new Tag219EnuBenchmark(Enum219Benchmark.THIRTY_YEAR);
+        assertEquals( "6", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag219EnuBenchmark(Enum219Benchmark.OLD_THIRTY_YEAR);
+        assertEquals( "7", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag219EnuBenchmark(Enum219Benchmark.THREE_MONTH);
+        assertEquals( "8", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag219EnuBenchmark(Enum219Benchmark.SIX_MONTH);
+        assertEquals( "9", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum219Benchmark oneEnum : Enum219Benchmark.values()) {
             tagData = new Tag219EnuBenchmark(oneEnum);
@@ -150,7 +133,7 @@ class Tag219EnuBenchmarkTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

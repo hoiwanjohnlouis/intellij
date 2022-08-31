@@ -23,15 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  701
- *  YieldCalcDate
- *  LocalMktDate
- *  <p></p>
- *  Include as needed to clarify yield irregularities associated with date,
- *  <p>
- *  e.g. when it falls on a non-business day.
- */
 class Tag701LmdYieldCalcDateTest {
     Tag701LmdYieldCalcDate tagData;
     String [] TestArray = {
@@ -63,26 +54,23 @@ class Tag701LmdYieldCalcDateTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag701LmdYieldCalcDate( new MyLocalMktDateType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag701LmdYieldCalcDate( new MyLocalMktDateType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  701
+         *  YieldCalcDate
+         *  LocalMktDate
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag701LmdYieldCalcDate( new MyLocalMktDateType( oneElement ));

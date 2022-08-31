@@ -23,28 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  27 (same as 27, 682)
- *  IOIQty
- *  String
- *  <p>
- *  Quantity (e.g. number of shares) in numeric form or relative size.
- *  <p></p>
- *  682 (same as 27, 682)
- *  LegIOIQty
- *  String
- *  <p>
- *  Leg-specific IOI quantity.
- *  <p>
- *  See IOIQty (27) for description and valid values
- *  <p></p>
- *  Valid values:
- *  <p>    0 - 1000000000
- *  <p>    S - Small
- *  <p>    M - Medium
- *  <p>    L - Large
- *  <p>    U - Undisclosed Quantity
- */
 class Tag27EnuIOIQtyTest {
     Tag27EnuIOIQty tagData;
 
@@ -72,43 +50,11 @@ class Tag27EnuIOIQtyTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        tagData = new Tag27EnuIOIQty(MyEnumIOIQty.ONE_BILLION);
-        assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag27EnuIOIQty(MyEnumIOIQty.SMALL);
-        assertEquals( "S", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag27EnuIOIQty(MyEnumIOIQty.MEDIUM);
-        assertEquals( "M", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag27EnuIOIQty(MyEnumIOIQty.LARGE);
-        assertEquals( "L", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag27EnuIOIQty(MyEnumIOIQty.UNDISCLOSED_QUANTITY);
-        assertEquals( "U", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        // loop around the ENUM and process
-        for (MyEnumIOIQty oneEnum : MyEnumIOIQty.values()) {
-            tagData = new Tag27EnuIOIQty(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (MyEnumIOIQty oneEnum : MyEnumIOIQty.values()) {
             tagData = new Tag27EnuIOIQty(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -116,6 +62,35 @@ class Tag27EnuIOIQtyTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  27 (same as 27, 682)
+         *  <p>    0 - 1000000000
+         *  <p>    S - Small
+         *  <p>    M - Medium
+         *  <p>    L - Large
+         *  <p>    U - Undisclosed Quantity
+         */
+        tagData = new Tag27EnuIOIQty(MyEnumIOIQty.ONE_BILLION);
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag27EnuIOIQty(MyEnumIOIQty.SMALL);
+        assertEquals( "S", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag27EnuIOIQty(MyEnumIOIQty.MEDIUM);
+        assertEquals( "M", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag27EnuIOIQty(MyEnumIOIQty.LARGE);
+        assertEquals( "L", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag27EnuIOIQty(MyEnumIOIQty.UNDISCLOSED_QUANTITY);
+        assertEquals( "U", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (MyEnumIOIQty oneEnum : MyEnumIOIQty.values()) {
             tagData = new Tag27EnuIOIQty(oneEnum);
@@ -133,7 +108,7 @@ class Tag27EnuIOIQtyTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

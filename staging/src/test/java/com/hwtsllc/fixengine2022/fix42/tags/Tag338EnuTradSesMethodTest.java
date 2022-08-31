@@ -23,29 +23,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  338
- *  Enu
- *  TradSesMethod
- *  int
- *  <p>
- *  Method of trading
- *  <p></p>
- *  Valid values:
- *  <p>    1-3 msg types
- *  <p>    "1 - Electronic"
- *  <p>    "2 - Open Outcry"
- *  <p>    "3 - Two Party"
- */
 class Tag338EnuTradSesMethodTest {
     Tag338EnuTradSesMethod tagData;
 
-    @Test
-    void FIX0338Test() {
-    }
-    @Test
-    void Tag0338Test() {
-    }
     @Test
     void PrintTest() {
         // loop around the ENUM and process
@@ -70,36 +50,11 @@ class Tag338EnuTradSesMethodTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         * 1-3 msg types
-         */
-        tagData = new Tag338EnuTradSesMethod(Enum338TradSesMethod.ELECTRONIC);
-        assertEquals( Enum338TradSesMethod.ELECTRONIC.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag338EnuTradSesMethod(Enum338TradSesMethod.OPEN_OUTCRY);
-        assertEquals( Enum338TradSesMethod.OPEN_OUTCRY.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag338EnuTradSesMethod(Enum338TradSesMethod.TWO_PARTY);
-        assertEquals( Enum338TradSesMethod.TWO_PARTY.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum338TradSesMethod oneEnum : Enum338TradSesMethod.values()) {
-            tagData = new Tag338EnuTradSesMethod(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum338TradSesMethod oneEnum : Enum338TradSesMethod.values()) {
             tagData = new Tag338EnuTradSesMethod(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -107,6 +62,29 @@ class Tag338EnuTradSesMethodTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  338
+         *  Enu
+         *  TradSesMethod
+         *  int
+         *  <p>    1-3 msg types
+         *  <p>    "1 - Electronic"
+         *  <p>    "2 - Open Outcry"
+         *  <p>    "3 - Two Party"
+         */
+        tagData = new Tag338EnuTradSesMethod(Enum338TradSesMethod.ELECTRONIC);
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag338EnuTradSesMethod(Enum338TradSesMethod.OPEN_OUTCRY);
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag338EnuTradSesMethod(Enum338TradSesMethod.TWO_PARTY);
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum338TradSesMethod oneEnum : Enum338TradSesMethod.values()) {
             tagData = new Tag338EnuTradSesMethod(oneEnum);
@@ -124,7 +102,7 @@ class Tag338EnuTradSesMethodTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

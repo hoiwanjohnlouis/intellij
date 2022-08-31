@@ -23,20 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  793
- *  SecondaryAllocID
- *  String
- *  <p></p>
- *  Secondary allocation identifier.
- *  <p></p>
- *  Unlike the AllocID (70),
- *  this can be shared across a number of allocation instruction
- *  or allocation report messages, thereby making it possible to
- *  pass an identifier for an original allocation message on multiple messages
- *  <p></p>
- *  (e.g. from one party to a second to a third, across cancel and replace messages etc.).
- */
 class Tag793StrSecondaryAllocIDTest {
     Tag793StrSecondaryAllocID tagData;
     String [] TestArray = {
@@ -68,25 +54,23 @@ class Tag793StrSecondaryAllocIDTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag793StrSecondaryAllocID( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag793StrSecondaryAllocID( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  793
+         *  SecondaryAllocID
+         *  String
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag793StrSecondaryAllocID( new MyStringType( oneElement ));

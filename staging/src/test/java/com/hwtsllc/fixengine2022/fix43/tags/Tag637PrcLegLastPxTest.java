@@ -23,15 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  637
- *  LegLastPx
- *  Price
- *  <p></p>
- *  Execution price assigned to a leg of a multileg instrument.
- *  <p></p>
- *  See LastPx (31) field for description and values
- */
 class Tag637PrcLegLastPxTest {
     Tag637PrcLegLastPx tagData;
     double [] TestArray = {
@@ -63,26 +54,23 @@ class Tag637PrcLegLastPxTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( double oneElement : TestArray ) {
-            tagData = new Tag637PrcLegLastPx( new MyPriceType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag637PrcLegLastPx( new MyPriceType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  637
+         *  LegLastPx
+         *  Price
+         */
+
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag637PrcLegLastPx( new MyPriceType( oneElement ));

@@ -23,18 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  209
- *  AllocHandlInst
- *  int
- *  <p></p>
- *  Indicates how the receiver (i.e. third party) of Allocation message should handle/process the account details.
- *  <p></p>
- *  Valid values:
- *  <p>    1 - Match
- *  <p>    2 - Forward
- *  <p>    3 - Forward and Match
- */
 class Tag209EnuAllocHandlInstTest {
     Tag209EnuAllocHandlInst tagData;
 
@@ -62,33 +50,11 @@ class Tag209EnuAllocHandlInstTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        tagData = new Tag209EnuAllocHandlInst(Enum209AllocHandlInst.MATCH);
-        assertEquals( Enum209AllocHandlInst.MATCH.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag209EnuAllocHandlInst(Enum209AllocHandlInst.FORWARD);
-        assertEquals( Enum209AllocHandlInst.FORWARD.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag209EnuAllocHandlInst(Enum209AllocHandlInst.FORWARD_AND_MATCH);
-        assertEquals( Enum209AllocHandlInst.FORWARD_AND_MATCH.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum209AllocHandlInst oneEnum : Enum209AllocHandlInst.values()) {
-            tagData = new Tag209EnuAllocHandlInst(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum209AllocHandlInst oneEnum : Enum209AllocHandlInst.values()) {
             tagData = new Tag209EnuAllocHandlInst(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -96,6 +62,27 @@ class Tag209EnuAllocHandlInstTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  209
+         *  AllocHandlInst
+         *  int
+         *  <p>    1 - Match
+         *  <p>    2 - Forward
+         *  <p>    3 - Forward and Match
+         */
+        tagData = new Tag209EnuAllocHandlInst(Enum209AllocHandlInst.MATCH);
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag209EnuAllocHandlInst(Enum209AllocHandlInst.FORWARD);
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag209EnuAllocHandlInst(Enum209AllocHandlInst.FORWARD_AND_MATCH);
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum209AllocHandlInst oneEnum : Enum209AllocHandlInst.values()) {
             tagData = new Tag209EnuAllocHandlInst(oneEnum);
@@ -113,7 +100,7 @@ class Tag209EnuAllocHandlInstTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

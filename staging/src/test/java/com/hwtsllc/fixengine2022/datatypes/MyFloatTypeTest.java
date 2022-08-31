@@ -30,13 +30,13 @@ class MyFloatTypeTest {
 
         oneElement = MyFloatType.TESTA_MY_FLOAT_TYPE;
         dataType = new MyFloatType( oneElement );
-        assertEquals( oneElement, dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, dataType.getDataValue());
+        assertEquals( oneElement, Float.valueOf( dataType.toString() ) );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.toString());
 
         oneElement = MyFloatType.TESTB_MY_FLOAT_TYPE;
         dataType = new MyFloatType( oneElement );
-        assertEquals( oneElement, dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, dataType.getDataValue());
+        assertEquals( oneElement, Float.valueOf( dataType.toString() ) );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.toString());
     }
     @Test
     void PrintFIXTagTest() {

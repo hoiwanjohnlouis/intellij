@@ -23,15 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  57
- *  TargetSubID
- *  String
- *  <p></p>
- *  Assigned value used to identify specific individual or unit intended to receive message.
- *  <p></p>
- *  "ADMIN" reserved for administrative messages not intended for a specific user.
- */
 class Tag57StrTargetSubIDTest {
     Tag57StrTargetSubID tagData;
     String [] TestArray = {
@@ -63,26 +54,21 @@ class Tag57StrTargetSubIDTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag57StrTargetSubID( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag57StrTargetSubID( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  57
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag57StrTargetSubID( new MyStringType( oneElement ));

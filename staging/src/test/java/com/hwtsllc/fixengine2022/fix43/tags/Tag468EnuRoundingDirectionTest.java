@@ -23,40 +23,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  468
- *  RoundingDirection
- *  char
- *  <p></p>
- *  Specifies which direction to round
- *  <p>
- *  For CIV – indicates whether or not the quantity of shares/units
- *  is to be rounded and in which direction where CashOrdQty (152)
- *  <p>
- *  or (for CIV only) OrderPercent (516) are specified on an order.
- *  <p></p>
- *  The default is for rounding to be at the discretion of
- *  the executing broker or fund manager.
- *  <p>
- *  <p>e.g. for an order specifying CashOrdQty or OrderPercent
- *  <p>if the calculated number of shares/units was 325.76 and RoundingModulus (469) was
- *  <p>0 - "round down" would give 320 units,
- *  <p>1 - "round up" would give 330 units and "round to nearest" would give 320 units.
- *  <p></p>
- *  Valid values:
- *  <p>    0 - Round to nearest
- *  <p>    1 - Round down
- *  <p>    2 - Round up
- */
 class Tag468EnuRoundingDirectionTest {
     Tag468EnuRoundingDirection tagData;
 
-    @Test
-    void FIX0468Test() {
-    }
-    @Test
-    void Tag0468Test() {
-    }
     @Test
     void PrintTest() {
         // loop around the ENUM and process
@@ -81,33 +50,11 @@ class Tag468EnuRoundingDirectionTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        tagData = new Tag468EnuRoundingDirection( Enum468RoundingDirection.ROUND_TO_NEAREST );
-        assertEquals( Enum468RoundingDirection.ROUND_TO_NEAREST.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag468EnuRoundingDirection( Enum468RoundingDirection.ROUND_DOWN );
-        assertEquals( Enum468RoundingDirection.ROUND_DOWN.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag468EnuRoundingDirection( Enum468RoundingDirection.ROUND_UP );
-        assertEquals( Enum468RoundingDirection.ROUND_UP.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum468RoundingDirection oneEnum : Enum468RoundingDirection.values()) {
-            tagData = new Tag468EnuRoundingDirection(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum468RoundingDirection oneEnum : Enum468RoundingDirection.values()) {
             tagData = new Tag468EnuRoundingDirection(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -115,6 +62,27 @@ class Tag468EnuRoundingDirectionTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  468
+         *  RoundingDirection
+         *  char
+         *  <p>    0 - Round to nearest
+         *  <p>    1 - Round down
+         *  <p>    2 - Round up
+         */
+        tagData = new Tag468EnuRoundingDirection( Enum468RoundingDirection.ROUND_TO_NEAREST );
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag468EnuRoundingDirection( Enum468RoundingDirection.ROUND_DOWN );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag468EnuRoundingDirection( Enum468RoundingDirection.ROUND_UP );
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum468RoundingDirection oneEnum : Enum468RoundingDirection.values()) {
             tagData = new Tag468EnuRoundingDirection(oneEnum);
@@ -132,7 +100,7 @@ class Tag468EnuRoundingDirectionTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

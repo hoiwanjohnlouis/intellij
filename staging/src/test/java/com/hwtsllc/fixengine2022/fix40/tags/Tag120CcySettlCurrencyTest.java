@@ -23,13 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  120
- *  SettlCurrency
- *  Currency
- *  <p></p>
- *  Currency code of settlement denomination.
- */
 class Tag120CcySettlCurrencyTest {
     Tag120CcySettlCurrency tagData;
     String [] TestArray = {
@@ -61,26 +54,23 @@ class Tag120CcySettlCurrencyTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag120CcySettlCurrency( new MyCurrencyType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag120CcySettlCurrency( new MyCurrencyType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  120
+         *  SettlCurrency
+         *  Currency
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag120CcySettlCurrency( new MyCurrencyType( oneElement ));

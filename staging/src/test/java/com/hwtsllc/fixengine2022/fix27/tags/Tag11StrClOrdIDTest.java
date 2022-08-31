@@ -23,23 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  11
- *  ClOrdID
- *  String
- *  <p></p>
- *  Unique identifier for Order as assigned by the buy-side
- *  <p></p>
- *  (institution, broker, intermediary  etc.)
- *  <p></p>
- *  (identified by SenderCompID (49) or OnBehalfOfCompID (5) as appropriate).
- *  <p></p>
- *  Uniqueness must be guaranteed within a single trading day.
- *  <p></p>
- *  Firms, particularly those  which electronically submit multi-day orders,
- *  trade globally or throughout market close periods, should ensure uniqueness
- *  across days, for example by embedding a date within the ClOrdID field.
- */
 class Tag11StrClOrdIDTest {
     Tag11StrClOrdID tagData;
     String [] TestArray = {
@@ -71,21 +54,12 @@ class Tag11StrClOrdIDTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag11StrClOrdID( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag11StrClOrdID( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }

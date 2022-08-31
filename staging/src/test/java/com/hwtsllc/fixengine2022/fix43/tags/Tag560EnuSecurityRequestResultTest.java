@@ -23,21 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  560
- *  SecurityRequestResult
- *  int
- *  <p></p>
- *  The results returned to a Security Request message
- *  <p></p>
- *  Valid values:
- *  <p>    0 - Valid request
- *  <p>    1 - Invalid or unsupported request
- *  <p>    2 - No instruments found that match selection criteria
- *  <p>    3 - Not authorized to retrieve instrument data
- *  <p>    4 - Instrument data temporarily unavailable
- *  <p>    5 - Request for instrument data not supported
- */
 class Tag560EnuSecurityRequestResultTest {
     Tag560EnuSecurityRequestResult tagData;
 
@@ -65,49 +50,11 @@ class Tag560EnuSecurityRequestResultTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  0-5 types
-         */
-        tagData = new Tag560EnuSecurityRequestResult( Enum560SecurityRequestResult.VALID_REQUEST );
-        assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag560EnuSecurityRequestResult( Enum560SecurityRequestResult.UNSUPPORTED_REQUEST );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag560EnuSecurityRequestResult( Enum560SecurityRequestResult.NO_INSTRUMENTS_FOUND );
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag560EnuSecurityRequestResult( Enum560SecurityRequestResult.NOT_AUTHORIZED );
-        assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag560EnuSecurityRequestResult( Enum560SecurityRequestResult.INSTRUMENT_DATA_UNAVAILABLE );
-        assertEquals( "4", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        tagData = new Tag560EnuSecurityRequestResult( Enum560SecurityRequestResult.REQUEST_NOT_SUPPORTED );
-        assertEquals( "5", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum560SecurityRequestResult oneEnum : Enum560SecurityRequestResult.values()) {
-            tagData = new Tag560EnuSecurityRequestResult(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum560SecurityRequestResult oneEnum : Enum560SecurityRequestResult.values()) {
             tagData = new Tag560EnuSecurityRequestResult(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -115,6 +62,44 @@ class Tag560EnuSecurityRequestResultTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  560
+         *  SecurityRequestResult
+         *  int
+         *  <p>    0 - Valid request
+         *  <p>    1 - Invalid or unsupported request
+         *  <p>    2 - No instruments found that match selection criteria
+         *  <p>    3 - Not authorized to retrieve instrument data
+         *  <p>    4 - Instrument data temporarily unavailable
+         */
+        tagData = new Tag560EnuSecurityRequestResult( Enum560SecurityRequestResult.VALID_REQUEST );
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag560EnuSecurityRequestResult( Enum560SecurityRequestResult.UNSUPPORTED_REQUEST );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag560EnuSecurityRequestResult( Enum560SecurityRequestResult.NO_INSTRUMENTS_FOUND );
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag560EnuSecurityRequestResult( Enum560SecurityRequestResult.NOT_AUTHORIZED );
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag560EnuSecurityRequestResult( Enum560SecurityRequestResult.INSTRUMENT_DATA_UNAVAILABLE );
+        assertEquals( "4", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    5 - Request for instrument data not supported
+         */
+        tagData = new Tag560EnuSecurityRequestResult( Enum560SecurityRequestResult.REQUEST_NOT_SUPPORTED );
+        assertEquals( "5", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum560SecurityRequestResult oneEnum : Enum560SecurityRequestResult.values()) {
             tagData = new Tag560EnuSecurityRequestResult(oneEnum);
@@ -132,7 +117,7 @@ class Tag560EnuSecurityRequestResultTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

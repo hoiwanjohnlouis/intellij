@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  115
- *  OnBehalfOfCompID
- *  String
- *  <p></p>
- *  Assigned value used to identify firm originating message
- *  if the message was delivered by a third party
- *  <p></p>
- *  i.e. the third party firm identifier would be delivered
- *  in the SenderCompID field and the firm originating the message in this field.
- */
 class Tag115StrOnBehalfOfCompIDTest {
     Tag115StrOnBehalfOfCompID tagData;
     String [] TestArray = {
@@ -65,26 +54,23 @@ class Tag115StrOnBehalfOfCompIDTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag115StrOnBehalfOfCompID( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag115StrOnBehalfOfCompID( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  115
+         *  OnBehalfOfCompID
+         *  String
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag115StrOnBehalfOfCompID( new MyStringType( oneElement ));

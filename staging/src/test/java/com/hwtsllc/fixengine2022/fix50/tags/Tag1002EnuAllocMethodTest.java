@@ -23,18 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  1002
- *  AllocMethod
- *  int
- *  <p>
- *  Specifies the method under which a trade quantity was allocated.
- *  <p></p>
- *  Valid values:
- *  <p>    1 - Automatic
- *  <p>    2 - Guarantor
- *  <p>    3 - Manual
- */
 class Tag1002EnuAllocMethodTest {
     Tag1002EnuAllocMethod tagData;
 
@@ -62,40 +50,11 @@ class Tag1002EnuAllocMethodTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    1 - Automatic
-         *  <p>    2 - Guarantor
-         *  <p>    3 - Manual
-         */
-        tagData = new Tag1002EnuAllocMethod( Enum1002AllocMethod.AUTOMATIC );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag1002EnuAllocMethod( Enum1002AllocMethod.GUARANTOR );
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag1002EnuAllocMethod( Enum1002AllocMethod.MANUAL );
-        assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        // loop around the ENUM and process
-        for ( Enum1002AllocMethod oneEnum : Enum1002AllocMethod.values()) {
-            tagData = new Tag1002EnuAllocMethod(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum1002AllocMethod oneEnum : Enum1002AllocMethod.values()) {
             tagData = new Tag1002EnuAllocMethod(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -103,6 +62,27 @@ class Tag1002EnuAllocMethodTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  1002
+         *  AllocMethod
+         *  int
+         *  <p>    1 - Automatic
+         *  <p>    2 - Guarantor
+         *  <p>    3 - Manual
+         */
+        tagData = new Tag1002EnuAllocMethod( Enum1002AllocMethod.AUTOMATIC );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag1002EnuAllocMethod( Enum1002AllocMethod.GUARANTOR );
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag1002EnuAllocMethod( Enum1002AllocMethod.MANUAL );
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum1002AllocMethod oneEnum : Enum1002AllocMethod.values()) {
             tagData = new Tag1002EnuAllocMethod(oneEnum);
@@ -120,7 +100,7 @@ class Tag1002EnuAllocMethodTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

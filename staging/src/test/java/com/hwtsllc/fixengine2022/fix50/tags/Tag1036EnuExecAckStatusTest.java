@@ -23,18 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  1036
- *  ExecAckStatus
- *  char
- *  <p>
- *  The status of this execution acknowledgement message.
- *  <p></p>
- *  Valid values:
- *  <p>    0 - Received, not yet processed
- *  <p>    1 - Accepted
- *  <p>    2 - Don't know / Rejected
- */
 class Tag1036EnuExecAckStatusTest {
     Tag1036EnuExecAckStatus tagData;
 
@@ -62,40 +50,11 @@ class Tag1036EnuExecAckStatusTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    0 - Received, not yet processed
-         *  <p>    1 - Accepted
-         *  <p>    2 - Don't know / Rejected
-         */
-        tagData = new Tag1036EnuExecAckStatus( Enum1036ExecAckStatus.RECEIVED );
-        assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag1036EnuExecAckStatus( Enum1036ExecAckStatus.ACCEPTED );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag1036EnuExecAckStatus( Enum1036ExecAckStatus.DONT_KNOW_REJECTED );
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        // loop around the ENUM and process
-        for ( Enum1036ExecAckStatus oneEnum : Enum1036ExecAckStatus.values()) {
-            tagData = new Tag1036EnuExecAckStatus(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum1036ExecAckStatus oneEnum : Enum1036ExecAckStatus.values()) {
             tagData = new Tag1036EnuExecAckStatus(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -103,6 +62,27 @@ class Tag1036EnuExecAckStatusTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  1036
+         *  ExecAckStatus
+         *  char
+         *  <p>    0 - Received, not yet processed
+         *  <p>    1 - Accepted
+         *  <p>    2 - Don't know / Rejected
+         */
+        tagData = new Tag1036EnuExecAckStatus( Enum1036ExecAckStatus.RECEIVED );
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag1036EnuExecAckStatus( Enum1036ExecAckStatus.ACCEPTED );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag1036EnuExecAckStatus( Enum1036ExecAckStatus.DONT_KNOW_REJECTED );
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum1036ExecAckStatus oneEnum : Enum1036ExecAckStatus.values()) {
             tagData = new Tag1036EnuExecAckStatus(oneEnum);
@@ -120,7 +100,7 @@ class Tag1036EnuExecAckStatusTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

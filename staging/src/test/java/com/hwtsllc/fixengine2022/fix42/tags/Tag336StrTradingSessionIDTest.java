@@ -23,26 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  336
- *  TradingSessionID
- *  String
- *  <p></p>
- *  Identifier for Trading Session
- *  <p></p>
- *  Can be used to represent a specific market trading session
- *  <p></p>
- *  (e.g. "PRE-OPEN", "CROSS_2", "AFTER-HOURS", "TOSTNET", "TOSTNET2", etc).
- *  <p></p>
- *  To specify good for session where session spans more than one calendar day,
- *  use TimeInForce = Day in conjunction with TradingSessionID.
- *  <p></p>
- *  Values should be bi-laterally agreed to between counterparties.
- *  <p></p>
- *  Firms may register Trading Session values on the FIX website
- *  <p></p>
- *  (presently a document maintained within "ECN and Exchanges" working group section).
- */
 class Tag336StrTradingSessionIDTest {
     Tag336StrTradingSessionID tagData;
     String [] TestArray = {
@@ -74,26 +54,23 @@ class Tag336StrTradingSessionIDTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag336StrTradingSessionID( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag336StrTradingSessionID( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  336
+         *  TradingSessionID
+         *  String
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag336StrTradingSessionID( new MyStringType( oneElement ));

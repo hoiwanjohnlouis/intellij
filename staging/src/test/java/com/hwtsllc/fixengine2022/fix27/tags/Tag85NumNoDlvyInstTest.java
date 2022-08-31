@@ -23,15 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  85
- *  NoDlvyInst
- *  NumInGroup
- *  <p></p>
- *  Number of delivery instruction fields in repeating group.
- *  <p></p>
- *  Note this field was removed in FIX 4.1 and reinstated in FIX 4.4.
- */
 // @Deprecated
 class Tag85NumNoDlvyInstTest {
     Tag85NumNoDlvyInst tagData;
@@ -64,26 +55,21 @@ class Tag85NumNoDlvyInstTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag85NumNoDlvyInst( new MyNumInGroupType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag85NumNoDlvyInst( new MyNumInGroupType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  85
+         */
+
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag85NumNoDlvyInst( new MyNumInGroupType( oneElement ));

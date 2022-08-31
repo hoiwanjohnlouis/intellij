@@ -23,18 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  1095
- *  PeggedRefPrice
- *  Price
- *  <p>
- *  The value of the reference price that the order is pegged to.
- *  <p></p>
- *  PeggedRefPrice + PegOffsetValue (211) = PeggedPrice (839)
- *  unless the limit price (44, Price) is breached.
- *  <p></p>
- *  The values may not be exact due to rounding.
- */
 class Tag1095PrcPeggedRefPriceTest {
     Tag1095PrcPeggedRefPrice tagData;
     double [] TestArray = {
@@ -66,26 +54,23 @@ class Tag1095PrcPeggedRefPriceTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( double oneElement : TestArray ) {
-            tagData = new Tag1095PrcPeggedRefPrice( new MyPriceType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag1095PrcPeggedRefPrice( new MyPriceType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  1095
+         *  PeggedRefPrice
+         *  Price
+         */
+
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag1095PrcPeggedRefPrice( new MyPriceType( oneElement ));

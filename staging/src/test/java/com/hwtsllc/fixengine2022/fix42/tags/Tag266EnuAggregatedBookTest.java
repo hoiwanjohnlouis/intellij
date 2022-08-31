@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  266
- *  AggregatedBook
- *  Boolean
- *  <p>
- *  Specifies whether or not book entries should be aggregated. (Not specified) = broker option
- *  <p></p>
- *  Valid values:
- *  <p>    N - book entries should not be aggregated
- *  <p>    Y - book entries to be aggregated
- */
 class Tag266EnuAggregatedBookTest {
     Tag266EnuAggregatedBook tagData;
 
@@ -61,29 +50,11 @@ class Tag266EnuAggregatedBookTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        tagData = new Tag266EnuAggregatedBook(Enum266AggregatedBook.NO);
-        assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag266EnuAggregatedBook(Enum266AggregatedBook.YES);
-        assertEquals( "Y", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum266AggregatedBook oneEnum : Enum266AggregatedBook.values()) {
-            tagData = new Tag266EnuAggregatedBook(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum266AggregatedBook oneEnum : Enum266AggregatedBook.values()) {
             tagData = new Tag266EnuAggregatedBook(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -91,6 +62,22 @@ class Tag266EnuAggregatedBookTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  266
+         *  AggregatedBook
+         *  Boolean
+         *  <p>    N - book entries should not be aggregated
+         *  <p>    Y - book entries to be aggregated
+         */
+        tagData = new Tag266EnuAggregatedBook(Enum266AggregatedBook.NO);
+        assertEquals( "N", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag266EnuAggregatedBook(Enum266AggregatedBook.YES);
+        assertEquals( "Y", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum266AggregatedBook oneEnum : Enum266AggregatedBook.values()) {
             tagData = new Tag266EnuAggregatedBook(oneEnum);
@@ -108,7 +95,7 @@ class Tag266EnuAggregatedBookTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

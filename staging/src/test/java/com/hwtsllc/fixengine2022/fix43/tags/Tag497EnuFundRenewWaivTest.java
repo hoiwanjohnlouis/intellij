@@ -23,18 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  497
- *  FundRenewWaiv
- *  char
- *  <p></p>
- *  A one character code identifying whether
- *  the Fund based renewal commission is to be waived.
- *  <p></p>
- *  Valid values:
- *  <p>    N - No
- *  <p>    Y - Yes
- */
 class Tag497EnuFundRenewWaivTest {
     Tag497EnuFundRenewWaiv tagData;
 
@@ -62,32 +50,11 @@ class Tag497EnuFundRenewWaivTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         * N, Y types
-         */
-        tagData = new Tag497EnuFundRenewWaiv( Enum497FundRenewWaiv.NO );
-        assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag497EnuFundRenewWaiv( Enum497FundRenewWaiv.YES );
-        assertEquals( "Y", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum497FundRenewWaiv oneEnum : Enum497FundRenewWaiv.values()) {
-            tagData = new Tag497EnuFundRenewWaiv(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum497FundRenewWaiv oneEnum : Enum497FundRenewWaiv.values()) {
             tagData = new Tag497EnuFundRenewWaiv(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -95,6 +62,22 @@ class Tag497EnuFundRenewWaivTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  497
+         *  FundRenewWaiv
+         *  char
+         *  <p>    N - No
+         *  <p>    Y - Yes
+         */
+        tagData = new Tag497EnuFundRenewWaiv( Enum497FundRenewWaiv.NO );
+        assertEquals( "N", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag497EnuFundRenewWaiv( Enum497FundRenewWaiv.YES );
+        assertEquals( "Y", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum497FundRenewWaiv oneEnum : Enum497FundRenewWaiv.values()) {
             tagData = new Tag497EnuFundRenewWaiv(oneEnum);
@@ -112,7 +95,7 @@ class Tag497EnuFundRenewWaivTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

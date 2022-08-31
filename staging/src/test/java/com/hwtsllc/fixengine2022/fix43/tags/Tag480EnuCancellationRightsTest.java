@@ -23,19 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  480
- *  CancellationRights
- *  char
- *  <p></p>
- *  For CIV – A one character code identifying whether Cancellation rights/Cooling off period applies.
- *  <p></p>
- *  Valid values:
- *  <p>    Y - Yes
- *  <p>    N - No - Execution Only
- *  <p>    M - No - Waiver agreement
- *  <p>    O - No - Institutional
- */
 class Tag480EnuCancellationRightsTest {
     Tag480EnuCancellationRights tagData;
 
@@ -63,40 +50,11 @@ class Tag480EnuCancellationRightsTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         * Y, N, M, and O types
-         */
-        tagData = new Tag480EnuCancellationRights( Enum480CancellationRights.YES );
-        assertEquals( Enum480CancellationRights.YES.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag480EnuCancellationRights( Enum480CancellationRights.EXECUTION_ONLY );
-        assertEquals( Enum480CancellationRights.EXECUTION_ONLY.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag480EnuCancellationRights( Enum480CancellationRights.WAIVER_AGREEMENT );
-        assertEquals( Enum480CancellationRights.WAIVER_AGREEMENT.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag480EnuCancellationRights( Enum480CancellationRights.INSTITUTIONAL );
-        assertEquals( Enum480CancellationRights.INSTITUTIONAL.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum480CancellationRights oneEnum : Enum480CancellationRights.values()) {
-            tagData = new Tag480EnuCancellationRights(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum480CancellationRights oneEnum : Enum480CancellationRights.values()) {
             tagData = new Tag480EnuCancellationRights(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -104,6 +62,32 @@ class Tag480EnuCancellationRightsTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  480
+         *  CancellationRights
+         *  char
+         *  <p>    Y - Yes
+         *  <p>    N - No - Execution Only
+         *  <p>    M - No - Waiver agreement
+         *  <p>    O - No - Institutional
+         */
+        tagData = new Tag480EnuCancellationRights( Enum480CancellationRights.YES );
+        assertEquals( "Y", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag480EnuCancellationRights( Enum480CancellationRights.EXECUTION_ONLY );
+        assertEquals( "N", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag480EnuCancellationRights( Enum480CancellationRights.WAIVER_AGREEMENT );
+        assertEquals( "M", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag480EnuCancellationRights( Enum480CancellationRights.INSTITUTIONAL );
+        assertEquals( "O", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum480CancellationRights oneEnum : Enum480CancellationRights.values()) {
             tagData = new Tag480EnuCancellationRights(oneEnum);
@@ -121,7 +105,7 @@ class Tag480EnuCancellationRightsTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

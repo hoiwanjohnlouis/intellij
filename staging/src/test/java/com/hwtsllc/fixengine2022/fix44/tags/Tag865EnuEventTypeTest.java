@@ -23,24 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  865
- *  EventType
- *  int
- *  <p></p>
- *  Code to represent the type of event
- *  <p></p>
- *  Valid values:
- *  <p>    1 - Put
- *  <p>    2 - Call
- *  <p>    3 - Tender
- *  <p>    4 - Sinking Fund Call
- *  <p>    5 - Activation
- *  <p></p>
- *  <p>    6 - Inactivation
- *  <p>    99 - Other
- *  <p>    or any value conforming to the data type Reserved100Plus
- */
 class Tag865EnuEventTypeTest {
     Tag865EnuEventType tagData;
 
@@ -68,62 +50,11 @@ class Tag865EnuEventTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    1 - Put
-         *  <p>    2 - Call
-         *  <p>    3 - Tender
-         *  <p>    4 - Sinking Fund Call
-         *  <p>    5 - Activation
-         */
-        tagData = new Tag865EnuEventType( Enum865EventType.PUT );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag865EnuEventType( Enum865EventType.CALL );
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag865EnuEventType( Enum865EventType.TENDER );
-        assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag865EnuEventType( Enum865EventType.SINKING_FUND_CALL );
-        assertEquals( "4", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag865EnuEventType( Enum865EventType.ACTIVATION );
-        assertEquals( "5", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        /*
-         *  <p>    6 - Inactivation
-         *  <p>    99 - Other
-         *  <p>    or any value conforming to the data type Reserved100Plus
-         */
-        tagData = new Tag865EnuEventType( Enum865EventType.INACTIVATION );
-        assertEquals( "6", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag865EnuEventType( Enum865EventType.OTHER );
-        assertEquals( "99", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum865EventType oneEnum : Enum865EventType.values()) {
-            tagData = new Tag865EnuEventType(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum865EventType oneEnum : Enum865EventType.values()) {
             tagData = new Tag865EnuEventType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -131,6 +62,52 @@ class Tag865EnuEventTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  865
+         *  EventType
+         *  int
+         *  <p>    1 - Put
+         *  <p>    2 - Call
+         *  <p>    3 - Tender
+         *  <p>    4 - Sinking Fund Call
+         *  <p>    5 - Activation
+         */
+        tagData = new Tag865EnuEventType( Enum865EventType.PUT );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag865EnuEventType( Enum865EventType.CALL );
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag865EnuEventType( Enum865EventType.TENDER );
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag865EnuEventType( Enum865EventType.SINKING_FUND_CALL );
+        assertEquals( "4", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag865EnuEventType( Enum865EventType.ACTIVATION );
+        assertEquals( "5", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    6 - Inactivation
+         */
+        tagData = new Tag865EnuEventType( Enum865EventType.INACTIVATION );
+        assertEquals( "6", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    99 - Other
+         *  <p>    or any value conforming to the data type Reserved100Plus
+         */
+        tagData = new Tag865EnuEventType( Enum865EventType.OTHER );
+        assertEquals( "99", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum865EventType oneEnum : Enum865EventType.values()) {
             tagData = new Tag865EnuEventType(oneEnum);
@@ -148,7 +125,7 @@ class Tag865EnuEventTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

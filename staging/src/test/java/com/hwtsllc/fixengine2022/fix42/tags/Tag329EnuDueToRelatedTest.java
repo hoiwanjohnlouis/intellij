@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  329
- *  DueToRelated
- *  Boolean
- *  <p>
- *  Indicates whether or not the halt was due to the Related Security being halted.
- *  <p></p>
- *  Valid values:
- *  <p>    N - Halt was not related to a halt of the related security
- *  <p>    Y - Halt was due to related security being halted
- */
 class Tag329EnuDueToRelatedTest {
     Tag329EnuDueToRelated tagData;
 
@@ -61,29 +50,11 @@ class Tag329EnuDueToRelatedTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        tagData = new Tag329EnuDueToRelated(Enum329DueToRelated.NO);
-        assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag329EnuDueToRelated(Enum329DueToRelated.YES);
-        assertEquals( "Y", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum329DueToRelated oneEnum : Enum329DueToRelated.values()) {
-            tagData = new Tag329EnuDueToRelated(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum329DueToRelated oneEnum : Enum329DueToRelated.values()) {
             tagData = new Tag329EnuDueToRelated(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -91,6 +62,22 @@ class Tag329EnuDueToRelatedTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  329
+         *  DueToRelated
+         *  Boolean
+         *  <p>    N - Halt was not related to a halt of the related security
+         *  <p>    Y - Halt was due to related security being halted
+         */
+        tagData = new Tag329EnuDueToRelated(Enum329DueToRelated.NO);
+        assertEquals( "N", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag329EnuDueToRelated(Enum329DueToRelated.YES);
+        assertEquals( "Y", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum329DueToRelated oneEnum : Enum329DueToRelated.values()) {
             tagData = new Tag329EnuDueToRelated(oneEnum);
@@ -108,7 +95,7 @@ class Tag329EnuDueToRelatedTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

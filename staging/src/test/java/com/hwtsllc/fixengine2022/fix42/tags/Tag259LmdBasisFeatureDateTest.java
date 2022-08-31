@@ -24,20 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  259
- *  BasisFeatureDate
- *  LocalMktDate
- *  <p></p>
- *  BasisFeatureDate allows requesting firms within fixed income the ability to
- *  request an alternative yield-to-worst, -maturity, -extended or other call.
- *  <p></p>
- *  This flows through the confirm process.
- *  <p></p>
- *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
- *  <p></p>
- *  (prior to FIX 4.4 field was of type UTCDate)
- */
 class Tag259LmdBasisFeatureDateTest {
     Tag259LmdBasisFeatureDate tagData;
     String [] TestArray = {
@@ -69,26 +55,23 @@ class Tag259LmdBasisFeatureDateTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag259LmdBasisFeatureDate( new MyLocalMktDateType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag259LmdBasisFeatureDate( new MyLocalMktDateType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  259
+         *  BasisFeatureDate
+         *  LocalMktDate
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag259LmdBasisFeatureDate( new MyLocalMktDateType( oneElement ));

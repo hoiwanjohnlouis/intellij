@@ -23,21 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  279
- *  MDUpdateAction
- *  char
- *  <p>
- *  Type of Market Data update action.
- *  <p></p>
- *  Valid values:
- *  <p>    0-4 msg types
- *  <p>    NEW( "0", "NEW", "0 - New" ),
- *  <p>    CHANGE( "1", "CHANGE", "1 - Change" ),
- *  <p>    DELETE( "2", "DELETE", "2 - Delete" ),
- *  <p>    DELETE_THRU( "3", "DELETE_THRU", "3 - Delete Thru" ),
- *  <p>    DELETE_FROM( "4", "DELETE_FROM", "4 - Delete From" ),
- */
 class Tag279EnuMDUpdateActionTest {
     Tag279EnuMDUpdateAction tagData;
 
@@ -65,44 +50,11 @@ class Tag279EnuMDUpdateActionTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         * 0-4 msg types
-         */
-        tagData = new Tag279EnuMDUpdateAction(Enum279MDUpdateAction.NEW);
-        assertEquals( Enum279MDUpdateAction.NEW.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag279EnuMDUpdateAction(Enum279MDUpdateAction.CHANGE);
-        assertEquals( Enum279MDUpdateAction.CHANGE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag279EnuMDUpdateAction(Enum279MDUpdateAction.DELETE);
-        assertEquals( Enum279MDUpdateAction.DELETE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag279EnuMDUpdateAction(Enum279MDUpdateAction.DELETE_THRU);
-        assertEquals( Enum279MDUpdateAction.DELETE_THRU.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag279EnuMDUpdateAction(Enum279MDUpdateAction.DELETE_FROM);
-        assertEquals( Enum279MDUpdateAction.DELETE_FROM.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum279MDUpdateAction oneEnum : Enum279MDUpdateAction.values()) {
-            tagData = new Tag279EnuMDUpdateAction(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum279MDUpdateAction oneEnum : Enum279MDUpdateAction.values()) {
             tagData = new Tag279EnuMDUpdateAction(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -110,6 +62,38 @@ class Tag279EnuMDUpdateActionTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  279
+         *  MDUpdateAction
+         *  char
+         *  <p>    0-4 msg types
+         *  <p>    NEW( "0", "NEW", "0 - New" ),
+         *  <p>    CHANGE( "1", "CHANGE", "1 - Change" ),
+         *  <p>    DELETE( "2", "DELETE", "2 - Delete" ),
+         *  <p>    DELETE_THRU( "3", "DELETE_THRU", "3 - Delete Thru" ),
+         *  <p>    DELETE_FROM( "4", "DELETE_FROM", "4 - Delete From" ),
+         */
+        tagData = new Tag279EnuMDUpdateAction(Enum279MDUpdateAction.NEW);
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag279EnuMDUpdateAction(Enum279MDUpdateAction.CHANGE);
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag279EnuMDUpdateAction(Enum279MDUpdateAction.DELETE);
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag279EnuMDUpdateAction(Enum279MDUpdateAction.DELETE_THRU);
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag279EnuMDUpdateAction(Enum279MDUpdateAction.DELETE_FROM);
+        assertEquals( "4", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum279MDUpdateAction oneEnum : Enum279MDUpdateAction.values()) {
             tagData = new Tag279EnuMDUpdateAction(oneEnum);
@@ -127,7 +111,7 @@ class Tag279EnuMDUpdateActionTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

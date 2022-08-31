@@ -73,9 +73,6 @@ public class Tag959EnuStrategyParameterType extends FIX50Abstract implements Log
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
-        return this.dataValue.toEnumIDString();
-    }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
@@ -83,7 +80,7 @@ public class Tag959EnuStrategyParameterType extends FIX50Abstract implements Log
     public String toValuePairString() {
         return toEnumIDString()
                 .concat("=")
-                .concat(getDataValue());
+                .concat(dataValue.toString());
     }
     /**
      * standard wrapper to format a detailed string describing this data field
@@ -113,28 +110,28 @@ public class Tag959EnuStrategyParameterType extends FIX50Abstract implements Log
      */
     @Override
     public String toDataIDString() {
-        return this.dataValue.toEnumIDString();
+        return dataValue.toEnumIDString();
     }
     /**
      * wrapper to return the Name of the underlying Data
      */
     @Override
     public String toDataNameString() {
-        return this.dataValue.toEnumNameString();
+        return dataValue.toEnumNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data
      */
     @Override
     public String toDataDescriptionString() {
-        return this.dataValue.toEnumDescriptionString();
+        return dataValue.toEnumDescriptionString();
     }
     /**
-     * standard wrapper to return a string describing the data
+     * standard wrapper to format a simple string describing the data
      */
     @Override
     public String toString() {
-        return String.valueOf(getDataValue());
+        return dataValue.toString();
     }
 
     /**

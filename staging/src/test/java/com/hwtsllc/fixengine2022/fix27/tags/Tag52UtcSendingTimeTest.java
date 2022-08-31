@@ -23,15 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  52
- *  SendingTime
- *  UTCTimestamp
- *  <p></p>
- *  Time of message transmission
- *  <p></p>
- *  (always expressed in UTC (Universal Time Coordinated), also known as "GMT")
- */
 class Tag52UtcSendingTimeTest {
     Tag52UtcSendingTime tagData;
     String [] TestArray = {
@@ -63,26 +54,21 @@ class Tag52UtcSendingTimeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag52UtcSendingTime( new MyUTCTimestampType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag52UtcSendingTime( new MyUTCTimestampType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  52
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag52UtcSendingTime( new MyUTCTimestampType( oneElement ));

@@ -61,21 +61,12 @@ class Tag1132TzTransactTimeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag1132TzTransactTime( new MyTZTimestampType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_TZT_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag1132TzTransactTime( new MyTZTimestampType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
@@ -85,7 +76,7 @@ class Tag1132TzTransactTimeTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag1132TzTransactTime( new MyTZTimestampType( oneElement ));
             assertEquals( oneElement, tagData.toString());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_TZT_DATA_VALUE, tagData.toString());
         }
     }
     @Test

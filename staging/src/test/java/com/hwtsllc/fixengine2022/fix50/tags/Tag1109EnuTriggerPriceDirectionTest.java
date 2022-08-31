@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  1109
- *  TriggerPriceDirection
- *  char
- *  <p>
- *  The side from which the trigger price is reached.
- *  <p></p>
- *  Valid values:
- *  <p>    U - Trigger if the price of the specified type goes UP to or through the specified Trigger Price
- *  <p>    D - Trigger if the price of the specified type goes DOWN to or through the specified Trigger Price
- */
 class Tag1109EnuTriggerPriceDirectionTest {
     Tag1109EnuTriggerPriceDirection tagData;
 
@@ -61,35 +50,11 @@ class Tag1109EnuTriggerPriceDirectionTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    U - Trigger if the price of the specified type goes UP to or through the specified Trigger Price
-         *  <p>    D - Trigger if the price of the specified type goes DOWN to or through the specified Trigger Price
-         */
-        tagData = new Tag1109EnuTriggerPriceDirection( Enum1109TriggerPriceDirection.TRIGGER_UP );
-        assertEquals( "U", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag1109EnuTriggerPriceDirection( Enum1109TriggerPriceDirection.TRIGGER_DOWN );
-        assertEquals( "D", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        // loop around the ENUM and process
-        for ( Enum1109TriggerPriceDirection oneEnum : Enum1109TriggerPriceDirection.values()) {
-            tagData = new Tag1109EnuTriggerPriceDirection(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum1109TriggerPriceDirection oneEnum : Enum1109TriggerPriceDirection.values()) {
             tagData = new Tag1109EnuTriggerPriceDirection(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -97,6 +62,22 @@ class Tag1109EnuTriggerPriceDirectionTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  1109
+         *  TriggerPriceDirection
+         *  char
+         *  <p>    U - Trigger if the price of the specified type goes UP to or through the specified Trigger Price
+         *  <p>    D - Trigger if the price of the specified type goes DOWN to or through the specified Trigger Price
+         */
+        tagData = new Tag1109EnuTriggerPriceDirection( Enum1109TriggerPriceDirection.TRIGGER_UP );
+        assertEquals( "U", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag1109EnuTriggerPriceDirection( Enum1109TriggerPriceDirection.TRIGGER_DOWN );
+        assertEquals( "D", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum1109TriggerPriceDirection oneEnum : Enum1109TriggerPriceDirection.values()) {
             tagData = new Tag1109EnuTriggerPriceDirection(oneEnum);
@@ -114,7 +95,7 @@ class Tag1109EnuTriggerPriceDirectionTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

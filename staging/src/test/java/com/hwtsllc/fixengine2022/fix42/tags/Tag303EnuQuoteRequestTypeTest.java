@@ -23,18 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  303
- *  QuoteRequestType
- *  int
- *  <p>
- *  Indicates the type of Quote Request being generated
- *  <p></p>
- *  Valid values:
- *  <p>    1-2 msg types
- *  <p>    "1 - Manual"
- *  <p>    "2 - Automatic"
- */
 class Tag303EnuQuoteRequestTypeTest {
     Tag303EnuQuoteRequestType tagData;
 
@@ -62,32 +50,11 @@ class Tag303EnuQuoteRequestTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         * 1-2 msg types
-         */
-        tagData = new Tag303EnuQuoteRequestType(Enum303QuoteRequestType.MANUAL);
-        assertEquals( Enum303QuoteRequestType.MANUAL.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag303EnuQuoteRequestType(Enum303QuoteRequestType.AUTOMATIC);
-        assertEquals( Enum303QuoteRequestType.AUTOMATIC.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum303QuoteRequestType oneEnum : Enum303QuoteRequestType.values()) {
-            tagData = new Tag303EnuQuoteRequestType(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum303QuoteRequestType oneEnum : Enum303QuoteRequestType.values()) {
             tagData = new Tag303EnuQuoteRequestType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -95,6 +62,23 @@ class Tag303EnuQuoteRequestTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  303
+         *  QuoteRequestType
+         *  int
+         *  <p>    1-2 msg types
+         *  <p>    "1 - Manual"
+         *  <p>    "2 - Automatic"
+         */
+        tagData = new Tag303EnuQuoteRequestType(Enum303QuoteRequestType.MANUAL);
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag303EnuQuoteRequestType(Enum303QuoteRequestType.AUTOMATIC);
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum303QuoteRequestType oneEnum : Enum303QuoteRequestType.values()) {
             tagData = new Tag303EnuQuoteRequestType(oneEnum);
@@ -112,7 +96,7 @@ class Tag303EnuQuoteRequestTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

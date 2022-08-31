@@ -23,55 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  235
- *  YieldType
- *  String
- *  <p>
- *  Type of yield. (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
- *  <p></p>
- *  Valid values:
- *  <p>    "AFTERTAX - After Tax Yield (Municipals)"
- *  <p>    "ANNUAL - Annual Yield"
- *  <p>    "ATISSUE - Yield At Issue (Municipals)"
- *  <p>    "AVGMATURITY - Yield To Avg Maturity"
- *  <p>    "BOOK - Book Yield"
- *  <p></p>
- *  <p>    "CALL - Yield to Next Call"
- *  <p>    "CHANGE - Yield Change Since Close"
- *  <p>    "CLOSE - Closing Yield"
- *  <p>    "COMPOUND - Compound Yield"
- *  <p>    "CURRENT - Current Yield"
- *  <p></p>
- *  <p>    "GOVTEQUIV - Gvnt Equivalent Yield"
- *  <p>    "GROSS - True Gross Yield"
- *  <p>    "INFLATION - Yield with Inflation Assumption"
- *  <p>    "INVERSEFLOATER - Inverse Floater Bond Yield"
- *  <p>    "LASTCLOSE - Most Recent Closing Yield"
- *  <p></p>
- *  <p>    "LASTMONTH - Closing Yield Most Recent Month"
- *  <p>    "LASTQUARTER - Closing Yield Most Recent Quarter"
- *  <p>    "LASTYEAR - Closing Yield Most Recent Year"
- *  <p>    "LONGAVGLIFE - Yield to Longest Average Life"
- *  <p>    "MARK - Mark to Market Yield"
- *  <p></p>
- *  <p>    "MATURITY - Yield to Maturity"
- *  <p>    "NEXTREFUND - Yield to Next Refund (Sinking Fund Bonds)"
- *  <p>    "OPENAVG - Open Average Yield"
- *  <p>    "PREVCLOSE - Previous Close Yield"
- *  <p>    "PROCEEDS - Proceeds Yield"
- *  <p></p>
- *  <p>    "PUT - Yield to Next Put"
- *  <p>    "SEMIANNUAL - Semi-annual Yield"
- *  <p>    "SHORTAVGLIFE - Yield to Shortest Average Life"
- *  <p>    "SIMPLE - Simple Yield"
- *  <p>    "TAXEQUIV - Tax Equivalent Yield"
- *  <p></p>
- *  <p>    "TENDER - Yield to Tender Date"
- *  <p>    "TRUE - True Yield"
- *  <p>    "VALUE1_32 - Yield Value Of 1/32"
- *  <p>    "WORST - Yield To Worst"
- */
 class Tag235EnuYieldTypeTest {
     Tag235EnuYieldType tagData;
 
@@ -99,157 +50,11 @@ class Tag235EnuYieldTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        tagData = new Tag235EnuYieldType(Enum235YieldType.AFTERTAX);
-        assertEquals( Enum235YieldType.AFTERTAX.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag235EnuYieldType(Enum235YieldType.ANNUAL);
-        assertEquals( Enum235YieldType.ANNUAL.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag235EnuYieldType(Enum235YieldType.ATISSUE);
-        assertEquals( Enum235YieldType.ATISSUE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag235EnuYieldType(Enum235YieldType.AVGMATURITY);
-        assertEquals( Enum235YieldType.AVGMATURITY.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag235EnuYieldType(Enum235YieldType.BOOK);
-        assertEquals( Enum235YieldType.BOOK.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag235EnuYieldType(Enum235YieldType.CALL);
-        assertEquals( Enum235YieldType.CALL.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag235EnuYieldType(Enum235YieldType.CHANGE);
-        assertEquals( Enum235YieldType.CHANGE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag235EnuYieldType(Enum235YieldType.CLOSE);
-        assertEquals( Enum235YieldType.CLOSE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag235EnuYieldType(Enum235YieldType.COMPOUND);
-        assertEquals( Enum235YieldType.COMPOUND.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag235EnuYieldType(Enum235YieldType.CURRENT);
-        assertEquals( Enum235YieldType.CURRENT.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag235EnuYieldType(Enum235YieldType.GOVTEQUIV);
-        assertEquals( Enum235YieldType.GOVTEQUIV.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag235EnuYieldType(Enum235YieldType.GROSS);
-        assertEquals( Enum235YieldType.GROSS.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag235EnuYieldType(Enum235YieldType.INFLATION);
-        assertEquals( Enum235YieldType.INFLATION.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag235EnuYieldType(Enum235YieldType.INVERSEFLOATER);
-        assertEquals( Enum235YieldType.INVERSEFLOATER.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag235EnuYieldType(Enum235YieldType.LASTCLOSE);
-        assertEquals( Enum235YieldType.LASTCLOSE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag235EnuYieldType(Enum235YieldType.LASTMONTH);
-        assertEquals( Enum235YieldType.LASTMONTH.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag235EnuYieldType(Enum235YieldType.LASTQUARTER);
-        assertEquals( Enum235YieldType.LASTQUARTER.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag235EnuYieldType(Enum235YieldType.LASTYEAR);
-        assertEquals( Enum235YieldType.LASTYEAR.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag235EnuYieldType(Enum235YieldType.LONGAVGLIFE);
-        assertEquals( Enum235YieldType.LONGAVGLIFE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag235EnuYieldType(Enum235YieldType.MARK);
-        assertEquals( Enum235YieldType.MARK.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag235EnuYieldType(Enum235YieldType.MATURITY);
-        assertEquals( Enum235YieldType.MATURITY.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag235EnuYieldType(Enum235YieldType.NEXTREFUND);
-        assertEquals( Enum235YieldType.NEXTREFUND.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag235EnuYieldType(Enum235YieldType.OPENAVG);
-        assertEquals( Enum235YieldType.OPENAVG.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag235EnuYieldType(Enum235YieldType.PREVCLOSE);
-        assertEquals( Enum235YieldType.PREVCLOSE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag235EnuYieldType(Enum235YieldType.PROCEEDS);
-        assertEquals( Enum235YieldType.PROCEEDS.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag235EnuYieldType(Enum235YieldType.PUT);
-        assertEquals( Enum235YieldType.PUT.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag235EnuYieldType(Enum235YieldType.SEMIANNUAL);
-        assertEquals( Enum235YieldType.SEMIANNUAL.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag235EnuYieldType(Enum235YieldType.SHORTAVGLIFE);
-        assertEquals( Enum235YieldType.SHORTAVGLIFE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag235EnuYieldType(Enum235YieldType.SIMPLE);
-        assertEquals( Enum235YieldType.SIMPLE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag235EnuYieldType(Enum235YieldType.TAXEQUIV);
-        assertEquals( Enum235YieldType.TAXEQUIV.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag235EnuYieldType(Enum235YieldType.TENDER);
-        assertEquals( Enum235YieldType.TENDER.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag235EnuYieldType(Enum235YieldType.TRUE);
-        assertEquals( Enum235YieldType.TRUE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag235EnuYieldType(Enum235YieldType.VALUE1_32);
-        assertEquals( Enum235YieldType.VALUE1_32.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag235EnuYieldType(Enum235YieldType.WORST);
-        assertEquals( Enum235YieldType.WORST.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum235YieldType oneEnum : Enum235YieldType.values()) {
-            tagData = new Tag235EnuYieldType(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum235YieldType oneEnum : Enum235YieldType.values()) {
             tagData = new Tag235EnuYieldType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -257,6 +62,194 @@ class Tag235EnuYieldTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  235
+         *  YieldType
+         *  String
+         *  <p>    "AFTERTAX - After Tax Yield (Municipals)"
+         *  <p>    "ANNUAL - Annual Yield"
+         *  <p>    "ATISSUE - Yield At Issue (Municipals)"
+         *  <p>    "AVGMATURITY - Yield To Avg Maturity"
+         *  <p>    "BOOK - Book Yield"
+         */
+        tagData = new Tag235EnuYieldType(Enum235YieldType.AFTERTAX);
+        assertEquals( "AFTERTAX", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag235EnuYieldType(Enum235YieldType.ANNUAL);
+        assertEquals( "ANNUAL", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag235EnuYieldType(Enum235YieldType.ATISSUE);
+        assertEquals( "ATISSUE", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag235EnuYieldType(Enum235YieldType.AVGMATURITY);
+        assertEquals( "AVGMATURITY", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag235EnuYieldType(Enum235YieldType.BOOK);
+        assertEquals( "BOOK", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    "CALL - Yield to Next Call"
+         *  <p>    "CHANGE - Yield Change Since Close"
+         *  <p>    "CLOSE - Closing Yield"
+         *  <p>    "COMPOUND - Compound Yield"
+         *  <p>    "CURRENT - Current Yield"
+         */
+        tagData = new Tag235EnuYieldType(Enum235YieldType.CALL);
+        assertEquals( "CALL", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag235EnuYieldType(Enum235YieldType.CHANGE);
+        assertEquals( "CHANGE", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag235EnuYieldType(Enum235YieldType.CLOSE);
+        assertEquals( "CLOSE", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag235EnuYieldType(Enum235YieldType.COMPOUND);
+        assertEquals( "COMPOUND", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag235EnuYieldType(Enum235YieldType.CURRENT);
+        assertEquals( "CURRENT", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    "GOVTEQUIV - Govt Equivalent Yield"
+         *  <p>    "GROSS - True Gross Yield"
+         *  <p>    "INFLATION - Yield with Inflation Assumption"
+         *  <p>    "INVERSEFLOATER - Inverse Floater Bond Yield"
+         *  <p>    "LASTCLOSE - Most Recent Closing Yield"
+         */
+        tagData = new Tag235EnuYieldType(Enum235YieldType.GOVTEQUIV);
+        assertEquals( "GOVTEQUIV", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag235EnuYieldType(Enum235YieldType.GROSS);
+        assertEquals( "GROSS", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag235EnuYieldType(Enum235YieldType.INFLATION);
+        assertEquals( "INFLATION", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag235EnuYieldType(Enum235YieldType.INVERSEFLOATER);
+        assertEquals( "INVERSEFLOATER", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag235EnuYieldType(Enum235YieldType.LASTCLOSE);
+        assertEquals( "LASTCLOSE", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    "LASTMONTH - Closing Yield Most Recent Month"
+         *  <p>    "LASTQUARTER - Closing Yield Most Recent Quarter"
+         *  <p>    "LASTYEAR - Closing Yield Most Recent Year"
+         *  <p>    "LONGAVGLIFE - Yield to Longest Average Life"
+         *  <p>    "MARK - Mark to Market Yield"
+         */
+        tagData = new Tag235EnuYieldType(Enum235YieldType.LASTMONTH);
+        assertEquals( "LASTMONTH", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag235EnuYieldType(Enum235YieldType.LASTQUARTER);
+        assertEquals( "LASTQUARTER", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag235EnuYieldType(Enum235YieldType.LASTYEAR);
+        assertEquals( "LASTYEAR", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag235EnuYieldType(Enum235YieldType.LONGAVGLIFE);
+        assertEquals( "LONGAVGLIFE", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag235EnuYieldType(Enum235YieldType.MARK);
+        assertEquals( "MARK", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    "MATURITY - Yield to Maturity"
+         *  <p>    "NEXTREFUND - Yield to Next Refund (Sinking Fund Bonds)"
+         *  <p>    "OPENAVG - Open Average Yield"
+         *  <p>    "PREVCLOSE - Previous Close Yield"
+         *  <p>    "PROCEEDS - Proceeds Yield"
+         */
+        tagData = new Tag235EnuYieldType(Enum235YieldType.MATURITY);
+        assertEquals( "MATURITY", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag235EnuYieldType(Enum235YieldType.NEXTREFUND);
+        assertEquals( "NEXTREFUND", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag235EnuYieldType(Enum235YieldType.OPENAVG);
+        assertEquals( "OPENAVG", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag235EnuYieldType(Enum235YieldType.PREVCLOSE);
+        assertEquals( "PREVCLOSE", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag235EnuYieldType(Enum235YieldType.PROCEEDS);
+        assertEquals( "PROCEEDS", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    "PUT - Yield to Next Put"
+         *  <p>    "SEMIANNUAL - Semi-annual Yield"
+         *  <p>    "SHORTAVGLIFE - Yield to Shortest Average Life"
+         *  <p>    "SIMPLE - Simple Yield"
+         *  <p>    "TAXEQUIV - Tax Equivalent Yield"
+         */
+        tagData = new Tag235EnuYieldType(Enum235YieldType.PUT);
+        assertEquals( "PUT", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag235EnuYieldType(Enum235YieldType.SEMIANNUAL);
+        assertEquals( "SEMIANNUAL", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag235EnuYieldType(Enum235YieldType.SHORTAVGLIFE);
+        assertEquals( "SHORTAVGLIFE", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag235EnuYieldType(Enum235YieldType.SIMPLE);
+        assertEquals( "SIMPLE", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag235EnuYieldType(Enum235YieldType.TAXEQUIV);
+        assertEquals( "TAXEQUIV", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    "TENDER - Yield to Tender Date"
+         *  <p>    "TRUE - True Yield"
+         *  <p>    "VALUE1_32 - Yield Value Of 1/32"
+         *  <p>    "WORST - Yield To Worst"
+         */
+        tagData = new Tag235EnuYieldType(Enum235YieldType.TENDER);
+        assertEquals( "TENDER", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag235EnuYieldType(Enum235YieldType.TRUE);
+        assertEquals( "TRUE", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag235EnuYieldType(Enum235YieldType.VALUE1_32);
+        assertEquals( "VALUE1_32", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag235EnuYieldType(Enum235YieldType.WORST);
+        assertEquals( "WORST", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum235YieldType oneEnum : Enum235YieldType.values()) {
             tagData = new Tag235EnuYieldType(oneEnum);
@@ -274,7 +267,7 @@ class Tag235EnuYieldTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

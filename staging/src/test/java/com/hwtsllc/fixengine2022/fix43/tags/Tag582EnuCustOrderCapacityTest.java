@@ -23,22 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  582
- *  CustOrderCapacity
- *  int
- *  <p></p>
- *  Capacity of customer placing the order
- *  <p>
- *  Primarily used by futures exchanges to indicate the CTICode (customer type indicator)
- *  as required by the US CFTC (Commodity Futures Trading Commission).
- *  <p></p>
- *  Valid values:
- *  <p>    1 - Member trading for their own account
- *  <p>    2 - Clearing Firm trading for its proprietary account
- *  <p>    3 - Member trading for another member
- *  <p>    4 - All other
- */
 class Tag582EnuCustOrderCapacityTest {
     Tag582EnuCustOrderCapacity tagData;
 
@@ -66,40 +50,11 @@ class Tag582EnuCustOrderCapacityTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  1-4 types
-         */
-        tagData = new Tag582EnuCustOrderCapacity( Enum582CustOrderCapacity.MEMBER_TRADING_ACCOUNT );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag582EnuCustOrderCapacity( Enum582CustOrderCapacity.CLEARING_FIRM_PROPRIETARY );
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag582EnuCustOrderCapacity( Enum582CustOrderCapacity.MEMBER_TRADING_FOR_ANOTHER );
-        assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag582EnuCustOrderCapacity( Enum582CustOrderCapacity.ALL_OTHER );
-        assertEquals( "4", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum582CustOrderCapacity oneEnum : Enum582CustOrderCapacity.values()) {
-            tagData = new Tag582EnuCustOrderCapacity(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum582CustOrderCapacity oneEnum : Enum582CustOrderCapacity.values()) {
             tagData = new Tag582EnuCustOrderCapacity(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -107,6 +62,32 @@ class Tag582EnuCustOrderCapacityTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  582
+         *  CustOrderCapacity
+         *  int
+         *  <p>    1 - Member trading for their own account
+         *  <p>    2 - Clearing Firm trading for its proprietary account
+         *  <p>    3 - Member trading for another member
+         *  <p>    4 - All other
+         */
+        tagData = new Tag582EnuCustOrderCapacity( Enum582CustOrderCapacity.MEMBER_TRADING_ACCOUNT );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag582EnuCustOrderCapacity( Enum582CustOrderCapacity.CLEARING_FIRM_PROPRIETARY );
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag582EnuCustOrderCapacity( Enum582CustOrderCapacity.MEMBER_TRADING_FOR_ANOTHER );
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag582EnuCustOrderCapacity( Enum582CustOrderCapacity.ALL_OTHER );
+        assertEquals( "4", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum582CustOrderCapacity oneEnum : Enum582CustOrderCapacity.values()) {
             tagData = new Tag582EnuCustOrderCapacity(oneEnum);
@@ -124,7 +105,7 @@ class Tag582EnuCustOrderCapacityTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

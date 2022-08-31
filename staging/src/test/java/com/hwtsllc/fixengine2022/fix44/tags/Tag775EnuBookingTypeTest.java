@@ -23,21 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  775
- *  BookingType
- *  int
- *  <p></p>
- *  Method for booking out this order.
- *  <p></p>
- *  Used when notifying a broker that an order to be settled by that broker
- *  is to be booked out as an OTC derivative (e.g. CFD or similar).
- *  <p></p>
- *  Valid values:
- *  <p>    0 - Regular booking
- *  <p>    1 - CFD (Contract for difference)
- *  <p>    2 - Total Return Swap
- */
 class Tag775EnuBookingTypeTest {
     Tag775EnuBookingType tagData;
 
@@ -65,39 +50,11 @@ class Tag775EnuBookingTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    0 - Regular booking
-         *  <p>    1 - CFD (Contract for difference)
-         *  <p>    2 - Total Return Swap
-         */
-        tagData = new Tag775EnuBookingType( Enum775BookingType.REGULAR_BOOKING );
-        assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag775EnuBookingType(Enum775BookingType.CONTRACT_FOR_DIFFERENCE);
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag775EnuBookingType(Enum775BookingType.TOTAL_RETURN_SWAP);
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum775BookingType oneEnum : Enum775BookingType.values()) {
-            tagData = new Tag775EnuBookingType(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum775BookingType oneEnum : Enum775BookingType.values()) {
             tagData = new Tag775EnuBookingType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -105,6 +62,27 @@ class Tag775EnuBookingTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  775
+         *  BookingType
+         *  int
+         *  <p>    0 - Regular booking
+         *  <p>    1 - CFD (Contract for difference)
+         *  <p>    2 - Total Return Swap
+         */
+        tagData = new Tag775EnuBookingType( Enum775BookingType.REGULAR_BOOKING );
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag775EnuBookingType(Enum775BookingType.CONTRACT_FOR_DIFFERENCE);
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag775EnuBookingType(Enum775BookingType.TOTAL_RETURN_SWAP);
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum775BookingType oneEnum : Enum775BookingType.values()) {
             tagData = new Tag775EnuBookingType(oneEnum);
@@ -122,7 +100,7 @@ class Tag775EnuBookingTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

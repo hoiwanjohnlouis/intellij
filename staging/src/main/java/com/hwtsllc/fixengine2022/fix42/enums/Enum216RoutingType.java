@@ -104,7 +104,7 @@ public enum Enum216RoutingType implements LogFIXString, LogVerboseString {
      */
     @Override
     public String toString() {
-        return toEnumLabelString()
+/*        return toEnumLabelString()
                 .concat("=[")
                 .concat( toEnumIDString())
                 .concat(",")
@@ -112,6 +112,9 @@ public enum Enum216RoutingType implements LogFIXString, LogVerboseString {
                 .concat(",")
                 .concat( toEnumDescriptionString())
                 .concat("]");
+        return toEnumIDString();
+ */
+        return id;
     }
 
     /**
@@ -122,6 +125,7 @@ public enum Enum216RoutingType implements LogFIXString, LogVerboseString {
          * dump all the enum values
          */
         for (Enum216RoutingType oneEnum : Enum216RoutingType.values()) {
+            System.out.println(oneEnum.toVerboseString());
             System.out.println(oneEnum);
         }
     }

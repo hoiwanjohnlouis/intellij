@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  570
- *  PreviouslyReported
- *  Boolean
- *  <p>
- *  Indicates if the trade capture report was previously reported to the counterparty
- *  <p>
- *  Valid values:
- *  <p>    N - Not reported to counterparty
- *  <p>    Y - Previously reported to counterparty
- */
 class Tag570EnuPreviouslyReportedTest {
     Tag570EnuPreviouslyReported tagData;
 
@@ -61,29 +50,11 @@ class Tag570EnuPreviouslyReportedTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        tagData = new Tag570EnuPreviouslyReported( Enum570PreviouslyReported.NO);
-        assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag570EnuPreviouslyReported(Enum570PreviouslyReported.YES);
-        assertEquals( "Y", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum570PreviouslyReported oneEnum : Enum570PreviouslyReported.values()) {
-            tagData = new Tag570EnuPreviouslyReported(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum570PreviouslyReported oneEnum : Enum570PreviouslyReported.values()) {
             tagData = new Tag570EnuPreviouslyReported(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -91,6 +62,22 @@ class Tag570EnuPreviouslyReportedTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  570
+         *  PreviouslyReported
+         *  Boolean
+         *  <p>    N - Not reported to counterparty
+         *  <p>    Y - Previously reported to counterparty
+         */
+        tagData = new Tag570EnuPreviouslyReported( Enum570PreviouslyReported.NO);
+        assertEquals( "N", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag570EnuPreviouslyReported(Enum570PreviouslyReported.YES);
+        assertEquals( "Y", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum570PreviouslyReported oneEnum : Enum570PreviouslyReported.values()) {
             tagData = new Tag570EnuPreviouslyReported(oneEnum);
@@ -108,7 +95,7 @@ class Tag570EnuPreviouslyReportedTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

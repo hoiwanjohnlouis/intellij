@@ -23,18 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  152
- *  CashOrderQty
- *  Qty
- *  <p></p>
- *  Specifies the approximate order quantity desired in
- *  total monetary units vs. as tradeable units (e.g. number of shares).
- *  <p></p>
- *  The broker or fund manager (for CIV orders) would be responsible for
- *  converting and calculating a tradeable unit (e.g. share) quantity (OrderQty (38))
- *  based upon this amount to be used for the actual order and subsequent messages.
- */
 class Tag152QtyCashOrderQtyTest {
     Tag152QtyCashOrderQty tagData;
     int [] TestArray = {
@@ -66,26 +54,23 @@ class Tag152QtyCashOrderQtyTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag152QtyCashOrderQty( new MyQtyType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag152QtyCashOrderQty( new MyQtyType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  152
+         *  CashOrderQty
+         *  Qty
+         */
+
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag152QtyCashOrderQty( new MyQtyType( oneElement ));

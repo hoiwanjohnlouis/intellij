@@ -23,25 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  836 (same as 836, 842,)
- *  PegOffsetType
- *  int
- *  <p>
- *  Type of Peg Offset value
- *  <p></p>
- *  842
- *  DiscretionOffsetType
- *  int
- *  <p>
- *  Type of Discretion Offset value
- *  <p></p>
- *  Valid values:
- *  <p>    0 - Price (default)
- *  <p>    1 - Basis Points
- *  <p>    2 - Ticks
- *  <p>    3 - Price Tier or Level
- */
 class Tag842EnuDiscretionOffsetTypeTest {
     Tag842EnuDiscretionOffsetType tagData;
 
@@ -69,44 +50,11 @@ class Tag842EnuDiscretionOffsetTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    0 - Price (default)
-         *  <p>    1 - Basis Points
-         *  <p>    2 - Ticks
-         *  <p>    3 - Price Tier or Level
-         */
-        tagData = new Tag842EnuDiscretionOffsetType( MyEnumOffsetType.PRICE );
-        assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag842EnuDiscretionOffsetType(MyEnumOffsetType.BASIS);
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag842EnuDiscretionOffsetType(MyEnumOffsetType.TICKS);
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag842EnuDiscretionOffsetType(MyEnumOffsetType.TIER_OR_LEVEL);
-        assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( MyEnumOffsetType oneEnum : MyEnumOffsetType.values()) {
-            tagData = new Tag842EnuDiscretionOffsetType(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( MyEnumOffsetType oneEnum : MyEnumOffsetType.values()) {
             tagData = new Tag842EnuDiscretionOffsetType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -114,6 +62,32 @@ class Tag842EnuDiscretionOffsetTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  842 (same as 836, 842,)
+         *  DiscretionOffsetType
+         *  int
+         *  <p>    0 - Price (default)
+         *  <p>    1 - Basis Points
+         *  <p>    2 - Ticks
+         *  <p>    3 - Price Tier or Level
+         */
+        tagData = new Tag842EnuDiscretionOffsetType( MyEnumOffsetType.PRICE );
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag842EnuDiscretionOffsetType(MyEnumOffsetType.BASIS);
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag842EnuDiscretionOffsetType(MyEnumOffsetType.TICKS);
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag842EnuDiscretionOffsetType(MyEnumOffsetType.TIER_OR_LEVEL);
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( MyEnumOffsetType oneEnum : MyEnumOffsetType.values()) {
             tagData = new Tag842EnuDiscretionOffsetType(oneEnum);
@@ -131,7 +105,7 @@ class Tag842EnuDiscretionOffsetTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

@@ -24,14 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  290
- *  MDEntryPositionNo
- *  int
- *  <p></p>
- *  Display position of a bid or offer, numbered from most competitive to least competitive,
- *  per market side, beginning with.
- */
 class Tag290IntMDEntryPositionNoTest {
     Tag290IntMDEntryPositionNo tagData;
     int [] TestArray = {
@@ -63,26 +55,23 @@ class Tag290IntMDEntryPositionNoTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag290IntMDEntryPositionNo( new MyIntType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag290IntMDEntryPositionNo( new MyIntType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  290
+         *  MDEntryPositionNo
+         *  int
+         */
+
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag290IntMDEntryPositionNo( new MyIntType( oneElement ));

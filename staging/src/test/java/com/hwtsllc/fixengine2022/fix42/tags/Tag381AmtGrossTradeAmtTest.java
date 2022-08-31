@@ -24,16 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  381
- *  GrossTradeAmt
- *  Amt
- *  <p></p>
- *  Total amount traded (e.g. CumQty (14) * AvgPx (6)) expressed in units of currency.
- *  <p></p>
- *  For FX Futures this is used to express the notional value of a fill when LastQty
- *  and other quantity fields are express in terms of contract size.
- */
 class Tag381AmtGrossTradeAmtTest {
     Tag381AmtGrossTradeAmt tagData;
     double [] TestArray = {
@@ -65,26 +55,23 @@ class Tag381AmtGrossTradeAmtTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( double oneElement : TestArray ) {
-            tagData = new Tag381AmtGrossTradeAmt( new MyAmtType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag381AmtGrossTradeAmt( new MyAmtType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  381
+         *  GrossTradeAmt
+         *  Amt
+         */
+
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag381AmtGrossTradeAmt( new MyAmtType( oneElement ));

@@ -23,18 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  590
- *  BookingUnit
- *  char
- *  <p></p>
- *  Indicates what constitutes a bookable unit.
- *  <p></p>
- *  Valid values:
- *  <p>    0 - Each partial execution is a bookable unit
- *  <p>    1 - Aggregate partial executions on this order, and book one trade per order
- *  <p>    2 - Aggregate executions for this symbol, side, and settlement date
- */
 class Tag590EnuBookingUnitTest {
     Tag590EnuBookingUnit tagData;
 
@@ -62,36 +50,11 @@ class Tag590EnuBookingUnitTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  0-2 types
-         */
-        tagData = new Tag590EnuBookingUnit( Enum590BookingUnit.PARTIAL_EXECUTION_BOOKABLE );
-        assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag590EnuBookingUnit( Enum590BookingUnit.AGGREGATE_PARTIAL_EXECUTION );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag590EnuBookingUnit( Enum590BookingUnit.AGGREGATE_EXECUTIONS );
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum590BookingUnit oneEnum : Enum590BookingUnit.values()) {
-            tagData = new Tag590EnuBookingUnit(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum590BookingUnit oneEnum : Enum590BookingUnit.values()) {
             tagData = new Tag590EnuBookingUnit(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -99,6 +62,27 @@ class Tag590EnuBookingUnitTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  590
+         *  BookingUnit
+         *  char
+         *  <p>    0 - Each partial execution is a bookable unit
+         *  <p>    1 - Aggregate partial executions on this order, and book one trade per order
+         *  <p>    2 - Aggregate executions for this symbol, side, and settlement date
+         */
+        tagData = new Tag590EnuBookingUnit( Enum590BookingUnit.PARTIAL_EXECUTION_BOOKABLE );
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag590EnuBookingUnit( Enum590BookingUnit.AGGREGATE_PARTIAL_EXECUTION );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag590EnuBookingUnit( Enum590BookingUnit.AGGREGATE_EXECUTIONS );
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum590BookingUnit oneEnum : Enum590BookingUnit.values()) {
             tagData = new Tag590EnuBookingUnit(oneEnum);
@@ -116,7 +100,7 @@ class Tag590EnuBookingUnitTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

@@ -23,18 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  37
- *  OrderID
- *  String
- *  <p></p>
- *  Unique identifier for Order as assigned by sell-side (broker, exchange, ECN).
- *  <p></p>
- *  Uniqueness must be guaranteed within a single trading day.
- *  <p></p>
- *  Firms which accept multi-day orders should consider
- *  embedding a date within the OrderID field to assure uniqueness across days.
- */
 class Tag37StrOrderIDTest {
     Tag37StrOrderID tagData;
     String [] TestArray = {
@@ -66,21 +54,12 @@ class Tag37StrOrderIDTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag37StrOrderID( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag37StrOrderID( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }

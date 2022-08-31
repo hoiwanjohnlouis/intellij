@@ -23,16 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  1134
- *  ReportedPxDiff
- *  Boolean
- *  <p>
- *  Shows that the reported price that is different from the market price
- *  <p></p>
- *  <p> YES( "Y", "YES", "Y - Reported price is different from the market price" ),
- *  <p> NO( "N", "NO", "N - Reported price is equal to market price" ),
- */
 class Tag1134EnuReportedPxDiffTest {
     Tag1134EnuReportedPxDiff tagData;
 
@@ -60,35 +50,11 @@ class Tag1134EnuReportedPxDiffTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p> NO( "N", "NO", "N - Reported price is equal to market price" ),
-         *  <p> YES( "Y", "YES", "Y - Reported price is different from the market price" ),
-         */
-        tagData = new Tag1134EnuReportedPxDiff( Enum1134ReportedPxDiff.NO );
-        assertEquals( "N", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        tagData = new Tag1134EnuReportedPxDiff( Enum1134ReportedPxDiff.YES );
-        assertEquals( "Y", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-
-        // loop around the ENUM and process
-        for ( Enum1134ReportedPxDiff oneEnum : Enum1134ReportedPxDiff.values()) {
-            tagData = new Tag1134EnuReportedPxDiff(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum1134ReportedPxDiff oneEnum : Enum1134ReportedPxDiff.values()) {
             tagData = new Tag1134EnuReportedPxDiff(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -96,6 +62,22 @@ class Tag1134EnuReportedPxDiffTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  1134
+         *  ReportedPxDiff
+         *  Boolean
+         *  <p> YES( "Y", "YES", "Y - Reported price is different from the market price" ),
+         *  <p> NO( "N", "NO", "N - Reported price is equal to market price" ),
+         */
+        tagData = new Tag1134EnuReportedPxDiff( Enum1134ReportedPxDiff.NO );
+        assertEquals( "N", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+
+        tagData = new Tag1134EnuReportedPxDiff( Enum1134ReportedPxDiff.YES );
+        assertEquals( "Y", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+
+
         // loop around the ENUM and process
         for ( Enum1134ReportedPxDiff oneEnum : Enum1134ReportedPxDiff.values()) {
             tagData = new Tag1134EnuReportedPxDiff(oneEnum);
@@ -113,7 +95,7 @@ class Tag1134EnuReportedPxDiffTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

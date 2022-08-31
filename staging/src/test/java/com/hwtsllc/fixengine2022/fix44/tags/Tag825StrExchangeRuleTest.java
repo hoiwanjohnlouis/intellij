@@ -23,20 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  825
- *  ExchangeRule
- *  String
- *  <p></p>
- *  Used to report any exchange rules that apply to this trade.
- *  <p></p>
- *  Primarily intended for US futures markets.
- *  <p></p>
- *  Certain trading practices are permitted by the CFTC,
- *  such as large lot trading, block trading, all or none trades.
- *  <p></p>
- *  If the rules are used, the exchanges are required to indicate these rules on the trade.
- */
 class Tag825StrExchangeRuleTest {
     Tag825StrExchangeRule tagData;
     String [] TestArray = {
@@ -68,25 +54,23 @@ class Tag825StrExchangeRuleTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag825StrExchangeRule( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag825StrExchangeRule( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  825
+         *  ExchangeRule
+         *  String
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag825StrExchangeRule( new MyStringType( oneElement ));

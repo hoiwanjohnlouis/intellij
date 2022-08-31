@@ -23,24 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  156 (same as 156, 1046,)
- *  SettlCurrFxRateCalc
- *  char
- *  <p></p>
- *  Specifies whether the SettlCurrFxRate (55) should be multiplied or divided.
- *  <p></p>
- *  1046
- *  UnderlyingFXRateCalc
- *  char
- *  <p>
- *  Specifies whether the UnderlyingFxRate (1045) should be multiplied or divided.
- *  <p></p>
- *  Valid values:
- *  <p></p>
- *  <p>    M - Multiply
- *  <p>    D - Divide
- */
 class Tag156EnuSettlCurrFXRateCalcTest {
     Tag156EnuSettlCurrFXRateCalc tagData;
 
@@ -68,29 +50,11 @@ class Tag156EnuSettlCurrFXRateCalcTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        tagData = new Tag156EnuSettlCurrFXRateCalc(MyEnumFXRateCalc.MULTIPLY);
-        assertEquals( MyEnumFXRateCalc.MULTIPLY.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag156EnuSettlCurrFXRateCalc(MyEnumFXRateCalc.DIVIDE);
-        assertEquals( MyEnumFXRateCalc.DIVIDE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (MyEnumFXRateCalc oneEnum : MyEnumFXRateCalc.values()) {
-            tagData = new Tag156EnuSettlCurrFXRateCalc(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (MyEnumFXRateCalc oneEnum : MyEnumFXRateCalc.values()) {
             tagData = new Tag156EnuSettlCurrFXRateCalc(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -98,6 +62,22 @@ class Tag156EnuSettlCurrFXRateCalcTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  156 (same as 156, 1046,)
+         *  SettlCurrFxRateCalc
+         *  char
+         *  <p>    M - Multiply
+         *  <p>    D - Divide
+         */
+        tagData = new Tag156EnuSettlCurrFXRateCalc(MyEnumFXRateCalc.MULTIPLY);
+        assertEquals( "M", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag156EnuSettlCurrFXRateCalc(MyEnumFXRateCalc.DIVIDE);
+        assertEquals( "D", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (MyEnumFXRateCalc oneEnum : MyEnumFXRateCalc.values()) {
             tagData = new Tag156EnuSettlCurrFXRateCalc(oneEnum);
@@ -115,7 +95,7 @@ class Tag156EnuSettlCurrFXRateCalcTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

@@ -23,23 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  935
- *  NetworkRequestType
- *  int
- *  <p></p>
- *  Indicates the type and level of details required for a
- *  Network Status Request Message Boolean logic applies
- *  <p></p>
- *  e.g. If you want to subscribe for changes to certain id’s
- *  then UserRequestType = 0 (8+2), Snapshot for certain ID’s = 9 (8+1)
- *  <p></p>
- *  Valid values:
- *  <p>    1 - Snapshot
- *  <p>    2 - Subscribe
- *  <p>    4 - Stop Subscribing
- *  <p>    8 - Level of Detail, then NoCompID's becomes required
- */
 class Tag935EnuNetworkRequestTypeTest {
     Tag935EnuNetworkRequestType tagData;
 
@@ -67,44 +50,11 @@ class Tag935EnuNetworkRequestTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    1 - Snapshot
-         *  <p>    2 - Subscribe
-         *  <p>    4 - Stop Subscribing
-         *  <p>    8 - Level of Detail, then NoCompID's becomes required
-         */
-        tagData = new Tag935EnuNetworkRequestType( Enum935NetworkRequestType.SNAPSHOT );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag935EnuNetworkRequestType( Enum935NetworkRequestType.SUBSCRIBE );
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag935EnuNetworkRequestType( Enum935NetworkRequestType.STOP_SUBSCRIBING );
-        assertEquals( "4", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag935EnuNetworkRequestType( Enum935NetworkRequestType.LEVEL_OF_DETAIL );
-        assertEquals( "8", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum935NetworkRequestType oneEnum : Enum935NetworkRequestType.values()) {
-            tagData = new Tag935EnuNetworkRequestType(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum935NetworkRequestType oneEnum : Enum935NetworkRequestType.values()) {
             tagData = new Tag935EnuNetworkRequestType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -112,6 +62,32 @@ class Tag935EnuNetworkRequestTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  935
+         *  NetworkRequestType
+         *  int
+         *  <p>    1 - Snapshot
+         *  <p>    2 - Subscribe
+         *  <p>    4 - Stop Subscribing
+         *  <p>    8 - Level of Detail, then NoCompID's becomes required
+         */
+        tagData = new Tag935EnuNetworkRequestType( Enum935NetworkRequestType.SNAPSHOT );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag935EnuNetworkRequestType( Enum935NetworkRequestType.SUBSCRIBE );
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag935EnuNetworkRequestType( Enum935NetworkRequestType.STOP_SUBSCRIBING );
+        assertEquals( "4", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag935EnuNetworkRequestType( Enum935NetworkRequestType.LEVEL_OF_DETAIL );
+        assertEquals( "8", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum935NetworkRequestType oneEnum : Enum935NetworkRequestType.values()) {
             tagData = new Tag935EnuNetworkRequestType(oneEnum);
@@ -129,7 +105,7 @@ class Tag935EnuNetworkRequestTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

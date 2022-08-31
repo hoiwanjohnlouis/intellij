@@ -23,24 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  636
- *  WorkingIndicator
- *  Boolean
- *  <p>
- *  Indicates if the order is currently being worked.
- *  <p>
- *  Applicable only for OrdStatus = "New".
- *  <p>
- *  For open outcry markets this indicates that the order is being worked in the crowd.
- *  <p>
- *  For electronic markets it indicates that the order has transitioned
- *  from a contingent order to a market order.
- *  <p>
- *  Valid values:
- *  <p>    N - Order has been accepted but not yet in a working state
- *  <p>    Y - Order is currently being worked
- */
 class Tag636EnuWorkingIndicatorTest {
     Tag636EnuWorkingIndicator tagData;
 
@@ -68,29 +50,11 @@ class Tag636EnuWorkingIndicatorTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        tagData = new Tag636EnuWorkingIndicator(Enum636WorkingIndicator.NO);
-        assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag636EnuWorkingIndicator(Enum636WorkingIndicator.YES);
-        assertEquals( "Y", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum636WorkingIndicator oneEnum : Enum636WorkingIndicator.values()) {
-            tagData = new Tag636EnuWorkingIndicator(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum636WorkingIndicator oneEnum : Enum636WorkingIndicator.values()) {
             tagData = new Tag636EnuWorkingIndicator(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -98,6 +62,22 @@ class Tag636EnuWorkingIndicatorTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  636
+         *  WorkingIndicator
+         *  Boolean
+         *  <p>    N - Order has been accepted but not yet in a working state
+         *  <p>    Y - Order is currently being worked
+         */
+        tagData = new Tag636EnuWorkingIndicator(Enum636WorkingIndicator.NO);
+        assertEquals( "N", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag636EnuWorkingIndicator(Enum636WorkingIndicator.YES);
+        assertEquals( "Y", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum636WorkingIndicator oneEnum : Enum636WorkingIndicator.values()) {
             tagData = new Tag636EnuWorkingIndicator(oneEnum);
@@ -115,7 +95,7 @@ class Tag636EnuWorkingIndicatorTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

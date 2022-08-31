@@ -22,32 +22,27 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MyUTCDateTypeTest {
+    MyUTCDateType dataType;
+    String [] TestArray = {
+            MyUTCDateType.TESTA_MY_UTC_DATE_TYPE,
+            MyUTCDateType.TESTB_MY_UTC_DATE_TYPE
+    };
+
     @Test
     void UTCDateTypeTest() {
-        MyUTCDateType dataType;
-        String oneElement;
-
-        oneElement = MyUTCDateType.TESTA_MY_UTC_DATE_TYPE;
-        dataType = new MyUTCDateType( oneElement );
-        assertEquals( oneElement, dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_UTCD_DATA_VALUE, dataType.getDataValue());
-
-        oneElement = MyUTCDateType.TESTB_MY_UTC_DATE_TYPE;
-        dataType = new MyUTCDateType( oneElement );
-        assertEquals( oneElement, dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_UTCD_DATA_VALUE, dataType.getDataValue());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            dataType = new MyUTCDateType( oneElement );
+            assertEquals( oneElement, dataType.toString() );
+            assertNotEquals( MyTestValues.JUNK_TZT_DATA_VALUE, dataType.toString());
+        }
     }
     @Test
-    void PrintFIXTagTest() {
-        MyUTCDateType dataType;
-        String oneElement;
-
-        oneElement = MyUTCDateType.TESTA_MY_UTC_DATE_TYPE;
-        dataType = new MyUTCDateType( oneElement );
-        System.out.println( dataType.toVerboseString() );
-
-        oneElement = MyUTCDateType.TESTB_MY_UTC_DATE_TYPE;
-        dataType = new MyUTCDateType( oneElement );
-        System.out.println( dataType.toVerboseString() );
+    void PrintTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            dataType = new MyUTCDateType( oneElement );
+            System.out.println( dataType.toVerboseString() );
+        }
     }
 }

@@ -24,20 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  225
- *  IssueDate
- *  LocalMktDate
- *  <p></p>
- *  The date on which a bond or stock offering is issued.
- *  <p></p>
- *  It may or may not be the same as the effective date ("Dated Date")
- *  or the date on which interest begins to accrue ("Interest Accrual Date")
- *  <p></p>
- *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
- *  <p></p>
- *  (prior to FIX 4.4 field was of type UTCDate)
- */
 class Tag225LmdIssueDateTest {
     Tag225LmdIssueDate tagData;
     String [] TestArray = {
@@ -69,26 +55,23 @@ class Tag225LmdIssueDateTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag225LmdIssueDate( new MyLocalMktDateType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag225LmdIssueDate( new MyLocalMktDateType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  225
+         *  IssueDate
+         *  LocalMktDate
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag225LmdIssueDate( new MyLocalMktDateType( oneElement ));

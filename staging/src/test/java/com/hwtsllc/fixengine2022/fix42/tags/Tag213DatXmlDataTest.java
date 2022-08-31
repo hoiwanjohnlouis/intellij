@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  213
- *  XmlData
- *  data
- *  <p></p>
- *  Actual XML data stream (e.g. FIXML).
- *  <p></p>
- *  See appropriate XML reference (e.g. FIXML).
- *  <p></p>
- *  Note: may contain embedded SOH characters.
- */
 class Tag213DatXmlDataTest {
     Tag213DatXmlData tagData;
     String [] TestArray = {
@@ -65,26 +54,23 @@ class Tag213DatXmlDataTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag213DatXmlData( new MyDataType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag213DatXmlData( new MyDataType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  213
+         *  XmlData
+         *  data
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag213DatXmlData( new MyDataType( oneElement ));

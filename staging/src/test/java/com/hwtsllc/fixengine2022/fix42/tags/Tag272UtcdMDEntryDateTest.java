@@ -23,15 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  272
- *  MDEntryDate
- *  UTCDateOnly
- *  <p></p>
- *  Date of Market Data Entry.
- *  <p></p>
- *  (prior to FIX 4.4 field was of type UTCDate)
- */
 class Tag272UtcdMDEntryDateTest {
     Tag272UtcdMDEntryDate tagData;
     String [] TestArray = {
@@ -63,31 +54,28 @@ class Tag272UtcdMDEntryDateTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag272UtcdMDEntryDate( new MyUTCDateType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_UTCD_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag272UtcdMDEntryDate( new MyUTCDateType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertNotEquals( MyTestValues.JUNK_UTCD_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  272
+         *  MDEntryDate
+         *  UTCDateOnly
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag272UtcdMDEntryDate( new MyUTCDateType( oneElement ));
             assertEquals( oneElement, tagData.toString());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+            assertNotEquals( MyTestValues.JUNK_UTCD_DATA_VALUE, tagData.toString());
         }
     }
     @Test

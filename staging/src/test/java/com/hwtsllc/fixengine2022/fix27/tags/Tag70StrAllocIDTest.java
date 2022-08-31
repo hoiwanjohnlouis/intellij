@@ -23,15 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  70
- *  AllocID
- *  String
- *  <p></p>
- *  Unique identifier for allocation message.
- *  <p></p>
- *  (Prior to FIX 4.1 this field was of type int)
- */
 class Tag70StrAllocIDTest {
     Tag70StrAllocID tagData;
     String [] TestArray = {
@@ -63,21 +54,16 @@ class Tag70StrAllocIDTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag70StrAllocID( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
+        /*
+         *  70
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag70StrAllocID( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }

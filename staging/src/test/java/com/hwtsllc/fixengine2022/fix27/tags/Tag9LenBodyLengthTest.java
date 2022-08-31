@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  9
- *  BodyLength
- *  Length
- *  <p></p>
- *  Message length, in bytes, forward to the CheckSum field.
- *  <p></p>
- *  ALWAYS SECOND FIELD IN MESSAGE.
- *  <p></p>
- *  (Always unencrypted)
- */
 class Tag9LenBodyLengthTest {
     Tag9LenBodyLength tagData;
     int [] TestArray = {
@@ -65,21 +54,12 @@ class Tag9LenBodyLengthTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag9LenBodyLength( new MyLengthType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag9LenBodyLength( new MyLengthType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }

@@ -28,7 +28,6 @@ public interface MyTestValues {
 
     double JUNK_AMT_DATA_VALUE = -65535.0D;                         //  MyAmtType
     String JUNK_DAT_DATA_VALUE = "JunkMyDataType";                  //  MyDataType
-    char JUNK_CHA_DATA_VALUE = '\\';                                //  MyCharType
     String JUNK_EXC_DATA_VALUE = "JunkMyExchangeType";              //  MyExchangeType
     float JUNK_FLO_DATA_VALUE = -65535.0F;                          //  MyFloatType
     int JUNK_INT_DATA_VALUE = -65535;                               //  MyIntType

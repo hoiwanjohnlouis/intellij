@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  141
- *  ResetSeqNumFlag
- *  Boolean
- *  <p></p>
- *  Indicates that the both sides of the FIX session should reset sequence numbers.
- *  <p></p>
- *  Valid values:
- *  <p>    N - No
- *  <p>    Y - Yes, reset sequence numbers
- */
 class Tag141EnuResetSeqNumFlagTest {
     Tag141EnuResetSeqNumFlag tagData;
 
@@ -61,29 +50,11 @@ class Tag141EnuResetSeqNumFlagTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        tagData = new Tag141EnuResetSeqNumFlag(Enum141ResetSeqNumFlag.NO);
-        assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag141EnuResetSeqNumFlag(Enum141ResetSeqNumFlag.YES);
-        assertEquals( "Y", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum141ResetSeqNumFlag oneEnum : Enum141ResetSeqNumFlag.values()) {
-            tagData = new Tag141EnuResetSeqNumFlag(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum141ResetSeqNumFlag oneEnum : Enum141ResetSeqNumFlag.values()) {
             tagData = new Tag141EnuResetSeqNumFlag(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -91,6 +62,22 @@ class Tag141EnuResetSeqNumFlagTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  141
+         *  ResetSeqNumFlag
+         *  Boolean
+         *  <p>    N - No
+         *  <p>    Y - Yes, reset sequence numbers
+         */
+        tagData = new Tag141EnuResetSeqNumFlag(Enum141ResetSeqNumFlag.NO);
+        assertEquals( "N", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag141EnuResetSeqNumFlag(Enum141ResetSeqNumFlag.YES);
+        assertEquals( "Y", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum141ResetSeqNumFlag oneEnum : Enum141ResetSeqNumFlag.values()) {
             tagData = new Tag141EnuResetSeqNumFlag(oneEnum);
@@ -108,7 +95,7 @@ class Tag141EnuResetSeqNumFlagTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

@@ -23,24 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  731 (same as 731, 733)
- *  SettlPriceType
- *  int
- *  <p></p>
- *  Type of settlement price
- *  <p></p>
- *  733 (same as 731, 733)
- *  UnderlyingSettlPriceType
- *  int
- *  <p></p>
- *  Underlying security’s SettlPriceType.
- *  See SettlPriceType (731) field for description
- *  <p></p>
- *  Valid values:
- *  <p>    1 - Final
- *  <p>    2 - Theoretical
- */
 class Tag731EnuSettlPriceTypeTest {
     Tag731EnuSettlPriceType tagData;
 
@@ -68,34 +50,11 @@ class Tag731EnuSettlPriceTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    1 - Final
-         *  <p>    2 - Theoretical
-         */
-        tagData = new Tag731EnuSettlPriceType( MyEnumSettlPriceType.FINAL );
-        assertEquals( "1", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag731EnuSettlPriceType( MyEnumSettlPriceType.THEORETICAL);
-        assertEquals( "2", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( MyEnumSettlPriceType oneEnum : MyEnumSettlPriceType.values()) {
-            tagData = new Tag731EnuSettlPriceType(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( MyEnumSettlPriceType oneEnum : MyEnumSettlPriceType.values()) {
             tagData = new Tag731EnuSettlPriceType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -103,6 +62,22 @@ class Tag731EnuSettlPriceTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  731 (same as 731, 733)
+         *  SettlPriceType
+         *  int
+         *  <p>    1 - Final
+         *  <p>    2 - Theoretical
+         */
+        tagData = new Tag731EnuSettlPriceType( MyEnumSettlPriceType.FINAL );
+        assertEquals( "1", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag731EnuSettlPriceType( MyEnumSettlPriceType.THEORETICAL);
+        assertEquals( "2", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( MyEnumSettlPriceType oneEnum : MyEnumSettlPriceType.values()) {
             tagData = new Tag731EnuSettlPriceType(oneEnum);
@@ -120,7 +95,7 @@ class Tag731EnuSettlPriceTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

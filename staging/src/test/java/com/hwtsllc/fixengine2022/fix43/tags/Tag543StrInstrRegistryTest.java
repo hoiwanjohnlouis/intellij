@@ -23,15 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  543
- *  InstrRegistry
- *  String
- *  <p></p>
- *  Values may include BIC for the depository or custodian who maintain ownership records,
- *  the ISO country code for the location of the record, or the value "ZZ" to specify
- *  physical ownership of the security (e.g. stock certificate).
- */
 class Tag543StrInstrRegistryTest {
     Tag543StrInstrRegistry tagData;
     String [] TestArray = {
@@ -63,25 +54,23 @@ class Tag543StrInstrRegistryTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag543StrInstrRegistry( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag543StrInstrRegistry( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  543
+         *  InstrRegistry
+         *  String
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag543StrInstrRegistry( new MyStringType( oneElement ));

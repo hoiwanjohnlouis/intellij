@@ -22,7 +22,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- *  200
+ *  200 (same as 200, 313, 610, 667, 955, )
  *  MaturityMonthYear
  *  month-year
  *  <p>     Can be used with standardized derivatives vs. the MaturityDate (54) field.
@@ -72,13 +72,13 @@ class MyMonthYearTypeTest {
 
         oneElement = MyMonthYearType.TESTA_MY_MONTH_YEAR_TYPE;
         dataType = new MyMonthYearType( oneElement );
-        assertEquals( oneElement, dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.getDataValue());
+        assertEquals( oneElement, dataType.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.toString());
 
         oneElement = MyMonthYearType.TESTB_MY_MONTH_YEAR_TYPE;
         dataType = new MyMonthYearType( oneElement );
-        assertEquals( oneElement, dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.getDataValue());
+        assertEquals( oneElement, dataType.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.toString());
     }
     @Test
     void PrintFIXTagTest() {

@@ -23,23 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  762
- *  SecuritySubType
- *  String
- *  <p></p>
- *  Sub-type qualification/identification of the SecurityType
- *  (e.g. for SecurityType="REPO"),
- *  or the CFICode if SecurityType is not specified.
- *  <p></p>
- *  If specified, SecurityType or CFICode is required.
- *  <p>
- *  <p>    Example Values:
- *  <p>    General = General Collateral (for SecurityType=REPO)
- *  <p>    For SecurityType="MLEG" markets can provide the name of the option
- *  <p>    or futures strategy, such as Calendar, Vertical, Butterfly, etc.
- *  <p>    NOTE: Additional values may be used by mutual agreement of the counterparties
- */
 class Tag762StrSecuritySubTypeTest {
     Tag762StrSecuritySubType tagData;
     String [] TestArray = {
@@ -71,25 +54,23 @@ class Tag762StrSecuritySubTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag762StrSecuritySubType( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag762StrSecuritySubType( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  762
+         *  SecuritySubType
+         *  String
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag762StrSecuritySubType( new MyStringType( oneElement ));

@@ -24,17 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  220
- *  BenchmarkCurveCurrency
- *  Currency
- *  <p></p>
- *  Identifies currency used for  benchmark curve.
- *  <p></p>
- *  See "Appendix 6-A: Valid Currency Codes" for information on obtaining valid values.
- *  <p></p>
- *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
- */
 class Tag220CcyBenchmarkCurveCurrencyTest {
     Tag220CcyBenchmarkCurveCurrency tagData;
     String [] TestArray = {
@@ -66,26 +55,23 @@ class Tag220CcyBenchmarkCurveCurrencyTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag220CcyBenchmarkCurveCurrency( new MyCurrencyType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag220CcyBenchmarkCurveCurrency( new MyCurrencyType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  220
+         *  BenchmarkCurveCurrency
+         *  Currency
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag220CcyBenchmarkCurveCurrency( new MyCurrencyType( oneElement ));

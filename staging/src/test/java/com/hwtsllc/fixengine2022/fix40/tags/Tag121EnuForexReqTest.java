@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  121
- *  ForexReq
- *  Boolean
- *  <p></p>
- *  Indicates request for forex accommodation trade to be executed along with security transaction.
- *  <p></p>
- *  Valid values:
- *  <p>    N - Do Not Execute Forex After Security Trade
- *  <p>    Y - Execute Forex After Security Trade
- */
 class Tag121EnuForexReqTest {
     Tag121EnuForexReq tagData;
 
@@ -61,29 +50,11 @@ class Tag121EnuForexReqTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        tagData = new Tag121EnuForexReq(Enum121ForexReq.NO);
-        assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag121EnuForexReq(Enum121ForexReq.YES);
-        assertEquals( "Y", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum121ForexReq oneEnum : Enum121ForexReq.values()) {
-            tagData = new Tag121EnuForexReq(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum121ForexReq oneEnum : Enum121ForexReq.values()) {
             tagData = new Tag121EnuForexReq(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -91,6 +62,22 @@ class Tag121EnuForexReqTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  121
+         *  ForexReq
+         *  Boolean
+         *  <p>    N - Do Not Execute Forex After Security Trade
+         *  <p>    Y - Execute Forex After Security Trade
+         */
+        tagData = new Tag121EnuForexReq(Enum121ForexReq.NO);
+        assertEquals( "N", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag121EnuForexReq(Enum121ForexReq.YES);
+        assertEquals( "Y", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum121ForexReq oneEnum : Enum121ForexReq.values()) {
             tagData = new Tag121EnuForexReq(oneEnum);
@@ -108,7 +95,7 @@ class Tag121EnuForexReqTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

@@ -23,32 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  577
- *  ClearingInstruction
- *  int
- *  <p></p>
- *  Eligibility of this trade for clearing and central counterparty processing
- *  values above 4000 are reserved for agreement between parties
- *  <p></p>
- *  Valid values:
- *  <p>    0 - Process normally
- *  <p>    1 - Exclude from all netting
- *  <p>    2 - Bilateral netting only
- *  <p>    3 - Ex clearing
- *  <p>    4 - Special trade
- *  <p></p>
- *  <p>    5 - Multilateral netting
- *  <p>    6 - Clear against central counterparty
- *  <p>    7 - Exclude from central counterparty
- *  <p>    8 - Manual mode (pre-posting and/or pre-giveup)
- *  <p>    9 - Automatic posting mode (trade posting to the position account number specified)
- *  <p></p>
- *  <p>    10 - Automatic give-up mode (trade give-up to the give-up destination number specified)
- *  <p>    11 - Qualified Service Representative QSR
- *  <p>    12 - Customer trade
- *  <p>    13 - Self clearing
- */
 class Tag577EnuClearingInstructionTest {
     Tag577EnuClearingInstruction tagData;
 
@@ -76,82 +50,11 @@ class Tag577EnuClearingInstructionTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  0-13 types
-         */
-        tagData = new Tag577EnuClearingInstruction( Enum577ClearingInstruction.PROCESS_NORMALLY );
-        assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag577EnuClearingInstruction( Enum577ClearingInstruction.EXCLUDE_ALL_NETTING );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag577EnuClearingInstruction( Enum577ClearingInstruction.BILATERAL_NETTING_ONLY );
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag577EnuClearingInstruction( Enum577ClearingInstruction.EX_CLEARING );
-        assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag577EnuClearingInstruction( Enum577ClearingInstruction.SPECIAL_TRADE );
-        assertEquals( "4", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        tagData = new Tag577EnuClearingInstruction( Enum577ClearingInstruction.MULTILATERAL_NETTING );
-        assertEquals( "5", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag577EnuClearingInstruction( Enum577ClearingInstruction.CLEAR_AGAINST_CENTRAL_COUNTERPARTY );
-        assertEquals( "6", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag577EnuClearingInstruction( Enum577ClearingInstruction.EXCLUDE_FROM_CENTRAL_COUNTERPARTY );
-        assertEquals( "7", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag577EnuClearingInstruction( Enum577ClearingInstruction.MANUAL );
-        assertEquals( "8", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag577EnuClearingInstruction( Enum577ClearingInstruction.AUTOMATIC_POSTING );
-        assertEquals( "9", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        tagData = new Tag577EnuClearingInstruction( Enum577ClearingInstruction.AUTOMATIC_GIVE_UP );
-        assertEquals( "10", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag577EnuClearingInstruction( Enum577ClearingInstruction.QUALIFIED_SERVICE_REPRESENTATIVE );
-        assertEquals( "11", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag577EnuClearingInstruction( Enum577ClearingInstruction.CUSTOMER_TRADE );
-        assertEquals( "12", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag577EnuClearingInstruction( Enum577ClearingInstruction.SELF_CLEARING );
-        assertEquals( "13", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum577ClearingInstruction oneEnum : Enum577ClearingInstruction.values()) {
-            tagData = new Tag577EnuClearingInstruction(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum577ClearingInstruction oneEnum : Enum577ClearingInstruction.values()) {
             tagData = new Tag577EnuClearingInstruction(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -159,6 +62,86 @@ class Tag577EnuClearingInstructionTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  577
+         *  ClearingInstruction
+         *  int
+         *  <p>    0 - Process normally
+         *  <p>    1 - Exclude from all netting
+         *  <p>    2 - Bilateral netting only
+         *  <p>    3 - Ex clearing
+         *  <p>    4 - Special trade
+         */
+        tagData = new Tag577EnuClearingInstruction( Enum577ClearingInstruction.PROCESS_NORMALLY );
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag577EnuClearingInstruction( Enum577ClearingInstruction.EXCLUDE_ALL_NETTING );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag577EnuClearingInstruction( Enum577ClearingInstruction.BILATERAL_NETTING_ONLY );
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag577EnuClearingInstruction( Enum577ClearingInstruction.EX_CLEARING );
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag577EnuClearingInstruction( Enum577ClearingInstruction.SPECIAL_TRADE );
+        assertEquals( "4", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    5 - Multilateral netting
+         *  <p>    6 - Clear against central counterparty
+         *  <p>    7 - Exclude from central counterparty
+         *  <p>    8 - Manual mode (pre-posting and/or pre-giveup)
+         *  <p>    9 - Automatic posting mode (trade posting to the position account number specified)
+         */
+        tagData = new Tag577EnuClearingInstruction( Enum577ClearingInstruction.MULTILATERAL_NETTING );
+        assertEquals( "5", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag577EnuClearingInstruction( Enum577ClearingInstruction.CLEAR_AGAINST_CENTRAL_COUNTERPARTY );
+        assertEquals( "6", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag577EnuClearingInstruction( Enum577ClearingInstruction.EXCLUDE_FROM_CENTRAL_COUNTERPARTY );
+        assertEquals( "7", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag577EnuClearingInstruction( Enum577ClearingInstruction.MANUAL );
+        assertEquals( "8", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag577EnuClearingInstruction( Enum577ClearingInstruction.AUTOMATIC_POSTING );
+        assertEquals( "9", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    10 - Automatic give-up mode (trade give-up to the give-up destination number specified)
+         *  <p>    11 - Qualified Service Representative QSR
+         *  <p>    12 - Customer trade
+         *  <p>    13 - Self clearing
+         */
+        tagData = new Tag577EnuClearingInstruction( Enum577ClearingInstruction.AUTOMATIC_GIVE_UP );
+        assertEquals( "10", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag577EnuClearingInstruction( Enum577ClearingInstruction.QUALIFIED_SERVICE_REPRESENTATIVE );
+        assertEquals( "11", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag577EnuClearingInstruction( Enum577ClearingInstruction.CUSTOMER_TRADE );
+        assertEquals( "12", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag577EnuClearingInstruction( Enum577ClearingInstruction.SELF_CLEARING );
+        assertEquals( "13", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum577ClearingInstruction oneEnum : Enum577ClearingInstruction.values()) {
             tagData = new Tag577EnuClearingInstruction(oneEnum);
@@ -176,7 +159,7 @@ class Tag577EnuClearingInstructionTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

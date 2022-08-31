@@ -163,14 +163,7 @@ public enum MyEnumOrderHandlingInst implements LogFIXString, LogVerboseString {
      */
     @Override
     public String toString() {
-        return toEnumLabelString()
-                .concat("=[")
-                .concat( toEnumIDString())
-                .concat(",")
-                .concat( toEnumNameString())
-                .concat(",")
-                .concat( toEnumDescriptionString())
-                .concat("]");
+        return id;
     }
 
     /**
@@ -181,7 +174,7 @@ public enum MyEnumOrderHandlingInst implements LogFIXString, LogVerboseString {
          * dump all the enum values
          */
         for (MyEnumOrderHandlingInst oneEnum : MyEnumOrderHandlingInst.values()) {
-            System.out.println(oneEnum);
+            System.out.println(oneEnum.toVerboseString());
         }
     }
 }

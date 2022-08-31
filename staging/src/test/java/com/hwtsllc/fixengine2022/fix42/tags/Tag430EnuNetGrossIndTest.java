@@ -23,18 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  430
- *  NetGrossInd
- *  int
- *  <p>
- *  Code to represent whether value is net (inclusive of tax) or gross.
- *  <p></p>
- *  Valid values:
- *  <p>    1-2 msg types
- *  <p>    1 - Net
- *  <p>    2 - Gross
- */
 class Tag430EnuNetGrossIndTest {
     Tag430EnuNetGrossInd tagData;
 
@@ -62,32 +50,11 @@ class Tag430EnuNetGrossIndTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         * 1-2 msg types
-         */
-        tagData = new Tag430EnuNetGrossInd(Enum430NetGrossInd.NET);
-        assertEquals( Enum430NetGrossInd.NET.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag430EnuNetGrossInd(Enum430NetGrossInd.GROSS);
-        assertEquals( Enum430NetGrossInd.GROSS.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum430NetGrossInd oneEnum : Enum430NetGrossInd.values()) {
-            tagData = new Tag430EnuNetGrossInd(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum430NetGrossInd oneEnum : Enum430NetGrossInd.values()) {
             tagData = new Tag430EnuNetGrossInd(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -95,6 +62,23 @@ class Tag430EnuNetGrossIndTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  430
+         *  NetGrossInd
+         *  int
+         *  <p>    1-2 msg types
+         *  <p>    1 - Net
+         *  <p>    2 - Gross
+         */
+        tagData = new Tag430EnuNetGrossInd(Enum430NetGrossInd.NET);
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag430EnuNetGrossInd(Enum430NetGrossInd.GROSS);
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum430NetGrossInd oneEnum : Enum430NetGrossInd.values()) {
             tagData = new Tag430EnuNetGrossInd(oneEnum);
@@ -112,7 +96,7 @@ class Tag430EnuNetGrossIndTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

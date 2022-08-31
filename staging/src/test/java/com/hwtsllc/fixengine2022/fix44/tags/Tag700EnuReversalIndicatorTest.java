@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  700
- *  ReversalIndicator
- *  Boolean
- *  <p></p>
- *  Indicates a trade that reverses a previous trade.
- *  <p></p>
- *  Valid values:
- *  <p>    N - Do Not Reverse Previous Trade
- *  <p>    Y - Reverse Previous Trade
- */
 class Tag700EnuReversalIndicatorTest {
     Tag700EnuReversalIndicator tagData;
 
@@ -61,34 +50,11 @@ class Tag700EnuReversalIndicatorTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    N - Do Not Reverse Previous Trade
-         *  <p>    Y - Reverse Previous Trade
-         */
-        tagData = new Tag700EnuReversalIndicator( Enum700ReversalIndicator.NO );
-        assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag700EnuReversalIndicator(Enum700ReversalIndicator.YES);
-        assertEquals( "Y", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum700ReversalIndicator oneEnum : Enum700ReversalIndicator.values()) {
-            tagData = new Tag700EnuReversalIndicator(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum700ReversalIndicator oneEnum : Enum700ReversalIndicator.values()) {
             tagData = new Tag700EnuReversalIndicator(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -96,6 +62,22 @@ class Tag700EnuReversalIndicatorTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  700
+         *  ReversalIndicator
+         *  Boolean
+         *  <p>    N - Do Not Reverse Previous Trade
+         *  <p>    Y - Reverse Previous Trade
+         */
+        tagData = new Tag700EnuReversalIndicator( Enum700ReversalIndicator.NO );
+        assertEquals( "N", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag700EnuReversalIndicator(Enum700ReversalIndicator.YES);
+        assertEquals( "Y", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum700ReversalIndicator oneEnum : Enum700ReversalIndicator.values()) {
             tagData = new Tag700EnuReversalIndicator(oneEnum);
@@ -113,7 +95,7 @@ class Tag700EnuReversalIndicatorTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

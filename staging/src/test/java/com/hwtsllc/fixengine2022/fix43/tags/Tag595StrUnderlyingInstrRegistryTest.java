@@ -23,15 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  595
- *  UnderlyingInstrRegistry
- *  String
- *  <p></p>
- *  Underlying security’s InstrRegistry.
- *  <p></p>
- *  See InstrRegistry (543) field for description
- */
 class Tag595StrUnderlyingInstrRegistryTest {
     Tag595StrUnderlyingInstrRegistry tagData;
     String [] TestArray = {
@@ -63,26 +54,23 @@ class Tag595StrUnderlyingInstrRegistryTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag595StrUnderlyingInstrRegistry( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag595StrUnderlyingInstrRegistry( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  595
+         *  UnderlyingInstrRegistry
+         *  String
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag595StrUnderlyingInstrRegistry( new MyStringType( oneElement ));

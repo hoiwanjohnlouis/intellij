@@ -23,24 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  431
- *  ListOrderStatus
- *  int
- *  <p>
- *  Code to represent the status of a list order.
- *  <p></p>
- *  Valid values:
- *  <p>    1-7 msg types
- *  <p>    1 - In bidding process
- *  <p>    2 - Received for execution
- *  <p>    3 - Executing
- *  <p>    4 - Cancelling
- *  <p>    5 - Alert
- *  <p></p>
- *  <p>    6 - All Done
- *  <p>    7 - Reject
- */
 class Tag431EnuListOrderStatusTest {
     Tag431EnuListOrderStatus tagData;
 
@@ -68,52 +50,11 @@ class Tag431EnuListOrderStatusTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         * 1-7 msg types
-         */
-        tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.IN_BIDDING_PROCESS);
-        assertEquals( Enum431ListOrderStatus.IN_BIDDING_PROCESS.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.RECEIVED_FOR_EXECUTION);
-        assertEquals( Enum431ListOrderStatus.RECEIVED_FOR_EXECUTION.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.EXECUTING);
-        assertEquals( Enum431ListOrderStatus.EXECUTING.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.CANCELLING);
-        assertEquals( Enum431ListOrderStatus.CANCELLING.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.ALERT);
-        assertEquals( Enum431ListOrderStatus.ALERT.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.ALL_DONE);
-        assertEquals( Enum431ListOrderStatus.ALL_DONE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.REJECT);
-        assertEquals( Enum431ListOrderStatus.REJECT.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum431ListOrderStatus oneEnum : Enum431ListOrderStatus.values()) {
-            tagData = new Tag431EnuListOrderStatus(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum431ListOrderStatus oneEnum : Enum431ListOrderStatus.values()) {
             tagData = new Tag431EnuListOrderStatus(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -121,6 +62,50 @@ class Tag431EnuListOrderStatusTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  431
+         *  ListOrderStatus
+         *  int
+         *  <p>    1-7 msg types
+         *  <p>    1 - In bidding process
+         *  <p>    2 - Received for execution
+         *  <p>    3 - Executing
+         *  <p>    4 - Cancelling
+         *  <p>    5 - Alert
+         */
+        tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.IN_BIDDING_PROCESS);
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.RECEIVED_FOR_EXECUTION);
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.EXECUTING);
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.CANCELLING);
+        assertEquals( "4", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.ALERT);
+        assertEquals( "5", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    6 - All Done
+         *  <p>    7 - Reject
+         */
+        tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.ALL_DONE);
+        assertEquals( "6", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag431EnuListOrderStatus(Enum431ListOrderStatus.REJECT);
+        assertEquals( "7", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum431ListOrderStatus oneEnum : Enum431ListOrderStatus.values()) {
             tagData = new Tag431EnuListOrderStatus(oneEnum);
@@ -138,7 +123,7 @@ class Tag431EnuListOrderStatusTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

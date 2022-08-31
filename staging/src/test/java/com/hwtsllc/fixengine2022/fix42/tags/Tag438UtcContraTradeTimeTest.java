@@ -24,15 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  438
- *  ContraTradeTime
- *  UTCTimestamp
- *  <p></p>
- *  Identifies the time of the trade with the ContraBroker (375).
- *  <p></p>
- *  (always expressed in UTC (Universal Time Coordinated, also known as "GMT")
- */
 class Tag438UtcContraTradeTimeTest {
     Tag438UtcContraTradeTime tagData;
     String [] TestArray = {
@@ -64,26 +55,23 @@ class Tag438UtcContraTradeTimeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag438UtcContraTradeTime( new MyUTCTimestampType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag438UtcContraTradeTime( new MyUTCTimestampType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  438
+         *  ContraTradeTime
+         *  UTCTimestamp
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag438UtcContraTradeTime( new MyUTCTimestampType( oneElement ));

@@ -23,29 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  1123 (same as 1123, 1124,)
- *  TradeHandlingInstr
- *  char
- *  <p>
- *  Specified how the Trade Capture Report should be handled by the Respondent.
- *  <p></p>
- *  1124
- *  OrigTradeHandlingInstr
- *  char
- *  <p>
- *  Optionally used with TradeHandlingInstr = 0 to relay the trade handling instruction
- *  used when reporting the trade to the marketplace.
- *  <p>
- *  Same values as TradeHandlingInstr (1123)
- *  <p></p>
- *  Valid values:
- *  <p>    0 - Trade Confirmation
- *  <p>    1 - Two-Party Report
- *  <p>    2 - One-Party Report for Matching
- *  <p>    3 - One-Party Report for Pass Through
- *  <p>    4 - Automated Floor Order Routing
- */
 class Tag1124EnuOrigTradeHandlingInstrTest {
     Tag1124EnuOrigTradeHandlingInstr tagData;
 
@@ -73,50 +50,11 @@ class Tag1124EnuOrigTradeHandlingInstrTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    0 - Trade Confirmation
-         *  <p>    1 - Two-Party Report
-         *  <p>    2 - One-Party Report for Matching
-         *  <p>    3 - One-Party Report for Pass Through
-         *  <p>    4 - Automated Floor Order Routing
-         */
-        tagData = new Tag1124EnuOrigTradeHandlingInstr( MyEnumTradeHandlingInstr.TRADE_CONFIRMATION );
-        assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag1124EnuOrigTradeHandlingInstr( MyEnumTradeHandlingInstr.TWO_PARTY_REPORT );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag1124EnuOrigTradeHandlingInstr( MyEnumTradeHandlingInstr.ONE_PARTY_MATCHING );
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag1124EnuOrigTradeHandlingInstr( MyEnumTradeHandlingInstr.ONE_PARTY_PASS_THROUGH );
-        assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag1124EnuOrigTradeHandlingInstr( MyEnumTradeHandlingInstr.AUTOMATED_ROUTING );
-        assertEquals( "4", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        // loop around the ENUM and process
-        for ( MyEnumTradeHandlingInstr oneEnum : MyEnumTradeHandlingInstr.values()) {
-            tagData = new Tag1124EnuOrigTradeHandlingInstr(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( MyEnumTradeHandlingInstr oneEnum : MyEnumTradeHandlingInstr.values()) {
             tagData = new Tag1124EnuOrigTradeHandlingInstr(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -124,6 +62,37 @@ class Tag1124EnuOrigTradeHandlingInstrTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  1124 (same as 1123, 1124,)
+         *  OrigTradeHandlingInstr
+         *  char
+         *  <p>    0 - Trade Confirmation
+         *  <p>    1 - Two-Party Report
+         *  <p>    2 - One-Party Report for Matching
+         *  <p>    3 - One-Party Report for Pass Through
+         *  <p>    4 - Automated Floor Order Routing
+         */
+        tagData = new Tag1124EnuOrigTradeHandlingInstr( MyEnumTradeHandlingInstr.TRADE_CONFIRMATION );
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag1124EnuOrigTradeHandlingInstr( MyEnumTradeHandlingInstr.TWO_PARTY_REPORT );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag1124EnuOrigTradeHandlingInstr( MyEnumTradeHandlingInstr.ONE_PARTY_MATCHING );
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag1124EnuOrigTradeHandlingInstr( MyEnumTradeHandlingInstr.ONE_PARTY_PASS_THROUGH );
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag1124EnuOrigTradeHandlingInstr( MyEnumTradeHandlingInstr.AUTOMATED_ROUTING );
+        assertEquals( "4", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( MyEnumTradeHandlingInstr oneEnum : MyEnumTradeHandlingInstr.values()) {
             tagData = new Tag1124EnuOrigTradeHandlingInstr(oneEnum);
@@ -141,7 +110,7 @@ class Tag1124EnuOrigTradeHandlingInstrTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

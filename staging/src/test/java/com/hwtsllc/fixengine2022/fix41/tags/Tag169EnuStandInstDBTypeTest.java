@@ -64,41 +64,11 @@ class Tag169EnuStandInstDBTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.OTHER);
-        assertEquals( Enum169StandInstDbType.OTHER.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.DTC_SID);
-        assertEquals( Enum169StandInstDbType.DTC_SID.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.THOMPSON_ALERT);
-        assertEquals( Enum169StandInstDbType.THOMPSON_ALERT.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.GLOBAL_CUSTODIAN);
-        assertEquals( Enum169StandInstDbType.GLOBAL_CUSTODIAN.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.ACCOUNT_NET);
-        assertEquals( Enum169StandInstDbType.ACCOUNT_NET.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum169StandInstDbType oneEnum : Enum169StandInstDbType.values()) {
-            tagData = new Tag169EnuStandInstDBType(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum169StandInstDbType oneEnum : Enum169StandInstDbType.values()) {
             tagData = new Tag169EnuStandInstDBType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -106,6 +76,37 @@ class Tag169EnuStandInstDBTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  169
+         *  StandInstDbType
+         *  int
+         *  <p>    0 - Other
+         *  <p>    1 - DTC SID
+         *  <p>    2 - Thomson ALERT
+         *  <p>    3 - A Global Custodian (StandInstDBName (70) must be provided)
+         *  <p>    4 - AccountNet
+         */
+        tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.OTHER);
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.DTC_SID);
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.THOMPSON_ALERT);
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.GLOBAL_CUSTODIAN);
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag169EnuStandInstDBType(Enum169StandInstDbType.ACCOUNT_NET);
+        assertEquals( "4", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum169StandInstDbType oneEnum : Enum169StandInstDbType.values()) {
             tagData = new Tag169EnuStandInstDBType(oneEnum);
@@ -123,7 +124,7 @@ class Tag169EnuStandInstDBTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

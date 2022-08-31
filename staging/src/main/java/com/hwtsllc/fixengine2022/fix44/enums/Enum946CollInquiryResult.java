@@ -123,14 +123,7 @@ public enum Enum946CollInquiryResult implements LogFIXString, LogVerboseString {
      */
     @Override
     public String toString() {
-        return toEnumLabelString()
-                .concat("=[")
-                .concat( toEnumIDString())
-                .concat(",")
-                .concat( toEnumNameString())
-                .concat(",")
-                .concat( toEnumDescriptionString())
-                .concat("]");
+        return id;
     }
 
     /**
@@ -141,7 +134,6 @@ public enum Enum946CollInquiryResult implements LogFIXString, LogVerboseString {
          * dump all the enum values
          */
         for (Enum946CollInquiryResult oneEnum : Enum946CollInquiryResult.values()) {
-            System.out.println(oneEnum);
             System.out.println(oneEnum.toVerboseString());
         }
     }

@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  385
- *  MsgDirection
- *  char
- *  <p>
- *  Specifies the direction of the messsage.
- *  <p></p>
- *  Valid values:
- *  <p>    R - Receive
- *  <p>    S - Send
- */
 class Tag385EnuMsgDirectionTest {
     Tag385EnuMsgDirection tagData;
 
@@ -61,32 +50,11 @@ class Tag385EnuMsgDirectionTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         * R, and S msg types
-         */
-        tagData = new Tag385EnuMsgDirection(Enum385MsgDirection.RECEIVE);
-        assertEquals( Enum385MsgDirection.RECEIVE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag385EnuMsgDirection(Enum385MsgDirection.SEND);
-        assertEquals( Enum385MsgDirection.SEND.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum385MsgDirection oneEnum : Enum385MsgDirection.values()) {
-            tagData = new Tag385EnuMsgDirection(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum385MsgDirection oneEnum : Enum385MsgDirection.values()) {
             tagData = new Tag385EnuMsgDirection(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -94,6 +62,22 @@ class Tag385EnuMsgDirectionTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  385
+         *  MsgDirection
+         *  char
+         *  <p>    R - Receive
+         *  <p>    S - Send
+         */
+        tagData = new Tag385EnuMsgDirection(Enum385MsgDirection.RECEIVE);
+        assertEquals( "R", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag385EnuMsgDirection(Enum385MsgDirection.SEND);
+        assertEquals( "S", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum385MsgDirection oneEnum : Enum385MsgDirection.values()) {
             tagData = new Tag385EnuMsgDirection(oneEnum);
@@ -111,7 +95,7 @@ class Tag385EnuMsgDirectionTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

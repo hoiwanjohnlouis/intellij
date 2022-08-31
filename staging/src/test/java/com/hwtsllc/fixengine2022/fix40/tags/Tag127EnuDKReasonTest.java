@@ -23,23 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  127
- *  DKReason
- *  char
- *  <p></p>
- *  Reason for execution rejection.
- *  <p></p>
- *  Valid values:
- *  <p>    A - Unknown Symbol
- *  <p>    B - Wrong Side
- *  <p>    C - Quantity Exceeds Order
- *  <p>    D - No Matching Order
- *  <p>    E - Price Exceeds Limit
- *  <p></p>
- *  <p>    F - Calculation Difference
- *  <p>    Z - Other
- */
 class Tag127EnuDKReasonTest {
     Tag127EnuDKReason tagData;
 
@@ -67,55 +50,11 @@ class Tag127EnuDKReasonTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         * A-F, Z DKReason type
-         */
-        tagData = new Tag127EnuDKReason(Enum127DKReason.UNKNOWN_SYMBOL);
-        assertEquals( "A", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag127EnuDKReason(Enum127DKReason.WRONG_SIDE);
-        assertEquals( "B", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag127EnuDKReason(Enum127DKReason.QUANTITY_EXCEEDS_ORDER);
-        assertEquals( "C", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag127EnuDKReason(Enum127DKReason.NO_MATCHING_ORDER);
-        assertEquals( "D", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag127EnuDKReason(Enum127DKReason.PRICE_EXCEEDS_LIMIT);
-        assertEquals( "E", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        tagData = new Tag127EnuDKReason(Enum127DKReason.CALCULATION_DIFFERENCE);
-        assertEquals( "F", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        tagData = new Tag127EnuDKReason(Enum127DKReason.OTHER);
-        assertEquals( "Z", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        // loop around the ENUM and process
-        for (Enum127DKReason oneEnum : Enum127DKReason.values()) {
-            tagData = new Tag127EnuDKReason(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum127DKReason oneEnum : Enum127DKReason.values()) {
             tagData = new Tag127EnuDKReason(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -123,6 +62,49 @@ class Tag127EnuDKReasonTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  127
+         *  DKReason
+         *  char
+         *  <p>    A - Unknown Symbol
+         *  <p>    B - Wrong Side
+         *  <p>    C - Quantity Exceeds Order
+         *  <p>    D - No Matching Order
+         *  <p>    E - Price Exceeds Limit
+         */
+        tagData = new Tag127EnuDKReason(Enum127DKReason.UNKNOWN_SYMBOL);
+        assertEquals( "A", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag127EnuDKReason(Enum127DKReason.WRONG_SIDE);
+        assertEquals( "B", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag127EnuDKReason(Enum127DKReason.QUANTITY_EXCEEDS_ORDER);
+        assertEquals( "C", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag127EnuDKReason(Enum127DKReason.NO_MATCHING_ORDER);
+        assertEquals( "D", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag127EnuDKReason(Enum127DKReason.PRICE_EXCEEDS_LIMIT);
+        assertEquals( "E", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    F - Calculation Difference
+         *  <p>    Z - Other
+         */
+        tagData = new Tag127EnuDKReason(Enum127DKReason.CALCULATION_DIFFERENCE);
+        assertEquals( "F", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag127EnuDKReason(Enum127DKReason.OTHER);
+        assertEquals( "Z", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum127DKReason oneEnum : Enum127DKReason.values()) {
             tagData = new Tag127EnuDKReason(oneEnum);
@@ -140,7 +122,7 @@ class Tag127EnuDKReasonTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

@@ -23,31 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  419
- *  BasisPxType
- *  char
- *  <p>
- *  Code to represent the basis price type.
- *  <p></p>
- *  Valid values:
- *  <p>    2 - Closing price at morning session
- *  <p>    3 - Closing price
- *  <p>    4 - Current price
- *  <p>    5 - SQ
- *  <p>    6 - VWAP through a day
- *  <p></p>
- *  <p>    7 - VWAP through a morning session
- *  <p>    8 - VWAP through an afternoon session
- *  <p>    9 - VWAP through a day except "YORI" (an opening auction)
- *  <p></p>
- *  <p>    A - VWAP through a morning session except "YORI" (an opening auction)
- *  <p>    B - VWAP through an afternoon session except "YORI" (an opening auction)
- *  <p>    C - Strike
- *  <p>    D - Open
- *  <p></p>
- *  <p>    Z - Others
- */
 class Tag419EnuBasisPxTypeTest {
     Tag419EnuBasisPxType tagData;
 
@@ -75,76 +50,11 @@ class Tag419EnuBasisPxTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  2-9, A-D, Z msg types
-         */
-        tagData = new Tag419EnuBasisPxType(Enum419BasisPxType.CLOSING_PRICE_MORNING);
-        assertEquals( Enum419BasisPxType.CLOSING_PRICE_MORNING.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag419EnuBasisPxType(Enum419BasisPxType.CLOSING_PRICE);
-        assertEquals( Enum419BasisPxType.CLOSING_PRICE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag419EnuBasisPxType(Enum419BasisPxType.CURRENT_PRICE);
-        assertEquals( Enum419BasisPxType.CURRENT_PRICE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag419EnuBasisPxType(Enum419BasisPxType.SQ);
-        assertEquals( Enum419BasisPxType.SQ.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag419EnuBasisPxType(Enum419BasisPxType.VWAP_DAY);
-        assertEquals( Enum419BasisPxType.VWAP_DAY.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag419EnuBasisPxType(Enum419BasisPxType.VWAP_MORNING);
-        assertEquals( Enum419BasisPxType.VWAP_MORNING.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag419EnuBasisPxType(Enum419BasisPxType.VWAP_AFTERNOON);
-        assertEquals( Enum419BasisPxType.VWAP_AFTERNOON.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag419EnuBasisPxType(Enum419BasisPxType.VWAP_DAY_EXCEPT_YORI);
-        assertEquals( Enum419BasisPxType.VWAP_DAY_EXCEPT_YORI.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag419EnuBasisPxType(Enum419BasisPxType.VWAP_MORNING_EXCEPT_YORI);
-        assertEquals( Enum419BasisPxType.VWAP_MORNING_EXCEPT_YORI.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag419EnuBasisPxType(Enum419BasisPxType.VWAP_AFTERNOON_EXCEPT_YORI);
-        assertEquals( Enum419BasisPxType.VWAP_AFTERNOON_EXCEPT_YORI.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag419EnuBasisPxType(Enum419BasisPxType.STRIKE);
-        assertEquals( Enum419BasisPxType.STRIKE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag419EnuBasisPxType(Enum419BasisPxType.OPEN);
-        assertEquals( Enum419BasisPxType.OPEN.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag419EnuBasisPxType(Enum419BasisPxType.OTHER);
-        assertEquals( Enum419BasisPxType.OTHER.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum419BasisPxType oneEnum : Enum419BasisPxType.values()) {
-            tagData = new Tag419EnuBasisPxType(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum419BasisPxType oneEnum : Enum419BasisPxType.values()) {
             tagData = new Tag419EnuBasisPxType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -152,6 +62,83 @@ class Tag419EnuBasisPxTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  419
+         *  BasisPxType
+         *  char
+         *  <p>    2 - Closing price at morning session
+         *  <p>    3 - Closing price
+         *  <p>    4 - Current price
+         *  <p>    5 - SQ
+         *  <p>    6 - VWAP through a day
+         */
+        tagData = new Tag419EnuBasisPxType(Enum419BasisPxType.CLOSING_PRICE_MORNING);
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag419EnuBasisPxType(Enum419BasisPxType.CLOSING_PRICE);
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag419EnuBasisPxType(Enum419BasisPxType.CURRENT_PRICE);
+        assertEquals( "4", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag419EnuBasisPxType(Enum419BasisPxType.SQ);
+        assertEquals( "5", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag419EnuBasisPxType(Enum419BasisPxType.VWAP_DAY);
+        assertEquals( "6", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    7 - VWAP through a morning session
+         *  <p>    8 - VWAP through an afternoon session
+         *  <p>    9 - VWAP through a day except "YORI" (an opening auction)
+         */
+        tagData = new Tag419EnuBasisPxType(Enum419BasisPxType.VWAP_MORNING);
+        assertEquals( "7", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag419EnuBasisPxType(Enum419BasisPxType.VWAP_AFTERNOON);
+        assertEquals( "8", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag419EnuBasisPxType(Enum419BasisPxType.VWAP_DAY_EXCEPT_YORI);
+        assertEquals( "9", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    A - VWAP through a morning session except "YORI" (an opening auction)
+         *  <p>    B - VWAP through an afternoon session except "YORI" (an opening auction)
+         *  <p>    C - Strike
+         *  <p>    D - Open
+         */
+        tagData = new Tag419EnuBasisPxType(Enum419BasisPxType.VWAP_MORNING_EXCEPT_YORI);
+        assertEquals( "A", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag419EnuBasisPxType(Enum419BasisPxType.VWAP_AFTERNOON_EXCEPT_YORI);
+        assertEquals( "B", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag419EnuBasisPxType(Enum419BasisPxType.STRIKE);
+        assertEquals( "C", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag419EnuBasisPxType(Enum419BasisPxType.OPEN);
+        assertEquals( "D", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    Z - Others
+         */
+        tagData = new Tag419EnuBasisPxType(Enum419BasisPxType.OTHER);
+        assertEquals( "Z", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum419BasisPxType oneEnum : Enum419BasisPxType.values()) {
             tagData = new Tag419EnuBasisPxType(oneEnum);
@@ -169,7 +156,7 @@ class Tag419EnuBasisPxTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

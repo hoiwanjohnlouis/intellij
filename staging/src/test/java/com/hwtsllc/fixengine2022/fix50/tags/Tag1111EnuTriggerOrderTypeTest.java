@@ -23,21 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  1111
- *  TriggerOrderType
- *  char
- *  <p>
- *  The OrdType the order should have after the trigger has hit.
- *  <p>
- *  Required to express orders that change from Limit to Market.
- *  <p>
- *  Other values from OrdType (40) may be used if appropriate and bilaterally agreed upon.
- *  <p></p>
- *  Valid values:
- *  <p>    1 - Market
- *  <p>    2 - Limit
- */
 class Tag1111EnuTriggerOrderTypeTest {
     Tag1111EnuTriggerOrderType tagData;
 
@@ -65,35 +50,11 @@ class Tag1111EnuTriggerOrderTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    1 - Market
-         *  <p>    2 - Limit
-         */
-        tagData = new Tag1111EnuTriggerOrderType( Enum1111TriggerOrderType.MARKET );
-        assertEquals( "1", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        tagData = new Tag1111EnuTriggerOrderType( Enum1111TriggerOrderType.LIMIT );
-        assertEquals( "2", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-
-        // loop around the ENUM and process
-        for ( Enum1111TriggerOrderType oneEnum : Enum1111TriggerOrderType.values()) {
-            tagData = new Tag1111EnuTriggerOrderType(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum1111TriggerOrderType oneEnum : Enum1111TriggerOrderType.values()) {
             tagData = new Tag1111EnuTriggerOrderType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -101,6 +62,22 @@ class Tag1111EnuTriggerOrderTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  1111
+         *  TriggerOrderType
+         *  char
+         *  <p>    1 - Market
+         *  <p>    2 - Limit
+         */
+        tagData = new Tag1111EnuTriggerOrderType( Enum1111TriggerOrderType.MARKET );
+        assertEquals( "1", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+
+        tagData = new Tag1111EnuTriggerOrderType( Enum1111TriggerOrderType.LIMIT );
+        assertEquals( "2", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+
+
         // loop around the ENUM and process
         for ( Enum1111TriggerOrderType oneEnum : Enum1111TriggerOrderType.values()) {
             tagData = new Tag1111EnuTriggerOrderType(oneEnum);
@@ -118,7 +95,7 @@ class Tag1111EnuTriggerOrderTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

@@ -23,25 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  531
- *  MassCancelResponse
- *  char
- *  <p></p>
- *  Specifies the action taken by counterparty order handling system
- *  as a result of the Order Mass Cancel Request
- *  <p></p>
- *  Valid values:
- *  <p>    0 - Cancel Request Rejected - See MassCancelRejectReason (532)
- *  <p>    1 - Cancel orders for a security
- *  <p>    2 - Cancel orders for an Underlying Security
- *  <p>    3 - Cancel orders for a Product
- *  <p>    4 - Cancel orders for a CFICode
- *  <p></p>
- *  <p>    5 - Cancel orders for a SecurityType
- *  <p>    6 - Cancel orders for a trading session
- *  <p>    7 - Cancel All Orders
- */
 class Tag531EnuMassCancelResponseTest {
     Tag531EnuMassCancelResponse tagData;
 
@@ -69,57 +50,11 @@ class Tag531EnuMassCancelResponseTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  0-7 types
-         */
-        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_REQUEST_REJECTED );
-        assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_SECURITY );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_UNDERLYING );
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_PRODUCT );
-        assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_CFICODE );
-        assertEquals( "4", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_SECURITYTYPE );
-        assertEquals( "5", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_SESSION );
-        assertEquals( "6", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ALL_ORDERS );
-        assertEquals( "7", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum531MassCancelResponse oneEnum : Enum531MassCancelResponse.values()) {
-            tagData = new Tag531EnuMassCancelResponse(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum531MassCancelResponse oneEnum : Enum531MassCancelResponse.values()) {
             tagData = new Tag531EnuMassCancelResponse(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -127,6 +62,54 @@ class Tag531EnuMassCancelResponseTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  531
+         *  MassCancelResponse
+         *  char
+         *  <p>    0 - Cancel Request Rejected - See MassCancelRejectReason (532)
+         *  <p>    1 - Cancel orders for a security
+         *  <p>    2 - Cancel orders for an Underlying Security
+         *  <p>    3 - Cancel orders for a Product
+         *  <p>    4 - Cancel orders for a CFICode
+         */
+        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_REQUEST_REJECTED );
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_SECURITY );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_UNDERLYING );
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_PRODUCT );
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_CFICODE );
+        assertEquals( "4", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    5 - Cancel orders for a SecurityType
+         *  <p>    6 - Cancel orders for a trading session
+         *  <p>    7 - Cancel All Orders
+         */
+        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_SECURITYTYPE );
+        assertEquals( "5", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ORDERS_FOR_SESSION );
+        assertEquals( "6", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag531EnuMassCancelResponse( Enum531MassCancelResponse.CANCEL_ALL_ORDERS );
+        assertEquals( "7", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum531MassCancelResponse oneEnum : Enum531MassCancelResponse.values()) {
             tagData = new Tag531EnuMassCancelResponse(oneEnum);
@@ -144,7 +127,7 @@ class Tag531EnuMassCancelResponseTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

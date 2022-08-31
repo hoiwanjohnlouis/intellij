@@ -24,13 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  350
- *  EncodedSecurityDescLen
- *  Length
- *  <p></p>
- *  Byte length of encoded (non-ASCII characters) EncodedSecurityDesc (351) field.
- */
 class Tag350LenEncodedSecurityDescLenTest {
     Tag350LenEncodedSecurityDescLen tagData;
     int [] TestArray = {
@@ -62,26 +55,23 @@ class Tag350LenEncodedSecurityDescLenTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag350LenEncodedSecurityDescLen( new MyLengthType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag350LenEncodedSecurityDescLen( new MyLengthType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  350
+         *  EncodedSecurityDescLen
+         *  Length
+         */
+
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag350LenEncodedSecurityDescLen( new MyLengthType( oneElement ));

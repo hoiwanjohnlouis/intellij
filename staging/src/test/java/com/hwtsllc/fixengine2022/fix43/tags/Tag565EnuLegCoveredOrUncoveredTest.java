@@ -17,31 +17,13 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyEnumCoveredOrUncovered;
+import com.hwtsllc.fixengine2022.fix41.tags.Tag203EnuCoveredOrUncovered;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  203 (same as 203, 565,)
- *  CoveredOrUncovered
- *  int
- *  <p>
- *  Used for derivative products, such as options
- *  <p></p>
- *  565
- *  LegCoveredOrUncovered
- *  int
- *  <p>
- *  CoveredOrUncovered for leg of a multileg
- *  <p>
- *  See CoveredOrUncovered (203) field for description
- *  <p></p>
- *  Valid values:
- *  <p>    0 - Covered
- *  <p>    1 - Uncovered
- */
 class Tag565EnuLegCoveredOrUncoveredTest {
     Tag565EnuLegCoveredOrUncovered tagData;
 
@@ -69,32 +51,11 @@ class Tag565EnuLegCoveredOrUncoveredTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  0-1 types
-         */
-        tagData = new Tag565EnuLegCoveredOrUncovered(MyEnumCoveredOrUncovered.COVERED);
-        assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag565EnuLegCoveredOrUncovered(MyEnumCoveredOrUncovered.UNCOVERED);
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (MyEnumCoveredOrUncovered oneEnum : MyEnumCoveredOrUncovered.values()) {
-            tagData = new Tag565EnuLegCoveredOrUncovered(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (MyEnumCoveredOrUncovered oneEnum : MyEnumCoveredOrUncovered.values()) {
             tagData = new Tag565EnuLegCoveredOrUncovered(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -102,6 +63,22 @@ class Tag565EnuLegCoveredOrUncoveredTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  565 (same as 203, 565,)
+         *  LegCoveredOrUncovered
+         *  int
+         *  <p>    0 - Covered
+         *  <p>    1 - Uncovered
+         */
+        tagData = new Tag565EnuLegCoveredOrUncovered(MyEnumCoveredOrUncovered.COVERED);
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag565EnuLegCoveredOrUncovered(MyEnumCoveredOrUncovered.UNCOVERED);
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (MyEnumCoveredOrUncovered oneEnum : MyEnumCoveredOrUncovered.values()) {
             tagData = new Tag565EnuLegCoveredOrUncovered(oneEnum);
@@ -119,7 +96,7 @@ class Tag565EnuLegCoveredOrUncoveredTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

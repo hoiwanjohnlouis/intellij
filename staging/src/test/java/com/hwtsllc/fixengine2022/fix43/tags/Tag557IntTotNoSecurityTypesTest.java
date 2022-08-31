@@ -23,15 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  557
- *  TotNoSecurityTypes
- *  int
- *  <p></p>
- *  Indicates total number of security types in the event that multiple Security Type messages are used to return results
- *  <p></p>
- *  (Prior to FIX 4.4 this field was named TotalNumSecurityTypes)
- */
 class Tag557IntTotNoSecurityTypesTest {
     Tag557IntTotNoSecurityTypes tagData;
     int [] TestArray = {
@@ -63,26 +54,23 @@ class Tag557IntTotNoSecurityTypesTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag557IntTotNoSecurityTypes( new MyIntType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag557IntTotNoSecurityTypes( new MyIntType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  557
+         *  TotNoSecurityTypes
+         *  int
+         */
+
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag557IntTotNoSecurityTypes( new MyIntType( oneElement ));

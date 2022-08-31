@@ -42,9 +42,6 @@ public class Tag364LenEncodedUnderlyingSecurityDescLen extends FIX42Abstract imp
         this.dataValue = dataValue;
     }
 
-    public int getDataValue() {
-        return this.dataValue.getDataValue();
-    }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
@@ -73,7 +70,7 @@ public class Tag364LenEncodedUnderlyingSecurityDescLen extends FIX42Abstract imp
      */
     @Override
     public String toString() {
-        return String.valueOf(getDataValue());
+        return dataValue.toString();
     }
 
     /**

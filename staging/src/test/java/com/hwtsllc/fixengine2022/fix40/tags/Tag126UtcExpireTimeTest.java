@@ -23,31 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  126
- *  ExpireTime
- *  UTCTimestamp
- *  <p></p>
- *  Time/Date of order expiration
- *  (always expressed in UTC (Universal Time Coordinated), also known as "GMT")
- *  <p></p>
- *      The meaning of expiration is specific to the context where the field is used.
- *  <p></p>
- *      For Orders,
- *          this is the expiration time of a Good Til Date TimeInForce.
- *  <p></p>
- *      For Quotes,
- *          this is the expiration of the quote.
- *  <p></p>
- *      Expiration time is provided across the quote message dialog
- *      to control the length of time of the overall quoting process.
- *  <p></p>
- *      For collateral requests,
- *          this is the time by which collateral must be assigned.
- *  <p></p>
- *      For collateral assignments,
- *          this is the time by which a response to the assignment is expected.
- */
 class Tag126UtcExpireTimeTest {
     Tag126UtcExpireTime tagData;
     String [] TestArray = {
@@ -79,26 +54,23 @@ class Tag126UtcExpireTimeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag126UtcExpireTime( new MyUTCTimestampType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag126UtcExpireTime( new MyUTCTimestampType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  126
+         *  ExpireTime
+         *  UTCTimestamp
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag126UtcExpireTime( new MyUTCTimestampType( oneElement ));

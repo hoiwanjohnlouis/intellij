@@ -23,74 +23,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  452 (same as 452, 538, 759, 784, 951, 1051, 1061, 1119)
- *  PartyRole
- *  int
- *  <p>
- *  Identifies the type or role of the PartyID (448) specified.
- *  <p>
- *  See "Appendix 6-G – Use of <Parties> Component Block"
- *  (see Volume : "Glossary" for value definitions)
- *  <p></p>
- *  538
- *  NestedPartyRole
- *  int
- *  <p>
- *  PartyRole value within a nested repeating group.
- *  <p>
- *  Same values as  PartyRole (452)
- *  <p></p>
- *  759
- *  Nested2PartyRole
- *  int
- *  <p>
- *  PartyRole value within a "second instance" Nested repeating group.
- *  <p>
- *  Same values as  PartyRole (452)
- *  <p></p>
- *  784
- *  SettlPartyRole
- *  int
- *  <p>
- *  PartyRole value within a settlement parties component.
- *  <p>
- *  Same values as  PartyRole (452)
- *  <p></p>
- *  951
- *  Nested3PartyRole
- *  int
- *  <p>
- *  PartyRole value within a "third instance" Nested repeating group.
- *  <p>
- *  Same values as  PartyRole (452)
- *  <p></p>
- *  1051
- *  InstrumentPartyRole
- *  int
- *  <p>
- *  PartyRole value within an instrument party repeating group.
- *  <p>
- *  Same values as  PartyRole (452)
- *  <p></p>
- *  1061
- *  UndlyInstrumentPartyRole
- *  int
- *  <p>
- *  PartyRole value within an underlying instrument party repeating group.
- *  <p>
- *  Same values as  PartyRole (452)
- *  <p></p>
- *  1119
- *  RootPartyRole
- *  int
- *  <p>
- *  PartyRole value within a root parties component.
- *  <p>
- *  Same values as PartyRole (452)
- *  <p></p>
- *  Valid values:
- *  <p></p>
+/*
  *  <p>    1 - Executing Firm (formerly FIX 4.2 ExecBroker)
  *  <p>    2 - Broker of Credit (formerly FIX 4.2 BrokerOfCredit)
  *  <p>    3 - Client ID (formerly FIX 4.2 ClientID)
@@ -217,8 +150,22 @@ class Tag1119EnuRootPartyRoleTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
+    void TagToValuePairStringTest() {
+        // loop around the ENUM and process
+        for ( MyEnumPartyRole oneEnum : MyEnumPartyRole.values()) {
+            tagData = new Tag1119EnuRootPartyRole(oneEnum);
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
         /*
+         *  1119 (same as 452, 538, 759, 784, 951, 1051, 1061, 1119)
+         *  RootPartyRole
+         *  int
          *  <p>    1 - Executing Firm (formerly FIX 4.2 ExecBroker)
          *  <p>    2 - Broker of Credit (formerly FIX 4.2 BrokerOfCredit)
          *  <p>    3 - Client ID (formerly FIX 4.2 ClientID)
@@ -226,24 +173,24 @@ class Tag1119EnuRootPartyRoleTest {
          *  <p>    5 - Investor ID
          */
         tagData = new Tag1119EnuRootPartyRole( MyEnumPartyRole.EXECUTING_FIRM );
-        assertEquals( "1", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "1", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.BROKER_OF_CREDIT);
-        assertEquals( "2", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "2", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.CLIENT_ID);
-        assertEquals( "3", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "3", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.CLEARING_FIRM);
-        assertEquals( "4", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "4", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.INVESTOR_ID);
-        assertEquals( "5", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "5", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         /*
          *  <p>    6 - Introducing Firm
@@ -253,24 +200,24 @@ class Tag1119EnuRootPartyRoleTest {
          *  <p>    10 - Settlement Location (formerly FIX 4.2 SettlLocation)
          */
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.INTRODUCING_FIRM);
-        assertEquals( "6", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "6", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.ENTERING_FIRM);
-        assertEquals( "7", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "7", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.LENDING_FIRM);
-        assertEquals( "8", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "8", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.FUND_MANAGER_CLIENT_ID);
-        assertEquals( "9", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "9", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.SETTLEMENT_LOCATION);
-        assertEquals( "10", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "10", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         /*
          *  <p>    11 - Order Origination Trader
@@ -283,24 +230,24 @@ class Tag1119EnuRootPartyRoleTest {
          *  <p>    15 - Correspondent Clearing Firm
          */
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.ORDER_ORIGINATION_TRADER);
-        assertEquals( "11", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "11", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.EXECUTING_TRADER);
-        assertEquals( "12", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "12", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.ORDER_ORIGINATION_FIRM);
-        assertEquals( "13", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "13", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.GIVEUP_CLEARING_FIRM);
-        assertEquals( "14", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "14", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.CORRESPONDENT_CLEARING_FIRM);
-        assertEquals( "15", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "15", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         /*
          *  <p>    16 - Executing System
@@ -310,24 +257,24 @@ class Tag1119EnuRootPartyRoleTest {
          *  <p>    20 - Underlying Contra Firm
          */
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.EXECUTING_SYSTEM);
-        assertEquals( "16", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "16", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.CONTRA_FIRM);
-        assertEquals( "17", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "17", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.CONTRA_CLEARING_FIRM);
-        assertEquals( "18", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "18", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.SPONSORING_FIRM);
-        assertEquals( "19", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "19", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.UNDERLYING_CONTRA_FIRM);
-        assertEquals( "20", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "20", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         /*
          *  <p>    21 - Clearing Organization
@@ -337,22 +284,22 @@ class Tag1119EnuRootPartyRoleTest {
          *  <p>    25 - Correspondent Clearing Organization
          */
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.CLEARING_ORGANIZATION);
-        assertEquals( "21", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "21", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.EXCHANGE);
-        assertEquals( "22", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "22", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         //  <p>    23 - NOT DEFINED
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.CUSTOMER_ACCOUNT);
-        assertEquals( "24", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "24", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.CORRESPONDENT_CLEARING_ORGANIZATION);
-        assertEquals( "25", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "25", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         /*
          *  <p>    26 - Correspondent Broker
@@ -362,24 +309,24 @@ class Tag1119EnuRootPartyRoleTest {
          *  <p>    30 - Agent
          */
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.CORRESPONDENT_BROKER);
-        assertEquals( "26", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "26", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.BUYER_SELLER);
-        assertEquals( "27", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "27", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.CUSTODIAN);
-        assertEquals( "28", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "28", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.INTERMEDIARY);
-        assertEquals( "29", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "29", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.AGENT);
-        assertEquals( "30", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "30", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         /*
          *  <p>    31 - Sub-custodian
@@ -389,24 +336,24 @@ class Tag1119EnuRootPartyRoleTest {
          *  <p>    35 - Liquidity provider
          */
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.SUB_CUSTODIAN);
-        assertEquals( "31", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "31", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.BENEFICIARY);
-        assertEquals( "32", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "32", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.INTERESTED_PARTY);
-        assertEquals( "33", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "33", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.REGULATORY_BODY);
-        assertEquals( "34", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "34", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.LIQUIDITY_PROVIDER);
-        assertEquals( "35", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "35", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         /*
          *  <p>    36 - Entering trader
@@ -416,24 +363,24 @@ class Tag1119EnuRootPartyRoleTest {
          *  <p>    40 - Transfer to Firm
          */
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.ENTERING_TRADER);
-        assertEquals( "36", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "36", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.CONTRA_TRADER);
-        assertEquals( "37", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "37", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.POSITION_ACCOUNT);
-        assertEquals( "38", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "38", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.CONTRA_INVESTOR_ID);
-        assertEquals( "39", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "39", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.TRANSFER_TO_FIRM);
-        assertEquals( "40", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "40", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         /*
          *  <p>    41 - Contra Position Account
@@ -443,24 +390,24 @@ class Tag1119EnuRootPartyRoleTest {
          *  <p>    45 - Secondary Account Number
          */
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.CONTRA_POSITION_ACCOUNT);
-        assertEquals( "41", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "41", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.CONTRA_EXCHANGE);
-        assertEquals( "42", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "42", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.INTERNAL_CARRY_ACCOUNT);
-        assertEquals( "43", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "43", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.ORDER_ENTRY_OPERATOR_ID);
-        assertEquals( "44", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "44", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.SECONDARY_ACCOUNT_NUMBER);
-        assertEquals( "45", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "45", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         /*
          *  <p>    46 - Foreign Firm
@@ -470,24 +417,24 @@ class Tag1119EnuRootPartyRoleTest {
          *  <p>    50 - Pledgor Account
          */
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.FOREIGN_FIRM);
-        assertEquals( "46", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "46", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.THIRD_PARTY_ALLOCATION_FIRM);
-        assertEquals( "47", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "47", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.CLAIMING_ACCOUNT);
-        assertEquals( "48", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "48", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.ASSET_MANAGER);
-        assertEquals( "49", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "49", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.PLEDGOR_ACCOUNT);
-        assertEquals( "50", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "50", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         /*
          *  <p>    51 - Pledgee Account
@@ -497,24 +444,24 @@ class Tag1119EnuRootPartyRoleTest {
          *  <p>    55 - Session ID
          */
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.PLEDGEE_ACCOUNT);
-        assertEquals( "51", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "51", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.LARGE_TRADER_REPORTABLE_ACCOUNT);
-        assertEquals( "52", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "52", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.TRADER_MNEMONIC);
-        assertEquals( "53", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "53", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.SENDER_LOCATION);
-        assertEquals( "54", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "54", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.SESSION_ID);
-        assertEquals( "55", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "55", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         /*
          *  <p>    56 - Acceptable Counterparty
@@ -524,24 +471,24 @@ class Tag1119EnuRootPartyRoleTest {
          *  <p>    60 - Introducing Broker
          */
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.ACCEPTABLE_COUNTERPARTY);
-        assertEquals( "56", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "56", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.UNACCEPTABLE_COUNTERPARTY);
-        assertEquals( "57", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "57", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.ENTERING_UNIT);
-        assertEquals( "58", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "58", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.EXECUTING_UNIT);
-        assertEquals( "59", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "59", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.INTRODUCING_BROKER);
-        assertEquals( "60", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "60", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         /*
          *  <p>    61 - Quote originator
@@ -551,24 +498,24 @@ class Tag1119EnuRootPartyRoleTest {
          *  <p>    65 - Regulated Market (RM)
          */
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.QUOTE_ORIGINATOR);
-        assertEquals( "61", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "61", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.REPORT_ORIGINATOR);
-        assertEquals( "62", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "62", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.SYSTEMATIC_INTERNALISER);
-        assertEquals( "63", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "63", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.MULTILATERAL_TRADING_FACILITY);
-        assertEquals( "64", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "64", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.REGULATED_MARKET);
-        assertEquals( "65", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "65", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         /*
          *  <p>    66 - Market Maker
@@ -579,24 +526,24 @@ class Tag1119EnuRootPartyRoleTest {
          *              (CAL)
          */
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.MARKET_MAKER);
-        assertEquals( "66", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "66", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.INVESTMENT_FIRM);
-        assertEquals( "67", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "67", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.HOST_CA);
-        assertEquals( "68", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "68", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.HOME_CA);
-        assertEquals( "69", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "69", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.CA_LIQUIDITY);
-        assertEquals( "70", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "70", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         /*
          *  <p>    71 - Competent Authority of the Transaction (Execution) Venue
@@ -608,24 +555,24 @@ class Tag1119EnuRootPartyRoleTest {
          *  <p>    75 - Location ID
          */
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.CA_TRANSACTION_VENUE);
-        assertEquals( "71", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "71", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.REPORTING_INTERMEDIARY);
-        assertEquals( "72", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "72", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.EXECUTION_VENUE);
-        assertEquals( "73", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "73", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.MARKET_DATA_ENTRY_ORIGINATOR);
-        assertEquals( "74", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "74", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.LOCATION_ID);
-        assertEquals( "75", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "75", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         /*
          *  <p>    76 - Desk ID
@@ -633,40 +580,18 @@ class Tag1119EnuRootPartyRoleTest {
          *  <p>    78 - Allocation Entity
          */
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.DESK_ID);
-        assertEquals( "76", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "76", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.MARKET_DATA_MARKET);
-        assertEquals( "77", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "77", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1119EnuRootPartyRole(MyEnumPartyRole.ALLOCATION_ENTITY);
-        assertEquals( "78", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "78", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
 
-        // loop around the ENUM and process
-        for ( MyEnumPartyRole oneEnum : MyEnumPartyRole.values()) {
-            tagData = new Tag1119EnuRootPartyRole(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
-    void TagToValuePairStringTest() {
-        // loop around the ENUM and process
-        for ( MyEnumPartyRole oneEnum : MyEnumPartyRole.values()) {
-            tagData = new Tag1119EnuRootPartyRole(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-        }
-    }
-    @Test
-    void TagToStringTest() {
         // loop around the ENUM and process
         for ( MyEnumPartyRole oneEnum : MyEnumPartyRole.values()) {
             tagData = new Tag1119EnuRootPartyRole(oneEnum);
@@ -684,7 +609,7 @@ class Tag1119EnuRootPartyRoleTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

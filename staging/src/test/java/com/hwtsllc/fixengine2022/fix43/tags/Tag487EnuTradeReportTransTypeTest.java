@@ -23,24 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  487
- *  TradeReportTransType
- *  int
- *  <p></p>
- *  Identifies Trade Report message transaction type
- *  <p></p>
- *  (Prior to FIX 4.4 this field was of type char)
- *  <p></p>
- *  Valid values:
- *  <p>    0 - New
- *  <p>    1 - Cancel
- *  <p>    2 - Replace
- *  <p>    3 - Release
- *  <p>    4 - Reverse
- *  <p></p>
- *  <p>    5 - Cancel Due To Back Out of Trade
- */
 class Tag487EnuTradeReportTransTypeTest {
     Tag487EnuTradeReportTransType tagData;
 
@@ -68,49 +50,11 @@ class Tag487EnuTradeReportTransTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         * 0-5 types
-         */
-        tagData = new Tag487EnuTradeReportTransType( Enum487TradeReportTransType.NEW );
-        assertEquals( Enum487TradeReportTransType.NEW.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag487EnuTradeReportTransType( Enum487TradeReportTransType.CANCEL );
-        assertEquals( Enum487TradeReportTransType.CANCEL.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag487EnuTradeReportTransType( Enum487TradeReportTransType.REPLACE );
-        assertEquals( Enum487TradeReportTransType.REPLACE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag487EnuTradeReportTransType( Enum487TradeReportTransType.RELEASE );
-        assertEquals( Enum487TradeReportTransType.RELEASE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag487EnuTradeReportTransType( Enum487TradeReportTransType.REVERSE );
-        assertEquals( Enum487TradeReportTransType.REVERSE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        tagData = new Tag487EnuTradeReportTransType( Enum487TradeReportTransType.CANCEL_BACK_OUT_TRADE );
-        assertEquals( Enum487TradeReportTransType.CANCEL_BACK_OUT_TRADE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum487TradeReportTransType oneEnum : Enum487TradeReportTransType.values()) {
-            tagData = new Tag487EnuTradeReportTransType(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum487TradeReportTransType oneEnum : Enum487TradeReportTransType.values()) {
             tagData = new Tag487EnuTradeReportTransType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -118,6 +62,44 @@ class Tag487EnuTradeReportTransTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  487
+         *  TradeReportTransType
+         *  int
+         *  <p>    0 - New
+         *  <p>    1 - Cancel
+         *  <p>    2 - Replace
+         *  <p>    3 - Release
+         *  <p>    4 - Reverse
+         */
+        tagData = new Tag487EnuTradeReportTransType( Enum487TradeReportTransType.NEW );
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag487EnuTradeReportTransType( Enum487TradeReportTransType.CANCEL );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag487EnuTradeReportTransType( Enum487TradeReportTransType.REPLACE );
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag487EnuTradeReportTransType( Enum487TradeReportTransType.RELEASE );
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag487EnuTradeReportTransType( Enum487TradeReportTransType.REVERSE );
+        assertEquals( "4", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    5 - Cancel Due To Back Out of Trade
+         */
+        tagData = new Tag487EnuTradeReportTransType( Enum487TradeReportTransType.CANCEL_BACK_OUT_TRADE );
+        assertEquals( "5", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum487TradeReportTransType oneEnum : Enum487TradeReportTransType.values()) {
             tagData = new Tag487EnuTradeReportTransType(oneEnum);
@@ -135,7 +117,7 @@ class Tag487EnuTradeReportTransTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

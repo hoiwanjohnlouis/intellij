@@ -30,13 +30,13 @@ class MyDataTypeTest {
 
         oneElement = MyDataType.TESTA_MY_DATA_TYPE;
         dataType = new MyDataType( oneElement );
-        assertEquals( oneElement, dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, dataType.getDataValue());
+        assertEquals( oneElement, dataType.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.toString());
 
         oneElement = MyDataType.TESTB_MY_DATA_TYPE;
         dataType = new MyDataType( oneElement );
-        assertEquals( oneElement, dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, dataType.getDataValue());
+        assertEquals( oneElement, dataType.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.toString());
     }
     @Test
     void PrintFIXTagTest() {

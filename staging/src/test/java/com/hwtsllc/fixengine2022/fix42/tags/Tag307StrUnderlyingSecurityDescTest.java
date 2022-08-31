@@ -24,15 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  307
- *  UnderlyingSecurityDesc
- *  String
- *  <p></p>
- *  Underlying security’s SecurityDesc.
- *  <p></p>
- *  See SecurityDesc (07) field for description
- */
 class Tag307StrUnderlyingSecurityDescTest {
     Tag307StrUnderlyingSecurityDesc tagData;
     String [] TestArray = {
@@ -64,26 +55,23 @@ class Tag307StrUnderlyingSecurityDescTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag307StrUnderlyingSecurityDesc( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag307StrUnderlyingSecurityDesc( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  307
+         *  UnderlyingSecurityDesc
+         *  String
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag307StrUnderlyingSecurityDesc( new MyStringType( oneElement ));

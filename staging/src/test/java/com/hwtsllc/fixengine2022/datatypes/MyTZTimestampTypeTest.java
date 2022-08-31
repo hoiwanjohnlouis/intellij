@@ -16,6 +16,9 @@
 
 package com.hwtsllc.fixengine2022.datatypes;
 
+import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -24,5 +27,27 @@ import static org.junit.jupiter.api.Assertions.*;
  *  Transact time in the local date-time stamp with a TZ offset to UTC identified
  */
 class MyTZTimestampTypeTest {
+    MyTZTimestampType dataType;
+    String [] TestArray = {
+            MyTZTimestampType.TESTA_MY_TZ_TIMESTAMP_TYPE,
+            MyTZTimestampType.TESTB_MY_TZ_TIMESTAMP_TYPE
+    };
 
+    @Test
+    void TZTimestampTypeTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            dataType = new MyTZTimestampType( oneElement );
+            assertEquals( oneElement, dataType.toString() );
+            assertNotEquals( MyTestValues.JUNK_TZT_DATA_VALUE, dataType.toString());
+        }
+    }
+    @Test
+    void PrintTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            dataType = new MyTZTimestampType( oneElement );
+            System.out.println( dataType.toVerboseString() );
+        }
+    }
 }

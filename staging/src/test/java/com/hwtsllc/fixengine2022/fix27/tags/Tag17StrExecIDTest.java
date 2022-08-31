@@ -23,22 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  17
- *  ExecID
- *  String
- *  <p></p>
- *  Unique identifier of execution message as assigned by sell-side (broker, exchange, ECN)
- *  <p></p>
- *  (will be 0 (zero) for ExecType (50) =I (Order Status)).
- *  <p></p>
- *  Uniqueness must be guaranteed within a single trading day or the life of a multi-day order.
- *  <p></p>
- *  Firms which accept multi-day orders should consider embedding a date within
- *  the ExecID field to assure uniqueness across days.
- *  <p></p>
- *  (Prior to FIX 4.1 this field was of type int)
- */
 class Tag17StrExecIDTest {
     Tag17StrExecID tagData;
     String [] TestArray = {
@@ -70,21 +54,12 @@ class Tag17StrExecIDTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag17StrExecID( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag17StrExecID( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }

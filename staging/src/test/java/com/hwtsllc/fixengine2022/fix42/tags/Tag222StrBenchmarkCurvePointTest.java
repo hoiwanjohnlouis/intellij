@@ -24,29 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  222
- *  BenchmarkCurvePoint
- *  String
- *  <p>
- *  Point on benchmark curve.  Free form values:  e.g. "Y", "7Y", "INTERPOLATED".
- *  <p>
- *  Sample values:
- *  <p>
- *  M = combination of a number between 1-12 and a "M" for month
- *  <p>
- *  Y = combination of number between 1-100 and a "Y" for year}
- *  <p>
- *  10Y-OLD = see above, then add "-OLD" when appropriate
- *  <p>
- *  INTERPOLATED = the point is mathematically derived
- *  <p>
- *  2/2031 5 3/8 = the point is stated via a combination of maturity month / year and coupon
- *  <p></p>
- *  See Fixed Income-specific documentation at http://www.fixprotocol.org for additional values.
- *  <p></p>
- *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
- */
 class Tag222StrBenchmarkCurvePointTest {
     Tag222StrBenchmarkCurvePoint tagData;
     String [] TestArray = {
@@ -78,26 +55,23 @@ class Tag222StrBenchmarkCurvePointTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag222StrBenchmarkCurvePoint( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag222StrBenchmarkCurvePoint( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  222
+         *  BenchmarkCurvePoint
+         *  String
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag222StrBenchmarkCurvePoint( new MyStringType( oneElement ));

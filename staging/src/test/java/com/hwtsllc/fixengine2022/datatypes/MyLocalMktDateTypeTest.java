@@ -30,13 +30,13 @@ class MyLocalMktDateTypeTest {
 
         oneElement = MyLocalMktDateType.TESTA_MY_LOCAL_MKT_DATE_TYPE;
         dataType = new MyLocalMktDateType( oneElement );
-        assertEquals( oneElement, dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, dataType.getDataValue());
+        assertEquals( oneElement, dataType.toString() );
+        assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, dataType.toString());
 
         oneElement = MyLocalMktDateType.TESTB_MY_LOCAL_MKT_DATE_TYPE;
         dataType = new MyLocalMktDateType( oneElement );
-        assertEquals( oneElement, dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, dataType.getDataValue());
+        assertEquals( oneElement, dataType.toString() );
+        assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, dataType.toString());
     }
     @Test
     void PrintFIXTagTest() {

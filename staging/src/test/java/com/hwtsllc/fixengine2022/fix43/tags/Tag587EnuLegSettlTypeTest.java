@@ -23,29 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  587
- *  LegSettlType
- *  char
- *  <p></p>
- *  Refer to values for SettlType[63]
- *  <p></p>
- *  Valid values:
- *  <p>    0 - Regular / FX Spot settlement (T+1 or T+2 depending on currency)
- *  <p>    1 - Cash (TOD / T+0)
- *  <p>    2 - Next Day (TOM / T+1)
- *  <p>    3 - T+2
- *  <p>    4 - T+3
- *  <p></p>
- *  <p>    5 - T+4
- *  <p>    6 - Future
- *  <p>    7 - When And If Issued
- *  <p>    8 - Sellers Option
- *  <p>    9 - T+5
- *  <p></p>
- *  <p>    B - Broken date - for FX expressing non-standard tenor, SettlDate (64) must be specified
- *  <p>    C - FX Spot Next settlement (Spot+1, aka next day)
- */
 class Tag587EnuLegSettlTypeTest {
     Tag587EnuLegSettlType tagData;
 
@@ -73,80 +50,11 @@ class Tag587EnuLegSettlTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  0-9, B-C, types
-         */
-
-        /*
-         *  0-9, types
-         */
-        tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.REGULAR );
-        assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.CASH );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.NEXT_DAY );
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.T_PLUS_2 );
-        assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.T_PLUS_3 );
-        assertEquals( "4", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.T_PLUS_4 );
-        assertEquals( "5", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.FUTURE );
-        assertEquals( "6", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.WHEN_ISSUED );
-        assertEquals( "7", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.SELLERS_OPTION );
-        assertEquals( "8", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.T_PLUS_5 );
-        assertEquals( "9", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        /*
-         *  B-C, types
-         */
-        tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.BROKEN_DATE );
-        assertEquals( "B", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.FX_SPOT );
-        assertEquals( "C", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum587LegSettlType oneEnum : Enum587LegSettlType.values()) {
-            tagData = new Tag587EnuLegSettlType(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum587LegSettlType oneEnum : Enum587LegSettlType.values()) {
             tagData = new Tag587EnuLegSettlType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -154,6 +62,76 @@ class Tag587EnuLegSettlTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  587
+         *  LegSettlType
+         *  char
+         *  <p>    0 - Regular / FX Spot settlement (T+1 or T+2 depending on currency)
+         *  <p>    1 - Cash (TOD / T+0)
+         *  <p>    2 - Next Day (TOM / T+1)
+         *  <p>    3 - T+2
+         *  <p>    4 - T+3
+         */
+        tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.REGULAR );
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.CASH );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.NEXT_DAY );
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.T_PLUS_2 );
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.T_PLUS_3 );
+        assertEquals( "4", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    5 - T+4
+         *  <p>    6 - Future
+         *  <p>    7 - When And If Issued
+         *  <p>    8 - Sellers Option
+         *  <p>    9 - T+5
+         */
+        tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.T_PLUS_4 );
+        assertEquals( "5", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.FUTURE );
+        assertEquals( "6", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.WHEN_ISSUED );
+        assertEquals( "7", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.SELLERS_OPTION );
+        assertEquals( "8", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.T_PLUS_5 );
+        assertEquals( "9", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    B - Broken date - for FX expressing non-standard tenor, SettlDate (64) must be specified
+         *  <p>    C - FX Spot Next settlement (Spot+1, aka next day)
+         */
+        tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.BROKEN_DATE );
+        assertEquals( "B", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag587EnuLegSettlType( Enum587LegSettlType.FX_SPOT );
+        assertEquals( "C", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum587LegSettlType oneEnum : Enum587LegSettlType.values()) {
             tagData = new Tag587EnuLegSettlType(oneEnum);
@@ -171,7 +149,7 @@ class Tag587EnuLegSettlTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

@@ -23,19 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  66
- *  ListID
- *  String
- *  <p></p>
- *  Unique identifier for list as assigned by institution,
- *  used to associate multiple individual orders.
- *  <p></p>
- *  Uniqueness must be guaranteed within a single trading day.
- *  <p></p>
- *  Firms which generate multi-day orders should consider embedding
- *  a date within the ListID field to assure uniqueness across days.
- */
 class Tag66StrListIDTest {
     Tag66StrListID tagData;
     String [] TestArray = {
@@ -67,26 +54,21 @@ class Tag66StrListIDTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag66StrListID( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag66StrListID( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  66
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag66StrListID( new MyStringType( oneElement ));

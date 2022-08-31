@@ -23,18 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  369
- *  LastMsgSeqNumProcessed
- *  SeqNum
- *  <p>
- *  The last MsgSeqNum (34) value received by the FIX engine and processed by
- *  downstream application, such as trading engine or order routing system.
- *  <p>
- *  Can be specified on every message sent.
- *  <p></p>
- *  Useful for detecting a backlog with a counterparty.
- */
 class Tag369SeqLastMsgSeqNumProcessedTest {
     Tag369SeqLastMsgSeqNumProcessed tagData;
     int [] TestArray = {
@@ -66,26 +54,23 @@ class Tag369SeqLastMsgSeqNumProcessedTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag369SeqLastMsgSeqNumProcessed( new MySeqNumType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag369SeqLastMsgSeqNumProcessed( new MySeqNumType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  369
+         *  LastMsgSeqNumProcessed
+         *  SeqNum
+         */
+
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag369SeqLastMsgSeqNumProcessed( new MySeqNumType( oneElement ));

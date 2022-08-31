@@ -30,13 +30,13 @@ class MyPriceTypeTest {
 
         oneElement = MyPriceType.TESTA_MY_PRICE_TYPE;
         dataType = new MyPriceType( oneElement );
-        assertEquals( oneElement, dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, dataType.getDataValue());
+        assertEquals( oneElement, Double.valueOf( dataType.toString() ) );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.toString());
 
         oneElement = MyPriceType.TESTB_MY_PRICE_TYPE;
         dataType = new MyPriceType( oneElement );
-        assertEquals( oneElement, dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, dataType.getDataValue());
+        assertEquals( oneElement, Double.valueOf( dataType.toString() ) );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.toString());
     }
     @Test
     void PrintFIXTagTest() {

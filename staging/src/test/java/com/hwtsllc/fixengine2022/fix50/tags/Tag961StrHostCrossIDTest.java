@@ -23,21 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  961
- *  HostCrossID
- *  String
- *  <p>
- *  Host assigned entity ID that can be used to reference all components of a cross;
- *  sides + strategy + legs.
- *  <p></p>
- *  Used as the primary key with which to refer to the Cross Order for cancellation and replace.
- *  <p></p>
- *  The HostCrossID will also be used to link together components of the Cross Order.
- *  <p></p>
- *  i.e. each individual Execution Report associated with the order will carry
- *  HostCrossID in order to tie back to the original cross order.
- */
 class Tag961StrHostCrossIDTest {
     Tag961StrHostCrossID tagData;
     String [] TestArray = {
@@ -69,26 +54,23 @@ class Tag961StrHostCrossIDTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag961StrHostCrossID( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag961StrHostCrossID( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  961
+         *  HostCrossID
+         *  String
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag961StrHostCrossID( new MyStringType( oneElement ));

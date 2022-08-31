@@ -23,18 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  754
- *  AutoAcceptIndicator
- *  Boolean
- *  <p></p>
- *  Identifies whether an allocation has been
- *  automatically accepted on behalf of the Carry Firm by the Clearing House.
- *  <p></p>
- *  Valid values:
- *  <p>    N - Allocation Pending Accept
- *  <p>    Y - Allocation Automatically Accepted
- */
 class Tag754EnuAutoAcceptIndicatorTest {
     Tag754EnuAutoAcceptIndicator tagData;
 
@@ -62,34 +50,11 @@ class Tag754EnuAutoAcceptIndicatorTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    N - Allocation Pending Accept
-         *  <p>    Y - Allocation Automatically Accepted
-         */
-        tagData = new Tag754EnuAutoAcceptIndicator( Enum754AutoAcceptIndicator.NO );
-        assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag754EnuAutoAcceptIndicator( Enum754AutoAcceptIndicator.YES);
-        assertEquals( "Y", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum754AutoAcceptIndicator oneEnum : Enum754AutoAcceptIndicator.values()) {
-            tagData = new Tag754EnuAutoAcceptIndicator(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum754AutoAcceptIndicator oneEnum : Enum754AutoAcceptIndicator.values()) {
             tagData = new Tag754EnuAutoAcceptIndicator(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -97,6 +62,22 @@ class Tag754EnuAutoAcceptIndicatorTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  754
+         *  AutoAcceptIndicator
+         *  Boolean
+         *  <p>    N - Allocation Pending Accept
+         *  <p>    Y - Allocation Automatically Accepted
+         */
+        tagData = new Tag754EnuAutoAcceptIndicator( Enum754AutoAcceptIndicator.NO );
+        assertEquals( "N", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag754EnuAutoAcceptIndicator( Enum754AutoAcceptIndicator.YES);
+        assertEquals( "Y", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum754AutoAcceptIndicator oneEnum : Enum754AutoAcceptIndicator.values()) {
             tagData = new Tag754EnuAutoAcceptIndicator(oneEnum);
@@ -114,7 +95,7 @@ class Tag754EnuAutoAcceptIndicatorTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

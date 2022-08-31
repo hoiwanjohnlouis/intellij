@@ -23,21 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  247
- *  UnderlyingRedemptionDate
- *  LocalMktDate
- *  <p></p>
- *  Deprecated in FIX.4.4
- *  <p></p>
- *  Underlying security's RedemptionDate.
- *  <p></p>
- *  See RedemptionDate (240) field for description
- *  <p></p>
- *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
- *  <p></p>
- *  (prior to FIX 4.4 field was of type UTCDate)
- */
 // @Deprecated
 class Tag247LmdUnderlyingRedemptionDateTest {
     Tag247LmdUnderlyingRedemptionDate tagData;
@@ -70,26 +55,23 @@ class Tag247LmdUnderlyingRedemptionDateTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag247LmdUnderlyingRedemptionDate( new MyLocalMktDateType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag247LmdUnderlyingRedemptionDate( new MyLocalMktDateType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  247
+         *  UnderlyingRedemptionDate
+         *  LocalMktDate
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag247LmdUnderlyingRedemptionDate( new MyLocalMktDateType( oneElement ));

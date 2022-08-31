@@ -24,13 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  344
- *  TradSesCloseTime
- *  UTCTimestamp
- *  <p></p>
- *  Closing time of the trading session
- */
 class Tag344UtcTradSesCloseTimeTest {
     Tag344UtcTradSesCloseTime tagData;
     String [] TestArray = {
@@ -62,26 +55,23 @@ class Tag344UtcTradSesCloseTimeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag344UtcTradSesCloseTime( new MyUTCTimestampType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag344UtcTradSesCloseTime( new MyUTCTimestampType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  344
+         *  TradSesCloseTime
+         *  UTCTimestamp
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag344UtcTradSesCloseTime( new MyUTCTimestampType( oneElement ));

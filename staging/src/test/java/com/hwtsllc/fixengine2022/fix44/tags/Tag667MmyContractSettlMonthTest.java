@@ -23,49 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  200
- *  MaturityMonthYear
- *  month-year
- *  <p>     Can be used with standardized derivatives vs. the MaturityDate (54) field.
- *  <p></p>
- *  313
- *  UnderlyingMaturityMonthYear
- *  month-year
- *  <p>     Underlying security’s MaturityMonthYear.
- *  <p>     Can be used with standardized derivatives vs. the UnderlyingMaturityDate (542) field.
- *  <p>     See MaturityMonthYear (200) field for description
- *  <p></p>
- *  610
- *  LegMaturityMonthYear
- *  month-year
- *  <p>     Multileg instrument's individual  security’s MaturityMonthYear.
- *  <p>     See MaturityMonthYear (200) field for description
- *  <p></p>
- *  667
- *  ContractSettlMonth
- *  month-year
- *  <p>     Specifies when the contract (i.e. MBS/TBA) will settle.
- *  <p></p>
- *  955
- *  LegContractSettlMonth
- *  month-year
- *  <p>     Specifies when the contract (i.e. MBS/TBA) will settle.
- *  <p></p>
- *  Month and Year of the maturity (used for standardized futures and options).
- *  <p>    Format:
- *  <p>    YYYYMM      (i.e. 99903)
- *  <p>    YYYYMMDD (20030323)
- *  <p>    YYYYMMwN (200303w) for week
- *  <p></p>
- *  A specific date or can be appended to the MaturityMonthYear.
- *  <p></p>
- *  For instance, if multiple standard products exist that mature in the same Year and Month,
- *  but actually mature at a different time, a value can be appended, such as "w" or "w2"
- *  to indicate week as opposed to week 2 expiration.
- *  <p></p>
- *  Likewise, the date (0-3) can be appended to indicate a specific expiration (maturity date).
- */
 class Tag667MmyContractSettlMonthTest {
     Tag667MmyContractSettlMonth tagData;
     String [] TestArray = {
@@ -97,26 +54,24 @@ class Tag667MmyContractSettlMonthTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag667MmyContractSettlMonth( new MyMonthYearType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag667MmyContractSettlMonth( new MyMonthYearType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  667 (same as 200, 313, 610, 667, 955, )
+         *  ContractSettlMonth
+         *  month-year
+         */
+
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag667MmyContractSettlMonth( new MyMonthYearType( oneElement ));

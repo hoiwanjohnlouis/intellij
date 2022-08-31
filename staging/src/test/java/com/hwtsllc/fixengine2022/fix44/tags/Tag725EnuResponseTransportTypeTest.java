@@ -23,20 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  725
- *  ResponseTransportType
- *  int
- *  <p></p>
- *  Identifies how the response to the request should be transmitted.
- *  <p></p>
- *  Details specified via ResponseDestination (726).
- *  <p></p>
- *  Valid values:
- *  <p>    0 - Inband - transport the request was sent over (default)
- *  <p>    1 - Out of Band - pre-arranged out-of-band delivery mechanism
- *              (i.e. FTP, HTTP, NDM, etc.) between counterparties
- */
 class Tag725EnuResponseTransportTypeTest {
     Tag725EnuResponseTransportType tagData;
 
@@ -64,35 +50,11 @@ class Tag725EnuResponseTransportTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    0 - Inband - transport the request was sent over (default)
-         *  <p>    1 - Out of Band - pre-arranged out-of-band delivery mechanism
-         *              (i.e. FTP, HTTP, NDM, etc.) between counterparties
-         */
-        tagData = new Tag725EnuResponseTransportType( Enum725ResponseTransportType.INBAND );
-        assertEquals( "0", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag725EnuResponseTransportType(Enum725ResponseTransportType.OUT_OF_BAND);
-        assertEquals( "1", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum725ResponseTransportType oneEnum : Enum725ResponseTransportType.values()) {
-            tagData = new Tag725EnuResponseTransportType(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum725ResponseTransportType oneEnum : Enum725ResponseTransportType.values()) {
             tagData = new Tag725EnuResponseTransportType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -100,6 +62,23 @@ class Tag725EnuResponseTransportTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  725
+         *  ResponseTransportType
+         *  int
+         *  <p>    0 - Inband - transport the request was sent over (default)
+         *  <p>    1 - Out of Band - pre-arranged out-of-band delivery mechanism
+         *              (i.e. FTP, HTTP, NDM, etc.) between counterparties
+         */
+        tagData = new Tag725EnuResponseTransportType( Enum725ResponseTransportType.INBAND );
+        assertEquals( "0", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag725EnuResponseTransportType(Enum725ResponseTransportType.OUT_OF_BAND);
+        assertEquals( "1", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum725ResponseTransportType oneEnum : Enum725ResponseTransportType.values()) {
             tagData = new Tag725EnuResponseTransportType(oneEnum);
@@ -117,7 +96,7 @@ class Tag725EnuResponseTransportTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

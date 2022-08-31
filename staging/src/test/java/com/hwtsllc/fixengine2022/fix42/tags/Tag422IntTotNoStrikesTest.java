@@ -24,18 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  422
- *  TotNoStrikes
- *  int
- *  <p></p>
- *  Total number of strike price entries across all messages.
- *  <p></p>
- *  Should be the sum of all NoStrikes (428) in each message that has
- *  repeating strike price entries related to the same ListID (66).
- *  <p></p>
- *  Used to support fragmentation.
- */
 class Tag422IntTotNoStrikesTest {
     Tag422IntTotNoStrikes tagData;
     int [] TestArray = {
@@ -67,26 +55,23 @@ class Tag422IntTotNoStrikesTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag422IntTotNoStrikes( new MyIntType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag422IntTotNoStrikes( new MyIntType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  422
+         *  TotNoStrikes
+         *  int
+         */
+
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag422IntTotNoStrikes( new MyIntType( oneElement ));

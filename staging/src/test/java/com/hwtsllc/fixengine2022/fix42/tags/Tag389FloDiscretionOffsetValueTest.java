@@ -24,16 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  389
- *  DiscretionOffsetValue
- *  float
- *  <p></p>
- *  Amount (signed) added to the "related to" price specified via DiscretionInst (388),
- *  in the context of DiscretionOffsetType (842)
- *  <p></p>
- *  (Prior to FIX 4.4 this field was of type PriceOffset)
- */
 class Tag389FloDiscretionOffsetValueTest {
     Tag389FloDiscretionOffsetValue tagData;
     float [] TestArray = {
@@ -65,26 +55,23 @@ class Tag389FloDiscretionOffsetValueTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( float oneElement : TestArray ) {
-            tagData = new Tag389FloDiscretionOffsetValue( new MyFloatType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( float oneElement : TestArray ) {
             tagData = new Tag389FloDiscretionOffsetValue( new MyFloatType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  389
+         *  DiscretionOffsetValue
+         *  float
+         */
+
         // process array of tags
         for ( float oneElement : TestArray ) {
             tagData = new Tag389FloDiscretionOffsetValue( new MyFloatType( oneElement ));

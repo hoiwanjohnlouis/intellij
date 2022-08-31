@@ -23,15 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  596
- *  LegCountryOfIssue
- *  Country
- *  <p></p>
- *  Multileg instrument's individual leg security’s CountryOfIssue.
- *  <p></p>
- *  See CountryOfIssue (470) field for description
- */
 class Tag596CouLegCountryOfIssueTest {
     Tag596CouLegCountryOfIssue tagData;
     String [] TestArray = {
@@ -63,26 +54,23 @@ class Tag596CouLegCountryOfIssueTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag596CouLegCountryOfIssue( new MyCountryType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag596CouLegCountryOfIssue( new MyCountryType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  596
+         *  LegCountryOfIssue
+         *  Country
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag596CouLegCountryOfIssue( new MyCountryType( oneElement ));

@@ -23,25 +23,12 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  674
- *  LegAllocAcctIDSource
- *  String
- *  <p></p>
- *  The source of the LegAllocAccount (671)
- *  <p></p>
- *  See AllocAcctIDSource (661) for description and valid values.
- */
 class Tag674StrLegAllocAcctIDSourceTest {
     Tag674StrLegAllocAcctIDSource tagData;
     String [] TestArray = {
             Tag674StrLegAllocAcctIDSource.TESTA_STR_LEG_ALLOC_ACCT_ID_SOURCE,
             Tag674StrLegAllocAcctIDSource.TESTB_STR_LEG_ALLOC_ACCT_ID_SOURCE
     };
-
-    @Test
-    void FIXTest() {
-    }
 
     @Test
     void PrintTest() {
@@ -67,25 +54,23 @@ class Tag674StrLegAllocAcctIDSourceTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag674StrLegAllocAcctIDSource( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag674StrLegAllocAcctIDSource( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  674
+         *  LegAllocAcctIDSource
+         *  String
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag674StrLegAllocAcctIDSource( new MyStringType( oneElement ));

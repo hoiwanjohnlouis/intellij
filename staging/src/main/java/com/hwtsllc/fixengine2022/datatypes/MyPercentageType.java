@@ -34,9 +34,6 @@ public class MyPercentageType implements LogVerboseString {
         this.dataValue = dataValue;
     }
 
-    public double getDataValue() {
-        return dataValue;
-    }
     /**
      * standard wrapper to format a detailed string describing this data field
      */
@@ -52,8 +49,9 @@ public class MyPercentageType implements LogVerboseString {
      */
     @Override
     public String toString() {
-        return String.valueOf(getDataValue() );
+        return String.valueOf( this.dataValue );
     }
+
     /**
      *
      * @param args Not used.

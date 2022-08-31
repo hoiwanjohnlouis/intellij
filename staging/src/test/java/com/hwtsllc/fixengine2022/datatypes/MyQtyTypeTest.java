@@ -28,20 +28,15 @@ class MyQtyTypeTest {
         MyQtyType dataType;
         int oneElement;
 
-        oneElement = 999999;
-        dataType = new MyQtyType( oneElement );
-        assertEquals(  oneElement , dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, dataType.getDataValue());
-
         oneElement = MyQtyType.TESTA_MY_QTY_TYPE;
         dataType = new MyQtyType( oneElement );
-        assertEquals(  oneElement , dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, dataType.getDataValue());
+        assertEquals( oneElement, Integer.valueOf( dataType.toString() ) );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.toString());
 
         oneElement = MyQtyType.TESTB_MY_QTY_TYPE;
         dataType = new MyQtyType( oneElement );
-        assertEquals(  oneElement , dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, dataType.getDataValue());
+        assertEquals( oneElement, Integer.valueOf( dataType.toString() ) );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.toString());
     }
     @Test
     void PrintFIXTagTest() {

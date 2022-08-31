@@ -46,9 +46,6 @@ public class Tag1014StrSideTrdRegTimestampSrc extends FIX50Abstract implements L
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
-        return this.dataValue.getDataValue();
-    }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
@@ -77,7 +74,7 @@ public class Tag1014StrSideTrdRegTimestampSrc extends FIX50Abstract implements L
      */
     @Override
     public String toString() {
-        return String.valueOf(getDataValue());
+        return dataValue.toString();
     }
 
     /**

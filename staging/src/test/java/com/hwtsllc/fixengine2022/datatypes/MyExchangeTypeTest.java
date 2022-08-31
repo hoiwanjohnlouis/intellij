@@ -30,13 +30,13 @@ class MyExchangeTypeTest {
 
         oneElement = MyExchangeType.TESTA_MY_EXCHANGE_TYPE;
         dataType = new MyExchangeType( oneElement );
-        assertEquals( oneElement, dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_EXC_DATA_VALUE, dataType.getDataValue());
+        assertEquals( oneElement, dataType.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.toString());
 
         oneElement = MyExchangeType.TESTB_MY_EXCHANGE_TYPE;
         dataType = new MyExchangeType( oneElement );
-        assertEquals( oneElement, dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_EXC_DATA_VALUE, dataType.getDataValue());
+        assertEquals( oneElement, dataType.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.toString());
     }
     @Test
     void PrintFIXTagTest() {

@@ -23,20 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  68
- *  TotNoOrders
- *  int
- *  <p></p>
- *  Total number of list order entries across all messages.
- *  <p></p>
- *  Should be the sum of all NoOrders (73) in each message that has
- *  repeating list order entries related to the same ListID (66).
- *  <p></p>
- *  Used to support fragmentation.
- *  <p></p>
- *  (Prior to FIX 4.2 this field was named "ListNoOrds")
- */
 class Tag68IntTotNoOrdersTest {
     Tag68IntTotNoOrders tagData;
     int [] TestArray = {
@@ -68,26 +54,21 @@ class Tag68IntTotNoOrdersTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag68IntTotNoOrders( new MyIntType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag68IntTotNoOrders( new MyIntType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  68
+         */
+
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag68IntTotNoOrders( new MyIntType( oneElement ));

@@ -23,20 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  1011
- *  MessageEventSource
- *  String
- *  <p>
- *  Used to identify the event or source  which gave rise to a message.
- *  <p>
- *  Valid values will be based on an exchange's implementation.
- *  <p>
- *  Example values are:
- *  <p>     "MQM" (originated at Firm Back Office)
- *  <p>     "Clear" (originated in Clearing System)
- *  <p>     "Reg" (static data generated via Register request)
- */
 class Tag1011StrMessageEventSourceTest {
     Tag1011StrMessageEventSource tagData;
     String [] TestArray = {
@@ -68,26 +54,23 @@ class Tag1011StrMessageEventSourceTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag1011StrMessageEventSource( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag1011StrMessageEventSource( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  1011
+         *  MessageEventSource
+         *  String
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag1011StrMessageEventSource( new MyStringType( oneElement ));

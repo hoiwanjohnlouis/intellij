@@ -24,15 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  318
- *  UnderlyingCurrency
- *  Currency
- *  <p></p>
- *  Underlying security’s Currency.
- *  <p></p>
- *  See Currency (5) field for description and valid values
- */
 // @Deprecated
 class Tag318CcyUnderlyingCurrencyTest {
     Tag318CcyUnderlyingCurrency tagData;
@@ -65,26 +56,23 @@ class Tag318CcyUnderlyingCurrencyTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag318CcyUnderlyingCurrency( new MyCurrencyType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag318CcyUnderlyingCurrency( new MyCurrencyType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  318
+         *  UnderlyingCurrency
+         *  Currency
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag318CcyUnderlyingCurrency( new MyCurrencyType( oneElement ));

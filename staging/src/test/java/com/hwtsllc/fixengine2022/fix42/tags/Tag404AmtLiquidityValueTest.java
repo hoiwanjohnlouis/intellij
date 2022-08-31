@@ -24,13 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  404
- *  LiquidityValue
- *  Amt
- *  <p></p>
- *  Value between LiquidityPctLow (402) and LiquidityPctHigh (403) in Currency
- */
 class Tag404AmtLiquidityValueTest {
     Tag404AmtLiquidityValue tagData;
     double [] TestArray = {
@@ -62,26 +55,23 @@ class Tag404AmtLiquidityValueTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( double oneElement : TestArray ) {
-            tagData = new Tag404AmtLiquidityValue( new MyAmtType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag404AmtLiquidityValue( new MyAmtType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  404
+         *  LiquidityValue
+         *  Amt
+         */
+
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag404AmtLiquidityValue( new MyAmtType( oneElement ));

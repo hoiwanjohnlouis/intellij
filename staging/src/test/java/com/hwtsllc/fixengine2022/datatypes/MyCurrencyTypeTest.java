@@ -30,13 +30,13 @@ class MyCurrencyTypeTest {
 
         oneElement = MyCurrencyType.TESTA_MY_CURRENCY_TYPE;
         dataType = new MyCurrencyType( oneElement );
-        assertEquals( oneElement, dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.getDataValue());
+        assertEquals( oneElement, dataType.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.toString());
 
         oneElement = MyCurrencyType.TESTB_MY_CURRENCY_TYPE;
         dataType = new MyCurrencyType( oneElement );
-        assertEquals( oneElement, dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.getDataValue());
+        assertEquals( oneElement, dataType.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.toString());
     }
     @Test
     void PrintFIXTagTest() {

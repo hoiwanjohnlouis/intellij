@@ -23,25 +23,12 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  949
- *  Nested3PartyID
- *  String
- *  <p></p>
- *  PartyID value within a "third instance" Nested repeating group.
- *  <p></p>
- *  Same values as  PartyID (448)
- */
 class Tag949StrNested3PartyIDTest {
     Tag949StrNested3PartyID tagData;
     String [] TestArray = {
             Tag949StrNested3PartyID.TESTA_STR_NESTED_3_PARTY_ID,
             Tag949StrNested3PartyID.TESTB_STR_NESTED_3_PARTY_ID
     };
-
-    @Test
-    void FIXTest() {
-    }
 
     @Test
     void PrintTest() {
@@ -67,25 +54,23 @@ class Tag949StrNested3PartyIDTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag949StrNested3PartyID( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag949StrNested3PartyID( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  949
+         *  Nested3PartyID
+         *  String
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag949StrNested3PartyID( new MyStringType( oneElement ));

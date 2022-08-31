@@ -23,13 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  823
- *  UnderlyingTradingSessionSubID
- *  String
- *  <p></p>
- *  Trading Session sub identifier in which the underlying instrument trades
- */
 class Tag823StrUnderlyingTradingSessionSubIDTest {
     Tag823StrUnderlyingTradingSessionSubID tagData;
     String [] TestArray = {
@@ -61,25 +54,23 @@ class Tag823StrUnderlyingTradingSessionSubIDTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag823StrUnderlyingTradingSessionSubID( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag823StrUnderlyingTradingSessionSubID( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  823
+         *  UnderlyingTradingSessionSubID
+         *  String
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag823StrUnderlyingTradingSessionSubID( new MyStringType( oneElement ));

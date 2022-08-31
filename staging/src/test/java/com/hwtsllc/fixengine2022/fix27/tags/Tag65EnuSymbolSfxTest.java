@@ -23,40 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  65 (same as 65, 312. 601,)
- *  SymbolSfx
- *  String
- *  <p>
- *  Additional information about the security
- *  <p>
- *  (e.g. preferred, warrants, etc.).
- *  <p>
- *  Note also see SecurityType (167).
- *  <p>
- *  As defined in the NYSE Stock and bond Symbol Directory and in the AMEX Fitch Directory.
- *  <p></p>
- *  312
- *  UnderlyingSymbolSfx
- *  String
- *  <p>
- *  Underlying security’s SymbolSfx.
- *  <p>
- *  See SymbolSfx (65) field for description
- *  <p></p>
- *  601
- *  LegSymbolSfx
- *  String
- *  <p>
- *  Multileg instrument's individual  security’s SymbolSfx.
- *  <p>
- *  See SymbolSfx (65) field for description
- *  <p></p>
- *  Valid values:
- *  For Fixed Income
- *  <p>    CD - EUCP with lump-sum interest rather than discount price
- *  <p>    WI - When-Issued for a security to be reissued under an old CUSIP or ISIN
- */
 class Tag65EnuSymbolSfxTest {
     Tag65EnuSymbolSfx tagData;
 
@@ -84,31 +50,11 @@ class Tag65EnuSymbolSfxTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        tagData = new Tag65EnuSymbolSfx(MyEnumSymbolSfx.EUCP);
-        assertEquals( "CD", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag65EnuSymbolSfx(MyEnumSymbolSfx.WHEN_ISSUED);
-        assertEquals( "WI", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        // loop around the ENUM and process
-        for (MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
-            tagData = new Tag65EnuSymbolSfx(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
             tagData = new Tag65EnuSymbolSfx(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -116,6 +62,20 @@ class Tag65EnuSymbolSfxTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  65 (same as 65, 312, 601,)
+         *  <p>    CD - EUCP with lump-sum interest rather than discount price
+         *  <p>    WI - When-Issued for a security to be reissued under an old CUSIP or ISIN
+         */
+        tagData = new Tag65EnuSymbolSfx(MyEnumSymbolSfx.EUCP);
+        assertEquals( "CD", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag65EnuSymbolSfx(MyEnumSymbolSfx.WHEN_ISSUED);
+        assertEquals( "WI", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
             tagData = new Tag65EnuSymbolSfx(oneEnum);
@@ -133,7 +93,7 @@ class Tag65EnuSymbolSfxTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

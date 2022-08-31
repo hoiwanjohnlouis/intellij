@@ -23,16 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  1028
- *  ManualOrderIndicator
- *  Boolean
- *  <p>
- *  Indicates if the order was initially received manually (as opposed to electronically)
- *  <p></p>
- *  <p> YES( "Y", "YES", "Y - Manually Order" ),
- *  <p> NO( "N", "NO", "N - Electronic Order" ),
- */
 class Tag1028EnuManualOrderIndicatorTest {
     Tag1028EnuManualOrderIndicator tagData;
 
@@ -60,35 +50,11 @@ class Tag1028EnuManualOrderIndicatorTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    NO( "N", "NO", "N - Electronic Order" ),
-         *  <p>    YES( "Y", "YES", "Y - Manually Order" ),
-         */
-        tagData = new Tag1028EnuManualOrderIndicator( Enum1028ManualOrderIndicator.NO );
-        assertEquals( "N", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        tagData = new Tag1028EnuManualOrderIndicator( Enum1028ManualOrderIndicator.YES );
-        assertEquals( "Y", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-
-        // loop around the ENUM and process
-        for ( Enum1028ManualOrderIndicator oneEnum : Enum1028ManualOrderIndicator.values()) {
-            tagData = new Tag1028EnuManualOrderIndicator(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum1028ManualOrderIndicator oneEnum : Enum1028ManualOrderIndicator.values()) {
             tagData = new Tag1028EnuManualOrderIndicator(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -96,6 +62,22 @@ class Tag1028EnuManualOrderIndicatorTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  1028
+         *  ManualOrderIndicator
+         *  Boolean
+         *  <p> YES( "Y", "YES", "Y - Manually Order" ),
+         *  <p> NO( "N", "NO", "N - Electronic Order" ),
+         */
+        tagData = new Tag1028EnuManualOrderIndicator( Enum1028ManualOrderIndicator.NO );
+        assertEquals( "N", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+
+        tagData = new Tag1028EnuManualOrderIndicator( Enum1028ManualOrderIndicator.YES );
+        assertEquals( "Y", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+
+
         // loop around the ENUM and process
         for ( Enum1028ManualOrderIndicator oneEnum : Enum1028ManualOrderIndicator.values()) {
             tagData = new Tag1028EnuManualOrderIndicator(oneEnum);
@@ -113,7 +95,7 @@ class Tag1028EnuManualOrderIndicatorTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

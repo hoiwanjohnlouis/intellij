@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  987
- *  UnderlyingSettlementDate
- *  LocalMktDate
- *  <p>
- *  Date the underlying instrument will settle.
- *  <p></p>
- *  Used for derivatives that deliver into more than one underlying instrument.
- *  <p></p>
- *  Settlement dates can vary across underlying instruments.
- */
 class Tag987LmdUnderlyingSettlementDateTest {
     Tag987LmdUnderlyingSettlementDate tagData;
     String [] TestArray = {
@@ -65,26 +54,23 @@ class Tag987LmdUnderlyingSettlementDateTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag987LmdUnderlyingSettlementDate( new MyLocalMktDateType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag987LmdUnderlyingSettlementDate( new MyLocalMktDateType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  987
+         *  UnderlyingSettlementDate
+         *  LocalMktDate
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag987LmdUnderlyingSettlementDate( new MyLocalMktDateType( oneElement ));

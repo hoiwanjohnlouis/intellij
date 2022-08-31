@@ -23,24 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  461
- *  CFICode
- *  String
- *  <p></p>
- *  Indicates the type of security using ISO 10962 standard, Classification of Financial Instruments (CFI code) values.
- *  <p></p>
- *  ISO 10962 is maintained by ANNA (Association of National Numbering Agencies) acting as Registration Authority.
- *  <p></p>
- *  See "Appendix 6-B FIX Fields Based Upon Other Standards".
- *  <p></p>
- *  See also the Product (460) and SecurityType (167) fields.
- *  <p></p>
- *  It is recommended that CFICode be used instead of SecurityType (167) for non-Fixed Income instruments.
- *  <p></p>
- *  A subset of possible values applicable to FIX usage are identified in
- *  "Appendix 6-D CFICode Usage - ISO 10962 Classification of Financial Instruments (CFI code)"
- */
 class Tag461StrCFICodeTest {
     Tag461StrCFICode tagData;
     String [] TestArray = {
@@ -72,25 +54,23 @@ class Tag461StrCFICodeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag461StrCFICode( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag461StrCFICode( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  461
+         *  CFICode
+         *  String
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag461StrCFICode( new MyStringType( oneElement ));

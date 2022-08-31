@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  974
- *  UnderlyingCashType
- *  String
- *  <p>
- *  Specific to the &lt;UnderlyingInstrument&gt; Used for derivatives that deliver into cash underlying.
- *  <p></p>
- *  Valid values:
- *  <p>    FIXED - FIXED
- *  <p>    DIFF - DIFF
- */
 class Tag974EnuUnderlyingCashTypeTest {
     Tag974EnuUnderlyingCashType tagData;
 
@@ -61,35 +50,11 @@ class Tag974EnuUnderlyingCashTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    FIXED - FIXED
-         *  <p>    DIFF - DIFF
-         */
-        tagData = new Tag974EnuUnderlyingCashType( Enum974UnderlyingCashType.FIXED );
-        assertEquals( "FIXED", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag974EnuUnderlyingCashType( Enum974UnderlyingCashType.DIFF );
-        assertEquals( "DIFF", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        // loop around the ENUM and process
-        for (Enum974UnderlyingCashType oneEnum : Enum974UnderlyingCashType.values()) {
-            tagData = new Tag974EnuUnderlyingCashType(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum974UnderlyingCashType oneEnum : Enum974UnderlyingCashType.values()) {
             tagData = new Tag974EnuUnderlyingCashType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -97,6 +62,22 @@ class Tag974EnuUnderlyingCashTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  974
+         *  UnderlyingCashType
+         *  String
+         *  <p>    FIXED - FIXED
+         *  <p>    DIFF - DIFF
+         */
+        tagData = new Tag974EnuUnderlyingCashType( Enum974UnderlyingCashType.FIXED );
+        assertEquals( "FIXED", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag974EnuUnderlyingCashType( Enum974UnderlyingCashType.DIFF );
+        assertEquals( "DIFF", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum974UnderlyingCashType oneEnum : Enum974UnderlyingCashType.values()) {
             tagData = new Tag974EnuUnderlyingCashType(oneEnum);
@@ -114,7 +95,7 @@ class Tag974EnuUnderlyingCashTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

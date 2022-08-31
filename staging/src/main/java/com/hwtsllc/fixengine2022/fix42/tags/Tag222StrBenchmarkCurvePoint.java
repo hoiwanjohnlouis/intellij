@@ -58,9 +58,6 @@ public class Tag222StrBenchmarkCurvePoint extends FIX42Abstract implements LogVa
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
-        return this.dataValue.getDataValue();
-    }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
@@ -89,7 +86,7 @@ public class Tag222StrBenchmarkCurvePoint extends FIX42Abstract implements LogVa
      */
     @Override
     public String toString() {
-        return String.valueOf(getDataValue());
+        return dataValue.toString();
     }
 
     /**

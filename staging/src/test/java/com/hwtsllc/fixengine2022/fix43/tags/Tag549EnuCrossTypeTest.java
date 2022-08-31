@@ -23,33 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  549
- *  CrossType
- *  int
- *  <p></p>
- *  Type of cross being submitted to a market
- *  <p></p>
- *  Valid values:
- *  <p>    1 - Cross AON - cross tade which is executed complete or not.
- *  <p>         Both sides are treated in the same manner. This is equivalent to an "All or None".
- *  <p></p>
- *  <p>    2 - Cross IOC - cross trade which is executed partially and the rest is cancelled.
- *  <p>         One side is fully executed, the other side is partially executed with the remainder being cancelled.
- *  <p>         This is equivalent to an IOC on the other side.
- *  <p>         Note: CrossPrioritization (550) field may be used to
- *                    indicate which side should fully execute in this scenario.
- *  <p></p>
- *  <p>    3 - Cross One Side - cross trade which is partially executed with the unfilled portions remaining active.
- *  <p>         One side of the corss is fully executed (as denoted by the CrossPrioritization (550) field),
- *              but the unfilled portion remains active.
- *  <p></p>
- *  <p>    4 - Cross Same Price - cross trade is executed with existing orders with the same price.
- *  <p>         In this case other orders exist with the same price, the quantity of the Cross is
- *              executed against the existing orders and quotes, the remainder of the cross
- *              is executed against the other side of the cross.
- *  <p>         The two sides potentially have different quantities.
- */
 class Tag549EnuCrossTypeTest {
     Tag549EnuCrossType tagData;
 
@@ -77,40 +50,11 @@ class Tag549EnuCrossTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  1-4 types
-         */
-        tagData = new Tag549EnuCrossType( Enum549CrossType.CROSS_AON );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag549EnuCrossType( Enum549CrossType.CROSS_IOC );
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag549EnuCrossType( Enum549CrossType.CROSS_ONE_SIDE );
-        assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag549EnuCrossType( Enum549CrossType.CROSS_SAME_PRICE );
-        assertEquals( "4", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum549CrossType oneEnum : Enum549CrossType.values()) {
-            tagData = new Tag549EnuCrossType(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum549CrossType oneEnum : Enum549CrossType.values()) {
             tagData = new Tag549EnuCrossType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -118,6 +62,46 @@ class Tag549EnuCrossTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  549
+         *  CrossType
+         *  int
+         *  <p>    1 - Cross AON - cross tade which is executed complete or not.
+         *  <p>         Both sides are treated in the same manner. This is equivalent to an "All or None".
+         *  <p></p>
+         *  <p>    2 - Cross IOC - cross trade which is executed partially and the rest is cancelled.
+         *  <p>         One side is fully executed, the other side is partially executed with the remainder being cancelled.
+         *  <p>         This is equivalent to an IOC on the other side.
+         *  <p>         Note: CrossPrioritization (550) field may be used to
+         *                    indicate which side should fully execute in this scenario.
+         *  <p></p>
+         *  <p>    3 - Cross One Side - cross trade which is partially executed with the unfilled portions remaining active.
+         *  <p>         One side of the corss is fully executed (as denoted by the CrossPrioritization (550) field),
+         *              but the unfilled portion remains active.
+         *  <p></p>
+         *  <p>    4 - Cross Same Price - cross trade is executed with existing orders with the same price.
+         *  <p>         In this case other orders exist with the same price, the quantity of the Cross is
+         *              executed against the existing orders and quotes, the remainder of the cross
+         *              is executed against the other side of the cross.
+         *  <p>         The two sides potentially have different quantities.
+         */
+        tagData = new Tag549EnuCrossType( Enum549CrossType.CROSS_AON );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag549EnuCrossType( Enum549CrossType.CROSS_IOC );
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag549EnuCrossType( Enum549CrossType.CROSS_ONE_SIDE );
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag549EnuCrossType( Enum549CrossType.CROSS_SAME_PRICE );
+        assertEquals( "4", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum549CrossType oneEnum : Enum549CrossType.values()) {
             tagData = new Tag549EnuCrossType(oneEnum);
@@ -135,7 +119,7 @@ class Tag549EnuCrossTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

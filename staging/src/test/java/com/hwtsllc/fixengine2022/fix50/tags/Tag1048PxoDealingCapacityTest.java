@@ -23,13 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  1048
- *  DealingCapacity
- *  PriceOffset
- *  <p>
- *  Identifies role of dealer; Agent, Principal, RisklessPrincipal
- */
 class Tag1048PxoDealingCapacityTest {
     Tag1048PxoDealingCapacity tagData;
     double [] TestArray = {
@@ -61,26 +54,23 @@ class Tag1048PxoDealingCapacityTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( double oneElement : TestArray ) {
-            tagData = new Tag1048PxoDealingCapacity( new MyPriceOffsetType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag1048PxoDealingCapacity( new MyPriceOffsetType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  1048
+         *  DealingCapacity
+         *  PriceOffset
+         */
+
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag1048PxoDealingCapacity( new MyPriceOffsetType( oneElement ));

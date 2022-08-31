@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  898
- *  MarginRatio
- *  Percentage
- *  <p></p>
- *  The fraction of the cash consideration that must be collateralized,
- *  expressed as a percent.
- *  <p></p>
- *  A MarginRatio of 02% indicates that the value of the collateral
- *  (after deducting for "haircut") must exceed the cash consideration by 2%.
- */
 class Tag898PctMarginRatioTest {
     Tag898PctMarginRatio tagData;
     double [] TestArray = {
@@ -65,26 +54,23 @@ class Tag898PctMarginRatioTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( double oneElement : TestArray ) {
-            tagData = new Tag898PctMarginRatio( new MyPercentageType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag898PctMarginRatio( new MyPercentageType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  898
+         *  MarginRatio
+         *  Percentage
+         */
+
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag898PctMarginRatio( new MyPercentageType( oneElement ));

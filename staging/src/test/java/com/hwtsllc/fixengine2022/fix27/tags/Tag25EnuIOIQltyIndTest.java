@@ -23,18 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  25
- *  IOIQltyInd
- *  char
- *  <p></p>
- *  Relative quality of indication
- *  <p></p>
- *  Valid values:
- *  <p>    H - High
- *  <p>    L - Low
- *  <p>    M - Medium
- */
 class Tag25EnuIOIQltyIndTest {
     Tag25EnuIOIQltyInd tagData;
 
@@ -62,35 +50,11 @@ class Tag25EnuIOIQltyIndTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        tagData = new Tag25EnuIOIQltyInd(Enum25IOIQltyInd.HIGH);
-        assertEquals( "H", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag25EnuIOIQltyInd(Enum25IOIQltyInd.MEDIUM);
-        assertEquals( "M", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag25EnuIOIQltyInd(Enum25IOIQltyInd.LOW);
-        assertEquals( "L", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        // loop around the ENUM and process
-        for (Enum25IOIQltyInd oneEnum : Enum25IOIQltyInd.values()) {
-            tagData = new Tag25EnuIOIQltyInd(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum25IOIQltyInd oneEnum : Enum25IOIQltyInd.values()) {
             tagData = new Tag25EnuIOIQltyInd(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -98,6 +62,25 @@ class Tag25EnuIOIQltyIndTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  25
+         *  <p>    H - High
+         *  <p>    L - Low
+         *  <p>    M - Medium
+         */
+        tagData = new Tag25EnuIOIQltyInd(Enum25IOIQltyInd.HIGH);
+        assertEquals( "H", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag25EnuIOIQltyInd(Enum25IOIQltyInd.MEDIUM);
+        assertEquals( "M", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag25EnuIOIQltyInd(Enum25IOIQltyInd.LOW);
+        assertEquals( "L", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum25IOIQltyInd oneEnum : Enum25IOIQltyInd.values()) {
             tagData = new Tag25EnuIOIQltyInd(oneEnum);
@@ -115,7 +98,7 @@ class Tag25EnuIOIQltyIndTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

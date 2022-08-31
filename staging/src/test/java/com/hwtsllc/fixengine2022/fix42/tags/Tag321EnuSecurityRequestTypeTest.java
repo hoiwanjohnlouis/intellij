@@ -23,23 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  321
- *  SecurityRequestType
- *  int
- *  <p>
- *  Type of Security Definition Request.
- *  <p></p>
- *  Valid values:
- *  <p>    0-3 msg types
- *  <p>    "0 - Request Security identity and specifications"
- *  <p>    "1 - Request Security identity for the specifications provided
- *          (name of the security is not supplied)"
- *  <p>    "2 - Request List Security Types" ),
- *  <p>    "3 - Request List Securities (can be qualified with Symbol, SecurityType,
- *          TradingSessionID, SecurityExchange.
- *          If provided, then only list Securities for the specific type.)"
- */
 class Tag321EnuSecurityRequestTypeTest {
     Tag321EnuSecurityRequestType tagData;
 
@@ -67,40 +50,11 @@ class Tag321EnuSecurityRequestTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         * 0-3 msg types
-         */
-        tagData = new Tag321EnuSecurityRequestType(Enum321SecurityRequestType.REQUEST_SECURITY_IDENTITY);
-        assertEquals( Enum321SecurityRequestType.REQUEST_SECURITY_IDENTITY.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag321EnuSecurityRequestType(Enum321SecurityRequestType.REQUEST_SPECIFIED_SECURITY);
-        assertEquals( Enum321SecurityRequestType.REQUEST_SPECIFIED_SECURITY.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag321EnuSecurityRequestType(Enum321SecurityRequestType.REQUEST_LIST_SECURITY_TYPES);
-        assertEquals( Enum321SecurityRequestType.REQUEST_LIST_SECURITY_TYPES.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag321EnuSecurityRequestType(Enum321SecurityRequestType.REQUEST_LIST_SECURITIES);
-        assertEquals( Enum321SecurityRequestType.REQUEST_LIST_SECURITIES.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum321SecurityRequestType oneEnum : Enum321SecurityRequestType.values()) {
-            tagData = new Tag321EnuSecurityRequestType(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum321SecurityRequestType oneEnum : Enum321SecurityRequestType.values()) {
             tagData = new Tag321EnuSecurityRequestType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -108,6 +62,36 @@ class Tag321EnuSecurityRequestTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  321
+         *  SecurityRequestType
+         *  int
+         *  <p>    0-3 msg types
+         *  <p>    "0 - Request Security identity and specifications"
+         *  <p>    "1 - Request Security identity for the specifications provided
+         *          (name of the security is not supplied)"
+         *  <p>    "2 - Request List Security Types" ),
+         *  <p>    "3 - Request List Securities (can be qualified with Symbol, SecurityType,
+         *          TradingSessionID, SecurityExchange.
+         *          If provided, then only list Securities for the specific type.)"
+         */
+        tagData = new Tag321EnuSecurityRequestType(Enum321SecurityRequestType.REQUEST_SECURITY_IDENTITY);
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag321EnuSecurityRequestType(Enum321SecurityRequestType.REQUEST_SPECIFIED_SECURITY);
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag321EnuSecurityRequestType(Enum321SecurityRequestType.REQUEST_LIST_SECURITY_TYPES);
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag321EnuSecurityRequestType(Enum321SecurityRequestType.REQUEST_LIST_SECURITIES);
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum321SecurityRequestType oneEnum : Enum321SecurityRequestType.values()) {
             tagData = new Tag321EnuSecurityRequestType(oneEnum);
@@ -125,7 +109,7 @@ class Tag321EnuSecurityRequestTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

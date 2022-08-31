@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  239
- *  RepoCollateralSecurityType
- *  int
- *  <p></p>
- *  Identifies the collateral used in the transaction.
- *  <p></p>
- *  Valid values:
- *  <p></p>
- *  see SecurityType (167) field (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
- */
 class Tag239IntRepoCollateralSecurityTypeTest {
     Tag239IntRepoCollateralSecurityType tagData;
     int [] TestArray = {
@@ -65,26 +54,23 @@ class Tag239IntRepoCollateralSecurityTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag239IntRepoCollateralSecurityType( new MyIntType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag239IntRepoCollateralSecurityType( new MyIntType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  239
+         *  RepoCollateralSecurityType
+         *  int
+         */
+
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag239IntRepoCollateralSecurityType( new MyIntType( oneElement ));

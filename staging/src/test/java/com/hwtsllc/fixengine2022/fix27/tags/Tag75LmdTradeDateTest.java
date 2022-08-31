@@ -23,15 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  75
- *  TradeDate
- *  LocalMktDate
- *  <p></p>
- *  Indicates date of trade referenced in this message in YYYYMMDD format.
- *  <p></p>
- *  Absence of this field indicates current day (expressed in local time at place of trade).
- */
 class Tag75LmdTradeDateTest {
     Tag75LmdTradeDate tagData;
     String [] TestArray = {
@@ -63,26 +54,21 @@ class Tag75LmdTradeDateTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag75LmdTradeDate( new MyLocalMktDateType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag75LmdTradeDate( new MyLocalMktDateType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  75
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag75LmdTradeDate( new MyLocalMktDateType( oneElement ));

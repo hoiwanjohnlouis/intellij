@@ -24,15 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  314
- *  UnderlyingMaturityDay
- *  day-of-month
- *  <p></p>
- *  Deprecated in FIX.4.2
- *  <p></p>
- *  Underlying security�s MaturityDay.  See MaturityDay field for description
- */
 // @Deprecated
 class Tag314IntUnderlyingMaturityDayTest {
     Tag314IntUnderlyingMaturityDay tagData;
@@ -65,26 +56,23 @@ class Tag314IntUnderlyingMaturityDayTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag314IntUnderlyingMaturityDay( new MyIntType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag314IntUnderlyingMaturityDay( new MyIntType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  314
+         *  UnderlyingMaturityDay
+         *  day-of-month
+         */
+
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag314IntUnderlyingMaturityDay( new MyIntType( oneElement ));

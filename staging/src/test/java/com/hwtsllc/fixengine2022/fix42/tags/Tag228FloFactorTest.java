@@ -24,25 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  228
- *  Factor
- *  float
- *  <p></p>
- *  For Fixed Income: Amortization Factor for deriving Current face from Original face for
- *  ABS or MBS securities, note the fraction may be greater than, equal to or less than .
- *  <p></p>
- *  In TIPS securities this is the Inflation index.
- *  <p></p>
- *  Qty * Factor * Price = Gross Trade Amount
- *  <p></p>
- *  For Derivatives: Contract Value Factor by which price must be adjusted
- *  to determine the true nominal value of one futures/options contract.
- *  <p></p>
- *  (Qty * Price) * Factor = Nominal Value
- *  <p></p>
- *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
- */
 class Tag228FloFactorTest {
     Tag228FloFactor tagData;
     float [] TestArray = {
@@ -74,26 +55,23 @@ class Tag228FloFactorTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( float oneElement : TestArray ) {
-            tagData = new Tag228FloFactor( new MyFloatType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( float oneElement : TestArray ) {
             tagData = new Tag228FloFactor( new MyFloatType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  228
+         *  Factor
+         *  float
+         */
+
         // process array of tags
         for ( float oneElement : TestArray ) {
             tagData = new Tag228FloFactor( new MyFloatType( oneElement ));

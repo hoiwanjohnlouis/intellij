@@ -44,9 +44,6 @@ public class Tag648QtyMinOfferSize extends FIX43Abstract implements LogValuePair
         this.dataValue = dataValue;
     }
 
-    public int getDataValue() {
-        return this.dataValue.getDataValue();
-    }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
@@ -75,7 +72,7 @@ public class Tag648QtyMinOfferSize extends FIX43Abstract implements LogValuePair
      */
     @Override
     public String toString() {
-        return String.valueOf(getDataValue());
+        return dataValue.toString();
     }
 
     /**

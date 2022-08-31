@@ -23,28 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  71
- *  AllocTransType
- *  char
- *  <p></p>
- *  Identifies allocation transaction type
- *  <p></p>
- *  <p> *** SOME VALUES HAVE BEEN REPLACED ***
- *  <p> *** See Replaced Features and Supported Approach ***
- *  <p></p>
- *  Valid values:
- *  <p>    0 - New
- *  <p>    1 - Replace
- *  <p>    2 - Cancel
- *  <p>    3 - Preliminary (without MiscFees and NetMoney) (Removed/Replaced)
- *  <p>    4 - Calculated (includes MiscFees and NetMoney) (Removed/Replaced)
- *  <p></p>
- *  <p>    5 - Calculated without Preliminary
- *          (sent unsolicited by broker, includes MiscFees and NetMoney)
- *          (Removed-Replaced)
- *  <p>    6 - Reversal
- */
 class Tag71EnuAllocTransTypeTest {
     Tag71EnuAllocTransType tagData;
 
@@ -72,54 +50,11 @@ class Tag71EnuAllocTransTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         * 0-6 AllocTransType types
-         */
-        tagData = new Tag71EnuAllocTransType(Enum71AllocTransType.NEW);
-        assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag71EnuAllocTransType(Enum71AllocTransType.REPLACE);
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag71EnuAllocTransType(Enum71AllocTransType.CANCEL);
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag71EnuAllocTransType(Enum71AllocTransType.PRELIMINARY_WITHOUT_MISC_FEES_AND_NETMONEY);
-        assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag71EnuAllocTransType(Enum71AllocTransType.CALCULATED_INCLUDES_MISC_FEES_AND_NETMONEY);
-        assertEquals( "4", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag71EnuAllocTransType(Enum71AllocTransType.CALCULATED_WITHOUT_PRELIMINARY);
-        assertEquals( "5", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag71EnuAllocTransType(Enum71AllocTransType.REVERSAL);
-        assertEquals( "6", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        // loop around the ENUM and process
-        for (Enum71AllocTransType oneEnum : Enum71AllocTransType.values()) {
-            tagData = new Tag71EnuAllocTransType(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum71AllocTransType oneEnum : Enum71AllocTransType.values()) {
             tagData = new Tag71EnuAllocTransType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -127,6 +62,49 @@ class Tag71EnuAllocTransTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  71
+         *  <p>    0 - New
+         *  <p>    1 - Replace
+         *  <p>    2 - Cancel
+         *  <p>    3 - Preliminary (without MiscFees and NetMoney) (Removed/Replaced)
+         *  <p>    4 - Calculated (includes MiscFees and NetMoney) (Removed/Replaced)
+         */
+        tagData = new Tag71EnuAllocTransType(Enum71AllocTransType.NEW);
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag71EnuAllocTransType(Enum71AllocTransType.REPLACE);
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag71EnuAllocTransType(Enum71AllocTransType.CANCEL);
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag71EnuAllocTransType(Enum71AllocTransType.PRELIMINARY_WITHOUT_MISC_FEES_AND_NETMONEY);
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag71EnuAllocTransType(Enum71AllocTransType.CALCULATED_INCLUDES_MISC_FEES_AND_NETMONEY);
+        assertEquals( "4", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    5 - Calculated without Preliminary
+         *          (sent unsolicited by broker, includes MiscFees and NetMoney)
+         *          (Removed-Replaced)
+         *  <p>    6 - Reversal
+         */
+        tagData = new Tag71EnuAllocTransType(Enum71AllocTransType.CALCULATED_WITHOUT_PRELIMINARY);
+        assertEquals( "5", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag71EnuAllocTransType(Enum71AllocTransType.REVERSAL);
+        assertEquals( "6", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum71AllocTransType oneEnum : Enum71AllocTransType.values()) {
             tagData = new Tag71EnuAllocTransType(oneEnum);
@@ -144,7 +122,7 @@ class Tag71EnuAllocTransTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

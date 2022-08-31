@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  113
- *  ReportToExch
- *  Boolean
- *  <p>
- *  Identifies party of trade responsible for exchange reporting.
- *  <p></p>
- *  Valid values:
- *  <p>    N - Indicates the party sending message will report trade
- *  <p>    Y - Indicates the party receiving message must report trade
- */
 class Tag113EnuReportToExchTest {
     Tag113EnuReportToExch tagData;
 
@@ -61,31 +50,11 @@ class Tag113EnuReportToExchTest {
         }
     }
     @Test
-    void Tag0113Test() {
-        tagData = new Tag113EnuReportToExch( Enum113ReportToExch.NO );
-        assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag113EnuReportToExch( Enum113ReportToExch.YES );
-        assertEquals( "Y", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-    }
-    @Test
-    void TagGetDataValueTest() {
-        // loop around the ENUM and process
-        for (Enum113ReportToExch oneEnum : Enum113ReportToExch.values()) {
-            tagData = new Tag113EnuReportToExch(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum113ReportToExch oneEnum : Enum113ReportToExch.values()) {
             tagData = new Tag113EnuReportToExch(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -93,6 +62,21 @@ class Tag113EnuReportToExchTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  113
+         *  ReportToExch
+         *  Boolean
+         *  <p>    N - Indicates the party sending message will report trade
+         *  <p>    Y - Indicates the party receiving message must report trade
+         */
+        tagData = new Tag113EnuReportToExch( Enum113ReportToExch.NO );
+        assertEquals( "N", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag113EnuReportToExch( Enum113ReportToExch.YES );
+        assertEquals( "Y", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
         // loop around the ENUM and process
         for (Enum113ReportToExch oneEnum : Enum113ReportToExch.values()) {
             tagData = new Tag113EnuReportToExch(oneEnum);
@@ -110,7 +94,7 @@ class Tag113EnuReportToExchTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

@@ -23,21 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  847
- *  TargetStrategy
- *  int
- *  <p></p>
- *  The target strategy of the order
- *  <p></p>
- *  1000+  = Reserved and available for bi-laterally agreed upon user defined values
- *  <p></p>
- *  Valid values:
- *  <p>    1 - VWAP
- *  <p>    2 - Participate (i.e. aim to be x percent of the market volume)
- *  <p>    3 - Minimize market impact
- *  <p>    or any value conforming to the data type Reserved1000Plus
- */
 class Tag847EnuTargetStrategyTest {
     Tag847EnuTargetStrategy tagData;
 
@@ -65,40 +50,11 @@ class Tag847EnuTargetStrategyTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    1 - VWAP
-         *  <p>    2 - Participate (i.e. aim to be x percent of the market volume)
-         *  <p>    3 - Minimize market impact
-         *  <p>    or any value conforming to the data type Reserved1000Plus
-         */
-        tagData = new Tag847EnuTargetStrategy( Enum847TargetStrategy.VWAP );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag847EnuTargetStrategy( Enum847TargetStrategy.PARTICIPATE );
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag847EnuTargetStrategy( Enum847TargetStrategy.MINIMIZE_MARKET_IMPACT );
-        assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum847TargetStrategy oneEnum : Enum847TargetStrategy.values()) {
-            tagData = new Tag847EnuTargetStrategy(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum847TargetStrategy oneEnum : Enum847TargetStrategy.values()) {
             tagData = new Tag847EnuTargetStrategy(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -106,6 +62,28 @@ class Tag847EnuTargetStrategyTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  847
+         *  TargetStrategy
+         *  int
+         *  <p>    1 - VWAP
+         *  <p>    2 - Participate (i.e. aim to be x percent of the market volume)
+         *  <p>    3 - Minimize market impact
+         *  <p>    or any value conforming to the data type Reserved1000Plus
+         */
+        tagData = new Tag847EnuTargetStrategy( Enum847TargetStrategy.VWAP );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag847EnuTargetStrategy( Enum847TargetStrategy.PARTICIPATE );
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag847EnuTargetStrategy( Enum847TargetStrategy.MINIMIZE_MARKET_IMPACT );
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum847TargetStrategy oneEnum : Enum847TargetStrategy.values()) {
             tagData = new Tag847EnuTargetStrategy(oneEnum);
@@ -123,7 +101,7 @@ class Tag847EnuTargetStrategyTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

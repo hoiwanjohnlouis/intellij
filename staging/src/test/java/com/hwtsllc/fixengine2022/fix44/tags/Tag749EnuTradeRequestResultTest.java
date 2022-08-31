@@ -23,28 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  749
- *  TradeRequestResult
- *  int
- *  <p></p>
- *  Result of Trade Request
- *  <p></p>
- *  4000+ Reserved and available for bi-laterally agreed upon user-defined values
- *  <p></p>
- *  Valid values:
- *  <p>    0 - Successful (default)
- *  <p>    1 - Invalid or unknown instrument
- *  <p>    2 - Invalid type of trade requested
- *  <p>    3 - Invalid parties
- *  <p>    4 - Invalid transport type requested
- *  <p></p>
- *  <p>    5 - Invalid destination requested
- *  <p>    8 - TradeRequestType not supported
- *  <p>    9 - Unauthorized for Trade Capture Report Request
- *  <p>    99 - Other
- *  <p>    or any value conforming to the data type Reserved100Plus
- */
 class Tag749EnuTradeRequestResultTest {
     Tag749EnuTradeRequestResult tagData;
 
@@ -72,72 +50,11 @@ class Tag749EnuTradeRequestResultTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    0 - Successful (default)
-         *  <p>    1 - Invalid or unknown instrument
-         *  <p>    2 - Invalid type of trade requested
-         *  <p>    3 - Invalid parties
-         *  <p>    4 - Invalid transport type requested
-         */
-        tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.SUCCESSFUL);
-        assertEquals( "0", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.UNKNOWN_INSTRUMENT);
-        assertEquals( "1", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.INVALID_TRADE_TYPE);
-        assertEquals( "2", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.INVALID_PARTIES);
-        assertEquals( "3", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.INVALID_TRANSPORT_TYPE);
-        assertEquals( "4", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        /*
-         *  <p>    5 - Invalid destination requested
-         *  <p>    8 - TradeRequestType not supported
-         *  <p>    9 - Unauthorized for Trade Capture Report Request
-         *  <p>    99 - Other
-         *  <p>    or any value conforming to the data type Reserved100Plus
-         */
-        tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.INVALID_DESTINATION_REQUESTED);
-        assertEquals( "5", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.TRADE_REQUEST_TYPE_NOT_SUPPORTED);
-        assertEquals( "8", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.UNAUTHORIZED_REPORT_REQUEST);
-        assertEquals( "9", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.OTHER);
-        assertEquals( "99", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        // loop around the ENUM and process
-        for ( Enum749TradeRequestResult oneEnum : Enum749TradeRequestResult.values()) {
-            tagData = new Tag749EnuTradeRequestResult(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum749TradeRequestResult oneEnum : Enum749TradeRequestResult.values()) {
             tagData = new Tag749EnuTradeRequestResult(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -145,6 +62,62 @@ class Tag749EnuTradeRequestResultTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  749
+         *  TradeRequestResult
+         *  int
+         *  <p>    0 - Successful (default)
+         *  <p>    1 - Invalid or unknown instrument
+         *  <p>    2 - Invalid type of trade requested
+         *  <p>    3 - Invalid parties
+         *  <p>    4 - Invalid transport type requested
+         */
+        tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.SUCCESSFUL);
+        assertEquals( "0", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+
+        tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.UNKNOWN_INSTRUMENT);
+        assertEquals( "1", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+
+        tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.INVALID_TRADE_TYPE);
+        assertEquals( "2", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+
+        tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.INVALID_PARTIES);
+        assertEquals( "3", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+
+        tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.INVALID_TRANSPORT_TYPE);
+        assertEquals( "4", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+
+        /*
+         *  <p>    5 - Invalid destination requested
+         *  <p>    8 - TradeRequestType not supported
+         *  <p>    9 - Unauthorized for Trade Capture Report Request
+         */
+        tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.INVALID_DESTINATION_REQUESTED);
+        assertEquals( "5", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+
+        tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.TRADE_REQUEST_TYPE_NOT_SUPPORTED);
+        assertEquals( "8", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+
+        tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.UNAUTHORIZED_REPORT_REQUEST);
+        assertEquals( "9", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+
+        /*
+         *  <p>    99 - Other
+         *  <p>    or any value conforming to the data type Reserved100Plus
+         */
+        tagData = new Tag749EnuTradeRequestResult(Enum749TradeRequestResult.OTHER);
+        assertEquals( "99", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+
+
         // loop around the ENUM and process
         for ( Enum749TradeRequestResult oneEnum : Enum749TradeRequestResult.values()) {
             tagData = new Tag749EnuTradeRequestResult(oneEnum);
@@ -162,7 +135,7 @@ class Tag749EnuTradeRequestResultTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

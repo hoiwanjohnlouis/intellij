@@ -23,13 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  789
- *  NextExpectedMsgSeqNum
- *  SeqNum
- *  <p></p>
- *  Next expected MsgSeqNum value to be received.
- */
 class Tag789SeqNextExpectedMsgSeqNumTest {
     Tag789SeqNextExpectedMsgSeqNum tagData;
     int [] TestArray = {
@@ -61,26 +54,23 @@ class Tag789SeqNextExpectedMsgSeqNumTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag789SeqNextExpectedMsgSeqNum( new MySeqNumType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_SEQ_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag789SeqNextExpectedMsgSeqNum( new MySeqNumType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  789
+         *  NextExpectedMsgSeqNum
+         *  SeqNum
+         */
+
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag789SeqNextExpectedMsgSeqNum( new MySeqNumType( oneElement ));

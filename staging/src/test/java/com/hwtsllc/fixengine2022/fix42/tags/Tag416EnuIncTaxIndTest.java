@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  416
- *  IncTaxInd
- *  int
- *  <p>
- *  Code to represent whether value is net (inclusive of tax) or gross.
- *  <p></p>
- *  Valid values:
- *  <p>    1 - Net
- *  <p>    2 - Gross
- */
 class Tag416EnuIncTaxIndTest {
     Tag416EnuIncTaxInd tagData;
 
@@ -61,32 +50,11 @@ class Tag416EnuIncTaxIndTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         * 1-2 msg types
-         */
-        tagData = new Tag416EnuIncTaxInd(Enum416IncTaxInd.NET);
-        assertEquals( Enum416IncTaxInd.NET.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag416EnuIncTaxInd(Enum416IncTaxInd.GROSS);
-        assertEquals( Enum416IncTaxInd.GROSS.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum416IncTaxInd oneEnum : Enum416IncTaxInd.values()) {
-            tagData = new Tag416EnuIncTaxInd(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum416IncTaxInd oneEnum : Enum416IncTaxInd.values()) {
             tagData = new Tag416EnuIncTaxInd(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -94,6 +62,22 @@ class Tag416EnuIncTaxIndTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  416
+         *  IncTaxInd
+         *  int
+         *  <p>    1 - Net
+         *  <p>    2 - Gross
+         */
+        tagData = new Tag416EnuIncTaxInd(Enum416IncTaxInd.NET);
+        assertEquals("1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag416EnuIncTaxInd(Enum416IncTaxInd.GROSS);
+        assertEquals("2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum416IncTaxInd oneEnum : Enum416IncTaxInd.values()) {
             tagData = new Tag416EnuIncTaxInd(oneEnum);
@@ -111,7 +95,7 @@ class Tag416EnuIncTaxIndTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

@@ -23,21 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  298
- *  QuoteCancelType
- *  int
- *  <p>
- *  Identifies the type of  quote cancel.
- *  <p></p>
- *  Valid values:
- *  <p>    1-5 msg types
- *  <p>    "1 - Cancel for Symbol(s)"
- *  <p>    "2 - Cancel for Security Type(s)"
- *  <p>    "3 - Cancel for Underlying Symbol"
- *  <p>    "4 - Cancel All Quotes"
- *  <p>    "5 - Cancel quote specified in QuoteID"
- */
 class Tag298EnuQuoteCancelTypeTest {
     Tag298EnuQuoteCancelType tagData;
 
@@ -65,44 +50,11 @@ class Tag298EnuQuoteCancelTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         * 1-5 msg types
-         */
-        tagData = new Tag298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_FOR_SYMBOL);
-        assertEquals( Enum298QuoteCancelType.CANCEL_FOR_SYMBOL.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_FOR_SECURITY_TYPE);
-        assertEquals( Enum298QuoteCancelType.CANCEL_FOR_SECURITY_TYPE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_FOR_UNDERLYING_SYMBOL);
-        assertEquals( Enum298QuoteCancelType.CANCEL_FOR_UNDERLYING_SYMBOL.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_ALL_QUOTES);
-        assertEquals( Enum298QuoteCancelType.CANCEL_ALL_QUOTES.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_QUOTEID_QUOTE);
-        assertEquals( Enum298QuoteCancelType.CANCEL_QUOTEID_QUOTE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum298QuoteCancelType oneEnum : Enum298QuoteCancelType.values()) {
-            tagData = new Tag298EnuQuoteCancelType(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum298QuoteCancelType oneEnum : Enum298QuoteCancelType.values()) {
             tagData = new Tag298EnuQuoteCancelType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -110,6 +62,38 @@ class Tag298EnuQuoteCancelTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  298
+         *  QuoteCancelType
+         *  int
+         *  <p>    1-5 msg types
+         *  <p>    "1 - Cancel for Symbol(s)"
+         *  <p>    "2 - Cancel for Security Type(s)"
+         *  <p>    "3 - Cancel for Underlying Symbol"
+         *  <p>    "4 - Cancel All Quotes"
+         *  <p>    "5 - Cancel quote specified in QuoteID"
+         */
+        tagData = new Tag298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_FOR_SYMBOL);
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_FOR_SECURITY_TYPE);
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_FOR_UNDERLYING_SYMBOL);
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_ALL_QUOTES);
+        assertEquals( "4", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag298EnuQuoteCancelType(Enum298QuoteCancelType.CANCEL_QUOTEID_QUOTE);
+        assertEquals( "5", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum298QuoteCancelType oneEnum : Enum298QuoteCancelType.values()) {
             tagData = new Tag298EnuQuoteCancelType(oneEnum);
@@ -127,7 +111,7 @@ class Tag298EnuQuoteCancelTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

@@ -23,15 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  521
- *  ContAmtCurr
- *  Currency
- *  <p></p>
- *  Specifies currency for the Contract amount if different from the Deal Currency
- *  <p></p>
- *  see "Appendix 6-A; Valid Currency Codes".
- */
 class Tag521CcyContAmtCurrTest {
     Tag521CcyContAmtCurr tagData;
     String [] TestArray = {
@@ -63,26 +54,23 @@ class Tag521CcyContAmtCurrTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag521CcyContAmtCurr( new MyCurrencyType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag521CcyContAmtCurr( new MyCurrencyType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  521
+         *  ContAmtCurr
+         *  Currency
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag521CcyContAmtCurr( new MyCurrencyType( oneElement ));

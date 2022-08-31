@@ -23,25 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  1094
- *  PegPriceType
- *  int
- *  <p>
- *  Defines the type of peg.
- *  <p></p>
- *  Valid values:
- *  <p>    1 - Last peg (last sale)
- *  <p>    2 - Mid-price peg (midprice of inside quote)
- *  <p>    3 - Opening peg
- *  <p>    4 - Market peg
- *  <p>    5 - Primary peg (primary market - buy at bid or sell at offer)
- *  <p></p>
- *  <p>    6 - Fixed Peg to Local best bid or offer at time of order
- *  <p>    7 - Peg to VWAP
- *  <p>    8 - Trailing Stop Peg
- *  <p>    9 - Peg to Limit Price
- */
 class Tag1094EnuPegPriceTypeTest {
     Tag1094EnuPegPriceType tagData;
 
@@ -69,8 +50,22 @@ class Tag1094EnuPegPriceTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
+    void TagToValuePairStringTest() {
+        // loop around the ENUM and process
+        for ( Enum1094PegPriceType oneEnum : Enum1094PegPriceType.values()) {
+            tagData = new Tag1094EnuPegPriceType(oneEnum);
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
         /*
+         *  1094
+         *  PegPriceType
+         *  int
          *  <p>    1 - Last peg (last sale)
          *  <p>    2 - Mid-price peg (midprice of inside quote)
          *  <p>    3 - Opening peg
@@ -78,24 +73,24 @@ class Tag1094EnuPegPriceTypeTest {
          *  <p>    5 - Primary peg (primary market - buy at bid or sell at offer)
          */
         tagData = new Tag1094EnuPegPriceType( Enum1094PegPriceType.LAST_PEG );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
         tagData = new Tag1094EnuPegPriceType( Enum1094PegPriceType.MID_PEG );
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
         tagData = new Tag1094EnuPegPriceType( Enum1094PegPriceType.OPENING_PEG );
-        assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
         tagData = new Tag1094EnuPegPriceType( Enum1094PegPriceType.MARKET_PEG );
-        assertEquals( "4", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "4", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
         tagData = new Tag1094EnuPegPriceType( Enum1094PegPriceType.PRIMARY_PEG );
-        assertEquals( "5", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "5", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
         /*
          *  <p>    6 - Fixed Peg to Local best bid or offer at time of order
@@ -104,44 +99,22 @@ class Tag1094EnuPegPriceTypeTest {
          *  <p>    9 - Peg to Limit Price
          */
         tagData = new Tag1094EnuPegPriceType( Enum1094PegPriceType.FIXED_PEG );
-        assertEquals( "6", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "6", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
         tagData = new Tag1094EnuPegPriceType( Enum1094PegPriceType.PEG_TO_VWAP );
-        assertEquals( "7", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "7", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
         tagData = new Tag1094EnuPegPriceType( Enum1094PegPriceType.TRAILING_STOP );
-        assertEquals( "8", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "8", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
         tagData = new Tag1094EnuPegPriceType( Enum1094PegPriceType.PEG_TO_LIMIT );
-        assertEquals( "9", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "9", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
 
-        // loop around the ENUM and process
-        for ( Enum1094PegPriceType oneEnum : Enum1094PegPriceType.values()) {
-            tagData = new Tag1094EnuPegPriceType(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
-    void TagToValuePairStringTest() {
-        // loop around the ENUM and process
-        for ( Enum1094PegPriceType oneEnum : Enum1094PegPriceType.values()) {
-            tagData = new Tag1094EnuPegPriceType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-        }
-    }
-    @Test
-    void TagToStringTest() {
         // loop around the ENUM and process
         for ( Enum1094PegPriceType oneEnum : Enum1094PegPriceType.values()) {
             tagData = new Tag1094EnuPegPriceType(oneEnum);
@@ -159,7 +132,7 @@ class Tag1094EnuPegPriceTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

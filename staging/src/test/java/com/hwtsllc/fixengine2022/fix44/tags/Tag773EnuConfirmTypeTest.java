@@ -23,18 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  773
- *  ConfirmType
- *  int
- *  <p></p>
- *  Identifies the type of Confirmation message being sent.
- *  <p></p>
- *  Valid values:
- *  <p>    1 - Status
- *  <p>    2 - Confirmation
- *  <p>    3 - Confirmation Request Rejected (reason can be stated in Text (58) field)
- */
 class Tag773EnuConfirmTypeTest {
     Tag773EnuConfirmType tagData;
 
@@ -62,39 +50,11 @@ class Tag773EnuConfirmTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    1 - Status
-         *  <p>    2 - Confirmation
-         *  <p>    3 - Confirmation Request Rejected (reason can be stated in Text (58) field)
-         */
-        tagData = new Tag773EnuConfirmType( Enum773ConfirmType.STATUS );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag773EnuConfirmType(Enum773ConfirmType.CONFIRMATION);
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag773EnuConfirmType(Enum773ConfirmType.CONFIRMATION_REJECTED);
-        assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum773ConfirmType oneEnum : Enum773ConfirmType.values()) {
-            tagData = new Tag773EnuConfirmType(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum773ConfirmType oneEnum : Enum773ConfirmType.values()) {
             tagData = new Tag773EnuConfirmType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -102,6 +62,27 @@ class Tag773EnuConfirmTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  773
+         *  ConfirmType
+         *  int
+         *  <p>    1 - Status
+         *  <p>    2 - Confirmation
+         *  <p>    3 - Confirmation Request Rejected (reason can be stated in Text (58) field)
+         */
+        tagData = new Tag773EnuConfirmType( Enum773ConfirmType.STATUS );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag773EnuConfirmType(Enum773ConfirmType.CONFIRMATION);
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag773EnuConfirmType(Enum773ConfirmType.CONFIRMATION_REJECTED);
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum773ConfirmType oneEnum : Enum773ConfirmType.values()) {
             tagData = new Tag773EnuConfirmType(oneEnum);
@@ -119,7 +100,7 @@ class Tag773EnuConfirmTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

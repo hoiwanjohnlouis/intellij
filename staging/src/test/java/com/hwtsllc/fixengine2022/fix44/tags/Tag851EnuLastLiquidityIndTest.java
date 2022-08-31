@@ -23,21 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  851
- *  LastLiquidityInd
- *  int
- *  <p></p>
- *  Indicator to identify whether this fill was a result of a liquidity provider providing
- *  or liquidity taker taking the liquidity.
- *  <p></p>
- *  Applicable only for OrdStatus of Partial or Filled.
- *  <p></p>
- *  Valid values:
- *  <p>    1 - Added Liquidity
- *  <p>    2 - Removed Liquidity
- *  <p>    3 - Liquidity Routed Out
- */
 class Tag851EnuLastLiquidityIndTest {
     Tag851EnuLastLiquidityInd tagData;
 
@@ -65,39 +50,11 @@ class Tag851EnuLastLiquidityIndTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    1 - Added Liquidity
-         *  <p>    2 - Removed Liquidity
-         *  <p>    3 - Liquidity Routed Out
-         */
-        tagData = new Tag851EnuLastLiquidityInd( Enum851LastLiquidityInd.ADDED );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag851EnuLastLiquidityInd( Enum851LastLiquidityInd.REMOVED );
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag851EnuLastLiquidityInd( Enum851LastLiquidityInd.ROUTED_OUT );
-        assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum851LastLiquidityInd oneEnum : Enum851LastLiquidityInd.values()) {
-            tagData = new Tag851EnuLastLiquidityInd(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum851LastLiquidityInd oneEnum : Enum851LastLiquidityInd.values()) {
             tagData = new Tag851EnuLastLiquidityInd(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -105,6 +62,27 @@ class Tag851EnuLastLiquidityIndTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  851
+         *  LastLiquidityInd
+         *  int
+         *  <p>    1 - Added Liquidity
+         *  <p>    2 - Removed Liquidity
+         *  <p>    3 - Liquidity Routed Out
+         */
+        tagData = new Tag851EnuLastLiquidityInd( Enum851LastLiquidityInd.ADDED );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag851EnuLastLiquidityInd( Enum851LastLiquidityInd.REMOVED );
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag851EnuLastLiquidityInd( Enum851LastLiquidityInd.ROUTED_OUT );
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum851LastLiquidityInd oneEnum : Enum851LastLiquidityInd.values()) {
             tagData = new Tag851EnuLastLiquidityInd(oneEnum);
@@ -122,7 +100,7 @@ class Tag851EnuLastLiquidityIndTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

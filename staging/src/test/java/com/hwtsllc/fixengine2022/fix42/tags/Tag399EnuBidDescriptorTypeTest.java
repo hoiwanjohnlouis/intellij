@@ -23,18 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  399
- *  BidDescriptorType
- *  int
- *  <p>
- *  Code to identify the type of BidDescriptor (400).
- *  <p></p>
- *  Valid values:
- *  <p>    1 - Sector
- *  <p>    2 - Country
- *  <p>    3 - Index
- */
 class Tag399EnuBidDescriptorTypeTest {
     Tag399EnuBidDescriptorType tagData;
 
@@ -62,36 +50,11 @@ class Tag399EnuBidDescriptorTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         * 1-3 msg types
-         */
-        tagData = new Tag399EnuBidDescriptorType(Enum399BidDescriptorType.SECTOR);
-        assertEquals( Enum399BidDescriptorType.SECTOR.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag399EnuBidDescriptorType(Enum399BidDescriptorType.COUNTRY);
-        assertEquals( Enum399BidDescriptorType.COUNTRY.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag399EnuBidDescriptorType(Enum399BidDescriptorType.INDEX);
-        assertEquals( Enum399BidDescriptorType.INDEX.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum399BidDescriptorType oneEnum : Enum399BidDescriptorType.values()) {
-            tagData = new Tag399EnuBidDescriptorType(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum399BidDescriptorType oneEnum : Enum399BidDescriptorType.values()) {
             tagData = new Tag399EnuBidDescriptorType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -99,6 +62,27 @@ class Tag399EnuBidDescriptorTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  399
+         *  BidDescriptorType
+         *  int
+         *  <p>    1 - Sector
+         *  <p>    2 - Country
+         *  <p>    3 - Index
+         */
+        tagData = new Tag399EnuBidDescriptorType(Enum399BidDescriptorType.SECTOR);
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag399EnuBidDescriptorType(Enum399BidDescriptorType.COUNTRY);
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag399EnuBidDescriptorType(Enum399BidDescriptorType.INDEX);
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum399BidDescriptorType oneEnum : Enum399BidDescriptorType.values()) {
             tagData = new Tag399EnuBidDescriptorType(oneEnum);
@@ -116,7 +100,7 @@ class Tag399EnuBidDescriptorTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

@@ -24,24 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  400
- *  BidDescriptor
- *  String
- *  <p></p>
- *  BidDescriptor value.
- *  <p></p>
- *  Usage depends upon BidDescriptorTyp (399).
- *  <p></p>
- *  If BidDescriptorType = 1
- *  Industrials etc - Free text
- *  <p>
- *  If BidDescriptorType = 2
- *  "FR" etc - ISO Country Codes
- *  <p>
- *  If BidDescriptorType = 3
- *  FT00, FT250, STOX - Free text
- */
 class Tag400StrBidDescriptorTest {
     Tag400StrBidDescriptor tagData;
     String [] TestArray = {
@@ -73,26 +55,23 @@ class Tag400StrBidDescriptorTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag400StrBidDescriptor( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag400StrBidDescriptor( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  400
+         *  BidDescriptor
+         *  String
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag400StrBidDescriptor( new MyStringType( oneElement ));

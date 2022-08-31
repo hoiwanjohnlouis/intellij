@@ -49,9 +49,6 @@ public class Tag243IntUnderlyingRepoCollateralSecurityType extends FIX42Abstract
         this.dataValue = dataValue;
     }
 
-    public int getDataValue() {
-        return this.dataValue.getDataValue();
-    }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
@@ -80,7 +77,7 @@ public class Tag243IntUnderlyingRepoCollateralSecurityType extends FIX42Abstract
      */
     @Override
     public String toString() {
-        return String.valueOf(getDataValue());
+        return dataValue.toString();
     }
 
     /**

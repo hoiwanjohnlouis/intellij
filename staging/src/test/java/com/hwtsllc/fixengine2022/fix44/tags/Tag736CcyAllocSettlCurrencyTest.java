@@ -23,23 +23,12 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  736
- *  AllocSettlCurrency
- *  Currency
- *  <p></p>
- *  Currency code of settlement denomination for a specific AllocAccount (79).
- */
 class Tag736CcyAllocSettlCurrencyTest {
     Tag736CcyAllocSettlCurrency tagData;
     String [] TestArray = {
             Tag736CcyAllocSettlCurrency.TESTA_CCY_ALLOC_SETTL_CURRENCY,
             Tag736CcyAllocSettlCurrency.TESTB_CCY_ALLOC_SETTL_CURRENCY
     };
-
-    @Test
-    void FIXTest() {
-    }
 
     @Test
     void PrintTest() {
@@ -65,26 +54,23 @@ class Tag736CcyAllocSettlCurrencyTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag736CcyAllocSettlCurrency( new MyCurrencyType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag736CcyAllocSettlCurrency( new MyCurrencyType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  736
+         *  AllocSettlCurrency
+         *  Currency
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag736CcyAllocSettlCurrency( new MyCurrencyType( oneElement ));

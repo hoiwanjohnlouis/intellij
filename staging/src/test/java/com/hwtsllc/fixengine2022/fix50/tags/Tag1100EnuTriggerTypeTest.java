@@ -23,20 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  1100
- *  TriggerType
- *  char
- *  <p>
- *  Defines when the trigger will hit,
- *  i.e. the action specified by the trigger instructions will come into effect.
- *  <p></p>
- *  Valid values:
- *  <p>    1 - Partial Execution
- *  <p>    2 - Specified Trading Session
- *  <p>    3 - Next Auction
- *  <p>    4 - Price Movement
- */
 class Tag1100EnuTriggerTypeTest {
     Tag1100EnuTriggerType tagData;
 
@@ -64,45 +50,11 @@ class Tag1100EnuTriggerTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    1 - Partial Execution
-         *  <p>    2 - Specified Trading Session
-         *  <p>    3 - Next Auction
-         *  <p>    4 - Price Movement
-         */
-        tagData = new Tag1100EnuTriggerType( Enum1100TriggerType.PARTIAL_EXECUTION );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag1100EnuTriggerType( Enum1100TriggerType.SPECIFIED_SESSION );
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag1100EnuTriggerType( Enum1100TriggerType.NEXT_AUCTION );
-        assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag1100EnuTriggerType( Enum1100TriggerType.PRICE_MOVEMENT );
-        assertEquals( "4", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        // loop around the ENUM and process
-        for ( Enum1100TriggerType oneEnum : Enum1100TriggerType.values()) {
-            tagData = new Tag1100EnuTriggerType(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum1100TriggerType oneEnum : Enum1100TriggerType.values()) {
             tagData = new Tag1100EnuTriggerType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -110,6 +62,32 @@ class Tag1100EnuTriggerTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  1100
+         *  TriggerType
+         *  char
+         *  <p>    1 - Partial Execution
+         *  <p>    2 - Specified Trading Session
+         *  <p>    3 - Next Auction
+         *  <p>    4 - Price Movement
+         */
+        tagData = new Tag1100EnuTriggerType( Enum1100TriggerType.PARTIAL_EXECUTION );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag1100EnuTriggerType( Enum1100TriggerType.SPECIFIED_SESSION );
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag1100EnuTriggerType( Enum1100TriggerType.NEXT_AUCTION );
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag1100EnuTriggerType( Enum1100TriggerType.PRICE_MOVEMENT );
+        assertEquals( "4", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum1100TriggerType oneEnum : Enum1100TriggerType.values()) {
             tagData = new Tag1100EnuTriggerType(oneEnum);
@@ -127,7 +105,7 @@ class Tag1100EnuTriggerTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

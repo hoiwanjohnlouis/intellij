@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  411
- *  ExchangeForPhysical
- *  Boolean
- *  <p>
- *  Indicates whether or not to exchange for phsyical.
- *  <p></p>
- *  Valid values:
- *  <p>    N - False
- *  <p>    Y - True
- */
 class Tag411EnuExchangeForPhysicalTest {
     Tag411EnuExchangeForPhysical tagData;
 
@@ -61,29 +50,11 @@ class Tag411EnuExchangeForPhysicalTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        tagData = new Tag411EnuExchangeForPhysical(Enum411ExchangeForPhysical.NO);
-        assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag411EnuExchangeForPhysical(Enum411ExchangeForPhysical.YES);
-        assertEquals( "Y", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum411ExchangeForPhysical oneEnum : Enum411ExchangeForPhysical.values()) {
-            tagData = new Tag411EnuExchangeForPhysical(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum411ExchangeForPhysical oneEnum : Enum411ExchangeForPhysical.values()) {
             tagData = new Tag411EnuExchangeForPhysical(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -91,6 +62,22 @@ class Tag411EnuExchangeForPhysicalTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  411
+         *  ExchangeForPhysical
+         *  Boolean
+         *  <p>    N - False
+         *  <p>    Y - True
+         */
+        tagData = new Tag411EnuExchangeForPhysical(Enum411ExchangeForPhysical.NO);
+        assertEquals( "N", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag411EnuExchangeForPhysical(Enum411ExchangeForPhysical.YES);
+        assertEquals( "Y", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum411ExchangeForPhysical oneEnum : Enum411ExchangeForPhysical.values()) {
             tagData = new Tag411EnuExchangeForPhysical(oneEnum);
@@ -108,7 +95,7 @@ class Tag411EnuExchangeForPhysicalTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

@@ -30,9 +30,6 @@ public class MyStringType implements LogVerboseString {
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
-        return dataValue;
-    }
     /**
      * standard wrapper to format a detailed string describing this data field
      */
@@ -48,8 +45,9 @@ public class MyStringType implements LogVerboseString {
      */
     @Override
     public String toString() {
-        return getDataValue();
+        return this.dataValue;
     }
+
     /**
      *
      * @param args Not used.

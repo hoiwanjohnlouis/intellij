@@ -23,24 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  206
- *  OptAttribute
- *  char
- *  <p></p>
- *  Can be used for SecurityType (167) =OPT to identify a particular security.
- *  <p></p>
- *  Valid values vary by SecurityExchange:
- *  <p>    *** REPLACED values - See "Replaced Features and Supported Approach" ***
- *  <p></p>
- *      For Exchange: MONEP (Paris)
- *  <p>    L = Long (a.k.a. "American")
- *  <p>    S = Short (a.k.a. "European")
- *  <p></p>
- *      For Exchanges: DTB (Frankfurt), HKSE (Hong Kong), and SOFFEX (Zurich)
- *  <p>    0-9 = single digit "version" number assigned by exchange following capital adjustments
- *               (0=current, 1=prior, 2=prior to , etc).
- */
 class Tag206StrOptAttributeTest {
     Tag206StrOptAttribute tagData;
     String [] TestArray = {
@@ -72,26 +54,23 @@ class Tag206StrOptAttributeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag206StrOptAttribute( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag206StrOptAttribute( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  206
+         *  OptAttribute
+         *  char
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag206StrOptAttribute( new MyStringType( oneElement ));

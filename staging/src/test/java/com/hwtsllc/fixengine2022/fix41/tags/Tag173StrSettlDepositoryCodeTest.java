@@ -23,15 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  173
- *  SettlDepositoryCode
- *  String
- *  <p></p>
- *  Deprecated in FIX.4.3 Brokers account code at the depository
- *  <p></p>
- *  (i.e. CEDEL ID  for CEDEL, FINS for DTC, or Euroclear ID for Euroclear) if Settlement Location is a depository
- */
 // @Deprecated
 class Tag173StrSettlDepositoryCodeTest {
     Tag173StrSettlDepositoryCode tagData;
@@ -64,26 +55,23 @@ class Tag173StrSettlDepositoryCodeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag173StrSettlDepositoryCode( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag173StrSettlDepositoryCode( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  173
+         *  SettlDepositoryCode
+         *  String
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag173StrSettlDepositoryCode( new MyStringType( oneElement ));

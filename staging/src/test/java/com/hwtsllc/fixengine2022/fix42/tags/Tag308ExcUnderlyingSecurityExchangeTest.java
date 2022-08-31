@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  308
- *  UnderlyingSecurityExchange
- *  Exchange
- *  <p></p>
- *  Underlying security’s SecurityExchange.  Can be used to identify the underlying security.
- *  <p></p>
- *  Valid values:
- *  <p></p>
- *  see SecurityExchange (207)
- */
 class Tag308ExcUnderlyingSecurityExchangeTest {
     Tag308ExcUnderlyingSecurityExchange tagData;
     String [] TestArray = {
@@ -65,26 +54,23 @@ class Tag308ExcUnderlyingSecurityExchangeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag308ExcUnderlyingSecurityExchange( new MyExchangeType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag308ExcUnderlyingSecurityExchange( new MyExchangeType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  308
+         *  UnderlyingSecurityExchange
+         *  Exchange
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag308ExcUnderlyingSecurityExchange( new MyExchangeType( oneElement ));

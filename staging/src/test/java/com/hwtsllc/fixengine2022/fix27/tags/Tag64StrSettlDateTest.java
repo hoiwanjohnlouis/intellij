@@ -23,21 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  64
- *  SettlDate
- *  LocalMktDate
- *  <p></p>
- *  Specific date of trade settlement (SettlementDate) in YYYYMMDD format.
- *  <p></p>
- *  If present, this field overrides SettlType (63).
- *  <p></p>
- *  This field is required if the value of  SettlType (63) is 6 (Future) or 8 (Sellers Option).
- *  <p></p>
- *  This field must be omitted if the value of SettlType (63) is 7 (When and If Issued)
- *  <p></p>
- *  (expressed in local time at place of settlement)
- */
 class Tag64StrSettlDateTest {
     Tag64StrSettlDate tagData;
     String [] TestArray = {
@@ -69,26 +54,21 @@ class Tag64StrSettlDateTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag64StrSettlDate( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag64StrSettlDate( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  64
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag64StrSettlDate( new MyStringType( oneElement ));

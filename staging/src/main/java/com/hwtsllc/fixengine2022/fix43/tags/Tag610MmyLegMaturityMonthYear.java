@@ -23,7 +23,7 @@ import com.hwtsllc.fixengine2022.interfaces.LogValuePairString;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  200
+ *  200 (same as 200, 313, 610, 667, 955, )
  *  MaturityMonthYear
  *  month-year
  *  <p>     Can be used with standardized derivatives vs. the MaturityDate (54) field.
@@ -78,9 +78,6 @@ public class Tag610MmyLegMaturityMonthYear extends FIX43Abstract implements LogV
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
-        return this.dataValue.getDataValue();
-    }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
@@ -109,7 +106,7 @@ public class Tag610MmyLegMaturityMonthYear extends FIX43Abstract implements LogV
      */
     @Override
     public String toString() {
-        return String.valueOf(getDataValue());
+        return dataValue.toString();
     }
 
     /**

@@ -54,9 +54,6 @@ public class Tag744EnuAssignmentMethod extends FIX44Abstract implements LogValue
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
-        return this.dataValue.toEnumIDString();
-    }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
@@ -64,7 +61,7 @@ public class Tag744EnuAssignmentMethod extends FIX44Abstract implements LogValue
     public String toValuePairString() {
         return toEnumIDString()
                 .concat("=")
-                .concat(getDataValue());
+                .concat(dataValue.toString());
     }
     /**
      * standard wrapper to format a detailed string describing this data field
@@ -115,7 +112,7 @@ public class Tag744EnuAssignmentMethod extends FIX44Abstract implements LogValue
      */
     @Override
     public String toString() {
-        return String.valueOf(getDataValue());
+        return dataValue.toString();
     }
 
     /**

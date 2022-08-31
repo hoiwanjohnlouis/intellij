@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  265
- *  MDUpdateType
- *  int
- *  <p>
- *  Specifies the type of Market Data update.
- *  <p></p>
- *  Valid values:
- *  <p>    "0 - Full refresh"
- *  <p>    "1 - Incremental refresh"
- */
 class Tag265EnuMDUpdateTypeTest {
     Tag265EnuMDUpdateType tagData;
 
@@ -61,32 +50,11 @@ class Tag265EnuMDUpdateTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         * 0-1 msg types
-         */
-        tagData = new Tag265EnuMDUpdateType(Enum265MDUpdateType.FULL_REFRESH);
-        assertEquals( Enum265MDUpdateType.FULL_REFRESH.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag265EnuMDUpdateType(Enum265MDUpdateType.INCREMENTAL_REFRESH);
-        assertEquals( Enum265MDUpdateType.INCREMENTAL_REFRESH.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum265MDUpdateType oneEnum : Enum265MDUpdateType.values()) {
-            tagData = new Tag265EnuMDUpdateType(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum265MDUpdateType oneEnum : Enum265MDUpdateType.values()) {
             tagData = new Tag265EnuMDUpdateType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -94,6 +62,22 @@ class Tag265EnuMDUpdateTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  265
+         *  MDUpdateType
+         *  int
+         *  <p>    "0 - Full refresh"
+         *  <p>    "1 - Incremental refresh"
+         */
+        tagData = new Tag265EnuMDUpdateType(Enum265MDUpdateType.FULL_REFRESH);
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag265EnuMDUpdateType(Enum265MDUpdateType.INCREMENTAL_REFRESH);
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum265MDUpdateType oneEnum : Enum265MDUpdateType.values()) {
             tagData = new Tag265EnuMDUpdateType(oneEnum);
@@ -111,7 +95,7 @@ class Tag265EnuMDUpdateTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

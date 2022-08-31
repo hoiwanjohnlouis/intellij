@@ -23,26 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  484
- *  ExecPriceType
- *  char
- *  <p></p>
- *  For CIV - Identifies how the execution price LastPx (31)
- *  was calculated from the fund unit/share price(s) calculated
- *  at the fund valuation point.
- *  <p></p>
- *  Valid values:
- *  <p>    B - Bid price
- *  <p>    C - Creation price
- *  <p>    D - Creation price plus adjustment percent
- *  <p>    E - Creation price plus adjustment amount
- *  <p>    O - Offer price
- *  <p></p>
- *  <p>    P - Offer price minus adjustment percent
- *  <p>    Q - Offer price minus adjustment amount
- *  <p>    S - Single price
- */
 class Tag484EnuExecPriceTypeTest {
     Tag484EnuExecPriceType tagData;
 
@@ -70,66 +50,11 @@ class Tag484EnuExecPriceTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  B, C, D, E, O, P, Q, and S types
-         */
-
-        /*
-         *  B, C, D, E, types
-         */
-        tagData = new Tag484EnuExecPriceType( Enum484PriceType.BID_PRICE );
-        assertEquals( Enum484PriceType.BID_PRICE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag484EnuExecPriceType( Enum484PriceType.CREATION_PRICE );
-        assertEquals( Enum484PriceType.CREATION_PRICE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag484EnuExecPriceType( Enum484PriceType.CREATION_PRICE_PLUS_PERCENT );
-        assertEquals( Enum484PriceType.CREATION_PRICE_PLUS_PERCENT.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag484EnuExecPriceType( Enum484PriceType.CREATION_PRICE_PLUS_AMOUNT );
-        assertEquals( Enum484PriceType.CREATION_PRICE_PLUS_AMOUNT.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        /*
-         * O, P, Q, and S types
-         */
-        tagData = new Tag484EnuExecPriceType( Enum484PriceType.OFFER_PRICE );
-        assertEquals( Enum484PriceType.OFFER_PRICE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag484EnuExecPriceType( Enum484PriceType.OFFER_PRICE_MINUS_PERCENT );
-        assertEquals( Enum484PriceType.OFFER_PRICE_MINUS_PERCENT.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag484EnuExecPriceType( Enum484PriceType.OFFER_PRICE_MINUS_AMOUNT );
-        assertEquals( Enum484PriceType.OFFER_PRICE_MINUS_AMOUNT.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        /*
-         *  S type
-         */
-        tagData = new Tag484EnuExecPriceType( Enum484PriceType.SINGLE_PRICE );
-        assertEquals( Enum484PriceType.SINGLE_PRICE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum484PriceType oneEnum : Enum484PriceType.values()) {
-            tagData = new Tag484EnuExecPriceType(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum484PriceType oneEnum : Enum484PriceType.values()) {
             tagData = new Tag484EnuExecPriceType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -137,6 +62,54 @@ class Tag484EnuExecPriceTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  484
+         *  ExecPriceType
+         *  char
+         *  <p>    B - Bid price
+         *  <p>    C - Creation price
+         *  <p>    D - Creation price plus adjustment percent
+         *  <p>    E - Creation price plus adjustment amount
+         *  <p>    O - Offer price
+         */
+        tagData = new Tag484EnuExecPriceType( Enum484PriceType.BID_PRICE );
+        assertEquals( "B", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag484EnuExecPriceType( Enum484PriceType.CREATION_PRICE );
+        assertEquals( "C", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag484EnuExecPriceType( Enum484PriceType.CREATION_PRICE_PLUS_PERCENT );
+        assertEquals( "D", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag484EnuExecPriceType( Enum484PriceType.CREATION_PRICE_PLUS_AMOUNT );
+        assertEquals( "E", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag484EnuExecPriceType( Enum484PriceType.OFFER_PRICE );
+        assertEquals( "O", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    P - Offer price minus adjustment percent
+         *  <p>    Q - Offer price minus adjustment amount
+         *  <p>    S - Single price
+         */
+        tagData = new Tag484EnuExecPriceType( Enum484PriceType.OFFER_PRICE_MINUS_PERCENT );
+        assertEquals( "P", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag484EnuExecPriceType( Enum484PriceType.OFFER_PRICE_MINUS_AMOUNT );
+        assertEquals( "Q", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag484EnuExecPriceType( Enum484PriceType.SINGLE_PRICE );
+        assertEquals( "S", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum484PriceType oneEnum : Enum484PriceType.values()) {
             tagData = new Tag484EnuExecPriceType(oneEnum);
@@ -154,7 +127,7 @@ class Tag484EnuExecPriceTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

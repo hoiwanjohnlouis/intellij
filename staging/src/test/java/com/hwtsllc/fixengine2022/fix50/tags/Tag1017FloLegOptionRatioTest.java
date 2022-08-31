@@ -23,19 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  1017
- *  LegOptionRatio
- *  float
- *  <p>
- *  Expresses the risk of an option leg
- *  <p></p>
- *  Value must be between -1 and 1.
- *  <p></p>
- *  A Call Option will require a ratio value between 0 and 1
- *  <p></p>
- *  A Put Option will require a ratio value between -1 and 0
- */
 class Tag1017FloLegOptionRatioTest {
     Tag1017FloLegOptionRatio tagData;
     float [] TestArray = {
@@ -67,26 +54,23 @@ class Tag1017FloLegOptionRatioTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( float oneElement : TestArray ) {
-            tagData = new Tag1017FloLegOptionRatio( new MyFloatType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_FLO_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( float oneElement : TestArray ) {
             tagData = new Tag1017FloLegOptionRatio( new MyFloatType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  1017
+         *  LegOptionRatio
+         *  float
+         */
+
         // process array of tags
         for ( float oneElement : TestArray ) {
             tagData = new Tag1017FloLegOptionRatio( new MyFloatType( oneElement ));

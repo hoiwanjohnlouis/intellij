@@ -23,18 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  849
- *  ParticipationRate
- *  Percentage
- *  <p></p>
- *  Deprecated in FIX.5.0
- *  <p></p>
- *  For a TargetStrategy=Participate order specifies the target particpation rate.
- *  <p></p>
- *  For other order types this is a volume limit
- *  (i.e. do not be more than this percent of the market volume)
- */
 class Tag849PctParticipationRateTest {
     Tag849PctParticipationRate tagData;
     double [] TestArray = {
@@ -66,26 +54,23 @@ class Tag849PctParticipationRateTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( double oneElement : TestArray ) {
-            tagData = new Tag849PctParticipationRate( new MyPercentageType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag849PctParticipationRate( new MyPercentageType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  849
+         *  ParticipationRate
+         *  Percentage
+         */
+
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag849PctParticipationRate( new MyPercentageType( oneElement ));

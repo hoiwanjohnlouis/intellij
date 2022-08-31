@@ -30,13 +30,13 @@ class MyPriceOffsetTypeTest {
 
         oneElement = MyPriceOffsetType.TESTA_MY_PRICE_OFFSET_TYPE;
         dataType = new MyPriceOffsetType( oneElement );
-        assertEquals( oneElement, dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, dataType.getDataValue());
+        assertEquals( oneElement, Double.valueOf( dataType.toString() ) );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.toString());
 
         oneElement = MyPriceOffsetType.TESTB_MY_PRICE_OFFSET_TYPE;
         dataType = new MyPriceOffsetType( oneElement );
-        assertEquals( oneElement, dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_PXO_DATA_VALUE, dataType.getDataValue());
+        assertEquals( oneElement, Double.valueOf( dataType.toString() ) );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.toString());
     }
     @Test
     void PrintFIXTagTest() {

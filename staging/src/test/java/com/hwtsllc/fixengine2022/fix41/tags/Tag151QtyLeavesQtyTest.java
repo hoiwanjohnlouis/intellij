@@ -23,19 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  151
- *  LeavesQty
- *  Qty
- *  <p></p>
- *  Quantity open for further execution.
- *  <p></p>
- *  If the OrdStatus (39) is Canceled, DoneForTheDay, Expired, Calculated, or Rejected
- *  (in which case the order is no longer active)  then LeavesQty could be 0,
- *  otherwise LeavesQty = OrderQty (38) – CumQty (14).
- *  <p></p>
- *  (Prior to FIX 4.2 this field was of type int)
- */
 class Tag151QtyLeavesQtyTest {
     Tag151QtyLeavesQty tagData;
     int [] TestArray = {
@@ -67,26 +54,23 @@ class Tag151QtyLeavesQtyTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag151QtyLeavesQty( new MyQtyType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag151QtyLeavesQty( new MyQtyType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  151
+         *  LeavesQty
+         *  Qty
+         */
+
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag151QtyLeavesQty( new MyQtyType( oneElement ));

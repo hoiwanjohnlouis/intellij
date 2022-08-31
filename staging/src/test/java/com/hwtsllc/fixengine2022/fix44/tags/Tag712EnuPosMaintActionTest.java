@@ -23,22 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  712
- *  PosMaintAction
- *  int
- *  <p></p>
- *  Maintenance Action to be performed.
- *  <p></p>
- *  Valid values:
- *  <p>    1 - New - used to increment the overall transaction quantity
- *  <p>    2 - Replace - used to override the overall transaction quantity
- *                      or specifically add messages based on the reference ID
- *  <p>    3 - Cancel - used to remove the overall transaction or specific
- *                      add messages based on reference ID
- *  <p>    4 - Reverse - used to completely back-out the transaction
- *                      such that the transaction never existed
- */
 class Tag712EnuPosMaintActionTest {
     Tag712EnuPosMaintAction tagData;
 
@@ -66,8 +50,22 @@ class Tag712EnuPosMaintActionTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
+    void TagToValuePairStringTest() {
+        // loop around the ENUM and process
+        for ( Enum712PosMaintAction oneEnum : Enum712PosMaintAction.values()) {
+            tagData = new Tag712EnuPosMaintAction(oneEnum);
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
         /*
+         *  712
+         *  PosMaintAction
+         *  int
          *  <p>    1 - New - used to increment the overall transaction quantity
          *  <p>    2 - Replace - used to override the overall transaction quantity
          *                      or specifically add messages based on the reference ID
@@ -77,43 +75,22 @@ class Tag712EnuPosMaintActionTest {
          *                      such that the transaction never existed
          */
         tagData = new Tag712EnuPosMaintAction( Enum712PosMaintAction.NEW );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
         tagData = new Tag712EnuPosMaintAction( Enum712PosMaintAction.REPLACE );
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
         tagData = new Tag712EnuPosMaintAction( Enum712PosMaintAction.CANCEL );
-        assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
         tagData = new Tag712EnuPosMaintAction( Enum712PosMaintAction.REVERSE );
-        assertEquals( "4", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
+        assertEquals( "4", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
 
-        // loop around the ENUM and process
-        for ( Enum712PosMaintAction oneEnum : Enum712PosMaintAction.values()) {
-            tagData = new Tag712EnuPosMaintAction(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
-    void TagToValuePairStringTest() {
-        // loop around the ENUM and process
-        for ( Enum712PosMaintAction oneEnum : Enum712PosMaintAction.values()) {
-            tagData = new Tag712EnuPosMaintAction(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-        }
-    }
-    @Test
-    void TagToStringTest() {
+
         // loop around the ENUM and process
         for ( Enum712PosMaintAction oneEnum : Enum712PosMaintAction.values()) {
             tagData = new Tag712EnuPosMaintAction(oneEnum);
@@ -131,7 +108,7 @@ class Tag712EnuPosMaintActionTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

@@ -23,30 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  660 (same as 660, 661)
- *  AcctIDSource
- *  int
- *  <p>
- *  Used to identify the source of the Account (1) code.
- *  This is especially useful if the account is a new account
- *  that the Respondent may not have set up yet in their system.
- *  <p></p>
- *  661 (same as 660, 601)
- *  AllocAcctIDSource
- *  int
- *  <p>
- *  Used to identify the source of the AllocAccount (79) code.
- *      See AcctIDSource (660) for valid values.
- *  <p></p>
- *  Valid values:
- *  <p>    1 - BIC
- *  <p>    2 - SID Code
- *  <p>    3 - TFM (GSPTA)
- *  <p>    4 - OMGEO (Alert ID)
- *  <p>    5 - DTCC Code
- *  <p>    99 - Other (custom or proprietary)
- */
 class Tag660EnuAcctIDSourceTest {
     Tag660EnuAcctIDSource tagData;
 
@@ -74,55 +50,11 @@ class Tag660EnuAcctIDSourceTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  1-5, 99, types
-         */
-
-        /*
-         *  1-5, types
-         */
-        tagData = new Tag660EnuAcctIDSource( MyEnumAcctIDSource.BIC );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag660EnuAcctIDSource(MyEnumAcctIDSource.SID);
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag660EnuAcctIDSource(MyEnumAcctIDSource.TFM);
-        assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag660EnuAcctIDSource(MyEnumAcctIDSource.OMGEO);
-        assertEquals( "4", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag660EnuAcctIDSource(MyEnumAcctIDSource.DTCC);
-        assertEquals( "5", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        /*
-         *  99, types
-         */
-        tagData = new Tag660EnuAcctIDSource(MyEnumAcctIDSource.OTHER);
-        assertEquals( "99", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (MyEnumAcctIDSource oneEnum : MyEnumAcctIDSource.values()) {
-            tagData = new Tag660EnuAcctIDSource(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (MyEnumAcctIDSource oneEnum : MyEnumAcctIDSource.values()) {
             tagData = new Tag660EnuAcctIDSource(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -130,6 +62,47 @@ class Tag660EnuAcctIDSourceTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  660 (same as 660, 661)
+         *  AcctIDSource
+         *  int
+         *  661 (same as 660, 601)
+         *  AllocAcctIDSource
+         *  int
+         *  <p>    1 - BIC
+         *  <p>    2 - SID Code
+         *  <p>    3 - TFM (GSPTA)
+         *  <p>    4 - OMGEO (Alert ID)
+         *  <p>    5 - DTCC Code
+         */
+        tagData = new Tag660EnuAcctIDSource( MyEnumAcctIDSource.BIC );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag660EnuAcctIDSource(MyEnumAcctIDSource.SID);
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag660EnuAcctIDSource(MyEnumAcctIDSource.TFM);
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag660EnuAcctIDSource(MyEnumAcctIDSource.OMGEO);
+        assertEquals( "4", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag660EnuAcctIDSource(MyEnumAcctIDSource.DTCC);
+        assertEquals( "5", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    99 - Other (custom or proprietary)
+         */
+        tagData = new Tag660EnuAcctIDSource(MyEnumAcctIDSource.OTHER);
+        assertEquals( "99", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (MyEnumAcctIDSource oneEnum : MyEnumAcctIDSource.values()) {
             tagData = new Tag660EnuAcctIDSource(oneEnum);
@@ -147,7 +120,7 @@ class Tag660EnuAcctIDSourceTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

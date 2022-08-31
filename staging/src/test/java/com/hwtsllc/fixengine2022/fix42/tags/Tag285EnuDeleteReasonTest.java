@@ -23,18 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  285
- *  DeleteReason
- *  char
- *  <p>
- *  Reason for deletion.
- *  <p></p>
- *  Valid values:
- *  <p>    0-1 msg types
- *  <p>    CANCELLATION_OR_TRADE_BUST( "0", "CANCELLATION_OR_TRADE_BUST", "0 - Cancellation / Trade Bust" ),
- *  <p>    ERROR( "1", "ERROR", "1 - Error" ),
- */
 class Tag285EnuDeleteReasonTest {
     Tag285EnuDeleteReason tagData;
 
@@ -62,32 +50,11 @@ class Tag285EnuDeleteReasonTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         * 0-1 msg types
-         */
-        tagData = new Tag285EnuDeleteReason(Enum285DeleteReason.CANCELLATION_OR_TRADE_BUST);
-        assertEquals( Enum285DeleteReason.CANCELLATION_OR_TRADE_BUST.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag285EnuDeleteReason(Enum285DeleteReason.ERROR);
-        assertEquals( Enum285DeleteReason.ERROR.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum285DeleteReason oneEnum : Enum285DeleteReason.values()) {
-            tagData = new Tag285EnuDeleteReason(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum285DeleteReason oneEnum : Enum285DeleteReason.values()) {
             tagData = new Tag285EnuDeleteReason(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -95,6 +62,23 @@ class Tag285EnuDeleteReasonTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  285
+         *  DeleteReason
+         *  char
+         *  <p>    0-1 msg types
+         *  <p>    CANCELLATION_OR_TRADE_BUST( "0", "CANCELLATION_OR_TRADE_BUST", "0 - Cancellation / Trade Bust" ),
+         *  <p>    ERROR( "1", "ERROR", "1 - Error" ),
+         */
+        tagData = new Tag285EnuDeleteReason(Enum285DeleteReason.CANCELLATION_OR_TRADE_BUST);
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag285EnuDeleteReason(Enum285DeleteReason.ERROR);
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum285DeleteReason oneEnum : Enum285DeleteReason.values()) {
             tagData = new Tag285EnuDeleteReason(oneEnum);
@@ -112,7 +96,7 @@ class Tag285EnuDeleteReasonTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

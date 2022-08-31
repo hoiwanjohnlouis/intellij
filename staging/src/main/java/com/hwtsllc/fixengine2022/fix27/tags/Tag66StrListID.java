@@ -48,9 +48,6 @@ public class Tag66StrListID extends FIX27Abstract implements LogValuePairString,
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
-        return this.dataValue.getDataValue();
-    }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
@@ -58,7 +55,7 @@ public class Tag66StrListID extends FIX27Abstract implements LogValuePairString,
     public String toValuePairString() {
         return toEnumIDString()
                 .concat("=")
-                .concat(dataValue.toString());
+                .concat(this.dataValue.toString());
     }
     /**
      * standard wrapper to format a detailed string describing this data field
@@ -79,7 +76,7 @@ public class Tag66StrListID extends FIX27Abstract implements LogValuePairString,
      */
     @Override
     public String toString() {
-        return String.valueOf(getDataValue());
+        return this.dataValue.toString();
     }
 
     /**

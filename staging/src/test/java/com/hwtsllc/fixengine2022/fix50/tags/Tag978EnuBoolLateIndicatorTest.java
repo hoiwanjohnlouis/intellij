@@ -23,16 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  978
- *  LateIndicator
- *  Boolean
- *  <p>
- *  Indicates if the contrary intention was received after the exchange imposed cutoff time
- *  <p></p>
- *  <p> YES( "Y", "YES", "Y - After the exchange cutoff time" ),
- *  <p> NO( "N", "NO", "N - Received during normal exchange hours" ),
- */
 class Tag978EnuBoolLateIndicatorTest {
     Tag978EnuBoolLateIndicator tagData;
 
@@ -60,35 +50,11 @@ class Tag978EnuBoolLateIndicatorTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    YES( "Y", "YES", "Y - After the exchange cutoff time" ),
-         *  <p>    NO( "N", "NO", "N - Received during normal exchange hours" ),
-         */
-        tagData = new Tag978EnuBoolLateIndicator( Enum978LateIndicator.YES );
-        assertEquals( "Y", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-        tagData = new Tag978EnuBoolLateIndicator( Enum978LateIndicator.NO );
-        assertEquals( "N", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-
-
-        // loop around the ENUM and process
-        for ( Enum978LateIndicator oneEnum : Enum978LateIndicator.values() ) {
-            tagData = new Tag978EnuBoolLateIndicator(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum978LateIndicator oneEnum : Enum978LateIndicator.values() ) {
             tagData = new Tag978EnuBoolLateIndicator(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -96,6 +62,22 @@ class Tag978EnuBoolLateIndicatorTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  978
+         *  LateIndicator
+         *  Boolean
+         *  <p> YES( "Y", "YES", "Y - After the exchange cutoff time" ),
+         *  <p> NO( "N", "NO", "N - Received during normal exchange hours" ),
+         */
+        tagData = new Tag978EnuBoolLateIndicator( Enum978LateIndicator.YES );
+        assertEquals( "Y", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+
+        tagData = new Tag978EnuBoolLateIndicator( Enum978LateIndicator.NO );
+        assertEquals( "N", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
+
+
         // loop around the ENUM and process
         for ( Enum978LateIndicator oneEnum : Enum978LateIndicator.values() ) {
             tagData = new Tag978EnuBoolLateIndicator(oneEnum);
@@ -113,7 +95,7 @@ class Tag978EnuBoolLateIndicatorTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

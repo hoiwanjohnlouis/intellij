@@ -23,21 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  418
- *  BidTradeType
- *  char
- *  <p>
- *  Code to represent the type of trade.
- *  <p>
- *  (Prior to FIX 4.4 this field was named "TradeType")
- *  <p></p>
- *  Valid values:
- *  <p>    A - Agency
- *  <p>    G - VWAP Guarantee
- *  <p>    J - Guaranteed Close
- *  <p>    R - Risk Trade
- */
 class Tag418EnuBidTradeTypeTest {
     Tag418EnuBidTradeType tagData;
 
@@ -65,40 +50,11 @@ class Tag418EnuBidTradeTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         * A, G, J, and R msg types
-         */
-        tagData = new Tag418EnuBidTradeType(Enum418BidTradeType.AGENCY);
-        assertEquals( Enum418BidTradeType.AGENCY.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag418EnuBidTradeType(Enum418BidTradeType.VWAP_GUARANTEE);
-        assertEquals( Enum418BidTradeType.VWAP_GUARANTEE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag418EnuBidTradeType(Enum418BidTradeType.GUARANTEED_CLOSE);
-        assertEquals( Enum418BidTradeType.GUARANTEED_CLOSE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag418EnuBidTradeType(Enum418BidTradeType.RISK_TRADE);
-        assertEquals( Enum418BidTradeType.RISK_TRADE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum418BidTradeType oneEnum : Enum418BidTradeType.values()) {
-            tagData = new Tag418EnuBidTradeType(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum418BidTradeType oneEnum : Enum418BidTradeType.values()) {
             tagData = new Tag418EnuBidTradeType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -106,6 +62,32 @@ class Tag418EnuBidTradeTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  418
+         *  BidTradeType
+         *  char
+         *  <p>    A - Agency
+         *  <p>    G - VWAP Guarantee
+         *  <p>    J - Guaranteed Close
+         *  <p>    R - Risk Trade
+         */
+        tagData = new Tag418EnuBidTradeType(Enum418BidTradeType.AGENCY);
+        assertEquals( "A", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag418EnuBidTradeType(Enum418BidTradeType.VWAP_GUARANTEE);
+        assertEquals( "G", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag418EnuBidTradeType(Enum418BidTradeType.GUARANTEED_CLOSE);
+        assertEquals( "J", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag418EnuBidTradeType(Enum418BidTradeType.RISK_TRADE);
+        assertEquals( "R", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum418BidTradeType oneEnum : Enum418BidTradeType.values()) {
             tagData = new Tag418EnuBidTradeType(oneEnum);
@@ -123,7 +105,7 @@ class Tag418EnuBidTradeTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  1057
- *  AggressorIndicator
- *  Boolean
- *  <p>
- *  Used to identify whether the order initiator is an aggressor or not in the trade.
- *  <p></p>
- *  Valid values:
- *  <p>  AGGRESSOR( "Y", "AGGRESSOR", "Y - Order initiator is aggressor" ),
- *  <p>  PASSIVE( "N", "PASSIVE", "N - Order initiator is passive" ),
- */
 class Tag1057EnuAggressorIndicatorTest {
     Tag1057EnuAggressorIndicator tagData;
 
@@ -61,35 +50,11 @@ class Tag1057EnuAggressorIndicatorTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>  AGGRESSOR( "Y", "AGGRESSOR", "Y - Order initiator is aggressor" ),
-         *  <p>  PASSIVE( "N", "PASSIVE", "N - Order initiator is passive" ),
-         */
-        tagData = new Tag1057EnuAggressorIndicator( Enum1057AggressorIndicator.AGGRESSOR );
-        assertEquals( "Y", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag1057EnuAggressorIndicator( Enum1057AggressorIndicator.PASSIVE );
-        assertEquals( "N", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        // loop around the ENUM and process
-        for ( Enum1057AggressorIndicator oneEnum : Enum1057AggressorIndicator.values()) {
-            tagData = new Tag1057EnuAggressorIndicator(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum1057AggressorIndicator oneEnum : Enum1057AggressorIndicator.values()) {
             tagData = new Tag1057EnuAggressorIndicator(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -97,6 +62,22 @@ class Tag1057EnuAggressorIndicatorTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  1057
+         *  AggressorIndicator
+         *  Boolean
+         *  <p>  AGGRESSOR( "Y", "AGGRESSOR", "Y - Order initiator is aggressor" ),
+         *  <p>  PASSIVE( "N", "PASSIVE", "N - Order initiator is passive" ),
+         */
+        tagData = new Tag1057EnuAggressorIndicator( Enum1057AggressorIndicator.AGGRESSOR );
+        assertEquals( "Y", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag1057EnuAggressorIndicator( Enum1057AggressorIndicator.PASSIVE );
+        assertEquals( "N", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum1057AggressorIndicator oneEnum : Enum1057AggressorIndicator.values()) {
             tagData = new Tag1057EnuAggressorIndicator(oneEnum);
@@ -114,7 +95,7 @@ class Tag1057EnuAggressorIndicatorTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

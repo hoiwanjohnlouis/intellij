@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  210
- *  MaxShow
- *  Qty
- *  <p></p>
- *  Deprecated in FIX.5.0
- *  <p></p>
- *  Maximum quantity (e.g. number of shares) within an order to be shown to other customers (i.e. sent via an IOI).
- *  <p></p>
- *  (Prior to FIX 4.2 this field was of type int)
- */
 class Tag210QtyMaxShowTest {
     Tag210QtyMaxShow tagData;
     int [] TestArray = {
@@ -65,26 +54,23 @@ class Tag210QtyMaxShowTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag210QtyMaxShow( new MyQtyType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag210QtyMaxShow( new MyQtyType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  210
+         *  MaxShow
+         *  Qty
+         */
+
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag210QtyMaxShow( new MyQtyType( oneElement ));

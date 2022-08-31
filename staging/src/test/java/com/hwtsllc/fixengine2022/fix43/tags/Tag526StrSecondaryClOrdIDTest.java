@@ -23,15 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  526
- *  SecondaryClOrdID
- *  String
- *  <p></p>
- *  Assigned by the party which originates the order.
- *  <p></p>
- *  Can be used to provide the ClOrdID (11) used by an exchange or executing system.
- */
 class Tag526StrSecondaryClOrdIDTest {
     Tag526StrSecondaryClOrdID tagData;
     String [] TestArray = {
@@ -63,25 +54,23 @@ class Tag526StrSecondaryClOrdIDTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag526StrSecondaryClOrdID( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag526StrSecondaryClOrdID( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  526
+         *  SecondaryClOrdID
+         *  String
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag526StrSecondaryClOrdID( new MyStringType( oneElement ));

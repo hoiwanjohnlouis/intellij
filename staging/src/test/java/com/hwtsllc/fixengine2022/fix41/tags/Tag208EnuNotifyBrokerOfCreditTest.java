@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  208
- *  NotifyBrokerOfCredit
- *  Boolean
- *  <p></p>
- *  Indicates if details should be communicated to BrokerOfCredit (i.e. step-in broker).
- *  <p></p>
- *  Valid values:
- *  <p>    N - Details should not be communicated
- *  <p>    Y - Details should be communicated
- */
 class Tag208EnuNotifyBrokerOfCreditTest {
     Tag208EnuNotifyBrokerOfCredit tagData;
 
@@ -61,29 +50,11 @@ class Tag208EnuNotifyBrokerOfCreditTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        tagData = new Tag208EnuNotifyBrokerOfCredit( Enum208NotifyBrokerOfCredit.NO);
-        assertEquals( Enum208NotifyBrokerOfCredit.NO.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag208EnuNotifyBrokerOfCredit( Enum208NotifyBrokerOfCredit.YES);
-        assertEquals( Enum208NotifyBrokerOfCredit.YES.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum208NotifyBrokerOfCredit oneEnum : Enum208NotifyBrokerOfCredit.values()) {
-            tagData = new Tag208EnuNotifyBrokerOfCredit(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum208NotifyBrokerOfCredit oneEnum : Enum208NotifyBrokerOfCredit.values()) {
             tagData = new Tag208EnuNotifyBrokerOfCredit(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -91,6 +62,22 @@ class Tag208EnuNotifyBrokerOfCreditTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  208
+         *  NotifyBrokerOfCredit
+         *  Boolean
+         *  <p>    N - Details should not be communicated
+         *  <p>    Y - Details should be communicated
+         */
+        tagData = new Tag208EnuNotifyBrokerOfCredit( Enum208NotifyBrokerOfCredit.NO);
+        assertEquals( "N", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag208EnuNotifyBrokerOfCredit( Enum208NotifyBrokerOfCredit.YES);
+        assertEquals( "Y", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum208NotifyBrokerOfCredit oneEnum : Enum208NotifyBrokerOfCredit.values()) {
             tagData = new Tag208EnuNotifyBrokerOfCredit(oneEnum);
@@ -108,7 +95,7 @@ class Tag208EnuNotifyBrokerOfCreditTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

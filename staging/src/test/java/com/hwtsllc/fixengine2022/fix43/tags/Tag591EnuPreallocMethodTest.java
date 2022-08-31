@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  591
- *  PreallocMethod
- *  char
- *  <p></p>
- *  Indicates the method of preallocation.
- *  <p></p>
- *  Valid values:
- *  <p>    0 - Pro-rata
- *  <p>    1 - Do not pro-rata - discuss first
- */
 class Tag591EnuPreallocMethodTest {
     Tag591EnuPreallocMethod tagData;
 
@@ -61,32 +50,11 @@ class Tag591EnuPreallocMethodTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  0-1 types
-         */
-        tagData = new Tag591EnuPreallocMethod( Enum591PreallocMethod.PRO_RATA );
-        assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag591EnuPreallocMethod( Enum591PreallocMethod.DO_NOT_PRO_RATA );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum591PreallocMethod oneEnum : Enum591PreallocMethod.values()) {
-            tagData = new Tag591EnuPreallocMethod(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum591PreallocMethod oneEnum : Enum591PreallocMethod.values()) {
             tagData = new Tag591EnuPreallocMethod(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -94,6 +62,22 @@ class Tag591EnuPreallocMethodTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  591
+         *  PreallocMethod
+         *  char
+         *  <p>    0 - Pro-rata
+         *  <p>    1 - Do not pro-rata - discuss first
+         */
+        tagData = new Tag591EnuPreallocMethod( Enum591PreallocMethod.PRO_RATA );
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag591EnuPreallocMethod( Enum591PreallocMethod.DO_NOT_PRO_RATA );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum591PreallocMethod oneEnum : Enum591PreallocMethod.values()) {
             tagData = new Tag591EnuPreallocMethod(oneEnum);
@@ -111,7 +95,7 @@ class Tag591EnuPreallocMethodTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

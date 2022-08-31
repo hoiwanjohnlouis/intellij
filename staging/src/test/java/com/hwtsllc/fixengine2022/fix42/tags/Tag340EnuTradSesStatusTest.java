@@ -23,34 +23,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  340
- *  Enu
- *  TradSesStatus
- *  int
- *  <p>
- *  State of the trading session.
- *  <p></p>
- *  Valid values:
- *  <p>    0-6 msg types
- *  <p>    "0 - Unknown"
- *  <p>    "1 - Halted"
- *  <p>    "2 - Open"
- *  <p>    "3 - Closed"
- *  <p>    "4 - Pre-Open"
- *  <p></p>
- *  <p>    "5 - Pre-Close"
- *  <p>    "6 - Request Rejected"
- */
 class Tag340EnuTradSesStatusTest {
     Tag340EnuTradSesStatus tagData;
 
-    @Test
-    void FIX0340Test() {
-    }
-    @Test
-    void Tag0340Test() {
-    }
     @Test
     void PrintTest() {
         // loop around the ENUM and process
@@ -75,53 +50,11 @@ class Tag340EnuTradSesStatusTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         * 0-6 msg types
-         */
-        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.UNKNOWN);
-        assertEquals( Enum340TradSesStatus.UNKNOWN.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.HALTED);
-        assertEquals( Enum340TradSesStatus.HALTED.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.OPEN);
-        assertEquals( Enum340TradSesStatus.OPEN.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.CLOSED);
-        assertEquals( Enum340TradSesStatus.CLOSED.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.PRE_CLOSE);
-        assertEquals( Enum340TradSesStatus.PRE_CLOSE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-
-        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.REQUEST_REJECTED);
-        assertEquals( Enum340TradSesStatus.REQUEST_REJECTED.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.CLOSED);
-        assertEquals( Enum340TradSesStatus.CLOSED.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum340TradSesStatus oneEnum : Enum340TradSesStatus.values()) {
-            tagData = new Tag340EnuTradSesStatus(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum340TradSesStatus oneEnum : Enum340TradSesStatus.values()) {
             tagData = new Tag340EnuTradSesStatus(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -129,6 +62,51 @@ class Tag340EnuTradSesStatusTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  340
+         *  Enu
+         *  TradSesStatus
+         *  int
+         *  <p>    0-6 msg types
+         *  <p>    "0 - Unknown"
+         *  <p>    "1 - Halted"
+         *  <p>    "2 - Open"
+         *  <p>    "3 - Closed"
+         *  <p>    "4 - Pre-Open"
+         */
+        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.UNKNOWN);
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.HALTED);
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.OPEN);
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.CLOSED);
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.PRE_OPEN);
+        assertEquals( "4", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    "5 - Pre-Close"
+         *  <p>    "6 - Request Rejected"
+         */
+        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.PRE_CLOSE);
+        assertEquals( "5", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag340EnuTradSesStatus(Enum340TradSesStatus.REQUEST_REJECTED);
+        assertEquals( "6", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum340TradSesStatus oneEnum : Enum340TradSesStatus.values()) {
             tagData = new Tag340EnuTradSesStatus(oneEnum);
@@ -146,7 +124,7 @@ class Tag340EnuTradSesStatusTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

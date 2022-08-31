@@ -24,13 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  396
- *  SideValue1
- *  Amt
- *  <p></p>
- *  Amounts in currency
- */
 class Tag396AmtSideValue1Test {
     Tag396AmtSideValue1 tagData;
     double [] TestArray = {
@@ -62,26 +55,23 @@ class Tag396AmtSideValue1Test {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( double oneElement : TestArray ) {
-            tagData = new Tag396AmtSideValue1( new MyAmtType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag396AmtSideValue1( new MyAmtType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  396
+         *  SideValue1
+         *  Amt
+         */
+
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag396AmtSideValue1( new MyAmtType( oneElement ));

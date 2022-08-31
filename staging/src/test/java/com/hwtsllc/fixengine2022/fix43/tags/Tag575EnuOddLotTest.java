@@ -23,19 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  575
- *  OddLot
- *  Boolean
- *  <p>
- *  Deprecated in FIX.5.0 This trade is to be treated as an odd lot
- *  <p>
- *  If this field is not specified, the default will be "N"
- *  <p>
- *  Valid values:
- *  <p>    N - Treat as round lot (default)
- *  <p>    Y - Treat as odd lot
- */
 class Tag575EnuOddLotTest {
     Tag575EnuOddLot tagData;
 
@@ -63,29 +50,11 @@ class Tag575EnuOddLotTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        tagData = new Tag575EnuOddLot( Enum575OddLot.NO);
-        assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag575EnuOddLot(Enum575OddLot.YES);
-        assertEquals( "Y", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum575OddLot oneEnum : Enum575OddLot.values()) {
-            tagData = new Tag575EnuOddLot(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum575OddLot oneEnum : Enum575OddLot.values()) {
             tagData = new Tag575EnuOddLot(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -93,6 +62,22 @@ class Tag575EnuOddLotTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  575
+         *  OddLot
+         *  Boolean
+         *  <p>    N - Treat as round lot (default)
+         *  <p>    Y - Treat as odd lot
+         */
+        tagData = new Tag575EnuOddLot( Enum575OddLot.NO);
+        assertEquals( "N", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag575EnuOddLot(Enum575OddLot.YES);
+        assertEquals( "Y", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum575OddLot oneEnum : Enum575OddLot.values()) {
             tagData = new Tag575EnuOddLot(oneEnum);
@@ -110,7 +95,7 @@ class Tag575EnuOddLotTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

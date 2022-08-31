@@ -23,20 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  669
- *  LastParPx
- *  Price
- *  <p></p>
- *  Last price expressed in percent-of-par.
- *  <p></p>
- *  Conditionally required for Fixed Income trades
- *  when LastPx (31) is expressed in Yield, Spread, Discount or any other type.
- *  <p></p>
- *  Usage: Execution Report and Allocation Report repeating executions block
- *  <p></p>
- *  (from sellside).
- */
 class Tag669PrcLastParPxTest {
     Tag669PrcLastParPx tagData;
     double [] TestArray = {
@@ -68,26 +54,23 @@ class Tag669PrcLastParPxTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( double oneElement : TestArray ) {
-            tagData = new Tag669PrcLastParPx( new MyPriceType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_PRC_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag669PrcLastParPx( new MyPriceType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  669
+         *  LastParPx
+         *  Price
+         */
+
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag669PrcLastParPx( new MyPriceType( oneElement ));

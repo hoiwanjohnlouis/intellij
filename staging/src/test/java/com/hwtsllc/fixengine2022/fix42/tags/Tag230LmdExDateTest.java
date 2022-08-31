@@ -24,22 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  230
- *  ExDate
- *  LocalMktDate
- *  <p></p>
- *  The date when a distribution of interest is deducted from a securities assets
- *  or set aside for payment to bondholders.
- *  <p></p>
- *  On the ex-date, the securities price drops by the amount of the distribution
- *  <p></p>
- *  (plus or minus any market activity).
- *  <p></p>
- *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
- *  <p></p>
- *  (prior to FIX 4.4 field was of type UTCDate)
- */
 class Tag230LmdExDateTest {
     Tag230LmdExDate tagData;
     String [] TestArray = {
@@ -71,26 +55,23 @@ class Tag230LmdExDateTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag230LmdExDate( new MyLocalMktDateType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag230LmdExDate( new MyLocalMktDateType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  230
+         *  ExDate
+         *  LocalMktDate
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag230LmdExDate( new MyLocalMktDateType( oneElement ));

@@ -23,15 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  83
- *  RptSeq
- *  int
- *  <p></p>
- *  Sequence number of message within report series.
- *  <p></p>
- *  Used to carry reporting sequence number of the fill as represented on the Trade Report Side.
- */
 class Tag83IntRptSeqTest {
     Tag83IntRptSeq tagData;
     int [] TestArray = {
@@ -63,26 +54,21 @@ class Tag83IntRptSeqTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag83IntRptSeq( new MyIntType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag83IntRptSeq( new MyIntType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  83
+         */
+
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag83IntRptSeq( new MyIntType( oneElement ));

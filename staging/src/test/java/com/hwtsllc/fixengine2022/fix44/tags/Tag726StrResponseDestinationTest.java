@@ -23,18 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  726
- *  ResponseDestination
- *  String
- *  <p></p>
- *  URI (Uniform Resource Identifier) for details) or other pre-arranged value.
- *  <p></p>
- *  Used in conjunction with ResponseTransportType (725) value of Out-of-Band
- *  to identify the out-of-band destination.
- *  <p></p>
- *  See "Appendix 6-B FIX Fields Based Upon Other Standards"
- */
 class Tag726StrResponseDestinationTest {
     Tag726StrResponseDestination tagData;
     String [] TestArray = {
@@ -66,25 +54,23 @@ class Tag726StrResponseDestinationTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag726StrResponseDestination( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag726StrResponseDestination( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  726
+         *  ResponseDestination
+         *  String
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag726StrResponseDestination( new MyStringType( oneElement ));

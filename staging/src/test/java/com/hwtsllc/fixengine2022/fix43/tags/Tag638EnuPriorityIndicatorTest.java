@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  638
- *  PriorityIndicator
- *  int
- *  <p></p>
- *  Indicates if a Cancel/Replace has caused an order to lose book priority.
- *  <p></p>
- *  Valid values:
- *  <p>    0 - Priority unchanged
- *  <p>    1 - Lost Priority as result of order change
- */
 class Tag638EnuPriorityIndicatorTest {
     Tag638EnuPriorityIndicator tagData;
 
@@ -61,32 +50,11 @@ class Tag638EnuPriorityIndicatorTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  0-1 types
-         */
-        tagData = new Tag638EnuPriorityIndicator( Enum638PriorityIndicator.PRIORITY_UNCHANGED );
-        assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag638EnuPriorityIndicator( Enum638PriorityIndicator.LOST_PRIORITY );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum638PriorityIndicator oneEnum : Enum638PriorityIndicator.values()) {
-            tagData = new Tag638EnuPriorityIndicator(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum638PriorityIndicator oneEnum : Enum638PriorityIndicator.values()) {
             tagData = new Tag638EnuPriorityIndicator(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -94,6 +62,22 @@ class Tag638EnuPriorityIndicatorTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  638
+         *  PriorityIndicator
+         *  int
+         *  <p>    0 - Priority unchanged
+         *  <p>    1 - Lost Priority as result of order change
+         */
+        tagData = new Tag638EnuPriorityIndicator( Enum638PriorityIndicator.PRIORITY_UNCHANGED );
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag638EnuPriorityIndicator( Enum638PriorityIndicator.LOST_PRIORITY );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum638PriorityIndicator oneEnum : Enum638PriorityIndicator.values()) {
             tagData = new Tag638EnuPriorityIndicator(oneEnum);
@@ -111,7 +95,7 @@ class Tag638EnuPriorityIndicatorTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

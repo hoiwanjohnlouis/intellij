@@ -23,23 +23,12 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  777
- *  SettlInstMsgID
- *  String
- *  <p></p>
- *  Unique identifier for Settlement Instruction message.
- */
 class Tag777StrSettlInstMsgIDTest {
     Tag777StrSettlInstMsgID tagData;
     String [] TestArray = {
             Tag777StrSettlInstMsgID.TESTA_STR_SETTL_INST_MSG_ID,
             Tag777StrSettlInstMsgID.TESTB_STR_SETTL_INST_MSG_ID
     };
-
-    @Test
-    void FIXTest() {
-    }
 
     @Test
     void PrintTest() {
@@ -65,25 +54,23 @@ class Tag777StrSettlInstMsgIDTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag777StrSettlInstMsgID( new MyStringType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag777StrSettlInstMsgID( new MyStringType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  777
+         *  SettlInstMsgID
+         *  String
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag777StrSettlInstMsgID( new MyStringType( oneElement ));

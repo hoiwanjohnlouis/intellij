@@ -30,13 +30,13 @@ class MyLengthTypeTest {
 
         oneElement = MyLengthType.TESTA_MY_LENGTH_TYPE;
         dataType = new MyLengthType( oneElement );
-        assertEquals( oneElement, dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, dataType.getDataValue());
+        assertEquals( oneElement, Integer.valueOf( dataType.toString() ) );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.toString());
 
         oneElement = MyLengthType.TESTB_MY_LENGTH_TYPE;
         dataType = new MyLengthType( oneElement );
-        assertEquals( oneElement, dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, dataType.getDataValue());
+        assertEquals( oneElement, Integer.valueOf( dataType.toString() ) );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.toString());
     }
     @Test
     void PrintFIXTagTest() {

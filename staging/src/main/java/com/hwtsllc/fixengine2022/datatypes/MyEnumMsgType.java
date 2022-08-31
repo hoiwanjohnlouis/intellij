@@ -456,16 +456,8 @@ public enum MyEnumMsgType implements LogFIXString, LogVerboseString {
     /**
      * standard wrapper to format a simple string describing this enum
      */
-    @Override
     public String toString() {
-        return toEnumLabelString()
-                .concat("=[")
-                .concat( toEnumIDString())
-                .concat(",")
-                .concat( toEnumNameString())
-                .concat(",")
-                .concat( toEnumDescriptionString())
-                .concat("]");
+        return id;
     }
 
     /**

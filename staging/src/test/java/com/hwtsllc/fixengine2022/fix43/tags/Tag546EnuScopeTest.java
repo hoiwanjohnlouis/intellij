@@ -23,18 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  546
- *  Scope
- *  MultipleCharValue
- *  <p>
- *  Specifies the market scope of the market data.
- *  <p></p>
- *  Valid values:
- *  <p>    1 - Local Market (Exchange, ECN, ATS)
- *  <p>    2 - National
- *  <p>    3 - Global
- */
 class Tag546EnuScopeTest {
     Tag546EnuScope tagData;
 
@@ -62,36 +50,11 @@ class Tag546EnuScopeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  1-3 types
-         */
-        tagData = new Tag546EnuScope( Enum546Scope.LOCAL_MARKET);
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag546EnuScope( Enum546Scope.NATIONAL);
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag546EnuScope( Enum546Scope.GLOBAL);
-        assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum546Scope oneEnum : Enum546Scope.values()) {
-            tagData = new Tag546EnuScope(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum546Scope oneEnum : Enum546Scope.values()) {
             tagData = new Tag546EnuScope(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -99,6 +62,27 @@ class Tag546EnuScopeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  546
+         *  Scope
+         *  MultipleCharValue
+         *  <p>    1 - Local Market (Exchange, ECN, ATS)
+         *  <p>    2 - National
+         *  <p>    3 - Global
+         */
+        tagData = new Tag546EnuScope( Enum546Scope.LOCAL_MARKET);
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag546EnuScope( Enum546Scope.NATIONAL);
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag546EnuScope( Enum546Scope.GLOBAL);
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum546Scope oneEnum : Enum546Scope.values()) {
             tagData = new Tag546EnuScope(oneEnum);
@@ -116,7 +100,7 @@ class Tag546EnuScopeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

@@ -23,15 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  618
- *  EncodedLegIssuerLen
- *  Length
- *  <p></p>
- *  Multileg instrument's individual  security’s EncodedIssuerLen.
- *  <p></p>
- *  See EncodedIssuerLen (348) field for description
- */
 class Tag618LenEncodedLegIssuerLenTest {
     Tag618LenEncodedLegIssuerLen tagData;
     int [] TestArray = {
@@ -63,26 +54,23 @@ class Tag618LenEncodedLegIssuerLenTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag618LenEncodedLegIssuerLen( new MyLengthType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_LEN_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag618LenEncodedLegIssuerLen( new MyLengthType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  618
+         *  EncodedLegIssuerLen
+         *  Length
+         */
+
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag618LenEncodedLegIssuerLen( new MyLengthType( oneElement ));

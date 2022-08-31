@@ -23,18 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  589
- *  DayBookingInst
- *  char
- *  <p></p>
- *  Indicates whether or not automatic booking can occur.
- *  <p></p>
- *  Valid values:
- *  <p>    0 - Can trigger booking without reference to the order initiator ("auto")
- *  <p>    1 - Speak with order initiator before booking ("speak first")
- *  <p>    2 - Accumulate
- */
 class Tag589EnuDayBookingInstTest {
     Tag589EnuDayBookingInst tagData;
 
@@ -62,36 +50,11 @@ class Tag589EnuDayBookingInstTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  0-2 types
-         */
-        tagData = new Tag589EnuDayBookingInst( Enum589DayBookingInst.AUTO_BOOKING );
-        assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag589EnuDayBookingInst( Enum589DayBookingInst.VERBAL_BOOKING );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag589EnuDayBookingInst( Enum589DayBookingInst.ACCUMULATE );
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum589DayBookingInst oneEnum : Enum589DayBookingInst.values()) {
-            tagData = new Tag589EnuDayBookingInst(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum589DayBookingInst oneEnum : Enum589DayBookingInst.values()) {
             tagData = new Tag589EnuDayBookingInst(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -99,6 +62,27 @@ class Tag589EnuDayBookingInstTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  589
+         *  DayBookingInst
+         *  char
+         *  <p>    0 - Can trigger booking without reference to the order initiator ("auto")
+         *  <p>    1 - Speak with order initiator before booking ("speak first")
+         *  <p>    2 - Accumulate
+         */
+        tagData = new Tag589EnuDayBookingInst( Enum589DayBookingInst.AUTO_BOOKING );
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag589EnuDayBookingInst( Enum589DayBookingInst.VERBAL_BOOKING );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag589EnuDayBookingInst( Enum589DayBookingInst.ACCUMULATE );
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum589DayBookingInst oneEnum : Enum589DayBookingInst.values()) {
             tagData = new Tag589EnuDayBookingInst(oneEnum);
@@ -116,7 +100,7 @@ class Tag589EnuDayBookingInstTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

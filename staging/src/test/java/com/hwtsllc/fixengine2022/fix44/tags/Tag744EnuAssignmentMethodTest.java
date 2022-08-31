@@ -23,24 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  744 (same as 744, 1049,)
- *  AssignmentMethod
- *  char
- *  <p>
- *  Method by which short positions are assigned
- *  to an exercise notice during exercise and assignment
- *  <p></p>
- *  1049
- *  InstrmtAssignmentMethod
- *  char
- *  <p>
- *  Method under which assignment was conducted
- *  <p></p>
- *  Valid values:
- *  <p>    P - Pro-rata
- *  <p>    R - Random
- */
 class Tag744EnuAssignmentMethodTest {
     Tag744EnuAssignmentMethod tagData;
 
@@ -68,34 +50,11 @@ class Tag744EnuAssignmentMethodTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    P - Pro-rata
-         *  <p>    R - Random
-         */
-        tagData = new Tag744EnuAssignmentMethod( MyEnumAssignmentMethod.PRO_RATA );
-        assertEquals( "P", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag744EnuAssignmentMethod( MyEnumAssignmentMethod.RANDOM );
-        assertEquals( "R", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( MyEnumAssignmentMethod oneEnum : MyEnumAssignmentMethod.values()) {
-            tagData = new Tag744EnuAssignmentMethod(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( MyEnumAssignmentMethod oneEnum : MyEnumAssignmentMethod.values()) {
             tagData = new Tag744EnuAssignmentMethod(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -103,6 +62,22 @@ class Tag744EnuAssignmentMethodTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  744 (same as 744, 1049,)
+         *  AssignmentMethod
+         *  char
+         *  <p>    P - Pro-rata
+         *  <p>    R - Random
+         */
+        tagData = new Tag744EnuAssignmentMethod( MyEnumAssignmentMethod.PRO_RATA );
+        assertEquals( "P", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag744EnuAssignmentMethod( MyEnumAssignmentMethod.RANDOM );
+        assertEquals( "R", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( MyEnumAssignmentMethod oneEnum : MyEnumAssignmentMethod.values()) {
             tagData = new Tag744EnuAssignmentMethod(oneEnum);
@@ -120,7 +95,7 @@ class Tag744EnuAssignmentMethodTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

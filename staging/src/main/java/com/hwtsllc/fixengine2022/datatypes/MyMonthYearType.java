@@ -19,7 +19,7 @@ package com.hwtsllc.fixengine2022.datatypes;
 import com.hwtsllc.fixengine2022.interfaces.LogVerboseString;
 
 /**
- *  200
+ *  200 (same as 200, 313, 610, 667, 955, )
  *  MaturityMonthYear
  *  month-year
  *  <p>     Can be used with standardized derivatives vs. the MaturityDate (54) field.
@@ -74,9 +74,6 @@ public class MyMonthYearType implements LogVerboseString {
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
-        return dataValue;
-    }
     /**
      * standard wrapper to format a detailed string describing this data field
      */
@@ -92,8 +89,9 @@ public class MyMonthYearType implements LogVerboseString {
      */
     @Override
     public String toString() {
-        return getDataValue();
+        return this.dataValue;
     }
+
     /**
      *
      * @param args Not used.

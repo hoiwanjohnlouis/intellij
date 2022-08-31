@@ -23,18 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  719
- *  ContraryInstructionIndicator
- *  Boolean
- *  <p></p>
- *  Used to indicate when a contrary instruction for exercise
- *  or abandonment is being submitted
- *  <p></p>
- *  Valid values:
- *  <p>    N - Instruction for Abandonment
- *  <p>    Y - Contrary Instruction for Exercise
- */
 class Tag719EnuContraryInstructionIndicatorTest {
     Tag719EnuContraryInstructionIndicator tagData;
 
@@ -62,34 +50,11 @@ class Tag719EnuContraryInstructionIndicatorTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    N - Instruction for Abandonment
-         *  <p>    Y - Contrary Instruction for Exercise
-         */
-        tagData = new Tag719EnuContraryInstructionIndicator( Enum719ContraryInstructionIndicator.NO );
-        assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag719EnuContraryInstructionIndicator(Enum719ContraryInstructionIndicator.YES);
-        assertEquals( "Y", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum719ContraryInstructionIndicator oneEnum : Enum719ContraryInstructionIndicator.values()) {
-            tagData = new Tag719EnuContraryInstructionIndicator(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum719ContraryInstructionIndicator oneEnum : Enum719ContraryInstructionIndicator.values()) {
             tagData = new Tag719EnuContraryInstructionIndicator(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -97,6 +62,22 @@ class Tag719EnuContraryInstructionIndicatorTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  719
+         *  ContraryInstructionIndicator
+         *  Boolean
+         *  <p>    N - Instruction for Abandonment
+         *  <p>    Y - Contrary Instruction for Exercise
+         */
+        tagData = new Tag719EnuContraryInstructionIndicator( Enum719ContraryInstructionIndicator.NO );
+        assertEquals( "N", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag719EnuContraryInstructionIndicator(Enum719ContraryInstructionIndicator.YES);
+        assertEquals( "Y", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum719ContraryInstructionIndicator oneEnum : Enum719ContraryInstructionIndicator.values()) {
             tagData = new Tag719EnuContraryInstructionIndicator(oneEnum);
@@ -114,7 +95,7 @@ class Tag719EnuContraryInstructionIndicatorTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

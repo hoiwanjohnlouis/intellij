@@ -23,20 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  910
- *  CollStatus
- *  int
- *  <p></p>
- *  Collateral Status
- *  <p></p>
- *  Valid values:
- *  <p>    0 - Unassigned
- *  <p>    1 - Partially Assigned
- *  <p>    2 - Assignment Proposed
- *  <p>    3 - Assigned (Accepted)
- *  <p>    4 - Challenged
- */
 class Tag910EnuCollStatusTest {
     Tag910EnuCollStatus tagData;
 
@@ -64,49 +50,11 @@ class Tag910EnuCollStatusTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    0 - Unassigned
-         *  <p>    1 - Partially Assigned
-         *  <p>    2 - Assignment Proposed
-         *  <p>    3 - Assigned (Accepted)
-         *  <p>    4 - Challenged
-         */
-        tagData = new Tag910EnuCollStatus( Enum910CollStatus.UNASSIGNED );
-        assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag910EnuCollStatus( Enum910CollStatus.PARTIALLY_ASSIGNED );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag910EnuCollStatus( Enum910CollStatus.ASSIGNMENT_PROPOSED );
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag910EnuCollStatus( Enum910CollStatus.ASSIGNED );
-        assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag910EnuCollStatus( Enum910CollStatus.CHALLENGED );
-        assertEquals( "4", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum910CollStatus oneEnum : Enum910CollStatus.values()) {
-            tagData = new Tag910EnuCollStatus(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum910CollStatus oneEnum : Enum910CollStatus.values()) {
             tagData = new Tag910EnuCollStatus(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -114,6 +62,37 @@ class Tag910EnuCollStatusTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  910
+         *  CollStatus
+         *  int
+         *  <p>    0 - Unassigned
+         *  <p>    1 - Partially Assigned
+         *  <p>    2 - Assignment Proposed
+         *  <p>    3 - Assigned (Accepted)
+         *  <p>    4 - Challenged
+         */
+        tagData = new Tag910EnuCollStatus( Enum910CollStatus.UNASSIGNED );
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag910EnuCollStatus( Enum910CollStatus.PARTIALLY_ASSIGNED );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag910EnuCollStatus( Enum910CollStatus.ASSIGNMENT_PROPOSED );
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag910EnuCollStatus( Enum910CollStatus.ASSIGNED );
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag910EnuCollStatus( Enum910CollStatus.CHALLENGED );
+        assertEquals( "4", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum910CollStatus oneEnum : Enum910CollStatus.values()) {
             tagData = new Tag910EnuCollStatus(oneEnum);
@@ -131,7 +110,7 @@ class Tag910EnuCollStatusTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

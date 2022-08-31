@@ -24,19 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  248
- *  LegCouponPaymentDate
- *  LocalMktDate
- *  <p></p>
- *  Multileg instrument's individual leg security’s CouponPaymentDate.
- *  <p></p>
- *  See CouponPaymentDate (224) field for description
- *  <p></p>
- *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
- *  <p></p>
- *  (prior to FIX 4.4 field was of type UTCDate)
- */
 class Tag248LmdLegCouponPaymentDateTest {
     Tag248LmdLegCouponPaymentDate tagData;
     String [] TestArray = {
@@ -68,26 +55,23 @@ class Tag248LmdLegCouponPaymentDateTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag248LmdLegCouponPaymentDate( new MyLocalMktDateType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_LMD_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag248LmdLegCouponPaymentDate( new MyLocalMktDateType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  248
+         *  LegCouponPaymentDate
+         *  LocalMktDate
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag248LmdLegCouponPaymentDate( new MyLocalMktDateType( oneElement ));

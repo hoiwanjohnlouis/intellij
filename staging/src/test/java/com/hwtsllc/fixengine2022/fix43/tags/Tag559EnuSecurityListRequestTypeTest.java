@@ -23,20 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  559
- *  SecurityListRequestType
- *  int
- *  <p></p>
- *  Identifies the type/criteria of Security List Request
- *  <p></p>
- *  Valid values:
- *  <p>    0 - Symbol
- *  <p>    1 - SecurityType and/or CFICode
- *  <p>    2 - Product
- *  <p>    3 - TradingSessionID
- *  <p>    4 - All Securities
- */
 class Tag559EnuSecurityListRequestTypeTest {
     Tag559EnuSecurityListRequestType tagData;
 
@@ -64,44 +50,11 @@ class Tag559EnuSecurityListRequestTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  0-4 types
-         */
-        tagData = new Tag559EnuSecurityListRequestType( Enum559SecurityListRequestType.SYMBOL );
-        assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag559EnuSecurityListRequestType( Enum559SecurityListRequestType.SECURITY_TYPE );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag559EnuSecurityListRequestType( Enum559SecurityListRequestType.PRODUCT );
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag559EnuSecurityListRequestType( Enum559SecurityListRequestType.TRADING_SESSION_ID );
-        assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag559EnuSecurityListRequestType( Enum559SecurityListRequestType.ALL_SECURITIES );
-        assertEquals( "4", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum559SecurityListRequestType oneEnum : Enum559SecurityListRequestType.values()) {
-            tagData = new Tag559EnuSecurityListRequestType(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum559SecurityListRequestType oneEnum : Enum559SecurityListRequestType.values()) {
             tagData = new Tag559EnuSecurityListRequestType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -109,6 +62,37 @@ class Tag559EnuSecurityListRequestTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  559
+         *  SecurityListRequestType
+         *  int
+         *  <p>    0 - Symbol
+         *  <p>    1 - SecurityType and/or CFICode
+         *  <p>    2 - Product
+         *  <p>    3 - TradingSessionID
+         *  <p>    4 - All Securities
+         */
+        tagData = new Tag559EnuSecurityListRequestType( Enum559SecurityListRequestType.SYMBOL );
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag559EnuSecurityListRequestType( Enum559SecurityListRequestType.SECURITY_TYPE );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag559EnuSecurityListRequestType( Enum559SecurityListRequestType.PRODUCT );
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag559EnuSecurityListRequestType( Enum559SecurityListRequestType.TRADING_SESSION_ID );
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag559EnuSecurityListRequestType( Enum559SecurityListRequestType.ALL_SECURITIES );
+        assertEquals( "4", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum559SecurityListRequestType oneEnum : Enum559SecurityListRequestType.values()) {
             tagData = new Tag559EnuSecurityListRequestType(oneEnum);
@@ -126,7 +110,7 @@ class Tag559EnuSecurityListRequestTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

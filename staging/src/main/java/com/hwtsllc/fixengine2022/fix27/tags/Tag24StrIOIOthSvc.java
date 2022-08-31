@@ -43,9 +43,6 @@ public class Tag24StrIOIOthSvc extends FIX27Abstract implements LogValuePairStri
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
-        return this.dataValue.getDataValue();
-    }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
@@ -53,7 +50,7 @@ public class Tag24StrIOIOthSvc extends FIX27Abstract implements LogValuePairStri
     public String toValuePairString() {
         return toEnumIDString()
                 .concat("=")
-                .concat(dataValue.toString());
+                .concat(this.dataValue.toString());
     }
     /**
      * standard wrapper to format a detailed string describing this data field
@@ -74,7 +71,7 @@ public class Tag24StrIOIOthSvc extends FIX27Abstract implements LogValuePairStri
      */
     @Override
     public String toString() {
-        return String.valueOf(getDataValue());
+        return this.dataValue.toString();
     }
 
     /**

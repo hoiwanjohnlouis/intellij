@@ -24,16 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  237
- *  TotalTakedown
- *  Amt
- *  <p></p>
- *  The price at which the securities are distributed to the different members of an
- *  underwriting group for the primary market in Municipals, total gross underwriter's spread.
- *  <p></p>
- *  (Note tag # was reserved in FIX 4.1, added in FIX 4.3)
- */
 class Tag237AmtTotalTakedownTest {
     Tag237AmtTotalTakedown tagData;
     double [] TestArray = {
@@ -65,26 +55,23 @@ class Tag237AmtTotalTakedownTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( double oneElement : TestArray ) {
-            tagData = new Tag237AmtTotalTakedown( new MyAmtType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_AMT_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag237AmtTotalTakedown( new MyAmtType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  237
+         *  TotalTakedown
+         *  Amt
+         */
+
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag237AmtTotalTakedown( new MyAmtType( oneElement ));

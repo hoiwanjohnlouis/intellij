@@ -24,16 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  361
- *  EncodedAllocText
- *  data
- *  <p></p>
- *  Encoded (non-ASCII characters) representation of the AllocText (161) field
- *  in the encoded format specified via the MessageEncoding (347) field.
- *  <p></p>
- *  If used, the ASCII (English) representation should also be specified in the AllocText field.
- */
 class Tag361DatEncodedAllocTextTest {
     Tag361DatEncodedAllocText tagData;
     String [] TestArray = {
@@ -65,26 +55,23 @@ class Tag361DatEncodedAllocTextTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag361DatEncodedAllocText( new MyDataType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_DAT_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag361DatEncodedAllocText( new MyDataType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  361
+         *  EncodedAllocText
+         *  data
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag361DatEncodedAllocText( new MyDataType( oneElement ));

@@ -28,20 +28,15 @@ class MyNumInGroupTypeTest {
         MyNumInGroupType dataType;
         int oneElement;
 
-        oneElement = 888888;
-        dataType = new MyNumInGroupType( oneElement );
-        assertEquals(  oneElement , dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, dataType.getDataValue());
-
         oneElement = MyNumInGroupType.TESTA_MY_NUM_IN_GROUP_TYPE;
         dataType = new MyNumInGroupType( oneElement );
-        assertEquals(  oneElement , dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, dataType.getDataValue());
+        assertEquals( oneElement, Integer.valueOf( dataType.toString() ) );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.toString());
 
         oneElement = MyNumInGroupType.TESTB_MY_NUM_IN_GROUP_TYPE;
         dataType = new MyNumInGroupType( oneElement );
-        assertEquals(  oneElement , dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_NUM_DATA_VALUE, dataType.getDataValue());
+        assertEquals( oneElement, Integer.valueOf( dataType.toString() ) );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.toString());
     }
     @Test
     void PrintFIXTagTest() {

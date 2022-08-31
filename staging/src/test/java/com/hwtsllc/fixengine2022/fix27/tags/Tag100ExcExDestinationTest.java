@@ -23,16 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  100
- *  ExDestination
- *  Exchange
- *  <p></p>
- *  Execution destination as defined by institution when order is entered.
- *  <p></p>
- *  Valid values:
- *  <p>     See "Appendix 6-C"
- */
 class Tag100ExcExDestinationTest {
     Tag100ExcExDestination tagData;
     String [] TestArray = {
@@ -64,26 +54,23 @@ class Tag100ExcExDestinationTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( String oneElement : TestArray ) {
-            tagData = new Tag100ExcExDestination( new MyExchangeType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag100ExcExDestination( new MyExchangeType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  100
+         *  ExDestination
+         *  Exchange
+         */
+
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag100ExcExDestination( new MyExchangeType( oneElement ));

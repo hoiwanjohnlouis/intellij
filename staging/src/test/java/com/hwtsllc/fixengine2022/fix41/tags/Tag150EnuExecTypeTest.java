@@ -23,43 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  150
- *  ExecType
- *  char
- *  <p></p>
- *  Describes the specific ExecutionRpt
- *  <p></p>
- *  (i.e. Pending Cancel) while OrdStatus (39) will always identify the current order status (i.e. Partially Filled)
- *  <p></p>
- *  *** SOME VALUES HAVE BEEN REPLACED - See "Replaced Features and Supported Approach" ***
- *  <p></p>
- *  Valid values:
- *  <p>    0 - New
- *  <p>    3 - Done for day
- *  <p>    4 - Canceled
- *  <p>    5 - Replaced
- *  <p>    6 - Pending Cancel (e.g. result of Order Cancel Request)
- *  <p></p>
- *  <p>    7 - Stopped
- *  <p>    8 - Rejected
- *  <p>    9 - Suspended
- *  <p></p>
- *  <p>    A - Pending New
- *  <p>    B - Calculated
- *  <p>    C - Expired
- *  <p>    D - Restated (Execution Report sent unsolicited by sellside, with ExecRestatementReason (378) set)
- *  <p>    E - Pending Replace (e.g. result of Order Cancel/Replace Request)
- *  <p></p>
- *  <p>    F - Trade (partial fill or fill)
- *  <p>    G - Trade Correct
- *  <p>    H - Trade Cancel
- *  <p>    I - Order Status
- *  <p>    J - Trade in a Clearing Hold
- *  <p></p>
- *  <p>    K - Trade has been released to Clearing
- *  <p>    L - Triggered or Activated by System
- */
 class Tag150EnuExecTypeTest {
     Tag150EnuExecType tagData;
 
@@ -87,101 +50,11 @@ class Tag150EnuExecTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        tagData = new Tag150EnuExecType(Enum150ExecType.NEW);
-        assertEquals( Enum150ExecType.NEW.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag150EnuExecType(Enum150ExecType.DONE_FOR_DAY);
-        assertEquals( Enum150ExecType.DONE_FOR_DAY.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag150EnuExecType(Enum150ExecType.CANCELED);
-        assertEquals( Enum150ExecType.CANCELED.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag150EnuExecType(Enum150ExecType.REPLACED);
-        assertEquals( Enum150ExecType.REPLACED.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag150EnuExecType(Enum150ExecType.PENDING_CANCEL);
-        assertEquals( Enum150ExecType.PENDING_CANCEL.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag150EnuExecType(Enum150ExecType.STOPPED);
-        assertEquals( Enum150ExecType.STOPPED.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag150EnuExecType(Enum150ExecType.REJECTED);
-        assertEquals( Enum150ExecType.REJECTED.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag150EnuExecType(Enum150ExecType.REJECTED);
-        assertEquals( Enum150ExecType.REJECTED.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag150EnuExecType(Enum150ExecType.PENDING_NEW);
-        assertEquals( Enum150ExecType.PENDING_NEW.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag150EnuExecType(Enum150ExecType.CALCULATED);
-        assertEquals( Enum150ExecType.CALCULATED.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag150EnuExecType(Enum150ExecType.EXPIRED);
-        assertEquals( Enum150ExecType.EXPIRED.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag150EnuExecType(Enum150ExecType.RESTATED);
-        assertEquals( Enum150ExecType.RESTATED.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag150EnuExecType(Enum150ExecType.PENDING_REPLACE);
-        assertEquals( Enum150ExecType.PENDING_REPLACE.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag150EnuExecType(Enum150ExecType.TRADE_PARTIAL_OR_FILLED);
-        assertEquals( Enum150ExecType.TRADE_PARTIAL_OR_FILLED.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag150EnuExecType(Enum150ExecType.TRADE_CORRECT);
-        assertEquals( Enum150ExecType.TRADE_CORRECT.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag150EnuExecType(Enum150ExecType.TRADE_CANCEL);
-        assertEquals( Enum150ExecType.TRADE_CANCEL.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag150EnuExecType(Enum150ExecType.ORDER_STATUS);
-        assertEquals( Enum150ExecType.ORDER_STATUS.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag150EnuExecType(Enum150ExecType.TRADE_IN_CLEARING_HOLD);
-        assertEquals( Enum150ExecType.TRADE_IN_CLEARING_HOLD.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag150EnuExecType(Enum150ExecType.TRADE_RELEASE_TO_CLEARING);
-        assertEquals( Enum150ExecType.TRADE_RELEASE_TO_CLEARING.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag150EnuExecType(Enum150ExecType.TRIGGERED_OR_ACTIVATED);
-        assertEquals( Enum150ExecType.TRIGGERED_OR_ACTIVATED.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum150ExecType oneEnum : Enum150ExecType.values()) {
-            tagData = new Tag150EnuExecType(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum150ExecType oneEnum : Enum150ExecType.values()) {
             tagData = new Tag150EnuExecType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -189,7 +62,118 @@ class Tag150EnuExecTypeTest {
     }
     @Test
     void TagToStringTest() {
-        Tag150EnuExecType tagData;
+        /*
+         *  150
+         *  <p>    0 - New
+         *  <p>    3 - Done for day
+         *  <p>    4 - Canceled
+         *  <p>    5 - Replaced
+         *  <p>    6 - Pending Cancel (e.g. result of Order Cancel Request)
+         */
+        tagData = new Tag150EnuExecType(Enum150ExecType.NEW);
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag150EnuExecType(Enum150ExecType.DONE_FOR_DAY);
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag150EnuExecType(Enum150ExecType.CANCELED);
+        assertEquals( "4", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag150EnuExecType(Enum150ExecType.REPLACED);
+        assertEquals( "5", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag150EnuExecType(Enum150ExecType.PENDING_CANCEL);
+        assertEquals( "6", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  150
+         *  <p>    7 - Stopped
+         *  <p>    8 - Rejected
+         *  <p>    9 - Suspended
+         */
+        tagData = new Tag150EnuExecType(Enum150ExecType.STOPPED);
+        assertEquals( "7", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag150EnuExecType(Enum150ExecType.REJECTED);
+        assertEquals( "8", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag150EnuExecType(Enum150ExecType.SUSPENDED);
+        assertEquals( "9", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    A - Pending New
+         *  <p>    B - Calculated
+         *  <p>    C - Expired
+         *  <p>    D - Restated (Execution Report sent unsolicited by sellside, with ExecRestatementReason (378) set)
+         *  <p>    E - Pending Replace (e.g. result of Order Cancel/Replace Request)
+         */
+        tagData = new Tag150EnuExecType(Enum150ExecType.PENDING_NEW);
+        assertEquals( "A", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag150EnuExecType(Enum150ExecType.CALCULATED);
+        assertEquals( "B", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag150EnuExecType(Enum150ExecType.EXPIRED);
+        assertEquals( "C", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag150EnuExecType(Enum150ExecType.RESTATED);
+        assertEquals( "D", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag150EnuExecType(Enum150ExecType.PENDING_REPLACE);
+        assertEquals( "E", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    F - Trade (partial fill or fill)
+         *  <p>    G - Trade Correct
+         *  <p>    H - Trade Cancel
+         *  <p>    I - Order Status
+         *  <p>    J - Trade in a Clearing Hold
+         */
+        tagData = new Tag150EnuExecType(Enum150ExecType.TRADE_PARTIAL_OR_FILLED);
+        assertEquals( "F", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag150EnuExecType(Enum150ExecType.TRADE_CORRECT);
+        assertEquals( "G", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag150EnuExecType(Enum150ExecType.TRADE_CANCEL);
+        assertEquals( "H", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag150EnuExecType(Enum150ExecType.ORDER_STATUS);
+        assertEquals( "I", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag150EnuExecType(Enum150ExecType.TRADE_IN_CLEARING_HOLD);
+        assertEquals( "J", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    K - Trade has been released to Clearing
+         *  <p>    L - Triggered or Activated by System
+         */
+        tagData = new Tag150EnuExecType(Enum150ExecType.TRADE_RELEASE_TO_CLEARING);
+        assertEquals( "K", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag150EnuExecType(Enum150ExecType.TRIGGERED_OR_ACTIVATED);
+        assertEquals( "L", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
 
         // loop around the ENUM and process
         for (Enum150ExecType oneEnum : Enum150ExecType.values()) {
@@ -208,7 +192,7 @@ class Tag150EnuExecTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

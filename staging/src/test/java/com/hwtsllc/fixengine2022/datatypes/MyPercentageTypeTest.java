@@ -30,13 +30,13 @@ class MyPercentageTypeTest {
 
         oneElement = MyPercentageType.TESTA_MY_PERCENTAGE_TYPE;
         dataType = new MyPercentageType( oneElement );
-        assertEquals( oneElement, dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, dataType.getDataValue());
+        assertEquals( oneElement, Double.valueOf( dataType.toString() ) );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.toString());
 
         oneElement = MyPercentageType.TESTB_MY_PERCENTAGE_TYPE;
         dataType = new MyPercentageType( oneElement );
-        assertEquals( oneElement, dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_PCT_DATA_VALUE, dataType.getDataValue());
+        assertEquals( oneElement, Double.valueOf( dataType.toString() ) );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, dataType.toString());
     }
     @Test
     void PrintFIXTagTest() {

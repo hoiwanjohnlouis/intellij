@@ -24,19 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  547
- *  MDImplicitDelete
- *  Boolean
- *  <p>
- *  Defines how a server handles distribution of a truncated book.  Defaults to broker option.
- *  <p>
- *  Valid values:
- *  <p>    N - Server must send an explicit delete for bids or offers
- *          falling outside the requested MarketDepth of the request
- *  <p>    Y - Client has responsibility for implicitly deleting bids
- *          or offers falling outside the MarketDepth of the request
- */
 class Tag547EnuMDImplicitDeleteTest {
     Tag547EnuMDImplicitDelete tagData;
 
@@ -64,29 +51,11 @@ class Tag547EnuMDImplicitDeleteTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        tagData = new Tag547EnuMDImplicitDelete( Enum547MDImplicitDelete.NO);
-        assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag547EnuMDImplicitDelete(Enum547MDImplicitDelete.YES);
-        assertEquals( "Y", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum547MDImplicitDelete oneEnum : Enum547MDImplicitDelete.values()) {
-            tagData = new Tag547EnuMDImplicitDelete(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum547MDImplicitDelete oneEnum : Enum547MDImplicitDelete.values()) {
             tagData = new Tag547EnuMDImplicitDelete(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -94,6 +63,24 @@ class Tag547EnuMDImplicitDeleteTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  547
+         *  MDImplicitDelete
+         *  Boolean
+         *  <p>    N - Server must send an explicit delete for bids or offers
+         *          falling outside the requested MarketDepth of the request
+         *  <p>    Y - Client has responsibility for implicitly deleting bids
+         *          or offers falling outside the MarketDepth of the request
+         */
+        tagData = new Tag547EnuMDImplicitDelete( Enum547MDImplicitDelete.NO);
+        assertEquals( "N", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag547EnuMDImplicitDelete(Enum547MDImplicitDelete.YES);
+        assertEquals( "Y", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum547MDImplicitDelete oneEnum : Enum547MDImplicitDelete.values()) {
             tagData = new Tag547EnuMDImplicitDelete(oneEnum);
@@ -111,7 +98,7 @@ class Tag547EnuMDImplicitDeleteTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

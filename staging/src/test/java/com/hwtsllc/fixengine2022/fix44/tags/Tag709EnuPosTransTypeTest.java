@@ -23,22 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  709
- *  PosTransType
- *  int
- *  <p></p>
- *  Identifies the type of position transaction
- *  <p></p>
- *  Valid values:
- *  <p>    1 - Exercise
- *  <p>    2 - Do Not Exercise
- *  <p>    3 - Position Adjustment
- *  <p>    4 - Position Change Submission or Margin Disposition
- *  <p>    5 - Pledge
- *  <p></p>
- *  <p>    6 - Large Trader Submission
- */
 class Tag709EnuPosTransTypeTest {
     Tag709EnuPosTransType tagData;
 
@@ -66,56 +50,11 @@ class Tag709EnuPosTransTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    1 - Exercise
-         *  <p>    2 - Do Not Exercise
-         *  <p>    3 - Position Adjustment
-         *  <p>    4 - Position Change Submission or Margin Disposition
-         *  <p>    5 - Pledge
-         */
-        tagData = new Tag709EnuPosTransType( Enum709PosTransType.EXERCISE );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag709EnuPosTransType(Enum709PosTransType.DO_NOT_EXERCISE);
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag709EnuPosTransType(Enum709PosTransType.POSITION_ADJUSTMENT);
-        assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag709EnuPosTransType(Enum709PosTransType.MARGIN_DISPOSITION);
-        assertEquals( "4", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag709EnuPosTransType(Enum709PosTransType.PLEDGE);
-        assertEquals( "5", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        /*
-         *  <p>    6 - Large Trader Submission
-         */
-        tagData = new Tag709EnuPosTransType(Enum709PosTransType.LARGE_TRADER_SUBMISSION);
-        assertEquals( "6", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum709PosTransType oneEnum : Enum709PosTransType.values()) {
-            tagData = new Tag709EnuPosTransType(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum709PosTransType oneEnum : Enum709PosTransType.values()) {
             tagData = new Tag709EnuPosTransType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -123,6 +62,44 @@ class Tag709EnuPosTransTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  709
+         *  PosTransType
+         *  int
+         *  <p>    1 - Exercise
+         *  <p>    2 - Do Not Exercise
+         *  <p>    3 - Position Adjustment
+         *  <p>    4 - Position Change Submission or Margin Disposition
+         *  <p>    5 - Pledge
+         */
+        tagData = new Tag709EnuPosTransType( Enum709PosTransType.EXERCISE );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag709EnuPosTransType(Enum709PosTransType.DO_NOT_EXERCISE);
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag709EnuPosTransType(Enum709PosTransType.POSITION_ADJUSTMENT);
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag709EnuPosTransType(Enum709PosTransType.MARGIN_DISPOSITION);
+        assertEquals( "4", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag709EnuPosTransType(Enum709PosTransType.PLEDGE);
+        assertEquals( "5", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    6 - Large Trader Submission
+         */
+        tagData = new Tag709EnuPosTransType(Enum709PosTransType.LARGE_TRADER_SUBMISSION);
+        assertEquals( "6", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum709PosTransType oneEnum : Enum709PosTransType.values()) {
             tagData = new Tag709EnuPosTransType(oneEnum);
@@ -140,7 +117,7 @@ class Tag709EnuPosTransTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

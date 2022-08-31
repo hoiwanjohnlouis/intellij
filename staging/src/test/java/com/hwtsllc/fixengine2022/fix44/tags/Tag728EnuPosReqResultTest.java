@@ -23,25 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  728
- *  PosReqResult
- *  int
- *  <p></p>
- *  Result of Request for Position
- *  <p></p>
- *  4000+ Reserved and available for bi-laterally agreed upon user-defined values
- *  <p></p>
- *  Valid values:
- *  <p>    0 - Valid request
- *  <p>    1 - Invalid or unsupported request
- *  <p>    2 - No positions found that match criteria
- *  <p>    3 - Not authorized to request positions
- *  <p>    4 - Request for position not supported
- *  <p></p>
- *  <p>    99 - Other (use Text (58) in conjunction with this code for an explanation)
- *  <p>    or any value conforming to the data type Reserved100Plus
- */
 class Tag728EnuPosReqResultTest {
     Tag728EnuPosReqResult tagData;
 
@@ -69,57 +50,11 @@ class Tag728EnuPosReqResultTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    0 - Valid request
-         *  <p>    1 - Invalid or unsupported request
-         *  <p>    2 - No positions found that match criteria
-         *  <p>    3 - Not authorized to request positions
-         *  <p>    4 - Request for position not supported
-         */
-        tagData = new Tag728EnuPosReqResult( Enum728PosReqResult.VALID_REQUEST );
-        assertEquals( "0", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag728EnuPosReqResult(Enum728PosReqResult.UNSUPPORTED_REQUEST);
-        assertEquals( "1", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag728EnuPosReqResult(Enum728PosReqResult.NO_POSITIONS_FOUND);
-        assertEquals( "2", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag728EnuPosReqResult(Enum728PosReqResult.NOT_AUTHORIZED);
-        assertEquals( "3", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag728EnuPosReqResult(Enum728PosReqResult.REQUEST_NOT_SUPPORTED);
-        assertEquals( "4", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        /*
-         *  <p>    99 - Other (use Text (58) in conjunction with this code for an explanation)
-         *  <p>    or any value conforming to the data type Reserved100Plus
-         */
-        tagData = new Tag728EnuPosReqResult(Enum728PosReqResult.OTHER);
-        assertEquals( "99", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum728PosReqResult oneEnum : Enum728PosReqResult.values()) {
-            tagData = new Tag728EnuPosReqResult(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum728PosReqResult oneEnum : Enum728PosReqResult.values()) {
             tagData = new Tag728EnuPosReqResult(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -127,6 +62,45 @@ class Tag728EnuPosReqResultTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  728
+         *  PosReqResult
+         *  int
+         *  <p>    0 - Valid request
+         *  <p>    1 - Invalid or unsupported request
+         *  <p>    2 - No positions found that match criteria
+         *  <p>    3 - Not authorized to request positions
+         *  <p>    4 - Request for position not supported
+         */
+        tagData = new Tag728EnuPosReqResult( Enum728PosReqResult.VALID_REQUEST );
+        assertEquals( "0", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag728EnuPosReqResult(Enum728PosReqResult.UNSUPPORTED_REQUEST);
+        assertEquals( "1", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag728EnuPosReqResult(Enum728PosReqResult.NO_POSITIONS_FOUND);
+        assertEquals( "2", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag728EnuPosReqResult(Enum728PosReqResult.NOT_AUTHORIZED);
+        assertEquals( "3", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag728EnuPosReqResult(Enum728PosReqResult.REQUEST_NOT_SUPPORTED);
+        assertEquals( "4", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        /*
+         *  <p>    99 - Other (use Text (58) in conjunction with this code for an explanation)
+         *  <p>    or any value conforming to the data type Reserved100Plus
+         */
+        tagData = new Tag728EnuPosReqResult(Enum728PosReqResult.OTHER);
+        assertEquals( "99", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum728PosReqResult oneEnum : Enum728PosReqResult.values()) {
             tagData = new Tag728EnuPosReqResult(oneEnum);
@@ -144,7 +118,7 @@ class Tag728EnuPosReqResultTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

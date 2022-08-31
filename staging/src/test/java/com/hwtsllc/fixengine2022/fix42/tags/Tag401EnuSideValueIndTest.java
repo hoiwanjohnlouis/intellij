@@ -23,20 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  401
- *  SideValueInd
- *  int
- *  <p>
- *  Code to identify which "SideValue" the value refers to.
- *  <p>
- *  SideValue1 and SideValue2 are used as opposed to Buy or Sell
- *  so that the basket can be quoted either way as Buy or Sell.
- *  <p></p>
- *  Valid values:
- *  <p>    1 - Side Value 1
- *  <p>    2 - Side Value 2
- */
 class Tag401EnuSideValueIndTest {
     Tag401EnuSideValueInd tagData;
 
@@ -64,32 +50,11 @@ class Tag401EnuSideValueIndTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         * 1-2 msg types
-         */
-        tagData = new Tag401EnuSideValueInd(Enum401SideValueInd.SIDE_VALUE_1);
-        assertEquals( Enum401SideValueInd.SIDE_VALUE_1.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag401EnuSideValueInd(Enum401SideValueInd.SIDE_VALUE_2);
-        assertEquals( Enum401SideValueInd.SIDE_VALUE_2.toEnumIDString(), tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum401SideValueInd oneEnum : Enum401SideValueInd.values()) {
-            tagData = new Tag401EnuSideValueInd(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum401SideValueInd oneEnum : Enum401SideValueInd.values()) {
             tagData = new Tag401EnuSideValueInd(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -97,6 +62,22 @@ class Tag401EnuSideValueIndTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  401
+         *  SideValueInd
+         *  int
+         *  <p>    1 - Side Value 1
+         *  <p>    2 - Side Value 2
+         */
+        tagData = new Tag401EnuSideValueInd(Enum401SideValueInd.SIDE_VALUE_1);
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag401EnuSideValueInd(Enum401SideValueInd.SIDE_VALUE_2);
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum401SideValueInd oneEnum : Enum401SideValueInd.values()) {
             tagData = new Tag401EnuSideValueInd(oneEnum);
@@ -114,7 +95,7 @@ class Tag401EnuSideValueIndTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

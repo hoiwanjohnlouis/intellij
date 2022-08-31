@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  720
- *  PriorSpreadIndicator
- *  Boolean
- *  <p></p>
- *  Indicates if requesting a rollover of prior day’s spread submissions.
- *  <p></p>
- *  Valid values:
- *  <p>    N - No Rollover
- *  <p>    Y - Rollover Prior Day's Spread
- */
 class Tag720EnuPriorSpreadIndicatorTest {
     Tag720EnuPriorSpreadIndicator tagData;
 
@@ -61,34 +50,11 @@ class Tag720EnuPriorSpreadIndicatorTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    N - No Rollover
-         *  <p>    Y - Rollover Prior Day's Spread
-         */
-        tagData = new Tag720EnuPriorSpreadIndicator( Enum720PriorSpreadIndicator.NO );
-        assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag720EnuPriorSpreadIndicator(Enum720PriorSpreadIndicator.YES);
-        assertEquals( "Y", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum720PriorSpreadIndicator oneEnum : Enum720PriorSpreadIndicator.values()) {
-            tagData = new Tag720EnuPriorSpreadIndicator(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum720PriorSpreadIndicator oneEnum : Enum720PriorSpreadIndicator.values()) {
             tagData = new Tag720EnuPriorSpreadIndicator(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -96,6 +62,22 @@ class Tag720EnuPriorSpreadIndicatorTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  720
+         *  PriorSpreadIndicator
+         *  Boolean
+         *  <p>    N - No Rollover
+         *  <p>    Y - Rollover Prior Day's Spread
+         */
+        tagData = new Tag720EnuPriorSpreadIndicator( Enum720PriorSpreadIndicator.NO );
+        assertEquals( "N", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag720EnuPriorSpreadIndicator(Enum720PriorSpreadIndicator.YES);
+        assertEquals( "Y", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum720PriorSpreadIndicator oneEnum : Enum720PriorSpreadIndicator.values()) {
             tagData = new Tag720EnuPriorSpreadIndicator(oneEnum);
@@ -113,7 +95,7 @@ class Tag720EnuPriorSpreadIndicatorTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

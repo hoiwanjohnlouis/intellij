@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  377
- *  SolicitedFlag
- *  Boolean
- *  <p>
- *  Indicates whether or not the order was solicited.
- *  <p></p>
- *  Valid values:
- *  <p>    N - Was not solicited
- *  <p>    Y - Was solicited
- */
 class Tag377EnuSolicitedFlagTest {
     Tag377EnuSolicitedFlag tagData;
 
@@ -61,29 +50,11 @@ class Tag377EnuSolicitedFlagTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        tagData = new Tag377EnuSolicitedFlag(Enum377SolicitedFlag.NO);
-        assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag377EnuSolicitedFlag(Enum377SolicitedFlag.YES);
-        assertEquals( "Y", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum377SolicitedFlag oneEnum : Enum377SolicitedFlag.values()) {
-            tagData = new Tag377EnuSolicitedFlag(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum377SolicitedFlag oneEnum : Enum377SolicitedFlag.values()) {
             tagData = new Tag377EnuSolicitedFlag(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -91,6 +62,22 @@ class Tag377EnuSolicitedFlagTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  377
+         *  SolicitedFlag
+         *  Boolean
+         *  <p>    N - Was not solicited
+         *  <p>    Y - Was solicited
+         */
+        tagData = new Tag377EnuSolicitedFlag(Enum377SolicitedFlag.NO);
+        assertEquals( "N", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag377EnuSolicitedFlag(Enum377SolicitedFlag.YES);
+        assertEquals( "Y", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum377SolicitedFlag oneEnum : Enum377SolicitedFlag.values()) {
             tagData = new Tag377EnuSolicitedFlag(oneEnum);
@@ -108,7 +95,7 @@ class Tag377EnuSolicitedFlagTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

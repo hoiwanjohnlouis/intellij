@@ -23,57 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  1031 (same as 1031, 1035,)
- *  CustOrderHandlingInst
- *  MultipleStringValue
- *  <p>
- *  Codes that apply special information that the Broker / Dealer needs to report, as specified by the customer.
- *  <p>
- *  NOTE: This field and its values have no bearing on the ExecInst and TimeInForce fields.
- *  <p>
- *  These values should not be used instead of ExecInst or TimeInForce.
- *  <p>
- *  This field and its values are intended for compliance reporting only.
- *  <p>
- *  For DeskTypeSource (1034) = 1 (NASD OATS), valid values are (as of OATS Phase 3 as provided by NASD.
- *  <p>
- *  See also http://www.nasd.com/oats/PhaseIII for a complete list.
- *  <p></p>
- *  1035
- *  DeskOrderHandlingInst
- *  MultipleStringValue
- *  <p></p>
- *  Valid values:
- *  <p>    ADD - Add On Order
- *  <p>    AON - All Or None
- *  <p>    CNH - Cash Not Held
- *  <p>    DIR - Directed Order
- *  <p>    E.W - Exchange for Physical Transaction
- *  <p></p>
- *  <p>    FOK - Fill Or Kill
- *  <p>    IO - Imbalance Only
- *  <p>    IOC - Immediate Or Cancel
- *  <p>    LOO - Limit On Open
- *  <p>    LOC - Limit On Close
- *  <p></p>
- *  <p>    MAO - Market At Open
- *  <p>    MAC - Market At Close
- *  <p>    MOO - Market On Open
- *  <p>    MOC - Market On Close
- *  <p>    MQT - Minimum Quantity
- *  <p></p>
- *  <p>    NH - Not Held
- *  <p>    OVD - Over the Day
- *  <p>    PEG - Pegged
- *  <p>    RSV - Reserve Size Order
- *  <p>    S.W - Stop Stock Transaction
- *  <p></p>
- *  <p>    SCL - Scale
- *  <p>    TMO - Time Order
- *  <p>    TS - Trailing Stop
- *  <p>    WRK - Work
- */
 class Tag1031EnuCustOrderHandlingInstTest {
     Tag1031EnuCustOrderHandlingInst tagData;
 
@@ -101,8 +50,22 @@ class Tag1031EnuCustOrderHandlingInstTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
+    void TagToValuePairStringTest() {
+        // loop around the ENUM and process
+        for ( MyEnumOrderHandlingInst oneEnum : MyEnumOrderHandlingInst.values()) {
+            tagData = new Tag1031EnuCustOrderHandlingInst(oneEnum);
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
+            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
+            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
+        }
+    }
+    @Test
+    void TagToStringTest() {
         /*
+         *  1031 (same as 1031, 1035,)
+         *  CustOrderHandlingInst
+         *  MultipleStringValue
          *  <p>    ADD - Add On Order
          *  <p>    AON - All Or None
          *  <p>    CNH - Cash Not Held
@@ -110,24 +73,24 @@ class Tag1031EnuCustOrderHandlingInstTest {
          *  <p>    E.W - Exchange for Physical Transaction
          */
         tagData = new Tag1031EnuCustOrderHandlingInst( MyEnumOrderHandlingInst.ADD_ON_ORDER );
-        assertEquals( "ADD", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "ADD", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1031EnuCustOrderHandlingInst( MyEnumOrderHandlingInst.ALL_OR_NONE );
-        assertEquals( "AON", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "AON", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1031EnuCustOrderHandlingInst( MyEnumOrderHandlingInst.CASH_NOT_HELD );
-        assertEquals( "CNH", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "CNH", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1031EnuCustOrderHandlingInst( MyEnumOrderHandlingInst.DIRECTED_ORDER );
-        assertEquals( "DIR", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "DIR", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1031EnuCustOrderHandlingInst( MyEnumOrderHandlingInst.EXCHANGE_FOR_PHYSICAL );
-        assertEquals( "E.W", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "E.W", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         /*
          *  <p>    FOK - Fill Or Kill
@@ -137,24 +100,24 @@ class Tag1031EnuCustOrderHandlingInstTest {
          *  <p>    LOC - Limit On Close
          */
         tagData = new Tag1031EnuCustOrderHandlingInst( MyEnumOrderHandlingInst.FILL_OR_KILL );
-        assertEquals( "FOK", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "FOK", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1031EnuCustOrderHandlingInst( MyEnumOrderHandlingInst.IMBALANCE_ONLY );
-        assertEquals( "IO", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "IO", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1031EnuCustOrderHandlingInst( MyEnumOrderHandlingInst.IMMEDIATE_OR_CANCEL );
-        assertEquals( "IOC", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "IOC", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1031EnuCustOrderHandlingInst( MyEnumOrderHandlingInst.LIMIT_ON_OPEN );
-        assertEquals( "LOO", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "LOO", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1031EnuCustOrderHandlingInst( MyEnumOrderHandlingInst.LIMIT_ON_CLOSE );
-        assertEquals( "LOC", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "LOC", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         /*
          *  <p>    MAO - Market At Open
@@ -164,24 +127,24 @@ class Tag1031EnuCustOrderHandlingInstTest {
          *  <p>    MQT - Minimum Quantity
          */
         tagData = new Tag1031EnuCustOrderHandlingInst( MyEnumOrderHandlingInst.MARKET_AT_OPEN );
-        assertEquals( "MAO", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "MAO", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1031EnuCustOrderHandlingInst( MyEnumOrderHandlingInst.MARKET_AT_CLOSE );
-        assertEquals( "MAC", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "MAC", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1031EnuCustOrderHandlingInst( MyEnumOrderHandlingInst.MARKET_ON_OPEN );
-        assertEquals( "MOO", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "MOO", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1031EnuCustOrderHandlingInst( MyEnumOrderHandlingInst.MARKET_ON_CLOSE );
-        assertEquals( "MOC", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "MOC", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1031EnuCustOrderHandlingInst( MyEnumOrderHandlingInst.MINIMUM_QUANTITY );
-        assertEquals( "MQT", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "MQT", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         /*
          *  <p>    NH - Not Held
@@ -191,24 +154,24 @@ class Tag1031EnuCustOrderHandlingInstTest {
          *  <p>    S.W - Stop Stock Transaction
          */
         tagData = new Tag1031EnuCustOrderHandlingInst( MyEnumOrderHandlingInst.NOT_HELD );
-        assertEquals( "NH", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "NH", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1031EnuCustOrderHandlingInst( MyEnumOrderHandlingInst.OVER_THE_DAY );
-        assertEquals( "OVD", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "OVD", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1031EnuCustOrderHandlingInst( MyEnumOrderHandlingInst.PEGGED );
-        assertEquals( "PEG", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "PEG", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1031EnuCustOrderHandlingInst( MyEnumOrderHandlingInst.RESERVE_SIZE_ORDER );
-        assertEquals( "RSV", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "RSV", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1031EnuCustOrderHandlingInst( MyEnumOrderHandlingInst.STOP_STOCK_TRANSACTION );
-        assertEquals( "S.W", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "S.W", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         /*
          *  <p>    SCL - Scale
@@ -217,44 +180,22 @@ class Tag1031EnuCustOrderHandlingInstTest {
          *  <p>    WRK - Work
          */
         tagData = new Tag1031EnuCustOrderHandlingInst( MyEnumOrderHandlingInst.SCALE );
-        assertEquals( "SCL", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "SCL", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1031EnuCustOrderHandlingInst( MyEnumOrderHandlingInst.TIME_ORDER );
-        assertEquals( "TMO", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "TMO", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1031EnuCustOrderHandlingInst( MyEnumOrderHandlingInst.TRAILING_STOP );
-        assertEquals( "TS", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "TS", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
         tagData = new Tag1031EnuCustOrderHandlingInst( MyEnumOrderHandlingInst.WORK );
-        assertEquals( "WRK", tagData.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue() );
+        assertEquals( "WRK", tagData.toString() );
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString() );
 
 
-        // loop around the ENUM and process
-        for ( MyEnumOrderHandlingInst oneEnum : MyEnumOrderHandlingInst.values()) {
-            tagData = new Tag1031EnuCustOrderHandlingInst(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
-    void TagToValuePairStringTest() {
-        // loop around the ENUM and process
-        for ( MyEnumOrderHandlingInst oneEnum : MyEnumOrderHandlingInst.values()) {
-            tagData = new Tag1031EnuCustOrderHandlingInst(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
-            assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
-        }
-    }
-    @Test
-    void TagToStringTest() {
         // loop around the ENUM and process
         for ( MyEnumOrderHandlingInst oneEnum : MyEnumOrderHandlingInst.values()) {
             tagData = new Tag1031EnuCustOrderHandlingInst(oneEnum);
@@ -272,7 +213,7 @@ class Tag1031EnuCustOrderHandlingInstTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

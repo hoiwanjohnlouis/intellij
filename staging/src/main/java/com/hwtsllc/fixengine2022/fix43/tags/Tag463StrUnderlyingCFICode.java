@@ -44,9 +44,6 @@ public class Tag463StrUnderlyingCFICode extends FIX43Abstract implements LogValu
         this.dataValue = dataValue;
     }
 
-    public String getDataValue() {
-        return this.dataValue.getDataValue();
-    }
     /**
      * standard wrapper to retrieve the build a standard fix message for this tag
      */
@@ -75,7 +72,7 @@ public class Tag463StrUnderlyingCFICode extends FIX43Abstract implements LogValu
      */
     @Override
     public String toString() {
-        return String.valueOf(getDataValue());
+        return dataValue.toString();
     }
 
     /**

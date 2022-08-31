@@ -23,19 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  905
- *  CollAsgnRespType
- *  int
- *  <p></p>
- *  Collateral Assignment Response Type
- *  <p></p>
- *  Valid values:
- *  <p>    0 - Received
- *  <p>    1 - Accepted
- *  <p>    2 - Declined
- *  <p>    3 - Rejected
- */
 class Tag905EnuCollAsgnRespTypeTest {
     Tag905EnuCollAsgnRespType tagData;
 
@@ -63,44 +50,11 @@ class Tag905EnuCollAsgnRespTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    0 - Received
-         *  <p>    1 - Accepted
-         *  <p>    2 - Declined
-         *  <p>    3 - Rejected
-         */
-        tagData = new Tag905EnuCollAsgnRespType( Enum905CollAsgnRespType.RECEIVED );
-        assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag905EnuCollAsgnRespType( Enum905CollAsgnRespType.ACCEPTED );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag905EnuCollAsgnRespType( Enum905CollAsgnRespType.DECLINED );
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag905EnuCollAsgnRespType( Enum905CollAsgnRespType.REJECTED );
-        assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum905CollAsgnRespType oneEnum : Enum905CollAsgnRespType.values()) {
-            tagData = new Tag905EnuCollAsgnRespType(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum905CollAsgnRespType oneEnum : Enum905CollAsgnRespType.values()) {
             tagData = new Tag905EnuCollAsgnRespType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -108,6 +62,32 @@ class Tag905EnuCollAsgnRespTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  905
+         *  CollAsgnRespType
+         *  int
+         *  <p>    0 - Received
+         *  <p>    1 - Accepted
+         *  <p>    2 - Declined
+         *  <p>    3 - Rejected
+         */
+        tagData = new Tag905EnuCollAsgnRespType( Enum905CollAsgnRespType.RECEIVED );
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag905EnuCollAsgnRespType( Enum905CollAsgnRespType.ACCEPTED );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag905EnuCollAsgnRespType( Enum905CollAsgnRespType.DECLINED );
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag905EnuCollAsgnRespType( Enum905CollAsgnRespType.REJECTED );
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum905CollAsgnRespType oneEnum : Enum905CollAsgnRespType.values()) {
             tagData = new Tag905EnuCollAsgnRespType(oneEnum);
@@ -125,7 +105,7 @@ class Tag905EnuCollAsgnRespTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

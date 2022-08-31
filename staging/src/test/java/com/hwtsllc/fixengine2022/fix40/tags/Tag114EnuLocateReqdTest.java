@@ -23,17 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  114
- *  LocateReqd
- *  Boolean
- *  <p></p>
- *  Indicates whether the broker is to locate the stock in conjunction with a short sell order.
- *  <p></p>
- *  Valid values:
- *  <p>    N - Indicates the broker is not required to locate
- *  <p>    Y - Indicates the broker is responsible for locating the stock
- */
 class Tag114EnuLocateReqdTest {
     Tag114EnuLocateReqd tagData;
 
@@ -61,29 +50,11 @@ class Tag114EnuLocateReqdTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        tagData = new Tag114EnuLocateReqd(Enum114LocateReqd.NO);
-        assertEquals( "N", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag114EnuLocateReqd(Enum114LocateReqd.YES);
-        assertEquals( "Y", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum114LocateReqd oneEnum : Enum114LocateReqd.values()) {
-            tagData = new Tag114EnuLocateReqd(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum114LocateReqd oneEnum : Enum114LocateReqd.values()) {
             tagData = new Tag114EnuLocateReqd(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -91,6 +62,22 @@ class Tag114EnuLocateReqdTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  114
+         *  LocateReqd
+         *  Boolean
+         *  <p>    N - Indicates the broker is not required to locate
+         *  <p>    Y - Indicates the broker is responsible for locating the stock
+         */
+        tagData = new Tag114EnuLocateReqd(Enum114LocateReqd.NO);
+        assertEquals( "N", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag114EnuLocateReqd(Enum114LocateReqd.YES);
+        assertEquals( "Y", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum114LocateReqd oneEnum : Enum114LocateReqd.values()) {
             tagData = new Tag114EnuLocateReqd(oneEnum);
@@ -108,7 +95,7 @@ class Tag114EnuLocateReqdTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

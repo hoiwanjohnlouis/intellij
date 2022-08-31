@@ -50,32 +50,27 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
  *      (see http://tycho.usno.navy.mil/leapsec.html)
  */
 class MyUTCTimestampTypeTest {
+    MyUTCTimestampType dataType;
+    String [] TestArray = {
+            MyUTCTimestampType.TESTA_MY_UTC_TIMESTAMP_TYPE,
+            MyUTCTimestampType.TESTB_MY_UTC_TIMESTAMP_TYPE
+    };
+
     @Test
     void UTCTimestampTypeTest() {
-        MyUTCTimestampType dataType;
-        String oneElement;
-
-        oneElement = MyUTCTimestampType.TESTA_MY_UTC_TIMESTAMP_TYPE;
-        dataType = new MyUTCTimestampType( oneElement );
-        assertEquals( oneElement, dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, dataType.getDataValue());
-
-        oneElement = MyUTCTimestampType.TESTB_MY_UTC_TIMESTAMP_TYPE;
-        dataType = new MyUTCTimestampType( oneElement );
-        assertEquals( oneElement, dataType.getDataValue() );
-        assertNotEquals( MyTestValues.JUNK_UTC_DATA_VALUE, dataType.getDataValue());
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            dataType = new MyUTCTimestampType( oneElement );
+            assertEquals( oneElement, dataType.toString() );
+            assertNotEquals( MyTestValues.JUNK_TZT_DATA_VALUE, dataType.toString());
+        }
     }
     @Test
-    void PrintFIXTagTest() {
-        MyUTCTimestampType dataType;
-        String oneElement;
-
-        oneElement = MyUTCTimestampType.TESTA_MY_UTC_TIMESTAMP_TYPE;
-        dataType = new MyUTCTimestampType( oneElement );
-        System.out.println( dataType.toVerboseString() );
-
-        oneElement = MyUTCTimestampType.TESTB_MY_UTC_TIMESTAMP_TYPE;
-        dataType = new MyUTCTimestampType( oneElement );
-        System.out.println( dataType.toVerboseString() );
+    void PrintTest() {
+        // process array of tags
+        for ( String oneElement : TestArray ) {
+            dataType = new MyUTCTimestampType( oneElement );
+            System.out.println( dataType.toVerboseString() );
+        }
     }
 }

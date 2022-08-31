@@ -23,26 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  837 (same as 837, 843,)
- *  PegLimitType
- *  int
- *  <p>
- *  Type of Peg Limit
- *  <p></p>
- *  843 (same as 837, 843,)
- *  DiscretionLimitType
- *  int
- *  <p>
- *  Type of Discretion Limit
- *  <p></p>
- *  Valid values:
- *  <p>    0 - Or better (default) - price improvement allowed
- *  <p>    1 - Strict - limit is a strict limit
- *  <p>    2 - Or worse - for a buy the peg limit is a minimum
- *                  and for a sell the peg limit is a maximum
- *                  (for use for orders which have a price range)
- */
 class Tag843EnuDiscretionLimitTypeTest {
     Tag843EnuDiscretionLimitType tagData;
 
@@ -70,41 +50,11 @@ class Tag843EnuDiscretionLimitTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    0 - Or better (default) - price improvement allowed
-         *  <p>    1 - Strict - limit is a strict limit
-         *  <p>    2 - Or worse - for a buy the peg limit is a minimum
-         *                  and for a sell the peg limit is a maximum
-         *                  (for use for orders which have a price range)
-         */
-        tagData = new Tag843EnuDiscretionLimitType( MyEnumLimitType.OR_BETTER );
-        assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag843EnuDiscretionLimitType(MyEnumLimitType.STRICT);
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag843EnuDiscretionLimitType(MyEnumLimitType.OR_WORSE);
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( MyEnumLimitType oneEnum : MyEnumLimitType.values()) {
-            tagData = new Tag843EnuDiscretionLimitType(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( MyEnumLimitType oneEnum : MyEnumLimitType.values()) {
             tagData = new Tag843EnuDiscretionLimitType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -112,6 +62,29 @@ class Tag843EnuDiscretionLimitTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  843 (same as 837, 843,)
+         *  DiscretionLimitType
+         *  int
+         *  <p>    0 - Or better (default) - price improvement allowed
+         *  <p>    1 - Strict - limit is a strict limit
+         *  <p>    2 - Or worse - for a buy the peg limit is a minimum
+         *                  and for a sell the peg limit is a maximum
+         *                  (for use for orders which have a price range)
+         */
+        tagData = new Tag843EnuDiscretionLimitType( MyEnumLimitType.OR_BETTER );
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag843EnuDiscretionLimitType(MyEnumLimitType.STRICT);
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag843EnuDiscretionLimitType(MyEnumLimitType.OR_WORSE);
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( MyEnumLimitType oneEnum : MyEnumLimitType.values()) {
             tagData = new Tag843EnuDiscretionLimitType(oneEnum);
@@ -129,7 +102,7 @@ class Tag843EnuDiscretionLimitTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

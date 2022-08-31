@@ -17,45 +17,13 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyEnumPositionEffect;
+import com.hwtsllc.fixengine2022.fix27.tags.Tag77EnuPositionEffect;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  77 (Same for TAGS 77, 564, 1047, )
- *  PositionEffect
- *  char
- *  <p>
- *  Indicates whether the resulting position after a trade
- *  should be an opening position or closing position.
- *  <p>
- *  Used for omnibus accounting - where accounts are held
- *  on a gross basis instead of being netted together.
- *  <p></p>
- *  564
- *  LegPositionEffect
- *  char
- *  <p>
- *  PositionEffect for leg of a multileg
- *  <p>
- *  See PositionEffect (77) field for description
- *  <p></p>
- *  1047
- *  AllocPositionEffect
- *  char
- *  <p>
- *  Indicates whether the resulting position after a trade should be an opening position or closing position.
- *  <p>
- *  Used for omnibus accounting - where accounts are held on a gross basis instead of being netted together.
- *  <p></p>
- *  Valid values:
- *  <p>    C - Close
- *  <p>    F - FIFO
- *  <p>    O - Open
- *  <p>    R - Rolled
- */
 class Tag564EnuLegPositionEffectTest {
     Tag564EnuLegPositionEffect tagData;
 
@@ -83,40 +51,11 @@ class Tag564EnuLegPositionEffectTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         * O, F, C, and R PositionEffect types
-         */
-        tagData = new Tag564EnuLegPositionEffect(MyEnumPositionEffect.OPEN);
-        assertEquals( "O", tagData.getDataValue());
-        assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag564EnuLegPositionEffect(MyEnumPositionEffect.FIFO);
-        assertEquals( "F", tagData.getDataValue());
-        assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag564EnuLegPositionEffect(MyEnumPositionEffect.CLOSE);
-        assertEquals( "C", tagData.getDataValue());
-        assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag564EnuLegPositionEffect(MyEnumPositionEffect.ROLLED);
-        assertEquals( "R", tagData.getDataValue());
-        assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (MyEnumPositionEffect oneEnum : MyEnumPositionEffect.values()) {
-            tagData = new Tag564EnuLegPositionEffect(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (MyEnumPositionEffect oneEnum : MyEnumPositionEffect.values()) {
             tagData = new Tag564EnuLegPositionEffect(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -124,6 +63,30 @@ class Tag564EnuLegPositionEffectTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  77 (Same for TAGS 77, 564, 1047, )
+         *  <p>    C - Close
+         *  <p>    F - FIFO
+         *  <p>    O - Open
+         *  <p>    R - Rolled
+         */
+        tagData = new Tag564EnuLegPositionEffect(MyEnumPositionEffect.OPEN);
+        assertEquals( "O", tagData.toString());
+        assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag564EnuLegPositionEffect(MyEnumPositionEffect.FIFO);
+        assertEquals( "F", tagData.toString());
+        assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag564EnuLegPositionEffect(MyEnumPositionEffect.CLOSE);
+        assertEquals( "C", tagData.toString());
+        assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag564EnuLegPositionEffect(MyEnumPositionEffect.ROLLED);
+        assertEquals( "R", tagData.toString());
+        assertNotEquals(MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (MyEnumPositionEffect oneEnum : MyEnumPositionEffect.values()) {
             tagData = new Tag564EnuLegPositionEffect(oneEnum);
@@ -141,7 +104,7 @@ class Tag564EnuLegPositionEffectTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

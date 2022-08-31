@@ -23,19 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  774
- *  ConfirmRejReason
- *  int
- *  <p></p>
- *  Identifies the reason for rejecting a Confirmation.
- *  <p></p>
- *  Valid values:
- *  <p>    1 - Mismatched account
- *  <p>    2 - Missing settlement instructions
- *  <p>    99 - Other
- *  <p>    or any value conforming to the data type Reserved100Plus
- */
 class Tag774EnuConfirmRejReasonTest {
     Tag774EnuConfirmRejReason tagData;
 
@@ -63,40 +50,11 @@ class Tag774EnuConfirmRejReasonTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  <p>    1 - Mismatched account
-         *  <p>    2 - Missing settlement instructions
-         *  <p>    99 - Other
-         *  <p>    or any value conforming to the data type Reserved100Plus
-         */
-        tagData = new Tag774EnuConfirmRejReason( Enum774ConfirmRejReason.MISMATCHED_ACCOUNT );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag774EnuConfirmRejReason(Enum774ConfirmRejReason.MISSING_INSTRUCTIONS);
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag774EnuConfirmRejReason(Enum774ConfirmRejReason.OTHER);
-        assertEquals( "99", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for ( Enum774ConfirmRejReason oneEnum : Enum774ConfirmRejReason.values()) {
-            tagData = new Tag774EnuConfirmRejReason(oneEnum);
-            assertEquals( tagData.toString(), tagData.getDataValue());
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for ( Enum774ConfirmRejReason oneEnum : Enum774ConfirmRejReason.values()) {
             tagData = new Tag774EnuConfirmRejReason(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -104,6 +62,28 @@ class Tag774EnuConfirmRejReasonTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  774
+         *  ConfirmRejReason
+         *  int
+         *  <p>    1 - Mismatched account
+         *  <p>    2 - Missing settlement instructions
+         *  <p>    99 - Other
+         *  <p>    or any value conforming to the data type Reserved100Plus
+         */
+        tagData = new Tag774EnuConfirmRejReason( Enum774ConfirmRejReason.MISMATCHED_ACCOUNT );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag774EnuConfirmRejReason(Enum774ConfirmRejReason.MISSING_INSTRUCTIONS);
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag774EnuConfirmRejReason(Enum774ConfirmRejReason.OTHER);
+        assertEquals( "99", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for ( Enum774ConfirmRejReason oneEnum : Enum774ConfirmRejReason.values()) {
             tagData = new Tag774EnuConfirmRejReason(oneEnum);
@@ -121,7 +101,7 @@ class Tag774EnuConfirmRejReasonTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

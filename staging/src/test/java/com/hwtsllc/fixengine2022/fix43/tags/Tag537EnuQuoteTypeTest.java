@@ -23,37 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  537
- *  QuoteType
- *  int
- *  <p></p>
- *  Identifies the type of quote.
- *  <p></p>
- *  An indicative quote is used to inform a counterparty of a market.
- *  <p></p>
- *  An indicative quote does not result directly in a trade.
- *  <p></p>
- *  A tradeable quote is submitted to a market and will result directly
- *  in a trade against other orders and quotes in a market.
- *  <p></p>
- *  A restricted tradeable quote is submitted to a market
- *  and within a certain restriction (possibly based upon price or quantity)
- *  will automatically trade against orders.
- *  <p></p>
- *  Order that do not comply with restrictions are sent to
- *  the quote issuer who can choose to accept or decline the order.
- *  <p></p>
- *  A counter quote is used in the negotiation model.
- *  <p>
- *  See Volume 7 – Product: Fixed Income for example usage.
- *  <p></p>
- *  Valid values:
- *  <p>    0 - Indicative
- *  <p>    1 - Tradeable
- *  <p>    2 - Restricted Tradeable
- *  <p>    3 - Counter (tradeable)
- */
 class Tag537EnuQuoteTypeTest {
     Tag537EnuQuoteType tagData;
 
@@ -81,40 +50,11 @@ class Tag537EnuQuoteTypeTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        /*
-         *  0-3 types
-         */
-        tagData = new Tag537EnuQuoteType( Enum537QuoteType.INDICATIVE );
-        assertEquals( "0", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag537EnuQuoteType( Enum537QuoteType.TRADEABLE );
-        assertEquals( "1", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag537EnuQuoteType( Enum537QuoteType.RESTRICTED_TRADEABLE );
-        assertEquals( "2", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        tagData = new Tag537EnuQuoteType( Enum537QuoteType.COUNTER );
-        assertEquals( "3", tagData.getDataValue());
-        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-
-        // loop around the ENUM and process
-        for (Enum537QuoteType oneEnum : Enum537QuoteType.values()) {
-            tagData = new Tag537EnuQuoteType(oneEnum);
-            assertEquals( tagData.toDataIDString(), tagData.getDataValue());
-            assertEquals( oneEnum.toEnumIDString(), tagData.getDataValue());
-            assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // loop around the ENUM and process
         for (Enum537QuoteType oneEnum : Enum537QuoteType.values()) {
             tagData = new Tag537EnuQuoteType(oneEnum);
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertEquals( tagData.toEnumIDString() + "=" + tagData.toDataIDString(), tagData.toValuePairString() );
             assertEquals( tagData.toEnumIDString() + "=" + oneEnum.toEnumIDString(), tagData.toValuePairString() );
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString());
@@ -122,6 +62,32 @@ class Tag537EnuQuoteTypeTest {
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  537
+         *  QuoteType
+         *  int
+         *  <p>    0 - Indicative
+         *  <p>    1 - Tradeable
+         *  <p>    2 - Restricted Tradeable
+         *  <p>    3 - Counter (tradeable)
+         */
+        tagData = new Tag537EnuQuoteType( Enum537QuoteType.INDICATIVE );
+        assertEquals( "0", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag537EnuQuoteType( Enum537QuoteType.TRADEABLE );
+        assertEquals( "1", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag537EnuQuoteType( Enum537QuoteType.RESTRICTED_TRADEABLE );
+        assertEquals( "2", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+        tagData = new Tag537EnuQuoteType( Enum537QuoteType.COUNTER );
+        assertEquals( "3", tagData.toString());
+        assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toString());
+
+
         // loop around the ENUM and process
         for (Enum537QuoteType oneEnum : Enum537QuoteType.values()) {
             tagData = new Tag537EnuQuoteType(oneEnum);
@@ -139,7 +105,7 @@ class Tag537EnuQuoteTypeTest {
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
-                            "\tDataValue[" + tagData.getDataValue() + "]\n" +
+                            "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
                             "\tDataName[" + tagData.toDataNameString() + "]\n" +

@@ -23,16 +23,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  1087
- *  DisplayMinIncr
- *  Qty
- *  <p>
- *  Defines the minimum increment to be used when calculating a random refresh of DisplayQty.
- *  <p></p>
- *  A user specifies this when he wants a larger increment than
- *  the standard provided by the market (e.g. the round lot size).
- */
 class Tag1087QtyDisplayMinIncrTest {
     Tag1087QtyDisplayMinIncr tagData;
     int [] TestArray = {
@@ -64,26 +54,23 @@ class Tag1087QtyDisplayMinIncrTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag1087QtyDisplayMinIncr( new MyQtyType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_QTY_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag1087QtyDisplayMinIncr( new MyQtyType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  1087
+         *  DisplayMinIncr
+         *  Qty
+         */
+
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag1087QtyDisplayMinIncr( new MyQtyType( oneElement ));

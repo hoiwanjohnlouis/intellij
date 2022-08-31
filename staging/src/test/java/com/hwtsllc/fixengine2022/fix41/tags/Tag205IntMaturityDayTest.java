@@ -24,16 +24,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-/**
- *  205
- *  MaturityDay
- *  day-of-month
- *  <p></p>
- *  Deprecated in FIX.4.2
- *  <p></p>
- *  Day of month used in conjunction with MaturityMonthYear
- *  to specify the maturity date for SecurityType=FUT or SecurityType=OPT.
- */
 // @Deprecated
 class Tag205IntMaturityDayTest {
     Tag205IntMaturityDay tagData;
@@ -66,26 +56,23 @@ class Tag205IntMaturityDayTest {
         }
     }
     @Test
-    void TagGetDataValueTest() {
-        // process array of tags
-        for ( int oneElement : TestArray ) {
-            tagData = new Tag205IntMaturityDay( new MyIntType( oneElement ));
-            assertEquals( oneElement, tagData.getDataValue() );
-            assertNotEquals( MyTestValues.JUNK_INT_DATA_VALUE, tagData.getDataValue());
-        }
-    }
-    @Test
     void TagToValuePairStringTest() {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag205IntMaturityDay( new MyIntType( oneElement ));
             assertEquals( tagData.toEnumIDString() + "=" + oneElement, tagData.toValuePairString());
-            assertEquals( tagData.toEnumIDString() + "=" + tagData.getDataValue(), tagData.toValuePairString());
+            assertEquals( tagData.toEnumIDString() + "=" + tagData.toString(), tagData.toValuePairString());
             assertNotEquals( MyTestValues.JUNK_STR_DATA_VALUE, tagData.toValuePairString() );
         }
     }
     @Test
     void TagToStringTest() {
+        /*
+         *  205
+         *  MaturityDay
+         *  day-of-month
+         */
+
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag205IntMaturityDay( new MyIntType( oneElement ));
