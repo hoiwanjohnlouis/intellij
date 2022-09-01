@@ -52,11 +52,11 @@ class Tag515UtcExecValuationPointTest {
             tagData = new Tag515UtcExecValuationPoint( new MyUTCTimestampType( oneElement ));
             assertEquals( "FIX515_UTC_EXEC_VALUATION_POINT", tagData.toFIXLabelString());
             assertEquals( "515", tagData.toFIXIDString());
-            assertEquals( "EXEC_VALUATION_POINT", tagData.toEnumNameString());
+            assertEquals( "EXEC_VALUATION_POINT", tagData.toFIXNameString());
             assertEquals( "ExecValuationPoint", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -87,7 +87,7 @@ class Tag515UtcExecValuationPointTest {
             assertEquals( "Tag515UtcExecValuationPoint\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

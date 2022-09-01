@@ -45,11 +45,11 @@ class Tag375StrContraBrokerTest {
             tagData = new Tag375StrContraBroker( new MyStringType( oneElement ));
             assertEquals( "FIX375_STR_CONTRA_BROKER", tagData.toFIXLabelString());
             assertEquals( "375", tagData.toFIXIDString());
-            assertEquals( "CONTRA_BROKER", tagData.toEnumNameString());
+            assertEquals( "CONTRA_BROKER", tagData.toFIXNameString());
             assertEquals( "ContraBroker", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag375StrContraBrokerTest {
             assertEquals( "Tag375StrContraBroker\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

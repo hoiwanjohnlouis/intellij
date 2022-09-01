@@ -45,11 +45,11 @@ class Tag362LenEncodedUnderlyingIssuerLenTest {
             tagData = new Tag362LenEncodedUnderlyingIssuerLen( new MyLengthType( oneElement ));
             assertEquals( "FIX362_LEN_ENCODED_UNDERLYING_ISSUER_LEN", tagData.toFIXLabelString());
             assertEquals( "362", tagData.toFIXIDString());
-            assertEquals( "ENCODED_UNDERLYING_ISSUER_LEN", tagData.toEnumNameString());
+            assertEquals( "ENCODED_UNDERLYING_ISSUER_LEN", tagData.toFIXNameString());
             assertEquals( "EncodedUnderlyingIssuerLen", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag362LenEncodedUnderlyingIssuerLenTest {
             assertEquals( "Tag362LenEncodedUnderlyingIssuerLen\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

@@ -45,11 +45,11 @@ class Tag238AmtConcessionTest {
             tagData = new Tag238AmtConcession( new MyAmtType( oneElement ));
             assertEquals( "FIX238_AMT_CONCESSION", tagData.toFIXLabelString());
             assertEquals( "238", tagData.toFIXIDString());
-            assertEquals( "CONCESSION", tagData.toEnumNameString());
+            assertEquals( "CONCESSION", tagData.toFIXNameString());
             assertEquals( "Concession", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag238AmtConcessionTest {
             assertEquals( "Tag238AmtConcession\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

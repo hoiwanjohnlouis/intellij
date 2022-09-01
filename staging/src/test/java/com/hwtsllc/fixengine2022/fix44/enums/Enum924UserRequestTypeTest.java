@@ -42,34 +42,34 @@ class Enum924UserRequestTypeTest {
 
         enumType = Enum924UserRequestType.LOG_ON;
         assertEquals( "1", enumType.toFIXIDString() );
-        assertEquals( "LOG_ON", enumType.toEnumNameString() );
+        assertEquals( "LOG_ON", enumType.toFIXNameString() );
         assertEquals( "1 - Log On User", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum924UserRequestType.LOG_OFF;
         assertEquals( "2", enumType.toFIXIDString() );
-        assertEquals( "LOG_OFF", enumType.toEnumNameString() );
+        assertEquals( "LOG_OFF", enumType.toFIXNameString() );
         assertEquals( "2 - Log Off User", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum924UserRequestType.CHANGE_PASSWORD;
         assertEquals( "3", enumType.toFIXIDString() );
-        assertEquals( "CHANGE_PASSWORD", enumType.toEnumNameString() );
+        assertEquals( "CHANGE_PASSWORD", enumType.toFIXNameString() );
         assertEquals( "3 - Change Password For User", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum924UserRequestType.REQUEST_STATUS;
         assertEquals( "4", enumType.toFIXIDString() );
-        assertEquals( "REQUEST_STATUS", enumType.toEnumNameString() );
+        assertEquals( "REQUEST_STATUS", enumType.toFIXNameString() );
         assertEquals( "4 - Request Individual User Status", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

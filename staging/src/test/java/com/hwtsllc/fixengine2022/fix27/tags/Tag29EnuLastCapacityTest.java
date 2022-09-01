@@ -40,11 +40,11 @@ class Tag29EnuLastCapacityTest {
         for (Enum29LastCapacity oneEnum : Enum29LastCapacity.values()) {
             tagData = new Tag29EnuLastCapacity(oneEnum);
             assertEquals( "FIX29_ENU_LAST_CAPACITY", tagData.toFIXLabelString());
-            assertEquals( "LAST_CAPACITY", tagData.toEnumNameString());
+            assertEquals( "LAST_CAPACITY", tagData.toFIXNameString());
             assertEquals( "29", tagData.toFIXIDString());
             assertEquals( "LastCapacity", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -101,7 +101,7 @@ class Tag29EnuLastCapacityTest {
             assertEquals( "Tag29EnuLastCapacity\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

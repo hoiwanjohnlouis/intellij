@@ -45,11 +45,11 @@ class Tag255StrCreditRatingTest {
             tagData = new Tag255StrCreditRating( new MyStringType( oneElement ));
             assertEquals( "FIX255_STR_CREDIT_RATING", tagData.toFIXLabelString());
             assertEquals( "255", tagData.toFIXIDString());
-            assertEquals( "CREDIT_RATING", tagData.toEnumNameString());
+            assertEquals( "CREDIT_RATING", tagData.toFIXNameString());
             assertEquals( "CreditRating", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag255StrCreditRatingTest {
             assertEquals( "Tag255StrCreditRating\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

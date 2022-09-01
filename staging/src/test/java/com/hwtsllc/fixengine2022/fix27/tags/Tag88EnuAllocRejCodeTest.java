@@ -40,11 +40,11 @@ class Tag88EnuAllocRejCodeTest {
         for (MyEnumAllocRejCode oneEnum : MyEnumAllocRejCode.values()) {
             tagData = new Tag88EnuAllocRejCode(oneEnum);
             assertEquals( "FIX88_ENU_ALLOC_REJ_CODE", tagData.toFIXLabelString());
-            assertEquals( "ALLOC_REJ_CODE", tagData.toEnumNameString());
+            assertEquals( "ALLOC_REJ_CODE", tagData.toFIXNameString());
             assertEquals( "88", tagData.toFIXIDString());
             assertEquals( "AllocRejCode", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -155,7 +155,7 @@ class Tag88EnuAllocRejCodeTest {
             assertEquals( "Tag88EnuAllocRejCode\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

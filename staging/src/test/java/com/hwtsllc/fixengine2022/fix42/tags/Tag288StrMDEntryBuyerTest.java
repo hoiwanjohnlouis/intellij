@@ -45,11 +45,11 @@ class Tag288StrMDEntryBuyerTest {
             tagData = new Tag288StrMDEntryBuyer( new MyStringType( oneElement ));
             assertEquals( "FIX288_STR_MD_ENTRY_BUYER", tagData.toFIXLabelString());
             assertEquals( "288", tagData.toFIXIDString());
-            assertEquals( "MD_ENTRY_BUYER", tagData.toEnumNameString());
+            assertEquals( "MD_ENTRY_BUYER", tagData.toFIXNameString());
             assertEquals( "MDEntryBuyer", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag288StrMDEntryBuyerTest {
             assertEquals( "Tag288StrMDEntryBuyer\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

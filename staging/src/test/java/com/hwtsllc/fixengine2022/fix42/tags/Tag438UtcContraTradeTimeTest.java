@@ -45,11 +45,11 @@ class Tag438UtcContraTradeTimeTest {
             tagData = new Tag438UtcContraTradeTime( new MyUTCTimestampType( oneElement ));
             assertEquals( "FIX438_UTC_CONTRA_TRADE_TIME", tagData.toFIXLabelString());
             assertEquals( "438", tagData.toFIXIDString());
-            assertEquals( "CONTRA_TRADE_TIME", tagData.toEnumNameString());
+            assertEquals( "CONTRA_TRADE_TIME", tagData.toFIXNameString());
             assertEquals( "ContraTradeTime", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag438UtcContraTradeTimeTest {
             assertEquals( "Tag438UtcContraTradeTime\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

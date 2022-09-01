@@ -91,7 +91,7 @@ public class Tag747EnuExerciseMethod extends FIX44Abstract implements LogValuePa
      */
     @Override
     public String toDataNameString() {
-        return dataValue.toEnumNameString();
+        return dataValue.toFIXNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data

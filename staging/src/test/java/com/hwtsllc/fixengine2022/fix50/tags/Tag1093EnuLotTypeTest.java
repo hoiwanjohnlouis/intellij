@@ -41,10 +41,10 @@ class Tag1093EnuLotTypeTest {
             tagData = new Tag1093EnuLotType(oneEnum);
             assertEquals( "FIX1093_ENU_LOT_TYPE", tagData.toFIXLabelString());
             assertEquals( "1093", tagData.toFIXIDString());
-            assertEquals( "LOT_TYPE", tagData.toEnumNameString());
+            assertEquals( "LOT_TYPE", tagData.toFIXNameString());
             assertEquals( "LotType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -98,7 +98,7 @@ class Tag1093EnuLotTypeTest {
             assertEquals( "Tag1093EnuLotType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

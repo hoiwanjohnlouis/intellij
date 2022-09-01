@@ -45,12 +45,12 @@ class Tag76StrExecBrokerTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag76StrExecBroker( new MyStringType( oneElement ));
             assertEquals( "FIX76_STR_EXEC_BROKER", tagData.toFIXLabelString());
-            assertEquals( "EXEC_BROKER", tagData.toEnumNameString());
+            assertEquals( "EXEC_BROKER", tagData.toFIXNameString());
             assertEquals( "76", tagData.toFIXIDString());
             assertEquals( "ExecBroker (replaced)", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -85,7 +85,7 @@ class Tag76StrExecBrokerTest {
             assertEquals( "Tag76StrExecBroker\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

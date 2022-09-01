@@ -45,11 +45,11 @@ class Tag800QtyOrderBookingQtyTest {
             tagData = new Tag800QtyOrderBookingQty( new MyQtyType( oneElement ));
             assertEquals( "FIX800_QTY_ORDER_BOOKING_QTY", tagData.toFIXLabelString());
             assertEquals( "800", tagData.toFIXIDString());
-            assertEquals( "ORDER_BOOKING_QTY", tagData.toEnumNameString());
+            assertEquals( "ORDER_BOOKING_QTY", tagData.toFIXNameString());
             assertEquals( "OrderBookingQty", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag800QtyOrderBookingQtyTest {
             assertEquals( "Tag800QtyOrderBookingQty\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

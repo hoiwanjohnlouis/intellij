@@ -45,11 +45,11 @@ class Tag470CouCountryOfIssueTest {
             tagData = new Tag470CouCountryOfIssue( new MyCountryType( oneElement ));
             assertEquals( "FIX470_COU_COUNTRY_OF_ISSUE", tagData.toFIXLabelString());
             assertEquals( "470", tagData.toFIXIDString());
-            assertEquals( "COUNTRY_OF_ISSUE", tagData.toEnumNameString());
+            assertEquals( "COUNTRY_OF_ISSUE", tagData.toFIXNameString());
             assertEquals( "CountryOfIssue", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag470CouCountryOfIssueTest {
             assertEquals( "Tag470CouCountryOfIssue\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

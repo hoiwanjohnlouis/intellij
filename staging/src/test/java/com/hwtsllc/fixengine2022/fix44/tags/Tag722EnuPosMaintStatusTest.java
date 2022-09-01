@@ -41,10 +41,10 @@ class Tag722EnuPosMaintStatusTest {
             tagData = new Tag722EnuPosMaintStatus(oneEnum);
             assertEquals( "FIX722_ENU_POS_MAINT_STATUS", tagData.toFIXLabelString());
             assertEquals( "722", tagData.toFIXIDString());
-            assertEquals( "POS_MAINT_STATUS", tagData.toEnumNameString());
+            assertEquals( "POS_MAINT_STATUS", tagData.toFIXNameString());
             assertEquals( "PosMaintStatus", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -108,7 +108,7 @@ class Tag722EnuPosMaintStatusTest {
             assertEquals( "Tag722EnuPosMaintStatus\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

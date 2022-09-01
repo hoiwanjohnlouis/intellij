@@ -40,11 +40,11 @@ class Tag114EnuLocateReqdTest {
         for (Enum114LocateReqd oneEnum : Enum114LocateReqd.values()) {
             tagData = new Tag114EnuLocateReqd(oneEnum);
             assertEquals( "FIX114_ENU_LOCATE_REQD", tagData.toFIXLabelString());
-            assertEquals( "LOCATE_REQD", tagData.toEnumNameString());
+            assertEquals( "LOCATE_REQD", tagData.toFIXNameString());
             assertEquals( "114", tagData.toFIXIDString());
             assertEquals( "LocateReqd", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -93,7 +93,7 @@ class Tag114EnuLocateReqdTest {
             assertEquals( "Tag114EnuLocateReqd\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

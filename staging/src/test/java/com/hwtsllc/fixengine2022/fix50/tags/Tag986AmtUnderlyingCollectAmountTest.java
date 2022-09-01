@@ -52,11 +52,11 @@ class Tag986AmtUnderlyingCollectAmountTest {
             tagData = new Tag986AmtUnderlyingCollectAmount( new MyAmtType( oneElement ));
             assertEquals( "FIX986_AMT_UNDERLYING_COLLECT_AMOUNT", tagData.toFIXLabelString());
             assertEquals( "986", tagData.toFIXIDString());
-            assertEquals( "UNDERLYING_COLLECT_AMOUNT", tagData.toEnumNameString());
+            assertEquals( "UNDERLYING_COLLECT_AMOUNT", tagData.toFIXNameString());
             assertEquals( "UnderlyingCollectAmount", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -87,7 +87,7 @@ class Tag986AmtUnderlyingCollectAmountTest {
             assertEquals( "Tag986AmtUnderlyingCollectAmount\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

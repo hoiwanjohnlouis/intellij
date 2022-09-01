@@ -65,34 +65,34 @@ class MyEnumPositionEffectTest {
          */
         enumType = MyEnumPositionEffect.CLOSE;
         assertEquals("C", enumType.toFIXIDString());
-        assertEquals("CLOSE", enumType.toEnumNameString());
+        assertEquals("CLOSE", enumType.toFIXNameString());
         assertEquals("C - Close", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumPositionEffect.FIFO;
         assertEquals("F", enumType.toFIXIDString());
-        assertEquals("FIFO", enumType.toEnumNameString());
+        assertEquals("FIFO", enumType.toFIXNameString());
         assertEquals("F - First In, First Out", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumPositionEffect.OPEN;
         assertEquals("O", enumType.toFIXIDString());
-        assertEquals("OPEN", enumType.toEnumNameString());
+        assertEquals("OPEN", enumType.toFIXNameString());
         assertEquals("O - Open", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumPositionEffect.ROLLED;
         assertEquals("R", enumType.toFIXIDString());
-        assertEquals("ROLLED", enumType.toEnumNameString());
+        assertEquals("ROLLED", enumType.toFIXNameString());
         assertEquals("R - Rolled", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

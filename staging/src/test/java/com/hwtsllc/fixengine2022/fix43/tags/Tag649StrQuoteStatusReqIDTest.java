@@ -45,11 +45,11 @@ class Tag649StrQuoteStatusReqIDTest {
             tagData = new Tag649StrQuoteStatusReqID( new MyStringType( oneElement ));
             assertEquals( "FIX649_STR_QUOTE_STATUS_REQ_ID", tagData.toFIXLabelString());
             assertEquals( "649", tagData.toFIXIDString());
-            assertEquals( "QUOTE_STATUS_REQ_ID", tagData.toEnumNameString());
+            assertEquals( "QUOTE_STATUS_REQ_ID", tagData.toFIXNameString());
             assertEquals( "QuoteStatusReqID", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag649StrQuoteStatusReqIDTest {
             assertEquals( "Tag649StrQuoteStatusReqID\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

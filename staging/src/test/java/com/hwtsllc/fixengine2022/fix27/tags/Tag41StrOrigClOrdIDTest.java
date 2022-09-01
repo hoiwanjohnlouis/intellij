@@ -44,12 +44,12 @@ class Tag41StrOrigClOrdIDTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag41StrOrigClOrdID( new MyStringType( oneElement ));
             assertEquals( "FIX41_STR_ORIG_CL_ORD_ID", tagData.toFIXLabelString());
-            assertEquals( "ORIG_CL_ORD_ID", tagData.toEnumNameString());
+            assertEquals( "ORIG_CL_ORD_ID", tagData.toFIXNameString());
             assertEquals( "41", tagData.toFIXIDString());
             assertEquals( "OrigClOrdID", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -80,7 +80,7 @@ class Tag41StrOrigClOrdIDTest {
             assertEquals( "Tag41StrOrigClOrdID\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

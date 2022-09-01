@@ -45,11 +45,11 @@ class Tag1011StrMessageEventSourceTest {
             tagData = new Tag1011StrMessageEventSource( new MyStringType( oneElement ));
             assertEquals( "FIX1011_STR_MESSAGE_EVENT_SOURCE", tagData.toFIXLabelString());
             assertEquals( "1011", tagData.toFIXIDString());
-            assertEquals( "MESSAGE_EVENT_SOURCE", tagData.toEnumNameString());
+            assertEquals( "MESSAGE_EVENT_SOURCE", tagData.toFIXNameString());
             assertEquals( "MessageEventSource", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag1011StrMessageEventSourceTest {
             assertEquals( "Tag1011StrMessageEventSource\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

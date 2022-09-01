@@ -45,11 +45,11 @@ class Tag402PctLiquidityPctLowTest {
             tagData = new Tag402PctLiquidityPctLow( new MyPercentageType( oneElement ));
             assertEquals( "FIX402_PCT_LIQUIDITY_PCT_LOW", tagData.toFIXLabelString());
             assertEquals( "402", tagData.toFIXIDString());
-            assertEquals( "LIQUIDITY_PCT_LOW", tagData.toEnumNameString());
+            assertEquals( "LIQUIDITY_PCT_LOW", tagData.toFIXNameString());
             assertEquals( "LiquidityPctLow", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag402PctLiquidityPctLowTest {
             assertEquals( "Tag402PctLiquidityPctLow\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

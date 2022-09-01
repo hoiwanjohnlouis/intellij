@@ -126,7 +126,7 @@ public class Tag40EnuOrdType extends FIX27Abstract implements LogValuePairString
      */
     @Override
     public String toDataNameString() {
-        return dataValue.toEnumNameString();
+        return dataValue.toFIXNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data

@@ -50,51 +50,51 @@ class Enum160SettlInstModeTest {
          */
         enumType = Enum160SettlInstMode.DEFAULT;
         assertEquals("0", enumType.toFIXIDString());
-        assertEquals("DEFAULT", enumType.toEnumNameString());
+        assertEquals("DEFAULT", enumType.toFIXNameString());
         assertEquals("0 - Default (Replaced)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum160SettlInstMode.STANDING_INSTRUCTIONS_PROVIDED;
         assertEquals("1", enumType.toFIXIDString());
-        assertEquals("STANDING_INSTRUCTIONS_PROVIDED", enumType.toEnumNameString());
+        assertEquals("STANDING_INSTRUCTIONS_PROVIDED", enumType.toFIXNameString());
         assertEquals("1 - Standing Instructions Provided", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum160SettlInstMode.SPECIFIC_ALLOCATION_ACCOUNT_OVERRIDING;
         assertEquals("2", enumType.toFIXIDString());
-        assertEquals("SPECIFIC_ALLOCATION_ACCOUNT_OVERRIDING", enumType.toEnumNameString());
+        assertEquals("SPECIFIC_ALLOCATION_ACCOUNT_OVERRIDING", enumType.toFIXNameString());
         assertEquals("2 - Specific Allocation Account Overriding (Replaced)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum160SettlInstMode.SPECIFIC_ALLOCATION_ACCOUNT_STANDING;
         assertEquals("3", enumType.toFIXIDString());
-        assertEquals("SPECIFIC_ALLOCATION_ACCOUNT_STANDING", enumType.toEnumNameString());
+        assertEquals("SPECIFIC_ALLOCATION_ACCOUNT_STANDING", enumType.toFIXNameString());
         assertEquals("3 - Specific Allocation Account Standing (Replaced)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum160SettlInstMode.SPECIFIC_ORDER_SINGLE_ACCOUNT;
         assertEquals("4", enumType.toFIXIDString());
-        assertEquals("SPECIFIC_ORDER_SINGLE_ACCOUNT", enumType.toEnumNameString());
+        assertEquals("SPECIFIC_ORDER_SINGLE_ACCOUNT", enumType.toFIXNameString());
         assertEquals("4 - Specific Order for a single account (for CIV)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = Enum160SettlInstMode.REQUEST_REJECT;
         assertEquals("5", enumType.toFIXIDString());
-        assertEquals("REQUEST_REJECT", enumType.toEnumNameString());
+        assertEquals("REQUEST_REJECT", enumType.toFIXNameString());
         assertEquals("5 - Request reject", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

@@ -45,11 +45,11 @@ class Tag474StrMailingDtlsTest {
             tagData = new Tag474StrMailingDtls( new MyStringType( oneElement ));
             assertEquals( "FIX474_STR_MAILING_DTLS", tagData.toFIXLabelString());
             assertEquals( "474", tagData.toFIXIDString());
-            assertEquals( "MAILING_DTLS", tagData.toEnumNameString());
+            assertEquals( "MAILING_DTLS", tagData.toFIXNameString());
             assertEquals( "MailingDtls", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag474StrMailingDtlsTest {
             assertEquals( "Tag474StrMailingDtls\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

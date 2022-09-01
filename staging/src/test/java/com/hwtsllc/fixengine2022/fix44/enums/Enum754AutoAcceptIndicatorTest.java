@@ -40,18 +40,18 @@ class Enum754AutoAcceptIndicatorTest {
 
         enumType = Enum754AutoAcceptIndicator.NO;
         assertEquals("N",enumType.toFIXIDString());
-        assertEquals("NO", enumType.toEnumNameString());
+        assertEquals("NO", enumType.toFIXNameString());
         assertEquals("N - Allocation Pending Accept", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum754AutoAcceptIndicator.YES;
         assertEquals("Y", enumType.toFIXIDString());
-        assertEquals("YES", enumType.toEnumNameString());
+        assertEquals("YES", enumType.toFIXNameString());
         assertEquals("Y - Allocation Automatically Accepted", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

@@ -40,12 +40,12 @@ class Tag141EnuResetSeqNumFlagTest {
         for (Enum141ResetSeqNumFlag oneEnum : Enum141ResetSeqNumFlag.values()) {
             tagData = new Tag141EnuResetSeqNumFlag(oneEnum);
             assertEquals( "FIX141_ENU_RESET_SEQ_NUM_FLAG", tagData.toFIXLabelString());
-            assertEquals( "RESET_SEQ_NUM_FLAG", tagData.toEnumNameString());
+            assertEquals( "RESET_SEQ_NUM_FLAG", tagData.toFIXNameString());
             assertEquals( "141", tagData.toFIXIDString());
             assertEquals( "ResetSeqNumFlag", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -93,7 +93,7 @@ class Tag141EnuResetSeqNumFlagTest {
             assertEquals( "Tag141EnuResetSeqNumFlag\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

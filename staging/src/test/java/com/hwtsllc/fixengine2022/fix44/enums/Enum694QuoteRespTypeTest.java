@@ -57,50 +57,50 @@ class Enum694QuoteRespTypeTest {
 
         enumType = Enum694QuoteRespType.HIT_OR_LIFT;
         assertEquals("1", enumType.toFIXIDString());
-        assertEquals("HIT_OR_LIFT", enumType.toEnumNameString());
+        assertEquals("HIT_OR_LIFT", enumType.toFIXNameString());
         assertEquals("1 - Hit/Lift", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum694QuoteRespType.COUNTER;
         assertEquals("2", enumType.toFIXIDString());
-        assertEquals("COUNTER", enumType.toEnumNameString());
+        assertEquals("COUNTER", enumType.toFIXNameString());
         assertEquals("2 - Counter", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum694QuoteRespType.EXPIRED;
         assertEquals("3", enumType.toFIXIDString());
-        assertEquals("EXPIRED", enumType.toEnumNameString());
+        assertEquals("EXPIRED", enumType.toFIXNameString());
         assertEquals("3 - Expired", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum694QuoteRespType.COVER;
         assertEquals("4", enumType.toFIXIDString());
-        assertEquals("COVER", enumType.toEnumNameString());
+        assertEquals("COVER", enumType.toFIXNameString());
         assertEquals("4 - Cover", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum694QuoteRespType.DONE_AWAY;
         assertEquals("5", enumType.toFIXIDString());
-        assertEquals("DONE_AWAY", enumType.toEnumNameString());
+        assertEquals("DONE_AWAY", enumType.toFIXNameString());
         assertEquals("5 - Done Away", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum694QuoteRespType.PASS;
         assertEquals("6", enumType.toFIXIDString());
-        assertEquals("PASS", enumType.toEnumNameString());
+        assertEquals("PASS", enumType.toFIXNameString());
         assertEquals("6 - Pass", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

@@ -49,59 +49,59 @@ class Enum906CollAsgnRejectReasonTest {
 
         enumType = Enum906CollAsgnRejectReason.UNKNOWN_DEAL;
         assertEquals( "0", enumType.toFIXIDString() );
-        assertEquals( "UNKNOWN_DEAL", enumType.toEnumNameString() );
+        assertEquals( "UNKNOWN_DEAL", enumType.toFIXNameString() );
         assertEquals( "0 - Unknown deal (order or trade)", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum906CollAsgnRejectReason.INVALID_INSTRUMENT;
         assertEquals( "1", enumType.toFIXIDString() );
-        assertEquals( "INVALID_INSTRUMENT", enumType.toEnumNameString() );
+        assertEquals( "INVALID_INSTRUMENT", enumType.toFIXNameString() );
         assertEquals( "1 - Unknown or invalid instrument", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum906CollAsgnRejectReason.UNAUTHORIZED_TRANSACTION;
         assertEquals( "2", enumType.toFIXIDString() );
-        assertEquals( "UNAUTHORIZED_TRANSACTION", enumType.toEnumNameString() );
+        assertEquals( "UNAUTHORIZED_TRANSACTION", enumType.toFIXNameString() );
         assertEquals( "2 - Unauthorized transaction", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum906CollAsgnRejectReason.INSUFFICIENT_COLLATERAL;
         assertEquals( "3", enumType.toFIXIDString() );
-        assertEquals( "INSUFFICIENT_COLLATERAL", enumType.toEnumNameString() );
+        assertEquals( "INSUFFICIENT_COLLATERAL", enumType.toFIXNameString() );
         assertEquals( "3 - Insufficient collateral", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum906CollAsgnRejectReason.INVALID_COLLATERAL;
         assertEquals( "4", enumType.toFIXIDString() );
-        assertEquals( "INVALID_COLLATERAL", enumType.toEnumNameString() );
+        assertEquals( "INVALID_COLLATERAL", enumType.toFIXNameString() );
         assertEquals( "4 - Invalid type of collateral", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = Enum906CollAsgnRejectReason.EXCESSIVE_SUBSTITUTION;
         assertEquals( "5", enumType.toFIXIDString() );
-        assertEquals( "EXCESSIVE_SUBSTITUTION", enumType.toEnumNameString() );
+        assertEquals( "EXCESSIVE_SUBSTITUTION", enumType.toFIXNameString() );
         assertEquals( "5 - Excessive substitution", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum906CollAsgnRejectReason.OTHER;
         assertEquals( "99", enumType.toFIXIDString() );
-        assertEquals( "OTHER", enumType.toEnumNameString() );
+        assertEquals( "OTHER", enumType.toFIXNameString() );
         assertEquals( "99 - Other", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

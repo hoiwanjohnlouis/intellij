@@ -45,11 +45,11 @@ class Tag526StrSecondaryClOrdIDTest {
             tagData = new Tag526StrSecondaryClOrdID( new MyStringType( oneElement ));
             assertEquals( "FIX526_STR_SECONDARY_CL_ORD_ID", tagData.toFIXLabelString());
             assertEquals( "526", tagData.toFIXIDString());
-            assertEquals( "SECONDARY_CL_ORD_ID", tagData.toEnumNameString());
+            assertEquals( "SECONDARY_CL_ORD_ID", tagData.toFIXNameString());
             assertEquals( "SecondaryClOrdID", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag526StrSecondaryClOrdIDTest {
             assertEquals( "Tag526StrSecondaryClOrdID\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

@@ -50,53 +50,53 @@ class Enum433ListExecInstTypeTest {
          */
         enumType = Enum433ListExecInstType.IMMEDIATE;
         assertEquals( "1", enumType.toFIXIDString());
-        assertEquals( "IMMEDIATE", enumType.toEnumNameString());
+        assertEquals( "IMMEDIATE", enumType.toFIXNameString());
         assertEquals( "1 - Immediate", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum433ListExecInstType.WAIT_FOR_EXECUTION_INSTRUCTION;
         assertEquals( "2", enumType.toFIXIDString());
-        assertEquals( "WAIT_FOR_EXECUTION_INSTRUCTION", enumType.toEnumNameString());
+        assertEquals( "WAIT_FOR_EXECUTION_INSTRUCTION", enumType.toFIXNameString());
         assertEquals( "2 - Wait for Execution Instruction " +
                         "(i.e. a List Execution message or phone call before proceeding with execution of the list)",
                 enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum433ListExecInstType.SELL_DRIVEN;
         assertEquals( "3", enumType.toFIXIDString());
-        assertEquals( "SELL_DRIVEN", enumType.toEnumNameString());
+        assertEquals( "SELL_DRIVEN", enumType.toFIXNameString());
         assertEquals( "3 - Exchange/switch CIV order - Sell driven", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum433ListExecInstType.BUY_DRIVEN_CASH_TOP_UP;
         assertEquals( "4", enumType.toFIXIDString());
-        assertEquals( "BUY_DRIVEN_CASH_TOP_UP", enumType.toEnumNameString());
+        assertEquals( "BUY_DRIVEN_CASH_TOP_UP", enumType.toFIXNameString());
         assertEquals( "4 - Exchange/switch CIV order - Buy driven, cash top-up " +
                         "(i.e. additional cash will be provided to fulfill the order)",
                 enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum433ListExecInstType.BUY_DRIVEN_CASH_WITHDRAW;
         assertEquals( "5", enumType.toFIXIDString());
-        assertEquals( "BUY_DRIVEN_CASH_WITHDRAW", enumType.toEnumNameString());
+        assertEquals( "BUY_DRIVEN_CASH_WITHDRAW", enumType.toFIXNameString());
         assertEquals( "5 - Exchange/switch CIV order - Buy driven, cash withdraw " +
                         "(i.e. additional cash will not be provided to fulfill the order)",
                 enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
     /**

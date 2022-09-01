@@ -40,11 +40,11 @@ class Tag123EnuGapFillFlagTest {
         for (Enum123GapFillFlag oneEnum : Enum123GapFillFlag.values()) {
             tagData = new Tag123EnuGapFillFlag(oneEnum);
             assertEquals( "FIX123_ENU_GAP_FILL_FLAG", tagData.toFIXLabelString());
-            assertEquals( "GAP_FILL_FLAG", tagData.toEnumNameString());
+            assertEquals( "GAP_FILL_FLAG", tagData.toFIXNameString());
             assertEquals( "123", tagData.toFIXIDString());
             assertEquals( "GapFillFlag", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -94,7 +94,7 @@ class Tag123EnuGapFillFlagTest {
             assertEquals( "Tag123EnuGapFillFlag\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

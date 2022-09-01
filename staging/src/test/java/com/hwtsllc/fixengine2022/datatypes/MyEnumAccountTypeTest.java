@@ -54,34 +54,34 @@ class MyEnumAccountTypeTest {
          */
         enumType = MyEnumAccountType.CUSTOMER_BOOK;
         assertEquals("1", enumType.toFIXIDString());
-        assertEquals("CUSTOMER_BOOK", enumType.toEnumNameString());
+        assertEquals("CUSTOMER_BOOK", enumType.toFIXNameString());
         assertEquals("1 - Account is carried on customer side of the books", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumAccountType.NON_CUSTOMER_BOOK;
         assertEquals("2", enumType.toFIXIDString());
-        assertEquals("NON_CUSTOMER_BOOK", enumType.toEnumNameString());
+        assertEquals("NON_CUSTOMER_BOOK", enumType.toFIXNameString());
         assertEquals("2 - Account is carried on non-customer side of books", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumAccountType.HOUSE_TRADER;
         assertEquals("3", enumType.toFIXIDString());
-        assertEquals("HOUSE_TRADER", enumType.toEnumNameString());
+        assertEquals("HOUSE_TRADER", enumType.toFIXNameString());
         assertEquals("3 - House Trader", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumAccountType.FLOOR_TRADER;
         assertEquals("4", enumType.toFIXIDString());
-        assertEquals("FLOOR_TRADER", enumType.toEnumNameString());
+        assertEquals("FLOOR_TRADER", enumType.toFIXNameString());
         assertEquals("4 - Floor Trader", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
@@ -90,27 +90,27 @@ class MyEnumAccountTypeTest {
          */
         enumType = MyEnumAccountType.NON_CUSTOMER_CROSSED_MARGIN_BOOK;
         assertEquals("6", enumType.toFIXIDString());
-        assertEquals("NON_CUSTOMER_CROSSED_MARGIN_BOOK", enumType.toEnumNameString());
+        assertEquals("NON_CUSTOMER_CROSSED_MARGIN_BOOK", enumType.toFIXNameString());
         assertEquals("6 - Account is carried on non-customer side of books and is cross margined",
                 enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumAccountType.HOUSE_TRADER_CROSSED_MARGIN_BOOK;
         assertEquals("7", enumType.toFIXIDString());
-        assertEquals("HOUSE_TRADER_CROSSED_MARGIN_BOOK", enumType.toEnumNameString());
+        assertEquals("HOUSE_TRADER_CROSSED_MARGIN_BOOK", enumType.toFIXNameString());
         assertEquals("7 - Account is house trader and is cross margined", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumAccountType.JOINT_BACK_OFFICE;
         assertEquals("8", enumType.toFIXIDString());
-        assertEquals("JOINT_BACK_OFFICE", enumType.toEnumNameString());
+        assertEquals("JOINT_BACK_OFFICE", enumType.toFIXNameString());
         assertEquals("8 - Joint back office account (JBO)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

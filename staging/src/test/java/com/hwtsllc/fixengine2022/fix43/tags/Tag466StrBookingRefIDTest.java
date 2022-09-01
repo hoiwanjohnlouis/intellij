@@ -45,11 +45,11 @@ class Tag466StrBookingRefIDTest {
             tagData = new Tag466StrBookingRefID( new MyStringType( oneElement ));
             assertEquals( "FIX466_STR_BOOKING_REF_ID", tagData.toFIXLabelString());
             assertEquals( "466", tagData.toFIXIDString());
-            assertEquals( "BOOKING_REF_ID", tagData.toEnumNameString());
+            assertEquals( "BOOKING_REF_ID", tagData.toFIXNameString());
             assertEquals( "BookingRefID", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag466StrBookingRefIDTest {
             assertEquals( "Tag466StrBookingRefID\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

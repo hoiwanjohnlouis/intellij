@@ -356,7 +356,7 @@ public enum FIX43 implements LogFIXString, LogVerboseString {
      * standard wrapper to retrieve the specific fix name for this enum. eg: the second field
      */
     @Override
-    public String toEnumNameString() {
+    public String toFIXNameString() {
         return name;
     }
     /**
@@ -376,7 +376,7 @@ public enum FIX43 implements LogFIXString, LogVerboseString {
                 .concat( toFIXIDString())
                 .concat("]")
                 .concat("\n\tFIXName[")
-                .concat( toEnumNameString())
+                .concat( toFIXNameString())
                 .concat("]")
                 .concat("\n\tFIXDescription[")
                 .concat( toEnumDescriptionString())
@@ -388,7 +388,7 @@ public enum FIX43 implements LogFIXString, LogVerboseString {
                 .concat("=[")
                 .concat( toFIXIDString())
                 .concat(",")
-                .concat( toEnumNameString())
+                .concat( toFIXNameString())
                 .concat(",")
                 .concat( toEnumDescriptionString())
                 .concat("]");

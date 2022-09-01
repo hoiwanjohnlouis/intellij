@@ -52,11 +52,11 @@ class Tag920AmtEndAccruedInterestAmtTest {
             tagData = new Tag920AmtEndAccruedInterestAmt( new MyAmtType( oneElement ));
             assertEquals( "FIX920_AMT_END_ACCRUED_INTEREST_AMT", tagData.toFIXLabelString());
             assertEquals( "920", tagData.toFIXIDString());
-            assertEquals( "END_ACCRUED_INTEREST_AMT", tagData.toEnumNameString());
+            assertEquals( "END_ACCRUED_INTEREST_AMT", tagData.toFIXNameString());
             assertEquals( "EndAccruedInterestAmt", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -87,7 +87,7 @@ class Tag920AmtEndAccruedInterestAmtTest {
             assertEquals( "Tag920AmtEndAccruedInterestAmt\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

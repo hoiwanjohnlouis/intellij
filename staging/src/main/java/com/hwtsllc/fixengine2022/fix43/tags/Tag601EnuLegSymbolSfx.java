@@ -114,7 +114,7 @@ public class Tag601EnuLegSymbolSfx extends FIX43Abstract implements LogValuePair
      */
     @Override
     public String toDataNameString() {
-        return dataValue.toEnumNameString();
+        return dataValue.toFIXNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data

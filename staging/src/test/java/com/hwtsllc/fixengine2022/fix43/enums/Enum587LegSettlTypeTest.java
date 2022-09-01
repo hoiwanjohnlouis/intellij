@@ -59,93 +59,93 @@ class Enum587LegSettlTypeTest {
          */
         enumType = Enum587LegSettlType.REGULAR;
         assertEquals("0", enumType.toFIXIDString());
-        assertEquals("REGULAR", enumType.toEnumNameString());
+        assertEquals("REGULAR", enumType.toFIXNameString());
         assertEquals("0 - Regular / FX Spot settlement (T+1 or T+2 depending on currency)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum587LegSettlType.CASH;
         assertEquals("1", enumType.toFIXIDString());
-        assertEquals("CASH", enumType.toEnumNameString());
+        assertEquals("CASH", enumType.toFIXNameString());
         assertEquals("1 - Cash (TOD / T+0)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum587LegSettlType.NEXT_DAY;
         assertEquals("2", enumType.toFIXIDString());
-        assertEquals("NEXT_DAY", enumType.toEnumNameString());
+        assertEquals("NEXT_DAY", enumType.toFIXNameString());
         assertEquals("2 - Next Day (TOM / T+1)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum587LegSettlType.T_PLUS_2;
         assertEquals("3", enumType.toFIXIDString());
-        assertEquals("T_PLUS_2", enumType.toEnumNameString());
+        assertEquals("T_PLUS_2", enumType.toFIXNameString());
         assertEquals("3 - T+2", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum587LegSettlType.T_PLUS_3;
         assertEquals("4", enumType.toFIXIDString());
-        assertEquals("T_PLUS_3", enumType.toEnumNameString());
+        assertEquals("T_PLUS_3", enumType.toFIXNameString());
         assertEquals("4 - T+3", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = Enum587LegSettlType.T_PLUS_4;
         assertEquals("5", enumType.toFIXIDString());
-        assertEquals("T_PLUS_4", enumType.toEnumNameString());
+        assertEquals("T_PLUS_4", enumType.toFIXNameString());
         assertEquals("5 - T+4", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum587LegSettlType.FUTURE;
         assertEquals("6", enumType.toFIXIDString());
-        assertEquals("FUTURE", enumType.toEnumNameString());
+        assertEquals("FUTURE", enumType.toFIXNameString());
         assertEquals("6 - Future", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum587LegSettlType.WHEN_ISSUED;
         assertEquals("7", enumType.toFIXIDString());
-        assertEquals("WHEN_ISSUED", enumType.toEnumNameString());
+        assertEquals("WHEN_ISSUED", enumType.toFIXNameString());
         assertEquals("7 - When And If Issued", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum587LegSettlType.SELLERS_OPTION;
         assertEquals("8", enumType.toFIXIDString());
-        assertEquals("SELLERS_OPTION", enumType.toEnumNameString());
+        assertEquals("SELLERS_OPTION", enumType.toFIXNameString());
         assertEquals("8 - Sellers Option", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum587LegSettlType.T_PLUS_5;
         assertEquals("9", enumType.toFIXIDString());
-        assertEquals("T_PLUS_5", enumType.toEnumNameString());
+        assertEquals("T_PLUS_5", enumType.toFIXNameString());
         assertEquals("9 - T+5", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
@@ -155,20 +155,20 @@ class Enum587LegSettlTypeTest {
          */
         enumType = Enum587LegSettlType.BROKEN_DATE;
         assertEquals("B", enumType.toFIXIDString());
-        assertEquals("BROKEN_DATE", enumType.toEnumNameString());
+        assertEquals("BROKEN_DATE", enumType.toFIXNameString());
         assertEquals("B - Broken date - for FX expressing non-standard tenor, SettlDate (64) must be specified", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum587LegSettlType.FX_SPOT;
         assertEquals("C", enumType.toFIXIDString());
-        assertEquals("FX_SPOT", enumType.toEnumNameString());
+        assertEquals("FX_SPOT", enumType.toFIXNameString());
         assertEquals("C - FX Spot Next settlement (Spot+1, aka next day)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

@@ -41,10 +41,10 @@ class Tag1092EnuPriceProtectionScopeTest {
             tagData = new Tag1092EnuPriceProtectionScope(oneEnum);
             assertEquals( "FIX1092_ENU_PRICE_PROTECTION_SCOPE", tagData.toFIXLabelString());
             assertEquals( "1092", tagData.toFIXIDString());
-            assertEquals( "PRICE_PROTECTION_SCOPE", tagData.toEnumNameString());
+            assertEquals( "PRICE_PROTECTION_SCOPE", tagData.toFIXNameString());
             assertEquals( "PriceProtectionScope", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -103,7 +103,7 @@ class Tag1092EnuPriceProtectionScopeTest {
             assertEquals( "Tag1092EnuPriceProtectionScope\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

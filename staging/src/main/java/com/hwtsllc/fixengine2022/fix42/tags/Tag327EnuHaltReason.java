@@ -98,7 +98,7 @@ public class Tag327EnuHaltReason extends FIX42Abstract implements LogValuePairSt
      */
     @Override
     public String toDataNameString() {
-        return dataValue.toEnumNameString();
+        return dataValue.toFIXNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data

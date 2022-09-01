@@ -41,10 +41,10 @@ class Tag661EnuAllocAcctIDSourceTest {
             tagData = new Tag661EnuAllocAcctIDSource(oneEnum);
             assertEquals( "FIX661_ENU_ALLOC_ACCT_ID_SOURCE", tagData.toFIXLabelString());
             assertEquals( "661", tagData.toFIXIDString());
-            assertEquals( "ALLOC_ACCT_ID_SOURCE", tagData.toEnumNameString());
+            assertEquals( "ALLOC_ACCT_ID_SOURCE", tagData.toFIXNameString());
             assertEquals( "AllocAcctIDSource", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -118,7 +118,7 @@ class Tag661EnuAllocAcctIDSourceTest {
             assertEquals( "Tag661EnuAllocAcctIDSource\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

@@ -147,10 +147,10 @@ class Tag761EnuBenchmarkSecurityIDSourceTest {
             tagData = new Tag761EnuBenchmarkSecurityIDSource(oneEnum);
             assertEquals( "FIX761_ENU_BENCHMARK_SECURITY_ID_SOURCE", tagData.toFIXLabelString());
             assertEquals( "761", tagData.toFIXIDString());
-            assertEquals( "BENCHMARK_SECURITY_ID_SOURCE", tagData.toEnumNameString());
+            assertEquals( "BENCHMARK_SECURITY_ID_SOURCE", tagData.toFIXNameString());
             assertEquals( "BenchmarkSecurityIDSource", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -303,7 +303,7 @@ class Tag761EnuBenchmarkSecurityIDSourceTest {
             assertEquals( "Tag761EnuBenchmarkSecurityIDSource\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

@@ -42,26 +42,26 @@ class Enum774ConfirmRejReasonTest {
 
         enumType = Enum774ConfirmRejReason.MISMATCHED_ACCOUNT;
         assertEquals( "1", enumType.toFIXIDString() );
-        assertEquals( "MISMATCHED_ACCOUNT", enumType.toEnumNameString() );
+        assertEquals( "MISMATCHED_ACCOUNT", enumType.toFIXNameString() );
         assertEquals( "1 - Mismatched account", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum774ConfirmRejReason.MISSING_INSTRUCTIONS;
         assertEquals( "2", enumType.toFIXIDString() );
-        assertEquals( "MISSING_INSTRUCTIONS", enumType.toEnumNameString() );
+        assertEquals( "MISSING_INSTRUCTIONS", enumType.toFIXNameString() );
         assertEquals( "2 - Missing settlement instructions", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum774ConfirmRejReason.OTHER;
         assertEquals( "99", enumType.toFIXIDString() );
-        assertEquals( "OTHER", enumType.toEnumNameString() );
+        assertEquals( "OTHER", enumType.toFIXNameString() );
         assertEquals( "99 - Other", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

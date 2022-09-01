@@ -45,11 +45,11 @@ class Tag876StrCPRegTypeTest {
             tagData = new Tag876StrCPRegType( new MyStringType( oneElement ));
             assertEquals( "FIX876_STR_CP_REG_TYPE", tagData.toFIXLabelString());
             assertEquals( "876", tagData.toFIXIDString());
-            assertEquals( "CP_REG_TYPE", tagData.toEnumNameString());
+            assertEquals( "CP_REG_TYPE", tagData.toFIXNameString());
             assertEquals( "CPRegType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag876StrCPRegTypeTest {
             assertEquals( "Tag876StrCPRegType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

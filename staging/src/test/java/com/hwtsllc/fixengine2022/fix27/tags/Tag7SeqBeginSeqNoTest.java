@@ -44,12 +44,12 @@ class Tag7SeqBeginSeqNoTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag7SeqBeginSeqNo( new MySeqNumType( oneElement ));
             assertEquals( "FIX7_SEQ_BEGIN_SEQ_NO", tagData.toFIXLabelString());
-            assertEquals( "BEGIN_SEQ_NO", tagData.toEnumNameString());
+            assertEquals( "BEGIN_SEQ_NO", tagData.toFIXNameString());
             assertEquals( "7", tagData.toFIXIDString());
             assertEquals( "BeginSeqNo", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -80,7 +80,7 @@ class Tag7SeqBeginSeqNoTest {
             assertEquals( "Tag7SeqBeginSeqNo\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

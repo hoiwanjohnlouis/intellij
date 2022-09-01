@@ -91,7 +91,7 @@ public class Tag114EnuLocateReqd extends FIX40Abstract implements LogValuePairSt
      */
     @Override
     public String toDataNameString() {
-        return dataValue.toEnumNameString();
+        return dataValue.toFIXNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data

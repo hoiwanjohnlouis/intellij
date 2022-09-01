@@ -42,11 +42,11 @@ class Tag166EnuSettlLocationTest {
             tagData = new Tag166EnuSettlLocation(oneEnum);
             assertEquals( "FIX166_ENU_SETTL_LOCATION", tagData.toFIXLabelString());
             assertEquals( "166", tagData.toFIXIDString());
-            assertEquals( "SETTL_LOCATION", tagData.toEnumNameString());
+            assertEquals( "SETTL_LOCATION", tagData.toFIXNameString());
             assertEquals( "SettlLocation (replaced)", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -121,7 +121,7 @@ class Tag166EnuSettlLocationTest {
             assertEquals( "Tag166EnuSettlLocation\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

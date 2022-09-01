@@ -41,10 +41,10 @@ class Tag888EnuUnderlyingStipTypeTest {
             tagData = new Tag888EnuUnderlyingStipType(oneEnum);
             assertEquals( "FIX888_ENU_UNDERLYING_STIP_TYPE", tagData.toFIXLabelString());
             assertEquals( "888", tagData.toFIXIDString());
-            assertEquals( "UNDERLYING_STIP_TYPE", tagData.toEnumNameString());
+            assertEquals( "UNDERLYING_STIP_TYPE", tagData.toFIXNameString());
             assertEquals( "UnderlyingStipType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -408,7 +408,7 @@ class Tag888EnuUnderlyingStipTypeTest {
             assertEquals( "Tag888EnuUnderlyingStipType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

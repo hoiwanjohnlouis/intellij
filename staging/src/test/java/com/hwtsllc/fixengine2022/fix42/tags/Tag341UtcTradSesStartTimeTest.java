@@ -45,11 +45,11 @@ class Tag341UtcTradSesStartTimeTest {
             tagData = new Tag341UtcTradSesStartTime( new MyUTCTimestampType( oneElement ));
             assertEquals( "FIX341_UTC_TRAD_SES_START_TIME", tagData.toFIXLabelString());
             assertEquals( "341", tagData.toFIXIDString());
-            assertEquals( "TRAD_SES_START_TIME", tagData.toEnumNameString());
+            assertEquals( "TRAD_SES_START_TIME", tagData.toFIXNameString());
             assertEquals( "TradSesStartTime", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag341UtcTradSesStartTimeTest {
             assertEquals( "Tag341UtcTradSesStartTime\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

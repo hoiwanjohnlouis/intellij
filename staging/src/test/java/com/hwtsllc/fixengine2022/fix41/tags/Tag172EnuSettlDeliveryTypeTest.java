@@ -41,11 +41,11 @@ class Tag172EnuSettlDeliveryTypeTest {
             tagData = new Tag172EnuSettlDeliveryType(oneEnum);
             assertEquals( "FIX172_ENU_SETTL_DELIVERY_TYPE", tagData.toFIXLabelString());
             assertEquals( "172", tagData.toFIXIDString());
-            assertEquals( "SETTL_DELIVERY_TYPE", tagData.toEnumNameString());
+            assertEquals( "SETTL_DELIVERY_TYPE", tagData.toFIXNameString());
             assertEquals( "SettlDeliveryType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -103,7 +103,7 @@ class Tag172EnuSettlDeliveryTypeTest {
             assertEquals( "Tag172EnuSettlDeliveryType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

@@ -49,59 +49,59 @@ class Enum98EncryptMethodTest {
          */
         enumType = Enum98EncryptMethod.NONE_OR_OTHER;
         assertEquals("0", enumType.toFIXIDString());
-        assertEquals("NONE_OR_OTHER", enumType.toEnumNameString());
+        assertEquals("NONE_OR_OTHER", enumType.toFIXNameString());
         assertEquals("0 - None / Other", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum98EncryptMethod.PKCS;
         assertEquals("1", enumType.toFIXIDString());
-        assertEquals("PKCS", enumType.toEnumNameString());
+        assertEquals("PKCS", enumType.toFIXNameString());
         assertEquals("1 - PKCS (Proprietary)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum98EncryptMethod.DES_ECB;
         assertEquals("2", enumType.toFIXIDString());
-        assertEquals("DES_ECB", enumType.toEnumNameString());
+        assertEquals("DES_ECB", enumType.toFIXNameString());
         assertEquals("2 - DES (ECB Mode)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum98EncryptMethod.PKCS_DES;
         assertEquals("3", enumType.toFIXIDString());
-        assertEquals("PKCS_DES", enumType.toEnumNameString());
+        assertEquals("PKCS_DES", enumType.toFIXNameString());
         assertEquals("3 - PKCS / DES (Proprietary)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum98EncryptMethod.PGP_DES;
         assertEquals("4", enumType.toFIXIDString());
-        assertEquals("PGP_DES", enumType.toEnumNameString());
+        assertEquals("PGP_DES", enumType.toFIXNameString());
         assertEquals("4 - PGP / DES (Defunct)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = Enum98EncryptMethod.PGP_DES_MD5;
         assertEquals("5", enumType.toFIXIDString());
-        assertEquals("PGP_DES_MD5", enumType.toEnumNameString());
+        assertEquals("PGP_DES_MD5", enumType.toFIXNameString());
         assertEquals("5 - PGP / DES-MD5 (See app note on FIX web site)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum98EncryptMethod.PEM_DES_MD5;
         assertEquals("6", enumType.toFIXIDString());
-        assertEquals("PEM_DES_MD5", enumType.toEnumNameString());
+        assertEquals("PEM_DES_MD5", enumType.toFIXNameString());
         assertEquals("6 - PEM / DES-MD5 (see app note on FIX web site)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

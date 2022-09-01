@@ -40,11 +40,11 @@ class Tag59EnuTimeInForceTest {
         for (Enum59TimeInForce oneEnum : Enum59TimeInForce.values()) {
             tagData = new Tag59EnuTimeInForce(oneEnum);
             assertEquals( "FIX59_ENU_TIME_IN_FORCE", tagData.toFIXLabelString());
-            assertEquals( "TIME_IN_FORCE", tagData.toEnumNameString());
+            assertEquals( "TIME_IN_FORCE", tagData.toFIXNameString());
             assertEquals( "59", tagData.toFIXIDString());
             assertEquals( "TimeInForce", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -123,7 +123,7 @@ class Tag59EnuTimeInForceTest {
             assertEquals( "Tag59EnuTimeInForce\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

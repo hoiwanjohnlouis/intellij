@@ -41,11 +41,11 @@ class Tag570EnuPreviouslyReportedTest {
             tagData = new Tag570EnuPreviouslyReported(oneEnum);
             assertEquals( "FIX570_ENU_PREVIOUSLY_REPORTED", tagData.toFIXLabelString());
             assertEquals( "570", tagData.toFIXIDString());
-            assertEquals( "PREVIOUSLY_REPORTED", tagData.toEnumNameString());
+            assertEquals( "PREVIOUSLY_REPORTED", tagData.toFIXNameString());
             assertEquals( "PreviouslyReported", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -93,7 +93,7 @@ class Tag570EnuPreviouslyReportedTest {
             assertEquals( "Tag570EnuPreviouslyReported\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

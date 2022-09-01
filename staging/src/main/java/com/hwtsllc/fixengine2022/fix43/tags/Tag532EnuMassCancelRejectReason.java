@@ -99,7 +99,7 @@ public class Tag532EnuMassCancelRejectReason extends FIX43Abstract implements Lo
      */
     @Override
     public String toDataNameString() {
-        return dataValue.toEnumNameString();
+        return dataValue.toFIXNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data

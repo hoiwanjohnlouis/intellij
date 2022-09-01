@@ -45,11 +45,11 @@ class Tag960StrStrategyParameterValueTest {
             tagData = new Tag960StrStrategyParameterValue( new MyStringType( oneElement ));
             assertEquals( "FIX960_STR_STRATEGY_PARAMETER_VALUE", tagData.toFIXLabelString());
             assertEquals( "960", tagData.toFIXIDString());
-            assertEquals( "STRATEGY_PARAMETER_VALUE", tagData.toEnumNameString());
+            assertEquals( "STRATEGY_PARAMETER_VALUE", tagData.toFIXNameString());
             assertEquals( "StrategyParameterValue", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag960StrStrategyParameterValueTest {
             assertEquals( "Tag960StrStrategyParameterValue\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

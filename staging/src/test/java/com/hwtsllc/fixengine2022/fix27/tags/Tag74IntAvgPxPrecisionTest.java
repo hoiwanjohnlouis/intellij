@@ -44,12 +44,12 @@ class Tag74IntAvgPxPrecisionTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag74IntAvgPxPrecision( new MyIntType( oneElement ));
             assertEquals( "FIX74_INT_AVG_PX_PRECISION", tagData.toFIXLabelString());
-            assertEquals( "AVG_PX_PRECISION", tagData.toEnumNameString());
+            assertEquals( "AVG_PX_PRECISION", tagData.toFIXNameString());
             assertEquals( "74", tagData.toFIXIDString());
             assertEquals( "AvgPxPrecision", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -84,7 +84,7 @@ class Tag74IntAvgPxPrecisionTest {
             assertEquals( "Tag74IntAvgPxPrecision\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

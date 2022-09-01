@@ -45,11 +45,11 @@ class Tag157IntNumDaysInterestTest {
             tagData = new Tag157IntNumDaysInterest( new MyIntType( oneElement ));
             assertEquals( "FIX157_INT_NUM_DAYS_INTEREST", tagData.toFIXLabelString());
             assertEquals( "157", tagData.toFIXIDString());
-            assertEquals( "NUM_DAYS_INTEREST", tagData.toEnumNameString());
+            assertEquals( "NUM_DAYS_INTEREST", tagData.toFIXNameString());
             assertEquals( "NumDaysInterest", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag157IntNumDaysInterestTest {
             assertEquals( "Tag157IntNumDaysInterest\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

@@ -41,10 +41,10 @@ class Tag690EnuLegSwapTypeTest {
             tagData = new Tag690EnuLegSwapType(oneEnum);
             assertEquals( "FIX690_ENU_LEG_SWAP_TYPE", tagData.toFIXLabelString());
             assertEquals( "690", tagData.toFIXIDString());
-            assertEquals( "LEG_SWAP_TYPE", tagData.toEnumNameString());
+            assertEquals( "LEG_SWAP_TYPE", tagData.toFIXNameString());
             assertEquals( "LegSwapType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -103,7 +103,7 @@ class Tag690EnuLegSwapTypeTest {
             assertEquals( "Tag690EnuLegSwapType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

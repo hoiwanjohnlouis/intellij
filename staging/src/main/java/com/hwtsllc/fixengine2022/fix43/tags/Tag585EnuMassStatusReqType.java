@@ -98,7 +98,7 @@ public class Tag585EnuMassStatusReqType extends FIX43Abstract implements LogValu
      */
     @Override
     public String toDataNameString() {
-        return dataValue.toEnumNameString();
+        return dataValue.toFIXNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data

@@ -113,100 +113,100 @@ class Enum829TrdSubTypeTest {
 
         enumType = Enum829TrdSubType.CMTA;
         assertEquals("0", enumType.toFIXIDString());
-        assertEquals("CMTA", enumType.toEnumNameString());
+        assertEquals("CMTA", enumType.toFIXNameString());
         assertEquals("0 - CMTA", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum829TrdSubType.INTERNAL_TRANSFER;
         assertEquals("1", enumType.toFIXIDString());
-        assertEquals("INTERNAL_TRANSFER", enumType.toEnumNameString());
+        assertEquals("INTERNAL_TRANSFER", enumType.toFIXNameString());
         assertEquals("1 - Internal transfer or adjustment", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum829TrdSubType.EXTERNAL_TRANSFER;
         assertEquals("2", enumType.toFIXIDString());
-        assertEquals("EXTERNAL_TRANSFER", enumType.toEnumNameString());
+        assertEquals("EXTERNAL_TRANSFER", enumType.toFIXNameString());
         assertEquals("2 - External transfer or transfer of account", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum829TrdSubType.REJECT;
         assertEquals("3", enumType.toFIXIDString());
-        assertEquals("REJECT", enumType.toEnumNameString());
+        assertEquals("REJECT", enumType.toFIXNameString());
         assertEquals("3 - Reject for submitting side", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum829TrdSubType.ADVISORY_FOR_CONTRA;
         assertEquals("4", enumType.toFIXIDString());
-        assertEquals("ADVISORY_FOR_CONTRA", enumType.toEnumNameString());
+        assertEquals("ADVISORY_FOR_CONTRA", enumType.toFIXNameString());
         assertEquals("4 - Advisory for contra side", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = Enum829TrdSubType.OFFSET_DUE_TO_ALLOCATION;
         assertEquals("5", enumType.toFIXIDString());
-        assertEquals("OFFSET_DUE_TO_ALLOCATION", enumType.toEnumNameString());
+        assertEquals("OFFSET_DUE_TO_ALLOCATION", enumType.toFIXNameString());
         assertEquals("5 - Offset due to an allocation", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum829TrdSubType.ONSET_DUE_TO_ALLOCATION;
         assertEquals("6", enumType.toFIXIDString());
-        assertEquals("ONSET_DUE_TO_ALLOCATION", enumType.toEnumNameString());
+        assertEquals("ONSET_DUE_TO_ALLOCATION", enumType.toFIXNameString());
         assertEquals("6 - Onset due to an allocation", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum829TrdSubType.DIFFERENTIAL_SPREAD;
         assertEquals("7", enumType.toFIXIDString());
-        assertEquals("DIFFERENTIAL_SPREAD", enumType.toEnumNameString());
+        assertEquals("DIFFERENTIAL_SPREAD", enumType.toFIXNameString());
         assertEquals("7 - Differential spread", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum829TrdSubType.IMPLIED_SPREAD_LEG;
         assertEquals("8", enumType.toFIXIDString());
-        assertEquals("IMPLIED_SPREAD_LEG", enumType.toEnumNameString());
+        assertEquals("IMPLIED_SPREAD_LEG", enumType.toFIXNameString());
         assertEquals("8 - Implied spread leg executed against an outright", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum829TrdSubType.TRANSACTION_FROM_EXERCISE;
         assertEquals("9", enumType.toFIXIDString());
-        assertEquals("TRANSACTION_FROM_EXERCISE", enumType.toEnumNameString());
+        assertEquals("TRANSACTION_FROM_EXERCISE", enumType.toFIXNameString());
         assertEquals("9 - Transaction from exercise", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = Enum829TrdSubType.TRANSACTION_FROM_ASSIGNMENT;
         assertEquals("10", enumType.toFIXIDString());
-        assertEquals("TRANSACTION_FROM_ASSIGNMENT", enumType.toEnumNameString());
+        assertEquals("TRANSACTION_FROM_ASSIGNMENT", enumType.toFIXNameString());
         assertEquals("10 - Transaction from assignment", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum829TrdSubType.ACATS;
         assertEquals("11", enumType.toFIXIDString());
-        assertEquals("ACATS", enumType.toEnumNameString());
+        assertEquals("ACATS", enumType.toFIXNameString());
         assertEquals("11 - ACATS", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
@@ -216,70 +216,70 @@ class Enum829TrdSubTypeTest {
          */
         enumType = Enum829TrdSubType.AI;
         assertEquals("14", enumType.toFIXIDString());
-        assertEquals("AI", enumType.toEnumNameString());
+        assertEquals("AI", enumType.toFIXNameString());
         assertEquals("14 - AI (Automated input facility disabled in response to an exchange request.)",
                 enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = Enum829TrdSubType.B;
         assertEquals("15", enumType.toFIXIDString());
-        assertEquals("B", enumType.toEnumNameString());
+        assertEquals("B", enumType.toFIXNameString());
         assertEquals("15 - B (Transaction between two member firms where neither member firm " +
                             "is registered as a market maker in the security in question and neither " +
                             "is a designated fund manager. Also used by broker dealers when dealing " +
                             "with another broker which is not a member firm. Non-order book securities only.)",
                 enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum829TrdSubType.K;
         assertEquals("16", enumType.toFIXIDString());
-        assertEquals("K", enumType.toEnumNameString());
+        assertEquals("K", enumType.toFIXNameString());
         assertEquals("16 - K (Transaction using block trade facility.)",
                 enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum829TrdSubType.LC;
         assertEquals("17", enumType.toFIXIDString());
-        assertEquals("LC", enumType.toEnumNameString());
+        assertEquals("LC", enumType.toFIXNameString());
         assertEquals("17 - LC (Correction submitted more than three days " +
                         "after publication of the original trade report.)",
                 enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum829TrdSubType.M;
         assertEquals("18", enumType.toFIXIDString());
-        assertEquals("M", enumType.toEnumNameString());
+        assertEquals("M", enumType.toFIXNameString());
         assertEquals("18 - M (Transaction, other than a transaction resulting from a stock swap " +
                         "or stock switch, between two market makers registered in that " +
                         "security including IDB or a public display system trades. " +
                         "Non-order book securities only.)",
                 enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum829TrdSubType.N;
         assertEquals("19", enumType.toFIXIDString());
-        assertEquals("N", enumType.toEnumNameString());
+        assertEquals("N", enumType.toFIXNameString());
         assertEquals("19 - N (Non-protected portfolio transaction or a fully disclosed portfolio transaction)",
                 enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = Enum829TrdSubType.NM;
         assertEquals("20", enumType.toFIXIDString());
-        assertEquals("NM", enumType.toEnumNameString());
+        assertEquals("NM", enumType.toFIXNameString());
         assertEquals("20 - NM (  " +
                         "i) transaction where Exchange has granted permission for non-publication.  " +
                         "ii) IDB is reporting as seller.  " +
@@ -287,61 +287,61 @@ class Enum829TrdSubTypeTest {
                         "where the transaction report is not also a trade report.)",
                 enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum829TrdSubType.NR;
         assertEquals("21", enumType.toFIXIDString());
-        assertEquals("NR", enumType.toEnumNameString());
+        assertEquals("NR", enumType.toFIXNameString());
         assertEquals("21 - NR (Non-risk transaction in a SEATS security other than an AIM security)",
                 enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum829TrdSubType.P;
         assertEquals("22", enumType.toFIXIDString());
-        assertEquals("P", enumType.toEnumNameString());
+        assertEquals("P", enumType.toFIXNameString());
         assertEquals("22 - P (Protected portfolio transaction or a worked principal agreement " +
                     "to effect a portfolio transaction which includes order book securities)",
                 enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum829TrdSubType.PA;
         assertEquals("23", enumType.toFIXIDString());
-        assertEquals("PA", enumType.toEnumNameString());
+        assertEquals("PA", enumType.toFIXNameString());
         assertEquals("23 - PA (Protected transaction notification)",
                 enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum829TrdSubType.PC;
         assertEquals("24", enumType.toFIXIDString());
-        assertEquals("PC", enumType.toEnumNameString());
+        assertEquals("PC", enumType.toFIXNameString());
         assertEquals("24 - PC (Contra trade for transaction which took place on a previous day " +
                         "and which was automatically executed on the Exchange trading system)",
                 enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = Enum829TrdSubType.PN;
         assertEquals("25", enumType.toFIXIDString());
-        assertEquals("PN", enumType.toEnumNameString());
+        assertEquals("PN", enumType.toFIXNameString());
         assertEquals("25 - PN (Worked principal notification for a portfolio " +
                         "transaction which includes order book securities)",
                 enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum829TrdSubType.R;
         assertEquals("26", enumType.toFIXIDString());
-        assertEquals("R", enumType.toEnumNameString());
+        assertEquals("R", enumType.toFIXNameString());
         assertEquals("26 - R (  " +
                 "i) riskless principal transaction between non-members where the buying and selling " +
                         "transactions are executed at different prices or on different terms " +
@@ -356,65 +356,65 @@ class Enum829TrdSubTypeTest {
                         "trade report with trade type indicator R).)",
                 enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum829TrdSubType.RO;
         assertEquals("27", enumType.toFIXIDString());
-        assertEquals("RO", enumType.toEnumNameString());
+        assertEquals("RO", enumType.toFIXNameString());
         assertEquals("27 - RO (Transaction which resulted from the exercise of a traditional option " +
                 "or a stock-settled covered warrant)",
                 enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum829TrdSubType.RT;
         assertEquals("28", enumType.toFIXIDString());
-        assertEquals("RT", enumType.toEnumNameString());
+        assertEquals("RT", enumType.toFIXNameString());
         assertEquals("28 - RT (Risk transaction in a SEATS security, (excluding AIM security) " +
                 "reported by a market maker registered in that security)",
                 enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum829TrdSubType.SW;
         assertEquals("29", enumType.toFIXIDString());
-        assertEquals("SW", enumType.toEnumNameString());
+        assertEquals("SW", enumType.toFIXNameString());
         assertEquals("29 - SW (Transactions resulting from stock swap or a stock switch " +
                 "(one report is required for each line of stock)",
                 enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = Enum829TrdSubType.T;
         assertEquals("30", enumType.toFIXIDString());
-        assertEquals("T", enumType.toEnumNameString());
+        assertEquals("T", enumType.toFIXNameString());
         assertEquals("30 - T (If reporting a single protected transaction)",
                 enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum829TrdSubType.WN;
         assertEquals("31", enumType.toFIXIDString());
-        assertEquals("WN", enumType.toEnumNameString());
+        assertEquals("WN", enumType.toFIXNameString());
         assertEquals("31 - WN (Worked principal notification for a single order book security)",
                 enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum829TrdSubType.WT;
         assertEquals("32", enumType.toFIXIDString());
-        assertEquals("WT", enumType.toEnumNameString());
+        assertEquals("WT", enumType.toFIXNameString());
         assertEquals("32 - WT (Worked principal transaction (other than a portfolio transaction))",
                 enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

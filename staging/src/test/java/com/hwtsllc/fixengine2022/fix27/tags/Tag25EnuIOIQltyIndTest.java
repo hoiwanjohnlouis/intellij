@@ -40,11 +40,11 @@ class Tag25EnuIOIQltyIndTest {
         for (Enum25IOIQltyInd oneEnum : Enum25IOIQltyInd.values()) {
             tagData = new Tag25EnuIOIQltyInd(oneEnum);
             assertEquals( "FIX25_ENU_IOI_QLTY_IND", tagData.toFIXLabelString());
-            assertEquals( "IOI_QLTY_IND", tagData.toEnumNameString());
+            assertEquals( "IOI_QLTY_IND", tagData.toFIXNameString());
             assertEquals( "25", tagData.toFIXIDString());
             assertEquals( "IOIQltyInd", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -96,7 +96,7 @@ class Tag25EnuIOIQltyIndTest {
             assertEquals( "Tag25EnuIOIQltyInd\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

@@ -45,11 +45,11 @@ class Tag760StrNested2PartySubIDTest {
             tagData = new Tag760StrNested2PartySubID( new MyStringType( oneElement ));
             assertEquals( "FIX760_STR_NESTED_2_PARTY_SUB_ID", tagData.toFIXLabelString());
             assertEquals( "760", tagData.toFIXIDString());
-            assertEquals( "NESTED_2_PARTY_SUB_ID", tagData.toEnumNameString());
+            assertEquals( "NESTED_2_PARTY_SUB_ID", tagData.toFIXNameString());
             assertEquals( "Nested2PartySubID", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag760StrNested2PartySubIDTest {
             assertEquals( "Tag760StrNested2PartySubID\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

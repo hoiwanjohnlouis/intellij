@@ -45,11 +45,11 @@ class Tag755StrAllocReportIDTest {
             tagData = new Tag755StrAllocReportID( new MyStringType( oneElement ));
             assertEquals( "FIX755_STR_ALLOC_REPORT_ID", tagData.toFIXLabelString());
             assertEquals( "755", tagData.toFIXIDString());
-            assertEquals( "ALLOC_REPORT_ID", tagData.toEnumNameString());
+            assertEquals( "ALLOC_REPORT_ID", tagData.toFIXNameString());
             assertEquals( "AllocReportID", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag755StrAllocReportIDTest {
             assertEquals( "Tag755StrAllocReportID\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

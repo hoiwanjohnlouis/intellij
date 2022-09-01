@@ -45,11 +45,11 @@ class Tag168UtcEffectiveTimeTest {
             tagData = new Tag168UtcEffectiveTime( new MyUTCTimestampType( oneElement ));
             assertEquals( "FIX168_UTC_EFFECTIVE_TIME", tagData.toFIXLabelString());
             assertEquals( "168", tagData.toFIXIDString());
-            assertEquals( "EFFECTIVE_TIME", tagData.toEnumNameString());
+            assertEquals( "EFFECTIVE_TIME", tagData.toFIXNameString());
             assertEquals( "EffectiveTime", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag168UtcEffectiveTimeTest {
             assertEquals( "Tag168UtcEffectiveTime\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

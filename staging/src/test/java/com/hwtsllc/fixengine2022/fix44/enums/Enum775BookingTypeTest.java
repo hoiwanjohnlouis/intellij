@@ -44,26 +44,26 @@ class Enum775BookingTypeTest {
 
         enumType = Enum775BookingType.REGULAR_BOOKING;
         assertEquals( "0", enumType.toFIXIDString() );
-        assertEquals( "REGULAR_BOOKING", enumType.toEnumNameString() );
+        assertEquals( "REGULAR_BOOKING", enumType.toFIXNameString() );
         assertEquals( "0 - Regular booking", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum775BookingType.CONTRACT_FOR_DIFFERENCE;
         assertEquals( "1", enumType.toFIXIDString() );
-        assertEquals( "CONTRACT_FOR_DIFFERENCE", enumType.toEnumNameString() );
+        assertEquals( "CONTRACT_FOR_DIFFERENCE", enumType.toFIXNameString() );
         assertEquals( "1 - CFD (Contract for difference)", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum775BookingType.TOTAL_RETURN_SWAP;
         assertEquals( "2", enumType.toFIXIDString() );
-        assertEquals( "TOTAL_RETURN_SWAP", enumType.toEnumNameString() );
+        assertEquals( "TOTAL_RETURN_SWAP", enumType.toFIXNameString() );
         assertEquals( "2 - Total Return Swap", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

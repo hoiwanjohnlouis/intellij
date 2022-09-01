@@ -45,11 +45,11 @@ class Tag471StrStateOrProvinceOfIssueTest {
             tagData = new Tag471StrStateOrProvinceOfIssue( new MyStringType( oneElement ));
             assertEquals( "FIX471_STR_STATE_OR_PROVINCE_OF_ISSUE", tagData.toFIXLabelString());
             assertEquals( "471", tagData.toFIXIDString());
-            assertEquals( "STATE_OR_PROVINCE_OF_ISSUE", tagData.toEnumNameString());
+            assertEquals( "STATE_OR_PROVINCE_OF_ISSUE", tagData.toFIXNameString());
             assertEquals( "StateOrProvinceOfIssue", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag471StrStateOrProvinceOfIssueTest {
             assertEquals( "Tag471StrStateOrProvinceOfIssue\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

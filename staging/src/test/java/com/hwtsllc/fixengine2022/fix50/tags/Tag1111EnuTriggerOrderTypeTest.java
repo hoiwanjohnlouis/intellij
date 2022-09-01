@@ -41,10 +41,10 @@ class Tag1111EnuTriggerOrderTypeTest {
             tagData = new Tag1111EnuTriggerOrderType(oneEnum);
             assertEquals( "FIX1111_ENU_TRIGGER_ORDER_TYPE", tagData.toFIXLabelString());
             assertEquals( "1111", tagData.toFIXIDString());
-            assertEquals( "TRIGGER_ORDER_TYPE", tagData.toEnumNameString());
+            assertEquals( "TRIGGER_ORDER_TYPE", tagData.toFIXNameString());
             assertEquals( "TriggerOrderType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -93,7 +93,7 @@ class Tag1111EnuTriggerOrderTypeTest {
             assertEquals( "Tag1111EnuTriggerOrderType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

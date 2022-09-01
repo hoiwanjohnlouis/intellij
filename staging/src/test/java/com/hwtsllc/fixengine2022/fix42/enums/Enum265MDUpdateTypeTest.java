@@ -43,20 +43,20 @@ class Enum265MDUpdateTypeTest {
          */
         enumType = Enum265MDUpdateType.FULL_REFRESH;
         assertEquals("0", enumType.toFIXIDString());
-        assertEquals("FULL_REFRESH", enumType.toEnumNameString());
+        assertEquals("FULL_REFRESH", enumType.toFIXNameString());
         assertEquals("0 - Full refresh", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum265MDUpdateType.INCREMENTAL_REFRESH;
         assertEquals("1", enumType.toFIXIDString());
-        assertEquals("INCREMENTAL_REFRESH", enumType.toEnumNameString());
+        assertEquals("INCREMENTAL_REFRESH", enumType.toFIXNameString());
         assertEquals("1 - Incremental refresh", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
     /**

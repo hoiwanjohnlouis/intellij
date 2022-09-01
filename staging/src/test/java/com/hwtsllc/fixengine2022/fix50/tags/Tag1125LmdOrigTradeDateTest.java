@@ -45,11 +45,11 @@ class Tag1125LmdOrigTradeDateTest {
             tagData = new Tag1125LmdOrigTradeDate( new MyLocalMktDateType( oneElement ));
             assertEquals( "FIX1125_LMD_ORIG_TRADE_DATE", tagData.toFIXLabelString());
             assertEquals( "1125", tagData.toFIXIDString());
-            assertEquals( "ORIG_TRADE_DATE", tagData.toEnumNameString());
+            assertEquals( "ORIG_TRADE_DATE", tagData.toFIXNameString());
             assertEquals( "OrigTradeDate", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag1125LmdOrigTradeDateTest {
             assertEquals( "Tag1125LmdOrigTradeDate\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

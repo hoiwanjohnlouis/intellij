@@ -103,7 +103,7 @@ public class Tag1124EnuOrigTradeHandlingInstr extends FIX50Abstract implements L
      */
     @Override
     public String toDataNameString() {
-        return dataValue.toEnumNameString();
+        return dataValue.toFIXNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data

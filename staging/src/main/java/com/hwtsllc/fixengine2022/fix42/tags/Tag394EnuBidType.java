@@ -92,7 +92,7 @@ public class Tag394EnuBidType extends FIX42Abstract implements LogValuePairStrin
      */
     @Override
     public String toDataNameString() {
-        return dataValue.toEnumNameString();
+        return dataValue.toFIXNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data

@@ -52,11 +52,11 @@ class Tag1132TzTransactTimeTest {
             tagData = new Tag1132TzTransactTime( new MyTZTimestampType( oneElement ));
             assertEquals( "FIX1132_TZ_TRANSACT_TIME", tagData.toFIXLabelString());
             assertEquals( "1132", tagData.toFIXIDString());
-            assertEquals( "TZ_TRANSACT_TIME", tagData.toEnumNameString());
+            assertEquals( "TZ_TRANSACT_TIME", tagData.toFIXNameString());
             assertEquals( "TZTransactTime", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -87,7 +87,7 @@ class Tag1132TzTransactTimeTest {
             assertEquals( "Tag1132TzTransactTime\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

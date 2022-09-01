@@ -45,11 +45,11 @@ class Tag554StrPasswordTest {
             tagData = new Tag554StrPassword( new MyStringType( oneElement ));
             assertEquals( "FIX554_STR_PASSWORD", tagData.toFIXLabelString());
             assertEquals( "554", tagData.toFIXIDString());
-            assertEquals( "PASSWORD", tagData.toEnumNameString());
+            assertEquals( "PASSWORD", tagData.toFIXNameString());
             assertEquals( "Password", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag554StrPasswordTest {
             assertEquals( "Tag554StrPassword\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

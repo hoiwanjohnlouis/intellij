@@ -53,11 +53,11 @@ class Tag766AmtAllowableOneSidednessValueTest {
             tagData = new Tag766AmtAllowableOneSidednessValue( new MyAmtType( oneElement ));
             assertEquals( "FIX766_AMT_ALLOWABLE_ONE_SIDEDNESS_VALUE", tagData.toFIXLabelString());
             assertEquals( "766", tagData.toFIXIDString());
-            assertEquals( "ALLOWABLE_ONE_SIDEDNESS_VALUE", tagData.toEnumNameString());
+            assertEquals( "ALLOWABLE_ONE_SIDEDNESS_VALUE", tagData.toFIXNameString());
             assertEquals( "AllowableOneSidednessValue", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -88,7 +88,7 @@ class Tag766AmtAllowableOneSidednessValueTest {
             assertEquals( "Tag766AmtAllowableOneSidednessValue\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

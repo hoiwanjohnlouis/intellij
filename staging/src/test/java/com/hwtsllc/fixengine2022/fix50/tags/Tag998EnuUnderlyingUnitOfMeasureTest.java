@@ -41,10 +41,10 @@ class Tag998EnuUnderlyingUnitOfMeasureTest {
             tagData = new Tag998EnuUnderlyingUnitOfMeasure(oneEnum);
             assertEquals( "FIX998_ENU_UNDERLYING_UNIT_OF_MEASURE", tagData.toFIXLabelString());
             assertEquals( "998", tagData.toFIXIDString());
-            assertEquals( "UNDERLYING_UNIT_OF_MEASURE", tagData.toEnumNameString());
+            assertEquals( "UNDERLYING_UNIT_OF_MEASURE", tagData.toFIXNameString());
             assertEquals( "UnderlyingUnitOfMeasure", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -147,7 +147,7 @@ class Tag998EnuUnderlyingUnitOfMeasureTest {
             assertEquals( "Tag998EnuUnderlyingUnitOfMeasure\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

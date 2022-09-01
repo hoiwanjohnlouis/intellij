@@ -41,26 +41,26 @@ class Enum1002AllocMethodTest {
 
         enumType = Enum1002AllocMethod.AUTOMATIC;
         assertEquals( "1", enumType.toFIXIDString() );
-        assertEquals( "AUTOMATIC", enumType.toEnumNameString() );
+        assertEquals( "AUTOMATIC", enumType.toFIXNameString() );
         assertEquals( "1 - Automatic", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1002AllocMethod.GUARANTOR;
         assertEquals( "2", enumType.toFIXIDString() );
-        assertEquals( "GUARANTOR", enumType.toEnumNameString() );
+        assertEquals( "GUARANTOR", enumType.toFIXNameString() );
         assertEquals( "2 - Guarantor", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1002AllocMethod.MANUAL;
         assertEquals( "3", enumType.toFIXIDString() );
-        assertEquals( "MANUAL", enumType.toEnumNameString() );
+        assertEquals( "MANUAL", enumType.toFIXNameString() );
         assertEquals( "3 - Manual", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

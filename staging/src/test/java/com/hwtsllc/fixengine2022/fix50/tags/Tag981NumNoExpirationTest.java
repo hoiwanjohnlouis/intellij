@@ -45,11 +45,11 @@ class Tag981NumNoExpirationTest {
             tagData = new Tag981NumNoExpiration( new MyNumInGroupType( oneElement ));
             assertEquals( "FIX981_NUM_NO_EXPIRATION", tagData.toFIXLabelString());
             assertEquals( "981", tagData.toFIXIDString());
-            assertEquals( "NO_EXPIRATION", tagData.toEnumNameString());
+            assertEquals( "NO_EXPIRATION", tagData.toFIXNameString());
             assertEquals( "NoExpiration", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag981NumNoExpirationTest {
             assertEquals( "Tag981NumNoExpiration\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

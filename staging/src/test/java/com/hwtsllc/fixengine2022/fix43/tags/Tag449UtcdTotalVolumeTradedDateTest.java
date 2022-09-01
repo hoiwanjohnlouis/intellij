@@ -55,11 +55,11 @@ class Tag449UtcdTotalVolumeTradedDateTest {
             tagData = new Tag449UtcdTotalVolumeTradedDate( new MyUTCDateType( oneElement ));
             assertEquals( "FIX449_UTCD_TOTAL_VOLUME_TRADED_DATE", tagData.toFIXLabelString());
             assertEquals( "449", tagData.toFIXIDString());
-            assertEquals( "TOTAL_VOLUME_TRADED_DATE", tagData.toEnumNameString());
+            assertEquals( "TOTAL_VOLUME_TRADED_DATE", tagData.toFIXNameString());
             assertEquals( "TotalVolumeTradedDate (replaced)", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -90,7 +90,7 @@ class Tag449UtcdTotalVolumeTradedDateTest {
             assertEquals( "Tag449UtcdTotalVolumeTradedDate\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

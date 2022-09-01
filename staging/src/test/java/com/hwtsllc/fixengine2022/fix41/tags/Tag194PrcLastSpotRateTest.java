@@ -45,11 +45,11 @@ class Tag194PrcLastSpotRateTest {
             tagData = new Tag194PrcLastSpotRate( new MyPriceType( oneElement ));
             assertEquals( "FIX194_PRC_LAST_SPOT_RATE", tagData.toFIXLabelString());
             assertEquals( "194", tagData.toFIXIDString());
-            assertEquals( "LAST_SPOT_RATE", tagData.toEnumNameString());
+            assertEquals( "LAST_SPOT_RATE", tagData.toFIXNameString());
             assertEquals( "LastSpotRate", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag194PrcLastSpotRateTest {
             assertEquals( "Tag194PrcLastSpotRate\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

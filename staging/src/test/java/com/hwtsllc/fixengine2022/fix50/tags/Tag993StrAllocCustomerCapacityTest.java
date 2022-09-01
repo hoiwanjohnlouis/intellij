@@ -45,11 +45,11 @@ class Tag993StrAllocCustomerCapacityTest {
             tagData = new Tag993StrAllocCustomerCapacity( new MyStringType( oneElement ));
             assertEquals( "FIX993_STR_ALLOC_CUSTOMER_CAPACITY", tagData.toFIXLabelString());
             assertEquals( "993", tagData.toFIXIDString());
-            assertEquals( "ALLOC_CUSTOMER_CAPACITY", tagData.toEnumNameString());
+            assertEquals( "ALLOC_CUSTOMER_CAPACITY", tagData.toFIXNameString());
             assertEquals( "AllocCustomerCapacity", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag993StrAllocCustomerCapacityTest {
             assertEquals( "Tag993StrAllocCustomerCapacity\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

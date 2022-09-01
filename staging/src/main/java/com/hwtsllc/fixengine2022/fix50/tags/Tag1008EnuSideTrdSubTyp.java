@@ -102,7 +102,7 @@ public class Tag1008EnuSideTrdSubTyp extends FIX50Abstract implements LogValuePa
      */
     @Override
     public String toDataNameString() {
-        return dataValue.toEnumNameString();
+        return dataValue.toFIXNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data

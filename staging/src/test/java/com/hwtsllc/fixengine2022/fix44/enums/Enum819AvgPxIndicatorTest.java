@@ -41,28 +41,28 @@ class Enum819AvgPxIndicatorTest {
 
         enumType = Enum819AvgPxIndicator.NO_PRICING;
         assertEquals("0", enumType.toFIXIDString());
-        assertEquals("NO_PRICING", enumType.toEnumNameString());
+        assertEquals("NO_PRICING", enumType.toFIXNameString());
         assertEquals("0 - No Average Pricing", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum819AvgPxIndicator.PART_OF_APG;
         assertEquals("1", enumType.toFIXIDString());
-        assertEquals("PART_OF_APG", enumType.toEnumNameString());
+        assertEquals("PART_OF_APG", enumType.toFIXNameString());
         assertEquals("1 - Trade is part of an average price group identified by the TradeLinkID (820)",
                 enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum819AvgPxIndicator.LAST_TRADE;
         assertEquals("2", enumType.toFIXIDString());
-        assertEquals("LAST_TRADE", enumType.toEnumNameString());
+        assertEquals("LAST_TRADE", enumType.toFIXNameString());
         assertEquals("2 - Last trade is the average price group identified by the TradeLinkID (820)",
                 enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

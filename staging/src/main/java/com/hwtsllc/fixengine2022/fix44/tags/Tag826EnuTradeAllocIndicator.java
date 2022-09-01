@@ -97,7 +97,7 @@ public class Tag826EnuTradeAllocIndicator extends FIX44Abstract implements LogVa
      */
     @Override
     public String toDataNameString() {
-        return dataValue.toEnumNameString();
+        return dataValue.toFIXNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data

@@ -41,11 +41,11 @@ class Tag563EnuMultiLegRptTypeReqTest {
             tagData = new Tag563EnuMultiLegRptTypeReq(oneEnum);
             assertEquals( "FIX563_ENU_MULTI_LEG_RPT_TYPE_REQ", tagData.toFIXLabelString());
             assertEquals( "563", tagData.toFIXIDString());
-            assertEquals( "MULTI_LEG_RPT_TYPE_REQ", tagData.toEnumNameString());
+            assertEquals( "MULTI_LEG_RPT_TYPE_REQ", tagData.toFIXNameString());
             assertEquals( "MultiLegRptTypeReq", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -99,7 +99,7 @@ class Tag563EnuMultiLegRptTypeReqTest {
             assertEquals( "Tag563EnuMultiLegRptTypeReq\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

@@ -45,11 +45,11 @@ class Tag275ExcMDMktTest {
             tagData = new Tag275ExcMDMkt( new MyExchangeType( oneElement ));
             assertEquals( "FIX275_EXC_MD_MKT", tagData.toFIXLabelString());
             assertEquals( "275", tagData.toFIXIDString());
-            assertEquals( "MD_MKT", tagData.toEnumNameString());
+            assertEquals( "MD_MKT", tagData.toFIXNameString());
             assertEquals( "MDMkt", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag275ExcMDMktTest {
             assertEquals( "Tag275ExcMDMkt\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

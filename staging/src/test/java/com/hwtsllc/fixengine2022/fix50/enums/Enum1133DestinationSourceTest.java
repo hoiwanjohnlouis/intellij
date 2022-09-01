@@ -43,42 +43,42 @@ class Enum1133DestinationSourceTest {
 
         enumType = Enum1133DestinationSource.BIC;
         assertEquals( "B", enumType.toFIXIDString() );
-        assertEquals( "BIC", enumType.toEnumNameString() );
+        assertEquals( "BIC", enumType.toFIXNameString() );
         assertEquals( "B - BIC (Bank Identification Code) (ISO 9362)", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1133DestinationSource.MARKET_PARTICIPANT_IDENTIFIER;
         assertEquals( "C", enumType.toFIXIDString() );
-        assertEquals( "MARKET_PARTICIPANT_IDENTIFIER", enumType.toEnumNameString() );
+        assertEquals( "MARKET_PARTICIPANT_IDENTIFIER", enumType.toFIXNameString() );
         assertEquals( "C - Generally accepted market participant identifier (e.g. NASD mnemonic)", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1133DestinationSource.PROPRIETARY;
         assertEquals( "D", enumType.toFIXIDString() );
-        assertEquals( "PROPRIETARY", enumType.toEnumNameString() );
+        assertEquals( "PROPRIETARY", enumType.toFIXNameString() );
         assertEquals( "D - Proprietary / Custom code", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1133DestinationSource.ISO_COUNTRY_CODE;
         assertEquals( "E", enumType.toFIXIDString() );
-        assertEquals( "ISO_COUNTRY_CODE", enumType.toEnumNameString() );
+        assertEquals( "ISO_COUNTRY_CODE", enumType.toFIXNameString() );
         assertEquals( "E - ISO Country Code", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1133DestinationSource.MIC;
         assertEquals( "G", enumType.toFIXIDString() );
-        assertEquals( "MIC", enumType.toEnumNameString() );
+        assertEquals( "MIC", enumType.toFIXNameString() );
         assertEquals( "G - MIC (ISO 10383 - Market Identifier Code)", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

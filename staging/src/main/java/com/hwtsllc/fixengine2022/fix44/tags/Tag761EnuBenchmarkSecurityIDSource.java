@@ -185,7 +185,7 @@ public class Tag761EnuBenchmarkSecurityIDSource extends FIX44Abstract implements
      */
     @Override
     public String toDataNameString() {
-        return dataValue.toEnumNameString();
+        return dataValue.toFIXNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data

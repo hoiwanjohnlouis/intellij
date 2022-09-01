@@ -46,11 +46,11 @@ class Tag243IntUnderlyingRepoCollateralSecurityTypeTest {
             tagData = new Tag243IntUnderlyingRepoCollateralSecurityType( new MyIntType( oneElement ));
             assertEquals( "FIX243_INT_UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE", tagData.toFIXLabelString());
             assertEquals( "243", tagData.toFIXIDString());
-            assertEquals( "UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE", tagData.toEnumNameString());
+            assertEquals( "UNDERLYING_REPO_COLLATERAL_SECURITY_TYPE", tagData.toFIXNameString());
             assertEquals( "UnderlyingRepoCollateralSecurityType (Deprecated)", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -87,7 +87,7 @@ class Tag243IntUnderlyingRepoCollateralSecurityTypeTest {
             assertEquals( "Tag243IntUnderlyingRepoCollateralSecurityType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

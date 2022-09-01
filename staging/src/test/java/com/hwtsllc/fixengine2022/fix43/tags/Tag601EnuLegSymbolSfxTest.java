@@ -41,11 +41,11 @@ class Tag601EnuLegSymbolSfxTest {
             tagData = new Tag601EnuLegSymbolSfx(oneEnum);
             assertEquals( "FIX601_ENU_LEG_SYMBOL_SFX", tagData.toFIXLabelString());
             assertEquals( "601", tagData.toFIXIDString());
-            assertEquals( "LEG_SYMBOL_SFX", tagData.toEnumNameString());
+            assertEquals( "LEG_SYMBOL_SFX", tagData.toFIXNameString());
             assertEquals( "LegSymbolSfx", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -91,7 +91,7 @@ class Tag601EnuLegSymbolSfxTest {
             assertEquals( "Tag601EnuLegSymbolSfx\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

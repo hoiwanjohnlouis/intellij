@@ -76,7 +76,7 @@ public enum Enum751TradeReportRejectReason implements LogFIXString, LogVerboseSt
      * standard wrapper to retrieve the specific fix name for this enum. eg: the second field
      */
     @Override
-    public String toEnumNameString() {
+    public String toFIXNameString() {
         return name;
     }
     /**
@@ -99,7 +99,7 @@ public enum Enum751TradeReportRejectReason implements LogFIXString, LogVerboseSt
                 .concat( toFIXIDString())
                 .concat("]")
                 .concat("\n\tName[")
-                .concat( toEnumNameString())
+                .concat( toFIXNameString())
                 .concat("]")
                 .concat("\n\tDescription[")
                 .concat( toEnumDescriptionString())

@@ -40,18 +40,18 @@ class Enum747ExerciseMethodTest {
 
         enumType = Enum747ExerciseMethod.AUTOMATIC;
         assertEquals( "A", enumType.toFIXIDString());
-        assertEquals( "AUTOMATIC", enumType.toEnumNameString());
+        assertEquals( "AUTOMATIC", enumType.toFIXNameString());
         assertEquals( "A - Automatic", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum747ExerciseMethod.MANUAL;
         assertEquals( "M", enumType.toFIXIDString());
-        assertEquals( "MANUAL", enumType.toEnumNameString());
+        assertEquals( "MANUAL", enumType.toFIXNameString());
         assertEquals( "M - Manual", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

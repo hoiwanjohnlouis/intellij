@@ -92,274 +92,274 @@ class Enum495TaxAdvantageTypeTest {
          */
         enumType = Enum495TaxAdvantageType.NONE;
         assertEquals("0", enumType.toFIXIDString());
-        assertEquals("NONE", enumType.toEnumNameString());
+        assertEquals("NONE", enumType.toFIXNameString());
         assertEquals("0 - None/Not Applicable (default)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum495TaxAdvantageType.MAXI_ISA;
         assertEquals("1", enumType.toFIXIDString());
-        assertEquals("MAXI_ISA", enumType.toEnumNameString());
+        assertEquals("MAXI_ISA", enumType.toFIXNameString());
         assertEquals("1 - Maxi ISA (UK)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum495TaxAdvantageType.TESSA;
         assertEquals("2", enumType.toFIXIDString());
-        assertEquals("TESSA", enumType.toEnumNameString());
+        assertEquals("TESSA", enumType.toFIXNameString());
         assertEquals("2 - TESSA (UK)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum495TaxAdvantageType.MINI_CASH_ISA;
         assertEquals("3", enumType.toFIXIDString());
-        assertEquals("MINI_CASH_ISA", enumType.toEnumNameString());
+        assertEquals("MINI_CASH_ISA", enumType.toFIXNameString());
         assertEquals("3 - Mini Cash ISA (UK)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum495TaxAdvantageType.MINI_STOCKS_AND_SHARES_ISA;
         assertEquals("4", enumType.toFIXIDString());
-        assertEquals("MINI_STOCKS_AND_SHARES_ISA", enumType.toEnumNameString());
+        assertEquals("MINI_STOCKS_AND_SHARES_ISA", enumType.toFIXNameString());
         assertEquals("4 - Mini Stocks And Shares ISA (UK)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum495TaxAdvantageType.MINI_INSURANCE_ISA;
         assertEquals("5", enumType.toFIXIDString());
-        assertEquals("MINI_INSURANCE_ISA", enumType.toEnumNameString());
+        assertEquals("MINI_INSURANCE_ISA", enumType.toFIXNameString());
         assertEquals("5 - Mini Insurance ISA (UK)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum495TaxAdvantageType.CURRENT_YEAR_PAYMENT;
         assertEquals("6", enumType.toFIXIDString());
-        assertEquals("CURRENT_YEAR_PAYMENT", enumType.toEnumNameString());
+        assertEquals("CURRENT_YEAR_PAYMENT", enumType.toFIXNameString());
         assertEquals("6 - Current Year Payment (US)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum495TaxAdvantageType.PRIOR_YEAR_PAYMENT;
         assertEquals("7", enumType.toFIXIDString());
-        assertEquals("PRIOR_YEAR_PAYMENT", enumType.toEnumNameString());
+        assertEquals("PRIOR_YEAR_PAYMENT", enumType.toFIXNameString());
         assertEquals("7 - Prior Year Payment (US)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum495TaxAdvantageType.ASSET_TRANSFER;
         assertEquals("8", enumType.toFIXIDString());
-        assertEquals("ASSET_TRANSFER", enumType.toEnumNameString());
+        assertEquals("ASSET_TRANSFER", enumType.toFIXNameString());
         assertEquals("8 - Asset Transfer (US)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum495TaxAdvantageType.EMPLOYEE_PRIOR_YEAR;
         assertEquals("9", enumType.toFIXIDString());
-        assertEquals("EMPLOYEE_PRIOR_YEAR", enumType.toEnumNameString());
+        assertEquals("EMPLOYEE_PRIOR_YEAR", enumType.toFIXNameString());
         assertEquals("9 - Employee - prior year (US)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum495TaxAdvantageType.EMPLOYEE_CURRENT_YEAR;
         assertEquals("10", enumType.toFIXIDString());
-        assertEquals("EMPLOYEE_CURRENT_YEAR", enumType.toEnumNameString());
+        assertEquals("EMPLOYEE_CURRENT_YEAR", enumType.toFIXNameString());
         assertEquals("10 - Employee - current year (US)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = Enum495TaxAdvantageType.EMPLOYER_PRIOR_YEAR;
         assertEquals("11", enumType.toFIXIDString());
-        assertEquals("EMPLOYER_PRIOR_YEAR", enumType.toEnumNameString());
+        assertEquals("EMPLOYER_PRIOR_YEAR", enumType.toFIXNameString());
         assertEquals("11 - Employer - prior year (US)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum495TaxAdvantageType.EMPLOYER_CURRENT_YEAR;
         assertEquals("12", enumType.toFIXIDString());
-        assertEquals("EMPLOYER_CURRENT_YEAR", enumType.toEnumNameString());
+        assertEquals("EMPLOYER_CURRENT_YEAR", enumType.toFIXNameString());
         assertEquals("12 - Employer - current year (US)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum495TaxAdvantageType.NON_FUND_PROTOTYPE_IRA;
         assertEquals("13", enumType.toFIXIDString());
-        assertEquals("NON_FUND_PROTOTYPE_IRA", enumType.toEnumNameString());
+        assertEquals("NON_FUND_PROTOTYPE_IRA", enumType.toFIXNameString());
         assertEquals("13 - Non-fund prototype IRA (US)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum495TaxAdvantageType.NON_FUND_QUALIFIED_PLAN;
         assertEquals("14", enumType.toFIXIDString());
-        assertEquals("NON_FUND_QUALIFIED_PLAN", enumType.toEnumNameString());
+        assertEquals("NON_FUND_QUALIFIED_PLAN", enumType.toFIXNameString());
         assertEquals("14 - Non-fund qualified plan (US)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum495TaxAdvantageType.DEFINED_CONTRIBUTION_PLAN;
         assertEquals("15", enumType.toFIXIDString());
-        assertEquals("DEFINED_CONTRIBUTION_PLAN", enumType.toEnumNameString());
+        assertEquals("DEFINED_CONTRIBUTION_PLAN", enumType.toFIXNameString());
         assertEquals("15 - Defined contribution plan (US)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum495TaxAdvantageType.INDIVIDUAL_RETIREMENT_ACCOUNT_REGULAR;
         assertEquals("16", enumType.toFIXIDString());
-        assertEquals("INDIVIDUAL_RETIREMENT_ACCOUNT_REGULAR", enumType.toEnumNameString());
+        assertEquals("INDIVIDUAL_RETIREMENT_ACCOUNT_REGULAR", enumType.toFIXNameString());
         assertEquals("16 - Individual Retirement Account (US)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum495TaxAdvantageType.INDIVIDUAL_RETIREMENT_ACCOUNT_ROLLOVER;
         assertEquals("17", enumType.toFIXIDString());
-        assertEquals("INDIVIDUAL_RETIREMENT_ACCOUNT_ROLLOVER", enumType.toEnumNameString());
+        assertEquals("INDIVIDUAL_RETIREMENT_ACCOUNT_ROLLOVER", enumType.toFIXNameString());
         assertEquals("17 - Individual Retirement Account - Rollover (US)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum495TaxAdvantageType.KEOGH;
         assertEquals("18", enumType.toFIXIDString());
-        assertEquals("KEOGH", enumType.toEnumNameString());
+        assertEquals("KEOGH", enumType.toFIXNameString());
         assertEquals("18 - KEOGH (US)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum495TaxAdvantageType.PROFIT_SHARING_PLAN;
         assertEquals("19", enumType.toFIXIDString());
-        assertEquals("PROFIT_SHARING_PLAN", enumType.toEnumNameString());
+        assertEquals("PROFIT_SHARING_PLAN", enumType.toFIXNameString());
         assertEquals("19 - Profit Sharing Plan (US)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum495TaxAdvantageType.RETIREMENT_401K;
         assertEquals("20", enumType.toFIXIDString());
-        assertEquals("401K", enumType.toEnumNameString());
+        assertEquals("401K", enumType.toFIXNameString());
         assertEquals("20 - 401(k) (US)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = Enum495TaxAdvantageType.SELF_DIRECTED_IRA;
         assertEquals("21", enumType.toFIXIDString());
-        assertEquals("SELF_DIRECTED_IRA", enumType.toEnumNameString());
+        assertEquals("SELF_DIRECTED_IRA", enumType.toFIXNameString());
         assertEquals("21 - Self-directed IRA (US)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum495TaxAdvantageType.RETIREMENT_403_B;
         assertEquals("22", enumType.toFIXIDString());
-        assertEquals("403_B", enumType.toEnumNameString());
+        assertEquals("403_B", enumType.toFIXNameString());
         assertEquals("22 - 403(b) (US)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum495TaxAdvantageType.RETIREMENT_457;
         assertEquals("23", enumType.toFIXIDString());
-        assertEquals("457", enumType.toEnumNameString());
+        assertEquals("457", enumType.toFIXNameString());
         assertEquals("23 - 457 (US)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum495TaxAdvantageType.ROTH_IRA_FUND_PROTOTYPE;
         assertEquals("24", enumType.toFIXIDString());
-        assertEquals("ROTH_IRA_FUND_PROTOTYPE", enumType.toEnumNameString());
+        assertEquals("ROTH_IRA_FUND_PROTOTYPE", enumType.toFIXNameString());
         assertEquals("24 - Roth IRA (Fund Prototype) (US)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum495TaxAdvantageType.ROTH_IRA_NON_PROTOTYPE;
         assertEquals("25", enumType.toFIXIDString());
-        assertEquals("ROTH_IRA_NON_PROTOTYPE", enumType.toEnumNameString());
+        assertEquals("ROTH_IRA_NON_PROTOTYPE", enumType.toFIXNameString());
         assertEquals("25 - Roth IRA (Non-prototype) (US)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum495TaxAdvantageType.ROTH_CONVERSION_IRA_FUND_PROTOTYPE;
         assertEquals("26", enumType.toFIXIDString());
-        assertEquals("ROTH_CONVERSION_IRA_FUND_PROTOTYPE", enumType.toEnumNameString());
+        assertEquals("ROTH_CONVERSION_IRA_FUND_PROTOTYPE", enumType.toFIXNameString());
         assertEquals("26 - Roth Conversion IRA (Fund Prototype) (US)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum495TaxAdvantageType.ROTH_CONVERSION_IRA_NON_PROTOTYPE;
         assertEquals("27", enumType.toFIXIDString());
-        assertEquals("ROTH_CONVERSION_IRA_NON_PROTOTYPE", enumType.toEnumNameString());
+        assertEquals("ROTH_CONVERSION_IRA_NON_PROTOTYPE", enumType.toFIXNameString());
         assertEquals("27 - Roth Conversion IRA (Non-prototype) (US)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum495TaxAdvantageType.EDUCATION_IRA_FUND_PROTOTYPE;
         assertEquals("28", enumType.toFIXIDString());
-        assertEquals("EDUCATION_IRA_FUND_PROTOTYPE", enumType.toEnumNameString());
+        assertEquals("EDUCATION_IRA_FUND_PROTOTYPE", enumType.toFIXNameString());
         assertEquals("28 - Education IRA (Fund Prototype) (US)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum495TaxAdvantageType.EDUCATION_IRA_NON_PROTOTYPE;
         assertEquals("29", enumType.toFIXIDString());
-        assertEquals("EDUCATION_IRA_NON_PROTOTYPE", enumType.toEnumNameString());
+        assertEquals("EDUCATION_IRA_NON_PROTOTYPE", enumType.toFIXNameString());
         assertEquals("29 - Education IRA (Non-prototype) (US)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
@@ -369,11 +369,11 @@ class Enum495TaxAdvantageTypeTest {
          */
         enumType = Enum495TaxAdvantageType.OTHER;
         assertEquals("999", enumType.toFIXIDString());
-        assertEquals("OTHER", enumType.toEnumNameString());
+        assertEquals("OTHER", enumType.toFIXNameString());
         assertEquals("999 - Other", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

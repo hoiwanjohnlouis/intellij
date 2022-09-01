@@ -47,29 +47,29 @@ class Enum590BookingUnitTest {
          */
         enumType = Enum590BookingUnit.PARTIAL_EXECUTION_BOOKABLE;
         assertEquals("0", enumType.toFIXIDString());
-        assertEquals("PARTIAL_EXECUTION_BOOKABLE", enumType.toEnumNameString());
+        assertEquals("PARTIAL_EXECUTION_BOOKABLE", enumType.toFIXNameString());
         assertEquals("0 - Each partial execution is a bookable unit", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum590BookingUnit.AGGREGATE_PARTIAL_EXECUTION;
         assertEquals("1", enumType.toFIXIDString());
-        assertEquals("AGGREGATE_PARTIAL_EXECUTION", enumType.toEnumNameString());
+        assertEquals("AGGREGATE_PARTIAL_EXECUTION", enumType.toFIXNameString());
         assertEquals("1 - Aggregate partial executions on this order, and book one trade per order", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum590BookingUnit.AGGREGATE_EXECUTIONS;
         assertEquals("2", enumType.toFIXIDString());
-        assertEquals("AGGREGATE_EXECUTIONS", enumType.toEnumNameString());
+        assertEquals("AGGREGATE_EXECUTIONS", enumType.toFIXNameString());
         assertEquals("2 - Aggregate executions for this symbol, side, and settlement date", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

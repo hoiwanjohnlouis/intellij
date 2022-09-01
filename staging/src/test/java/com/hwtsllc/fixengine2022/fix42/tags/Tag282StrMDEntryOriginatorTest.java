@@ -45,11 +45,11 @@ class Tag282StrMDEntryOriginatorTest {
             tagData = new Tag282StrMDEntryOriginator( new MyStringType( oneElement ));
             assertEquals( "FIX282_STR_MD_ENTRY_ORIGINATOR", tagData.toFIXLabelString());
             assertEquals( "282", tagData.toFIXIDString());
-            assertEquals( "MD_ENTRY_ORIGINATOR", tagData.toEnumNameString());
+            assertEquals( "MD_ENTRY_ORIGINATOR", tagData.toFIXNameString());
             assertEquals( "MDEntryOriginator", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag282StrMDEntryOriginatorTest {
             assertEquals( "Tag282StrMDEntryOriginator\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

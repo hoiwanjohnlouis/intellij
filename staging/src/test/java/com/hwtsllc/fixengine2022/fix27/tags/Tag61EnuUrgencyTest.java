@@ -40,11 +40,11 @@ class Tag61EnuUrgencyTest {
         for (Enum61Urgency oneEnum : Enum61Urgency.values()) {
             tagData = new Tag61EnuUrgency(oneEnum);
             assertEquals( "FIX61_ENU_URGENCY", tagData.toFIXLabelString());
-            assertEquals( "URGENCY", tagData.toEnumNameString());
+            assertEquals( "URGENCY", tagData.toFIXNameString());
             assertEquals( "61", tagData.toFIXIDString());
             assertEquals( "Urgency", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -96,7 +96,7 @@ class Tag61EnuUrgencyTest {
             assertEquals( "Tag61EnuUrgency\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

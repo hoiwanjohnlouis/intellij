@@ -44,12 +44,12 @@ class Tag100ExcExDestinationTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag100ExcExDestination( new MyExchangeType( oneElement ));
             assertEquals( "FIX100_EXC_EX_DESTINATION", tagData.toFIXLabelString());
-            assertEquals( "EX_DESTINATION", tagData.toEnumNameString());
+            assertEquals( "EX_DESTINATION", tagData.toFIXNameString());
             assertEquals( "100", tagData.toFIXIDString());
             assertEquals( "ExDestination", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag100ExcExDestinationTest {
             assertEquals( "Tag100ExcExDestination\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

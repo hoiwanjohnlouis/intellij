@@ -52,42 +52,42 @@ class MyEnumTradeHandlingInstrTest {
 
         enumType = MyEnumTradeHandlingInstr.TRADE_CONFIRMATION;
         assertEquals( "0", enumType.toFIXIDString() );
-        assertEquals( "TRADE_CONFIRMATION", enumType.toEnumNameString() );
+        assertEquals( "TRADE_CONFIRMATION", enumType.toFIXNameString() );
         assertEquals( "0 - Trade Confirmation", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumTradeHandlingInstr.TWO_PARTY_REPORT;
         assertEquals( "1", enumType.toFIXIDString() );
-        assertEquals( "TWO_PARTY_REPORT", enumType.toEnumNameString() );
+        assertEquals( "TWO_PARTY_REPORT", enumType.toFIXNameString() );
         assertEquals( "1 - Two-Party Report", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumTradeHandlingInstr.ONE_PARTY_MATCHING;
         assertEquals( "2", enumType.toFIXIDString() );
-        assertEquals( "ONE_PARTY_MATCHING", enumType.toEnumNameString() );
+        assertEquals( "ONE_PARTY_MATCHING", enumType.toFIXNameString() );
         assertEquals( "2 - One-Party Report for Matching", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumTradeHandlingInstr.ONE_PARTY_PASS_THROUGH;
         assertEquals( "3", enumType.toFIXIDString() );
-        assertEquals( "ONE_PARTY_PASS_THROUGH", enumType.toEnumNameString() );
+        assertEquals( "ONE_PARTY_PASS_THROUGH", enumType.toFIXNameString() );
         assertEquals( "3 - One-Party Report for Pass Through", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumTradeHandlingInstr.AUTOMATED_ROUTING;
         assertEquals( "4", enumType.toFIXIDString() );
-        assertEquals( "AUTOMATED_ROUTING", enumType.toEnumNameString() );
+        assertEquals( "AUTOMATED_ROUTING", enumType.toFIXNameString() );
         assertEquals( "4 - Automated Floor Order Routing", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

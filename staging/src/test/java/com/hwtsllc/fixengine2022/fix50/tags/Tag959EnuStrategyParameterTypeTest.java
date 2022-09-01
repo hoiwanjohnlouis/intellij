@@ -41,10 +41,10 @@ class Tag959EnuStrategyParameterTypeTest {
             tagData = new Tag959EnuStrategyParameterType(oneEnum);
             assertEquals( "FIX959_ENU_STRATEGY_PARAMETER_TYPE", tagData.toFIXLabelString());
             assertEquals( "959", tagData.toFIXIDString());
-            assertEquals( "STRATEGY_PARAMETER_TYPE", tagData.toEnumNameString());
+            assertEquals( "STRATEGY_PARAMETER_TYPE", tagData.toFIXNameString());
             assertEquals( "StrategyParameterType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -211,7 +211,7 @@ class Tag959EnuStrategyParameterTypeTest {
             assertEquals( "Tag959EnuStrategyParameterType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

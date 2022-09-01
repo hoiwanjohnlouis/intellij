@@ -45,11 +45,11 @@ class Tag639PxoPriceImprovementTest {
             tagData = new Tag639PxoPriceImprovement( new MyPriceOffsetType( oneElement ));
             assertEquals( "FIX639_PXO_PRICE_IMPROVEMENT", tagData.toFIXLabelString());
             assertEquals( "639", tagData.toFIXIDString());
-            assertEquals( "PRICE_IMPROVEMENT", tagData.toEnumNameString());
+            assertEquals( "PRICE_IMPROVEMENT", tagData.toFIXNameString());
             assertEquals( "PriceImprovement", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag639PxoPriceImprovementTest {
             assertEquals( "Tag639PxoPriceImprovement\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

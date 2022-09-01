@@ -57,11 +57,11 @@ class Tag1012UtcSideTrdRegTimestampTest {
             tagData = new Tag1012UtcSideTrdRegTimestamp( new MyUTCTimestampType( oneElement ));
             assertEquals( "FIX1012_UTC_SIDE_TRD_REG_TIMESTAMP", tagData.toFIXLabelString());
             assertEquals( "1012", tagData.toFIXIDString());
-            assertEquals( "SIDE_TRD_REG_TIMESTAMP", tagData.toEnumNameString());
+            assertEquals( "SIDE_TRD_REG_TIMESTAMP", tagData.toFIXNameString());
             assertEquals( "SideTrdRegTimestamp", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -92,7 +92,7 @@ class Tag1012UtcSideTrdRegTimestampTest {
             assertEquals( "Tag1012UtcSideTrdRegTimestamp\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

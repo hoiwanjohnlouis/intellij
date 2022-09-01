@@ -46,11 +46,11 @@ class Tag440StrClearingAccountTest {
             tagData = new Tag440StrClearingAccount( new MyStringType( oneElement ));
             assertEquals( "FIX440_STR_CLEARING_ACCOUNT", tagData.toFIXLabelString());
             assertEquals( "440", tagData.toFIXIDString());
-            assertEquals( "CLEARING_ACCOUNT", tagData.toEnumNameString());
+            assertEquals( "CLEARING_ACCOUNT", tagData.toFIXNameString());
             assertEquals( "ClearingAccount", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -87,7 +87,7 @@ class Tag440StrClearingAccountTest {
             assertEquals( "Tag440StrClearingAccount\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

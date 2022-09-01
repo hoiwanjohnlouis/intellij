@@ -91,7 +91,7 @@ public class Tag385EnuMsgDirection extends FIX42Abstract implements LogValuePair
      */
     @Override
     public String toDataNameString() {
-        return dataValue.toEnumNameString();
+        return dataValue.toFIXNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data

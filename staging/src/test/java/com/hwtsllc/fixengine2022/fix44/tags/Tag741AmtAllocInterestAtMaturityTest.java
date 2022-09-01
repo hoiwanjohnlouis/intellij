@@ -52,11 +52,11 @@ class Tag741AmtAllocInterestAtMaturityTest {
             tagData = new Tag741AmtAllocInterestAtMaturity( new MyAmtType( oneElement ));
             assertEquals( "FIX741_AMT_ALLOC_INTEREST_AT_MATURITY", tagData.toFIXLabelString());
             assertEquals( "741", tagData.toFIXIDString());
-            assertEquals( "ALLOC_INTEREST_AT_MATURITY", tagData.toEnumNameString());
+            assertEquals( "ALLOC_INTEREST_AT_MATURITY", tagData.toFIXNameString());
             assertEquals( "AllocInterestAtMaturity", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -87,7 +87,7 @@ class Tag741AmtAllocInterestAtMaturityTest {
             assertEquals( "Tag741AmtAllocInterestAtMaturity\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

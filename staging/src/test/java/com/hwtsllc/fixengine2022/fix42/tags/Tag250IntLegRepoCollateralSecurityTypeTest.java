@@ -46,11 +46,11 @@ class Tag250IntLegRepoCollateralSecurityTypeTest {
             tagData = new Tag250IntLegRepoCollateralSecurityType( new MyIntType( oneElement ));
             assertEquals( "FIX250_INT_LEG_REPO_COLLATERAL_SECURITY_TYPE", tagData.toFIXLabelString());
             assertEquals( "250", tagData.toFIXIDString());
-            assertEquals( "LEG_REPO_COLLATERAL_SECURITY_TYPE", tagData.toEnumNameString());
+            assertEquals( "LEG_REPO_COLLATERAL_SECURITY_TYPE", tagData.toFIXNameString());
             assertEquals( "LegRepoCollateralSecurityType (Deprecated)", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -87,7 +87,7 @@ class Tag250IntLegRepoCollateralSecurityTypeTest {
             assertEquals( "Tag250IntLegRepoCollateralSecurityType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

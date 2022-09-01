@@ -58,11 +58,11 @@ class Tag769UtcTrdRegTimestampTest {
             tagData = new Tag769UtcTrdRegTimestamp( new MyUTCTimestampType( oneElement ));
             assertEquals( "FIX769_UTC_TRD_REG_TIMESTAMP", tagData.toFIXLabelString());
             assertEquals( "769", tagData.toFIXIDString());
-            assertEquals( "TRD_REG_TIMESTAMP", tagData.toEnumNameString());
+            assertEquals( "TRD_REG_TIMESTAMP", tagData.toFIXNameString());
             assertEquals( "TrdRegTimestamp", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -93,7 +93,7 @@ class Tag769UtcTrdRegTimestampTest {
             assertEquals( "Tag769UtcTrdRegTimestamp\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

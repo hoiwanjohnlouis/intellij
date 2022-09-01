@@ -58,11 +58,11 @@ class Tag1StrAccountTest {
             tagData = new Tag1StrAccount( new MyStringType( oneElement ));
             assertEquals( "FIX1_STR_ACCOUNT", tagData.toFIXLabelString());
             assertEquals( "1", tagData.toFIXIDString());
-            assertEquals( "ACCOUNT", tagData.toEnumNameString());
+            assertEquals( "ACCOUNT", tagData.toFIXNameString());
             assertEquals( "Account", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -93,7 +93,7 @@ class Tag1StrAccountTest {
             assertEquals( "Tag1StrAccount\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

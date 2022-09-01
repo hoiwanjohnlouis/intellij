@@ -41,10 +41,10 @@ class Tag725EnuResponseTransportTypeTest {
             tagData = new Tag725EnuResponseTransportType(oneEnum);
             assertEquals( "FIX725_ENU_RESPONSE_TRANSPORT_TYPE", tagData.toFIXLabelString());
             assertEquals( "725", tagData.toFIXIDString());
-            assertEquals( "RESPONSE_TRANSPORT_TYPE", tagData.toEnumNameString());
+            assertEquals( "RESPONSE_TRANSPORT_TYPE", tagData.toFIXNameString());
             assertEquals( "ResponseTransportType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -94,7 +94,7 @@ class Tag725EnuResponseTransportTypeTest {
             assertEquals( "Tag725EnuResponseTransportType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

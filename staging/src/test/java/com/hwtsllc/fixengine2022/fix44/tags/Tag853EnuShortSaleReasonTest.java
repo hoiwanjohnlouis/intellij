@@ -41,10 +41,10 @@ class Tag853EnuShortSaleReasonTest {
             tagData = new Tag853EnuShortSaleReason(oneEnum);
             assertEquals( "FIX853_ENU_SHORT_SALE_REASON", tagData.toFIXLabelString());
             assertEquals( "853", tagData.toFIXIDString());
-            assertEquals( "SHORT_SALE_REASON", tagData.toEnumNameString());
+            assertEquals( "SHORT_SALE_REASON", tagData.toFIXNameString());
             assertEquals( "ShortSaleReason", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -116,7 +116,7 @@ class Tag853EnuShortSaleReasonTest {
             assertEquals( "Tag853EnuShortSaleReason\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

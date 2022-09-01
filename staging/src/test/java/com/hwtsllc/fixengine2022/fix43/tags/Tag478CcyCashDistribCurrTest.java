@@ -45,11 +45,11 @@ class Tag478CcyCashDistribCurrTest {
             tagData = new Tag478CcyCashDistribCurr( new MyCurrencyType( oneElement ));
             assertEquals( "FIX478_CCY_CASH_DISTRIB_CURR", tagData.toFIXLabelString());
             assertEquals( "478", tagData.toFIXIDString());
-            assertEquals( "CASH_DISTRIB_CURR", tagData.toEnumNameString());
+            assertEquals( "CASH_DISTRIB_CURR", tagData.toFIXNameString());
             assertEquals( "CashDistribCurr", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag478CcyCashDistribCurrTest {
             assertEquals( "Tag478CcyCashDistribCurr\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

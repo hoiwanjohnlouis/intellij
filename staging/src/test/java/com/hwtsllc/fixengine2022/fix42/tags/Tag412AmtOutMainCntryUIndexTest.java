@@ -45,11 +45,11 @@ class Tag412AmtOutMainCntryUIndexTest {
             tagData = new Tag412AmtOutMainCntryUIndex( new MyAmtType( oneElement ));
             assertEquals( "FIX412_AMT_OUT_MAIN_CNTRY_U_INDEX", tagData.toFIXLabelString());
             assertEquals( "412", tagData.toFIXIDString());
-            assertEquals( "OUT_MAIN_CNTRY_U_INDEX", tagData.toEnumNameString());
+            assertEquals( "OUT_MAIN_CNTRY_U_INDEX", tagData.toFIXNameString());
             assertEquals( "OutMainCntryUIndex", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag412AmtOutMainCntryUIndexTest {
             assertEquals( "Tag412AmtOutMainCntryUIndex\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

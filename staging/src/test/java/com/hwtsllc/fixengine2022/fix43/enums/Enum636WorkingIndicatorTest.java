@@ -48,20 +48,20 @@ class Enum636WorkingIndicatorTest {
          */
         enumType = Enum636WorkingIndicator.NO;
         assertEquals("N", enumType.toFIXIDString());
-        assertEquals("NO", enumType.toEnumNameString());
+        assertEquals("NO", enumType.toFIXNameString());
         assertEquals("N - Order has been accepted but not yet in a working state", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum636WorkingIndicator.YES;
         assertEquals("Y", enumType.toFIXIDString());
-        assertEquals("YES", enumType.toEnumNameString());
+        assertEquals("YES", enumType.toFIXNameString());
         assertEquals("Y - Order is currently being worked", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

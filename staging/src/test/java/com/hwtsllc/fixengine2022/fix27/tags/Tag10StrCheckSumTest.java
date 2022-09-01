@@ -44,12 +44,12 @@ class Tag10StrCheckSumTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag10StrCheckSum( new MyStringType( oneElement ));
             assertEquals( "FIX10_STR_CHECK_SUM", tagData.toFIXLabelString());
-            assertEquals( "CHECK_SUM", tagData.toEnumNameString());
+            assertEquals( "CHECK_SUM", tagData.toFIXNameString());
             assertEquals( "10", tagData.toFIXIDString());
             assertEquals( "CheckSum", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -80,7 +80,7 @@ class Tag10StrCheckSumTest {
             assertEquals( "Tag10StrCheckSum\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

@@ -48,75 +48,75 @@ class Enum1094PegPriceTypeTest {
 
         enumType = Enum1094PegPriceType.LAST_PEG;
         assertEquals( "1", enumType.toFIXIDString() );
-        assertEquals( "LAST_PEG", enumType.toEnumNameString() );
+        assertEquals( "LAST_PEG", enumType.toFIXNameString() );
         assertEquals( "1 - Last peg (last sale)", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1094PegPriceType.MID_PEG;
         assertEquals( "2", enumType.toFIXIDString() );
-        assertEquals( "MID_PEG", enumType.toEnumNameString() );
+        assertEquals( "MID_PEG", enumType.toFIXNameString() );
         assertEquals( "2 - Mid-price peg (midprice of inside quote)", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1094PegPriceType.OPENING_PEG;
         assertEquals( "3", enumType.toFIXIDString() );
-        assertEquals( "OPENING_PEG", enumType.toEnumNameString() );
+        assertEquals( "OPENING_PEG", enumType.toFIXNameString() );
         assertEquals( "3 - Opening peg", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1094PegPriceType.MARKET_PEG;
         assertEquals( "4", enumType.toFIXIDString() );
-        assertEquals( "MARKET_PEG", enumType.toEnumNameString() );
+        assertEquals( "MARKET_PEG", enumType.toFIXNameString() );
         assertEquals( "4 - Market peg", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1094PegPriceType.PRIMARY_PEG;
         assertEquals( "5", enumType.toFIXIDString() );
-        assertEquals( "PRIMARY_PEG", enumType.toEnumNameString() );
+        assertEquals( "PRIMARY_PEG", enumType.toFIXNameString() );
         assertEquals( "5 - Primary peg (primary market - buy at bid or sell at offer)", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = Enum1094PegPriceType.FIXED_PEG;
         assertEquals( "6", enumType.toFIXIDString() );
-        assertEquals( "FIXED_PEG", enumType.toEnumNameString() );
+        assertEquals( "FIXED_PEG", enumType.toFIXNameString() );
         assertEquals( "6 - Fixed Peg to Local best bid or offer at time of order", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1094PegPriceType.PEG_TO_VWAP;
         assertEquals( "7", enumType.toFIXIDString() );
-        assertEquals( "PEG_TO_VWAP", enumType.toEnumNameString() );
+        assertEquals( "PEG_TO_VWAP", enumType.toFIXNameString() );
         assertEquals( "7 - Peg to VWAP", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1094PegPriceType.TRAILING_STOP;
         assertEquals( "8", enumType.toFIXIDString() );
-        assertEquals( "TRAILING_STOP", enumType.toEnumNameString() );
+        assertEquals( "TRAILING_STOP", enumType.toFIXNameString() );
         assertEquals( "8 - Trailing Stop Peg", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1094PegPriceType.PEG_TO_LIMIT;
         assertEquals( "9", enumType.toFIXIDString() );
-        assertEquals( "PEG_TO_LIMIT", enumType.toEnumNameString() );
+        assertEquals( "PEG_TO_LIMIT", enumType.toFIXNameString() );
         assertEquals( "9 - Peg to Limit Price", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

@@ -92,7 +92,7 @@ public class Tag303EnuQuoteRequestType extends FIX42Abstract implements LogValue
      */
     @Override
     public String toDataNameString() {
-        return dataValue.toEnumNameString();
+        return dataValue.toFIXNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data

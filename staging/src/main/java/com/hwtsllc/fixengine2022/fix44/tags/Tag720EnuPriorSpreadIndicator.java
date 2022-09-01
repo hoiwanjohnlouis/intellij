@@ -91,7 +91,7 @@ public class Tag720EnuPriorSpreadIndicator extends FIX44Abstract implements LogV
      */
     @Override
     public String toDataNameString() {
-        return dataValue.toEnumNameString();
+        return dataValue.toFIXNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data

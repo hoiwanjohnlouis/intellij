@@ -45,11 +45,11 @@ class Tag149StrURLLinkTest {
             tagData = new Tag149StrURLLink( new MyStringType( oneElement ));
             assertEquals( "FIX149_STR_URL_LINK", tagData.toFIXLabelString());
             assertEquals( "149", tagData.toFIXIDString());
-            assertEquals( "URL_LINK", tagData.toEnumNameString());
+            assertEquals( "URL_LINK", tagData.toFIXNameString());
             assertEquals( "URLLink", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag149StrURLLinkTest {
             assertEquals( "Tag149StrURLLink\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

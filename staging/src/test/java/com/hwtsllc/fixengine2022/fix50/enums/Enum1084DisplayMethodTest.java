@@ -43,26 +43,26 @@ class Enum1084DisplayMethodTest {
 
         enumType = Enum1084DisplayMethod.INITIAL;
         assertEquals( "1", enumType.toFIXIDString() );
-        assertEquals( "INITIAL", enumType.toEnumNameString() );
+        assertEquals( "INITIAL", enumType.toFIXNameString() );
         assertEquals( "1 - Initial (use original DisplayQty)", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1084DisplayMethod.NEW;
         assertEquals( "2", enumType.toFIXIDString() );
-        assertEquals( "NEW", enumType.toEnumNameString() );
+        assertEquals( "NEW", enumType.toFIXNameString() );
         assertEquals( "2 - New (use RefreshQty)", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1084DisplayMethod.RANDOM;
         assertEquals( "3", enumType.toFIXIDString() );
-        assertEquals( "RANDOM", enumType.toEnumNameString() );
+        assertEquals( "RANDOM", enumType.toFIXNameString() );
         assertEquals( "3 - Random (randomize value)", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

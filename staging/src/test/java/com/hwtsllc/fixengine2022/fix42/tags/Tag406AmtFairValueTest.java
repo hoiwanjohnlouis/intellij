@@ -45,11 +45,11 @@ class Tag406AmtFairValueTest {
             tagData = new Tag406AmtFairValue( new MyAmtType( oneElement ));
             assertEquals( "FIX406_AMT_FAIR_VALUE", tagData.toFIXLabelString());
             assertEquals( "406", tagData.toFIXIDString());
-            assertEquals( "FAIR_VALUE", tagData.toEnumNameString());
+            assertEquals( "FAIR_VALUE", tagData.toFIXNameString());
             assertEquals( "FairValue", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag406AmtFairValueTest {
             assertEquals( "Tag406AmtFairValue\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

@@ -20,6 +20,6 @@ public interface LogFIXString {
     // concrete definitions are by whom inherits this class
     String toFIXLabelString();
     String toFIXIDString();
-    String toEnumNameString();
+    String toFIXNameString();
     String toEnumDescriptionString();
 }

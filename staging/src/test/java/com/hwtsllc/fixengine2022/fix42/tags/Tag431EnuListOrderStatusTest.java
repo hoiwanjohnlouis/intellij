@@ -41,11 +41,11 @@ class Tag431EnuListOrderStatusTest {
             tagData = new Tag431EnuListOrderStatus(oneEnum);
             assertEquals( "FIX431_ENU_LIST_ORDER_STATUS", tagData.toFIXLabelString());
             assertEquals( "431", tagData.toFIXIDString());
-            assertEquals( "LIST_ORDER_STATUS", tagData.toEnumNameString());
+            assertEquals( "LIST_ORDER_STATUS", tagData.toFIXNameString());
             assertEquals( "ListOrderStatus", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -121,7 +121,7 @@ class Tag431EnuListOrderStatusTest {
             assertEquals( "Tag431EnuListOrderStatus\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

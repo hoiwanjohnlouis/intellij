@@ -45,11 +45,11 @@ class Tag360LenEncodedAllocTextLenTest {
             tagData = new Tag360LenEncodedAllocTextLen( new MyLengthType( oneElement ));
             assertEquals( "FIX360_LEN_ENCODED_ALLOC_TEXT_LEN", tagData.toFIXLabelString());
             assertEquals( "360", tagData.toFIXIDString());
-            assertEquals( "ENCODED_ALLOC_TEXT_LEN", tagData.toEnumNameString());
+            assertEquals( "ENCODED_ALLOC_TEXT_LEN", tagData.toFIXNameString());
             assertEquals( "EncodedAllocTextLen", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag360LenEncodedAllocTextLenTest {
             assertEquals( "Tag360LenEncodedAllocTextLen\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

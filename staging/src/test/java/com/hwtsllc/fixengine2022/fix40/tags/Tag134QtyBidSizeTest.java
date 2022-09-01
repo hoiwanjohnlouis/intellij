@@ -44,12 +44,12 @@ class Tag134QtyBidSizeTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag134QtyBidSize( new MyQtyType( oneElement ));
             assertEquals( "FIX134_QTY_BID_SIZE", tagData.toFIXLabelString());
-            assertEquals( "BID_SIZE", tagData.toEnumNameString());
+            assertEquals( "BID_SIZE", tagData.toFIXNameString());
             assertEquals( "134", tagData.toFIXIDString());
             assertEquals( "BidSize", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag134QtyBidSizeTest {
             assertEquals( "Tag134QtyBidSize\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

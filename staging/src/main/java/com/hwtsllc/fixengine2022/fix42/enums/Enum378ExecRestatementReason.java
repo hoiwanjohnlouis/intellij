@@ -107,7 +107,7 @@ public enum Enum378ExecRestatementReason implements LogFIXString, LogVerboseStri
      * standard wrapper to retrieve the specific fix name for this enum. eg: the second field
      */
     @Override
-    public String toEnumNameString() {
+    public String toFIXNameString() {
         return name;
     }
     /**
@@ -130,7 +130,7 @@ public enum Enum378ExecRestatementReason implements LogFIXString, LogVerboseStri
                 .concat( toFIXIDString())
                 .concat("]")
                 .concat("\n\tName[")
-                .concat( toEnumNameString())
+                .concat( toFIXNameString())
                 .concat("]")
                 .concat("\n\tDescription[")
                 .concat( toEnumDescriptionString())

@@ -42,34 +42,34 @@ class Enum928StatusValueTest {
 
         enumType = Enum928StatusValue.CONNECTED;
         assertEquals( "1", enumType.toFIXIDString() );
-        assertEquals( "CONNECTED", enumType.toEnumNameString() );
+        assertEquals( "CONNECTED", enumType.toFIXNameString() );
         assertEquals( "1 - Connected", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum928StatusValue.DOWN_EXPECTED_UP;
         assertEquals( "2", enumType.toFIXIDString() );
-        assertEquals( "DOWN_EXPECTED_UP", enumType.toEnumNameString() );
+        assertEquals( "DOWN_EXPECTED_UP", enumType.toFIXNameString() );
         assertEquals( "2 - Not Connected - down expected up", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum928StatusValue.DOWN_EXPECTED_DOWN;
         assertEquals( "3", enumType.toFIXIDString() );
-        assertEquals( "DOWN_EXPECTED_DOWN", enumType.toEnumNameString() );
+        assertEquals( "DOWN_EXPECTED_DOWN", enumType.toFIXNameString() );
         assertEquals( "3 - Not Connected - down expected down", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum928StatusValue.IN_PROCESS;
         assertEquals( "4", enumType.toFIXIDString() );
-        assertEquals( "IN_PROCESS", enumType.toEnumNameString() );
+        assertEquals( "IN_PROCESS", enumType.toFIXNameString() );
         assertEquals( "4 - In Process", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

@@ -45,11 +45,11 @@ class Tag1026FloMDEntrySpotRateTest {
             tagData = new Tag1026FloMDEntrySpotRate( new MyFloatType( oneElement ));
             assertEquals( "FIX1026_FLO_MD_ENTRY_SPOT_RATE", tagData.toFIXLabelString());
             assertEquals( "1026", tagData.toFIXIDString());
-            assertEquals( "MD_ENTRY_SPOT_RATE", tagData.toEnumNameString());
+            assertEquals( "MD_ENTRY_SPOT_RATE", tagData.toFIXNameString());
             assertEquals( "MDEntrySpotRate", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag1026FloMDEntrySpotRateTest {
             assertEquals( "Tag1026FloMDEntrySpotRate\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

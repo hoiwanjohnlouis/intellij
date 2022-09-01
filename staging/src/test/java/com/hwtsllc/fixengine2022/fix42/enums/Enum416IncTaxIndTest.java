@@ -43,20 +43,20 @@ class Enum416IncTaxIndTest {
          */
         enumType = Enum416IncTaxInd.NET;
         assertEquals( "1", enumType.toFIXIDString());
-        assertEquals( "NET", enumType.toEnumNameString());
+        assertEquals( "NET", enumType.toFIXNameString());
         assertEquals( "1 - Net", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum416IncTaxInd.GROSS;
         assertEquals( "2", enumType.toFIXIDString());
-        assertEquals( "GROSS", enumType.toEnumNameString());
+        assertEquals( "GROSS", enumType.toFIXNameString());
         assertEquals( "2 - Gross", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
     /**

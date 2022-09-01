@@ -46,11 +46,11 @@ class Tag244IntUnderlyingRepurchaseTermTest {
             tagData = new Tag244IntUnderlyingRepurchaseTerm( new MyIntType( oneElement ));
             assertEquals( "FIX244_INT_UNDERLYING_REPURCHASE_TERM", tagData.toFIXLabelString());
             assertEquals( "244", tagData.toFIXIDString());
-            assertEquals( "UNDERLYING_REPURCHASE_TERM", tagData.toEnumNameString());
+            assertEquals( "UNDERLYING_REPURCHASE_TERM", tagData.toFIXNameString());
             assertEquals( "UnderlyingRepurchaseTerm (Deprecated)", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -87,7 +87,7 @@ class Tag244IntUnderlyingRepurchaseTermTest {
             assertEquals( "Tag244IntUnderlyingRepurchaseTerm\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

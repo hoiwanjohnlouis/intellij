@@ -45,11 +45,11 @@ class Tag445LenEncodedListStatusTextLenTest {
             tagData = new Tag445LenEncodedListStatusTextLen( new MyLengthType( oneElement ));
             assertEquals( "FIX445_LEN_LIST_STATUS_ENCODED_TEXT_LEN", tagData.toFIXLabelString());
             assertEquals( "445", tagData.toFIXIDString());
-            assertEquals( "LIST_STATUS_ENCODED_TEXT_LEN", tagData.toEnumNameString());
+            assertEquals( "LIST_STATUS_ENCODED_TEXT_LEN", tagData.toFIXNameString());
             assertEquals( "ListStatusEncodedTextLen", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag445LenEncodedListStatusTextLenTest {
             assertEquals( "Tag445LenEncodedListStatusTextLen\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

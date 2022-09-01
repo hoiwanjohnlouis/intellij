@@ -41,10 +41,10 @@ class Tag677EnuLegBenchmarkCurveNameTest {
             tagData = new Tag677EnuLegBenchmarkCurveName(oneEnum);
             assertEquals( "FIX677_ENU_LEG_BENCHMARK_CURVE_NAME", tagData.toFIXLabelString());
             assertEquals( "677", tagData.toFIXIDString());
-            assertEquals( "LEG_BENCHMARK_CURVE_NAME", tagData.toEnumNameString());
+            assertEquals( "LEG_BENCHMARK_CURVE_NAME", tagData.toFIXNameString());
             assertEquals( "LegBenchmarkCurveName", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -147,7 +147,7 @@ class Tag677EnuLegBenchmarkCurveNameTest {
             assertEquals( "Tag677EnuLegBenchmarkCurveName\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

@@ -48,34 +48,34 @@ class MyEnumDiscretionOrPegScopeTest {
 
         enumType = MyEnumDiscretionOrPegScope.LOCAL;
         assertEquals( "1", enumType.toFIXIDString());
-        assertEquals( "LOCAL", enumType.toEnumNameString());
+        assertEquals( "LOCAL", enumType.toFIXNameString());
         assertEquals( "1 - Local (Exchange, ECN, ATS)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumDiscretionOrPegScope.NATIONAL;
         assertEquals( "2", enumType.toFIXIDString());
-        assertEquals( "NATIONAL", enumType.toEnumNameString());
+        assertEquals( "NATIONAL", enumType.toFIXNameString());
         assertEquals( "2 - National", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumDiscretionOrPegScope.GLOBAL;
         assertEquals( "3", enumType.toFIXIDString());
-        assertEquals( "GLOBAL", enumType.toEnumNameString());
+        assertEquals( "GLOBAL", enumType.toFIXNameString());
         assertEquals( "3 - Global", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumDiscretionOrPegScope.NATIONAL_EXCLUDING_LOCAL;
         assertEquals( "4", enumType.toFIXIDString());
-        assertEquals( "NATIONAL_EXCLUDING_LOCAL", enumType.toEnumNameString());
+        assertEquals( "NATIONAL_EXCLUDING_LOCAL", enumType.toFIXNameString());
         assertEquals( "4 - National excluding local", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

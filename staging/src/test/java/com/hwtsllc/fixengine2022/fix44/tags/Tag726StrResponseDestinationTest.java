@@ -45,11 +45,11 @@ class Tag726StrResponseDestinationTest {
             tagData = new Tag726StrResponseDestination( new MyStringType( oneElement ));
             assertEquals( "FIX726_STR_RESPONSE_DESTINATION", tagData.toFIXLabelString());
             assertEquals( "726", tagData.toFIXIDString());
-            assertEquals( "RESPONSE_DESTINATION", tagData.toEnumNameString());
+            assertEquals( "RESPONSE_DESTINATION", tagData.toFIXNameString());
             assertEquals( "ResponseDestination", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag726StrResponseDestinationTest {
             assertEquals( "Tag726StrResponseDestination\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

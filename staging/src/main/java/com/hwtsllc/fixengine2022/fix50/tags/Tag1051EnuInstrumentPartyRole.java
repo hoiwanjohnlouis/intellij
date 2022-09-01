@@ -247,7 +247,7 @@ public class Tag1051EnuInstrumentPartyRole extends FIX50Abstract implements LogV
      */
     @Override
     public String toDataNameString() {
-        return dataValue.toEnumNameString();
+        return dataValue.toFIXNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data

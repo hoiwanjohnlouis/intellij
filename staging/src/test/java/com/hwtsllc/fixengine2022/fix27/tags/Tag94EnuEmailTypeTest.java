@@ -40,11 +40,11 @@ class Tag94EnuEmailTypeTest {
         for (Enum94EmailType oneEnum : Enum94EmailType.values()) {
             tagData = new Tag94EnuEmailType(oneEnum);
             assertEquals( "FIX94_ENU_EMAIL_TYPE", tagData.toFIXLabelString());
-            assertEquals( "EMAIL_TYPE", tagData.toEnumNameString());
+            assertEquals( "EMAIL_TYPE", tagData.toFIXNameString());
             assertEquals( "94", tagData.toFIXIDString());
             assertEquals( "EmailType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -96,7 +96,7 @@ class Tag94EnuEmailTypeTest {
             assertEquals( "Tag94EnuEmailType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

@@ -41,11 +41,11 @@ class Tag581EnuAccountTypeTest {
             tagData = new Tag581EnuAccountType(oneEnum);
             assertEquals( "FIX581_ENU_ACCOUNT_TYPE", tagData.toFIXLabelString());
             assertEquals( "581", tagData.toFIXIDString());
-            assertEquals( "ACCOUNT_TYPE", tagData.toEnumNameString());
+            assertEquals( "ACCOUNT_TYPE", tagData.toFIXNameString());
             assertEquals( "AccountType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -120,7 +120,7 @@ class Tag581EnuAccountTypeTest {
             assertEquals( "Tag581EnuAccountType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

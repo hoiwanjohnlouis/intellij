@@ -52,11 +52,11 @@ class Tag1079TzMaturityTimeTest {
             tagData = new Tag1079TzMaturityTime( new MyTZTimeOnlyType( oneElement ));
             assertEquals( "FIX1079_TZ_MATURITY_TIME", tagData.toFIXLabelString());
             assertEquals( "1079", tagData.toFIXIDString());
-            assertEquals( "MATURITY_TIME", tagData.toEnumNameString());
+            assertEquals( "MATURITY_TIME", tagData.toFIXNameString());
             assertEquals( "MaturityTime", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -87,7 +87,7 @@ class Tag1079TzMaturityTimeTest {
             assertEquals( "Tag1079TzMaturityTime\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

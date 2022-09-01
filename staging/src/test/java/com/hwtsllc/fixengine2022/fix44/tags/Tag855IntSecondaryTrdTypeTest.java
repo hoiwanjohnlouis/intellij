@@ -45,11 +45,11 @@ class Tag855IntSecondaryTrdTypeTest {
             tagData = new Tag855IntSecondaryTrdType( new MyIntType( oneElement ));
             assertEquals( "FIX855_INT_SECONDARY_TRD_TYPE", tagData.toFIXLabelString());
             assertEquals( "855", tagData.toFIXIDString());
-            assertEquals( "SECONDARY_TRD_TYPE", tagData.toEnumNameString());
+            assertEquals( "SECONDARY_TRD_TYPE", tagData.toFIXNameString());
             assertEquals( "SecondaryTrdType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag855IntSecondaryTrdTypeTest {
             assertEquals( "Tag855IntSecondaryTrdType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

@@ -41,10 +41,10 @@ class Tag982EnuExpTypeTest {
             tagData = new Tag982EnuExpType(oneEnum);
             assertEquals( "FIX982_ENU_EXP_TYPE", tagData.toFIXLabelString());
             assertEquals( "982", tagData.toFIXIDString());
-            assertEquals( "EXP_TYPE", tagData.toEnumNameString());
+            assertEquals( "EXP_TYPE", tagData.toFIXNameString());
             assertEquals( "ExpType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -108,7 +108,7 @@ class Tag982EnuExpTypeTest {
             assertEquals( "Tag982EnuExpType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

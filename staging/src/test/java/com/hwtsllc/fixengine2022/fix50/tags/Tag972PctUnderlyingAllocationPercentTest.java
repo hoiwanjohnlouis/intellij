@@ -45,11 +45,11 @@ class Tag972PctUnderlyingAllocationPercentTest {
             tagData = new Tag972PctUnderlyingAllocationPercent( new MyPercentageType( oneElement ));
             assertEquals( "FIX972_PCT_UNDERLYING_ALLOCATION_PERCENT", tagData.toFIXLabelString());
             assertEquals( "972", tagData.toFIXIDString());
-            assertEquals( "UNDERLYING_ALLOCATION_PERCENT", tagData.toEnumNameString());
+            assertEquals( "UNDERLYING_ALLOCATION_PERCENT", tagData.toFIXNameString());
             assertEquals( "UnderlyingAllocationPercent", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag972PctUnderlyingAllocationPercentTest {
             assertEquals( "Tag972PctUnderlyingAllocationPercent\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

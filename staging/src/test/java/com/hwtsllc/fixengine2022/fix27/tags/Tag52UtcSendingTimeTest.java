@@ -44,12 +44,12 @@ class Tag52UtcSendingTimeTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag52UtcSendingTime( new MyUTCTimestampType( oneElement ));
             assertEquals( "FIX52_UTC_SENDING_TIME", tagData.toFIXLabelString());
-            assertEquals( "SENDING_TIME", tagData.toEnumNameString());
+            assertEquals( "SENDING_TIME", tagData.toFIXNameString());
             assertEquals( "52", tagData.toFIXIDString());
             assertEquals( "SendingTime", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -84,7 +84,7 @@ class Tag52UtcSendingTimeTest {
             assertEquals( "Tag52UtcSendingTime\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

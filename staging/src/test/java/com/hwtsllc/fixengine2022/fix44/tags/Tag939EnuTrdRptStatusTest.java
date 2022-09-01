@@ -41,10 +41,10 @@ class Tag939EnuTrdRptStatusTest {
             tagData = new Tag939EnuTrdRptStatus(oneEnum);
             assertEquals( "FIX939_ENU_TRD_RPT_STATUS", tagData.toFIXLabelString());
             assertEquals( "939", tagData.toFIXIDString());
-            assertEquals( "TRD_RPT_STATUS", tagData.toEnumNameString());
+            assertEquals( "TRD_RPT_STATUS", tagData.toFIXNameString());
             assertEquals( "TrdRptStatus", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -98,7 +98,7 @@ class Tag939EnuTrdRptStatusTest {
             assertEquals( "Tag939EnuTrdRptStatus\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

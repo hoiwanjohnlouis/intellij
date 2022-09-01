@@ -52,11 +52,11 @@ class Tag746AmtOpenInterestTest {
             tagData = new Tag746AmtOpenInterest( new MyAmtType( oneElement ));
             assertEquals( "FIX746_AMT_OPEN_INTEREST", tagData.toFIXLabelString());
             assertEquals( "746", tagData.toFIXIDString());
-            assertEquals( "OPEN_INTEREST", tagData.toEnumNameString());
+            assertEquals( "OPEN_INTEREST", tagData.toFIXNameString());
             assertEquals( "OpenInterest", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -87,7 +87,7 @@ class Tag746AmtOpenInterestTest {
             assertEquals( "Tag746AmtOpenInterest\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

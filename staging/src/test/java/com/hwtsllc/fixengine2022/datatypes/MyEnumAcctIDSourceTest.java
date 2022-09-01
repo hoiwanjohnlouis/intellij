@@ -53,50 +53,50 @@ class MyEnumAcctIDSourceTest {
 
         enumType = MyEnumAcctIDSource.BIC;
         assertEquals("1", enumType.toFIXIDString());
-        assertEquals("BIC", enumType.toEnumNameString());
+        assertEquals("BIC", enumType.toFIXNameString());
         assertEquals("1 - BIC", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumAcctIDSource.SID;
         assertEquals("2", enumType.toFIXIDString());
-        assertEquals("SID", enumType.toEnumNameString());
+        assertEquals("SID", enumType.toFIXNameString());
         assertEquals("2 - SID Code", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumAcctIDSource.TFM;
         assertEquals("3", enumType.toFIXIDString());
-        assertEquals("TFM", enumType.toEnumNameString());
+        assertEquals("TFM", enumType.toFIXNameString());
         assertEquals("3 - TFM (GSPTA)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumAcctIDSource.OMGEO;
         assertEquals("4", enumType.toFIXIDString());
-        assertEquals("OMGEO", enumType.toEnumNameString());
+        assertEquals("OMGEO", enumType.toFIXNameString());
         assertEquals("4 - OMGEO (Alert ID)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumAcctIDSource.DTCC;
         assertEquals("5", enumType.toFIXIDString());
-        assertEquals("DTCC", enumType.toEnumNameString());
+        assertEquals("DTCC", enumType.toFIXNameString());
         assertEquals("5 - DTCC Code", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = MyEnumAcctIDSource.OTHER;
         assertEquals("99", enumType.toFIXIDString());
-        assertEquals("OTHER", enumType.toEnumNameString());
+        assertEquals("OTHER", enumType.toFIXNameString());
         assertEquals("99 - Other (custom or proprietary)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

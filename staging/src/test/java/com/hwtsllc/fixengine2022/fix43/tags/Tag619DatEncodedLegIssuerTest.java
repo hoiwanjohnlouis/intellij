@@ -45,11 +45,11 @@ class Tag619DatEncodedLegIssuerTest {
             tagData = new Tag619DatEncodedLegIssuer( new MyDataType( oneElement ));
             assertEquals( "FIX619_DAT_ENCODED_LEG_ISSUER", tagData.toFIXLabelString());
             assertEquals( "619", tagData.toFIXIDString());
-            assertEquals( "ENCODED_LEG_ISSUER", tagData.toEnumNameString());
+            assertEquals( "ENCODED_LEG_ISSUER", tagData.toFIXNameString());
             assertEquals( "EncodedLegIssuer", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag619DatEncodedLegIssuerTest {
             assertEquals( "Tag619DatEncodedLegIssuer\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

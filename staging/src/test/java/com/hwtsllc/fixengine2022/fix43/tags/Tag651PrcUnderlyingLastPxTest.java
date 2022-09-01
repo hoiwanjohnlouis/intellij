@@ -45,11 +45,11 @@ class Tag651PrcUnderlyingLastPxTest {
             tagData = new Tag651PrcUnderlyingLastPx( new MyPriceType( oneElement ));
             assertEquals( "FIX651_PRC_UNDERLYING_LAST_PX", tagData.toFIXLabelString());
             assertEquals( "651", tagData.toFIXIDString());
-            assertEquals( "UNDERLYING_LAST_PX", tagData.toEnumNameString());
+            assertEquals( "UNDERLYING_LAST_PX", tagData.toFIXNameString());
             assertEquals( "UnderlyingLastPx", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag651PrcUnderlyingLastPxTest {
             assertEquals( "Tag651PrcUnderlyingLastPx\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

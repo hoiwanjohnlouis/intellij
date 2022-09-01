@@ -41,11 +41,11 @@ class Tag310EnuUnderlyingSecurityTypeTest {
             tagData = new Tag310EnuUnderlyingSecurityType(oneEnum);
             assertEquals( "FIX310_ENU_UNDERLYING_SECURITY_TYPE", tagData.toFIXLabelString());
             assertEquals( "310", tagData.toFIXIDString());
-            assertEquals( "UNDERLYING_SECURITY_TYPE", tagData.toEnumNameString());
+            assertEquals( "UNDERLYING_SECURITY_TYPE", tagData.toFIXNameString());
             assertEquals( "UnderlyingSecurityType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -638,7 +638,7 @@ class Tag310EnuUnderlyingSecurityTypeTest {
             assertEquals( "Tag310EnuUnderlyingSecurityType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

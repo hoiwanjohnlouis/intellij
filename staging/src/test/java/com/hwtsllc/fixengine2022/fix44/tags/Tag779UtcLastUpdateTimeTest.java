@@ -53,11 +53,11 @@ class Tag779UtcLastUpdateTimeTest {
             tagData = new Tag779UtcLastUpdateTime( new MyUTCTimestampType( oneElement ));
             assertEquals( "FIX779_UTC_LAST_UPDATE_TIME", tagData.toFIXLabelString());
             assertEquals( "779", tagData.toFIXIDString());
-            assertEquals( "LAST_UPDATE_TIME", tagData.toEnumNameString());
+            assertEquals( "LAST_UPDATE_TIME", tagData.toFIXNameString());
             assertEquals( "LastUpdateTime", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -88,7 +88,7 @@ class Tag779UtcLastUpdateTimeTest {
             assertEquals( "Tag779UtcLastUpdateTime\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

@@ -42,34 +42,34 @@ class Enum1081RefOrderIDSourceTest {
 
         enumType = Enum1081RefOrderIDSource.SECONDARY_ORDE_ID;
         assertEquals( "0", enumType.toFIXIDString() );
-        assertEquals( "SECONDARY_ORDE_ID", enumType.toEnumNameString() );
+        assertEquals( "SECONDARY_ORDE_ID", enumType.toFIXNameString() );
         assertEquals( "0 - SecondaryOrdeID (198)", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1081RefOrderIDSource.ORDE_ID;
         assertEquals( "1", enumType.toFIXIDString() );
-        assertEquals( "ORDE_ID", enumType.toEnumNameString() );
+        assertEquals( "ORDE_ID", enumType.toFIXNameString() );
         assertEquals( "1 - OrdeID (37)", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1081RefOrderIDSource.M_ENTRY_ID;
         assertEquals( "2", enumType.toFIXIDString() );
-        assertEquals( "M_ENTRY_ID", enumType.toEnumNameString() );
+        assertEquals( "M_ENTRY_ID", enumType.toFIXNameString() );
         assertEquals( "2 - MEntryID (278)", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum1081RefOrderIDSource.QUOT_ENTRY_ID;
         assertEquals( "3", enumType.toFIXIDString() );
-        assertEquals( "QUOT_ENTRY_ID", enumType.toEnumNameString() );
+        assertEquals( "QUOT_ENTRY_ID", enumType.toFIXNameString() );
         assertEquals( "3 - QuotEntryID (299)", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

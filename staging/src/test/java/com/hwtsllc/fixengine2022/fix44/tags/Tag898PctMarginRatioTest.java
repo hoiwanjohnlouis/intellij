@@ -45,11 +45,11 @@ class Tag898PctMarginRatioTest {
             tagData = new Tag898PctMarginRatio( new MyPercentageType( oneElement ));
             assertEquals( "FIX898_PCT_MARGIN_RATIO", tagData.toFIXLabelString());
             assertEquals( "898", tagData.toFIXIDString());
-            assertEquals( "MARGIN_RATIO", tagData.toEnumNameString());
+            assertEquals( "MARGIN_RATIO", tagData.toFIXNameString());
             assertEquals( "MarginRatio", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag898PctMarginRatioTest {
             assertEquals( "Tag898PctMarginRatio\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

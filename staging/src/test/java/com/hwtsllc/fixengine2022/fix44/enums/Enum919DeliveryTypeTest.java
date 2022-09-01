@@ -42,34 +42,34 @@ class Enum919DeliveryTypeTest {
 
         enumType = Enum919DeliveryType.VERSUS_PAYMENT;
         assertEquals( "0", enumType.toFIXIDString() );
-        assertEquals( "VERSUS_PAYMENT", enumType.toEnumNameString() );
+        assertEquals( "VERSUS_PAYMENT", enumType.toFIXNameString() );
         assertEquals( "0 - Versus Payment: Deliver (if sell) or Receive (if buy) vs. (against) Payment", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum919DeliveryType.FREE;
         assertEquals( "1", enumType.toFIXIDString() );
-        assertEquals( "FREE", enumType.toEnumNameString() );
+        assertEquals( "FREE", enumType.toFIXNameString() );
         assertEquals( "1 - Free: Deliver (if sell) or Receive (if buy) Free", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum919DeliveryType.TRI_PARTY;
         assertEquals( "2", enumType.toFIXIDString() );
-        assertEquals( "TRI_PARTY", enumType.toEnumNameString() );
+        assertEquals( "TRI_PARTY", enumType.toFIXNameString() );
         assertEquals( "2 - Tri-Party", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum919DeliveryType.HOLD_IN_CUSTODY;
         assertEquals( "3", enumType.toFIXIDString() );
-        assertEquals( "HOLD_IN_CUSTODY", enumType.toEnumNameString() );
+        assertEquals( "HOLD_IN_CUSTODY", enumType.toFIXNameString() );
         assertEquals( "3 - Hold In Custody", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

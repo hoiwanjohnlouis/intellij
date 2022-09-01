@@ -45,11 +45,11 @@ class Tag317StrUnderlyingOptAttributeTest {
             tagData = new Tag317StrUnderlyingOptAttribute( new MyStringType( oneElement ));
             assertEquals( "FIX317_STR_UNDERLYING_OPT_ATTRIBUTE", tagData.toFIXLabelString());
             assertEquals( "317", tagData.toFIXIDString());
-            assertEquals( "UNDERLYING_OPT_ATTRIBUTE", tagData.toEnumNameString());
+            assertEquals( "UNDERLYING_OPT_ATTRIBUTE", tagData.toFIXNameString());
             assertEquals( "UnderlyingOptAttribute", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag317StrUnderlyingOptAttributeTest {
             assertEquals( "Tag317StrUnderlyingOptAttribute\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

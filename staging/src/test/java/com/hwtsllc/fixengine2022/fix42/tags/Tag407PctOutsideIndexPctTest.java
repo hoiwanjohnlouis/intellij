@@ -45,11 +45,11 @@ class Tag407PctOutsideIndexPctTest {
             tagData = new Tag407PctOutsideIndexPct( new MyPercentageType( oneElement ));
             assertEquals( "FIX407_PCT_OUTSIDE_INDEX_PCT", tagData.toFIXLabelString());
             assertEquals( "407", tagData.toFIXIDString());
-            assertEquals( "OUTSIDE_INDEX_PCT", tagData.toEnumNameString());
+            assertEquals( "OUTSIDE_INDEX_PCT", tagData.toFIXNameString());
             assertEquals( "OutsideIndexPct", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag407PctOutsideIndexPctTest {
             assertEquals( "Tag407PctOutsideIndexPct\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

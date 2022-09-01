@@ -41,10 +41,10 @@ class Tag751EnuTradeReportRejectReasonTest {
             tagData = new Tag751EnuTradeReportRejectReason(oneEnum);
             assertEquals( "FIX751_ENU_TRADE_REPORT_REJECT_REASON", tagData.toFIXLabelString());
             assertEquals( "751", tagData.toFIXIDString());
-            assertEquals( "TRADE_REPORT_REJECT_REASON", tagData.toEnumNameString());
+            assertEquals( "TRADE_REPORT_REJECT_REASON", tagData.toFIXNameString());
             assertEquals( "TradeReportRejectReason", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -116,7 +116,7 @@ class Tag751EnuTradeReportRejectReasonTest {
             assertEquals( "Tag751EnuTradeReportRejectReason\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

@@ -45,11 +45,11 @@ class Tag330QtyBuyVolumeTest {
             tagData = new Tag330QtyBuyVolume( new MyQtyType( oneElement ));
             assertEquals( "FIX330_QTY_BUY_VOLUME", tagData.toFIXLabelString());
             assertEquals( "330", tagData.toFIXIDString());
-            assertEquals( "BUY_VOLUME", tagData.toEnumNameString());
+            assertEquals( "BUY_VOLUME", tagData.toFIXNameString());
             assertEquals( "BuyVolume", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag330QtyBuyVolumeTest {
             assertEquals( "Tag330QtyBuyVolume\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

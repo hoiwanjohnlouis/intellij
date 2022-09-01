@@ -42,11 +42,11 @@ class Tag315EnuUnderlyingPutOrCallTest {
             tagData = new Tag315EnuUnderlyingPutOrCall(oneEnum);
             assertEquals( "FIX315_ENU_UNDERLYING_PUT_OR_CALL", tagData.toFIXLabelString());
             assertEquals( "315", tagData.toFIXIDString());
-            assertEquals( "UNDERLYING_PUT_OR_CALL", tagData.toEnumNameString());
+            assertEquals( "UNDERLYING_PUT_OR_CALL", tagData.toFIXNameString());
             assertEquals( "UnderlyingPutOrCall (replaced)", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -94,7 +94,7 @@ class Tag315EnuUnderlyingPutOrCallTest {
             assertEquals( "Tag315EnuUnderlyingPutOrCall\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

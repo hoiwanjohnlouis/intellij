@@ -93,7 +93,7 @@ public class Tag905EnuCollAsgnRespType extends FIX44Abstract implements LogValue
      */
     @Override
     public String toDataNameString() {
-        return dataValue.toEnumNameString();
+        return dataValue.toFIXNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data

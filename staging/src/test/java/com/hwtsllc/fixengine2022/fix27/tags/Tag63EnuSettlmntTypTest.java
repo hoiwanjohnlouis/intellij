@@ -40,11 +40,11 @@ class Tag63EnuSettlmntTypTest {
         for (Enum63SettlType oneEnum : Enum63SettlType.values()) {
             tagData = new Tag63EnuSettlmntTyp(oneEnum);
             assertEquals( "FIX63_ENU_SETTLMNT_TYP", tagData.toFIXLabelString());
-            assertEquals( "SETTLMNT_TYP", tagData.toEnumNameString());
+            assertEquals( "SETTLMNT_TYP", tagData.toFIXNameString());
             assertEquals( "63", tagData.toFIXIDString());
             assertEquals( "SettlmntTyp", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -146,7 +146,7 @@ class Tag63EnuSettlmntTypTest {
             assertEquals( "Tag63EnuSettlmntTyp\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

@@ -45,11 +45,11 @@ class Tag667MmyContractSettlMonthTest {
             tagData = new Tag667MmyContractSettlMonth( new MyMonthYearType( oneElement ));
             assertEquals( "FIX667_MMY_CONTRACT_SETTL_MONTH", tagData.toFIXLabelString());
             assertEquals( "667", tagData.toFIXIDString());
-            assertEquals( "CONTRACT_SETTL_MONTH", tagData.toEnumNameString());
+            assertEquals( "CONTRACT_SETTL_MONTH", tagData.toFIXNameString());
             assertEquals( "ContractSettlMonth", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -87,7 +87,7 @@ class Tag667MmyContractSettlMonthTest {
             assertEquals( "Tag667MmyContractSettlMonth\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

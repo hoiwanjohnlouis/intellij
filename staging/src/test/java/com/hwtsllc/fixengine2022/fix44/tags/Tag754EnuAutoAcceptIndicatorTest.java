@@ -41,10 +41,10 @@ class Tag754EnuAutoAcceptIndicatorTest {
             tagData = new Tag754EnuAutoAcceptIndicator(oneEnum);
             assertEquals( "FIX754_ENU_AUTO_ACCEPT_INDICATOR", tagData.toFIXLabelString());
             assertEquals( "754", tagData.toFIXIDString());
-            assertEquals( "AUTO_ACCEPT_INDICATOR", tagData.toEnumNameString());
+            assertEquals( "AUTO_ACCEPT_INDICATOR", tagData.toFIXNameString());
             assertEquals( "AutoAcceptIndicator", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -93,7 +93,7 @@ class Tag754EnuAutoAcceptIndicatorTest {
             assertEquals( "Tag754EnuAutoAcceptIndicator\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

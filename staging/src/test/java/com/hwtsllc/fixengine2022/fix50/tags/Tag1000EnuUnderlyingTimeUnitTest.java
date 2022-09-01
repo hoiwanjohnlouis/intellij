@@ -40,11 +40,11 @@ class Tag1000EnuUnderlyingTimeUnitTest {
         for ( MyEnumTimeUnit oneEnum : MyEnumTimeUnit.values() ) {
             tagData = new Tag1000EnuUnderlyingTimeUnit(oneEnum);
             assertEquals( "FIX1000_ENU_UNDERLYING_TIME_UNIT", tagData.toFIXLabelString());
-            assertEquals( "UNDERLYING_TIME_UNIT", tagData.toEnumNameString());
+            assertEquals( "UNDERLYING_TIME_UNIT", tagData.toFIXNameString());
             assertEquals( "1000", tagData.toFIXIDString());
             assertEquals( "UnderlyingTimeUnit", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -120,7 +120,7 @@ class Tag1000EnuUnderlyingTimeUnitTest {
             assertEquals( "Tag1000EnuUnderlyingTimeUnit\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

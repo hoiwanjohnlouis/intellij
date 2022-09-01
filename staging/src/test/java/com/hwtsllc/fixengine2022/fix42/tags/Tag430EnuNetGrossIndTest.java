@@ -41,11 +41,11 @@ class Tag430EnuNetGrossIndTest {
             tagData = new Tag430EnuNetGrossInd(oneEnum);
             assertEquals( "FIX430_ENU_NET_GROSS_IND", tagData.toFIXLabelString());
             assertEquals( "430", tagData.toFIXIDString());
-            assertEquals( "NET_GROSS_IND", tagData.toEnumNameString());
+            assertEquals( "NET_GROSS_IND", tagData.toFIXNameString());
             assertEquals( "NetGrossInd", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -94,7 +94,7 @@ class Tag430EnuNetGrossIndTest {
             assertEquals( "Tag430EnuNetGrossInd\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

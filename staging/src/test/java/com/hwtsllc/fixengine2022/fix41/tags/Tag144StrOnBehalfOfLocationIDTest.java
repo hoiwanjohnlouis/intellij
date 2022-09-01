@@ -45,11 +45,11 @@ class Tag144StrOnBehalfOfLocationIDTest {
             tagData = new Tag144StrOnBehalfOfLocationID( new MyStringType( oneElement ));
             assertEquals( "FIX144_STR_ON_BEHALF_OF_LOCATION_ID", tagData.toFIXLabelString());
             assertEquals( "144", tagData.toFIXIDString());
-            assertEquals( "ON_BEHALF_OF_LOCATION_ID", tagData.toEnumNameString());
+            assertEquals( "ON_BEHALF_OF_LOCATION_ID", tagData.toFIXNameString());
             assertEquals( "OnBehalfOfLocationID", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag144StrOnBehalfOfLocationIDTest {
             assertEquals( "Tag144StrOnBehalfOfLocationID\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

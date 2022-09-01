@@ -45,11 +45,11 @@ class Tag256StrUnderlyingCreditRatingTest {
             tagData = new Tag256StrUnderlyingCreditRating( new MyStringType( oneElement ));
             assertEquals( "FIX256_STR_UNDERLYING_CREDIT_RATING", tagData.toFIXLabelString());
             assertEquals( "256", tagData.toFIXIDString());
-            assertEquals( "UNDERLYING_CREDIT_RATING", tagData.toEnumNameString());
+            assertEquals( "UNDERLYING_CREDIT_RATING", tagData.toFIXNameString());
             assertEquals( "UnderlyingCreditRating", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag256StrUnderlyingCreditRatingTest {
             assertEquals( "Tag256StrUnderlyingCreditRating\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

@@ -45,11 +45,11 @@ class Tag594StrUnderlyingLocaleOfIssueTest {
             tagData = new Tag594StrUnderlyingLocaleOfIssue( new MyStringType( oneElement ));
             assertEquals( "FIX594_STR_UNDERLYING_LOCALE_OF_ISSUE", tagData.toFIXLabelString());
             assertEquals( "594", tagData.toFIXIDString());
-            assertEquals( "UNDERLYING_LOCALE_OF_ISSUE", tagData.toEnumNameString());
+            assertEquals( "UNDERLYING_LOCALE_OF_ISSUE", tagData.toFIXNameString());
             assertEquals( "UnderlyingLocaleOfIssue", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag594StrUnderlyingLocaleOfIssueTest {
             assertEquals( "Tag594StrUnderlyingLocaleOfIssue\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

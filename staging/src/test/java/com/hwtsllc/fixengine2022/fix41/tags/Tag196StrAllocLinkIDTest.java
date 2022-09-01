@@ -45,11 +45,11 @@ class Tag196StrAllocLinkIDTest {
             tagData = new Tag196StrAllocLinkID( new MyStringType( oneElement ));
             assertEquals( "FIX196_STR_ALLOC_LINK_ID", tagData.toFIXLabelString());
             assertEquals( "196", tagData.toFIXIDString());
-            assertEquals( "ALLOC_LINK_ID", tagData.toEnumNameString());
+            assertEquals( "ALLOC_LINK_ID", tagData.toFIXNameString());
             assertEquals( "AllocLinkID", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag196StrAllocLinkIDTest {
             assertEquals( "Tag196StrAllocLinkID\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

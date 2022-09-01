@@ -45,11 +45,11 @@ class Tag908StrCollRptIDTest {
             tagData = new Tag908StrCollRptID( new MyStringType( oneElement ));
             assertEquals( "FIX908_STR_COLL_RPT_ID", tagData.toFIXLabelString());
             assertEquals( "908", tagData.toFIXIDString());
-            assertEquals( "COLL_RPT_ID", tagData.toEnumNameString());
+            assertEquals( "COLL_RPT_ID", tagData.toFIXNameString());
             assertEquals( "CollRptID", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag908StrCollRptIDTest {
             assertEquals( "Tag908StrCollRptID\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

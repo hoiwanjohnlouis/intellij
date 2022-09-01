@@ -45,11 +45,11 @@ class Tag264IntMarketDepthTest {
             tagData = new Tag264IntMarketDepth( new MyIntType( oneElement ));
             assertEquals( "FIX264_INT_MARKET_DEPTH", tagData.toFIXLabelString());
             assertEquals( "264", tagData.toFIXIDString());
-            assertEquals( "MARKET_DEPTH", tagData.toEnumNameString());
+            assertEquals( "MARKET_DEPTH", tagData.toFIXNameString());
             assertEquals( "MarketDepth", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag264IntMarketDepthTest {
             assertEquals( "Tag264IntMarketDepth\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

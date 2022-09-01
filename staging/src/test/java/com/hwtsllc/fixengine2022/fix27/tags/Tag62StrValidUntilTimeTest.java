@@ -44,12 +44,12 @@ class Tag62StrValidUntilTimeTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag62StrValidUntilTime( new MyStringType( oneElement ));
             assertEquals( "FIX62_STR_VALID_UNTIL_TIME", tagData.toFIXLabelString());
-            assertEquals( "VALID_UNTIL_TIME", tagData.toEnumNameString());
+            assertEquals( "VALID_UNTIL_TIME", tagData.toFIXNameString());
             assertEquals( "62", tagData.toFIXIDString());
             assertEquals( "ValidUntilTime", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -84,7 +84,7 @@ class Tag62StrValidUntilTimeTest {
             assertEquals( "Tag62StrValidUntilTime\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

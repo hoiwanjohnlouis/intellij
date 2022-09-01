@@ -41,11 +41,11 @@ class Tag265EnuMDUpdateTypeTest {
             tagData = new Tag265EnuMDUpdateType(oneEnum);
             assertEquals( "FIX265_ENU_MD_UPDATE_TYPE", tagData.toFIXLabelString());
             assertEquals( "265", tagData.toFIXIDString());
-            assertEquals( "MD_UPDATE_TYPE", tagData.toEnumNameString());
+            assertEquals( "MD_UPDATE_TYPE", tagData.toFIXNameString());
             assertEquals( "MDUpdateType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -93,7 +93,7 @@ class Tag265EnuMDUpdateTypeTest {
             assertEquals( "Tag265EnuMDUpdateType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

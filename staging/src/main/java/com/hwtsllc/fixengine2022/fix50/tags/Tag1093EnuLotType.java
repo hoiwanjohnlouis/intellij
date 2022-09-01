@@ -92,7 +92,7 @@ public class Tag1093EnuLotType extends FIX50Abstract implements LogValuePairStri
      */
     @Override
     public String toDataNameString() {
-        return dataValue.toEnumNameString();
+        return dataValue.toFIXNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data

@@ -45,11 +45,11 @@ class Tag877StrUnderlyingCPProgramTest {
             tagData = new Tag877StrUnderlyingCPProgram( new MyStringType( oneElement ));
             assertEquals( "FIX877_STR_UNDERLYING_CP_PROGRAM", tagData.toFIXLabelString());
             assertEquals( "877", tagData.toFIXIDString());
-            assertEquals( "UNDERLYING_CP_PROGRAM", tagData.toEnumNameString());
+            assertEquals( "UNDERLYING_CP_PROGRAM", tagData.toFIXNameString());
             assertEquals( "UnderlyingCPProgram", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag877StrUnderlyingCPProgramTest {
             assertEquals( "Tag877StrUnderlyingCPProgram\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

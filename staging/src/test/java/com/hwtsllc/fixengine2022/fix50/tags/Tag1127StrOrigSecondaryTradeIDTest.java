@@ -45,11 +45,11 @@ class Tag1127StrOrigSecondaryTradeIDTest {
             tagData = new Tag1127StrOrigSecondaryTradeID( new MyStringType( oneElement ));
             assertEquals( "FIX1127_STR_ORIG_SECONDARY_TRADE_ID", tagData.toFIXLabelString());
             assertEquals( "1127", tagData.toFIXIDString());
-            assertEquals( "ORIG_SECONDARY_TRADE_ID", tagData.toEnumNameString());
+            assertEquals( "ORIG_SECONDARY_TRADE_ID", tagData.toFIXNameString());
             assertEquals( "OrigSecondaryTradeID", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag1127StrOrigSecondaryTradeIDTest {
             assertEquals( "Tag1127StrOrigSecondaryTradeID\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

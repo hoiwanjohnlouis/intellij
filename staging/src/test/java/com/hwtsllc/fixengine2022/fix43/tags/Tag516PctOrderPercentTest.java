@@ -45,11 +45,11 @@ class Tag516PctOrderPercentTest {
             tagData = new Tag516PctOrderPercent( new MyPercentageType( oneElement ));
             assertEquals( "FIX516_PCT_ORDER_PERCENT", tagData.toFIXLabelString());
             assertEquals( "516", tagData.toFIXIDString());
-            assertEquals( "ORDER_PERCENT", tagData.toEnumNameString());
+            assertEquals( "ORDER_PERCENT", tagData.toFIXNameString());
             assertEquals( "OrderPercent", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag516PctOrderPercentTest {
             assertEquals( "Tag516PctOrderPercent\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

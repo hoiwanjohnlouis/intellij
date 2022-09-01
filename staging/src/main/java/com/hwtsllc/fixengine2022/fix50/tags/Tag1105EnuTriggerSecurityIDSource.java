@@ -185,7 +185,7 @@ public class Tag1105EnuTriggerSecurityIDSource extends FIX50Abstract implements 
      */
     @Override
     public String toDataNameString() {
-        return dataValue.toEnumNameString();
+        return dataValue.toFIXNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data

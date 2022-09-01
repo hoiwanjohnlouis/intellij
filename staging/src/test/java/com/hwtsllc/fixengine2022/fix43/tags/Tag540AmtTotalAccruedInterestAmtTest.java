@@ -53,11 +53,11 @@ class Tag540AmtTotalAccruedInterestAmtTest {
             tagData = new Tag540AmtTotalAccruedInterestAmt( new MyAmtType( oneElement ));
             assertEquals( "FIX540_AMT_TOTAL_ACCRUED_INTEREST_AMT", tagData.toFIXLabelString());
             assertEquals( "540", tagData.toFIXIDString());
-            assertEquals( "TOTAL_ACCRUED_INTEREST_AMT", tagData.toEnumNameString());
+            assertEquals( "TOTAL_ACCRUED_INTEREST_AMT", tagData.toFIXNameString());
             assertEquals( "TotalAccruedInterestAmt (Deprecated)", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -88,7 +88,7 @@ class Tag540AmtTotalAccruedInterestAmtTest {
             assertEquals( "Tag540AmtTotalAccruedInterestAmt\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

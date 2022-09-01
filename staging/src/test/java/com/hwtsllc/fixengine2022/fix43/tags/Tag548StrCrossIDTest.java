@@ -45,11 +45,11 @@ class Tag548StrCrossIDTest {
             tagData = new Tag548StrCrossID( new MyStringType( oneElement ));
             assertEquals( "FIX548_STR_CROSS_ID", tagData.toFIXLabelString());
             assertEquals( "548", tagData.toFIXIDString());
-            assertEquals( "CROSS_ID", tagData.toEnumNameString());
+            assertEquals( "CROSS_ID", tagData.toFIXNameString());
             assertEquals( "CrossID", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag548StrCrossIDTest {
             assertEquals( "Tag548StrCrossID\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

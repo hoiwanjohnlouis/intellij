@@ -45,11 +45,11 @@ class Tag1058NumNoUndlyInstrumentPartiesTest {
             tagData = new Tag1058NumNoUndlyInstrumentParties( new MyNumInGroupType( oneElement ));
             assertEquals( "FIX1058_NUM_NO_UNDLY_INSTRUMENT_PARTIES", tagData.toFIXLabelString());
             assertEquals( "1058", tagData.toFIXIDString());
-            assertEquals( "NO_UNDLY_INSTRUMENT_PARTIES", tagData.toEnumNameString());
+            assertEquals( "NO_UNDLY_INSTRUMENT_PARTIES", tagData.toFIXNameString());
             assertEquals( "NoUndlyInstrumentParties", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag1058NumNoUndlyInstrumentPartiesTest {
             assertEquals( "Tag1058NumNoUndlyInstrumentParties\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

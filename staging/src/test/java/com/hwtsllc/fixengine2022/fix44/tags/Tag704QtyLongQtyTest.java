@@ -45,11 +45,11 @@ class Tag704QtyLongQtyTest {
             tagData = new Tag704QtyLongQty( new MyQtyType( oneElement ));
             assertEquals( "FIX704_QTY_LONG_QTY", tagData.toFIXLabelString());
             assertEquals( "704", tagData.toFIXIDString());
-            assertEquals( "LONG_QTY", tagData.toEnumNameString());
+            assertEquals( "LONG_QTY", tagData.toFIXNameString());
             assertEquals( "LongQty", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag704QtyLongQtyTest {
             assertEquals( "Tag704QtyLongQty\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

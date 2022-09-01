@@ -51,52 +51,52 @@ class Enum1008SideTrdSubTypTest {
 
         enumType = Enum1008SideTrdSubTyp.CMTA;
         assertEquals( "0", enumType.toFIXIDString() );
-        assertEquals( "CMTA", enumType.toEnumNameString() );
+        assertEquals( "CMTA", enumType.toFIXNameString() );
         assertEquals( "0 - CMTA", enumType.toEnumDescriptionString() );
         enumType = Enum1008SideTrdSubTyp.INTERNAL_TRANSFER;
         assertEquals( "1", enumType.toFIXIDString() );
-        assertEquals( "INTERNAL_TRANSFER", enumType.toEnumNameString() );
+        assertEquals( "INTERNAL_TRANSFER", enumType.toFIXNameString() );
         assertEquals( "1 - Internal Transfer", enumType.toEnumDescriptionString() );
         enumType = Enum1008SideTrdSubTyp.EXTERNAL_TRANSFER;
         assertEquals( "2", enumType.toFIXIDString() );
-        assertEquals( "EXTERNAL_TRANSFER", enumType.toEnumNameString() );
+        assertEquals( "EXTERNAL_TRANSFER", enumType.toFIXNameString() );
         assertEquals( "2 - External Transfer", enumType.toEnumDescriptionString() );
         enumType = Enum1008SideTrdSubTyp.REJECT_SUBMISSION;
         assertEquals( "3", enumType.toFIXIDString() );
-        assertEquals( "REJECT_SUBMISSION", enumType.toEnumNameString() );
+        assertEquals( "REJECT_SUBMISSION", enumType.toFIXNameString() );
         assertEquals( "3 - Reject for Submitting Trade", enumType.toEnumDescriptionString() );
         enumType = Enum1008SideTrdSubTyp.ADVISORY_FOR_CONTRA;
         assertEquals( "4", enumType.toFIXIDString() );
-        assertEquals( "ADVISORY_FOR_CONTRA", enumType.toEnumNameString() );
+        assertEquals( "ADVISORY_FOR_CONTRA", enumType.toFIXNameString() );
         assertEquals( "4 - Advisory for Contra Side", enumType.toEnumDescriptionString() );
 
         enumType = Enum1008SideTrdSubTyp.OFFSET_DUE_TO_ALLOCATION;
         assertEquals( "5", enumType.toFIXIDString() );
-        assertEquals( "OFFSET_DUE_TO_ALLOCATION", enumType.toEnumNameString() );
+        assertEquals( "OFFSET_DUE_TO_ALLOCATION", enumType.toFIXNameString() );
         assertEquals( "5 - Offset due to an allocation", enumType.toEnumDescriptionString() );
         enumType = Enum1008SideTrdSubTyp.ONSET_DUE_TO_ALLOCATION;
         assertEquals( "6", enumType.toFIXIDString() );
-        assertEquals( "ONSET_DUE_TO_ALLOCATION", enumType.toEnumNameString() );
+        assertEquals( "ONSET_DUE_TO_ALLOCATION", enumType.toFIXNameString() );
         assertEquals( "6 - Onset due to an allocation", enumType.toEnumDescriptionString() );
         enumType = Enum1008SideTrdSubTyp.DIFFERENTIAL_SPREAD;
         assertEquals( "7", enumType.toFIXIDString() );
-        assertEquals( "DIFFERENTIAL_SPREAD", enumType.toEnumNameString() );
+        assertEquals( "DIFFERENTIAL_SPREAD", enumType.toFIXNameString() );
         assertEquals( "7 - Differential Spread", enumType.toEnumDescriptionString() );
         enumType = Enum1008SideTrdSubTyp.IMPLIED_SPREAD_LEG;
         assertEquals( "8", enumType.toFIXIDString() );
-        assertEquals( "IMPLIED_SPREAD_LEG", enumType.toEnumNameString() );
+        assertEquals( "IMPLIED_SPREAD_LEG", enumType.toFIXNameString() );
         assertEquals( "8 - Implied Spread leg executed against an outright", enumType.toEnumDescriptionString() );
         enumType = Enum1008SideTrdSubTyp.TRANSACTION_FROM_EXERCISE;
         assertEquals( "9", enumType.toFIXIDString() );
-        assertEquals( "TRANSACTION_FROM_EXERCISE", enumType.toEnumNameString() );
+        assertEquals( "TRANSACTION_FROM_EXERCISE", enumType.toFIXNameString() );
         assertEquals( "9 - Transaction from Exercise", enumType.toEnumDescriptionString() );
 
         enumType = Enum1008SideTrdSubTyp.TRANSACTION_FROM_ASSIGNMENT;
         assertEquals( "10", enumType.toFIXIDString() );
-        assertEquals( "TRANSACTION_FROM_ASSIGNMENT", enumType.toEnumNameString() );
+        assertEquals( "TRANSACTION_FROM_ASSIGNMENT", enumType.toFIXNameString() );
         assertEquals( "10 - Transaction from Assignment", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

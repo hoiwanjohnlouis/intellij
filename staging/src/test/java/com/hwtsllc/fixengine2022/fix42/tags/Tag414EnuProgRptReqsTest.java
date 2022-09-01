@@ -41,11 +41,11 @@ class Tag414EnuProgRptReqsTest {
             tagData = new Tag414EnuProgRptReqs(oneEnum);
             assertEquals( "FIX414_ENU_PROG_RPT_REQS", tagData.toFIXLabelString());
             assertEquals( "414", tagData.toFIXIDString());
-            assertEquals( "PROG_RPT_REQS", tagData.toEnumNameString());
+            assertEquals( "PROG_RPT_REQS", tagData.toFIXNameString());
             assertEquals( "ProgRptReqs", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -101,7 +101,7 @@ class Tag414EnuProgRptReqsTest {
             assertEquals( "Tag414EnuProgRptReqs\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

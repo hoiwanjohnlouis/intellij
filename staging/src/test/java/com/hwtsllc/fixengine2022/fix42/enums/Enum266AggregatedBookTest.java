@@ -40,18 +40,18 @@ class Enum266AggregatedBookTest {
 
         enumType = Enum266AggregatedBook.NO;
         assertEquals("N",enumType.toFIXIDString());
-        assertEquals("NO", enumType.toEnumNameString());
+        assertEquals("NO", enumType.toFIXNameString());
         assertEquals("N - book entries should not be aggregated", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum266AggregatedBook.YES;
         assertEquals("Y", enumType.toFIXIDString());
-        assertEquals("YES", enumType.toEnumNameString());
+        assertEquals("YES", enumType.toFIXNameString());
         assertEquals("Y - book entries to be aggregated", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

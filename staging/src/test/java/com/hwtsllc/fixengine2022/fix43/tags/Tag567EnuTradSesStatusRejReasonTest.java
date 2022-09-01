@@ -41,11 +41,11 @@ class Tag567EnuTradSesStatusRejReasonTest {
             tagData = new Tag567EnuTradSesStatusRejReason(oneEnum);
             assertEquals( "FIX567_ENU_TRAD_SES_STATUS_REJ_REASON", tagData.toFIXLabelString());
             assertEquals( "567", tagData.toFIXIDString());
-            assertEquals( "TRAD_SES_STATUS_REJ_REASON", tagData.toEnumNameString());
+            assertEquals( "TRAD_SES_STATUS_REJ_REASON", tagData.toFIXNameString());
             assertEquals( "TradSesStatusRejReason", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -98,7 +98,7 @@ class Tag567EnuTradSesStatusRejReasonTest {
             assertEquals( "Tag567EnuTradSesStatusRejReason\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

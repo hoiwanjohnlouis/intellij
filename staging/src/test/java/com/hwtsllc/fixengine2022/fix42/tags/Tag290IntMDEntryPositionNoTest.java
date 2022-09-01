@@ -45,11 +45,11 @@ class Tag290IntMDEntryPositionNoTest {
             tagData = new Tag290IntMDEntryPositionNo( new MyIntType( oneElement ));
             assertEquals( "FIX290_INT_MD_ENTRY_POSITION_NO", tagData.toFIXLabelString());
             assertEquals( "290", tagData.toFIXIDString());
-            assertEquals( "MD_ENTRY_POSITION_NO", tagData.toEnumNameString());
+            assertEquals( "MD_ENTRY_POSITION_NO", tagData.toFIXNameString());
             assertEquals( "MDEntryPositionNo", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag290IntMDEntryPositionNoTest {
             assertEquals( "Tag290IntMDEntryPositionNo\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

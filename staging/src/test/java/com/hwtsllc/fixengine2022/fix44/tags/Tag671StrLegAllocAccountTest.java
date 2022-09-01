@@ -45,11 +45,11 @@ class Tag671StrLegAllocAccountTest {
             tagData = new Tag671StrLegAllocAccount( new MyStringType( oneElement ));
             assertEquals( "FIX671_STR_LEG_ALLOC_ACCOUNT", tagData.toFIXLabelString());
             assertEquals( "671", tagData.toFIXIDString());
-            assertEquals( "LEG_ALLOC_ACCOUNT", tagData.toEnumNameString());
+            assertEquals( "LEG_ALLOC_ACCOUNT", tagData.toFIXNameString());
             assertEquals( "LegAllocAccount", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag671StrLegAllocAccountTest {
             assertEquals( "Tag671StrLegAllocAccount\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

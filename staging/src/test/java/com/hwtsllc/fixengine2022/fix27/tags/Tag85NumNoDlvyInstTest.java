@@ -45,12 +45,12 @@ class Tag85NumNoDlvyInstTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag85NumNoDlvyInst( new MyNumInGroupType( oneElement ));
             assertEquals( "FIX85_NUM_NO_DLVY_INST", tagData.toFIXLabelString());
-            assertEquals( "NO_DLVY_INST", tagData.toEnumNameString());
+            assertEquals( "NO_DLVY_INST", tagData.toFIXNameString());
             assertEquals( "85", tagData.toFIXIDString());
             assertEquals( "NoDlvyInst (no longer used)", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -85,7 +85,7 @@ class Tag85NumNoDlvyInstTest {
             assertEquals( "Tag85NumNoDlvyInst\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

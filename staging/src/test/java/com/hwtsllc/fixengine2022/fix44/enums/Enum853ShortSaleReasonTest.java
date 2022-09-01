@@ -46,51 +46,51 @@ class Enum853ShortSaleReasonTest {
 
         enumType = Enum853ShortSaleReason.DEALER_SOLD_SHORT;
         assertEquals( "0", enumType.toFIXIDString() );
-        assertEquals( "DEALER_SOLD_SHORT", enumType.toEnumNameString() );
+        assertEquals( "DEALER_SOLD_SHORT", enumType.toFIXNameString() );
         assertEquals( "0 - Dealer Sold Short", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum853ShortSaleReason.DEALER_SOLD_SHORT_EXEMPT;
         assertEquals( "1", enumType.toFIXIDString() );
-        assertEquals( "DEALER_SOLD_SHORT_EXEMPT", enumType.toEnumNameString() );
+        assertEquals( "DEALER_SOLD_SHORT_EXEMPT", enumType.toFIXNameString() );
         assertEquals( "1 - Dealer Sold Short Exempt", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum853ShortSaleReason.CUSTOMER_SOLD_SHORT;
         assertEquals( "2", enumType.toFIXIDString() );
-        assertEquals( "CUSTOMER_SOLD_SHORT", enumType.toEnumNameString() );
+        assertEquals( "CUSTOMER_SOLD_SHORT", enumType.toFIXNameString() );
         assertEquals( "2 - Selling Customer Sold Short", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum853ShortSaleReason.CUSTOMER_SOLD_SHORT_EXEMPT;
         assertEquals( "3", enumType.toFIXIDString() );
-        assertEquals( "CUSTOMER_SOLD_SHORT_EXEMPT", enumType.toEnumNameString() );
+        assertEquals( "CUSTOMER_SOLD_SHORT_EXEMPT", enumType.toFIXNameString() );
         assertEquals( "3 - Selling Customer Sold Short Exempt", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum853ShortSaleReason.CONTRA_SOLD_SHORT;
         assertEquals( "4", enumType.toFIXIDString() );
-        assertEquals( "CONTRA_SOLD_SHORT", enumType.toEnumNameString() );
+        assertEquals( "CONTRA_SOLD_SHORT", enumType.toFIXNameString() );
         assertEquals( "4 - Qualified Service Representative (QSR) or Automatic Give-up (AGU) Contra Side Sold Short", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = Enum853ShortSaleReason.CONTRA_SOLD_SHORT_EXEMPT;
         assertEquals( "5", enumType.toFIXIDString() );
-        assertEquals( "CONTRA_SOLD_SHORT_EXEMPT", enumType.toEnumNameString() );
+        assertEquals( "CONTRA_SOLD_SHORT_EXEMPT", enumType.toFIXNameString() );
         assertEquals( "5 - QSR or AGU Contra Side Sold Short Exempt", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

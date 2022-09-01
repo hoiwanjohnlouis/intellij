@@ -107,7 +107,7 @@ public class Tag549EnuCrossType extends FIX43Abstract implements LogValuePairStr
      */
     @Override
     public String toDataNameString() {
-        return dataValue.toEnumNameString();
+        return dataValue.toFIXNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data

@@ -45,11 +45,11 @@ class Tag295NumNoQuoteEntriesTest {
             tagData = new Tag295NumNoQuoteEntries( new MyNumInGroupType( oneElement ));
             assertEquals( "FIX295_NUM_NO_QUOTE_ENTRIES", tagData.toFIXLabelString());
             assertEquals( "295", tagData.toFIXIDString());
-            assertEquals( "NO_QUOTE_ENTRIES", tagData.toEnumNameString());
+            assertEquals( "NO_QUOTE_ENTRIES", tagData.toFIXNameString());
             assertEquals( "NoQuoteEntries", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag295NumNoQuoteEntriesTest {
             assertEquals( "Tag295NumNoQuoteEntries\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

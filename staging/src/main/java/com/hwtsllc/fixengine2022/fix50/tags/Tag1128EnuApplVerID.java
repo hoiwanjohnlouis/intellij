@@ -118,7 +118,7 @@ public class Tag1128EnuApplVerID extends FIX50Abstract implements LogValuePairSt
      */
     @Override
     public String toDataNameString() {
-        return dataValue.toEnumNameString();
+        return dataValue.toFIXNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data

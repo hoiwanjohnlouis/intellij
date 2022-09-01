@@ -41,10 +41,10 @@ class Tag796EnuAllocCancReplaceReasonTest {
             tagData = new Tag796EnuAllocCancReplaceReason(oneEnum);
             assertEquals( "FIX796_ENU_ALLOC_CANC_REPLACE_REASON", tagData.toFIXLabelString());
             assertEquals( "796", tagData.toFIXIDString());
-            assertEquals( "ALLOC_CANC_REPLACE_REASON", tagData.toEnumNameString());
+            assertEquals( "ALLOC_CANC_REPLACE_REASON", tagData.toFIXNameString());
             assertEquals( "AllocCancReplaceReason", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -99,7 +99,7 @@ class Tag796EnuAllocCancReplaceReasonTest {
             assertEquals( "Tag796EnuAllocCancReplaceReason\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

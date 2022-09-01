@@ -99,7 +99,7 @@ public class Tag836EnuPegOffsetType extends FIX44Abstract implements LogValuePai
      */
     @Override
     public String toDataNameString() {
-        return dataValue.toEnumNameString();
+        return dataValue.toFIXNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data

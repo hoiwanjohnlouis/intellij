@@ -45,11 +45,11 @@ class Tag543StrInstrRegistryTest {
             tagData = new Tag543StrInstrRegistry( new MyStringType( oneElement ));
             assertEquals( "FIX543_STR_INSTR_REGISTRY", tagData.toFIXLabelString());
             assertEquals( "543", tagData.toFIXIDString());
-            assertEquals( "INSTR_REGISTRY", tagData.toEnumNameString());
+            assertEquals( "INSTR_REGISTRY", tagData.toFIXNameString());
             assertEquals( "InstrRegistry", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag543StrInstrRegistryTest {
             assertEquals( "Tag543StrInstrRegistry\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

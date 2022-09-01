@@ -45,11 +45,11 @@ class Tag821StrOrderInputDeviceTest {
             tagData = new Tag821StrOrderInputDevice( new MyStringType( oneElement ));
             assertEquals( "FIX821_STR_ORDER_INPUT_DEVICE", tagData.toFIXLabelString());
             assertEquals( "821", tagData.toFIXIDString());
-            assertEquals( "ORDER_INPUT_DEVICE", tagData.toEnumNameString());
+            assertEquals( "ORDER_INPUT_DEVICE", tagData.toFIXNameString());
             assertEquals( "OrderInputDevice", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag821StrOrderInputDeviceTest {
             assertEquals( "Tag821StrOrderInputDevice\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

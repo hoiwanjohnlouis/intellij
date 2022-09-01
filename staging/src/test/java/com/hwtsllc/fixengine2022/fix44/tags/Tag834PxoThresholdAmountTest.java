@@ -45,11 +45,11 @@ class Tag834PxoThresholdAmountTest {
             tagData = new Tag834PxoThresholdAmount( new MyPriceOffsetType( oneElement ));
             assertEquals( "FIX834_PXO_THRESHOLD_AMOUNT", tagData.toFIXLabelString());
             assertEquals( "834", tagData.toFIXIDString());
-            assertEquals( "THRESHOLD_AMOUNT", tagData.toEnumNameString());
+            assertEquals( "THRESHOLD_AMOUNT", tagData.toFIXNameString());
             assertEquals( "ThresholdAmount", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag834PxoThresholdAmountTest {
             assertEquals( "Tag834PxoThresholdAmount\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

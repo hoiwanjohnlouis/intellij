@@ -45,38 +45,38 @@ class Enum274TickDirectionTest {
          */
         enumType = Enum274TickDirection.PLUS_TICK;
         assertEquals( "0", enumType.toFIXIDString());
-        assertEquals( "PLUS_TICK", enumType.toEnumNameString());
+        assertEquals( "PLUS_TICK", enumType.toFIXNameString());
         assertEquals( "0 - Plus Tick", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum274TickDirection.ZERO_PLUS_TICK;
         assertEquals( "1", enumType.toFIXIDString());
-        assertEquals( "ZERO_PLUS_TICK", enumType.toEnumNameString());
+        assertEquals( "ZERO_PLUS_TICK", enumType.toFIXNameString());
         assertEquals( "1 - Zero-Plus Tick", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum274TickDirection.MINUS_TICK;
         assertEquals( "2", enumType.toFIXIDString());
-        assertEquals( "MINUS_TICK", enumType.toEnumNameString());
+        assertEquals( "MINUS_TICK", enumType.toFIXNameString());
         assertEquals( "2 - Minus Tick", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum274TickDirection.ZERO_MINUS_TICK;
         assertEquals( "3", enumType.toFIXIDString());
-        assertEquals( "ZERO_MINUS_TICK", enumType.toEnumNameString());
+        assertEquals( "ZERO_MINUS_TICK", enumType.toFIXNameString());
         assertEquals( "3 - Zero-Minus Tick", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

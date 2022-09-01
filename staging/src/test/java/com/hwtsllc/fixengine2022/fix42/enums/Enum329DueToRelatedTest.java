@@ -40,18 +40,18 @@ class Enum329DueToRelatedTest {
 
         enumType = Enum329DueToRelated.NO;
         assertEquals("N",enumType.toFIXIDString());
-        assertEquals("NO", enumType.toEnumNameString());
+        assertEquals("NO", enumType.toFIXNameString());
         assertEquals("N - Halt was not related to a halt of the related security", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum329DueToRelated.YES;
         assertEquals("Y", enumType.toFIXIDString());
-        assertEquals("YES", enumType.toEnumNameString());
+        assertEquals("YES", enumType.toFIXNameString());
         assertEquals("Y - Halt was due to related security being halted", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

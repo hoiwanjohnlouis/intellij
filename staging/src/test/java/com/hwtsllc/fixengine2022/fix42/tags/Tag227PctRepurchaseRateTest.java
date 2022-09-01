@@ -46,11 +46,11 @@ class Tag227PctRepurchaseRateTest {
             tagData = new Tag227PctRepurchaseRate( new MyPercentageType( oneElement ));
             assertEquals( "FIX227_PCT_REPURCHASE_RATE", tagData.toFIXLabelString());
             assertEquals( "227", tagData.toFIXIDString());
-            assertEquals( "REPURCHASE_RATE", tagData.toEnumNameString());
+            assertEquals( "REPURCHASE_RATE", tagData.toFIXNameString());
             assertEquals( "RepurchaseRate (Deprecated)", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -87,7 +87,7 @@ class Tag227PctRepurchaseRateTest {
             assertEquals( "Tag227PctRepurchaseRate\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

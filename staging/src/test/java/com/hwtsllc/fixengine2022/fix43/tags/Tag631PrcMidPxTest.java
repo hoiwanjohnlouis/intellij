@@ -45,11 +45,11 @@ class Tag631PrcMidPxTest {
             tagData = new Tag631PrcMidPx( new MyPriceType( oneElement ));
             assertEquals( "FIX631_PRC_MID_PX", tagData.toFIXLabelString());
             assertEquals( "631", tagData.toFIXIDString());
-            assertEquals( "MID_PX", tagData.toEnumNameString());
+            assertEquals( "MID_PX", tagData.toFIXNameString());
             assertEquals( "MidPx", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag631PrcMidPxTest {
             assertEquals( "Tag631PrcMidPx\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

@@ -45,11 +45,11 @@ class Tag615PctLegCouponRateTest {
             tagData = new Tag615PctLegCouponRate( new MyPercentageType( oneElement ));
             assertEquals( "FIX615_PCT_LEG_COUPON_RATE", tagData.toFIXLabelString());
             assertEquals( "615", tagData.toFIXIDString());
-            assertEquals( "LEG_COUPON_RATE", tagData.toEnumNameString());
+            assertEquals( "LEG_COUPON_RATE", tagData.toFIXNameString());
             assertEquals( "LegCouponRate", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag615PctLegCouponRateTest {
             assertEquals( "Tag615PctLegCouponRate\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

@@ -47,29 +47,29 @@ class Enum514RegistTransTypeTest {
          */
         enumType = Enum514RegistTransType.NEW;
         assertEquals("0", enumType.toFIXIDString());
-        assertEquals("NEW", enumType.toEnumNameString());
+        assertEquals("NEW", enumType.toFIXNameString());
         assertEquals("0 - New", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum514RegistTransType.REPLACE;
         assertEquals("1", enumType.toFIXIDString());
-        assertEquals("REPLACE", enumType.toEnumNameString());
+        assertEquals("REPLACE", enumType.toFIXNameString());
         assertEquals("1 - Replace", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum514RegistTransType.CANCEL;
         assertEquals("2", enumType.toFIXIDString());
-        assertEquals("CANCEL", enumType.toEnumNameString());
+        assertEquals("CANCEL", enumType.toFIXNameString());
         assertEquals("2 - Cancel", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

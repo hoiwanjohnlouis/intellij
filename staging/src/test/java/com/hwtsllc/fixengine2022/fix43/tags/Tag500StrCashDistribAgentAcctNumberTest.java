@@ -45,11 +45,11 @@ class Tag500StrCashDistribAgentAcctNumberTest {
             tagData = new Tag500StrCashDistribAgentAcctNumber( new MyStringType( oneElement ));
             assertEquals( "FIX500_STR_CASH_DISTRIB_AGENT_ACCT_NUMBER", tagData.toFIXLabelString());
             assertEquals( "500", tagData.toFIXIDString());
-            assertEquals( "CASH_DISTRIB_AGENT_ACCT_NUMBER", tagData.toEnumNameString());
+            assertEquals( "CASH_DISTRIB_AGENT_ACCT_NUMBER", tagData.toFIXNameString());
             assertEquals( "CashDistribAgentAcctNumber", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag500StrCashDistribAgentAcctNumberTest {
             assertEquals( "Tag500StrCashDistribAgentAcctNumber\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

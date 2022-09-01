@@ -47,59 +47,59 @@ class Enum127DKReasonTest {
          */
         enumType = Enum127DKReason.UNKNOWN_SYMBOL;
         assertEquals("A", enumType.toFIXIDString());
-        assertEquals("UNKNOWN_SYMBOL", enumType.toEnumNameString());
+        assertEquals("UNKNOWN_SYMBOL", enumType.toFIXNameString());
         assertEquals("A - Unknown Symbol", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum127DKReason.WRONG_SIDE;
         assertEquals("B", enumType.toFIXIDString());
-        assertEquals("WRONG_SIDE", enumType.toEnumNameString());
+        assertEquals("WRONG_SIDE", enumType.toFIXNameString());
         assertEquals("B - Wrong Side", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum127DKReason.QUANTITY_EXCEEDS_ORDER;
         assertEquals("C", enumType.toFIXIDString());
-        assertEquals("QUANTITY_EXCEEDS_ORDER", enumType.toEnumNameString());
+        assertEquals("QUANTITY_EXCEEDS_ORDER", enumType.toFIXNameString());
         assertEquals("C - Quantity Exceeds Order", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum127DKReason.NO_MATCHING_ORDER;
         assertEquals("D", enumType.toFIXIDString());
-        assertEquals("NO_MATCHING_ORDER", enumType.toEnumNameString());
+        assertEquals("NO_MATCHING_ORDER", enumType.toFIXNameString());
         assertEquals("D - No Matching Order", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum127DKReason.PRICE_EXCEEDS_LIMIT;
         assertEquals("E", enumType.toFIXIDString());
-        assertEquals("PRICE_EXCEEDS_LIMIT", enumType.toEnumNameString());
+        assertEquals("PRICE_EXCEEDS_LIMIT", enumType.toFIXNameString());
         assertEquals("E - Price Exceeds Limit", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
 
         enumType = Enum127DKReason.CALCULATION_DIFFERENCE;
         assertEquals("F", enumType.toFIXIDString());
-        assertEquals("CALCULATION_DIFFERENCE", enumType.toEnumNameString());
+        assertEquals("CALCULATION_DIFFERENCE", enumType.toFIXNameString());
         assertEquals("F - Calculation Difference", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum127DKReason.OTHER;
         assertEquals("Z", enumType.toFIXIDString());
-        assertEquals("OTHER", enumType.toEnumNameString());
+        assertEquals("OTHER", enumType.toFIXNameString());
         assertEquals("Z - Other", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

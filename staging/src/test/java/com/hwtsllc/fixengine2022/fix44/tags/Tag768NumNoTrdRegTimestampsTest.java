@@ -45,11 +45,11 @@ class Tag768NumNoTrdRegTimestampsTest {
             tagData = new Tag768NumNoTrdRegTimestamps( new MyNumInGroupType( oneElement ));
             assertEquals( "FIX768_NUM_NO_TRD_REG_TIMESTAMPS", tagData.toFIXLabelString());
             assertEquals( "768", tagData.toFIXIDString());
-            assertEquals( "NO_TRD_REG_TIMESTAMPS", tagData.toEnumNameString());
+            assertEquals( "NO_TRD_REG_TIMESTAMPS", tagData.toFIXNameString());
             assertEquals( "NoTrdRegTimestamps", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag768NumNoTrdRegTimestampsTest {
             assertEquals( "Tag768NumNoTrdRegTimestamps\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

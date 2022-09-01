@@ -44,12 +44,12 @@ class Tag55StrSymbolTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag55StrSymbol( new MyStringType( oneElement ));
             assertEquals( "FIX55_STR_SYMBOL", tagData.toFIXLabelString());
-            assertEquals( "SYMBOL", tagData.toEnumNameString());
+            assertEquals( "SYMBOL", tagData.toFIXNameString());
             assertEquals( "55", tagData.toFIXIDString());
             assertEquals( "Symbol", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -84,7 +84,7 @@ class Tag55StrSymbolTest {
             assertEquals( "Tag55StrSymbol\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

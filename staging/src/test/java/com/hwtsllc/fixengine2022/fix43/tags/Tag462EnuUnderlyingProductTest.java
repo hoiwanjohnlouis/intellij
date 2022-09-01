@@ -41,11 +41,11 @@ class Tag462EnuUnderlyingProductTest {
             tagData = new Tag462EnuUnderlyingProduct(oneEnum);
             assertEquals( "FIX462_ENU_UNDERLYING_PRODUCT", tagData.toFIXLabelString());
             assertEquals( "462", tagData.toFIXIDString());
-            assertEquals( "UNDERLYING_PRODUCT", tagData.toEnumNameString());
+            assertEquals( "UNDERLYING_PRODUCT", tagData.toFIXNameString());
             assertEquals( "UnderlyingProduct", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -152,7 +152,7 @@ class Tag462EnuUnderlyingProductTest {
             assertEquals( "Tag462EnuUnderlyingProduct\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

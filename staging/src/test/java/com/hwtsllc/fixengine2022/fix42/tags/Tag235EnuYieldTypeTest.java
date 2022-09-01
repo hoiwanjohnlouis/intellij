@@ -41,11 +41,11 @@ class Tag235EnuYieldTypeTest {
             tagData = new Tag235EnuYieldType(oneEnum);
             assertEquals( "FIX235_ENU_YIELD_TYPE", tagData.toFIXLabelString());
             assertEquals( "235", tagData.toFIXIDString());
-            assertEquals( "YIELD_TYPE", tagData.toEnumNameString());
+            assertEquals( "YIELD_TYPE", tagData.toFIXNameString());
             assertEquals( "YieldType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -265,7 +265,7 @@ class Tag235EnuYieldTypeTest {
             assertEquals( "Tag235EnuYieldType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

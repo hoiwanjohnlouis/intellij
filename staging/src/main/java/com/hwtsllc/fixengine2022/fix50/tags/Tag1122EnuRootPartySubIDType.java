@@ -187,7 +187,7 @@ public class Tag1122EnuRootPartySubIDType extends FIX50Abstract implements LogVa
      */
     @Override
     public String toDataNameString() {
-        return dataValue.toEnumNameString();
+        return dataValue.toFIXNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data

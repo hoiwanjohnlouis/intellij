@@ -45,11 +45,11 @@ class Tag302StrQuoteSetIDTest {
             tagData = new Tag302StrQuoteSetID( new MyStringType( oneElement ));
             assertEquals( "FIX302_STR_QUOTE_SET_ID", tagData.toFIXLabelString());
             assertEquals( "302", tagData.toFIXIDString());
-            assertEquals( "QUOTE_SET_ID", tagData.toEnumNameString());
+            assertEquals( "QUOTE_SET_ID", tagData.toFIXNameString());
             assertEquals( "QuoteSetID", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag302StrQuoteSetIDTest {
             assertEquals( "Tag302StrQuoteSetID\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

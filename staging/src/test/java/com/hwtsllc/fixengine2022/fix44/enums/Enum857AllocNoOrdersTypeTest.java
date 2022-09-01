@@ -42,18 +42,18 @@ class Enum857AllocNoOrdersTypeTest {
 
         enumType = Enum857AllocNoOrdersType.NOT_SPECIFIED;
         assertEquals( "0", enumType.toFIXIDString() );
-        assertEquals( "NOT_SPECIFIED", enumType.toEnumNameString() );
+        assertEquals( "NOT_SPECIFIED", enumType.toFIXNameString() );
         assertEquals( "0 - Not Specified", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum857AllocNoOrdersType.LIST_PROVIDED;
         assertEquals( "1", enumType.toFIXIDString() );
-        assertEquals( "LIST_PROVIDED", enumType.toEnumNameString() );
+        assertEquals( "LIST_PROVIDED", enumType.toFIXNameString() );
         assertEquals( "1 - Explicit List Provided", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

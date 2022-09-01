@@ -44,12 +44,12 @@ class Tag99PrcStopPxTest {
         for ( double oneElement : TestArray ) {
             tagData = new Tag99PrcStopPx( new MyPriceType( oneElement ));
             assertEquals( "FIX99_PRC_STOP_PX", tagData.toFIXLabelString());
-            assertEquals( "STOP_PX", tagData.toEnumNameString());
+            assertEquals( "STOP_PX", tagData.toFIXNameString());
             assertEquals( "99", tagData.toFIXIDString());
             assertEquals( "StopPx", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag99PrcStopPxTest {
             assertEquals( "Tag99PrcStopPx\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

@@ -45,11 +45,11 @@ class Tag1106StrTriggerSecurityDescTest {
             tagData = new Tag1106StrTriggerSecurityDesc( new MyStringType( oneElement ));
             assertEquals( "FIX1106_STR_TRIGGER_SECURITY_DESC", tagData.toFIXLabelString());
             assertEquals( "1106", tagData.toFIXIDString());
-            assertEquals( "TRIGGER_SECURITY_DESC", tagData.toEnumNameString());
+            assertEquals( "TRIGGER_SECURITY_DESC", tagData.toFIXNameString());
             assertEquals( "TriggerSecurityDesc", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag1106StrTriggerSecurityDescTest {
             assertEquals( "Tag1106StrTriggerSecurityDesc\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

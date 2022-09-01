@@ -45,11 +45,11 @@ class Tag767CcyAllowableOneSidednessCurrTest {
             tagData = new Tag767CcyAllowableOneSidednessCurr( new MyCurrencyType( oneElement ));
             assertEquals( "FIX767_CCY_ALLOWABLE_ONE_SIDEDNESS_CURR", tagData.toFIXLabelString());
             assertEquals( "767", tagData.toFIXIDString());
-            assertEquals( "ALLOWABLE_ONE_SIDEDNESS_CURR", tagData.toEnumNameString());
+            assertEquals( "ALLOWABLE_ONE_SIDEDNESS_CURR", tagData.toFIXNameString());
             assertEquals( "AllowableOneSidednessCurr", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag767CcyAllowableOneSidednessCurrTest {
             assertEquals( "Tag767CcyAllowableOneSidednessCurr\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

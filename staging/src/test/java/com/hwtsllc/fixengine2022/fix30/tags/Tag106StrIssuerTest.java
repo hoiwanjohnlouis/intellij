@@ -44,12 +44,12 @@ class Tag106StrIssuerTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag106StrIssuer( new MyStringType( oneElement ));
             assertEquals( "FIX106_STR_ISSUER", tagData.toFIXLabelString());
-            assertEquals( "ISSUER", tagData.toEnumNameString());
+            assertEquals( "ISSUER", tagData.toFIXNameString());
             assertEquals( "106", tagData.toFIXIDString());
             assertEquals( "Issuer", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag106StrIssuerTest {
             assertEquals( "Tag106StrIssuer\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

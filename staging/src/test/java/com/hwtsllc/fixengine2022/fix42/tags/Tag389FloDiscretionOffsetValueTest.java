@@ -45,11 +45,11 @@ class Tag389FloDiscretionOffsetValueTest {
             tagData = new Tag389FloDiscretionOffsetValue( new MyFloatType( oneElement ));
             assertEquals( "FIX389_FLO_DISCRETION_OFFSET_VALUE", tagData.toFIXLabelString());
             assertEquals( "389", tagData.toFIXIDString());
-            assertEquals( "DISCRETION_OFFSET_VALUE", tagData.toEnumNameString());
+            assertEquals( "DISCRETION_OFFSET_VALUE", tagData.toFIXNameString());
             assertEquals( "DiscretionOffsetValue", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag389FloDiscretionOffsetValueTest {
             assertEquals( "Tag389FloDiscretionOffsetValue\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

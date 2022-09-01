@@ -45,11 +45,11 @@ class Tag832IntTotNumAssignmentReportsTest {
             tagData = new Tag832IntTotNumAssignmentReports( new MyIntType( oneElement ));
             assertEquals( "FIX832_INT_TOT_NUM_ASSIGNMENT_REPORTS", tagData.toFIXLabelString());
             assertEquals( "832", tagData.toFIXIDString());
-            assertEquals( "TOT_NUM_ASSIGNMENT_REPORTS", tagData.toEnumNameString());
+            assertEquals( "TOT_NUM_ASSIGNMENT_REPORTS", tagData.toFIXNameString());
             assertEquals( "TotNumAssignmentReports", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag832IntTotNumAssignmentReportsTest {
             assertEquals( "Tag832IntTotNumAssignmentReports\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

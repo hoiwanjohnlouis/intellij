@@ -45,11 +45,11 @@ class Tag1117StrRootPartyIDTest {
             tagData = new Tag1117StrRootPartyID( new MyStringType( oneElement ));
             assertEquals( "FIX1117_STR_ROOT_PARTY_ID", tagData.toFIXLabelString());
             assertEquals( "1117", tagData.toFIXIDString());
-            assertEquals( "ROOT_PARTY_ID", tagData.toEnumNameString());
+            assertEquals( "ROOT_PARTY_ID", tagData.toFIXNameString());
             assertEquals( "RootPartyID", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag1117StrRootPartyIDTest {
             assertEquals( "Tag1117StrRootPartyID\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

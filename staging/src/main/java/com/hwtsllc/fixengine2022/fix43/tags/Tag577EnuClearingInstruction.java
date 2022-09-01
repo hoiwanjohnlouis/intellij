@@ -106,7 +106,7 @@ public class Tag577EnuClearingInstruction extends FIX43Abstract implements LogVa
      */
     @Override
     public String toDataNameString() {
-        return dataValue.toEnumNameString();
+        return dataValue.toFIXNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data

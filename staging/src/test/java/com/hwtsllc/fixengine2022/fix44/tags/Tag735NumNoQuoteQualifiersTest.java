@@ -45,11 +45,11 @@ class Tag735NumNoQuoteQualifiersTest {
             tagData = new Tag735NumNoQuoteQualifiers( new MyNumInGroupType( oneElement ));
             assertEquals( "FIX735_NUM_NO_QUOTE_QUALIFIERS", tagData.toFIXLabelString());
             assertEquals( "735", tagData.toFIXIDString());
-            assertEquals( "NO_QUOTE_QUALIFIERS", tagData.toEnumNameString());
+            assertEquals( "NO_QUOTE_QUALIFIERS", tagData.toFIXNameString());
             assertEquals( "NoQuoteQualifiers", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag735NumNoQuoteQualifiersTest {
             assertEquals( "Tag735NumNoQuoteQualifiers\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

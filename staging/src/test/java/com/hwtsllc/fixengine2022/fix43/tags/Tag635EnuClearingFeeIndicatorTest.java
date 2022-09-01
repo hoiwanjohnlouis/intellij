@@ -41,11 +41,11 @@ class Tag635EnuClearingFeeIndicatorTest {
             tagData = new Tag635EnuClearingFeeIndicator(oneEnum);
             assertEquals( "FIX635_ENU_CLEARING_FEE_INDICATOR", tagData.toFIXLabelString());
             assertEquals( "635", tagData.toFIXIDString());
-            assertEquals( "CLEARING_FEE_INDICATOR", tagData.toEnumNameString());
+            assertEquals( "CLEARING_FEE_INDICATOR", tagData.toFIXNameString());
             assertEquals( "ClearingFeeIndicator", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -157,7 +157,7 @@ class Tag635EnuClearingFeeIndicatorTest {
             assertEquals( "Tag635EnuClearingFeeIndicator\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

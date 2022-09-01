@@ -41,11 +41,11 @@ class Tag590EnuBookingUnitTest {
             tagData = new Tag590EnuBookingUnit(oneEnum);
             assertEquals( "FIX590_ENU_BOOKING_UNIT", tagData.toFIXLabelString());
             assertEquals( "590", tagData.toFIXIDString());
-            assertEquals( "BOOKING_UNIT", tagData.toEnumNameString());
+            assertEquals( "BOOKING_UNIT", tagData.toFIXNameString());
             assertEquals( "BookingUnit", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -98,7 +98,7 @@ class Tag590EnuBookingUnitTest {
             assertEquals( "Tag590EnuBookingUnit\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

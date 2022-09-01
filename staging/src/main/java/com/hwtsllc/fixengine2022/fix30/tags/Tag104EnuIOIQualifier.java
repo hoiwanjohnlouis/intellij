@@ -120,7 +120,7 @@ public class Tag104EnuIOIQualifier extends FIX30Abstract implements LogValuePair
      */
     @Override
     public String toDataNameString() {
-        return dataValue.toEnumNameString();
+        return dataValue.toFIXNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data

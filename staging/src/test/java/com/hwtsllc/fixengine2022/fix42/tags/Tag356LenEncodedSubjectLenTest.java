@@ -45,11 +45,11 @@ class Tag356LenEncodedSubjectLenTest {
             tagData = new Tag356LenEncodedSubjectLen( new MyLengthType( oneElement ));
             assertEquals( "FIX356_LEN_ENCODED_SUBJECT_LEN", tagData.toFIXLabelString());
             assertEquals( "356", tagData.toFIXIDString());
-            assertEquals( "ENCODED_SUBJECT_LEN", tagData.toEnumNameString());
+            assertEquals( "ENCODED_SUBJECT_LEN", tagData.toFIXNameString());
             assertEquals( "EncodedSubjectLen", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag356LenEncodedSubjectLenTest {
             assertEquals( "Tag356LenEncodedSubjectLen\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

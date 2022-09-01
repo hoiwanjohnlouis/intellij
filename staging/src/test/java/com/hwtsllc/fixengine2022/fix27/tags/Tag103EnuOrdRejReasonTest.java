@@ -40,11 +40,11 @@ class Tag103EnuOrdRejReasonTest {
         for (Enum103OrdRejReason oneEnum : Enum103OrdRejReason.values()) {
             tagData = new Tag103EnuOrdRejReason(oneEnum);
             assertEquals( "FIX103_ENU_ORD_REJ_REASON", tagData.toFIXLabelString());
-            assertEquals( "ORD_REJ_REASON", tagData.toEnumNameString());
+            assertEquals( "ORD_REJ_REASON", tagData.toFIXNameString());
             assertEquals( "103", tagData.toFIXIDString());
             assertEquals( "OrdRejReason",  tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -186,7 +186,7 @@ class Tag103EnuOrdRejReasonTest {
             assertEquals( "Tag103EnuOrdRejReason\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

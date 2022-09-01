@@ -45,11 +45,11 @@ class Tag488StrCardHolderNameTest {
             tagData = new Tag488StrCardHolderName( new MyStringType( oneElement ));
             assertEquals( "FIX488_STR_CARD_HOLDER_NAME", tagData.toFIXLabelString());
             assertEquals( "488", tagData.toFIXIDString());
-            assertEquals( "CARD_HOLDER_NAME", tagData.toEnumNameString());
+            assertEquals( "CARD_HOLDER_NAME", tagData.toFIXNameString());
             assertEquals( "CardHolderName", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag488StrCardHolderNameTest {
             assertEquals( "Tag488StrCardHolderName\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

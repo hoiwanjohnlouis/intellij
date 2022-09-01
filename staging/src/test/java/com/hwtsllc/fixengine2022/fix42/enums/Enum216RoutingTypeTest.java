@@ -45,38 +45,38 @@ class Enum216RoutingTypeTest {
          */
         enumType = Enum216RoutingType.TARGET_FIRM;
         assertEquals("1", enumType.toFIXIDString());
-        assertEquals("TARGET_FIRM", enumType.toEnumNameString());
+        assertEquals("TARGET_FIRM", enumType.toFIXNameString());
         assertEquals("1 - Target Firm", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum216RoutingType.TARGET_LIST;
         assertEquals("2", enumType.toFIXIDString());
-        assertEquals("TARGET_LIST", enumType.toEnumNameString());
+        assertEquals("TARGET_LIST", enumType.toFIXNameString());
         assertEquals("2 - Target List", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum216RoutingType.BLOCK_FIRM;
         assertEquals("3", enumType.toFIXIDString());
-        assertEquals("BLOCK_FIRM", enumType.toEnumNameString());
+        assertEquals("BLOCK_FIRM", enumType.toFIXNameString());
         assertEquals("3 - Block Firm", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum216RoutingType.BLOCK_LIST;
         assertEquals("4", enumType.toFIXIDString());
-        assertEquals("BLOCK_LIST", enumType.toEnumNameString());
+        assertEquals("BLOCK_LIST", enumType.toFIXNameString());
         assertEquals("4 - Block List", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

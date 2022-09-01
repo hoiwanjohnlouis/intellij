@@ -41,10 +41,10 @@ class Tag835EnuPegMoveTypeTest {
             tagData = new Tag835EnuPegMoveType(oneEnum);
             assertEquals( "FIX835_ENU_PEG_MOVE_TYPE", tagData.toFIXLabelString());
             assertEquals( "835", tagData.toFIXIDString());
-            assertEquals( "PEG_MOVE_TYPE", tagData.toEnumNameString());
+            assertEquals( "PEG_MOVE_TYPE", tagData.toFIXNameString());
             assertEquals( "PegMoveType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -93,7 +93,7 @@ class Tag835EnuPegMoveTypeTest {
             assertEquals( "Tag835EnuPegMoveType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

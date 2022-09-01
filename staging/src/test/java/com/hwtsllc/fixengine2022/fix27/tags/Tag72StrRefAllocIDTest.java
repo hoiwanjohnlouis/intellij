@@ -44,12 +44,12 @@ class Tag72StrRefAllocIDTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag72StrRefAllocID( new MyStringType( oneElement ));
             assertEquals( "FIX72_STR_REF_ALLOC_ID", tagData.toFIXLabelString());
-            assertEquals( "REF_ALLOC_ID", tagData.toEnumNameString());
+            assertEquals( "REF_ALLOC_ID", tagData.toFIXNameString());
             assertEquals( "72", tagData.toFIXIDString());
             assertEquals( "RefAllocID", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -84,7 +84,7 @@ class Tag72StrRefAllocIDTest {
             assertEquals( "Tag72StrRefAllocID\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

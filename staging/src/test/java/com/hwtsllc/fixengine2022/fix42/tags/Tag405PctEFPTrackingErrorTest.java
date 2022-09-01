@@ -45,11 +45,11 @@ class Tag405PctEFPTrackingErrorTest {
             tagData = new Tag405PctEFPTrackingError( new MyPercentageType( oneElement ));
             assertEquals( "FIX405_PCT_EFP_TRACKING_ERROR", tagData.toFIXLabelString());
             assertEquals( "405", tagData.toFIXIDString());
-            assertEquals( "EFP_TRACKING_ERROR", tagData.toEnumNameString());
+            assertEquals( "EFP_TRACKING_ERROR", tagData.toFIXNameString());
             assertEquals( "EFPTrackingError", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag405PctEFPTrackingErrorTest {
             assertEquals( "Tag405PctEFPTrackingError\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

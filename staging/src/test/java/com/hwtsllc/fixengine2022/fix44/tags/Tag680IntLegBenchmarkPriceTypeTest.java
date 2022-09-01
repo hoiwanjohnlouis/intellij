@@ -45,11 +45,11 @@ class Tag680IntLegBenchmarkPriceTypeTest {
             tagData = new Tag680IntLegBenchmarkPriceType( new MyIntType( oneElement ));
             assertEquals( "FIX680_INT_LEG_BENCHMARK_PRICE_TYPE", tagData.toFIXLabelString());
             assertEquals( "680", tagData.toFIXIDString());
-            assertEquals( "LEG_BENCHMARK_PRICE_TYPE", tagData.toEnumNameString());
+            assertEquals( "LEG_BENCHMARK_PRICE_TYPE", tagData.toFIXNameString());
             assertEquals( "LegBenchmarkPriceType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag680IntLegBenchmarkPriceTypeTest {
             assertEquals( "Tag680IntLegBenchmarkPriceType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

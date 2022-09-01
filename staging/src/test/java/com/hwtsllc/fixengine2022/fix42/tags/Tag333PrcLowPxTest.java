@@ -45,11 +45,11 @@ class Tag333PrcLowPxTest {
             tagData = new Tag333PrcLowPx( new MyPriceType( oneElement ));
             assertEquals( "FIX333_PRC_LOW_PX", tagData.toFIXLabelString());
             assertEquals( "333", tagData.toFIXIDString());
-            assertEquals( "LOW_PX", tagData.toEnumNameString());
+            assertEquals( "LOW_PX", tagData.toFIXNameString());
             assertEquals( "LowPx", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag333PrcLowPxTest {
             assertEquals( "Tag333PrcLowPx\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

@@ -45,11 +45,11 @@ class Tag969FloMinPriceIncrementTest {
             tagData = new Tag969FloMinPriceIncrement( new MyFloatType( oneElement ));
             assertEquals( "FIX969_FLO_MIN_PRICE_INCREMENT", tagData.toFIXLabelString());
             assertEquals( "969", tagData.toFIXIDString());
-            assertEquals( "MIN_PRICE_INCREMENT", tagData.toEnumNameString());
+            assertEquals( "MIN_PRICE_INCREMENT", tagData.toFIXNameString());
             assertEquals( "MinPriceIncrement", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag969FloMinPriceIncrementTest {
             assertEquals( "Tag969FloMinPriceIncrement\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

@@ -97,7 +97,7 @@ public class Tag127EnuDKReason extends FIX40Abstract implements LogValuePairStri
      */
     @Override
     public String toDataNameString() {
-        return dataValue.toEnumNameString();
+        return dataValue.toFIXNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data

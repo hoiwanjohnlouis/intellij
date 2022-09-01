@@ -40,11 +40,11 @@ class Tag4EnuAdvSideTest {
         for (Enum4AdvSide oneEnum : Enum4AdvSide.values()) {
             tagData = new Tag4EnuAdvSide(oneEnum);
             assertEquals( "FIX4_ENU_ADV_SIDE", tagData.toFIXLabelString());
-            assertEquals( "ADV_SIDE", tagData.toEnumNameString());
+            assertEquals( "ADV_SIDE", tagData.toFIXNameString());
             assertEquals( "4", tagData.toFIXIDString());
             assertEquals( "AdvSide", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -100,7 +100,7 @@ class Tag4EnuAdvSideTest {
             assertEquals( "Tag4EnuAdvSide\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

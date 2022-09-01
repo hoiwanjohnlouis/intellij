@@ -45,11 +45,11 @@ class Tag241LmdUnderlyingCouponPaymentDateTest {
             tagData = new Tag241LmdUnderlyingCouponPaymentDate( new MyLocalMktDateType( oneElement ));
             assertEquals( "FIX241_LMD_UNDERLYING_COUPON_PAYMENT_DATE", tagData.toFIXLabelString());
             assertEquals( "241", tagData.toFIXIDString());
-            assertEquals( "UNDERLYING_COUPON_PAYMENT_DATE", tagData.toEnumNameString());
+            assertEquals( "UNDERLYING_COUPON_PAYMENT_DATE", tagData.toFIXNameString());
             assertEquals( "UnderlyingCouponPaymentDate", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag241LmdUnderlyingCouponPaymentDateTest {
             assertEquals( "Tag241LmdUnderlyingCouponPaymentDate\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

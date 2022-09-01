@@ -52,11 +52,11 @@ class Tag886AmtUnderlyingEndValueTest {
             tagData = new Tag886AmtUnderlyingEndValue( new MyAmtType( oneElement ));
             assertEquals( "FIX886_AMT_UNDERLYING_END_VALUE", tagData.toFIXLabelString());
             assertEquals( "886", tagData.toFIXIDString());
-            assertEquals( "UNDERLYING_END_VALUE", tagData.toEnumNameString());
+            assertEquals( "UNDERLYING_END_VALUE", tagData.toFIXNameString());
             assertEquals( "UnderlyingEndValue", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -87,7 +87,7 @@ class Tag886AmtUnderlyingEndValueTest {
             assertEquals( "Tag886AmtUnderlyingEndValue\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

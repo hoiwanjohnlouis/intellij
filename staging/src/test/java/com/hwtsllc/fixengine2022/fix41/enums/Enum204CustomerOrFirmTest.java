@@ -46,18 +46,18 @@ class Enum204CustomerOrFirmTest {
          */
         enumType = Enum204CustomerOrFirm.CUSTOMER;
         assertEquals("0", enumType.toFIXIDString());
-        assertEquals("CUSTOMER", enumType.toEnumNameString());
+        assertEquals("CUSTOMER", enumType.toFIXNameString());
         assertEquals("0 - Customer", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum204CustomerOrFirm.FIRM;
         assertEquals("1", enumType.toFIXIDString());
-        assertEquals("FIRM", enumType.toEnumNameString());
+        assertEquals("FIRM", enumType.toFIXNameString());
         assertEquals("1 - Firm", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

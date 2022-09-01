@@ -45,11 +45,11 @@ class Tag593StrUnderlyingStateOrProvinceOfIssueTest {
             tagData = new Tag593StrUnderlyingStateOrProvinceOfIssue( new MyStringType( oneElement ));
             assertEquals( "FIX593_STR_UNDERLYING_STATE_OR_PROVINCE_OF_ISSUE", tagData.toFIXLabelString());
             assertEquals( "593", tagData.toFIXIDString());
-            assertEquals( "UNDERLYING_STATE_OR_PROVINCE_OF_ISSUE", tagData.toEnumNameString());
+            assertEquals( "UNDERLYING_STATE_OR_PROVINCE_OF_ISSUE", tagData.toFIXNameString());
             assertEquals( "UnderlyingStateOrProvinceOfIssue", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag593StrUnderlyingStateOrProvinceOfIssueTest {
             assertEquals( "Tag593StrUnderlyingStateOrProvinceOfIssue\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

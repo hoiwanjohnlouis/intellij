@@ -46,11 +46,11 @@ class Tag205IntMaturityDayTest {
             tagData = new Tag205IntMaturityDay( new MyIntType( oneElement ));
             assertEquals( "FIX205_INT_MATURITY_DAY", tagData.toFIXLabelString());
             assertEquals( "205", tagData.toFIXIDString());
-            assertEquals( "MATURITY_DAY", tagData.toEnumNameString());
+            assertEquals( "MATURITY_DAY", tagData.toFIXNameString());
             assertEquals( "MaturityDay (replaced)", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -87,7 +87,7 @@ class Tag205IntMaturityDayTest {
             assertEquals( "Tag205IntMaturityDay\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

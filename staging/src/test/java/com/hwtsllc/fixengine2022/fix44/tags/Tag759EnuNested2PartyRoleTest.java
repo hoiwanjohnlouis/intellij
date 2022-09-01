@@ -41,10 +41,10 @@ class Tag759EnuNested2PartyRoleTest {
             tagData = new Tag759EnuNested2PartyRole(oneEnum);
             assertEquals( "FIX759_ENU_NESTED_2_PARTY_ROLE", tagData.toFIXLabelString());
             assertEquals( "759", tagData.toFIXIDString());
-            assertEquals( "NESTED_2_PARTY_ROLE", tagData.toEnumNameString());
+            assertEquals( "NESTED_2_PARTY_ROLE", tagData.toFIXNameString());
             assertEquals( "Nested2PartyRole", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -507,7 +507,7 @@ class Tag759EnuNested2PartyRoleTest {
             assertEquals( "Tag759EnuNested2PartyRole\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

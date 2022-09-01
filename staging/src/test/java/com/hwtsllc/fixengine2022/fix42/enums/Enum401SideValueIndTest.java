@@ -46,20 +46,20 @@ class Enum401SideValueIndTest {
          */
         enumType = Enum401SideValueInd.SIDE_VALUE_1;
         assertEquals( "1", enumType.toFIXIDString());
-        assertEquals( "SIDE_VALUE_1", enumType.toEnumNameString());
+        assertEquals( "SIDE_VALUE_1", enumType.toFIXNameString());
         assertEquals( "1 - Side Value 1", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum401SideValueInd.SIDE_VALUE_2;
         assertEquals( "2", enumType.toFIXIDString());
-        assertEquals( "SIDE_VALUE_2", enumType.toEnumNameString());
+        assertEquals( "SIDE_VALUE_2", enumType.toFIXNameString());
         assertEquals( "2 - Side Value 2", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
     /**

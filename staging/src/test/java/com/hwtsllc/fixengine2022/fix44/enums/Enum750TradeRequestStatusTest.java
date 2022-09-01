@@ -41,26 +41,26 @@ class Enum750TradeRequestStatusTest {
 
         enumType = Enum750TradeRequestStatus.ACCEPTED;
         assertEquals( "0", enumType.toFIXIDString());
-        assertEquals( "ACCEPTED", enumType.toEnumNameString());
+        assertEquals( "ACCEPTED", enumType.toFIXNameString());
         assertEquals( "0 - Accepted", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum750TradeRequestStatus.COMPLETED;
         assertEquals( "1", enumType.toFIXIDString());
-        assertEquals( "COMPLETED", enumType.toEnumNameString());
+        assertEquals( "COMPLETED", enumType.toFIXNameString());
         assertEquals( "1 - Completed", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum750TradeRequestStatus.REJECTED;
         assertEquals( "2", enumType.toFIXIDString());
-        assertEquals( "REJECTED", enumType.toEnumNameString());
+        assertEquals( "REJECTED", enumType.toFIXNameString());
         assertEquals( "2 - Rejected", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

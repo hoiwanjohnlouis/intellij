@@ -45,11 +45,11 @@ class Tag947CcyStrikeCurrencyTest {
             tagData = new Tag947CcyStrikeCurrency( new MyCurrencyType( oneElement ));
             assertEquals( "FIX947_CCY_STRIKE_CURRENCY", tagData.toFIXLabelString());
             assertEquals( "947", tagData.toFIXIDString());
-            assertEquals( "STRIKE_CURRENCY", tagData.toEnumNameString());
+            assertEquals( "STRIKE_CURRENCY", tagData.toFIXNameString());
             assertEquals( "StrikeCurrency", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag947CcyStrikeCurrencyTest {
             assertEquals( "Tag947CcyStrikeCurrency\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

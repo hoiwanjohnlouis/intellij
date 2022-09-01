@@ -44,12 +44,12 @@ class Tag115StrOnBehalfOfCompIDTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag115StrOnBehalfOfCompID( new MyStringType( oneElement ));
             assertEquals( "FIX115_STR_ON_BEHALF_OF_COMP_ID", tagData.toFIXLabelString());
-            assertEquals( "ON_BEHALF_OF_COMP_ID", tagData.toEnumNameString());
+            assertEquals( "ON_BEHALF_OF_COMP_ID", tagData.toFIXNameString());
             assertEquals( "115", tagData.toFIXIDString());
             assertEquals( "OnBehalfOfCompID", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag115StrOnBehalfOfCompIDTest {
             assertEquals( "Tag115StrOnBehalfOfCompID\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

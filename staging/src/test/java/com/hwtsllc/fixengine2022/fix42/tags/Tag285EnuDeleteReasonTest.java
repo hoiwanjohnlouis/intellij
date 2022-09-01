@@ -41,11 +41,11 @@ class Tag285EnuDeleteReasonTest {
             tagData = new Tag285EnuDeleteReason(oneEnum);
             assertEquals( "FIX285_ENU_DELETE_REASON", tagData.toFIXLabelString());
             assertEquals( "285", tagData.toFIXIDString());
-            assertEquals( "DELETE_REASON", tagData.toEnumNameString());
+            assertEquals( "DELETE_REASON", tagData.toFIXNameString());
             assertEquals( "DeleteReason", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -94,7 +94,7 @@ class Tag285EnuDeleteReasonTest {
             assertEquals( "Tag285EnuDeleteReason\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

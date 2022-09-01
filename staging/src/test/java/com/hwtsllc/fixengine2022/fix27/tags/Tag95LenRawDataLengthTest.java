@@ -44,12 +44,12 @@ class Tag95LenRawDataLengthTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag95LenRawDataLength( new MyLengthType( oneElement ));
             assertEquals( "FIX95_LEN_RAW_DATA_LENGTH", tagData.toFIXLabelString());
-            assertEquals( "RAW_DATA_LENGTH", tagData.toEnumNameString());
+            assertEquals( "RAW_DATA_LENGTH", tagData.toFIXNameString());
             assertEquals( "95", tagData.toFIXIDString());
             assertEquals( "RawDataLength", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag95LenRawDataLengthTest {
             assertEquals( "Tag95LenRawDataLength\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

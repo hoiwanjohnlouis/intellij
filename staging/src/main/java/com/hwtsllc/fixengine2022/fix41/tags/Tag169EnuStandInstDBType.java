@@ -94,7 +94,7 @@ public class Tag169EnuStandInstDBType extends FIX41Abstract implements LogValueP
      */
     @Override
     public String toDataNameString() {
-        return dataValue.toEnumNameString();
+        return dataValue.toFIXNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data

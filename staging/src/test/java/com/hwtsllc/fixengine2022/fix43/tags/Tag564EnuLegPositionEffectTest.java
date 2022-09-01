@@ -41,11 +41,11 @@ class Tag564EnuLegPositionEffectTest {
             tagData = new Tag564EnuLegPositionEffect(oneEnum);
             assertEquals( "FIX564_ENU_LEG_POSITION_EFFECT", tagData.toFIXLabelString());
             assertEquals( "564", tagData.toFIXIDString());
-            assertEquals( "LEG_POSITION_EFFECT", tagData.toEnumNameString());
+            assertEquals( "LEG_POSITION_EFFECT", tagData.toFIXNameString());
             assertEquals( "LegPositionEffect", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -101,7 +101,7 @@ class Tag564EnuLegPositionEffectTest {
             assertEquals( "Tag564EnuLegPositionEffect\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

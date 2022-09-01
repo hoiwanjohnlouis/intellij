@@ -94,7 +94,7 @@ public class Tag481EnuMoneyLaunderingStatus extends FIX43Abstract implements Log
      */
     @Override
     public String toDataNameString() {
-        return dataValue.toEnumNameString();
+        return dataValue.toFIXNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data

@@ -52,11 +52,11 @@ class Tag890AmtMaturityNetMoneyTest {
             tagData = new Tag890AmtMaturityNetMoney( new MyAmtType( oneElement ));
             assertEquals( "FIX890_AMT_MATURITY_NET_MONEY", tagData.toFIXLabelString());
             assertEquals( "890", tagData.toFIXIDString());
-            assertEquals( "MATURITY_NET_MONEY", tagData.toEnumNameString());
+            assertEquals( "MATURITY_NET_MONEY", tagData.toFIXNameString());
             assertEquals( "MaturityNetMoney", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -87,7 +87,7 @@ class Tag890AmtMaturityNetMoneyTest {
             assertEquals( "Tag890AmtMaturityNetMoney\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

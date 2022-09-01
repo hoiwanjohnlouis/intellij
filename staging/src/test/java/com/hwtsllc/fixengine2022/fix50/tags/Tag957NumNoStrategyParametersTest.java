@@ -45,11 +45,11 @@ class Tag957NumNoStrategyParametersTest {
             tagData = new Tag957NumNoStrategyParameters( new MyNumInGroupType( oneElement ));
             assertEquals( "FIX957_NUM_NO_STRATEGY_PARAMETERS", tagData.toFIXLabelString());
             assertEquals( "957", tagData.toFIXIDString());
-            assertEquals( "NO_STRATEGY_PARAMETERS", tagData.toEnumNameString());
+            assertEquals( "NO_STRATEGY_PARAMETERS", tagData.toFIXNameString());
             assertEquals( "NoStrategyParameters", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag957NumNoStrategyParametersTest {
             assertEquals( "Tag957NumNoStrategyParameters\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

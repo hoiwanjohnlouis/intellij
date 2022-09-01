@@ -45,11 +45,11 @@ class Tag713StrOrigPosReqRefIDTest {
             tagData = new Tag713StrOrigPosReqRefID( new MyStringType( oneElement ));
             assertEquals( "FIX713_STR_ORIG_POS_REQ_REF_ID", tagData.toFIXLabelString());
             assertEquals( "713", tagData.toFIXIDString());
-            assertEquals( "ORIG_POS_REQ_REF_ID", tagData.toEnumNameString());
+            assertEquals( "ORIG_POS_REQ_REF_ID", tagData.toFIXNameString());
             assertEquals( "OrigPosReqRefID", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag713StrOrigPosReqRefIDTest {
             assertEquals( "Tag713StrOrigPosReqRefID\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

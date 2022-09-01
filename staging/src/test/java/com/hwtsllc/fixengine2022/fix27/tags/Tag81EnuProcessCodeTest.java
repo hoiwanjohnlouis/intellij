@@ -40,11 +40,11 @@ class Tag81EnuProcessCodeTest {
         for (Enum81ProcessCode oneEnum : Enum81ProcessCode.values()) {
             tagData = new Tag81EnuProcessCode(oneEnum);
             assertEquals( "FIX81_ENU_PROCESS_CODE", tagData.toFIXLabelString());
-            assertEquals( "PROCESS_CODE", tagData.toEnumNameString());
+            assertEquals( "PROCESS_CODE", tagData.toFIXNameString());
             assertEquals( "81", tagData.toFIXIDString());
             assertEquals( "ProcessCode", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -118,7 +118,7 @@ class Tag81EnuProcessCodeTest {
             assertEquals( "Tag81EnuProcessCode\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

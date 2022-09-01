@@ -44,12 +44,12 @@ class Tag60UtcTransactTimeTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag60UtcTransactTime( new MyUTCTimestampType( oneElement ));
             assertEquals( "FIX60_UTC_TRANSACT_TIME", tagData.toFIXLabelString());
-            assertEquals( "TRANSACT_TIME", tagData.toEnumNameString());
+            assertEquals( "TRANSACT_TIME", tagData.toFIXNameString());
             assertEquals( "60", tagData.toFIXIDString());
             assertEquals( "TransactTime", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -84,7 +84,7 @@ class Tag60UtcTransactTimeTest {
             assertEquals( "Tag60UtcTransactTime\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

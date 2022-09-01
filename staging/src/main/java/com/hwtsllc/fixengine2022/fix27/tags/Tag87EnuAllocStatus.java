@@ -98,7 +98,7 @@ public class Tag87EnuAllocStatus extends FIX27Abstract implements LogValuePairSt
      */
     @Override
     public String toDataNameString() {
-        return dataValue.toEnumNameString();
+        return dataValue.toFIXNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data

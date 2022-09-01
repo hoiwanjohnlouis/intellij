@@ -41,11 +41,11 @@ class Tag464EnuTestMessageIndicatorTest {
             tagData = new Tag464EnuTestMessageIndicator(oneEnum);
             assertEquals( "FIX464_ENU_TEST_MESSAGE_INDICATOR", tagData.toFIXLabelString());
             assertEquals( "464", tagData.toFIXIDString());
-            assertEquals( "TEST_MESSAGE_INDICATOR", tagData.toEnumNameString());
+            assertEquals( "TEST_MESSAGE_INDICATOR", tagData.toFIXNameString());
             assertEquals( "TestMessageIndicator", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -93,7 +93,7 @@ class Tag464EnuTestMessageIndicatorTest {
             assertEquals( "Tag464EnuTestMessageIndicator\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

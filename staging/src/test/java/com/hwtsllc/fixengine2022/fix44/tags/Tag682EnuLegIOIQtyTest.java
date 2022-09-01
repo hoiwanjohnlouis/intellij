@@ -41,10 +41,10 @@ class Tag682EnuLegIOIQtyTest {
             tagData = new Tag682EnuLegIOIQty(oneEnum);
             assertEquals( "FIX682_ENU_LEG_IOI_QTY", tagData.toFIXLabelString());
             assertEquals( "682", tagData.toFIXIDString());
-            assertEquals( "LEG_IOI_QTY", tagData.toEnumNameString());
+            assertEquals( "LEG_IOI_QTY", tagData.toFIXNameString());
             assertEquals( "LegIOIQty", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -106,7 +106,7 @@ class Tag682EnuLegIOIQtyTest {
             assertEquals( "Tag682EnuLegIOIQty\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

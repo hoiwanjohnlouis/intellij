@@ -46,11 +46,11 @@ class Tag439StrClearingFirmTest {
             tagData = new Tag439StrClearingFirm( new MyStringType( oneElement ));
             assertEquals( "FIX439_STR_CLEARING_FIRM", tagData.toFIXLabelString());
             assertEquals( "439", tagData.toFIXIDString());
-            assertEquals( "CLEARING_FIRM", tagData.toEnumNameString());
+            assertEquals( "CLEARING_FIRM", tagData.toFIXNameString());
             assertEquals( "ClearingFirm", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -87,7 +87,7 @@ class Tag439StrClearingFirmTest {
             assertEquals( "Tag439StrClearingFirm\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

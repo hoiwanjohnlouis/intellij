@@ -45,11 +45,11 @@ class Tag632PctBidYieldTest {
             tagData = new Tag632PctBidYield( new MyPercentageType( oneElement ));
             assertEquals( "FIX632_PCT_BID_YIELD", tagData.toFIXLabelString());
             assertEquals( "632", tagData.toFIXIDString());
-            assertEquals( "BID_YIELD", tagData.toEnumNameString());
+            assertEquals( "BID_YIELD", tagData.toFIXNameString());
             assertEquals( "BidYield", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag632PctBidYieldTest {
             assertEquals( "Tag632PctBidYield\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

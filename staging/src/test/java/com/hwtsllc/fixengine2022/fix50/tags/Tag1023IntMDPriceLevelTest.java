@@ -45,11 +45,11 @@ class Tag1023IntMDPriceLevelTest {
             tagData = new Tag1023IntMDPriceLevel( new MyIntType( oneElement ));
             assertEquals( "FIX1023_INT_MD_PRICE_LEVEL", tagData.toFIXLabelString());
             assertEquals( "1023", tagData.toFIXIDString());
-            assertEquals( "MD_PRICE_LEVEL", tagData.toEnumNameString());
+            assertEquals( "MD_PRICE_LEVEL", tagData.toFIXNameString());
             assertEquals( "MDPriceLevel", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag1023IntMDPriceLevelTest {
             assertEquals( "Tag1023IntMDPriceLevel\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

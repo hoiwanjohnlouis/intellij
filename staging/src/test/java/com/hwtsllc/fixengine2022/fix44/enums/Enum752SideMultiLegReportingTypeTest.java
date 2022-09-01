@@ -42,26 +42,26 @@ class Enum752SideMultiLegReportingTypeTest {
 
         enumType = Enum752SideMultiLegReportingType.SINGLE_SECURITY;
         assertEquals( "1", enumType.toFIXIDString());
-        assertEquals( "SINGLE_SECURITY", enumType.toEnumNameString());
+        assertEquals( "SINGLE_SECURITY", enumType.toFIXNameString());
         assertEquals( "1 - Single Security (default if not specified)", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum752SideMultiLegReportingType.INDIVIDUAL_LEG;
         assertEquals( "2", enumType.toFIXIDString());
-        assertEquals( "INDIVIDUAL_LEG", enumType.toEnumNameString());
+        assertEquals( "INDIVIDUAL_LEG", enumType.toFIXNameString());
         assertEquals( "2 - Individual leg of a multileg security", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum752SideMultiLegReportingType.MULTILEG_SECURITY;
         assertEquals( "3", enumType.toFIXIDString());
-        assertEquals( "MULTILEG_SECURITY", enumType.toEnumNameString());
+        assertEquals( "MULTILEG_SECURITY", enumType.toFIXNameString());
         assertEquals( "3 - Multileg Security", enumType.toEnumDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

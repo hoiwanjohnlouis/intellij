@@ -45,11 +45,11 @@ class Tag408AmtValueOfFuturesTest {
             tagData = new Tag408AmtValueOfFutures( new MyAmtType( oneElement ));
             assertEquals( "FIX408_AMT_VALUE_OF_FUTURES", tagData.toFIXLabelString());
             assertEquals( "408", tagData.toFIXIDString());
-            assertEquals( "VALUE_OF_FUTURES", tagData.toEnumNameString());
+            assertEquals( "VALUE_OF_FUTURES", tagData.toFIXNameString());
             assertEquals( "ValueOfFutures", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag408AmtValueOfFuturesTest {
             assertEquals( "Tag408AmtValueOfFutures\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

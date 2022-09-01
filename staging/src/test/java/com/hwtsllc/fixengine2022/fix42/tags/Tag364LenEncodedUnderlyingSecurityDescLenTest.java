@@ -45,11 +45,11 @@ class Tag364LenEncodedUnderlyingSecurityDescLenTest {
             tagData = new Tag364LenEncodedUnderlyingSecurityDescLen( new MyLengthType( oneElement ));
             assertEquals( "FIX364_LEN_ENCODED_UNDERLYING_SECURITY_DESC_LEN", tagData.toFIXLabelString());
             assertEquals( "364", tagData.toFIXIDString());
-            assertEquals( "ENCODED_UNDERLYING_SECURITY_DESC_LEN", tagData.toEnumNameString());
+            assertEquals( "ENCODED_UNDERLYING_SECURITY_DESC_LEN", tagData.toFIXNameString());
             assertEquals( "EncodedUnderlyingSecurityDescLen", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag364LenEncodedUnderlyingSecurityDescLenTest {
             assertEquals( "Tag364LenEncodedUnderlyingSecurityDescLen\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

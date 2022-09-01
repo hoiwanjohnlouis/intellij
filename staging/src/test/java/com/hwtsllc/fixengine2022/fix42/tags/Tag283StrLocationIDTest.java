@@ -45,11 +45,11 @@ class Tag283StrLocationIDTest {
             tagData = new Tag283StrLocationID( new MyStringType( oneElement ));
             assertEquals( "FIX283_STR_LOCATION_ID", tagData.toFIXLabelString());
             assertEquals( "283", tagData.toFIXIDString());
-            assertEquals( "LOCATION_ID", tagData.toEnumNameString());
+            assertEquals( "LOCATION_ID", tagData.toFIXNameString());
             assertEquals( "LocationID", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag283StrLocationIDTest {
             assertEquals( "Tag283StrLocationID\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

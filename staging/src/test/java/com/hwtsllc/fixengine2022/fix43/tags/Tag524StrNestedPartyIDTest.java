@@ -45,11 +45,11 @@ class Tag524StrNestedPartyIDTest {
             tagData = new Tag524StrNestedPartyID( new MyStringType( oneElement ));
             assertEquals( "FIX524_STR_NESTED_PARTY_ID", tagData.toFIXLabelString());
             assertEquals( "524", tagData.toFIXIDString());
-            assertEquals( "NESTED_PARTY_ID", tagData.toEnumNameString());
+            assertEquals( "NESTED_PARTY_ID", tagData.toFIXNameString());
             assertEquals( "NestedPartyID", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag524StrNestedPartyIDTest {
             assertEquals( "Tag524StrNestedPartyID\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

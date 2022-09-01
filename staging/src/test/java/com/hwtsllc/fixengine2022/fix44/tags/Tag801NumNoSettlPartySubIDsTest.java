@@ -45,11 +45,11 @@ class Tag801NumNoSettlPartySubIDsTest {
             tagData = new Tag801NumNoSettlPartySubIDs( new MyNumInGroupType( oneElement ));
             assertEquals( "FIX801_NUM_NO_SETTL_PARTY_SUB_IDS", tagData.toFIXLabelString());
             assertEquals( "801", tagData.toFIXIDString());
-            assertEquals( "NO_SETTL_PARTY_SUB_IDS", tagData.toEnumNameString());
+            assertEquals( "NO_SETTL_PARTY_SUB_IDS", tagData.toFIXNameString());
             assertEquals( "NoSettlPartySubIDs", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag801NumNoSettlPartySubIDsTest {
             assertEquals( "Tag801NumNoSettlPartySubIDs\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

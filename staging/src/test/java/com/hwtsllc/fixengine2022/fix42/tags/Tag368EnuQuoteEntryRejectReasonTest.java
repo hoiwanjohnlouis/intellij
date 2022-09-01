@@ -41,11 +41,11 @@ class Tag368EnuQuoteEntryRejectReasonTest {
             tagData = new Tag368EnuQuoteEntryRejectReason(oneEnum);
             assertEquals( "FIX368_ENU_QUOTE_ENTRY_REJECT_REASON", tagData.toFIXLabelString());
             assertEquals( "368", tagData.toFIXIDString());
-            assertEquals( "QUOTE_ENTRY_REJECT_REASON", tagData.toEnumNameString());
+            assertEquals( "QUOTE_ENTRY_REJECT_REASON", tagData.toFIXNameString());
             assertEquals( "QuoteEntryRejectReason", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -139,7 +139,7 @@ class Tag368EnuQuoteEntryRejectReasonTest {
             assertEquals( "Tag368EnuQuoteEntryRejectReason\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

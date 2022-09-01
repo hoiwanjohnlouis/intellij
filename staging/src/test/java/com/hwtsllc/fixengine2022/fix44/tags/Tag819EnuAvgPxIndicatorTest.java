@@ -41,10 +41,10 @@ class Tag819EnuAvgPxIndicatorTest {
             tagData = new Tag819EnuAvgPxIndicator(oneEnum);
             assertEquals( "FIX819_ENU_AVG_PX_INDICATOR", tagData.toFIXLabelString());
             assertEquals( "819", tagData.toFIXIDString());
-            assertEquals( "AVG_PX_INDICATOR", tagData.toEnumNameString());
+            assertEquals( "AVG_PX_INDICATOR", tagData.toFIXNameString());
             assertEquals( "AvgPxIndicator", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -98,7 +98,7 @@ class Tag819EnuAvgPxIndicatorTest {
             assertEquals( "Tag819EnuAvgPxIndicator\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

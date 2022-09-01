@@ -45,11 +45,11 @@ class Tag347StrMessageEncodingTest {
             tagData = new Tag347StrMessageEncoding( new MyStringType( oneElement ));
             assertEquals( "FIX347_STR_MESSAGE_ENCODING", tagData.toFIXLabelString());
             assertEquals( "347", tagData.toFIXIDString());
-            assertEquals( "MESSAGE_ENCODING", tagData.toEnumNameString());
+            assertEquals( "MESSAGE_ENCODING", tagData.toFIXNameString());
             assertEquals( "MessageEncoding", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag347StrMessageEncodingTest {
             assertEquals( "Tag347StrMessageEncoding\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

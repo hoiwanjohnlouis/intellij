@@ -41,11 +41,11 @@ class Tag522EnuOwnerTypeTest {
             tagData = new Tag522EnuOwnerType(oneEnum);
             assertEquals( "FIX522_ENU_OWNER_TYPE", tagData.toFIXLabelString());
             assertEquals( "522", tagData.toFIXIDString());
-            assertEquals( "OWNER_TYPE", tagData.toEnumNameString());
+            assertEquals( "OWNER_TYPE", tagData.toFIXNameString());
             assertEquals( "OwnerType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -152,7 +152,7 @@ class Tag522EnuOwnerTypeTest {
             assertEquals( "Tag522EnuOwnerType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

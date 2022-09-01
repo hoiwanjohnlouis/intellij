@@ -41,10 +41,10 @@ class Tag752EnuSideMultiLegReportingTypeTest {
             tagData = new Tag752EnuSideMultiLegReportingType(oneEnum);
             assertEquals( "FIX752_ENU_SIDE_MULTI_LEG_REPORTING_TYPE", tagData.toFIXLabelString());
             assertEquals( "752", tagData.toFIXIDString());
-            assertEquals( "SIDE_MULTI_LEG_REPORTING_TYPE", tagData.toEnumNameString());
+            assertEquals( "SIDE_MULTI_LEG_REPORTING_TYPE", tagData.toFIXNameString());
             assertEquals( "SideMultiLegReportingType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -98,7 +98,7 @@ class Tag752EnuSideMultiLegReportingTypeTest {
             assertEquals( "Tag752EnuSideMultiLegReportingType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

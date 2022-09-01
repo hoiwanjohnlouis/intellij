@@ -44,12 +44,12 @@ class Tag128StrDeliverToCompIDTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag128StrDeliverToCompID( new MyStringType( oneElement ));
             assertEquals( "FIX128_STR_DELIVER_TO_COMP_ID", tagData.toFIXLabelString());
-            assertEquals( "DELIVER_TO_COMP_ID", tagData.toEnumNameString());
+            assertEquals( "DELIVER_TO_COMP_ID", tagData.toFIXNameString());
             assertEquals( "128", tagData.toFIXIDString());
             assertEquals( "DeliverToCompID", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag128StrDeliverToCompIDTest {
             assertEquals( "Tag128StrDeliverToCompID\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

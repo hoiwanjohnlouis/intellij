@@ -40,11 +40,11 @@ class Tag130EnuIOINaturalFlagTest {
         for (Enum130IOINaturalFlag oneEnum : Enum130IOINaturalFlag.values()) {
             tagData = new Tag130EnuIOINaturalFlag(oneEnum);
             assertEquals( "FIX130_ENU_IOI_NATURAL_FLAG", tagData.toFIXLabelString());
-            assertEquals( "IOI_NATURAL_FLAG", tagData.toEnumNameString());
+            assertEquals( "IOI_NATURAL_FLAG", tagData.toFIXNameString());
             assertEquals( "130", tagData.toFIXIDString());
             assertEquals( "IOINaturalFlag", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -93,7 +93,7 @@ class Tag130EnuIOINaturalFlagTest {
             assertEquals( "Tag130EnuIOINaturalFlag\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

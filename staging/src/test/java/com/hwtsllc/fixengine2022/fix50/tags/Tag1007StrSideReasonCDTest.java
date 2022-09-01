@@ -45,11 +45,11 @@ class Tag1007StrSideReasonCDTest {
             tagData = new Tag1007StrSideReasonCD( new MyStringType( oneElement ));
             assertEquals( "FIX1007_STR_SIDE_REASON_CD", tagData.toFIXLabelString());
             assertEquals( "1007", tagData.toFIXIDString());
-            assertEquals( "SIDE_REASON_CD", tagData.toEnumNameString());
+            assertEquals( "SIDE_REASON_CD", tagData.toFIXNameString());
             assertEquals( "SideReasonCD", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag1007StrSideReasonCDTest {
             assertEquals( "Tag1007StrSideReasonCD\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

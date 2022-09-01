@@ -41,26 +41,26 @@ class Enum939TrdRptStatusTest {
 
         enumType = Enum939TrdRptStatus.ACCEPTED;
         assertEquals( "0", enumType.toFIXIDString() );
-        assertEquals( "ACCEPTED", enumType.toEnumNameString() );
+        assertEquals( "ACCEPTED", enumType.toFIXNameString() );
         assertEquals( "0 - Accepted", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum939TrdRptStatus.REJECTED;
         assertEquals( "1", enumType.toFIXIDString() );
-        assertEquals( "REJECTED", enumType.toEnumNameString() );
+        assertEquals( "REJECTED", enumType.toFIXNameString() );
         assertEquals( "1 - Rejected", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
 
         enumType = Enum939TrdRptStatus.ACCEPTED_WITH_ERRORS;
         assertEquals( "3", enumType.toFIXIDString() );
-        assertEquals( "ACCEPTED_WITH_ERRORS", enumType.toEnumNameString() );
+        assertEquals( "ACCEPTED_WITH_ERRORS", enumType.toFIXNameString() );
         assertEquals( "3 - Accepted with errors", enumType.toEnumDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
-        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
+        assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
     }
 }

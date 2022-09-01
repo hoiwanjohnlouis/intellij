@@ -44,12 +44,12 @@ class Tag30StrLastMktTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag30StrLastMkt( new MyStringType( oneElement ));
             assertEquals( "FIX30_STR_LAST_MKT", tagData.toFIXLabelString());
-            assertEquals( "LAST_MKT", tagData.toEnumNameString());
+            assertEquals( "LAST_MKT", tagData.toFIXNameString());
             assertEquals( "30", tagData.toFIXIDString());
             assertEquals( "LastMkt", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -80,7 +80,7 @@ class Tag30StrLastMktTest {
             assertEquals( "Tag30StrLastMkt\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

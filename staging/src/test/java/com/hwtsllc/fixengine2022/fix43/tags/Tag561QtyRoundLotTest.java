@@ -45,11 +45,11 @@ class Tag561QtyRoundLotTest {
             tagData = new Tag561QtyRoundLot( new MyQtyType( oneElement ));
             assertEquals( "FIX561_QTY_ROUND_LOT", tagData.toFIXLabelString());
             assertEquals( "561", tagData.toFIXIDString());
-            assertEquals( "ROUND_LOT", tagData.toEnumNameString());
+            assertEquals( "ROUND_LOT", tagData.toFIXNameString());
             assertEquals( "RoundLot", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag561QtyRoundLotTest {
             assertEquals( "Tag561QtyRoundLot\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

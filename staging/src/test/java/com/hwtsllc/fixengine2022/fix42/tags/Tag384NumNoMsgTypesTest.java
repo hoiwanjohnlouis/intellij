@@ -45,11 +45,11 @@ class Tag384NumNoMsgTypesTest {
             tagData = new Tag384NumNoMsgTypes( new MyNumInGroupType( oneElement ));
             assertEquals( "FIX384_NUM_NO_MSG_TYPES", tagData.toFIXLabelString());
             assertEquals( "384", tagData.toFIXIDString());
-            assertEquals( "NO_MSG_TYPES", tagData.toEnumNameString());
+            assertEquals( "NO_MSG_TYPES", tagData.toFIXNameString());
             assertEquals( "NoMsgTypes", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -86,7 +86,7 @@ class Tag384NumNoMsgTypesTest {
             assertEquals( "Tag384NumNoMsgTypes\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

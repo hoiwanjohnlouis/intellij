@@ -41,10 +41,10 @@ class Tag784EnuSettlPartyRoleTest {
             tagData = new Tag784EnuSettlPartyRole(oneEnum);
             assertEquals( "FIX784_ENU_SETTL_PARTY_ROLE", tagData.toFIXLabelString());
             assertEquals( "784", tagData.toFIXIDString());
-            assertEquals( "SETTL_PARTY_ROLE", tagData.toEnumNameString());
+            assertEquals( "SETTL_PARTY_ROLE", tagData.toFIXNameString());
             assertEquals( "SettlPartyRole", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -507,7 +507,7 @@ class Tag784EnuSettlPartyRoleTest {
             assertEquals( "Tag784EnuSettlPartyRole\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

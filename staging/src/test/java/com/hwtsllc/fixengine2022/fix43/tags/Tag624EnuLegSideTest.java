@@ -41,11 +41,11 @@ class Tag624EnuLegSideTest {
             tagData = new Tag624EnuLegSide(oneEnum);
             assertEquals( "FIX624_ENU_LEG_SIDE", tagData.toFIXLabelString());
             assertEquals( "624", tagData.toFIXIDString());
-            assertEquals( "LEG_SIDE", tagData.toEnumNameString());
+            assertEquals( "LEG_SIDE", tagData.toFIXNameString());
             assertEquals( "LegSide", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -167,7 +167,7 @@ class Tag624EnuLegSideTest {
             assertEquals( "Tag624EnuLegSide\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

@@ -41,10 +41,10 @@ class Tag875EnuCPProgramTest {
             tagData = new Tag875EnuCPProgram(oneEnum);
             assertEquals( "FIX875_ENU_CP_PROGRAM", tagData.toFIXLabelString());
             assertEquals( "875", tagData.toFIXIDString());
-            assertEquals( "CP_PROGRAM", tagData.toEnumNameString());
+            assertEquals( "CP_PROGRAM", tagData.toFIXNameString());
             assertEquals( "CPProgram", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -101,7 +101,7 @@ class Tag875EnuCPProgramTest {
             assertEquals( "Tag875EnuCPProgram\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

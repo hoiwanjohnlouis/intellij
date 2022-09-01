@@ -34,8 +34,8 @@ public abstract class FIX43Abstract implements LogFIXString, LogVerboseString {
         return String.valueOf(fixValue.toFIXIDString());
     }
     @Override
-    public String toEnumNameString() {
-        return fixValue.toEnumNameString();
+    public String toFIXNameString() {
+        return fixValue.toFIXNameString();
     }
     @Override
     public String toEnumDescriptionString() {
@@ -54,7 +54,7 @@ public abstract class FIX43Abstract implements LogFIXString, LogVerboseString {
                 .concat(String.valueOf( toFIXIDString()))
                 .concat("]")
                 .concat("\n\tFIXName[")
-                .concat( toEnumNameString())
+                .concat( toFIXNameString())
                 .concat("]")
                 .concat("\n\tFIXDescription[")
                 .concat( toEnumDescriptionString())
@@ -68,7 +68,7 @@ public abstract class FIX43Abstract implements LogFIXString, LogVerboseString {
                 .concat(",")
                 .concat(String.valueOf( toFIXIDString()))
                 .concat(",")
-                .concat( toEnumNameString())
+                .concat( toFIXNameString())
                 .concat(",")
                 .concat( toEnumDescriptionString())
                 .concat("]");

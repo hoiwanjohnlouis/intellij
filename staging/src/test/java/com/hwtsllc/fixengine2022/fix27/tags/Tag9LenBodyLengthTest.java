@@ -44,12 +44,12 @@ class Tag9LenBodyLengthTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag9LenBodyLength( new MyLengthType( oneElement ));
             assertEquals( "FIX9_LEN_BODY_LENGTH", tagData.toFIXLabelString());
-            assertEquals( "BODY_LENGTH", tagData.toEnumNameString());
+            assertEquals( "BODY_LENGTH", tagData.toFIXNameString());
             assertEquals( "9", tagData.toFIXIDString());
             assertEquals( "BodyLength", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -80,7 +80,7 @@ class Tag9LenBodyLengthTest {
             assertEquals( "Tag9LenBodyLength\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",

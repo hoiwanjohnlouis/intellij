@@ -41,10 +41,10 @@ class Tag1094EnuPegPriceTypeTest {
             tagData = new Tag1094EnuPegPriceType(oneEnum);
             assertEquals( "FIX1094_ENU_PEG_PRICE_TYPE", tagData.toFIXLabelString());
             assertEquals( "1094", tagData.toFIXIDString());
-            assertEquals( "PEG_PRICE_TYPE", tagData.toEnumNameString());
+            assertEquals( "PEG_PRICE_TYPE", tagData.toFIXNameString());
             assertEquals( "PegPriceType", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -130,7 +130,7 @@ class Tag1094EnuPegPriceTypeTest {
             assertEquals( "Tag1094EnuPegPriceType\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

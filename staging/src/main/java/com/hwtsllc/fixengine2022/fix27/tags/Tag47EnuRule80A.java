@@ -130,7 +130,7 @@ public class Tag47EnuRule80A extends FIX27Abstract implements LogValuePairString
      */
     @Override
     public String toDataNameString() {
-        return dataValue.toEnumNameString();
+        return dataValue.toFIXNameString();
     }
     /**
      * wrapper to return the Description of the underlying Data

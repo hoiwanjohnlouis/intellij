@@ -41,10 +41,10 @@ class Tag1047EnuAllocPositionEffectTest {
             tagData = new Tag1047EnuAllocPositionEffect(oneEnum);
             assertEquals( "FIX1047_ENU_ALLOC_POSITION_EFFECT", tagData.toFIXLabelString());
             assertEquals( "1047", tagData.toFIXIDString());
-            assertEquals( "ALLOC_POSITION_EFFECT", tagData.toEnumNameString());
+            assertEquals( "ALLOC_POSITION_EFFECT", tagData.toFIXNameString());
             assertEquals( "AllocPositionEffect", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
@@ -101,7 +101,7 @@ class Tag1047EnuAllocPositionEffectTest {
             assertEquals( "Tag1047EnuAllocPositionEffect\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +

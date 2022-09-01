@@ -41,11 +41,11 @@ class Tag507EnuRegistRejReasonCodeTest {
             tagData = new Tag507EnuRegistRejReasonCode(oneEnum);
             assertEquals( "FIX507_ENU_REGIST_REJ_REASON_CODE", tagData.toFIXLabelString());
             assertEquals( "507", tagData.toFIXIDString());
-            assertEquals( "REGIST_REJ_REASON_CODE", tagData.toEnumNameString());
+            assertEquals( "REGIST_REJ_REASON_CODE", tagData.toFIXNameString());
             assertEquals( "RegistRejReasonCode", tagData.toEnumDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
+            assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
         }
     }
@@ -187,7 +187,7 @@ class Tag507EnuRegistRejReasonCodeTest {
             assertEquals( "Tag507EnuRegistRejReasonCode\n" +
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
-                            "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
+                            "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
