@@ -46,11 +46,11 @@ class Tag228FloFactorTest {
             assertEquals( "FIX228_FLO_FACTOR", tagData.toFIXLabelString());
             assertEquals( "228", tagData.toFIXIDString());
             assertEquals( "FACTOR", tagData.toFIXNameString());
-            assertEquals( "Factor", tagData.toEnumDescriptionString());
+            assertEquals( "Factor", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -87,7 +87,7 @@ class Tag228FloFactorTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
                     tagData.toVerboseString());

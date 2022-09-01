@@ -52,49 +52,49 @@ class Enum770TrdRegTimestampTypeTest {
         enumType = Enum770TrdRegTimestampType.EXECUTION_TIME;
         assertEquals("1", enumType.toFIXIDString());
         assertEquals("EXECUTION_TIME", enumType.toFIXNameString());
-        assertEquals("1 - Execution Time", enumType.toEnumDescriptionString());
+        assertEquals("1 - Execution Time", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum770TrdRegTimestampType.TIME_IN;
         assertEquals("2", enumType.toFIXIDString());
         assertEquals("TIME_IN", enumType.toFIXNameString());
-        assertEquals("2 - Time In", enumType.toEnumDescriptionString());
+        assertEquals("2 - Time In", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum770TrdRegTimestampType.TIME_OUT;
         assertEquals("3", enumType.toFIXIDString());
         assertEquals("TIME_OUT", enumType.toFIXNameString());
-        assertEquals("3 - Time Out", enumType.toEnumDescriptionString());
+        assertEquals("3 - Time Out", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum770TrdRegTimestampType.BROKER_RECEIPT;
         assertEquals("4", enumType.toFIXIDString());
         assertEquals("BROKER_RECEIPT", enumType.toFIXNameString());
-        assertEquals("4 - Broker Receipt", enumType.toEnumDescriptionString());
+        assertEquals("4 - Broker Receipt", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum770TrdRegTimestampType.BROKER_EXECUTION;
         assertEquals("5", enumType.toFIXIDString());
         assertEquals("BROKER_EXECUTION", enumType.toFIXNameString());
-        assertEquals("5 - Broker Execution", enumType.toEnumDescriptionString());
+        assertEquals("5 - Broker Execution", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum770TrdRegTimestampType.DESK_RECEIPT;
         assertEquals("6", enumType.toFIXIDString());
         assertEquals("DESK_RECEIPT", enumType.toFIXNameString());
-        assertEquals("6 - Desk Receipt", enumType.toEnumDescriptionString());
+        assertEquals("6 - Desk Receipt", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

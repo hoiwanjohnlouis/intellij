@@ -42,11 +42,11 @@ class Tag1134EnuReportedPxDiffTest {
             assertEquals( "FIX1134_ENU_REPORTED_PX_DIFF", tagData.toFIXLabelString());
             assertEquals( "1134", tagData.toFIXIDString());
             assertEquals( "REPORTED_PX_DIFF", tagData.toFIXNameString());
-            assertEquals( "ReportedPxDiff", tagData.toEnumDescriptionString());
+            assertEquals( "ReportedPxDiff", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -94,7 +94,7 @@ class Tag1134EnuReportedPxDiffTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +

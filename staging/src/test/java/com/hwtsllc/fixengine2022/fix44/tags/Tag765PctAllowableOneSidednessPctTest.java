@@ -46,11 +46,11 @@ class Tag765PctAllowableOneSidednessPctTest {
             assertEquals( "FIX765_PCT_ALLOWABLE_ONE_SIDEDNESS_PCT", tagData.toFIXLabelString());
             assertEquals( "765", tagData.toFIXIDString());
             assertEquals( "ALLOWABLE_ONE_SIDEDNESS_PCT", tagData.toFIXNameString());
-            assertEquals( "AllowableOneSidednessPct", tagData.toEnumDescriptionString());
+            assertEquals( "AllowableOneSidednessPct", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -87,7 +87,7 @@ class Tag765PctAllowableOneSidednessPctTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
                     tagData.toVerboseString());

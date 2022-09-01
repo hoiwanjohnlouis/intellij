@@ -42,25 +42,25 @@ class Enum1093LotTypeTest {
         enumType = Enum1093LotType.ODD_LOT;
         assertEquals( "1", enumType.toFIXIDString() );
         assertEquals( "ODD_LOT", enumType.toFIXNameString() );
-        assertEquals( "1 - Odd Lot", enumType.toEnumDescriptionString() );
+        assertEquals( "1 - Odd Lot", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1093LotType.ROUND_LOT;
         assertEquals( "2", enumType.toFIXIDString() );
         assertEquals( "ROUND_LOT", enumType.toFIXNameString() );
-        assertEquals( "2 - Round Lot", enumType.toEnumDescriptionString() );
+        assertEquals( "2 - Round Lot", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1093LotType.BLOCK_LOT;
         assertEquals( "3", enumType.toFIXIDString() );
         assertEquals( "BLOCK_LOT", enumType.toFIXNameString() );
-        assertEquals( "3 - Block Lot", enumType.toEnumDescriptionString() );
+        assertEquals( "3 - Block Lot", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

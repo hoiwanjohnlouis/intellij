@@ -39,17 +39,17 @@ class Enum1134ReportedPxDiffTest {
         enumType = Enum1134ReportedPxDiff.NO;
         assertEquals("N",enumType.toFIXIDString());
         assertEquals("NO", enumType.toFIXNameString());
-        assertEquals("N - Reported price is equal to market price", enumType.toEnumDescriptionString());
+        assertEquals("N - Reported price is equal to market price", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1134ReportedPxDiff.YES;
         assertEquals("Y", enumType.toFIXIDString());
         assertEquals("YES", enumType.toFIXNameString());
-        assertEquals("Y - Reported price is different from the market price", enumType.toEnumDescriptionString());
+        assertEquals("Y - Reported price is different from the market price", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

@@ -41,17 +41,17 @@ class Enum208NotifyBrokerOfCreditTest {
         enumType = Enum208NotifyBrokerOfCredit.NO;
         assertEquals("N",enumType.toFIXIDString());
         assertEquals("NO", enumType.toFIXNameString());
-        assertEquals("N - Details should not be communicated", enumType.toEnumDescriptionString());
+        assertEquals("N - Details should not be communicated", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum208NotifyBrokerOfCredit.YES;
         assertEquals("Y", enumType.toFIXIDString());
         assertEquals("YES", enumType.toFIXNameString());
-        assertEquals("Y - Details should be communicated", enumType.toEnumDescriptionString());
+        assertEquals("Y - Details should be communicated", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

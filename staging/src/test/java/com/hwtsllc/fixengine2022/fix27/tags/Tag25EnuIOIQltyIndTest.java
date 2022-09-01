@@ -42,11 +42,11 @@ class Tag25EnuIOIQltyIndTest {
             assertEquals( "FIX25_ENU_IOI_QLTY_IND", tagData.toFIXLabelString());
             assertEquals( "IOI_QLTY_IND", tagData.toFIXNameString());
             assertEquals( "25", tagData.toFIXIDString());
-            assertEquals( "IOIQltyInd", tagData.toEnumDescriptionString());
+            assertEquals( "IOIQltyInd", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -97,7 +97,7 @@ class Tag25EnuIOIQltyIndTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +

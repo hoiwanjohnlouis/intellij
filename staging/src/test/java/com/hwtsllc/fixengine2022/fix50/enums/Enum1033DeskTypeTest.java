@@ -52,90 +52,90 @@ class Enum1033DeskTypeTest {
         enumType = Enum1033DeskType.AGENCY;
         assertEquals( "A", enumType.toFIXIDString() );
         assertEquals( "AGENCY", enumType.toFIXNameString() );
-        assertEquals( "A - Agency", enumType.toEnumDescriptionString() );
+        assertEquals( "A - Agency", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1033DeskType.ARBITRAGE;
         assertEquals( "AR", enumType.toFIXIDString() );
         assertEquals( "ARBITRAGE", enumType.toFIXNameString() );
-        assertEquals( "AR - Arbitrage", enumType.toEnumDescriptionString() );
+        assertEquals( "AR - Arbitrage", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1033DeskType.DERIVATIVES;
         assertEquals( "D", enumType.toFIXIDString() );
         assertEquals( "DERIVATIVES", enumType.toFIXNameString() );
-        assertEquals( "D - Derivatives", enumType.toEnumDescriptionString() );
+        assertEquals( "D - Derivatives", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1033DeskType.INTERNATIONAL;
         assertEquals( "IN", enumType.toFIXIDString() );
         assertEquals( "INTERNATIONAL", enumType.toFIXNameString() );
-        assertEquals( "IN - International", enumType.toEnumDescriptionString() );
+        assertEquals( "IN - International", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1033DeskType.INSTITUTIONAL;
         assertEquals( "IS", enumType.toFIXIDString() );
         assertEquals( "INSTITUTIONAL", enumType.toFIXNameString() );
-        assertEquals( "IS - Institutional", enumType.toEnumDescriptionString() );
+        assertEquals( "IS - Institutional", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = Enum1033DeskType.OTHER;
         assertEquals( "O", enumType.toFIXIDString() );
         assertEquals( "OTHER", enumType.toFIXNameString() );
-        assertEquals( "O - Other", enumType.toEnumDescriptionString() );
+        assertEquals( "O - Other", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1033DeskType.PREFERRED;
         assertEquals( "PF", enumType.toFIXIDString() );
         assertEquals( "PREFERRED", enumType.toFIXNameString() );
-        assertEquals( "PF - Preferred Trading", enumType.toEnumDescriptionString() );
+        assertEquals( "PF - Preferred Trading", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1033DeskType.PROPRIETARY;
         assertEquals( "PR", enumType.toFIXIDString() );
         assertEquals( "PROPRIETARY", enumType.toFIXNameString() );
-        assertEquals( "PR - Proprietary", enumType.toEnumDescriptionString() );
+        assertEquals( "PR - Proprietary", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1033DeskType.PROGRAM_TRADING;
         assertEquals( "PT", enumType.toFIXIDString() );
         assertEquals( "PROGRAM_TRADING", enumType.toFIXNameString() );
-        assertEquals( "PT - Program Trading", enumType.toEnumDescriptionString() );
+        assertEquals( "PT - Program Trading", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1033DeskType.SALES;
         assertEquals( "S", enumType.toFIXIDString() );
         assertEquals( "SALES", enumType.toFIXNameString() );
-        assertEquals( "S - Sales", enumType.toEnumDescriptionString() );
+        assertEquals( "S - Sales", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1033DeskType.TRADING;
         assertEquals( "T", enumType.toFIXIDString() );
         assertEquals( "TRADING", enumType.toFIXNameString() );
-        assertEquals( "T - Trading", enumType.toEnumDescriptionString() );
+        assertEquals( "T - Trading", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

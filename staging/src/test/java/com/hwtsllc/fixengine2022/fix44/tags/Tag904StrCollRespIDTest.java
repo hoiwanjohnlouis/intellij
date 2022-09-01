@@ -46,11 +46,11 @@ class Tag904StrCollRespIDTest {
             assertEquals( "FIX904_STR_COLL_RESP_ID", tagData.toFIXLabelString());
             assertEquals( "904", tagData.toFIXIDString());
             assertEquals( "COLL_RESP_ID", tagData.toFIXNameString());
-            assertEquals( "CollRespID", tagData.toEnumDescriptionString());
+            assertEquals( "CollRespID", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -87,7 +87,7 @@ class Tag904StrCollRespIDTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
                     tagData.toVerboseString());

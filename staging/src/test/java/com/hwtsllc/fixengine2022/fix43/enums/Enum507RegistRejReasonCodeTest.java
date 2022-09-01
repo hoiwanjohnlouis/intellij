@@ -77,164 +77,164 @@ class Enum507RegistRejReasonCodeTest {
         enumType = Enum507RegistRejReasonCode.INVALID_ACCOUNT_TYPE;
         assertEquals("1", enumType.toFIXIDString());
         assertEquals("INVALID_ACCOUNT_TYPE", enumType.toFIXNameString());
-        assertEquals("1 - Invalid/unacceptable Account Type", enumType.toEnumDescriptionString());
+        assertEquals("1 - Invalid/unacceptable Account Type", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum507RegistRejReasonCode.INVALID_TAX_EXEMPT_TYPE;
         assertEquals("2", enumType.toFIXIDString());
         assertEquals("INVALID_TAX_EXEMPT_TYPE", enumType.toFIXNameString());
-        assertEquals("2 - Invalid/unacceptable Tax Exempt Type", enumType.toEnumDescriptionString());
+        assertEquals("2 - Invalid/unacceptable Tax Exempt Type", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum507RegistRejReasonCode.INVALID_OWNERSHIP_TYPE;
         assertEquals("3", enumType.toFIXIDString());
         assertEquals("INVALID_OWNERSHIP_TYPE", enumType.toFIXNameString());
-        assertEquals("3 - Invalid/unacceptable Ownership Type", enumType.toEnumDescriptionString());
+        assertEquals("3 - Invalid/unacceptable Ownership Type", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum507RegistRejReasonCode.INVALID_NO_REG_DETAILS;
         assertEquals("4", enumType.toFIXIDString());
         assertEquals("INVALID_NO_REG_DETAILS", enumType.toFIXNameString());
-        assertEquals("4 - Invalid/unacceptable No Reg Details", enumType.toEnumDescriptionString());
+        assertEquals("4 - Invalid/unacceptable No Reg Details", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum507RegistRejReasonCode.INVALID_REG_SEQ_NO;
         assertEquals("5", enumType.toFIXIDString());
         assertEquals("INVALID_REG_SEQ_NO", enumType.toFIXNameString());
-        assertEquals("5 - Invalid/unacceptable Reg Seq No", enumType.toEnumDescriptionString());
+        assertEquals("5 - Invalid/unacceptable Reg Seq No", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum507RegistRejReasonCode.INVALID_REG_DETAILS;
         assertEquals("6", enumType.toFIXIDString());
         assertEquals("INVALID_REG_DETAILS", enumType.toFIXNameString());
-        assertEquals("6 - Invalid/unacceptable Reg Details", enumType.toEnumDescriptionString());
+        assertEquals("6 - Invalid/unacceptable Reg Details", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum507RegistRejReasonCode.INVALID_MAILING_DETAILS;
         assertEquals("7", enumType.toFIXIDString());
         assertEquals("INVALID_MAILING_DETAILS", enumType.toFIXNameString());
-        assertEquals("7 - Invalid/unacceptable Mailing Details", enumType.toEnumDescriptionString());
+        assertEquals("7 - Invalid/unacceptable Mailing Details", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum507RegistRejReasonCode.INVALID_MAILING_INSTRUCTIONS;
         assertEquals("8", enumType.toFIXIDString());
         assertEquals("INVALID_MAILING_INSTRUCTIONS", enumType.toFIXNameString());
-        assertEquals("8 - Invalid/unacceptable Mailing Instructions", enumType.toEnumDescriptionString());
+        assertEquals("8 - Invalid/unacceptable Mailing Instructions", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum507RegistRejReasonCode.INVALID_INVESTOR_ID;
         assertEquals("9", enumType.toFIXIDString());
         assertEquals("INVALID_INVESTOR_ID", enumType.toFIXNameString());
-        assertEquals("9 - Invalid/unacceptable Investor ID", enumType.toEnumDescriptionString());
+        assertEquals("9 - Invalid/unacceptable Investor ID", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum507RegistRejReasonCode.INVALID_INVESTOR_ID_SOURCE;
         assertEquals("10", enumType.toFIXIDString());
         assertEquals("INVALID_INVESTOR_ID_SOURCE", enumType.toFIXNameString());
-        assertEquals("10 - Invalid/unacceptable Investor ID Source", enumType.toEnumDescriptionString());
+        assertEquals("10 - Invalid/unacceptable Investor ID Source", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum507RegistRejReasonCode.INVALID_DATE_OF_BIRTH;
         assertEquals("11", enumType.toFIXIDString());
         assertEquals("INVALID_DATE_OF_BIRTH", enumType.toFIXNameString());
-        assertEquals("11 - Invalid/unacceptable Date Of Birth", enumType.toEnumDescriptionString());
+        assertEquals("11 - Invalid/unacceptable Date Of Birth", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum507RegistRejReasonCode.INVALID_COUNTRY_OF_RESIDENCE;
         assertEquals("12", enumType.toFIXIDString());
         assertEquals("INVALID_COUNTRY_OF_RESIDENCE", enumType.toFIXNameString());
-        assertEquals("12 - Invalid/unacceptable Investor Country Of Residence", enumType.toEnumDescriptionString());
+        assertEquals("12 - Invalid/unacceptable Investor Country Of Residence", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum507RegistRejReasonCode.INVALID_NO_DISTRIB_INSTNS;
         assertEquals("13", enumType.toFIXIDString());
         assertEquals("INVALID_NO_DISTRIB_INSTNS", enumType.toFIXNameString());
-        assertEquals("13 - Invalid/unacceptable No Distrib Instns", enumType.toEnumDescriptionString());
+        assertEquals("13 - Invalid/unacceptable No Distrib Instns", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum507RegistRejReasonCode.INVALID_DISTRIB_PERCENTAGE;
         assertEquals("14", enumType.toFIXIDString());
         assertEquals("INVALID_DISTRIB_PERCENTAGE", enumType.toFIXNameString());
-        assertEquals("14 - Invalid/unacceptable Distrib Percentage", enumType.toEnumDescriptionString());
+        assertEquals("14 - Invalid/unacceptable Distrib Percentage", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum507RegistRejReasonCode.INVALID_DISTRIB_PAYMENT_METHOD;
         assertEquals("15", enumType.toFIXIDString());
         assertEquals("INVALID_DISTRIB_PAYMENT_METHOD", enumType.toFIXNameString());
-        assertEquals("15 - Invalid/unacceptable Distrib Payment Method", enumType.toEnumDescriptionString());
+        assertEquals("15 - Invalid/unacceptable Distrib Payment Method", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum507RegistRejReasonCode.INVALID_CDA_ACCT_NAME;
         assertEquals("16", enumType.toFIXIDString());
         assertEquals("INVALID_CDA_ACCT_NAME", enumType.toFIXNameString());
-        assertEquals("16 - Invalid/unacceptable Cash Distrib Agent Acct Name", enumType.toEnumDescriptionString());
+        assertEquals("16 - Invalid/unacceptable Cash Distrib Agent Acct Name", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum507RegistRejReasonCode.INVALID_CDA_CODE;
         assertEquals("17", enumType.toFIXIDString());
         assertEquals("INVALID_CDA_CODE", enumType.toFIXNameString());
-        assertEquals("17 - Invalid/unacceptable Cash Distrib Agent Code", enumType.toEnumDescriptionString());
+        assertEquals("17 - Invalid/unacceptable Cash Distrib Agent Code", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum507RegistRejReasonCode.INVALID_CDA_ACCT_NUM;
         assertEquals("18", enumType.toFIXIDString());
         assertEquals("INVALID_CDA_ACCT_NUM", enumType.toFIXNameString());
-        assertEquals("18 - Invalid/unacceptable Cash Distrib Agent Acct Num", enumType.toEnumDescriptionString());
+        assertEquals("18 - Invalid/unacceptable Cash Distrib Agent Acct Num", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
 
@@ -244,10 +244,10 @@ class Enum507RegistRejReasonCodeTest {
         enumType = Enum507RegistRejReasonCode.OTHER;
         assertEquals("99", enumType.toFIXIDString());
         assertEquals("OTHER", enumType.toFIXNameString());
-        assertEquals("99 - Other", enumType.toEnumDescriptionString());
+        assertEquals("99 - Other", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

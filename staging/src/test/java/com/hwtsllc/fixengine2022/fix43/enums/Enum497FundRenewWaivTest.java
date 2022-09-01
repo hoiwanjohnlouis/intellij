@@ -48,19 +48,19 @@ class Enum497FundRenewWaivTest {
         enumType = Enum497FundRenewWaiv.NO;
         assertEquals("N", enumType.toFIXIDString());
         assertEquals("NO", enumType.toFIXNameString());
-        assertEquals("N - No", enumType.toEnumDescriptionString());
+        assertEquals("N - No", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum497FundRenewWaiv.YES;
         assertEquals("Y", enumType.toFIXIDString());
         assertEquals("YES", enumType.toFIXNameString());
-        assertEquals("Y - Yes", enumType.toEnumDescriptionString());
+        assertEquals("Y - Yes", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

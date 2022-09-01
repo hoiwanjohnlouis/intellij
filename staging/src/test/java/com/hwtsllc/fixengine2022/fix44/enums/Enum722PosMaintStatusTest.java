@@ -44,41 +44,41 @@ class Enum722PosMaintStatusTest {
         enumType = Enum722PosMaintStatus.ACCEPTED;
         assertEquals( "0", enumType.toFIXIDString());
         assertEquals( "ACCEPTED", enumType.toFIXNameString());
-        assertEquals( "0 - Accepted", enumType.toEnumDescriptionString());
+        assertEquals( "0 - Accepted", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum722PosMaintStatus.ACCEPTED_WITH_WARNINGS;
         assertEquals( "1", enumType.toFIXIDString());
         assertEquals( "ACCEPTED_WITH_WARNINGS", enumType.toFIXNameString());
-        assertEquals( "1 - Accepted With Warnings", enumType.toEnumDescriptionString());
+        assertEquals( "1 - Accepted With Warnings", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum722PosMaintStatus.REJECTED;
         assertEquals( "2", enumType.toFIXIDString());
         assertEquals( "REJECTED", enumType.toFIXNameString());
-        assertEquals( "2 - Rejected", enumType.toEnumDescriptionString());
+        assertEquals( "2 - Rejected", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum722PosMaintStatus.COMPLETED;
         assertEquals( "3", enumType.toFIXIDString());
         assertEquals( "COMPLETED", enumType.toFIXNameString());
-        assertEquals( "3 - Completed", enumType.toEnumDescriptionString());
+        assertEquals( "3 - Completed", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum722PosMaintStatus.COMPLETED_WITH_WARNINGS;
         assertEquals( "4", enumType.toFIXIDString());
         assertEquals( "COMPLETED_WITH_WARNINGS", enumType.toFIXNameString());
-        assertEquals( "4 - Completed With Warnings", enumType.toEnumDescriptionString());
+        assertEquals( "4 - Completed With Warnings", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

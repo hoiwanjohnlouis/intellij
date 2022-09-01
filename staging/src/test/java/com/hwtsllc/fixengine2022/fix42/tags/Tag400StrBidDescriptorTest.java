@@ -46,11 +46,11 @@ class Tag400StrBidDescriptorTest {
             assertEquals( "FIX400_STR_BID_DESCRIPTOR", tagData.toFIXLabelString());
             assertEquals( "400", tagData.toFIXIDString());
             assertEquals( "BID_DESCRIPTOR", tagData.toFIXNameString());
-            assertEquals( "BidDescriptor", tagData.toEnumDescriptionString());
+            assertEquals( "BidDescriptor", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -87,7 +87,7 @@ class Tag400StrBidDescriptorTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
                     tagData.toVerboseString());

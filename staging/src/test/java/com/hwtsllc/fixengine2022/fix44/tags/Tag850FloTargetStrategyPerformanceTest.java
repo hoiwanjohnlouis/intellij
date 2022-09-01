@@ -46,11 +46,11 @@ class Tag850FloTargetStrategyPerformanceTest {
             assertEquals( "FIX850_FLO_TARGET_STRATEGY_PERFORMANCE", tagData.toFIXLabelString());
             assertEquals( "850", tagData.toFIXIDString());
             assertEquals( "TARGET_STRATEGY_PERFORMANCE", tagData.toFIXNameString());
-            assertEquals( "TargetStrategyPerformance", tagData.toEnumDescriptionString());
+            assertEquals( "TargetStrategyPerformance", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -87,7 +87,7 @@ class Tag850FloTargetStrategyPerformanceTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
                     tagData.toVerboseString());

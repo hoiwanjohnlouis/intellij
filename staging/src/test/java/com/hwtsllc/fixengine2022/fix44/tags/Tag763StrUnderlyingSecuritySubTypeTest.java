@@ -46,11 +46,11 @@ class Tag763StrUnderlyingSecuritySubTypeTest {
             assertEquals( "FIX763_STR_UNDERLYING_SECURITY_SUB_TYPE", tagData.toFIXLabelString());
             assertEquals( "763", tagData.toFIXIDString());
             assertEquals( "UNDERLYING_SECURITY_SUB_TYPE", tagData.toFIXNameString());
-            assertEquals( "UnderlyingSecuritySubType", tagData.toEnumDescriptionString());
+            assertEquals( "UnderlyingSecuritySubType", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -87,7 +87,7 @@ class Tag763StrUnderlyingSecuritySubTypeTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
                     tagData.toVerboseString());

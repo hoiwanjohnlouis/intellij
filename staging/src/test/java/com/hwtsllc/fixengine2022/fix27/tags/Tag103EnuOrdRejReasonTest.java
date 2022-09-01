@@ -42,11 +42,11 @@ class Tag103EnuOrdRejReasonTest {
             assertEquals( "FIX103_ENU_ORD_REJ_REASON", tagData.toFIXLabelString());
             assertEquals( "ORD_REJ_REASON", tagData.toFIXNameString());
             assertEquals( "103", tagData.toFIXIDString());
-            assertEquals( "OrdRejReason",  tagData.toEnumDescriptionString());
+            assertEquals( "OrdRejReason",  tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -187,7 +187,7 @@ class Tag103EnuOrdRejReasonTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +

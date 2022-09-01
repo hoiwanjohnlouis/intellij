@@ -42,11 +42,11 @@ class Tag1061EnuUndlyInstrumentPartyRoleTest {
             assertEquals( "FIX1061_ENU_UNDLY_INSTRUMENT_PARTY_ROLE", tagData.toFIXLabelString());
             assertEquals( "1061", tagData.toFIXIDString());
             assertEquals( "UNDLY_INSTRUMENT_PARTY_ROLE", tagData.toFIXNameString());
-            assertEquals( "UndlyInstrumentPartyRole", tagData.toEnumDescriptionString());
+            assertEquals( "UndlyInstrumentPartyRole", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -508,7 +508,7 @@ class Tag1061EnuUndlyInstrumentPartyRoleTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +

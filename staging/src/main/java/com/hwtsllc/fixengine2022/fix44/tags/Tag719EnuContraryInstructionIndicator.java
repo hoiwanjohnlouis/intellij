@@ -99,7 +99,7 @@ public class Tag719EnuContraryInstructionIndicator extends FIX44Abstract impleme
      */
     @Override
     public String toDataDescriptionString() {
-        return dataValue.toEnumDescriptionString();
+        return dataValue.toFIXDescriptionString();
     }
     /**
      * standard wrapper to format a simple string describing the data

@@ -38,8 +38,8 @@ public abstract class FIX42Abstract implements LogFIXString, LogVerboseString {
         return fixValue.toFIXNameString();
     }
     @Override
-    public String toEnumDescriptionString() {
-        return fixValue.toEnumDescriptionString();
+    public String toFIXDescriptionString() {
+        return fixValue.toFIXDescriptionString();
     }
     /**
      * standard wrapper to format a detailed string describing this enum
@@ -57,7 +57,7 @@ public abstract class FIX42Abstract implements LogFIXString, LogVerboseString {
                 .concat( toFIXNameString())
                 .concat("]")
                 .concat("\n\tFIXDescription[")
-                .concat( toEnumDescriptionString())
+                .concat( toFIXDescriptionString())
                 .concat("]");
     }
     @Override
@@ -70,7 +70,7 @@ public abstract class FIX42Abstract implements LogFIXString, LogVerboseString {
                 .concat(",")
                 .concat( toFIXNameString())
                 .concat(",")
-                .concat( toEnumDescriptionString())
+                .concat( toFIXDescriptionString())
                 .concat("]");
     }
 }

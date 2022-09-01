@@ -46,11 +46,11 @@ class Tag789SeqNextExpectedMsgSeqNumTest {
             assertEquals( "FIX789_SEQ_NEXT_EXPECTED_MSG_SEQ_NUM", tagData.toFIXLabelString());
             assertEquals( "789", tagData.toFIXIDString());
             assertEquals( "NEXT_EXPECTED_MSG_SEQ_NUM", tagData.toFIXNameString());
-            assertEquals( "NextExpectedMsgSeqNum", tagData.toEnumDescriptionString());
+            assertEquals( "NextExpectedMsgSeqNum", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -87,7 +87,7 @@ class Tag789SeqNextExpectedMsgSeqNumTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
                     tagData.toVerboseString());

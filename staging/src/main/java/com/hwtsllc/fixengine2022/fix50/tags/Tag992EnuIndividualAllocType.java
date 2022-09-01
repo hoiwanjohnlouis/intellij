@@ -98,7 +98,7 @@ public class Tag992EnuIndividualAllocType extends FIX50Abstract implements LogVa
      */
     @Override
     public String toDataDescriptionString() {
-        return dataValue.toEnumDescriptionString();
+        return dataValue.toFIXDescriptionString();
     }
     /**
      * standard wrapper to format a simple string describing the data

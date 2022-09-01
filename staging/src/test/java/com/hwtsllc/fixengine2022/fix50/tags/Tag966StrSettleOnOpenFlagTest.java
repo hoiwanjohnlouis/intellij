@@ -46,11 +46,11 @@ class Tag966StrSettleOnOpenFlagTest {
             assertEquals( "FIX966_STR_SETTLE_ON_OPEN_FLAG", tagData.toFIXLabelString());
             assertEquals( "966", tagData.toFIXIDString());
             assertEquals( "SETTLE_ON_OPEN_FLAG", tagData.toFIXNameString());
-            assertEquals( "SettleOnOpenFlag", tagData.toEnumDescriptionString());
+            assertEquals( "SettleOnOpenFlag", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -87,7 +87,7 @@ class Tag966StrSettleOnOpenFlagTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
                     tagData.toVerboseString());

@@ -67,37 +67,37 @@ class Enum537QuoteTypeTest {
         enumType = Enum537QuoteType.INDICATIVE;
         assertEquals("0", enumType.toFIXIDString());
         assertEquals("INDICATIVE", enumType.toFIXNameString());
-        assertEquals("0 - Indicative", enumType.toEnumDescriptionString());
+        assertEquals("0 - Indicative", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum537QuoteType.TRADEABLE;
         assertEquals("1", enumType.toFIXIDString());
         assertEquals("TRADEABLE", enumType.toFIXNameString());
-        assertEquals("1 - Tradeable", enumType.toEnumDescriptionString());
+        assertEquals("1 - Tradeable", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum537QuoteType.RESTRICTED_TRADEABLE;
         assertEquals("2", enumType.toFIXIDString());
         assertEquals("RESTRICTED_TRADEABLE", enumType.toFIXNameString());
-        assertEquals("2 - Restricted Tradeable", enumType.toEnumDescriptionString());
+        assertEquals("2 - Restricted Tradeable", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum537QuoteType.COUNTER;
         assertEquals("3", enumType.toFIXIDString());
         assertEquals("COUNTER", enumType.toFIXNameString());
-        assertEquals("3 - Counter (tradeable)", enumType.toEnumDescriptionString());
+        assertEquals("3 - Counter (tradeable)", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

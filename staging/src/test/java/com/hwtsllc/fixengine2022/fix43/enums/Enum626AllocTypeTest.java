@@ -70,129 +70,129 @@ class Enum626AllocTypeTest {
         enumType = Enum626AllocType.CALCULATED_INCLUDES_MISCFEES_NETMONEY;
         assertEquals("1", enumType.toFIXIDString());
         assertEquals("CALCULATED_INCLUDES_MISCFEES_NETMONEY", enumType.toFIXNameString());
-        assertEquals("1 - Calculated (includes MiscFees and NetMoney)", enumType.toEnumDescriptionString());
+        assertEquals("1 - Calculated (includes MiscFees and NetMoney)", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum626AllocType.PRELIMINARY_WITHOUT_MISCFEES_NETMONEY;
         assertEquals("2", enumType.toFIXIDString());
         assertEquals("PRELIMINARY_WITHOUT_MISCFEES_NETMONEY", enumType.toFIXNameString());
-        assertEquals("2 - Preliminary (without MiscFees and NetMoney)", enumType.toEnumDescriptionString());
+        assertEquals("2 - Preliminary (without MiscFees and NetMoney)", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum626AllocType.SELLSIDE_USING_PRELIMINARY;
         assertEquals("3", enumType.toFIXIDString());
         assertEquals("SELLSIDE_USING_PRELIMINARY", enumType.toFIXNameString());
-        assertEquals("3 - Sellside Calculated Using Preliminary (includes MiscFees and NetMoney) (Replaced)", enumType.toEnumDescriptionString());
+        assertEquals("3 - Sellside Calculated Using Preliminary (includes MiscFees and NetMoney) (Replaced)", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum626AllocType.SELLSIDE_WITHOUT_PRELIMINARY;
         assertEquals("4", enumType.toFIXIDString());
         assertEquals("SELLSIDE_WITHOUT_PRELIMINARY", enumType.toFIXNameString());
-        assertEquals("4 - Sellside Calculated Without Preliminary (sent unsolicited by sellside, includes MiscFees and NetMoney) (Replaced)", enumType.toEnumDescriptionString());
+        assertEquals("4 - Sellside Calculated Without Preliminary (sent unsolicited by sellside, includes MiscFees and NetMoney) (Replaced)", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum626AllocType.READY_TO_BOOK_SINGLE_ORDER;
         assertEquals("5", enumType.toFIXIDString());
         assertEquals("READY_TO_BOOK_SINGLE_ORDER", enumType.toFIXNameString());
-        assertEquals("5 - Ready-To-Book - Single Order", enumType.toEnumDescriptionString());
+        assertEquals("5 - Ready-To-Book - Single Order", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = Enum626AllocType.BUYSIDE_READY_TO_BOOK;
         assertEquals("6", enumType.toFIXIDString());
         assertEquals("BUYSIDE_READY_TO_BOOK", enumType.toFIXNameString());
-        assertEquals("6 - Buyside Ready-To-Book - Combined Set of Orders (Replaced)", enumType.toEnumDescriptionString());
+        assertEquals("6 - Buyside Ready-To-Book - Combined Set of Orders (Replaced)", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum626AllocType.WAREHOUSE_INSTRUCTION;
         assertEquals("7", enumType.toFIXIDString());
         assertEquals("WAREHOUSE_INSTRUCTION", enumType.toFIXNameString());
-        assertEquals("7 - Warehouse Instruction", enumType.toEnumDescriptionString());
+        assertEquals("7 - Warehouse Instruction", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum626AllocType.REQUEST_INTERMEDIARY;
         assertEquals("8", enumType.toFIXIDString());
         assertEquals("REQUEST_INTERMEDIARY", enumType.toFIXNameString());
-        assertEquals("8 - Request to Intermediary", enumType.toEnumDescriptionString());
+        assertEquals("8 - Request to Intermediary", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum626AllocType.ACCEPT;
         assertEquals("9", enumType.toFIXIDString());
         assertEquals("ACCEPT", enumType.toFIXNameString());
-        assertEquals("9 - Accept", enumType.toEnumDescriptionString());
+        assertEquals("9 - Accept", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum626AllocType.REJECT;
         assertEquals("10", enumType.toFIXIDString());
         assertEquals("REJECT", enumType.toFIXNameString());
-        assertEquals("10 - Reject", enumType.toEnumDescriptionString());
+        assertEquals("10 - Reject", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = Enum626AllocType.ACCEPT_PENDING;
         assertEquals("11", enumType.toFIXIDString());
         assertEquals("ACCEPT_PENDING", enumType.toFIXNameString());
-        assertEquals("11 - Accept Pending", enumType.toEnumDescriptionString());
+        assertEquals("11 - Accept Pending", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum626AllocType.INCOMPLETE_GROUP;
         assertEquals("12", enumType.toFIXIDString());
         assertEquals("INCOMPLETE_GROUP", enumType.toFIXNameString());
-        assertEquals("12 - Incomplete Group", enumType.toEnumDescriptionString());
+        assertEquals("12 - Incomplete Group", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum626AllocType.COMPLETE_GROUP;
         assertEquals("13", enumType.toFIXIDString());
         assertEquals("COMPLETE_GROUP", enumType.toFIXNameString());
-        assertEquals("13 - Complete Group", enumType.toEnumDescriptionString());
+        assertEquals("13 - Complete Group", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum626AllocType.REVERSAL_PENDING;
         assertEquals("14", enumType.toFIXIDString());
         assertEquals("REVERSAL_PENDING", enumType.toFIXNameString());
-        assertEquals("14 - Reversal Pending", enumType.toEnumDescriptionString());
+        assertEquals("14 - Reversal Pending", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

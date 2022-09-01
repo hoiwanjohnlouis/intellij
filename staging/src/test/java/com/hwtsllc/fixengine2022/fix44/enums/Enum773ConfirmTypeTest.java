@@ -42,26 +42,26 @@ class Enum773ConfirmTypeTest {
         enumType = Enum773ConfirmType.STATUS;
         assertEquals( "1", enumType.toFIXIDString() );
         assertEquals( "STATUS", enumType.toFIXNameString() );
-        assertEquals( "1 - Status", enumType.toEnumDescriptionString() );
+        assertEquals( "1 - Status", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum773ConfirmType.CONFIRMATION;
         assertEquals( "2", enumType.toFIXIDString() );
         assertEquals( "CONFIRMATION", enumType.toFIXNameString() );
-        assertEquals( "2 - Confirmation", enumType.toEnumDescriptionString() );
+        assertEquals( "2 - Confirmation", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum773ConfirmType.CONFIRMATION_REJECTED;
         assertEquals( "3", enumType.toFIXIDString() );
         assertEquals( "CONFIRMATION_REJECTED", enumType.toFIXNameString() );
         assertEquals( "3 - Confirmation Request Rejected (reason can be stated in Text (58) field)",
-                enumType.toEnumDescriptionString() );
+                enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

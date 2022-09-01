@@ -42,11 +42,11 @@ class Tag692EnuQuotePriceTypeTest {
             assertEquals( "FIX692_ENU_QUOTE_PRICE_TYPE", tagData.toFIXLabelString());
             assertEquals( "692", tagData.toFIXIDString());
             assertEquals( "QUOTE_PRICE_TYPE", tagData.toFIXNameString());
-            assertEquals( "QuotePriceType", tagData.toEnumDescriptionString());
+            assertEquals( "QuotePriceType", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -136,7 +136,7 @@ class Tag692EnuQuotePriceTypeTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +

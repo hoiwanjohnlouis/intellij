@@ -52,37 +52,37 @@ class Enum582CustOrderCapacityTest {
         enumType = Enum582CustOrderCapacity.MEMBER_TRADING_ACCOUNT;
         assertEquals("1", enumType.toFIXIDString());
         assertEquals("MEMBER_TRADING_ACCOUNT", enumType.toFIXNameString());
-        assertEquals("1 - Member trading for their own account", enumType.toEnumDescriptionString());
+        assertEquals("1 - Member trading for their own account", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum582CustOrderCapacity.CLEARING_FIRM_PROPRIETARY;
         assertEquals("2", enumType.toFIXIDString());
         assertEquals("CLEARING_FIRM_PROPRIETARY", enumType.toFIXNameString());
-        assertEquals("2 - Clearing Firm trading for its proprietary account", enumType.toEnumDescriptionString());
+        assertEquals("2 - Clearing Firm trading for its proprietary account", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum582CustOrderCapacity.MEMBER_TRADING_FOR_ANOTHER;
         assertEquals("3", enumType.toFIXIDString());
         assertEquals("MEMBER_TRADING_FOR_ANOTHER", enumType.toFIXNameString());
-        assertEquals("3 - Member trading for another member", enumType.toEnumDescriptionString());
+        assertEquals("3 - Member trading for another member", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum582CustOrderCapacity.ALL_OTHER;
         assertEquals("4", enumType.toFIXIDString());
         assertEquals("ALL_OTHER", enumType.toFIXNameString());
-        assertEquals("4 - All other", enumType.toEnumDescriptionString());
+        assertEquals("4 - All other", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

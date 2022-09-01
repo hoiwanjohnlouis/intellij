@@ -47,11 +47,11 @@ class Tag226IntRepurchaseTermTest {
             assertEquals( "FIX226_INT_REPURCHASE_TERM", tagData.toFIXLabelString());
             assertEquals( "226", tagData.toFIXIDString());
             assertEquals( "REPURCHASE_TERM", tagData.toFIXNameString());
-            assertEquals( "RepurchaseTerm (Deprecated)", tagData.toEnumDescriptionString());
+            assertEquals( "RepurchaseTerm (Deprecated)", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -88,7 +88,7 @@ class Tag226IntRepurchaseTermTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
                     tagData.toVerboseString());

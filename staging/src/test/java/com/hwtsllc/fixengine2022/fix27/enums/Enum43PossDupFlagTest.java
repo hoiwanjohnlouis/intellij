@@ -41,17 +41,17 @@ class Enum43PossDupFlagTest {
         enumType = Enum43PossDupFlag.NO;
         assertEquals("N",enumType.toFIXIDString());
         assertEquals("NO", enumType.toFIXNameString());
-        assertEquals("N - Original transmission", enumType.toEnumDescriptionString());
+        assertEquals("N - Original transmission", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum43PossDupFlag.YES;
         assertEquals("Y", enumType.toFIXIDString());
         assertEquals("YES", enumType.toFIXNameString());
-        assertEquals("Y - Possible duplicate", enumType.toEnumDescriptionString());
+        assertEquals("Y - Possible duplicate", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

@@ -46,11 +46,11 @@ class Tag1027PxoMDEntryForwardPointsTest {
             assertEquals( "FIX1027_PXO_MD_ENTRY_FORWARD_POINTS", tagData.toFIXLabelString());
             assertEquals( "1027", tagData.toFIXIDString());
             assertEquals( "MD_ENTRY_FORWARD_POINTS", tagData.toFIXNameString());
-            assertEquals( "MDEntryForwardPoints", tagData.toEnumDescriptionString());
+            assertEquals( "MDEntryForwardPoints", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -87,7 +87,7 @@ class Tag1027PxoMDEntryForwardPointsTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
                     tagData.toVerboseString());

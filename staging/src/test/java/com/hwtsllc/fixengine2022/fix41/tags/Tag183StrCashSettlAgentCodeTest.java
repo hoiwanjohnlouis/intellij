@@ -47,11 +47,11 @@ class Tag183StrCashSettlAgentCodeTest {
             assertEquals( "FIX183_STR_CASH_SETTL_AGENT_CODE", tagData.toFIXLabelString());
             assertEquals( "183", tagData.toFIXIDString());
             assertEquals( "CASH_SETTL_AGENT_CODE", tagData.toFIXNameString());
-            assertEquals( "CashSettlAgentCode (replaced)", tagData.toEnumDescriptionString());
+            assertEquals( "CashSettlAgentCode (replaced)", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -88,7 +88,7 @@ class Tag183StrCashSettlAgentCodeTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
                     tagData.toVerboseString());

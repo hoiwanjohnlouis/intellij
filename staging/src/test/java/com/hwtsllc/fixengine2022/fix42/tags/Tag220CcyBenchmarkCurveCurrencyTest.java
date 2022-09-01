@@ -46,11 +46,11 @@ class Tag220CcyBenchmarkCurveCurrencyTest {
             assertEquals( "FIX220_CCY_BENCHMARK_CURVE_CURRENCY", tagData.toFIXLabelString());
             assertEquals( "220", tagData.toFIXIDString());
             assertEquals( "BENCHMARK_CURVE_CURRENCY", tagData.toFIXNameString());
-            assertEquals( "BenchmarkCurveCurrency", tagData.toEnumDescriptionString());
+            assertEquals( "BenchmarkCurveCurrency", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -87,7 +87,7 @@ class Tag220CcyBenchmarkCurveCurrencyTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
                     tagData.toVerboseString());

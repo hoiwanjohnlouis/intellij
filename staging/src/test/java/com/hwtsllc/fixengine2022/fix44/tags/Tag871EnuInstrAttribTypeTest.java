@@ -42,11 +42,11 @@ class Tag871EnuInstrAttribTypeTest {
             assertEquals( "FIX871_ENU_INSTR_ATTRIB_TYPE", tagData.toFIXLabelString());
             assertEquals( "871", tagData.toFIXIDString());
             assertEquals( "INSTR_ATTRIB_TYPE", tagData.toFIXNameString());
-            assertEquals( "InstrAttribType", tagData.toEnumDescriptionString());
+            assertEquals( "InstrAttribType", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -210,7 +210,7 @@ class Tag871EnuInstrAttribTypeTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +

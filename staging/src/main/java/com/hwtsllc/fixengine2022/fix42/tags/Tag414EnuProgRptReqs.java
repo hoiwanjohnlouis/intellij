@@ -102,7 +102,7 @@ public class Tag414EnuProgRptReqs extends FIX42Abstract implements LogValuePairS
      */
     @Override
     public String toDataDescriptionString() {
-        return dataValue.toEnumDescriptionString();
+        return dataValue.toFIXDescriptionString();
     }
     /**
      * standard wrapper to format a simple string describing the data

@@ -41,17 +41,17 @@ class Enum121ForexReqTest {
         enumType = Enum121ForexReq.NO;
         assertEquals("N",enumType.toFIXIDString());
         assertEquals("NO", enumType.toFIXNameString());
-        assertEquals("N - Do Not Execute Forex After Security Trade", enumType.toEnumDescriptionString());
+        assertEquals("N - Do Not Execute Forex After Security Trade", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum121ForexReq.YES;
         assertEquals("Y", enumType.toFIXIDString());
         assertEquals("YES", enumType.toFIXNameString());
-        assertEquals("Y - Execute Forex After Security Trade", enumType.toEnumDescriptionString());
+        assertEquals("Y - Execute Forex After Security Trade", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

@@ -101,7 +101,7 @@ public class Tag665EnuConfirmStatus extends FIX44Abstract implements LogValuePai
      */
     @Override
     public String toDataDescriptionString() {
-        return dataValue.toEnumDescriptionString();
+        return dataValue.toFIXDescriptionString();
     }
     /**
      * standard wrapper to format a simple string describing the data

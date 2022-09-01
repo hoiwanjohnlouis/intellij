@@ -42,11 +42,11 @@ class Tag532EnuMassCancelRejectReasonTest {
             assertEquals( "FIX532_ENU_MASS_CANCEL_REJECT_REASON", tagData.toFIXLabelString());
             assertEquals( "532", tagData.toFIXIDString());
             assertEquals( "MASS_CANCEL_REJECT_REASON", tagData.toFIXNameString());
-            assertEquals( "MassCancelRejectReason", tagData.toEnumDescriptionString());
+            assertEquals( "MassCancelRejectReason", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -132,7 +132,7 @@ class Tag532EnuMassCancelRejectReasonTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +

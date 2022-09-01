@@ -50,58 +50,58 @@ class Enum323SecurityResponseTypeTest {
         enumType = Enum323SecurityResponseType.ACCEPT_SECURITY_AS_IS;
         assertEquals( "1", enumType.toFIXIDString());
         assertEquals( "ACCEPT_SECURITY_AS_IS", enumType.toFIXNameString());
-        assertEquals( "1 - Accept security proposal as-is", enumType.toEnumDescriptionString());
+        assertEquals( "1 - Accept security proposal as-is", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum323SecurityResponseType.ACCEPT_SECURITY_REVISIONS;
         assertEquals( "2", enumType.toFIXIDString());
         assertEquals( "ACCEPT_SECURITY_REVISIONS", enumType.toFIXNameString());
         assertEquals( "2 - Accept security proposal with revisions as indicated in the message",
-                enumType.toEnumDescriptionString());
+                enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum323SecurityResponseType.LIST_OF_SECURITY_TYPES_RETURNED;
         assertEquals( "3", enumType.toFIXIDString());
         assertEquals( "LIST_OF_SECURITY_TYPES_RETURNED", enumType.toFIXNameString());
-        assertEquals( "3 - List of security types returned per request", enumType.toEnumDescriptionString());
+        assertEquals( "3 - List of security types returned per request", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum323SecurityResponseType.LIST_OF_SECURITIES_RETURNED_PER_REQUEST;
         assertEquals( "4", enumType.toFIXIDString());
         assertEquals( "LIST_OF_SECURITIES_RETURNED_PER_REQUEST", enumType.toFIXNameString());
-        assertEquals( "4 - List of securities returned per request", enumType.toEnumDescriptionString());
+        assertEquals( "4 - List of securities returned per request", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum323SecurityResponseType.REJECT_SECURITY_PROPOSAL;
         assertEquals( "5", enumType.toFIXIDString());
         assertEquals( "REJECT_SECURITY_PROPOSAL", enumType.toFIXNameString());
-        assertEquals( "5 - Reject security proposal", enumType.toEnumDescriptionString());
+        assertEquals( "5 - Reject security proposal", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = Enum323SecurityResponseType.CANNOT_MATCH_SELECTION;
         assertEquals( "6", enumType.toFIXIDString());
         assertEquals( "CANNOT_MATCH_SELECTION", enumType.toFIXNameString());
-        assertEquals( "6 - Cannot match selection criteria", enumType.toEnumDescriptionString());
+        assertEquals( "6 - Cannot match selection criteria", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
     /**
      *

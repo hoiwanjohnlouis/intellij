@@ -64,17 +64,17 @@ class MyEnumSymbolSfxTest {
         enumType = MyEnumSymbolSfx.EUCP;
         assertEquals( "CD", enumType.toFIXIDString());
         assertEquals( "EUCP", enumType.toFIXNameString());
-        assertEquals( "CD - EUCP with lump-sum interest rather than discount price", enumType.toEnumDescriptionString());
+        assertEquals( "CD - EUCP with lump-sum interest rather than discount price", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumSymbolSfx.WHEN_ISSUED;
         assertEquals( "WI", enumType.toFIXIDString());
         assertEquals( "WHEN_ISSUED", enumType.toFIXNameString());
-        assertEquals( "WI - When-Issued for a security to be reissued under an old CUSIP or ISIN", enumType.toEnumDescriptionString());
+        assertEquals( "WI - When-Issued for a security to be reissued under an old CUSIP or ISIN", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

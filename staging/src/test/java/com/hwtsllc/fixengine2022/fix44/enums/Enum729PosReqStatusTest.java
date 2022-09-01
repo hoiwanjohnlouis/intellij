@@ -42,25 +42,25 @@ class Enum729PosReqStatusTest {
         enumType = Enum729PosReqStatus.COMPLETED;
         assertEquals( "0", enumType.toFIXIDString());
         assertEquals( "COMPLETED", enumType.toFIXNameString());
-        assertEquals( "0 - Completed", enumType.toEnumDescriptionString());
+        assertEquals( "0 - Completed", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum729PosReqStatus.COMPLETED_WITH_WARNINGS;
         assertEquals( "1", enumType.toFIXIDString());
         assertEquals( "COMPLETED_WITH_WARNINGS", enumType.toFIXNameString());
-        assertEquals( "1 - Completed With Warnings", enumType.toEnumDescriptionString());
+        assertEquals( "1 - Completed With Warnings", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum729PosReqStatus.REJECTED;
         assertEquals( "2", enumType.toFIXIDString());
         assertEquals( "REJECTED", enumType.toFIXNameString());
-        assertEquals( "2 - Rejected", enumType.toEnumDescriptionString());
+        assertEquals( "2 - Rejected", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

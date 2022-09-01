@@ -48,47 +48,47 @@ class Enum298QuoteCancelTypeTest {
         enumType = Enum298QuoteCancelType.CANCEL_FOR_SYMBOL;
         assertEquals( "1", enumType.toFIXIDString());
         assertEquals( "CANCEL_FOR_SYMBOL", enumType.toFIXNameString());
-        assertEquals( "1 - Cancel for Symbol(s)", enumType.toEnumDescriptionString());
+        assertEquals( "1 - Cancel for Symbol(s)", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum298QuoteCancelType.CANCEL_FOR_SECURITY_TYPE;
         assertEquals( "2", enumType.toFIXIDString());
         assertEquals( "CANCEL_FOR_SECURITY_TYPE", enumType.toFIXNameString());
-        assertEquals( "2 - Cancel for Security Type(s)", enumType.toEnumDescriptionString());
+        assertEquals( "2 - Cancel for Security Type(s)", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum298QuoteCancelType.CANCEL_FOR_UNDERLYING_SYMBOL;
         assertEquals( "3", enumType.toFIXIDString());
         assertEquals( "CANCEL_FOR_UNDERLYING_SYMBOL", enumType.toFIXNameString());
-        assertEquals( "3 - Cancel for Underlying Symbol", enumType.toEnumDescriptionString());
+        assertEquals( "3 - Cancel for Underlying Symbol", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum298QuoteCancelType.CANCEL_ALL_QUOTES;
         assertEquals( "4", enumType.toFIXIDString());
         assertEquals( "CANCEL_ALL_QUOTES", enumType.toFIXNameString());
-        assertEquals( "4 - Cancel All Quotes", enumType.toEnumDescriptionString());
+        assertEquals( "4 - Cancel All Quotes", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum298QuoteCancelType.CANCEL_QUOTEID_QUOTE;
         assertEquals( "5", enumType.toFIXIDString());
         assertEquals( "CANCEL_QUOTEID_QUOTE", enumType.toFIXNameString());
-        assertEquals( "5 - Cancel quote specified in QuoteID", enumType.toEnumDescriptionString());
+        assertEquals( "5 - Cancel quote specified in QuoteID", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
     /**
      *

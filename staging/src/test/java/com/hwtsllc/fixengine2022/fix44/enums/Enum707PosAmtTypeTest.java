@@ -49,73 +49,73 @@ class Enum707PosAmtTypeTest {
         enumType = Enum707PosAmtType.CASH_AMOUNT;
         assertEquals( "CASH", enumType.toFIXIDString());
         assertEquals( "CASH_AMOUNT", enumType.toFIXNameString());
-        assertEquals( "CASH - Cash Amount (Corporate Event)", enumType.toEnumDescriptionString());
+        assertEquals( "CASH - Cash Amount (Corporate Event)", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum707PosAmtType.CASH_RESIDUAL_AMOUNT;
         assertEquals( "CRES", enumType.toFIXIDString());
         assertEquals( "CASH_RESIDUAL_AMOUNT", enumType.toFIXNameString());
-        assertEquals( "CRES - Cash Residual Amount", enumType.toEnumDescriptionString());
+        assertEquals( "CRES - Cash Residual Amount", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum707PosAmtType.FINAL_MARK_TO_MARKET_AMOUNT;
         assertEquals( "FMTM", enumType.toFIXIDString());
         assertEquals( "FINAL_MARK_TO_MARKET_AMOUNT", enumType.toFIXNameString());
-        assertEquals( "FMTM - Final Mark-to-Market Amount", enumType.toEnumDescriptionString());
+        assertEquals( "FMTM - Final Mark-to-Market Amount", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum707PosAmtType.INCREMENTAL_MARK_TO_MARKET_AMOUNT;
         assertEquals( "IMTM", enumType.toFIXIDString());
         assertEquals( "INCREMENTAL_MARK_TO_MARKET_AMOUNT", enumType.toFIXNameString());
-        assertEquals( "IMTM - Incremental Mark-to-Market Amount", enumType.toEnumDescriptionString());
+        assertEquals( "IMTM - Incremental Mark-to-Market Amount", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum707PosAmtType.PREMIUM_AMOUNT;
         assertEquals( "PREM", enumType.toFIXIDString());
         assertEquals( "PREMIUM_AMOUNT", enumType.toFIXNameString());
-        assertEquals( "PREM - Premium Amount", enumType.toEnumDescriptionString());
+        assertEquals( "PREM - Premium Amount", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum707PosAmtType.START_OF_DAY_MARK_TO_MARKET_AMOUNT;
         assertEquals( "SMTM", enumType.toFIXIDString());
         assertEquals( "START_OF_DAY_MARK_TO_MARKET_AMOUNT", enumType.toFIXNameString());
-        assertEquals( "SMTM - Start-of-Day Mark-to-Market Amount", enumType.toEnumDescriptionString());
+        assertEquals( "SMTM - Start-of-Day Mark-to-Market Amount", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum707PosAmtType.TRADE_VARIATION_AMOUNT;
         assertEquals( "TVAR", enumType.toFIXIDString());
         assertEquals( "TRADE_VARIATION_AMOUNT", enumType.toFIXNameString());
-        assertEquals( "TVAR - Trade Variation Amount", enumType.toEnumDescriptionString());
+        assertEquals( "TVAR - Trade Variation Amount", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum707PosAmtType.VALUE_ADJUSTED_AMOUNT;
         assertEquals( "VADJ", enumType.toFIXIDString());
         assertEquals( "VALUE_ADJUSTED_AMOUNT", enumType.toFIXNameString());
-        assertEquals( "VADJ - Value Adjusted Amount", enumType.toEnumDescriptionString());
+        assertEquals( "VADJ - Value Adjusted Amount", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum707PosAmtType.SETTLEMENT_VALUE;
         assertEquals( "SETL", enumType.toFIXIDString());
         assertEquals( "SETTLEMENT_VALUE", enumType.toFIXNameString());
-        assertEquals( "SETL - Settlement Value", enumType.toEnumDescriptionString());
+        assertEquals( "SETL - Settlement Value", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

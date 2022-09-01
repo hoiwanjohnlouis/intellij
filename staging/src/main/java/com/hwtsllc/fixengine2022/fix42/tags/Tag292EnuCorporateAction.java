@@ -123,7 +123,7 @@ public class Tag292EnuCorporateAction extends FIX42Abstract implements LogValueP
      */
     @Override
     public String toDataDescriptionString() {
-        return dataValue.toEnumDescriptionString();
+        return dataValue.toFIXDescriptionString();
     }
     /**
      * standard wrapper to format a simple string describing the data

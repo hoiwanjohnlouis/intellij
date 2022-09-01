@@ -46,29 +46,29 @@ class Enum301QuoteResponseLevelTest {
         enumType = Enum301QuoteResponseLevel.NO_ACKNOWLEDGEMENT;
         assertEquals("0", enumType.toFIXIDString());
         assertEquals("NO_ACKNOWLEDGEMENT", enumType.toFIXNameString());
-        assertEquals("0 - No Acknowledgement (default)", enumType.toEnumDescriptionString());
+        assertEquals("0 - No Acknowledgement (default)", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum301QuoteResponseLevel.ACKNOWLEDGE_NEGATIVE_OR_ERRORS;
         assertEquals("1", enumType.toFIXIDString());
         assertEquals("ACKNOWLEDGE_NEGATIVE_OR_ERRORS", enumType.toFIXNameString());
-        assertEquals("1 - Acknowledge only negative or erroneous quotes", enumType.toEnumDescriptionString());
+        assertEquals("1 - Acknowledge only negative or erroneous quotes", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum301QuoteResponseLevel.ACKNOWLEDGE_EACH_QUOTE;
         assertEquals("2", enumType.toFIXIDString());
         assertEquals("ACKNOWLEDGE_EACH_QUOTE", enumType.toFIXNameString());
-        assertEquals("2 - Acknowledge each quote messages", enumType.toEnumDescriptionString());
+        assertEquals("2 - Acknowledge each quote messages", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
     /**
      *

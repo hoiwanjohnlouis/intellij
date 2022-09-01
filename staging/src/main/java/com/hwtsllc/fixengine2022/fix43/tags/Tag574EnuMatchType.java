@@ -147,7 +147,7 @@ public class Tag574EnuMatchType extends FIX43Abstract implements LogValuePairStr
      */
     @Override
     public String toDataDescriptionString() {
-        return dataValue.toEnumDescriptionString();
+        return dataValue.toFIXDescriptionString();
     }
     /**
      * standard wrapper to format a simple string describing the data

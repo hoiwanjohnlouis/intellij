@@ -100,7 +100,7 @@ public class Tag464EnuTestMessageIndicator extends FIX43Abstract implements LogV
      */
     @Override
     public String toDataDescriptionString() {
-        return dataValue.toEnumDescriptionString();
+        return dataValue.toFIXDescriptionString();
     }
     /**
      * standard wrapper to format a simple string describing the data

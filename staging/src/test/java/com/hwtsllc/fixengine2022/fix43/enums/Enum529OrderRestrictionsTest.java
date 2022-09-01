@@ -64,84 +64,84 @@ class Enum529OrderRestrictionsTest {
         enumType = Enum529OrderRestrictions.PROGRAM_TRADE;
         assertEquals("1", enumType.toFIXIDString());
         assertEquals("PROGRAM_TRADE", enumType.toFIXNameString());
-        assertEquals("1 - Program Trade", enumType.toEnumDescriptionString());
+        assertEquals("1 - Program Trade", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum529OrderRestrictions.INDEX_ARBITRAGE;
         assertEquals("2", enumType.toFIXIDString());
         assertEquals("INDEX_ARBITRAGE", enumType.toFIXNameString());
-        assertEquals("2 - Index Arbitrage", enumType.toEnumDescriptionString());
+        assertEquals("2 - Index Arbitrage", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum529OrderRestrictions.NON_INDEX_ARBITRAGE;
         assertEquals("3", enumType.toFIXIDString());
         assertEquals("NON_INDEX_ARBITRAGE", enumType.toFIXNameString());
-        assertEquals("3 - Non-Index Arbitrage", enumType.toEnumDescriptionString());
+        assertEquals("3 - Non-Index Arbitrage", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum529OrderRestrictions.COMPETING_MARKET_MAKER;
         assertEquals("4", enumType.toFIXIDString());
         assertEquals("COMPETING_MARKET_MAKER", enumType.toFIXNameString());
-        assertEquals("4 - Competing Market Maker", enumType.toEnumDescriptionString());
+        assertEquals("4 - Competing Market Maker", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum529OrderRestrictions.SPECIALIST_IN_SECURITY;
         assertEquals("5", enumType.toFIXIDString());
         assertEquals("SPECIALIST_IN_SECURITY", enumType.toFIXNameString());
-        assertEquals("5 - Acting as Market Maker or Specialist in the security", enumType.toEnumDescriptionString());
+        assertEquals("5 - Acting as Market Maker or Specialist in the security", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = Enum529OrderRestrictions.SPECIALIST_IN_UNDERLYING_SECURITY;
         assertEquals("6", enumType.toFIXIDString());
         assertEquals("SPECIALIST_IN_UNDERLYING_SECURITY", enumType.toFIXNameString());
-        assertEquals("6 - Acting as Market Maker of Specialist in the underlying security of a derivative security", enumType.toEnumDescriptionString());
+        assertEquals("6 - Acting as Market Maker of Specialist in the underlying security of a derivative security", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum529OrderRestrictions.FOREIGN_ENTITY;
         assertEquals("7", enumType.toFIXIDString());
         assertEquals("FOREIGN_ENTITY", enumType.toFIXNameString());
-        assertEquals("7 - Foreign Entity (of foreign government or regulatory jurisdiction)", enumType.toEnumDescriptionString());
+        assertEquals("7 - Foreign Entity (of foreign government or regulatory jurisdiction)", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum529OrderRestrictions.EXTERNAL_MARKET_PARTICIPANT;
         assertEquals("8", enumType.toFIXIDString());
         assertEquals("EXTERNAL_MARKET_PARTICIPANT", enumType.toFIXNameString());
-        assertEquals("8 - External Market Participant", enumType.toEnumDescriptionString());
+        assertEquals("8 - External Market Participant", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum529OrderRestrictions.EXTERNAL_INTER_CONNECTED;
         assertEquals("9", enumType.toFIXIDString());
         assertEquals("EXTERNAL_INTER_CONNECTED", enumType.toFIXNameString());
-        assertEquals("9 - External Inter-connected Market Linkage", enumType.toEnumDescriptionString());
+        assertEquals("9 - External Inter-connected Market Linkage", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
 
@@ -151,10 +151,10 @@ class Enum529OrderRestrictionsTest {
         enumType = Enum529OrderRestrictions.RISKLESS_ARBITRAGE;
         assertEquals("A", enumType.toFIXIDString());
         assertEquals("RISKLESS_ARBITRAGE", enumType.toFIXNameString());
-        assertEquals("A - Riskless Arbitrage", enumType.toEnumDescriptionString());
+        assertEquals("A - Riskless Arbitrage", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

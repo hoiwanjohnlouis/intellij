@@ -48,29 +48,29 @@ class Enum442MultiLegReportingTypeTest {
         enumType = Enum442MultiLegReportingType.SINGLE_SECURITY;
         assertEquals("1", enumType.toFIXIDString());
         assertEquals("SINGLE_SECURITY", enumType.toFIXNameString());
-        assertEquals("1 - Single security (default if not specified)", enumType.toEnumDescriptionString());
+        assertEquals("1 - Single security (default if not specified)", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum442MultiLegReportingType.INDIVIDUAL_LEG_SECURITY;
         assertEquals("2", enumType.toFIXIDString());
         assertEquals("INDIVIDUAL_LEG_SECURITY", enumType.toFIXNameString());
-        assertEquals("2 - Individual leg of a multi=leg security", enumType.toEnumDescriptionString());
+        assertEquals("2 - Individual leg of a multi=leg security", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum442MultiLegReportingType.MULTI_LEG_SECURITY;
         assertEquals("3", enumType.toFIXIDString());
         assertEquals("MULTI_LEG_SECURITY", enumType.toFIXNameString());
-        assertEquals("3 - Multi-leg security", enumType.toEnumDescriptionString());
+        assertEquals("3 - Multi-leg security", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
     /**
      *

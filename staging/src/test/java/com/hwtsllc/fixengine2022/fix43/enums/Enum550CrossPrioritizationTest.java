@@ -55,28 +55,28 @@ class Enum550CrossPrioritizationTest {
         enumType = Enum550CrossPrioritization.NONE;
         assertEquals("0", enumType.toFIXIDString());
         assertEquals("NONE", enumType.toFIXNameString());
-        assertEquals("0 - None", enumType.toEnumDescriptionString());
+        assertEquals("0 - None", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum550CrossPrioritization.BUY_PRIORITY;
         assertEquals("1", enumType.toFIXIDString());
         assertEquals("BUY_PRIORITY", enumType.toFIXNameString());
-        assertEquals("1 - Buy side is prioritized", enumType.toEnumDescriptionString());
+        assertEquals("1 - Buy side is prioritized", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum550CrossPrioritization.SELL_PRIORITY;
         assertEquals("2", enumType.toFIXIDString());
         assertEquals("SELL_PRIORITY", enumType.toFIXNameString());
-        assertEquals("2 - Sell side is prioritized", enumType.toEnumDescriptionString());
+        assertEquals("2 - Sell side is prioritized", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

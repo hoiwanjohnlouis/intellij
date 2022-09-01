@@ -42,11 +42,11 @@ class Tag980EnuSecurityUpdateActionTest {
             assertEquals( "FIX980_ENU_SECURITY_UPDATE_ACTION", tagData.toFIXLabelString());
             assertEquals( "980", tagData.toFIXIDString());
             assertEquals( "SECURITY_UPDATE_ACTION", tagData.toFIXNameString());
-            assertEquals( "SecurityUpdateAction", tagData.toEnumDescriptionString());
+            assertEquals( "SecurityUpdateAction", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -99,7 +99,7 @@ class Tag980EnuSecurityUpdateActionTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +

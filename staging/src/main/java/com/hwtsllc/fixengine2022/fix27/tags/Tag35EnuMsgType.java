@@ -240,7 +240,7 @@ public class Tag35EnuMsgType extends FIX27Abstract implements LogValuePairString
      */
     @Override
     public String toDataDescriptionString() {
-        return dataValue.toEnumDescriptionString();
+        return dataValue.toFIXDescriptionString();
     }
     /**
      * standard wrapper to format a simple string describing the data

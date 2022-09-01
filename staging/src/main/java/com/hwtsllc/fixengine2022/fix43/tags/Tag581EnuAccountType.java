@@ -109,7 +109,7 @@ public class Tag581EnuAccountType extends FIX43Abstract implements LogValuePairS
      */
     @Override
     public String toDataDescriptionString() {
-        return dataValue.toEnumDescriptionString();
+        return dataValue.toFIXDescriptionString();
     }
     /**
      * standard wrapper to format a simple string describing the data

@@ -79,7 +79,7 @@ public enum Enum559SecurityListRequestType implements LogFIXString, LogVerboseSt
      * standard wrapper to retrieve the specific fix description for this enum. eg: the third field
      */
     @Override
-    public String toEnumDescriptionString() {
+    public String toFIXDescriptionString() {
         return description;
     }
     /**
@@ -98,7 +98,7 @@ public enum Enum559SecurityListRequestType implements LogFIXString, LogVerboseSt
                 .concat( toFIXNameString())
                 .concat("]")
                 .concat("\n\tDescription[")
-                .concat( toEnumDescriptionString())
+                .concat( toFIXDescriptionString())
                 .concat("]");
     }
     /**

@@ -43,33 +43,33 @@ class Enum905CollAsgnRespTypeTest {
         enumType = Enum905CollAsgnRespType.RECEIVED;
         assertEquals( "0", enumType.toFIXIDString() );
         assertEquals( "RECEIVED", enumType.toFIXNameString() );
-        assertEquals( "0 - Received", enumType.toEnumDescriptionString() );
+        assertEquals( "0 - Received", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum905CollAsgnRespType.ACCEPTED;
         assertEquals( "1", enumType.toFIXIDString() );
         assertEquals( "ACCEPTED", enumType.toFIXNameString() );
-        assertEquals( "1 - Accepted", enumType.toEnumDescriptionString() );
+        assertEquals( "1 - Accepted", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum905CollAsgnRespType.DECLINED;
         assertEquals( "2", enumType.toFIXIDString() );
         assertEquals( "DECLINED", enumType.toFIXNameString() );
-        assertEquals( "2 - Declined", enumType.toEnumDescriptionString() );
+        assertEquals( "2 - Declined", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum905CollAsgnRespType.REJECTED;
         assertEquals( "3", enumType.toFIXIDString() );
         assertEquals( "REJECTED", enumType.toFIXNameString() );
-        assertEquals( "3 - Rejected", enumType.toEnumDescriptionString() );
+        assertEquals( "3 - Rejected", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

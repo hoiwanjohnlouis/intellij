@@ -42,11 +42,11 @@ class Tag497EnuFundRenewWaivTest {
             assertEquals( "FIX497_ENU_FUND_RENEW_WAIV", tagData.toFIXLabelString());
             assertEquals( "497", tagData.toFIXIDString());
             assertEquals( "FUND_RENEW_WAIV", tagData.toFIXNameString());
-            assertEquals( "FundRenewWaiv", tagData.toEnumDescriptionString());
+            assertEquals( "FundRenewWaiv", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -94,7 +94,7 @@ class Tag497EnuFundRenewWaivTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +

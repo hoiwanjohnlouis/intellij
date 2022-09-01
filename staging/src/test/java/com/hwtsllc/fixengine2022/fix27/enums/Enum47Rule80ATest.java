@@ -83,187 +83,187 @@ class Enum47Rule80ATest {
         enumType = Enum47Rule80A.AGENCY_SINGLE_ORDER;
         assertEquals("A", enumType.toFIXIDString());
         assertEquals("AGENCY_SINGLE_ORDER", enumType.toFIXNameString());
-        assertEquals("A - Agency single order", enumType.toEnumDescriptionString());
+        assertEquals("A - Agency single order", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum47Rule80A.SHORT_EXEMPT_A;
         assertEquals("B", enumType.toFIXIDString());
         assertEquals("SHORT_EXEMPT_A", enumType.toFIXNameString());
-        assertEquals("B - Short exempt transaction (refer to A type)", enumType.toEnumDescriptionString());
+        assertEquals("B - Short exempt transaction (refer to A type)", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum47Rule80A.PROGRAM_NON_INDEX_ARB_MEMBER;
         assertEquals("C", enumType.toFIXIDString());
         assertEquals("PROGRAM_NON_INDEX_ARB_MEMBER", enumType.toFIXNameString());
-        assertEquals("C - Program order, non-index arb, for Member firm/org", enumType.toEnumDescriptionString());
+        assertEquals("C - Program order, non-index arb, for Member firm/org", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum47Rule80A.PROGRAM_INDEX_ARB_MEMBER;
         assertEquals("D", enumType.toFIXIDString());
         assertEquals("PROGRAM_INDEX_ARB_MEMBER", enumType.toFIXNameString());
-        assertEquals("D - Program order, index arb, for Member firm/org", enumType.toEnumDescriptionString());
+        assertEquals("D - Program order, index arb, for Member firm/org", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum47Rule80A.SHORT_EXEMPT_P;
         assertEquals("E", enumType.toFIXIDString());
         assertEquals("SHORT_EXEMPT_P", enumType.toFIXNameString());
-        assertEquals("E - Short Exempt Transaction for Principal", enumType.toEnumDescriptionString());
+        assertEquals("E - Short Exempt Transaction for Principal", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = Enum47Rule80A.SHORT_EXEMPT_W;
         assertEquals("F", enumType.toFIXIDString());
         assertEquals("SHORT_EXEMPT_W", enumType.toFIXNameString());
-        assertEquals("F - Short exempt transaction (refer to W type)", enumType.toEnumDescriptionString());
+        assertEquals("F - Short exempt transaction (refer to W type)", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum47Rule80A.SHORT_EXEMPT_I;
         assertEquals("H", enumType.toFIXIDString());
         assertEquals("SHORT_EXEMPT_I", enumType.toFIXNameString());
-        assertEquals("H - Short exempt transaction (refer to I type)", enumType.toEnumDescriptionString());
+        assertEquals("H - Short exempt transaction (refer to I type)", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum47Rule80A.INDIVIDUAL_INVESTOR_SINGLE_ORDER;
         assertEquals("I", enumType.toFIXIDString());
         assertEquals("INDIVIDUAL_INVESTOR_SINGLE_ORDER", enumType.toFIXNameString());
-        assertEquals("I - Individual Investor, single order", enumType.toEnumDescriptionString());
+        assertEquals("I - Individual Investor, single order", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum47Rule80A.PROGRAM_INDEX_ARB_INDIVIDUAL;
         assertEquals("J", enumType.toFIXIDString());
         assertEquals("PROGRAM_INDEX_ARB_INDIVIDUAL", enumType.toFIXNameString());
-        assertEquals("J - Program Order, index arb, for individual customer", enumType.toEnumDescriptionString());
+        assertEquals("J - Program Order, index arb, for individual customer", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum47Rule80A.PROGRAM_NON_INDEX_ARB_INDIVIDUAL;
         assertEquals("K", enumType.toFIXIDString());
         assertEquals("PROGRAM_NON_INDEX_ARB_INDIVIDUAL", enumType.toFIXNameString());
-        assertEquals("K - Program Order, non-index arb, for individual customer", enumType.toEnumDescriptionString());
+        assertEquals("K - Program Order, non-index arb, for individual customer", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = Enum47Rule80A.SHORT_EXEMPT_MARKET_MAKER_P_O;
         assertEquals("L", enumType.toFIXIDString());
         assertEquals("SHORT_EXEMPT_MARKET_MAKER_P_O", enumType.toFIXNameString());
         assertEquals("L - Short exempt transaction for member competing market-maker affiliated " +
-                "with the firm clearing the trade (refer to P and O types)", enumType.toEnumDescriptionString());
+                "with the firm clearing the trade (refer to P and O types)", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum47Rule80A.PROGRAM_INDEX_ARB_OTHER_MEMBER;
         assertEquals("M", enumType.toFIXIDString());
         assertEquals("PROGRAM_INDEX_ARB_OTHER_MEMBER", enumType.toFIXNameString());
-        assertEquals("M - Program Order, index arb, for other member", enumType.toEnumDescriptionString());
+        assertEquals("M - Program Order, index arb, for other member", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum47Rule80A.PROPRIETARY_MARKET_MAKER_CLEARING;
         assertEquals("O", enumType.toFIXIDString());
         assertEquals("PROPRIETARY_MARKET_MAKER_CLEARING", enumType.toFIXNameString());
         assertEquals("O - Proprietary transactions for competing market-maker that is affiliated " +
-                "with the clearing member", enumType.toEnumDescriptionString());
+                "with the clearing member", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum47Rule80A.PRINCIPAL;
         assertEquals("P", enumType.toFIXIDString());
         assertEquals("PRINCIPAL", enumType.toFIXNameString());
-        assertEquals("P - Principal", enumType.toEnumDescriptionString());
+        assertEquals("P - Principal", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum47Rule80A.NON_MEMBER_MARKET_MAKER;
         assertEquals("R", enumType.toFIXIDString());
         assertEquals("NON_MEMBER_MARKET_MAKER", enumType.toFIXNameString());
         assertEquals("R - Transactions for the account of a non-member competing market-maker",
-                enumType.toEnumDescriptionString());
+                enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = Enum47Rule80A.SPECIALIST_TRADES;
         assertEquals("S", enumType.toFIXIDString());
         assertEquals("SPECIALIST_TRADES", enumType.toFIXNameString());
-        assertEquals("S - Specialist trades", enumType.toEnumDescriptionString());
+        assertEquals("S - Specialist trades", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum47Rule80A.UNAFFILIATED_MEMBER_MARKET_MAKER;
         assertEquals("T", enumType.toFIXIDString());
         assertEquals("UNAFFILIATED_MEMBER_MARKET_MAKER", enumType.toFIXNameString());
         assertEquals("T - Transactions for the account of an unaffiliated member's competing market-maker",
-                enumType.toEnumDescriptionString());
+                enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum47Rule80A.PROGRAM_INDEX_ARB_OTHER_AGENCY;
         assertEquals("U", enumType.toFIXIDString());
         assertEquals("PROGRAM_INDEX_ARB_OTHER_AGENCY", enumType.toFIXNameString());
-        assertEquals("U - Program Order, index arb, for other agency", enumType.toEnumDescriptionString());
+        assertEquals("U - Program Order, index arb, for other agency", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum47Rule80A.AGENT_FOR_OTHER_MEMBER;
         assertEquals("W", enumType.toFIXIDString());
         assertEquals("AGENT_FOR_OTHER_MEMBER", enumType.toFIXNameString());
-        assertEquals("W - All other orders as agent for other member", enumType.toEnumDescriptionString());
+        assertEquals("W - All other orders as agent for other member", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum47Rule80A.SHORT_EXEMPT_MARKET_MAKER_W_T;
         assertEquals("X", enumType.toFIXIDString());
         assertEquals("SHORT_EXEMPT_MARKET_MAKER_W_T", enumType.toFIXNameString());
         assertEquals("X - Short exempt transaction for member competing market-maker not affiliated " +
-                "with the firm clearing the trade (refer to W and T types)", enumType.toEnumDescriptionString());
+                "with the firm clearing the trade (refer to W and T types)", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = Enum47Rule80A.PROGRAM_NON_INDEX_ARB_OTHER_AGENCY;
         assertEquals("Y", enumType.toFIXIDString());
         assertEquals("PROGRAM_NON_INDEX_ARB_OTHER_AGENCY", enumType.toFIXNameString());
-        assertEquals("Y - Program Order, non-index arb, for other agency", enumType.toEnumDescriptionString());
+        assertEquals("Y - Program Order, non-index arb, for other agency", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum47Rule80A.SHORT_EXEMPT_NON_MEMBER_MARKET_MAKER_A_R;
         assertEquals("Z", enumType.toFIXIDString());
         assertEquals("SHORT_EXEMPT_NON_MEMBER_MARKET_MAKER_A_R", enumType.toFIXNameString());
         assertEquals("Z - Short exempt transaction for non-member competing market-maker " +
-                        "(refer to A and R types)", enumType.toEnumDescriptionString());
+                        "(refer to A and R types)", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

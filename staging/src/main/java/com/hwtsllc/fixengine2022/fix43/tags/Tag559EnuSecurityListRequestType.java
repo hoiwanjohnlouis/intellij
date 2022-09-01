@@ -101,7 +101,7 @@ public class Tag559EnuSecurityListRequestType extends FIX43Abstract implements L
      */
     @Override
     public String toDataDescriptionString() {
-        return dataValue.toEnumDescriptionString();
+        return dataValue.toFIXDescriptionString();
     }
     /**
      * standard wrapper to format a simple string describing the data

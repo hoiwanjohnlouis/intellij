@@ -46,11 +46,11 @@ class Tag735NumNoQuoteQualifiersTest {
             assertEquals( "FIX735_NUM_NO_QUOTE_QUALIFIERS", tagData.toFIXLabelString());
             assertEquals( "735", tagData.toFIXIDString());
             assertEquals( "NO_QUOTE_QUALIFIERS", tagData.toFIXNameString());
-            assertEquals( "NoQuoteQualifiers", tagData.toEnumDescriptionString());
+            assertEquals( "NoQuoteQualifiers", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -87,7 +87,7 @@ class Tag735NumNoQuoteQualifiersTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
                     tagData.toVerboseString());

@@ -58,132 +58,132 @@ class Enum856TradeReportTypeTest {
         enumType = Enum856TradeReportType.SUBMIT;
         assertEquals("0", enumType.toFIXIDString());
         assertEquals("SUBMIT", enumType.toFIXNameString());
-        assertEquals("0 - Submit", enumType.toEnumDescriptionString());
+        assertEquals("0 - Submit", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum856TradeReportType.ALLEGED;
         assertEquals("1", enumType.toFIXIDString());
         assertEquals("ALLEGED", enumType.toFIXNameString());
-        assertEquals("1 - Alleged", enumType.toEnumDescriptionString());
+        assertEquals("1 - Alleged", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum856TradeReportType.ACCEPT;
         assertEquals("2", enumType.toFIXIDString());
         assertEquals("ACCEPT", enumType.toFIXNameString());
-        assertEquals("2 - Accept", enumType.toEnumDescriptionString());
+        assertEquals("2 - Accept", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum856TradeReportType.DECLINE;
         assertEquals("3", enumType.toFIXIDString());
         assertEquals("DECLINE", enumType.toFIXNameString());
-        assertEquals("3 - Decline", enumType.toEnumDescriptionString());
+        assertEquals("3 - Decline", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum856TradeReportType.ADDENDUM;
         assertEquals("4", enumType.toFIXIDString());
         assertEquals("ADDENDUM", enumType.toFIXNameString());
-        assertEquals("4 - Addendum", enumType.toEnumDescriptionString());
+        assertEquals("4 - Addendum", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = Enum856TradeReportType.NO_WAS;
         assertEquals("5", enumType.toFIXIDString());
         assertEquals("NO_WAS", enumType.toFIXNameString());
-        assertEquals("5 - No-Was", enumType.toEnumDescriptionString());
+        assertEquals("5 - No-Was", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum856TradeReportType.TRADE_REPORT_CANCEL;
         assertEquals("6", enumType.toFIXIDString());
         assertEquals("TRADE_REPORT_CANCEL", enumType.toFIXNameString());
-        assertEquals("6 - Trade Report Cancel", enumType.toEnumDescriptionString());
+        assertEquals("6 - Trade Report Cancel", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum856TradeReportType.LOCKED_IN_TRADE_BREAK;
         assertEquals("7", enumType.toFIXIDString());
         assertEquals("LOCKED_IN_TRADE_BREAK", enumType.toFIXNameString());
-        assertEquals("7 - (Locked-In) Trade Break", enumType.toEnumDescriptionString());
+        assertEquals("7 - (Locked-In) Trade Break", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum856TradeReportType.DEFAULTED;
         assertEquals("8", enumType.toFIXIDString());
         assertEquals("DEFAULTED", enumType.toFIXNameString());
-        assertEquals("8 - Defaulted", enumType.toEnumDescriptionString());
+        assertEquals("8 - Defaulted", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum856TradeReportType.INVALID_CMTA;
         assertEquals("9", enumType.toFIXIDString());
         assertEquals("INVALID_CMTA", enumType.toFIXNameString());
-        assertEquals("9 - Invalid CMTA", enumType.toEnumDescriptionString());
+        assertEquals("9 - Invalid CMTA", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = Enum856TradeReportType.PENDED;
         assertEquals("10", enumType.toFIXIDString());
         assertEquals("PENDED", enumType.toFIXNameString());
-        assertEquals("10 - Pended", enumType.toEnumDescriptionString());
+        assertEquals("10 - Pended", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum856TradeReportType.ALLEGED_NEW;
         assertEquals("11", enumType.toFIXIDString());
         assertEquals("ALLEGED_NEW", enumType.toFIXNameString());
-        assertEquals("11 - Alleged New", enumType.toEnumDescriptionString());
+        assertEquals("11 - Alleged New", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum856TradeReportType.ALLEGED_ADDENDUM;
         assertEquals("12", enumType.toFIXIDString());
         assertEquals("ALLEGED_ADDENDUM", enumType.toFIXNameString());
-        assertEquals("12 - Alleged Addendum", enumType.toEnumDescriptionString());
+        assertEquals("12 - Alleged Addendum", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum856TradeReportType.ALLEGED_NO_WAS;
         assertEquals("13", enumType.toFIXIDString());
         assertEquals("ALLEGED_NO_WAS", enumType.toFIXNameString());
-        assertEquals("13 - Alleged No-Was", enumType.toEnumDescriptionString());
+        assertEquals("13 - Alleged No-Was", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum856TradeReportType.ALLEGED_TRADE_REPORT_CANCEL;
         assertEquals("14", enumType.toFIXIDString());
         assertEquals("ALLEGED_TRADE_REPORT_CANCEL", enumType.toFIXNameString());
-        assertEquals("14 - Alleged Trade Report Cancel", enumType.toEnumDescriptionString());
+        assertEquals("14 - Alleged Trade Report Cancel", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = Enum856TradeReportType.ALLEGED_LOCKED_IN_TRADE_BREAK;
         assertEquals("15", enumType.toFIXIDString());
         assertEquals("ALLEGED_LOCKED_IN_TRADE_BREAK", enumType.toFIXNameString());
-        assertEquals("15 - Alleged (Locked-In) Trade Break", enumType.toEnumDescriptionString());
+        assertEquals("15 - Alleged (Locked-In) Trade Break", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

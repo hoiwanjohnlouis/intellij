@@ -48,9 +48,9 @@ class MyEnumOrderSourceTest {
         enumType = MyEnumOrderSource.NASD_OATS;
         assertEquals( "1", enumType.toFIXIDString() );
         assertEquals( "NASD_OATS", enumType.toFIXNameString() );
-        assertEquals( "1 - NASD OATS", enumType.toEnumDescriptionString() );
+        assertEquals( "1 - NASD OATS", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

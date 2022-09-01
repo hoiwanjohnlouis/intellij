@@ -55,11 +55,11 @@ class Tag737AmtAllocSettlCurrAmtTest {
             assertEquals( "FIX737_AMT_ALLOC_SETTL_CURR_AMT", tagData.toFIXLabelString());
             assertEquals( "737", tagData.toFIXIDString());
             assertEquals( "ALLOC_SETTL_CURR_AMT", tagData.toFIXNameString());
-            assertEquals( "AllocSettlCurrAmt", tagData.toEnumDescriptionString());
+            assertEquals( "AllocSettlCurrAmt", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -90,7 +90,7 @@ class Tag737AmtAllocSettlCurrAmtTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
                     tagData.toVerboseString());

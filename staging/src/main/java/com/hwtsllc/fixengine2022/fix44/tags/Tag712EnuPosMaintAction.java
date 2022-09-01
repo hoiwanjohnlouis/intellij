@@ -103,7 +103,7 @@ public class Tag712EnuPosMaintAction extends FIX44Abstract implements LogValuePa
      */
     @Override
     public String toDataDescriptionString() {
-        return dataValue.toEnumDescriptionString();
+        return dataValue.toFIXDescriptionString();
     }
     /**
      * standard wrapper to format a simple string describing the data

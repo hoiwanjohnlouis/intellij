@@ -98,7 +98,7 @@ public class Tag1083EnuDisplayWhen extends FIX50Abstract implements LogValuePair
      */
     @Override
     public String toDataDescriptionString() {
-        return dataValue.toEnumDescriptionString();
+        return dataValue.toFIXDescriptionString();
     }
     /**
      * standard wrapper to format a simple string describing the data

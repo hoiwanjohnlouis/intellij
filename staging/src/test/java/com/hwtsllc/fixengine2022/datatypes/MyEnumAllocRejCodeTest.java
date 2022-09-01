@@ -66,113 +66,113 @@ class MyEnumAllocRejCodeTest {
         enumType = MyEnumAllocRejCode.UNKNOWN_ACCOUNT;
         assertEquals("0", enumType.toFIXIDString());
         assertEquals("UNKNOWN_ACCOUNT", enumType.toFIXNameString());
-        assertEquals("0 - Unknown account(s)", enumType.toEnumDescriptionString());
+        assertEquals("0 - Unknown account(s)", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumAllocRejCode.INCORRECT_QUANTITY;
         assertEquals("1", enumType.toFIXIDString());
         assertEquals("INCORRECT_QUANTITY", enumType.toFIXNameString());
-        assertEquals("1 - Incorrect quantity", enumType.toEnumDescriptionString());
+        assertEquals("1 - Incorrect quantity", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumAllocRejCode.INCORRECT_AVERAGE_PRICE;
         assertEquals("2", enumType.toFIXIDString());
         assertEquals("INCORRECT_AVERAGE_PRICE", enumType.toFIXNameString());
-        assertEquals("2 - Incorrect average price", enumType.toEnumDescriptionString());
+        assertEquals("2 - Incorrect average price", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumAllocRejCode.UNKNOWN_EXECUTING_BROKER_MNEMONIC;
         assertEquals("3", enumType.toFIXIDString());
         assertEquals("UNKNOWN_EXECUTING_BROKER_MNEMONIC", enumType.toFIXNameString());
-        assertEquals("3 - Unknown executing broker mnemonic", enumType.toEnumDescriptionString());
+        assertEquals("3 - Unknown executing broker mnemonic", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumAllocRejCode.COMMISSION_DIFFERENCE;
         assertEquals("4", enumType.toFIXIDString());
         assertEquals("COMMISSION_DIFFERENCE", enumType.toFIXNameString());
-        assertEquals("4 - Commission difference", enumType.toEnumDescriptionString());
+        assertEquals("4 - Commission difference", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumAllocRejCode.UNKNOWN_ORDERID;
         assertEquals("5", enumType.toFIXIDString());
         assertEquals("UNKNOWN_ORDERID", enumType.toFIXNameString());
-        assertEquals("5 - Unknown OrderID (37)", enumType.toEnumDescriptionString());
+        assertEquals("5 - Unknown OrderID (37)", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumAllocRejCode.UNKNOWN_LISTID;
         assertEquals("6", enumType.toFIXIDString());
         assertEquals("UNKNOWN_LISTID", enumType.toFIXNameString());
-        assertEquals("6 - Unknown ListID (66)", enumType.toEnumDescriptionString());
+        assertEquals("6 - Unknown ListID (66)", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumAllocRejCode.OTHER;
         assertEquals("7", enumType.toFIXIDString());
         assertEquals("OTHER", enumType.toFIXNameString());
-        assertEquals("7 - Other (further in Text (58))", enumType.toEnumDescriptionString());
+        assertEquals("7 - Other (further in Text (58))", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumAllocRejCode.INCORRECT_ALLOCATED_QUANTITY;
         assertEquals("8", enumType.toFIXIDString());
         assertEquals("INCORRECT_ALLOCATED_QUANTITY", enumType.toFIXNameString());
-        assertEquals("8 - Incorrect allocated quantity", enumType.toEnumDescriptionString());
+        assertEquals("8 - Incorrect allocated quantity", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumAllocRejCode.CALCULATION_DIFFERENCE;
         assertEquals("9", enumType.toFIXIDString());
         assertEquals("CALCULATION_DIFFERENCE", enumType.toFIXNameString());
-        assertEquals("9 - Calculation difference", enumType.toEnumDescriptionString());
+        assertEquals("9 - Calculation difference", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumAllocRejCode.UNKNOWN_OR_STALE_EXECID;
         assertEquals("10", enumType.toFIXIDString());
         assertEquals("UNKNOWN_OR_STALE_EXECID", enumType.toFIXNameString());
-        assertEquals("10 - Unknown or stale ExecID", enumType.toEnumDescriptionString());
+        assertEquals("10 - Unknown or stale ExecID", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumAllocRejCode.MISMATCHED_DATA;
         assertEquals("11", enumType.toFIXIDString());
         assertEquals("MISMATCHED_DATA", enumType.toFIXNameString());
-        assertEquals("11 - Mismatched data", enumType.toEnumDescriptionString());
+        assertEquals("11 - Mismatched data", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumAllocRejCode.UNKNOWN_CLORDID;
         assertEquals("12", enumType.toFIXIDString());
         assertEquals("UNKNOWN_CLORDID", enumType.toFIXNameString());
-        assertEquals("12 - Unknown ClOrdID", enumType.toEnumDescriptionString());
+        assertEquals("12 - Unknown ClOrdID", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumAllocRejCode.WAREHOUSE_REQUEST_REJECTED;
         assertEquals("13", enumType.toFIXIDString());
         assertEquals("WAREHOUSE_REQUEST_REJECTED", enumType.toFIXNameString());
-        assertEquals("13 - Warehouse request rejected", enumType.toEnumDescriptionString());
+        assertEquals("13 - Warehouse request rejected", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

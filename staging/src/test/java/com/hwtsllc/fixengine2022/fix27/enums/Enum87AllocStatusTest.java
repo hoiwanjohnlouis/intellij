@@ -51,66 +51,66 @@ class Enum87AllocStatusTest {
         enumType = Enum87AllocStatus.ACCEPTED;
         assertEquals("0", enumType.toFIXIDString());
         assertEquals("ACCEPTED", enumType.toFIXNameString());
-        assertEquals("0 -accepted (successfully processed)", enumType.toEnumDescriptionString());
+        assertEquals("0 -accepted (successfully processed)", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum87AllocStatus.BLOCK_LEVEL_REJECT;
         assertEquals("1", enumType.toFIXIDString());
         assertEquals("BLOCK_LEVEL_REJECT", enumType.toFIXNameString());
-        assertEquals("1 - block level reject", enumType.toEnumDescriptionString());
+        assertEquals("1 - block level reject", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum87AllocStatus.ACCOUNT_LEVEL_REJECT;
         assertEquals("2", enumType.toFIXIDString());
         assertEquals("ACCOUNT_LEVEL_REJECT", enumType.toFIXNameString());
-        assertEquals("2 - account level reject", enumType.toEnumDescriptionString());
+        assertEquals("2 - account level reject", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum87AllocStatus.RECEIVED_NOT_PROCESSED;
         assertEquals("3", enumType.toFIXIDString());
         assertEquals("RECEIVED_NOT_PROCESSED", enumType.toFIXNameString());
-        assertEquals("3 - received (received, not yet processed)", enumType.toEnumDescriptionString());
+        assertEquals("3 - received (received, not yet processed)", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum87AllocStatus.INCOMPLETE;
         assertEquals("4", enumType.toFIXIDString());
         assertEquals("INCOMPLETE", enumType.toFIXNameString());
-        assertEquals("4 - incomplete", enumType.toEnumDescriptionString());
+        assertEquals("4 - incomplete", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = Enum87AllocStatus.REJECTED_BY_INTERMEDIARY;
         assertEquals("5", enumType.toFIXIDString());
         assertEquals("REJECTED_BY_INTERMEDIARY", enumType.toFIXNameString());
-        assertEquals("5 - rejected by intermediary", enumType.toEnumDescriptionString());
+        assertEquals("5 - rejected by intermediary", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum87AllocStatus.ALLOCATION_PENDING;
         assertEquals("6", enumType.toFIXIDString());
         assertEquals("ALLOCATION_PENDING", enumType.toFIXNameString());
-        assertEquals("6 - allocation pending", enumType.toEnumDescriptionString());
+        assertEquals("6 - allocation pending", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum87AllocStatus.REVERSED;
         assertEquals("7", enumType.toFIXIDString());
         assertEquals("REVERSED", enumType.toFIXNameString());
-        assertEquals("7 - reversed", enumType.toEnumDescriptionString());
+        assertEquals("7 - reversed", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

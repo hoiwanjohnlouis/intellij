@@ -42,25 +42,25 @@ class Enum975UnderlyingSettlementTypeTest {
         enumType = Enum975UnderlyingSettlementType.T_PLUS_1;
         assertEquals( "2", enumType.toFIXIDString() );
         assertEquals( "T_PLUS_1", enumType.toFIXNameString() );
-        assertEquals( "2 - T+1", enumType.toEnumDescriptionString() );
+        assertEquals( "2 - T+1", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum975UnderlyingSettlementType.T_PLUS_3;
         assertEquals( "4", enumType.toFIXIDString() );
         assertEquals( "T_PLUS_3", enumType.toFIXNameString() );
-        assertEquals( "4 - T+3", enumType.toEnumDescriptionString() );
+        assertEquals( "4 - T+3", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum975UnderlyingSettlementType.T_PLUS_4;
         assertEquals( "5", enumType.toFIXIDString() );
         assertEquals( "T_PLUS_4", enumType.toFIXNameString() );
-        assertEquals( "5 - T+4", enumType.toEnumDescriptionString() );
+        assertEquals( "5 - T+4", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

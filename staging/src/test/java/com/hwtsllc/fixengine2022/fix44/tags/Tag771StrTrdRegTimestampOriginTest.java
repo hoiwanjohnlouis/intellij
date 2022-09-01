@@ -46,11 +46,11 @@ class Tag771StrTrdRegTimestampOriginTest {
             assertEquals( "FIX771_STR_TRD_REG_TIMESTAMP_ORIGIN", tagData.toFIXLabelString());
             assertEquals( "771", tagData.toFIXIDString());
             assertEquals( "TRD_REG_TIMESTAMP_ORIGIN", tagData.toFIXNameString());
-            assertEquals( "TrdRegTimestampOrigin", tagData.toEnumDescriptionString());
+            assertEquals( "TrdRegTimestampOrigin", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -87,7 +87,7 @@ class Tag771StrTrdRegTimestampOriginTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
                     tagData.toVerboseString());

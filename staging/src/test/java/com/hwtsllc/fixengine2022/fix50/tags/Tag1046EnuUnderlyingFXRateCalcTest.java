@@ -60,11 +60,11 @@ class Tag1046EnuUnderlyingFXRateCalcTest {
             assertEquals( "FIX1046_ENU_UNDERLYING_FX_RATE_CALC", tagData.toFIXLabelString());
             assertEquals( "1046", tagData.toFIXIDString());
             assertEquals( "UNDERLYING_FX_RATE_CALC", tagData.toFIXNameString());
-            assertEquals( "UnderlyingFXRateCalc", tagData.toEnumDescriptionString());
+            assertEquals( "UnderlyingFXRateCalc", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -112,7 +112,7 @@ class Tag1046EnuUnderlyingFXRateCalcTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +

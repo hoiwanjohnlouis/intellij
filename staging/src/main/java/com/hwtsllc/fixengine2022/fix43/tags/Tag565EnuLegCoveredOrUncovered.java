@@ -106,7 +106,7 @@ public class Tag565EnuLegCoveredOrUncovered extends FIX43Abstract implements Log
      */
     @Override
     public String toDataDescriptionString() {
-        return dataValue.toEnumDescriptionString();
+        return dataValue.toFIXDescriptionString();
     }
     /**
      * standard wrapper to format a simple string describing the data

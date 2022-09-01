@@ -111,7 +111,7 @@ public class Tag59EnuTimeInForce extends FIX27Abstract implements LogValuePairSt
      */
     @Override
     public String toDataDescriptionString() {
-        return dataValue.toEnumDescriptionString();
+        return dataValue.toFIXDescriptionString();
     }
     /**
      * standard wrapper to format a simple string describing the data

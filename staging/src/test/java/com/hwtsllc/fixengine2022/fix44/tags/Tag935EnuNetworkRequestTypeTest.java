@@ -42,11 +42,11 @@ class Tag935EnuNetworkRequestTypeTest {
             assertEquals( "FIX935_ENU_NETWORK_REQUEST_TYPE", tagData.toFIXLabelString());
             assertEquals( "935", tagData.toFIXIDString());
             assertEquals( "NETWORK_REQUEST_TYPE", tagData.toFIXNameString());
-            assertEquals( "NetworkRequestType", tagData.toEnumDescriptionString());
+            assertEquals( "NetworkRequestType", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -104,7 +104,7 @@ class Tag935EnuNetworkRequestTypeTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +

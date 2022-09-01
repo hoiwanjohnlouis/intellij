@@ -112,7 +112,7 @@ public class Tag468EnuRoundingDirection extends FIX43Abstract implements LogValu
      */
     @Override
     public String toDataDescriptionString() {
-        return dataValue.toEnumDescriptionString();
+        return dataValue.toFIXDescriptionString();
     }
     /**
      * standard wrapper to format a simple string describing the data

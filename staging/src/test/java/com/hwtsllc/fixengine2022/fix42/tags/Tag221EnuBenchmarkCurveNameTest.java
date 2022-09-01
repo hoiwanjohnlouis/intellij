@@ -42,11 +42,11 @@ class Tag221EnuBenchmarkCurveNameTest {
             assertEquals( "FIX221_ENU_BENCHMARK_CURVE_NAME", tagData.toFIXLabelString());
             assertEquals( "221", tagData.toFIXIDString());
             assertEquals( "BENCHMARK_CURVE_NAME", tagData.toFIXNameString());
-            assertEquals( "BenchmarkCurveName", tagData.toEnumDescriptionString());
+            assertEquals( "BenchmarkCurveName", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -148,7 +148,7 @@ class Tag221EnuBenchmarkCurveNameTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +

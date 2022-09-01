@@ -42,11 +42,11 @@ class Tag208EnuNotifyBrokerOfCreditTest {
             assertEquals( "FIX208_ENU_NOTIFY_BROKER_OF_CREDIT", tagData.toFIXLabelString());
             assertEquals( "208", tagData.toFIXIDString());
             assertEquals( "NOTIFY_BROKER_OF_CREDIT", tagData.toFIXNameString());
-            assertEquals( "NotifyBrokerOfCredit", tagData.toEnumDescriptionString());
+            assertEquals( "NotifyBrokerOfCredit", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -94,7 +94,7 @@ class Tag208EnuNotifyBrokerOfCreditTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +

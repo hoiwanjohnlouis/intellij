@@ -45,25 +45,25 @@ class Enum94EmailTypeTest {
         enumType = Enum94EmailType.NEW;
         assertEquals("0", enumType.toFIXIDString());
         assertEquals("NEW", enumType.toFIXNameString());
-        assertEquals("0 - New", enumType.toEnumDescriptionString());
+        assertEquals("0 - New", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum94EmailType.REPLY;
         assertEquals("1", enumType.toFIXIDString());
         assertEquals("REPLY", enumType.toFIXNameString());
-        assertEquals("1 - Reply", enumType.toEnumDescriptionString());
+        assertEquals("1 - Reply", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum94EmailType.ADMIN_REPLY;
         assertEquals("2", enumType.toFIXIDString());
         assertEquals("ADMIN_REPLY", enumType.toFIXNameString());
-        assertEquals("2 - Admin Reply", enumType.toEnumDescriptionString());
+        assertEquals("2 - Admin Reply", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

@@ -50,18 +50,18 @@ class MyEnumLimitTypeTest {
         enumType = MyEnumLimitType.OR_BETTER;
         assertEquals("0", enumType.toFIXIDString());
         assertEquals("OR_BETTER", enumType.toFIXNameString());
-        assertEquals("0 - Or better (default) - price improvement allowed", enumType.toEnumDescriptionString());
+        assertEquals("0 - Or better (default) - price improvement allowed", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumLimitType.STRICT;
         assertEquals("1", enumType.toFIXIDString());
         assertEquals("STRICT", enumType.toFIXNameString());
-        assertEquals("1 - Strict - limit is a strict limit", enumType.toEnumDescriptionString());
+        assertEquals("1 - Strict - limit is a strict limit", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumLimitType.OR_WORSE;
         assertEquals("2", enumType.toFIXIDString());
@@ -69,9 +69,9 @@ class MyEnumLimitTypeTest {
         assertEquals("2 - Or worse - for a buy the peg limit is a minimum " +
                             "and for a sell the peg limit is a maximum " +
                             "(for use for orders which have a price range)",
-                enumType.toEnumDescriptionString());
+                enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

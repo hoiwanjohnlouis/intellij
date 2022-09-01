@@ -43,11 +43,11 @@ class Tag22EnuSecurityIDSourceTest {
             assertEquals( "FIX22_ENU_SECURITY_ID_SOURCE", tagData.toFIXLabelString());
             assertEquals( "SECURITY_ID_SOURCE", tagData.toFIXNameString());
             assertEquals( "22", tagData.toFIXIDString());
-            assertEquals( "SecurityIDSource", tagData.toEnumDescriptionString());
+            assertEquals( "SecurityIDSource", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -199,7 +199,7 @@ class Tag22EnuSecurityIDSourceTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +

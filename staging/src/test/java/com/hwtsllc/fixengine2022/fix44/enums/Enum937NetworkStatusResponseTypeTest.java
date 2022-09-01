@@ -41,17 +41,17 @@ class Enum937NetworkStatusResponseTypeTest {
         enumType = Enum937NetworkStatusResponseType.FULL;
         assertEquals( "1", enumType.toFIXIDString() );
         assertEquals( "FULL", enumType.toFIXNameString() );
-        assertEquals( "1 - Full", enumType.toEnumDescriptionString() );
+        assertEquals( "1 - Full", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum937NetworkStatusResponseType.INCREMENTAL;
         assertEquals( "2", enumType.toFIXIDString() );
         assertEquals( "INCREMENTAL", enumType.toFIXNameString() );
-        assertEquals( "2 - Incremental Update", enumType.toEnumDescriptionString() );
+        assertEquals( "2 - Incremental Update", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

@@ -148,7 +148,7 @@ public class Tag698EnuYieldRedemptionPriceType extends FIX44Abstract implements 
      */
     @Override
     public String toDataDescriptionString() {
-        return dataValue.toEnumDescriptionString();
+        return dataValue.toFIXDescriptionString();
     }
     /**
      * standard wrapper to format a simple string describing the data

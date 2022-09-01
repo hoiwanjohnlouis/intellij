@@ -47,33 +47,33 @@ class Enum20ExecTransTypeTest {
         enumType = Enum20ExecTransType.NEW;
         assertEquals("0", enumType.toFIXIDString());
         assertEquals("NEW", enumType.toFIXNameString());
-        assertEquals("0 - New", enumType.toEnumDescriptionString());
+        assertEquals("0 - New", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum20ExecTransType.CANCEL;
         assertEquals("1", enumType.toFIXIDString());
         assertEquals("CANCEL", enumType.toFIXNameString());
-        assertEquals("1 - Cancel", enumType.toEnumDescriptionString());
+        assertEquals("1 - Cancel", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum20ExecTransType.CORRECT;
         assertEquals("2", enumType.toFIXIDString());
         assertEquals("CORRECT", enumType.toFIXNameString());
-        assertEquals("2 - Correct", enumType.toEnumDescriptionString());
+        assertEquals("2 - Correct", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum20ExecTransType.STATUS;
         assertEquals("3", enumType.toFIXIDString());
         assertEquals("STATUS", enumType.toFIXNameString());
-        assertEquals("3 - Status", enumType.toEnumDescriptionString());
+        assertEquals("3 - Status", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

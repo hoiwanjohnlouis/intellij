@@ -45,25 +45,25 @@ class Enum875CPProgramTest {
         enumType = Enum875CPProgram.THREE;
         assertEquals( "1", enumType.toFIXIDString() );
         assertEquals( "THREE", enumType.toFIXNameString() );
-        assertEquals( "1 - 3(a)(3)", enumType.toEnumDescriptionString() );
+        assertEquals( "1 - 3(a)(3)", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum875CPProgram.FOUR;
         assertEquals( "2", enumType.toFIXIDString() );
         assertEquals( "FOUR", enumType.toFIXNameString() );
-        assertEquals( "2 - 4(2)", enumType.toEnumDescriptionString() );
+        assertEquals( "2 - 4(2)", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum875CPProgram.OTHER;
         assertEquals( "99", enumType.toFIXIDString() );
         assertEquals( "OTHER", enumType.toFIXNameString() );
-        assertEquals( "99 - Other", enumType.toEnumDescriptionString() );
+        assertEquals( "99 - Other", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

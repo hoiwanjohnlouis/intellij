@@ -42,11 +42,11 @@ class Tag587EnuLegSettlTypeTest {
             assertEquals( "FIX587_ENU_LEG_SETTL_TYPE", tagData.toFIXLabelString());
             assertEquals( "587", tagData.toFIXIDString());
             assertEquals( "LEG_SETTL_TYPE", tagData.toFIXNameString());
-            assertEquals( "LegSettlType (formerly named LegSettlmntTyp prior to FIX 4.4)", tagData.toEnumDescriptionString());
+            assertEquals( "LegSettlType (formerly named LegSettlmntTyp prior to FIX 4.4)", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -148,7 +148,7 @@ class Tag587EnuLegSettlTypeTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +

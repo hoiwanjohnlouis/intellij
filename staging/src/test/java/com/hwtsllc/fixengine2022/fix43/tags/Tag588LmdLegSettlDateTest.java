@@ -46,11 +46,11 @@ class Tag588LmdLegSettlDateTest {
             assertEquals( "FIX588_LMD_LEG_SETTL_DATE", tagData.toFIXLabelString());
             assertEquals( "588", tagData.toFIXIDString());
             assertEquals( "LEG_SETTL_DATE", tagData.toFIXNameString());
-            assertEquals( "LegSettlDate (formerly named LegFutSettlDate prior to FIX 4.4)", tagData.toEnumDescriptionString());
+            assertEquals( "LegSettlDate (formerly named LegFutSettlDate prior to FIX 4.4)", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -87,7 +87,7 @@ class Tag588LmdLegSettlDateTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
                     tagData.toVerboseString());

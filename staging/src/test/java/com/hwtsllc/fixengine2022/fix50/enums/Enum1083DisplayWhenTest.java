@@ -41,17 +41,17 @@ class Enum1083DisplayWhenTest {
         enumType = Enum1083DisplayWhen.IMMEDIATE;
         assertEquals( "1", enumType.toFIXIDString() );
         assertEquals( "IMMEDIATE", enumType.toFIXNameString() );
-        assertEquals( "1 - Immediate (after each fill)", enumType.toEnumDescriptionString() );
+        assertEquals( "1 - Immediate (after each fill)", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1083DisplayWhen.EXHAUST;
         assertEquals( "2", enumType.toFIXIDString() );
         assertEquals( "EXHAUST", enumType.toFIXNameString() );
-        assertEquals( "2 - Exhaust (when DisplayQty = 0)", enumType.toEnumDescriptionString() );
+        assertEquals( "2 - Exhaust (when DisplayQty = 0)", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

@@ -46,20 +46,20 @@ class Enum374BidRequestTransTypeTest {
         enumType = Enum374BidRequestTransType.CANCEL;
         assertEquals( "C", enumType.toFIXIDString());
         assertEquals( "CANCEL", enumType.toFIXNameString());
-        assertEquals( "C - Cancel", enumType.toEnumDescriptionString());
+        assertEquals( "C - Cancel", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum374BidRequestTransType.NEW;
         assertEquals( "N", enumType.toFIXIDString());
         assertEquals( "NEW", enumType.toFIXNameString());
-        assertEquals( "N - New", enumType.toEnumDescriptionString());
+        assertEquals( "N - New", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
     /**
      *

@@ -42,17 +42,17 @@ class Enum1015AsOfIndicatorTest {
         enumType = Enum1015AsOfIndicator.FALSE;
         assertEquals( "0", enumType.toFIXIDString() );
         assertEquals( "FALSE", enumType.toFIXNameString() );
-        assertEquals( "0 - false - trade is not an AsOf trade", enumType.toEnumDescriptionString() );
+        assertEquals( "0 - false - trade is not an AsOf trade", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1015AsOfIndicator.TRUE;
         assertEquals( "1", enumType.toFIXIDString() );
         assertEquals( "TRUE", enumType.toFIXNameString() );
-        assertEquals( "1 - true - trade is an AsOf  trade", enumType.toEnumDescriptionString() );
+        assertEquals( "1 - true - trade is an AsOf  trade", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

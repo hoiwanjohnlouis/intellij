@@ -47,11 +47,11 @@ class Enum481MoneyLaunderingStatusTest {
         enumType = Enum481MoneyLaunderingStatus.PASSED;
         assertEquals("Y", enumType.toFIXIDString());
         assertEquals("PASSED", enumType.toFIXNameString());
-        assertEquals("Y - Passed", enumType.toEnumDescriptionString());
+        assertEquals("Y - Passed", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
 
@@ -61,11 +61,11 @@ class Enum481MoneyLaunderingStatusTest {
         enumType = Enum481MoneyLaunderingStatus.NOT_CHECKED;
         assertEquals("N", enumType.toFIXIDString());
         assertEquals("NOT_CHECKED", enumType.toFIXNameString());
-        assertEquals("N - Not Checked", enumType.toEnumDescriptionString());
+        assertEquals("N - Not Checked", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
 
@@ -75,28 +75,28 @@ class Enum481MoneyLaunderingStatusTest {
         enumType = Enum481MoneyLaunderingStatus.EXEMPT_BELOW_LIMIT;
         assertEquals("1", enumType.toFIXIDString());
         assertEquals("EXEMPT_BELOW_LIMIT", enumType.toFIXNameString());
-        assertEquals("1 - Exempt - Below the Limit", enumType.toEnumDescriptionString());
+        assertEquals("1 - Exempt - Below the Limit", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum481MoneyLaunderingStatus.EXEMPT_CLIENT_MONEY;
         assertEquals("2", enumType.toFIXIDString());
         assertEquals("EXEMPT_CLIENT_MONEY", enumType.toFIXNameString());
-        assertEquals("2 - Exempt - Client Money Type exemption", enumType.toEnumDescriptionString());
+        assertEquals("2 - Exempt - Client Money Type exemption", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum481MoneyLaunderingStatus.EXEMPT_AUTHORISED;
         assertEquals("3", enumType.toFIXIDString());
         assertEquals("EXEMPT_AUTHORISED", enumType.toFIXNameString());
-        assertEquals("3 - Exempt - Authorised Credit or financial institution", enumType.toEnumDescriptionString());
+        assertEquals("3 - Exempt - Authorised Credit or financial institution", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

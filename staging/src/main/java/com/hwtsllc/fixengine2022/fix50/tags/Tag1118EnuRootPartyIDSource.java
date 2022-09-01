@@ -191,7 +191,7 @@ public class Tag1118EnuRootPartyIDSource extends FIX50Abstract implements LogVal
      */
     @Override
     public String toDataDescriptionString() {
-        return dataValue.toEnumDescriptionString();
+        return dataValue.toFIXDescriptionString();
     }
     /**
      * standard wrapper to return a string describing the data

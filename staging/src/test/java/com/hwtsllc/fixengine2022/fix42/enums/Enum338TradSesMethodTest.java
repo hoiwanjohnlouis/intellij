@@ -47,29 +47,29 @@ class Enum338TradSesMethodTest {
         enumType = Enum338TradSesMethod.ELECTRONIC;
         assertEquals( "1", enumType.toFIXIDString());
         assertEquals( "ELECTRONIC", enumType.toFIXNameString());
-        assertEquals( "1 - Electronic", enumType.toEnumDescriptionString());
+        assertEquals( "1 - Electronic", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum338TradSesMethod.OPEN_OUTCRY;
         assertEquals( "2", enumType.toFIXIDString());
         assertEquals( "OPEN_OUTCRY", enumType.toFIXNameString());
-        assertEquals( "2 - Open Outcry", enumType.toEnumDescriptionString());
+        assertEquals( "2 - Open Outcry", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum338TradSesMethod.TWO_PARTY;
         assertEquals( "3", enumType.toFIXIDString());
         assertEquals( "TWO_PARTY", enumType.toFIXNameString());
-        assertEquals( "3 - Two Party", enumType.toEnumDescriptionString());
+        assertEquals( "3 - Two Party", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
     /**
      *

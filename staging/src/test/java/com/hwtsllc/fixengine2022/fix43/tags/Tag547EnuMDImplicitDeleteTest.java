@@ -42,11 +42,11 @@ class Tag547EnuMDImplicitDeleteTest {
             assertEquals( "FIX547_ENU_MD_IMPLICIT_DELETE", tagData.toFIXLabelString());
             assertEquals( "547", tagData.toFIXIDString());
             assertEquals( "MD_IMPLICIT_DELETE", tagData.toFIXNameString());
-            assertEquals( "MDImplicitDelete", tagData.toEnumDescriptionString());
+            assertEquals( "MDImplicitDelete", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -96,7 +96,7 @@ class Tag547EnuMDImplicitDeleteTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +

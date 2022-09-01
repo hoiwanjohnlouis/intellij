@@ -109,7 +109,7 @@ public class Tag1033EnuDeskType extends FIX50Abstract implements LogValuePairStr
      */
     @Override
     public String toDataDescriptionString() {
-        return dataValue.toEnumDescriptionString();
+        return dataValue.toFIXDescriptionString();
     }
     /**
      * standard wrapper to format a simple string describing the data

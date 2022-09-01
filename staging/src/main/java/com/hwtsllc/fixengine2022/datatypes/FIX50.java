@@ -325,7 +325,7 @@ public enum FIX50 implements LogFIXString, LogVerboseString {
      * standard wrapper to retrieve the specific fix description for this enum. eg: the third field
      */
     @Override
-    public String toEnumDescriptionString() {
+    public String toFIXDescriptionString() {
         return description;
     }
     @Override
@@ -341,7 +341,7 @@ public enum FIX50 implements LogFIXString, LogVerboseString {
                 .concat( toFIXNameString())
                 .concat("]")
                 .concat("\n\tFIXDescription[")
-                .concat( toEnumDescriptionString())
+                .concat( toFIXDescriptionString())
                 .concat("]");
     }
     @Override
@@ -352,7 +352,7 @@ public enum FIX50 implements LogFIXString, LogVerboseString {
                 .concat(",")
                 .concat( toFIXNameString())
                 .concat(",")
-                .concat( toEnumDescriptionString())
+                .concat( toFIXDescriptionString())
                 .concat("]");
     }
 

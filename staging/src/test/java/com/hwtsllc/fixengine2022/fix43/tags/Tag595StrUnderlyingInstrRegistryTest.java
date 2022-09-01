@@ -46,11 +46,11 @@ class Tag595StrUnderlyingInstrRegistryTest {
             assertEquals( "FIX595_STR_UNDERLYING_INSTR_REGISTRY", tagData.toFIXLabelString());
             assertEquals( "595", tagData.toFIXIDString());
             assertEquals( "UNDERLYING_INSTR_REGISTRY", tagData.toFIXNameString());
-            assertEquals( "UnderlyingInstrRegistry", tagData.toEnumDescriptionString());
+            assertEquals( "UnderlyingInstrRegistry", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -87,7 +87,7 @@ class Tag595StrUnderlyingInstrRegistryTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
                     tagData.toVerboseString());

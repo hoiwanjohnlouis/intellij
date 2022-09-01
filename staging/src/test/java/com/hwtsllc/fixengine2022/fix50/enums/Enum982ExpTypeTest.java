@@ -44,41 +44,41 @@ class Enum982ExpTypeTest {
         enumType = Enum982ExpType.AUTO_EXERCISE;
         assertEquals( "1", enumType.toFIXIDString() );
         assertEquals( "AUTO_EXERCISE", enumType.toFIXNameString() );
-        assertEquals( "1 - Auto Exercise", enumType.toEnumDescriptionString() );
+        assertEquals( "1 - Auto Exercise", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum982ExpType.NON_AUTO_EXERCISE;
         assertEquals( "2", enumType.toFIXIDString() );
         assertEquals( "NON_AUTO_EXERCISE", enumType.toFIXNameString() );
-        assertEquals( "2 - Non Auto Exercise", enumType.toEnumDescriptionString() );
+        assertEquals( "2 - Non Auto Exercise", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum982ExpType.FINAL_EXERCISED;
         assertEquals( "3", enumType.toFIXIDString() );
         assertEquals( "FINAL_EXERCISED", enumType.toFIXNameString() );
-        assertEquals( "3 - Final Will Be Exercised", enumType.toEnumDescriptionString() );
+        assertEquals( "3 - Final Will Be Exercised", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum982ExpType.CONTRARY_INTENTION;
         assertEquals( "4", enumType.toFIXIDString() );
         assertEquals( "CONTRARY_INTENTION", enumType.toFIXNameString() );
-        assertEquals( "4 - Contrary Intention", enumType.toEnumDescriptionString() );
+        assertEquals( "4 - Contrary Intention", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum982ExpType.DIFFERENCE;
         assertEquals( "5", enumType.toFIXIDString() );
         assertEquals( "DIFFERENCE", enumType.toFIXNameString() );
-        assertEquals( "5 - Difference", enumType.toEnumDescriptionString() );
+        assertEquals( "5 - Difference", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

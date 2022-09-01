@@ -191,7 +191,7 @@ public class Tag1060EnuUndlyInstrumentPartyIDSource extends FIX50Abstract implem
      */
     @Override
     public String toDataDescriptionString() {
-        return dataValue.toEnumDescriptionString();
+        return dataValue.toFIXDescriptionString();
     }
     /**
      * standard wrapper to format a simple string describing the data

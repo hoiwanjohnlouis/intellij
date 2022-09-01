@@ -48,66 +48,66 @@ class Enum1115OrderCategoryTest {
         enumType = Enum1115OrderCategory.ORDER;
         assertEquals( "1", enumType.toFIXIDString() );
         assertEquals( "ORDER", enumType.toFIXNameString() );
-        assertEquals( "1 - Order", enumType.toEnumDescriptionString() );
+        assertEquals( "1 - Order", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1115OrderCategory.QUOTE;
         assertEquals( "2", enumType.toFIXIDString() );
         assertEquals( "QUOTE", enumType.toFIXNameString() );
-        assertEquals( "2 - Quote", enumType.toEnumDescriptionString() );
+        assertEquals( "2 - Quote", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1115OrderCategory.PRIVATELY;
         assertEquals( "3", enumType.toFIXIDString() );
         assertEquals( "PRIVATELY", enumType.toFIXNameString() );
-        assertEquals( "3 - Privately Negotiated Trade", enumType.toEnumDescriptionString() );
+        assertEquals( "3 - Privately Negotiated Trade", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1115OrderCategory.MULTILEG;
         assertEquals( "4", enumType.toFIXIDString() );
         assertEquals( "MULTILEG", enumType.toFIXNameString() );
-        assertEquals( "4 - Multileg order", enumType.toEnumDescriptionString() );
+        assertEquals( "4 - Multileg order", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1115OrderCategory.LINKED;
         assertEquals( "5", enumType.toFIXIDString() );
         assertEquals( "LINKED", enumType.toFIXNameString() );
-        assertEquals( "5 - Linked order", enumType.toEnumDescriptionString() );
+        assertEquals( "5 - Linked order", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
 
         enumType = Enum1115OrderCategory.QUOTE_REQUEST;
         assertEquals( "6", enumType.toFIXIDString() );
         assertEquals( "QUOTE_REQUEST", enumType.toFIXNameString() );
-        assertEquals( "6 - Quote Request", enumType.toEnumDescriptionString() );
+        assertEquals( "6 - Quote Request", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1115OrderCategory.IMPLIED_ORDER;
         assertEquals( "7", enumType.toFIXIDString() );
         assertEquals( "IMPLIED_ORDER", enumType.toFIXNameString() );
-        assertEquals( "7 - Implied Order", enumType.toEnumDescriptionString() );
+        assertEquals( "7 - Implied Order", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1115OrderCategory.CROSS_ORDER;
         assertEquals( "8", enumType.toFIXIDString() );
         assertEquals( "CROSS_ORDER", enumType.toFIXNameString() );
-        assertEquals( "8 - Cross Order", enumType.toEnumDescriptionString() );
+        assertEquals( "8 - Cross Order", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

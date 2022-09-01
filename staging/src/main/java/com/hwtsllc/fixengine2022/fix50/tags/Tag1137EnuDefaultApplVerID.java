@@ -127,7 +127,7 @@ public class Tag1137EnuDefaultApplVerID extends FIX50Abstract implements LogValu
      */
     @Override
     public String toDataDescriptionString() {
-        return dataValue.toEnumDescriptionString();
+        return dataValue.toFIXDescriptionString();
     }
     /**
      * standard wrapper to format a simple string describing the data

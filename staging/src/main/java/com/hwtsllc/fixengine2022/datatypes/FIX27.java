@@ -240,7 +240,7 @@ public enum FIX27 implements LogFIXString, LogVerboseString, MyTestValues {
      * standard wrapper to retrieve the specific fix description for this enum. eg: the third field
      */
     @Override
-    public String toEnumDescriptionString() {
+    public String toFIXDescriptionString() {
         return description;
     }
     @Override
@@ -256,7 +256,7 @@ public enum FIX27 implements LogFIXString, LogVerboseString, MyTestValues {
                 .concat( toFIXNameString())
                 .concat("]")
                 .concat("\n\tFIXDescription[")
-                .concat( toEnumDescriptionString())
+                .concat( toFIXDescriptionString())
                 .concat("]");
     }
     @Override
@@ -267,7 +267,7 @@ public enum FIX27 implements LogFIXString, LogVerboseString, MyTestValues {
                 .concat(",")
                 .concat( toFIXNameString())
                 .concat(",")
-                .concat( toEnumDescriptionString())
+                .concat( toFIXDescriptionString())
                 .concat("]");
     }
 

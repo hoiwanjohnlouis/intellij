@@ -43,17 +43,17 @@ class Enum965SecurityStatusTest {
         enumType = Enum965SecurityStatus.ACTIVE;
         assertEquals( "1", enumType.toFIXIDString() );
         assertEquals( "ACTIVE", enumType.toFIXNameString() );
-        assertEquals( "1 - Active", enumType.toEnumDescriptionString() );
+        assertEquals( "1 - Active", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum965SecurityStatus.INACTIVE;
         assertEquals( "2", enumType.toFIXIDString() );
         assertEquals( "INACTIVE", enumType.toFIXNameString() );
-        assertEquals( "2 - Inactive", enumType.toEnumDescriptionString() );
+        assertEquals( "2 - Inactive", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

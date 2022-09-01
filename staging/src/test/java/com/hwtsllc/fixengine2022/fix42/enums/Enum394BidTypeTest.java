@@ -45,29 +45,29 @@ class Enum394BidTypeTest {
         enumType = Enum394BidType.NON_DISCLOSED;
         assertEquals( "1", enumType.toFIXIDString());
         assertEquals( "NON_DISCLOSED", enumType.toFIXNameString());
-        assertEquals( "1 - Non Disclosed style (e.g. US/European)", enumType.toEnumDescriptionString());
+        assertEquals( "1 - Non Disclosed style (e.g. US/European)", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum394BidType.DISCLOSED;
         assertEquals( "2", enumType.toFIXIDString());
         assertEquals( "DISCLOSED", enumType.toFIXNameString());
-        assertEquals( "2 - Disclosed style (e.g. Japanese)", enumType.toEnumDescriptionString());
+        assertEquals( "2 - Disclosed style (e.g. Japanese)", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum394BidType.NO_BIDDING;
         assertEquals( "3", enumType.toFIXIDString());
         assertEquals( "NO_BIDDING", enumType.toFIXNameString());
-        assertEquals( "3 - No bidding process", enumType.toEnumDescriptionString());
+        assertEquals( "3 - No bidding process", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
     /**
      *

@@ -47,11 +47,11 @@ class Tag181StrSecuritySettlAgentContactPhoneTest {
             assertEquals( "FIX181_STR_SECURITY_SETTL_AGENT_CONTACT_PHONE", tagData.toFIXLabelString());
             assertEquals( "181", tagData.toFIXIDString());
             assertEquals( "SECURITY_SETTL_AGENT_CONTACT_PHONE", tagData.toFIXNameString());
-            assertEquals( "SecuritySettlAgentContactPhone (replaced)", tagData.toEnumDescriptionString());
+            assertEquals( "SecuritySettlAgentContactPhone (replaced)", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -88,7 +88,7 @@ class Tag181StrSecuritySettlAgentContactPhoneTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
                     tagData.toVerboseString());

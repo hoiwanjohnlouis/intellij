@@ -191,7 +191,7 @@ public class Tag783EnuSettlPartyIDSource extends FIX44Abstract implements LogVal
      */
     @Override
     public String toDataDescriptionString() {
-        return dataValue.toEnumDescriptionString();
+        return dataValue.toFIXDescriptionString();
     }
     /**
      * standard wrapper to format a simple string describing the data

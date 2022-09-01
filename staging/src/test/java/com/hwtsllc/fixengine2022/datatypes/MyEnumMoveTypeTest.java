@@ -47,17 +47,17 @@ class MyEnumMoveTypeTest {
         enumType = MyEnumMoveType.FLOATING;
         assertEquals("0", enumType.toFIXIDString());
         assertEquals("FLOATING", enumType.toFIXNameString());
-        assertEquals("0 - Floating (default)", enumType.toEnumDescriptionString());
+        assertEquals("0 - Floating (default)", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumMoveType.FIXED;
         assertEquals("1", enumType.toFIXIDString());
         assertEquals("FIXED", enumType.toFIXNameString());
-        assertEquals("1 - Fixed", enumType.toEnumDescriptionString());
+        assertEquals("1 - Fixed", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

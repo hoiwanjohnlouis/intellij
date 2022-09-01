@@ -42,25 +42,25 @@ class Enum5AdvTransTypeTest {
         enumType = Enum5AdvTransType.NEW;
         assertEquals("N", enumType.toFIXIDString());
         assertEquals("NEW", enumType.toFIXNameString());
-        assertEquals("N - New", enumType.toEnumDescriptionString());
+        assertEquals("N - New", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum5AdvTransType.CANCEL;
         assertEquals("C", enumType.toFIXIDString());
         assertEquals("CANCEL", enumType.toFIXNameString());
-        assertEquals("C - Cancel", enumType.toEnumDescriptionString());
+        assertEquals("C - Cancel", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum5AdvTransType.REPLACE;
         assertEquals("R", enumType.toFIXIDString());
         assertEquals("REPLACE", enumType.toFIXNameString());
-        assertEquals("R - Replace", enumType.toEnumDescriptionString());
+        assertEquals("R - Replace", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

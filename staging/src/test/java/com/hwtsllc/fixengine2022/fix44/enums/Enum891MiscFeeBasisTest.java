@@ -42,25 +42,25 @@ class Enum891MiscFeeBasisTest {
         enumType = Enum891MiscFeeBasis.ABSOLUTE;
         assertEquals( "0", enumType.toFIXIDString() );
         assertEquals( "ABSOLUTE", enumType.toFIXNameString() );
-        assertEquals( "0 - Absolute", enumType.toEnumDescriptionString() );
+        assertEquals( "0 - Absolute", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum891MiscFeeBasis.PER_UNIT;
         assertEquals( "1", enumType.toFIXIDString() );
         assertEquals( "PER_UNIT", enumType.toFIXNameString() );
-        assertEquals( "1 - Per Unit", enumType.toEnumDescriptionString() );
+        assertEquals( "1 - Per Unit", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum891MiscFeeBasis.PERCENTAGE;
         assertEquals( "2", enumType.toFIXIDString() );
         assertEquals( "PERCENTAGE", enumType.toFIXNameString() );
-        assertEquals( "2 - Percentage", enumType.toEnumDescriptionString() );
+        assertEquals( "2 - Percentage", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

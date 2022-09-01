@@ -126,7 +126,7 @@ public class Tag871EnuInstrAttribType extends FIX44Abstract implements LogValueP
      */
     @Override
     public String toDataDescriptionString() {
-        return dataValue.toEnumDescriptionString();
+        return dataValue.toFIXDescriptionString();
     }
     /**
      * standard wrapper to format a simple string describing the data

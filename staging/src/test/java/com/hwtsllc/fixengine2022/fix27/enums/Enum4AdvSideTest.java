@@ -43,33 +43,33 @@ class Enum4AdvSideTest {
         enumType = Enum4AdvSide.BUY;
         assertEquals("B", enumType.toFIXIDString());
         assertEquals("BUY", enumType.toFIXNameString());
-        assertEquals("B - Buy", enumType.toEnumDescriptionString());
+        assertEquals("B - Buy", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum4AdvSide.SELL;
         assertEquals("S", enumType.toFIXIDString());
         assertEquals("SELL", enumType.toFIXNameString());
-        assertEquals("S - Sell", enumType.toEnumDescriptionString());
+        assertEquals("S - Sell", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum4AdvSide.CROSS;
         assertEquals("X", enumType.toFIXIDString());
         assertEquals("CROSS", enumType.toFIXNameString());
-        assertEquals("X - Cross", enumType.toEnumDescriptionString());
+        assertEquals("X - Cross", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum4AdvSide.TRADE;
         assertEquals("T", enumType.toFIXIDString());
         assertEquals("TRADE", enumType.toFIXNameString());
-        assertEquals("T - Trade", enumType.toEnumDescriptionString());
+        assertEquals("T - Trade", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

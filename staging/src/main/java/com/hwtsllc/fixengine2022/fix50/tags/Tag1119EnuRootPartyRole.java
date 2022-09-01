@@ -254,7 +254,7 @@ public class Tag1119EnuRootPartyRole extends FIX50Abstract implements LogValuePa
      */
     @Override
     public String toDataDescriptionString() {
-        return dataValue.toEnumDescriptionString();
+        return dataValue.toFIXDescriptionString();
     }
     /**
      * standard wrapper to return a string describing the data

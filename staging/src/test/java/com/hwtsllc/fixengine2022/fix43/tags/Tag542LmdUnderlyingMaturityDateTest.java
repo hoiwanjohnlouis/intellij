@@ -46,11 +46,11 @@ class Tag542LmdUnderlyingMaturityDateTest {
             assertEquals( "FIX542_LMD_UNDERLYING_MATURITY_DATE", tagData.toFIXLabelString());
             assertEquals( "542", tagData.toFIXIDString());
             assertEquals( "UNDERLYING_MATURITY_DATE", tagData.toFIXNameString());
-            assertEquals( "UnderlyingMaturityDate", tagData.toEnumDescriptionString());
+            assertEquals( "UnderlyingMaturityDate", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -87,7 +87,7 @@ class Tag542LmdUnderlyingMaturityDateTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
                     tagData.toVerboseString());

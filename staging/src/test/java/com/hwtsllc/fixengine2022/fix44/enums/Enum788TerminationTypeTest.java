@@ -43,33 +43,33 @@ class Enum788TerminationTypeTest {
         enumType = Enum788TerminationType.OVERNIGHT;
         assertEquals("1", enumType.toFIXIDString());
         assertEquals("OVERNIGHT", enumType.toFIXNameString());
-        assertEquals("1 - Overnight", enumType.toEnumDescriptionString());
+        assertEquals("1 - Overnight", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum788TerminationType.TERM;
         assertEquals("2", enumType.toFIXIDString());
         assertEquals("TERM", enumType.toFIXNameString());
-        assertEquals("2 - Term", enumType.toEnumDescriptionString());
+        assertEquals("2 - Term", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum788TerminationType.FLEXIBLE;
         assertEquals("3", enumType.toFIXIDString());
         assertEquals("FLEXIBLE", enumType.toFIXNameString());
-        assertEquals("3 - Flexible", enumType.toEnumDescriptionString());
+        assertEquals("3 - Flexible", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum788TerminationType.OPEN;
         assertEquals("4", enumType.toFIXIDString());
         assertEquals("OPEN", enumType.toFIXNameString());
-        assertEquals("4 - Open", enumType.toEnumDescriptionString());
+        assertEquals("4 - Open", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

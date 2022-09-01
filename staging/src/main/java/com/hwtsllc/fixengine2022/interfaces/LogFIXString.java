@@ -21,5 +21,5 @@ public interface LogFIXString {
     String toFIXLabelString();
     String toFIXIDString();
     String toFIXNameString();
-    String toEnumDescriptionString();
+    String toFIXDescriptionString();
 }

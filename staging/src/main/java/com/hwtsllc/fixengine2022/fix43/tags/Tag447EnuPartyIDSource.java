@@ -191,7 +191,7 @@ public class Tag447EnuPartyIDSource extends FIX43Abstract implements LogValuePai
      */
     @Override
     public String toDataDescriptionString() {
-        return dataValue.toEnumDescriptionString();
+        return dataValue.toFIXDescriptionString();
     }
     /**
      * standard wrapper to format a simple string describing the data

@@ -45,25 +45,25 @@ class Enum209AllocHandlInstTest {
         enumType = Enum209AllocHandlInst.MATCH;
         assertEquals("1", enumType.toFIXIDString());
         assertEquals("MATCH", enumType.toFIXNameString());
-        assertEquals("1 - Match", enumType.toEnumDescriptionString());
+        assertEquals("1 - Match", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum209AllocHandlInst.FORWARD;
         assertEquals("2", enumType.toFIXIDString());
         assertEquals("FORWARD", enumType.toFIXNameString());
-        assertEquals("2 - Forward", enumType.toEnumDescriptionString());
+        assertEquals("2 - Forward", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum209AllocHandlInst.FORWARD_AND_MATCH;
         assertEquals("3", enumType.toFIXIDString());
         assertEquals("FORWARD_AND_MATCH", enumType.toFIXNameString());
-        assertEquals("3 - Forward and Match", enumType.toEnumDescriptionString());
+        assertEquals("3 - Forward and Match", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

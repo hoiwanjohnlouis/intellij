@@ -41,17 +41,17 @@ class Enum668DeliveryFormTest {
         enumType = Enum668DeliveryForm.BOOK_ENTRY;
         assertEquals("1", enumType.toFIXIDString());
         assertEquals("BOOK_ENTRY", enumType.toFIXNameString());
-        assertEquals("1 - Book Entry (default)", enumType.toEnumDescriptionString());
+        assertEquals("1 - Book Entry (default)", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum668DeliveryForm.BEARER;
         assertEquals("2", enumType.toFIXIDString());
         assertEquals("BEARER", enumType.toFIXNameString());
-        assertEquals("2 - Bearer", enumType.toEnumDescriptionString());
+        assertEquals("2 - Bearer", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

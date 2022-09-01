@@ -57,11 +57,11 @@ class Tag483UtcTransBkdTimeTest {
             assertEquals( "FIX483_UTC_TRANS_BKD_TIME", tagData.toFIXLabelString());
             assertEquals( "483", tagData.toFIXIDString());
             assertEquals( "TRANS_BKD_TIME", tagData.toFIXNameString());
-            assertEquals( "TransBkdTime", tagData.toEnumDescriptionString());
+            assertEquals( "TransBkdTime", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -92,7 +92,7 @@ class Tag483UtcTransBkdTimeTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
                     tagData.toVerboseString());

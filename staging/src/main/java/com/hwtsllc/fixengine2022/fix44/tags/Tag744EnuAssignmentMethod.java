@@ -105,7 +105,7 @@ public class Tag744EnuAssignmentMethod extends FIX44Abstract implements LogValue
      */
     @Override
     public String toDataDescriptionString() {
-        return this.dataValue.toEnumDescriptionString();
+        return this.dataValue.toFIXDescriptionString();
     }
     /**
      * standard wrapper to format a simple string describing the data

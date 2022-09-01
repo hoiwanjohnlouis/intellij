@@ -138,7 +138,7 @@ public class Tag1031EnuCustOrderHandlingInst extends FIX50Abstract implements Lo
      */
     @Override
     public String toDataDescriptionString() {
-        return dataValue.toEnumDescriptionString();
+        return dataValue.toFIXDescriptionString();
     }
     /**
      * standard wrapper to return a string describing the data

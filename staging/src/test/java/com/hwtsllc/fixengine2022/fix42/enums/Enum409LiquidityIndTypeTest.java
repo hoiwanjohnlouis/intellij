@@ -46,38 +46,38 @@ class Enum409LiquidityIndTypeTest {
         enumType = Enum409LiquidityIndType.FIVE_DAY_MOVING_AVERAGE;
         assertEquals( "1", enumType.toFIXIDString());
         assertEquals( "FIVE_DAY_MOVING_AVERAGE", enumType.toFIXNameString());
-        assertEquals( "1 - 5-Day Moving Average", enumType.toEnumDescriptionString());
+        assertEquals( "1 - 5-Day Moving Average", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum409LiquidityIndType.TWENTY_DAY_MOVING_AVERAGE;
         assertEquals( "2", enumType.toFIXIDString());
         assertEquals( "TWENTY_DAY_MOVING_AVERAGE", enumType.toFIXNameString());
-        assertEquals( "2 - 20-Day Moving Average", enumType.toEnumDescriptionString());
+        assertEquals( "2 - 20-Day Moving Average", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum409LiquidityIndType.NORMAL_MARKET_SIZE;
         assertEquals( "3", enumType.toFIXIDString());
         assertEquals( "NORMAL_MARKET_SIZE", enumType.toFIXNameString());
-        assertEquals( "3 - Normal Market Size", enumType.toEnumDescriptionString());
+        assertEquals( "3 - Normal Market Size", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum409LiquidityIndType.OTHER;
         assertEquals( "4", enumType.toFIXIDString());
         assertEquals( "OTHER", enumType.toFIXNameString());
-        assertEquals( "4 - Other", enumType.toEnumDescriptionString());
+        assertEquals( "4 - Other", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
     /**
      *

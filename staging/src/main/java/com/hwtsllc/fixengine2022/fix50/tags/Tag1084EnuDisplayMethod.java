@@ -101,7 +101,7 @@ public class Tag1084EnuDisplayMethod extends FIX50Abstract implements LogValuePa
      */
     @Override
     public String toDataDescriptionString() {
-        return dataValue.toEnumDescriptionString();
+        return dataValue.toFIXDescriptionString();
     }
     /**
      * standard wrapper to format a simple string describing the data

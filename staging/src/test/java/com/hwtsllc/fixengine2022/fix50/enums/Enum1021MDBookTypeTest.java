@@ -44,25 +44,25 @@ class Enum1021MDBookTypeTest {
         enumType = Enum1021MDBookType.TOP_OF_BOOK;
         assertEquals( "1", enumType.toFIXIDString() );
         assertEquals( "TOP_OF_BOOK", enumType.toFIXNameString() );
-        assertEquals( "1 - Top of Book", enumType.toEnumDescriptionString() );
+        assertEquals( "1 - Top of Book", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1021MDBookType.PRICE_DEPTH;
         assertEquals( "2", enumType.toFIXIDString() );
         assertEquals( "PRICE_DEPTH", enumType.toFIXNameString() );
-        assertEquals( "2 - Price Depth", enumType.toEnumDescriptionString() );
+        assertEquals( "2 - Price Depth", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1021MDBookType.ORDER_DEPTH;
         assertEquals( "3", enumType.toFIXIDString() );
         assertEquals( "ORDER_DEPTH", enumType.toFIXNameString() );
-        assertEquals( "3 - Order Depth", enumType.toEnumDescriptionString() );
+        assertEquals( "3 - Order Depth", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

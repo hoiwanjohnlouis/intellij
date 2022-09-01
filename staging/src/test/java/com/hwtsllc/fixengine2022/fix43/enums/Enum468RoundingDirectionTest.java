@@ -58,28 +58,28 @@ class Enum468RoundingDirectionTest {
         enumType = Enum468RoundingDirection.ROUND_TO_NEAREST;
         assertEquals("0", enumType.toFIXIDString());
         assertEquals("ROUND_TO_NEAREST", enumType.toFIXNameString());
-        assertEquals("0 - Round to nearest", enumType.toEnumDescriptionString());
+        assertEquals("0 - Round to nearest", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum468RoundingDirection.ROUND_DOWN;
         assertEquals("1", enumType.toFIXIDString());
         assertEquals("ROUND_DOWN", enumType.toFIXNameString());
-        assertEquals("1 - Round down", enumType.toEnumDescriptionString());
+        assertEquals("1 - Round down", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum468RoundingDirection.ROUND_UP;
         assertEquals("2", enumType.toFIXIDString());
         assertEquals("ROUND_UP", enumType.toFIXNameString());
-        assertEquals("2 - Round up", enumType.toEnumDescriptionString());
+        assertEquals("2 - Round up", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

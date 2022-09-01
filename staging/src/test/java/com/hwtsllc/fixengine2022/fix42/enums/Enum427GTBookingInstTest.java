@@ -45,29 +45,29 @@ class Enum427GTBookingInstTest {
         enumType = Enum427GTBookingInst.BOOK_OUT_ALL_TRADES;
         assertEquals( "0", enumType.toFIXIDString());
         assertEquals( "BOOK_OUT_ALL_TRADES", enumType.toFIXNameString());
-        assertEquals( "0 - Book out all trades on day of execution", enumType.toEnumDescriptionString());
+        assertEquals( "0 - Book out all trades on day of execution", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum427GTBookingInst.ACCUMULATE_EXECUTIONS_UNTIL_FILLED_OR_EXPIRES;
         assertEquals( "1", enumType.toFIXIDString());
         assertEquals( "ACCUMULATE_EXECUTIONS_UNTIL_FILLED_OR_EXPIRES", enumType.toFIXNameString());
-        assertEquals( "1 - Accumulate executions until order is filled or expires", enumType.toEnumDescriptionString());
+        assertEquals( "1 - Accumulate executions until order is filled or expires", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum427GTBookingInst.ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE;
         assertEquals( "2", enumType.toFIXIDString());
         assertEquals( "ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE", enumType.toFIXNameString());
-        assertEquals( "2 - Accumulate until verbally notified otherwise", enumType.toEnumDescriptionString());
+        assertEquals( "2 - Accumulate until verbally notified otherwise", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
     /**
      *

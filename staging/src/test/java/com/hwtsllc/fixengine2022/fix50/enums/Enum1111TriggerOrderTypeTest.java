@@ -45,17 +45,17 @@ class Enum1111TriggerOrderTypeTest {
         enumType = Enum1111TriggerOrderType.MARKET;
         assertEquals( "1", enumType.toFIXIDString() );
         assertEquals( "MARKET", enumType.toFIXNameString() );
-        assertEquals( "1 - Market", enumType.toEnumDescriptionString() );
+        assertEquals( "1 - Market", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum1111TriggerOrderType.LIMIT;
         assertEquals( "2", enumType.toFIXIDString() );
         assertEquals( "LIMIT", enumType.toFIXNameString() );
-        assertEquals( "2 - Limit", enumType.toEnumDescriptionString() );
+        assertEquals( "2 - Limit", enumType.toFIXDescriptionString() );
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

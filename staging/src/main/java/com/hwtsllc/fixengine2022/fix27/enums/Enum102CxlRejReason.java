@@ -97,7 +97,7 @@ public enum Enum102CxlRejReason implements LogFIXString, LogVerboseString {
      * standard wrapper to retrieve the specific fix description for this enum. eg: the third field
      */
     @Override
-    public String toEnumDescriptionString() {
+    public String toFIXDescriptionString() {
         return description;
     }
     /**
@@ -116,7 +116,7 @@ public enum Enum102CxlRejReason implements LogFIXString, LogVerboseString {
                 .concat( toFIXNameString())
                 .concat("]")
                 .concat("\n\tDescription[")
-                .concat( toEnumDescriptionString())
+                .concat( toFIXDescriptionString())
                 .concat("]");
     }
     /**

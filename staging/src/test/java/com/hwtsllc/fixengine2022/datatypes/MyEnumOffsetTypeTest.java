@@ -49,33 +49,33 @@ class MyEnumOffsetTypeTest {
         enumType = MyEnumOffsetType.PRICE;
         assertEquals("0", enumType.toFIXIDString());
         assertEquals("PRICE", enumType.toFIXNameString());
-        assertEquals("0 - Price (default)", enumType.toEnumDescriptionString());
+        assertEquals("0 - Price (default)", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumOffsetType.BASIS;
         assertEquals("1", enumType.toFIXIDString());
         assertEquals("BASIS", enumType.toFIXNameString());
-        assertEquals("1 - Basis Points", enumType.toEnumDescriptionString());
+        assertEquals("1 - Basis Points", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumOffsetType.TICKS;
         assertEquals("2", enumType.toFIXIDString());
         assertEquals("TICKS", enumType.toFIXNameString());
-        assertEquals("2 - Ticks", enumType.toEnumDescriptionString());
+        assertEquals("2 - Ticks", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = MyEnumOffsetType.TIER_OR_LEVEL;
         assertEquals("3", enumType.toFIXIDString());
         assertEquals("TIER_OR_LEVEL", enumType.toFIXNameString());
-        assertEquals("3 - Price Tier or Level", enumType.toEnumDescriptionString());
+        assertEquals("3 - Price Tier or Level", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

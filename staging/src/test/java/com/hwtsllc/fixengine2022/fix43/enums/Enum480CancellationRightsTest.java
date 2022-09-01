@@ -49,37 +49,37 @@ class Enum480CancellationRightsTest {
         enumType = Enum480CancellationRights.YES;
         assertEquals("Y", enumType.toFIXIDString());
         assertEquals("YES", enumType.toFIXNameString());
-        assertEquals("Y - Yes", enumType.toEnumDescriptionString());
+        assertEquals("Y - Yes", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum480CancellationRights.EXECUTION_ONLY;
         assertEquals("N", enumType.toFIXIDString());
         assertEquals("EXECUTION_ONLY", enumType.toFIXNameString());
-        assertEquals("N - No - Execution Only", enumType.toEnumDescriptionString());
+        assertEquals("N - No - Execution Only", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum480CancellationRights.WAIVER_AGREEMENT;
         assertEquals("M", enumType.toFIXIDString());
         assertEquals("WAIVER_AGREEMENT", enumType.toFIXNameString());
-        assertEquals("M - No - Waiver agreement", enumType.toEnumDescriptionString());
+        assertEquals("M - No - Waiver agreement", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum480CancellationRights.INSTITUTIONAL;
         assertEquals("O", enumType.toFIXIDString());
         assertEquals("INSTITUTIONAL", enumType.toFIXNameString());
-        assertEquals("O - No - Institutional", enumType.toEnumDescriptionString());
+        assertEquals("O - No - Institutional", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

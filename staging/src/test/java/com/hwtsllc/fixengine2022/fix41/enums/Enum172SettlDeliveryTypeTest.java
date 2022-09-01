@@ -47,33 +47,33 @@ class Enum172SettlDeliveryTypeTest {
         assertEquals("0", enumType.toFIXIDString());
         assertEquals("VERSUS", enumType.toFIXNameString());
         assertEquals("0 - Versus. Payment: Deliver (if Sell) or Receive (if Buy) vs. (Against) Payment",
-                enumType.toEnumDescriptionString());
+                enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum172SettlDeliveryType.FREE;
         assertEquals("1", enumType.toFIXIDString());
         assertEquals("FREE", enumType.toFIXNameString());
-        assertEquals("1 - Free: Deliver (if Sell) or Receive (if Buy) Free", enumType.toEnumDescriptionString());
+        assertEquals("1 - Free: Deliver (if Sell) or Receive (if Buy) Free", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum172SettlDeliveryType.TRI_PARTY;
         assertEquals("2", enumType.toFIXIDString());
         assertEquals("TRI_PARTY", enumType.toFIXNameString());
-        assertEquals("2 - Tri-Party", enumType.toEnumDescriptionString());
+        assertEquals("2 - Tri-Party", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
 
         enumType = Enum172SettlDeliveryType.HOLD_IN_CUSTODY;
         assertEquals("3", enumType.toFIXIDString());
         assertEquals("HOLD_IN_CUSTODY", enumType.toFIXNameString());
-        assertEquals("3 - Hold In Custody", enumType.toEnumDescriptionString());
+        assertEquals("3 - Hold In Custody", enumType.toFIXDescriptionString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toFIXIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toFIXNameString());
-        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
+        assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toFIXDescriptionString());
     }
 }

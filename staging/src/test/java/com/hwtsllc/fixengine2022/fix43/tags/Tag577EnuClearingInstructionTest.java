@@ -42,11 +42,11 @@ class Tag577EnuClearingInstructionTest {
             assertEquals( "FIX577_ENU_CLEARING_INSTRUCTION", tagData.toFIXLabelString());
             assertEquals( "577", tagData.toFIXIDString());
             assertEquals( "CLEARING_INSTRUCTION", tagData.toFIXNameString());
-            assertEquals( "ClearingInstruction", tagData.toEnumDescriptionString());
+            assertEquals( "ClearingInstruction", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -158,7 +158,7 @@ class Tag577EnuClearingInstructionTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +

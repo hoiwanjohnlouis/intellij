@@ -121,7 +121,7 @@ public class Tag65EnuSymbolSfx extends FIX27Abstract implements LogValuePairStri
      */
     @Override
     public String toDataDescriptionString() {
-        return dataValue.toEnumDescriptionString();
+        return dataValue.toFIXDescriptionString();
     }
     /**
      * standard wrapper to format a simple string describing the data

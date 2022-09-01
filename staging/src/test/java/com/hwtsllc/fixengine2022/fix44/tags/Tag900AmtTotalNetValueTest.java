@@ -63,11 +63,11 @@ class Tag900AmtTotalNetValueTest {
             assertEquals( "FIX900_AMT_TOTAL_NET_VALUE", tagData.toFIXLabelString());
             assertEquals( "900", tagData.toFIXIDString());
             assertEquals( "TOTAL_NET_VALUE", tagData.toFIXNameString());
-            assertEquals( "TotalNetValue", tagData.toEnumDescriptionString());
+            assertEquals( "TotalNetValue", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -98,7 +98,7 @@ class Tag900AmtTotalNetValueTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + oneElement + "]\n" +
                             "\tValuePair[" + tagData.toFIXIDString() + "=" + oneElement + "]",
                     tagData.toVerboseString());

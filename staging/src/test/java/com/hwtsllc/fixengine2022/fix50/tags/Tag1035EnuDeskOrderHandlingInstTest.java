@@ -42,11 +42,11 @@ class Tag1035EnuDeskOrderHandlingInstTest {
             assertEquals( "FIX1035_ENU_DESK_ORDER_HANDLING_INST", tagData.toFIXLabelString());
             assertEquals( "1035", tagData.toFIXIDString());
             assertEquals( "DESK_ORDER_HANDLING_INST", tagData.toFIXNameString());
-            assertEquals( "DeskOrderHandlingInst", tagData.toEnumDescriptionString());
+            assertEquals( "DeskOrderHandlingInst", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -212,7 +212,7 @@ class Tag1035EnuDeskOrderHandlingInstTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +

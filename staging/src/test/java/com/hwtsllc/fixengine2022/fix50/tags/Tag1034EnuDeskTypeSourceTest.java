@@ -60,11 +60,11 @@ class Tag1034EnuDeskTypeSourceTest {
             assertEquals( "FIX1034_ENU_DESK_TYPE_SOURCE", tagData.toFIXLabelString());
             assertEquals( "1034", tagData.toFIXIDString());
             assertEquals( "DESK_TYPE_SOURCE", tagData.toFIXNameString());
-            assertEquals( "DeskTypeSource", tagData.toEnumDescriptionString());
+            assertEquals( "DeskTypeSource", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -107,7 +107,7 @@ class Tag1034EnuDeskTypeSourceTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +

@@ -42,11 +42,11 @@ class Tag658EnuQuoteRequestRejectReasonTest {
             assertEquals( "FIX658_ENU_QUOTE_REQUEST_REJECT_REASON", tagData.toFIXLabelString());
             assertEquals( "658", tagData.toFIXIDString());
             assertEquals( "QUOTE_REQUEST_REJECT_REASON", tagData.toFIXNameString());
-            assertEquals( "QuoteRequestRejectReason", tagData.toEnumDescriptionString());
+            assertEquals( "QuoteRequestRejectReason", tagData.toFIXDescriptionString());
             assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toFIXIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toFIXNameString());
-            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
+            assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toFIXDescriptionString());
         }
     }
     @Test
@@ -152,7 +152,7 @@ class Tag658EnuQuoteRequestRejectReasonTest {
                             "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toFIXIDString() + "]\n" +
                             "\tFIXName[" + tagData.toFIXNameString() + "]\n" +
-                            "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
+                            "\tFIXDescription[" + tagData.toFIXDescriptionString() + "]\n" +
                             "\tDataValue[" + tagData.toString() + "]\n" +
                             "\tValuePair[" + tagData.toValuePairString() + "]\n" +
                             "\tDataID[" + tagData.toDataIDString() + "]\n" +
