@@ -58,7 +58,7 @@ class Enum380BusinessRejectReasonTest {
         assertEquals( "0", enumType.toEnumIDString());
         assertEquals( "OTHER", enumType.toEnumNameString());
         assertEquals( "0 - Other", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -67,7 +67,7 @@ class Enum380BusinessRejectReasonTest {
         assertEquals( "1", enumType.toEnumIDString());
         assertEquals( "UNKNOWN_ID", enumType.toEnumNameString());
         assertEquals( "1 - Unknown ID", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -76,7 +76,7 @@ class Enum380BusinessRejectReasonTest {
         assertEquals( "2", enumType.toEnumIDString());
         assertEquals( "UNKNOWN_SECURITY", enumType.toEnumNameString());
         assertEquals( "2 - Unknown Security", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -85,7 +85,7 @@ class Enum380BusinessRejectReasonTest {
         assertEquals( "3", enumType.toEnumIDString());
         assertEquals( "UNKNOWN_MESSAGE_TYPE", enumType.toEnumNameString());
         assertEquals( "3 - Unknown Message Type", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -94,7 +94,7 @@ class Enum380BusinessRejectReasonTest {
         assertEquals( "4", enumType.toEnumIDString());
         assertEquals( "APPLICATION_NOT_AVAILABLE", enumType.toEnumNameString());
         assertEquals( "4 - Application not available", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -103,7 +103,7 @@ class Enum380BusinessRejectReasonTest {
         assertEquals( "5", enumType.toEnumIDString());
         assertEquals( "REQUIRED_FIELD_MISSING", enumType.toEnumNameString());
         assertEquals( "5 - Conditionally required field missing", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -112,7 +112,7 @@ class Enum380BusinessRejectReasonTest {
         assertEquals( "6", enumType.toEnumIDString());
         assertEquals( "NOT_AUTHORIZED", enumType.toEnumNameString());
         assertEquals( "6 - Not Authorized", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -121,7 +121,7 @@ class Enum380BusinessRejectReasonTest {
         assertEquals( "7", enumType.toEnumIDString());
         assertEquals( "DELIVERTO_FIRM_NOT_AVAILABLE", enumType.toEnumNameString());
         assertEquals( "7 - DeliverTo firm not available at this time", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -135,7 +135,7 @@ class Enum380BusinessRejectReasonTest {
         assertEquals( "18", enumType.toEnumIDString());
         assertEquals( "INVALID_PRICE_INCREMENT", enumType.toEnumNameString());
         assertEquals( "18 - Invalid price increment", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());

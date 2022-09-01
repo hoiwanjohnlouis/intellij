@@ -43,11 +43,11 @@ class Tag485FloExecPriceAdjustmentTest {
         // process array of tags
         for ( float oneElement : TestArray ) {
             tagData = new Tag485FloExecPriceAdjustment( new MyFloatType( oneElement ));
-            assertEquals( "FIX485_FLO_EXEC_PRICE_ADJUSTMENT", tagData.toEnumLabelString());
+            assertEquals( "FIX485_FLO_EXEC_PRICE_ADJUSTMENT", tagData.toFIXLabelString());
             assertEquals( "485", tagData.toEnumIDString());
             assertEquals( "EXEC_PRICE_ADJUSTMENT", tagData.toEnumNameString());
             assertEquals( "ExecPriceAdjustment", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag485FloExecPriceAdjustmentTest {
         for ( float oneElement : TestArray ) {
             tagData = new Tag485FloExecPriceAdjustment( new MyFloatType( oneElement ));
             assertEquals( "Tag485FloExecPriceAdjustment\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

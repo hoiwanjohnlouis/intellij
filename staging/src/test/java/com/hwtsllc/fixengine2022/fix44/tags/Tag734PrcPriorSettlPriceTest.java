@@ -43,11 +43,11 @@ class Tag734PrcPriorSettlPriceTest {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag734PrcPriorSettlPrice( new MyPriceType( oneElement ));
-            assertEquals( "FIX734_PRC_PRIOR_SETTL_PRICE", tagData.toEnumLabelString());
+            assertEquals( "FIX734_PRC_PRIOR_SETTL_PRICE", tagData.toFIXLabelString());
             assertEquals( "734", tagData.toEnumIDString());
             assertEquals( "PRIOR_SETTL_PRICE", tagData.toEnumNameString());
             assertEquals( "PriorSettlPrice", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag734PrcPriorSettlPriceTest {
         for ( double oneElement : TestArray ) {
             tagData = new Tag734PrcPriorSettlPrice( new MyPriceType( oneElement ));
             assertEquals( "Tag734PrcPriorSettlPrice\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

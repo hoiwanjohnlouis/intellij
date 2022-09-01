@@ -39,11 +39,11 @@ class Tag1043EnuCollApplTypeTest {
         // loop around the ENUM and process
         for ( Enum1043CollApplType oneEnum : Enum1043CollApplType.values()) {
             tagData = new Tag1043EnuCollApplType(oneEnum);
-            assertEquals( "FIX1043_ENU_COLL_APPL_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX1043_ENU_COLL_APPL_TYPE", tagData.toFIXLabelString());
             assertEquals( "1043", tagData.toEnumIDString());
             assertEquals( "COLL_APPL_TYPE", tagData.toEnumNameString());
             assertEquals( "CollApplType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -91,7 +91,7 @@ class Tag1043EnuCollApplTypeTest {
         for ( Enum1043CollApplType oneEnum : Enum1043CollApplType.values()) {
             tagData = new Tag1043EnuCollApplType(oneEnum);
             assertEquals( "Tag1043EnuCollApplType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

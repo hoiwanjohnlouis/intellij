@@ -39,11 +39,11 @@ class Tag815EnuApplQueueActionTest {
         // loop around the ENUM and process
         for ( MyEnumApplQueue oneEnum : MyEnumApplQueue.values()) {
             tagData = new Tag815EnuApplQueueAction(oneEnum);
-            assertEquals( "FIX815_ENU_APPL_QUEUE_ACTION", tagData.toEnumLabelString());
+            assertEquals( "FIX815_ENU_APPL_QUEUE_ACTION", tagData.toFIXLabelString());
             assertEquals( "815", tagData.toEnumIDString());
             assertEquals( "APPL_QUEUE_ACTION", tagData.toEnumNameString());
             assertEquals( "ApplQueueAction", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -101,7 +101,7 @@ class Tag815EnuApplQueueActionTest {
         for ( MyEnumApplQueue oneEnum : MyEnumApplQueue.values()) {
             tagData = new Tag815EnuApplQueueAction(oneEnum);
             assertEquals( "Tag815EnuApplQueueAction\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyEnumFXRateCalc;
-import com.hwtsllc.fixengine2022.fix41.tags.Tag156EnuSettlCurrFXRateCalc;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -58,11 +57,11 @@ class Tag1046EnuUnderlyingFXRateCalcTest {
         // loop around the ENUM and process
         for ( MyEnumFXRateCalc oneEnum : MyEnumFXRateCalc.values()) {
             tagData = new Tag1046EnuUnderlyingFXRateCalc(oneEnum);
-            assertEquals( "FIX1046_ENU_UNDERLYING_FX_RATE_CALC", tagData.toEnumLabelString());
+            assertEquals( "FIX1046_ENU_UNDERLYING_FX_RATE_CALC", tagData.toFIXLabelString());
             assertEquals( "1046", tagData.toEnumIDString());
             assertEquals( "UNDERLYING_FX_RATE_CALC", tagData.toEnumNameString());
             assertEquals( "UnderlyingFXRateCalc", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -110,7 +109,7 @@ class Tag1046EnuUnderlyingFXRateCalcTest {
         for ( MyEnumFXRateCalc oneEnum : MyEnumFXRateCalc.values()) {
             tagData = new Tag1046EnuUnderlyingFXRateCalc(oneEnum);
             assertEquals( "Tag1046EnuUnderlyingFXRateCalc\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

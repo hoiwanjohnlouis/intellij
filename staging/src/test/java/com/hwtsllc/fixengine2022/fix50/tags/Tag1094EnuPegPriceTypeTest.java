@@ -39,11 +39,11 @@ class Tag1094EnuPegPriceTypeTest {
         // loop around the ENUM and process
         for ( Enum1094PegPriceType oneEnum : Enum1094PegPriceType.values()) {
             tagData = new Tag1094EnuPegPriceType(oneEnum);
-            assertEquals( "FIX1094_ENU_PEG_PRICE_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX1094_ENU_PEG_PRICE_TYPE", tagData.toFIXLabelString());
             assertEquals( "1094", tagData.toEnumIDString());
             assertEquals( "PEG_PRICE_TYPE", tagData.toEnumNameString());
             assertEquals( "PegPriceType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -128,7 +128,7 @@ class Tag1094EnuPegPriceTypeTest {
         for ( Enum1094PegPriceType oneEnum : Enum1094PegPriceType.values()) {
             tagData = new Tag1094EnuPegPriceType(oneEnum);
             assertEquals( "Tag1094EnuPegPriceType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

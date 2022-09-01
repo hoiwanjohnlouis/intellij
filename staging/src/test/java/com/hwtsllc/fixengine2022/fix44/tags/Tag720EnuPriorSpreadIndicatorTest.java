@@ -39,11 +39,11 @@ class Tag720EnuPriorSpreadIndicatorTest {
         // loop around the ENUM and process
         for ( Enum720PriorSpreadIndicator oneEnum : Enum720PriorSpreadIndicator.values()) {
             tagData = new Tag720EnuPriorSpreadIndicator(oneEnum);
-            assertEquals( "FIX720_ENU_PRIOR_SPREAD_INDICATOR", tagData.toEnumLabelString());
+            assertEquals( "FIX720_ENU_PRIOR_SPREAD_INDICATOR", tagData.toFIXLabelString());
             assertEquals( "720", tagData.toEnumIDString());
             assertEquals( "PRIOR_SPREAD_INDICATOR", tagData.toEnumNameString());
             assertEquals( "PriorSpreadIndicator", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -91,7 +91,7 @@ class Tag720EnuPriorSpreadIndicatorTest {
         for ( Enum720PriorSpreadIndicator oneEnum : Enum720PriorSpreadIndicator.values()) {
             tagData = new Tag720EnuPriorSpreadIndicator(oneEnum);
             assertEquals( "Tag720EnuPriorSpreadIndicator\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

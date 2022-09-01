@@ -45,7 +45,7 @@ class Enum385MsgDirectionTest {
         assertEquals( "R", enumType.toEnumIDString());
         assertEquals( "RECEIVE", enumType.toEnumNameString());
         assertEquals( "R - Receive", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -54,7 +54,7 @@ class Enum385MsgDirectionTest {
         assertEquals( "S", enumType.toEnumIDString());
         assertEquals( "SEND", enumType.toEnumNameString());
         assertEquals( "S - Send", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());

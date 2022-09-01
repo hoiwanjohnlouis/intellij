@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyIntType;
-import com.hwtsllc.fixengine2022.fix41.tags.Tag205IntMaturityDay;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -44,11 +43,11 @@ class Tag304IntTotNoQuoteEntriesTest {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag304IntTotNoQuoteEntries( new MyIntType( oneElement ));
-            assertEquals( "FIX304_INT_TOT_QUOTE_ENTRIES", tagData.toEnumLabelString());
+            assertEquals( "FIX304_INT_TOT_QUOTE_ENTRIES", tagData.toFIXLabelString());
             assertEquals( "304", tagData.toEnumIDString());
             assertEquals( "TOT_QUOTE_ENTRIES", tagData.toEnumNameString());
             assertEquals( "TotQuoteEntries", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -86,7 +85,7 @@ class Tag304IntTotNoQuoteEntriesTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag304IntTotNoQuoteEntries( new MyIntType( oneElement ));
             assertEquals( "Tag304IntTotNoQuoteEntries\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

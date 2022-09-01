@@ -39,11 +39,11 @@ class Tag1109EnuTriggerPriceDirectionTest {
         // loop around the ENUM and process
         for ( Enum1109TriggerPriceDirection oneEnum : Enum1109TriggerPriceDirection.values()) {
             tagData = new Tag1109EnuTriggerPriceDirection(oneEnum);
-            assertEquals( "FIX1109_ENU_TRIGGER_PRICE_DIRECTION", tagData.toEnumLabelString());
+            assertEquals( "FIX1109_ENU_TRIGGER_PRICE_DIRECTION", tagData.toFIXLabelString());
             assertEquals( "1109", tagData.toEnumIDString());
             assertEquals( "TRIGGER_PRICE_DIRECTION", tagData.toEnumNameString());
             assertEquals( "TriggerPriceDirection", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -91,7 +91,7 @@ class Tag1109EnuTriggerPriceDirectionTest {
         for ( Enum1109TriggerPriceDirection oneEnum : Enum1109TriggerPriceDirection.values()) {
             tagData = new Tag1109EnuTriggerPriceDirection(oneEnum);
             assertEquals( "Tag1109EnuTriggerPriceDirection\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

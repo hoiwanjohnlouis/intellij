@@ -56,7 +56,7 @@ class Enum465QuantityTypeTest {
         assertEquals("1", enumType.toEnumIDString());
         assertEquals("SHARES", enumType.toEnumNameString());
         assertEquals("1 - SHARES", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -65,7 +65,7 @@ class Enum465QuantityTypeTest {
         assertEquals("2", enumType.toEnumIDString());
         assertEquals("BONDS", enumType.toEnumNameString());
         assertEquals("2 - BONDS", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -74,7 +74,7 @@ class Enum465QuantityTypeTest {
         assertEquals("3", enumType.toEnumIDString());
         assertEquals("CURRENTFACE", enumType.toEnumNameString());
         assertEquals("3 - CURRENTFACE", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -83,7 +83,7 @@ class Enum465QuantityTypeTest {
         assertEquals("4", enumType.toEnumIDString());
         assertEquals("ORIGINALFACE", enumType.toEnumNameString());
         assertEquals("4 - ORIGINALFACE", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -92,7 +92,7 @@ class Enum465QuantityTypeTest {
         assertEquals("5", enumType.toEnumIDString());
         assertEquals("CURRENCY", enumType.toEnumNameString());
         assertEquals("5 - CURRENCY", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -101,7 +101,7 @@ class Enum465QuantityTypeTest {
         assertEquals("6", enumType.toEnumIDString());
         assertEquals("CONTRACTS", enumType.toEnumNameString());
         assertEquals("6 - CONTRACTS", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -110,7 +110,7 @@ class Enum465QuantityTypeTest {
         assertEquals("7", enumType.toEnumIDString());
         assertEquals("OTHER", enumType.toEnumNameString());
         assertEquals("7 - OTHER", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -119,7 +119,7 @@ class Enum465QuantityTypeTest {
         assertEquals("8", enumType.toEnumIDString());
         assertEquals("PAR", enumType.toEnumNameString());
         assertEquals("8 - PAR", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());

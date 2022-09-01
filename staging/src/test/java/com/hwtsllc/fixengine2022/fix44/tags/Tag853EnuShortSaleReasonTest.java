@@ -39,11 +39,11 @@ class Tag853EnuShortSaleReasonTest {
         // loop around the ENUM and process
         for ( Enum853ShortSaleReason oneEnum : Enum853ShortSaleReason.values()) {
             tagData = new Tag853EnuShortSaleReason(oneEnum);
-            assertEquals( "FIX853_ENU_SHORT_SALE_REASON", tagData.toEnumLabelString());
+            assertEquals( "FIX853_ENU_SHORT_SALE_REASON", tagData.toFIXLabelString());
             assertEquals( "853", tagData.toEnumIDString());
             assertEquals( "SHORT_SALE_REASON", tagData.toEnumNameString());
             assertEquals( "ShortSaleReason", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -114,7 +114,7 @@ class Tag853EnuShortSaleReasonTest {
         for ( Enum853ShortSaleReason oneEnum : Enum853ShortSaleReason.values()) {
             tagData = new Tag853EnuShortSaleReason(oneEnum);
             assertEquals( "Tag853EnuShortSaleReason\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

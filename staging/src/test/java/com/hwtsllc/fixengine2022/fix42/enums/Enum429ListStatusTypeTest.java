@@ -51,7 +51,7 @@ class Enum429ListStatusTypeTest {
         assertEquals( "1", enumType.toEnumIDString());
         assertEquals( "ACK", enumType.toEnumNameString());
         assertEquals( "1 - Ack", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -60,7 +60,7 @@ class Enum429ListStatusTypeTest {
         assertEquals( "2", enumType.toEnumIDString());
         assertEquals( "RESPONSE", enumType.toEnumNameString());
         assertEquals( "2 - Response", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -69,7 +69,7 @@ class Enum429ListStatusTypeTest {
         assertEquals( "3", enumType.toEnumIDString());
         assertEquals( "TIMED", enumType.toEnumNameString());
         assertEquals( "3 - Timed", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -78,7 +78,7 @@ class Enum429ListStatusTypeTest {
         assertEquals( "4", enumType.toEnumIDString());
         assertEquals( "EXEC_STARTED", enumType.toEnumNameString());
         assertEquals( "4 - Exec Started", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -87,7 +87,7 @@ class Enum429ListStatusTypeTest {
         assertEquals( "5", enumType.toEnumIDString());
         assertEquals( "ALL_DONE", enumType.toEnumNameString());
         assertEquals( "5 - All Done", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -97,7 +97,7 @@ class Enum429ListStatusTypeTest {
         assertEquals( "6", enumType.toEnumIDString());
         assertEquals( "ALERT", enumType.toEnumNameString());
         assertEquals( "6 - Alert", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());

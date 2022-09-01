@@ -47,7 +47,7 @@ class Enum274TickDirectionTest {
         assertEquals( "0", enumType.toEnumIDString());
         assertEquals( "PLUS_TICK", enumType.toEnumNameString());
         assertEquals( "0 - Plus Tick", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -56,7 +56,7 @@ class Enum274TickDirectionTest {
         assertEquals( "1", enumType.toEnumIDString());
         assertEquals( "ZERO_PLUS_TICK", enumType.toEnumNameString());
         assertEquals( "1 - Zero-Plus Tick", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -65,7 +65,7 @@ class Enum274TickDirectionTest {
         assertEquals( "2", enumType.toEnumIDString());
         assertEquals( "MINUS_TICK", enumType.toEnumNameString());
         assertEquals( "2 - Minus Tick", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -74,7 +74,7 @@ class Enum274TickDirectionTest {
         assertEquals( "3", enumType.toEnumIDString());
         assertEquals( "ZERO_MINUS_TICK", enumType.toEnumNameString());
         assertEquals( "3 - Zero-Minus Tick", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());

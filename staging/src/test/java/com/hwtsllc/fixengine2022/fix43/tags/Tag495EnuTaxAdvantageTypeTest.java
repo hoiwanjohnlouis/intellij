@@ -39,11 +39,11 @@ class Tag495EnuTaxAdvantageTypeTest {
         // loop around the ENUM and process
         for (Enum495TaxAdvantageType oneEnum : Enum495TaxAdvantageType.values()) {
             tagData = new Tag495EnuTaxAdvantageType(oneEnum);
-            assertEquals( "FIX495_ENU_TAX_ADVANTAGE_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX495_ENU_TAX_ADVANTAGE_TYPE", tagData.toFIXLabelString());
             assertEquals( "495", tagData.toEnumIDString());
             assertEquals( "TAX_ADVANTAGE_TYPE", tagData.toEnumNameString());
             assertEquals( "TaxAdvantageType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -249,7 +249,7 @@ class Tag495EnuTaxAdvantageTypeTest {
         for (Enum495TaxAdvantageType oneEnum : Enum495TaxAdvantageType.values()) {
             tagData = new Tag495EnuTaxAdvantageType(oneEnum);
             assertEquals( "Tag495EnuTaxAdvantageType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

@@ -26,8 +26,8 @@ public abstract class FIX30Abstract implements LogFIXString, LogVerboseString {
         this.fixValue = fixType;
     }
     @Override
-    public String toEnumLabelString() {
-        return fixValue.toEnumLabelString();
+    public String toFIXLabelString() {
+        return fixValue.toFIXLabelString();
     }
     @Override
     public String toEnumIDString() {
@@ -48,7 +48,7 @@ public abstract class FIX30Abstract implements LogFIXString, LogVerboseString {
     public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
-                .concat( toEnumLabelString())
+                .concat( toFIXLabelString())
                 .concat("]")
                 .concat("\n\tFIXID[")
                 .concat(String.valueOf( toEnumIDString()))
@@ -64,7 +64,7 @@ public abstract class FIX30Abstract implements LogFIXString, LogVerboseString {
     public String toString() {
         return this.getClass().getSimpleName()
                 .concat("=[")
-                .concat( toEnumLabelString())
+                .concat( toFIXLabelString())
                 .concat(",")
                 .concat(String.valueOf( toEnumIDString()))
                 .concat(",")

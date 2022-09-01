@@ -43,11 +43,11 @@ class Tag475CouInvestorCountryOfResidenceTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag475CouInvestorCountryOfResidence( new MyCountryType( oneElement ));
-            assertEquals( "FIX475_COU_INVESTOR_COUNTRY_OF_RESIDENCE", tagData.toEnumLabelString());
+            assertEquals( "FIX475_COU_INVESTOR_COUNTRY_OF_RESIDENCE", tagData.toFIXLabelString());
             assertEquals( "475", tagData.toEnumIDString());
             assertEquals( "INVESTOR_COUNTRY_OF_RESIDENCE", tagData.toEnumNameString());
             assertEquals( "InvestorCountryOfResidence", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag475CouInvestorCountryOfResidenceTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag475CouInvestorCountryOfResidence( new MyCountryType( oneElement ));
             assertEquals( "Tag475CouInvestorCountryOfResidence\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

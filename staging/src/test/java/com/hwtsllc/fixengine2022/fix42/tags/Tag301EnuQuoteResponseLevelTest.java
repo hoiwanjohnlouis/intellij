@@ -39,11 +39,11 @@ class Tag301EnuQuoteResponseLevelTest {
         // loop around the ENUM and process
         for ( Enum301QuoteResponseLevel oneEnum : Enum301QuoteResponseLevel.values()) {
             tagData = new Tag301EnuQuoteResponseLevel(oneEnum);
-            assertEquals( "FIX301_ENU_QUOTE_RESPONSE_LEVEL", tagData.toEnumLabelString());
+            assertEquals( "FIX301_ENU_QUOTE_RESPONSE_LEVEL", tagData.toFIXLabelString());
             assertEquals( "301", tagData.toEnumIDString());
             assertEquals( "QUOTE_RESPONSE_LEVEL", tagData.toEnumNameString());
             assertEquals( "QuoteResponseLevel", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -97,7 +97,7 @@ class Tag301EnuQuoteResponseLevelTest {
         for ( Enum301QuoteResponseLevel oneEnum : Enum301QuoteResponseLevel.values()) {
             tagData = new Tag301EnuQuoteResponseLevel(oneEnum);
             assertEquals( "Tag301EnuQuoteResponseLevel\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

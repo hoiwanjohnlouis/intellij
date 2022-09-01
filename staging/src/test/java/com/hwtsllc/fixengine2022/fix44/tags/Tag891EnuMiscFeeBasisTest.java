@@ -39,11 +39,11 @@ class Tag891EnuMiscFeeBasisTest {
         // loop around the ENUM and process
         for ( Enum891MiscFeeBasis oneEnum : Enum891MiscFeeBasis.values()) {
             tagData = new Tag891EnuMiscFeeBasis(oneEnum);
-            assertEquals( "FIX891_ENU_MISC_FEE_BASIS", tagData.toEnumLabelString());
+            assertEquals( "FIX891_ENU_MISC_FEE_BASIS", tagData.toFIXLabelString());
             assertEquals( "891", tagData.toEnumIDString());
             assertEquals( "MISC_FEE_BASIS", tagData.toEnumNameString());
             assertEquals( "MiscFeeBasis", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -96,7 +96,7 @@ class Tag891EnuMiscFeeBasisTest {
         for ( Enum891MiscFeeBasis oneEnum : Enum891MiscFeeBasis.values()) {
             tagData = new Tag891EnuMiscFeeBasis(oneEnum);
             assertEquals( "Tag891EnuMiscFeeBasis\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

@@ -43,11 +43,11 @@ class Tag889StrUnderlyingStipValueTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag889StrUnderlyingStipValue( new MyStringType( oneElement ));
-            assertEquals( "FIX889_STR_UNDERLYING_STIP_VALUE", tagData.toEnumLabelString());
+            assertEquals( "FIX889_STR_UNDERLYING_STIP_VALUE", tagData.toFIXLabelString());
             assertEquals( "889", tagData.toEnumIDString());
             assertEquals( "UNDERLYING_STIP_VALUE", tagData.toEnumNameString());
             assertEquals( "UnderlyingStipValue", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag889StrUnderlyingStipValueTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag889StrUnderlyingStipValue( new MyStringType( oneElement ));
             assertEquals( "Tag889StrUnderlyingStipValue\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

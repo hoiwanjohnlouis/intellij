@@ -39,11 +39,11 @@ class Tag263EnuSubscriptionRequestTypeTest {
         // loop around the ENUM and process
         for ( Enum263SubscriptionRequestType oneEnum : Enum263SubscriptionRequestType.values()) {
             tagData = new Tag263EnuSubscriptionRequestType(oneEnum);
-            assertEquals( "FIX263_ENU_SUBSCRIPTION_REQUEST_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX263_ENU_SUBSCRIPTION_REQUEST_TYPE", tagData.toFIXLabelString());
             assertEquals( "263", tagData.toEnumIDString());
             assertEquals( "SUBSCRIPTION_REQUEST_TYPE", tagData.toEnumNameString());
             assertEquals( "SubscriptionRequestType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -96,7 +96,7 @@ class Tag263EnuSubscriptionRequestTypeTest {
         for ( Enum263SubscriptionRequestType oneEnum : Enum263SubscriptionRequestType.values()) {
             tagData = new Tag263EnuSubscriptionRequestType(oneEnum);
             assertEquals( "Tag263EnuSubscriptionRequestType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

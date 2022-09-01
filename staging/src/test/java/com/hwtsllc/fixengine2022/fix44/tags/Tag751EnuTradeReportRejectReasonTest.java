@@ -39,11 +39,11 @@ class Tag751EnuTradeReportRejectReasonTest {
         // loop around the ENUM and process
         for ( Enum751TradeReportRejectReason oneEnum : Enum751TradeReportRejectReason.values()) {
             tagData = new Tag751EnuTradeReportRejectReason(oneEnum);
-            assertEquals( "FIX751_ENU_TRADE_REPORT_REJECT_REASON", tagData.toEnumLabelString());
+            assertEquals( "FIX751_ENU_TRADE_REPORT_REJECT_REASON", tagData.toFIXLabelString());
             assertEquals( "751", tagData.toEnumIDString());
             assertEquals( "TRADE_REPORT_REJECT_REASON", tagData.toEnumNameString());
             assertEquals( "TradeReportRejectReason", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -114,7 +114,7 @@ class Tag751EnuTradeReportRejectReasonTest {
         for ( Enum751TradeReportRejectReason oneEnum : Enum751TradeReportRejectReason.values()) {
             tagData = new Tag751EnuTradeReportRejectReason(oneEnum);
             assertEquals( "Tag751EnuTradeReportRejectReason\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

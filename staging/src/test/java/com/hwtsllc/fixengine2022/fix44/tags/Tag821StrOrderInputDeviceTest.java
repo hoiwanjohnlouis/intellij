@@ -43,11 +43,11 @@ class Tag821StrOrderInputDeviceTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag821StrOrderInputDevice( new MyStringType( oneElement ));
-            assertEquals( "FIX821_STR_ORDER_INPUT_DEVICE", tagData.toEnumLabelString());
+            assertEquals( "FIX821_STR_ORDER_INPUT_DEVICE", tagData.toFIXLabelString());
             assertEquals( "821", tagData.toEnumIDString());
             assertEquals( "ORDER_INPUT_DEVICE", tagData.toEnumNameString());
             assertEquals( "OrderInputDevice", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag821StrOrderInputDeviceTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag821StrOrderInputDevice( new MyStringType( oneElement ));
             assertEquals( "Tag821StrOrderInputDevice\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

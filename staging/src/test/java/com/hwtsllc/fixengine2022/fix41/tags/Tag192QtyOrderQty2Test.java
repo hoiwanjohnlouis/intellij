@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyQtyType;
-import com.hwtsllc.fixengine2022.fix40.tags.Tag134QtyBidSize;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -45,11 +44,11 @@ class Tag192QtyOrderQty2Test {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag192QtyOrderQty2( new MyQtyType( oneElement ));
-            assertEquals( "FIX192_QTY_ORDER_QTY_2", tagData.toEnumLabelString());
+            assertEquals( "FIX192_QTY_ORDER_QTY_2", tagData.toFIXLabelString());
             assertEquals( "192", tagData.toEnumIDString());
             assertEquals( "ORDER_QTY_2", tagData.toEnumNameString());
             assertEquals( "OrderQty2", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -86,7 +85,7 @@ class Tag192QtyOrderQty2Test {
         for ( int oneElement : TestArray ) {
             tagData = new Tag192QtyOrderQty2( new MyQtyType( oneElement ));
             assertEquals( "Tag192QtyOrderQty2\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

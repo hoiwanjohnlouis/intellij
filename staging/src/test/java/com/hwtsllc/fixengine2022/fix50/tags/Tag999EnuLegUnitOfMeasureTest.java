@@ -39,11 +39,11 @@ class Tag999EnuLegUnitOfMeasureTest {
         // loop around the ENUM and process
         for ( MyEnumUnitOfMeasure oneEnum : MyEnumUnitOfMeasure.values()) {
             tagData = new Tag999EnuLegUnitOfMeasure(oneEnum);
-            assertEquals( "FIX999_ENU_LEG_UNIT_OF_MEASURE", tagData.toEnumLabelString());
+            assertEquals( "FIX999_ENU_LEG_UNIT_OF_MEASURE", tagData.toFIXLabelString());
             assertEquals( "999", tagData.toEnumIDString());
             assertEquals( "LEG_UNIT_OF_MEASURE", tagData.toEnumNameString());
             assertEquals( "LegUnitOfMeasure", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -145,7 +145,7 @@ class Tag999EnuLegUnitOfMeasureTest {
         for ( MyEnumUnitOfMeasure oneEnum : MyEnumUnitOfMeasure.values()) {
             tagData = new Tag999EnuLegUnitOfMeasure(oneEnum);
             assertEquals( "Tag999EnuLegUnitOfMeasure\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

@@ -52,7 +52,7 @@ class Enum560SecurityRequestResultTest {
         assertEquals("0", enumType.toEnumIDString());
         assertEquals("VALID_REQUEST", enumType.toEnumNameString());
         assertEquals("0 - Valid request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -61,7 +61,7 @@ class Enum560SecurityRequestResultTest {
         assertEquals("1", enumType.toEnumIDString());
         assertEquals("UNSUPPORTED_REQUEST", enumType.toEnumNameString());
         assertEquals("1 - Invalid or unsupported request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -70,7 +70,7 @@ class Enum560SecurityRequestResultTest {
         assertEquals("2", enumType.toEnumIDString());
         assertEquals("NO_INSTRUMENTS_FOUND", enumType.toEnumNameString());
         assertEquals("2 - No instruments found that match selection criteria", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -79,7 +79,7 @@ class Enum560SecurityRequestResultTest {
         assertEquals("3", enumType.toEnumIDString());
         assertEquals("NOT_AUTHORIZED", enumType.toEnumNameString());
         assertEquals("3 - Not authorized to retrieve instrument data", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -88,7 +88,7 @@ class Enum560SecurityRequestResultTest {
         assertEquals("4", enumType.toEnumIDString());
         assertEquals("INSTRUMENT_DATA_UNAVAILABLE", enumType.toEnumNameString());
         assertEquals("4 - Instrument data temporarily unavailable", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -98,7 +98,7 @@ class Enum560SecurityRequestResultTest {
         assertEquals("5", enumType.toEnumIDString());
         assertEquals("REQUEST_NOT_SUPPORTED", enumType.toEnumNameString());
         assertEquals("5 - Request for instrument data not supported", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());

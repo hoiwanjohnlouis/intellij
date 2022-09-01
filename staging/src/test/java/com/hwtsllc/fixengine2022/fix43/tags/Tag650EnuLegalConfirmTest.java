@@ -39,11 +39,11 @@ class Tag650EnuLegalConfirmTest {
         // loop around the ENUM and process
         for (Enum650LegalConfirm oneEnum : Enum650LegalConfirm.values()) {
             tagData = new Tag650EnuLegalConfirm(oneEnum);
-            assertEquals( "FIX650_ENU_LEGAL_CONFIRM", tagData.toEnumLabelString());
+            assertEquals( "FIX650_ENU_LEGAL_CONFIRM", tagData.toFIXLabelString());
             assertEquals( "650", tagData.toEnumIDString());
             assertEquals( "LEGAL_CONFIRM", tagData.toEnumNameString());
             assertEquals( "LegalConfirm", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -91,7 +91,7 @@ class Tag650EnuLegalConfirmTest {
         for (Enum650LegalConfirm oneEnum : Enum650LegalConfirm.values()) {
             tagData = new Tag650EnuLegalConfirm(oneEnum);
             assertEquals( "Tag650EnuLegalConfirm\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

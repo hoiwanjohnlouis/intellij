@@ -39,11 +39,11 @@ class Tag1111EnuTriggerOrderTypeTest {
         // loop around the ENUM and process
         for ( Enum1111TriggerOrderType oneEnum : Enum1111TriggerOrderType.values()) {
             tagData = new Tag1111EnuTriggerOrderType(oneEnum);
-            assertEquals( "FIX1111_ENU_TRIGGER_ORDER_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX1111_ENU_TRIGGER_ORDER_TYPE", tagData.toFIXLabelString());
             assertEquals( "1111", tagData.toEnumIDString());
             assertEquals( "TRIGGER_ORDER_TYPE", tagData.toEnumNameString());
             assertEquals( "TriggerOrderType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -91,7 +91,7 @@ class Tag1111EnuTriggerOrderTypeTest {
         for ( Enum1111TriggerOrderType oneEnum : Enum1111TriggerOrderType.values()) {
             tagData = new Tag1111EnuTriggerOrderType(oneEnum);
             assertEquals( "Tag1111EnuTriggerOrderType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

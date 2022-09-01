@@ -39,11 +39,11 @@ class Tag940EnuAffirmStatusTest {
         // loop around the ENUM and process
         for ( Enum940AffirmStatus oneEnum : Enum940AffirmStatus.values()) {
             tagData = new Tag940EnuAffirmStatus(oneEnum);
-            assertEquals( "FIX940_ENU_AFFIRM_STATUS", tagData.toEnumLabelString());
+            assertEquals( "FIX940_ENU_AFFIRM_STATUS", tagData.toFIXLabelString());
             assertEquals( "940", tagData.toEnumIDString());
             assertEquals( "AFFIRM_STATUS", tagData.toEnumNameString());
             assertEquals( "AffirmStatus", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -96,7 +96,7 @@ class Tag940EnuAffirmStatusTest {
         for ( Enum940AffirmStatus oneEnum : Enum940AffirmStatus.values()) {
             tagData = new Tag940EnuAffirmStatus(oneEnum);
             assertEquals( "Tag940EnuAffirmStatus\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

@@ -43,11 +43,11 @@ class Tag767CcyAllowableOneSidednessCurrTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag767CcyAllowableOneSidednessCurr( new MyCurrencyType( oneElement ));
-            assertEquals( "FIX767_CCY_ALLOWABLE_ONE_SIDEDNESS_CURR", tagData.toEnumLabelString());
+            assertEquals( "FIX767_CCY_ALLOWABLE_ONE_SIDEDNESS_CURR", tagData.toFIXLabelString());
             assertEquals( "767", tagData.toEnumIDString());
             assertEquals( "ALLOWABLE_ONE_SIDEDNESS_CURR", tagData.toEnumNameString());
             assertEquals( "AllowableOneSidednessCurr", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag767CcyAllowableOneSidednessCurrTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag767CcyAllowableOneSidednessCurr( new MyCurrencyType( oneElement ));
             assertEquals( "Tag767CcyAllowableOneSidednessCurr\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

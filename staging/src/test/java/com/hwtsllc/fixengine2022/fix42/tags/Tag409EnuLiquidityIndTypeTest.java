@@ -39,11 +39,11 @@ class Tag409EnuLiquidityIndTypeTest {
         // loop around the ENUM and process
         for ( Enum409LiquidityIndType oneEnum : Enum409LiquidityIndType.values()) {
             tagData = new Tag409EnuLiquidityIndType(oneEnum);
-            assertEquals( "FIX409_ENU_LIQUIDITY_IND_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX409_ENU_LIQUIDITY_IND_TYPE", tagData.toFIXLabelString());
             assertEquals( "409", tagData.toEnumIDString());
             assertEquals( "LIQUIDITY_IND_TYPE", tagData.toEnumNameString());
             assertEquals( "LiquidityIndType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -101,7 +101,7 @@ class Tag409EnuLiquidityIndTypeTest {
         for ( Enum409LiquidityIndType oneEnum : Enum409LiquidityIndType.values()) {
             tagData = new Tag409EnuLiquidityIndType(oneEnum);
             assertEquals( "Tag409EnuLiquidityIndType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

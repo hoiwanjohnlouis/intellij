@@ -39,11 +39,11 @@ class Tag724EnuPosReqTypeTest {
         // loop around the ENUM and process
         for ( Enum724PosReqType oneEnum : Enum724PosReqType.values()) {
             tagData = new Tag724EnuPosReqType(oneEnum);
-            assertEquals( "FIX724_ENU_POS_REQ_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX724_ENU_POS_REQ_TYPE", tagData.toFIXLabelString());
             assertEquals( "724", tagData.toEnumIDString());
             assertEquals( "POS_REQ_TYPE", tagData.toEnumNameString());
             assertEquals( "PosReqType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -113,7 +113,7 @@ class Tag724EnuPosReqTypeTest {
         for ( Enum724PosReqType oneEnum : Enum724PosReqType.values()) {
             tagData = new Tag724EnuPosReqType(oneEnum);
             assertEquals( "Tag724EnuPosReqType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

@@ -43,11 +43,11 @@ class Tag932StrNetworkResponseIDTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag932StrNetworkResponseID( new MyStringType( oneElement ));
-            assertEquals( "FIX932_STR_NETWORK_RESPONSE_ID", tagData.toEnumLabelString());
+            assertEquals( "FIX932_STR_NETWORK_RESPONSE_ID", tagData.toFIXLabelString());
             assertEquals( "932", tagData.toEnumIDString());
             assertEquals( "NETWORK_RESPONSE_ID", tagData.toEnumNameString());
             assertEquals( "NetworkResponseID", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag932StrNetworkResponseIDTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag932StrNetworkResponseID( new MyStringType( oneElement ));
             assertEquals( "Tag932StrNetworkResponseID\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

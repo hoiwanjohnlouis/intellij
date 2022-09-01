@@ -39,11 +39,11 @@ class Tag658EnuQuoteRequestRejectReasonTest {
         // loop around the ENUM and process
         for (Enum658QuoteRequestRejectReason oneEnum : Enum658QuoteRequestRejectReason.values()) {
             tagData = new Tag658EnuQuoteRequestRejectReason(oneEnum);
-            assertEquals( "FIX658_ENU_QUOTE_REQUEST_REJECT_REASON", tagData.toEnumLabelString());
+            assertEquals( "FIX658_ENU_QUOTE_REQUEST_REJECT_REASON", tagData.toFIXLabelString());
             assertEquals( "658", tagData.toEnumIDString());
             assertEquals( "QUOTE_REQUEST_REJECT_REASON", tagData.toEnumNameString());
             assertEquals( "QuoteRequestRejectReason", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -149,7 +149,7 @@ class Tag658EnuQuoteRequestRejectReasonTest {
         for (Enum658QuoteRequestRejectReason oneEnum : Enum658QuoteRequestRejectReason.values()) {
             tagData = new Tag658EnuQuoteRequestRejectReason(oneEnum);
             assertEquals( "Tag658EnuQuoteRequestRejectReason\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

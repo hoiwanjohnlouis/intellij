@@ -57,11 +57,11 @@ class Tag629UtcHopSendingTimeTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag629UtcHopSendingTime( new MyUTCTimestampType( oneElement ));
-            assertEquals( "FIX629_UTC_HOP_SENDING_TIME", tagData.toEnumLabelString());
+            assertEquals( "FIX629_UTC_HOP_SENDING_TIME", tagData.toFIXLabelString());
             assertEquals( "629", tagData.toEnumIDString());
             assertEquals( "HOP_SENDING_TIME", tagData.toEnumNameString());
             assertEquals( "HopSendingTime", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -92,7 +92,7 @@ class Tag629UtcHopSendingTimeTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag629UtcHopSendingTime( new MyUTCTimestampType( oneElement ));
             assertEquals( "Tag629UtcHopSendingTime\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

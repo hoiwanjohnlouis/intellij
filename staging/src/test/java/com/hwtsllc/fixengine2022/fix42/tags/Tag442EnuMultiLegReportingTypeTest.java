@@ -39,11 +39,11 @@ class Tag442EnuMultiLegReportingTypeTest {
         // loop around the ENUM and process
         for ( Enum442MultiLegReportingType oneEnum : Enum442MultiLegReportingType.values()) {
             tagData = new Tag442EnuMultiLegReportingType(oneEnum);
-            assertEquals( "FIX442_ENU_MULTI_LEG_REPORTING_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX442_ENU_MULTI_LEG_REPORTING_TYPE", tagData.toFIXLabelString());
             assertEquals( "442", tagData.toEnumIDString());
             assertEquals( "MULTI_LEG_REPORTING_TYPE", tagData.toEnumNameString());
             assertEquals( "MultiLegReportingType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -97,7 +97,7 @@ class Tag442EnuMultiLegReportingTypeTest {
         for ( Enum442MultiLegReportingType oneEnum : Enum442MultiLegReportingType.values()) {
             tagData = new Tag442EnuMultiLegReportingType(oneEnum);
             assertEquals( "Tag442EnuMultiLegReportingType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

@@ -50,7 +50,7 @@ class Enum286OpenCLoseSettlFlagTest {
         assertEquals( "0", enumType.toEnumIDString());
         assertEquals( "DAILY_OPEN_OR_CLOSE_OR_SETTLEMENT", enumType.toEnumNameString());
         assertEquals( "0 - Daily Open / Close / Settlement entry", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -59,7 +59,7 @@ class Enum286OpenCLoseSettlFlagTest {
         assertEquals( "1", enumType.toEnumIDString());
         assertEquals( "SESSION_OPEN_OR_CLOSE_OR_SETTLEMENT", enumType.toEnumNameString());
         assertEquals( "1 - Session Open / Close / Settlement entry", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -68,7 +68,7 @@ class Enum286OpenCLoseSettlFlagTest {
         assertEquals( "2", enumType.toEnumIDString());
         assertEquals( "DELIVERY_SETTLEMENT", enumType.toEnumNameString());
         assertEquals( "2 - Delivery Settlement entry", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -77,7 +77,7 @@ class Enum286OpenCLoseSettlFlagTest {
         assertEquals( "3", enumType.toEnumIDString());
         assertEquals( "EXPECTED", enumType.toEnumNameString());
         assertEquals( "3 - Expected entry", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -86,7 +86,7 @@ class Enum286OpenCLoseSettlFlagTest {
         assertEquals( "4", enumType.toEnumIDString());
         assertEquals( "PREVIOUS_BUSINESS_DAY", enumType.toEnumNameString());
         assertEquals( "4 - Entry from previous business day", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -95,7 +95,7 @@ class Enum286OpenCLoseSettlFlagTest {
         assertEquals( "5", enumType.toEnumIDString());
         assertEquals( "THEORETICAL_PRICE_VALUE", enumType.toEnumNameString());
         assertEquals( "5 - Theoretical Price value", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());

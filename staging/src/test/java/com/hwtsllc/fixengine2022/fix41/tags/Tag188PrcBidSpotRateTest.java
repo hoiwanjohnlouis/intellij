@@ -43,11 +43,11 @@ class Tag188PrcBidSpotRateTest {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag188PrcBidSpotRate( new MyPriceType( oneElement ));
-            assertEquals( "FIX188_PRC_BID_SPOT_RATE", tagData.toEnumLabelString());
+            assertEquals( "FIX188_PRC_BID_SPOT_RATE", tagData.toFIXLabelString());
             assertEquals( "188", tagData.toEnumIDString());
             assertEquals( "BID_SPOT_RATE", tagData.toEnumNameString());
             assertEquals( "BidSpotRate", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag188PrcBidSpotRateTest {
         for ( double oneElement : TestArray ) {
             tagData = new Tag188PrcBidSpotRate( new MyPriceType( oneElement ));
             assertEquals( "Tag188PrcBidSpotRate\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

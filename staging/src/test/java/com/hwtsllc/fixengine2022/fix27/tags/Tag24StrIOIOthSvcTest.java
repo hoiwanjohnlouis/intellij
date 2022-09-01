@@ -44,11 +44,11 @@ class Tag24StrIOIOthSvcTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag24StrIOIOthSvc( new MyStringType( oneElement ));
-            assertEquals( "FIX24_STR_IOI_OTH_SVC", tagData.toEnumLabelString());
+            assertEquals( "FIX24_STR_IOI_OTH_SVC", tagData.toFIXLabelString());
             assertEquals( "IOI_OTH_SVC", tagData.toEnumNameString());
             assertEquals( "24", tagData.toEnumIDString());
             assertEquals( "IOIOthSvc (no longer used)", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -79,7 +79,7 @@ class Tag24StrIOIOthSvcTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag24StrIOIOthSvc( new MyStringType( oneElement ));
             assertEquals( "Tag24StrIOIOthSvc\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

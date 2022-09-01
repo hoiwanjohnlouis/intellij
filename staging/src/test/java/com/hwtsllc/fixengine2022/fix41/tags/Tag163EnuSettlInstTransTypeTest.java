@@ -39,11 +39,11 @@ class Tag163EnuSettlInstTransTypeTest {
         // loop around the ENUM and process
         for (Enum163SettlInstTransType oneEnum : Enum163SettlInstTransType.values()) {
             tagData = new Tag163EnuSettlInstTransType(oneEnum);
-            assertEquals( "FIX163_ENU_SETTL_INST_TRANS_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX163_ENU_SETTL_INST_TRANS_TYPE", tagData.toFIXLabelString());
             assertEquals( "163", tagData.toEnumIDString());
             assertEquals( "SETTL_INST_TRANS_TYPE", tagData.toEnumNameString());
             assertEquals( "SettlInstTransType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -101,7 +101,7 @@ class Tag163EnuSettlInstTransTypeTest {
         for (Enum163SettlInstTransType oneEnum : Enum163SettlInstTransType.values()) {
             tagData = new Tag163EnuSettlInstTransType(oneEnum);
             assertEquals( "Tag163EnuSettlInstTransType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyEnumSymbolSfx;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag65EnuSymbolSfx;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -40,11 +39,11 @@ class Tag312EnuUnderlyingSymbolSfxTest {
         // loop around the ENUM and process
         for ( MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
             tagData = new Tag312EnuUnderlyingSymbolSfx(oneEnum);
-            assertEquals( "FIX312_ENU_UNDERLYING_SYMBOL_SFX", tagData.toEnumLabelString());
+            assertEquals( "FIX312_ENU_UNDERLYING_SYMBOL_SFX", tagData.toFIXLabelString());
             assertEquals( "312", tagData.toEnumIDString());
             assertEquals( "UNDERLYING_SYMBOL_SFX", tagData.toEnumNameString());
             assertEquals( "UnderlyingSymbolSfx", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -90,7 +89,7 @@ class Tag312EnuUnderlyingSymbolSfxTest {
         for ( MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
             tagData = new Tag312EnuUnderlyingSymbolSfx(oneEnum);
             assertEquals( "Tag312EnuUnderlyingSymbolSfx\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

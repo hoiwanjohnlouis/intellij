@@ -43,11 +43,11 @@ class Tag630SeqHopRefIDTest {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag630SeqHopRefID( new MySeqNumType( oneElement ));
-            assertEquals( "FIX630_SEQ_HOP_REF_ID", tagData.toEnumLabelString());
+            assertEquals( "FIX630_SEQ_HOP_REF_ID", tagData.toFIXLabelString());
             assertEquals( "630", tagData.toEnumIDString());
             assertEquals( "HOP_REF_ID", tagData.toEnumNameString());
             assertEquals( "HopRefID", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag630SeqHopRefIDTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag630SeqHopRefID( new MySeqNumType( oneElement ));
             assertEquals( "Tag630SeqHopRefID\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

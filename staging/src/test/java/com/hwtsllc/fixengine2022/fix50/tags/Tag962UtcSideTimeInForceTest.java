@@ -55,11 +55,11 @@ class Tag962UtcSideTimeInForceTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag962UtcSideTimeInForce( new MyUTCTimestampType( oneElement ));
-            assertEquals( "FIX962_UTC_SIDE_TIME_IN_FORCE", tagData.toEnumLabelString());
+            assertEquals( "FIX962_UTC_SIDE_TIME_IN_FORCE", tagData.toFIXLabelString());
             assertEquals( "962", tagData.toEnumIDString());
             assertEquals( "SIDE_TIME_IN_FORCE", tagData.toEnumNameString());
             assertEquals( "SideTimeInForce", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -90,7 +90,7 @@ class Tag962UtcSideTimeInForceTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag962UtcSideTimeInForce( new MyUTCTimestampType( oneElement ));
             assertEquals( "Tag962UtcSideTimeInForce\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

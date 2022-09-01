@@ -43,11 +43,11 @@ class Tag224LmdCouponPaymentDateTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag224LmdCouponPaymentDate( new MyLocalMktDateType( oneElement ));
-            assertEquals( "FIX224_LMD_COUPON_PAYMENT_DATE", tagData.toEnumLabelString());
+            assertEquals( "FIX224_LMD_COUPON_PAYMENT_DATE", tagData.toFIXLabelString());
             assertEquals( "224", tagData.toEnumIDString());
             assertEquals( "COUPON_PAYMENT_DATE", tagData.toEnumNameString());
             assertEquals( "CouponPaymentDate", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag224LmdCouponPaymentDateTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag224LmdCouponPaymentDate( new MyLocalMktDateType( oneElement ));
             assertEquals( "Tag224LmdCouponPaymentDate\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

@@ -134,7 +134,7 @@ class Enum277TradeConditionTest {
         assertEquals("0", enumType.toEnumIDString());
         assertEquals("CANCEL", enumType.toEnumNameString());
         assertEquals("0 - Cancel", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -147,7 +147,7 @@ class Enum277TradeConditionTest {
         assertEquals( "A", enumType.toEnumIDString());
         assertEquals( "CASH_MARKET", enumType.toEnumNameString());
         assertEquals( "A - Cash (only) Market", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -156,7 +156,7 @@ class Enum277TradeConditionTest {
         assertEquals( "B", enumType.toEnumIDString());
         assertEquals( "AVERAGE_PRICE_TRADE", enumType.toEnumNameString());
         assertEquals( "B - Average Price Trade", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -165,7 +165,7 @@ class Enum277TradeConditionTest {
         assertEquals( "C", enumType.toEnumIDString());
         assertEquals( "CASH_TRADE", enumType.toEnumNameString());
         assertEquals( "C - Cash Trade (same day clearing)", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -174,7 +174,7 @@ class Enum277TradeConditionTest {
         assertEquals( "D", enumType.toEnumIDString());
         assertEquals( "NEXT_DAY_MARKET", enumType.toEnumNameString());
         assertEquals( "D - Next Day (only) Market", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -183,7 +183,7 @@ class Enum277TradeConditionTest {
         assertEquals( "E", enumType.toEnumIDString());
         assertEquals( "OPENING_REOPENING_TRADE_DETAIL", enumType.toEnumNameString());
         assertEquals( "E - Opening/Reopening Trade Detail", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -192,7 +192,7 @@ class Enum277TradeConditionTest {
         assertEquals( "F", enumType.toEnumIDString());
         assertEquals( "INTRADAY_TRADE_DETAIL", enumType.toEnumNameString());
         assertEquals( "F - Intraday Trade Detail", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -201,7 +201,7 @@ class Enum277TradeConditionTest {
         assertEquals( "G", enumType.toEnumIDString());
         assertEquals( "RULE_127_TRADE_NYSE", enumType.toEnumNameString());
         assertEquals( "G - Rule 127 Trade (NYSE)", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -210,7 +210,7 @@ class Enum277TradeConditionTest {
         assertEquals( "H", enumType.toEnumIDString());
         assertEquals( "RULE_155_TRADE_AMEX", enumType.toEnumNameString());
         assertEquals( "H - Rule 155 Trade (AMEX)", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -219,7 +219,7 @@ class Enum277TradeConditionTest {
         assertEquals( "I", enumType.toEnumIDString());
         assertEquals( "SOLD_LAST", enumType.toEnumNameString());
         assertEquals( "I - Sold Last (late reporting)", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -228,7 +228,7 @@ class Enum277TradeConditionTest {
         assertEquals( "J", enumType.toEnumIDString());
         assertEquals( "NEXT_DAY_TRADE", enumType.toEnumNameString());
         assertEquals( "J - Next Day Trade (next day clearing)", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -237,7 +237,7 @@ class Enum277TradeConditionTest {
         assertEquals( "K", enumType.toEnumIDString());
         assertEquals( "OPENED", enumType.toEnumNameString());
         assertEquals( "K - Opened (late report of opened trade)", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -246,7 +246,7 @@ class Enum277TradeConditionTest {
         assertEquals( "L", enumType.toEnumIDString());
         assertEquals( "SELLER", enumType.toEnumNameString());
         assertEquals( "L - Seller", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -255,7 +255,7 @@ class Enum277TradeConditionTest {
         assertEquals( "M", enumType.toEnumIDString());
         assertEquals( "SOLD", enumType.toEnumNameString());
         assertEquals( "M - Sold (out of sequence)", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -264,7 +264,7 @@ class Enum277TradeConditionTest {
         assertEquals( "N", enumType.toEnumIDString());
         assertEquals( "STOPPED_STOCK", enumType.toEnumNameString());
         assertEquals( "N - Stopped Stock (guarantee of price but does not execute the order)", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -277,7 +277,7 @@ class Enum277TradeConditionTest {
         assertEquals( "P", enumType.toEnumIDString());
         assertEquals( "IMBALANCE_MORE_BUYERS", enumType.toEnumNameString());
         assertEquals( "P - Imbalance More Buyers (cannot be used in combination with Q)", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -286,7 +286,7 @@ class Enum277TradeConditionTest {
         assertEquals( "Q", enumType.toEnumIDString());
         assertEquals( "IMBALANCE_MORE_SELLERS", enumType.toEnumNameString());
         assertEquals( "Q - Imbalance More Sellers (cannot be used in combination with P)", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -295,7 +295,7 @@ class Enum277TradeConditionTest {
         assertEquals( "R", enumType.toEnumIDString());
         assertEquals( "OPENING_PRICE", enumType.toEnumNameString());
         assertEquals( "R - Opening Price", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -304,7 +304,7 @@ class Enum277TradeConditionTest {
         assertEquals( "S", enumType.toEnumIDString());
         assertEquals( "BARGAIN_CONDITION_LSE", enumType.toEnumNameString());
         assertEquals( "S - Bargain Condition (LSE)", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -313,7 +313,7 @@ class Enum277TradeConditionTest {
         assertEquals( "T", enumType.toEnumIDString());
         assertEquals( "CONVERTED_PRICE_INDICATOR", enumType.toEnumNameString());
         assertEquals( "T - Converted Price Indicator", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -322,7 +322,7 @@ class Enum277TradeConditionTest {
         assertEquals( "U", enumType.toEnumIDString());
         assertEquals( "EXCHANGE_LAST", enumType.toEnumNameString());
         assertEquals( "U - Exchange Last", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -331,7 +331,7 @@ class Enum277TradeConditionTest {
         assertEquals( "V", enumType.toEnumIDString());
         assertEquals( "FINAL_PRICE_OF_SESSION", enumType.toEnumNameString());
         assertEquals( "V - Final Price of Session", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -340,7 +340,7 @@ class Enum277TradeConditionTest {
         assertEquals( "W", enumType.toEnumIDString());
         assertEquals( "EX_PIT", enumType.toEnumNameString());
         assertEquals( "W - Ex-pit", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -349,7 +349,7 @@ class Enum277TradeConditionTest {
         assertEquals( "X", enumType.toEnumIDString());
         assertEquals( "CROSSED", enumType.toEnumNameString());
         assertEquals( "X - Crossed", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -358,7 +358,7 @@ class Enum277TradeConditionTest {
         assertEquals( "Y", enumType.toEnumIDString());
         assertEquals( "TRADES_FROM_MANUAL_OR_SLOW_QUOTE", enumType.toEnumNameString());
         assertEquals( "Y - Trades resulting from manual/slow quote", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -367,7 +367,7 @@ class Enum277TradeConditionTest {
         assertEquals( "Z", enumType.toEnumIDString());
         assertEquals( "TRADES_FROM_INTERMARKET_SWEEP", enumType.toEnumNameString());
         assertEquals( "Z - Trades resulting from intermarket sweep", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -380,7 +380,7 @@ class Enum277TradeConditionTest {
         assertEquals( "a", enumType.toEnumIDString());
         assertEquals( "VOLUME_ONLY", enumType.toEnumNameString());
         assertEquals( "a - Volume Only", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -389,7 +389,7 @@ class Enum277TradeConditionTest {
         assertEquals( "b", enumType.toEnumIDString());
         assertEquals( "DIRECT_PLUS", enumType.toEnumNameString());
         assertEquals( "b - Direct Plus", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -398,7 +398,7 @@ class Enum277TradeConditionTest {
         assertEquals( "c", enumType.toEnumIDString());
         assertEquals( "ACQUISITION", enumType.toEnumNameString());
         assertEquals( "c - Acquisition", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -407,7 +407,7 @@ class Enum277TradeConditionTest {
         assertEquals( "d", enumType.toEnumIDString());
         assertEquals( "BUNCHED", enumType.toEnumNameString());
         assertEquals( "d - Bunched", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -416,7 +416,7 @@ class Enum277TradeConditionTest {
         assertEquals( "e", enumType.toEnumIDString());
         assertEquals( "DISTRIBUTION", enumType.toEnumNameString());
         assertEquals( "e - Distribution", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -425,7 +425,7 @@ class Enum277TradeConditionTest {
         assertEquals( "f", enumType.toEnumIDString());
         assertEquals( "BUNCHED_SALE", enumType.toEnumNameString());
         assertEquals( "f - Bunched Sale", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -434,7 +434,7 @@ class Enum277TradeConditionTest {
         assertEquals( "g", enumType.toEnumIDString());
         assertEquals( "SPLIT_TRADE", enumType.toEnumNameString());
         assertEquals( "g - Split Trade", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -443,7 +443,7 @@ class Enum277TradeConditionTest {
         assertEquals( "h", enumType.toEnumIDString());
         assertEquals( "CANCEL_STOPPED", enumType.toEnumNameString());
         assertEquals( "h - Cancel Stopped", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -452,7 +452,7 @@ class Enum277TradeConditionTest {
         assertEquals( "i", enumType.toEnumIDString());
         assertEquals( "CANCEL_ETH", enumType.toEnumNameString());
         assertEquals( "i - Cancel ETH", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -461,7 +461,7 @@ class Enum277TradeConditionTest {
         assertEquals( "j", enumType.toEnumIDString());
         assertEquals( "CANCEL_STOPPED_ETH", enumType.toEnumNameString());
         assertEquals( "j - Cancel Stopped ETH", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -470,7 +470,7 @@ class Enum277TradeConditionTest {
         assertEquals( "k", enumType.toEnumIDString());
         assertEquals( "OUT_OF_SEQUENCE_ETH", enumType.toEnumNameString());
         assertEquals( "k - Out of Sequence ETH", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -479,7 +479,7 @@ class Enum277TradeConditionTest {
         assertEquals( "l", enumType.toEnumIDString());
         assertEquals( "CANCEL_LAST_ETH", enumType.toEnumNameString());
         assertEquals( "l - Cancel Last ETH", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -488,7 +488,7 @@ class Enum277TradeConditionTest {
         assertEquals( "m", enumType.toEnumIDString());
         assertEquals( "SOLD_LAST_SALE_ETH", enumType.toEnumNameString());
         assertEquals( "m - Sold Last Sale ETH", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -497,7 +497,7 @@ class Enum277TradeConditionTest {
         assertEquals( "n", enumType.toEnumIDString());
         assertEquals( "CANCEL_LAST", enumType.toEnumNameString());
         assertEquals( "n - Cancel Last", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -506,7 +506,7 @@ class Enum277TradeConditionTest {
         assertEquals( "o", enumType.toEnumIDString());
         assertEquals( "SOLD_LAST_SALE", enumType.toEnumNameString());
         assertEquals( "o - Sold Last Sale", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -515,7 +515,7 @@ class Enum277TradeConditionTest {
         assertEquals( "p", enumType.toEnumIDString());
         assertEquals( "CANCEL_OPEN", enumType.toEnumNameString());
         assertEquals( "p - Cancel Open", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -524,7 +524,7 @@ class Enum277TradeConditionTest {
         assertEquals( "q", enumType.toEnumIDString());
         assertEquals( "CANCEL_OPEN_ETH", enumType.toEnumNameString());
         assertEquals( "q - Cancel Open ETH", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -533,7 +533,7 @@ class Enum277TradeConditionTest {
         assertEquals( "r", enumType.toEnumIDString());
         assertEquals( "OPENED_SALE_ETH", enumType.toEnumNameString());
         assertEquals( "r - Opened Sale ETH", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -542,7 +542,7 @@ class Enum277TradeConditionTest {
         assertEquals( "s", enumType.toEnumIDString());
         assertEquals( "CANCEL_ONLY", enumType.toEnumNameString());
         assertEquals( "s - Cancel Only", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -551,7 +551,7 @@ class Enum277TradeConditionTest {
         assertEquals( "t", enumType.toEnumIDString());
         assertEquals( "CANCEL_ONLY_ETH", enumType.toEnumNameString());
         assertEquals( "t - Cancel Only ETH", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -560,7 +560,7 @@ class Enum277TradeConditionTest {
         assertEquals( "u", enumType.toEnumIDString());
         assertEquals( "LATE_OPEN_ETH", enumType.toEnumNameString());
         assertEquals( "u - Late Open ETH", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -569,7 +569,7 @@ class Enum277TradeConditionTest {
         assertEquals( "v", enumType.toEnumIDString());
         assertEquals( "AUTO_EXECUTION_ETH", enumType.toEnumNameString());
         assertEquals( "v - Auto Execution ETH", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -578,7 +578,7 @@ class Enum277TradeConditionTest {
         assertEquals( "w", enumType.toEnumIDString());
         assertEquals( "REOPEN", enumType.toEnumNameString());
         assertEquals( "w - Reopen", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -587,7 +587,7 @@ class Enum277TradeConditionTest {
         assertEquals( "x", enumType.toEnumIDString());
         assertEquals( "REOPEN_ETH", enumType.toEnumNameString());
         assertEquals( "x - Reopen ETH", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -596,7 +596,7 @@ class Enum277TradeConditionTest {
         assertEquals( "y", enumType.toEnumIDString());
         assertEquals( "ADJUSTED", enumType.toEnumNameString());
         assertEquals( "y - Adjusted", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -605,7 +605,7 @@ class Enum277TradeConditionTest {
         assertEquals( "z", enumType.toEnumIDString());
         assertEquals( "ADJUSTED_ETH", enumType.toEnumNameString());
         assertEquals( "z - Adjusted ETH", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -618,7 +618,7 @@ class Enum277TradeConditionTest {
         assertEquals( "AA", enumType.toEnumIDString());
         assertEquals( "SPREAD", enumType.toEnumNameString());
         assertEquals( "AA - Spread", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -627,7 +627,7 @@ class Enum277TradeConditionTest {
         assertEquals( "AB", enumType.toEnumIDString());
         assertEquals( "SPREAD_ETH", enumType.toEnumNameString());
         assertEquals( "AB - Spread ETH", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -636,7 +636,7 @@ class Enum277TradeConditionTest {
         assertEquals( "AC", enumType.toEnumIDString());
         assertEquals( "STRADDLE", enumType.toEnumNameString());
         assertEquals( "AC - Straddle", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -645,7 +645,7 @@ class Enum277TradeConditionTest {
         assertEquals( "AD", enumType.toEnumIDString());
         assertEquals( "STRADDLE_ETH", enumType.toEnumNameString());
         assertEquals( "AD - Straddle ETH", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -654,7 +654,7 @@ class Enum277TradeConditionTest {
         assertEquals( "AE", enumType.toEnumIDString());
         assertEquals( "STOPPED", enumType.toEnumNameString());
         assertEquals( "AE - Stopped", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -663,7 +663,7 @@ class Enum277TradeConditionTest {
         assertEquals( "AF", enumType.toEnumIDString());
         assertEquals( "STOPPED_ETH", enumType.toEnumNameString());
         assertEquals( "AF - Stopped ETH", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -672,7 +672,7 @@ class Enum277TradeConditionTest {
         assertEquals( "AG", enumType.toEnumIDString());
         assertEquals( "REGULAR_ETH", enumType.toEnumNameString());
         assertEquals( "AG - Regular ETH", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -681,7 +681,7 @@ class Enum277TradeConditionTest {
         assertEquals( "AH", enumType.toEnumIDString());
         assertEquals( "COMBO", enumType.toEnumNameString());
         assertEquals( "AH - Combo", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -690,7 +690,7 @@ class Enum277TradeConditionTest {
         assertEquals( "AI", enumType.toEnumIDString());
         assertEquals( "COMBO_ETH", enumType.toEnumNameString());
         assertEquals( "AI - Combo ETH", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -699,7 +699,7 @@ class Enum277TradeConditionTest {
         assertEquals( "AJ", enumType.toEnumIDString());
         assertEquals( "OFFICIAL_CLOSING_PRICE", enumType.toEnumNameString());
         assertEquals( "AJ - Official Closing Price", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -708,7 +708,7 @@ class Enum277TradeConditionTest {
         assertEquals( "AK", enumType.toEnumIDString());
         assertEquals( "PRIOR_REFERENCE_PRICE", enumType.toEnumNameString());
         assertEquals( "AK - Prior Reference Price", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -717,7 +717,7 @@ class Enum277TradeConditionTest {
         assertEquals( "AL", enumType.toEnumIDString());
         assertEquals( "STOPPED_SOLD_LAST", enumType.toEnumNameString());
         assertEquals( "AL - Stopped Sold Last", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -726,7 +726,7 @@ class Enum277TradeConditionTest {
         assertEquals( "AM", enumType.toEnumIDString());
         assertEquals( "STOPPED_OUT_OF_SEQUENCE", enumType.toEnumNameString());
         assertEquals( "AM - Stopped Out of Sequence", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -735,7 +735,7 @@ class Enum277TradeConditionTest {
         assertEquals( "AN", enumType.toEnumIDString());
         assertEquals( "OFFICAL_CLOSING_PRICE_AN", enumType.toEnumNameString());
         assertEquals( "AN - Offical Closing Price", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -744,7 +744,7 @@ class Enum277TradeConditionTest {
         assertEquals( "AO", enumType.toEnumIDString());
         assertEquals( "CROSSED_AO", enumType.toEnumNameString());
         assertEquals( "AO - Crossed", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -753,7 +753,7 @@ class Enum277TradeConditionTest {
         assertEquals( "AP", enumType.toEnumIDString());
         assertEquals( "FAST_MARKET", enumType.toEnumNameString());
         assertEquals( "AP - Fast Market", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -762,7 +762,7 @@ class Enum277TradeConditionTest {
         assertEquals( "AQ", enumType.toEnumIDString());
         assertEquals( "AUTOMATIC_EXECUTION", enumType.toEnumNameString());
         assertEquals( "AQ - Automatic Execution", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -771,7 +771,7 @@ class Enum277TradeConditionTest {
         assertEquals( "AR", enumType.toEnumIDString());
         assertEquals( "FORM_T", enumType.toEnumNameString());
         assertEquals( "AR - Form T", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -780,7 +780,7 @@ class Enum277TradeConditionTest {
         assertEquals( "AS", enumType.toEnumIDString());
         assertEquals( "BASKET_INDEX", enumType.toEnumNameString());
         assertEquals( "AS - Basket Index", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -789,7 +789,7 @@ class Enum277TradeConditionTest {
         assertEquals("AT", enumType.toEnumIDString());
         assertEquals("BURST_BASKET", enumType.toEnumNameString());
         assertEquals("AT - Burst Basket", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());

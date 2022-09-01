@@ -43,11 +43,11 @@ class Tag120CcySettlCurrencyTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag120CcySettlCurrency( new MyCurrencyType( oneElement ));
-            assertEquals( "FIX120_CCY_SETTL_CURRENCY", tagData.toEnumLabelString());
+            assertEquals( "FIX120_CCY_SETTL_CURRENCY", tagData.toFIXLabelString());
             assertEquals( "SETTL_CURRENCY", tagData.toEnumNameString());
             assertEquals( "120", tagData.toEnumIDString());
             assertEquals( "SettlCurrency", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag120CcySettlCurrencyTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag120CcySettlCurrency( new MyCurrencyType( oneElement ));
             assertEquals( "Tag120CcySettlCurrency\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

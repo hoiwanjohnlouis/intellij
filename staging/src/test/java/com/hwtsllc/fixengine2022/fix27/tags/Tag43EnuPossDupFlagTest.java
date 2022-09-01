@@ -39,11 +39,11 @@ class Tag43EnuPossDupFlagTest {
         // loop around the ENUM and process
         for (Enum43PossDupFlag oneEnum : Enum43PossDupFlag.values()) {
             tagData = new Tag43EnuPossDupFlag(oneEnum);
-            assertEquals( "FIX43_ENU_POSS_DUP_FLAG", tagData.toEnumLabelString());
+            assertEquals( "FIX43_ENU_POSS_DUP_FLAG", tagData.toFIXLabelString());
             assertEquals( "POSS_DUP_FLAG", tagData.toEnumNameString());
             assertEquals( "43", tagData.toEnumIDString());
             assertEquals( "PossDupFlag", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -89,7 +89,7 @@ class Tag43EnuPossDupFlagTest {
         for (Enum43PossDupFlag oneEnum : Enum43PossDupFlag.values()) {
             tagData = new Tag43EnuPossDupFlag(oneEnum);
             assertEquals( "Tag43EnuPossDupFlag\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

@@ -39,11 +39,11 @@ class Tag570EnuPreviouslyReportedTest {
         // loop around the ENUM and process
         for (Enum570PreviouslyReported oneEnum : Enum570PreviouslyReported.values()) {
             tagData = new Tag570EnuPreviouslyReported(oneEnum);
-            assertEquals( "FIX570_ENU_PREVIOUSLY_REPORTED", tagData.toEnumLabelString());
+            assertEquals( "FIX570_ENU_PREVIOUSLY_REPORTED", tagData.toFIXLabelString());
             assertEquals( "570", tagData.toEnumIDString());
             assertEquals( "PREVIOUSLY_REPORTED", tagData.toEnumNameString());
             assertEquals( "PreviouslyReported", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -91,7 +91,7 @@ class Tag570EnuPreviouslyReportedTest {
         for (Enum570PreviouslyReported oneEnum : Enum570PreviouslyReported.values()) {
             tagData = new Tag570EnuPreviouslyReported(oneEnum);
             assertEquals( "Tag570EnuPreviouslyReported\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

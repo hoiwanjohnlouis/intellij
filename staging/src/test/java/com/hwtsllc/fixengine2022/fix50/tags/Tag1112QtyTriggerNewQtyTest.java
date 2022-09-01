@@ -43,11 +43,11 @@ class Tag1112QtyTriggerNewQtyTest {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag1112QtyTriggerNewQty( new MyQtyType( oneElement ));
-            assertEquals( "FIX1112_QTY_TRIGGER_NEW_QTY", tagData.toEnumLabelString());
+            assertEquals( "FIX1112_QTY_TRIGGER_NEW_QTY", tagData.toFIXLabelString());
             assertEquals( "1112", tagData.toEnumIDString());
             assertEquals( "TRIGGER_NEW_QTY", tagData.toEnumNameString());
             assertEquals( "TriggerNewQty", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag1112QtyTriggerNewQtyTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag1112QtyTriggerNewQty( new MyQtyType( oneElement ));
             assertEquals( "Tag1112QtyTriggerNewQty\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

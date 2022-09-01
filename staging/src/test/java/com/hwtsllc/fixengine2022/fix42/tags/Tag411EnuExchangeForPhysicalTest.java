@@ -39,11 +39,11 @@ class Tag411EnuExchangeForPhysicalTest {
         // loop around the ENUM and process
         for ( Enum411ExchangeForPhysical oneEnum : Enum411ExchangeForPhysical.values()) {
             tagData = new Tag411EnuExchangeForPhysical(oneEnum);
-            assertEquals( "FIX411_ENU_EXCHANGE_FOR_PHYSICAL", tagData.toEnumLabelString());
+            assertEquals( "FIX411_ENU_EXCHANGE_FOR_PHYSICAL", tagData.toFIXLabelString());
             assertEquals( "411", tagData.toEnumIDString());
             assertEquals( "EXCHANGE_FOR_PHYSICAL", tagData.toEnumNameString());
             assertEquals( "ExchangeForPhysical", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -91,7 +91,7 @@ class Tag411EnuExchangeForPhysicalTest {
         for ( Enum411ExchangeForPhysical oneEnum : Enum411ExchangeForPhysical.values()) {
             tagData = new Tag411EnuExchangeForPhysical(oneEnum);
             assertEquals( "Tag411EnuExchangeForPhysical\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

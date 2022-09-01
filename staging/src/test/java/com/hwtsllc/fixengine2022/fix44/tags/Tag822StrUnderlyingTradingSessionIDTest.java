@@ -43,11 +43,11 @@ class Tag822StrUnderlyingTradingSessionIDTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag822StrUnderlyingTradingSessionID( new MyStringType( oneElement ));
-            assertEquals( "FIX822_STR_UNDERLYING_TRADING_SESSION_ID", tagData.toEnumLabelString());
+            assertEquals( "FIX822_STR_UNDERLYING_TRADING_SESSION_ID", tagData.toFIXLabelString());
             assertEquals( "822", tagData.toEnumIDString());
             assertEquals( "UNDERLYING_TRADING_SESSION_ID", tagData.toEnumNameString());
             assertEquals( "UnderlyingTradingSessionID", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag822StrUnderlyingTradingSessionIDTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag822StrUnderlyingTradingSessionID( new MyStringType( oneElement ));
             assertEquals( "Tag822StrUnderlyingTradingSessionID\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

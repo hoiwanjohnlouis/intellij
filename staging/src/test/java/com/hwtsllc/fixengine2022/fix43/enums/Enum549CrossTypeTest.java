@@ -64,7 +64,7 @@ class Enum549CrossTypeTest {
         assertEquals("1", enumType.toEnumIDString());
         assertEquals("CROSS_AON", enumType.toEnumNameString());
         assertEquals("1 - Cross AON - cross tade which is executed complete or not. This is equivalent to an All_Or_None", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -73,7 +73,7 @@ class Enum549CrossTypeTest {
         assertEquals("2", enumType.toEnumIDString());
         assertEquals("CROSS_IOC", enumType.toEnumNameString());
         assertEquals("2 - Cross IOC - cross trade which is executed partially and the rest is cancelled. Note: CrossPrioritization (550) field may be used to indicate which side should fully execute in this scenario", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -82,7 +82,7 @@ class Enum549CrossTypeTest {
         assertEquals("3", enumType.toEnumIDString());
         assertEquals("CROSS_ONE_SIDE", enumType.toEnumNameString());
         assertEquals("3 - Cross One Side - cross trade which is partially executed with the unfilled portions remaining active. One side of the cross is fully executed (as denoted by the CrossPrioritization (550) field)", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -91,7 +91,7 @@ class Enum549CrossTypeTest {
         assertEquals("4", enumType.toEnumIDString());
         assertEquals("CROSS_SAME_PRICE", enumType.toEnumNameString());
         assertEquals("4 - Cross Same Price - cross trade is executed with existing orders with the same price. The two sides potentially have different quantities", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());

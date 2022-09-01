@@ -39,11 +39,11 @@ class Tag924EnuUserRequestTypeTest {
         // loop around the ENUM and process
         for ( Enum924UserRequestType oneEnum : Enum924UserRequestType.values()) {
             tagData = new Tag924EnuUserRequestType(oneEnum);
-            assertEquals( "FIX924_ENU_USER_REQUEST_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX924_ENU_USER_REQUEST_TYPE", tagData.toFIXLabelString());
             assertEquals( "924", tagData.toEnumIDString());
             assertEquals( "USER_REQUEST_TYPE", tagData.toEnumNameString());
             assertEquals( "UserRequestType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -101,7 +101,7 @@ class Tag924EnuUserRequestTypeTest {
         for ( Enum924UserRequestType oneEnum : Enum924UserRequestType.values()) {
             tagData = new Tag924EnuUserRequestType(oneEnum);
             assertEquals( "Tag924EnuUserRequestType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

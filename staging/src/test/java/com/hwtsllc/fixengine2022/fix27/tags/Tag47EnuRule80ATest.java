@@ -40,11 +40,11 @@ class Tag47EnuRule80ATest {
         // loop around the ENUM and process
         for (Enum47Rule80A oneEnum : Enum47Rule80A.values()) {
             tagData = new Tag47EnuRule80A(oneEnum);
-            assertEquals( "FIX47_ENU_RULE_80_A", tagData.toEnumLabelString());
+            assertEquals( "FIX47_ENU_RULE_80_A", tagData.toFIXLabelString());
             assertEquals( "RULE_80_A", tagData.toEnumNameString());
             assertEquals( "47", tagData.toEnumIDString());
             assertEquals( "Rule80A (no longer used)", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -209,7 +209,7 @@ class Tag47EnuRule80ATest {
         for (Enum47Rule80A oneEnum : Enum47Rule80A.values()) {
             tagData = new Tag47EnuRule80A(oneEnum);
             assertEquals( "Tag47EnuRule80A\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

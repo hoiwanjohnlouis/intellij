@@ -39,11 +39,11 @@ class Tag733EnuUnderlyingSettlPriceTypeTest {
         // loop around the ENUM and process
         for ( MyEnumSettlPriceType oneEnum : MyEnumSettlPriceType.values()) {
             tagData = new Tag733EnuUnderlyingSettlPriceType(oneEnum);
-            assertEquals( "FIX733_ENU_UNDERLYING_SETTL_PRICE_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX733_ENU_UNDERLYING_SETTL_PRICE_TYPE", tagData.toFIXLabelString());
             assertEquals( "733", tagData.toEnumIDString());
             assertEquals( "UNDERLYING_SETTL_PRICE_TYPE", tagData.toEnumNameString());
             assertEquals( "UnderlyingSettlPriceType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -91,7 +91,7 @@ class Tag733EnuUnderlyingSettlPriceTypeTest {
         for ( MyEnumSettlPriceType oneEnum : MyEnumSettlPriceType.values()) {
             tagData = new Tag733EnuUnderlyingSettlPriceType(oneEnum);
             assertEquals( "Tag733EnuUnderlyingSettlPriceType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

@@ -39,11 +39,11 @@ class Tag21EnuHandlInstTest {
         // loop around the ENUM and process
         for (Enum21HandlInst oneEnum : Enum21HandlInst.values()) {
             tagData = new Tag21EnuHandlInst(oneEnum);
-            assertEquals( "FIX21_ENU_HANDL_INST", tagData.toEnumLabelString());
+            assertEquals( "FIX21_ENU_HANDL_INST", tagData.toFIXLabelString());
             assertEquals( "HANDL_INST", tagData.toEnumNameString());
             assertEquals( "21", tagData.toEnumIDString());
             assertEquals( "HandlInst", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -94,7 +94,7 @@ class Tag21EnuHandlInstTest {
         for (Enum21HandlInst oneEnum : Enum21HandlInst.values()) {
             tagData = new Tag21EnuHandlInst(oneEnum);
             assertEquals( "Tag21EnuHandlInst\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

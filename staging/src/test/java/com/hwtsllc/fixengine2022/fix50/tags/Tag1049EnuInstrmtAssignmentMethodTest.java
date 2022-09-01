@@ -39,11 +39,11 @@ class Tag1049EnuInstrmtAssignmentMethodTest {
         // loop around the ENUM and process
         for ( MyEnumAssignmentMethod oneEnum : MyEnumAssignmentMethod.values()) {
             tagData = new Tag1049EnuInstrmtAssignmentMethod(oneEnum);
-            assertEquals( "FIX1049_ENU_INSTRMT_ASSIGNMENT_METHOD", tagData.toEnumLabelString());
+            assertEquals( "FIX1049_ENU_INSTRMT_ASSIGNMENT_METHOD", tagData.toFIXLabelString());
             assertEquals( "1049", tagData.toEnumIDString());
             assertEquals( "INSTRMT_ASSIGNMENT_METHOD", tagData.toEnumNameString());
             assertEquals( "InstrmtAssignmentMethod", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -91,7 +91,7 @@ class Tag1049EnuInstrmtAssignmentMethodTest {
         for ( MyEnumAssignmentMethod oneEnum : MyEnumAssignmentMethod.values()) {
             tagData = new Tag1049EnuInstrmtAssignmentMethod(oneEnum);
             assertEquals( "Tag1049EnuInstrmtAssignmentMethod\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

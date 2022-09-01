@@ -43,11 +43,11 @@ class Tag869PctPctAtRiskTest {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag869PctPctAtRisk( new MyPercentageType( oneElement ));
-            assertEquals( "FIX869_PCT_PCT_AT_RISK", tagData.toEnumLabelString());
+            assertEquals( "FIX869_PCT_PCT_AT_RISK", tagData.toFIXLabelString());
             assertEquals( "869", tagData.toEnumIDString());
             assertEquals( "PCT_AT_RISK", tagData.toEnumNameString());
             assertEquals( "PctAtRisk", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag869PctPctAtRiskTest {
         for ( double oneElement : TestArray ) {
             tagData = new Tag869PctPctAtRisk( new MyPercentageType( oneElement ));
             assertEquals( "Tag869PctPctAtRisk\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

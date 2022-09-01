@@ -43,11 +43,11 @@ class Tag721StrPosMaintRptIDTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag721StrPosMaintRptID( new MyStringType( oneElement ));
-            assertEquals( "FIX721_STR_POS_MAINT_RPT_ID", tagData.toEnumLabelString());
+            assertEquals( "FIX721_STR_POS_MAINT_RPT_ID", tagData.toFIXLabelString());
             assertEquals( "721", tagData.toEnumIDString());
             assertEquals( "POS_MAINT_RPT_ID", tagData.toEnumNameString());
             assertEquals( "PosMaintRptID", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag721StrPosMaintRptIDTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag721StrPosMaintRptID( new MyStringType( oneElement ));
             assertEquals( "Tag721StrPosMaintRptID\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

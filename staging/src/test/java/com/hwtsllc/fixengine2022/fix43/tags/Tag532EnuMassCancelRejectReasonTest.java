@@ -39,11 +39,11 @@ class Tag532EnuMassCancelRejectReasonTest {
         // loop around the ENUM and process
         for (Enum532MassCancelRejectReason oneEnum : Enum532MassCancelRejectReason.values()) {
             tagData = new Tag532EnuMassCancelRejectReason(oneEnum);
-            assertEquals( "FIX532_ENU_MASS_CANCEL_REJECT_REASON", tagData.toEnumLabelString());
+            assertEquals( "FIX532_ENU_MASS_CANCEL_REJECT_REASON", tagData.toFIXLabelString());
             assertEquals( "532", tagData.toEnumIDString());
             assertEquals( "MASS_CANCEL_REJECT_REASON", tagData.toEnumNameString());
             assertEquals( "MassCancelRejectReason", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -129,7 +129,7 @@ class Tag532EnuMassCancelRejectReasonTest {
         for (Enum532MassCancelRejectReason oneEnum : Enum532MassCancelRejectReason.values()) {
             tagData = new Tag532EnuMassCancelRejectReason(oneEnum);
             assertEquals( "Tag532EnuMassCancelRejectReason\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

@@ -184,7 +184,7 @@ public enum FIX41 implements LogFIXString, LogVerboseString {
      * standard wrapper to retrieve the specific enum name
      */
     @Override
-    public String toEnumLabelString() {
+    public String toFIXLabelString() {
         return this.name();
     }
     /**
@@ -212,7 +212,7 @@ public enum FIX41 implements LogFIXString, LogVerboseString {
     public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tFIXTypeName[")
-                .concat( toEnumLabelString())
+                .concat( toFIXLabelString())
                 .concat("]")
                 .concat("\n\tFIXNumber[")
                 .concat( toEnumIDString())
@@ -226,7 +226,7 @@ public enum FIX41 implements LogFIXString, LogVerboseString {
     }
     @Override
     public String toString() {
-        return toEnumLabelString()
+        return toFIXLabelString()
                 .concat("=[")
                 .concat( toEnumIDString())
                 .concat(",")

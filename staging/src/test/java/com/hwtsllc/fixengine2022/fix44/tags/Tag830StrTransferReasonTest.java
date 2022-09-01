@@ -43,11 +43,11 @@ class Tag830StrTransferReasonTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag830StrTransferReason( new MyStringType( oneElement ));
-            assertEquals( "FIX830_STR_TRANSFER_REASON", tagData.toEnumLabelString());
+            assertEquals( "FIX830_STR_TRANSFER_REASON", tagData.toFIXLabelString());
             assertEquals( "830", tagData.toEnumIDString());
             assertEquals( "TRANSFER_REASON", tagData.toEnumNameString());
             assertEquals( "TransferReason", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag830StrTransferReasonTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag830StrTransferReason( new MyStringType( oneElement ));
             assertEquals( "Tag830StrTransferReason\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

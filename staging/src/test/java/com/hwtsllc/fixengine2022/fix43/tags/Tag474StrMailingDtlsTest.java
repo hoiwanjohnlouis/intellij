@@ -43,11 +43,11 @@ class Tag474StrMailingDtlsTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag474StrMailingDtls( new MyStringType( oneElement ));
-            assertEquals( "FIX474_STR_MAILING_DTLS", tagData.toEnumLabelString());
+            assertEquals( "FIX474_STR_MAILING_DTLS", tagData.toFIXLabelString());
             assertEquals( "474", tagData.toEnumIDString());
             assertEquals( "MAILING_DTLS", tagData.toEnumNameString());
             assertEquals( "MailingDtls", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag474StrMailingDtlsTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag474StrMailingDtls( new MyStringType( oneElement ));
             assertEquals( "Tag474StrMailingDtls\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

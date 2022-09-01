@@ -39,11 +39,11 @@ class Tag552EnuNoSidesTest {
         // loop around the ENUM and process
         for ( Enum552NoSides oneEnum : Enum552NoSides.values()) {
             tagData = new Tag552EnuNoSides(oneEnum);
-            assertEquals( "FIX552_ENU_NO_SIDES", tagData.toEnumLabelString());
+            assertEquals( "FIX552_ENU_NO_SIDES", tagData.toFIXLabelString());
             assertEquals( "552", tagData.toEnumIDString());
             assertEquals( "NO_SIDES", tagData.toEnumNameString());
             assertEquals( "NoSides", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -91,7 +91,7 @@ class Tag552EnuNoSidesTest {
         for ( Enum552NoSides oneEnum : Enum552NoSides.values()) {
             tagData = new Tag552EnuNoSides(oneEnum);
             assertEquals( "Tag552EnuNoSides\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

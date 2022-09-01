@@ -39,11 +39,11 @@ class Tag836EnuPegOffsetTypeTest {
         // loop around the ENUM and process
         for ( MyEnumOffsetType oneEnum : MyEnumOffsetType.values()) {
             tagData = new Tag836EnuPegOffsetType(oneEnum);
-            assertEquals( "FIX836_ENU_PEG_OFFSET_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX836_ENU_PEG_OFFSET_TYPE", tagData.toFIXLabelString());
             assertEquals( "836", tagData.toEnumIDString());
             assertEquals( "PEG_OFFSET_TYPE", tagData.toEnumNameString());
             assertEquals( "PegOffsetType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -101,7 +101,7 @@ class Tag836EnuPegOffsetTypeTest {
         for ( MyEnumOffsetType oneEnum : MyEnumOffsetType.values()) {
             tagData = new Tag836EnuPegOffsetType(oneEnum);
             assertEquals( "Tag836EnuPegOffsetType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

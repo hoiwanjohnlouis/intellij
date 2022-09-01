@@ -40,11 +40,11 @@ class Tag22EnuSecurityIDSourceTest {
         // loop around the ENUM and process
         for (MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
             tagData = new Tag22EnuSecurityIDSource(oneEnum);
-            assertEquals( "FIX22_ENU_SECURITY_ID_SOURCE", tagData.toEnumLabelString());
+            assertEquals( "FIX22_ENU_SECURITY_ID_SOURCE", tagData.toFIXLabelString());
             assertEquals( "SECURITY_ID_SOURCE", tagData.toEnumNameString());
             assertEquals( "22", tagData.toEnumIDString());
             assertEquals( "SecurityIDSource", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -196,7 +196,7 @@ class Tag22EnuSecurityIDSourceTest {
         for (MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
             tagData = new Tag22EnuSecurityIDSource(oneEnum);
             assertEquals( "Tag22EnuSecurityIDSource\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

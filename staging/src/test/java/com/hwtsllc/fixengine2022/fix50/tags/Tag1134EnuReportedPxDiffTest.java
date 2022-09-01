@@ -39,11 +39,11 @@ class Tag1134EnuReportedPxDiffTest {
         // loop around the ENUM and process
         for ( Enum1134ReportedPxDiff oneEnum : Enum1134ReportedPxDiff.values()) {
             tagData = new Tag1134EnuReportedPxDiff(oneEnum);
-            assertEquals( "FIX1134_ENU_REPORTED_PX_DIFF", tagData.toEnumLabelString());
+            assertEquals( "FIX1134_ENU_REPORTED_PX_DIFF", tagData.toFIXLabelString());
             assertEquals( "1134", tagData.toEnumIDString());
             assertEquals( "REPORTED_PX_DIFF", tagData.toEnumNameString());
             assertEquals( "ReportedPxDiff", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -91,7 +91,7 @@ class Tag1134EnuReportedPxDiffTest {
         for ( Enum1134ReportedPxDiff oneEnum : Enum1134ReportedPxDiff.values()) {
             tagData = new Tag1134EnuReportedPxDiff(oneEnum);
             assertEquals( "Tag1134EnuReportedPxDiff\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

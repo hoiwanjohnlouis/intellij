@@ -43,7 +43,7 @@ class Tag80QtyAllocQtyTest {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag80QtyAllocQty( new MyQtyType( oneElement ));
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -78,7 +78,7 @@ class Tag80QtyAllocQtyTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag80QtyAllocQty( new MyQtyType( oneElement ));
             assertEquals( "Tag80QtyAllocQty\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

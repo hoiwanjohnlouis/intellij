@@ -39,11 +39,11 @@ class Tag327EnuHaltReasonTest {
         // loop around the ENUM and process
         for ( Enum327HaltReason oneEnum : Enum327HaltReason.values()) {
             tagData = new Tag327EnuHaltReason(oneEnum);
-            assertEquals( "FIX327_ENU_HALT_REASON", tagData.toEnumLabelString());
+            assertEquals( "FIX327_ENU_HALT_REASON", tagData.toFIXLabelString());
             assertEquals( "327", tagData.toEnumIDString());
             assertEquals( "HALT_REASON", tagData.toEnumNameString());
             assertEquals( "HaltReason", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -115,7 +115,7 @@ class Tag327EnuHaltReasonTest {
         for ( Enum327HaltReason oneEnum : Enum327HaltReason.values()) {
             tagData = new Tag327EnuHaltReason(oneEnum);
             assertEquals( "Tag327EnuHaltReason\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

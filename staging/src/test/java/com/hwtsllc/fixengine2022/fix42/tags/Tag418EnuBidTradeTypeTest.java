@@ -39,11 +39,11 @@ class Tag418EnuBidTradeTypeTest {
         // loop around the ENUM and process
         for ( Enum418BidTradeType oneEnum : Enum418BidTradeType.values()) {
             tagData = new Tag418EnuBidTradeType(oneEnum);
-            assertEquals( "FIX418_ENU_BID_TRADE_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX418_ENU_BID_TRADE_TYPE", tagData.toFIXLabelString());
             assertEquals( "418", tagData.toEnumIDString());
             assertEquals( "BID_TRADE_TYPE", tagData.toEnumNameString());
             assertEquals( "BidTradeType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -101,7 +101,7 @@ class Tag418EnuBidTradeTypeTest {
         for ( Enum418BidTradeType oneEnum : Enum418BidTradeType.values()) {
             tagData = new Tag418EnuBidTradeType(oneEnum);
             assertEquals( "Tag418EnuBidTradeType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

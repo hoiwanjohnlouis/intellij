@@ -54,11 +54,11 @@ class Tag483UtcTransBkdTimeTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag483UtcTransBkdTime( new MyUTCTimestampType( oneElement ));
-            assertEquals( "FIX483_UTC_TRANS_BKD_TIME", tagData.toEnumLabelString());
+            assertEquals( "FIX483_UTC_TRANS_BKD_TIME", tagData.toFIXLabelString());
             assertEquals( "483", tagData.toEnumIDString());
             assertEquals( "TRANS_BKD_TIME", tagData.toEnumNameString());
             assertEquals( "TransBkdTime", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -89,7 +89,7 @@ class Tag483UtcTransBkdTimeTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag483UtcTransBkdTime( new MyUTCTimestampType( oneElement ));
             assertEquals( "Tag483UtcTransBkdTime\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

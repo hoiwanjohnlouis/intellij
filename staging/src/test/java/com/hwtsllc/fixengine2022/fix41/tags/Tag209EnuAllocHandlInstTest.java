@@ -39,11 +39,11 @@ class Tag209EnuAllocHandlInstTest {
         // loop around the ENUM and process
         for (Enum209AllocHandlInst oneEnum : Enum209AllocHandlInst.values()) {
             tagData = new Tag209EnuAllocHandlInst(oneEnum);
-            assertEquals( "FIX209_ENU_ALLOC_HANDL_INST", tagData.toEnumLabelString());
+            assertEquals( "FIX209_ENU_ALLOC_HANDL_INST", tagData.toFIXLabelString());
             assertEquals( "209", tagData.toEnumIDString());
             assertEquals( "ALLOC_HANDL_INST", tagData.toEnumNameString());
             assertEquals( "AllocHandlInst", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -96,7 +96,7 @@ class Tag209EnuAllocHandlInstTest {
         for (Enum209AllocHandlInst oneEnum : Enum209AllocHandlInst.values()) {
             tagData = new Tag209EnuAllocHandlInst(oneEnum);
             assertEquals( "Tag209EnuAllocHandlInst\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

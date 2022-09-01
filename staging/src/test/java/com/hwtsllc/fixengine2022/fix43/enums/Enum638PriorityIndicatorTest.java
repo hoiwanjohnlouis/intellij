@@ -48,7 +48,7 @@ class Enum638PriorityIndicatorTest {
         assertEquals("0", enumType.toEnumIDString());
         assertEquals("PRIORITY_UNCHANGED", enumType.toEnumNameString());
         assertEquals("0 - Priority unchanged", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -57,7 +57,7 @@ class Enum638PriorityIndicatorTest {
         assertEquals("1", enumType.toEnumIDString());
         assertEquals("LOST_PRIORITY", enumType.toEnumNameString());
         assertEquals("1 - Lost Priority as result of order change", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());

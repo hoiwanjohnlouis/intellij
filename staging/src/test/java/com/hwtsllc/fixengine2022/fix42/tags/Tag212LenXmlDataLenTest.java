@@ -43,11 +43,11 @@ class Tag212LenXmlDataLenTest {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag212LenXmlDataLen( new MyLengthType( oneElement ));
-            assertEquals( "FIX212_LEN_XML_DATA_LEN", tagData.toEnumLabelString());
+            assertEquals( "FIX212_LEN_XML_DATA_LEN", tagData.toFIXLabelString());
             assertEquals( "212", tagData.toEnumIDString());
             assertEquals( "XML_DATA_LEN", tagData.toEnumNameString());
             assertEquals( "XmlDataLen", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag212LenXmlDataLenTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag212LenXmlDataLen( new MyLengthType( oneElement ));
             assertEquals( "Tag212LenXmlDataLen\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

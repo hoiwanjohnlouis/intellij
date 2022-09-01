@@ -43,11 +43,11 @@ class Tag347StrMessageEncodingTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag347StrMessageEncoding( new MyStringType( oneElement ));
-            assertEquals( "FIX347_STR_MESSAGE_ENCODING", tagData.toEnumLabelString());
+            assertEquals( "FIX347_STR_MESSAGE_ENCODING", tagData.toFIXLabelString());
             assertEquals( "347", tagData.toEnumIDString());
             assertEquals( "MESSAGE_ENCODING", tagData.toEnumNameString());
             assertEquals( "MessageEncoding", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag347StrMessageEncodingTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag347StrMessageEncoding( new MyStringType( oneElement ));
             assertEquals( "Tag347StrMessageEncoding\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

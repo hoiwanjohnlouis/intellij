@@ -39,11 +39,11 @@ class Tag944EnuCollActionTest {
         // loop around the ENUM and process
         for ( Enum944CollAction oneEnum : Enum944CollAction.values()) {
             tagData = new Tag944EnuCollAction(oneEnum);
-            assertEquals( "FIX944_ENU_COLL_ACTION", tagData.toEnumLabelString());
+            assertEquals( "FIX944_ENU_COLL_ACTION", tagData.toFIXLabelString());
             assertEquals( "944", tagData.toEnumIDString());
             assertEquals( "COLL_ACTION", tagData.toEnumNameString());
             assertEquals( "CollAction", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -96,7 +96,7 @@ class Tag944EnuCollActionTest {
         for ( Enum944CollAction oneEnum : Enum944CollAction.values()) {
             tagData = new Tag944EnuCollAction(oneEnum);
             assertEquals( "Tag944EnuCollAction\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

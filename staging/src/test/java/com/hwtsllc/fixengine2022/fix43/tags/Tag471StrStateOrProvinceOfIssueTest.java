@@ -43,11 +43,11 @@ class Tag471StrStateOrProvinceOfIssueTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag471StrStateOrProvinceOfIssue( new MyStringType( oneElement ));
-            assertEquals( "FIX471_STR_STATE_OR_PROVINCE_OF_ISSUE", tagData.toEnumLabelString());
+            assertEquals( "FIX471_STR_STATE_OR_PROVINCE_OF_ISSUE", tagData.toFIXLabelString());
             assertEquals( "471", tagData.toEnumIDString());
             assertEquals( "STATE_OR_PROVINCE_OF_ISSUE", tagData.toEnumNameString());
             assertEquals( "StateOrProvinceOfIssue", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag471StrStateOrProvinceOfIssueTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag471StrStateOrProvinceOfIssue( new MyStringType( oneElement ));
             assertEquals( "Tag471StrStateOrProvinceOfIssue\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

@@ -43,11 +43,11 @@ class Tag993StrAllocCustomerCapacityTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag993StrAllocCustomerCapacity( new MyStringType( oneElement ));
-            assertEquals( "FIX993_STR_ALLOC_CUSTOMER_CAPACITY", tagData.toEnumLabelString());
+            assertEquals( "FIX993_STR_ALLOC_CUSTOMER_CAPACITY", tagData.toFIXLabelString());
             assertEquals( "993", tagData.toEnumIDString());
             assertEquals( "ALLOC_CUSTOMER_CAPACITY", tagData.toEnumNameString());
             assertEquals( "AllocCustomerCapacity", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag993StrAllocCustomerCapacityTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag993StrAllocCustomerCapacity( new MyStringType( oneElement ));
             assertEquals( "Tag993StrAllocCustomerCapacity\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

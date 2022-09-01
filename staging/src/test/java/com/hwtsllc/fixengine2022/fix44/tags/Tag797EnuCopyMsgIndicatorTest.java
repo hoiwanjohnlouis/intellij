@@ -39,11 +39,11 @@ class Tag797EnuCopyMsgIndicatorTest {
         // loop around the ENUM and process
         for ( Enum797CopyMsgIndicator oneEnum : Enum797CopyMsgIndicator.values()) {
             tagData = new Tag797EnuCopyMsgIndicator(oneEnum);
-            assertEquals( "FIX797_ENU_COPY_MSG_INDICATOR", tagData.toEnumLabelString());
+            assertEquals( "FIX797_ENU_COPY_MSG_INDICATOR", tagData.toFIXLabelString());
             assertEquals( "797", tagData.toEnumIDString());
             assertEquals( "COPY_MSG_INDICATOR", tagData.toEnumNameString());
             assertEquals( "CopyMsgIndicator", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -91,7 +91,7 @@ class Tag797EnuCopyMsgIndicatorTest {
         for ( Enum797CopyMsgIndicator oneEnum : Enum797CopyMsgIndicator.values()) {
             tagData = new Tag797EnuCopyMsgIndicator(oneEnum);
             assertEquals( "Tag797EnuCopyMsgIndicator\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

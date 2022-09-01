@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.fix41.tags.Tag206StrOptAttribute;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -44,11 +43,11 @@ class Tag222StrBenchmarkCurvePointTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag222StrBenchmarkCurvePoint( new MyStringType( oneElement ));
-            assertEquals( "FIX222_STR_BENCHMARK_CURVE_POINT", tagData.toEnumLabelString());
+            assertEquals( "FIX222_STR_BENCHMARK_CURVE_POINT", tagData.toFIXLabelString());
             assertEquals( "222", tagData.toEnumIDString());
             assertEquals( "BENCHMARK_CURVE_POINT", tagData.toEnumNameString());
             assertEquals( "BenchmarkCurvePoint", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -85,7 +84,7 @@ class Tag222StrBenchmarkCurvePointTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag222StrBenchmarkCurvePoint( new MyStringType( oneElement ));
             assertEquals( "Tag222StrBenchmarkCurvePoint\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

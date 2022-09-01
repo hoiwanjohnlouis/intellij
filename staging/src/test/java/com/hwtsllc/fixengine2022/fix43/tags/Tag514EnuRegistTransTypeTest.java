@@ -39,11 +39,11 @@ class Tag514EnuRegistTransTypeTest {
         // loop around the ENUM and process
         for (Enum514RegistTransType oneEnum : Enum514RegistTransType.values()) {
             tagData = new Tag514EnuRegistTransType(oneEnum);
-            assertEquals( "FIX514_ENU_REGIST_TRANS_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX514_ENU_REGIST_TRANS_TYPE", tagData.toFIXLabelString());
             assertEquals( "514", tagData.toEnumIDString());
             assertEquals( "REGIST_TRANS_TYPE", tagData.toEnumNameString());
             assertEquals( "RegistTransType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -96,7 +96,7 @@ class Tag514EnuRegistTransTypeTest {
         for (Enum514RegistTransType oneEnum : Enum514RegistTransType.values()) {
             tagData = new Tag514EnuRegistTransType(oneEnum);
             assertEquals( "Tag514EnuRegistTransType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

@@ -39,11 +39,11 @@ class Tag416EnuIncTaxIndTest {
         // loop around the ENUM and process
         for ( Enum416IncTaxInd oneEnum : Enum416IncTaxInd.values()) {
             tagData = new Tag416EnuIncTaxInd(oneEnum);
-            assertEquals( "FIX416_ENU_INC_TAX_IND", tagData.toEnumLabelString());
+            assertEquals( "FIX416_ENU_INC_TAX_IND", tagData.toFIXLabelString());
             assertEquals( "416", tagData.toEnumIDString());
             assertEquals( "INC_TAX_IND", tagData.toEnumNameString());
             assertEquals( "IncTaxInd", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -91,7 +91,7 @@ class Tag416EnuIncTaxIndTest {
         for ( Enum416IncTaxInd oneEnum : Enum416IncTaxInd.values()) {
             tagData = new Tag416EnuIncTaxInd(oneEnum);
             assertEquals( "Tag416EnuIncTaxInd\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

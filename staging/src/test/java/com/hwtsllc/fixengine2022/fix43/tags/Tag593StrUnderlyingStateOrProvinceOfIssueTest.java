@@ -43,11 +43,11 @@ class Tag593StrUnderlyingStateOrProvinceOfIssueTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag593StrUnderlyingStateOrProvinceOfIssue( new MyStringType( oneElement ));
-            assertEquals( "FIX593_STR_UNDERLYING_STATE_OR_PROVINCE_OF_ISSUE", tagData.toEnumLabelString());
+            assertEquals( "FIX593_STR_UNDERLYING_STATE_OR_PROVINCE_OF_ISSUE", tagData.toFIXLabelString());
             assertEquals( "593", tagData.toEnumIDString());
             assertEquals( "UNDERLYING_STATE_OR_PROVINCE_OF_ISSUE", tagData.toEnumNameString());
             assertEquals( "UnderlyingStateOrProvinceOfIssue", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag593StrUnderlyingStateOrProvinceOfIssueTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag593StrUnderlyingStateOrProvinceOfIssue( new MyStringType( oneElement ));
             assertEquals( "Tag593StrUnderlyingStateOrProvinceOfIssue\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

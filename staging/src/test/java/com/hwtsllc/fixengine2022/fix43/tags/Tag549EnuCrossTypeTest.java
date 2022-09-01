@@ -39,11 +39,11 @@ class Tag549EnuCrossTypeTest {
         // loop around the ENUM and process
         for (Enum549CrossType oneEnum : Enum549CrossType.values()) {
             tagData = new Tag549EnuCrossType(oneEnum);
-            assertEquals( "FIX549_ENU_CROSS_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX549_ENU_CROSS_TYPE", tagData.toFIXLabelString());
             assertEquals( "549", tagData.toEnumIDString());
             assertEquals( "CROSS_TYPE", tagData.toEnumNameString());
             assertEquals( "CrossType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -115,7 +115,7 @@ class Tag549EnuCrossTypeTest {
         for (Enum549CrossType oneEnum : Enum549CrossType.values()) {
             tagData = new Tag549EnuCrossType(oneEnum);
             assertEquals( "Tag549EnuCrossType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

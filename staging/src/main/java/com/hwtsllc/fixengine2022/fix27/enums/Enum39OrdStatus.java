@@ -87,7 +87,7 @@ public enum Enum39OrdStatus implements LogFIXString, LogVerboseString {
      * standard wrapper to retrieve the specific enum name
      */
     @Override
-    public String toEnumLabelString() {
+    public String toFIXLabelString() {
         return this.name();
     }
     /**
@@ -118,7 +118,7 @@ public enum Enum39OrdStatus implements LogFIXString, LogVerboseString {
     public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
-                .concat( toEnumLabelString())
+                .concat( toFIXLabelString())
                 .concat("]")
                 .concat("\n\tAction[")
                 .concat( toEnumIDString())

@@ -46,7 +46,7 @@ class Enum285DeleteReasonTest {
         assertEquals( "0", enumType.toEnumIDString());
         assertEquals( "CANCELLATION_OR_TRADE_BUST", enumType.toEnumNameString());
         assertEquals( "0 - Cancellation / Trade Bust", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -55,7 +55,7 @@ class Enum285DeleteReasonTest {
         assertEquals( "1", enumType.toEnumIDString());
         assertEquals( "ERROR", enumType.toEnumNameString());
         assertEquals( "1 - Error", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());

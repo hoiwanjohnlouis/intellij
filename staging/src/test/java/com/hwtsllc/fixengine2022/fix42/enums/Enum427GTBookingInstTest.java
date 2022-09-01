@@ -46,7 +46,7 @@ class Enum427GTBookingInstTest {
         assertEquals( "0", enumType.toEnumIDString());
         assertEquals( "BOOK_OUT_ALL_TRADES", enumType.toEnumNameString());
         assertEquals( "0 - Book out all trades on day of execution", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -55,7 +55,7 @@ class Enum427GTBookingInstTest {
         assertEquals( "1", enumType.toEnumIDString());
         assertEquals( "ACCUMULATE_EXECUTIONS_UNTIL_FILLED_OR_EXPIRES", enumType.toEnumNameString());
         assertEquals( "1 - Accumulate executions until order is filled or expires", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -64,7 +64,7 @@ class Enum427GTBookingInstTest {
         assertEquals( "2", enumType.toEnumIDString());
         assertEquals( "ACCUMULATE_UNTIL_NOTIFIED_OTHERWISE", enumType.toEnumNameString());
         assertEquals( "2 - Accumulate until verbally notified otherwise", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());

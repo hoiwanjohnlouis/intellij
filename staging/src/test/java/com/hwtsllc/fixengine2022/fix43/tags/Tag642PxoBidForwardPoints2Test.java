@@ -43,11 +43,11 @@ class Tag642PxoBidForwardPoints2Test {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag642PxoBidForwardPoints2( new MyPriceOffsetType( oneElement ));
-            assertEquals( "FIX642_PXO_BID_FORWARD_POINTS_2", tagData.toEnumLabelString());
+            assertEquals( "FIX642_PXO_BID_FORWARD_POINTS_2", tagData.toFIXLabelString());
             assertEquals( "642", tagData.toEnumIDString());
             assertEquals( "BID_FORWARD_POINTS_2", tagData.toEnumNameString());
             assertEquals( "BidForwardPoints2", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag642PxoBidForwardPoints2Test {
         for ( double oneElement : TestArray ) {
             tagData = new Tag642PxoBidForwardPoints2( new MyPriceOffsetType( oneElement ));
             assertEquals( "Tag642PxoBidForwardPoints2\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

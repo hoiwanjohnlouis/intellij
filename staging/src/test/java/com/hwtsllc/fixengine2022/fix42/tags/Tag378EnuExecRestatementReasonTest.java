@@ -39,11 +39,11 @@ class Tag378EnuExecRestatementReasonTest {
         // loop around the ENUM and process
         for ( Enum378ExecRestatementReason oneEnum : Enum378ExecRestatementReason.values()) {
             tagData = new Tag378EnuExecRestatementReason(oneEnum);
-            assertEquals( "FIX378_ENU_EXEC_RESTATEMENT_REASON", tagData.toEnumLabelString());
+            assertEquals( "FIX378_ENU_EXEC_RESTATEMENT_REASON", tagData.toFIXLabelString());
             assertEquals( "378", tagData.toEnumIDString());
             assertEquals( "EXEC_RESTATEMENT_REASON", tagData.toEnumNameString());
             assertEquals( "ExecRestatementReason", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -153,7 +153,7 @@ class Tag378EnuExecRestatementReasonTest {
         for ( Enum378ExecRestatementReason oneEnum : Enum378ExecRestatementReason.values()) {
             tagData = new Tag378EnuExecRestatementReason(oneEnum);
             assertEquals( "Tag378EnuExecRestatementReason\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

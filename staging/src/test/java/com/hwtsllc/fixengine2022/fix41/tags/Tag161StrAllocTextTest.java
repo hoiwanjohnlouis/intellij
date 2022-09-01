@@ -43,11 +43,11 @@ class Tag161StrAllocTextTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag161StrAllocText( new MyStringType( oneElement ));
-            assertEquals( "FIX161_STR_ALLOC_TEXT", tagData.toEnumLabelString());
+            assertEquals( "FIX161_STR_ALLOC_TEXT", tagData.toFIXLabelString());
             assertEquals( "161", tagData.toEnumIDString());
             assertEquals( "ALLOC_TEXT", tagData.toEnumNameString());
             assertEquals( "AllocText", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag161StrAllocTextTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag161StrAllocText( new MyStringType( oneElement ));
             assertEquals( "Tag161StrAllocText\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

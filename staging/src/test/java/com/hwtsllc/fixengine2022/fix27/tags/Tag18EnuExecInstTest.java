@@ -39,11 +39,11 @@ class Tag18EnuExecInstTest {
         // loop around the ENUM and process
         for (Enum18ExecInst oneEnum : Enum18ExecInst.values()) {
             tagData = new Tag18EnuExecInst(oneEnum);
-            assertEquals( "FIX18_ENU_EXEC_INST", tagData.toEnumLabelString());
+            assertEquals( "FIX18_ENU_EXEC_INST", tagData.toFIXLabelString());
             assertEquals( "EXEC_INST", tagData.toEnumNameString());
             assertEquals( "18", tagData.toEnumIDString());
             assertEquals( "ExecInst", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -336,7 +336,7 @@ class Tag18EnuExecInstTest {
         for (Enum18ExecInst oneEnum : Enum18ExecInst.values()) {
             tagData = new Tag18EnuExecInst(oneEnum);
             assertEquals( "Tag18EnuExecInst\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

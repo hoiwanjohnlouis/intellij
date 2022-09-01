@@ -43,11 +43,11 @@ class Tag789SeqNextExpectedMsgSeqNumTest {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag789SeqNextExpectedMsgSeqNum( new MySeqNumType( oneElement ));
-            assertEquals( "FIX789_SEQ_NEXT_EXPECTED_MSG_SEQ_NUM", tagData.toEnumLabelString());
+            assertEquals( "FIX789_SEQ_NEXT_EXPECTED_MSG_SEQ_NUM", tagData.toFIXLabelString());
             assertEquals( "789", tagData.toEnumIDString());
             assertEquals( "NEXT_EXPECTED_MSG_SEQ_NUM", tagData.toEnumNameString());
             assertEquals( "NextExpectedMsgSeqNum", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag789SeqNextExpectedMsgSeqNumTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag789SeqNextExpectedMsgSeqNum( new MySeqNumType( oneElement ));
             assertEquals( "Tag789SeqNextExpectedMsgSeqNum\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

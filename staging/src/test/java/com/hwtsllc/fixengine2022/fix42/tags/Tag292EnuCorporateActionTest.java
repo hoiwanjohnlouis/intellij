@@ -39,11 +39,11 @@ class Tag292EnuCorporateActionTest {
         // loop around the ENUM and process
         for ( Enum292CorporateAction oneEnum : Enum292CorporateAction.values()) {
             tagData = new Tag292EnuCorporateAction(oneEnum);
-            assertEquals( "FIX292_ENU_CORPORATE_ACTION", tagData.toEnumLabelString());
+            assertEquals( "FIX292_ENU_CORPORATE_ACTION", tagData.toFIXLabelString());
             assertEquals( "292", tagData.toEnumIDString());
             assertEquals( "CORPORATE_ACTION", tagData.toEnumNameString());
             assertEquals( "CorporateAction", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -199,7 +199,7 @@ class Tag292EnuCorporateActionTest {
         for ( Enum292CorporateAction oneEnum : Enum292CorporateAction.values()) {
             tagData = new Tag292EnuCorporateAction(oneEnum);
             assertEquals( "Tag292EnuCorporateAction\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

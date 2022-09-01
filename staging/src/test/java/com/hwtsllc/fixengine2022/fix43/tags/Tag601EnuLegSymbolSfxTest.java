@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyEnumSymbolSfx;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag65EnuSymbolSfx;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -40,11 +39,11 @@ class Tag601EnuLegSymbolSfxTest {
         // loop around the ENUM and process
         for (MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
             tagData = new Tag601EnuLegSymbolSfx(oneEnum);
-            assertEquals( "FIX601_ENU_LEG_SYMBOL_SFX", tagData.toEnumLabelString());
+            assertEquals( "FIX601_ENU_LEG_SYMBOL_SFX", tagData.toFIXLabelString());
             assertEquals( "601", tagData.toEnumIDString());
             assertEquals( "LEG_SYMBOL_SFX", tagData.toEnumNameString());
             assertEquals( "LegSymbolSfx", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -90,7 +89,7 @@ class Tag601EnuLegSymbolSfxTest {
         for (MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
             tagData = new Tag601EnuLegSymbolSfx(oneEnum);
             assertEquals( "Tag601EnuLegSymbolSfx\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

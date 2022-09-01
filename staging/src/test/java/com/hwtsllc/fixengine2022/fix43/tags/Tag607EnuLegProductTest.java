@@ -39,11 +39,11 @@ class Tag607EnuLegProductTest {
         // loop around the ENUM and process
         for (MyEnumProduct oneEnum : MyEnumProduct.values()) {
             tagData = new Tag607EnuLegProduct(oneEnum);
-            assertEquals( "FIX607_ENU_LEG_PRODUCT", tagData.toEnumLabelString());
+            assertEquals( "FIX607_ENU_LEG_PRODUCT", tagData.toFIXLabelString());
             assertEquals( "607", tagData.toEnumIDString());
             assertEquals( "LEG_PRODUCT", tagData.toEnumNameString());
             assertEquals( "LegProduct", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -150,7 +150,7 @@ class Tag607EnuLegProductTest {
         for (MyEnumProduct oneEnum : MyEnumProduct.values()) {
             tagData = new Tag607EnuLegProduct(oneEnum);
             assertEquals( "Tag607EnuLegProduct\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

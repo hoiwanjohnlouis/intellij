@@ -43,11 +43,11 @@ class Tag877StrUnderlyingCPProgramTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag877StrUnderlyingCPProgram( new MyStringType( oneElement ));
-            assertEquals( "FIX877_STR_UNDERLYING_CP_PROGRAM", tagData.toEnumLabelString());
+            assertEquals( "FIX877_STR_UNDERLYING_CP_PROGRAM", tagData.toFIXLabelString());
             assertEquals( "877", tagData.toEnumIDString());
             assertEquals( "UNDERLYING_CP_PROGRAM", tagData.toEnumNameString());
             assertEquals( "UnderlyingCPProgram", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag877StrUnderlyingCPProgramTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag877StrUnderlyingCPProgram( new MyStringType( oneElement ));
             assertEquals( "Tag877StrUnderlyingCPProgram\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

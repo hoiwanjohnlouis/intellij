@@ -39,11 +39,11 @@ class Tag1033EnuDeskTypeTest {
         // loop around the ENUM and process
         for ( Enum1033DeskType oneEnum : Enum1033DeskType.values()) {
             tagData = new Tag1033EnuDeskType(oneEnum);
-            assertEquals( "FIX1033_ENU_DESK_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX1033_ENU_DESK_TYPE", tagData.toFIXLabelString());
             assertEquals( "1033", tagData.toEnumIDString());
             assertEquals( "DESK_TYPE", tagData.toEnumNameString());
             assertEquals( "DeskType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -140,7 +140,7 @@ class Tag1033EnuDeskTypeTest {
         for ( Enum1033DeskType oneEnum : Enum1033DeskType.values()) {
             tagData = new Tag1033EnuDeskType(oneEnum);
             assertEquals( "Tag1033EnuDeskType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

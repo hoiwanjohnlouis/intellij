@@ -63,7 +63,7 @@ class Enum577ClearingInstructionTest {
         assertEquals( "0", enumType.toEnumIDString());
         assertEquals( "PROCESS_NORMALLY", enumType.toEnumNameString());
         assertEquals( "0 - Process normally", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -72,7 +72,7 @@ class Enum577ClearingInstructionTest {
         assertEquals( "1", enumType.toEnumIDString());
         assertEquals( "EXCLUDE_ALL_NETTING", enumType.toEnumNameString());
         assertEquals( "1 - Exclude from all netting", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -81,7 +81,7 @@ class Enum577ClearingInstructionTest {
         assertEquals( "2", enumType.toEnumIDString());
         assertEquals( "BILATERAL_NETTING_ONLY", enumType.toEnumNameString());
         assertEquals( "2 - Bilateral netting only", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -90,7 +90,7 @@ class Enum577ClearingInstructionTest {
         assertEquals( "3", enumType.toEnumIDString());
         assertEquals( "EX_CLEARING", enumType.toEnumNameString());
         assertEquals( "3 - Ex clearing", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -99,7 +99,7 @@ class Enum577ClearingInstructionTest {
         assertEquals( "4", enumType.toEnumIDString());
         assertEquals( "SPECIAL_TRADE", enumType.toEnumNameString());
         assertEquals( "4 - Special trade", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -109,7 +109,7 @@ class Enum577ClearingInstructionTest {
         assertEquals( "5", enumType.toEnumIDString());
         assertEquals( "MULTILATERAL_NETTING", enumType.toEnumNameString());
         assertEquals( "5 - Multilateral netting", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -118,7 +118,7 @@ class Enum577ClearingInstructionTest {
         assertEquals( "6", enumType.toEnumIDString());
         assertEquals( "CLEAR_AGAINST_CENTRAL_COUNTERPARTY", enumType.toEnumNameString());
         assertEquals( "6 - Clear against central counterparty", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -127,7 +127,7 @@ class Enum577ClearingInstructionTest {
         assertEquals( "7", enumType.toEnumIDString());
         assertEquals( "EXCLUDE_FROM_CENTRAL_COUNTERPARTY", enumType.toEnumNameString());
         assertEquals( "7 - Exclude from central counterparty", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -136,7 +136,7 @@ class Enum577ClearingInstructionTest {
         assertEquals( "8", enumType.toEnumIDString());
         assertEquals( "MANUAL", enumType.toEnumNameString());
         assertEquals( "8 - Manual mode (pre-posting and/or pre-giveup)", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -146,7 +146,7 @@ class Enum577ClearingInstructionTest {
         assertEquals( "AUTOMATIC_POSTING", enumType.toEnumNameString());
         assertEquals( "9 - Automatic posting mode (trade posting to the position account number specified)",
                 enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -157,7 +157,7 @@ class Enum577ClearingInstructionTest {
         assertEquals( "AUTOMATIC_GIVE_UP", enumType.toEnumNameString());
         assertEquals( "10 - Automatic give-up mode (trade give-up to the give-up destination number specified)",
                 enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -166,7 +166,7 @@ class Enum577ClearingInstructionTest {
         assertEquals( "11", enumType.toEnumIDString());
         assertEquals( "QUALIFIED_SERVICE_REPRESENTATIVE", enumType.toEnumNameString());
         assertEquals( "11 - Qualified Service Representative QSR", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -175,7 +175,7 @@ class Enum577ClearingInstructionTest {
         assertEquals( "12", enumType.toEnumIDString());
         assertEquals( "CUSTOMER_TRADE", enumType.toEnumNameString());
         assertEquals( "12 - Customer trade", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -184,7 +184,7 @@ class Enum577ClearingInstructionTest {
         assertEquals( "13", enumType.toEnumIDString());
         assertEquals( "SELF_CLEARING", enumType.toEnumNameString());
         assertEquals( "13 - Self clearing", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());

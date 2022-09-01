@@ -43,11 +43,11 @@ class Tag976LmdQuantityDateTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag976LmdQuantityDate( new MyLocalMktDateType( oneElement ));
-            assertEquals( "FIX976_QUANTITY_DATE", tagData.toEnumLabelString());
+            assertEquals( "FIX976_QUANTITY_DATE", tagData.toFIXLabelString());
             assertEquals( "976", tagData.toEnumIDString());
             assertEquals( "QUANTITY_DATE", tagData.toEnumNameString());
             assertEquals( "QuantityDate", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag976LmdQuantityDateTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag976LmdQuantityDate( new MyLocalMktDateType( oneElement ));
             assertEquals( "Tag976LmdQuantityDate\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

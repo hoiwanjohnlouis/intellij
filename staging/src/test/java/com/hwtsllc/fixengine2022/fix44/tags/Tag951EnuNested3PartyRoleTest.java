@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyEnumPartyRole;
-import com.hwtsllc.fixengine2022.fix50.tags.Tag1119EnuRootPartyRole;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -40,11 +39,11 @@ class Tag951EnuNested3PartyRoleTest {
         // loop around the ENUM and process
         for ( MyEnumPartyRole oneEnum : MyEnumPartyRole.values()) {
             tagData = new Tag951EnuNested3PartyRole(oneEnum);
-            assertEquals( "FIX951_ENU_NESTED_3_PARTY_ROLE", tagData.toEnumLabelString());
+            assertEquals( "FIX951_ENU_NESTED_3_PARTY_ROLE", tagData.toFIXLabelString());
             assertEquals( "951", tagData.toEnumIDString());
             assertEquals( "NESTED_3_PARTY_ROLE", tagData.toEnumNameString());
             assertEquals( "Nested3PartyRole", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -506,7 +505,7 @@ class Tag951EnuNested3PartyRoleTest {
         for ( MyEnumPartyRole oneEnum : MyEnumPartyRole.values()) {
             tagData = new Tag951EnuNested3PartyRole(oneEnum);
             assertEquals( "Tag951EnuNested3PartyRole\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

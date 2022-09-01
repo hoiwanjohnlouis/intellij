@@ -39,11 +39,11 @@ class Tag1035EnuDeskOrderHandlingInstTest {
         // loop around the ENUM and process
         for ( MyEnumOrderHandlingInst oneEnum : MyEnumOrderHandlingInst.values()) {
             tagData = new Tag1035EnuDeskOrderHandlingInst(oneEnum);
-            assertEquals( "FIX1035_ENU_DESK_ORDER_HANDLING_INST", tagData.toEnumLabelString());
+            assertEquals( "FIX1035_ENU_DESK_ORDER_HANDLING_INST", tagData.toFIXLabelString());
             assertEquals( "1035", tagData.toEnumIDString());
             assertEquals( "DESK_ORDER_HANDLING_INST", tagData.toEnumNameString());
             assertEquals( "DeskOrderHandlingInst", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -209,7 +209,7 @@ class Tag1035EnuDeskOrderHandlingInstTest {
         for ( MyEnumOrderHandlingInst oneEnum : MyEnumOrderHandlingInst.values()) {
             tagData = new Tag1035EnuDeskOrderHandlingInst(oneEnum);
             assertEquals( "Tag1035EnuDeskOrderHandlingInst\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

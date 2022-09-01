@@ -39,11 +39,11 @@ class Tag160EnuSettlInstModeTest {
         // loop around the ENUM and process
         for (Enum160SettlInstMode oneEnum : Enum160SettlInstMode.values()) {
             tagData = new Tag160EnuSettlInstMode(oneEnum);
-            assertEquals( "FIX160_ENU_SETTL_INST_MODE", tagData.toEnumLabelString());
+            assertEquals( "FIX160_ENU_SETTL_INST_MODE", tagData.toFIXLabelString());
             assertEquals( "160", tagData.toEnumIDString());
             assertEquals( "SETTL_INST_MODE", tagData.toEnumNameString());
             assertEquals( "SettlInstMode", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -113,7 +113,7 @@ class Tag160EnuSettlInstModeTest {
         for (Enum160SettlInstMode oneEnum : Enum160SettlInstMode.values()) {
             tagData = new Tag160EnuSettlInstMode(oneEnum);
             assertEquals( "Tag160EnuSettlInstMode\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

@@ -39,11 +39,11 @@ class Tag935EnuNetworkRequestTypeTest {
         // loop around the ENUM and process
         for ( Enum935NetworkRequestType oneEnum : Enum935NetworkRequestType.values()) {
             tagData = new Tag935EnuNetworkRequestType(oneEnum);
-            assertEquals( "FIX935_ENU_NETWORK_REQUEST_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX935_ENU_NETWORK_REQUEST_TYPE", tagData.toFIXLabelString());
             assertEquals( "935", tagData.toEnumIDString());
             assertEquals( "NETWORK_REQUEST_TYPE", tagData.toEnumNameString());
             assertEquals( "NetworkRequestType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -101,7 +101,7 @@ class Tag935EnuNetworkRequestTypeTest {
         for ( Enum935NetworkRequestType oneEnum : Enum935NetworkRequestType.values()) {
             tagData = new Tag935EnuNetworkRequestType(oneEnum);
             assertEquals( "Tag935EnuNetworkRequestType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

@@ -43,12 +43,12 @@ class Tag218PxoSpreadTest {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag218PxoSpread( new MyPriceOffsetType( oneElement ));
-            assertEquals( "FIX218_PXO_SPREAD", tagData.toEnumLabelString());
+            assertEquals( "FIX218_PXO_SPREAD", tagData.toFIXLabelString());
             assertEquals( "218", tagData.toEnumIDString());
             assertEquals( "SPREAD", tagData.toEnumNameString());
             assertEquals( "For Fixed Income.  Either Swap Spread or Spread to Benchmark depending upon the order type",
                     tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -85,7 +85,7 @@ class Tag218PxoSpreadTest {
         for ( double oneElement : TestArray ) {
             tagData = new Tag218PxoSpread( new MyPriceOffsetType( oneElement ));
             assertEquals( "Tag218PxoSpread\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

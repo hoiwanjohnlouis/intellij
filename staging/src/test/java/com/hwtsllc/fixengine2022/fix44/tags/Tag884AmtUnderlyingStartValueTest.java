@@ -50,11 +50,11 @@ class Tag884AmtUnderlyingStartValueTest {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag884AmtUnderlyingStartValue( new MyAmtType( oneElement ));
-            assertEquals( "FIX884_AMT_UNDERLYING_START_VALUE", tagData.toEnumLabelString());
+            assertEquals( "FIX884_AMT_UNDERLYING_START_VALUE", tagData.toFIXLabelString());
             assertEquals( "884", tagData.toEnumIDString());
             assertEquals( "UNDERLYING_START_VALUE", tagData.toEnumNameString());
             assertEquals( "UnderlyingStartValue", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -85,7 +85,7 @@ class Tag884AmtUnderlyingStartValueTest {
         for ( double oneElement : TestArray ) {
             tagData = new Tag884AmtUnderlyingStartValue( new MyAmtType( oneElement ));
             assertEquals( "Tag884AmtUnderlyingStartValue\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

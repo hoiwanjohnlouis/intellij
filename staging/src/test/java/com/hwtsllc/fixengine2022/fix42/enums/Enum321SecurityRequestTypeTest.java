@@ -51,7 +51,7 @@ class Enum321SecurityRequestTypeTest {
         assertEquals( "0", enumType.toEnumIDString());
         assertEquals( "REQUEST_SECURITY_IDENTITY", enumType.toEnumNameString());
         assertEquals( "0 - Request Security identity and specifications", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -62,7 +62,7 @@ class Enum321SecurityRequestTypeTest {
         assertEquals( "1 - Request Security identity for the specifications provided " +
                         "(name of the security is not supplied)",
                 enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -71,7 +71,7 @@ class Enum321SecurityRequestTypeTest {
         assertEquals( "2", enumType.toEnumIDString());
         assertEquals( "REQUEST_LIST_SECURITY_TYPES", enumType.toEnumNameString());
         assertEquals( "2 - Request List Security Types", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -83,7 +83,7 @@ class Enum321SecurityRequestTypeTest {
                         "(can be qualified with Symbol, SecurityType, TradingSessionID, SecurityExchange. " +
                         "If provided, then only list Securities for the specific type.)",
                 enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());

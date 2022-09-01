@@ -43,11 +43,11 @@ class Tag1068PxoLegOfferForwardPointsTest {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag1068PxoLegOfferForwardPoints( new MyPriceOffsetType( oneElement ));
-            assertEquals( "FIX1068_PXO_LEG_OFFER_FORWARD_POINTS", tagData.toEnumLabelString());
+            assertEquals( "FIX1068_PXO_LEG_OFFER_FORWARD_POINTS", tagData.toFIXLabelString());
             assertEquals( "1068", tagData.toEnumIDString());
             assertEquals( "LEG_OFFER_FORWARD_POINTS", tagData.toEnumNameString());
             assertEquals( "LegOfferForwardPoints", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag1068PxoLegOfferForwardPointsTest {
         for ( double oneElement : TestArray ) {
             tagData = new Tag1068PxoLegOfferForwardPoints( new MyPriceOffsetType( oneElement ));
             assertEquals( "Tag1068PxoLegOfferForwardPoints\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

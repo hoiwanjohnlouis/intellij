@@ -39,11 +39,11 @@ class Tag235EnuYieldTypeTest {
         // loop around the ENUM and process
         for ( Enum235YieldType oneEnum : Enum235YieldType.values()) {
             tagData = new Tag235EnuYieldType(oneEnum);
-            assertEquals( "FIX235_ENU_YIELD_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX235_ENU_YIELD_TYPE", tagData.toFIXLabelString());
             assertEquals( "235", tagData.toEnumIDString());
             assertEquals( "YIELD_TYPE", tagData.toEnumNameString());
             assertEquals( "YieldType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -263,7 +263,7 @@ class Tag235EnuYieldTypeTest {
         for ( Enum235YieldType oneEnum : Enum235YieldType.values()) {
             tagData = new Tag235EnuYieldType(oneEnum);
             assertEquals( "Tag235EnuYieldType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

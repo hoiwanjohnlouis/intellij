@@ -44,11 +44,11 @@ class Tag105StrWaveNoTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag105StrWaveNo( new MyStringType( oneElement ));
-            assertEquals( "FIX105_STR_WAVE_NO", tagData.toEnumLabelString());
+            assertEquals( "FIX105_STR_WAVE_NO", tagData.toFIXLabelString());
             assertEquals( "WAVE_NO", tagData.toEnumNameString());
             assertEquals( "105", tagData.toEnumIDString());
             assertEquals( "WaveNo", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -85,7 +85,7 @@ class Tag105StrWaveNoTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag105StrWaveNo( new MyStringType( oneElement ));
             assertEquals( "Tag105StrWaveNo\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

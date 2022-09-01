@@ -39,11 +39,11 @@ class Tag871EnuInstrAttribTypeTest {
         // loop around the ENUM and process
         for ( Enum871InstrAttribType oneEnum : Enum871InstrAttribType.values()) {
             tagData = new Tag871EnuInstrAttribType(oneEnum);
-            assertEquals( "FIX871_ENU_INSTR_ATTRIB_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX871_ENU_INSTR_ATTRIB_TYPE", tagData.toFIXLabelString());
             assertEquals( "871", tagData.toEnumIDString());
             assertEquals( "INSTR_ATTRIB_TYPE", tagData.toEnumNameString());
             assertEquals( "InstrAttribType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -207,7 +207,7 @@ class Tag871EnuInstrAttribTypeTest {
         for ( Enum871InstrAttribType oneEnum : Enum871InstrAttribType.values()) {
             tagData = new Tag871EnuInstrAttribType(oneEnum);
             assertEquals( "Tag871EnuInstrAttribType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

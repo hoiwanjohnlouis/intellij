@@ -43,11 +43,11 @@ class Tag834PxoThresholdAmountTest {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag834PxoThresholdAmount( new MyPriceOffsetType( oneElement ));
-            assertEquals( "FIX834_PXO_THRESHOLD_AMOUNT", tagData.toEnumLabelString());
+            assertEquals( "FIX834_PXO_THRESHOLD_AMOUNT", tagData.toFIXLabelString());
             assertEquals( "834", tagData.toEnumIDString());
             assertEquals( "THRESHOLD_AMOUNT", tagData.toEnumNameString());
             assertEquals( "ThresholdAmount", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag834PxoThresholdAmountTest {
         for ( double oneElement : TestArray ) {
             tagData = new Tag834PxoThresholdAmount( new MyPriceOffsetType( oneElement ));
             assertEquals( "Tag834PxoThresholdAmount\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

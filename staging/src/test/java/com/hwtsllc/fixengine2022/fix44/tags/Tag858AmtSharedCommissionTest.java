@@ -51,11 +51,11 @@ class Tag858AmtSharedCommissionTest {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag858AmtSharedCommission( new MyAmtType( oneElement ));
-            assertEquals( "FIX858_AMT_SHARED_COMMISSION", tagData.toEnumLabelString());
+            assertEquals( "FIX858_AMT_SHARED_COMMISSION", tagData.toFIXLabelString());
             assertEquals( "858", tagData.toEnumIDString());
             assertEquals( "SHARED_COMMISSION", tagData.toEnumNameString());
             assertEquals( "SharedCommission", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -86,7 +86,7 @@ class Tag858AmtSharedCommissionTest {
         for ( double oneElement : TestArray ) {
             tagData = new Tag858AmtSharedCommission( new MyAmtType( oneElement ));
             assertEquals( "Tag858AmtSharedCommission\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

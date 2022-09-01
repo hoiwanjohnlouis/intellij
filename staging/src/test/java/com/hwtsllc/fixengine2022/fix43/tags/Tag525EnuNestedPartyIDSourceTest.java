@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyEnumPartyIDSource;
-import com.hwtsllc.fixengine2022.fix44.tags.Tag950EnuNested3PartyIDSource;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -40,11 +39,11 @@ class Tag525EnuNestedPartyIDSourceTest {
         // loop around the ENUM and process
         for (MyEnumPartyIDSource oneEnum : MyEnumPartyIDSource.values()) {
             tagData = new Tag525EnuNestedPartyIDSource(oneEnum);
-            assertEquals( "FIX525_ENU_NESTED_PARTY_ID_SOURCE", tagData.toEnumLabelString());
+            assertEquals( "FIX525_ENU_NESTED_PARTY_ID_SOURCE", tagData.toFIXLabelString());
             assertEquals( "525", tagData.toEnumIDString());
             assertEquals( "NESTED_PARTY_ID_SOURCE", tagData.toEnumNameString());
             assertEquals( "NestedPartyIDSource", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -191,7 +190,7 @@ class Tag525EnuNestedPartyIDSourceTest {
         for (MyEnumPartyIDSource oneEnum : MyEnumPartyIDSource.values()) {
             tagData = new Tag525EnuNestedPartyIDSource(oneEnum);
             assertEquals( "Tag525EnuNestedPartyIDSource\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

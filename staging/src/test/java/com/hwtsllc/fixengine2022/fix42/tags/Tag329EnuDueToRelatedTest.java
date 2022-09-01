@@ -39,11 +39,11 @@ class Tag329EnuDueToRelatedTest {
         // loop around the ENUM and process
         for ( Enum329DueToRelated oneEnum : Enum329DueToRelated.values()) {
             tagData = new Tag329EnuDueToRelated(oneEnum);
-            assertEquals( "FIX329_ENU_DUE_TO_RELATED", tagData.toEnumLabelString());
+            assertEquals( "FIX329_ENU_DUE_TO_RELATED", tagData.toFIXLabelString());
             assertEquals( "329", tagData.toEnumIDString());
             assertEquals( "DUE_TO_RELATED", tagData.toEnumNameString());
             assertEquals( "DueToRelated", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -91,7 +91,7 @@ class Tag329EnuDueToRelatedTest {
         for ( Enum329DueToRelated oneEnum : Enum329DueToRelated.values()) {
             tagData = new Tag329EnuDueToRelated(oneEnum);
             assertEquals( "Tag329EnuDueToRelated\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

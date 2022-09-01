@@ -43,11 +43,11 @@ class Tag678StrLegBenchmarkCurvePointTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag678StrLegBenchmarkCurvePoint( new MyStringType( oneElement ));
-            assertEquals( "FIX678_STR_LEG_BENCHMARK_CURVE_POINT", tagData.toEnumLabelString());
+            assertEquals( "FIX678_STR_LEG_BENCHMARK_CURVE_POINT", tagData.toFIXLabelString());
             assertEquals( "678", tagData.toEnumIDString());
             assertEquals( "LEG_BENCHMARK_CURVE_POINT", tagData.toEnumNameString());
             assertEquals( "LegBenchmarkCurvePoint", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag678StrLegBenchmarkCurvePointTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag678StrLegBenchmarkCurvePoint( new MyStringType( oneElement ));
             assertEquals( "Tag678StrLegBenchmarkCurvePoint\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

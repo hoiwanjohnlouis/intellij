@@ -43,11 +43,11 @@ class Tag213DatXmlDataTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag213DatXmlData( new MyDataType( oneElement ));
-            assertEquals( "FIX213_DAT_XML_DATA", tagData.toEnumLabelString());
+            assertEquals( "FIX213_DAT_XML_DATA", tagData.toFIXLabelString());
             assertEquals( "213", tagData.toEnumIDString());
             assertEquals( "XML_DATA", tagData.toEnumNameString());
             assertEquals( "XmlData", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag213DatXmlDataTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag213DatXmlData( new MyDataType( oneElement ));
             assertEquals( "Tag213DatXmlData\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

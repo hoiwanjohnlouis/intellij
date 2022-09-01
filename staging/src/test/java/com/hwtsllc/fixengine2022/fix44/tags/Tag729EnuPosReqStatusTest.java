@@ -39,11 +39,11 @@ class Tag729EnuPosReqStatusTest {
         // loop around the ENUM and process
         for ( Enum729PosReqStatus oneEnum : Enum729PosReqStatus.values()) {
             tagData = new Tag729EnuPosReqStatus(oneEnum);
-            assertEquals( "FIX729_ENU_POS_REQ_STATUS", tagData.toEnumLabelString());
+            assertEquals( "FIX729_ENU_POS_REQ_STATUS", tagData.toFIXLabelString());
             assertEquals( "729", tagData.toEnumIDString());
             assertEquals( "POS_REQ_STATUS", tagData.toEnumNameString());
             assertEquals( "PosReqStatus", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -96,7 +96,7 @@ class Tag729EnuPosReqStatusTest {
         for ( Enum729PosReqStatus oneEnum : Enum729PosReqStatus.values()) {
             tagData = new Tag729EnuPosReqStatus(oneEnum);
             assertEquals( "Tag729EnuPosReqStatus\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

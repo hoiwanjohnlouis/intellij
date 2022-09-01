@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyIntType;
-import com.hwtsllc.fixengine2022.fix41.tags.Tag205IntMaturityDay;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -44,11 +43,11 @@ class Tag441IntLiquidityNumSecuritiesTest {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag441IntLiquidityNumSecurities( new MyIntType( oneElement ));
-            assertEquals( "FIX441_INT_LIQUIDITY_NUM_SECURITIES", tagData.toEnumLabelString());
+            assertEquals( "FIX441_INT_LIQUIDITY_NUM_SECURITIES", tagData.toFIXLabelString());
             assertEquals( "441", tagData.toEnumIDString());
             assertEquals( "LIQUIDITY_NUM_SECURITIES", tagData.toEnumNameString());
             assertEquals( "LiquidityNumSecurities", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -85,7 +84,7 @@ class Tag441IntLiquidityNumSecuritiesTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag441IntLiquidityNumSecurities( new MyIntType( oneElement ));
             assertEquals( "Tag441IntLiquidityNumSecurities\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

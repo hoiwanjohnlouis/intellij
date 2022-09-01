@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyDataType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag96DatRawData;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -44,11 +43,11 @@ class Tag363DatEncodedUnderlyingIssuerTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag363DatEncodedUnderlyingIssuer( new MyDataType( oneElement ));
-            assertEquals( "FIX363_DAT_ENCODED_UNDERLYING_ISSUER", tagData.toEnumLabelString());
+            assertEquals( "FIX363_DAT_ENCODED_UNDERLYING_ISSUER", tagData.toFIXLabelString());
             assertEquals( "363", tagData.toEnumIDString());
             assertEquals( "ENCODED_UNDERLYING_ISSUER", tagData.toEnumNameString());
             assertEquals( "EncodedUnderlyingIssuer", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -85,7 +84,7 @@ class Tag363DatEncodedUnderlyingIssuerTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag363DatEncodedUnderlyingIssuer( new MyDataType( oneElement ));
             assertEquals( "Tag363DatEncodedUnderlyingIssuer\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

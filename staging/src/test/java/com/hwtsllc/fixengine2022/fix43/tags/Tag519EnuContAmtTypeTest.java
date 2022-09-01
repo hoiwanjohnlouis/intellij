@@ -39,11 +39,11 @@ class Tag519EnuContAmtTypeTest {
         // loop around the ENUM and process
         for (Enum519ContAmtType oneEnum : Enum519ContAmtType.values()) {
             tagData = new Tag519EnuContAmtType(oneEnum);
-            assertEquals( "FIX519_ENU_CONT_AMT_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX519_ENU_CONT_AMT_TYPE", tagData.toFIXLabelString());
             assertEquals( "519", tagData.toEnumIDString());
             assertEquals( "CONT_AMT_TYPE", tagData.toEnumNameString());
             assertEquals( "ContAmtType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -161,7 +161,7 @@ class Tag519EnuContAmtTypeTest {
         for (Enum519ContAmtType oneEnum : Enum519ContAmtType.values()) {
             tagData = new Tag519EnuContAmtType(oneEnum);
             assertEquals( "Tag519EnuContAmtType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

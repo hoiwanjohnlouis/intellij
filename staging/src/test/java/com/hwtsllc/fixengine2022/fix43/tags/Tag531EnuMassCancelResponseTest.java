@@ -39,11 +39,11 @@ class Tag531EnuMassCancelResponseTest {
         // loop around the ENUM and process
         for (Enum531MassCancelResponse oneEnum : Enum531MassCancelResponse.values()) {
             tagData = new Tag531EnuMassCancelResponse(oneEnum);
-            assertEquals( "FIX531_ENU_MASS_CANCEL_RESPONSE", tagData.toEnumLabelString());
+            assertEquals( "FIX531_ENU_MASS_CANCEL_RESPONSE", tagData.toFIXLabelString());
             assertEquals( "531", tagData.toEnumIDString());
             assertEquals( "MASS_CANCEL_RESPONSE", tagData.toEnumNameString());
             assertEquals( "MassCancelResponse", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -123,7 +123,7 @@ class Tag531EnuMassCancelResponseTest {
         for (Enum531MassCancelResponse oneEnum : Enum531MassCancelResponse.values()) {
             tagData = new Tag531EnuMassCancelResponse(oneEnum);
             assertEquals( "Tag531EnuMassCancelResponse\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

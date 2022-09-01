@@ -43,11 +43,11 @@ class Tag12AmtCommissionTest {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag12AmtCommission( new MyAmtType( oneElement ));
-            assertEquals( "FIX12_AMT_COMMISSION", tagData.toEnumLabelString());
+            assertEquals( "FIX12_AMT_COMMISSION", tagData.toFIXLabelString());
             assertEquals( "COMMISSION", tagData.toEnumNameString());
             assertEquals( "12", tagData.toEnumIDString());
             assertEquals( "Commission", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -78,7 +78,7 @@ class Tag12AmtCommissionTest {
         for ( double oneElement : TestArray ) {
             tagData = new Tag12AmtCommission( new MyAmtType( oneElement ));
             assertEquals( "Tag12AmtCommission\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

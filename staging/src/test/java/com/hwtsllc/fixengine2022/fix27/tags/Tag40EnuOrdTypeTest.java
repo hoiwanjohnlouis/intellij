@@ -39,11 +39,11 @@ class Tag40EnuOrdTypeTest {
         // loop around the ENUM and process
         for (Enum40OrdType oneEnum : Enum40OrdType.values()) {
             tagData = new Tag40EnuOrdType(oneEnum);
-            assertEquals( "FIX40_ENU_ORD_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX40_ENU_ORD_TYPE", tagData.toFIXLabelString());
             assertEquals( "ORD_TYPE", tagData.toEnumNameString());
             assertEquals( "40", tagData.toEnumIDString());
             assertEquals( "OrdType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -210,7 +210,7 @@ class Tag40EnuOrdTypeTest {
         for (Enum40OrdType oneEnum : Enum40OrdType.values()) {
             tagData = new Tag40EnuOrdType(oneEnum);
             assertEquals( "Tag40EnuOrdType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

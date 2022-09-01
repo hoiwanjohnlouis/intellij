@@ -43,11 +43,11 @@ class Tag806NumNoNested2PartySubIDsTest {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag806NumNoNested2PartySubIDs( new MyNumInGroupType( oneElement ));
-            assertEquals( "FIX806_NUM_NO_NESTED_2_PARTY_SUB_IDS", tagData.toEnumLabelString());
+            assertEquals( "FIX806_NUM_NO_NESTED_2_PARTY_SUB_IDS", tagData.toFIXLabelString());
             assertEquals( "806", tagData.toEnumIDString());
             assertEquals( "NO_NESTED_2_PARTY_SUB_IDS", tagData.toEnumNameString());
             assertEquals( "NoNested2PartySubIDs", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag806NumNoNested2PartySubIDsTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag806NumNoNested2PartySubIDs( new MyNumInGroupType( oneElement ));
             assertEquals( "Tag806NumNoNested2PartySubIDs\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

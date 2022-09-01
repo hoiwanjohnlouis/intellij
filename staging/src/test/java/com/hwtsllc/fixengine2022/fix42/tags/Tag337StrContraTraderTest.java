@@ -43,11 +43,11 @@ class Tag337StrContraTraderTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag337StrContraTrader( new MyStringType( oneElement ));
-            assertEquals( "FIX337_STR_CONTRA_TRADER", tagData.toEnumLabelString());
+            assertEquals( "FIX337_STR_CONTRA_TRADER", tagData.toFIXLabelString());
             assertEquals( "337", tagData.toEnumIDString());
             assertEquals( "CONTRA_TRADER", tagData.toEnumNameString());
             assertEquals( "ContraTrader", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag337StrContraTraderTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag337StrContraTrader( new MyStringType( oneElement ));
             assertEquals( "Tag337StrContraTrader\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

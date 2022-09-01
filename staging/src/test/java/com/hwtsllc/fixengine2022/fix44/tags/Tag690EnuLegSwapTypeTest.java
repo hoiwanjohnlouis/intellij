@@ -39,11 +39,11 @@ class Tag690EnuLegSwapTypeTest {
         // loop around the ENUM and process
         for ( Enum690LegSwapType oneEnum : Enum690LegSwapType.values()) {
             tagData = new Tag690EnuLegSwapType(oneEnum);
-            assertEquals( "FIX690_ENU_LEG_SWAP_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX690_ENU_LEG_SWAP_TYPE", tagData.toFIXLabelString());
             assertEquals( "690", tagData.toEnumIDString());
             assertEquals( "LEG_SWAP_TYPE", tagData.toEnumNameString());
             assertEquals( "LegSwapType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -101,7 +101,7 @@ class Tag690EnuLegSwapTypeTest {
         for ( Enum690LegSwapType oneEnum : Enum690LegSwapType.values()) {
             tagData = new Tag690EnuLegSwapType(oneEnum);
             assertEquals( "Tag690EnuLegSwapType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

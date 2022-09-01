@@ -39,11 +39,11 @@ class Tag1029EnuCustDirectedOrderTest {
         // loop around the ENUM and process
         for ( Enum1029CustDirectedOrder oneEnum : Enum1029CustDirectedOrder.values()) {
             tagData = new Tag1029EnuCustDirectedOrder(oneEnum);
-            assertEquals( "FIX1029_ENU_CUST_DIRECTED_ORDER", tagData.toEnumLabelString());
+            assertEquals( "FIX1029_ENU_CUST_DIRECTED_ORDER", tagData.toFIXLabelString());
             assertEquals( "1029", tagData.toEnumIDString());
             assertEquals( "CUST_DIRECTED_ORDER", tagData.toEnumNameString());
             assertEquals( "CustDirectedOrder", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -91,7 +91,7 @@ class Tag1029EnuCustDirectedOrderTest {
         for ( Enum1029CustDirectedOrder oneEnum : Enum1029CustDirectedOrder.values()) {
             tagData = new Tag1029EnuCustDirectedOrder(oneEnum);
             assertEquals( "Tag1029EnuCustDirectedOrder\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

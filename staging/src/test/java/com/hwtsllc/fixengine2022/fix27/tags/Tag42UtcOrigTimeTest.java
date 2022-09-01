@@ -43,11 +43,11 @@ class Tag42UtcOrigTimeTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag42UtcOrigTime( new MyUTCTimestampType( oneElement ));
-            assertEquals( "FIX42_UTC_ORIG_TIME", tagData.toEnumLabelString());
+            assertEquals( "FIX42_UTC_ORIG_TIME", tagData.toFIXLabelString());
             assertEquals( "ORIG_TIME", tagData.toEnumNameString());
             assertEquals( "42", tagData.toEnumIDString());
             assertEquals( "OrigTime", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -78,7 +78,7 @@ class Tag42UtcOrigTimeTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag42UtcOrigTime( new MyUTCTimestampType( oneElement ));
             assertEquals( "Tag42UtcOrigTime\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

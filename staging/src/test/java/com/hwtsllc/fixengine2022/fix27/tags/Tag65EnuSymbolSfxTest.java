@@ -39,11 +39,11 @@ class Tag65EnuSymbolSfxTest {
         // loop around the ENUM and process
         for (MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
             tagData = new Tag65EnuSymbolSfx( oneEnum );
-            assertEquals( "FIX65_ENU_SYMBOL_SFX", tagData.toEnumLabelString());
+            assertEquals( "FIX65_ENU_SYMBOL_SFX", tagData.toFIXLabelString());
             assertEquals( "SYMBOL_SFX", tagData.toEnumNameString() );
             assertEquals( "65", tagData.toEnumIDString() );
             assertEquals( "SymbolSfx", tagData.toEnumDescriptionString() );
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString() );
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString() );
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString() );
@@ -89,7 +89,7 @@ class Tag65EnuSymbolSfxTest {
         for (MyEnumSymbolSfx oneEnum : MyEnumSymbolSfx.values()) {
             tagData = new Tag65EnuSymbolSfx(oneEnum);
             assertEquals( "Tag65EnuSymbolSfx\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

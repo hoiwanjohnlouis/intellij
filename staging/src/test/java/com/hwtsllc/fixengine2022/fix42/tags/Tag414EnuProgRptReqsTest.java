@@ -39,11 +39,11 @@ class Tag414EnuProgRptReqsTest {
         // loop around the ENUM and process
         for ( Enum414ProgRptReqs oneEnum : Enum414ProgRptReqs.values()) {
             tagData = new Tag414EnuProgRptReqs(oneEnum);
-            assertEquals( "FIX414_ENU_PROG_RPT_REQS", tagData.toEnumLabelString());
+            assertEquals( "FIX414_ENU_PROG_RPT_REQS", tagData.toFIXLabelString());
             assertEquals( "414", tagData.toEnumIDString());
             assertEquals( "PROG_RPT_REQS", tagData.toEnumNameString());
             assertEquals( "ProgRptReqs", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -99,7 +99,7 @@ class Tag414EnuProgRptReqsTest {
         for ( Enum414ProgRptReqs oneEnum : Enum414ProgRptReqs.values()) {
             tagData = new Tag414EnuProgRptReqs(oneEnum);
             assertEquals( "Tag414EnuProgRptReqs\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

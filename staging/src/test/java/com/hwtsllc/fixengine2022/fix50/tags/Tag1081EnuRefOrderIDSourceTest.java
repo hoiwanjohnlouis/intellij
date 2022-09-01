@@ -39,11 +39,11 @@ class Tag1081EnuRefOrderIDSourceTest {
         // loop around the ENUM and process
         for ( Enum1081RefOrderIDSource oneEnum : Enum1081RefOrderIDSource.values()) {
             tagData = new Tag1081EnuRefOrderIDSource(oneEnum);
-            assertEquals( "FIX1081_ENU_REF_ORDER_ID_SOURCE", tagData.toEnumLabelString());
+            assertEquals( "FIX1081_ENU_REF_ORDER_ID_SOURCE", tagData.toFIXLabelString());
             assertEquals( "1081", tagData.toEnumIDString());
             assertEquals( "REF_ORDER_ID_SOURCE", tagData.toEnumNameString());
             assertEquals( "RefOrderIDSource", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -101,7 +101,7 @@ class Tag1081EnuRefOrderIDSourceTest {
         for ( Enum1081RefOrderIDSource oneEnum : Enum1081RefOrderIDSource.values()) {
             tagData = new Tag1081EnuRefOrderIDSource(oneEnum);
             assertEquals( "Tag1081EnuRefOrderIDSource\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

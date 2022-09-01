@@ -43,11 +43,11 @@ class Tag623FloLegRatioQtyTest {
         // process array of tags
         for ( float oneElement : TestArray ) {
             tagData = new Tag623FloLegRatioQty( new MyFloatType( oneElement ));
-            assertEquals( "FIX623_FLO_LEG_RATIO_QTY", tagData.toEnumLabelString());
+            assertEquals( "FIX623_FLO_LEG_RATIO_QTY", tagData.toFIXLabelString());
             assertEquals( "623", tagData.toEnumIDString());
             assertEquals( "LEG_RATIO_QTY", tagData.toEnumNameString());
             assertEquals( "LegRatioQty", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag623FloLegRatioQtyTest {
         for ( float oneElement : TestArray ) {
             tagData = new Tag623FloLegRatioQty( new MyFloatType( oneElement ));
             assertEquals( "Tag623FloLegRatioQty\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

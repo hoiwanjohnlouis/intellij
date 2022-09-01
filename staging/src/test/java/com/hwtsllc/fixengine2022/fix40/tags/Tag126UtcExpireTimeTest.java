@@ -43,11 +43,11 @@ class Tag126UtcExpireTimeTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag126UtcExpireTime( new MyUTCTimestampType( oneElement ));
-            assertEquals( "FIX126_UTC_EXPIRE_TIME", tagData.toEnumLabelString());
+            assertEquals( "FIX126_UTC_EXPIRE_TIME", tagData.toFIXLabelString());
             assertEquals( "EXPIRE_TIME", tagData.toEnumNameString());
             assertEquals( "126", tagData.toEnumIDString());
             assertEquals( "ExpireTime", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag126UtcExpireTimeTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag126UtcExpireTime( new MyUTCTimestampType( oneElement ));
             assertEquals( "Tag126UtcExpireTime\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

@@ -66,7 +66,7 @@ class Enum281MDReqRejReasonTest {
         assertEquals( "0", enumType.toEnumIDString());
         assertEquals( "UNKNOWN_SYMBOL", enumType.toEnumNameString());
         assertEquals( "0 - Unknown Symbol", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -75,7 +75,7 @@ class Enum281MDReqRejReasonTest {
         assertEquals( "1", enumType.toEnumIDString());
         assertEquals( "DUPLICATE_MDREQID", enumType.toEnumNameString());
         assertEquals( "1 - Duplicate MDReqID", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Enum281MDReqRejReasonTest {
         assertEquals( "2", enumType.toEnumIDString());
         assertEquals( "INSUFFICIENT_BANDWIDTH", enumType.toEnumNameString());
         assertEquals( "2 - Insufficient Bandwidth", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -93,7 +93,7 @@ class Enum281MDReqRejReasonTest {
         assertEquals( "3", enumType.toEnumIDString());
         assertEquals( "INSUFFICIENT_PERMISSIONS", enumType.toEnumNameString());
         assertEquals( "3 - Insufficient Permissions", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -102,7 +102,7 @@ class Enum281MDReqRejReasonTest {
         assertEquals( "4", enumType.toEnumIDString());
         assertEquals( "UNSUPPORTED_SUBSCRIPTIONREQUESTTYPE", enumType.toEnumNameString());
         assertEquals( "4 - Unsupported SubscriptionRequestType", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -111,7 +111,7 @@ class Enum281MDReqRejReasonTest {
         assertEquals( "5", enumType.toEnumIDString());
         assertEquals( "UNSUPPORTED_MARKETDEPTH", enumType.toEnumNameString());
         assertEquals( "5 - Unsupported MarketDepth", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -120,7 +120,7 @@ class Enum281MDReqRejReasonTest {
         assertEquals( "6", enumType.toEnumIDString());
         assertEquals( "UNSUPPORTED_MDUPDATETYPE", enumType.toEnumNameString());
         assertEquals( "6 - Unsupported MDUpdateType", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -129,7 +129,7 @@ class Enum281MDReqRejReasonTest {
         assertEquals( "7", enumType.toEnumIDString());
         assertEquals( "UNSUPPORTED_AGGREGATEDBOOK", enumType.toEnumNameString());
         assertEquals( "7 - Unsupported AggregatedBook", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -138,7 +138,7 @@ class Enum281MDReqRejReasonTest {
         assertEquals( "8", enumType.toEnumIDString());
         assertEquals( "UNSUPPORTED_MDENTRYTYPE", enumType.toEnumNameString());
         assertEquals( "8 - Unsupported MDEntryType", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -147,7 +147,7 @@ class Enum281MDReqRejReasonTest {
         assertEquals( "9", enumType.toEnumIDString());
         assertEquals( "UNSUPPORTED_TRADINGSESSIONID", enumType.toEnumNameString());
         assertEquals( "9 - Unsupported TradingSessionID", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -160,7 +160,7 @@ class Enum281MDReqRejReasonTest {
         assertEquals( "A", enumType.toEnumIDString());
         assertEquals( "UNSUPPORTED_SCOPE", enumType.toEnumNameString());
         assertEquals( "A - Unsupported Scope", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -169,7 +169,7 @@ class Enum281MDReqRejReasonTest {
         assertEquals( "B", enumType.toEnumIDString());
         assertEquals( "UNSUPPORTED_OPENCLOSESETTLEFLAG", enumType.toEnumNameString());
         assertEquals( "B - Unsupported OpenCloseSettleFlag", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -178,7 +178,7 @@ class Enum281MDReqRejReasonTest {
         assertEquals( "C", enumType.toEnumIDString());
         assertEquals( "UNSUPPORTED_MDIMPLICITDELETE", enumType.toEnumNameString());
         assertEquals( "C - Unsupported MDImplicitDelete", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -187,7 +187,7 @@ class Enum281MDReqRejReasonTest {
         assertEquals( "D", enumType.toEnumIDString());
         assertEquals( "INSUFFICIENT_CREDIT", enumType.toEnumNameString());
         assertEquals( "D - Insufficient credit", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());

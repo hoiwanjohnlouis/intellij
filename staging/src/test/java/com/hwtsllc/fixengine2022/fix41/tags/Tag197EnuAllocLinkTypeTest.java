@@ -39,11 +39,11 @@ class Tag197EnuAllocLinkTypeTest {
         // loop around the ENUM and process
         for (Enum197AllocLinkType oneEnum : Enum197AllocLinkType.values()) {
             tagData = new Tag197EnuAllocLinkType(oneEnum);
-            assertEquals( "FIX197_ENU_ALLOC_LINK_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX197_ENU_ALLOC_LINK_TYPE", tagData.toFIXLabelString());
             assertEquals( "197", tagData.toEnumIDString());
             assertEquals( "ALLOC_LINK_TYPE", tagData.toEnumNameString());
             assertEquals( "AllocLinkType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -91,7 +91,7 @@ class Tag197EnuAllocLinkTypeTest {
         for (Enum197AllocLinkType oneEnum : Enum197AllocLinkType.values()) {
             tagData = new Tag197EnuAllocLinkType(oneEnum);
             assertEquals( "Tag197EnuAllocLinkType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

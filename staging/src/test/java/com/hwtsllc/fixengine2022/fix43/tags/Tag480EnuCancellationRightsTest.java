@@ -39,11 +39,11 @@ class Tag480EnuCancellationRightsTest {
         // loop around the ENUM and process
         for (Enum480CancellationRights oneEnum : Enum480CancellationRights.values()) {
             tagData = new Tag480EnuCancellationRights(oneEnum);
-            assertEquals( "FIX480_ENU_CANCELLATION_RIGHTS", tagData.toEnumLabelString());
+            assertEquals( "FIX480_ENU_CANCELLATION_RIGHTS", tagData.toFIXLabelString());
             assertEquals( "480", tagData.toEnumIDString());
             assertEquals( "CANCELLATION_RIGHTS", tagData.toEnumNameString());
             assertEquals( "CancellationRights", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -101,7 +101,7 @@ class Tag480EnuCancellationRightsTest {
         for (Enum480CancellationRights oneEnum : Enum480CancellationRights.values()) {
             tagData = new Tag480EnuCancellationRights(oneEnum);
             assertEquals( "Tag480EnuCancellationRights\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

@@ -43,11 +43,11 @@ class Tag887NumNoUnderlyingStipsTest {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag887NumNoUnderlyingStips( new MyNumInGroupType( oneElement ));
-            assertEquals( "FIX887_NUM_NO_UNDERLYING_STIPS", tagData.toEnumLabelString());
+            assertEquals( "FIX887_NUM_NO_UNDERLYING_STIPS", tagData.toFIXLabelString());
             assertEquals( "887", tagData.toEnumIDString());
             assertEquals( "NO_UNDERLYING_STIPS", tagData.toEnumNameString());
             assertEquals( "NoUnderlyingStips", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag887NumNoUnderlyingStipsTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag887NumNoUnderlyingStips( new MyNumInGroupType( oneElement ));
             assertEquals( "Tag887NumNoUnderlyingStips\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

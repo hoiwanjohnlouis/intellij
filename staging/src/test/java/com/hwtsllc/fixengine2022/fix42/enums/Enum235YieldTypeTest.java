@@ -85,7 +85,7 @@ class Enum235YieldTypeTest {
         assertEquals("AFTERTAX", enumType.toEnumIDString());
         assertEquals("AFTERTAX", enumType.toEnumNameString());
         assertEquals("AFTERTAX - After Tax Yield (Municipals)", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -94,7 +94,7 @@ class Enum235YieldTypeTest {
         assertEquals("ANNUAL", enumType.toEnumIDString());
         assertEquals("ANNUAL", enumType.toEnumNameString());
         assertEquals("ANNUAL - Annual Yield", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -103,7 +103,7 @@ class Enum235YieldTypeTest {
         assertEquals("ATISSUE", enumType.toEnumIDString());
         assertEquals("ATISSUE", enumType.toEnumNameString());
         assertEquals("ATISSUE - Yield At Issue (Municipals)", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -112,7 +112,7 @@ class Enum235YieldTypeTest {
         assertEquals("AVGMATURITY", enumType.toEnumIDString());
         assertEquals("AVGMATURITY", enumType.toEnumNameString());
         assertEquals("AVGMATURITY - Yield To Avg Maturity", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -121,7 +121,7 @@ class Enum235YieldTypeTest {
         assertEquals("BOOK", enumType.toEnumIDString());
         assertEquals("BOOK", enumType.toEnumNameString());
         assertEquals("BOOK - Book Yield", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -130,7 +130,7 @@ class Enum235YieldTypeTest {
         assertEquals("CALL", enumType.toEnumIDString());
         assertEquals("CALL", enumType.toEnumNameString());
         assertEquals("CALL - Yield to Next Call", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -139,7 +139,7 @@ class Enum235YieldTypeTest {
         assertEquals("CHANGE", enumType.toEnumIDString());
         assertEquals("CHANGE", enumType.toEnumNameString());
         assertEquals("CHANGE - Yield Change Since Close", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -148,7 +148,7 @@ class Enum235YieldTypeTest {
         assertEquals("CLOSE", enumType.toEnumIDString());
         assertEquals("CLOSE", enumType.toEnumNameString());
         assertEquals("CLOSE - Closing Yield", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -157,7 +157,7 @@ class Enum235YieldTypeTest {
         assertEquals("COMPOUND", enumType.toEnumIDString());
         assertEquals("COMPOUND", enumType.toEnumNameString());
         assertEquals("COMPOUND - Compound Yield", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -166,7 +166,7 @@ class Enum235YieldTypeTest {
         assertEquals("CURRENT", enumType.toEnumIDString());
         assertEquals("CURRENT", enumType.toEnumNameString());
         assertEquals("CURRENT - Current Yield", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -175,7 +175,7 @@ class Enum235YieldTypeTest {
         assertEquals("GOVTEQUIV", enumType.toEnumIDString());
         assertEquals("GOVTEQUIV", enumType.toEnumNameString());
         assertEquals("GOVTEQUIV - Gvnt Equivalent Yield", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -184,7 +184,7 @@ class Enum235YieldTypeTest {
         assertEquals("GROSS", enumType.toEnumIDString());
         assertEquals("GROSS", enumType.toEnumNameString());
         assertEquals("GROSS - True Gross Yield", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -193,7 +193,7 @@ class Enum235YieldTypeTest {
         assertEquals("INFLATION", enumType.toEnumIDString());
         assertEquals("INFLATION", enumType.toEnumNameString());
         assertEquals("INFLATION - Yield with Inflation Assumption", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -202,7 +202,7 @@ class Enum235YieldTypeTest {
         assertEquals("INVERSEFLOATER", enumType.toEnumIDString());
         assertEquals("INVERSEFLOATER", enumType.toEnumNameString());
         assertEquals("INVERSEFLOATER - Inverse Floater Bond Yield", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -211,7 +211,7 @@ class Enum235YieldTypeTest {
         assertEquals("LASTCLOSE", enumType.toEnumIDString());
         assertEquals("LASTCLOSE", enumType.toEnumNameString());
         assertEquals("LASTCLOSE - Most Recent Closing Yield", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -220,7 +220,7 @@ class Enum235YieldTypeTest {
         assertEquals("LASTMONTH", enumType.toEnumIDString());
         assertEquals("LASTMONTH", enumType.toEnumNameString());
         assertEquals("LASTMONTH - Closing Yield Most Recent Month", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -229,7 +229,7 @@ class Enum235YieldTypeTest {
         assertEquals("LASTQUARTER", enumType.toEnumIDString());
         assertEquals("LASTQUARTER", enumType.toEnumNameString());
         assertEquals("LASTQUARTER - Closing Yield Most Recent Quarter", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -238,7 +238,7 @@ class Enum235YieldTypeTest {
         assertEquals("LASTYEAR", enumType.toEnumIDString());
         assertEquals("LASTYEAR", enumType.toEnumNameString());
         assertEquals("LASTYEAR - Closing Yield Most Recent Year", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -247,7 +247,7 @@ class Enum235YieldTypeTest {
         assertEquals("LONGAVGLIFE", enumType.toEnumIDString());
         assertEquals("LONGAVGLIFE", enumType.toEnumNameString());
         assertEquals("LONGAVGLIFE - Yield to Longest Average Life", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -256,7 +256,7 @@ class Enum235YieldTypeTest {
         assertEquals("MARK", enumType.toEnumIDString());
         assertEquals("MARK", enumType.toEnumNameString());
         assertEquals("MARK - Mark to Market Yield", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -265,7 +265,7 @@ class Enum235YieldTypeTest {
         assertEquals("MATURITY", enumType.toEnumIDString());
         assertEquals("MATURITY", enumType.toEnumNameString());
         assertEquals("MATURITY - Yield to Maturity", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -274,7 +274,7 @@ class Enum235YieldTypeTest {
         assertEquals("NEXTREFUND", enumType.toEnumIDString());
         assertEquals("NEXTREFUND", enumType.toEnumNameString());
         assertEquals("NEXTREFUND - Yield to Next Refund (Sinking Fund Bonds)", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -283,7 +283,7 @@ class Enum235YieldTypeTest {
         assertEquals("OPENAVG", enumType.toEnumIDString());
         assertEquals("OPENAVG", enumType.toEnumNameString());
         assertEquals("OPENAVG - Open Average Yield", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -292,7 +292,7 @@ class Enum235YieldTypeTest {
         assertEquals("PREVCLOSE", enumType.toEnumIDString());
         assertEquals("PREVCLOSE", enumType.toEnumNameString());
         assertEquals("PREVCLOSE - Previous Close Yield", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -301,7 +301,7 @@ class Enum235YieldTypeTest {
         assertEquals("PROCEEDS", enumType.toEnumIDString());
         assertEquals("PROCEEDS", enumType.toEnumNameString());
         assertEquals("PROCEEDS - Proceeds Yield", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -310,7 +310,7 @@ class Enum235YieldTypeTest {
         assertEquals("PUT", enumType.toEnumIDString());
         assertEquals("PUT", enumType.toEnumNameString());
         assertEquals("PUT - Yield to Next Put", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -319,7 +319,7 @@ class Enum235YieldTypeTest {
         assertEquals("SEMIANNUAL", enumType.toEnumIDString());
         assertEquals("SEMIANNUAL", enumType.toEnumNameString());
         assertEquals("SEMIANNUAL - Semi-annual Yield", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -328,7 +328,7 @@ class Enum235YieldTypeTest {
         assertEquals("SHORTAVGLIFE", enumType.toEnumIDString());
         assertEquals("SHORTAVGLIFE", enumType.toEnumNameString());
         assertEquals("SHORTAVGLIFE - Yield to Shortest Average Life", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -337,7 +337,7 @@ class Enum235YieldTypeTest {
         assertEquals("SIMPLE", enumType.toEnumIDString());
         assertEquals("SIMPLE", enumType.toEnumNameString());
         assertEquals("SIMPLE - Simple Yield", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -346,7 +346,7 @@ class Enum235YieldTypeTest {
         assertEquals("TAXEQUIV", enumType.toEnumIDString());
         assertEquals("TAXEQUIV", enumType.toEnumNameString());
         assertEquals("TAXEQUIV - Tax Equivalent Yield", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -355,7 +355,7 @@ class Enum235YieldTypeTest {
         assertEquals("TENDER", enumType.toEnumIDString());
         assertEquals("TENDER", enumType.toEnumNameString());
         assertEquals("TENDER - Yield to Tender Date", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -364,7 +364,7 @@ class Enum235YieldTypeTest {
         assertEquals("TRUE", enumType.toEnumIDString());
         assertEquals("TRUE", enumType.toEnumNameString());
         assertEquals("TRUE - True Yield", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -373,7 +373,7 @@ class Enum235YieldTypeTest {
         assertEquals("VALUE1_32", enumType.toEnumIDString());
         assertEquals("VALUE1_32", enumType.toEnumNameString());
         assertEquals("VALUE1_32 - Yield Value Of 1/32", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -382,7 +382,7 @@ class Enum235YieldTypeTest {
         assertEquals("WORST", enumType.toEnumIDString());
         assertEquals("WORST", enumType.toEnumNameString());
         assertEquals("WORST - Yield To Worst", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());

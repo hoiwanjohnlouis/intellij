@@ -39,11 +39,11 @@ class Tag589EnuDayBookingInstTest {
         // loop around the ENUM and process
         for (Enum589DayBookingInst oneEnum : Enum589DayBookingInst.values()) {
             tagData = new Tag589EnuDayBookingInst(oneEnum);
-            assertEquals( "FIX589_ENU_DAY_BOOKING_INST", tagData.toEnumLabelString());
+            assertEquals( "FIX589_ENU_DAY_BOOKING_INST", tagData.toFIXLabelString());
             assertEquals( "589", tagData.toEnumIDString());
             assertEquals( "DAY_BOOKING_INST", tagData.toEnumNameString());
             assertEquals( "DayBookingInst", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -96,7 +96,7 @@ class Tag589EnuDayBookingInstTest {
         for (Enum589DayBookingInst oneEnum : Enum589DayBookingInst.values()) {
             tagData = new Tag589EnuDayBookingInst(oneEnum);
             assertEquals( "Tag589EnuDayBookingInst\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

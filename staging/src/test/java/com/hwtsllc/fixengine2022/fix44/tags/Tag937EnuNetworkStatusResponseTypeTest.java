@@ -39,11 +39,11 @@ class Tag937EnuNetworkStatusResponseTypeTest {
         // loop around the ENUM and process
         for ( Enum937NetworkStatusResponseType oneEnum : Enum937NetworkStatusResponseType.values()) {
             tagData = new Tag937EnuNetworkStatusResponseType(oneEnum);
-            assertEquals( "FIX937_ENU_NETWORK_STATUS_RESPONSE_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX937_ENU_NETWORK_STATUS_RESPONSE_TYPE", tagData.toFIXLabelString());
             assertEquals( "937", tagData.toEnumIDString());
             assertEquals( "NETWORK_STATUS_RESPONSE_TYPE", tagData.toEnumNameString());
             assertEquals( "NetworkStatusResponseType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -91,7 +91,7 @@ class Tag937EnuNetworkStatusResponseTypeTest {
         for ( Enum937NetworkStatusResponseType oneEnum : Enum937NetworkStatusResponseType.values()) {
             tagData = new Tag937EnuNetworkStatusResponseType(oneEnum);
             assertEquals( "Tag937EnuNetworkStatusResponseType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

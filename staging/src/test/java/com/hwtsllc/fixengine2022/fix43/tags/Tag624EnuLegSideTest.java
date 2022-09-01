@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyEnumSide;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag54EnuSide;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -40,11 +39,11 @@ class Tag624EnuLegSideTest {
         // loop around the ENUM and process
         for (MyEnumSide oneEnum : MyEnumSide.values()) {
             tagData = new Tag624EnuLegSide(oneEnum);
-            assertEquals( "FIX624_ENU_LEG_SIDE", tagData.toEnumLabelString());
+            assertEquals( "FIX624_ENU_LEG_SIDE", tagData.toFIXLabelString());
             assertEquals( "624", tagData.toEnumIDString());
             assertEquals( "LEG_SIDE", tagData.toEnumNameString());
             assertEquals( "LegSide", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -166,7 +165,7 @@ class Tag624EnuLegSideTest {
         for (MyEnumSide oneEnum : MyEnumSide.values()) {
             tagData = new Tag624EnuLegSide(oneEnum);
             assertEquals( "Tag624EnuLegSide\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

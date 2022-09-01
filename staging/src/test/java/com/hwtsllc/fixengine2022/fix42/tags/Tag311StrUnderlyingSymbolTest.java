@@ -43,11 +43,11 @@ class Tag311StrUnderlyingSymbolTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag311StrUnderlyingSymbol( new MyStringType( oneElement ));
-            assertEquals( "FIX311_STR_UNDERLYING_SYMBOL", tagData.toEnumLabelString());
+            assertEquals( "FIX311_STR_UNDERLYING_SYMBOL", tagData.toFIXLabelString());
             assertEquals( "311", tagData.toEnumIDString());
             assertEquals( "UNDERLYING_SYMBOL", tagData.toEnumNameString());
             assertEquals( "UnderlyingSymbol", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag311StrUnderlyingSymbolTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag311StrUnderlyingSymbol( new MyStringType( oneElement ));
             assertEquals( "Tag311StrUnderlyingSymbol\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

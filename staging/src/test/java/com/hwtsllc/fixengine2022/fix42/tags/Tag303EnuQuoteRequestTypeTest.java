@@ -39,11 +39,11 @@ class Tag303EnuQuoteRequestTypeTest {
         // loop around the ENUM and process
         for ( Enum303QuoteRequestType oneEnum : Enum303QuoteRequestType.values()) {
             tagData = new Tag303EnuQuoteRequestType(oneEnum);
-            assertEquals( "FIX303_ENU_QUOTE_REQUEST_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX303_ENU_QUOTE_REQUEST_TYPE", tagData.toFIXLabelString());
             assertEquals( "303", tagData.toEnumIDString());
             assertEquals( "QUOTE_REQUEST_TYPE", tagData.toEnumNameString());
             assertEquals( "QuoteRequestType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -92,7 +92,7 @@ class Tag303EnuQuoteRequestTypeTest {
         for ( Enum303QuoteRequestType oneEnum : Enum303QuoteRequestType.values()) {
             tagData = new Tag303EnuQuoteRequestType(oneEnum);
             assertEquals( "Tag303EnuQuoteRequestType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

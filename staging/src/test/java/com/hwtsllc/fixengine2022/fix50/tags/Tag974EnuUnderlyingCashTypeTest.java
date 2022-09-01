@@ -39,11 +39,11 @@ class Tag974EnuUnderlyingCashTypeTest {
         // loop around the ENUM and process
         for (Enum974UnderlyingCashType oneEnum : Enum974UnderlyingCashType.values()) {
             tagData = new Tag974EnuUnderlyingCashType(oneEnum);
-            assertEquals( "FIX974_ENU_UNDERLYING_CASH_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX974_ENU_UNDERLYING_CASH_TYPE", tagData.toFIXLabelString());
             assertEquals( "974", tagData.toEnumIDString());
             assertEquals( "UNDERLYING_CASH_TYPE", tagData.toEnumNameString());
             assertEquals( "UnderlyingCashType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -91,7 +91,7 @@ class Tag974EnuUnderlyingCashTypeTest {
         for (Enum974UnderlyingCashType oneEnum : Enum974UnderlyingCashType.values()) {
             tagData = new Tag974EnuUnderlyingCashType(oneEnum);
             assertEquals( "Tag974EnuUnderlyingCashType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

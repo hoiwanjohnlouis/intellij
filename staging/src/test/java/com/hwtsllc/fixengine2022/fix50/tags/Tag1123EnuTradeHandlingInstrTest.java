@@ -39,11 +39,11 @@ class Tag1123EnuTradeHandlingInstrTest {
         // loop around the ENUM and process
         for ( MyEnumTradeHandlingInstr oneEnum : MyEnumTradeHandlingInstr.values()) {
             tagData = new Tag1123EnuTradeHandlingInstr(oneEnum);
-            assertEquals( "FIX1123_ENU_TRADE_HANDLING_INSTR", tagData.toEnumLabelString());
+            assertEquals( "FIX1123_ENU_TRADE_HANDLING_INSTR", tagData.toFIXLabelString());
             assertEquals( "1123", tagData.toEnumIDString());
             assertEquals( "TRADE_HANDLING_INSTR", tagData.toEnumNameString());
             assertEquals( "TradeHandlingInstr", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -106,7 +106,7 @@ class Tag1123EnuTradeHandlingInstrTest {
         for ( MyEnumTradeHandlingInstr oneEnum : MyEnumTradeHandlingInstr.values()) {
             tagData = new Tag1123EnuTradeHandlingInstr(oneEnum);
             assertEquals( "Tag1123EnuTradeHandlingInstr\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

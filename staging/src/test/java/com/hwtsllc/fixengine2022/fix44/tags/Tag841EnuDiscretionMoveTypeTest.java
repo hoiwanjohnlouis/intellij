@@ -39,11 +39,11 @@ class Tag841EnuDiscretionMoveTypeTest {
         // loop around the ENUM and process
         for ( MyEnumMoveType oneEnum : MyEnumMoveType.values()) {
             tagData = new Tag841EnuDiscretionMoveType(oneEnum);
-            assertEquals( "FIX841_ENU_DISCRETION_MOVE_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX841_ENU_DISCRETION_MOVE_TYPE", tagData.toFIXLabelString());
             assertEquals( "841", tagData.toEnumIDString());
             assertEquals( "DISCRETION_MOVE_TYPE", tagData.toEnumNameString());
             assertEquals( "DiscretionMoveType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -91,7 +91,7 @@ class Tag841EnuDiscretionMoveTypeTest {
         for ( MyEnumMoveType oneEnum : MyEnumMoveType.values()) {
             tagData = new Tag841EnuDiscretionMoveType(oneEnum);
             assertEquals( "Tag841EnuDiscretionMoveType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

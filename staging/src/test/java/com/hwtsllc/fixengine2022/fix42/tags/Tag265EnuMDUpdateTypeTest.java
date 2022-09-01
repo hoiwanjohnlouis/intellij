@@ -39,11 +39,11 @@ class Tag265EnuMDUpdateTypeTest {
         // loop around the ENUM and process
         for ( Enum265MDUpdateType oneEnum : Enum265MDUpdateType.values()) {
             tagData = new Tag265EnuMDUpdateType(oneEnum);
-            assertEquals( "FIX265_ENU_MD_UPDATE_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX265_ENU_MD_UPDATE_TYPE", tagData.toFIXLabelString());
             assertEquals( "265", tagData.toEnumIDString());
             assertEquals( "MD_UPDATE_TYPE", tagData.toEnumNameString());
             assertEquals( "MDUpdateType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -91,7 +91,7 @@ class Tag265EnuMDUpdateTypeTest {
         for ( Enum265MDUpdateType oneEnum : Enum265MDUpdateType.values()) {
             tagData = new Tag265EnuMDUpdateType(oneEnum);
             assertEquals( "Tag265EnuMDUpdateType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

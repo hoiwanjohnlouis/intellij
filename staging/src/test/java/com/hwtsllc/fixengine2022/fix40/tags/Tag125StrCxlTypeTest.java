@@ -44,11 +44,11 @@ class Tag125StrCxlTypeTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag125StrCxlType( new MyStringType( oneElement ));
-            assertEquals( "FIX125_STR_CXL_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX125_STR_CXL_TYPE", tagData.toFIXLabelString());
             assertEquals( "CXL_TYPE", tagData.toEnumNameString());
             assertEquals( "125", tagData.toEnumIDString());
             assertEquals( "CxlType (no longer used)", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -85,7 +85,7 @@ class Tag125StrCxlTypeTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag125StrCxlType( new MyStringType( oneElement ));
             assertEquals( "Tag125StrCxlType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

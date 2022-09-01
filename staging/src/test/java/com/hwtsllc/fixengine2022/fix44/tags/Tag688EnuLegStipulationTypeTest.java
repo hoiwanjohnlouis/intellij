@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyEnumStipulationType;
-import com.hwtsllc.fixengine2022.fix42.tags.Tag233EnuStipulationType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -40,11 +39,11 @@ class Tag688EnuLegStipulationTypeTest {
         // loop around the ENUM and process
         for ( MyEnumStipulationType oneEnum : MyEnumStipulationType.values()) {
             tagData = new Tag688EnuLegStipulationType(oneEnum);
-            assertEquals( "FIX688_ENU_LEG_STIPULATION_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX688_ENU_LEG_STIPULATION_TYPE", tagData.toFIXLabelString());
             assertEquals( "688", tagData.toEnumIDString());
             assertEquals( "LEG_STIPULATION_TYPE", tagData.toEnumNameString());
             assertEquals( "LegStipulationType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -407,7 +406,7 @@ class Tag688EnuLegStipulationTypeTest {
         for ( MyEnumStipulationType oneEnum : MyEnumStipulationType.values()) {
             tagData = new Tag688EnuLegStipulationType(oneEnum);
             assertEquals( "Tag688EnuLegStipulationType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

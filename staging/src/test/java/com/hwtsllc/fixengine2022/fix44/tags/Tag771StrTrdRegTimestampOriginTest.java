@@ -43,11 +43,11 @@ class Tag771StrTrdRegTimestampOriginTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag771StrTrdRegTimestampOrigin( new MyStringType( oneElement ));
-            assertEquals( "FIX771_STR_TRD_REG_TIMESTAMP_ORIGIN", tagData.toEnumLabelString());
+            assertEquals( "FIX771_STR_TRD_REG_TIMESTAMP_ORIGIN", tagData.toFIXLabelString());
             assertEquals( "771", tagData.toEnumIDString());
             assertEquals( "TRD_REG_TIMESTAMP_ORIGIN", tagData.toEnumNameString());
             assertEquals( "TrdRegTimestampOrigin", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag771StrTrdRegTimestampOriginTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag771StrTrdRegTimestampOrigin( new MyStringType( oneElement ));
             assertEquals( "Tag771StrTrdRegTimestampOrigin\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

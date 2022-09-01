@@ -39,11 +39,11 @@ class Tag749EnuTradeRequestResultTest {
         // loop around the ENUM and process
         for ( Enum749TradeRequestResult oneEnum : Enum749TradeRequestResult.values()) {
             tagData = new Tag749EnuTradeRequestResult(oneEnum);
-            assertEquals( "FIX749_ENU_TRADE_REQUEST_RESULT", tagData.toEnumLabelString());
+            assertEquals( "FIX749_ENU_TRADE_REQUEST_RESULT", tagData.toFIXLabelString());
             assertEquals( "749", tagData.toEnumIDString());
             assertEquals( "TRADE_REQUEST_RESULT", tagData.toEnumNameString());
             assertEquals( "TradeRequestResult", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -131,7 +131,7 @@ class Tag749EnuTradeRequestResultTest {
         for ( Enum749TradeRequestResult oneEnum : Enum749TradeRequestResult.values()) {
             tagData = new Tag749EnuTradeRequestResult(oneEnum);
             assertEquals( "Tag749EnuTradeRequestResult\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

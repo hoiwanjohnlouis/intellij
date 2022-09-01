@@ -52,11 +52,11 @@ class Tag737AmtAllocSettlCurrAmtTest {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag737AmtAllocSettlCurrAmt( new MyAmtType( oneElement ));
-            assertEquals( "FIX737_AMT_ALLOC_SETTL_CURR_AMT", tagData.toEnumLabelString());
+            assertEquals( "FIX737_AMT_ALLOC_SETTL_CURR_AMT", tagData.toFIXLabelString());
             assertEquals( "737", tagData.toEnumIDString());
             assertEquals( "ALLOC_SETTL_CURR_AMT", tagData.toEnumNameString());
             assertEquals( "AllocSettlCurrAmt", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -87,7 +87,7 @@ class Tag737AmtAllocSettlCurrAmtTest {
         for ( double oneElement : TestArray ) {
             tagData = new Tag737AmtAllocSettlCurrAmt( new MyAmtType( oneElement ));
             assertEquals( "Tag737AmtAllocSettlCurrAmt\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

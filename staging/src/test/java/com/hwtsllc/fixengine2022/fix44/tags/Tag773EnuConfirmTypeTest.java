@@ -39,11 +39,11 @@ class Tag773EnuConfirmTypeTest {
         // loop around the ENUM and process
         for ( Enum773ConfirmType oneEnum : Enum773ConfirmType.values()) {
             tagData = new Tag773EnuConfirmType(oneEnum);
-            assertEquals( "FIX773_ENU_CONFIRM_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX773_ENU_CONFIRM_TYPE", tagData.toFIXLabelString());
             assertEquals( "773", tagData.toEnumIDString());
             assertEquals( "CONFIRM_TYPE", tagData.toEnumNameString());
             assertEquals( "ConfirmType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -96,7 +96,7 @@ class Tag773EnuConfirmTypeTest {
         for ( Enum773ConfirmType oneEnum : Enum773ConfirmType.values()) {
             tagData = new Tag773EnuConfirmType(oneEnum);
             assertEquals( "Tag773EnuConfirmType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

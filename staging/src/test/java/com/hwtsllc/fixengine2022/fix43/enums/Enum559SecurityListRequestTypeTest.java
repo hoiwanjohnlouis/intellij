@@ -51,7 +51,7 @@ class Enum559SecurityListRequestTypeTest {
         assertEquals("0", enumType.toEnumIDString());
         assertEquals("SYMBOL", enumType.toEnumNameString());
         assertEquals("0 - Symbol", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -60,7 +60,7 @@ class Enum559SecurityListRequestTypeTest {
         assertEquals("1", enumType.toEnumIDString());
         assertEquals("SECURITY_TYPE", enumType.toEnumNameString());
         assertEquals("1 - SecurityType and/or CFICode", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -69,7 +69,7 @@ class Enum559SecurityListRequestTypeTest {
         assertEquals("2", enumType.toEnumIDString());
         assertEquals("PRODUCT", enumType.toEnumNameString());
         assertEquals("2 - Product", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -78,7 +78,7 @@ class Enum559SecurityListRequestTypeTest {
         assertEquals("3", enumType.toEnumIDString());
         assertEquals("TRADING_SESSION_ID", enumType.toEnumNameString());
         assertEquals("3 - TradingSessionID", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -87,7 +87,7 @@ class Enum559SecurityListRequestTypeTest {
         assertEquals("4", enumType.toEnumIDString());
         assertEquals("ALL_SECURITIES", enumType.toEnumNameString());
         assertEquals("4 - All Securities", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());

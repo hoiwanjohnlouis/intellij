@@ -39,11 +39,11 @@ class Tag546EnuScopeTest {
         // loop around the ENUM and process
         for (Enum546Scope oneEnum : Enum546Scope.values()) {
             tagData = new Tag546EnuScope(oneEnum);
-            assertEquals( "FIX546_ENU_MARKET_SCOPE", tagData.toEnumLabelString());
+            assertEquals( "FIX546_ENU_MARKET_SCOPE", tagData.toFIXLabelString());
             assertEquals( "546", tagData.toEnumIDString());
             assertEquals( "MARKET_SCOPE", tagData.toEnumNameString());
             assertEquals( "MarketScope", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -96,7 +96,7 @@ class Tag546EnuScopeTest {
         for (Enum546Scope oneEnum : Enum546Scope.values()) {
             tagData = new Tag546EnuScope(oneEnum);
             assertEquals( "Tag546EnuScope\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

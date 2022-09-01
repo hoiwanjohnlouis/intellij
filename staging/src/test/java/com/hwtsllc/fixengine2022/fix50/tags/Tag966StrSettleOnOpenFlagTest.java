@@ -43,11 +43,11 @@ class Tag966StrSettleOnOpenFlagTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag966StrSettleOnOpenFlag( new MyStringType( oneElement ));
-            assertEquals( "FIX966_STR_SETTLE_ON_OPEN_FLAG", tagData.toEnumLabelString());
+            assertEquals( "FIX966_STR_SETTLE_ON_OPEN_FLAG", tagData.toFIXLabelString());
             assertEquals( "966", tagData.toEnumIDString());
             assertEquals( "SETTLE_ON_OPEN_FLAG", tagData.toEnumNameString());
             assertEquals( "SettleOnOpenFlag", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag966StrSettleOnOpenFlagTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag966StrSettleOnOpenFlag( new MyStringType( oneElement ));
             assertEquals( "Tag966StrSettleOnOpenFlag\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

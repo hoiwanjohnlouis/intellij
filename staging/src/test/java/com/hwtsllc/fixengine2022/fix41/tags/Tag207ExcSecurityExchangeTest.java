@@ -43,11 +43,11 @@ class Tag207ExcSecurityExchangeTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag207ExcSecurityExchange( new MyExchangeType( oneElement ));
-            assertEquals( "FIX207_EXC_SECURITY_EXCHANGE", tagData.toEnumLabelString());
+            assertEquals( "FIX207_EXC_SECURITY_EXCHANGE", tagData.toFIXLabelString());
             assertEquals( "207", tagData.toEnumIDString());
             assertEquals( "SECURITY_EXCHANGE", tagData.toEnumNameString());
             assertEquals( "SecurityExchange", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag207ExcSecurityExchangeTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag207ExcSecurityExchange( new MyExchangeType( oneElement ));
             assertEquals( "Tag207ExcSecurityExchange\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

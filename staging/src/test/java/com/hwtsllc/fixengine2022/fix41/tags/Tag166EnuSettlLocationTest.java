@@ -40,11 +40,11 @@ class Tag166EnuSettlLocationTest {
         // loop around the ENUM and process
         for (Enum166SettlLocation oneEnum : Enum166SettlLocation.values()) {
             tagData = new Tag166EnuSettlLocation(oneEnum);
-            assertEquals( "FIX166_ENU_SETTL_LOCATION", tagData.toEnumLabelString());
+            assertEquals( "FIX166_ENU_SETTL_LOCATION", tagData.toFIXLabelString());
             assertEquals( "166", tagData.toEnumIDString());
             assertEquals( "SETTL_LOCATION", tagData.toEnumNameString());
             assertEquals( "SettlLocation (replaced)", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -119,7 +119,7 @@ class Tag166EnuSettlLocationTest {
         for (Enum166SettlLocation oneEnum : Enum166SettlLocation.values()) {
             tagData = new Tag166EnuSettlLocation(oneEnum);
             assertEquals( "Tag166EnuSettlLocation\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

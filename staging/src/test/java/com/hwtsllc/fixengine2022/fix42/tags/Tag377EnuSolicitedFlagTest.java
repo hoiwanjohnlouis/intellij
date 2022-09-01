@@ -39,11 +39,11 @@ class Tag377EnuSolicitedFlagTest {
         // loop around the ENUM and process
         for ( Enum377SolicitedFlag oneEnum : Enum377SolicitedFlag.values()) {
             tagData = new Tag377EnuSolicitedFlag(oneEnum);
-            assertEquals( "FIX377_ENU_SOLICITED_FLAG", tagData.toEnumLabelString());
+            assertEquals( "FIX377_ENU_SOLICITED_FLAG", tagData.toFIXLabelString());
             assertEquals( "377", tagData.toEnumIDString());
             assertEquals( "SOLICITED_FLAG", tagData.toEnumNameString());
             assertEquals( "SolicitedFlag", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -91,7 +91,7 @@ class Tag377EnuSolicitedFlagTest {
         for ( Enum377SolicitedFlag oneEnum : Enum377SolicitedFlag.values()) {
             tagData = new Tag377EnuSolicitedFlag(oneEnum);
             assertEquals( "Tag377EnuSolicitedFlag\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

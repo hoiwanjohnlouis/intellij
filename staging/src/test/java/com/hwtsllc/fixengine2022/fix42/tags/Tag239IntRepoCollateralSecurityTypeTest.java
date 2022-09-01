@@ -43,11 +43,11 @@ class Tag239IntRepoCollateralSecurityTypeTest {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag239IntRepoCollateralSecurityType( new MyIntType( oneElement ));
-            assertEquals( "FIX239_INT_REPO_COLLATERAL_SECURITY_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX239_INT_REPO_COLLATERAL_SECURITY_TYPE", tagData.toFIXLabelString());
             assertEquals( "239", tagData.toEnumIDString());
             assertEquals( "REPO_COLLATERAL_SECURITY_TYPE", tagData.toEnumNameString());
             assertEquals( "RepoCollateralSecurityType (Deprecated)", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag239IntRepoCollateralSecurityTypeTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag239IntRepoCollateralSecurityType( new MyIntType( oneElement ));
             assertEquals( "Tag239IntRepoCollateralSecurityType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

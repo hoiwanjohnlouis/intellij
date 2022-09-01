@@ -39,11 +39,11 @@ class Tag844EnuDiscretionRoundDirectionTest {
         // loop around the ENUM and process
         for ( MyEnumRoundDirection oneEnum : MyEnumRoundDirection.values()) {
             tagData = new Tag844EnuDiscretionRoundDirection(oneEnum);
-            assertEquals( "FIX844_ENU_DISCRETION_ROUND_DIRECTION", tagData.toEnumLabelString());
+            assertEquals( "FIX844_ENU_DISCRETION_ROUND_DIRECTION", tagData.toFIXLabelString());
             assertEquals( "844", tagData.toEnumIDString());
             assertEquals( "DISCRETION_ROUND_DIRECTION", tagData.toEnumNameString());
             assertEquals( "DiscretionRoundDirection", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -93,7 +93,7 @@ class Tag844EnuDiscretionRoundDirectionTest {
         for ( MyEnumRoundDirection oneEnum : MyEnumRoundDirection.values()) {
             tagData = new Tag844EnuDiscretionRoundDirection(oneEnum);
             assertEquals( "Tag844EnuDiscretionRoundDirection\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

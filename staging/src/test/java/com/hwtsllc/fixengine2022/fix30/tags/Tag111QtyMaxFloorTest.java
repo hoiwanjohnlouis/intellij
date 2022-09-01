@@ -43,11 +43,11 @@ class Tag111QtyMaxFloorTest {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag111QtyMaxFloor( new MyQtyType( oneElement ));
-            assertEquals( "FIX111_QTY_MAX_FLOOR", tagData.toEnumLabelString());
+            assertEquals( "FIX111_QTY_MAX_FLOOR", tagData.toFIXLabelString());
             assertEquals( "MAX_FLOOR", tagData.toEnumNameString());
             assertEquals( "111", tagData.toEnumIDString());
             assertEquals( "MaxFloor", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag111QtyMaxFloorTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag111QtyMaxFloor( new MyQtyType( oneElement ));
             assertEquals( "Tag111QtyMaxFloor\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

@@ -44,11 +44,11 @@ class Tag251IntLegRepurchaseTermTest {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag251IntLegRepurchaseTerm( new MyIntType( oneElement ));
-            assertEquals( "FIX251_INT_LEG_REPURCHASE_TERM", tagData.toEnumLabelString());
+            assertEquals( "FIX251_INT_LEG_REPURCHASE_TERM", tagData.toFIXLabelString());
             assertEquals( "251", tagData.toEnumIDString());
             assertEquals( "LEG_REPURCHASE_TERM", tagData.toEnumNameString());
             assertEquals( "LegRepurchaseTerm (Deprecated)", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -85,7 +85,7 @@ class Tag251IntLegRepurchaseTermTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag251IntLegRepurchaseTerm( new MyIntType( oneElement ));
             assertEquals( "Tag251IntLegRepurchaseTerm\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

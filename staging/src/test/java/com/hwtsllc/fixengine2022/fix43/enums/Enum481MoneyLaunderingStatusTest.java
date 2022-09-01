@@ -48,7 +48,7 @@ class Enum481MoneyLaunderingStatusTest {
         assertEquals("Y", enumType.toEnumIDString());
         assertEquals("PASSED", enumType.toEnumNameString());
         assertEquals("Y - Passed", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -62,7 +62,7 @@ class Enum481MoneyLaunderingStatusTest {
         assertEquals("N", enumType.toEnumIDString());
         assertEquals("NOT_CHECKED", enumType.toEnumNameString());
         assertEquals("N - Not Checked", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -76,7 +76,7 @@ class Enum481MoneyLaunderingStatusTest {
         assertEquals("1", enumType.toEnumIDString());
         assertEquals("EXEMPT_BELOW_LIMIT", enumType.toEnumNameString());
         assertEquals("1 - Exempt - Below the Limit", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -85,7 +85,7 @@ class Enum481MoneyLaunderingStatusTest {
         assertEquals("2", enumType.toEnumIDString());
         assertEquals("EXEMPT_CLIENT_MONEY", enumType.toEnumNameString());
         assertEquals("2 - Exempt - Client Money Type exemption", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -94,7 +94,7 @@ class Enum481MoneyLaunderingStatusTest {
         assertEquals("3", enumType.toEnumIDString());
         assertEquals("EXEMPT_AUTHORISED", enumType.toEnumNameString());
         assertEquals("3 - Exempt - Authorised Credit or financial institution", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());

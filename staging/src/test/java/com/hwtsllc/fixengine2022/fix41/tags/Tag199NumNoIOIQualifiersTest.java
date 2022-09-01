@@ -43,11 +43,11 @@ class Tag199NumNoIOIQualifiersTest {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag199NumNoIOIQualifiers( new MyNumInGroupType( oneElement ));
-            assertEquals( "FIX199_NUM_NO_IOI_QUALIFIERS", tagData.toEnumLabelString());
+            assertEquals( "FIX199_NUM_NO_IOI_QUALIFIERS", tagData.toFIXLabelString());
             assertEquals( "199", tagData.toEnumIDString());
             assertEquals( "NO_IOI_QUALIFIERS", tagData.toEnumNameString());
             assertEquals( "NoIOIQualifiers", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag199NumNoIOIQualifiersTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag199NumNoIOIQualifiers( new MyNumInGroupType( oneElement ));
             assertEquals( "Tag199NumNoIOIQualifiers\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

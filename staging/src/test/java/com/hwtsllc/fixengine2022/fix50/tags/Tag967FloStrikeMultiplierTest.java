@@ -43,11 +43,11 @@ class Tag967FloStrikeMultiplierTest {
         // process array of tags
         for ( float oneElement : TestArray ) {
             tagData = new Tag967FloStrikeMultiplier( new MyFloatType( oneElement ));
-            assertEquals( "FIX967_FLO_STRIKE_MULTIPLIER", tagData.toEnumLabelString());
+            assertEquals( "FIX967_FLO_STRIKE_MULTIPLIER", tagData.toFIXLabelString());
             assertEquals( "967", tagData.toEnumIDString());
             assertEquals( "STRIKE_MULTIPLIER", tagData.toEnumNameString());
             assertEquals( "StrikeMultiplier", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag967FloStrikeMultiplierTest {
         for ( float oneElement : TestArray ) {
             tagData = new Tag967FloStrikeMultiplier( new MyFloatType( oneElement ));
             assertEquals( "Tag967FloStrikeMultiplier\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

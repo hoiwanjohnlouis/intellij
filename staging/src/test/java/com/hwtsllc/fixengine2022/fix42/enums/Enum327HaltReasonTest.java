@@ -52,7 +52,7 @@ class Enum327HaltReasonTest {
         assertEquals( "D", enumType.toEnumIDString());
         assertEquals( "NEWS_DISSEMINATION", enumType.toEnumNameString());
         assertEquals( "D - News Dissemination", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -61,7 +61,7 @@ class Enum327HaltReasonTest {
         assertEquals( "E", enumType.toEnumIDString());
         assertEquals( "ORDER_INFLUX", enumType.toEnumNameString());
         assertEquals( "E - Order Influx", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -70,7 +70,7 @@ class Enum327HaltReasonTest {
         assertEquals( "I", enumType.toEnumIDString());
         assertEquals( "ORDER_IMBALANCE", enumType.toEnumNameString());
         assertEquals( "I - Order Imbalance", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -79,7 +79,7 @@ class Enum327HaltReasonTest {
         assertEquals( "M", enumType.toEnumIDString());
         assertEquals( "ADDITIONAL_INFORMATION", enumType.toEnumNameString());
         assertEquals( "M - Additional Information", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -88,7 +88,7 @@ class Enum327HaltReasonTest {
         assertEquals( "P", enumType.toEnumIDString());
         assertEquals( "NEW_PENDING", enumType.toEnumNameString());
         assertEquals( "P - New Pending", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -98,7 +98,7 @@ class Enum327HaltReasonTest {
         assertEquals( "X", enumType.toEnumIDString());
         assertEquals( "EQUIPMENT_CHANGE_OVER", enumType.toEnumNameString());
         assertEquals( "X - Equipment Changeover", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());

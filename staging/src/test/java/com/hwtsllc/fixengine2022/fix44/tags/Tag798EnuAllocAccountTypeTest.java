@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyEnumAccountType;
-import com.hwtsllc.fixengine2022.fix43.tags.Tag581EnuAccountType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -40,11 +39,11 @@ class Tag798EnuAllocAccountTypeTest {
         // loop around the ENUM and process
         for ( MyEnumAccountType oneEnum : MyEnumAccountType.values()) {
             tagData = new Tag798EnuAllocAccountType(oneEnum);
-            assertEquals( "FIX798_ENU_ALLOC_ACCOUNT_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX798_ENU_ALLOC_ACCOUNT_TYPE", tagData.toFIXLabelString());
             assertEquals( "798", tagData.toEnumIDString());
             assertEquals( "ALLOC_ACCOUNT_TYPE", tagData.toEnumNameString());
             assertEquals( "AllocAccountType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -119,7 +118,7 @@ class Tag798EnuAllocAccountTypeTest {
         for ( MyEnumAccountType oneEnum : MyEnumAccountType.values()) {
             tagData = new Tag798EnuAllocAccountType(oneEnum);
             assertEquals( "Tag798EnuAllocAccountType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

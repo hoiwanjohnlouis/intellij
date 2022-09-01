@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyEnumMsgType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag35EnuMsgType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -40,11 +39,11 @@ class Tag372EnuRefMsgTypeTest {
         // loop around the ENUM and process
         for ( MyEnumMsgType oneEnum : MyEnumMsgType.values()) {
             tagData = new Tag372EnuRefMsgType(oneEnum);
-            assertEquals( "FIX372_ENU_REF_MSG_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX372_ENU_REF_MSG_TYPE", tagData.toFIXLabelString());
             assertEquals( "372", tagData.toEnumIDString());
             assertEquals( "REF_MSG_TYPE", tagData.toEnumNameString());
             assertEquals( "RefMsgType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -638,7 +637,7 @@ class Tag372EnuRefMsgTypeTest {
         for ( MyEnumMsgType oneEnum : MyEnumMsgType.values()) {
             tagData = new Tag372EnuRefMsgType(oneEnum);
             assertEquals( "Tag372EnuRefMsgType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

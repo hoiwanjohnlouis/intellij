@@ -43,11 +43,11 @@ class Tag1110PrcTriggerNewPriceTest {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag1110PrcTriggerNewPrice( new MyPriceType( oneElement ));
-            assertEquals( "FIX1110_PRC_TRIGGER_NEW_PRICE", tagData.toEnumLabelString());
+            assertEquals( "FIX1110_PRC_TRIGGER_NEW_PRICE", tagData.toFIXLabelString());
             assertEquals( "1110", tagData.toEnumIDString());
             assertEquals( "TRIGGER_NEW_PRICE", tagData.toEnumNameString());
             assertEquals( "TriggerNewPrice", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag1110PrcTriggerNewPriceTest {
         for ( double oneElement : TestArray ) {
             tagData = new Tag1110PrcTriggerNewPrice( new MyPriceType( oneElement ));
             assertEquals( "Tag1110PrcTriggerNewPrice\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

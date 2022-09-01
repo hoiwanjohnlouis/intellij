@@ -39,11 +39,11 @@ class Tag842EnuDiscretionOffsetTypeTest {
         // loop around the ENUM and process
         for ( MyEnumOffsetType oneEnum : MyEnumOffsetType.values()) {
             tagData = new Tag842EnuDiscretionOffsetType(oneEnum);
-            assertEquals( "FIX842_ENU_DISCRETION_OFFSET_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX842_ENU_DISCRETION_OFFSET_TYPE", tagData.toFIXLabelString());
             assertEquals( "842", tagData.toEnumIDString());
             assertEquals( "DISCRETION_OFFSET_TYPE", tagData.toEnumNameString());
             assertEquals( "DiscretionOffsetType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -101,7 +101,7 @@ class Tag842EnuDiscretionOffsetTypeTest {
         for ( MyEnumOffsetType oneEnum : MyEnumOffsetType.values()) {
             tagData = new Tag842EnuDiscretionOffsetType(oneEnum);
             assertEquals( "Tag842EnuDiscretionOffsetType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

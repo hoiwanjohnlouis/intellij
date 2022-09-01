@@ -39,11 +39,11 @@ class Tag468EnuRoundingDirectionTest {
         // loop around the ENUM and process
         for (Enum468RoundingDirection oneEnum : Enum468RoundingDirection.values()) {
             tagData = new Tag468EnuRoundingDirection(oneEnum);
-            assertEquals( "FIX468_ENU_ROUNDING_DIRECTION", tagData.toEnumLabelString());
+            assertEquals( "FIX468_ENU_ROUNDING_DIRECTION", tagData.toFIXLabelString());
             assertEquals( "468", tagData.toEnumIDString());
             assertEquals( "ROUNDING_DIRECTION", tagData.toEnumNameString());
             assertEquals( "RoundingDirection", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -96,7 +96,7 @@ class Tag468EnuRoundingDirectionTest {
         for (Enum468RoundingDirection oneEnum : Enum468RoundingDirection.values()) {
             tagData = new Tag468EnuRoundingDirection(oneEnum);
             assertEquals( "Tag468EnuRoundingDirection\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

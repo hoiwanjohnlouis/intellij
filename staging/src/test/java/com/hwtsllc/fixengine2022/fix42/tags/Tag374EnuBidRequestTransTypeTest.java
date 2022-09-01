@@ -39,11 +39,11 @@ class Tag374EnuBidRequestTransTypeTest {
         // loop around the ENUM and process
         for ( Enum374BidRequestTransType oneEnum : Enum374BidRequestTransType.values()) {
             tagData = new Tag374EnuBidRequestTransType(oneEnum);
-            assertEquals( "FIX374_ENU_BID_REQUEST_TRANS_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX374_ENU_BID_REQUEST_TRANS_TYPE", tagData.toFIXLabelString());
             assertEquals( "374", tagData.toEnumIDString());
             assertEquals( "BID_REQUEST_TRANS_TYPE", tagData.toEnumNameString());
             assertEquals( "BidRequestTransType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -93,7 +93,7 @@ class Tag374EnuBidRequestTransTypeTest {
         for ( Enum374BidRequestTransType oneEnum : Enum374BidRequestTransType.values()) {
             tagData = new Tag374EnuBidRequestTransType(oneEnum);
             assertEquals( "Tag374EnuBidRequestTransType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

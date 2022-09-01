@@ -43,11 +43,11 @@ class Tag634PctOfferYieldTest {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag634PctOfferYield( new MyPercentageType( oneElement ));
-            assertEquals( "FIX634_PCT_OFFER_YIELD", tagData.toEnumLabelString());
+            assertEquals( "FIX634_PCT_OFFER_YIELD", tagData.toFIXLabelString());
             assertEquals( "634", tagData.toEnumIDString());
             assertEquals( "OFFER_YIELD", tagData.toEnumNameString());
             assertEquals( "OfferYield", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag634PctOfferYieldTest {
         for ( double oneElement : TestArray ) {
             tagData = new Tag634PctOfferYield( new MyPercentageType( oneElement ));
             assertEquals( "Tag634PctOfferYield\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyLengthType;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag95LenRawDataLength;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -44,11 +43,11 @@ class Tag360LenEncodedAllocTextLenTest {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag360LenEncodedAllocTextLen( new MyLengthType( oneElement ));
-            assertEquals( "FIX360_LEN_ENCODED_ALLOC_TEXT_LEN", tagData.toEnumLabelString());
+            assertEquals( "FIX360_LEN_ENCODED_ALLOC_TEXT_LEN", tagData.toFIXLabelString());
             assertEquals( "360", tagData.toEnumIDString());
             assertEquals( "ENCODED_ALLOC_TEXT_LEN", tagData.toEnumNameString());
             assertEquals( "EncodedAllocTextLen", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -85,7 +84,7 @@ class Tag360LenEncodedAllocTextLenTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag360LenEncodedAllocTextLen( new MyLengthType( oneElement ));
             assertEquals( "Tag360LenEncodedAllocTextLen\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

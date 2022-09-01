@@ -43,11 +43,11 @@ class Tag1089QtyMatchIncrementTest {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag1089QtyMatchIncrement( new MyQtyType( oneElement ));
-            assertEquals( "FIX1089_QTY_MATCH_INCREMENT", tagData.toEnumLabelString());
+            assertEquals( "FIX1089_QTY_MATCH_INCREMENT", tagData.toFIXLabelString());
             assertEquals( "1089", tagData.toEnumIDString());
             assertEquals( "MATCH_INCREMENT", tagData.toEnumNameString());
             assertEquals( "MatchIncrement", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag1089QtyMatchIncrementTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag1089QtyMatchIncrement( new MyQtyType( oneElement ));
             assertEquals( "Tag1089QtyMatchIncrement\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

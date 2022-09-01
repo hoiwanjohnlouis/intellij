@@ -39,11 +39,11 @@ class Tag104EnuIOIQualifierTest {
         // loop around the ENUM and process
         for ( MyEnumQualifier oneEnum : MyEnumQualifier.values()) {
             tagData = new Tag104EnuIOIQualifier( oneEnum );
-            assertEquals( "FIX104_ENU_IOI_QUALIFIER", tagData.toEnumLabelString());
+            assertEquals( "FIX104_ENU_IOI_QUALIFIER", tagData.toFIXLabelString());
             assertEquals( "IOI_QUALIFIER", tagData.toEnumNameString());
             assertEquals( "104", tagData.toEnumIDString());
             assertEquals( "IOIQualifier", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -177,7 +177,7 @@ class Tag104EnuIOIQualifierTest {
         for (MyEnumQualifier oneEnum : MyEnumQualifier.values()) {
             tagData = new Tag104EnuIOIQualifier(oneEnum);
             assertEquals( "Tag104EnuIOIQualifier\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

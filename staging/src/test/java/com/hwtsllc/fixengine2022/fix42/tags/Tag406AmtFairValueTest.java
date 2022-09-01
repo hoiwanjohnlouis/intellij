@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
-import com.hwtsllc.fixengine2022.fix40.tags.Tag118AmtNetMoney;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -44,11 +43,11 @@ class Tag406AmtFairValueTest {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag406AmtFairValue( new MyAmtType( oneElement ));
-            assertEquals( "FIX406_AMT_FAIR_VALUE", tagData.toEnumLabelString());
+            assertEquals( "FIX406_AMT_FAIR_VALUE", tagData.toFIXLabelString());
             assertEquals( "406", tagData.toEnumIDString());
             assertEquals( "FAIR_VALUE", tagData.toEnumNameString());
             assertEquals( "FairValue", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -85,7 +84,7 @@ class Tag406AmtFairValueTest {
         for ( double oneElement : TestArray ) {
             tagData = new Tag406AmtFairValue( new MyAmtType( oneElement ));
             assertEquals( "Tag406AmtFairValue\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

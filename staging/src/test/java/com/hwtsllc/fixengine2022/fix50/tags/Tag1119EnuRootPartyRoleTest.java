@@ -139,11 +139,11 @@ class Tag1119EnuRootPartyRoleTest {
         // loop around the ENUM and process
         for ( MyEnumPartyRole oneEnum : MyEnumPartyRole.values()) {
             tagData = new Tag1119EnuRootPartyRole(oneEnum);
-            assertEquals( "FIX1119_ENU_ROOT_PARTY_ROLE", tagData.toEnumLabelString());
+            assertEquals( "FIX1119_ENU_ROOT_PARTY_ROLE", tagData.toFIXLabelString());
             assertEquals( "1119", tagData.toEnumIDString());
             assertEquals( "ROOT_PARTY_ROLE", tagData.toEnumNameString());
             assertEquals( "RootPartyRole", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -605,7 +605,7 @@ class Tag1119EnuRootPartyRoleTest {
         for ( MyEnumPartyRole oneEnum : MyEnumPartyRole.values()) {
             tagData = new Tag1119EnuRootPartyRole(oneEnum);
             assertEquals( "Tag1119EnuRootPartyRole\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

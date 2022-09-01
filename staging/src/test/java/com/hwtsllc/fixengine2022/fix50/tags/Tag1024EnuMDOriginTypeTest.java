@@ -39,11 +39,11 @@ class Tag1024EnuMDOriginTypeTest {
         // loop around the ENUM and process
         for ( Enum1024MDOriginType oneEnum : Enum1024MDOriginType.values()) {
             tagData = new Tag1024EnuMDOriginType(oneEnum);
-            assertEquals( "FIX1024_ENU_MD_ORIGIN_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX1024_ENU_MD_ORIGIN_TYPE", tagData.toFIXLabelString());
             assertEquals( "1024", tagData.toEnumIDString());
             assertEquals( "MD_ORIGIN_TYPE", tagData.toEnumNameString());
             assertEquals( "MDOriginType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -96,7 +96,7 @@ class Tag1024EnuMDOriginTypeTest {
         for ( Enum1024MDOriginType oneEnum : Enum1024MDOriginType.values()) {
             tagData = new Tag1024EnuMDOriginType(oneEnum);
             assertEquals( "Tag1024EnuMDOriginType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

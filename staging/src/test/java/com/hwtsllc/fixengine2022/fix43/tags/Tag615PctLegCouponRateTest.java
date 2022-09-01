@@ -43,11 +43,11 @@ class Tag615PctLegCouponRateTest {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag615PctLegCouponRate( new MyPercentageType( oneElement ));
-            assertEquals( "FIX615_PCT_LEG_COUPON_RATE", tagData.toEnumLabelString());
+            assertEquals( "FIX615_PCT_LEG_COUPON_RATE", tagData.toFIXLabelString());
             assertEquals( "615", tagData.toEnumIDString());
             assertEquals( "LEG_COUPON_RATE", tagData.toEnumNameString());
             assertEquals( "LegCouponRate", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag615PctLegCouponRateTest {
         for ( double oneElement : TestArray ) {
             tagData = new Tag615PctLegCouponRate( new MyPercentageType( oneElement ));
             assertEquals( "Tag615PctLegCouponRate\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

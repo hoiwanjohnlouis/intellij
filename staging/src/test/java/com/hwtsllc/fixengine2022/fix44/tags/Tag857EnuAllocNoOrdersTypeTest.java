@@ -39,11 +39,11 @@ class Tag857EnuAllocNoOrdersTypeTest {
         // loop around the ENUM and process
         for ( Enum857AllocNoOrdersType oneEnum : Enum857AllocNoOrdersType.values()) {
             tagData = new Tag857EnuAllocNoOrdersType(oneEnum);
-            assertEquals( "FIX857_ENU_ALLOC_NO_ORDERS_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX857_ENU_ALLOC_NO_ORDERS_TYPE", tagData.toFIXLabelString());
             assertEquals( "857", tagData.toEnumIDString());
             assertEquals( "ALLOC_NO_ORDERS_TYPE", tagData.toEnumNameString());
             assertEquals( "AllocNoOrdersType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -91,7 +91,7 @@ class Tag857EnuAllocNoOrdersTypeTest {
         for ( Enum857AllocNoOrdersType oneEnum : Enum857AllocNoOrdersType.values()) {
             tagData = new Tag857EnuAllocNoOrdersType(oneEnum);
             assertEquals( "Tag857EnuAllocNoOrdersType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

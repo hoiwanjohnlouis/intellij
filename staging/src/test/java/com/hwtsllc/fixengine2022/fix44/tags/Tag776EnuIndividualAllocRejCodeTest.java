@@ -39,11 +39,11 @@ class Tag776EnuIndividualAllocRejCodeTest {
         // loop around the ENUM and process
         for ( MyEnumAllocRejCode oneEnum : MyEnumAllocRejCode.values()) {
             tagData = new Tag776EnuIndividualAllocRejCode(oneEnum);
-            assertEquals( "FIX776_ENU_INDIVIDUAL_ALLOC_REJ_CODE", tagData.toEnumLabelString());
+            assertEquals( "FIX776_ENU_INDIVIDUAL_ALLOC_REJ_CODE", tagData.toFIXLabelString());
             assertEquals( "776", tagData.toEnumIDString());
             assertEquals( "INDIVIDUAL_ALLOC_REJ_CODE", tagData.toEnumNameString());
             assertEquals( "IndividualAllocRejCode", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -153,7 +153,7 @@ class Tag776EnuIndividualAllocRejCodeTest {
         for ( MyEnumAllocRejCode oneEnum : MyEnumAllocRejCode.values()) {
             tagData = new Tag776EnuIndividualAllocRejCode(oneEnum);
             assertEquals( "Tag776EnuIndividualAllocRejCode\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

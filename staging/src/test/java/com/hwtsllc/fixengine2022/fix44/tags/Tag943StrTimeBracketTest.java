@@ -43,11 +43,11 @@ class Tag943StrTimeBracketTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag943StrTimeBracket( new MyStringType( oneElement ));
-            assertEquals( "FIX943_STR_TIME_BRACKET", tagData.toEnumLabelString());
+            assertEquals( "FIX943_STR_TIME_BRACKET", tagData.toFIXLabelString());
             assertEquals( "943", tagData.toEnumIDString());
             assertEquals( "TIME_BRACKET", tagData.toEnumNameString());
             assertEquals( "TimeBracket", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag943StrTimeBracketTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag943StrTimeBracket( new MyStringType( oneElement ));
             assertEquals( "Tag943StrTimeBracket\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

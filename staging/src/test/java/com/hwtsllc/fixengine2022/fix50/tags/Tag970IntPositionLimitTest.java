@@ -43,11 +43,11 @@ class Tag970IntPositionLimitTest {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag970IntPositionLimit( new MyIntType( oneElement ));
-            assertEquals( "FIX970_INT_POSITION_LIMIT", tagData.toEnumLabelString());
+            assertEquals( "FIX970_INT_POSITION_LIMIT", tagData.toFIXLabelString());
             assertEquals( "970", tagData.toEnumIDString());
             assertEquals( "POSITION_LIMIT", tagData.toEnumNameString());
             assertEquals( "PositionLimit", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag970IntPositionLimitTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag970IntPositionLimit( new MyIntType( oneElement ));
             assertEquals( "Tag970IntPositionLimit\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

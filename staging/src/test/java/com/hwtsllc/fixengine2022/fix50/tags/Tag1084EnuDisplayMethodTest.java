@@ -39,11 +39,11 @@ class Tag1084EnuDisplayMethodTest {
         // loop around the ENUM and process
         for ( Enum1084DisplayMethod oneEnum : Enum1084DisplayMethod.values()) {
             tagData = new Tag1084EnuDisplayMethod(oneEnum);
-            assertEquals( "FIX1084_ENU_DISPLAY_METHOD", tagData.toEnumLabelString());
+            assertEquals( "FIX1084_ENU_DISPLAY_METHOD", tagData.toFIXLabelString());
             assertEquals( "1084", tagData.toEnumIDString());
             assertEquals( "DISPLAY_METHOD", tagData.toEnumNameString());
             assertEquals( "DisplayMethod", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -96,7 +96,7 @@ class Tag1084EnuDisplayMethodTest {
         for ( Enum1084DisplayMethod oneEnum : Enum1084DisplayMethod.values()) {
             tagData = new Tag1084EnuDisplayMethod(oneEnum);
             assertEquals( "Tag1084EnuDisplayMethod\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

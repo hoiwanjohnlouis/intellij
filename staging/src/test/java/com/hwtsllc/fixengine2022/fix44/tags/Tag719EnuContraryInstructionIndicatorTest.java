@@ -39,11 +39,11 @@ class Tag719EnuContraryInstructionIndicatorTest {
         // loop around the ENUM and process
         for ( Enum719ContraryInstructionIndicator oneEnum : Enum719ContraryInstructionIndicator.values()) {
             tagData = new Tag719EnuContraryInstructionIndicator(oneEnum);
-            assertEquals( "FIX719_ENU_CONTRARY_INSTRUCTION_INDICATOR", tagData.toEnumLabelString());
+            assertEquals( "FIX719_ENU_CONTRARY_INSTRUCTION_INDICATOR", tagData.toFIXLabelString());
             assertEquals( "719", tagData.toEnumIDString());
             assertEquals( "CONTRARY_INSTRUCTION_INDICATOR", tagData.toEnumNameString());
             assertEquals( "ContraryInstructionIndicator", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -91,7 +91,7 @@ class Tag719EnuContraryInstructionIndicatorTest {
         for ( Enum719ContraryInstructionIndicator oneEnum : Enum719ContraryInstructionIndicator.values()) {
             tagData = new Tag719EnuContraryInstructionIndicator(oneEnum);
             assertEquals( "Tag719EnuContraryInstructionIndicator\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

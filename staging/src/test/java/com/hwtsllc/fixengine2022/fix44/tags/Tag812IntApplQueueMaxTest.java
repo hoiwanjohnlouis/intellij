@@ -43,11 +43,11 @@ class Tag812IntApplQueueMaxTest {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag812IntApplQueueMax( new MyIntType( oneElement ));
-            assertEquals( "FIX812_INT_APPL_QUEUE_MAX", tagData.toEnumLabelString());
+            assertEquals( "FIX812_INT_APPL_QUEUE_MAX", tagData.toFIXLabelString());
             assertEquals( "812", tagData.toEnumIDString());
             assertEquals( "APPL_QUEUE_MAX", tagData.toEnumNameString());
             assertEquals( "ApplQueueMax", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag812IntApplQueueMaxTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag812IntApplQueueMax( new MyIntType( oneElement ));
             assertEquals( "Tag812IntApplQueueMax\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

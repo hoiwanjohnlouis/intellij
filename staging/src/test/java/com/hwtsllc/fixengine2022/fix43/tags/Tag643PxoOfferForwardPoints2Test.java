@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.datatypes.MyPriceOffsetType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -53,11 +52,11 @@ class Tag643PxoOfferForwardPoints2Test {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag643PxoOfferForwardPoints2( new MyPriceOffsetType( oneElement ));
-            assertEquals( "FIX643_PXO_OFFER_FORWARD_POINTS_2", tagData.toEnumLabelString());
+            assertEquals( "FIX643_PXO_OFFER_FORWARD_POINTS_2", tagData.toFIXLabelString());
             assertEquals( "643", tagData.toEnumIDString());
             assertEquals( "OFFER_FORWARD_POINTS_2", tagData.toEnumNameString());
             assertEquals( "OfferForwardPoints2", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -94,7 +93,7 @@ class Tag643PxoOfferForwardPoints2Test {
         for ( double oneElement : TestArray ) {
             tagData = new Tag643PxoOfferForwardPoints2( new MyPriceOffsetType( oneElement ));
             assertEquals( "Tag643PxoOfferForwardPoints2\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

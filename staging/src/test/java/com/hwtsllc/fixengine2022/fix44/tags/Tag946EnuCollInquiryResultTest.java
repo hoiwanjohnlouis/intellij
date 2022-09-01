@@ -39,11 +39,11 @@ class Tag946EnuCollInquiryResultTest {
         // loop around the ENUM and process
         for ( Enum946CollInquiryResult oneEnum : Enum946CollInquiryResult.values()) {
             tagData = new Tag946EnuCollInquiryResult(oneEnum);
-            assertEquals( "FIX946_ENU_COLL_INQUIRY_RESULT", tagData.toEnumLabelString());
+            assertEquals( "FIX946_ENU_COLL_INQUIRY_RESULT", tagData.toFIXLabelString());
             assertEquals( "946", tagData.toEnumIDString());
             assertEquals( "COLL_INQUIRY_RESULT", tagData.toEnumNameString());
             assertEquals( "CollInquiryResult", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -141,7 +141,7 @@ class Tag946EnuCollInquiryResultTest {
         for ( Enum946CollInquiryResult oneEnum : Enum946CollInquiryResult.values()) {
             tagData = new Tag946EnuCollInquiryResult(oneEnum);
             assertEquals( "Tag946EnuCollInquiryResult\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

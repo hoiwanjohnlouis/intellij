@@ -43,11 +43,11 @@ class Tag1013IntSideTrdRegTimestampTypeTest {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag1013IntSideTrdRegTimestampType( new MyIntType( oneElement ));
-            assertEquals( "FIX1013_INT_SIDE_TRD_REG_TIMESTAMP_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX1013_INT_SIDE_TRD_REG_TIMESTAMP_TYPE", tagData.toFIXLabelString());
             assertEquals( "1013", tagData.toEnumIDString());
             assertEquals( "SIDE_TRD_REG_TIMESTAMP_TYPE", tagData.toEnumNameString());
             assertEquals( "SideTrdRegTimestampType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag1013IntSideTrdRegTimestampTypeTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag1013IntSideTrdRegTimestampType( new MyIntType( oneElement ));
             assertEquals( "Tag1013IntSideTrdRegTimestampType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

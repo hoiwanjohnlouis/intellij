@@ -43,11 +43,11 @@ class Tag158PctAccruedInterestRateTest {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag158PctAccruedInterestRate( new MyPercentageType( oneElement ));
-            assertEquals( "FIX158_PCT_ACCRUED_INTEREST_RATE", tagData.toEnumLabelString());
+            assertEquals( "FIX158_PCT_ACCRUED_INTEREST_RATE", tagData.toFIXLabelString());
             assertEquals( "158", tagData.toEnumIDString());
             assertEquals( "ACCRUED_INTEREST_RATE", tagData.toEnumNameString());
             assertEquals( "AccruedInterestRate", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag158PctAccruedInterestRateTest {
         for ( double oneElement : TestArray ) {
             tagData = new Tag158PctAccruedInterestRate( new MyPercentageType( oneElement ));
             assertEquals( "Tag158PctAccruedInterestRate\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

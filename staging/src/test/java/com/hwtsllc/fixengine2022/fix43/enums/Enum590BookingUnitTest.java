@@ -49,7 +49,7 @@ class Enum590BookingUnitTest {
         assertEquals("0", enumType.toEnumIDString());
         assertEquals("PARTIAL_EXECUTION_BOOKABLE", enumType.toEnumNameString());
         assertEquals("0 - Each partial execution is a bookable unit", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -58,7 +58,7 @@ class Enum590BookingUnitTest {
         assertEquals("1", enumType.toEnumIDString());
         assertEquals("AGGREGATE_PARTIAL_EXECUTION", enumType.toEnumNameString());
         assertEquals("1 - Aggregate partial executions on this order, and book one trade per order", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -67,7 +67,7 @@ class Enum590BookingUnitTest {
         assertEquals("2", enumType.toEnumIDString());
         assertEquals("AGGREGATE_EXECUTIONS", enumType.toEnumNameString());
         assertEquals("2 - Aggregate executions for this symbol, side, and settlement date", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());

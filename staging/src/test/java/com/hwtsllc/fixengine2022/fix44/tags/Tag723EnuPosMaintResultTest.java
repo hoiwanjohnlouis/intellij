@@ -39,11 +39,11 @@ class Tag723EnuPosMaintResultTest {
         // loop around the ENUM and process
         for ( Enum723PosMaintResult oneEnum : Enum723PosMaintResult.values()) {
             tagData = new Tag723EnuPosMaintResult(oneEnum);
-            assertEquals( "FIX723_ENU_POS_MAINT_RESULT", tagData.toEnumLabelString());
+            assertEquals( "FIX723_ENU_POS_MAINT_RESULT", tagData.toFIXLabelString());
             assertEquals( "723", tagData.toEnumIDString());
             assertEquals( "POS_MAINT_RESULT", tagData.toEnumNameString());
             assertEquals( "PosMaintResult", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -99,7 +99,7 @@ class Tag723EnuPosMaintResultTest {
         for ( Enum723PosMaintResult oneEnum : Enum723PosMaintResult.values()) {
             tagData = new Tag723EnuPosMaintResult(oneEnum);
             assertEquals( "Tag723EnuPosMaintResult\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

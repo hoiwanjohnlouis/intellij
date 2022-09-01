@@ -39,11 +39,11 @@ class Tag980EnuSecurityUpdateActionTest {
         // loop around the ENUM and process
         for ( ENum980SecurityUpdateAction oneEnum : ENum980SecurityUpdateAction.values() ) {
             tagData = new Tag980EnuSecurityUpdateAction(oneEnum);
-            assertEquals( "FIX980_ENU_SECURITY_UPDATE_ACTION", tagData.toEnumLabelString());
+            assertEquals( "FIX980_ENU_SECURITY_UPDATE_ACTION", tagData.toFIXLabelString());
             assertEquals( "980", tagData.toEnumIDString());
             assertEquals( "SECURITY_UPDATE_ACTION", tagData.toEnumNameString());
             assertEquals( "SecurityUpdateAction", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -96,7 +96,7 @@ class Tag980EnuSecurityUpdateActionTest {
         for ( ENum980SecurityUpdateAction oneEnum : ENum980SecurityUpdateAction.values() ) {
             tagData = new Tag980EnuSecurityUpdateAction(oneEnum);
             assertEquals( "Tag980EnuSecurityUpdateAction\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

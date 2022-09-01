@@ -43,11 +43,11 @@ class Tag469FloRoundingModulusTest {
         // process array of tags
         for ( float oneElement : TestArray ) {
             tagData = new Tag469FloRoundingModulus( new MyFloatType( oneElement ));
-            assertEquals( "FIX469_FLO_ROUNDING_MODULUS", tagData.toEnumLabelString());
+            assertEquals( "FIX469_FLO_ROUNDING_MODULUS", tagData.toFIXLabelString());
             assertEquals( "469", tagData.toEnumIDString());
             assertEquals( "ROUNDING_MODULUS", tagData.toEnumNameString());
             assertEquals( "RoundingModulus", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag469FloRoundingModulusTest {
         for ( float oneElement : TestArray ) {
             tagData = new Tag469FloRoundingModulus( new MyFloatType( oneElement ));
             assertEquals( "Tag469FloRoundingModulus\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

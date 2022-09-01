@@ -43,11 +43,11 @@ class Tag621LenEncodedLegSecurityDescLenTest {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag621LenEncodedLegSecurityDescLen( new MyLengthType( oneElement ));
-            assertEquals( "FIX621_LEN_ENCODED_LEG_SECURITY_DESC_LEN", tagData.toEnumLabelString());
+            assertEquals( "FIX621_LEN_ENCODED_LEG_SECURITY_DESC_LEN", tagData.toFIXLabelString());
             assertEquals( "621", tagData.toEnumIDString());
             assertEquals( "ENCODED_LEG_SECURITY_DESC_LEN", tagData.toEnumNameString());
             assertEquals( "EncodedLegSecurityDescLen", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag621LenEncodedLegSecurityDescLenTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag621LenEncodedLegSecurityDescLen( new MyLengthType( oneElement ));
             assertEquals( "Tag621LenEncodedLegSecurityDescLen\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

@@ -39,11 +39,11 @@ class Tag87EnuAllocStatusTest {
         // loop around the ENUM and process
         for (Enum87AllocStatus oneEnum : Enum87AllocStatus.values()) {
             tagData = new Tag87EnuAllocStatus(oneEnum);
-            assertEquals( "FIX87_ENU_ALLOC_STATUS", tagData.toEnumLabelString());
+            assertEquals( "FIX87_ENU_ALLOC_STATUS", tagData.toFIXLabelString());
             assertEquals( "ALLOC_STATUS", tagData.toEnumNameString());
             assertEquals( "87", tagData.toEnumIDString());
             assertEquals( "AllocStatus", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -121,7 +121,7 @@ class Tag87EnuAllocStatusTest {
         for (Enum87AllocStatus oneEnum : Enum87AllocStatus.values()) {
             tagData = new Tag87EnuAllocStatus(oneEnum);
             assertEquals( "Tag87EnuAllocStatus\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

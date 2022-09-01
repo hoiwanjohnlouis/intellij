@@ -43,11 +43,11 @@ class Tag600StrLegSymbolTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag600StrLegSymbol( new MyStringType( oneElement ));
-            assertEquals( "FIX600_STR_LEG_SYMBOL", tagData.toEnumLabelString());
+            assertEquals( "FIX600_STR_LEG_SYMBOL", tagData.toFIXLabelString());
             assertEquals( "600", tagData.toEnumIDString());
             assertEquals( "LEG_SYMBOL", tagData.toEnumNameString());
             assertEquals( "LegSymbol", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag600StrLegSymbolTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag600StrLegSymbol( new MyStringType( oneElement ));
             assertEquals( "Tag600StrLegSymbol\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

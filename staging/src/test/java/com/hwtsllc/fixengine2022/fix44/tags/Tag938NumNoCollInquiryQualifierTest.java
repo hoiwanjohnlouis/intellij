@@ -43,11 +43,11 @@ class Tag938NumNoCollInquiryQualifierTest {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag938NumNoCollInquiryQualifier( new MyNumInGroupType( oneElement ));
-            assertEquals( "FIX938_NUM_NO_COLL_INQUIRY_QUALIFIER", tagData.toEnumLabelString());
+            assertEquals( "FIX938_NUM_NO_COLL_INQUIRY_QUALIFIER", tagData.toFIXLabelString());
             assertEquals( "938", tagData.toEnumIDString());
             assertEquals( "NO_COLL_INQUIRY_QUALIFIER", tagData.toEnumNameString());
             assertEquals( "NoCollInquiryQualifier", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag938NumNoCollInquiryQualifierTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag938NumNoCollInquiryQualifier( new MyNumInGroupType( oneElement ));
             assertEquals( "Tag938NumNoCollInquiryQualifier\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

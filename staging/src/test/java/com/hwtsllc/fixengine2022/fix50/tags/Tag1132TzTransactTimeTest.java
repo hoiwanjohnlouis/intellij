@@ -50,11 +50,11 @@ class Tag1132TzTransactTimeTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag1132TzTransactTime( new MyTZTimestampType( oneElement ));
-            assertEquals( "FIX1132_TZ_TRANSACT_TIME", tagData.toEnumLabelString());
+            assertEquals( "FIX1132_TZ_TRANSACT_TIME", tagData.toFIXLabelString());
             assertEquals( "1132", tagData.toEnumIDString());
             assertEquals( "TZ_TRANSACT_TIME", tagData.toEnumNameString());
             assertEquals( "TZTransactTime", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -85,7 +85,7 @@ class Tag1132TzTransactTimeTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag1132TzTransactTime( new MyTZTimestampType( oneElement ));
             assertEquals( "Tag1132TzTransactTime\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

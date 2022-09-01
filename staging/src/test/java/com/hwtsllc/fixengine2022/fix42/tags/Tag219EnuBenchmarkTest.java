@@ -40,11 +40,11 @@ class Tag219EnuBenchmarkTest {
         // loop around the ENUM and process
         for ( Enum219Benchmark oneEnum : Enum219Benchmark.values()) {
             tagData = new Tag219EnuBenchmark(oneEnum);
-            assertEquals( "FIX219_ENU_BENCHMARK", tagData.toEnumLabelString());
+            assertEquals( "FIX219_ENU_BENCHMARK", tagData.toFIXLabelString());
             assertEquals( "219", tagData.toEnumIDString());
             assertEquals( "BENCHMARK", tagData.toEnumNameString());
             assertEquals( "Benchmark (no longer used)", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -129,7 +129,7 @@ class Tag219EnuBenchmarkTest {
         for ( Enum219Benchmark oneEnum : Enum219Benchmark.values()) {
             tagData = new Tag219EnuBenchmark(oneEnum);
             assertEquals( "Tag219EnuBenchmark\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

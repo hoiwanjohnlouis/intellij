@@ -43,11 +43,11 @@ class Tag149StrURLLinkTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag149StrURLLink( new MyStringType( oneElement ));
-            assertEquals( "FIX149_STR_URL_LINK", tagData.toEnumLabelString());
+            assertEquals( "FIX149_STR_URL_LINK", tagData.toFIXLabelString());
             assertEquals( "149", tagData.toEnumIDString());
             assertEquals( "URL_LINK", tagData.toEnumNameString());
             assertEquals( "URLLink", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag149StrURLLinkTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag149StrURLLink( new MyStringType( oneElement ));
             assertEquals( "Tag149StrURLLink\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

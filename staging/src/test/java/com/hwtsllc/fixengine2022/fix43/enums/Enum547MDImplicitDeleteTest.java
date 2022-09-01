@@ -50,7 +50,7 @@ class Enum547MDImplicitDeleteTest {
         assertEquals("N", enumType.toEnumIDString());
         assertEquals("NO", enumType.toEnumNameString());
         assertEquals("N - Server must send an explicit delete for bids or offers falling outside the requested MarketDepth of the request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -59,7 +59,7 @@ class Enum547MDImplicitDeleteTest {
         assertEquals("Y", enumType.toEnumIDString());
         assertEquals("YES", enumType.toEnumNameString());
         assertEquals("Y - Client has responsibility for implicitly deleting bids or offers falling outside the MarketDepth of the request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());

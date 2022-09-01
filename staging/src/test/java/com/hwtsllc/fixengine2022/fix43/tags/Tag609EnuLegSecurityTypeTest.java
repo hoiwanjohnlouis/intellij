@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix43.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyEnumSecurityType;
-import com.hwtsllc.fixengine2022.fix41.tags.Tag167EnuSecurityType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -40,11 +39,11 @@ class Tag609EnuLegSecurityTypeTest {
         // loop around the ENUM and process
         for (MyEnumSecurityType oneEnum : MyEnumSecurityType.values()) {
             tagData = new Tag609EnuLegSecurityType(oneEnum);
-            assertEquals( "FIX609_ENU_LEG_SECURITY_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX609_ENU_LEG_SECURITY_TYPE", tagData.toFIXLabelString());
             assertEquals( "609", tagData.toEnumIDString());
             assertEquals( "LEG_SECURITY_TYPE", tagData.toEnumNameString());
             assertEquals( "LegSecurityType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -637,7 +636,7 @@ class Tag609EnuLegSecurityTypeTest {
         for (MyEnumSecurityType oneEnum : MyEnumSecurityType.values()) {
             tagData = new Tag609EnuLegSecurityType(oneEnum);
             assertEquals( "Tag609EnuLegSecurityType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

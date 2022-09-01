@@ -39,11 +39,11 @@ class Tag709EnuPosTransTypeTest {
         // loop around the ENUM and process
         for ( Enum709PosTransType oneEnum : Enum709PosTransType.values()) {
             tagData = new Tag709EnuPosTransType(oneEnum);
-            assertEquals( "FIX709_ENU_POS_TRANS_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX709_ENU_POS_TRANS_TYPE", tagData.toFIXLabelString());
             assertEquals( "709", tagData.toEnumIDString());
             assertEquals( "POS_TRANS_TYPE", tagData.toEnumNameString());
             assertEquals( "PosTransType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -113,7 +113,7 @@ class Tag709EnuPosTransTypeTest {
         for ( Enum709PosTransType oneEnum : Enum709PosTransType.values()) {
             tagData = new Tag709EnuPosTransType(oneEnum);
             assertEquals( "Tag709EnuPosTransType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

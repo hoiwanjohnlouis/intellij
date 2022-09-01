@@ -43,11 +43,11 @@ class Tag257StrLegCreditRatingTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag257StrLegCreditRating( new MyStringType( oneElement ));
-            assertEquals( "FIX257_STR_LEG_CREDIT_RATING", tagData.toEnumLabelString());
+            assertEquals( "FIX257_STR_LEG_CREDIT_RATING", tagData.toFIXLabelString());
             assertEquals( "257", tagData.toEnumIDString());
             assertEquals( "LEG_CREDIT_RATING", tagData.toEnumNameString());
             assertEquals( "LegCreditRating", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag257StrLegCreditRatingTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag257StrLegCreditRating( new MyStringType( oneElement ));
             assertEquals( "Tag257StrLegCreditRating\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

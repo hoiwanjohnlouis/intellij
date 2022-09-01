@@ -40,11 +40,11 @@ class Tag20EnuExecTransTypeTest {
         // loop around the ENUM and process
         for (Enum20ExecTransType oneEnum : Enum20ExecTransType.values()) {
             tagData = new Tag20EnuExecTransType(oneEnum);
-            assertEquals( "FIX20_ENU_EXEC_TRANS_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX20_ENU_EXEC_TRANS_TYPE", tagData.toFIXLabelString());
             assertEquals( "EXEC_TRANS_TYPE", tagData.toEnumNameString());
             assertEquals( "20", tagData.toEnumIDString());
             assertEquals( "ExecTransType (replaced)", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -100,7 +100,7 @@ class Tag20EnuExecTransTypeTest {
         for (Enum20ExecTransType oneEnum : Enum20ExecTransType.values()) {
             tagData = new Tag20EnuExecTransType(oneEnum);
             assertEquals( "Tag20EnuExecTransType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

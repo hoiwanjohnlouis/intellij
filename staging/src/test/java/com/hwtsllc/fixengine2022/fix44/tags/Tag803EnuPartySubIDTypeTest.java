@@ -39,11 +39,11 @@ class Tag803EnuPartySubIDTypeTest {
         // loop around the ENUM and process
         for ( MyEnumPartySubIDType oneEnum : MyEnumPartySubIDType.values()) {
             tagData = new Tag803EnuPartySubIDType(oneEnum);
-            assertEquals( "FIX803_ENU_PARTY_SUB_ID_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX803_ENU_PARTY_SUB_ID_TYPE", tagData.toFIXLabelString());
             assertEquals( "803", tagData.toEnumIDString());
             assertEquals( "PARTY_SUB_ID_TYPE", tagData.toEnumNameString());
             assertEquals( "PartySubIDType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -254,7 +254,7 @@ class Tag803EnuPartySubIDTypeTest {
         for ( MyEnumPartySubIDType oneEnum : MyEnumPartySubIDType.values()) {
             tagData = new Tag803EnuPartySubIDType(oneEnum);
             assertEquals( "Tag803EnuPartySubIDType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

@@ -43,11 +43,11 @@ class Tag451PxoNetChgPrevDayTest {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag451PxoNetChgPrevDay( new MyPriceOffsetType( oneElement ));
-            assertEquals( "FIX451_PXO_NET_CHG_PREV_DAY", tagData.toEnumLabelString());
+            assertEquals( "FIX451_PXO_NET_CHG_PREV_DAY", tagData.toFIXLabelString());
             assertEquals( "451", tagData.toEnumIDString());
             assertEquals( "NET_CHG_PREV_DAY", tagData.toEnumNameString());
             assertEquals( "NetChgPrevDay", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag451PxoNetChgPrevDayTest {
         for ( double oneElement : TestArray ) {
             tagData = new Tag451PxoNetChgPrevDay( new MyPriceOffsetType( oneElement ));
             assertEquals( "Tag451PxoNetChgPrevDay\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

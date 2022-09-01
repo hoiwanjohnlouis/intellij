@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyFloatType;
-import com.hwtsllc.fixengine2022.fix41.tags.Tag211FloPegOffsetValue;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -44,11 +43,11 @@ class Tag389FloDiscretionOffsetValueTest {
         // process array of tags
         for ( float oneElement : TestArray ) {
             tagData = new Tag389FloDiscretionOffsetValue( new MyFloatType( oneElement ));
-            assertEquals( "FIX389_FLO_DISCRETION_OFFSET_VALUE", tagData.toEnumLabelString());
+            assertEquals( "FIX389_FLO_DISCRETION_OFFSET_VALUE", tagData.toFIXLabelString());
             assertEquals( "389", tagData.toEnumIDString());
             assertEquals( "DISCRETION_OFFSET_VALUE", tagData.toEnumNameString());
             assertEquals( "DiscretionOffsetValue", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -85,7 +84,7 @@ class Tag389FloDiscretionOffsetValueTest {
         for ( float oneElement : TestArray ) {
             tagData = new Tag389FloDiscretionOffsetValue( new MyFloatType( oneElement ));
             assertEquals( "Tag389FloDiscretionOffsetValue\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

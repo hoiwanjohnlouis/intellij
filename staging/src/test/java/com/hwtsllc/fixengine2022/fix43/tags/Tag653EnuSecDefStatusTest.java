@@ -40,11 +40,11 @@ class Tag653EnuSecDefStatusTest {
         // loop around the ENUM and process
         for (Enum653SecDefStatus oneEnum : Enum653SecDefStatus.values()) {
             tagData = new Tag653EnuSecDefStatus(oneEnum);
-            assertEquals( "FIX653_ENU_SEC_DEF_STATUS", tagData.toEnumLabelString());
+            assertEquals( "FIX653_ENU_SEC_DEF_STATUS", tagData.toFIXLabelString());
             assertEquals( "653", tagData.toEnumIDString());
             assertEquals( "SEC_DEF_STATUS", tagData.toEnumNameString());
             assertEquals( "SecDefStatus (replaced)", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -107,7 +107,7 @@ class Tag653EnuSecDefStatusTest {
         for (Enum653SecDefStatus oneEnum : Enum653SecDefStatus.values()) {
             tagData = new Tag653EnuSecDefStatus(oneEnum);
             assertEquals( "Tag653EnuSecDefStatus\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

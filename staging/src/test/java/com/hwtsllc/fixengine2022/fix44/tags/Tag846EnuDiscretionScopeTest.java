@@ -39,11 +39,11 @@ class Tag846EnuDiscretionScopeTest {
         // loop around the ENUM and process
         for ( MyEnumDiscretionOrPegScope oneEnum : MyEnumDiscretionOrPegScope.values()) {
             tagData = new Tag846EnuDiscretionScope(oneEnum);
-            assertEquals( "FIX846_ENU_DISCRETION_SCOPE", tagData.toEnumLabelString());
+            assertEquals( "FIX846_ENU_DISCRETION_SCOPE", tagData.toFIXLabelString());
             assertEquals( "846", tagData.toEnumIDString());
             assertEquals( "DISCRETION_SCOPE", tagData.toEnumNameString());
             assertEquals( "DiscretionScope", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -101,7 +101,7 @@ class Tag846EnuDiscretionScopeTest {
         for ( MyEnumDiscretionOrPegScope oneEnum : MyEnumDiscretionOrPegScope.values()) {
             tagData = new Tag846EnuDiscretionScope(oneEnum);
             assertEquals( "Tag846EnuDiscretionScope\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

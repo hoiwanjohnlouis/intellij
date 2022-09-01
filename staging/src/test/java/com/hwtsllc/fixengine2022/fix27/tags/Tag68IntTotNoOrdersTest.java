@@ -43,11 +43,11 @@ class Tag68IntTotNoOrdersTest {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag68IntTotNoOrders( new MyIntType( oneElement ));
-            assertEquals( "FIX68_INT_TOT_NO_ORDERS", tagData.toEnumLabelString());
+            assertEquals( "FIX68_INT_TOT_NO_ORDERS", tagData.toFIXLabelString());
             assertEquals( "TOT_NO_ORDERS", tagData.toEnumNameString());
             assertEquals( "68", tagData.toEnumIDString());
             assertEquals( "TotNoOrders (formerly named: ListNoOrds)", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -82,7 +82,7 @@ class Tag68IntTotNoOrdersTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag68IntTotNoOrders( new MyIntType( oneElement ));
             assertEquals( "Tag68IntTotNoOrders\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

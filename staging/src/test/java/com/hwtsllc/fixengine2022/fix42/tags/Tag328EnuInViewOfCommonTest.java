@@ -39,11 +39,11 @@ class Tag328EnuInViewOfCommonTest {
         // loop around the ENUM and process
         for ( Enum328InViewOfCommon oneEnum : Enum328InViewOfCommon.values()) {
             tagData = new Tag328EnuInViewOfCommon(oneEnum);
-            assertEquals( "FIX328_ENU_IN_VIEW_OF_COMMON", tagData.toEnumLabelString());
+            assertEquals( "FIX328_ENU_IN_VIEW_OF_COMMON", tagData.toFIXLabelString());
             assertEquals( "328", tagData.toEnumIDString());
             assertEquals( "IN_VIEW_OF_COMMON", tagData.toEnumNameString());
             assertEquals( "InViewOfCommon", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -91,7 +91,7 @@ class Tag328EnuInViewOfCommonTest {
         for ( Enum328InViewOfCommon oneEnum : Enum328InViewOfCommon.values()) {
             tagData = new Tag328EnuInViewOfCommon(oneEnum);
             assertEquals( "Tag328EnuInViewOfCommon\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

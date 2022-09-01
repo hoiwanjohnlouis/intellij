@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyIntType;
-import com.hwtsllc.fixengine2022.fix30.tags.Tag108IntHeartBtInt;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -45,11 +44,11 @@ class Tag205IntMaturityDayTest {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag205IntMaturityDay( new MyIntType( oneElement ));
-            assertEquals( "FIX205_INT_MATURITY_DAY", tagData.toEnumLabelString());
+            assertEquals( "FIX205_INT_MATURITY_DAY", tagData.toFIXLabelString());
             assertEquals( "205", tagData.toEnumIDString());
             assertEquals( "MATURITY_DAY", tagData.toEnumNameString());
             assertEquals( "MaturityDay (replaced)", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -86,7 +85,7 @@ class Tag205IntMaturityDayTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag205IntMaturityDay( new MyIntType( oneElement ));
             assertEquals( "Tag205IntMaturityDay\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

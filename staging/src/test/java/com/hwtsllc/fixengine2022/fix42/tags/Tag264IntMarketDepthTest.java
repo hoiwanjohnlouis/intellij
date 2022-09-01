@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyIntType;
-import com.hwtsllc.fixengine2022.fix41.tags.Tag205IntMaturityDay;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -44,11 +43,11 @@ class Tag264IntMarketDepthTest {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag264IntMarketDepth( new MyIntType( oneElement ));
-            assertEquals( "FIX264_INT_MARKET_DEPTH", tagData.toEnumLabelString());
+            assertEquals( "FIX264_INT_MARKET_DEPTH", tagData.toFIXLabelString());
             assertEquals( "264", tagData.toEnumIDString());
             assertEquals( "MARKET_DEPTH", tagData.toEnumNameString());
             assertEquals( "MarketDepth", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -85,7 +84,7 @@ class Tag264IntMarketDepthTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag264IntMarketDepth( new MyIntType( oneElement ));
             assertEquals( "Tag264IntMarketDepth\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

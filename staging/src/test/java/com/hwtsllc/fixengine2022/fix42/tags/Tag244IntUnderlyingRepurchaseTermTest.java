@@ -44,11 +44,11 @@ class Tag244IntUnderlyingRepurchaseTermTest {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag244IntUnderlyingRepurchaseTerm( new MyIntType( oneElement ));
-            assertEquals( "FIX244_INT_UNDERLYING_REPURCHASE_TERM", tagData.toEnumLabelString());
+            assertEquals( "FIX244_INT_UNDERLYING_REPURCHASE_TERM", tagData.toFIXLabelString());
             assertEquals( "244", tagData.toEnumIDString());
             assertEquals( "UNDERLYING_REPURCHASE_TERM", tagData.toEnumNameString());
             assertEquals( "UnderlyingRepurchaseTerm (Deprecated)", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -85,7 +85,7 @@ class Tag244IntUnderlyingRepurchaseTermTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag244IntUnderlyingRepurchaseTerm( new MyIntType( oneElement ));
             assertEquals( "Tag244IntUnderlyingRepurchaseTerm\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

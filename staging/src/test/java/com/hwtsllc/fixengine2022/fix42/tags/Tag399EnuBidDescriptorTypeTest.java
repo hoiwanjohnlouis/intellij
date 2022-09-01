@@ -39,11 +39,11 @@ class Tag399EnuBidDescriptorTypeTest {
         // loop around the ENUM and process
         for ( Enum399BidDescriptorType oneEnum : Enum399BidDescriptorType.values()) {
             tagData = new Tag399EnuBidDescriptorType(oneEnum);
-            assertEquals( "FIX399_ENU_BID_DESCRIPTOR_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX399_ENU_BID_DESCRIPTOR_TYPE", tagData.toFIXLabelString());
             assertEquals( "399", tagData.toEnumIDString());
             assertEquals( "BID_DESCRIPTOR_TYPE", tagData.toEnumNameString());
             assertEquals( "BidDescriptorType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -96,7 +96,7 @@ class Tag399EnuBidDescriptorTypeTest {
         for ( Enum399BidDescriptorType oneEnum : Enum399BidDescriptorType.values()) {
             tagData = new Tag399EnuBidDescriptorType(oneEnum);
             assertEquals( "Tag399EnuBidDescriptorType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

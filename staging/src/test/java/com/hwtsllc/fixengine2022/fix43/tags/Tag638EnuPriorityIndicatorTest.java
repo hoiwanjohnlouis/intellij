@@ -39,11 +39,11 @@ class Tag638EnuPriorityIndicatorTest {
         // loop around the ENUM and process
         for (Enum638PriorityIndicator oneEnum : Enum638PriorityIndicator.values()) {
             tagData = new Tag638EnuPriorityIndicator(oneEnum);
-            assertEquals( "FIX638_ENU_PRIORITY_INDICATOR", tagData.toEnumLabelString());
+            assertEquals( "FIX638_ENU_PRIORITY_INDICATOR", tagData.toFIXLabelString());
             assertEquals( "638", tagData.toEnumIDString());
             assertEquals( "PRIORITY_INDICATOR", tagData.toEnumNameString());
             assertEquals( "PriorityIndicator", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -91,7 +91,7 @@ class Tag638EnuPriorityIndicatorTest {
         for (Enum638PriorityIndicator oneEnum : Enum638PriorityIndicator.values()) {
             tagData = new Tag638EnuPriorityIndicator(oneEnum);
             assertEquals( "Tag638EnuPriorityIndicator\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

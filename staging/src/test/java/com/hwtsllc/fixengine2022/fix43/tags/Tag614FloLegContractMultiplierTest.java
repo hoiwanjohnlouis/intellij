@@ -43,11 +43,11 @@ class Tag614FloLegContractMultiplierTest {
         // process array of tags
         for ( float oneElement : TestArray ) {
             tagData = new Tag614FloLegContractMultiplier( new MyFloatType( oneElement ));
-            assertEquals( "FIX614_FLO_LEG_CONTRACT_MULTIPLIER", tagData.toEnumLabelString());
+            assertEquals( "FIX614_FLO_LEG_CONTRACT_MULTIPLIER", tagData.toFIXLabelString());
             assertEquals( "614", tagData.toEnumIDString());
             assertEquals( "LEG_CONTRACT_MULTIPLIER", tagData.toEnumNameString());
             assertEquals( "LegContractMultiplier", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag614FloLegContractMultiplierTest {
         for ( float oneElement : TestArray ) {
             tagData = new Tag614FloLegContractMultiplier( new MyFloatType( oneElement ));
             assertEquals( "Tag614FloLegContractMultiplier\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

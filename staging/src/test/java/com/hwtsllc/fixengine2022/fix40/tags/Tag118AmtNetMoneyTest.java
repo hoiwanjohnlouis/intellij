@@ -43,11 +43,11 @@ class  Tag118AmtNetMoneyTest {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag118AmtNetMoney( new MyAmtType( oneElement ));
-            assertEquals( "FIX118_AMT_NET_MONEY", tagData.toEnumLabelString());
+            assertEquals( "FIX118_AMT_NET_MONEY", tagData.toFIXLabelString());
             assertEquals( "NET_MONEY", tagData.toEnumNameString());
             assertEquals( "118", tagData.toEnumIDString());
             assertEquals( "NetMoney", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class  Tag118AmtNetMoneyTest {
         for ( double oneElement : TestArray ) {
             tagData = new Tag118AmtNetMoney( new MyAmtType( oneElement ));
             assertEquals( "Tag118AmtNetMoney\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

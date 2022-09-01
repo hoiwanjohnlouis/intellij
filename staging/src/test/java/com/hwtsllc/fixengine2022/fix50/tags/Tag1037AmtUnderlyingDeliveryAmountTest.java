@@ -50,11 +50,11 @@ class Tag1037AmtUnderlyingDeliveryAmountTest {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag1037AmtUnderlyingDeliveryAmount( new MyAmtType( oneElement ));
-            assertEquals( "FIX1037_AMT_UNDERLYING_DELIVERY_AMOUNT", tagData.toEnumLabelString());
+            assertEquals( "FIX1037_AMT_UNDERLYING_DELIVERY_AMOUNT", tagData.toFIXLabelString());
             assertEquals( "1037", tagData.toEnumIDString());
             assertEquals( "UNDERLYING_DELIVERY_AMOUNT", tagData.toEnumNameString());
             assertEquals( "UnderlyingDeliveryAmount", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -85,7 +85,7 @@ class Tag1037AmtUnderlyingDeliveryAmountTest {
         for ( double oneElement : TestArray ) {
             tagData = new Tag1037AmtUnderlyingDeliveryAmount( new MyAmtType( oneElement ));
             assertEquals( "Tag1037AmtUnderlyingDeliveryAmount\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

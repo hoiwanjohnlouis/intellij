@@ -54,7 +54,7 @@ class Enum530MassCancelRequestTypeTest {
         assertEquals("1", enumType.toEnumIDString());
         assertEquals("CANCEL_ORDERS_FOR_SECURITY", enumType.toEnumNameString());
         assertEquals("1 - Cancel orders for a security", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -63,7 +63,7 @@ class Enum530MassCancelRequestTypeTest {
         assertEquals("2", enumType.toEnumIDString());
         assertEquals("CANCEL_ORDERS_FOR_UNDERLYING", enumType.toEnumNameString());
         assertEquals("2 - Cancel orders for an underlying security", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -72,7 +72,7 @@ class Enum530MassCancelRequestTypeTest {
         assertEquals("3", enumType.toEnumIDString());
         assertEquals("CANCEL_ORDERS_FOR_PRODUCT", enumType.toEnumNameString());
         assertEquals("3 - Cancel orders for a Product", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -81,7 +81,7 @@ class Enum530MassCancelRequestTypeTest {
         assertEquals("4", enumType.toEnumIDString());
         assertEquals("CANCEL_ORDERS_FOR_CFICODE", enumType.toEnumNameString());
         assertEquals("4 - Cancel orders for a CFICode", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -90,7 +90,7 @@ class Enum530MassCancelRequestTypeTest {
         assertEquals("5", enumType.toEnumIDString());
         assertEquals("CANCEL_ORDERS_FOR_SECURITYTYPE", enumType.toEnumNameString());
         assertEquals("5 - Cancel orders for a SecurityType", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -100,7 +100,7 @@ class Enum530MassCancelRequestTypeTest {
         assertEquals("6", enumType.toEnumIDString());
         assertEquals("CANCEL_ORDERS_FOR_SESSION", enumType.toEnumNameString());
         assertEquals("6 - Cancel orders for a trading session", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -109,7 +109,7 @@ class Enum530MassCancelRequestTypeTest {
         assertEquals("7", enumType.toEnumIDString());
         assertEquals("CANCEL_ALL_ORDERS", enumType.toEnumNameString());
         assertEquals("7 - Cancel all orders", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());

@@ -39,11 +39,11 @@ class Tag334EnuAdjustmentTest {
         // loop around the ENUM and process
         for ( Enum334Adjustment oneEnum : Enum334Adjustment.values()) {
             tagData = new Tag334EnuAdjustment(oneEnum);
-            assertEquals( "FIX334_ENU_ADJUSTMENT", tagData.toEnumLabelString());
+            assertEquals( "FIX334_ENU_ADJUSTMENT", tagData.toFIXLabelString());
             assertEquals( "334", tagData.toEnumIDString());
             assertEquals( "ADJUSTMENT", tagData.toEnumNameString());
             assertEquals( "Adjustment", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -98,7 +98,7 @@ class Tag334EnuAdjustmentTest {
         for ( Enum334Adjustment oneEnum : Enum334Adjustment.values()) {
             tagData = new Tag334EnuAdjustment(oneEnum);
             assertEquals( "Tag334EnuAdjustment\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

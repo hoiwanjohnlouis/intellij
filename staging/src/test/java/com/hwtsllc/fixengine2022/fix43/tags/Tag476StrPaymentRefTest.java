@@ -43,11 +43,11 @@ class Tag476StrPaymentRefTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag476StrPaymentRef( new MyStringType( oneElement ));
-            assertEquals( "FIX476_STR_PAYMENT_REF", tagData.toEnumLabelString());
+            assertEquals( "FIX476_STR_PAYMENT_REF", tagData.toFIXLabelString());
             assertEquals( "476", tagData.toEnumIDString());
             assertEquals( "PAYMENT_REF", tagData.toEnumNameString());
             assertEquals( "PaymentRef", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag476StrPaymentRefTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag476StrPaymentRef( new MyStringType( oneElement ));
             assertEquals( "Tag476StrPaymentRef\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

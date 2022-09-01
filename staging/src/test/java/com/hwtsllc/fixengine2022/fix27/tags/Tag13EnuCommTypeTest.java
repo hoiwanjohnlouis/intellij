@@ -39,11 +39,11 @@ class Tag13EnuCommTypeTest {
         // loop around the ENUM and process
         for (Enum13CommType oneEnum : Enum13CommType.values()) {
             tagData = new Tag13EnuCommType(oneEnum);
-            assertEquals( "FIX13_ENU_COMM_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX13_ENU_COMM_TYPE", tagData.toFIXLabelString());
             assertEquals( "COMM_TYPE", tagData.toEnumNameString());
             assertEquals( "13", tagData.toEnumIDString());
             assertEquals( "CommType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -114,7 +114,7 @@ class Tag13EnuCommTypeTest {
         for (Enum13CommType oneEnum : Enum13CommType.values()) {
             tagData = new Tag13EnuCommType(oneEnum);
             assertEquals( "Tag13EnuCommType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

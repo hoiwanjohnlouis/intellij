@@ -39,11 +39,11 @@ class Tag419EnuBasisPxTypeTest {
         // loop around the ENUM and process
         for ( Enum419BasisPxType oneEnum : Enum419BasisPxType.values()) {
             tagData = new Tag419EnuBasisPxType(oneEnum);
-            assertEquals( "FIX419_ENU_BASIS_PX_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX419_ENU_BASIS_PX_TYPE", tagData.toFIXLabelString());
             assertEquals( "419", tagData.toEnumIDString());
             assertEquals( "BASIS_PX_TYPE", tagData.toEnumNameString());
             assertEquals( "BasisPxType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -152,7 +152,7 @@ class Tag419EnuBasisPxTypeTest {
         for ( Enum419BasisPxType oneEnum : Enum419BasisPxType.values()) {
             tagData = new Tag419EnuBasisPxType(oneEnum);
             assertEquals( "Tag419EnuBasisPxType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

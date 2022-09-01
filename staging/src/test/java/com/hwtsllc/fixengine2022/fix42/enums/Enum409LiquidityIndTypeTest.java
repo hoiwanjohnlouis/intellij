@@ -47,7 +47,7 @@ class Enum409LiquidityIndTypeTest {
         assertEquals( "1", enumType.toEnumIDString());
         assertEquals( "FIVE_DAY_MOVING_AVERAGE", enumType.toEnumNameString());
         assertEquals( "1 - 5-Day Moving Average", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -56,7 +56,7 @@ class Enum409LiquidityIndTypeTest {
         assertEquals( "2", enumType.toEnumIDString());
         assertEquals( "TWENTY_DAY_MOVING_AVERAGE", enumType.toEnumNameString());
         assertEquals( "2 - 20-Day Moving Average", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -65,7 +65,7 @@ class Enum409LiquidityIndTypeTest {
         assertEquals( "3", enumType.toEnumIDString());
         assertEquals( "NORMAL_MARKET_SIZE", enumType.toEnumNameString());
         assertEquals( "3 - Normal Market Size", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -74,7 +74,7 @@ class Enum409LiquidityIndTypeTest {
         assertEquals( "4", enumType.toEnumIDString());
         assertEquals( "OTHER", enumType.toEnumNameString());
         assertEquals( "4 - Other", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());

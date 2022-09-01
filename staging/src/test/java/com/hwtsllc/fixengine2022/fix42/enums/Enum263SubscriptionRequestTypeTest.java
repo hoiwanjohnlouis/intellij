@@ -46,7 +46,7 @@ class Enum263SubscriptionRequestTypeTest {
         assertEquals("0", enumType.toEnumIDString());
         assertEquals("SNAPSHOT", enumType.toEnumNameString());
         assertEquals("0 - Snapshot", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -55,7 +55,7 @@ class Enum263SubscriptionRequestTypeTest {
         assertEquals("1", enumType.toEnumIDString());
         assertEquals("SUBSCRIBE_SNAPSHOT", enumType.toEnumNameString());
         assertEquals("1 - Snapshot + Updates (Subscribe)", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -64,7 +64,7 @@ class Enum263SubscriptionRequestTypeTest {
         assertEquals("2", enumType.toEnumIDString());
         assertEquals("UNSUBSCRIBE_SNAPSHOT", enumType.toEnumNameString());
         assertEquals("2 - Disable previous Snapshot + Update Request (Unsubscribe)", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());

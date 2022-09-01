@@ -60,7 +60,7 @@ public enum MyEnumCoveredOrUncovered implements LogFIXString, LogVerboseString {
      * standard wrapper to retrieve the specific enum name
      */
     @Override
-    public String toEnumLabelString() {
+    public String toFIXLabelString() {
         return this.name();
     }
     /**
@@ -91,7 +91,7 @@ public enum MyEnumCoveredOrUncovered implements LogFIXString, LogVerboseString {
     public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
-                .concat( toEnumLabelString())
+                .concat( toFIXLabelString())
                 .concat("]")
                 .concat("\n\tAction[")
                 .concat( toEnumIDString())

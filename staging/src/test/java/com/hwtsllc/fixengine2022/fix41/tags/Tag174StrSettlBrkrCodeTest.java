@@ -44,11 +44,11 @@ class Tag174StrSettlBrkrCodeTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag174StrSettlBrkrCode( new MyStringType( oneElement ));
-            assertEquals( "FIX174_STR_SETTL_BRKR_CODE", tagData.toEnumLabelString());
+            assertEquals( "FIX174_STR_SETTL_BRKR_CODE", tagData.toFIXLabelString());
             assertEquals( "174", tagData.toEnumIDString());
             assertEquals( "SETTL_BRKR_CODE", tagData.toEnumNameString());
             assertEquals( "SettlBrkrCode (replaced)", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -85,7 +85,7 @@ class Tag174StrSettlBrkrCodeTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag174StrSettlBrkrCode( new MyStringType( oneElement ));
             assertEquals( "Tag174StrSettlBrkrCode\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

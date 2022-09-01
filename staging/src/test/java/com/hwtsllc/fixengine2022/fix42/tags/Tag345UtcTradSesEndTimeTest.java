@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyUTCTimestampType;
-import com.hwtsllc.fixengine2022.fix41.tags.Tag168UtcEffectiveTime;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -44,11 +43,11 @@ class Tag345UtcTradSesEndTimeTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag345UtcTradSesEndTime( new MyUTCTimestampType( oneElement ));
-            assertEquals( "FIX345_UTC_TRAD_SES_END_TIME", tagData.toEnumLabelString());
+            assertEquals( "FIX345_UTC_TRAD_SES_END_TIME", tagData.toFIXLabelString());
             assertEquals( "345", tagData.toEnumIDString());
             assertEquals( "TRAD_SES_END_TIME", tagData.toEnumNameString());
             assertEquals( "TradSesEndTime", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -85,7 +84,7 @@ class Tag345UtcTradSesEndTimeTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag345UtcTradSesEndTime( new MyUTCTimestampType( oneElement ));
             assertEquals( "Tag345UtcTradSesEndTime\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

@@ -43,11 +43,11 @@ class Tag64StrSettlDateTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag64StrSettlDate( new MyStringType( oneElement ));
-            assertEquals( "FIX64_STR_SETTL_DATE", tagData.toEnumLabelString());
+            assertEquals( "FIX64_STR_SETTL_DATE", tagData.toFIXLabelString());
             assertEquals( "SETTL_DATE", tagData.toEnumNameString());
             assertEquals( "64", tagData.toEnumIDString());
             assertEquals( "SettlDate", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -82,7 +82,7 @@ class Tag64StrSettlDateTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag64StrSettlDate( new MyStringType( oneElement ));
             assertEquals( "Tag64StrSettlDate\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

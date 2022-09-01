@@ -46,7 +46,7 @@ class Enum434CxlRejResponseToTest {
         assertEquals("1", enumType.toEnumIDString());
         assertEquals("ORDER_CANCEL_REQUEST", enumType.toEnumNameString());
         assertEquals("1 - Order cancel request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -55,7 +55,7 @@ class Enum434CxlRejResponseToTest {
         assertEquals("2", enumType.toEnumIDString());
         assertEquals("ORDER_MODIFICATION_REQUEST", enumType.toEnumNameString());
         assertEquals("2 - Order cancel/replace request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());

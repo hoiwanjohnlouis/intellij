@@ -16,7 +16,6 @@
 
 package com.hwtsllc.fixengine2022.fix43.tags;
 
-import com.hwtsllc.fixengine2022.datatypes.FIX43;
 import com.hwtsllc.fixengine2022.fix43.enums.Enum547MDImplicitDelete;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
@@ -40,11 +39,11 @@ class Tag547EnuMDImplicitDeleteTest {
         // loop around the ENUM and process
         for ( Enum547MDImplicitDelete oneEnum : Enum547MDImplicitDelete.values()) {
             tagData = new Tag547EnuMDImplicitDelete(oneEnum);
-            assertEquals( "FIX547_ENU_MD_IMPLICIT_DELETE", tagData.toEnumLabelString());
+            assertEquals( "FIX547_ENU_MD_IMPLICIT_DELETE", tagData.toFIXLabelString());
             assertEquals( "547", tagData.toEnumIDString());
             assertEquals( "MD_IMPLICIT_DELETE", tagData.toEnumNameString());
             assertEquals( "MDImplicitDelete", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -94,7 +93,7 @@ class Tag547EnuMDImplicitDeleteTest {
         for ( Enum547MDImplicitDelete oneEnum : Enum547MDImplicitDelete.values()) {
             tagData = new Tag547EnuMDImplicitDelete(oneEnum);
             assertEquals( "Tag547EnuMDImplicitDelete\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

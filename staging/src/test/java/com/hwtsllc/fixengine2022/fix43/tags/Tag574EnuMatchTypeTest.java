@@ -39,11 +39,11 @@ class Tag574EnuMatchTypeTest {
         // loop around the ENUM and process
         for (Enum574MatchType oneEnum : Enum574MatchType.values()) {
             tagData = new Tag574EnuMatchType(oneEnum);
-            assertEquals( "FIX574_ENU_MATCH_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX574_ENU_MATCH_TYPE", tagData.toFIXLabelString());
             assertEquals( "574", tagData.toEnumIDString());
             assertEquals( "MATCH_TYPE", tagData.toEnumNameString());
             assertEquals( "MatchType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -263,7 +263,7 @@ class Tag574EnuMatchTypeTest {
         for (Enum574MatchType oneEnum : Enum574MatchType.values()) {
             tagData = new Tag574EnuMatchType(oneEnum);
             assertEquals( "Tag574EnuMatchType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

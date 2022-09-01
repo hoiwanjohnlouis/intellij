@@ -39,11 +39,11 @@ class Tag1028EnuManualOrderIndicatorTest {
         // loop around the ENUM and process
         for ( Enum1028ManualOrderIndicator oneEnum : Enum1028ManualOrderIndicator.values()) {
             tagData = new Tag1028EnuManualOrderIndicator(oneEnum);
-            assertEquals( "FIX1028_ENU_MANUAL_ORDER_INDICATOR", tagData.toEnumLabelString());
+            assertEquals( "FIX1028_ENU_MANUAL_ORDER_INDICATOR", tagData.toFIXLabelString());
             assertEquals( "1028", tagData.toEnumIDString());
             assertEquals( "MANUAL_ORDER_INDICATOR", tagData.toEnumNameString());
             assertEquals( "ManualOrderIndicator", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -91,7 +91,7 @@ class Tag1028EnuManualOrderIndicatorTest {
         for ( Enum1028ManualOrderIndicator oneEnum : Enum1028ManualOrderIndicator.values()) {
             tagData = new Tag1028EnuManualOrderIndicator(oneEnum);
             assertEquals( "Tag1028EnuManualOrderIndicator\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

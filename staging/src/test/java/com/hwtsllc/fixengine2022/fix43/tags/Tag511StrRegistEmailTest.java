@@ -43,11 +43,11 @@ class Tag511StrRegistEmailTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag511StrRegistEmail( new MyStringType( oneElement ));
-            assertEquals( "FIX511_STR_REGIST_EMAIL", tagData.toEnumLabelString());
+            assertEquals( "FIX511_STR_REGIST_EMAIL", tagData.toFIXLabelString());
             assertEquals( "511", tagData.toEnumIDString());
             assertEquals( "REGIST_EMAIL", tagData.toEnumNameString());
             assertEquals( "RegistEmail", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag511StrRegistEmailTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag511StrRegistEmail( new MyStringType( oneElement ));
             assertEquals( "Tag511StrRegistEmail\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

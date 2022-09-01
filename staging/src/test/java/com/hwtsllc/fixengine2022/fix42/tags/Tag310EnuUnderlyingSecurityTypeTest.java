@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyEnumSecurityType;
-import com.hwtsllc.fixengine2022.fix41.tags.Tag167EnuSecurityType;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -40,11 +39,11 @@ class Tag310EnuUnderlyingSecurityTypeTest {
         // loop around the ENUM and process
         for ( MyEnumSecurityType oneEnum : MyEnumSecurityType.values()) {
             tagData = new Tag310EnuUnderlyingSecurityType(oneEnum);
-            assertEquals( "FIX310_ENU_UNDERLYING_SECURITY_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX310_ENU_UNDERLYING_SECURITY_TYPE", tagData.toFIXLabelString());
             assertEquals( "310", tagData.toEnumIDString());
             assertEquals( "UNDERLYING_SECURITY_TYPE", tagData.toEnumNameString());
             assertEquals( "UnderlyingSecurityType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -637,7 +636,7 @@ class Tag310EnuUnderlyingSecurityTypeTest {
         for ( MyEnumSecurityType oneEnum : MyEnumSecurityType.values()) {
             tagData = new Tag310EnuUnderlyingSecurityType(oneEnum);
             assertEquals( "Tag310EnuUnderlyingSecurityType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

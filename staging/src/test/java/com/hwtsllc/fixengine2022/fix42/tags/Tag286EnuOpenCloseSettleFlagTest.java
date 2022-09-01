@@ -39,11 +39,11 @@ class Tag286EnuOpenCloseSettleFlagTest {
         // loop around the ENUM and process
         for ( Enum286OpenCLoseSettlFlag oneEnum : Enum286OpenCLoseSettlFlag.values()) {
             tagData = new Tag286EnuOpenCloseSettleFlag(oneEnum);
-            assertEquals( "FIX286_ENU_OPEN_CLOSE_SETTLE_FLAG", tagData.toEnumLabelString());
+            assertEquals( "FIX286_ENU_OPEN_CLOSE_SETTLE_FLAG", tagData.toFIXLabelString());
             assertEquals( "286", tagData.toEnumIDString());
             assertEquals( "OPEN_CLOSE_SETTLE_FLAG", tagData.toEnumNameString());
             assertEquals( "OpenCloseSettleFlag", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -114,7 +114,7 @@ class Tag286EnuOpenCloseSettleFlagTest {
         for ( Enum286OpenCLoseSettlFlag oneEnum : Enum286OpenCLoseSettlFlag.values()) {
             tagData = new Tag286EnuOpenCloseSettleFlag(oneEnum);
             assertEquals( "Tag286EnuOpenCloseSettleFlag\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

@@ -39,11 +39,11 @@ class Tag563EnuMultiLegRptTypeReqTest {
         // loop around the ENUM and process
         for (Enum563MultiLegRptTypeReq oneEnum : Enum563MultiLegRptTypeReq.values()) {
             tagData = new Tag563EnuMultiLegRptTypeReq(oneEnum);
-            assertEquals( "FIX563_ENU_MULTI_LEG_RPT_TYPE_REQ", tagData.toEnumLabelString());
+            assertEquals( "FIX563_ENU_MULTI_LEG_RPT_TYPE_REQ", tagData.toFIXLabelString());
             assertEquals( "563", tagData.toEnumIDString());
             assertEquals( "MULTI_LEG_RPT_TYPE_REQ", tagData.toEnumNameString());
             assertEquals( "MultiLegRptTypeReq", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -97,7 +97,7 @@ class Tag563EnuMultiLegRptTypeReqTest {
         for (Enum563MultiLegRptTypeReq oneEnum : Enum563MultiLegRptTypeReq.values()) {
             tagData = new Tag563EnuMultiLegRptTypeReq(oneEnum);
             assertEquals( "Tag563EnuMultiLegRptTypeReq\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

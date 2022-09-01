@@ -43,11 +43,11 @@ class Tag206StrOptAttributeTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag206StrOptAttribute( new MyStringType( oneElement ));
-            assertEquals( "FIX206_STR_OPT_ATTRIBUTE", tagData.toEnumLabelString());
+            assertEquals( "FIX206_STR_OPT_ATTRIBUTE", tagData.toFIXLabelString());
             assertEquals( "206", tagData.toEnumIDString());
             assertEquals( "OPT_ATTRIBUTE", tagData.toEnumNameString());
             assertEquals( "OptAttribute", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag206StrOptAttributeTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag206StrOptAttribute( new MyStringType( oneElement ));
             assertEquals( "Tag206StrOptAttribute\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

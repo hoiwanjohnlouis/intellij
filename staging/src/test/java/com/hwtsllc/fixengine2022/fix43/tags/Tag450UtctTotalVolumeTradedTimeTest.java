@@ -53,11 +53,11 @@ class Tag450UtctTotalVolumeTradedTimeTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag450UtctTotalVolumeTradedTime( new MyUTCTimeType( oneElement ));
-            assertEquals( "FIX450_UTCT_TOTAL_VOLUME_TRADED_TIME", tagData.toEnumLabelString());
+            assertEquals( "FIX450_UTCT_TOTAL_VOLUME_TRADED_TIME", tagData.toFIXLabelString());
             assertEquals( "450", tagData.toEnumIDString());
             assertEquals( "TOTAL_VOLUME_TRADED_TIME", tagData.toEnumNameString());
             assertEquals( "TotalVolumeTradedTime (replaced)", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -88,7 +88,7 @@ class Tag450UtctTotalVolumeTradedTimeTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag450UtctTotalVolumeTradedTime( new MyUTCTimeType( oneElement ));
             assertEquals( "Tag450UtctTotalVolumeTradedTime\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

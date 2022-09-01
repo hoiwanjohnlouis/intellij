@@ -39,11 +39,11 @@ class Tag423EnuPriceTypeTest {
         // loop around the ENUM and process
         for ( MyEnumPriceType oneEnum : MyEnumPriceType.values()) {
             tagData = new Tag423EnuPriceType(oneEnum);
-            assertEquals( "FIX423_ENU_PRICE_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX423_ENU_PRICE_TYPE", tagData.toFIXLabelString());
             assertEquals( "423", tagData.toEnumIDString());
             assertEquals( "PRICE_TYPE", tagData.toEnumNameString());
             assertEquals( "PriceType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -180,7 +180,7 @@ class Tag423EnuPriceTypeTest {
         for ( MyEnumPriceType oneEnum : MyEnumPriceType.values()) {
             tagData = new Tag423EnuPriceType(oneEnum);
             assertEquals( "Tag423EnuPriceType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

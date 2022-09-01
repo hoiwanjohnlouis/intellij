@@ -43,11 +43,11 @@ class Tag1106StrTriggerSecurityDescTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag1106StrTriggerSecurityDesc( new MyStringType( oneElement ));
-            assertEquals( "FIX1106_STR_TRIGGER_SECURITY_DESC", tagData.toEnumLabelString());
+            assertEquals( "FIX1106_STR_TRIGGER_SECURITY_DESC", tagData.toFIXLabelString());
             assertEquals( "1106", tagData.toEnumIDString());
             assertEquals( "TRIGGER_SECURITY_DESC", tagData.toEnumNameString());
             assertEquals( "TriggerSecurityDesc", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag1106StrTriggerSecurityDescTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag1106StrTriggerSecurityDesc( new MyStringType( oneElement ));
             assertEquals( "Tag1106StrTriggerSecurityDesc\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

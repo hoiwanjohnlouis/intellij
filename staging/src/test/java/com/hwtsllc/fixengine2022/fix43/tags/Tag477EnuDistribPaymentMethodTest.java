@@ -39,11 +39,11 @@ class Tag477EnuDistribPaymentMethodTest {
         // loop around the ENUM and process
         for (Enum477DistribPaymentMethod oneEnum : Enum477DistribPaymentMethod.values()) {
             tagData = new Tag477EnuDistribPaymentMethod(oneEnum);
-            assertEquals( "FIX477_ENU_DISTRIB_PAYMENT_METHOD", tagData.toEnumLabelString());
+            assertEquals( "FIX477_ENU_DISTRIB_PAYMENT_METHOD", tagData.toFIXLabelString());
             assertEquals( "477", tagData.toEnumIDString());
             assertEquals( "DISTRIB_PAYMENT_METHOD", tagData.toEnumNameString());
             assertEquals( "DistribPaymentMethod", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -146,7 +146,7 @@ class Tag477EnuDistribPaymentMethodTest {
         for (Enum477DistribPaymentMethod oneEnum : Enum477DistribPaymentMethod.values()) {
             tagData = new Tag477EnuDistribPaymentMethod(oneEnum);
             assertEquals( "Tag477EnuDistribPaymentMethod\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyEnumBenchmarkCurveName;
-import com.hwtsllc.fixengine2022.fix44.tags.Tag677EnuLegBenchmarkCurveName;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -40,11 +39,11 @@ class Tag221EnuBenchmarkCurveNameTest {
         // loop around the ENUM and process
         for ( MyEnumBenchmarkCurveName oneEnum : MyEnumBenchmarkCurveName.values()) {
             tagData = new Tag221EnuBenchmarkCurveName(oneEnum);
-            assertEquals( "FIX221_ENU_BENCHMARK_CURVE_NAME", tagData.toEnumLabelString());
+            assertEquals( "FIX221_ENU_BENCHMARK_CURVE_NAME", tagData.toFIXLabelString());
             assertEquals( "221", tagData.toEnumIDString());
             assertEquals( "BENCHMARK_CURVE_NAME", tagData.toEnumNameString());
             assertEquals( "BenchmarkCurveName", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -146,7 +145,7 @@ class Tag221EnuBenchmarkCurveNameTest {
         for ( MyEnumBenchmarkCurveName oneEnum : MyEnumBenchmarkCurveName.values()) {
             tagData = new Tag221EnuBenchmarkCurveName(oneEnum);
             assertEquals( "Tag221EnuBenchmarkCurveName\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

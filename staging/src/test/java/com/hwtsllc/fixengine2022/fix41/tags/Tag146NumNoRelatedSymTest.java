@@ -43,11 +43,11 @@ class Tag146NumNoRelatedSymTest {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag146NumNoRelatedSym( new MyNumInGroupType( oneElement ));
-            assertEquals( "FIX146_NUM_NO_RELATED_SYM", tagData.toEnumLabelString());
+            assertEquals( "FIX146_NUM_NO_RELATED_SYM", tagData.toFIXLabelString());
             assertEquals( "146", tagData.toEnumIDString());
             assertEquals( "NO_RELATED_SYM", tagData.toEnumNameString());
             assertEquals( "NoRelatedSym", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag146NumNoRelatedSymTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag146NumNoRelatedSym( new MyNumInGroupType( oneElement ));
             assertEquals( "Tag146NumNoRelatedSym\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

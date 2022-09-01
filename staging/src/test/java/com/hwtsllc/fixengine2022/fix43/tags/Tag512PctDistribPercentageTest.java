@@ -43,11 +43,11 @@ class Tag512PctDistribPercentageTest {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag512PctDistribPercentage( new MyPercentageType( oneElement ));
-            assertEquals( "FIX512_PCT_DISTRIB_PERCENTAGE", tagData.toEnumLabelString());
+            assertEquals( "FIX512_PCT_DISTRIB_PERCENTAGE", tagData.toFIXLabelString());
             assertEquals( "512", tagData.toEnumIDString());
             assertEquals( "DISTRIB_PERCENTAGE", tagData.toEnumNameString());
             assertEquals( "DistribPercentage", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag512PctDistribPercentageTest {
         for ( double oneElement : TestArray ) {
             tagData = new Tag512PctDistribPercentage( new MyPercentageType( oneElement ));
             assertEquals( "Tag512PctDistribPercentage\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

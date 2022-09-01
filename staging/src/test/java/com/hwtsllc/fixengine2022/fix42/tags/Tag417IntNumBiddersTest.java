@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyIntType;
-import com.hwtsllc.fixengine2022.fix41.tags.Tag205IntMaturityDay;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -44,11 +43,11 @@ class Tag417IntNumBiddersTest {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag417IntNumBidders( new MyIntType( oneElement ));
-            assertEquals( "FIX417_INT_NUM_BIDDERS", tagData.toEnumLabelString());
+            assertEquals( "FIX417_INT_NUM_BIDDERS", tagData.toFIXLabelString());
             assertEquals( "417", tagData.toEnumIDString());
             assertEquals( "NUM_BIDDERS", tagData.toEnumNameString());
             assertEquals( "NumBidders", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -85,7 +84,7 @@ class Tag417IntNumBiddersTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag417IntNumBidders( new MyIntType( oneElement ));
             assertEquals( "Tag417IntNumBidders\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

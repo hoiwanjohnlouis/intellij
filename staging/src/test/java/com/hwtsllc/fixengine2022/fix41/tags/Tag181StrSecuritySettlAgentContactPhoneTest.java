@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.fix40.tags.Tag131StrQuoteReqID;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -45,11 +44,11 @@ class Tag181StrSecuritySettlAgentContactPhoneTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag181StrSecuritySettlAgentContactPhone( new MyStringType( oneElement ));
-            assertEquals( "FIX181_STR_SECURITY_SETTL_AGENT_CONTACT_PHONE", tagData.toEnumLabelString());
+            assertEquals( "FIX181_STR_SECURITY_SETTL_AGENT_CONTACT_PHONE", tagData.toFIXLabelString());
             assertEquals( "181", tagData.toEnumIDString());
             assertEquals( "SECURITY_SETTL_AGENT_CONTACT_PHONE", tagData.toEnumNameString());
             assertEquals( "SecuritySettlAgentContactPhone (replaced)", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -86,7 +85,7 @@ class Tag181StrSecuritySettlAgentContactPhoneTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag181StrSecuritySettlAgentContactPhone( new MyStringType( oneElement ));
             assertEquals( "Tag181StrSecuritySettlAgentContactPhone\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

@@ -43,11 +43,11 @@ class Tag148StrHeadlineTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag148StrHeadline( new MyStringType( oneElement ));
-            assertEquals( "FIX148_STR_HEADLINE", tagData.toEnumLabelString());
+            assertEquals( "FIX148_STR_HEADLINE", tagData.toFIXLabelString());
             assertEquals( "148", tagData.toEnumIDString());
             assertEquals( "HEADLINE", tagData.toEnumNameString());
             assertEquals( "Headline", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag148StrHeadlineTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag148StrHeadline( new MyStringType( oneElement ));
             assertEquals( "Tag148StrHeadline\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

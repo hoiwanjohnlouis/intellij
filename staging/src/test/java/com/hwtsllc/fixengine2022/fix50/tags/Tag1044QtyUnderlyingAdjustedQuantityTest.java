@@ -43,11 +43,11 @@ class Tag1044QtyUnderlyingAdjustedQuantityTest {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag1044QtyUnderlyingAdjustedQuantity( new MyQtyType( oneElement ));
-            assertEquals( "FIX1044_QTY_UNDERLYING_ADJUSTED_QUANTITY", tagData.toEnumLabelString());
+            assertEquals( "FIX1044_QTY_UNDERLYING_ADJUSTED_QUANTITY", tagData.toFIXLabelString());
             assertEquals( "1044", tagData.toEnumIDString());
             assertEquals( "UNDERLYING_ADJUSTED_QUANTITY", tagData.toEnumNameString());
             assertEquals( "UnderlyingAdjustedQuantity", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag1044QtyUnderlyingAdjustedQuantityTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag1044QtyUnderlyingAdjustedQuantity( new MyQtyType( oneElement ));
             assertEquals( "Tag1044QtyUnderlyingAdjustedQuantity\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

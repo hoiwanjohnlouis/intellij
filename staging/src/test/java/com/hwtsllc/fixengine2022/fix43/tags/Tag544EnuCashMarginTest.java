@@ -39,11 +39,11 @@ class Tag544EnuCashMarginTest {
         // loop around the ENUM and process
         for (Enum544CashMargin oneEnum : Enum544CashMargin.values()) {
             tagData = new Tag544EnuCashMargin(oneEnum);
-            assertEquals( "FIX544_ENU_CASH_MARGIN", tagData.toEnumLabelString());
+            assertEquals( "FIX544_ENU_CASH_MARGIN", tagData.toFIXLabelString());
             assertEquals( "544", tagData.toEnumIDString());
             assertEquals( "CASH_MARGIN", tagData.toEnumNameString());
             assertEquals( "CashMargin", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -96,7 +96,7 @@ class Tag544EnuCashMarginTest {
         for (Enum544CashMargin oneEnum : Enum544CashMargin.values()) {
             tagData = new Tag544EnuCashMargin(oneEnum);
             assertEquals( "Tag544EnuCashMargin\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

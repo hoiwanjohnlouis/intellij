@@ -43,11 +43,11 @@ class Tag144StrOnBehalfOfLocationIDTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag144StrOnBehalfOfLocationID( new MyStringType( oneElement ));
-            assertEquals( "FIX144_STR_ON_BEHALF_OF_LOCATION_ID", tagData.toEnumLabelString());
+            assertEquals( "FIX144_STR_ON_BEHALF_OF_LOCATION_ID", tagData.toFIXLabelString());
             assertEquals( "144", tagData.toEnumIDString());
             assertEquals( "ON_BEHALF_OF_LOCATION_ID", tagData.toEnumNameString());
             assertEquals( "OnBehalfOfLocationID", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag144StrOnBehalfOfLocationIDTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag144StrOnBehalfOfLocationID( new MyStringType( oneElement ));
             assertEquals( "Tag144StrOnBehalfOfLocationID\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

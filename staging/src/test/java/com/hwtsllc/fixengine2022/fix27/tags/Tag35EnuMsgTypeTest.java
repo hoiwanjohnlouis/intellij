@@ -39,11 +39,11 @@ class Tag35EnuMsgTypeTest {
         // loop around the ENUM and process
         for (MyEnumMsgType oneEnum : MyEnumMsgType.values()) {
             tagData = new Tag35EnuMsgType(oneEnum);
-            assertEquals( "FIX35_ENU_MSG_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX35_ENU_MSG_TYPE", tagData.toFIXLabelString());
             assertEquals( "MSG_TYPE", tagData.toEnumNameString());
             assertEquals( "35", tagData.toEnumIDString());
             assertEquals( "MsgType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -637,7 +637,7 @@ class Tag35EnuMsgTypeTest {
         for (MyEnumMsgType oneEnum : MyEnumMsgType.values()) {
             tagData = new Tag35EnuMsgType(oneEnum);
             assertEquals( "Tag35EnuMsgType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

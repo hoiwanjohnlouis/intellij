@@ -18,7 +18,6 @@ package com.hwtsllc.fixengine2022.fix44.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.FIX27;
 import com.hwtsllc.fixengine2022.datatypes.MyEnumSecurityIDSource;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag22EnuSecurityIDSource;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -146,11 +145,11 @@ class Tag761EnuBenchmarkSecurityIDSourceTest {
         // loop around the ENUM and process
         for ( MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
             tagData = new Tag761EnuBenchmarkSecurityIDSource(oneEnum);
-            assertEquals( "FIX761_ENU_BENCHMARK_SECURITY_ID_SOURCE", tagData.toEnumLabelString());
+            assertEquals( "FIX761_ENU_BENCHMARK_SECURITY_ID_SOURCE", tagData.toFIXLabelString());
             assertEquals( "761", tagData.toEnumIDString());
             assertEquals( "BENCHMARK_SECURITY_ID_SOURCE", tagData.toEnumNameString());
             assertEquals( "BenchmarkSecurityIDSource", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -302,7 +301,7 @@ class Tag761EnuBenchmarkSecurityIDSourceTest {
         for ( MyEnumSecurityIDSource oneEnum : MyEnumSecurityIDSource.values()) {
             tagData = new Tag761EnuBenchmarkSecurityIDSource(oneEnum);
             assertEquals( "Tag761EnuBenchmarkSecurityIDSource\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

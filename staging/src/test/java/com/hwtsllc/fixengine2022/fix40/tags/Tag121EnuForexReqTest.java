@@ -39,11 +39,11 @@ class Tag121EnuForexReqTest {
         // loop around the ENUM and process
         for (Enum121ForexReq oneEnum : Enum121ForexReq.values()) {
             tagData = new Tag121EnuForexReq(oneEnum);
-            assertEquals( "FIX121_ENU_FOREX_REQ", tagData.toEnumLabelString());
+            assertEquals( "FIX121_ENU_FOREX_REQ", tagData.toFIXLabelString());
             assertEquals( "FOREX_REQ", tagData.toEnumNameString());
             assertEquals( "121", tagData.toEnumIDString());
             assertEquals( "ForexReq", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -91,7 +91,7 @@ class Tag121EnuForexReqTest {
         for (Enum121ForexReq oneEnum : Enum121ForexReq.values()) {
             tagData = new Tag121EnuForexReq(oneEnum);
             assertEquals( "Tag121EnuForexReq\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

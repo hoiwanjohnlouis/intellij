@@ -39,11 +39,11 @@ class Tag982EnuExpTypeTest {
         // loop around the ENUM and process
         for ( Enum982ExpType oneEnum : Enum982ExpType.values()) {
             tagData = new Tag982EnuExpType(oneEnum);
-            assertEquals( "FIX982_ENU_EXP_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX982_ENU_EXP_TYPE", tagData.toFIXLabelString());
             assertEquals( "982", tagData.toEnumIDString());
             assertEquals( "EXP_TYPE", tagData.toEnumNameString());
             assertEquals( "ExpType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -106,7 +106,7 @@ class Tag982EnuExpTypeTest {
         for ( Enum982ExpType oneEnum : Enum982ExpType.values()) {
             tagData = new Tag982EnuExpType(oneEnum);
             assertEquals( "Tag982EnuExpType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

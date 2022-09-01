@@ -53,7 +53,7 @@ class Enum567TradSesStatusRejReasonTest {
         assertEquals("1", enumType.toEnumIDString());
         assertEquals("UNKNOWN_TRADING_SESSION_ID", enumType.toEnumNameString());
         assertEquals("1 - Unknown or invalid TradingSessionID", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -66,7 +66,7 @@ class Enum567TradSesStatusRejReasonTest {
         assertEquals("99", enumType.toEnumIDString());
         assertEquals("OTHER", enumType.toEnumNameString());
         assertEquals("99 - Other", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());

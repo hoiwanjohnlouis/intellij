@@ -43,11 +43,11 @@ class Tag960StrStrategyParameterValueTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag960StrStrategyParameterValue( new MyStringType( oneElement ));
-            assertEquals( "FIX960_STR_STRATEGY_PARAMETER_VALUE", tagData.toEnumLabelString());
+            assertEquals( "FIX960_STR_STRATEGY_PARAMETER_VALUE", tagData.toFIXLabelString());
             assertEquals( "960", tagData.toEnumIDString());
             assertEquals( "STRATEGY_PARAMETER_VALUE", tagData.toEnumNameString());
             assertEquals( "StrategyParameterValue", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag960StrStrategyParameterValueTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag960StrStrategyParameterValue( new MyStringType( oneElement ));
             assertEquals( "Tag960StrStrategyParameterValue\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

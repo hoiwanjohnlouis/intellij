@@ -39,11 +39,11 @@ class Tag829EnuTrdSubTypeTest {
         // loop around the ENUM and process
         for ( Enum829TrdSubType oneEnum : Enum829TrdSubType.values()) {
             tagData = new Tag829EnuTrdSubType(oneEnum);
-            assertEquals( "FIX829_ENU_TRD_SUB_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX829_ENU_TRD_SUB_TYPE", tagData.toFIXLabelString());
             assertEquals( "829", tagData.toEnumIDString());
             assertEquals( "TRD_SUB_TYPE", tagData.toEnumNameString());
             assertEquals( "TrdSubType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -291,7 +291,7 @@ class Tag829EnuTrdSubTypeTest {
         for ( Enum829TrdSubType oneEnum : Enum829TrdSubType.values()) {
             tagData = new Tag829EnuTrdSubType(oneEnum);
             assertEquals( "Tag829EnuTrdSubType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

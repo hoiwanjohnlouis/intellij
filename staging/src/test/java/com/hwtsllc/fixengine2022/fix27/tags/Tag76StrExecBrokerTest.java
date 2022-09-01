@@ -44,11 +44,11 @@ class Tag76StrExecBrokerTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag76StrExecBroker( new MyStringType( oneElement ));
-            assertEquals( "FIX76_STR_EXEC_BROKER", tagData.toEnumLabelString());
+            assertEquals( "FIX76_STR_EXEC_BROKER", tagData.toFIXLabelString());
             assertEquals( "EXEC_BROKER", tagData.toEnumNameString());
             assertEquals( "76", tagData.toEnumIDString());
             assertEquals( "ExecBroker (replaced)", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -83,7 +83,7 @@ class Tag76StrExecBrokerTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag76StrExecBroker( new MyStringType( oneElement ));
             assertEquals( "Tag76StrExecBroker\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

@@ -39,11 +39,11 @@ class Tag666EnuConfirmTransTypeTest {
         // loop around the ENUM and process
         for ( Enum666ConfirmTransType oneEnum : Enum666ConfirmTransType.values()) {
             tagData = new Tag666EnuConfirmTransType(oneEnum);
-            assertEquals( "FIX666_ENU_CONFIRM_TRANS_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX666_ENU_CONFIRM_TRANS_TYPE", tagData.toFIXLabelString());
             assertEquals( "666", tagData.toEnumIDString());
             assertEquals( "CONFIRM_TRANS_TYPE", tagData.toEnumNameString());
             assertEquals( "ConfirmTransType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -96,7 +96,7 @@ class Tag666EnuConfirmTransTypeTest {
         for ( Enum666ConfirmTransType oneEnum : Enum666ConfirmTransType.values()) {
             tagData = new Tag666EnuConfirmTransType(oneEnum);
             assertEquals( "Tag666EnuConfirmTransType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

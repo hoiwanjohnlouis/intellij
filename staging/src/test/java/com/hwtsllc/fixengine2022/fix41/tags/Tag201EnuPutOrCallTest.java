@@ -40,11 +40,11 @@ class Tag201EnuPutOrCallTest {
         // loop around the ENUM and process
         for (MyEnumPutOrCall oneEnum : MyEnumPutOrCall.values()) {
             tagData = new Tag201EnuPutOrCall(oneEnum);
-            assertEquals( "FIX201_ENU_PUT_OR_CALL", tagData.toEnumLabelString());
+            assertEquals( "FIX201_ENU_PUT_OR_CALL", tagData.toFIXLabelString());
             assertEquals( "201", tagData.toEnumIDString());
             assertEquals( "PUT_OR_CALL", tagData.toEnumNameString());
             assertEquals( "PutOrCall (replaced)", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -92,7 +92,7 @@ class Tag201EnuPutOrCallTest {
         for (MyEnumPutOrCall oneEnum : MyEnumPutOrCall.values()) {
             tagData = new Tag201EnuPutOrCall(oneEnum);
             assertEquals( "Tag201EnuPutOrCall\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

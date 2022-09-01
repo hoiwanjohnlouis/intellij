@@ -39,11 +39,11 @@ class Tag1008EnuSideTrdSubTypTest {
         // loop around the ENUM and process
         for ( Enum1008SideTrdSubTyp oneEnum : Enum1008SideTrdSubTyp.values()) {
             tagData = new Tag1008EnuSideTrdSubTyp(oneEnum);
-            assertEquals( "FIX1008_ENU_SIDE_TRD_SUB_TYP", tagData.toEnumLabelString());
+            assertEquals( "FIX1008_ENU_SIDE_TRD_SUB_TYP", tagData.toFIXLabelString());
             assertEquals( "1008", tagData.toEnumIDString());
             assertEquals( "SIDE_TRD_SUB_TYP", tagData.toEnumNameString());
             assertEquals( "SideTrdSubTyp", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -140,7 +140,7 @@ class Tag1008EnuSideTrdSubTypTest {
         for ( Enum1008SideTrdSubTyp oneEnum : Enum1008SideTrdSubTyp.values()) {
             tagData = new Tag1008EnuSideTrdSubTyp(oneEnum);
             assertEquals( "Tag1008EnuSideTrdSubTyp\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

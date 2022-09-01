@@ -39,11 +39,11 @@ class Tag338EnuTradSesMethodTest {
         // loop around the ENUM and process
         for ( Enum338TradSesMethod oneEnum : Enum338TradSesMethod.values()) {
             tagData = new Tag338EnuTradSesMethod(oneEnum);
-            assertEquals( "FIX338_ENU_TRAD_SES_METHOD", tagData.toEnumLabelString());
+            assertEquals( "FIX338_ENU_TRAD_SES_METHOD", tagData.toFIXLabelString());
             assertEquals( "338", tagData.toEnumIDString());
             assertEquals( "TRAD_SES_METHOD", tagData.toEnumNameString());
             assertEquals( "TradSesMethod", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -98,7 +98,7 @@ class Tag338EnuTradSesMethodTest {
         for ( Enum338TradSesMethod oneEnum : Enum338TradSesMethod.values()) {
             tagData = new Tag338EnuTradSesMethod(oneEnum);
             assertEquals( "Tag338EnuTradSesMethod\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

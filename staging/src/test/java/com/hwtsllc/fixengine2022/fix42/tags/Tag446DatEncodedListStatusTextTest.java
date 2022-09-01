@@ -43,11 +43,11 @@ class Tag446DatEncodedListStatusTextTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag446DatEncodedListStatusText( new MyDataType( oneElement ));
-            assertEquals( "FIX446_DAT_LIST_STATUS_ENCODED_TEXT", tagData.toEnumLabelString());
+            assertEquals( "FIX446_DAT_LIST_STATUS_ENCODED_TEXT", tagData.toFIXLabelString());
             assertEquals( "446", tagData.toEnumIDString());
             assertEquals( "LIST_STATUS_ENCODED_TEXT", tagData.toEnumNameString());
             assertEquals( "ListStatusEncodedText", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag446DatEncodedListStatusTextTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag446DatEncodedListStatusText( new MyDataType( oneElement ));
             assertEquals( "Tag446DatEncodedListStatusText\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

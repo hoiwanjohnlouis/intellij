@@ -39,11 +39,11 @@ class Tag893EnuLastFragmentTest {
         // loop around the ENUM and process
         for ( Enum893LastFragment oneEnum : Enum893LastFragment.values()) {
             tagData = new Tag893EnuLastFragment(oneEnum);
-            assertEquals( "FIX893_ENU_LAST_FRAGMENT", tagData.toEnumLabelString());
+            assertEquals( "FIX893_ENU_LAST_FRAGMENT", tagData.toFIXLabelString());
             assertEquals( "893", tagData.toEnumIDString());
             assertEquals( "LAST_FRAGMENT", tagData.toEnumNameString());
             assertEquals( "LastFragment", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -91,7 +91,7 @@ class Tag893EnuLastFragmentTest {
         for ( Enum893LastFragment oneEnum : Enum893LastFragment.values()) {
             tagData = new Tag893EnuLastFragment(oneEnum);
             assertEquals( "Tag893EnuLastFragment\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

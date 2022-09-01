@@ -43,11 +43,11 @@ class Tag1062NumNoUndlyInstrumentPartySubIDsTest {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag1062NumNoUndlyInstrumentPartySubIDs( new MyNumInGroupType( oneElement ));
-            assertEquals( "FIX1062_NUM_NO_UNDLY_INSTRUMENT_PARTY_SUB_IDS", tagData.toEnumLabelString());
+            assertEquals( "FIX1062_NUM_NO_UNDLY_INSTRUMENT_PARTY_SUB_IDS", tagData.toFIXLabelString());
             assertEquals( "1062", tagData.toEnumIDString());
             assertEquals( "NO_UNDLY_INSTRUMENT_PARTY_SUB_IDS", tagData.toEnumNameString());
             assertEquals( "NoUndlyInstrumentPartySubIDs", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag1062NumNoUndlyInstrumentPartySubIDsTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag1062NumNoUndlyInstrumentPartySubIDs( new MyNumInGroupType( oneElement ));
             assertEquals( "Tag1062NumNoUndlyInstrumentPartySubIDs\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

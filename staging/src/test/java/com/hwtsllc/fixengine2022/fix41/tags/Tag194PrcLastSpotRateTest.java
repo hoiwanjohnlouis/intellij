@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
-import com.hwtsllc.fixengine2022.fix40.tags.Tag140PrcPrevClosePx;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -44,11 +43,11 @@ class Tag194PrcLastSpotRateTest {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag194PrcLastSpotRate( new MyPriceType( oneElement ));
-            assertEquals( "FIX194_PRC_LAST_SPOT_RATE", tagData.toEnumLabelString());
+            assertEquals( "FIX194_PRC_LAST_SPOT_RATE", tagData.toFIXLabelString());
             assertEquals( "194", tagData.toEnumIDString());
             assertEquals( "LAST_SPOT_RATE", tagData.toEnumNameString());
             assertEquals( "LastSpotRate", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -85,7 +84,7 @@ class Tag194PrcLastSpotRateTest {
         for ( double oneElement : TestArray ) {
             tagData = new Tag194PrcLastSpotRate( new MyPriceType( oneElement ));
             assertEquals( "Tag194PrcLastSpotRate\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

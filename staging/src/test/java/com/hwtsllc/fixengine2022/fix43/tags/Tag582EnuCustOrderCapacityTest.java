@@ -39,11 +39,11 @@ class Tag582EnuCustOrderCapacityTest {
         // loop around the ENUM and process
         for (Enum582CustOrderCapacity oneEnum : Enum582CustOrderCapacity.values()) {
             tagData = new Tag582EnuCustOrderCapacity(oneEnum);
-            assertEquals( "FIX582_ENU_CUST_ORDER_CAPACITY", tagData.toEnumLabelString());
+            assertEquals( "FIX582_ENU_CUST_ORDER_CAPACITY", tagData.toFIXLabelString());
             assertEquals( "582", tagData.toEnumIDString());
             assertEquals( "CUST_ORDER_CAPACITY", tagData.toEnumNameString());
             assertEquals( "CustOrderCapacity", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -101,7 +101,7 @@ class Tag582EnuCustOrderCapacityTest {
         for (Enum582CustOrderCapacity oneEnum : Enum582CustOrderCapacity.values()) {
             tagData = new Tag582EnuCustOrderCapacity(oneEnum);
             assertEquals( "Tag582EnuCustOrderCapacity\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

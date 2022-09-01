@@ -43,11 +43,11 @@ class Tag108IntHeartBtIntTest {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag108IntHeartBtInt( new MyIntType( oneElement ));
-            assertEquals( "FIX108_INT_HEART_BT_INT", tagData.toEnumLabelString());
+            assertEquals( "FIX108_INT_HEART_BT_INT", tagData.toFIXLabelString());
             assertEquals( "HEART_BT_INT", tagData.toEnumNameString());
             assertEquals( "108", tagData.toEnumIDString());
             assertEquals( "HeartBtInt", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag108IntHeartBtIntTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag108IntHeartBtInt( new MyIntType( oneElement ));
             assertEquals( "Tag108IntHeartBtInt\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

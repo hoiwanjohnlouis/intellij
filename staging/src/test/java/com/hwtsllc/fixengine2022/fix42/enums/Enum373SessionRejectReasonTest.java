@@ -71,7 +71,7 @@ class Enum373SessionRejectReasonTest {
         assertEquals( "0", enumType.toEnumIDString());
         assertEquals( "INVALID_TAG_NUMBER", enumType.toEnumNameString());
         assertEquals( "0 - Invalid Tag Number", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -80,7 +80,7 @@ class Enum373SessionRejectReasonTest {
         assertEquals( "1", enumType.toEnumIDString());
         assertEquals( "REQUIRED_TAG_MISSING", enumType.toEnumNameString());
         assertEquals( "1 - Required Tag Missing", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -89,7 +89,7 @@ class Enum373SessionRejectReasonTest {
         assertEquals( "2", enumType.toEnumIDString());
         assertEquals( "TAG_NOT_DEFINED_FOR_THIS_MESSAGE_TYPE", enumType.toEnumNameString());
         assertEquals( "2 - Tag not defined for this message type", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -98,7 +98,7 @@ class Enum373SessionRejectReasonTest {
         assertEquals( "3", enumType.toEnumIDString());
         assertEquals( "UNDEFINED_TAG", enumType.toEnumNameString());
         assertEquals( "3 - Undefined tag", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -107,7 +107,7 @@ class Enum373SessionRejectReasonTest {
         assertEquals( "4", enumType.toEnumIDString());
         assertEquals( "TAG_SPECIFIED_WITHOUT_A_VALUE", enumType.toEnumNameString());
         assertEquals( "4 - Tag specified without a value", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -116,7 +116,7 @@ class Enum373SessionRejectReasonTest {
         assertEquals( "5", enumType.toEnumIDString());
         assertEquals( "INCORRECT_VALUE_FOR_THIS_TAG", enumType.toEnumNameString());
         assertEquals( "5 - Value is incorrect (out of range) for this tag", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -125,7 +125,7 @@ class Enum373SessionRejectReasonTest {
         assertEquals( "6", enumType.toEnumIDString());
         assertEquals( "INCORRECT_DATA_FORMAT", enumType.toEnumNameString());
         assertEquals( "6 - Incorrect data format for value", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -134,7 +134,7 @@ class Enum373SessionRejectReasonTest {
         assertEquals( "7", enumType.toEnumIDString());
         assertEquals( "DECRYPTION_PROBLEM", enumType.toEnumNameString());
         assertEquals( "7 - Decryption problem", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -143,7 +143,7 @@ class Enum373SessionRejectReasonTest {
         assertEquals( "8", enumType.toEnumIDString());
         assertEquals( "SIGNATURE_PROBLEM", enumType.toEnumNameString());
         assertEquals( "8 - Signature problem", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -152,7 +152,7 @@ class Enum373SessionRejectReasonTest {
         assertEquals( "9", enumType.toEnumIDString());
         assertEquals( "COMPID_PROBLEM", enumType.toEnumNameString());
         assertEquals( "9 -  CompID problem", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -161,7 +161,7 @@ class Enum373SessionRejectReasonTest {
         assertEquals( "10", enumType.toEnumIDString());
         assertEquals( "SENDINGTIME_ACCURACY_PROBLEM", enumType.toEnumNameString());
         assertEquals( "10 - SendingTime Accuracy Problem", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -170,7 +170,7 @@ class Enum373SessionRejectReasonTest {
         assertEquals( "11", enumType.toEnumIDString());
         assertEquals( "INVALID_MSGTYPE", enumType.toEnumNameString());
         assertEquals( "11 - Invalid MsgType", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -179,7 +179,7 @@ class Enum373SessionRejectReasonTest {
         assertEquals( "12", enumType.toEnumIDString());
         assertEquals( "XML_VALIDATION_ERROR", enumType.toEnumNameString());
         assertEquals( "12 - XML Validation Error", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -188,7 +188,7 @@ class Enum373SessionRejectReasonTest {
         assertEquals( "13", enumType.toEnumIDString());
         assertEquals( "DUPLICATE_TAG", enumType.toEnumNameString());
         assertEquals( "13 - Tag appears more than once", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -197,7 +197,7 @@ class Enum373SessionRejectReasonTest {
         assertEquals( "14", enumType.toEnumIDString());
         assertEquals( "TAG_SPECIFIED_OUT_OF_ORDER", enumType.toEnumNameString());
         assertEquals( "14 - Tag specified out of required order", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -206,7 +206,7 @@ class Enum373SessionRejectReasonTest {
         assertEquals( "15", enumType.toEnumIDString());
         assertEquals( "REPEATING_GROUP_FIELDS_OUT_OF_ORDER", enumType.toEnumNameString());
         assertEquals( "15 - Repeating group fields out of order", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -215,7 +215,7 @@ class Enum373SessionRejectReasonTest {
         assertEquals( "16", enumType.toEnumIDString());
         assertEquals( "INCORRECT_NUMINGROUP_COUNT", enumType.toEnumNameString());
         assertEquals( "16 - Incorrect NumInGroup count for repeating group", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -225,7 +225,7 @@ class Enum373SessionRejectReasonTest {
         assertEquals( "VALUE_INCLUDES_FIELD_DELIMITER", enumType.toEnumNameString());
         assertEquals( "17 - Non *Data* value includes field delimiter (<SOH> character)",
                 enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -239,7 +239,7 @@ class Enum373SessionRejectReasonTest {
         assertEquals( "99", enumType.toEnumIDString());
         assertEquals( "OTHER", enumType.toEnumNameString());
         assertEquals( "99 - Other", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());

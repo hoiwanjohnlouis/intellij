@@ -39,11 +39,11 @@ class Tag1036EnuExecAckStatusTest {
         // loop around the ENUM and process
         for ( Enum1036ExecAckStatus oneEnum : Enum1036ExecAckStatus.values()) {
             tagData = new Tag1036EnuExecAckStatus(oneEnum);
-            assertEquals( "FIX1036_ENU_EXEC_ACK_STATUS", tagData.toEnumLabelString());
+            assertEquals( "FIX1036_ENU_EXEC_ACK_STATUS", tagData.toFIXLabelString());
             assertEquals( "1036", tagData.toEnumIDString());
             assertEquals( "EXEC_ACK_STATUS", tagData.toEnumNameString());
             assertEquals( "ExecAckStatus", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -96,7 +96,7 @@ class Tag1036EnuExecAckStatusTest {
         for ( Enum1036ExecAckStatus oneEnum : Enum1036ExecAckStatus.values()) {
             tagData = new Tag1036EnuExecAckStatus(oneEnum);
             assertEquals( "Tag1036EnuExecAckStatus\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

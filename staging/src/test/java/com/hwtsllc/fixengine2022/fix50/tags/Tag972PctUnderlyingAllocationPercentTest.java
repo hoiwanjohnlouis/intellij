@@ -43,11 +43,11 @@ class Tag972PctUnderlyingAllocationPercentTest {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag972PctUnderlyingAllocationPercent( new MyPercentageType( oneElement ));
-            assertEquals( "FIX972_PCT_UNDERLYING_ALLOCATION_PERCENT", tagData.toEnumLabelString());
+            assertEquals( "FIX972_PCT_UNDERLYING_ALLOCATION_PERCENT", tagData.toFIXLabelString());
             assertEquals( "972", tagData.toEnumIDString());
             assertEquals( "UNDERLYING_ALLOCATION_PERCENT", tagData.toEnumNameString());
             assertEquals( "UnderlyingAllocationPercent", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag972PctUnderlyingAllocationPercentTest {
         for ( double oneElement : TestArray ) {
             tagData = new Tag972PctUnderlyingAllocationPercent( new MyPercentageType( oneElement ));
             assertEquals( "Tag972PctUnderlyingAllocationPercent\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

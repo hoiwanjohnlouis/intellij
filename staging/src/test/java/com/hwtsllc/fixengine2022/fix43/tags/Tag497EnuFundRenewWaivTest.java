@@ -39,11 +39,11 @@ class Tag497EnuFundRenewWaivTest {
         // loop around the ENUM and process
         for (Enum497FundRenewWaiv oneEnum : Enum497FundRenewWaiv.values()) {
             tagData = new Tag497EnuFundRenewWaiv(oneEnum);
-            assertEquals( "FIX497_ENU_FUND_RENEW_WAIV", tagData.toEnumLabelString());
+            assertEquals( "FIX497_ENU_FUND_RENEW_WAIV", tagData.toFIXLabelString());
             assertEquals( "497", tagData.toEnumIDString());
             assertEquals( "FUND_RENEW_WAIV", tagData.toEnumNameString());
             assertEquals( "FundRenewWaiv", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -91,7 +91,7 @@ class Tag497EnuFundRenewWaivTest {
         for (Enum497FundRenewWaiv oneEnum : Enum497FundRenewWaiv.values()) {
             tagData = new Tag497EnuFundRenewWaiv(oneEnum);
             assertEquals( "Tag497EnuFundRenewWaiv\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

@@ -39,11 +39,11 @@ class Tag569EnuTradeRequestTypeTest {
         // loop around the ENUM and process
         for (Enum569TradeRequestType oneEnum : Enum569TradeRequestType.values()) {
             tagData = new Tag569EnuTradeRequestType(oneEnum);
-            assertEquals( "FIX569_ENU_TRADE_REQUEST_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX569_ENU_TRADE_REQUEST_TYPE", tagData.toFIXLabelString());
             assertEquals( "569", tagData.toEnumIDString());
             assertEquals( "TRADE_REQUEST_TYPE", tagData.toEnumNameString());
             assertEquals( "TradeRequestType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -107,7 +107,7 @@ class Tag569EnuTradeRequestTypeTest {
         for (Enum569TradeRequestType oneEnum : Enum569TradeRequestType.values()) {
             tagData = new Tag569EnuTradeRequestType(oneEnum);
             assertEquals( "Tag569EnuTradeRequestType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

@@ -51,7 +51,7 @@ class Enum323SecurityResponseTypeTest {
         assertEquals( "1", enumType.toEnumIDString());
         assertEquals( "ACCEPT_SECURITY_AS_IS", enumType.toEnumNameString());
         assertEquals( "1 - Accept security proposal as-is", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -61,7 +61,7 @@ class Enum323SecurityResponseTypeTest {
         assertEquals( "ACCEPT_SECURITY_REVISIONS", enumType.toEnumNameString());
         assertEquals( "2 - Accept security proposal with revisions as indicated in the message",
                 enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -70,7 +70,7 @@ class Enum323SecurityResponseTypeTest {
         assertEquals( "3", enumType.toEnumIDString());
         assertEquals( "LIST_OF_SECURITY_TYPES_RETURNED", enumType.toEnumNameString());
         assertEquals( "3 - List of security types returned per request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -79,7 +79,7 @@ class Enum323SecurityResponseTypeTest {
         assertEquals( "4", enumType.toEnumIDString());
         assertEquals( "LIST_OF_SECURITIES_RETURNED_PER_REQUEST", enumType.toEnumNameString());
         assertEquals( "4 - List of securities returned per request", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -88,7 +88,7 @@ class Enum323SecurityResponseTypeTest {
         assertEquals( "5", enumType.toEnumIDString());
         assertEquals( "REJECT_SECURITY_PROPOSAL", enumType.toEnumNameString());
         assertEquals( "5 - Reject security proposal", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -98,7 +98,7 @@ class Enum323SecurityResponseTypeTest {
         assertEquals( "6", enumType.toEnumIDString());
         assertEquals( "CANNOT_MATCH_SELECTION", enumType.toEnumNameString());
         assertEquals( "6 - Cannot match selection criteria", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());

@@ -39,11 +39,11 @@ class Tag826EnuTradeAllocIndicatorTest {
         // loop around the ENUM and process
         for ( Enum826TradeAllocIndicator oneEnum : Enum826TradeAllocIndicator.values()) {
             tagData = new Tag826EnuTradeAllocIndicator(oneEnum);
-            assertEquals( "FIX826_ENU_TRADE_ALLOC_INDICATOR", tagData.toEnumLabelString());
+            assertEquals( "FIX826_ENU_TRADE_ALLOC_INDICATOR", tagData.toFIXLabelString());
             assertEquals( "826", tagData.toEnumIDString());
             assertEquals( "TRADE_ALLOC_INDICATOR", tagData.toEnumNameString());
             assertEquals( "TradeAllocIndicator", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -114,7 +114,7 @@ class Tag826EnuTradeAllocIndicatorTest {
         for ( Enum826TradeAllocIndicator oneEnum : Enum826TradeAllocIndicator.values()) {
             tagData = new Tag826EnuTradeAllocIndicator(oneEnum);
             assertEquals( "Tag826EnuTradeAllocIndicator\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

@@ -39,11 +39,11 @@ class Tag905EnuCollAsgnRespTypeTest {
         // loop around the ENUM and process
         for ( Enum905CollAsgnRespType oneEnum : Enum905CollAsgnRespType.values()) {
             tagData = new Tag905EnuCollAsgnRespType(oneEnum);
-            assertEquals( "FIX905_ENU_COLL_ASGN_RESP_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX905_ENU_COLL_ASGN_RESP_TYPE", tagData.toFIXLabelString());
             assertEquals( "905", tagData.toEnumIDString());
             assertEquals( "COLL_ASGN_RESP_TYPE", tagData.toEnumNameString());
             assertEquals( "CollAsgnRespType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -101,7 +101,7 @@ class Tag905EnuCollAsgnRespTypeTest {
         for ( Enum905CollAsgnRespType oneEnum : Enum905CollAsgnRespType.values()) {
             tagData = new Tag905EnuCollAsgnRespType(oneEnum);
             assertEquals( "Tag905EnuCollAsgnRespType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

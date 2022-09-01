@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix50.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyEnumPositionEffect;
-import com.hwtsllc.fixengine2022.fix27.tags.Tag77EnuPositionEffect;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -40,11 +39,11 @@ class Tag1047EnuAllocPositionEffectTest {
         // loop around the ENUM and process
         for ( MyEnumPositionEffect oneEnum : MyEnumPositionEffect.values()) {
             tagData = new Tag1047EnuAllocPositionEffect(oneEnum);
-            assertEquals( "FIX1047_ENU_ALLOC_POSITION_EFFECT", tagData.toEnumLabelString());
+            assertEquals( "FIX1047_ENU_ALLOC_POSITION_EFFECT", tagData.toFIXLabelString());
             assertEquals( "1047", tagData.toEnumIDString());
             assertEquals( "ALLOC_POSITION_EFFECT", tagData.toEnumNameString());
             assertEquals( "AllocPositionEffect", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -100,7 +99,7 @@ class Tag1047EnuAllocPositionEffectTest {
         for ( MyEnumPositionEffect oneEnum : MyEnumPositionEffect.values()) {
             tagData = new Tag1047EnuAllocPositionEffect(oneEnum);
             assertEquals( "Tag1047EnuAllocPositionEffect\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

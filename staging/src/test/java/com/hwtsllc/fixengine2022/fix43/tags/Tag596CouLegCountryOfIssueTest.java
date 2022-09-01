@@ -43,11 +43,11 @@ class Tag596CouLegCountryOfIssueTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag596CouLegCountryOfIssue( new MyCountryType( oneElement ));
-            assertEquals( "FIX596_COU_LEG_COUNTRY_OF_ISSUE", tagData.toEnumLabelString());
+            assertEquals( "FIX596_COU_LEG_COUNTRY_OF_ISSUE", tagData.toFIXLabelString());
             assertEquals( "596", tagData.toEnumIDString());
             assertEquals( "LEG_COUNTRY_OF_ISSUE", tagData.toEnumNameString());
             assertEquals( "LegCountryOfIssue", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag596CouLegCountryOfIssueTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag596CouLegCountryOfIssue( new MyCountryType( oneElement ));
             assertEquals( "Tag596CouLegCountryOfIssue\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

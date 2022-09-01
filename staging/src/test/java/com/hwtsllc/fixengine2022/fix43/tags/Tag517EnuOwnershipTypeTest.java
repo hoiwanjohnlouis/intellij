@@ -39,11 +39,11 @@ class Tag517EnuOwnershipTypeTest {
         // loop around the ENUM and process
         for (Enum517OwnershipType oneEnum : Enum517OwnershipType.values()) {
             tagData = new Tag517EnuOwnershipType(oneEnum);
-            assertEquals( "FIX517_ENU_OWNERSHIP_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX517_ENU_OWNERSHIP_TYPE", tagData.toFIXLabelString());
             assertEquals( "517", tagData.toEnumIDString());
             assertEquals( "OWNERSHIP_TYPE", tagData.toEnumNameString());
             assertEquals( "OwnershipType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -96,7 +96,7 @@ class Tag517EnuOwnershipTypeTest {
         for (Enum517OwnershipType oneEnum : Enum517OwnershipType.values()) {
             tagData = new Tag517EnuOwnershipType(oneEnum);
             assertEquals( "Tag517EnuOwnershipType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

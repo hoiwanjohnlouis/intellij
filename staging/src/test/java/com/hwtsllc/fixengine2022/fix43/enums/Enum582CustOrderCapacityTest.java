@@ -53,7 +53,7 @@ class Enum582CustOrderCapacityTest {
         assertEquals("1", enumType.toEnumIDString());
         assertEquals("MEMBER_TRADING_ACCOUNT", enumType.toEnumNameString());
         assertEquals("1 - Member trading for their own account", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -62,7 +62,7 @@ class Enum582CustOrderCapacityTest {
         assertEquals("2", enumType.toEnumIDString());
         assertEquals("CLEARING_FIRM_PROPRIETARY", enumType.toEnumNameString());
         assertEquals("2 - Clearing Firm trading for its proprietary account", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -71,7 +71,7 @@ class Enum582CustOrderCapacityTest {
         assertEquals("3", enumType.toEnumIDString());
         assertEquals("MEMBER_TRADING_FOR_ANOTHER", enumType.toEnumNameString());
         assertEquals("3 - Member trading for another member", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());
@@ -80,7 +80,7 @@ class Enum582CustOrderCapacityTest {
         assertEquals("4", enumType.toEnumIDString());
         assertEquals("ALL_OTHER", enumType.toEnumNameString());
         assertEquals("4 - All other", enumType.toEnumDescriptionString());
-        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toEnumLabelString());
+        assertNotEquals( MyTestValues.JUNK_ENUM_NAME, enumType.toFIXLabelString());
         assertNotEquals( MyTestValues.JUNK_ID, enumType.toEnumIDString());
         assertNotEquals( MyTestValues.JUNK_NAME, enumType.toEnumNameString());
         assertNotEquals( MyTestValues.JUNK_DESCRIPTION, enumType.toEnumDescriptionString());

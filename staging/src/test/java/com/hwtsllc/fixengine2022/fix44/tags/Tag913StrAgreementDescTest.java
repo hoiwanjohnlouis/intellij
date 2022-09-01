@@ -43,11 +43,11 @@ class Tag913StrAgreementDescTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag913StrAgreementDesc( new MyStringType( oneElement ));
-            assertEquals( "FIX913_STR_AGREEMENT_DESC", tagData.toEnumLabelString());
+            assertEquals( "FIX913_STR_AGREEMENT_DESC", tagData.toFIXLabelString());
             assertEquals( "913", tagData.toEnumIDString());
             assertEquals( "AGREEMENT_DESC", tagData.toEnumNameString());
             assertEquals( "AgreementDesc", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag913StrAgreementDescTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag913StrAgreementDesc( new MyStringType( oneElement ));
             assertEquals( "Tag913StrAgreementDesc\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

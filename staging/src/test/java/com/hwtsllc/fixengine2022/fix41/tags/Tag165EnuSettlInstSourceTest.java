@@ -39,11 +39,11 @@ class Tag165EnuSettlInstSourceTest {
         // loop around the ENUM and process
         for (Enum165SettlInstSource oneEnum : Enum165SettlInstSource.values()) {
             tagData = new Tag165EnuSettlInstSource(oneEnum);
-            assertEquals( "FIX165_ENU_SETTL_INST_SOURCE", tagData.toEnumLabelString());
+            assertEquals( "FIX165_ENU_SETTL_INST_SOURCE", tagData.toFIXLabelString());
             assertEquals( "165", tagData.toEnumIDString());
             assertEquals( "SETTL_INST_SOURCE", tagData.toEnumNameString());
             assertEquals( "SettlInstSource", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -96,7 +96,7 @@ class Tag165EnuSettlInstSourceTest {
         for (Enum165SettlInstSource oneEnum : Enum165SettlInstSource.values()) {
             tagData = new Tag165EnuSettlInstSource(oneEnum);
             assertEquals( "Tag165EnuSettlInstSource\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

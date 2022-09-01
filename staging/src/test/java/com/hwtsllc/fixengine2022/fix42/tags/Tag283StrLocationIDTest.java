@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.fix41.tags.Tag198StrSecondaryOrderID;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -44,11 +43,11 @@ class Tag283StrLocationIDTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag283StrLocationID( new MyStringType( oneElement ));
-            assertEquals( "FIX283_STR_LOCATION_ID", tagData.toEnumLabelString());
+            assertEquals( "FIX283_STR_LOCATION_ID", tagData.toFIXLabelString());
             assertEquals( "283", tagData.toEnumIDString());
             assertEquals( "LOCATION_ID", tagData.toEnumNameString());
             assertEquals( "LocationID", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -85,7 +84,7 @@ class Tag283StrLocationIDTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag283StrLocationID( new MyStringType( oneElement ));
             assertEquals( "Tag283StrLocationID\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

@@ -39,11 +39,11 @@ class Tag747EnuExerciseMethodTest {
         // loop around the ENUM and process
         for ( Enum747ExerciseMethod oneEnum : Enum747ExerciseMethod.values()) {
             tagData = new Tag747EnuExerciseMethod(oneEnum);
-            assertEquals( "FIX747_ENU_EXERCISE_METHOD", tagData.toEnumLabelString());
+            assertEquals( "FIX747_ENU_EXERCISE_METHOD", tagData.toFIXLabelString());
             assertEquals( "747", tagData.toEnumIDString());
             assertEquals( "EXERCISE_METHOD", tagData.toEnumNameString());
             assertEquals( "ExerciseMethod", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -91,7 +91,7 @@ class Tag747EnuExerciseMethodTest {
         for ( Enum747ExerciseMethod oneEnum : Enum747ExerciseMethod.values()) {
             tagData = new Tag747EnuExerciseMethod(oneEnum);
             assertEquals( "Tag747EnuExerciseMethod\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

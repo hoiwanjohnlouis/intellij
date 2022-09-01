@@ -39,11 +39,11 @@ class Tag203EnuCoveredOrUncoveredTest {
         // loop around the ENUM and process
         for (MyEnumCoveredOrUncovered oneEnum : MyEnumCoveredOrUncovered.values()) {
             tagData = new Tag203EnuCoveredOrUncovered(oneEnum);
-            assertEquals( "FIX203_ENU_COVERED_OR_UNCOVERED", tagData.toEnumLabelString());
+            assertEquals( "FIX203_ENU_COVERED_OR_UNCOVERED", tagData.toFIXLabelString());
             assertEquals( "203", tagData.toEnumIDString());
             assertEquals( "COVERED_OR_UNCOVERED", tagData.toEnumNameString());
             assertEquals( "CoveredOrUncovered", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -94,7 +94,7 @@ class Tag203EnuCoveredOrUncoveredTest {
         for (MyEnumCoveredOrUncovered oneEnum : MyEnumCoveredOrUncovered.values()) {
             tagData = new Tag203EnuCoveredOrUncovered(oneEnum);
             assertEquals( "Tag203EnuCoveredOrUncovered\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

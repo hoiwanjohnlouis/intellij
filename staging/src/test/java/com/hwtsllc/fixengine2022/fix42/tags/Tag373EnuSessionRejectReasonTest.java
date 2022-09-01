@@ -39,11 +39,11 @@ class Tag373EnuSessionRejectReasonTest {
         // loop around the ENUM and process
         for ( Enum373SessionRejectReason oneEnum : Enum373SessionRejectReason.values()) {
             tagData = new Tag373EnuSessionRejectReason(oneEnum);
-            assertEquals( "FIX373_ENU_SESSION_REJECT_REASON", tagData.toEnumLabelString());
+            assertEquals( "FIX373_ENU_SESSION_REJECT_REASON", tagData.toFIXLabelString());
             assertEquals( "373", tagData.toEnumIDString());
             assertEquals( "SESSION_REJECT_REASON", tagData.toEnumNameString());
             assertEquals( "SessionRejectReason", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -185,7 +185,7 @@ class Tag373EnuSessionRejectReasonTest {
         for ( Enum373SessionRejectReason oneEnum : Enum373SessionRejectReason.values()) {
             tagData = new Tag373EnuSessionRejectReason(oneEnum);
             assertEquals( "Tag373EnuSessionRejectReason\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

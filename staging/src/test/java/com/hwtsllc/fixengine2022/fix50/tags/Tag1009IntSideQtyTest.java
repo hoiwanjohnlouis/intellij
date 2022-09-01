@@ -43,11 +43,11 @@ class Tag1009IntSideQtyTest {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag1009IntSideQty( new MyIntType( oneElement ));
-            assertEquals( "FIX1009_INT_SIDE_QTY", tagData.toEnumLabelString());
+            assertEquals( "FIX1009_INT_SIDE_QTY", tagData.toFIXLabelString());
             assertEquals( "1009", tagData.toEnumIDString());
             assertEquals( "SIDE_QTY", tagData.toEnumNameString());
             assertEquals( "SideQty", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag1009IntSideQtyTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag1009IntSideQty( new MyIntType( oneElement ));
             assertEquals( "Tag1009IntSideQty\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

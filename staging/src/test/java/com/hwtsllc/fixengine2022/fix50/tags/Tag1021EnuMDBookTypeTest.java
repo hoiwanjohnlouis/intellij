@@ -39,11 +39,11 @@ class Tag1021EnuMDBookTypeTest {
         // loop around the ENUM and process
         for ( Enum1021MDBookType oneEnum : Enum1021MDBookType.values()) {
             tagData = new Tag1021EnuMDBookType(oneEnum);
-            assertEquals( "FIX1021_ENU_MD_BOOK_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX1021_ENU_MD_BOOK_TYPE", tagData.toFIXLabelString());
             assertEquals( "1021", tagData.toEnumIDString());
             assertEquals( "MD_BOOK_TYPE", tagData.toEnumNameString());
             assertEquals( "MDBookType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -96,7 +96,7 @@ class Tag1021EnuMDBookTypeTest {
         for ( Enum1021MDBookType oneEnum : Enum1021MDBookType.values()) {
             tagData = new Tag1021EnuMDBookType(oneEnum);
             assertEquals( "Tag1021EnuMDBookType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

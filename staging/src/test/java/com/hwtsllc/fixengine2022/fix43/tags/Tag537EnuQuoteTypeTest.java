@@ -39,11 +39,11 @@ class Tag537EnuQuoteTypeTest {
         // loop around the ENUM and process
         for (Enum537QuoteType oneEnum : Enum537QuoteType.values()) {
             tagData = new Tag537EnuQuoteType(oneEnum);
-            assertEquals( "FIX537_ENU_QUOTE_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX537_ENU_QUOTE_TYPE", tagData.toFIXLabelString());
             assertEquals( "537", tagData.toEnumIDString());
             assertEquals( "QUOTE_TYPE", tagData.toEnumNameString());
             assertEquals( "QuoteType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -101,7 +101,7 @@ class Tag537EnuQuoteTypeTest {
         for (Enum537QuoteType oneEnum : Enum537QuoteType.values()) {
             tagData = new Tag537EnuQuoteType(oneEnum);
             assertEquals( "Tag537EnuQuoteType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

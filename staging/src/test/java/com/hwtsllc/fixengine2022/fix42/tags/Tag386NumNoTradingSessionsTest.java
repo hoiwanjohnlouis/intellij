@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyNumInGroupType;
-import com.hwtsllc.fixengine2022.fix41.tags.Tag146NumNoRelatedSym;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -44,11 +43,11 @@ class Tag386NumNoTradingSessionsTest {
         // process array of tags
         for ( int oneElement : TestArray ) {
             tagData = new Tag386NumNoTradingSessions( new MyNumInGroupType( oneElement ));
-            assertEquals( "FIX386_NUM_NO_TRADING_SESSIONS", tagData.toEnumLabelString());
+            assertEquals( "FIX386_NUM_NO_TRADING_SESSIONS", tagData.toFIXLabelString());
             assertEquals( "386", tagData.toEnumIDString());
             assertEquals( "NO_TRADING_SESSIONS", tagData.toEnumNameString());
             assertEquals( "NoTradingSessions", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -85,7 +84,7 @@ class Tag386NumNoTradingSessionsTest {
         for ( int oneElement : TestArray ) {
             tagData = new Tag386NumNoTradingSessions( new MyNumInGroupType( oneElement ));
             assertEquals( "Tag386NumNoTradingSessions\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

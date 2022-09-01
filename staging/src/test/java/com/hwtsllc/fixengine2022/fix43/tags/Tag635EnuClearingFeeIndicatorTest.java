@@ -39,11 +39,11 @@ class Tag635EnuClearingFeeIndicatorTest {
         // loop around the ENUM and process
         for (Enum635ClearingFeeIndicator oneEnum : Enum635ClearingFeeIndicator.values()) {
             tagData = new Tag635EnuClearingFeeIndicator(oneEnum);
-            assertEquals( "FIX635_ENU_CLEARING_FEE_INDICATOR", tagData.toEnumLabelString());
+            assertEquals( "FIX635_ENU_CLEARING_FEE_INDICATOR", tagData.toFIXLabelString());
             assertEquals( "635", tagData.toEnumIDString());
             assertEquals( "CLEARING_FEE_INDICATOR", tagData.toEnumNameString());
             assertEquals( "ClearingFeeIndicator", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -155,7 +155,7 @@ class Tag635EnuClearingFeeIndicatorTest {
         for (Enum635ClearingFeeIndicator oneEnum : Enum635ClearingFeeIndicator.values()) {
             tagData = new Tag635EnuClearingFeeIndicator(oneEnum);
             assertEquals( "Tag635EnuClearingFeeIndicator\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

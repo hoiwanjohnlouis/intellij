@@ -39,11 +39,11 @@ class Tag840EnuPegScopeTest {
         // loop around the ENUM and process
         for ( MyEnumDiscretionOrPegScope oneEnum : MyEnumDiscretionOrPegScope.values()) {
             tagData = new Tag840EnuPegScope(oneEnum);
-            assertEquals( "FIX840_ENU_PEG_SCOPE", tagData.toEnumLabelString());
+            assertEquals( "FIX840_ENU_PEG_SCOPE", tagData.toFIXLabelString());
             assertEquals( "840", tagData.toEnumIDString());
             assertEquals( "PEG_SCOPE", tagData.toEnumNameString());
             assertEquals( "PegScope", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -101,7 +101,7 @@ class Tag840EnuPegScopeTest {
         for ( MyEnumDiscretionOrPegScope oneEnum : MyEnumDiscretionOrPegScope.values()) {
             tagData = new Tag840EnuPegScope(oneEnum);
             assertEquals( "Tag840EnuPegScope\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

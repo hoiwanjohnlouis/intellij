@@ -43,11 +43,11 @@ class Tag968FloStrikeValueTest {
         // process array of tags
         for ( float oneElement : TestArray ) {
             tagData = new Tag968FloStrikeValue( new MyFloatType( oneElement ));
-            assertEquals( "FIX968_FLO_STRIKE_VALUE", tagData.toEnumLabelString());
+            assertEquals( "FIX968_FLO_STRIKE_VALUE", tagData.toFIXLabelString());
             assertEquals( "968", tagData.toEnumIDString());
             assertEquals( "STRIKE_VALUE", tagData.toEnumNameString());
             assertEquals( "StrikeValue", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag968FloStrikeValueTest {
         for ( float oneElement : TestArray ) {
             tagData = new Tag968FloStrikeValue( new MyFloatType( oneElement ));
             assertEquals( "Tag968FloStrikeValue\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

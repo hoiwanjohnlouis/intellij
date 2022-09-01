@@ -43,11 +43,11 @@ class Tag211FloPegOffsetValueTest {
         // process array of tags
         for ( float oneElement : TestArray ) {
             tagData = new Tag211FloPegOffsetValue( new MyFloatType( oneElement ));
-            assertEquals( "FIX211_FLO_PEG_DIFFERENCE", tagData.toEnumLabelString());
+            assertEquals( "FIX211_FLO_PEG_DIFFERENCE", tagData.toFIXLabelString());
             assertEquals( "211", tagData.toEnumIDString());
             assertEquals( "PEG_DIFFERENCE", tagData.toEnumNameString());
             assertEquals( "PegDifference", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag211FloPegOffsetValueTest {
         for ( float oneElement : TestArray ) {
             tagData = new Tag211FloPegOffsetValue( new MyFloatType( oneElement ));
             assertEquals( "Tag211FloPegOffsetValue\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

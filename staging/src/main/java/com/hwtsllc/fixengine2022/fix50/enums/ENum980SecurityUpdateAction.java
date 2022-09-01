@@ -50,7 +50,7 @@ public enum ENum980SecurityUpdateAction implements LogFIXString, LogVerboseStrin
      * standard wrapper to retrieve the specific enum name
      */
     @Override
-    public String toEnumLabelString() {
+    public String toFIXLabelString() {
         return this.name();
     }
     /**
@@ -81,7 +81,7 @@ public enum ENum980SecurityUpdateAction implements LogFIXString, LogVerboseStrin
     public String toVerboseString() {
         return this.getClass().getSimpleName()
                 .concat("\n\tEnumName[")
-                .concat( toEnumLabelString())
+                .concat( toFIXLabelString())
                 .concat("]")
                 .concat("\n\tAction[")
                 .concat( toEnumIDString())

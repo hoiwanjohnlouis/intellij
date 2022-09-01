@@ -39,11 +39,11 @@ class Tag464EnuTestMessageIndicatorTest {
         // loop around the ENUM and process
         for (Enum464TestMessageIndicator oneEnum : Enum464TestMessageIndicator.values()) {
             tagData = new Tag464EnuTestMessageIndicator(oneEnum);
-            assertEquals( "FIX464_ENU_TEST_MESSAGE_INDICATOR", tagData.toEnumLabelString());
+            assertEquals( "FIX464_ENU_TEST_MESSAGE_INDICATOR", tagData.toFIXLabelString());
             assertEquals( "464", tagData.toEnumIDString());
             assertEquals( "TEST_MESSAGE_INDICATOR", tagData.toEnumNameString());
             assertEquals( "TestMessageIndicator", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -91,7 +91,7 @@ class Tag464EnuTestMessageIndicatorTest {
         for (Enum464TestMessageIndicator oneEnum : Enum464TestMessageIndicator.values()) {
             tagData = new Tag464EnuTestMessageIndicator(oneEnum);
             assertEquals( "Tag464EnuTestMessageIndicator\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

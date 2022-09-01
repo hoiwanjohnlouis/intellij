@@ -39,11 +39,11 @@ class Tag321EnuSecurityRequestTypeTest {
         // loop around the ENUM and process
         for ( Enum321SecurityRequestType oneEnum : Enum321SecurityRequestType.values()) {
             tagData = new Tag321EnuSecurityRequestType(oneEnum);
-            assertEquals( "FIX321_ENU_SECURITY_REQUEST_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX321_ENU_SECURITY_REQUEST_TYPE", tagData.toFIXLabelString());
             assertEquals( "321", tagData.toEnumIDString());
             assertEquals( "SECURITY_REQUEST_TYPE", tagData.toEnumNameString());
             assertEquals( "SecurityRequestType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -105,7 +105,7 @@ class Tag321EnuSecurityRequestTypeTest {
         for ( Enum321SecurityRequestType oneEnum : Enum321SecurityRequestType.values()) {
             tagData = new Tag321EnuSecurityRequestType(oneEnum);
             assertEquals( "Tag321EnuSecurityRequestType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

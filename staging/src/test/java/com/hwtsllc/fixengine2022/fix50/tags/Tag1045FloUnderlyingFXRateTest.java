@@ -43,11 +43,11 @@ class Tag1045FloUnderlyingFXRateTest {
         // process array of tags
         for ( float oneElement : TestArray ) {
             tagData = new Tag1045FloUnderlyingFXRate( new MyFloatType( oneElement ));
-            assertEquals( "FIX1045_FLO_UNDERLYING_FX_RATE", tagData.toEnumLabelString());
+            assertEquals( "FIX1045_FLO_UNDERLYING_FX_RATE", tagData.toFIXLabelString());
             assertEquals( "1045", tagData.toEnumIDString());
             assertEquals( "UNDERLYING_FX_RATE", tagData.toEnumNameString());
             assertEquals( "UnderlyingFXRate", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag1045FloUnderlyingFXRateTest {
         for ( float oneElement : TestArray ) {
             tagData = new Tag1045FloUnderlyingFXRate( new MyFloatType( oneElement ));
             assertEquals( "Tag1045FloUnderlyingFXRate\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

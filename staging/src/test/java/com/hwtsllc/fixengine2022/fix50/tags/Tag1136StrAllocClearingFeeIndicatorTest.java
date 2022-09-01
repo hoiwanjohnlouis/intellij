@@ -43,11 +43,11 @@ class Tag1136StrAllocClearingFeeIndicatorTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag1136StrAllocClearingFeeIndicator( new MyStringType( oneElement ));
-            assertEquals( "FIX1136_STR_ALLOC_CLEARING_FEE_INDICATOR", tagData.toEnumLabelString());
+            assertEquals( "FIX1136_STR_ALLOC_CLEARING_FEE_INDICATOR", tagData.toFIXLabelString());
             assertEquals( "1136", tagData.toEnumIDString());
             assertEquals( "ALLOC_CLEARING_FEE_INDICATOR", tagData.toEnumNameString());
             assertEquals( "AllocClearingFeeIndicator", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag1136StrAllocClearingFeeIndicatorTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag1136StrAllocClearingFeeIndicator( new MyStringType( oneElement ));
             assertEquals( "Tag1136StrAllocClearingFeeIndicator\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

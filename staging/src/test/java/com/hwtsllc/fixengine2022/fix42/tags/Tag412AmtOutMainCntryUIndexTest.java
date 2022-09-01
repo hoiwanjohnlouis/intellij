@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyAmtType;
-import com.hwtsllc.fixengine2022.fix40.tags.Tag118AmtNetMoney;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -44,11 +43,11 @@ class Tag412AmtOutMainCntryUIndexTest {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag412AmtOutMainCntryUIndex( new MyAmtType( oneElement ));
-            assertEquals( "FIX412_AMT_OUT_MAIN_CNTRY_U_INDEX", tagData.toEnumLabelString());
+            assertEquals( "FIX412_AMT_OUT_MAIN_CNTRY_U_INDEX", tagData.toFIXLabelString());
             assertEquals( "412", tagData.toEnumIDString());
             assertEquals( "OUT_MAIN_CNTRY_U_INDEX", tagData.toEnumNameString());
             assertEquals( "OutMainCntryUIndex", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -85,7 +84,7 @@ class Tag412AmtOutMainCntryUIndexTest {
         for ( double oneElement : TestArray ) {
             tagData = new Tag412AmtOutMainCntryUIndex( new MyAmtType( oneElement ));
             assertEquals( "Tag412AmtOutMainCntryUIndex\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

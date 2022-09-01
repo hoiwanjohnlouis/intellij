@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyPriceType;
-import com.hwtsllc.fixengine2022.fix41.tags.Tag202PrcStrikePrice;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -44,11 +43,11 @@ class Tag270PrcMDEntryPxTest {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag270PrcMDEntryPx( new MyPriceType( oneElement ));
-            assertEquals( "FIX270_PRC_MD_ENTRY_PX", tagData.toEnumLabelString());
+            assertEquals( "FIX270_PRC_MD_ENTRY_PX", tagData.toFIXLabelString());
             assertEquals( "270", tagData.toEnumIDString());
             assertEquals( "MD_ENTRY_PX", tagData.toEnumNameString());
             assertEquals( "MDEntryPx", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -85,7 +84,7 @@ class Tag270PrcMDEntryPxTest {
         for ( double oneElement : TestArray ) {
             tagData = new Tag270PrcMDEntryPx( new MyPriceType( oneElement ));
             assertEquals( "Tag270PrcMDEntryPx\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

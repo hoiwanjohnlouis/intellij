@@ -39,11 +39,11 @@ class Tag794EnuAllocReportTypeTest {
         // loop around the ENUM and process
         for ( Enum794AllocReportType oneEnum : Enum794AllocReportType.values()) {
             tagData = new Tag794EnuAllocReportType(oneEnum);
-            assertEquals( "FIX794_ENU_ALLOC_REPORT_TYPE", tagData.toEnumLabelString());
+            assertEquals( "FIX794_ENU_ALLOC_REPORT_TYPE", tagData.toFIXLabelString());
             assertEquals( "794", tagData.toEnumIDString());
             assertEquals( "ALLOC_REPORT_TYPE", tagData.toEnumNameString());
             assertEquals( "AllocReportType", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -136,7 +136,7 @@ class Tag794EnuAllocReportTypeTest {
         for ( Enum794AllocReportType oneEnum : Enum794AllocReportType.values()) {
             tagData = new Tag794EnuAllocReportType(oneEnum);
             assertEquals( "Tag794EnuAllocReportType\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

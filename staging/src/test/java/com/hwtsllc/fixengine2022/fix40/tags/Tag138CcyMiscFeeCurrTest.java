@@ -43,11 +43,11 @@ class Tag138CcyMiscFeeCurrTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag138CcyMiscFeeCurr( new MyCurrencyType( oneElement ));
-            assertEquals( "FIX138_CCY_MISC_FEE_CURR", tagData.toEnumLabelString());
+            assertEquals( "FIX138_CCY_MISC_FEE_CURR", tagData.toFIXLabelString());
             assertEquals( "MISC_FEE_CURR", tagData.toEnumNameString());
             assertEquals( "138", tagData.toEnumIDString());
             assertEquals( "MiscFeeCurr", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -84,7 +84,7 @@ class Tag138CcyMiscFeeCurrTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag138CcyMiscFeeCurr( new MyCurrencyType( oneElement ));
             assertEquals( "Tag138CcyMiscFeeCurr\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

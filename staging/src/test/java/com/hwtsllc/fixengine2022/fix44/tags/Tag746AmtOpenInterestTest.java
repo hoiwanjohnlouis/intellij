@@ -50,11 +50,11 @@ class Tag746AmtOpenInterestTest {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag746AmtOpenInterest( new MyAmtType( oneElement ));
-            assertEquals( "FIX746_AMT_OPEN_INTEREST", tagData.toEnumLabelString());
+            assertEquals( "FIX746_AMT_OPEN_INTEREST", tagData.toFIXLabelString());
             assertEquals( "746", tagData.toEnumIDString());
             assertEquals( "OPEN_INTEREST", tagData.toEnumNameString());
             assertEquals( "OpenInterest", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -85,7 +85,7 @@ class Tag746AmtOpenInterestTest {
         for ( double oneElement : TestArray ) {
             tagData = new Tag746AmtOpenInterest( new MyAmtType( oneElement ));
             assertEquals( "Tag746AmtOpenInterest\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

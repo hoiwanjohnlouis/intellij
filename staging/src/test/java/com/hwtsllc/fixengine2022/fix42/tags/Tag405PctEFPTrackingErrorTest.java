@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
-import com.hwtsllc.fixengine2022.fix41.tags.Tag158PctAccruedInterestRate;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -44,11 +43,11 @@ class Tag405PctEFPTrackingErrorTest {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag405PctEFPTrackingError( new MyPercentageType( oneElement ));
-            assertEquals( "FIX405_PCT_EFP_TRACKING_ERROR", tagData.toEnumLabelString());
+            assertEquals( "FIX405_PCT_EFP_TRACKING_ERROR", tagData.toFIXLabelString());
             assertEquals( "405", tagData.toEnumIDString());
             assertEquals( "EFP_TRACKING_ERROR", tagData.toEnumNameString());
             assertEquals( "EFPTrackingError", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -85,7 +84,7 @@ class Tag405PctEFPTrackingErrorTest {
         for ( double oneElement : TestArray ) {
             tagData = new Tag405PctEFPTrackingError( new MyPercentageType( oneElement ));
             assertEquals( "Tag405PctEFPTrackingError\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

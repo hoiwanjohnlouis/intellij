@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix42.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyPercentageType;
-import com.hwtsllc.fixengine2022.fix41.tags.Tag158PctAccruedInterestRate;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -44,11 +43,11 @@ class Tag435PctUnderlyingCouponRateTest {
         // process array of tags
         for ( double oneElement : TestArray ) {
             tagData = new Tag435PctUnderlyingCouponRate( new MyPercentageType( oneElement ));
-            assertEquals( "FIX435_PCT_UNDERLYING_COUPON_RATE", tagData.toEnumLabelString());
+            assertEquals( "FIX435_PCT_UNDERLYING_COUPON_RATE", tagData.toFIXLabelString());
             assertEquals( "435", tagData.toEnumIDString());
             assertEquals( "UNDERLYING_COUPON_RATE", tagData.toEnumNameString());
             assertEquals( "UnderlyingCouponRate", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -85,7 +84,7 @@ class Tag435PctUnderlyingCouponRateTest {
         for ( double oneElement : TestArray ) {
             tagData = new Tag435PctUnderlyingCouponRate( new MyPercentageType( oneElement ));
             assertEquals( "Tag435PctUnderlyingCouponRate\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +

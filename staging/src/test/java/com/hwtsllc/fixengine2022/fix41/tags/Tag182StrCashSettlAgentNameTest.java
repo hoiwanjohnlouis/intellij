@@ -17,7 +17,6 @@
 package com.hwtsllc.fixengine2022.fix41.tags;
 
 import com.hwtsllc.fixengine2022.datatypes.MyStringType;
-import com.hwtsllc.fixengine2022.fix40.tags.Tag131StrQuoteReqID;
 import com.hwtsllc.fixengine2022.interfaces.MyTestValues;
 import org.junit.jupiter.api.Test;
 
@@ -45,11 +44,11 @@ class Tag182StrCashSettlAgentNameTest {
         // process array of tags
         for ( String oneElement : TestArray ) {
             tagData = new Tag182StrCashSettlAgentName( new MyStringType( oneElement ));
-            assertEquals( "FIX182_STR_CASH_SETTL_AGENT_NAME", tagData.toEnumLabelString());
+            assertEquals( "FIX182_STR_CASH_SETTL_AGENT_NAME", tagData.toFIXLabelString());
             assertEquals( "182", tagData.toEnumIDString());
             assertEquals( "CASH_SETTL_AGENT_NAME", tagData.toEnumNameString());
             assertEquals( "CashSettlAgentName (replaced)", tagData.toEnumDescriptionString());
-            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toEnumLabelString());
+            assertNotEquals( MyTestValues.JUNK_ENUM_NAME, tagData.toFIXLabelString());
             assertNotEquals( MyTestValues.JUNK_ID, tagData.toEnumIDString());
             assertNotEquals( MyTestValues.JUNK_NAME, tagData.toEnumNameString());
             assertNotEquals( MyTestValues.JUNK_DESCRIPTION, tagData.toEnumDescriptionString());
@@ -86,7 +85,7 @@ class Tag182StrCashSettlAgentNameTest {
         for ( String oneElement : TestArray ) {
             tagData = new Tag182StrCashSettlAgentName( new MyStringType( oneElement ));
             assertEquals( "Tag182StrCashSettlAgentName\n" +
-                            "\tEnumName[" + tagData.toEnumLabelString() + "]\n" +
+                            "\tEnumName[" + tagData.toFIXLabelString() + "]\n" +
                             "\tFIXID[" + tagData.toEnumIDString() + "]\n" +
                             "\tFIXName[" + tagData.toEnumNameString() + "]\n" +
                             "\tFIXDescription[" + tagData.toEnumDescriptionString() + "]\n" +
